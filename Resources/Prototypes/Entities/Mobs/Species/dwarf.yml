@@ -5,6 +5,8 @@
   id: BaseMobDwarf
   abstract: true
   components:
+  - type: Interaction
+    erp: true
   - type: Hunger
   - type: Thirst
   - type: Icon

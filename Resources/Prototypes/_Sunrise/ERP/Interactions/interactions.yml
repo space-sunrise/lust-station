@@ -1,0 +1,81 @@
+- type: interaction
+  id: placeholder
+  name: Обычное взаимодействие
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - placeholder1
+  - placeholder2
+  - placeholder3
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: erpPlaceholder
+  name: Ерп-взаимодействие
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - ERPplaceholder1
+  - ERPplaceholder2
+  - ERPplaceholder3
+  sound:
+    path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 10
+
+- type: interaction
+  id: erpPlaceholder2
+  name: Ерп-взаимодействие с женщиной
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - ERPplaceholder1
+  - ERPplaceholder2
+  - ERPplaceholder3
+  sound:
+    path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercent: 10
+
+- type: interaction
+  id: erpPlaceholder3
+  name: Ерп-взаимодействие c женщиной, без одежды
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - ERPplaceholder1
+  - ERPplaceholder2
+  - ERPplaceholder3
+  sound:
+    path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 10
+
+- type: interaction
+  id: erpPlaceholder4
+  name: ERP-Взаимодействие кого угодно с женищной
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - ERPplaceholder1
+  - ERPplaceholder2
+  - ERPplaceholder3
+  sound:
+    path: /Audio/Voice/Arachnid/arachnid_scream.ogg
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercent: 10

@@ -5,6 +5,8 @@
   id: BaseMobReptilian
   abstract: true
   components:
+  - type: Interaction
+    erp: true
   - type: HumanoidAppearance
     species: Reptilian
     hideLayersOnEquip:
