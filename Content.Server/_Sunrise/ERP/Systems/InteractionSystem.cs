@@ -49,7 +49,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (comp.Love >= 1 && humanoid.Sex == Sex.Male)
                     {
                         comp.ActualLove = 0;
-                        comp.Love = 0;
+                        comp.Love = 0.95f;
                         comp.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
                         _chat.TrySendInGameICMessage(ent, "кончает!", InGameICChatType.Emote, false);
                     }
