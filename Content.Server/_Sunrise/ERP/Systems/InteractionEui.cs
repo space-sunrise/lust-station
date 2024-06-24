@@ -52,6 +52,12 @@ namespace Content.Server._Sunrise.ERP.Systems
                         Close();
                     }
                     break;
+                case RequestInteractionState req:
+                    var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
+                    if (!res.HasValue) return;
+                    var resVal = res.Value;
+                    SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5));
+                    break;
             }
         }
 

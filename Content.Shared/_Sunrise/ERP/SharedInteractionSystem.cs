@@ -14,6 +14,7 @@ namespace Content.Shared._Sunrise.ERP
     }
 
 
+
     [Serializable, NetSerializable]
     public sealed class SetInteractionEuiState : EuiStateBase
     {
@@ -50,6 +51,37 @@ namespace Content.Shared._Sunrise.ERP
         public ResponseLoveMessage(float percent)
         {
             Percent = percent;
+        }
+    }
+
+    [NetSerializable, Serializable]
+    public sealed class RequestInteractionState : EuiMessageBase
+    {
+        public NetEntity User;
+        public NetEntity Target;
+        public RequestInteractionState(NetEntity user, NetEntity target)
+        {
+            User = user;
+            Target = target;
+        }
+    }
+
+    [Serializable, NetSerializable]
+    public sealed class ResponseInteractionState : EuiMessageBase
+    {
+        public Sex UserSex;
+        public Sex TargetSex;
+        public bool UserHasClothing;
+        public bool TargetHasClothing;
+        public bool ErpAllowed;
+
+        public ResponseInteractionState(Sex userSex, Sex targetSex, bool userHasClothing, bool targetHasClothing, bool erp)
+        {
+            UserSex = userSex;
+            TargetSex = targetSex;
+            UserHasClothing = userHasClothing;
+            TargetHasClothing = targetHasClothing;
+            ErpAllowed = erp;
         }
     }
 

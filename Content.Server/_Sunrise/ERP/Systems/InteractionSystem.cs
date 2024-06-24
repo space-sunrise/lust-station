@@ -27,6 +27,33 @@ namespace Content.Server._Sunrise.ERP.Systems
             SubscribeLocalEvent<GetVerbsEvent<Verb>>(AddVerbs);
         }
 
+        public (Sex, bool, Sex, bool, bool)? RequestMenu(EntityUid User, EntityUid Target)
+        {
+            if (TryComp<InteractionComponent>(Target, out var targetInteraction) && TryComp<InteractionComponent>(User, out var userInteraction))
+            {
+                if (TryComp<HumanoidAppearanceComponent>(Target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(User, out var userHumanoid))
+                {
+                    bool erp = true;
+                    bool userClothing = false;
+                    bool targetClothing = false;
+                    if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
+                    if (TryComp<ContainerManagerComponent>(User, out var container))
+                    {
+                        if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
+                        if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
+                    }
+
+                    if (TryComp<ContainerManagerComponent>(Target, out var targetContainer))
+                    {
+                        if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
+                        if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
+                    }
+                    return (userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp);
+                }
+            }
+            return null;
+        }
+
         public void AddLove(NetEntity entity, NetEntity target, int percent)
         {
             List<EntityUid> ents = new();
