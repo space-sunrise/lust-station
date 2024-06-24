@@ -1,3 +1,4 @@
+// © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Robust.Shared.Audio;

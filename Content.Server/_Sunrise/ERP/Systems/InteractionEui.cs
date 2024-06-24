@@ -1,3 +1,4 @@
+// © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
 using Content.Server.EUI;
 using Content.Shared.Eui;
 using JetBrains.Annotations;
@@ -21,6 +22,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly InteractionSystem _interaction;
         private readonly TransformSystem _transform;
         public IEntityManager _entManager;
+        
         public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
             _target = target;

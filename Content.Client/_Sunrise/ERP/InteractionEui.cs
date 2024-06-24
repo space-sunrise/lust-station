@@ -1,11 +1,9 @@
+// © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
 using Content.Client.Eui;
 using Content.Shared.Eui;
 using Content.Shared._Sunrise.ERP;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
-using Content.Shared._Sunrise.ERP;
-using System.Linq;
-using Content.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Random;
 using Content.Client.Chat.Managers;
