@@ -11,6 +11,7 @@ using Robust.Client.Player;
 using Robust.Shared.Prototypes;
 using Robust.Client.Graphics;
 using Robust.Shared.Timing;
+using System.Linq;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
@@ -71,14 +72,19 @@ public sealed partial class InteractionWindow : DefaultWindow
 
         if(_gameTiming.CurTime > UntilUpdate)
         {
-            UntilUpdate = _gameTiming.CurTime + TimeSpan.FromMicroseconds(4);
-            _eui.RequestLove();
+            UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(5);
+            _eui.RequestState();
         }
+        _eui.RequestLove();
     }
 
 
-        public void Populate(List<InteractionPrototype> prototypes)
+    public void Populate()
     {
+        var prototypes = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList();
+        ItemInteractions.Clear();
+        UserDescription.DisposeAllChildren();
+        TargetDescription.DisposeAllChildren();
         //Проверки nullable-типов
         if (!TargetEntityId.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -89,7 +95,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (Erp)
         {
             //Юзер
-            UserDescription.AddChild(new Label {Text = "Вы..."});
+            UserDescription.AddChild(new Label { Text = "Вы..." });
             if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
             if (UserSex.Value == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
@@ -100,16 +106,29 @@ public sealed partial class InteractionWindow : DefaultWindow
             else TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
             if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
             else if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
-        } else
+        }
+        else
         {
             ErpProgress.Dispose();
         }
-
+        //Сделать адекватнее бы
         foreach (var proto in prototypes)
         {
+            if (proto.Erp) continue;
             var texture = _spriteSystem.Frame0(proto.Icon);
             if (UserHasClothing && proto.UserWithoutCloth) continue;
-            if (TargetHasClothing && proto.TargetWithoutCloth) continue; 
+            if (TargetHasClothing && proto.TargetWithoutCloth) continue;
+            if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
+            if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
+            if (!Erp && proto.Erp) continue;
+            ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+        }
+        foreach (var proto in prototypes)
+        {
+            if (!proto.Erp) continue;
+            var texture = _spriteSystem.Frame0(proto.Icon);
+            if (UserHasClothing && proto.UserWithoutCloth) continue;
+            if (TargetHasClothing && proto.TargetWithoutCloth) continue;
             if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
             if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
             if (!Erp && proto.Erp) continue;

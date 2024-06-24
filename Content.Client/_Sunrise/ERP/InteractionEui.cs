@@ -12,6 +12,7 @@ using Content.Client.Chat.Managers;
 using Robust.Shared.Audio.Systems;
 using Robust.Client.Player;
 using Robust.Shared.Timing;
+using Content.Shared.IdentityManagement;
 namespace Content.Client._Sunrise.ERP
 {
     [UsedImplicitly]
@@ -44,6 +45,14 @@ namespace Content.Client._Sunrise.ERP
                 case ResponseLoveMessage req:
                     _window.LoveBar.Value = req.Percent;
                     break;
+                case ResponseInteractionState req:
+                    _window.UserHasClothing = req.UserHasClothing;
+                    _window.TargetHasClothing = req.TargetHasClothing;
+                    _window.UserSex = req.UserSex;
+                    _window.TargetSex = req.TargetSex;
+                    _window.Erp = req.ErpAllowed;
+                    _window.Populate();
+                    break;
             }
         }
 
@@ -52,6 +61,13 @@ namespace Content.Client._Sunrise.ERP
             if (!_player.LocalEntity.HasValue) return;
             if (!_window.TargetEntityId.HasValue) return;
             SendMessage(new AddLoveMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value, 0));
+        }
+
+        public void RequestState()
+        {
+            if (!_window.TargetEntityId.HasValue) return;
+            if (!_player.LocalEntity.HasValue) return;
+            SendMessage(new RequestInteractionState(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value));
         }
 
         private void OnClosed()
@@ -80,8 +96,7 @@ namespace Content.Client._Sunrise.ERP
             _window.UserHasClothing = euiState.UserHasClothing;
             _window.TargetHasClothing = euiState.TargetHasClothing;
             _window.Erp = euiState.ErpAllowed;
-            var interactions = _prototypeManager.EnumeratePrototypes<InteractionPrototype>();
-            _window.Populate(interactions.ToList());
+            _window.Populate();
 
         }
 
@@ -95,12 +110,15 @@ namespace Content.Client._Sunrise.ERP
                 InteractionPrototype interaction = (InteractionPrototype) item.Metadata;
                 if (interaction.Emotes.Count > 0)
                 {
-                    _chat.SendMessage(_random.Pick(interaction.Emotes), Shared.Chat.ChatSelectChannel.Emotes);
+                    if (_window.TargetEntityId == null) return;
+                    string emote = _random.Pick(interaction.Emotes);
+                    emote = emote.Replace("%user", Identity.Name(_player.LocalEntity.Value, _entManager));
+                    emote = emote.Replace("%target", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager));
+                    _chat.SendMessage(emote, Shared.Chat.ChatSelectChannel.Emotes);
                 }
-                if (interaction.Sound != null)
+                if (interaction.Sounds.Count > 0)
                 {
-
-                    _audio.PlayPvs(interaction.Sound, _player.LocalEntity.Value);
+                    _audio.PlayPvs(_random.Pick(interaction.Sounds), _player.LocalEntity.Value);
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value, interaction.LovePercent));

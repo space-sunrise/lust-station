@@ -16,8 +16,9 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField]
     public SpriteSpecifier Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/blankIcon.png")); //Иконка рядом с текстом
 
-    [DataField("sound")]
-    public SoundSpecifier? Sound; //Хлюп-хлюп...
+    [DataField("sounds")]
+    public List<SoundSpecifier> Sounds = new();
+    //public HashSet<SoundSpecifier> Sounds = new(); //Хлюп-хлюп...
 
     [DataField] public HashSet<string> Emotes = new();
 
