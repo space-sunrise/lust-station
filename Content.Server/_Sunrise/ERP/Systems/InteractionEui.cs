@@ -44,7 +44,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             switch (msg)
             {
                 case AddLoveMessage req:
-                    _interaction.AddLove(req.User, req.Target, req.Percent);
+                    _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
                     if(_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
                     {
                         SendMessage(new ResponseLoveMessage(usComp.Love));

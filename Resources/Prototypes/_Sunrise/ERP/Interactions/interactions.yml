@@ -64,7 +64,8 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  lovePercent: 2
+  lovePercentUser: 0
+  lovePercentTarget: 2
 
 - type: interaction
   id: ERPkiss
@@ -94,7 +95,8 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  lovePercent: 5
+  lovePercentUser: 5
+  lovePercentTarget: 6
 
 - type: interaction
   id: ERPkiss2
@@ -117,7 +119,8 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  lovePercent: 4
+  lovePercentUser: 5
+  lovePercentTarget: 6
 
 - type: interaction
   id: ERPbreast1
@@ -137,7 +140,8 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 1
+  lovePercentUser: 4
+  lovePercentTarget: 10
 
 - type: interaction
   id: ERPbreast2
@@ -153,7 +157,8 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 1
+  lovePercentUser: 5
+  lovePercentTarget: 13
 
 - type: interaction
   id: ERPanusInsert
@@ -175,7 +180,8 @@
   userWithoutCloth: true
   targetWithoutCloth: true
   erp: true
-  lovePercent: 15
+  lovePercentUser: 20
+  lovePercentTarget: 20
 
 - type: interaction
   id: ERPvaginaInsert
@@ -196,7 +202,8 @@
   userWithoutCloth: true
   targetWithoutCloth: true
   erp: true
-  lovePercent: 15
+  lovePercentUser: 20
+  lovePercentTarget: 20
 
 - type: interaction
   id: ERPvaginaLick
@@ -211,7 +218,8 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 3
+  lovePercentUser: 4
+  lovePercentTarget: 12
 
 - type: interaction
   id: ERPmasturbate
@@ -232,10 +240,11 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 15
+  lovePercentUser: 2
+  lovePercentTarget: 15
 
 - type: interaction
-  id: ERPmasturbateSelfMale
+  id: ERPmasturbateSelf
   name: Мастурбировать себе
   icon: _Sunrise/Interface/ERP/heartIcon.png
   emotes:
@@ -248,29 +257,13 @@
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
   - path: /Audio/_Sunrise/ERP/hlup3.ogg
   - path: /Audio/_Sunrise/ERP/hlup4.ogg
-  userSex: Male
+  userSex: Unsexed
   targetSex: Unsexed
   userWithoutCloth: true
   targetWithoutCloth: false
   erp: true
-  lovePercent: 15
-
-- type: interaction
-  id: ERPmasturbateSelfFemale
-  name: Мастурбировать себе
-  icon: _Sunrise/Interface/ERP/heartIcon.png
-  emotes:
-  - мастурбирует
-  - мастурбирует, смотря на %target
-  - начинает мастурбировать
-  - начинает мастурбировать, смотря на %target
-  userSex: Female
-  targetSex: Unsexed
-  userWithoutCloth: true
-  targetWithoutCloth: false
-  erp: true
-  lovePercent: 0
-
+  lovePercentUser: 15
+  lovePercentTarget: 2
 
 - type: interaction
   id: ERPbruh
@@ -285,14 +278,14 @@
   userWithoutCloth: false
   targetWithoutCloth: true
   erp: true
-  lovePercent: 15
+  lovePercentUser: 3
+  lovePercentTarget: 15
 
 - type: interaction
   id: ERPbruh2
   name: Заставить отсосать
   icon: _Sunrise/Interface/ERP/heartIcon.png
   emotes:
-  - заставляет отсасывать у себя %target
   - заставляет сосать %target
   - заставляет делать минет %target
   userSex: Male
@@ -300,4 +293,5 @@
   userWithoutCloth: true
   targetWithoutCloth: false
   erp: true
-  lovePercent: 15
+  lovePercentUser: 15
+  lovePercentTarget: 3

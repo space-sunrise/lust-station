@@ -25,7 +25,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         {
             base.Initialize();
             SubscribeLocalEvent<InteractionComponent, ComponentInit>(OnComponentInit);
-            SubscribeLocalEvent<GetVerbsEvent<Verb>>(AddVerbs);
+            SubscribeLocalEvent<InteractionComponent, GetVerbsEvent<Verb>>(AddVerbs);
         }
 
         public (Sex, bool, Sex, bool, bool)? RequestMenu(EntityUid User, EntityUid Target)
@@ -55,36 +55,70 @@ namespace Content.Server._Sunrise.ERP.Systems
             return null;
         }
 
-        public void AddLove(NetEntity entity, NetEntity target, int percent)
+        public void AddLove(NetEntity entity, NetEntity target, int percentUser, int percentTarget)
         {
-            List<EntityUid> ents = new();
-            ents.Add(GetEntity(entity));
-            ents.Add(GetEntity(target));
-            foreach (var ent in ents)
+            var User = GetEntity(entity);
+            var Target = GetEntity(target);
+            if (!TryComp<InteractionComponent>(User, out var compUser)) return;
+            if (!TryComp<InteractionComponent>(Target, out var compTarget)) return;
+
+            if (percentUser != 0)
             {
-                if (!TryComp<HumanoidAppearanceComponent>(ent, out var humanoid)) continue;
-                if (TryComp<InteractionComponent>(ent, out var comp))
+                if (_gameTiming.CurTime > compUser.LoveDelay)
                 {
-                    if (percent != 0)
+                    compUser.ActualLove += (percentUser + _random.Next(-percentUser / 2, percentUser / 2)) / 100f;
+                    compUser.TimeFromLastErp = _gameTiming.CurTime;
+                }
+                Spawn("EffectHearts", Transform(User).Coordinates);
+                if(_random.Prob(0.1f))
+                {
+                    _chat.TryEmoteWithChat(User, "Moan", ChatTransmitRange.Normal);
+                }
+            }
+            if (compUser.Love >= 1)
+            {
+                compUser.ActualLove = 0;
+                compUser.Love = 0.95f;
+                compUser.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
+                _chat.TrySendInGameICMessage(User, "кончает!", InGameICChatType.Emote, false);
+                if(TryComp<HumanoidAppearanceComponent>(User, out var humuser))
+                {
+                    if(humuser.Sex == Sex.Male)
                     {
-                        if (_gameTiming.CurTime > comp.LoveDelay && humanoid.Sex == Sex.Male)
-                        {
-                            comp.ActualLove += (percent + _random.Next(-percent / 2, percent / 2)) / 100f;
-                            comp.TimeFromLastErp = _gameTiming.CurTime;
-                        }
-                        Spawn("EffectHearts", Transform(ent).Coordinates);
+                        Spawn("PuddleSemen", Transform(User).Coordinates);
                     }
-                    if (comp.Love >= 1 && humanoid.Sex == Sex.Male)
+                } 
+            }
+
+            if (percentTarget != 0)
+            {
+                if (_gameTiming.CurTime > compTarget.LoveDelay)
+                {
+                    compTarget.ActualLove += (percentTarget + _random.Next(-percentTarget / 2, percentTarget / 2)) / 100f;
+                    compTarget.TimeFromLastErp = _gameTiming.CurTime;
+                }
+                Spawn("EffectHearts", Transform(Target).Coordinates);
+                if (_random.Prob(0.1f))
+                {
+                    _chat.TryEmoteWithChat(User, "Moan", ChatTransmitRange.Normal);
+                }
+            }
+            if (compTarget.Love >= 1)
+            {
+                compTarget.ActualLove = 0;
+                compTarget.Love = 0.95f;
+                compTarget.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
+                _chat.TrySendInGameICMessage(Target, "кончает!", InGameICChatType.Emote, false);
+                if (TryComp<HumanoidAppearanceComponent>(Target, out var taruser))
+                {
+                    if (taruser.Sex == Sex.Male)
                     {
-                        comp.ActualLove = 0;
-                        comp.Love = 0.95f;
-                        comp.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
-                        _chat.TrySendInGameICMessage(ent, "кончает!", InGameICChatType.Emote, false);
+                        Spawn("PuddleSemen", Transform(Target).Coordinates);
                     }
                 }
             }
         }
-        private void AddVerbs(GetVerbsEvent<Verb> args)
+        private void AddVerbs(EntityUid uid, InteractionComponent comp, GetVerbsEvent<Verb> args)
         {
             if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
                 return;
@@ -98,7 +132,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                 {
                     Priority = -1,
                     Text = "Взаимодействовать с...",
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/Interface/VerbIcons/snow.svg.192dpi.png")), //Не знаю, какую иконку вставить
+                    Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/heart.png")),
                     Act = () =>
                     {
                         if (!args.CanInteract || !args.CanAccess) return;
