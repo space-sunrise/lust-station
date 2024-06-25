@@ -29,7 +29,7 @@
   - extended
   - shittersafari
   name: extended-title
-  showInVote: true # Lust
+  showInVote: true # Lust Station
   description: extended-description
   rules:
   - BasicStationEventScheduler
@@ -112,7 +112,7 @@
   name: death-match-title
   description: death-match-description
   maxPlayers: 15
-  showInVote: false
+  showInVote: false # Lust Station
   supportedMaps: DeathMatchMapPool
   rules:
     - DeathMatch31

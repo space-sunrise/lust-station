@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtSchool
+  id: ClothingUniformJumpskirtJapaneseSchool
   name: school skirt
   description: Japanese school skirt. It looks kinda anime.
   components:

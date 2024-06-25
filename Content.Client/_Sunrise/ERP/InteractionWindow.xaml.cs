@@ -98,14 +98,22 @@ public sealed partial class InteractionWindow : DefaultWindow
             UserDescription.AddChild(new Label { Text = "Вы..." });
             if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
+            UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
             if (UserSex.Value == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
-            else if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
             //Таргет
             TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "..." });
             if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
-            else TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
-            if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
-            else if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+            else
+            {
+                TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
+                TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
+                if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
+                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+            }
+            if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+
         }
         else
         {

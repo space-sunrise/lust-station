@@ -3,7 +3,7 @@
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: []
-  sponsorOnly: false # бесплатно???
+  sponsorOnly: false # Lust Station
   coloring:
     default:
       type:
@@ -27,7 +27,7 @@
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: []
-  sponsorOnly: false # бесплатно???
+  sponsorOnly: false # Lust Station
   coloring:
     default:
       type:

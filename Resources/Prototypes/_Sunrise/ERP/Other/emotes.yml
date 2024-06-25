@@ -1,0 +1,30 @@
+- type: emote
+  id: Moan
+  name: Стонать
+  category: Vocal
+  icon: Interface/Emotes/sigh.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["стонет"]
+  chatTriggers:
+    - стонет
+    - стонет.
+
+
+- type: soundCollection
+  id: MaleMoan
+  files:
+    - /Audio/_Sunrise/ERP/maleston1.ogg
+    - /Audio/_Sunrise/ERP/maleston2.ogg
+
+- type: soundCollection
+  id: FemaleMoan
+  files:
+    - /Audio/_Sunrise/ERP/femston1.ogg
+    - /Audio/_Sunrise/ERP/femston2.ogg
+    - /Audio/_Sunrise/ERP/femston3.ogg
+    - /Audio/_Sunrise/ERP/femston4.ogg

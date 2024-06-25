@@ -13,7 +13,7 @@
 - type: loadout
   id: WhiteNekoBra
   equipment: BraNekoWhite
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -26,7 +26,7 @@
 - type: loadout
   id: BlackNekoBra
   equipment: BraNekoBlack
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -39,7 +39,7 @@
 - type: loadout
   id: AssblastusaBra
   equipment: BraAssblastusa
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -52,7 +52,7 @@
 - type: loadout
   id: BikiniBra
   equipment: BraBikini
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -65,7 +65,7 @@
 - type: loadout
   id: BraletteBra
   equipment: BraBralette
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -78,7 +78,7 @@
 - type: loadout
   id: CommieBra
   equipment: BraCommie
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -91,7 +91,7 @@
 - type: loadout
   id: KinkyBra
   equipment: BraKinky
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -104,7 +104,7 @@
 - type: loadout
   id: LaceBra
   equipment: BraLace
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -117,7 +117,7 @@
 - type: loadout
   id: SportBra
   equipment: BraSport
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -130,7 +130,7 @@
 - type: loadout
   id: ThongBra
   equipment: BraThong
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -143,7 +143,7 @@
 - type: loadout
   id: UkBra
   equipment: BraUk
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment

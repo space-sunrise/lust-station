@@ -15,7 +15,7 @@
 - type: loadout
   id: NekoWhiteWomanPants
   equipment: NekoWhiteWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -28,7 +28,7 @@
 - type: loadout
   id: NekoBlackWomanPants
   equipment: NekoBlackWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -41,7 +41,7 @@
 - type: loadout
   id: AssblastusaWomanPants
   equipment: AssblastusaWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -54,7 +54,7 @@
 - type: loadout
   id: BikiniWomanPants
   equipment: BikiniWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -67,7 +67,7 @@
 - type: loadout
   id: BraletteWomanPants
   equipment: BraletteWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -80,7 +80,7 @@
 - type: loadout
   id: CommieWomanPants
   equipment: CommieWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -93,7 +93,7 @@
 - type: loadout
   id: KinkyWomanPants
   equipment: KinkyWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -106,7 +106,7 @@
 - type: loadout
   id: LaceWomanPants
   equipment: LaceWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -119,7 +119,7 @@
 - type: loadout
   id: SportWomanPants
   equipment: SportWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -132,7 +132,7 @@
 - type: loadout
   id: ThongWomanPants
   equipment: ThongWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -145,7 +145,7 @@
 - type: loadout
   id: UkWomanPants
   equipment: UkWomanPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -172,7 +172,7 @@
 - type: loadout
   id: AssblastusaManPants
   equipment: AssblastusaManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -185,7 +185,7 @@
 - type: loadout
   id: BriefsManPants
   equipment: BriefsManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -198,7 +198,7 @@
 - type: loadout
   id: CommieManPants
   equipment: CommieManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -211,7 +211,7 @@
 - type: loadout
   id: HeartsManPants
   equipment: HeartsManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -224,7 +224,7 @@
 - type: loadout
   id: KinkyManPants
   equipment: KinkyManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -237,7 +237,7 @@
 - type: loadout
   id: LongjohnsManPants
   equipment: LongjohnsManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -250,7 +250,7 @@
 - type: loadout
   id: MankiniManPants
   equipment: MankiniManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -263,7 +263,7 @@
 - type: loadout
   id: StripeManPants
   equipment: StripeManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment
@@ -276,7 +276,7 @@
 - type: loadout
   id: UkManPants
   equipment: UkManPants
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: MaleMoment

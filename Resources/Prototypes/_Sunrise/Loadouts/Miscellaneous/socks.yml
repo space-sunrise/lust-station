@@ -22,7 +22,7 @@
 - type: loadout
   id: FishnetTights
   equipment: FishnetTights
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -35,7 +35,7 @@
 - type: loadout
   id: KneeWhiteSocks
   equipment: KneeWhiteSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeWhiteSocks
@@ -45,7 +45,7 @@
 - type: loadout
   id: KneeAceSocks
   equipment: KneeAceSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeAceSocks
@@ -55,7 +55,7 @@
 - type: loadout
   id: KneeAssblastusaSocks
   equipment: KneeAssblastusaSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeAssblastusaSocks
@@ -65,7 +65,7 @@
 - type: loadout
   id: KneeBeeSocks
   equipment: KneeBeeSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeBeeSocks
@@ -75,7 +75,7 @@
 - type: loadout
   id: KneeBlackSocks
   equipment: KneeBlackSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeBlackSocks
@@ -85,7 +85,7 @@
 - type: loadout
   id: KneeCommieSocks
   equipment: KneeCommieSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeCommieSocks
@@ -95,7 +95,7 @@
 - type: loadout
   id: KneeFishnetSocks
   equipment: KneeFishnetSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -108,7 +108,7 @@
 - type: loadout
   id: KneeRainbowSocks
   equipment: KneeRainbowSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeRainbowSocks
@@ -118,7 +118,7 @@
 - type: loadout
   id: KneeStripedSocks
   equipment: KneeStripedSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeStripedSocks
@@ -128,7 +128,7 @@
 - type: loadout
   id: KneeThinSocks
   equipment: KneeThinSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeThinSocks
@@ -138,7 +138,7 @@
 - type: loadout
   id: KneeTransSocks
   equipment: KneeTransSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeTransSocks
@@ -148,7 +148,7 @@
 - type: loadout
   id: KneeUkSocks
   equipment: KneeUkSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: KneeUkSocks
@@ -158,7 +158,7 @@
 - type: loadout
   id: NormBlackSocks
   equipment: NormBlackSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: NormBlackSocks
@@ -168,7 +168,7 @@
 - type: loadout
   id: NormWhiteSocks
   equipment: NormWhiteSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: NormWhiteSocks
@@ -178,7 +178,7 @@
 - type: loadout
   id: Pantyhose
   equipment: Pantyhose
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -191,7 +191,7 @@
 - type: loadout
   id: ShortBlackSocks
   equipment: ShortBlackSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
 
 - type: startingGear
   id: ShortBlackSocks
@@ -201,7 +201,7 @@
 - type: loadout
   id: StockingsBlue
   equipment: StockingsBlue
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -214,7 +214,7 @@
 - type: loadout
   id: StockingsCyan
   equipment: StockingsCyan
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -227,7 +227,7 @@
 - type: loadout
   id: StockingsDpink
   equipment: StockingsDpink
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -240,7 +240,7 @@
 - type: loadout
   id: StockingsGreen
   equipment: StockingsGreen
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -253,7 +253,7 @@
 - type: loadout
   id: Stockingslpink
   equipment: Stockingslpink
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -266,7 +266,7 @@
 - type: loadout
   id: StockingsOrange
   equipment: StockingsOrange
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -279,7 +279,7 @@
 - type: loadout
   id: StockingsPurple
   equipment: StockingsPurple
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -292,7 +292,7 @@
 - type: loadout
   id: ThighAceSocks
   equipment: ThighAceSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -305,7 +305,7 @@
 - type: loadout
   id: ThighAsblastusaSocks
   equipment: ThighAsblastusaSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -318,7 +318,7 @@
 - type: loadout
   id: ThighBeeSocks
   equipment: ThighBeeSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -331,7 +331,7 @@
 - type: loadout
   id: ThighBlackSocks
   equipment: ThighBlackSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -344,7 +344,7 @@
 - type: loadout
   id: ThighCommieSocks
   equipment: ThighCommieSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -357,7 +357,7 @@
 - type: loadout
   id: ThighRainbowSocks
   equipment: ThighRainbowSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -370,7 +370,7 @@
 - type: loadout
   id: ThighTransSocks
   equipment: ThighTransSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
@@ -383,7 +383,7 @@
 - type: loadout
   id: ThighUkSocks
   equipment: ThighUkSocks
-  sponsorOnly: false
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment

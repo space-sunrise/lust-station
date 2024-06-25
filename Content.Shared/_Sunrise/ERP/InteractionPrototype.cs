@@ -37,5 +37,6 @@ public sealed partial class InteractionPrototype : IPrototype
 
     [DataField] public bool Erp = false; // Это ЕРП-действие?
 
-    [DataField] public int LovePercent = 0; // Сколько процентов добавлять к шкале "окончания"
+    [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
+    [DataField] public int LovePercentTarget = 0; // Сколько процентов добавлять к шкале "окончания"
 }

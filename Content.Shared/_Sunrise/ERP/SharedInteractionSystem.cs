@@ -33,13 +33,15 @@ namespace Content.Shared._Sunrise.ERP
     {
         public NetEntity User;
         public NetEntity Target;
-        public int Percent;
+        public int PercentUser;
+        public int PercentTarget;
 
-        public AddLoveMessage(NetEntity user, NetEntity target, int percent)
+        public AddLoveMessage(NetEntity user, NetEntity target, int percentUser, int percentTarget)
         {
             User = user;
             Target = target;
-            Percent = percent;
+            PercentUser = percentUser;
+            PercentTarget = percentTarget;
         }
     }
 
