@@ -1,0 +1,32 @@
+- type: entity
+  parent: VendingMachine
+  id: VendingMachineKink
+  name: KinkMate
+  description: A kinky vending machine.
+  components:
+  - type: VendingMachine
+    pack: KinkMateInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: KinkMateAds
+  - type: Speech
+  - type: Tag
+    tags:
+      - DroneUsable
+  - type: Sprite
+    sprite: _Lust/Structures/Machines/VendingMachines/kinkmate.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.8
+    energy: 1.6
+    color: "#ff54f7"
