@@ -1,0 +1,25 @@
+- type: entity
+  parent: BaseItem
+  id: ERPNormalDildo
+  name: normal dildo
+  description: Just a based dildo, nothing else. Should I tell you where you can put it?
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/dildo.rsi
+    state: icon
+  - type: Item
+    size: Tiny
+    sprite: _Lust/ERP/Toys/dildo.rsi
+
+- type: entity
+  parent: BaseItem
+  id: ERPNormalFleshlight
+  name: normal fleshlight
+  description: Just a based fleshlight, nothing else. Should I tell you what you can put inside?
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/fleshlight.rsi
+    state: icon
+  - type: Item
+    size: Tiny
+    sprite: _Lust/ERP/Toys/fleshlight.rsi
