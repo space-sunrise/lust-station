@@ -17,6 +17,8 @@
       collection: Whistles
     Mew:
       collection: FelinidMews
+    Moan:
+      collection: FelinidMews
     Meow:
       collection: FelinidMeows
     Hisses:
@@ -44,6 +46,8 @@
     Whistle:
       collection: Whistles
     Mew:
+      collection: FelinidMews
+    Moan:
       collection: FelinidMews
     Meow:
       collection: FelinidMeows
@@ -83,6 +87,8 @@
       collection: BikeHorn
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Crying:
       collection: MaleCry
     Whistle:
@@ -107,6 +113,8 @@
       collection: Whistles
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Growl:
       collection: VulpkaninGrowls
     Howl:
@@ -133,6 +141,8 @@
       collection: Whistles
     Sigh:
       collection: FemaleSigh
+    Moan:
+      collection: FemaleMoan
     Growl:
       collection: VulpkaninGrowls
     Howl:
@@ -165,6 +175,8 @@
       collection: Snores
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Honk:
       collection: BikeHorn
     Crying:

@@ -1,0 +1,297 @@
+- type: interaction
+  id: handshake
+  name: Пожать руку
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - жмёт руку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: hug
+  name: Обнять
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - обнимает %target
+  - крепко обнимает %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: highfive
+  name: Дать пять
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - даёт пять %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: pethead
+  name: Погладить по головке
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - гладит %target по голове
+  - гладит %target по головке
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+# Erp (help)
+
+
+- type: interaction
+  id: ERPfeet1
+  name: Вылизать ножки
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - лижет ножки %target
+  - начинает лизать ножки %target
+  - подносит свой рот к ножкам %target, и начинает их лизать
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 2
+
+- type: interaction
+  id: ERPkiss
+  name: Поцеловать
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует %target
+  - нежно целует %target
+  - слегка целует %target
+  - целует %target, заводя руку за шею и прижимая к себе
+  - нежно целует %target, заводя руку за шею и прижимая к себе
+  - слегка целует %target, заводя руку за шею и прижимая к себе
+  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+  - целует %target, заводя руку за шею
+  - нежно целует %target, заводя руку за шею
+  - слегка целует %target, заводя руку за шею
+  - настойчиво целует %target, заводя руку за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 5
+  lovePercentTarget: 6
+
+- type: interaction
+  id: ERPkiss2
+  name: Поцеловать шею
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует %target за шею
+  - нежно целует %target за шею
+  - слегка целует %target за шею
+  - настойчиво целует %target за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 5
+  lovePercentTarget: 6
+
+- type: interaction
+  id: ERPbreast1
+  name: Сжать грудь в ладони
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает грудь %target
+  - аккуратно сжимает грудь %target
+  - резко сжимает грудь %target
+  - сжимает грудь %target в ладони
+  - аккуратно сжимает грудь %target в ладони
+  - резко сжимает грудь %target в ладони
+  - лапает грудь %target
+  - мнёт грудь %target
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 10
+
+- type: interaction
+  id: ERPbreast2
+  name: Пососать соски
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сосёт соски %target
+  - аккуратно сосёт соски %target
+  - резко сосёт соски %target
+  - нежно сосёт соски %target
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 5
+  lovePercentTarget: 13
+
+- type: interaction
+  id: ERPanusInsert
+  name: Проникнуть в задницу
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - проникает в задницу %target
+  - проникнул в задницу %target
+  - резко проникает в задницу %target
+  - делает аккуратное проникновение в задницу %target
+  - делает резкое проникновение в задницу %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 20
+  lovePercentTarget: 20
+
+- type: interaction
+  id: ERPvaginaInsert
+  name: Проникнуть в вагину
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - проникает в вагину %target
+  - проникнул в вагину %target
+  - резко проникает в вагину %target
+  - делает аккуратное проникновение в вагину %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 20
+  lovePercentTarget: 20
+
+- type: interaction
+  id: ERPvaginaLick
+  name: Вылизать вагину
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - нежно лижет вагину %target
+  - вылизывает вагину %target
+  - лижет вагинут %target
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 12
+
+- type: interaction
+  id: ERPmasturbate
+  name: Мастурбировать
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - аккуратно мастурбирует %target'у
+  - мастурбирует %target'у
+  - резко начинает мастурбировать %target'у
+  - начинает мастурбировать %target'у
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 15
+
+- type: interaction
+  id: ERPmasturbateSelf
+  name: Мастурбировать себе
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - мастурбирует
+  - мастурбирует, смотря на %target
+  - начинает мастурбировать
+  - начинает мастурбировать, смотря на %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 15
+  lovePercentTarget: 2
+
+- type: interaction
+  id: ERPbruh
+  name: Отсосать
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - отсасывает у %target
+  - сосёт у %target
+  - делает минет %target
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 15
+
+- type: interaction
+  id: ERPbruh2
+  name: Заставить отсосать
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - заставляет сосать %target
+  - заставляет делать минет %target
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 15
+  lovePercentTarget: 3

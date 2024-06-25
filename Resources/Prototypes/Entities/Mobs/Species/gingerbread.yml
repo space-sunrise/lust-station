@@ -5,6 +5,8 @@
   id: BaseMobGingerbread
   abstract: true
   components:
+  - type: Interaction
+    erp: true
   - type: HumanoidAppearance
     species: Gingerbread
   - type: Icon

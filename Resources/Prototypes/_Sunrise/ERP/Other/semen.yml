@@ -1,0 +1,28 @@
+- type: reagent
+  id: Semen
+  name: семя
+  group: Foods
+  desc: Продукт чьего-то производства..
+  physicalDesc: липкое
+  flavor: semen
+  color: white
+  recognizable: true
+
+- type: flavor
+  id: semen
+  flavorType: Complex
+  description: как семя
+
+- type: entity
+  id: PuddleSemen
+  name: лужа
+  parent: PuddleTemporary
+  suffix: семя
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Semen
+          Quantity: 2

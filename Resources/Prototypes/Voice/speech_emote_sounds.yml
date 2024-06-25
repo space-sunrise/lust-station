@@ -28,6 +28,8 @@
       collection: BikeHorn
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Crying:
       collection: MaleCry
     Whistle:
@@ -68,6 +70,8 @@
       collection: CluwneHorn
     Sigh:
       collection: FemaleSigh
+    Moan:
+      collection: FemaleMoan
     Crying:
       collection: FemaleCry
     Whistle:
@@ -152,6 +156,8 @@
       collection: BikeHorn
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Crying:
       collection: MaleCry
     Whistle:
@@ -194,6 +200,8 @@
       collection: CluwneHorn
     Sigh:
       collection: FemaleSigh
+    Moan:
+      collection: FemaleMoan
     Crying:
       collection: FemaleCry
     Whistle:
@@ -281,6 +289,8 @@
       collection: Snores
     Sigh:
       collection: MaleSigh
+    Moan:
+      collection: MaleMoan
     Honk:
       collection: BikeHorn
     Crying:
@@ -322,6 +332,8 @@
       collection: Snores
     Sigh:
       collection: FemaleSigh
+    Moan:
+      collection: FemaleMoan
     Honk:
       collection: BikeHorn
     Crying:

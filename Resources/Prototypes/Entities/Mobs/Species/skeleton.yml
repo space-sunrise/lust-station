@@ -7,6 +7,8 @@
   id: BaseMobSkeletonPerson
   abstract: true
   components:
+  - type: Interaction
+    erp: false
   - type: HumanoidAppearance
     species: Skeleton
   - type: Icon
