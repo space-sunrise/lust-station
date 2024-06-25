@@ -1,2 +1,2 @@
-changelog-tab-title-ChangelogSunrise = Обновления Sunrise
-changelog-sunrise-window-title = Sunrise Changelog
+changelog-tab-title-ChangelogSunrise = Обновления Lust Station
+changelog-sunrise-window-title = Lust Station Changelog
