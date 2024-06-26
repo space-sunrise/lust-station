@@ -4,6 +4,8 @@ using Robust.Shared.Utility;
 using Robust.Shared.Audio;
 using Content.Shared.Humanoid;
 namespace Content.Shared._Sunrise.ERP;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 [Prototype("interaction")]
 public sealed partial class InteractionPrototype : IPrototype
@@ -39,4 +41,6 @@ public sealed partial class InteractionPrototype : IPrototype
 
     [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
     [DataField] public int LovePercentTarget = 0; // Сколько процентов добавлять к шкале "окончания"
+    [DataField("inhandObject", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    public string InhandObject = string.Empty;
 }

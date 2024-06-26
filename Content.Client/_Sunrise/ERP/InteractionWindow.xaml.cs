@@ -12,6 +12,7 @@ using Robust.Shared.Prototypes;
 using Robust.Client.Graphics;
 using Robust.Shared.Timing;
 using System.Linq;
+using Content.Shared.Hands.Components;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
@@ -51,8 +52,52 @@ public sealed partial class InteractionWindow : DefaultWindow
     private void PopulateByFilter(string filter)
     {
         ItemInteractions.Clear();
+        if (!_player.LocalEntity.HasValue) return;
+        var uid = _player.LocalEntity.Value;
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
         {
+            if(proto.InhandObject != string.Empty)
+            {
+                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                {
+                    if (hands.ActiveHand == null) continue;
+                    if (hands.ActiveHand.Container == null) continue;
+                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
+                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
+                    if (meta.EntityPrototype == null) continue;
+                    if (meta.EntityPrototype.ID != proto.InhandObject) continue;
+                }
+                else continue;
+            }
+            if (proto.Erp) continue;
+            if (string.IsNullOrEmpty(filter) ||
+                proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
+            {
+                var texture = _spriteSystem.Frame0(proto.Icon);
+                if (UserHasClothing && proto.UserWithoutCloth) continue;
+                if (TargetHasClothing && proto.TargetWithoutCloth) continue;
+                if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
+                if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
+                if (!Erp && proto.Erp) continue;
+                ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+            }
+        }
+        foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
+        {
+            if (proto.InhandObject != string.Empty)
+            {
+                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                {
+                    if (hands.ActiveHand == null) continue;
+                    if (hands.ActiveHand.Container == null) continue;
+                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
+                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
+                    if (meta.EntityPrototype == null) continue;
+                    if (meta.EntityPrototype.ID != proto.InhandObject) continue;
+                }
+                else continue;
+            }
+            if (!proto.Erp) continue;
             if (string.IsNullOrEmpty(filter) ||
                 proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
             {
@@ -120,28 +165,7 @@ public sealed partial class InteractionWindow : DefaultWindow
             ErpProgress.Dispose();
         }
         //Сделать адекватнее бы
-        foreach (var proto in prototypes)
-        {
-            if (proto.Erp) continue;
-            var texture = _spriteSystem.Frame0(proto.Icon);
-            if (UserHasClothing && proto.UserWithoutCloth) continue;
-            if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-            if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-            if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-            if (!Erp && proto.Erp) continue;
-            ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
-        }
-        foreach (var proto in prototypes)
-        {
-            if (!proto.Erp) continue;
-            var texture = _spriteSystem.Frame0(proto.Icon);
-            if (UserHasClothing && proto.UserWithoutCloth) continue;
-            if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-            if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-            if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-            if (!Erp && proto.Erp) continue;
-            ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
-        }
+        PopulateByFilter(SearchBar.Text);
         ItemInteractions.OnItemSelected += _eui.OnItemSelect;
     }
 }

@@ -10,6 +10,10 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/dildo.rsi
+  - type: ERPToy
+    genitalTagList:
+    - anal
+    - vagina
 
 - type: entity
   parent: BaseItem
@@ -23,3 +27,7 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fleshlight.rsi
+  - type: ERPToy
+    genitalTagList:
+    - penis
+    - vagina
