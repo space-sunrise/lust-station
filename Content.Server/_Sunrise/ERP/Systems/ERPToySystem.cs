@@ -1,10 +1,5 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
 using Content.Shared._Sunrise.ERP.Components;
-using Content.Shared.Database;
-using Content.Shared.Verbs;
-using Robust.Shared.Player;
-using Robust.Shared.Utility;
-using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 using Content.Server.EUI;
 using Content.Shared.Humanoid;
@@ -34,7 +29,6 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void Initialize()
         {
             base.Initialize();
-            SubscribeLocalEvent<ERPToyComponent, ComponentInit>(OnComponentInit);
             SubscribeLocalEvent<ERPToyComponent, UseInHandEvent>(OnUseInHand);
             SubscribeLocalEvent<ERPToyComponent, AfterInteractEvent>(OnAfterInteract);
             SubscribeLocalEvent<InteractionComponent, ERPToyDoAfterEvent>(OnDoAfter);
@@ -142,8 +136,5 @@ namespace Content.Server._Sunrise.ERP.Systems
             _popup.PopupEntity($"{Identity.Name(uid, EntityManager, args.User)} теперь используется на {usingGenital}", args.User, args.User, PopupType.Small);
         }
 
-        private void OnComponentInit(EntityUid uid, ERPToyComponent component, ComponentInit args)
-        {
-        }
     }
 }
