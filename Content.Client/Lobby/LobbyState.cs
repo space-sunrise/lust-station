@@ -66,7 +66,7 @@ namespace Content.Client.Lobby
 
             Lobby!.LocalChangelogBody.CleanChangelog();
 
-            var sunriseChangelog = new ResPath("/Changelog/ChangelogSunrise.yml");
+            var sunriseChangelog = new ResPath("/Changelog/ChangelogLust.yml");
 
             var yamlData = _resource.ContentFileReadYaml(sunriseChangelog);
 
