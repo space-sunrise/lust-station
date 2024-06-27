@@ -77,7 +77,7 @@
                             <BoxContainer Orientation="Vertical" SetSize="550 300" VerticalExpand="True">
                                 <controls:StripeBack>
                                     <BoxContainer Orientation="Horizontal">
-                                        <Label HorizontalExpand="True" Text="{Loc 'changelog-sunrise-window-title'}" VAlign="Center"
+                                        <Label HorizontalExpand="True" Text="{Loc 'changelog-lust-window-title'}" VAlign="Center"
                                                StyleClasses="LabelHeading" Align="Center"/>
                                     </BoxContainer>
                                 </controls:StripeBack>
