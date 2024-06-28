@@ -21,9 +21,9 @@ SERVER_FILES = [
 
 VERSION = os.environ['GITHUB_SHA']
 FORK_ID = "sunrise"
-BUILD_URL = f"https://shizainc.com/sunrise_builds/sunrise/builds/{{FORK_VERSION}}/{FILE}"
-MANIFEST_URL = f"https://shizainc.com/sunrise_cdn/version/{{FORK_VERSION}}/manifest"
-MANIFEST_DOWNLOAD_URL = f"https://shizainc.com/sunrise_cdn/version/{{FORK_VERSION}}/download"
+BUILD_URL = f"https://shizainc.com/sunrise_builds/lust/builds/{{FORK_VERSION}}/{FILE}"
+MANIFEST_URL = f"https://shizainc.com/lust_cdn/version/{{FORK_VERSION}}/manifest"
+MANIFEST_DOWNLOAD_URL = f"https://shizainc.com/lust_cdn/version/{{FORK_VERSION}}/download"
 
 def main() -> None:
     client_file = os.path.join("release", FILE)
