@@ -1,0 +1,305 @@
+- type: construction
+  name: sofa left side
+  id: BlackSofaLeftSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: blacksofaleft
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/black_sofa.rsi
+    state: sofa_left
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: sofa middle
+  id: BlackSofaMiddleRecipe
+  graph: Seat
+  startNode: start
+  targetNode: blacksofamiddle
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/black_sofa.rsi
+    state: sofa_middle
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: sofa right side
+  id: BlackSofaRightSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: blacksofaright
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/black_sofa.rsi
+    state: sofa_right
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: black armchair
+  id: BlackArmchairRecipe
+  graph: Seat
+  startNode: start
+  targetNode: blackchair
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/black_chair.rsi
+    state: armchair
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: DoubleBedTopRecipe
+  name: double bed top
+  description: You now, hot to use it.
+  graph: bed
+  startNode: start
+  targetNode: doublebedtop
+  category: construction-category-furniture
+  icon:
+    sprite: _Lust/Structures/Furniture/doublebed.rsi
+    state: top
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: DoubleBedBottomRecipe
+  name: double bed bottom
+  description: You now, hot to use it.
+  graph: bed
+  startNode: start
+  targetNode: doublebedbottom
+  category: construction-category-furniture
+  icon:
+    sprite: ADT/Structures/Furniture/doublebed.rsi
+    state: bottom
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: red sofa left side
+  id: RedSofaLeftSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: redsofaleft
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/red_sofa.rsi
+    state: sofa_left
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: red sofa middle
+  id: RedSofaMiddleRecipe
+  graph: Seat
+  startNode: start
+  targetNode: redsofamiddle
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/red_sofa.rsi
+    state: sofa_middle
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: red sofa right side
+  id: RedSofaRightSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: redsofaright
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/red_sofa.rsi
+    state: sofa_right
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: violet sofa left side
+  id: VioletSofaLeftSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: violetsofaleft
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/violet_sofa.rsi
+    state: sofa_left
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: violet sofa middle
+  id: VioletSofaMiddleRecipe
+  graph: Seat
+  startNode: start
+  targetNode: violetsofamiddle
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/violet_sofa.rsi
+    state: sofa_middle
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: violet sofa right side
+  id: VioletSofaRightSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: violetsofaright
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/violet_sofa.rsi
+    state: sofa_right
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: leather sofa left side
+  id: LeatherSofaLeftSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: leathersofaleft
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/leather_sofa.rsi
+    state: sofa_left
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: leather sofa middle
+  id: LeatherSofaMiddleRecipe
+  graph: Seat
+  startNode: start
+  targetNode: leathersofamiddle
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/leather_sofa.rsi
+    state: sofa_middle
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: leather sofa right side
+  id: LeatherSofaRightSideRecipe
+  graph: Seat
+  startNode: start
+  targetNode: leathersofaright
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/leather_sofa.rsi
+    state: sofa_right
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: violet armchair
+  id: VioletArmchairRecipe
+  graph: Seat
+  startNode: start
+  targetNode: violetchair
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/yuna_chairs.rsi
+    state: kreslo_fiol
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: red armchair
+  id: RedArmchairRecipe
+  graph: Seat
+  startNode: start
+  targetNode: redchair
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/yuna_chairs.rsi
+    state: kreslo_red
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  name: leather armchair
+  id: LeatherArmchairRecipe
+  graph: Seat
+  startNode: start
+  targetNode: leatherchair
+  category: construction-category-furniture
+  description: It looks comfy.
+  icon:
+    sprite: _Lust/Structures/Furniture/yuna_chairs.rsi
+    state: kreslo_kor
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked

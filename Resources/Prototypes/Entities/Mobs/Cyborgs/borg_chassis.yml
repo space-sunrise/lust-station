@@ -257,6 +257,8 @@
   name: service cyborg
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/service_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: service
     - state: service_e_r
@@ -277,7 +279,7 @@
     noMindState: service_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/service_borg.rsi
       state: service
     name: service cyborg
   - type: Construction
