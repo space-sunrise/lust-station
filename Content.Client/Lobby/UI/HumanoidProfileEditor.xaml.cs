@@ -1222,7 +1222,6 @@ namespace Content.Client.Lobby.UI
             // In case there's species restrictions for loadouts
             RefreshLoadouts();
             UpdateSexControls(); // update sex for new species
-            UpdateErpControls();
             UpdateSpeciesGuidebookIcon();
             SetDirty();
             ReloadPreview();
@@ -1339,7 +1338,7 @@ namespace Content.Client.Lobby.UI
             if (erps.Contains(Profile.Erp))
                 ErpButton.SelectId((int) Profile.Erp);
             else
-                ErpButton.SelectId((int) erps[1]);
+                ErpButton.SelectId((int) erps[2]);
         }
 
         private void UpdateSkinColor()

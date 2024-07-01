@@ -142,6 +142,7 @@ namespace Content.Shared.Preferences
             string voice, // Sunrise-TTS
             int age,
             Sex sex,
+            Erp erp,
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -157,6 +158,7 @@ namespace Content.Shared.Preferences
             Voice = voice; // Sunrise-TTS
             Age = age;
             Sex = sex;
+            Erp = erp;
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -189,6 +191,7 @@ namespace Content.Shared.Preferences
                 other.Voice,
                 other.Age,
                 other.Sex,
+                other.Erp,
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -482,6 +485,7 @@ namespace Content.Shared.Preferences
             if (Name != other.Name) return false;
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
+            if (Erp != other.Erp) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
