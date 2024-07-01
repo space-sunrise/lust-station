@@ -88,6 +88,9 @@ namespace Content.Shared.Preferences
         public int Age { get; set; } = 18;
 
         [DataField]
+        public Erp Erp { get; set; } = Erp.Ask;
+
+        [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
 
         [DataField]
@@ -298,6 +301,11 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithSex(Sex sex)
         {
             return new(this) { Sex = sex };
+        }
+
+        public HumanoidCharacterProfile WithErp(Erp erp)
+        {
+            return new(this) { Erp = erp };
         }
 
         public HumanoidCharacterProfile WithGender(Gender gender)

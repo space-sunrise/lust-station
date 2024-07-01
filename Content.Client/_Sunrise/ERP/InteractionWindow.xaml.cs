@@ -53,6 +53,7 @@ public sealed partial class InteractionWindow : DefaultWindow
     {
         ItemInteractions.Clear();
         if (!_player.LocalEntity.HasValue) return;
+        if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
         {
@@ -70,6 +71,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                 else continue;
             }
             if (proto.Erp) continue;
+            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
             if (string.IsNullOrEmpty(filter) ||
                 proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
             {
@@ -98,6 +100,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                 else continue;
             }
             if (!proto.Erp) continue;
+            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
             if (string.IsNullOrEmpty(filter) ||
                 proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
             {
@@ -148,16 +151,19 @@ public sealed partial class InteractionWindow : DefaultWindow
             if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
             if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
             //Таргет
-            TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "..." });
-            if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
-            else
+            if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
             {
-                TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
-                TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
-                if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
-                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "..." });
+                if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
+                else
+                {
+                    TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
+                    TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
+                    if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
+                    if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+                }
+                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
             }
-            if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
 
         }
         else

@@ -285,6 +285,7 @@ namespace Content.Server.Database
             profile.Voice = humanoid.Voice; // Sunrise-TTS
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
+            profile.Erp = humanoid.Erp.ToString(); // Lust-ERP
             profile.Gender = humanoid.Gender.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();

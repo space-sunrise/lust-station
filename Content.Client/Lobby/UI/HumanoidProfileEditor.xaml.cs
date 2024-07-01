@@ -172,6 +172,16 @@ namespace Content.Client.Lobby.UI
 
             #endregion Sex
 
+            #region Erp
+
+            ErpButton.OnItemSelected += args =>
+            {
+                ErpButton.SelectId(args.Id);
+                SetErp((Erp) args.Id);
+            };
+
+            #endregion Erp
+
             #region Age
 
             AgeEdit.OnTextChanged += args =>
@@ -735,6 +745,7 @@ namespace Content.Client.Lobby.UI
             UpdateNameEdit();
             UpdateFlavorTextEdit();
             UpdateSexControls();
+            UpdateErpControls();
             UpdateGenderControls();
             UpdateSkinColor();
             //UpdateSpawnPriorityControls();
@@ -1180,6 +1191,12 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
+        private void SetErp(Erp newErp)
+        {
+            Profile = Profile?.WithErp(newErp);
+            SetDirty();
+        }
+
         private void SetGender(Gender newGender)
         {
             Profile = Profile?.WithGender(newGender);
@@ -1205,6 +1222,7 @@ namespace Content.Client.Lobby.UI
             // In case there's species restrictions for loadouts
             RefreshLoadouts();
             UpdateSexControls(); // update sex for new species
+            UpdateErpControls();
             UpdateSpeciesGuidebookIcon();
             SetDirty();
             ReloadPreview();
@@ -1297,6 +1315,31 @@ namespace Content.Client.Lobby.UI
                 SexButton.SelectId((int) Profile.Sex);
             else
                 SexButton.SelectId((int) sexes[0]);
+        }
+
+        private void UpdateErpControls()
+        {
+            if (Profile == null)
+                return;
+
+            ErpButton.Clear();
+
+            var erps = new List<Erp>
+            {
+                Erp.Yes,
+                Erp.Ask,
+                Erp.No
+            };
+            // add button for each sex
+            foreach (var sex in erps)
+            {
+                ErpButton.AddItem(Loc.GetString($"humanoid-profile-editor-erp-{sex.ToString().ToLower()}-text"), (int) sex);
+            }
+
+            if (erps.Contains(Profile.Erp))
+                ErpButton.SelectId((int) Profile.Erp);
+            else
+                ErpButton.SelectId((int) erps[1]);
         }
 
         private void UpdateSkinColor()
