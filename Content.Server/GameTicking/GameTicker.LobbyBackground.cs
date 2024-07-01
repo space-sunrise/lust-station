@@ -40,16 +40,7 @@ public sealed partial class GameTicker
     [ViewVariables]
     private readonly List<LobbyImage> _lobbyImages = new ()
     {
-        new LobbyImage(){Path = "Mobs/Demons/ratvar.rsi", State = "ratvar", Scale = new Vector2(1.15f, 1.15f)},
-        new LobbyImage(){Path = "_Sunrise/96x96megafauna.rsi", State = "bubblegum", Scale = new Vector2(4f, 4f)},
-        new LobbyImage(){Path = "_Sunrise/96x96megafauna.rsi", State = "mega_legion", Scale = new Vector2(4f, 4f)},
-        new LobbyImage(){Path = "_Sunrise/hulk.rsi", State = "Champion of Honk", Scale = new Vector2(6f, 6f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "kha'rin", Scale = new Vector2(1f, 1f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "narbee", Scale = new Vector2(1f, 1f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "narsie", Scale = new Vector2(1f, 1f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "reaper", Scale = new Vector2(1f, 1f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "legion", Scale = new Vector2(1f, 1f)},
-        new LobbyImage(){Path = "_Sunrise/narsie.rsi", State = "narsie-chains", Scale = new Vector2(1f, 1f)}
+        new LobbyImage(){Path = "_Lust/Parallax/silicons.rsi", State = "silicon_sit", Scale = new Vector2(10f, 10f)}
     };
 
     private void InitializeLobbyBackground()

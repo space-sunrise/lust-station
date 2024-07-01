@@ -92,6 +92,8 @@
   name: engineer cyborg
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/engineer_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: engineer
     - state: engineer_e_r
@@ -112,7 +114,7 @@
     noMindState: engineer_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/engineer_borg.rsi
       state: engineer
     name: engineer cyborg
   - type: Construction
@@ -196,6 +198,8 @@
   name: medical cyborg
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/medical_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: medical
       map: ["movement"]
@@ -224,7 +228,7 @@
     noMindState: medical_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/medical_borg.rsi
       state: medical
     name: medical cyborg
   - type: Construction

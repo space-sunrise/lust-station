@@ -1,0 +1,28 @@
+﻿{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Adapted by SShved, discord: sshvedik. Taken from modified S.P.L.U.R.T build - BlueMoon, https://github.com/BlueMoon-Labs/MOLOT-BlueMoon-Station",
+  "states": [
+    {
+      "name": "medical",
+      "directions": 4
+    },
+    {
+      "name": "medical_e",
+      "directions": 4
+    },
+    {
+      "name": "medical_e_r",
+      "directions": 4
+    },
+    {
+      "name": "medical_l",
+      "directions": 4
+    }
+
+  ]
+}
