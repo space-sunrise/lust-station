@@ -13,6 +13,11 @@ using Robust.Client.Graphics;
 using Robust.Shared.Timing;
 using System.Linq;
 using Content.Shared.Hands.Components;
+using Robust.Shared.Utility;
+using Content.Client.Stylesheets;
+using Content.Shared._Sunrise.ERP.Components;
+using System.IO;
+using Microsoft.CodeAnalysis.Operations;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
@@ -42,6 +47,76 @@ public sealed partial class InteractionWindow : DefaultWindow
         LoveBar = ProgressBar;
         SearchBar.OnTextChanged += SearchBarOnOnTextChanged;
         ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: Color.Pink);
+        ButtonGroup Group = new();
+        InteractionButton.Group = Group;
+        DescriptionButton.Group = Group;
+        InteractionButton.Pressed = true;
+        InteractionButton.OnPressed += SetModeToInteraction;
+        DescriptionButton.OnPressed += SetModeToDescription;
+    }
+
+    private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
+    {
+        SearchBar.Visible = true;
+        ItemInteractions.Visible = true;
+        DescriptionContainer.Visible = false;
+    }
+
+    private void SetModeToDescription(BaseButton.ButtonEventArgs obj)
+    {
+        SearchBar.Visible = false;
+        ItemInteractions.Visible = false;
+        DescriptionContainer.Visible = true;
+        DescriptionPopulate();
+    }
+
+    private void DescriptionPopulate()
+    {
+        TextureLeft.DisposeAllChildren();
+        TextureRight.DisposeAllChildren();
+
+        if (!_player.LocalEntity.HasValue) return;
+        if (!UserSex.HasValue) return;
+        if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var UserInteraction)) return;
+        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var UserHumanoid)) return;
+        SpriteLeft.SetEntity(_player.LocalEntity.Value);
+        UserName.Text = $"{Identity.Name(_player.LocalEntity.Value, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
+        UserName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
+        foreach (var i in UserInteraction.GenitalSprites)
+        {
+            if (UserHasClothing) break;
+            var t = new TextureRect();
+            t.TexturePath = i;
+            t.SetSize = new(125, 125);
+            t.VerticalAlignment = VAlignment.Top;
+            t.HorizontalAlignment = HAlignment.Center;
+            t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
+            t.Modulate = UserHumanoid.SkinColor;
+            t.Margin = new(15);
+            TextureLeft.AddChild(t);
+        }
+
+        if (!TargetEntityId.HasValue) return;
+        if (!TargetSex.HasValue) return;
+        if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var TargetInteraction)) return;
+        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var TargetHumanoid)) return;
+        var target = _entManager.GetEntity(TargetEntityId.Value);
+        SpriteRight.SetEntity(target);
+        TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
+        TargetName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
+        foreach (var i in TargetInteraction.GenitalSprites)
+        {
+            if (TargetHasClothing) break;
+            var t = new TextureRect();
+            t.TexturePath = i;
+            t.SetSize = new(125, 125);
+            t.VerticalAlignment = VAlignment.Top;
+            t.HorizontalAlignment = HAlignment.Center;
+            t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
+            t.Margin = new(15);
+            t.Modulate = TargetHumanoid.SkinColor;
+            TextureRight.AddChild(t);
+        }
     }
 
     private void SearchBarOnOnTextChanged(LineEdit.LineEditEventArgs obj)
@@ -57,7 +132,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         var uid = _player.LocalEntity.Value;
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
         {
-            if(proto.InhandObject != string.Empty)
+            if(proto.InhandObject.Count > 0)
             {
                 if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
                 {
@@ -66,7 +141,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                     if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
                     if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
                     if (meta.EntityPrototype == null) continue;
-                    if (meta.EntityPrototype.ID != proto.InhandObject) continue;
+                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
                 }
                 else continue;
             }
@@ -86,7 +161,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         }
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
         {
-            if (proto.InhandObject != string.Empty)
+            if (proto.InhandObject.Count > 0)
             {
                 if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
                 {
@@ -95,7 +170,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                     if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
                     if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
                     if (meta.EntityPrototype == null) continue;
-                    if (meta.EntityPrototype.ID != proto.InhandObject) continue;
+                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
                 }
                 else continue;
             }
@@ -120,7 +195,7 @@ public sealed partial class InteractionWindow : DefaultWindow
 
         if(_gameTiming.CurTime > UntilUpdate)
         {
-            UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(5);
+            UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
             _eui.RequestState();
         }
         _eui.RequestLove();
@@ -170,8 +245,13 @@ public sealed partial class InteractionWindow : DefaultWindow
         {
             ErpProgress.Dispose();
         }
-        //Сделать адекватнее бы
-        PopulateByFilter(SearchBar.Text);
+        if(DescriptionContainer.Visible)
+        {
+            DescriptionPopulate();
+        } else
+        {
+            PopulateByFilter(SearchBar.Text);
+        }
         ItemInteractions.OnItemSelected += _eui.OnItemSelect;
     }
 }

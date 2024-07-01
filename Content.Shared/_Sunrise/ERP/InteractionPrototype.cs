@@ -41,7 +41,7 @@ public sealed partial class InteractionPrototype : IPrototype
 
     [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
     [DataField] public int LovePercentTarget = 0; // Сколько процентов добавлять к шкале "окончания"
-    [DataField("inhandObject", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
-    public string InhandObject = string.Empty;
+    //[DataField("inhandObject", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
+    [DataField] public HashSet<string> InhandObject = new();
     [DataField] public bool UseSelf = false;
 }

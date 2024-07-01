@@ -125,7 +125,7 @@ namespace Content.Server._Sunrise.ERP.Systems
 
 
             var player = actor.PlayerSession;
-                if (!args.CanInteract || !args.CanAccess) return;
+            if (!args.CanInteract || !args.CanAccess) return;
             args.Verbs.Add(new Verb
             {
                 Priority = -1,

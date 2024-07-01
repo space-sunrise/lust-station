@@ -1,7 +1,8 @@
 - type: interaction
   id: ERPtoyPlaceholder
   name: Игрушка плейсхолдер 1
-  inhandObject: ERPNormalDildo
+  inhandObject:
+  - ERPNormalDildo
   icon: _Sunrise/Interface/ERP/toyIcon.png
   emotes:
   - работает
@@ -13,7 +14,8 @@
 - type: interaction
   id: ERPtoyPlaceholder2
   name: Игрушка плейсхолдер 2
-  inhandObject: ERPNormalFleshlight
+  inhandObject:
+  - ERPNormalFleshlight
   icon: _Sunrise/Interface/ERP/toyIcon.png
   emotes:
   - работает

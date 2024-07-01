@@ -12,6 +12,7 @@ public sealed partial class InteractionComponent : Component
     [DataField, AutoNetworkedField] public float Love = 0;
     [DataField, AutoNetworkedField] public TimeSpan LoveDelay;
     [DataField, AutoNetworkedField] public TimeSpan TimeFromLastErp;
+    [DataField, AutoNetworkedField] public HashSet<string> GenitalSprites = new() { "/Textures/deprecated.rsi/deprecated.png", "/Textures/deprecated.rsi/deprecated.png" };
 
 }
 
