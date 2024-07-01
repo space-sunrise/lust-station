@@ -40,7 +40,8 @@ public sealed partial class GameTicker
     [ViewVariables]
     private readonly List<LobbyImage> _lobbyImages = new ()
     {
-        new LobbyImage(){Path = "_Lust/Parallax/silicons.rsi", State = "silicon_sit", Scale = new Vector2(10f, 10f)}
+        new LobbyImage(){Path = "_Lust/Parallax/silicons.rsi", State = "silicon_sit", Scale = new Vector2(10f, 10f)},
+        new LobbyImage(){Path = "_Lust/Parallax/silicons.rsi", State = "medical_sit", Scale = new Vector2(10f, 10f)}
     };
 
     private void InitializeLobbyBackground()
