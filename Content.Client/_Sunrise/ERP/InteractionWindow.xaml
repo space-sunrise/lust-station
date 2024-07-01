@@ -57,14 +57,14 @@
         <BoxContainer Name="DescriptionContainer" VerticalExpand="True" Margin="4 0" Visible="False">
             <BoxContainer Name="DescriptionLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200">
                 <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
-                    <SpriteView Name="SpriteLeft" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="55 55" Stretch="Fill"/>
+                    <SpriteView Name="SpriteLeft" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
                     <Label Name="UserName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
                 </BoxContainer>
                 <BoxContainer Name="TextureLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
             </BoxContainer>
             <BoxContainer Name="DescriptionRight" Orientation="Vertical" VerticalExpand="True" HorizontalAlignment="Right" SetWidth="200">
                 <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
-                    <SpriteView Name="SpriteRight" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="55 55" Stretch="Fill"/>
+                    <SpriteView Name="SpriteRight" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
                     <Label Name="TargetName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
                 </BoxContainer>
                 <BoxContainer Name="TextureRight" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
