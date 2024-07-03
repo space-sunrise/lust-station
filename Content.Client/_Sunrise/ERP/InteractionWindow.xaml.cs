@@ -53,6 +53,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         InteractionButton.Pressed = true;
         InteractionButton.OnPressed += SetModeToInteraction;
         DescriptionButton.OnPressed += SetModeToDescription;
+        PopulateByFilter("", false);
     }
 
     private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
@@ -123,13 +124,13 @@ public sealed partial class InteractionWindow : DefaultWindow
     {
         PopulateByFilter(SearchBar.Text);
     }
-
-    private void PopulateByFilter(string filter)
+    private List<(string, Texture, InteractionPrototype)> oldItemList = new();
+    private void PopulateByFilter(string filter, bool check = true)
     {
-        ItemInteractions.Clear();
         if (!_player.LocalEntity.HasValue) return;
         if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
+        List<(string, Texture, InteractionPrototype)> itemList = new();
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
         {
             if(proto.InhandObject.Count > 0)
@@ -156,7 +157,8 @@ public sealed partial class InteractionWindow : DefaultWindow
                 if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
                 if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
                 if (!Erp && proto.Erp) continue;
-                ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+                itemList.Add((proto.Name, texture, proto));
             }
         }
         foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
@@ -185,9 +187,38 @@ public sealed partial class InteractionWindow : DefaultWindow
                 if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
                 if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
                 if (!Erp && proto.Erp) continue;
-                ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+                itemList.Add((proto.Name, texture, proto));
+                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
             }
         }
+        bool equals = true;
+        foreach (var i in oldItemList)
+        {
+            if (!itemList.Contains(i))
+            {
+                equals = false;
+                break;
+            }
+        }
+        foreach (var i in itemList)
+        {
+            if (!oldItemList.Contains(i))
+            {
+                equals = false;
+                break;
+            }
+        }
+        if (!equals || !check)
+        {
+            ItemInteractions.Clear();
+            foreach(var i in itemList)
+            {
+                ItemInteractions.AddItem(i.Item1, i.Item2, metadata: i.Item3);
+            }
+        }
+
+
+        oldItemList = itemList;
     }
     protected override void FrameUpdate(FrameEventArgs args)
     {
@@ -205,7 +236,6 @@ public sealed partial class InteractionWindow : DefaultWindow
     public void Populate()
     {
         var prototypes = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList();
-        ItemInteractions.Clear();
         UserDescription.DisposeAllChildren();
         TargetDescription.DisposeAllChildren();
         //Проверки nullable-типов

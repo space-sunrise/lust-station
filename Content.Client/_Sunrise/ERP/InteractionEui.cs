@@ -54,6 +54,10 @@ namespace Content.Client._Sunrise.ERP
             }
         }
 
+        public void Sendmessage(string msg)
+        {
+            _chat.SendMessage(msg, Shared.Chat.ChatSelectChannel.Local);
+        }
         public void RequestLove()
         {
             if (!_player.LocalEntity.HasValue) return;
