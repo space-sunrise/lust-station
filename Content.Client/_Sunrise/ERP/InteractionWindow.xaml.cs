@@ -17,7 +17,6 @@ using Robust.Shared.Utility;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using System.IO;
-using Microsoft.CodeAnalysis.Operations;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
