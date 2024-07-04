@@ -17,6 +17,7 @@ using Robust.Shared.Utility;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using System.IO;
+using Content.Shared.Interaction;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
@@ -96,11 +97,13 @@ public sealed partial class InteractionWindow : DefaultWindow
             TextureLeft.AddChild(t);
         }
 
+        var targets = _entManager.GetEntity(TargetEntityId);
+        if (!targets.HasValue) return;
+        var target = targets.Value;
         if (!TargetEntityId.HasValue) return;
         if (!TargetSex.HasValue) return;
-        if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var TargetInteraction)) return;
-        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var TargetHumanoid)) return;
-        var target = _entManager.GetEntity(TargetEntityId.Value);
+        if (!_entManager.TryGetComponent<InteractionComponent>(target, out var TargetInteraction)) return;
+        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(target, out var TargetHumanoid)) return;
         SpriteRight.SetEntity(target);
         TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
         TargetName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
