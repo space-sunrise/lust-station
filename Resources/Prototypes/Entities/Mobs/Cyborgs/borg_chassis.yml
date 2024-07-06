@@ -3,6 +3,8 @@
   parent: BaseBorgChassisNT
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: robot
     - state: robot_e_r
@@ -22,7 +24,7 @@
     noMindState: robot_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
       state: robot
     name: cyborg
   - type: Construction
@@ -36,6 +38,8 @@
   name: salvage cyborg
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: miner
       map: ["movement"]
@@ -64,7 +68,7 @@
     noMindState: miner_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
       state: miner
     name: salvage cyborg
   - type: Construction
