@@ -38,7 +38,7 @@
   name: salvage cyborg
   components:
   - type: Sprite
-    sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
+    sprite: _Lust/Mobs/Silicon/Chassis/miner_borg.rsi
     scale: 0.80, 0.80
     layers:
     - state: miner
@@ -51,13 +51,6 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: miner_moving
-    noMovementLayers:
-      movement:
-        state: miner
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -68,7 +61,7 @@
     noMindState: miner_e_r
   - type: BorgTransponder
     sprite:
-      sprite: _Lust/Mobs/Silicon/Chassis/basic_borg.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/miner_borg.rsi
       state: miner
     name: salvage cyborg
   - type: Construction
@@ -215,13 +208,6 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: medical_moving
-    noMovementLayers:
-      movement:
-        state: medical
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
