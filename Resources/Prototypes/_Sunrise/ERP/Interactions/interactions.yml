@@ -89,7 +89,7 @@
   lovePercentTarget: 2
 
 - type: interaction
-  id: ERPfeet1
+  id: ERPfeet2
   name: Прислонить ножку ко рту
   icon: _Sunrise/Interface/ERP/heartIcon.png
   emotes:
@@ -125,7 +125,7 @@
   lovePercentTarget: 3
 
 - type: interaction
-  id: ERPfeet1
+  id: ERPneckLick
   name: Облизнуть шею
   icon: _Sunrise/Interface/ERP/kissIcon.png
   emotes:
