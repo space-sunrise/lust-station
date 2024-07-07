@@ -24,6 +24,25 @@
             </ProgressBar>
             <TextureRect SetSize="20 20" Stretch="KeepAspectCentered" HorizontalAlignment="Right" TexturePath="/Textures/_Sunrise/Interface/ERP/heart.png"/>
         </BoxContainer>
+        <!-- Top row mode buttons -->
+        <BoxContainer Name="ModeButtons"
+                       Orientation="Horizontal"
+                       HorizontalAlignment="Stretch"
+                       MinSize="410 30"
+                       Margin="5">
+            <Button Name="InteractionButton"
+                    ToggleMode="True"
+                    HorizontalExpand="True"
+                    VerticalExpand="True"
+                    Text="Взаимодействия"
+                    Margin="5"/>
+            <Button Name="DescriptionButton"
+                     ToggleMode="True"
+                     HorizontalExpand="True"
+                     VerticalExpand="True"
+                     Text="Подробности"
+                     Margin="5"/>
+        </BoxContainer>
         <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="2" Access="Public" />
         <LineEdit Name="SearchBar" PlaceHolder="Search..." HorizontalExpand="True"  Margin ="4 4" Access="Public"/>
         <ItemList Name="ItemInteractions"
@@ -35,5 +54,21 @@
                   SelectMode="Button"
                   StyleClasses="ItemList">
         </ItemList>
+        <BoxContainer Name="DescriptionContainer" VerticalExpand="True" Margin="4 0" Visible="False">
+            <BoxContainer Name="DescriptionLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200">
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
+                    <SpriteView Name="SpriteLeft" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
+                    <Label Name="UserName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
+                </BoxContainer>
+                <BoxContainer Name="TextureLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
+            </BoxContainer>
+            <BoxContainer Name="DescriptionRight" Orientation="Vertical" VerticalExpand="True" HorizontalAlignment="Right" SetWidth="200">
+                <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
+                    <SpriteView Name="SpriteRight" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
+                    <Label Name="TargetName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
+                </BoxContainer>
+                <BoxContainer Name="TextureRight" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
+            </BoxContainer>
+        </BoxContainer>
     </BoxContainer>
 </DefaultWindow>

@@ -406,6 +406,7 @@
   erp: true
   lovePercentUser: 15
   lovePercentTarget: 2
+  useSelf: true
 
 - type: interaction
   id: ERPbruh
@@ -575,4 +576,5 @@
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 1
+
 

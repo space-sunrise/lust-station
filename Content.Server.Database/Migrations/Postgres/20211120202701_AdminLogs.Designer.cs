@@ -47,7 +47,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("AdminRankId")
                         .HasDatabaseName("IX_admin_admin_rank_id");
 
-                    b.ToTable("admin", (string)null);
+                    b.ToTable("admin", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminFlag", b =>
@@ -81,7 +81,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("Flag", "AdminId")
                         .IsUnique();
 
-                    b.ToTable("admin_flag", (string)null);
+                    b.ToTable("admin_flag", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminLog", b =>
@@ -124,7 +124,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("Type")
                         .HasDatabaseName("IX_admin_log_type");
 
-                    b.ToTable("admin_log", (string)null);
+                    b.ToTable("admin_log", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminLogEntity", b =>
@@ -154,7 +154,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("AdminLogId", "AdminLogRoundId")
                         .HasDatabaseName("IX_admin_log_entity_admin_log_id_admin_log_round_id");
 
-                    b.ToTable("admin_log_entity", (string)null);
+                    b.ToTable("admin_log_entity", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminLogPlayer", b =>
@@ -176,7 +176,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.HasIndex("LogId", "RoundId");
 
-                    b.ToTable("admin_log_player", (string)null);
+                    b.ToTable("admin_log_player", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminRank", b =>
@@ -196,7 +196,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasKey("Id")
                         .HasName("PK_admin_rank");
 
-                    b.ToTable("admin_rank", (string)null);
+                    b.ToTable("admin_rank", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AdminRankFlag", b =>
@@ -226,7 +226,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("Flag", "AdminRankId")
                         .IsUnique();
 
-                    b.ToTable("admin_rank_flag", (string)null);
+                    b.ToTable("admin_rank_flag", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Antag", b =>
@@ -253,7 +253,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("ProfileId", "AntagName")
                         .IsUnique();
 
-                    b.ToTable("antag", (string)null);
+                    b.ToTable("antag", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.AssignedUserId", b =>
@@ -283,7 +283,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("UserName")
                         .IsUnique();
 
-                    b.ToTable("assigned_user_id", (string)null);
+                    b.ToTable("assigned_user_id", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Job", b =>
@@ -321,7 +321,7 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsUnique()
                         .HasFilter("priority = 3");
 
-                    b.ToTable("job", (string)null);
+                    b.ToTable("job", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Player", b =>
@@ -370,7 +370,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("player", (string)null);
+                    b.ToTable("player", (string) null);
 
                     b.HasCheckConstraint("LastSeenAddressNotIPv6MappedIPv4", "NOT inet '::ffff:0.0.0.0/96' >>= last_seen_address");
                 });
@@ -411,7 +411,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("connection_log", (string)null);
+                    b.ToTable("connection_log", (string) null);
 
                     b.HasCheckConstraint("AddressNotIPv6MappedIPv4", "NOT inet '::ffff:0.0.0.0/96' >>= address");
                 });
@@ -461,7 +461,7 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("server_ban", (string)null);
+                    b.ToTable("server_ban", (string) null);
 
                     b.HasCheckConstraint("AddressNotIPv6MappedIPv4", "NOT inet '::ffff:0.0.0.0/96' >>= address");
 
@@ -495,7 +495,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("BanId")
                         .IsUnique();
 
-                    b.ToTable("server_unban", (string)null);
+                    b.ToTable("server_unban", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Preference", b =>
@@ -526,7 +526,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("UserId")
                         .IsUnique();
 
-                    b.ToTable("preference", (string)null);
+                    b.ToTable("preference", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
@@ -600,6 +600,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("sex");
 
+                    b.Property<string>("Erp")
+                                            .IsRequired()
+                                            .HasColumnType("text")
+                                            .HasColumnName("erp");
+
                     b.Property<string>("SkinColor")
                         .IsRequired()
                         .HasColumnType("text")
@@ -618,7 +623,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("Slot", "PreferenceId")
                         .IsUnique();
 
-                    b.ToTable("profile", (string)null);
+                    b.ToTable("profile", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Round", b =>
@@ -633,7 +638,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasKey("Id")
                         .HasName("PK_round");
 
-                    b.ToTable("round", (string)null);
+                    b.ToTable("round", (string) null);
                 });
 
             modelBuilder.Entity("PlayerRound", b =>
@@ -652,7 +657,7 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("RoundsId")
                         .HasDatabaseName("IX_player_round_rounds_id");
 
-                    b.ToTable("player_round", (string)null);
+                    b.ToTable("player_round", (string) null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Admin", b =>

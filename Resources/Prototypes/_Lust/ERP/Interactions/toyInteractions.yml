@@ -1,0 +1,25 @@
+- type: interaction
+  id: ERPtoyPlaceholder
+  name: Игрушка плейсхолдер 1
+  inhandObject:
+  - ERPNormalDildo
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - работает
+  targetSex: Unsexed
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 15
+
+- type: interaction
+  id: ERPtoyPlaceholder2
+  name: Игрушка плейсхолдер 2
+  inhandObject:
+  - ERPNormalFleshlight
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - работает
+  targetSex: Unsexed
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 15

@@ -88,6 +88,9 @@ namespace Content.Shared.Preferences
         public int Age { get; set; } = 18;
 
         [DataField]
+        public Erp Erp { get; set; } = Erp.Ask;
+
+        [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
 
         [DataField]
@@ -139,6 +142,7 @@ namespace Content.Shared.Preferences
             string voice, // Sunrise-TTS
             int age,
             Sex sex,
+            Erp erp,
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -154,6 +158,7 @@ namespace Content.Shared.Preferences
             Voice = voice; // Sunrise-TTS
             Age = age;
             Sex = sex;
+            Erp = erp;
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -186,6 +191,7 @@ namespace Content.Shared.Preferences
                 other.Voice,
                 other.Age,
                 other.Sex,
+                other.Erp,
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -298,6 +304,11 @@ namespace Content.Shared.Preferences
         public HumanoidCharacterProfile WithSex(Sex sex)
         {
             return new(this) { Sex = sex };
+        }
+
+        public HumanoidCharacterProfile WithErp(Erp erp)
+        {
+            return new(this) { Erp = erp };
         }
 
         public HumanoidCharacterProfile WithGender(Gender gender)
@@ -474,6 +485,7 @@ namespace Content.Shared.Preferences
             if (Name != other.Name) return false;
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
+            if (Erp != other.Erp) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
@@ -705,6 +717,7 @@ namespace Content.Shared.Preferences
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
+            hashCode.Add((int) Erp);
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);

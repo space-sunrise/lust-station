@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using Content.Server.Access.Systems;
 using Content.Server.DetailExaminable;
 using Content.Server.Humanoid;
@@ -9,6 +9,7 @@ using Content.Server.Shuttles.Systems;
 using Content.Server.Spawners.Components;
 using Content.Server.Spawners.EntitySystems;
 using Content.Server.Station.Components;
+using Content.Shared._Sunrise.ERP.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
@@ -240,6 +241,9 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             {
                 AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
             }
+            EnsureComp<DetailExaminableComponent>(entity.Value).Erp = profile.Erp;
+            if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
+            if(EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
         }
 
         DoJobSpecials(job, entity.Value);
