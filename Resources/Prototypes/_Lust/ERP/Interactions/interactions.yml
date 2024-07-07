@@ -37,19 +37,36 @@
 
 - type: interaction
   id: pethead
-  name: Погладить по головке
+  name: Погладить по голове
   icon: _Sunrise/Interface/ERP/blankIcon.png
   emotes:
   - гладит %target по голове
-  - гладит %target по головке
   userSex: Unsexed
   targetSex: Unsexed
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: false
 
-# Erp (help)
+# Erp (дальше бога нет)
 
+- type: interaction
+  id: ERPassclap
+  name: Шлёпнуть по жопе
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - смачно шлёпает %target по филейной части тела
+  - шлёпает %target по жопе, создавая этим громкий хлопок
+  - делает смачный шлепок по попе %target
+  sounds:
+  - path: /Audio/_Lust/ERP/clap1.ogg
+  - path: /Audio/_Lust/ERP/clap1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 0
 
 - type: interaction
   id: ERPfeet1
@@ -59,12 +76,72 @@
   - лижет ножки %target
   - начинает лизать ножки %target
   - подносит свой рот к ножкам %target, и начинает их лизать
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  lovePercentUser: 0
+  lovePercentUser: 2
+  lovePercentTarget: 2
+
+- type: interaction
+  id: ERPfeet2
+  name: Прислонить ножку ко рту
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - снимает обувь с одной ступни и тычет ножкой в лицо %target
+  - снимает обувь с одной ступни и прислоняет ножку ко рту %target
+  - подносит свою ножку к лицу %target, заставляя лизать её
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+
+- type: interaction
+  id: ERPalotofkisses
+  name: Одарить шквалом поцелуев
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - устраивает град поцелуев, ни оставляя сухого места на %target
+  sounds:
+  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 3
+
+- type: interaction
+  id: ERPneckLick
+  name: Облизнуть шею
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - прильнул к шее %target языком
+  - касается шеи %target своим язычком
+  - страстно облизывает шею %target, оставляя на ней влажный след
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 2
   lovePercentTarget: 2
 
 - type: interaction
@@ -95,8 +172,8 @@
   userWithoutCloth: false
   targetWithoutCloth: false
   erp: true
-  lovePercentUser: 5
-  lovePercentTarget: 6
+  lovePercentUser: 2
+  lovePercentTarget: 2
 
 - type: interaction
   id: ERPkiss2
@@ -152,6 +229,10 @@
   - аккуратно сосёт соски %target
   - резко сосёт соски %target
   - нежно сосёт соски %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Female
   userWithoutCloth: false
@@ -206,6 +287,26 @@
   lovePercentTarget: 20
 
 - type: interaction
+  id: ERPbootycheeksInsert
+  name: Сунуть член между булок
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - пихает свой член между булок %target
+  - суёт свой пенис между упругих булок %target
+  - проводит своим членом по заднице %target, после чего суёт его между булок
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 20
+  lovePercentTarget: 20
+
+- type: interaction
   id: ERPvaginaLick
   name: Вылизать вагину
   icon: _Sunrise/Interface/ERP/heartIcon.png
@@ -213,6 +314,10 @@
   - нежно лижет вагину %target
   - вылизывает вагину %target
   - лижет вагинут %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Female
   userWithoutCloth: false
@@ -222,14 +327,51 @@
   lovePercentTarget: 12
 
 - type: interaction
-  id: ERPmasturbate
-  name: Мастурбировать
+  id: ERPanalLick
+  name: Вылизать задницу
   icon: _Sunrise/Interface/ERP/heartIcon.png
   emotes:
-  - аккуратно мастурбирует %target'у
-  - мастурбирует %target'у
-  - резко начинает мастурбировать %target'у
-  - начинает мастурбировать %target'у
+  - нежно лижет анальное кольцо %target
+  - делает круговые движения языком вокруг анала %target
+  - вылизывает задницу %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 8
+
+- type: interaction
+  id: ERPputboobsontheface
+  name: Положить грудь на лицо
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - тычет своей грудью в лицо %target, закрывая его полностью
+  - кладёт свои сиськи прямо на лицо %target, не давая ему продохнуть
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Female
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+
+- type: interaction
+  id: ERPmasturbate
+  name: Мастурбировать член
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - аккуратно мастурбирует член %target
+  - мастурбирует пенис %target
+  - начинает надрачивать член %target
+  - охватывает член %target и нежно дрочит его
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
@@ -250,7 +392,7 @@
   emotes:
   - мастурбирует
   - мастурбирует, смотря на %target
-  - начинает мастурбировать
+  - начинает дрочить свой пенис
   - начинает мастурбировать, смотря на %target
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
@@ -274,6 +416,11 @@
   - отсасывает у %target
   - сосёт у %target
   - делает минет %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   userWithoutCloth: false
@@ -289,6 +436,11 @@
   emotes:
   - заставляет сосать %target
   - заставляет делать минет %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
   userSex: Male
   targetSex: Unsexed
   userWithoutCloth: true
@@ -296,4 +448,133 @@
   erp: true
   lovePercentUser: 15
   lovePercentTarget: 3
+
+- type: interaction
+  id: ERPtouchvagina
+  name: Потрогать вагину
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - подводит свои пальчики к киске %target и нежно ласкает её
+  - поглаживает вагину %target
+  - играется с киской %target своими пальчиками
+  - проводит пальцами по промежности %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+
+- type: interaction
+  id: ERPfistvagina
+  name: Вставить пальцы в вагину
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - медленно вставляет пальцы в лоно %target
+  - играется с киской %target своими пальчиками
+  - вставляет 2 пальца прямо в киску %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Female
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+
+- type: interaction
+  id: ERPfapwithboobs
+  name: Подрочить член грудью
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает член %target своей грудью и начинает дрочить ими
+  - пропихивает член %target между своих сисек и начинает двигать ими
+  - прячет пенис %target между своих сисек, ритмично двигая их вверх и вниз
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Female
+  targetSex: Male
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 12
+
+- type: interaction
+  id: ERPfapwithhips
+  name: Подрочить член бёдрами
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает член %target своими бёдрами, начиная дрочить его
+  - пропихивает член %target между своих бёдер и начинает двигать ими
+  - охватывает пенис %target между своих бёдер, ритмично двигая ими вверх и вниз
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+
+- type: interaction
+  id: ERPselffapwithboobs
+  name: Пропихнуть свой член между сисек
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - пихает свой член между сисек %target, ритмично двигая им
+  - суёт свой пенис между грудями %target и начинает трахать их
+  - проталкивает свой член между сисек %target, словно трахая их
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  userWithoutCloth: true
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 1
+
+- type: interaction
+  id: ERPselffapwithhips
+  name: Пропихнуть свой член между бёдер
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - водит членом по бёдрам %target, а затем проталкивает свой пенис между них
+  - пихает свой член между бёдер %target, ритмично двигая им
+  - суёт свой пенис между бёдрами %target и начинает трахать их
+  - проталкивает свой член между бёдер %target, словно трахая их
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Unsexed
+  userWithoutCloth: true
+  targetWithoutCloth: false
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 1
+
 
