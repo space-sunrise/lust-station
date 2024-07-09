@@ -125,44 +125,41 @@ namespace Content.Server._Sunrise.ERP.Systems
 
 
             var player = actor.PlayerSession;
-            if (args.User != args.Target)
+            if (!args.CanInteract || !args.CanAccess) return;
+            args.Verbs.Add(new Verb
             {
-                if (!args.CanInteract || !args.CanAccess) return;
-                args.Verbs.Add(new Verb
+                Priority = -1,
+                Text = "Взаимодействовать с...",
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/heart.png")),
+                Act = () =>
                 {
-                    Priority = -1,
-                    Text = "Взаимодействовать с...",
-                    Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/heart.png")),
-                    Act = () =>
+                    if (!args.CanInteract || !args.CanAccess) return;
+                    if (TryComp<InteractionComponent>(args.Target, out var targetInteraction) && TryComp<InteractionComponent>(args.User, out var userInteraction))
                     {
-                        if (!args.CanInteract || !args.CanAccess) return;
-                        if (TryComp<InteractionComponent>(args.Target, out var targetInteraction) && TryComp<InteractionComponent>(args.User, out var userInteraction))
+                        if (TryComp<HumanoidAppearanceComponent>(args.Target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(args.User, out var userHumanoid))
                         {
-                            if (TryComp<HumanoidAppearanceComponent>(args.Target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(args.User, out var userHumanoid))
+                            bool erp = true;
+                            bool userClothing = false;
+                            bool targetClothing = false;
+                            if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
+                            if (TryComp<ContainerManagerComponent>(args.User, out var container))
                             {
-                                bool erp = true;
-                                bool userClothing = false;
-                                bool targetClothing = false;
-                                if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
-                                if (TryComp<ContainerManagerComponent>(args.User, out var container))
-                                {
-                                    if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
-                                    if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
-                                }
-
-                                if (TryComp<ContainerManagerComponent>(args.Target, out var targetContainer))
-                                {
-                                    if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
-                                    if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
-                                }
-
-                                _eui.OpenEui(new InteractionEui(GetNetEntity(args.Target), userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp), player);
+                                if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
+                                if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
                             }
+
+                            if (TryComp<ContainerManagerComponent>(args.Target, out var targetContainer))
+                            {
+                                if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
+                                if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
+                            }
+
+                            _eui.OpenEui(new InteractionEui(GetNetEntity(args.Target), userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp), player);
                         }
-                    },
-                    Impact = LogImpact.Low,
-                });
-            }
+                    }
+                },
+                Impact = LogImpact.Low,
+            });
         }
 
         public override void Update(float frameTime)

@@ -262,6 +262,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnName("sex")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnName("erp")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("SkinColor")
                         .IsRequired()
                         .HasColumnName("skin_color")

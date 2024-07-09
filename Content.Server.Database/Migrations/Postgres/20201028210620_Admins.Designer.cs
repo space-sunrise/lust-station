@@ -423,6 +423,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnName("sex")
                         .HasColumnType("text");
 
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnName("erp")
+                        .HasColumnType("text");
+
                     b.Property<string>("SkinColor")
                         .IsRequired()
                         .HasColumnName("skin_color")
