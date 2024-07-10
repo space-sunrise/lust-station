@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedCloak
+  name: medical cloak
+  description: cool medical cloak
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/medical_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckEngCloak
+  name: Engineer cloak
+  description: cool engineer cloak
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/engineer_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSecCloak
+  name: Security cloak
+  description: bloody cloak, it seems the blood of the corporation enemies is still fresh... not bad
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/security_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckQilluCloak
+  name: special Qillu cloak
+  description: a purple cloak given to the most loyal employees of the corporation.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/qillu_cloak.rsi
