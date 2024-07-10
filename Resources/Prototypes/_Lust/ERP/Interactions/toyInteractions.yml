@@ -1,3 +1,4 @@
+# ERP (help)
 - type: interaction
   id: ERPtoyPlaceholder
   name: Игрушка плейсхолдер 1
@@ -10,6 +11,7 @@
   targetWithoutCloth: true
   erp: true
   lovePercentTarget: 15
+  useSelf: true
 
 - type: interaction
   id: ERPtoyPlaceholder2
@@ -23,3 +25,4 @@
   targetWithoutCloth: true
   erp: true
   lovePercentTarget: 15
+  useSelf: true
