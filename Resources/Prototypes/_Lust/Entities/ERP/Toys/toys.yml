@@ -141,7 +141,6 @@
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_yellow.rsi
 
-#
 - type: entity
   name: Shibari
   id: ERPShibariRope
