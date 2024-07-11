@@ -1,0 +1,28 @@
+﻿{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Adapted by SShved, discord: sshvedik. Taken from modified S.P.L.U.R.T build - BlueMoon, https://github.com/BlueMoon-Labs/MOLOT-BlueMoon-Station",
+  "states": [
+    {
+      "name": "janitor",
+      "directions": 4
+    },
+    {
+      "name": "janitor_e",
+      "directions": 4
+    },
+    {
+      "name": "janitor_e_r",
+      "directions": 4
+    },
+    {
+      "name": "janitor_l",
+      "directions": 4
+    }
+
+  ]
+}

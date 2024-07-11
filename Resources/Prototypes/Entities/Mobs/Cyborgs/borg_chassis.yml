@@ -139,6 +139,8 @@
   name: janitor cyborg
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/Chassis/janitor_borg.rsi
+    scale: 0.80, 0.80
     layers:
     - state: janitor
       map: ["movement"]
@@ -150,13 +152,6 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: janitor_moving
-    noMovementLayers:
-      movement:
-        state: janitor
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -167,7 +162,7 @@
     noMindState: janitor_e_r
   - type: BorgTransponder
     sprite:
-      sprite: Mobs/Silicon/chassis.rsi
+      sprite: _Lust/Mobs/Silicon/Chassis/janitor_borg.rsi
       state: janitor
     name: janitor cyborg
   - type: Construction
