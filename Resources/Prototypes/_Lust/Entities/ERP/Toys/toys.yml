@@ -142,7 +142,6 @@
     sprite: _Lust/ERP/Toys/fl_yellow.rsi
 
 - type: entity
-  name: Shibari
   id: ERPShibariRope
   name: shibari rope
   description: This rope is designed for shibari, the art of Japanese rope bondage. Ready to tie up some pleasure?
