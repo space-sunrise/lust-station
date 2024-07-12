@@ -47,6 +47,17 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtCMOTurtle
 
+# Neck
+- type: loadout # Lust Station
+  id: CmoSpecialCloak
+  equipment: CmoSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: CmoSpecialCloak
+  equipment:
+    neck: ClothingNeckCmoSpecialCloak
+
 # Head
 - type: loadout
   id: ChiefMedicalOfficerBeret

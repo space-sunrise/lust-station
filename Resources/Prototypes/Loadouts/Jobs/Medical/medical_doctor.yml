@@ -180,6 +180,17 @@
   equipment:
     jumpsuit: UniformScrubsColorPurple
 
+# Neck
+- type: loadout # Lust Station
+  id: MedicalCloak
+  equipment: MedicalCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: MedicalCloak
+  equipment:
+    neck: ClothingNeckMedCloak
+
 # Back
 - type: loadout
   id: MedicalDoctorBackpack

@@ -72,6 +72,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - CaptainSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -109,6 +110,7 @@
   loadouts:
   - HoPCloak
   - HoPMantle
+  - HopSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: HoPBackpack
@@ -533,6 +535,7 @@
   loadouts:
   - QuartermasterCloak
   - QuartermasterMantle
+  - QuartermasterSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: QuartermasterOuterClothing
@@ -653,6 +656,13 @@
   - YellowJumpsuit
   - YellowJumpskirt
 
+- type: loadoutGroup # Lust Station
+  id: EngineerNeck
+  name: loadout-group-engineer-neck
+  minLimit: 0
+  loadouts:
+  - EngineerCloak
+
 - type: loadoutGroup
   id: StationEngineerHead
   name: loadout-group-station-engineer-head
@@ -757,6 +767,7 @@
   loadouts:
   - ResearchDirectorMantle
   - ResearchDirectorCloak
+  - RdSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: ResearchDirectorJumpsuit
@@ -885,6 +896,7 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
+  - HosSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -935,6 +947,12 @@
   - SeniorOfficerJumpsuit
   - SeniorOfficerJumpskirt
 
+- type: loadoutGroup # Lust Station
+  id: SecurityNeck
+  name: loadout-group-security-neck
+  loadouts:
+  - SecurityCloak
+
 - type: loadoutGroup
   id: SecurityBackpack
   name: loadout-group-security-backpack
@@ -948,6 +966,7 @@
   name: loadout-group-security-belt
   loadouts:
   - SecurityBelt
+  - SecuritySheathBelt # Lust Station
   - SecurityWebbing
 
 - type: loadoutGroup
@@ -1055,6 +1074,7 @@
   loadouts:
   - ChiefMedicalOfficerCloak
   - ChiefMedicalOfficerMantle
+  - CmoSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes
@@ -1087,6 +1107,13 @@
   - MedicalBlueScrubs
   - MedicalGreenScrubs
   - MedicalPurpleScrubs
+
+- type: loadoutGroup # Lust Station
+  id: MedicalNeck
+  name: loadout-group-medical-neck
+  minLimit: 0
+  loadouts:
+  - MedicalCloak
 
 - type: loadoutGroup
   id: MedicalDoctorOuterClothing

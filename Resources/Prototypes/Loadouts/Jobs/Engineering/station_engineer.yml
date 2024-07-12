@@ -123,6 +123,17 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorEngineer
 
+# Neck
+- type: loadout # Lust Station
+  id: EngineerNeck
+  equipment: EngineerNeck
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: EngineerNeck
+  equipment:
+    neck: ClothingNeckEngCloak
+
 # Back
 - type: loadout
   id: StationEngineerBackpack

@@ -118,6 +118,17 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtSeniorOfficer
 
+# Neck
+- type: loadout # Lust Station
+  id: SecurityCloak
+  equipment: SecurityCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: SecurityCloak
+  equipment:
+    neck: ClothingNeckSecCloak
+
 # Back
 - type: loadout
   id: SecurityBackpack
@@ -155,6 +166,16 @@
   id: SecurityBelt
   equipment:
     belt: ClothingBeltSecurityFilled
+
+- type: loadout # Lust Station
+  id: SecuritySheathBelt
+  equipment: SecuritySheathBelt
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: SecuritySheathBelt
+  equipment:
+    belt: ClothingSheathBeltSecurity
 
 - type: loadout
   id: SecurityWebbing

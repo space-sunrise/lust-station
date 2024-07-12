@@ -109,6 +109,16 @@
   equipment:
     neck: ClothingNeckMantleHOS
 
+- type: loadout # Lust Station
+  id: HosSpecialCloak
+  equipment: HosSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: HosSpecialCloak
+  equipment:
+    neck: ClothingNeckHosSpecialCloak
+
 # OuterClothing
 - type: loadout
   id: HeadofSecurityCoat

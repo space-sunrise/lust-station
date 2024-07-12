@@ -292,6 +292,7 @@
   id: JobTechnicalAssistant
   groups:
   - TechnicalAssistantJumpsuit
+  - EngineerNeck # Lust Station
   - StationEngineerBackpack
   - Trinkets
   - SurvivalExtended
@@ -306,6 +307,7 @@
   groups:
   - StationEngineerHead
   - StationEngineerJumpsuit
+  - EngineerNeck # Lust Station
   - StationEngineerBackpack
   - StationEngineerOuterClothing
   - StationEngineerShoes
@@ -322,6 +324,7 @@
   id: JobAtmosphericTechnician
   groups:
   - AtmosphericTechnicianJumpsuit
+  - EngineerNeck # Lust Station
   - AtmosphericTechnicianBackpack
   - AtmosphericTechnicianOuterClothing
   - AtmosphericTechnicianShoes
@@ -413,6 +416,7 @@
   - SecurityTrinkets  # Sunrise
   - WardenHead
   - WardenJumpsuit
+  - SecurityNeck # Lust Station
   - SecurityBackpack
   - SecurityBelt
   - WardenOuterClothing
@@ -431,6 +435,7 @@
   - SecurityTrinkets  # Sunrise
   - SecurityHead
   - SecurityJumpsuit
+  - SecurityNeck # Lust Station
   - SecurityBackpack
   - SecurityOuterClothing
   - SecurityShoes
@@ -451,6 +456,7 @@
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
+  - SecurityNeck # Lust Station
   - SecurityBackpack
   - DetectiveOuterClothing
   - SecurityShoes
@@ -467,6 +473,7 @@
   groups:
   - SecurityTrinkets  # Sunrise
   - SecurityCadetJumpsuit
+  - SecurityNeck # Lust Station
   - SecurityBackpack
   - Trinkets
   - SurvivalSecurity
@@ -503,6 +510,7 @@
   - MedicalDoctorHead
   - MedicalMask
   - MedicalDoctorJumpsuit
+  - MedicalNeck # Lust Station
   - MedicalGloves
   - MedicalBackpack
   - MedicalDoctorOuterClothing
@@ -521,6 +529,7 @@
   id: JobMedicalIntern
   groups:
   - MedicalInternJumpsuit
+  - MedicalNeck # Lust Station
   - MedicalBackpack
   - Glasses
   - Trinkets
@@ -536,6 +545,7 @@
   groups:
   - MedicalMask
   - ChemistJumpsuit
+  - MedicalNeck # Lust Station
   - MedicalGloves
   - ChemistBackpack
   - ChemistOuterClothing
@@ -554,6 +564,7 @@
   - ParamedicHead
   - MedicalMask
   - ParamedicJumpsuit
+  - MedicalNeck # Lust Station
   - MedicalGloves
   - MedicalBackpack
   - ParamedicOuterClothing

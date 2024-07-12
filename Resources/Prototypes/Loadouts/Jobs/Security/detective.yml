@@ -27,6 +27,16 @@
   equipment:
     neck: ClothingNeckTieDet
 
+- type: loadout # Lust Station
+  id: SecurityCloak
+  equipment: SecurityCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: SecurityCloak
+  equipment:
+    neck: ClothingNeckSecCloak
+
 # Jumpsuit
 - type: loadout
   id: DetectiveJumpsuit

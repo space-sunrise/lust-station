@@ -94,6 +94,16 @@
   equipment:
     neck: ClothingNeckMantleCap
 
+- type: loadout # Lust Station
+  id: CaptainSpecialCloak
+  equipment: CaptainSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: CaptainSpecialCloak
+  equipment:
+    neck: ClothingNeckCapSpecialCloak
+
 # Back
 - type: loadout
   id: CaptainBackpack

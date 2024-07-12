@@ -62,6 +62,16 @@
   equipment:
     neck: ClothingNeckMantleHOP
 
+- type: loadout # Lust Station
+  id: HopSpecialCloak
+  equipment: HopSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: HopSpecialCloak
+  equipment:
+    neck: ClothingNeckHopSpecialCloak
+
 # Back
 - type: loadout
   id: HoPBackpackIan

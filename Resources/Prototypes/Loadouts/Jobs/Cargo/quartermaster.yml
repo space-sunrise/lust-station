@@ -97,6 +97,16 @@
   equipment:
     neck: ClothingNeckMantleQM
 
+- type: loadout # Lust Station
+  id: QuartermasterSpecialCloak
+  equipment: QuartermasterSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: QuartermasterSpecialCloak
+  equipment:
+    neck: ClothingNeckQmSpecialCloak
+
 # OuterClothing
 - type: loadout
   id: QuartermasterWintercoat

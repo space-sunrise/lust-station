@@ -22,3 +22,14 @@
   id: YellowJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorYellow
+
+# Neck
+- type: loadout # Lust Station
+  id: EngineerCloak
+  equipment: EngineerCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: EngineerCloak
+  equipment:
+    neck: ClothingNeckEngCloak

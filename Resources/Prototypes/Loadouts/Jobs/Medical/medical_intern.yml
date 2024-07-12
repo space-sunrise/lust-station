@@ -22,3 +22,14 @@
   id: WhiteJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorWhite
+
+# Neck
+- type: loadout # Lust Station
+  id: MedicalCloak
+  equipment: MedicalCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: MedicalCloak
+  equipment:
+    neck: ClothingNeckMedCloak
