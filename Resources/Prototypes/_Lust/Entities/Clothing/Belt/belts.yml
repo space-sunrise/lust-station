@@ -20,8 +20,8 @@
       - MagazineMagnum
       - CombatKnife
       - Truncheon
+      - StunSword # We shouldn't be able to put there stunbaton
       components:
-      - Stunsword
       - FlashOnTrigger
       - SmokeOnTrigger
       - Flash
@@ -38,10 +38,10 @@
         whitelist:
           components:
           - FlashOnTrigger
-      stunsword:
+      stunsword: # same
         whitelist:
-          components:
-          - Stunbaton
+          tags:
+          - StunSword # same
       tear_gas_grenade:
         whitelist:
           components:
