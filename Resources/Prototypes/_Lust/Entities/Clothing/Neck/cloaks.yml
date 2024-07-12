@@ -1,0 +1,89 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMedCloak
+  name: medical cloak
+  description: Cool medical cloak.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/medical_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckEngCloak
+  name: Engineer cloak
+  description: Cool engineer cloak.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/engineer_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckSecCloak
+  name: Security cloak
+  description: Bloody cloak, it seems the blood of the corporation enemies is still fresh... Not bad.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/security_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckQilluCloak
+  name: special Qillu cloak
+  description: A purple cloak given to the most loyal employees of the corporation.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/qillu_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCapSpecialCloak
+  name: special captain cloak
+  description: Special cloak for special Captain. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/cap_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCmoSpecialCloak
+  name: special CMO cloak
+  description: Special cloak for special CMO. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/cmo_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckHopSpecialCloak
+  name: special HOP cloak
+  description: Special cloak for special HOP. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/hop_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckHosSpecialCloak
+  name: special HOS cloak
+  description: Special cloak for special HOS. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/hos_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckQmSpecialCloak
+  name: special QM cloak
+  description: Special cloak for special QM. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/qm_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckRdSpecialCloak
+  name: special RD cloak
+  description: Special cloak for special RD. Looks so rich.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/rd_special_cloak.rsi
