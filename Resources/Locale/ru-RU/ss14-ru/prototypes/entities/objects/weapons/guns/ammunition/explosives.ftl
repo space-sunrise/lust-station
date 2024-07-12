@@ -26,5 +26,5 @@ ent-CannonBallGlassshot = стеклянная картечь
     .suffix = Пираты
     .desc = { ent-BaseCannonBall.desc }
 
-ent-CartridgeRocketNT = выстрел NT-69
+ent-CartridgeRocketNT = выстрел QL-69
     .desc = { ent-CartridgeRocket.desc }
