@@ -1006,6 +1006,7 @@
   minLimit: 0
   loadouts:
   - DetectiveTie
+  - SecurityCloak
 
 - type: loadoutGroup
   id: DetectiveJumpsuit

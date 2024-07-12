@@ -1,0 +1,10 @@
+﻿# Neck
+- type: loadout
+  id: QilluCloak
+  equipment: QilluCloak
+  sponsorOnly: true
+
+- type: startingGear
+  id: QilluCloak
+  equipment:
+    neck: ClothingNeckQilluCloak

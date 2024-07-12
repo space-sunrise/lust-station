@@ -42,17 +42,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtWarden
 
-# Neck
-- type: loadout # Lust Station
-  id: SecurityCloak
-  equipment: SecurityCloak
-  sponsorOnly: true
-
-- type: startingGear # Lust Station
-  id: SecurityCloak
-  equipment:
-    neck: ClothingNeckSecCloak
-
 # OuterClothing
 - type: loadout
   id: WardenCoat

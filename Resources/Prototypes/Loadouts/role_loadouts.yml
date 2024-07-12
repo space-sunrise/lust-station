@@ -9,6 +9,7 @@
   - CaptainOuterClothing
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -26,6 +27,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -45,6 +47,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -61,6 +64,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -75,6 +79,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -92,6 +97,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -106,6 +112,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -121,6 +128,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -139,6 +147,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -157,6 +166,7 @@
   - Trinkets
   - JanitorPlunger
   - Survival
+  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobBotanist
@@ -168,6 +178,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -185,6 +196,7 @@
   - Glasses
   - Trinkets
   - SurvivalClown
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -202,6 +214,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -218,6 +231,7 @@
   - Trinkets
   - Instruments
   - Survival
+  - SpecialLoadout # Lust Station
 
 # Cargo
 - type: roleLoadout
@@ -232,6 +246,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -249,6 +264,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -264,6 +280,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -282,6 +299,7 @@
   - ChiefEngineerShoes
   - Trinkets
   - SurvivalExtended
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -296,6 +314,7 @@
   - StationEngineerBackpack
   - Trinkets
   - SurvivalExtended
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -314,6 +333,7 @@
   - StationEngineerID
   - Trinkets
   - SurvivalExtended
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -330,6 +350,7 @@
   - AtmosphericTechnicianShoes
   - Trinkets
   - SurvivalExtended
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -350,6 +371,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -370,6 +392,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -384,6 +407,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -404,6 +428,7 @@
   - SecurityShoes
   - Trinkets
   - SurvivalSecurity
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -423,6 +448,7 @@
   - SecurityShoes
   - Trinkets
   - SurvivalSecurity
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -443,6 +469,7 @@
   - SecurityBelt
   - Trinkets
   - SurvivalSecurity
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -456,12 +483,12 @@
   - DetectiveHead
   - DetectiveNeck
   - DetectiveJumpsuit
-  - SecurityNeck # Lust Station
   - SecurityBackpack
   - DetectiveOuterClothing
   - SecurityShoes
   - Trinkets
   - SurvivalSecurity
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -477,6 +504,7 @@
   - SecurityBackpack
   - Trinkets
   - SurvivalSecurity
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -498,6 +526,7 @@
   - Glasses
   - Trinkets
   - SurvivalMedical
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -519,6 +548,7 @@
   - Glasses
   - Trinkets
   - SurvivalMedical
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -534,6 +564,7 @@
   - Glasses
   - Trinkets
   - SurvivalMedical
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -552,6 +583,7 @@
   - MedicalShoes
   - Trinkets
   - SurvivalMedical
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -572,6 +604,7 @@
   - Glasses
   - Trinkets
   - SurvivalMedical
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -586,6 +619,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -600,6 +634,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -613,6 +648,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
@@ -628,6 +664,7 @@
   - Glasses
   - Trinkets
   - Survival
+  - SpecialLoadout # Lust Station
   # Sunrise-start
   - Bra
   - Pants
