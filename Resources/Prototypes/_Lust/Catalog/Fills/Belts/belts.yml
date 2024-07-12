@@ -1,0 +1,8 @@
+﻿- type: entity
+  parent: ClothingSheathBeltSecurity
+  id: ClothingSheathBeltSecurityFilled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - Stunsword
