@@ -2,7 +2,10 @@
   parent: ClothingSheathBeltSecurity
   id: ClothingSheathBeltSecurityFilled
   components:
-  - type: ContainerFill
-    containers:
-      item:
-      - Stunsword
+  - type: StorageFill
+    contents:
+    - id: GrenadeFlashBang
+    - id: TearGasGrenade
+    - id: Stunsword
+    - id: Handcuffs
+    - id: Handcuffs
