@@ -501,6 +501,7 @@ namespace Content.Server.GameTicking
             // Sunrise-Start
             RandomizeLobbyParalax();
             RandomizeLobbyImage();
+            RandomizeLobbyBackground();
             // Sunrise-End
             ResettingCleanup();
             IncrementRoundNumber();
@@ -625,11 +626,6 @@ namespace Content.Server.GameTicking
             {
                 LoadMaps();
             }
-        }
-
-        public TimeSpan RoundDuration()
-        {
-            return _gameTiming.CurTime.Subtract(RoundStartTimeSpan);
         }
 
         private void AnnounceRound()

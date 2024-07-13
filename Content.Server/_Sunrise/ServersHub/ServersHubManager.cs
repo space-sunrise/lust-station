@@ -89,6 +89,8 @@ public sealed partial class ServersHubManager
         if (_serversList.Count == 0)
             return;
 
+        _cfg.SetCVar(CVars.ResourceUploadingLimitMb, 0f);
+
         _serverDataList.Clear();
 
         foreach (var serverUrl in _serversList)
@@ -141,7 +143,7 @@ public sealed partial class ServersHubManager
 
         if (!resp.IsSuccessStatusCode)
         {
-            _sawmill.Error("Auth server returned bad response {StatusCode}!", resp.StatusCode);
+            _sawmill.Error("SS14 server returned bad response {StatusCode}!", resp.StatusCode);
             return null;
         }
 

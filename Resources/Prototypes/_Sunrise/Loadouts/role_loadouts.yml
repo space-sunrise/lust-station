@@ -6,6 +6,7 @@
   - CommonBackpack
   - Trinkets
   - Survival
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -17,6 +18,7 @@
   - CommonBackpack
   - Trinkets
   - Survival
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -27,9 +29,10 @@
   groups:
   - BrigmedicJumpsuit
   - BrigmedicBackpack
+  - SurvivalSecurity
   - Trinkets
   - SecurityTrinkets
-  - SurvivalSecurity
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -41,8 +44,8 @@
   - CentCommOperatorJumpsuit
   - CentCommOperatorHats
   - Trinkets
-  - SecurityBodycam
   - Survival
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -55,6 +58,7 @@
   - CentCommOperatorHats
   - Trinkets
   - Survival
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -65,9 +69,9 @@
   groups:
   - BlueShieldJumpsuit
   - BlueShieldBackpack
-  - SecurityBodycam
   - Trinkets
   - Survival
+  - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
   - Pants
@@ -79,11 +83,13 @@
   - SeniorOfficerJumpsuit
   - SecurityBackpack
   - SecurityBelt
-  - SecurityTrinkets
   - SecurityOuterClothing
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -98,6 +104,8 @@
   - Glasses
   - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -113,6 +121,8 @@
   - SurvivalMedical
   - Trinkets
   - Glasses
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -126,6 +136,8 @@
   - StationEngineerShoes
   - SurvivalExtended
   - Trinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -141,6 +153,147 @@
   - ScientistShoes
   - Survival
   - Trinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonEngineer
+  groups:
+  - StationEngineerHead
+  - StationEngineerJumpsuit
+  - StationEngineerBackpack
+  - StationEngineerOuterClothing
+  - StationEngineerShoes
+  - Trinkets
+  - SurvivalExtended
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonPilot
+  groups:
+  - PrisonGuardJumpsuit
+  - PrisonGuardBackpack
+  - SecurityShoes
+  - Trinkets
+  - SecurityTrinkets
+  - SurvivalSecurity
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonWorker
+  groups:
+  - BartenderJumpsuit
+  - CommonBackpack
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisoner
+  groups:
+  - PrisonerJumpsuit
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonGuard
+  groups:
+  - PrisonGuardHead
+  - PrisonGuardJumpsuit
+  - PrisonGuardBackpack
+  - SecurityShoes
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobSecurityPilot
+  groups:
+  - SecurityPilotJumpsuit
+  - SecurityBackpack
+  - SecurityShoes
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonChef
+  groups:
+  - GroupTankHarness
+  - ChefHead
+  - ChefMask
+  - ChefJumpsuit
+  - CommonBackpack
+  - ChefOuterClothing
+  - Glasses
+  - Survival
+  - Trinkets
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPrisonDoctor
+  groups:
+  - GroupTankHarness
+  - MedicalDoctorHead
+  - MedicalMask
+  - MedicalDoctorJumpsuit
+  - MedicalGloves
+  - MedicalBackpack
+  - MedicalDoctorOuterClothing
+  - MedicalShoes
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+  - GroupSpeciesBreathToolMedical
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobHeadOfPrison
+  groups:
+  - PrisonGuardHead
+  - PrisonGuardJumpsuit
+  - PrisonGuardBackpack
+  - SecurityShoes
+  - SurvivalSecurity
+  - Trinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathToolSecurity
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
