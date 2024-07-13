@@ -5,6 +5,8 @@
   id: BaseMobDemon
   abstract: true
   components:
+  - type: Interaction
+    erp: true
   - type: HumanoidAppearance
     species: DemonSpecies
   - type: Hunger
