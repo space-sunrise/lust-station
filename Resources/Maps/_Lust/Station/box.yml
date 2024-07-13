@@ -63644,6 +63644,72 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 57.5,-34.5
       parent: 8364
+  - uid: 21350
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 20.536333,-10.249656
+      parent: 8364
+  - uid: 21351
+    components:
+    - type: Transform
+      pos: 18.676958,-8.357717
+      parent: 8364
+  - uid: 21352
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 20.348833,-7.1224833
+      parent: 8364
+  - uid: 21353
+    components:
+    - type: Transform
+      pos: 20.520708,-5.4963546
+      parent: 8364
+  - uid: 21354
+    components:
+    - type: Transform
+      pos: 19.520708,-8.404624
+      parent: 8364
+  - uid: 21357
+    components:
+    - type: Transform
+      pos: 19.473833,-5.4494467
+      parent: 8364
+  - uid: 21358
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 19.426958,-10.296563
+      parent: 8364
+  - uid: 21359
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 19.708208,-7.1693907
+      parent: 8364
+  - uid: 21360
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 18.583208,-10.327834
+      parent: 8364
+  - uid: 21361
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 18.598833,-7.153756
+      parent: 8364
+  - uid: 21362
+    components:
+    - type: Transform
+      pos: 18.739458,-5.433811
+      parent: 8364
+  - uid: 21367
+    components:
+    - type: Transform
+      pos: 20.333208,-8.3889885
+      parent: 8364
   - uid: 21611
     components:
     - type: Transform
@@ -68866,6 +68932,12 @@ entities:
     - type: Transform
       pos: 15.5,28.5
       parent: 8364
+  - uid: 9061
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 10.5,-13.5
+      parent: 8364
   - uid: 9413
     components:
     - type: Transform
@@ -68976,6 +69048,12 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -57.5,-2.5
       parent: 8364
+  - uid: 14991
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 10.5,-12.5
+      parent: 8364
   - uid: 15320
     components:
     - type: Transform
@@ -69041,6 +69119,18 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 44.5,-34.5
+      parent: 8364
+  - uid: 20895
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,-12.5
+      parent: 8364
+  - uid: 21349
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 8.5,-13.5
       parent: 8364
   - uid: 21983
     components:
@@ -132653,104 +132743,6 @@ entities:
     components:
     - type: Transform
       pos: -58.5,-15.5
-      parent: 8364
-- proto: RedArmhair
-  entities:
-  - uid: 21359
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,-13.5
-      parent: 8364
-  - uid: 21360
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 8.5,-12.5
-      parent: 8364
-  - uid: 21361
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,-12.5
-      parent: 8364
-  - uid: 21362
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 10.5,-13.5
-      parent: 8364
-- proto: RedSofaLeftSide
-  entities:
-  - uid: 9061
-    components:
-    - type: Transform
-      pos: 18.5,-8.5
-      parent: 8364
-  - uid: 21350
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-7.5
-      parent: 8364
-  - uid: 21352
-    components:
-    - type: Transform
-      pos: 18.5,-5.5
-      parent: 8364
-  - uid: 21357
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 20.5,-10.5
-      parent: 8364
-- proto: RedSofaMiddle
-  entities:
-  - uid: 14991
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 19.5,-7.5
-      parent: 8364
-  - uid: 20895
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 19.5,-10.5
-      parent: 8364
-  - uid: 21351
-    components:
-    - type: Transform
-      pos: 19.5,-8.5
-      parent: 8364
-  - uid: 21367
-    components:
-    - type: Transform
-      pos: 19.5,-5.5
-      parent: 8364
-- proto: RedSofaRightSide
-  entities:
-  - uid: 21349
-    components:
-    - type: Transform
-      pos: 20.5,-8.5
-      parent: 8364
-  - uid: 21353
-    components:
-    - type: Transform
-      pos: 20.5,-5.5
-      parent: 8364
-  - uid: 21354
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 18.5,-10.5
-      parent: 8364
-  - uid: 21358
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 18.5,-7.5
       parent: 8364
 - proto: ReinforcedPlasmaWindow
   entities:
