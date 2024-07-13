@@ -71,6 +71,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - CaptainSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -108,6 +109,7 @@
   loadouts:
   - HoPCloak
   - HoPMantle
+  - HopSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: HoPBackpack
@@ -530,6 +532,7 @@
   loadouts:
   - QuartermasterCloak
   - QuartermasterMantle
+  - QuartermasterSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: QuartermasterOuterClothing
@@ -727,6 +730,7 @@
   loadouts:
   - ResearchDirectorMantle
   - ResearchDirectorCloak
+  - RdSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: ResearchDirectorJumpsuit
@@ -831,6 +835,7 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
+  - HosSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -892,6 +897,7 @@
   name: loadout-group-security-belt
   loadouts:
   - SecurityBelt
+  - SecuritySheathBelt # Lust Station
   - SecurityWebbing
 
 - type: loadoutGroup
@@ -924,6 +930,7 @@
   minLimit: 0
   loadouts:
   - DetectiveTie
+  - SecurityCloak # Lust Station
 
 - type: loadoutGroup
   id: DetectiveJumpsuit
@@ -990,6 +997,7 @@
   loadouts:
   - ChiefMedicalOfficerCloak
   - ChiefMedicalOfficerMantle
+  - CmoSpecialCloak # Lust Station
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerShoes

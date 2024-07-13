@@ -71,6 +71,12 @@
                                     <Control HorizontalExpand="True"/>
                                     <OptionButton Name="SexButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
+                                <!-- Erp -->
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'humanoid-profile-editor-erp-label'}" />
+                                    <Control HorizontalExpand="True"/>
+                                    <OptionButton Name="ErpButton" HorizontalAlignment="Right" />
+                                </BoxContainer>
                                 <!-- Pronouns -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-pronouns-label'}" />

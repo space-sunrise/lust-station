@@ -1,0 +1,11 @@
+﻿- type: entity
+  parent: ClothingSheathBeltSecurity
+  id: ClothingSheathBeltSecurityFilled
+  components:
+  - type: StorageFill
+    contents:
+    - id: GrenadeFlashBang
+    - id: TearGasGrenade
+    - id: Stunsword
+    - id: Handcuffs
+    - id: Handcuffs

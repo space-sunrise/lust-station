@@ -13,9 +13,6 @@
   - type: Advertise
     pack: KinkMateAds
   - type: Speech
-  - type: Tag
-    tags:
-      - DroneUsable
   - type: Sprite
     sprite: _Lust/Structures/Machines/VendingMachines/kinkmate.rsi
     layers:

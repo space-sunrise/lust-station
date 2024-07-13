@@ -738,6 +738,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
 
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("erp");
+
                     b.Property<string>("EyeColor")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -808,12 +813,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
-                    // Sunrise-TTS-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("voice");
-                    // Sunrise-TTS-End
 
                     b.HasKey("Id")
                         .HasName("PK_profile");

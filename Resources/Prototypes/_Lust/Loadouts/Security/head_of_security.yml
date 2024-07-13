@@ -1,0 +1,19 @@
+﻿- type: loadout # Lust Station
+  id: HosSpecialCloak
+  equipment: HosSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: HosSpecialCloak
+  equipment:
+    neck: ClothingNeckHosSpecialCloak
+
+- type: loadout # Lust Station
+  id: SecuritySheathBelt
+  equipment: SecuritySheathBelt
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: SecuritySheathBelt
+  equipment:
+    belt: ClothingSheathBeltSecurityFilled

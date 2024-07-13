@@ -1,7 +1,7 @@
 ent-Soap = мыло
     .desc = Дешёвый брусок мыла. Не пахнет.
 ent-SoapNT = мыло
-    .desc = Брусок мыла бренда Nanotrasen. Пахнет плазмой.
+    .desc = Брусок мыла бренда Qillu. Пахнет плазмой.
 ent-SoapDeluxe = мыло
     .desc = Брусок мыла престижного бренда Waffle Co. Пахнет земляникой.
 ent-SoapSyndie = мыло

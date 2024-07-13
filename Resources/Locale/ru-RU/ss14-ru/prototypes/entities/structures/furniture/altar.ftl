@@ -1,6 +1,6 @@
 ent-AltarBase = алтарь
     .desc = Алтарь богов.
-ent-AltarNanotrasen = алтарь Nanotrasen
+ent-AltarNanotrasen = алтарь Qillu
     .desc = { ent-AltarBase.desc }
 ent-AltarChaos = алтарь хаоса
     .desc = { ent-AltarNanotrasen.desc }

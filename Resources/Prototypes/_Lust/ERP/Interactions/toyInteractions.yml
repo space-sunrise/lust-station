@@ -1,0 +1,98 @@
+# Dildos
+
+- type: interaction
+  id: ERPtoyPlaceholderDildo
+  name: Вставить дилдо в анал
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - вставляет дилдо в анал %target
+  - вводит дилдо в анал %target
+  - аккуратно вставляет дилдо в анал %target
+  - глубоко вставляет дилдо в анал %target
+  - резко вставляет дилдо в анал %target
+  - медленно вводит дилдо в анал %target
+  - наслаждаясь, вставляет дилдо в анал %target
+  targetSex: Male
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 5
+  useSelf: true
+
+- type: interaction
+  id: ERPtoyPlaceholderDildo2
+  name: Вставить дилдо в вагину
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - вставляет дилдо в вагину %target
+  - вводит дилдо в вагину %target
+  - аккуратно вставляет дилдо в анал %target
+  - глубоко вставляет дилдо в анал %target
+  - резко вставляет дилдо в анал %target
+  - медленно вводит дилдо в анал %target
+  - наслаждаясь, вставляет дилдо в анал %target
+  targetSex: Female
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 5
+  useSelf: true
+
+- type: interaction
+  id: ERPtoyPlaceholderDildo3
+  name: Вставить дилдо в анал
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - вставляет дилдо в анал %target
+  - вводит дилдо в анал %target
+  - аккуратно вставляет дилдо в анал %target
+  - глубоко вставляет дилдо в анал %target
+  - резко вставляет дилдо в анал %target
+  - медленно вводит дилдо в анал %target
+  - наслаждаясь, вставляет дилдо в анал %target
+  targetSex: Female
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 5
+  useSelf: true
+
+# Fleshflights
+
+- type: interaction
+  id: ERPtoyPlaceholderFleshflight1
+  name: Вставить член в киску
+  inhandObject:
+  - ERPNormalFleshlight
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - надевает киску на член %target
+  - вставляет член %target в киску
+  - медленно надевает киску на член %target
+  - глубоко вставляет член %target в киску
+  - аккуратно надевает киску на член %target
+  - резко вставляет член %target в киску
+  - наслаждаясь, надевает киску на член %target
+  targetSex: Male
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 5
+  useSelf: true

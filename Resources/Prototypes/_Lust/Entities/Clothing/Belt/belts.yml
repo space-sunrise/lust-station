@@ -1,0 +1,50 @@
+﻿- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingSheathBeltSecurity
+  name: security sheath belt
+  description: Can hold security gear like handcuffs and flashes. It has a special compartment for sword.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Belt/securitysheath.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Belt/securitysheath.rsi
+  - type: Storage
+    whitelist:
+      tags:
+      - CigPack
+      - Taser
+      - SecBeltEquip
+      - Radio
+      - Sidearm
+      - MagazinePistol
+      - MagazineMagnum
+      - CombatKnife
+      - Truncheon
+      - StunSword # We shouldn't be able to put there stunbaton
+      components:
+      - FlashOnTrigger
+      - SmokeOnTrigger
+      - Flash
+      - Handcuff
+      - BallisticAmmoProvider
+      - CartridgeAmmo
+      - DoorRemote
+      - Whistle
+      - HolosignProjector
+      - BalloonPopper
+  - type: ItemMapper
+    mapLayers:
+      flashbang:
+        whitelist:
+          components:
+          - FlashOnTrigger
+      stunsword: # same
+        whitelist:
+          tags:
+          - StunSword # same
+      tear_gas_grenade:
+        whitelist:
+          components:
+          - SmokeOnTrigger
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance
