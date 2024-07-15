@@ -79,7 +79,7 @@ public sealed class SunriseCCVars
      */
 
     public static readonly CVarDef<bool> GodModeRoundEnd =
-        CVarDef.Create("game.godmode_end", true, CVar.SERVERONLY);
+        CVarDef.Create("game.godmode_end", false, CVar.SERVERONLY);
 
     /*
      * Peaceful Round End
@@ -89,11 +89,14 @@ public sealed class SunriseCCVars
     /// Making everyone a pacifist at the end of a round.
     /// </summary>
     public static readonly CVarDef<bool> PeacefulRoundEnd =
-        CVarDef.Create("game.peaceful_end", true, CVar.SERVERONLY);
+        CVarDef.Create("game.peaceful_end", false, CVar.SERVERONLY);
 
     /*
      * Servers Hub
      */
+
+    public static readonly CVarDef<bool> ServersHubEnable =
+        CVarDef.Create("servers_hub.enable", true, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Список серверов отображаемых в хабе. Разделяются через запятую.
@@ -109,7 +112,7 @@ public sealed class SunriseCCVars
     /// До сколько часов общего наиграного времени игроки будут появляться на станции даже в позднем присоединеии.
     /// </summary>
     public static readonly CVarDef<int> ArrivalsMinHours =
-        CVarDef.Create("transithub.arrivals_min_hours", 10, CVar.SERVER | CVar.ARCHIVE);
+        CVarDef.Create("transithub.arrivals_min_hours", 20, CVar.SERVER | CVar.ARCHIVE);
 
     /**
      * Tape Player
@@ -120,4 +123,42 @@ public sealed class SunriseCCVars
     /// </summary>
     public static readonly CVarDef<bool> TapePlayerClientEnabled =
         CVarDef.Create("tape_player.client_enabled", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Link to boosty to show in the launcher.
+    /// </summary>
+    public static readonly CVarDef<string> InfoLinksDonate =
+        CVarDef.Create("infolinks.donate", "", CVar.SERVER | CVar.REPLICATED);
+
+    /**
+     * Lobby
+     */
+
+    public static readonly CVarDef<string> LobbyBackground =
+        CVarDef.Create("lobby.background", "Art", CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    public static readonly CVarDef<float> LobbyOpacity =
+        CVarDef.Create("lobby.lobby_opacity", 0.90f, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /*
+     * Planet Prison
+     */
+
+    public static readonly CVarDef<int> MinPlayersPlanetPrison =
+        CVarDef.Create("planet_prison.min_players", 60, CVar.SERVERONLY);
+
+    /**
+     * Roadmap
+     */
+
+    public static readonly CVarDef<string> RoadmapId =
+        CVarDef.Create("roadmap.id", "SunriseRoadmap");
+
+    /**
+     * Lobby Changelog
+     */
+
+    public static readonly CVarDef<string> LobbyChangelogs =
+        CVarDef.Create("lobby_changelog.id", "ChangelogSunrise.yml,Changelog.yml", CVar.SERVER | CVar.REPLICATED);
+
 }

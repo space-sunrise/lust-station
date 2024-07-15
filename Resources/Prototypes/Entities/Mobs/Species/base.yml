@@ -148,9 +148,6 @@
     - StaminaModifier
     - Flashed
     - LoveEffect  # Sunrise-Aphrodesiac
-  - type: Reflect
-    enabled: false
-    reflectProb: 0
   - type: Body
     prototype: Human
     requiredLegs: 2
@@ -247,7 +244,6 @@
   components:
   - type: Carriable # Sunrise-edit
   - type: CanEscapeInventory # Sunrise-edit
-  - type: FootPrints # Sunrise-edit
   - type: Barotrauma
     damage:
       types:

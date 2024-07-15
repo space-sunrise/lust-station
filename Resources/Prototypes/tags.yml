@@ -546,6 +546,9 @@
   id: DrinkSpaceGlue
 
 - type: Tag
+  id: Dropper
+
+- type: Tag
   id: Duck
 
 - type: Tag
@@ -619,6 +622,9 @@
 
 - type: Tag
   id: GasScrubber
+
+- type: Tag
+  id: GasTank
 
 - type: Tag
   id: GasVent
@@ -1100,6 +1106,9 @@
   id: SalvageExperiment
 
 - type: Tag
+  id: Scarf
+
+- type: Tag
   id: Screwdriver
 
 - type: Tag
@@ -1340,5 +1349,8 @@
 
 - type: Tag
   id: WriteIgnoreStamps
+
+- type: Tag
+  id: SolarAssemblyFlatpack
 
 # ALPHABETICAL
