@@ -6,6 +6,8 @@ using Content.Shared._Sunrise.ERP;
 using Content.Shared.Humanoid;
 using Content.Shared._Sunrise.ERP.Components;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Random;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     [UsedImplicitly]
@@ -18,9 +20,11 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly bool _targetHasClothing;
         private readonly bool _erpAllowed;
 
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         private readonly InteractionSystem _interaction;
         private readonly TransformSystem _transform;
+        private readonly SharedAudioSystem _audio;
         public IEntityManager _entManager;
         
         public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
@@ -34,6 +38,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             _interaction = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<InteractionSystem>();
             _transform = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<TransformSystem>();
             _entManager = IoCManager.Resolve<IEntityManager>();
+            _audio = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SharedAudioSystem>();
             IoCManager.InjectDependencies(this);
         }
 
@@ -59,6 +64,9 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (!res.HasValue) return;
                     var resVal = res.Value;
                     SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5));
+                    break;
+                case PlaySoundMessage req:
+                    _audio.PlayPvs(_random.Pick(req.Audios), _entManager.GetEntity(req.User));
                     break;
             }
         }

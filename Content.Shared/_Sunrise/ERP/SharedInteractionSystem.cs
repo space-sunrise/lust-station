@@ -3,6 +3,7 @@ using Content.Shared._Sunrise.ERP.Components;
 using Robust.Shared.Serialization;
 using Content.Shared.Eui;
 using Content.Shared.Humanoid;
+using Robust.Shared.Audio;
 namespace Content.Shared._Sunrise.ERP
 {
     public abstract class SharedInteractionSystem : EntitySystem
@@ -54,6 +55,19 @@ namespace Content.Shared._Sunrise.ERP
         public ResponseLoveMessage(float percent)
         {
             Percent = percent;
+        }
+    }
+
+    [NetSerializable, Serializable]
+    public sealed class PlaySoundMessage : EuiMessageBase
+    {
+        public NetEntity User;
+        public List<SoundSpecifier> Audios;
+
+        public PlaySoundMessage(NetEntity user, List<SoundSpecifier> audios)
+        {
+            User = user;
+            Audios = audios;
         }
     }
 

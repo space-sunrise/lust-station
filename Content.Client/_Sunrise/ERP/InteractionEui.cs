@@ -123,7 +123,8 @@ namespace Content.Client._Sunrise.ERP
                 }
                 if (interaction.Sounds.Count > 0)
                 {
-                    _audio.PlayPvs(_random.Pick(interaction.Sounds), _player.LocalEntity.Value);
+                    SendMessage(new PlaySoundMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), interaction.Sounds));
+                    
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 if (_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
