@@ -87,7 +87,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                     {
                         Spawn("PuddleSemen", Transform(User).Coordinates);
                     }
-                } 
+                }
             }
 
             if (percentTarget != 0)
@@ -170,7 +170,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             while (query.MoveNext(out var uid, out var comp))
             {
                 comp.Love -= ((comp.Love - comp.ActualLove) / 1) * frameTime;
-                if (_gameTiming.CurTime - comp.TimeFromLastErp > TimeSpan.FromSeconds(15) && comp.Love > 0)
+                if (_gameTiming.CurTime - comp.TimeFromLastErp > TimeSpan.FromSeconds(40) && comp.Love > 0)
                 {
                     comp.ActualLove -= 0.001f;
                 }
