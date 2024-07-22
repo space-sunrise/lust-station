@@ -382,3 +382,5 @@ SignHydro3: SignHydro1
 # Sunrise migrations
 AirlockExternalGlassShuttleArrivals: AirlockExternalGlassShuttleArrivalsLocked
 AirlockHatchSyndicate: AirlockHatchSyndicateLocked
+SurveillanceCameraWirelessRouterBase: SurveillanceCameraWirelessRouterConstructed
+WallRiveted: WallBrick
