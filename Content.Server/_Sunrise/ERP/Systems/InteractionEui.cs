@@ -26,7 +26,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly TransformSystem _transform;
         private readonly SharedAudioSystem _audio;
         public IEntityManager _entManager;
-        
+
         public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
             _target = target;
@@ -45,20 +45,19 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
-            
+
             switch (msg)
             {
                 case AddLoveMessage req:
-                    if (!_entManager.GetEntity(req.User).Valid) return;
-                    if (!_entManager.GetEntity(req.Target).Valid) return;
+                    if(!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
+                    {
+                        Close();
+                        return;
+                    }
                     _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
                     if(_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
                     {
                         SendMessage(new ResponseLoveMessage(usComp.Love));
-                    }
-                    if(!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
-                    {
-                        Close();
                     }
                     break;
                 case RequestInteractionState req:
