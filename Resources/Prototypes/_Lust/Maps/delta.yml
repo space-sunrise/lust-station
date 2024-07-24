@@ -60,3 +60,8 @@
             BlueShield: [ 1, 1 ]
             # security
             Brigmedic: [ 1, 1 ]
+            #senior
+            SeniorPhysician: [ 1, 1 ]
+            SeniorResearcher: [ 1, 1 ]
+            SeniorOfficer: [ 1, 1 ]
+            SeniorEngineer: [ 1, 1 ]
