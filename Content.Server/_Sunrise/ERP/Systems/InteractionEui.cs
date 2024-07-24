@@ -45,10 +45,12 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
-
+            
             switch (msg)
             {
                 case AddLoveMessage req:
+                    if (!_entManager.GetEntity(req.User).Valid) return;
+                    if (!_entManager.GetEntity(req.Target).Valid) return;
                     _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
                     if(_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
                     {
@@ -60,12 +62,15 @@ namespace Content.Server._Sunrise.ERP.Systems
                     }
                     break;
                 case RequestInteractionState req:
+                    if (!_entManager.GetEntity(req.User).Valid) return;
+                    if (!_entManager.GetEntity(req.Target).Valid) return;
                     var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
                     if (!res.HasValue) return;
                     var resVal = res.Value;
                     SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5));
                     break;
                 case PlaySoundMessage req:
+                    if (!_entManager.GetEntity(req.User).Valid) return;
                     _audio.PlayPvs(_random.Pick(req.Audios), _entManager.GetEntity(req.User));
                     break;
             }

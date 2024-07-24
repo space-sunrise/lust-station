@@ -246,6 +246,8 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (!TargetSex.HasValue) return;
         if (!_player.LocalEntity.HasValue) return;
 
+        if (!TargetEntityId.Value.Valid) return;
+
         //Аминь
         if (Erp)
         {
