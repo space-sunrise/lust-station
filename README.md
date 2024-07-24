@@ -4,7 +4,7 @@
 
 <div class="header" align="center">
 
-[![Discord](https://img.shields.io/discord/831352358520725506?label=Discord&logo=discord&logoColor=white)](https://discord.gg/sunrise-1174575355370160190)
+[![Discord](https://img.shields.io/discord/831352358520725506?label=Discord&logo=discord&logoColor=white)](https://discord.gg/ssJTANEa)
 [![Wiki](https://img.shields.io/badge/Wiki-SS14%20SUNRISE-blue)](https://sunrise14.top/wiki/)
 [![Steam](https://img.shields.io/badge/Steam-SS14%20SUNRISE-blue)](https://store.steampowered.com/app/1255460/Space_Station_14/)
 [![Client](https://img.shields.io/badge/Client-Download-blue)](https://spacestation14.io/about/nightlies/)
@@ -28,7 +28,7 @@ Space Station 14 — это ролевая игра, вдохновлённая 
 <!---
 ТУТ ИЗМЕНИТЬ НА СВОЁ АПИ С САЙТА repobeats.axiom.co  СЕЙЧАС ЭТО СТАТИСТИКА МОЕГО РЕПОЗИТОРИЯ!!!!!!!!!!!!!!!!!!!!
 --->
-![Статистика активности](https://repobeats.axiom.co/api/embed/4b571efc250497453ec50bb02a6f2ca21a316c18.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/49651d1b93eecc08e01f1a268a917343cf661fc8.svg "Repobeats analytics image")
 
 ## Участники проекта
 

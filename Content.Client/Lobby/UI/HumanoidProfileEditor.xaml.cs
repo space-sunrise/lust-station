@@ -776,7 +776,7 @@ namespace Content.Client.Lobby.UI
             UpdateEyePickers();
             UpdateSaveButton();
             UpdateMarkings();
-            UpdateTTSVoicesControls(); // Sunrise-TTS
+            UpdateTtsVoicesControls(); // Sunrise-TTS
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
@@ -1207,7 +1207,7 @@ namespace Content.Client.Lobby.UI
             }
 
             UpdateGenderControls();
-            UpdateTTSVoicesControls(); // Sunrise-TTS
+            UpdateTtsVoicesControls(); // Sunrise-TTS
             RefreshLoadouts(); // Sunrise-Sex restrictions
             Markings.SetSex(newSex);
             ReloadPreview();
