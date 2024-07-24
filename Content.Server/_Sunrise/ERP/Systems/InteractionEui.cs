@@ -6,6 +6,9 @@ using Content.Shared._Sunrise.ERP;
 using Content.Shared.Humanoid;
 using Content.Shared._Sunrise.ERP.Components;
 using Robust.Server.GameObjects;
+using Robust.Shared.Audio.Systems;
+using Robust.Shared.Random;
+using Robust.Shared.Timing;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     [UsedImplicitly]
@@ -22,7 +25,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly InteractionSystem _interaction;
         private readonly TransformSystem _transform;
         public IEntityManager _entManager;
-        
+
         public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
             _target = target;
@@ -40,18 +43,21 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
-
             switch (msg)
             {
                 case AddLoveMessage req:
-                    _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
-                    if(_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
-                    {
-                        SendMessage(new ResponseLoveMessage(usComp.Love));
-                    }
-                    if(!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
+                    if (req.Target != _target) return;
+                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
                     {
                         Close();
+                        return;
+                    }
+                    if (!_entManager.GetEntity(req.User).Valid) return;
+                    if (!_entManager.GetEntity(req.Target).Valid) return;
+                    _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
+                    if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
+                    {
+                        SendMessage(new ResponseLoveMessage(usComp.Love));
                     }
                     break;
                 case RequestInteractionState req:
