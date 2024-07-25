@@ -9,6 +9,8 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using Robust.Shared.Prototypes;
+using System.Linq;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     [UsedImplicitly]
@@ -23,9 +25,11 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly bool _erpAllowed;
 
 
-        private readonly InteractionSystem _interaction;
+        private readonly InteractionSystem _interaction; 
         private readonly TransformSystem _transform;
         public IEntityManager _entManager;
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        private Dictionary<string, InteractionPrototype> _prototypes = new();
 
         public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
@@ -39,6 +43,8 @@ namespace Content.Server._Sunrise.ERP.Systems
             _interaction = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<InteractionSystem>();
             _transform = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<TransformSystem>();
             _entManager = IoCManager.Resolve<IEntityManager>();
+
+
             IoCManager.InjectDependencies(this);
         }
 
@@ -48,6 +54,21 @@ namespace Content.Server._Sunrise.ERP.Systems
             switch (msg)
             {
                 case AddLoveMessage req:
+                    var percentUser = 0;
+                    var percentTarget = 0;
+                    if (req.InteractionPrototype != null)
+                    {
+                        if (_prototypes.ContainsKey(req.InteractionPrototype))
+                        {
+                            var proto = _prototypes[req.InteractionPrototype];
+                            percentUser = proto.LovePercentUser;
+                            percentTarget = proto.LovePercentTarget;
+                            if (proto.TargetWithoutCloth && _targetHasClothing) return;
+                            if (proto.UserWithoutCloth && _userHasClothing) return;
+                            if (proto.Erp && !_erpAllowed) return;
+                        }
+                        else return;
+                    }
                     if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
                     {
                         Close();
@@ -55,8 +76,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                     }
                     if (!_entManager.GetEntity(_user).Valid) return;
                     if (!_entManager.GetEntity(_target).Valid) return;
-                    if (!_erpAllowed) return;
-                    _interaction.AddLove(_user, _target, req.PercentUser, req.PercentTarget);
+                    _interaction.AddLove(_user, _target, percentUser, percentTarget);
                     if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
                         SendMessage(new ResponseLoveMessage(usComp.Love));
                     break;
@@ -73,7 +93,8 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void Opened()
         {
             base.Opened();
-
+            _prototypes.Clear();
+            _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList().ForEach(x => _prototypes.Add(x.ID, x));
             StateDirty();
         }
 

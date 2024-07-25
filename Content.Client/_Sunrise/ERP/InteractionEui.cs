@@ -62,7 +62,7 @@ namespace Content.Client._Sunrise.ERP
         {
             if (!_player.LocalEntity.HasValue) return;
             if (!_window.TargetEntityId.HasValue) return;
-            SendMessage(new AddLoveMessage(0, 0));
+            SendMessage(new AddLoveMessage(null));
         }
 
         public void RequestState()
@@ -126,10 +126,7 @@ namespace Content.Client._Sunrise.ERP
                     _audio.PlayPvs(_random.Pick(interaction.Sounds), _player.LocalEntity.Value);
                 }
                 if (!_window.TargetEntityId.HasValue) return;
-                if (_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
-                    SendMessage(new AddLoveMessage(interaction.LovePercentUser, interaction.LovePercentTarget));
-                else
-                    SendMessage(new AddLoveMessage(interaction.LovePercentUser/2, interaction.LovePercentTarget));
+                SendMessage(new AddLoveMessage(interaction.ID));
                 _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(2);
             }
         }

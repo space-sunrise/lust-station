@@ -31,13 +31,11 @@ namespace Content.Shared._Sunrise.ERP
     [NetSerializable, Serializable]
     public sealed class AddLoveMessage : EuiMessageBase
     {
-        public int PercentUser;
-        public int PercentTarget;
+        public string? InteractionPrototype;
 
-        public AddLoveMessage(int percentUser, int percentTarget)
+        public AddLoveMessage(string? interactionPrototype)
         {
-            PercentUser = percentUser;
-            PercentTarget = percentTarget;
+            InteractionPrototype = interactionPrototype;
         }
     }
 
