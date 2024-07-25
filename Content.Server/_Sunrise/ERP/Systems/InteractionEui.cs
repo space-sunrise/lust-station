@@ -15,6 +15,7 @@ namespace Content.Server._Sunrise.ERP.Systems
     public sealed class InteractionEui : BaseEui
     {
         private readonly NetEntity _target;
+        private readonly NetEntity _user;
         private readonly Sex _userSex;
         private readonly Sex _targetSex;
         private readonly bool _userHasClothing;
@@ -26,8 +27,9 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly TransformSystem _transform;
         public IEntityManager _entManager;
 
-        public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
+        public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
+            _user = user;
             _target = target;
             _userSex = userSex;
             _userHasClothing = userHasClothing;
@@ -46,19 +48,17 @@ namespace Content.Server._Sunrise.ERP.Systems
             switch (msg)
             {
                 case AddLoveMessage req:
-                    if (req.Target != _target) return;
-                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
+                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
                     {
                         Close();
                         return;
                     }
-                    if (!_entManager.GetEntity(req.User).Valid) return;
-                    if (!_entManager.GetEntity(req.Target).Valid) return;
-                    _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
-                    if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
-                    {
+                    if (!_entManager.GetEntity(_user).Valid) return;
+                    if (!_entManager.GetEntity(_target).Valid) return;
+                    if (!_erpAllowed) return;
+                    _interaction.AddLove(_user, _target, req.PercentUser, req.PercentTarget);
+                    if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
                         SendMessage(new ResponseLoveMessage(usComp.Love));
-                    }
                     break;
                 case RequestInteractionState req:
                     var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
