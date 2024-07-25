@@ -14,6 +14,7 @@
   supervisors: job-supervisors-captain
   radioBold: true
   canBeAntag: false
+  displayWeight: 50  # Sunrise
   access:
   - Research
   - Command
@@ -40,3 +41,4 @@
   storage:
     back:
     - Flash
+    - Telebaton

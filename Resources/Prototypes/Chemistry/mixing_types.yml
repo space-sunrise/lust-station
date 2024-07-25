@@ -39,13 +39,6 @@
     state: base
 
 - type: mixingCategory
-  id: Vaccinator
-  verbText: ent-Vaccinator
-  icon:
-    sprite: Structures/Machines/Medical/centrifuge.rsi
-    state: base
-
-- type: mixingCategory
   id: Electrolysis
   verbText: mixing-verb-electrolysis
   icon:
@@ -58,3 +51,17 @@
   icon:
     sprite: Objects/Specific/Chapel/bible.rsi
     state: icon
+
+- type: mixingCategory
+  id: Shake
+  verbText: mixing-verb-shake
+  icon:
+    sprite: Objects/Consumable/Drinks/shaker.rsi
+    state: icon
+
+- type: mixingCategory
+  id: Stir
+  verbText: mixing-verb-stir
+  icon:
+    sprite: Objects/Misc/utensils.rsi
+    state: spoon

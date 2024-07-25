@@ -33,7 +33,7 @@
             TechnicalAssistant: [ 2, 3 ]
             #medical
             ChiefMedicalOfficer: [ 1, 1 ]
-            Chemist: [ 2, 3 ]
+            Chemist: [ 2, 2 ]
             Paramedic: [ 1, 1 ]
             MedicalDoctor: [ 6, 6 ]
             Psychologist: [ 1, 1 ]
@@ -61,6 +61,6 @@
             Boxer: [ 1, 1 ]
             Reporter: [ 1, 1 ]
             # Sunrise-Law
-            IAA: [ 1, 1 ]
-            Lawyer: [ 2, 2 ]
-            Magistrat: [ 1, 1 ]
+            #IAA: [ 1, 1 ]
+            #Lawyer: [ 2, 2 ]
+            #Magistrat: [ 1, 1 ]

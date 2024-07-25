@@ -1,0 +1,9 @@
+﻿- type: loadout # Lust Station
+  id: RdSpecialCloak
+  equipment: RdSpecialCloak
+  sponsorOnly: true
+
+- type: startingGear # Lust Station
+  id: RdSpecialCloak
+  equipment:
+    neck: ClothingNeckRdSpecialCloak

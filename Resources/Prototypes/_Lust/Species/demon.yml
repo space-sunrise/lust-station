@@ -1,5 +1,5 @@
 - type: species
-  id: DemonSpecies
+  id: Demon
   name: species-name-demon
   roundStart: true
   prototype: MobDemon

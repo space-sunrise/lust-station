@@ -6,8 +6,6 @@
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
-  - type: DiseaseImmuneClothing
-    prob: 0.2
   - type: Clothing
     sprite: Clothing/Hands/Gloves/Boxing/boxingred.rsi
   - type: StaminaDamageOnHit
@@ -155,8 +153,6 @@
   components:
   - type: Sprite
     sprite: Clothing/Hands/Gloves/nitrile.rsi
-  - type: DiseaseImmuneClothing
-    prob: 0.4
   - type: Clothing
     sprite: Clothing/Hands/Gloves/nitrile.rsi
   - type: Fiber
@@ -210,7 +206,7 @@
   - type: FingerprintMask
 
 - type: entity
-  parent: ClothingHandsBase
+  parent: [ClothingHandsBase, BaseToggleClothing]
   id: ClothingHandsGlovesSpaceNinja
   name: space ninja gloves
   description: These black nano-enhanced gloves insulate from electricity and provide fire resistance.
@@ -238,7 +234,31 @@
   - type: Thieving
     stripTimeReduction: 1
     stealthy: true
+  - type: ToggleClothing
+    action: ActionToggleNinjaGloves
   - type: NinjaGloves
+    abilities:
+    - components:
+      - type: BatteryDrainer
+      - type: StunProvider
+        noPowerPopup: ninja-no-power
+        whitelist:
+          components:
+          - Stamina
+      - type: EmagProvider
+        whitelist:
+          components:
+          - Airlock
+    - objective: StealResearchObjective
+      components:
+      - type: ResearchStealer
+    - objective: TerrorObjective
+      components:
+      - type: CommsHacker
+        threats: NinjaThreats
+    - objective: MassArrestObjective
+      components:
+      - type: CriminalRecordsHacker
 
 - type: entity
   parent: ClothingHandsGlovesColorBlack

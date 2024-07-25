@@ -17,7 +17,8 @@
     - BaseStationArrivals
     - BaseStationGateway
     - BaseStationShuttles
-    - BaseStationCentComm # Sunrise-Edit
+    # Нету смысла пока не будет консоли отправки ОБР
+    #- BaseStationCentComm # Sunrise-Edit
     - BaseStationEvacuation
     - BaseStationAlertLevels
     - BaseStationMagnet
@@ -28,6 +29,12 @@
     # Sunrise-Start
     - BaseStationTransitHub
     - BaseStationDontSelling
+    - BaseStationPlanetPrison
+    - BaseStationGoal
+    - BaseStationGammaArmory
+    - BaseStationAntagsTargets
+    - BaseStationCryoTeleport
+    - BaseStationMeteorSwarmTarget
     # Sunrise-End
   noSpawn: true
   components:
@@ -45,6 +52,7 @@
     - BaseCentCommShuttles
     - BaseStationImmortal
     - BaseStationDontSelling
+    - BaseStationCryoTeleport
     # Sunrise-End
   noSpawn: true
   components:

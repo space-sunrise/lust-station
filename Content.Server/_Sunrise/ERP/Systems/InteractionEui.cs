@@ -24,13 +24,14 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly bool _targetHasClothing;
         private readonly bool _erpAllowed;
 
+        [Dependency] private readonly IRobustRandom _random = default!;
 
         private readonly InteractionSystem _interaction; 
         private readonly TransformSystem _transform;
+        private readonly SharedAudioSystem _audio;
         public IEntityManager _entManager;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         private Dictionary<string, InteractionPrototype> _prototypes = new();
-
         public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
             _user = user;
@@ -43,8 +44,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             _interaction = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<InteractionSystem>();
             _transform = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<TransformSystem>();
             _entManager = IoCManager.Resolve<IEntityManager>();
-
-
+            _audio = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SharedAudioSystem>();
             IoCManager.InjectDependencies(this);
         }
 
@@ -81,10 +81,16 @@ namespace Content.Server._Sunrise.ERP.Systems
                         SendMessage(new ResponseLoveMessage(usComp.Love));
                     break;
                 case RequestInteractionState req:
+                    if (!_entManager.GetEntity(req.User).Valid) return;
+                    if (!_entManager.GetEntity(req.Target).Valid) return;
                     var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
                     if (!res.HasValue) return;
                     var resVal = res.Value;
                     SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5));
+                    break;
+                case PlaySoundMessage req:
+                    if (!_entManager.GetEntity(req.User).Valid) return;
+                    _audio.PlayPvs(_random.Pick(req.Audios), _entManager.GetEntity(req.User));
                     break;
             }
         }

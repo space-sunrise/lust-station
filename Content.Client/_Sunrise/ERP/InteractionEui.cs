@@ -69,6 +69,9 @@ namespace Content.Client._Sunrise.ERP
         {
             if (!_window.TargetEntityId.HasValue) return;
             if (!_player.LocalEntity.HasValue) return;
+            if (!_player.LocalEntity.Value.IsValid()) return;
+            if (!_window.TargetEntityId.Value.IsValid()) return;
+            if (!_window.IsOpen) return;
             SendMessage(new RequestInteractionState(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value));
         }
 
@@ -79,7 +82,7 @@ namespace Content.Client._Sunrise.ERP
 
         public override void Opened()
         {
-            _window.OpenCentered();
+            _window.OpenCenteredLeft();
         }
 
         public override void Closed()
@@ -107,12 +110,14 @@ namespace Content.Client._Sunrise.ERP
             if (_gameTiming.CurTime >= _window.TimeUntilAllow)
             {
                 if (!_player.LocalEntity.HasValue) return;
+                if (!_player.LocalEntity.Value.IsValid()) return;
                 var item = args.ItemList[args.ItemIndex];
                 if (item.Metadata == null) return;
                 InteractionPrototype interaction = (InteractionPrototype) item.Metadata;
                 if (interaction.Emotes.Count > 0)
                 {
                     if (_window.TargetEntityId == null) return;
+                    if (!_window.TargetEntityId.Value.IsValid()) return;
                     string emote = _random.Pick(interaction.Emotes);
                     emote = emote.Replace("%user", Identity.Name(_player.LocalEntity.Value, _entManager));
                     if(_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
@@ -123,7 +128,8 @@ namespace Content.Client._Sunrise.ERP
                 }
                 if (interaction.Sounds.Count > 0)
                 {
-                    _audio.PlayPvs(_random.Pick(interaction.Sounds), _player.LocalEntity.Value);
+                    SendMessage(new PlaySoundMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), interaction.Sounds));
+                    
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));
