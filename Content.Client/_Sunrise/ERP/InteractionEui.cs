@@ -62,10 +62,7 @@ namespace Content.Client._Sunrise.ERP
         {
             if (!_player.LocalEntity.HasValue) return;
             if (!_window.TargetEntityId.HasValue) return;
-            if (!_player.LocalEntity.Value.IsValid()) return;
-            if (!_window.TargetEntityId.Value.IsValid()) return;
-            if (!_window.IsOpen) return;
-            SendMessage(new AddLoveMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value, 0, 0));
+            SendMessage(new AddLoveMessage(null));
         }
 
         public void RequestState()
@@ -135,11 +132,7 @@ namespace Content.Client._Sunrise.ERP
                     
                 }
                 if (!_window.TargetEntityId.HasValue) return;
-                if (!_window.TargetEntityId.Value.IsValid()) return;
-                if (_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
-                    SendMessage(new AddLoveMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value, interaction.LovePercentUser, interaction.LovePercentTarget));
-                else
-                    SendMessage(new AddLoveMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value, interaction.LovePercentUser/2, interaction.LovePercentTarget));
+                SendMessage(new AddLoveMessage(interaction.ID));
                 _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(2);
             }
         }
