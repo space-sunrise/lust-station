@@ -1,0 +1,5 @@
+﻿- type: localizedDataset
+  id: UnderwearMateAds
+  values:
+    prefix: advertisement-underwear-
+    count: 5
