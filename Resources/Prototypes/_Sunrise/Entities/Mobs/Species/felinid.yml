@@ -5,6 +5,7 @@
   id: MobFelinidBase
   abstract: true
   components:
+  - type: OwOAccent
   - type: Speech
     speechVerb: Felinid
     allowedEmotes: ['Mew', 'Meow', 'Hisses', 'Purr']
@@ -17,7 +18,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.25
+          radius: 0.20
         density: 50
         restitution: 0.0
         mask:
@@ -98,7 +99,7 @@
   name: Urist McHands
   parent: MobHumanDummy
   id: MobFelinidDummy
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   description: A dummy felinid meant to be used in character setup.
 
 #Nya~~

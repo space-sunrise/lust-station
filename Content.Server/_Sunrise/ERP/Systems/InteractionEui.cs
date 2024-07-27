@@ -8,12 +8,16 @@ using Content.Shared._Sunrise.ERP.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Random;
+using Robust.Shared.Timing;
+using Robust.Shared.Prototypes;
+using System.Linq;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     [UsedImplicitly]
     public sealed class InteractionEui : BaseEui
     {
         private readonly NetEntity _target;
+        private readonly NetEntity _user;
         private readonly Sex _userSex;
         private readonly Sex _targetSex;
         private readonly bool _userHasClothing;
@@ -22,13 +26,15 @@ namespace Content.Server._Sunrise.ERP.Systems
 
         [Dependency] private readonly IRobustRandom _random = default!;
 
-        private readonly InteractionSystem _interaction;
+        private readonly InteractionSystem _interaction; 
         private readonly TransformSystem _transform;
         private readonly SharedAudioSystem _audio;
         public IEntityManager _entManager;
-
-        public InteractionEui(NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+        private Dictionary<string, InteractionPrototype> _prototypes = new();
+        public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
         {
+            _user = user;
             _target = target;
             _userSex = userSex;
             _userHasClothing = userHasClothing;
@@ -45,20 +51,34 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
-
             switch (msg)
             {
                 case AddLoveMessage req:
-                    if(!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(req.User)), _transform.GetMoverCoordinates(_entManager.GetEntity(req.Target)), 2))
+                    var percentUser = 0;
+                    var percentTarget = 0;
+                    if (req.InteractionPrototype != null)
+                    {
+                        if (_prototypes.ContainsKey(req.InteractionPrototype))
+                        {
+                            var proto = _prototypes[req.InteractionPrototype];
+                            percentUser = proto.LovePercentUser;
+                            percentTarget = proto.LovePercentTarget;
+                            if (proto.TargetWithoutCloth && _targetHasClothing) return;
+                            if (proto.UserWithoutCloth && _userHasClothing) return;
+                            if (proto.Erp && !_erpAllowed) return;
+                        }
+                        else return;
+                    }
+                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
                     {
                         Close();
                         return;
                     }
-                    _interaction.AddLove(req.User, req.Target, req.PercentUser, req.PercentTarget);
-                    if(_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(req.User), out var usComp))
-                    {
+                    if (!_entManager.GetEntity(_user).Valid) return;
+                    if (!_entManager.GetEntity(_target).Valid) return;
+                    _interaction.AddLove(_user, _target, percentUser, percentTarget);
+                    if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
                         SendMessage(new ResponseLoveMessage(usComp.Love));
-                    }
                     break;
                 case RequestInteractionState req:
                     if (!_entManager.GetEntity(req.User).Valid) return;
@@ -79,7 +99,8 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void Opened()
         {
             base.Opened();
-
+            _prototypes.Clear();
+            _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList().ForEach(x => _prototypes.Add(x.ID, x));
             StateDirty();
         }
 

@@ -32,17 +32,11 @@ namespace Content.Shared._Sunrise.ERP
     [NetSerializable, Serializable]
     public sealed class AddLoveMessage : EuiMessageBase
     {
-        public NetEntity User;
-        public NetEntity Target;
-        public int PercentUser;
-        public int PercentTarget;
+        public string? InteractionPrototype;
 
-        public AddLoveMessage(NetEntity user, NetEntity target, int percentUser, int percentTarget)
+        public AddLoveMessage(string? interactionPrototype)
         {
-            User = user;
-            Target = target;
-            PercentUser = percentUser;
-            PercentTarget = percentTarget;
+            InteractionPrototype = interactionPrototype;
         }
     }
 

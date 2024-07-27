@@ -7,9 +7,9 @@
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
   skinColoration: HumanToned
-  YoungAge: 23
-  OldAge: 25
-  MaxAge: 27
+  youngAge: 23
+  oldAge: 25
+  maxAge: 27
 
 - type: markingPoints
   id: MobFelinidMarkingLimits

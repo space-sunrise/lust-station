@@ -1,0 +1,29 @@
+﻿- type: entity
+  parent: VendingMachine
+  id: VendingMachineUnderwear
+  name: UnderwearMate
+  description: A vending machine with underwear. There you are, your favorite panties!
+  components:
+  - type: VendingMachine
+    pack: UnderwearMateInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+    denyState: deny-unshaded
+  - type: Advertise
+    pack: UnderwearMateAds
+  - type: Speech
+  - type: Sprite
+    sprite: _Lust/Structures/Machines/VendingMachines/underwearmate.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.8
+    energy: 1.6
+    color: "#ff54f7"
