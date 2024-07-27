@@ -71,13 +71,11 @@
     - shader: StencilClear
       sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
       state:
-    # Sunrise-start
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
-    # Sunrise-end
     - map: ["jumpsuit"]
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
@@ -127,11 +125,14 @@
       - CanPilot
       - FootstepSound
       - DoorBumpOpener
+  - type: CollectiveMind
+    minds:
+    - Xeno
 
 - type: entity
   parent: BaseSpeciesDummy
   id: MobXenoDummy
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
     species: HumanoidXeno
