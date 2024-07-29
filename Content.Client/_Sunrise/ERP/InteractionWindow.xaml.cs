@@ -18,6 +18,7 @@ using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using System.IO;
 using Content.Shared.Interaction;
+using Robust.Shared.Toolshed.Commands.Generic.ListGeneration;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
@@ -34,6 +35,10 @@ public sealed partial class InteractionWindow : DefaultWindow
     public bool UserHasClothing { get; set; }
     public bool TargetHasClothing { get; set; }
     public bool Erp { get; set; }
+
+    public HashSet<string>? UserTags { get; set; }
+    public HashSet<string>? TargetTags { get; set; }
+
     public ProgressBar LoveBar;
     public TimeSpan TimeUntilAllow = TimeSpan.Zero;
     private readonly InteractionEui _eui;
@@ -50,10 +55,14 @@ public sealed partial class InteractionWindow : DefaultWindow
         ButtonGroup Group = new();
         InteractionButton.Group = Group;
         DescriptionButton.Group = Group;
+        DevButton.Group = Group;
         InteractionButton.Pressed = true;
         InteractionButton.OnPressed += SetModeToInteraction;
         DescriptionButton.OnPressed += SetModeToDescription;
+        DevButton.OnPressed += SetModeToDev;
         PopulateByFilter("", false);
+
+        DescriptionButton.Visible = false;
     }
 
     private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
@@ -61,6 +70,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         SearchBar.Visible = true;
         ItemInteractions.Visible = true;
         DescriptionContainer.Visible = false;
+        DevContainer.Visible = false;
     }
 
     private void SetModeToDescription(BaseButton.ButtonEventArgs obj)
@@ -68,13 +78,23 @@ public sealed partial class InteractionWindow : DefaultWindow
         SearchBar.Visible = false;
         ItemInteractions.Visible = false;
         DescriptionContainer.Visible = true;
+        DevContainer.Visible = false;
         DescriptionPopulate();
+    }
+
+    private void SetModeToDev(BaseButton.ButtonEventArgs obj)
+    {
+        SearchBar.Visible = false;
+        ItemInteractions.Visible = false;
+        DescriptionContainer.Visible = false;
+        DevContainer.Visible = true;
+        DevPopulate();
     }
 
     private void DescriptionPopulate()
     {
-        TextureLeft.DisposeAllChildren();
-        TextureRight.DisposeAllChildren();
+        DevLeft.DisposeAllChildren();
+        DevRight.DisposeAllChildren();
 
         if (!_player.LocalEntity.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -122,6 +142,28 @@ public sealed partial class InteractionWindow : DefaultWindow
         }
     }
 
+    private void DevPopulate()
+    {
+
+        if (!_player.LocalEntity.HasValue) return;
+
+        if (UserTags != null) {
+            foreach (var i in UserTags)
+            {
+                DevLeft.AddItem(i, null, false);
+            }
+        }
+        if (!TargetEntityId.HasValue) return;
+
+        if (TargetTags != null)
+        {
+            foreach (var i in TargetTags)
+            {
+                DevRight.AddItem(i, null, false);
+            }
+        }
+    }
+
     private void SearchBarOnOnTextChanged(LineEdit.LineEditEventArgs obj)
     {
         PopulateByFilter(SearchBar.Text);
@@ -133,64 +175,56 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
         List<(string, Texture, InteractionPrototype)> itemList = new();
-        foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
+        foreach (bool i in new List<bool> { false, true })
         {
-            if(proto.InhandObject.Count > 0)
+            foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
             {
-                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+
+                if (proto.InhandObject.Count > 0)
                 {
-                    if (hands.ActiveHand == null) continue;
-                    if (hands.ActiveHand.Container == null) continue;
-                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
-                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
-                    if (meta.EntityPrototype == null) continue;
-                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                    {
+                        if (hands.ActiveHand == null) continue;
+                        if (hands.ActiveHand.Container == null) continue;
+                        if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
+                        if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
+                        if (meta.EntityPrototype == null) continue;
+                        if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    }
+                    else continue;
                 }
-                else continue;
-            }
-            if (proto.Erp) continue;
-            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
-            if (string.IsNullOrEmpty(filter) ||
-                proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
-            {
-                var texture = _spriteSystem.Frame0(proto.Icon);
-                if (UserHasClothing && proto.UserWithoutCloth) continue;
-                if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-                if (!Erp && proto.Erp) continue;
-                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
-                itemList.Add((proto.Name, texture, proto));
-            }
-        }
-        foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
-        {
-            if (proto.InhandObject.Count > 0)
-            {
-                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                if (proto.Erp != i) continue;
+                if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
+                if (string.IsNullOrEmpty(filter) ||
+                    proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
                 {
-                    if (hands.ActiveHand == null) continue;
-                    if (hands.ActiveHand.Container == null) continue;
-                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
-                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
-                    if (meta.EntityPrototype == null) continue;
-                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    var texture = _spriteSystem.Frame0(proto.Icon);
+                    if (UserHasClothing && proto.UserWithoutCloth) continue;
+                    if (TargetHasClothing && proto.TargetWithoutCloth) continue;
+                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
+                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
+                    if (!Erp && proto.Erp) continue;
+                    if (UserTags != null)
+                    {
+                        foreach (var tag in UserTags)
+                        {
+                            if (!proto.UserTagWhitelist.Contains(tag)) goto CONTINUE;
+                            if (proto.UserTagBlacklist.Contains(tag)) goto CONTINUE;
+                        }
+                    }
+
+                    if (TargetTags != null)
+                    {
+                        foreach (var tag in TargetTags)
+                        {
+                            if (!proto.TargetTagWhitelist.Contains(tag)) goto CONTINUE;
+                            if (proto.TargetTagBlacklist.Contains(tag)) goto CONTINUE;
+                        }
+                    }
+                    //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+                    itemList.Add((proto.Name, texture, proto));
                 }
-                else continue;
-            }
-            if (!proto.Erp) continue;
-            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
-            if (string.IsNullOrEmpty(filter) ||
-                proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
-            {
-                var texture = _spriteSystem.Frame0(proto.Icon);
-                if (UserHasClothing && proto.UserWithoutCloth) continue;
-                if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-                if (!Erp && proto.Erp) continue;
-                itemList.Add((proto.Name, texture, proto));
-                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+            CONTINUE:;
             }
         }
         bool equals = true;

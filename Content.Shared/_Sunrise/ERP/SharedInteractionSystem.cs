@@ -26,6 +26,8 @@ namespace Content.Shared._Sunrise.ERP
         public bool UserHasClothing;
         public bool TargetHasClothing;
         public bool ErpAllowed;
+        public HashSet<string>? UserTags;
+        public HashSet<string>? TargetTags;
     }
 
 
@@ -85,14 +87,18 @@ namespace Content.Shared._Sunrise.ERP
         public bool UserHasClothing;
         public bool TargetHasClothing;
         public bool ErpAllowed;
+        public HashSet<string> UserTags;
+        public HashSet<string> TargetTags;
 
-        public ResponseInteractionState(Sex userSex, Sex targetSex, bool userHasClothing, bool targetHasClothing, bool erp)
+        public ResponseInteractionState(Sex userSex, Sex targetSex, bool userHasClothing, bool targetHasClothing, bool erp, HashSet<string> userTags, HashSet<string> targetTags)
         {
             UserSex = userSex;
             TargetSex = targetSex;
             UserHasClothing = userHasClothing;
             TargetHasClothing = targetHasClothing;
             ErpAllowed = erp;
+            UserTags = userTags;
+            TargetTags = targetTags;
         }
     }
 

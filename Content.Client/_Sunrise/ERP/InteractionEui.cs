@@ -49,6 +49,8 @@ namespace Content.Client._Sunrise.ERP
                     _window.UserSex = req.UserSex;
                     _window.TargetSex = req.TargetSex;
                     _window.Erp = req.ErpAllowed;
+                    _window.UserTags = req.UserTags;
+                    _window.TargetTags = req.TargetTags;
                     _window.Populate();
                     break;
             }
@@ -101,6 +103,8 @@ namespace Content.Client._Sunrise.ERP
             _window.UserHasClothing = euiState.UserHasClothing;
             _window.TargetHasClothing = euiState.TargetHasClothing;
             _window.Erp = euiState.ErpAllowed;
+            if (euiState.UserTags != null) { _window.UserTags = euiState.UserTags; } else { _window.UserTags = new(); }
+            if (euiState.TargetTags != null) { _window.TargetTags = euiState.TargetTags; } else { _window.TargetTags = new(); }
             _window.Populate();
 
         }

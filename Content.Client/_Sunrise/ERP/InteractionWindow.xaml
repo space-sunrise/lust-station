@@ -42,6 +42,12 @@
                      VerticalExpand="True"
                      Text="Подробности"
                      Margin="5"/>
+            <Button Name="DevButton"
+                     ToggleMode="True"
+                     HorizontalExpand="True"
+                     VerticalExpand="True"
+                     Text="DEV"
+                     Margin="5"/>
         </BoxContainer>
         <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="2" Access="Public" />
         <LineEdit Name="SearchBar" PlaceHolder="Search..." HorizontalExpand="True"  Margin ="4 4" Access="Public"/>
@@ -69,6 +75,30 @@
                 </BoxContainer>
                 <BoxContainer Name="TextureRight" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
             </BoxContainer>
+        </BoxContainer>
+        <BoxContainer Name="DevContainer" VerticalExpand="True" HorizontalAlignment="Stretch" Margin="4 0" Visible="False">
+            <ItemList Name="DevLeft"
+                  Access="Public"
+                  SizeFlagsStretchRatio="8"
+                  VerticalExpand="True"
+                  HorizontalExpand="True"
+                  ItemSeparation="2"
+                  Margin="4 0"
+                  SelectMode="Button"
+                  MinWidth="200"
+                  StyleClasses="ItemList">
+            </ItemList>
+            <ItemList Name="DevRight"
+                  Access="Public"
+                  SizeFlagsStretchRatio="8"
+                  VerticalExpand="True"
+                  HorizontalExpand="True"
+                  ItemSeparation="2"
+                  Margin="4 0"
+                  SelectMode="Button"
+                  MinWidth="200"
+                  StyleClasses="ItemList">
+            </ItemList>
         </BoxContainer>
     </BoxContainer>
 </DefaultWindow>

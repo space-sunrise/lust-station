@@ -47,6 +47,118 @@
   targetWithoutCloth: false
   erp: false
 
+- type: interaction
+  id: alotofkisses
+  name: Одарить шквалом поцелуев
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - устраивает град поцелуев, ни оставляя сухого места на %target
+  sounds:
+  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+  lovePercentUser: 4
+  lovePercentTarget: 4
+
+- type: interaction
+  id: kiss
+  name: Поцеловать
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует %target
+  - нежно целует %target
+  - слегка целует %target
+  - целует %target, заводя руку за шею и прижимая к себе
+  - нежно целует %target, заводя руку за шею и прижимая к себе
+  - слегка целует %target, заводя руку за шею и прижимая к себе
+  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+  - целует %target, заводя руку за шею
+  - нежно целует %target, заводя руку за шею
+  - слегка целует %target, заводя руку за шею
+  - настойчиво целует %target, заводя руку за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+  lovePercentUser: 2
+  lovePercentTarget: 2
+
+- type: interaction
+  id: kiss2
+  name: Поцеловать шею
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует %target за шею
+  - нежно целует %target за шею
+  - слегка целует %target за шею
+  - настойчиво целует %target за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+  lovePercentUser: 5
+  lovePercentTarget: 6
+
+- type: interaction
+  id: kisshand
+  name: Поцеловать руку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - берёт %target за руку и целует её
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+- type: interaction
+  id: kiss3
+  name: Поцеловать в щёку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - чмокает %target в щёчку
+  - нежно целует %target в щёку
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: false
+  erp: false
+
+
+
 # Erp (дальше бога нет)
 
 - type: interaction
@@ -108,21 +220,7 @@
   lovePercentUser: 2
   lovePercentTarget: 2
 
-- type: interaction
-  id: ERPalotofkisses
-  name: Одарить шквалом поцелуев
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - устраивает град поцелуев, ни оставляя сухого места на %target
-  sounds:
-  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  userWithoutCloth: false
-  targetWithoutCloth: false
-  erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 3
+
 
 - type: interaction
   id: ERPneckLick
@@ -144,60 +242,7 @@
   lovePercentUser: 2
   lovePercentTarget: 2
 
-- type: interaction
-  id: ERPkiss
-  name: Поцеловать
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - целует %target
-  - нежно целует %target
-  - слегка целует %target
-  - целует %target, заводя руку за шею и прижимая к себе
-  - нежно целует %target, заводя руку за шею и прижимая к себе
-  - слегка целует %target, заводя руку за шею и прижимая к себе
-  - настойчиво целует %target, заводя руку за шею и прижимая к себе
-  - целует %target, заводя руку за шею
-  - нежно целует %target, заводя руку за шею
-  - слегка целует %target, заводя руку за шею
-  - настойчиво целует %target, заводя руку за шею
-  sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  userWithoutCloth: false
-  targetWithoutCloth: false
-  erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 2
 
-- type: interaction
-  id: ERPkiss2
-  name: Поцеловать шею
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - целует %target за шею
-  - нежно целует %target за шею
-  - слегка целует %target за шею
-  - настойчиво целует %target за шею
-  sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  userWithoutCloth: false
-  targetWithoutCloth: false
-  erp: true
-  lovePercentUser: 5
-  lovePercentTarget: 6
 
 - type: interaction
   id: ERPbreast1
@@ -704,3 +749,4 @@
   erp: false
   lovePercentUser: 0
   lovePercentTarget: 0
+

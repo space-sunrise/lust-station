@@ -41,6 +41,12 @@ public sealed partial class InteractionPrototype : IPrototype
 
     [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
     [DataField] public int LovePercentTarget = 0; // Сколько процентов добавлять к шкале "окончания"
+
+
+    [DataField] public HashSet<string> UserTagWhitelist = new();
+    [DataField] public HashSet<string> TargetTagWhitelist = new();
+    [DataField] public HashSet<string> UserTagBlacklist = new();
+    [DataField] public HashSet<string> TargetTagBlacklist = new();
     //[DataField("inhandObject", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     [DataField] public HashSet<string> InhandObject = new();
     [DataField] public bool UseSelf = false;
