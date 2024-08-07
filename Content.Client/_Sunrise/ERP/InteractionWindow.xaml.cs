@@ -19,10 +19,11 @@ using Content.Shared._Sunrise.ERP.Components;
 using System.IO;
 using Content.Shared.Interaction;
 using Robust.Shared.Toolshed.Commands.Generic.ListGeneration;
+using Content.Client.UserInterface.Controls;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
-public sealed partial class InteractionWindow : DefaultWindow
+public sealed partial class InteractionWindow : FancyWindow
 {
     private readonly SpriteSystem _spriteSystem;
     [Dependency] private readonly EntityManager _entManager = default!;
@@ -52,6 +53,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         LoveBar = ProgressBar;
         SearchBar.OnTextChanged += SearchBarOnOnTextChanged;
         ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: Color.Pink);
+        ProgressBar.BackgroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(91,51,58));
         ButtonGroup Group = new();
         InteractionButton.Group = Group;
         DescriptionButton.Group = Group;
@@ -60,9 +62,10 @@ public sealed partial class InteractionWindow : DefaultWindow
         InteractionButton.OnPressed += SetModeToInteraction;
         DescriptionButton.OnPressed += SetModeToDescription;
         DevButton.OnPressed += SetModeToDev;
+
         PopulateByFilter("", false);
 
-        DescriptionButton.Visible = false;
+        DevButton.Visible = true;
     }
 
     private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
@@ -208,7 +211,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                     {
                         foreach (var tag in UserTags)
                         {
-                            if (!proto.UserTagWhitelist.Contains(tag)) goto CONTINUE;
+                            if (!proto.UserTagWhitelist.Contains(tag) && proto.UserTagWhitelist.Count > 0) goto CONTINUE;
                             if (proto.UserTagBlacklist.Contains(tag)) goto CONTINUE;
                         }
                     }
@@ -217,7 +220,7 @@ public sealed partial class InteractionWindow : DefaultWindow
                     {
                         foreach (var tag in TargetTags)
                         {
-                            if (!proto.TargetTagWhitelist.Contains(tag)) goto CONTINUE;
+                            if (!proto.TargetTagWhitelist.Contains(tag) && proto.TargetTagWhitelist.Count > 0) goto CONTINUE;
                             if (proto.TargetTagBlacklist.Contains(tag)) goto CONTINUE;
                         }
                     }
@@ -286,7 +289,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (Erp)
         {
             //Юзер
-            UserDescription.AddChild(new Label { Text = "Вы..." });
+            UserDescription.AddChild(new Label { Text = "Вы...", StyleClasses = { StyleNano.StyleClassLabelBig } }); ;
             if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
             UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
@@ -296,8 +299,8 @@ public sealed partial class InteractionWindow : DefaultWindow
             //Таргет
             if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
             {
-                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "..." });
-                if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
+                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "...", StyleClasses = { StyleNano.StyleClassLabelBig } });
+                if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой"});
                 else
                 {
                     TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
