@@ -1,9 +1,5 @@
 ﻿- type: loadout # Lust Station
   id: QuartermasterSpecialCloak
-  equipment: QuartermasterSpecialCloak
   sponsorOnly: true
-
-- type: startingGear # Lust Station
-  id: QuartermasterSpecialCloak
   equipment:
     neck: ClothingNeckQmSpecialCloak
