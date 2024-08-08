@@ -1,0 +1,83 @@
+﻿# 2. ДЕЙСТВИЯ С ЩЕКАМИ
+
+- type: interaction
+  id: KissCheek
+  name: Чмокнуть в щёчку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - чмокает %target в щёчку
+  - нежно целует %target в щёку
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: PatCheeks
+  name: Потискать за щёки
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - нежно треплет щёки %target
+  - растягивает щёки %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: KissBothCheeks
+  name: Расцеловать щёки
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует обе щёки %target
+  - чмокает %target в обе щёки одновременно
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: PressCheek
+  name: Прижаться щекой
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - нежно прижимается щекой к щеке %target
+  - слегка прижимается щекой, создавая близость с %target
+  - с теплотой касается щекой %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: LickCheekDoggyStyle
+  name: По-собачьи лизнуть шёку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - по-собачьи лижет щёку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  UserTagWhitelist:
+  - Vulpakin
+
+- type: interaction
+  id: LickCheek
+  name: Лизнуть шёку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - лижет щёку %target
+  - нежно лижет щёку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false

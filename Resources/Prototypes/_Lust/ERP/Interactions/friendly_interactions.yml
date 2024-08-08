@@ -1,0 +1,89 @@
+﻿# 1. ДРУЖЕСКИЕ ДЕЙСТВИЯ
+
+- type: interaction
+  id: Handshake
+  name: Пожать руку
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - жмёт руку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: PatShoulder
+  name: Похлопать по плечу
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - хлопает по плечу %target
+  #  sounds:
+  #  - path: /Audio/_Sunrise/ERP/kiss1.ogg НУЖЕН ЗВУК
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: Hug
+  name: Обнять
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - обнимает %target
+  - крепко обнимает %target
+  sounds:
+  - path: /Audio/Effects/thudswoosh.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: Highfive
+  name: Дать пять
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - даёт пять %target
+  #  sounds:
+  #  - path: /Audio/_Sunrise/ERP/SOME.OGG НУЖЕН ЗВУК
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+- type: interaction
+  id: KissHand
+  name: Поцеловать руку
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - берёт %target за руку и целует её
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true # поцелуи - ЕРП
+
+- type: interaction
+  id: PetHead
+  name: Погладить по голове
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - гладит %target по голове
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+
+#- type: interaction
+#  id: ALotOfKisses
+#  name: Одарить шквалом поцелуев
+#  icon: _Sunrise/Interface/ERP/kissIcon.png
+#  emotes:
+#  - устраивает град поцелуев, ни оставляя сухого места на %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+#  userSex: Unsexed
+#  targetSex: Unsexed
+#  erp: true # поцелуи - ЕРП
+#  lovePercentUser: 4
+#  lovePercentTarget: 4
