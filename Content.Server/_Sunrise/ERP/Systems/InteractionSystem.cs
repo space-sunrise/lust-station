@@ -154,7 +154,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                                 if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
                             }
 
-                            _eui.OpenEui(new InteractionEui(GetNetEntity(args.Target), userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp), player);
+                            _eui.OpenEui(new InteractionEui(GetNetEntity(args.User), GetNetEntity(args.Target), userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp), player);
                         }
                     }
                 },
