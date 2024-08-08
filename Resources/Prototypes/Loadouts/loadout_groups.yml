@@ -60,8 +60,16 @@
   loadouts:
   - EmergencyNitrogen
   - EmergencyOxygen
-  - LoadoutSpeciesEVANitrogen
   - EmergencyWithoutGas  # Sunrise-Edit
+  - LoadoutSpeciesVoxNitrogen
+
+- type: loadoutGroup
+  id: GroupEVATank
+  name: loadout-group-EVA-tank
+  hidden: true
+  loadouts:
+  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesEVAOxygen
 
 # Command
 - type: loadoutGroup
@@ -436,7 +444,7 @@
   loadouts:
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
-  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasClown # Sunrise-Edit
 
 - type: loadoutGroup
@@ -743,7 +751,7 @@
   loadouts:
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
-  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasExtended # Sunrise-Edit
 
 # Science
@@ -988,7 +996,7 @@
   loadouts:
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
-  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSecurity # Sunrise-Edit
 
 # Medical
@@ -1161,7 +1169,7 @@
   loadouts:
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
-  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasMedical # Sunrise-Edit
 
 # Wildcards
@@ -1197,7 +1205,7 @@
   loadouts:
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
-  - LoadoutSpeciesEVANitrogen
+  - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSyndicate # Sunrise-Edit
 
 - type: loadoutGroup

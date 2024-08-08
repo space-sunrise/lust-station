@@ -76,9 +76,6 @@
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
-    availableModes:
-    - FullAuto
-    - SemiAuto
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -160,8 +157,6 @@
     fireRate: 4
     soundGunshot:
       collection: usp # Sunrise-Edit
-      params:
-        volume: 10
     availableModes:
     - SemiAuto
   - type: ItemSlots
@@ -209,8 +204,6 @@
     - SemiAuto
     soundGunshot:
       collection: glock18 # Sunrise-Edit
-      params:
-        volume: 10
 
 - type: entity
   name: N1984
