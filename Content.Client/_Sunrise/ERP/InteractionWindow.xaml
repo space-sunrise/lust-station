@@ -9,12 +9,8 @@
             <gfx:StyleBoxFlat BackgroundColor="#161619" />
         </PanelContainer.PanelOverride>
         <BoxContainer Name="BasedContainer" Orientation="Vertical" HorizontalExpand="True">
-            <BoxContainer Name="Descriptions" Orientation="Horizontal" MaxHeight="200" VerticalAlignment="Top">
-                <BoxContainer Name="UserDescription" Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Left" Margin="10" MinWidth="180">
-                </BoxContainer>
-                <controls:VSpacer Spacing="40"/>
-                <BoxContainer Name="TargetDescription" Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Right" Margin="10" MinWidth="180">
-                </BoxContainer>
+            <BoxContainer Name="Descriptions" Orientation="Horizontal" MaxHeight="150" VerticalAlignment="Top">
+                <TextureRect SetSize="436 200" Stretch="KeepAspectCentered" HorizontalAlignment="Center" TexturePath="/Textures/_Sunrise/Interface/ERP/erpPanel.png"/>
             </BoxContainer>
             <BoxContainer Name="ErpProgress" Orientation="Horizontal" HorizontalAlignment="Stretch" HorizontalExpand="True" MaxHeight="20" VerticalAlignment="Top" Margin="4">
                 <ProgressBar
