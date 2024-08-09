@@ -281,6 +281,8 @@ public sealed partial class InteractionWindow : FancyWindow
     public void Populate()
     {
         var prototypes = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList();
+        //UserDescription.DisposeAllChildren();
+        //TargetDescription.DisposeAllChildren();
         //Проверки nullable-типов
         if (!TargetEntityId.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -289,10 +291,6 @@ public sealed partial class InteractionWindow : FancyWindow
 
         if (!TargetEntityId.Value.Valid) return;
 
-        else
-        {
-            ErpProgress.Dispose();
-        }
         if(DescriptionContainer.Visible)
         {
             DescriptionPopulate();
