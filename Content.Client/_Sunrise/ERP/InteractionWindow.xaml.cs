@@ -179,9 +179,9 @@ public sealed partial class InteractionWindow : FancyWindow
         var uid = _player.LocalEntity.Value;
         List<(string, Texture, InteractionPrototype)> itemList = new();
         foreach (string category in new List<string>
-        {"standart", "щёки", "губы", "шея", "уши", "хвост", "рога", "крылья",
-        "рот", "грудь", "попа", "член", "вагина", "ляжки", "подмышки", "слаймолюд", "диона",
-        "ксеноморф", "руки", "ступни", "анус", "яйца", "секс-игрушки"}
+        {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
+        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анус",
+            "слаймолюд", "диона", "ксеноморф"}
         )
         {
             foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
@@ -200,7 +200,7 @@ public sealed partial class InteractionWindow : FancyWindow
                     }
                     else continue;
                 }
-                if (proto.Category != category) continue;
+                if (proto.Category.ToLower() != category) continue;
                 if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
                 if (string.IsNullOrEmpty(filter) ||
                     proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
