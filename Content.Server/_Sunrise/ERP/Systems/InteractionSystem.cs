@@ -46,7 +46,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         {
             if (TryComp<InteractionComponent>(target, out var targetInteraction) && TryComp<InteractionComponent>(user, out var userInteraction))
             {
-                if (TryComp<HumanoidAppearanceComponent>(target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(target, out var userHumanoid))
+                if (TryComp<HumanoidAppearanceComponent>(target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(user, out var userHumanoid))
                 {
                     bool erp = true;
                     bool userClothing = false;

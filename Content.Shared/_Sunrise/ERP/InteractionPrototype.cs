@@ -50,4 +50,5 @@ public sealed partial class InteractionPrototype : IPrototype
     //[DataField("inhandObject", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
     [DataField] public HashSet<string> InhandObject = new();
     [DataField] public bool UseSelf = false;
+    [DataField] public string Category = "standart";
 }

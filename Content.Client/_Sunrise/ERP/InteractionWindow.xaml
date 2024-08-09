@@ -3,13 +3,13 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                xmlns:style="clr-namespace:Content.Client.Stylesheets"
-               Title="Взаимодействия" SetWidth="529" MinWidth="420" SetHeight="600" MaxHeight="600" MinHeight="600" Resizable="True">
+               Title="Взаимодействия" SetWidth="436" MinWidth="420" SetHeight="600" MaxHeight="600" MinHeight="600" Resizable="True">
     <PanelContainer Name="BasedPanel">
         <PanelContainer.PanelOverride>
             <gfx:StyleBoxFlat BackgroundColor="#161619" />
         </PanelContainer.PanelOverride>
         <BoxContainer Name="BasedContainer" Orientation="Vertical" HorizontalExpand="True">
-            <BoxContainer Orientation="Horizontal" MaxHeight="200" VerticalAlignment="Top">
+            <BoxContainer Name="Descriptions" Orientation="Horizontal" MaxHeight="200" VerticalAlignment="Top">
                 <BoxContainer Name="UserDescription" Orientation="Vertical" HorizontalExpand="True" HorizontalAlignment="Left" Margin="10" MinWidth="180">
                 </BoxContainer>
                 <controls:VSpacer Spacing="40"/>
@@ -52,7 +52,7 @@
                          Text="DEV"
                          Margin="5"/>
             </BoxContainer>
-            <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="2" Access="Public" />
+            <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="4" Margin="5" Access="Public" />
             <LineEdit Name="SearchBar" PlaceHolder="Поиск..." HorizontalExpand="True"  Margin ="4 4" Access="Public"/>
             <ItemList Name="ItemInteractions"
                       Access="Public"
@@ -61,7 +61,7 @@
                       ItemSeparation="2"
                       Margin="4 0"
                       SelectMode="Button"
-                      StyleClasses="ItemList">
+                      StyleClasses="darkItemList">
             </ItemList>
             <BoxContainer Name="DescriptionContainer" VerticalExpand="True" Margin="4 0" Visible="False">
                 <BoxContainer Name="DescriptionLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200">

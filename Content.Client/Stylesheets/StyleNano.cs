@@ -1029,6 +1029,19 @@ namespace Content.Client.Stylesheets
                         itemListBackgroundSelected)
                 }),
 
+                //sunrise-lust-edit-start
+                new StyleRule(new SelectorElement(typeof(ItemList), new[] {"darkItemList"}, null, null), new[]
+                {
+                    new StyleProperty(ItemList.StylePropertyBackground,
+                        new StyleBoxFlat {BackgroundColor = new Color(22,22,30)}),
+                    new StyleProperty(ItemList.StylePropertyItemBackground,
+                        new StyleBoxFlat {BackgroundColor = new Color(37,37,40)}),
+                    new StyleProperty(ItemList.StylePropertyDisabledItemBackground,
+                        itemListItemBackgroundDisabled),
+                    new StyleProperty(ItemList.StylePropertySelectedItemBackground,
+                        itemListBackgroundSelected)
+                }),
+                //sunrise-lust-edit-end
                 new StyleRule(new SelectorElement(typeof(ItemList), new[] {"transparentItemList"}, null, null), new[]
                 {
                     new StyleProperty(ItemList.StylePropertyBackground,
