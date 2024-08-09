@@ -51,4 +51,5 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public HashSet<string> InhandObject = new();
     [DataField] public bool UseSelf = false;
     [DataField] public string Category = "standart";
+    [DataField] public int SortOrder = 0;
 }

@@ -177,6 +177,8 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!_player.LocalEntity.HasValue) return;
         if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
+        var protos = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToArray();
+        Array.Sort(protos, (x, y) => x.SortOrder.CompareTo(y.SortOrder));
         List<(string, Texture, InteractionPrototype)> itemList = new();
         foreach (string category in new List<string>
         {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
@@ -184,7 +186,7 @@ public sealed partial class InteractionWindow : FancyWindow
             "слаймолюд", "диона", "ксеноморф"}
         )
         {
-            foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
+            foreach (var proto in protos)
             {
 
                 if (proto.InhandObject.Count > 0)
