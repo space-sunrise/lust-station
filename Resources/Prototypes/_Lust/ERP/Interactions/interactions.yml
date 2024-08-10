@@ -308,6 +308,7 @@
   erp: true
   lovePercentUser: 20
   lovePercentTarget: 20
+  targetVirginityLoss: anal
 
 - type: interaction
   id: ERPvaginaInsert

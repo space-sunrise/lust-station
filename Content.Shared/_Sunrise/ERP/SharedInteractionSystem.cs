@@ -42,6 +42,17 @@ namespace Content.Shared._Sunrise.ERP
         }
     }
 
+    [NetSerializable, Serializable]
+    public sealed class SendInteractionToServer : EuiMessageBase
+    {
+        public string? InteractionPrototype;
+
+        public SendInteractionToServer(string? interactionPrototype)
+        {
+            InteractionPrototype = interactionPrototype;
+        }
+    }
+
 
     [NetSerializable, Serializable]
     public sealed class ResponseLoveMessage : EuiMessageBase

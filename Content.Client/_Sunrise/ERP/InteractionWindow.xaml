@@ -3,7 +3,7 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                xmlns:style="clr-namespace:Content.Client.Stylesheets"
-               Title="Взаимодействия" SetWidth="436" MinWidth="420" SetHeight="600" MaxHeight="600" MinHeight="600" Resizable="True">
+               Title="Взаимодействия" SetWidth="476" MinWidth="420" SetHeight="600" MaxHeight="600" MinHeight="600" Resizable="True">
     <PanelContainer Name="BasedPanel">
         <PanelContainer.PanelOverride>
             <gfx:StyleBoxFlat BackgroundColor="#161619" />

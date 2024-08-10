@@ -50,15 +50,15 @@ namespace Content.Server.Database
                 .IsUnique();
 
             modelBuilder.Entity<Profile>()
-                .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
+                .HasIndex(p => new { p.Slot, PrefsId = p.PreferenceId })
                 .IsUnique();
 
             modelBuilder.Entity<Antag>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.AntagName })
                 .IsUnique();
 
             modelBuilder.Entity<Trait>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.TraitName })
                 .IsUnique();
 
             modelBuilder.Entity<ProfileRoleLoadout>()
@@ -106,15 +106,15 @@ namespace Content.Server.Database
                 .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<AdminFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminId})
+                .HasIndex(f => new { f.Flag, f.AdminId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminRankFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminRankId})
+                .HasIndex(f => new { f.Flag, f.AdminRankId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminLog>()
-                .HasKey(log => new {log.RoundId, log.Id});
+                .HasKey(log => new { log.RoundId, log.Id });
 
             modelBuilder.Entity<AdminLog>()
                 .Property(log => log.Id);
@@ -139,7 +139,7 @@ namespace Content.Server.Database
                 .HasIndex(round => round.StartDate);
 
             modelBuilder.Entity<AdminLogPlayer>()
-                .HasKey(logPlayer => new {logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId});
+                .HasKey(logPlayer => new { logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId });
 
             modelBuilder.Entity<ServerBan>()
                 .HasIndex(p => p.PlayerUserId);
@@ -359,6 +359,8 @@ namespace Content.Server.Database
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
         public string Erp { get; set; } = null!; // Lust-ERP
+        public string Virginity { get; set; } = null!; // Lust-ERP
+        public string AnalVirginity { get; set; } = null!; // Lust-ERP
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
         public string Voice { get; set; } = null!; // Sunrise-TTS
@@ -685,7 +687,7 @@ namespace Content.Server.Database
     public enum ServerBanExemptFlags
     {
         // @formatter:off
-        None       = 0,
+        None = 0,
 
         /// <summary>
         /// Ban is a datacenter range, connections usually imply usage of a VPN service.
@@ -905,7 +907,7 @@ namespace Content.Server.Database
         Panic = 3,
         /*
          * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
-         * 
+         *
          * If baby jail is removed, please reserve this value for as long as can reasonably be done to prevent causing ambiguity in connection denial reasons.
          * Reservation by commenting out the value is likely sufficient for this purpose, but may impact projects which depend on SS14 like SS14.Admin.
          */

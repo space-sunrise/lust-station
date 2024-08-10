@@ -12,6 +12,7 @@ using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Chat.Systems;
+using Content.Shared._Sunrise.ERP;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     public sealed class InteractionSystem : EntitySystem
@@ -141,6 +142,51 @@ namespace Content.Server._Sunrise.ERP.Systems
             }
             data = null;
             return false;
+        }
+
+        public void ProcessInteraction(NetEntity user, NetEntity target, InteractionPrototype prototype)
+        {
+            var User = GetEntity(user);
+            var Target = GetEntity(target);
+
+            foreach(var entity in new List<EntityUid> {User, Target})
+            {
+                if (!TryComp<InteractionComponent>(entity, out var interaction)) continue;
+                //Virginity check
+
+                if((entity == User && prototype.UserVirginityLoss == VirginityLoss.anal ||
+                    entity == Target && prototype.TargetVirginityLoss == VirginityLoss.anal) &&
+                    interaction.AnalVirginity == Virginity.Yes)
+                {
+                    interaction.AnalVirginity = Virginity.No;
+                    _chat.TrySendInGameICMessage(entity, "лишается анальной девственности", InGameICChatType.Emote, false);
+                }
+                if(TryComp<HumanoidAppearanceComponent>(entity, out var humanoid))
+                {
+                    switch(humanoid.Sex)
+                    {
+                        case Sex.Male:
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.male ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.male) &&
+                                interaction.Virginity == Virginity.Yes)
+                            {
+                                interaction.Virginity = Virginity.No;
+                                _chat.TrySendInGameICMessage(entity, "лишается девственности", InGameICChatType.Emote, false);
+                            }
+                            break;
+                        case Sex.Female:
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.female ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.female) &&
+                                interaction.Virginity == Virginity.Yes)
+                            {
+                                interaction.Virginity = Virginity.No;
+                                _chat.TrySendInGameICMessage(entity, "теряет девственность", InGameICChatType.Emote, false);
+                            }
+                            break;
+                        default: break;
+                    }
+                }
+            }
         }
 
         public void AddLove(NetEntity entity, NetEntity target, int percentUser, int percentTarget)

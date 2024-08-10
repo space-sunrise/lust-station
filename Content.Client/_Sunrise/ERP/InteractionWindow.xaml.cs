@@ -63,7 +63,7 @@ public sealed partial class InteractionWindow : FancyWindow
         DescriptionButton.OnPressed += SetModeToDescription;
         DevButton.OnPressed += SetModeToDev;
         PopulateByFilter("", false);
-        //ModeButtons.Visible = false;
+        ModeButtons.Visible = false;
         //Descriptions.Visible = false;
         DevButton.Visible = true;
     }

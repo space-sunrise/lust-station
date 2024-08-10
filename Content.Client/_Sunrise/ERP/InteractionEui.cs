@@ -56,10 +56,6 @@ namespace Content.Client._Sunrise.ERP
             }
         }
 
-        public void Sendmessage(string msg)
-        {
-            _chat.SendMessage(msg, Shared.Chat.ChatSelectChannel.Local);
-        }
         public void RequestLove()
         {
             if (!_player.LocalEntity.HasValue) return;
@@ -137,6 +133,7 @@ namespace Content.Client._Sunrise.ERP
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));
+                SendMessage(new SendInteractionToServer(interaction.ID));
                 _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(2);
             }
         }
