@@ -1,0 +1,101 @@
+﻿# 3. ГУБЫ-START
+
+- type: interaction
+  id: Kissгубы
+  name: Поцеловать в губы
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - целует %target
+  - нежно целует %target
+  - слегка целует %target
+  - целует %target, заводя руку за шею и прижимая к себе
+  - нежно целует %target, заводя руку за шею и прижимая к себе
+  - слегка целует %target, заводя руку за шею и прижимая к себе
+  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+  - целует %target, заводя руку за шею
+  - нежно целует %target, заводя руку за шею
+  - слегка целует %target, заводя руку за шею
+  - настойчиво целует %target, заводя руку за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true # поцелуи - ЕРП
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: губы
+
+- type: interaction
+  id: GentleKiss
+  name: Нежный поцелуй
+  icon: _Sunrise/Interface/ERP/kissIcon.png
+  emotes:
+  - нежно касается губами губ %target
+  - с любовью целует %target в губы
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 3
+  category: губы
+
+- type: interaction
+  id: QuickPeck
+  name: Чмокнуть в губы
+  icon: _Sunrise/Interface/ERP/quickPeckIcon.png
+  emotes:
+  - быстро чмокает %target в губы
+  - дарит лёгкий поцелуй %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 1
+  category: губы
+
+- type: interaction
+  id: DeepKiss
+  name: Глубокий поцелуй
+  icon: _Sunrise/Interface/ERP/deepKissIcon.png
+  emotes:
+  - глубоко целует %target, увлекаясь
+  - страстно соединяет губы с губами %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 4
+  category: губы
+
+- type: interaction
+  id: PlayfulNibble
+  name: Куснуть за губки
+  icon: _Sunrise/Interface/ERP/nibbleIcon.png
+  emotes:
+  - игриво прикусывает губу %target
+  - нежно кусает губу %target, добавляя страсти
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 3
+  category: губы
+
+- type: interaction
+  id: FrenchKiss
+  name: Французский поцелуй
+  icon: _Sunrise/Interface/ERP/frenchKissIcon.png
+  emotes:
+  - страстно целует %target с игрой языков
+  - глубоко целует %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 5
+  lovePercentTarget: 5
+  category: губы

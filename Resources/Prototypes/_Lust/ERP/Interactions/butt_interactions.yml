@@ -1,0 +1,63 @@
+﻿- type: interaction
+  id: ERPassclap
+  name: Шлёпнуть по жопе
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - смачно шлёпает %target по филейной части тела
+  - шлёпает %target по жопе, создавая этим громкий хлопок
+  - делает смачный шлепок по попе %target
+  sounds:
+  - path: /Audio/_Lust/ERP/clap1.ogg
+  - path: /Audio/_Lust/ERP/clap1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 0
+  category: попа
+
+- type: interaction
+  id: ERPButtFuck
+  name: Сунуть член между булок
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - пихает свой член между булок %target
+  - суёт свой пенис между упругих булок %target
+  - проводит своим членом по заднице %target, после чего суёт его между булок
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  userSex: Male
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 20
+  lovePercentTarget: 20
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: попа
+
+- type: interaction
+  id: ERPanalLick
+  name: Вылизать задницу
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - нежно лижет анальное кольцо %target
+  - делает круговые движения языком вокруг анала %target
+  - вылизывает задницу %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 8
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: попа

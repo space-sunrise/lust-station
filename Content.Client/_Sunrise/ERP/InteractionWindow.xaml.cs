@@ -63,7 +63,7 @@ public sealed partial class InteractionWindow : FancyWindow
         DescriptionButton.OnPressed += SetModeToDescription;
         DevButton.OnPressed += SetModeToDev;
         PopulateByFilter("", false);
-        ModeButtons.Visible = false;
+        // ModeButtons.Visible = false;
         //Descriptions.Visible = false;
         DevButton.Visible = true;
     }
@@ -182,8 +182,8 @@ public sealed partial class InteractionWindow : FancyWindow
         List<(string, Texture, InteractionPrototype)> itemList = new();
         foreach (string category in new List<string>
         {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
-        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анус",
-            "слаймолюд", "диона", "ксеноморф"}
+        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал",
+            "слаймолюд", "диона", "ксеноморф", "лицо"}
         )
         {
             foreach (var proto in protos)

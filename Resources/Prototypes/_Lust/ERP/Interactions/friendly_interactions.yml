@@ -9,6 +9,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: дружба
 
 - type: interaction
   id: PatShoulder
@@ -21,6 +22,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: дружба
 
 - type: interaction
   id: Hug
@@ -34,6 +36,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: дружба
 
 - type: interaction
   id: Highfive
@@ -46,6 +49,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: дружба
 
 - type: interaction
   id: KissHand
@@ -63,6 +67,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: true # поцелуи - ЕРП
+  category: дружба
 
 - type: interaction
   id: PetHead
@@ -73,6 +78,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: дружба
 
 #- type: interaction
 #  id: ALotOfKisses
@@ -87,3 +93,20 @@
 #  erp: true # поцелуи - ЕРП
 #  lovePercentUser: 4
 #  lovePercentTarget: 4
+
+- type: interaction
+  id: blowslap
+  name: Дать пощечину
+  icon: _Sunrise/Interface/ERP/blankIcon.png
+  emotes:
+  - резко бьет по щеке %target
+  - сильно шлепает %target по лицу
+  - с громким хлопком ударяет %target по щеке
+  sounds:
+  - path: /Audio/_Lust/ERP/blow_slap.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  lovePercentUser: 0
+  lovePercentTarget: 0
+  category: дружба

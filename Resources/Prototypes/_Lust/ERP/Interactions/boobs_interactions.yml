@@ -1,0 +1,74 @@
+﻿- type: interaction
+  id: ERPbreast1
+  name: Сжать грудь в ладони
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает грудь %target
+  - аккуратно сжимает грудь %target
+  - резко сжимает грудь %target
+  - сжимает грудь %target в ладони
+  - аккуратно сжимает грудь %target в ладони
+  - резко сжимает грудь %target в ладони
+  - лапает грудь %target
+  - мнёт грудь %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь
+
+- type: interaction
+  id: ERPbreast2
+  name: Пососать соски
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сосёт соски %target
+  - аккуратно сосёт соски %target
+  - резко сосёт соски %target
+  - нежно сосёт соски %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 5
+  lovePercentTarget: 13
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь
+
+- type: interaction
+  id: ERPselffapwithboobs
+  name: Пропихнуть свой член между сисек
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - пихает свой член между сисек %target, ритмично двигая им
+  - суёт свой пенис между грудями %target и начинает трахать их
+  - проталкивает свой член между сисек %target, словно трахая их
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 1
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  category: грудь

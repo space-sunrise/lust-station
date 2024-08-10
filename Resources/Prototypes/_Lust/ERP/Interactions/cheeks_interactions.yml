@@ -17,9 +17,10 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: щёки
 
 - type: interaction
-  id: PatCheeks
+  id: Patщёки
   name: Потискать за щёки
   icon: _Sunrise/Interface/ERP/kissIcon.png
   emotes:
@@ -28,9 +29,10 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: щёки
 
 - type: interaction
-  id: KissBothCheeks
+  id: KissBothщёки
   name: Расцеловать щёки
   icon: _Sunrise/Interface/ERP/kissIcon.png
   emotes:
@@ -46,6 +48,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: щёки
 
 - type: interaction
   id: PressCheek
@@ -58,6 +61,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: щёки
 
 - type: interaction
   id: LickCheekDoggyStyle
@@ -70,6 +74,7 @@
   erp: false
   UserTagWhitelist:
   - Vulpakin
+  category: щёки
 
 - type: interaction
   id: LickCheek
@@ -81,3 +86,4 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: щёки

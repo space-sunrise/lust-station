@@ -1,0 +1,66 @@
+﻿- type: interaction
+  id: ERPselffapwithhips
+  name: Пропихнуть свой член между бёдер
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - водит членом по бёдрам %target, а затем проталкивает свой пенис между них
+  - пихает свой член между бёдер %target, ритмично двигая им
+  - суёт свой пенис между бёдрами %target и начинает трахать их
+  - проталкивает свой член между бёдер %target, словно трахая их
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 1
+  targetTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: ляжки
+
+- type: interaction
+  id: ERPlickthighs
+  name: Облизать ляжки
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - облизывает ляжки %target своим язычком
+  - покрывает поцелуями и лизаниями ляжки %target
+  - нежно проводит язычком по ляжкам %target
+  - ласкает ляжки %target своим тёплым язычком
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 4
+  userTagBlacklist:
+  - mask
+  targetTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  category: ляжки
+
+- type: interaction
+  id: ERPstrokebetweenlegs
+  name: Погладить промежность
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - аккуратно проводит пальцами по промежности %target
+  - медленно ласкает промежность %target
+  - нежно касается промежности %target своими пальцами
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 3
+  category: ляжки

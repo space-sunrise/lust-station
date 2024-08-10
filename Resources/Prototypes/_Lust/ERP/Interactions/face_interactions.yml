@@ -1,0 +1,51 @@
+﻿- type: interaction
+  id: ERPputboobsontheface
+  name: Положить грудь на лицо
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - тычет своей грудью в лицо %target, закрывая его полностью
+  - кладёт свои сиськи прямо на лицо %target, не давая ему продохнуть
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Female
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+  userTagBlacklist:
+  - bra
+  - outerClothing
+  - jumpsuit
+
+- type: interaction
+  id: ERPputboobsontheface2
+  name: Прижаться грудью к лицу
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - тычет своей грудью в лицо %target, закрывая его полностью
+  - кладёт свои сиськи прямо на лицо %target, не давая ему продохнуть
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Female
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+  userTagBlacklist:
+  - outerClothing
+  category: лицо
+
+- type: interaction
+  id: ERPsitonface
+  name: Сесть попой на лицо
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - медленно садится попой на лицо %target
+  - нежно опускает попу на лицо %target
+  - крепко прижимает попу к лицу %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: лицо

@@ -1,0 +1,70 @@
+﻿- type: interaction
+  id: ERPanusInsert
+  name: Проникнуть в задницу
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - проникает в задницу %target
+  - проникнул в задницу %target
+  - резко проникает в задницу %target
+  - делает аккуратное проникновение в задницу %target
+  - делает резкое проникновение в задницу %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 20
+  lovePercentTarget: 20
+  category: анал
+
+- type: interaction
+  id: ERPfingerinanus
+  name: Вставить пальчик в анус
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - медленно вставляет пальчик в анус %target
+  - осторожно проникает пальчиком в анус %target
+  - чувствительно массирует анус %target пальчиками
+  - разрабатывает анус %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 4
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: анал
+
+- type: interaction
+  id: ERPfingerinanus2
+  name: Трахнуть анус пальчиками
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - активно мастурбирует анус %target пальчиками
+  - интенсивно трахает анус %target своими пальчиками
+  - глубоко проникает пальчиками в анус %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: анал

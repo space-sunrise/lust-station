@@ -1,0 +1,145 @@
+﻿- type: interaction
+  id: ERPmasturbate
+  name: Мастурбировать член
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - аккуратно мастурбирует член %target
+  - мастурбирует пенис %target
+  - начинает надрачивать член %target
+  - охватывает член %target и нежно дрочит его
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 15
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: ERPmasturbateSelf
+  name: Мастурбировать себе
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - мастурбирует
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 15
+  lovePercentTarget: 2
+  useSelf: true
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: ERPbruh
+  name: Отсосать
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - отсасывает у %target
+  - сосёт у %target
+  - делает минет %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 15
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: ERPfapwithboobs
+  name: Подрочить член грудью
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает член %target своей грудью и начинает дрочить ими
+  - пропихивает член %target между своих сисек и начинает двигать ими
+  - прячет пенис %target между своих сисек, ритмично двигая их вверх и вниз
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Female
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: ERPfapwithhips
+  name: Подрочить член бёдрами
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - сжимает член %target своими бёдрами, начиная дрочить его
+  - пропихивает член %target между своих бёдер и начинает двигать ими
+  - охватывает пенис %target между своих бёдер, ритмично двигая ими вверх и вниз
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: ERPstrokepenisusinglegs
+  name: Погладить пенис ножками
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - осторожно ласкает пенис %target своей ножкой
+  - аккуратно проводит своей ножкой по члену %target
+  - нежно поглаживает пенис %target ступней
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
