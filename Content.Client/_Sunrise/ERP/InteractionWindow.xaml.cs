@@ -62,9 +62,9 @@ public sealed partial class InteractionWindow : FancyWindow
         InteractionButton.OnPressed += SetModeToInteraction;
         DescriptionButton.OnPressed += SetModeToDescription;
         DevButton.OnPressed += SetModeToDev;
-
         PopulateByFilter("", false);
-
+        ModeButtons.Visible = false;
+        //Descriptions.Visible = false;
         DevButton.Visible = true;
     }
 
@@ -177,10 +177,16 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!_player.LocalEntity.HasValue) return;
         if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
+        var protos = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToArray();
+        Array.Sort(protos, (x, y) => x.SortOrder.CompareTo(y.SortOrder));
         List<(string, Texture, InteractionPrototype)> itemList = new();
-        foreach (bool i in new List<bool> { false, true })
+        foreach (string category in new List<string>
+        {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
+        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анус",
+            "слаймолюд", "диона", "ксеноморф"}
+        )
         {
-            foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
+            foreach (var proto in protos)
             {
 
                 if (proto.InhandObject.Count > 0)
@@ -196,7 +202,7 @@ public sealed partial class InteractionWindow : FancyWindow
                     }
                     else continue;
                 }
-                if (proto.Erp != i) continue;
+                if (proto.Category.ToLower() != category) continue;
                 if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
                 if (string.IsNullOrEmpty(filter) ||
                     proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
@@ -275,8 +281,8 @@ public sealed partial class InteractionWindow : FancyWindow
     public void Populate()
     {
         var prototypes = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList();
-        UserDescription.DisposeAllChildren();
-        TargetDescription.DisposeAllChildren();
+        //UserDescription.DisposeAllChildren();
+        //TargetDescription.DisposeAllChildren();
         //Проверки nullable-типов
         if (!TargetEntityId.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -285,37 +291,6 @@ public sealed partial class InteractionWindow : FancyWindow
 
         if (!TargetEntityId.Value.Valid) return;
 
-        //Аминь
-        if (Erp)
-        {
-            //Юзер
-            UserDescription.AddChild(new Label { Text = "Вы...", StyleClasses = { StyleNano.StyleClassLabelBig } }); ;
-            if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
-            else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
-            UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
-            if (UserSex.Value == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
-            //Таргет
-            if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
-            {
-                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "...", StyleClasses = { StyleNano.StyleClassLabelBig } });
-                if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой"});
-                else
-                {
-                    TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
-                    TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
-                    if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
-                    if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
-                }
-                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
-            }
-
-        }
-        else
-        {
-            ErpProgress.Dispose();
-        }
         if(DescriptionContainer.Visible)
         {
             DescriptionPopulate();

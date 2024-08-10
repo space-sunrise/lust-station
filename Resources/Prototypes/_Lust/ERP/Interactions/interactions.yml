@@ -748,7 +748,7 @@
   lovePercentTarget: 2
 
 - type: interaction
-  id: ERPblowslap
+  id: blowslap
   name: Дать пощечину
   icon: _Sunrise/Interface/ERP/blankIcon.png
   emotes:
@@ -765,3 +765,37 @@
   lovePercentUser: 0
   lovePercentTarget: 0
 
+- type: interaction
+  id: fondlethigs
+  name: Ласкать ляжки
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - облизывает ляжки %target своим язычком
+  - нежно гладит и целует ляжки %target
+  - страстно осыпает поцелуями ляжки %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 3
+
+- type: interaction
+  id: footlick
+  name: Лизать ступни
+  icon: _Sunrise/Interface/ERP/heartIcon.png
+  emotes:
+  - ласкает язычком пальчики на ногах %target
+  - проходит по ступням %target своим язычком
+  - щекочет язычком пяточки %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 3
+  targetTagBlacklist:
+  - shoes
+  - socks
