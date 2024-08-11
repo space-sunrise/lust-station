@@ -68,7 +68,7 @@
   targetTagBlacklist:
   - pants
   - jumpsuit
-  - outerClothin
+  - outerClothing
   category: вагина
 
 - type: interaction
@@ -86,13 +86,13 @@
   - path: /Audio/_Sunrise/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Female
-  userWithoutCloth: false
-  targetWithoutCloth: true
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 10
   targetTagBlacklist:
   - pants
   - jumpsuit
-  - outerClothin
+  - outerClothing
   category: вагина
+  targetTagWhitelist:
+  - felinidEarsBasic

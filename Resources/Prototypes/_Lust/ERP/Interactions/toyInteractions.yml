@@ -96,3 +96,30 @@
   erp: true
   lovePercentTarget: 5
   useSelf: true
+
+# Some other stuff
+
+- type: interaction
+  id: ERPtoyPlaceholderDildoStunbaton
+  name: Вставить  в анал
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toyIcon.png
+  emotes:
+  - вставляет дилдо в анал %target
+  - вводит дилдо в анал %target
+  - аккуратно вставляет дилдо в анал %target
+  - глубоко вставляет дилдо в анал %target
+  - резко вставляет дилдо в анал %target
+  - медленно вводит дилдо в анал %target
+  - наслаждаясь, вставляет дилдо в анал %target
+  targetSex: Male
+  targetWithoutCloth: true
+  erp: true
+  lovePercentTarget: 5
+  useSelf: true

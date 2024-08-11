@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: ERPbruh2
   name: Заставить отсосать
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  icon: _Sunrise/Interface/ERP/lips.png
   emotes:
   - заставляет сосать %target
   - заставляет делать минет %target
