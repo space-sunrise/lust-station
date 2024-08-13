@@ -33,7 +33,6 @@
 
 - type: markingPoints
   id: MobTajaranMarkingLimits
-  onlyWhitelisted: true
   points:
     Hair:
       points: 1
