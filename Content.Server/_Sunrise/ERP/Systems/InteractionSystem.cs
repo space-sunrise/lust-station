@@ -13,6 +13,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Chat.Systems;
 using Content.Shared._Sunrise.ERP;
+using Content.Shared.Damage;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     public sealed class InteractionSystem : EntitySystem
@@ -22,6 +23,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         [Dependency] protected readonly IGameTiming _gameTiming = default!;
         [Dependency] protected readonly ChatSystem _chat = default!;
         [Dependency] protected readonly IRobustRandom _random = default!;
+        [Dependency] protected readonly DamageableSystem _damageable = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -161,7 +163,16 @@ namespace Content.Server._Sunrise.ERP.Systems
                     interaction.AnalVirginity = Virginity.No;
                     _chat.TrySendInGameICMessage(entity, "лишается анальной девственности", InGameICChatType.Emote, false);
                 }
-                if(TryComp<HumanoidAppearanceComponent>(entity, out var humanoid))
+                if (entity == User && _random.Prob(prototype.UserMoanChance) ||
+                   entity == Target && _random.Prob(prototype.TargetMoanChance)) _chat.TryEmoteWithChat(entity, "Moan", ChatTransmitRange.Normal);
+
+
+                if (entity == User)
+                    _damageable.TryChangeDamage(entity, prototype.UserDamage, origin: User);
+                if (entity == Target)
+                    _damageable.TryChangeDamage(entity, prototype.TargetDamage, origin: User); // Юзер по умолчанию является тем, кто наносит дамаг, т.к он использует действие
+
+                if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid))
                 {
                     switch(humanoid.Sex)
                     {
@@ -204,10 +215,6 @@ namespace Content.Server._Sunrise.ERP.Systems
                     compUser.TimeFromLastErp = _gameTiming.CurTime;
                 }
                 Spawn("EffectHearts", Transform(User).Coordinates);
-                if(_random.Prob(0.1f))
-                {
-                    _chat.TryEmoteWithChat(User, "Moan", ChatTransmitRange.Normal);
-                }
             }
             if (compUser.Love >= 1)
             {
@@ -232,10 +239,6 @@ namespace Content.Server._Sunrise.ERP.Systems
                     compTarget.TimeFromLastErp = _gameTiming.CurTime;
                 }
                 Spawn("EffectHearts", Transform(Target).Coordinates);
-                if (_random.Prob(0.1f))
-                {
-                    _chat.TryEmoteWithChat(User, "Moan", ChatTransmitRange.Normal);
-                }
             }
             if (compTarget.Love >= 1)
             {

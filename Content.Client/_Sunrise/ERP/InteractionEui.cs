@@ -123,7 +123,7 @@ namespace Content.Client._Sunrise.ERP
                     if(_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
                         emote = emote.Replace("%target", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager));
                     else
-                        emote = emote.Replace("%target", "себя");
+                        emote = emote.Replace("%target", interaction.SelfEmoteOverride);
                     _chat.SendMessage(emote, Shared.Chat.ChatSelectChannel.Emotes);
                 }
                 if (interaction.Sounds.Count > 0)

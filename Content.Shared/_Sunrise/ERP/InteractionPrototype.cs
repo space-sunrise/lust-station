@@ -4,6 +4,8 @@ using Robust.Shared.Utility;
 using Robust.Shared.Audio;
 using Content.Shared.Humanoid;
 namespace Content.Shared._Sunrise.ERP;
+
+using Content.Shared.Damage;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
@@ -23,6 +25,7 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public bool Erp = false; // Это ЕРП-действие?
     [DataField] public HashSet<string> InhandObject = new(); // Требуемый в руке объект у юзера
     [DataField] public bool UseSelf = false; // Можно ли использовать на себе?
+    [DataField] public string SelfEmoteOverride = "себя";
     [DataField] public string Category = "standart"; // Категория действия
     [DataField] public int SortOrder = 0; // Порядок действия в категории
 
@@ -34,6 +37,9 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
     [DataField] public HashSet<string> UserTagWhitelist = new(); // Вайтлист тегов
     [DataField] public HashSet<string> UserTagBlacklist = new(); // Блеклист тегов
+    [DataField] public float UserMoanChance = 0;
+    [DataField] public DamageSpecifier UserDamage = default!;
+
 
     // Тоже самое, но таргет
     [DataField] public Sex TargetSex = Sex.Unsexed;
@@ -42,4 +48,6 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public int LovePercentTarget = 0;
     [DataField] public HashSet<string> TargetTagWhitelist = new();
     [DataField] public HashSet<string> TargetTagBlacklist = new();
+    [DataField] public float TargetMoanChance = 0;
+    [DataField] public DamageSpecifier TargetDamage = default!;
 }
