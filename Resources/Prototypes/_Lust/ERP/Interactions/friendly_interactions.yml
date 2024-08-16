@@ -3,7 +3,7 @@
 - type: interaction
   id: Handshake
   name: Пожать руку
-  icon: _Sunrise/Interface/ERP/blankIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
   - жмёт руку %target
   userSex: Unsexed
@@ -14,7 +14,7 @@
 - type: interaction
   id: PatShoulder
   name: Похлопать по плечу
-  icon: _Sunrise/Interface/ERP/blankIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
   - хлопает по плечу %target
   #  sounds:
@@ -27,10 +27,11 @@
 - type: interaction
   id: Hug
   name: Обнять
-  icon: _Sunrise/Interface/ERP/blankIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
   - обнимает %target
   - крепко обнимает %target
+  - прижимает к себе %target
   sounds:
   - path: /Audio/Effects/thudswoosh.ogg
   userSex: Unsexed
@@ -41,7 +42,7 @@
 - type: interaction
   id: Highfive
   name: Дать пять
-  icon: _Sunrise/Interface/ERP/blankIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
   - даёт пять %target
   #  sounds:
@@ -54,9 +55,9 @@
 - type: interaction
   id: KissHand
   name: Поцеловать руку
-  icon: _Sunrise/Interface/ERP/kissIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
-  - берёт %target за руку и целует её
+  - берет %target за руку и целует в кисть
   sounds:
   - path: /Audio/_Sunrise/ERP/kiss1.ogg
   - path: /Audio/_Sunrise/ERP/kiss2.ogg
@@ -66,13 +67,13 @@
   - path: /Audio/_Sunrise/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
-  erp: true # поцелуи - ЕРП
+  erp: false
   category: дружба
 
 - type: interaction
   id: PetHead
   name: Погладить по голове
-  icon: _Sunrise/Interface/ERP/blankIcon.png
+  icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
   - гладит %target по голове
   userSex: Unsexed
@@ -80,10 +81,99 @@
   erp: false
   category: дружба
 
-#- type: interaction
+- type: interaction
+  id: ShoulderMassage
+  name: Помассировать плечи
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - массирует плечи %target
+  - делает массаж плечей %target
+  - разминает плечи %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FelinidRubsCheek
+  name: Потереться как котик
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - нежно трется щекой об %target
+  - ласково трется щекой об %target
+  - по-кошачьи трется щекой об %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Felinid
+  category: дружба
+
+- type: interaction
+  id: HeadTailpats
+  name: Погладить хвостиком
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - нежно гладит хвостиком голову %target
+  - ласково гладит хвостиком по спине %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: дружба
+
+- type: interaction
+  id: TailPull
+  name: Дернуть за хвост
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - резко дергает за хвост %target
+  - грубо дергает за хвост %target
+  - неожиданно дергает хвост %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: дружба
+
+- type: interaction
+  id: blowslap
+  name: Дать пощечину
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - резко бьет по щеке %target
+  - сильно шлепает %target по лицу
+  - с громким хлопком ударяет %target по щеке
+  - дает звонкую пощечину %target
+  sounds:
+  - path: /Audio/_Lust/ERP/blow_slap.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  lovePercentUser: 0
+  lovePercentTarget: 0
+  category: дружба
+
+# - type: interaction
 #  id: ALotOfKisses
 #  name: Одарить шквалом поцелуев
-#  icon: _Sunrise/Interface/ERP/kissIcon.png
+#  icon: _Sunrise/Interface/ERP/friendly.png
 #  emotes:
 #  - устраивает град поцелуев, ни оставляя сухого места на %target
 #  sounds:
@@ -93,20 +183,3 @@
 #  erp: true # поцелуи - ЕРП
 #  lovePercentUser: 4
 #  lovePercentTarget: 4
-
-- type: interaction
-  id: blowslap
-  name: Дать пощечину
-  icon: _Sunrise/Interface/ERP/blankIcon.png
-  emotes:
-  - резко бьет по щеке %target
-  - сильно шлепает %target по лицу
-  - с громким хлопком ударяет %target по щеке
-  sounds:
-  - path: /Audio/_Lust/ERP/blow_slap.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  lovePercentUser: 0
-  lovePercentTarget: 0
-  category: дружба

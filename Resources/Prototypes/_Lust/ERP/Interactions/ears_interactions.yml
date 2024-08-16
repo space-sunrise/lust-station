@@ -1,0 +1,71 @@
+- type: interaction
+  id: BiteEars
+  name: Кусь за ушко
+  icon: _Sunrise/Interface/ERP/ears.png
+  emotes:
+  - делает кусь за ушко %target
+  - слегка прикусывает ушко %target
+  - нежно покусывает ушко %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 3
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: уши
+
+- type: interaction
+  id: PatEars
+  name: Погладить ушки
+  icon: _Sunrise/Interface/ERP/ears.png
+  emotes:
+  - нежно гладит пальчиками ушки %target
+  - трепетно касается ушек %target
+  - ласково поглаживает ушки %target
+  - бережно ласкает ушки %target
+  - нежно проводит по ушкам %target своей ладонью
+  - аккуратно гладит за ушками %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 15
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: уши
+
+- type: interaction
+  id: PatEars2
+  name: Почесать за ушком
+  icon: _Sunrise/Interface/ERP/ears.png
+  emotes:
+  - нежно чешет за ушком %target
+  - ласково почесывает %target за ушком
+  - нежно расчесывает пальчиками за ушком %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 15
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: уши

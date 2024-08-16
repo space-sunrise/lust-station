@@ -1,10 +1,62 @@
 ﻿- type: interaction
-  id: ERPmasturbate
-  name: Мастурбировать член
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: CockLegPat
+  name: Погладить член ножкой
+  icon: _Sunrise/Interface/ERP/cock.png
   emotes:
-  - аккуратно мастурбирует член %target
-  - мастурбирует пенис %target
+  - ласкает ножкой член %target
+  - игриво проводит ножкой по члену %target
+  - нежно поглаживает ступней член %target
+  - проводит ножкой вдоль члена %target
+  userSex: Unsexed
+  targetSex: Male
+  userWithoutCloth: false
+  targetWithoutCloth: true
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: CockFapBoobs
+  name: Подрочить член грудью
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - возбужденно трахает членом %target между своих грудок
+  - активно дрочит член %target своей грудью
+  - страстно трахает грудью член %target
+  - ритмично дрочит грудями член %target
+  - сжимая грудями член %target, ритмично двигает ими вверх-вниз
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Female
+  targetSex: Male
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  - bra
+  category: член
+
+- type: interaction
+  id: CockFap
+  name: Подрочить член рукой
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - нежно мастурбирует член %target
+  - мастурбирует член %target
   - начинает надрачивать член %target
   - охватывает член %target и нежно дрочит его
   sounds:
@@ -15,8 +67,8 @@
   userSex: Unsexed
   targetSex: Male
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 15
+  lovePercentUser: 4
+  lovePercentTarget: 8
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -24,32 +76,9 @@
   category: член
 
 - type: interaction
-  id: ERPmasturbateSelf
-  name: Мастурбировать себе
-  icon: _Sunrise/Interface/ERP/heartIcon.png
-  emotes:
-  - мастурбирует
-  sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 15
-  lovePercentTarget: 2
-  useSelf: true
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  category: член
-
-- type: interaction
-  id: ERPbruh
-  name: Отсосать
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: CockBlowjob
+  name: Сделать минет
+  icon: _Sunrise/Interface/ERP/cock.png
   emotes:
   - отсасывает у %target
   - сосёт у %target
@@ -62,48 +91,25 @@
   userSex: Unsexed
   targetSex: Male
   erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 15
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  category: член
-
-- type: interaction
-  id: ERPfapwithboobs
-  name: Подрочить член грудью
-  icon: _Sunrise/Interface/ERP/heartIcon.png
-  emotes:
-  - сжимает член %target своей грудью и начинает дрочить ими
-  - пропихивает член %target между своих сисек и начинает двигать ими
-  - прячет пенис %target между своих сисек, ритмично двигая их вверх и вниз
-  sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
-  userSex: Female
-  erp: true
-  lovePercentUser: 1
-  lovePercentTarget: 6
+  lovePercentUser: 4
+  lovePercentTarget: 8
   targetTagBlacklist:
   - pants
   - jumpsuit
   - outerClothing
   userTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - mask
   category: член
 
 - type: interaction
-  id: ERPfapwithhips
-  name: Подрочить член бёдрами
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: CockFuckThighs
+  name: Трахнуть член бёдрами
+  icon: _Sunrise/Interface/ERP/cock.png
   emotes:
   - сжимает член %target своими бёдрами, начиная дрочить его
   - пропихивает член %target между своих бёдер и начинает двигать ими
   - охватывает пенис %target между своих бёдер, ритмично двигая ими вверх и вниз
+  - сжимает и трахает член %target своими ляжками
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
@@ -112,7 +118,7 @@
   userSex: Unsexed
   targetSex: Male
   erp: true
-  lovePercentUser: 2
+  lovePercentUser: 5
   lovePercentTarget: 10
   targetTagBlacklist:
   - pants
@@ -124,22 +130,169 @@
   category: член
 
 - type: interaction
-  id: ERPstrokepenisusinglegs
-  name: Погладить пенис ножками
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: CockCowgirl
+  name: Трахнуть член киской
+  icon: _Sunrise/Interface/ERP/cock.png
   emotes:
-  - осторожно ласкает пенис %target своей ножкой
-  - аккуратно проводит своей ножкой по члену %target
-  - нежно поглаживает пенис %target ступней
+  - возбужденно седлает киской член %target
+  - страстно скачет киской на члене %target
+  - заведенно трахает киской член %target
+  - резко опускается киской на член %target
+  - грубо скачет киской на члене %target
+  userSex: Female
+  targetSex: Male
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: CockCowboy
+  name: Трахнуть член попкой
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - возбужденно седлает попкой член %target
+  - страстно скачет попкой на члене %target
+  - заведенно двигает попкой на члене %target
+  - резко опускается попкой на член %target
+  - уверенно садится попкой на член %target
   userSex: Unsexed
   targetSex: Male
-  userWithoutCloth: false
-  targetWithoutCloth: true
   erp: true
-  lovePercentUser: 1
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член
+
+- type: interaction
+  id: CockTailFap
+  name: Мастурбировать член хвостиком
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - похотливо обвивает хвостиком член %target
+  - нежно дрочит хвостиком член %target
+  - ласкает член %target своим хвостиком
+  - игриво поглаживает хвостиком член %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 8
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: член
+
+- type: interaction
+  id: CockTongueFap
+  name: Ласкать член длинным языком
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - обвивает длинным языком и сжимает член %target
+  - страстно сжимает и дрочит длинным языком член %target
+  - ласкает своим длинным языком член %target
+  - нежно поглаживает длинным языком член %target
+  - оплетает длинным языком и двигает вверх-вниз по члену %target
+  - игриво скользит длинным языком вдоль члена %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 8
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagWhitelist:
+  - Vulpkanin
+  - Demon
+  - Reptilian
+  - Predator
+  - SlimePerson
+  userTagBlacklist:
+  - mask
+  category: член
+
+- type: interaction
+  id: CockVaginaGrind
+  name: Тереться об член киской
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - сидя сверху, возбужденно трется киской об член %target
+  - сидя сверху, прижимается киской к члену %target и двигает бедрами
+  - увлеченно скользит киской вдоль члена %target
+  - страстно трется киской об член %target
+  userSex: Female
+  targetSex: Male
+  erp: true
+  lovePercentUser: 7
   lovePercentTarget: 7
   targetTagBlacklist:
   - pants
   - jumpsuit
   - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   category: член
+
+- type: interaction
+  id: SlimeHandjob
+  name: Подрочить слизью
+  icon: _Sunrise/Interface/ERP/cock.png
+  emotes:
+  - обволакивает своей слизью член %target и начинает его ласкать
+  - присасывается к члену %target своей слизью и начинает его дрочить
+  - погружает в свою слизь член %target и обсасывает его, причмокивая
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 15
+  userTagBlacklist:
+  - Vulpkanin
+  - Swine
+  - Predator
+  - HumanoidXeno
+  - Felinid
+  - Vox
+  - Reptilian
+  - Moth
+  - Human
+  - Dwarf
+  - Diona
+  - Demon
+  - Arachnid
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: слаймолюд
+
+#наступить на член
+#ласкать член шестью лапками

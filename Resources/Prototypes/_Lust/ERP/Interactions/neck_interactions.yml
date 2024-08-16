@@ -3,7 +3,7 @@
 - type: interaction
   id: KissNeck
   name: Поцеловать в шею
-  icon: _Sunrise/Interface/ERP/kissIcon.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - целует %target за шею
   - нежно целует %target за шею
@@ -26,7 +26,7 @@
 - type: interaction
   id: NuzzleNeckVulpaStyle
   name: Потереться мордочкой о шею
-  icon: _Sunrise/Interface/ERP/nuzzleIcon.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - нежно трётся мордочкой о шею %target
   - мягко касается мордочкой шеи %target, создавая приятное ощущение
@@ -42,7 +42,7 @@
 - type: interaction
   id: NuzzleNeck
   name: Потереться мордочкой о шею
-  icon: _Sunrise/Interface/ERP/nuzzleIcon.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - нежно трётся носиком о шею %target
   - мягко касается носиком шеи %target, создавая приятное ощущение
@@ -56,7 +56,7 @@
 - type: interaction
   id: BiteNeck
   name: Укусить за шею
-  icon: _Sunrise/Interface/ERP/biteIcon.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - игриво кусает %target за шею
   - слегка прикусывает шею %target, оставляя след
@@ -70,7 +70,7 @@
 - type: interaction
   id: ERPneckLick
   name: Облизнуть шею
-  icon: _Sunrise/Interface/ERP/kissIcon.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - прильнул к шее %target языком
   - касается шеи %target своим язычком

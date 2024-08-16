@@ -1,34 +1,15 @@
 ﻿- type: interaction
-  id: ERPanusInsert
-  name: Проникнуть в задницу
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: AnalFingering
+  name: Разработать анус пальцем
+  icon: _Sunrise/Interface/ERP/anal.png
   emotes:
-  - проникает в задницу %target
-  - проникнул в задницу %target
-  - резко проникает в задницу %target
-  - делает аккуратное проникновение в задницу %target
-  - делает резкое проникновение в задницу %target
-  sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 20
-  lovePercentTarget: 20
-  category: анал
-
-- type: interaction
-  id: ERPfingerinanus
-  name: Вставить пальчик в анус
-  icon: _Sunrise/Interface/ERP/heartIcon.png
-  emotes:
-  - медленно вставляет пальчик в анус %target
-  - осторожно проникает пальчиком в анус %target
-  - чувствительно массирует анус %target пальчиками
-  - разрабатывает анус %target
+  - медленно вставляет пальчик в попку %target
+  - осторожно проникает пальчиком в попку %target
+  - нежно массирует пальчиками анус %target
+  - аккуратно разрабатывает пальчиком попку %target
+  - плавно вставляет пальчик в попку %target
+  - потихоньку засовывает пальчик в попку %target
+  - проскальзывает пальчиком в попку %target
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
@@ -37,7 +18,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 1
+  lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
   - pants
@@ -46,13 +27,43 @@
   category: анал
 
 - type: interaction
-  id: ERPfingerinanus2
-  name: Трахнуть анус пальчиками
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: AnalLick
+  name: Поласкать анус языком
+  icon: _Sunrise/Interface/ERP/anal.png
   emotes:
-  - активно мастурбирует анус %target пальчиками
-  - интенсивно трахает анус %target своими пальчиками
-  - глубоко проникает пальчиками в анус %target
+  - чувственно вылизывает заднюю дырочку %target
+  - игриво извивает язычком в анусе %target
+  - медленно водит язычком вокруг ануса %target
+  - плавно вводит язычок в попку %target
+  - страстно вылизывает язычком анус %target
+  - глубоко проникает языком в анус %target
+  - нежно вылизывает анус %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: анал
+
+- type: interaction
+  id: AnalFingering2
+  name: Трахать анус пальцами
+  icon: _Sunrise/Interface/ERP/anal.png
+  emotes:
+  - активно трахает пальчиками анус %target
+  - интенсивно трахает пальчиками анус %target
+  - на всю длину входит пальчиками в анус %target
+  - увлеченно трахает пальчиками анус %target
+  - быстро долбит пальчиками анус %target
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
@@ -61,8 +72,38 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 1
-  lovePercentTarget: 6
+  lovePercentUser: 3
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: анал
+
+- type: interaction
+  id: AnalFuck
+  name: Трахать анус членом
+  icon: _Sunrise/Interface/ERP/anal.png
+  emotes:
+  - трахает в попку %target
+  - долбит попку %target своим членом
+  - на всю длину входит в попку %target
+  - резко проникает в задницу %target
+  - медленно входит в попку %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   targetTagBlacklist:
   - pants
   - jumpsuit

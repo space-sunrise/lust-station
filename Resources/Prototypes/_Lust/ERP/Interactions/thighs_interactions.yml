@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: ERPselffapwithhips
   name: Пропихнуть свой член между бёдер
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  icon: _Sunrise/Interface/ERP/thights.png
   emotes:
   - водит членом по бёдрам %target, а затем проталкивает свой пенис между них
   - пихает свой член между бёдер %target, ритмично двигая им
@@ -29,12 +29,14 @@
 - type: interaction
   id: ERPlickthighs
   name: Облизать ляжки
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  icon: _Sunrise/Interface/ERP/thights.png
   emotes:
   - облизывает ляжки %target своим язычком
   - покрывает поцелуями и лизаниями ляжки %target
   - нежно проводит язычком по ляжкам %target
   - ласкает ляжки %target своим тёплым язычком
+  - нежно гладит и целует ляжки %target
+  - страстно осыпает поцелуями ляжки %target
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
@@ -53,11 +55,14 @@
 - type: interaction
   id: ERPstrokebetweenlegs
   name: Погладить промежность
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  icon: _Sunrise/Interface/ERP/thights.png
   emotes:
   - аккуратно проводит пальцами по промежности %target
   - медленно ласкает промежность %target
   - нежно касается промежности %target своими пальцами
+  - поглаживает пальчиками между ног %target
+  - игриво поглаживает промежность %target
+  - ласкает ладонью промежность %target
   userSex: Unsexed
   targetSex: Unsexed
   erp: true

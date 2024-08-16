@@ -1,0 +1,146 @@
+- type: interaction
+  id: HornsBlowjobFemale
+  name: Трахать в рот схватив рожки
+  icon: _Sunrise/Interface/ERP/horn.png
+  emotes:
+  - крепко взяв %target за рожки трахает её в ротик
+  - трахает в ротик %target держа её за рожки
+  - взяв %target за рожки, делает себе минет её ротиком
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  targetTagWhitelist:
+  - LizardHornsAngler
+  - LizardHornsCurled
+  - LizardHornsRam
+  - LizardHornsShort
+  - LizardHornsSimple
+  - LizardHornsDemonic
+  - LizardHornsBighorn
+  - LizardHornsMyrsore
+  - LizardHornsAyrshire
+  - LizardHornsArgali
+  - LizardHornsDouble
+  - DemonCowHorns
+  - DemonHornsDeer
+  - DemonHornsSmall
+  - mask
+  category: рога
+
+- type: interaction
+  id: HornsBlowjobMale
+  name: Минет за рожки
+  icon: _Sunrise/Interface/ERP/horn.png
+  emotes:
+  - крепко взяв %target за рожки трахает его в ротик
+  - трахает в ротик %target держа его за рожки
+  - взяв %target за рожки, делает себе минет его ротиком
+  userSex: Male
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  targetTagWhitelist:
+  - LizardHornsAngler
+  - LizardHornsCurled
+  - LizardHornsRam
+  - LizardHornsShort
+  - LizardHornsSimple
+  - LizardHornsDemonic
+  - LizardHornsBighorn
+  - LizardHornsMyrsore
+  - LizardHornsAyrshire
+  - LizardHornsArgali
+  - LizardHornsDouble
+  - DemonCowHorns
+  - DemonHornsDeer
+  - DemonHornsSmall
+  - mask
+  category: рога
+
+- type: interaction
+  id: HornsСunnilingusMale
+  name: Куни за рожки
+  icon: _Sunrise/Interface/ERP/horn.png
+  emotes:
+  - хватает %target за рожки и прижимает его губки к своей киске
+  - сжимая рожки %target окунает его язычок в свою киску
+  - берет %target за рожки и трется об его язычок своей киской
+  - крепко держа за рожки %target, ласкает свою киску его язычком
+  - притягивает к себе за рожки %target, заставляя вылизывать свою киску
+  userSex: Female
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  targetTagWhitelist:
+  - LizardHornsAngler
+  - LizardHornsCurled
+  - LizardHornsRam
+  - LizardHornsShort
+  - LizardHornsSimple
+  - LizardHornsDemonic
+  - LizardHornsBighorn
+  - LizardHornsMyrsore
+  - LizardHornsAyrshire
+  - LizardHornsArgali
+  - LizardHornsDouble
+  - DemonCowHorns
+  - DemonHornsDeer
+  - DemonHornsSmall
+  - mask
+  category: рога
+
+- type: interaction
+  id: HornsСunnilingusFemale
+  name: Куни за рожки
+  icon: _Sunrise/Interface/ERP/horn.png
+  emotes:
+  - хватает %target за рожки и прижимает её губки к своей киске
+  - сжимая рожки %target окунает её язычок в свою киску
+  - берет %target за рожки и трется об её язычок своей киской
+  - крепко держа за рожки %target, ласкает свою киску её язычком
+  - притягивает к себе за рожки %target, заставляя вылизывать свою киску
+  userSex: Female
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 10
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  targetTagWhitelist:
+  - LizardHornsAngler
+  - LizardHornsCurled
+  - LizardHornsRam
+  - LizardHornsShort
+  - LizardHornsSimple
+  - LizardHornsDemonic
+  - LizardHornsBighorn
+  - LizardHornsMyrsore
+  - LizardHornsAyrshire
+  - LizardHornsArgali
+  - LizardHornsDouble
+  - DemonCowHorns
+  - DemonHornsDeer
+  - DemonHornsSmall
+  - mask
+  category: рога
+
+#Трахать в анус держа рожки
+#Трахать в вагину держа рожки

@@ -1,12 +1,9 @@
-﻿# 2. ДЕЙСТВИЯ С ЩЕКАМИ
-
-- type: interaction
-  id: KissCheek
+﻿- type: interaction
+  id: CheeksKiss
   name: Чмокнуть в щёчку
-  icon: _Sunrise/Interface/ERP/kissIcon.png
+  icon: _Sunrise/Interface/ERP/cheeks.png
   emotes:
-  - чмокает %target в щёчку
-  - нежно целует %target в щёку
+  - чмокает в щёчку %target
   sounds:
   - path: /Audio/_Sunrise/ERP/kiss1.ogg
   - path: /Audio/_Sunrise/ERP/kiss2.ogg
@@ -20,69 +17,33 @@
   category: щёки
 
 - type: interaction
-  id: Patщёки
+  id: CheeksKissBoth
+  name: Расцеловать в обе щёки
+  icon: _Sunrise/Interface/ERP/cheeks.png
+  emotes:
+  - целует %target в обе щёки
+  - чмокает %target в обе щёки
+  - расцеловывает %target в обе щеки
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: щёки
+
+- type: interaction
+  id: CheeksPat
   name: Потискать за щёки
-  icon: _Sunrise/Interface/ERP/kissIcon.png
+  icon: _Sunrise/Interface/ERP/cheeks.png
   emotes:
-  - нежно треплет щёки %target
-  - растягивает щёки %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: щёки
-
-- type: interaction
-  id: KissBothщёки
-  name: Расцеловать щёки
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - целует обе щёки %target
-  - чмокает %target в обе щёки одновременно
-  sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: щёки
-
-- type: interaction
-  id: PressCheek
-  name: Прижаться щекой
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - нежно прижимается щекой к щеке %target
-  - слегка прижимается щекой, создавая близость с %target
-  - с теплотой касается щекой %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: щёки
-
-- type: interaction
-  id: LickCheekDoggyStyle
-  name: По-собачьи лизнуть шёку
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - по-собачьи лижет щёку %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  UserTagWhitelist:
-  - Vulpakin
-  category: щёки
-
-- type: interaction
-  id: LickCheek
-  name: Лизнуть шёку
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - лижет щёку %target
-  - нежно лижет щёку %target
+  - нежно треплет за щёчки %target
+  - слегка растягивает щёчки %target
+  - тискает щечки %target
   userSex: Unsexed
   targetSex: Unsexed
   erp: false

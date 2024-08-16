@@ -1,51 +1,145 @@
 ﻿- type: interaction
-  id: ERPputboobsontheface
-  name: Положить грудь на лицо
-  icon: _Sunrise/Interface/ERP/heartIcon.png
-  emotes:
-  - тычет своей грудью в лицо %target, закрывая его полностью
-  - кладёт свои сиськи прямо на лицо %target, не давая ему продохнуть
-  sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
-  userSex: Female
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 6
-  userTagBlacklist:
-  - bra
-  - outerClothing
-  - jumpsuit
-
-- type: interaction
-  id: ERPputboobsontheface2
+  id: FaceInBoobs
   name: Прижаться грудью к лицу
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  icon: _Sunrise/Interface/ERP/face.png
   emotes:
-  - тычет своей грудью в лицо %target, закрывая его полностью
-  - кладёт свои сиськи прямо на лицо %target, не давая ему продохнуть
+  - прижимается грудью к лицу %target
+  - прижимает к своей груди лицо %target
+  - погружает в свою грудь лицо %target
   sounds:
   - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
   userSex: Female
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 6
-  userTagBlacklist:
-  - outerClothing
+  lovePercentUser: 3
+  lovePercentTarget: 3
+  userMoanChance: 0
+  targetMoanChance: 0
   category: лицо
 
 - type: interaction
-  id: ERPsitonface
-  name: Сесть попой на лицо
-  icon: _Sunrise/Interface/ERP/heartIcon.png
+  id: FaceSitting
+  name: Сесть на лицо
+  icon: _Sunrise/Interface/ERP/face.png
   emotes:
-  - медленно садится попой на лицо %target
-  - нежно опускает попу на лицо %target
-  - крепко прижимает попу к лицу %target
+  - нежно садится попкой на лицо %target
+  - медленно опускает попу на лицо %target
+  - крепко прижимается попкой к лицу %target
+  - садится своей попкой на лицо %target
+  - шлепается задницей на лицо %target
+  - садится на лицо %target своей задницей
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
   category: лицо
+
+- type: interaction
+  id: FaceThighsCrush
+  name: Стиснуть голову ляжками
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - сжимает голову %target своими ляжками
+  - стискивает ляжками голову %target
+  - обхватывает ляжками голову %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+  category: лицо
+
+- type: interaction
+  id: FacePats
+  name: Погладить по лицу
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - нежно проводит ладонью по лицу %target
+  - нежно гладит лицо %target своей ладонью
+  - нежно поглаживает ладонью лицо %target
+  - нежно гладит %target по лицу
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+  category: лицо
+
+- type: interaction
+  id: FaceDickSlap
+  name: Шлепнуть по лицу членом
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - отводит член в сторону, и шлепает им по лицу %target
+  - отведя вбок тазом, шлепает членом по лицу %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 6
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: лицо
+
+- type: interaction
+  id: FaceLickDoggyStyle
+  name: Облизать лицо по-собачьи
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - по-собачьи облизывает щёки %target
+  - по-собачьи облизывает губы %target
+  - по-собачьи лижет в нос %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Vulpkanin
+  targetTagBlacklist:
+  - mask
+  category: лицо
+
+- type: interaction
+  id: FaceRubCat
+  name: Потереться как котик
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - по-кошачьи трется щекой об лицо %target
+  - как котик трется головой об %target
+  - мурлыкая, трется ушками об %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Felinid
+  category: лицо
+
+- type: interaction
+  id: CheeksPress
+  name: Прижаться щекой к лицу
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - нежно прижимается щекой к лицу %target
+  - слегка прижимается щекой к лицу %target, создавая близость
+  - с теплотой прижимается щекой к лицу %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+#тесно прижимается грудью к телу %target
+#прижимается грудью к руке %target
