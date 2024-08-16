@@ -733,6 +733,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("anal_virginity");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -812,6 +817,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
+
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("virginity");
 
                     b.Property<string>("Voice")
                         .IsRequired()

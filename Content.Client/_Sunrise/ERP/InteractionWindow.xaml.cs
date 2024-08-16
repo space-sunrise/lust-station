@@ -183,7 +183,7 @@ public sealed partial class InteractionWindow : FancyWindow
         foreach (string category in new List<string>
         {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
         "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал",
-            "слаймолюд", "диона", "ксеноморф", "лицо"}
+            "лицо"}
         )
         {
             foreach (var proto in protos)
@@ -215,18 +215,30 @@ public sealed partial class InteractionWindow : FancyWindow
                     if (!Erp && proto.Erp) continue;
                     if (UserTags != null)
                     {
+                        if (proto.UserTagWhitelist.Count > 0)
+                        {
+                            foreach (var tag in proto.UserTagWhitelist)
+                            {
+                                if (!UserTags.Contains(tag)) goto CONTINUE;
+                            }
+                        }
                         foreach (var tag in UserTags)
                         {
-                            if (!proto.UserTagWhitelist.Contains(tag) && proto.UserTagWhitelist.Count > 0) goto CONTINUE;
                             if (proto.UserTagBlacklist.Contains(tag)) goto CONTINUE;
                         }
                     }
 
                     if (TargetTags != null)
                     {
+                        if(proto.TargetTagWhitelist.Count > 0)
+                        {
+                            foreach(var tag in proto.TargetTagWhitelist)
+                            {
+                                if (!TargetTags.Contains(tag)) goto CONTINUE;
+                            }
+                        }
                         foreach (var tag in TargetTags)
                         {
-                            if (!proto.TargetTagWhitelist.Contains(tag) && proto.TargetTagWhitelist.Count > 0) goto CONTINUE;
                             if (proto.TargetTagBlacklist.Contains(tag)) goto CONTINUE;
                         }
                     }

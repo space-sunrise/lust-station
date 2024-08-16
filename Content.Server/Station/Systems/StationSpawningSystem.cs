@@ -205,7 +205,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             {
                 var session = _actors.GetSession(entity);
 
-                string [] sponsorsPrototypes = [];
+                string[] sponsorsPrototypes = [];
                 if (_sponsorsManager != null && session != null)
                 {
                     if (_sponsorsManager.TryGetPrototypes(session.UserId, out var prototypes))
@@ -243,7 +243,9 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             }
             EnsureComp<DetailExaminableComponent>(entity.Value).Erp = profile.Erp;
             if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-            if(EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+            EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
+            EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+            if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
         }
 
         DoJobSpecials(job, entity.Value);

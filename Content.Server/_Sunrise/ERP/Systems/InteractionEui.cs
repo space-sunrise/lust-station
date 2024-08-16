@@ -84,6 +84,24 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
                         SendMessage(new ResponseLoveMessage(usComp.Love));
                     break;
+                case SendInteractionToServer req:
+                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
+                    {
+                        Close();
+                        return;
+                    }
+                    if (!_entManager.GetEntity(_user).Valid) return;
+                    if (!_entManager.GetEntity(_target).Valid) return;
+                    if (req.InteractionPrototype != null)
+                    {
+                        if (_prototypes.ContainsKey(req.InteractionPrototype))
+                        {
+                            var proto = _prototypes[req.InteractionPrototype];
+                            _interaction.ProcessInteraction(_user, _target, proto);
+                        }
+                        else return;
+                    }
+                    break;
                 case RequestInteractionState req:
                     if (!_entManager.GetEntity(req.User).Valid) return;
                     if (!_entManager.GetEntity(req.Target).Valid) return;

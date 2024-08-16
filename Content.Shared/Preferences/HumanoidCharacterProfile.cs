@@ -89,6 +89,10 @@ namespace Content.Shared.Preferences
 
         [DataField]
         public Erp Erp { get; set; } = Erp.Ask;
+        [DataField]
+        public Virginity Virginity { get; set; } = Virginity.No;
+        [DataField]
+        public Virginity AnalVirginity { get; set; } = Virginity.Yes;
 
         [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
@@ -143,6 +147,8 @@ namespace Content.Shared.Preferences
             int age,
             Sex sex,
             Erp erp,
+            Virginity virginity,
+            Virginity analVirginity,
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -159,6 +165,8 @@ namespace Content.Shared.Preferences
             Age = age;
             Sex = sex;
             Erp = erp;
+            Virginity = virginity;
+            AnalVirginity = analVirginity;
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -192,6 +200,8 @@ namespace Content.Shared.Preferences
                 other.Age,
                 other.Sex,
                 other.Erp,
+                other.Virginity,
+                other.AnalVirginity,
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -310,6 +320,15 @@ namespace Content.Shared.Preferences
         {
             return new(this) { Erp = erp };
         }
+        public HumanoidCharacterProfile WithVirginity(Virginity virginity)
+        {
+            return new(this) { Virginity = virginity };
+        }
+
+        public HumanoidCharacterProfile WithAnalVirginity(Virginity analVirginity)
+        {
+            return new(this) { AnalVirginity = analVirginity };
+        }
 
         public HumanoidCharacterProfile WithGender(Gender gender)
         {
@@ -400,7 +419,7 @@ namespace Content.Shared.Preferences
         {
             return new(this)
             {
-                _antagPreferences = new (antagPreferences),
+                _antagPreferences = new(antagPreferences),
             };
         }
 
@@ -496,6 +515,8 @@ namespace Content.Shared.Preferences
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
             if (Erp != other.Erp) return false;
+            if (Virginity != other.Virginity) return false;
+            if (AnalVirginity != other.AnalVirginity) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
@@ -765,7 +786,9 @@ namespace Content.Shared.Preferences
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add((int)Sex);
-            hashCode.Add((int) Erp);
+            hashCode.Add((int)Erp);
+            hashCode.Add((int)Virginity);
+            hashCode.Add((int)AnalVirginity);
             hashCode.Add((int)Gender);
             hashCode.Add(Appearance);
             hashCode.Add((int)SpawnPriority);
@@ -797,7 +820,7 @@ namespace Content.Shared.Preferences
             return profile;
         }
 
-        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string [] sponsorPrototypes)
+        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string[] sponsorPrototypes)
         {
             if (!_loadouts.TryGetValue(id, out var loadout))
             {
