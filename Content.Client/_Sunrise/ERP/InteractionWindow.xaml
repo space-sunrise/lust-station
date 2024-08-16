@@ -1,34 +1,68 @@
 <controls:FancyWindow xmlns="https://spacestation14.io"
-               xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
-               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-               xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
-               xmlns:style="clr-namespace:Content.Client.Stylesheets"
-               Title="Взаимодействия" SetWidth="476" MinWidth="420" SetHeight="600" MaxHeight="600" MinHeight="600" Resizable="True">
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                      xmlns:style="clr-namespace:Content.Client.Stylesheets"
+                      Title="Взаимодействия"
+                      SetWidth="476"
+                      MinWidth="420"
+                      SetHeight="600"
+                      MaxHeight="600"
+                      MinHeight="600"
+                      Resizable="True">
     <PanelContainer Name="BasedPanel">
         <PanelContainer.PanelOverride>
-            <gfx:StyleBoxFlat BackgroundColor="#161619" />
+            <gfx:StyleBoxFlat BackgroundColor="#161619"/>
         </PanelContainer.PanelOverride>
-        <BoxContainer Name="BasedContainer" Orientation="Vertical" HorizontalExpand="True">
-            <BoxContainer Name="Descriptions" Orientation="Horizontal" MaxHeight="150" VerticalAlignment="Top">
-                <TextureRect SetSize="436 200" Stretch="KeepAspectCentered" HorizontalAlignment="Center" TexturePath="/Textures/_Sunrise/Interface/ERP/erpPanel.png"/>
+        <BoxContainer Name="BasedContainer"
+                      Orientation="Vertical"
+                      HorizontalExpand="True">
+            <BoxContainer Name="Descriptions"
+                          Orientation="Horizontal"
+                          MaxHeight="200"
+                          VerticalAlignment="Top">
+                <BoxContainer Name="UserDescription"
+                              Orientation="Vertical"
+                              HorizontalExpand="True"
+                              HorizontalAlignment="Left"
+                              Margin="10"
+                              MinWidth="180">
+                </BoxContainer>
+                <controls:VSpacer Spacing="40"/>
+                <BoxContainer Name="TargetDescription"
+                              Orientation="Vertical"
+                              HorizontalExpand="True"
+                              HorizontalAlignment="Right"
+                              Margin="10"
+                              MinWidth="180">
+                </BoxContainer>
             </BoxContainer>
-            <BoxContainer Name="ErpProgress" Orientation="Horizontal" HorizontalAlignment="Stretch" HorizontalExpand="True" MaxHeight="20" VerticalAlignment="Top" Margin="4">
+            <BoxContainer Name="ErpProgress"
+                          Orientation="Horizontal"
+                          HorizontalAlignment="Stretch"
+                          HorizontalExpand="True"
+                          MaxHeight="20"
+                          VerticalAlignment="Top"
+                          Margin="4">
                 <ProgressBar
-                            Margin="3 3 3 3"
-                            Name="ProgressBar"
-                            MinValue="0"
-                            MaxValue="1"
-                            SetHeight="20"
-                            HorizontalExpand="True"
-                            HorizontalAlignment="Stretch">
+                    Margin="3 3 3 3"
+                    Name="ProgressBar"
+                    MinValue="0"
+                    MaxValue="1"
+                    SetHeight="20"
+                    HorizontalExpand="True"
+                    HorizontalAlignment="Stretch">
                 </ProgressBar>
-                <TextureRect SetSize="20 20" Stretch="KeepAspectCentered" HorizontalAlignment="Right" TexturePath="/Textures/_Sunrise/Interface/ERP/heart.png"/>
+                <TextureRect SetSize="20 20"
+                             Stretch="KeepAspectCentered"
+                             HorizontalAlignment="Right"
+                             TexturePath="/Textures/_Sunrise/Interface/ERP/heart.png"/>
             </BoxContainer>
             <BoxContainer Name="ModeButtons"
-                           Orientation="Horizontal"
-                           HorizontalAlignment="Stretch"
-                           MinSize="410 30"
-                           Margin="3">
+                          Orientation="Horizontal"
+                          HorizontalAlignment="Stretch"
+                          MinSize="410 30"
+                          Margin="3">
                 <Button Name="InteractionButton"
                         ToggleMode="True"
                         HorizontalExpand="True"
@@ -36,20 +70,27 @@
                         Text="Взаимодействия"
                         Margin="5"/>
                 <Button Name="DescriptionButton"
-                         ToggleMode="True"
-                         HorizontalExpand="True"
-                         VerticalExpand="True"
-                         Text="Подробности"
-                         Margin="5"/>
+                        ToggleMode="True"
+                        HorizontalExpand="True"
+                        VerticalExpand="True"
+                        Text="Подробности"
+                        Margin="5"/>
                 <Button Name="DevButton"
-                         ToggleMode="True"
-                         HorizontalExpand="True"
-                         VerticalExpand="True"
-                         Text="DEV"
-                         Margin="5"/>
+                        ToggleMode="True"
+                        HorizontalExpand="True"
+                        VerticalExpand="True"
+                        Text="DEV"
+                        Margin="5"/>
             </BoxContainer>
-            <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="4" Margin="5" Access="Public" />
-            <LineEdit Name="SearchBar" PlaceHolder="Поиск..." HorizontalExpand="True"  Margin ="4 4" Access="Public"/>
+            <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}"
+                            Thickness="4"
+                            Margin="5"
+                            Access="Public"/>
+            <LineEdit Name="SearchBar"
+                      PlaceHolder="Поиск..."
+                      HorizontalExpand="True"
+                      Margin="4 4"
+                      Access="Public"/>
             <ItemList Name="ItemInteractions"
                       Access="Public"
                       SizeFlagsStretchRatio="8"
@@ -59,44 +100,88 @@
                       SelectMode="Button"
                       StyleClasses="darkItemList">
             </ItemList>
-            <BoxContainer Name="DescriptionContainer" VerticalExpand="True" Margin="4 0" Visible="False">
-                <BoxContainer Name="DescriptionLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200">
-                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
-                        <SpriteView Name="SpriteLeft" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
-                        <Label Name="UserName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
+            <BoxContainer Name="DescriptionContainer"
+                          VerticalExpand="True"
+                          Margin="4 0"
+                          Visible="False">
+                <BoxContainer Name="DescriptionLeft"
+                              Orientation="Vertical"
+                              VerticalExpand="True"
+                              SetWidth="200">
+                    <BoxContainer Orientation="Horizontal"
+                                  HorizontalExpand="True"
+                                  SetHeight="60">
+                        <SpriteView Name="SpriteLeft"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Margin="3"
+                                    SetSize="64 64"
+                                    Stretch="Fill"/>
+                        <Label Name="UserName"
+                               Text="Урист Макчеловек"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="2"
+                               MaxSize="45 30"/>
                     </BoxContainer>
-                    <BoxContainer Name="TextureLeft" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
+                    <BoxContainer Name="TextureLeft"
+                                  Orientation="Vertical"
+                                  VerticalExpand="True"
+                                  SetWidth="200"/>
                 </BoxContainer>
-                <BoxContainer Name="DescriptionRight" Orientation="Vertical" VerticalExpand="True" HorizontalAlignment="Right" SetWidth="200">
-                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True" SetHeight="60">
-                        <SpriteView Name="SpriteRight" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3" SetSize="64 64" Stretch="Fill"/>
-                        <Label Name="TargetName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="2" MaxSize="45 30"/>
+                <BoxContainer Name="DescriptionRight"
+                              Orientation="Vertical"
+                              VerticalExpand="True"
+                              HorizontalAlignment="Right"
+                              SetWidth="200">
+                    <BoxContainer Orientation="Horizontal"
+                                  HorizontalExpand="True"
+                                  SetHeight="60">
+                        <SpriteView Name="SpriteRight"
+                                    HorizontalAlignment="Left"
+                                    VerticalAlignment="Top"
+                                    Margin="3"
+                                    SetSize="64 64"
+                                    Stretch="Fill"/>
+                        <Label Name="TargetName"
+                               Text="Урист Макчеловек"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Left"
+                               Margin="2"
+                               MaxSize="45 30"/>
                     </BoxContainer>
-                    <BoxContainer Name="TextureRight" Orientation="Vertical" VerticalExpand="True" SetWidth="200"/>
+                    <BoxContainer Name="TextureRight"
+                                  Orientation="Vertical"
+                                  VerticalExpand="True"
+                                  SetWidth="200"/>
                 </BoxContainer>
             </BoxContainer>
-            <BoxContainer Name="DevContainer" VerticalExpand="True" HorizontalAlignment="Stretch" Margin="4 0" Visible="False">
+            <BoxContainer Name="DevContainer"
+                          VerticalExpand="True"
+                          HorizontalAlignment="Stretch"
+                          Margin="4 0"
+                          Visible="False">
                 <ItemList Name="DevLeft"
-                      Access="Public"
-                      SizeFlagsStretchRatio="8"
-                      VerticalExpand="True"
-                      HorizontalExpand="True"
-                      ItemSeparation="2"
-                      Margin="4 0"
-                      SelectMode="Button"
-                      MinWidth="200"
-                      StyleClasses="ItemList">
+                          Access="Public"
+                          SizeFlagsStretchRatio="8"
+                          VerticalExpand="True"
+                          HorizontalExpand="True"
+                          ItemSeparation="2"
+                          Margin="4 0"
+                          SelectMode="Button"
+                          MinWidth="200"
+                          StyleClasses="ItemList">
                 </ItemList>
                 <ItemList Name="DevRight"
-                      Access="Public"
-                      SizeFlagsStretchRatio="8"
-                      VerticalExpand="True"
-                      HorizontalExpand="True"
-                      ItemSeparation="2"
-                      Margin="4 0"
-                      SelectMode="Button"
-                      MinWidth="200"
-                      StyleClasses="ItemList">
+                          Access="Public"
+                          SizeFlagsStretchRatio="8"
+                          VerticalExpand="True"
+                          HorizontalExpand="True"
+                          ItemSeparation="2"
+                          Margin="4 0"
+                          SelectMode="Button"
+                          MinWidth="200"
+                          StyleClasses="ItemList">
                 </ItemList>
             </BoxContainer>
         </BoxContainer>
