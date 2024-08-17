@@ -32,7 +32,7 @@
     sprite: _Sunrise/Clothing/Eyes/Glasses/blueshield_sunglasses.rsi
   - type: FlashImmunity
   - type: ShowJobIcons
-  - type: ShowMindShieldIcons
+#  - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: ShowHealthBars
     damageContainers:
@@ -58,10 +58,10 @@
     sprite: _Sunrise/Clothing/Eyes/Glasses/weldglasses.rsi
   - type: FlashImmunity
   - type: EyeProtection
-    protectionTime: 5
   - type: Tag
     tags:
     - HamsterWearable
+    - WhitelistChameleon
     
 - type: entity
   parent: ClothingEyesBase
@@ -75,7 +75,8 @@
     sprite: _Sunrise/Clothing/Eyes/Glasses/sunhudskill.rsi
   - type: FlashImmunity
   - type: ShowJobIcons
-  - type: ShowMindShieldIcons
+#  - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
-  - type: EyeProtection
-    protectionTime: 5
+  - type: Tag
+    tags:
+    - WhitelistChameleon

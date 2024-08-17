@@ -5,6 +5,7 @@
   id: BaseMobArachnid
   abstract: true
   components:
+  - type: Absorbable
   - type: Interaction
     erp: false
   - type: Body

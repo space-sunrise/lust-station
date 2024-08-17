@@ -1,8 +1,0 @@
-﻿- type: gameMapPool
-  id: LustMapPool
-  maps:
-  - LustDelta
-  - LustBox
-  - LustCluster
-  - LustFland
-  - LustMarathon

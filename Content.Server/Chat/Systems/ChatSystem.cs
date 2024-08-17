@@ -363,6 +363,43 @@ public sealed partial class ChatSystem : SharedChatSystem
     }
 
     /// <summary>
+    /// Dispatches an announcement to players selected by filter.
+    /// </summary>
+    /// <param name="filter">Filter to select players who will recieve the announcement</param>
+    /// <param name="message">The contents of the message</param>
+    /// <param name="source">The entity making the announcement (used to determine the station)</param>
+    /// <param name="sender">The sender (Communications Console in Communications Console Announcement)</param>
+    /// <param name="playDefaultSound">Play the announcement sound</param>
+    /// <param name="announcementSound">Sound to play</param>
+    /// <param name="colorOverride">Optional color for the announcement message</param>
+    public void DispatchFilteredAnnouncement(
+        Filter filter,
+        string message,
+        EntityUid? source = null,
+        string? sender = null,
+        bool playDefault = true, // Sunrise-edit
+        bool playTts = true, // Sunrise-edit
+        string? announceVoice = null,  // Sunrise-edit
+        SoundSpecifier? announcementSound = null,
+        Color? colorOverride = null)
+    {
+        sender ??= Loc.GetString("chat-manager-sender-announcement");
+
+        var wrappedMessage = Loc.GetString("chat-manager-sender-announcement-wrap-message", ("sender", sender), ("message", FormattedMessage.EscapeText(message)));
+        _chatManager.ChatMessageToManyFiltered(filter, ChatChannel.Radio, message, wrappedMessage, source ?? default, false, true, colorOverride);
+        // Sunrise-start
+        if (playDefault && announcementSound == null)
+            announcementSound = new SoundPathSpecifier(DefaultAnnouncementSound);
+
+        if (playTts)
+        {
+            RaiseLocalEvent(new AnnouncementSpokeEvent(filter, wrappedMessage, announcementSound, announceVoice));
+        }
+        // Sunrise-edit
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Station Announcement from {sender}: {message}");
+    }
+
+    /// <summary>
     /// Dispatches an announcement on a specific station
     /// </summary>
     /// <param name="source">The entity making the announcement (used to determine the station)</param>
@@ -379,7 +416,7 @@ public sealed partial class ChatSystem : SharedChatSystem
         bool playDefault = true, // Sunrise-edit
         bool playTts = true, // Sunrise-edit
         Color? colorOverride = null,
-        string? announceVoice = null,
+        string? announceVoice = null,  // Sunrise-edit
         SoundSpecifier? announcementSound = null)
     {
         sender ??= Loc.GetString("chat-manager-sender-announcement");
