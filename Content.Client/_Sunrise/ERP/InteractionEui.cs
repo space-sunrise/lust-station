@@ -19,7 +19,6 @@ namespace Content.Client._Sunrise.ERP
         private readonly InteractionWindow _window;
         public IEntityManager _entManager;
 
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IChatManager _chat = default!;
         [Dependency] private readonly IPlayerManager _player = default!;
@@ -147,10 +146,7 @@ namespace Content.Client._Sunrise.ERP
                     _chat.SendMessage(emote, Shared.Chat.ChatSelectChannel.Emotes);
                 }
                 if (interaction.Sounds.Count > 0)
-                {
                     SendMessage(new PlaySoundMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), interaction.Sounds));
-                    
-                }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));
                 SendMessage(new SendInteractionToServer(interaction.ID));
