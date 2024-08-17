@@ -45,17 +45,6 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtPsychologist
-  name: psychologist suitskirt
-  description: I don't lose things. I place things in locations which later elude me.
-  components:
-    - type: Sprite
-      sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/psychologist.rsi
-    - type: Clothing
-      sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/psychologist.rsi
-
-- type: entity
-  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtSchool
   name: school skirt
   description: Stylish and comfortable school skirt.
@@ -104,9 +93,9 @@
   name: Юбка комбинезон пилота Службы Безопасности
   components:
   - type: Sprite
-    sprite: _Sunrise/Entities/Clothing/Unoforms/Jumpskirt/pilotjumpskirt.rsi
+    sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/pilotjumpskirt.rsi
   - type: Clothing
-    sprite: _Sunrise/Entities/Clothing/Unoforms/Jumpskirt/pilotjumpskirt.rsi
+    sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/pilotjumpskirt.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -118,3 +107,15 @@
     sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/ntrep.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/ntrep.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtBarber
+  name: платье парикмахера
+  description: Как же он хорош.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/barber.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Uniforms/Jumpskirt/barber.rsi

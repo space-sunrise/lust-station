@@ -198,6 +198,7 @@
   - type: GuideHelp
     guides:
     - Bartender
+    - Drinks
 
 - type: entity
   parent: VendingMachine
@@ -896,6 +897,7 @@
   - type: GuideHelp
     guides:
     - Security
+    - Antagonists
 
 - type: entity
   parent: VendingMachine
@@ -2012,7 +2014,7 @@
   parent: VendingMachine
   id: VendingMachineCentDrobe
   name: CentDrobe
-  description: A one-of-a-kind vending machine for all your centcom aesthetic needs!
+  description: A one-of-a-kind vending machine for all your centcomm aesthetic needs!
   components:
   - type: VendingMachine
     pack: CentDrobeInventory
@@ -2131,6 +2133,7 @@
   - type: GuideHelp
     guides:
     - Chemicals
+    - Chemist
 
 - type: entity
   parent: VendingMachineChemicals

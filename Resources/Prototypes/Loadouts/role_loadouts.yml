@@ -44,6 +44,7 @@
   - GroupTankHarness
   - PassengerJumpsuit
   - CommonBackpack
+  - PassengerNeck
   - PassengerFace
   - PassengerGloves
   - PassengerOuterClothing
@@ -479,6 +480,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
@@ -499,6 +501,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
@@ -520,6 +523,7 @@
   - SecurityBelt
   - SurvivalSecurity
   - Trinkets
+  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
@@ -541,6 +545,7 @@
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
+  - SecurityStar
   - GroupSpeciesBreathToolSecurity
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
@@ -711,6 +716,7 @@
   groups:
   - CommonBackpack # Sunrise-edit
   - GroupTankHarness
+  - PsychologistJumpsuit
   - MedicalBackpack
   - Glasses
   - Survival
@@ -784,3 +790,9 @@
   - SurvivalSyndicate
   - GroupSpeciesBreathTool
   - GroupTankHarness
+
+- type: roleLoadout
+  id: RoleSurvivalEVA
+  groups:
+  - GroupEVATank
+  - SurvivalExtended

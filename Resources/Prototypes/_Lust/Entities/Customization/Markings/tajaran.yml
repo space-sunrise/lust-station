@@ -1,0 +1,308 @@
+#Живот.
+- type: marking
+  id: Belly1
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_chest.rsi
+      state: belly1
+
+- type: marking
+  id: Belly2
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_chest.rsi
+      state: belly2
+
+- type: marking
+  id: Belly3
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_chest.rsi
+      state: belly3
+
+- type: marking
+  id: Belly4
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_chest.rsi
+      state: chest
+
+#Наложение.
+- type: marking
+  id: BodyStripes
+  bodyPart: [ Chest, RArm, LArm, RLeg, LLeg ]
+  markingCategory: Overlay
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_overlay.rsi
+      state: stripes_body
+
+- type: marking
+  id: BodyBlots
+  bodyPart: [ Chest, RArm, LArm, RLeg, LLeg ]
+  markingCategory: Overlay
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_overlay.rsi
+      state: blots_body
+
+- type: marking
+  id: patch2
+  bodyPart: [ Chest, RLeg, LLeg ]
+  markingCategory: Overlay
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_overlay.rsi
+      state: patch
+
+- type: marking
+  id: BodySkeleton
+  bodyPart: [ Chest, RArm, LArm, RLeg, LLeg ]
+  markingCategory: Overlay
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_overlay.rsi
+      state: skeleton_body
+
+- type: marking
+  id: arm1
+  bodyPart: [ RArm, LArm, RLeg, LLeg ]
+  markingCategory: Overlay
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_overlay.rsi
+      state: points
+
+#Части тел.
+
+- type: marking
+  id: LHandGradient
+  bodyPart: LHand
+  markingCategory: Arms
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_LHand
+
+- type: marking
+  id: RHandGradient
+  bodyPart: RHand
+  markingCategory: Arms
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_RHand
+
+- type: marking
+  id: LArmGradient
+  bodyPart: LArm
+  markingCategory: Arms
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_LArm
+
+- type: marking
+  id: RArmGradient
+  bodyPart: RArm
+  markingCategory: Arms
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_RArm
+
+- type: marking
+  id: LLegGradient
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_LLeg
+
+- type: marking
+  id: RLegGradient
+  bodyPart: RFoot
+  markingCategory: Legs
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_parts.rsi
+      state: gradient_RLeg
+
+#Хвосты.
+- type: marking
+  id: TailWingler3
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: wingler_3
+
+- type: marking
+  id: TailWingler2
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: wingler_2
+
+- type: marking
+  id: TailWingler1
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: wingler_1
+
+- type: marking
+  id: TailTip
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: tail_tip
+
+- type: marking
+  id: TailRing
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: tail_ring
+
+- type: marking
+  id: TailSkeleton
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: tail_skeleton
+
+- type: marking
+  id: TailFluffy
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_tail.rsi
+      state: tail_fluffy
+
+- type: marking
+  id: TailColor
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Mobs/Species/Tajaran/parts.rsi
+      state: tail_m
+
+#Голова.
+
+##Голова (верх)
+- type: marking
+  id: Head1
+  bodyPart: Head
+  markingCategory: HeadTop
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: outears
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: inears
+##
+
+- type: marking
+  id: Head5
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: nose
+
+- type: marking
+  id: Head8
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: tiger_face
+
+- type: marking
+  id: Head9
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: tiger_head
+
+- type: marking
+  id: HeadEyesStripes
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: eye_stripes_head
+
+- type: marking
+  id: HeadStar
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: star_head
+
+- type: marking
+  id: HeadRacoon
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: raccoon-head
+
+- type: marking
+  id: HeadMane
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: mane_head
+
+#Морда.
+- type: marking
+  id: Head4
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: muzzleinears
+
+- type: marking
+  id: Head2
+  bodyPart: Head
+  markingCategory: Snout
+  speciesRestriction: [TajaranSpecies]
+  sprites:
+    - sprite: _Lust/Customization/Markings/Tajaran/tajaran_head.rsi
+      state: muzzle

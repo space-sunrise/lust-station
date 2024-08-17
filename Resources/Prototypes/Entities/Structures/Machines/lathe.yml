@@ -115,6 +115,8 @@
   - type: Lathe
     idleState: icon
     runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticRecipes:
       - Wirecutter
       - Igniter
@@ -122,7 +124,7 @@
       - Screwdriver
       - Welder
       - Wrench
-      - Crowbar
+      - CrowbarGreen
       - Multitool
       - NetworkConfigurator
       - SprayPainter
@@ -270,6 +272,8 @@
   - type: Lathe
     idleState: icon
     runningState: building
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticRecipes:
     - LargeBeaker
     - Dropper
@@ -279,6 +283,7 @@
     dynamicRecipes:
       - PowerDrill
       - MiningDrill
+      - MiningDrillDiamond
       - AnomalyScanner
       - AnomalyLocator
       - AnomalyLocatorWide
@@ -341,7 +346,7 @@
       - DeviceQuantumSpinInverter
   - type: EmagLatheRecipes
     emagDynamicRecipes:
-#Sunrise-edit start
+      # Sunrise-Start
       - CartridgePistolRubber
       - CartridgeMagnumRubber
       - CartridgeRifleRubber
@@ -350,7 +355,7 @@
       - MagazineBoxMagnumRubber
       - MagazineBoxRifleRubber
       - MagazineBoxLightRifleRubber
-#Sunrise-edit end
+      # Sunrise-End
       - BoxBeanbag
       - BoxShotgunIncendiary
       - BoxShotgunUranium
@@ -447,6 +452,7 @@
     - BoozeDispenserMachineCircuitboard
     - SodaDispenserMachineCircuitboard
     - SpaceHeaterMachineCircuitBoard
+    - CutterMachineCircuitboard
     dynamicRecipes:
       - ThermomachineFreezerMachineCircuitBoard
       - HellfireFreezerMachineCircuitBoard
@@ -546,7 +552,7 @@
   id: ExosuitFabricator
   parent: BaseLatheLube
   name: exosuit fabricator
-  description: Creates parts for robotics and other mechanical needs
+  description: Creates parts for robotics and other mechanical needs.
   components:
   - type: Sprite
     sprite: Structures/Machines/exosuit_fabricator.rsi
@@ -670,7 +676,7 @@
 - type: entity
   id: Biofabricator
   parent: BaseLathe
-  name: biofabricator
+  name: biocube fabricator
   description: Produces animal cubes using biomass.
   components:
   - type: Sprite
@@ -679,16 +685,20 @@
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
+      color: "#ffaa99"
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
+      color: "#ffaaaa"
     - state: inserting
       map: ["enum.MaterialStorageVisualLayers.Inserting"]
+      color: "#ffaaaa"
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Machine
     board: BiofabricatorMachineCircuitboard
   - type: MaterialStorage
+    ignoreColor: true
     whitelist:
       tags:
         - Sheet
@@ -775,6 +785,31 @@
       - WeaponDisablerPractice
       - WeaponLaserCarbinePractice
       - Zipties
+    # Sunrise-start
+      - MagazineM16A4
+      - MagazineLightMachineGunMG60
+      - MagazinePPSH41
+      - MagazineRPD
+      - MagazineNewVector
+      - MagazineMP38
+      - MagazineMP5
+      - MagazineMP7
+      - MagazineP90
+      - MagazineScorpion
+      - MagazineAK
+      - MagazineAR18
+      - MagazineG36
+      - MagazineM28
+      - MagazineFamas
+      - MagazineBR64
+      - MagazineDragunov
+      - MagazineV31
+      - MagazineACP14
+      - MagazineGlock22
+      - MagazineVP70
+      - MagazineHIBrowning
+      - MagazineDeagle
+    # Sunrise-end
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
@@ -825,6 +860,7 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
+      - ClothingBackpackElectropack
       - WeaponEnergyGun       # Sunrise - Energy Gun
       - WeaponEnergyGunMini   # Sunrise - Miniature Energy Gun
       - WeaponEnergyGunPistol # Sunrise - PDW-9 Energy Pistol
@@ -1087,14 +1123,6 @@
       - ClothingOuterWinterWardenUnarmored
       - ClothingOuterWinterQM
       - ClothingOuterWinterRD
-      - ClothingNeckMantleCap
-      - ClothingNeckMantleCE
-      - ClothingNeckMantleCMO
-      - ClothingNeckMantleHOP
-      - ClothingNeckMantleHOS
-      - ClothingNeckMantleHOSShoulder
-      - ClothingNeckMantleRD
-      - ClothingNeckMantleQM
       - ClothingOuterWinterMusician
       - ClothingOuterWinterClown
       - ClothingOuterWinterMime
@@ -1237,6 +1265,7 @@
       - IngotGold30
       - IngotSilver30
       - MaterialBananium10
+      - MaterialDiamond
 
 - type: entity
   parent: BaseLathe
@@ -1268,3 +1297,82 @@
     staticRecipes:
     - MaterialSheetMeat
     - SheetPaper
+
+- type: entity
+  parent: BaseLathe
+  id: CutterMachine
+  name: cutter machine
+  description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
+  components:
+  - type: Transform
+    noRot: false
+  - type: Sprite
+    sprite: Structures/Machines/cuttermachine.rsi
+    snapCardinals: true
+    layers:
+    - state: icon
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Machine
+    board: CutterMachineCircuitboard
+  - type: Lathe
+    producingSound: /Audio/Machines/cutter.ogg
+    idleState: icon
+    runningState: building
+    staticRecipes:
+      - FloorTileItemDark
+      - FloorTileItemDarkDiagonalMini
+      - FloorTileItemDarkDiagonal
+      - FloorTileItemDarkHerringbone
+      - FloorTileItemDarkMini
+      - FloorTileItemDarkMono
+      - FloorTileItemDarkPavement
+      - FloorTileItemDarkPavementVertical
+      - FloorTileItemDarkOffset
+      - FloorTileItemSteelCheckerDark
+      - FloorTileItemSteel
+      - FloorTileItemSteelOffset
+      - FloorTileItemSteelDiagonalMini
+      - FloorTileItemSteelDiagonal
+      - FloorTileItemSteelHerringbone
+      - FloorTileItemSteelMini
+      - FloorTileItemSteelMono
+      - FloorTileItemSteelPavement
+      - FloorTileItemSteelPavementVertical
+      - FloorTileItemWhite
+      - FloorTileItemWhiteOffset
+      - FloorTileItemWhiteDiagonalMini
+      - FloorTileItemWhiteDiagonal
+      - FloorTileItemWhiteHerringbone
+      - FloorTileItemWhiteMini
+      - FloorTileItemWhiteMono
+      - FloorTileItemWhitePavement
+      - FloorTileItemWhitePavementVertical
+      - FloorTileItemSteelCheckerLight
+      - FloorTileItemGratingMaint
+      - FloorTileItemTechmaint
+      - FloorTileItemSteelMaint
+      - FloorTileItemWood
+      - FloorTileItemWoodLarge
+      - FloorTileItemWoodPattern
+      - FloorTileItemConcrete
+      - FloorTileItemConcreteMono
+      - FloorTileItemConcreteSmooth
+      - FloorTileItemGrayConcrete
+      - FloorTileItemGrayConcreteMono
+      - FloorTileItemGrayConcreteSmooth
+      - FloorTileItemOldConcrete
+      - FloorTileItemOldConcreteMono
+      - FloorTileItemOldConcreteSmooth
+  - type: MaterialStorage
+    whitelist:
+      tags:
+        - Sheet
+        - Metal
+        - Wooden
+        - RawMaterial
+        - Plastic

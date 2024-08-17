@@ -204,16 +204,6 @@
   - Socks
 
 - type: roleLoadout
-  id: JobPrisoner
-  groups:
-  - PrisonerJumpsuit
-  - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
-  - Bra
-  - Pants
-  - Socks
-
-- type: roleLoadout
   id: JobPrisonGuard
   groups:
   - PrisonGuardHead
@@ -307,6 +297,30 @@
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobBarber
+  groups:
+  - BarberJumpsuit
+  - CommonBackpack
+  - Trinkets
+  - Survival
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobPlanetPrisoner
+  groups:
+  - PrisonerJumpsuit
+  - GroupSpeciesBreathTool
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
