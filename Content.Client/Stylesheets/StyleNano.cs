@@ -1043,7 +1043,7 @@ namespace Content.Client.Stylesheets
                     new StyleProperty(ItemList.StylePropertyItemBackground,
                         new StyleBoxFlat {BackgroundColor = new Color(37,37,40)}),
                     new StyleProperty(ItemList.StylePropertyDisabledItemBackground,
-                        itemListItemBackgroundDisabled),
+                        new StyleBoxFlat {BackgroundColor = new Color(56,25,55)}),
                     new StyleProperty(ItemList.StylePropertySelectedItemBackground,
                         itemListBackgroundSelected)
                 }),

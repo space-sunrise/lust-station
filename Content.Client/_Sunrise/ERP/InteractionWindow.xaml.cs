@@ -281,15 +281,11 @@ public sealed partial class InteractionWindow : FancyWindow
     protected override void FrameUpdate(FrameEventArgs args)
     {
         base.FrameUpdate(args);
-
+        _eui.FrameUpdate(args);
         if (_gameTiming.CurTime > UntilUpdate)
         {
             UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
             _eui.RequestState();
-        }
-        foreach (var item in ItemInteractions)
-        {
-            item.Disabled = _gameTiming.CurTime <= TimeUntilAllow;
         }
         _eui.RequestLove();
     }

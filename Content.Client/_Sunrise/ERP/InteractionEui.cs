@@ -105,6 +105,24 @@ namespace Content.Client._Sunrise.ERP
 
         }
 
+        private List<(ItemList.Item, TimeSpan, string?)> _disabledItems = new();
+
+        public void FrameUpdate(FrameEventArgs args)
+        {
+            foreach((var item, var time, var text) in _disabledItems)
+            {
+                item.Text = text + $" ({(time - _gameTiming.CurTime).Seconds} сек.)";
+                if(_gameTiming.CurTime >= time)
+                {
+                    item.Text = text;
+                    item.Disabled = false;
+                    _disabledItems.Remove((item, time, text));
+                    break;
+                }
+            }
+        }
+
+
         public void OnItemSelect(ItemList.ItemListSelectedEventArgs args)
         {
             if (_gameTiming.CurTime >= _window.TimeUntilAllow)
@@ -112,6 +130,8 @@ namespace Content.Client._Sunrise.ERP
                 if (!_player.LocalEntity.HasValue) return;
                 if (!_player.LocalEntity.Value.IsValid()) return;
                 var item = args.ItemList[args.ItemIndex];
+                item.Disabled = true;
+                _disabledItems.Add((item, _gameTiming.CurTime + TimeSpan.FromSeconds(5), item.Text));
                 if (item.Metadata == null) return;
                 InteractionPrototype interaction = (InteractionPrototype) item.Metadata;
                 if (interaction.Emotes.Count > 0)
@@ -134,7 +154,7 @@ namespace Content.Client._Sunrise.ERP
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));
                 SendMessage(new SendInteractionToServer(interaction.ID));
-                _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(2);
+                _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(0.5);
             }
         }
     }
