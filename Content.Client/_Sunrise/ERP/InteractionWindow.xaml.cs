@@ -287,6 +287,19 @@ public sealed partial class InteractionWindow : FancyWindow
             UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
             _eui.RequestState();
         }
+        if(_gameTiming.CurTime > TimeUntilAllow)
+        {
+            foreach(var item in ItemInteractions)
+            {
+                item.Disabled = false;
+            }
+        } else
+        {
+            foreach (var item in ItemInteractions)
+            {
+                item.Disabled = true;
+            }
+        }
         _eui.RequestLove();
     }
 

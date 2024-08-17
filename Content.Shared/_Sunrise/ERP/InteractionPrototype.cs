@@ -38,7 +38,6 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public HashSet<string> UserTagWhitelist = new(); // Вайтлист тегов
     [DataField] public HashSet<string> UserTagBlacklist = new(); // Блеклист тегов
     [DataField] public float UserMoanChance = 0;
-    [DataField] public DamageSpecifier UserDamage = default!;
 
 
     // Тоже самое, но таргет
@@ -49,5 +48,4 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public HashSet<string> TargetTagWhitelist = new();
     [DataField] public HashSet<string> TargetTagBlacklist = new();
     [DataField] public float TargetMoanChance = 0;
-    [DataField] public DamageSpecifier TargetDamage = default!;
 }
