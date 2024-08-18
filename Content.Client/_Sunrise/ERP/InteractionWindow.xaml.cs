@@ -52,8 +52,8 @@ public sealed partial class InteractionWindow : FancyWindow
         _eui = eui;
         LoveBar = ProgressBar;
         SearchBar.OnTextChanged += SearchBarOnOnTextChanged;
-        ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: Color.Pink);
-        ProgressBar.BackgroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(91, 51, 58));
+        ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(247, 141, 141));
+        ProgressBar.BackgroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(152, 24, 84));
         ButtonGroup Group = new();
         InteractionButton.Group = Group;
         DescriptionButton.Group = Group;
