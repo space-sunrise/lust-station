@@ -162,7 +162,12 @@
   - с громким хлопком ударяет %target по щеке
   - дает звонкую пощечину %target
   sounds:
-  - path: /Audio/_Lust/ERP/blow_slap.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_1.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_2.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_3.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_4.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_5.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
