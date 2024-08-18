@@ -55,7 +55,7 @@
 - type: interaction
   id: KissHand
   name: Поцеловать руку
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/kiss_hand.png
   emotes:
   - берет %target за руку и целует в кисть
   sounds:
@@ -97,7 +97,7 @@
 - type: interaction
   id: FelinidRubsCheek
   name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/kitty.png
   emotes:
   - нежно трется щекой об %target
   - ласково трется щекой об %target
