@@ -113,7 +113,7 @@
 - type: interaction
   id: FaceRubCat
   name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_rub_cat.png
   emotes:
   - по-кошачьи трется щекой об лицо %target
   - как котик трется головой об %target

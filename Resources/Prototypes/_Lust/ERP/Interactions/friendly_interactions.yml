@@ -3,7 +3,7 @@
 - type: interaction
   id: Handshake
   name: Пожать руку
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/hand_shake.png
   emotes:
   - жмёт руку %target
   userSex: Unsexed
@@ -14,7 +14,7 @@
 - type: interaction
   id: PatShoulder
   name: Похлопать по плечу
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/pat_shoulder.png
   emotes:
   - хлопает по плечу %target
   #  sounds:
@@ -42,7 +42,7 @@
 - type: interaction
   id: Highfive
   name: Дать пять
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/high_five.png
   emotes:
   - даёт пять %target
   #  sounds:
@@ -73,7 +73,7 @@
 - type: interaction
   id: PetHead
   name: Погладить по голове
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/pet_head.png
   emotes:
   - гладит %target по голове
   userSex: Unsexed
@@ -84,7 +84,7 @@
 - type: interaction
   id: ShoulderMassage
   name: Помассировать плечи
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/shoulder_massage.png
   emotes:
   - массирует плечи %target
   - делает массаж плечей %target
@@ -97,7 +97,7 @@
 - type: interaction
   id: FelinidRubsCheek
   name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/kitty.png
+  icon: _Sunrise/Interface/ERP/face_rub_cat.png
   emotes:
   - нежно трется щекой об %target
   - ласково трется щекой об %target
@@ -155,7 +155,7 @@
 - type: interaction
   id: blowslap
   name: Дать пощечину
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/blow_slap.png
   emotes:
   - резко бьет по щеке %target
   - сильно шлепает %target по лицу

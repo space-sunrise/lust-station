@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: CheeksKiss
   name: Чмокнуть в щёчку
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_kiss.png
   emotes:
   - чмокает в щёчку %target
   sounds:
@@ -19,7 +19,7 @@
 - type: interaction
   id: CheeksKissBoth
   name: Расцеловать в обе щёки
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png
   emotes:
   - целует %target в обе щёки
   - чмокает %target в обе щёки
@@ -39,7 +39,7 @@
 - type: interaction
   id: CheeksPat
   name: Потискать за щёки
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_pat.png
   emotes:
   - нежно треплет за щёчки %target
   - слегка растягивает щёчки %target

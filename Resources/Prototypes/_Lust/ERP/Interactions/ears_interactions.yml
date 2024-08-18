@@ -1,7 +1,7 @@
 - type: interaction
   id: BiteEars
   name: Кусь за ушко
-  icon: _Sunrise/Interface/ERP/ears.png
+  icon: _Sunrise/Interface/ERP/bite_ears.png
   emotes:
   - делает кусь за ушко %target
   - слегка прикусывает ушко %target
@@ -24,7 +24,7 @@
 - type: interaction
   id: PatEars
   name: Погладить ушки
-  icon: _Sunrise/Interface/ERP/ears.png
+  icon: _Sunrise/Interface/ERP/pat_ears.png
   emotes:
   - нежно гладит пальчиками ушки %target
   - трепетно касается ушек %target
@@ -50,7 +50,7 @@
 - type: interaction
   id: PatEars2
   name: Почесать за ушком
-  icon: _Sunrise/Interface/ERP/ears.png
+  icon: _Sunrise/Interface/ERP/pat_ears.png
   emotes:
   - нежно чешет за ушком %target
   - ласково почесывает %target за ушком
