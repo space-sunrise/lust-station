@@ -1,5 +1,61 @@
 ﻿- type: interaction
-  id: ERPbruh2
+  id: MouthQuickPeck
+  name: Чмокнуть в губы
+  icon: _Sunrise/Interface/ERP/lips.png
+  emotes:
+  - быстро чмокает %target в губы
+  - дарит лёгкий поцелуй %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 1
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - mask
+  userTagBlacklist:
+  - mask
+  category: рот
+
+- type: interaction
+  id: MouthKissLips
+  name: Поцеловать в губы
+  icon: _Sunrise/Interface/ERP/lips.png
+  emotes:
+  - целует %target
+  - нежно целует %target
+  - слегка целует %target
+  - целует %target, заводя руку за шею и прижимая к себе
+  - нежно целует %target, заводя руку за шею и прижимая к себе
+  - слегка целует %target, заводя руку за шею и прижимая к себе
+  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+  - целует %target, заводя руку за шею
+  - нежно целует %target, заводя руку за шею
+  - слегка целует %target, заводя руку за шею
+  - настойчиво целует %target, заводя руку за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - mask
+  userTagBlacklist:
+  - mask
+  category: рот
+
+- type: interaction
+  id: MouthBlowjob
   name: Заставить отсосать
   icon: _Sunrise/Interface/ERP/mouth.png
   emotes:
@@ -13,8 +69,66 @@
   userSex: Male
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 15
-  lovePercentTarget: 3
+  lovePercentUser: 9
+  lovePercentTarget: 5
   targetTagBlacklist:
   - mask
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   category: рот
+
+- type: interaction
+  id: MouthHairFaceFuckMale
+  name: Трахнуть в рот схватив волосы
+  icon: _Sunrise/Interface/ERP/hair.png
+  emotes:
+  - намотав на кулак волосы %target долбит членом его ротик
+  - крепко сжав волосы %target делает себе минет его ротиком
+  - сжимая рукой волосы %target, грубо трахает его в ротик
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Male
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - mask
+  - hair
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: волосы
+
+- type: interaction
+  id: MouthHairFaceFuckFemale
+  name: Трахнуть в рот схватив волосы
+  icon: _Sunrise/Interface/ERP/hair.png
+  emotes:
+  - намотав на кулак волосы %target долбит членом её ротик
+  - крепко сжав волосы %target делает себе минет её ротиком
+  - сжимая рукой волосы %target, грубо трахает её в ротик
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - mask
+  - hair
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: волосы

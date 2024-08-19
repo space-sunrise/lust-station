@@ -1,5 +1,3 @@
-# Dildos
-
 - type: interaction
   id: ERPtoyPlaceholderDildo
   name: Вставить дилдо в анал
@@ -22,7 +20,7 @@
   targetSex: Male
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
 
 - type: interaction
@@ -73,7 +71,7 @@
   targetSex: Female
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
   selfEmoteOverride: self
 
@@ -96,7 +94,7 @@
   targetSex: Male
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
   selfEmoteOverride: self
 

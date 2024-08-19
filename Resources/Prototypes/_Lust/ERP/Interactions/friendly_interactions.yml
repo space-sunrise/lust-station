@@ -1,7 +1,7 @@
 ﻿# 1. ДРУЖЕСКИЕ ДЕЙСТВИЯ
 
 - type: interaction
-  id: Handshake
+  id: FriendlyHandshake
   name: Пожать руку
   icon: _Sunrise/Interface/ERP/hand_shake.png
   emotes:
@@ -12,7 +12,7 @@
   category: дружба
 
 - type: interaction
-  id: PatShoulder
+  id: FriendlyPatShoulder
   name: Похлопать по плечу
   icon: _Sunrise/Interface/ERP/pat_shoulder.png
   emotes:
@@ -25,7 +25,7 @@
   category: дружба
 
 - type: interaction
-  id: Hug
+  id: FriendlyHug
   name: Обнять
   icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
@@ -40,7 +40,7 @@
   category: дружба
 
 - type: interaction
-  id: Highfive
+  id: FriendlyHighfive
   name: Дать пять
   icon: _Sunrise/Interface/ERP/high_five.png
   emotes:
@@ -53,7 +53,7 @@
   category: дружба
 
 - type: interaction
-  id: KissHand
+  id: FriendlyKissHand
   name: Поцеловать руку
   icon: _Sunrise/Interface/ERP/kiss_hand.png
   emotes:
@@ -71,7 +71,7 @@
   category: дружба
 
 - type: interaction
-  id: PetHead
+  id: FriendlyPatHead
   name: Погладить по голове
   icon: _Sunrise/Interface/ERP/pet_head.png
   emotes:
@@ -82,7 +82,7 @@
   category: дружба
 
 - type: interaction
-  id: ShoulderMassage
+  id: FriendlyShoulderMassage
   name: Помассировать плечи
   icon: _Sunrise/Interface/ERP/shoulder_massage.png
   emotes:
@@ -95,7 +95,7 @@
   category: дружба
 
 - type: interaction
-  id: FelinidRubsCheek
+  id: FriendlyFelinidRubsCheek
   name: Потереться как котик
   icon: _Sunrise/Interface/ERP/face_rub_cat.png
   emotes:
@@ -110,7 +110,7 @@
   category: дружба
 
 - type: interaction
-  id: HeadTailpats
+  id: FriendlyHeadTailpats
   name: Погладить хвостиком
   icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
@@ -130,7 +130,7 @@
   category: дружба
 
 - type: interaction
-  id: TailPull
+  id: FriendlyTailPull
   name: Дернуть за хвост
   icon: _Sunrise/Interface/ERP/friendly.png
   emotes:
@@ -140,8 +140,6 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
-  lovePercentUser: 2
-  lovePercentTarget: 10
   targetTagWhitelist:
   - Vulpkanin
   - Felinid
@@ -153,14 +151,14 @@
   category: дружба
 
 - type: interaction
-  id: blowslap
+  id: FriendlyBlowslap
   name: Дать пощечину
   icon: _Sunrise/Interface/ERP/blow_slap.png
   emotes:
-  - резко бьет по щеке %target
-  - сильно шлепает %target по лицу
-  - с громким хлопком ударяет %target по щеке
-  - дает звонкую пощечину %target
+  - резко бьет ладонью по щеке %target
+  - сильно шлепает %target по лицу ладонью
+  - с громким хлопком ударяет %target по щеке ладонью
+  - дает ладонью звонкую пощечину %target
   sounds:
   - path: /Audio/_Lust/ERP/slap/slap_1.ogg
   - path: /Audio/_Lust/ERP/slap/slap_2.ogg
@@ -171,8 +169,55 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
-  lovePercentUser: 0
-  lovePercentTarget: 0
+  category: дружба
+
+- type: interaction
+  id: FriendlyNoseBoop
+  name: Тронуть кончик носа пальцем
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - прикасается пальцем к кончику носа %target, буп!
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  targetTagWhitelist:
+  Human
+  Felinid
+  SlimePerson
+  Vulpkanin
+  TajaranSpecies
+  Swine
+  Dwarf
+  Demon
+  category: дружба
+
+- type: interaction
+  id: FriendlyFlyingKiss
+  name: Воздушный поцелуй
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - посылает воздушный поцелуй %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyFingerTap
+  name: Потрогать спину пальцем
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - трогает пальцем спину %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
   category: дружба
 
 # - type: interaction
@@ -188,3 +233,5 @@
 #  erp: true # поцелуи - ЕРП
 #  lovePercentUser: 4
 #  lovePercentTarget: 4
+
+#сплестись пальчиками

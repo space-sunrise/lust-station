@@ -1,57 +1,6 @@
 ﻿- type: interaction
-  id: PussyFuck
-  name: Проникнуть в вагину
-  icon: _Sunrise/Interface/ERP/pussy.png
-  emotes:
-  - проникает в вагину %target
-  - резко проникает в вагину %target
-  - делает аккуратное проникновение в вагину %target
-  sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
-  erp: true
-  lovePercentUser: 10
-  lovePercentTarget: 10
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  category: вагина
-
-- type: interaction
-  id: PussyLick
-  name: Вылизать вагину
-  icon: _Sunrise/Interface/ERP/pussy.png
-  emotes:
-  - нежно лижет вагину %target
-  - вылизывает вагину %target
-  - лижет вагинут %target
-  sounds:
-  - path: /Audio/_Lust/ERP/lick1.ogg
-  - path: /Audio/_Lust/ERP/lick2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Female
-  erp: true
-  lovePercentUser: 4
-  lovePercentTarget: 12
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  category: вагина
-
-- type: interaction
   id: PussyTouch
-  name: Потрогать вагину
+  name: Поласкать вагину пальцами
   icon: _Sunrise/Interface/ERP/pussy.png
   emotes:
   - подводит свои пальчики к киске %target и нежно ласкает её
@@ -66,8 +15,31 @@
   userSex: Unsexed
   targetSex: Female
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 6
+  lovePercentUser: 4
+  lovePercentTarget: 8
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: вагина
+
+- type: interaction
+  id: PussyLick
+  name: Полизать вагину
+  icon: _Sunrise/Interface/ERP/pussy.png
+  emotes:
+  - нежно лижет вагину %target
+  - вылизывает вагину %target
+  - лижет вагинут %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 9
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -76,7 +48,7 @@
 
 - type: interaction
   id: PussyFingering
-  name: Вставить пальцы в вагину
+  name: Трахать вагину пальцами
   icon: _Sunrise/Interface/ERP/pussy.png
   emotes:
   - медленно вставляет пальцы в лоно %target
@@ -90,8 +62,8 @@
   userSex: Unsexed
   targetSex: Female
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 10
+  lovePercentUser: 4
+  lovePercentTarget: 9
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -100,13 +72,13 @@
 
 - type: interaction
   id: PussyScissors
-  name: Потереться кисками
+  name: Потереться вагинами
   icon: _Sunrise/Interface/ERP/pussy.png
   emotes:
-  - нежно трется кисками с %target
-  - страстно трется кисками с %target
-  - прижимается кисками с %target и двигает бедрами
-  - возбужденно трется кисками с %target
+  - нежно трется вагинами с %target
+  - страстно трется вагинами с %target
+  - прижимается вагинами с %target и двигает бедрами
+  - возбужденно трется вагинами с %target
   sounds:
   - path: /Audio/_Sunrise/ERP/hlup.ogg
   - path: /Audio/_Sunrise/ERP/hlup2.ogg
@@ -115,7 +87,35 @@
   userSex: Female
   targetSex: Female
   erp: true
-  lovePercentUser: 2
+  lovePercentUser: 9
+  lovePercentTarget: 9
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: вагина
+
+- type: interaction
+  id: PussyFuck
+  name: Трахать вагину членом
+  icon: _Sunrise/Interface/ERP/pussy.png
+  emotes:
+  - проникает в вагину %target
+  - резко проникает в вагину %target
+  - делает аккуратное проникновение в вагину %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
   lovePercentTarget: 10
   targetTagBlacklist:
   - pants

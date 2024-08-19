@@ -1,6 +1,70 @@
 ﻿- type: interaction
-  id: ERPselffapwithhips
-  name: Пропихнуть свой член между бёдер
+  id: LegsLick
+  name: Полизать ляжки
+  icon: _Sunrise/Interface/ERP/thights.png
+  emotes:
+  - облизывает ляжки %target своим язычком
+  - покрывает поцелуями и лизаниями ляжки %target
+  - нежно проводит язычком по ляжкам %target
+  - ласкает ляжки %target своим тёплым язычком
+  - нежно гладит и целует ляжки %target
+  - страстно осыпает поцелуями ляжки %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  userTagBlacklist:
+  - mask
+  targetTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  category: ляжки
+
+- type: interaction
+  id: LegsStrokeBetween
+  name: Погладить промежность
+  icon: _Sunrise/Interface/ERP/thights.png
+  emotes:
+  - аккуратно проводит пальцами по промежности %target
+  - медленно ласкает промежность %target
+  - нежно касается промежности %target своими пальцами
+  - поглаживает пальчиками между ног %target
+  - игриво поглаживает промежность %target
+  - ласкает ладонью промежность %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  category: ляжки
+
+- type: interaction
+  id: LegsLick
+  name: Полизать ступни
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - ласкает язычком пальчики на ногах %target
+  - проходит своим язычком по ступням %target
+  - страстно облизывает ступни %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - shoes
+  - socks
+  userTagBlacklist:
+  - mask
+  category: ступни
+
+- type: interaction
+  id: LegsCockFuck
+  name: Трахать между бедер
   icon: _Sunrise/Interface/ERP/thights.png
   emotes:
   - водит членом по бёдрам %target, а затем проталкивает свой пенис между них
@@ -16,7 +80,7 @@
   targetSex: Unsexed
   erp: true
   lovePercentUser: 10
-  lovePercentTarget: 1
+  lovePercentTarget: 5
   targetTagBlacklist:
   - jumpsuit
   - outerClothing
@@ -24,48 +88,4 @@
   - pants
   - jumpsuit
   - outerClothing
-  category: ляжки
-
-- type: interaction
-  id: ERPlickthighs
-  name: Облизать ляжки
-  icon: _Sunrise/Interface/ERP/thights.png
-  emotes:
-  - облизывает ляжки %target своим язычком
-  - покрывает поцелуями и лизаниями ляжки %target
-  - нежно проводит язычком по ляжкам %target
-  - ласкает ляжки %target своим тёплым язычком
-  - нежно гладит и целует ляжки %target
-  - страстно осыпает поцелуями ляжки %target
-  sounds:
-  - path: /Audio/_Lust/ERP/lick1.ogg
-  - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 1
-  lovePercentTarget: 4
-  userTagBlacklist:
-  - mask
-  targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
-  category: ляжки
-
-- type: interaction
-  id: ERPstrokebetweenlegs
-  name: Погладить промежность
-  icon: _Sunrise/Interface/ERP/thights.png
-  emotes:
-  - аккуратно проводит пальцами по промежности %target
-  - медленно ласкает промежность %target
-  - нежно касается промежности %target своими пальцами
-  - поглаживает пальчиками между ног %target
-  - игриво поглаживает промежность %target
-  - ласкает ладонью промежность %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 1
-  lovePercentTarget: 3
   category: ляжки

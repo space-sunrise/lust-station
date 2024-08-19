@@ -1,9 +1,27 @@
-﻿# 4. ШЕЯ
+﻿- type: interaction
+  id: NeckNuzzleVulpaStyle
+  name: Потереться мордочкой о шею
+  icon: _Sunrise/Interface/ERP/nuzzle_neck_vulpa.png
+  emotes:
+  - нежно трётся мордочкой о шею %target
+  - мягко касается мордочкой шеи %target, создавая приятное ощущение
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  UserTagWhitelist:
+  - Vulpakin
+  UserTagBlacklist:
+  - mask
+  category: шея
 
 - type: interaction
-  id: KissNeck
+  id: NeckKiss
   name: Поцеловать в шею
-  icon: _Sunrise/Interface/ERP/kiss_neck.png
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - целует %target за шею
   - нежно целует %target за шею
@@ -18,59 +36,19 @@
   - path: /Audio/_Sunrise/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
-  erp: false
-  lovePercentUser: 2
-  lovePercentTarget: 6
-  category: шея
-
-- type: interaction
-  id: NuzzleNeckVulpaStyle
-  name: Потереться мордочкой о шею
-  icon: _Sunrise/Interface/ERP/nuzzle_neck_vulpa.png
-  emotes:
-  - нежно трётся мордочкой о шею %target
-  - мягко касается мордочкой шеи %target, создавая приятное ощущение
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  lovePercentUser: 2
-  lovePercentTarget: 4
-  UserTagWhitelist:
-  - Vulpakin
-  category: шея
-
-- type: interaction
-  id: NuzzleNeck
-  name: Потереться мордочкой о шею
-  icon: _Sunrise/Interface/ERP/nuzzle_neck.png
-  emotes:
-  - нежно трётся носиком о шею %target
-  - мягко касается носиком шеи %target, создавая приятное ощущение
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  lovePercentUser: 2
-  lovePercentTarget: 4
-  category: шея
-
-- type: interaction
-  id: BiteNeck
-  name: Укусить за шею
-  icon: _Sunrise/Interface/ERP/bite_neck.png
-  emotes:
-  - игриво кусает %target за шею
-  - слегка прикусывает шею %target, оставляя след
-  userSex: Unsexed
-  targetSex: Unsexed
   erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 6
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  UserTagBlacklist:
+  - mask
   category: шея
 
 - type: interaction
-  id: ERPneckLick
-  name: Облизнуть шею
-  icon: _Sunrise/Interface/ERP/lick_neck.png
+  id: NeckLick
+  name: Полизать шею
+  icon: _Sunrise/Interface/ERP/neck.png
   emotes:
   - прильнул к шее %target языком
   - касается шеи %target своим язычком
@@ -85,5 +63,24 @@
   targetSex: Unsexed
   erp: true
   lovePercentUser: 2
-  lovePercentTarget: 2
+  lovePercentTarget: 4
+  UserTagBlacklist:
+  - mask
+  category: шея
+
+- type: interaction
+  id: NeckBite
+  name: Укусить за шею
+  icon: _Sunrise/Interface/ERP/neck.png
+  emotes:
+  - игриво кусает %target за шею
+  - слегка прикусывает шею %target
+  - нежно покусывает шейку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  UserTagBlacklist:
+  - mask
   category: шея

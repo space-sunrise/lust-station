@@ -1,4 +1,70 @@
 ﻿- type: interaction
+  id: FaceCheekKiss
+  name: Чмокнуть в щёчку
+  icon: _Sunrise/Interface/ERP/cheeks.png
+  emotes:
+  - чмокает в щёчку %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+- type: interaction
+  id: FaceCheeksKiss
+  name: Расцеловать щёчки
+  icon: _Sunrise/Interface/ERP/cheeks.png
+  emotes:
+  - целует %target в обе щёки
+  - чмокает %target в обе щёки
+  - расцеловывает %target в обе щеки
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+- type: interaction
+  id: FaceCheeksPull
+  name: Потискать за щёчки
+  icon: _Sunrise/Interface/ERP/cheeks.png
+  emotes:
+  - нежно треплет за щёчки %target
+  - слегка растягивает щёчки %target
+  - тискает щечки %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+- type: interaction
+  id: FacePats
+  name: Погладить по лицу
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - нежно проводит ладонью по лицу %target
+  - ласково гладит ладонью лицо %target
+  - слегка поглаживает ладонью лицо %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+- type: interaction
   id: FaceInBoobs
   name: Прижаться грудью к лицу
   icon: _Sunrise/Interface/ERP/face.png
@@ -11,8 +77,28 @@
   userSex: Female
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 3
+  lovePercentUser: 4
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  category: лицо
+
+- type: interaction
+  id: FaceThighsCrush
+  name: Стиснуть голову ляжками
+  icon: _Sunrise/Interface/ERP/face.png
+  emotes:
+  - с силой сжимает ляжками голову %target
+  - крепко стискивает ляжками голову %target
+  - полностью обхватывает ляжками голову %target
+  - плотно сжимает ляжками голову %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 5
   userMoanChance: 0
   targetMoanChance: 0
   category: лицо
@@ -31,59 +117,28 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 2
-  category: лицо
-
-- type: interaction
-  id: FaceThighsCrush
-  name: Стиснуть голову ляжками
-  icon: _Sunrise/Interface/ERP/face.png
-  emotes:
-  - сжимает голову %target своими ляжками
-  - стискивает ляжками голову %target
-  - обхватывает ляжками голову %target
-  sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 6
-  category: лицо
-
-- type: interaction
-  id: FacePats
-  name: Погладить по лицу
-  icon: _Sunrise/Interface/ERP/face.png
-  emotes:
-  - нежно проводит ладонью по лицу %target
-  - нежно гладит лицо %target своей ладонью
-  - нежно поглаживает ладонью лицо %target
-  - нежно гладит %target по лицу
-  sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 6
+  lovePercentUser: 6
+  lovePercentTarget: 3
   category: лицо
 
 - type: interaction
   id: FaceDickSlap
-  name: Шлепнуть по лицу членом
+  name: Дать пощечину членом
   icon: _Sunrise/Interface/ERP/face.png
   emotes:
   - отводит член в сторону, и шлепает им по лицу %target
   - отведя вбок тазом, шлепает членом по лицу %target
+  - звонко шлепает членом по лицу %target
+  - сочно шлепает членом по щеке %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
-  userSex: Unsexed
+  - path: /Audio/_Lust/ERP/blow_slap.ogg
+  userSex: Male
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 2
+  lovePercentUser: 3
   lovePercentTarget: 6
+  userMoanChance: 0
+  targetMoanChance: 0
   userTagBlacklist:
   - pants
   - jumpsuit
@@ -119,8 +174,7 @@
   - как котик трется головой об %target
   - мурлыкая, трется ушками об %target
   sounds:
-  - path: /Audio/_Lust/ERP/lick1.ogg
-  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
