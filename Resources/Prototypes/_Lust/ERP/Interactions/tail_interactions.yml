@@ -1,24 +1,2 @@
-- type: interaction
-  id: PatTail
-  name: Погладить хвост
-  icon: _Sunrise/Interface/ERP/tail.png
-  emotes:
-  - нежно гладит хвостик %target
-  - нежно проводит ладонью по хвосту %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 10
-  targetTagWhitelist:
-  - Vulpkanin
-  - Felinid
-  - Demon
-  - Reptilian
-  - CatTailStripes
-  - SlimeCatTail
-  - SlimeCatTailStripes
-  category: хвост
-
 #трахать в анус держа хвост
 #трахать в вагину держа хвост

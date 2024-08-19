@@ -181,14 +181,14 @@
   targetSex: Unsexed
   erp: false
   targetTagWhitelist:
-  Human
-  Felinid
-  SlimePerson
-  Vulpkanin
-  TajaranSpecies
-  Swine
-  Dwarf
-  Demon
+  - Human
+  - Felinid
+  - SlimePerson
+  - Vulpkanin
+  - TajaranSpecies
+  - Swine
+  - Dwarf
+  - Demon
   category: дружба
 
 - type: interaction
