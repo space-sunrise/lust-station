@@ -1,0 +1,91 @@
+﻿- type: interaction
+  id: FeetLick1
+  name: Вылизать ножки
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - лижет ножки %target
+  - начинает лизать ножки %target
+  - подносит свой рот к ножкам %target, и начинает их лизать
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: ступни
+
+- type: interaction
+  id: FeetMouth
+  name: Прислонить ножку ко рту
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - снимает обувь с одной ступни и тычет ножкой в лицо %target
+  - снимает обувь с одной ступни и прислоняет ножку ко рту %target
+  - подносит свою ножку к лицу %target, заставляя лизать её
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: ступни
+
+- type: interaction
+  id: FeetLick2
+  name: Лизать ступни
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - ласкает язычком пальчики на ногах %target
+  - проходит по ступням %target своим язычком
+  - щекочет язычком пяточки %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 3
+  targetTagBlacklist:
+  - shoes
+  - socks
+  category: ступни
+
+- type: interaction
+  id: FeetJob
+  name: Погладить член ступней
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - гладит ступней член %target
+  - ласкает ступней член %target
+  - поглаживает ступней член %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 3
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: ступни
+
+- type: interaction
+  id: FeetShoesLick
+  name: Лизать обувь
+  icon: _Sunrise/Interface/ERP/feet.png
+  emotes:
+  - старательно вылизывает языком обувь %target
+  - тщательно проходит языком по подошве обуви %target
+  - медленно проводит языком по обуви %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 3
+  targetTagWhitelist:
+  - shoes
+  category: ступни

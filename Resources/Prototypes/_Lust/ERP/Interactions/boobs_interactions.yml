@@ -1,0 +1,184 @@
+﻿- type: interaction
+  id: BoobsCuddle
+  name: Прижаться к груди
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - прижимается лицом к груди %target
+  - утыкается лицом в грудь %target
+  - прижимается щекой к груди %target
+  - кладет голову на грудь %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: грудь
+
+- type: interaction
+  id: BoobsPaw
+  name: Полапать грудь
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - резко хватает за грудь %target
+  - неожиданно берет за грудь %target
+  - быстро сжимает грудь %target
+  - бесстыже лапает грудь %target
+  - похотливо лапает грудь %target
+  - медленно сжимает грудь %target
+  - нежно проводит ладонью по груди %target
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 3
+  category: грудь
+
+- type: interaction
+  id: BoobsMassage
+  name: Массировать грудь
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - деликатно разминает грудь %target
+  - старательно массирует грудь %target
+  - нежно массирует грудь %target
+  - круговыми движениями массирует грудь %target
+  - плавно массирует грудь %target
+  - ритмично массирует грудь %target
+  - медленно массирует грудь %target
+  - методично массирует грудь %target
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь
+
+- type: interaction
+  id: BoobsManyKisses
+  name: Расцеловать грудь
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - страстно покрывает поцелуями грудь %target
+  - нежно расцеловывает грудь %target
+  - причмокивая, расцеловывает грудь %target
+  - увлеченно покрывает поцелуями грудь %target
+  - сжимает и расцеловывает грудь %target
+  sounds:
+  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  targetTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: грудь
+
+- type: interaction
+  id: BoobsSlap
+  name: Шлепнуть по груди
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - наотмашь шлепает ладонью по груди %target
+  - делает смачный шлепок по груди %target, заставляя её трястись
+  - звонко шлепает ладонью грудь %target
+  - широко размахнувшись, шлёпает по груди %target
+  sounds:
+  - path: /Audio/_Lust/ERP/clap1.ogg
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь
+
+- type: interaction
+  id: BoobsSqueeze
+  name: Поласкать грудь руками
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - медленно сжимает в ладони грудь %target
+  - нежно гладит грудь %target
+  - аккуратно мнет ладонями грудь %target
+  - возбужденно ласкает пальцами грудь %target
+  - играет пальчиками с сосками %target
+  - слегка сжимает и оттягивает соски %target
+  - теребит пальчиками соски %target
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь
+
+- type: interaction
+  id: BoobsSuck
+  name: Поласкать соски ртом
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - нежно сосёт соски %target
+  - ласкает язычком соски %target
+  - страстно водит язычком вокруг сосков %target
+  - увлеченно вылизывает соски %target
+  - игриво теребит язычком соски %target
+  - жадно сосет грудь %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: грудь
+
+- type: interaction
+  id: BoobsFuck
+  name: Трахать грудь
+  icon: _Sunrise/Interface/ERP/boobs.png
+  emotes:
+  - ритмично просовывает член между грудей %target
+  - сжимая руками грудь %target, быстро трахает членом её грудь
+  - возбужденно скользит членом между грудей %target
+  - активно трахает членом грудь %target
+  - страстно трахает членом сжатую грудь %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 8
+  lovePercentTarget: 4
+  userTagBlacklist:
+  - jumpsuit
+  - outerClothing
+  - pants
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: грудь

@@ -1,5 +1,3 @@
-# Dildos
-
 - type: interaction
   id: ERPtoyPlaceholderDildo
   name: Вставить дилдо в анал
@@ -22,7 +20,7 @@
   targetSex: Male
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
 
 - type: interaction
@@ -37,18 +35,19 @@
   - ERPDildoTentacle
   icon: _Sunrise/Interface/ERP/toyIcon.png
   emotes:
-  - вставляет дилдо в вагину %target
-  - вводит дилдо в вагину %target
-  - аккуратно вставляет дилдо в анал %target
-  - глубоко вставляет дилдо в анал %target
+  - вставляет дилдо в киску %target
+  - вводит дилдо в киску %target
+  - аккуратно вставляет дилдо в киску %target
+  - глубоко вставляет дилдо в вагину %target
   - резко вставляет дилдо в анал %target
   - медленно вводит дилдо в анал %target
   - наслаждаясь, вставляет дилдо в анал %target
   targetSex: Female
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
+  selfEmoteOverride: self
 
 - type: interaction
   id: ERPtoyPlaceholderDildo3
@@ -72,8 +71,9 @@
   targetSex: Female
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
+  selfEmoteOverride: self
 
 # Fleshflights
 
@@ -94,5 +94,8 @@
   targetSex: Male
   targetWithoutCloth: true
   erp: true
-  lovePercentTarget: 5
+  lovePercentTarget: 8
   useSelf: true
+  selfEmoteOverride: self
+
+# банан секс игрушка

@@ -196,6 +196,14 @@ namespace Content.Server.Database
             if (Enum.TryParse<Erp>(profile.Erp, true, out var erpVal))
                 erp = erpVal;
 
+            var virginity = Virginity.No;
+            if (Enum.TryParse<Virginity>(profile.Virginity, true, out var virginityVal))
+                virginity = virginityVal;
+
+            var analVirginity = Virginity.Yes;
+            if (Enum.TryParse<Virginity>(profile.AnalVirginity, true, out var analVirginityVal))
+                analVirginity = analVirginityVal;
+
             var spawnPriority = (SpawnPriorityPreference)profile.SpawnPriority;
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
@@ -253,6 +261,8 @@ namespace Content.Server.Database
                 profile.Age,
                 sex,
                 erp,
+                virginity,
+                analVirginity,
                 gender,
                 new HumanoidCharacterAppearance
                 (
@@ -291,6 +301,8 @@ namespace Content.Server.Database
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Erp = humanoid.Erp.ToString(); // Lust-ERP
+            profile.Virginity = humanoid.Virginity.ToString(); // Lust-ERP
+            profile.AnalVirginity = humanoid.AnalVirginity.ToString(); // Lust-ERP
             profile.Gender = humanoid.Gender.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();

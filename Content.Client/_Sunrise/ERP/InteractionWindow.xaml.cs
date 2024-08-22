@@ -18,10 +18,12 @@ using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using System.IO;
 using Content.Shared.Interaction;
+using Robust.Shared.Toolshed.Commands.Generic.ListGeneration;
+using Content.Client.UserInterface.Controls;
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
-public sealed partial class InteractionWindow : DefaultWindow
+public sealed partial class InteractionWindow : FancyWindow
 {
     private readonly SpriteSystem _spriteSystem;
     [Dependency] private readonly EntityManager _entManager = default!;
@@ -34,6 +36,10 @@ public sealed partial class InteractionWindow : DefaultWindow
     public bool UserHasClothing { get; set; }
     public bool TargetHasClothing { get; set; }
     public bool Erp { get; set; }
+
+    public HashSet<string>? UserTags { get; set; }
+    public HashSet<string>? TargetTags { get; set; }
+
     public ProgressBar LoveBar;
     public TimeSpan TimeUntilAllow = TimeSpan.Zero;
     private readonly InteractionEui _eui;
@@ -46,14 +52,20 @@ public sealed partial class InteractionWindow : DefaultWindow
         _eui = eui;
         LoveBar = ProgressBar;
         SearchBar.OnTextChanged += SearchBarOnOnTextChanged;
-        ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: Color.Pink);
+        ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(247, 141, 141));
+        ProgressBar.BackgroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(152, 24, 84));
         ButtonGroup Group = new();
         InteractionButton.Group = Group;
         DescriptionButton.Group = Group;
+        DevButton.Group = Group;
         InteractionButton.Pressed = true;
         InteractionButton.OnPressed += SetModeToInteraction;
         DescriptionButton.OnPressed += SetModeToDescription;
+        DevButton.OnPressed += SetModeToDev;
         PopulateByFilter("", false);
+        // ModeButtons.Visible = false;
+        //Descriptions.Visible = false;
+        DevButton.Visible = true;
     }
 
     private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
@@ -61,6 +73,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         SearchBar.Visible = true;
         ItemInteractions.Visible = true;
         DescriptionContainer.Visible = false;
+        DevContainer.Visible = false;
     }
 
     private void SetModeToDescription(BaseButton.ButtonEventArgs obj)
@@ -68,13 +81,23 @@ public sealed partial class InteractionWindow : DefaultWindow
         SearchBar.Visible = false;
         ItemInteractions.Visible = false;
         DescriptionContainer.Visible = true;
+        DevContainer.Visible = false;
         DescriptionPopulate();
+    }
+
+    private void SetModeToDev(BaseButton.ButtonEventArgs obj)
+    {
+        SearchBar.Visible = false;
+        ItemInteractions.Visible = false;
+        DescriptionContainer.Visible = false;
+        DevContainer.Visible = true;
+        DevPopulate();
     }
 
     private void DescriptionPopulate()
     {
-        TextureLeft.DisposeAllChildren();
-        TextureRight.DisposeAllChildren();
+        DevLeft.DisposeAllChildren();
+        DevRight.DisposeAllChildren();
 
         if (!_player.LocalEntity.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -122,6 +145,29 @@ public sealed partial class InteractionWindow : DefaultWindow
         }
     }
 
+    private void DevPopulate()
+    {
+
+        if (!_player.LocalEntity.HasValue) return;
+
+        if (UserTags != null)
+        {
+            foreach (var i in UserTags)
+            {
+                DevLeft.AddItem(i, null, false);
+            }
+        }
+        if (!TargetEntityId.HasValue) return;
+
+        if (TargetTags != null)
+        {
+            foreach (var i in TargetTags)
+            {
+                DevRight.AddItem(i, null, false);
+            }
+        }
+    }
+
     private void SearchBarOnOnTextChanged(LineEdit.LineEditEventArgs obj)
     {
         PopulateByFilter(SearchBar.Text);
@@ -132,65 +178,75 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (!_player.LocalEntity.HasValue) return;
         if (!TargetEntityId.HasValue) return;
         var uid = _player.LocalEntity.Value;
+        var protos = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToArray();
+        Array.Sort(protos, (x, y) => x.SortOrder.CompareTo(y.SortOrder));
         List<(string, Texture, InteractionPrototype)> itemList = new();
-        foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
+        foreach (string category in new List<string>
+        {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
+        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал",
+            "лицо"}
+        )
         {
-            if(proto.InhandObject.Count > 0)
+            foreach (var proto in protos)
             {
-                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+
+                if (proto.InhandObject.Count > 0)
                 {
-                    if (hands.ActiveHand == null) continue;
-                    if (hands.ActiveHand.Container == null) continue;
-                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
-                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
-                    if (meta.EntityPrototype == null) continue;
-                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                    {
+                        if (hands.ActiveHand == null) continue;
+                        if (hands.ActiveHand.Container == null) continue;
+                        if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
+                        if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
+                        if (meta.EntityPrototype == null) continue;
+                        if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    }
+                    else continue;
                 }
-                else continue;
-            }
-            if (proto.Erp) continue;
-            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
-            if (string.IsNullOrEmpty(filter) ||
-                proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
-            {
-                var texture = _spriteSystem.Frame0(proto.Icon);
-                if (UserHasClothing && proto.UserWithoutCloth) continue;
-                if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-                if (!Erp && proto.Erp) continue;
-                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
-                itemList.Add((proto.Name, texture, proto));
-            }
-        }
-        foreach (var proto in _prototypeManager.EnumeratePrototypes<InteractionPrototype>())
-        {
-            if (proto.InhandObject.Count > 0)
-            {
-                if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
+                if (proto.Category.ToLower() != category) continue;
+                if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
+                if (string.IsNullOrEmpty(filter) ||
+                    proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
                 {
-                    if (hands.ActiveHand == null) continue;
-                    if (hands.ActiveHand.Container == null) continue;
-                    if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
-                    if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
-                    if (meta.EntityPrototype == null) continue;
-                    if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                    var texture = _spriteSystem.Frame0(proto.Icon);
+                    if (UserHasClothing && proto.UserWithoutCloth) continue;
+                    if (TargetHasClothing && proto.TargetWithoutCloth) continue;
+                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
+                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
+                    if (!Erp && proto.Erp) continue;
+                    if (UserTags != null)
+                    {
+                        if (proto.UserTagWhitelist.Count > 0)
+                        {
+                            foreach (var tag in proto.UserTagWhitelist)
+                            {
+                                if (!UserTags.Contains(tag)) goto CONTINUE;
+                            }
+                        }
+                        foreach (var tag in UserTags)
+                        {
+                            if (proto.UserTagBlacklist.Contains(tag)) goto CONTINUE;
+                        }
+                    }
+
+                    if (TargetTags != null)
+                    {
+                        if (proto.TargetTagWhitelist.Count > 0)
+                        {
+                            foreach (var tag in proto.TargetTagWhitelist)
+                            {
+                                if (!TargetTags.Contains(tag)) goto CONTINUE;
+                            }
+                        }
+                        foreach (var tag in TargetTags)
+                        {
+                            if (proto.TargetTagBlacklist.Contains(tag)) goto CONTINUE;
+                        }
+                    }
+                    //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+                    itemList.Add((proto.Name, texture, proto));
                 }
-                else continue;
-            }
-            if (!proto.Erp) continue;
-            if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
-            if (string.IsNullOrEmpty(filter) ||
-                proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
-            {
-                var texture = _spriteSystem.Frame0(proto.Icon);
-                if (UserHasClothing && proto.UserWithoutCloth) continue;
-                if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-                if (!Erp && proto.Erp) continue;
-                itemList.Add((proto.Name, texture, proto));
-                //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
+            CONTINUE:;
             }
         }
         bool equals = true;
@@ -213,7 +269,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (!equals || !check)
         {
             ItemInteractions.Clear();
-            foreach(var i in itemList)
+            foreach (var i in itemList)
             {
                 ItemInteractions.AddItem(i.Item1, i.Item2, metadata: i.Item3);
             }
@@ -225,8 +281,8 @@ public sealed partial class InteractionWindow : DefaultWindow
     protected override void FrameUpdate(FrameEventArgs args)
     {
         base.FrameUpdate(args);
-
-        if(_gameTiming.CurTime > UntilUpdate)
+        _eui.FrameUpdate(args);
+        if (_gameTiming.CurTime > UntilUpdate)
         {
             UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
             _eui.RequestState();
@@ -252,7 +308,7 @@ public sealed partial class InteractionWindow : DefaultWindow
         if (Erp)
         {
             //Юзер
-            UserDescription.AddChild(new Label { Text = "Вы..." });
+            UserDescription.AddChild(new Label { Text = "Вы...", StyleClasses = { StyleNano.StyleClassLabelBig } }); ;
             if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
             UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
@@ -262,7 +318,7 @@ public sealed partial class InteractionWindow : DefaultWindow
             //Таргет
             if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
             {
-                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "..." });
+                TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "...", StyleClasses = { StyleNano.StyleClassLabelBig } });
                 if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
                 else
                 {
@@ -279,10 +335,12 @@ public sealed partial class InteractionWindow : DefaultWindow
         {
             ErpProgress.Dispose();
         }
-        if(DescriptionContainer.Visible)
+
+        if (DescriptionContainer.Visible)
         {
             DescriptionPopulate();
-        } else
+        }
+        else
         {
             PopulateByFilter(SearchBar.Text);
         }

@@ -1,0 +1,115 @@
+- type: interaction
+  id: EarsBite
+  name: Кусь за ушко
+  icon: _Sunrise/Interface/ERP/bite_ears.png
+  emotes:
+  - делает кусь за ушко %target
+  - слегка прикусывает ушко %target
+  - нежно кусает ушко %target
+  - игриво кусает за ушко %target
+  - нямкает ушко %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  userTagWhitelist:
+  - mask
+  category: уши
+
+- type: interaction
+  id: EarsPat
+  name: Погладить ушки
+  icon: _Sunrise/Interface/ERP/pat_ears.png
+  emotes:
+  - нежно гладит пальчиками ушки %target
+  - трепетно касается ушек %target
+  - ласково поглаживает ушки %target
+  - бережно ласкает ушки %target
+  - нежно проводит по ушкам %target своей ладонью
+  - аккуратно гладит за ушками %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: уши
+
+- type: interaction
+  id: EarsScratch
+  name: Почесать за ушком
+  icon: _Sunrise/Interface/ERP/pat_ears.png
+  emotes:
+  - нежно чешет за ушком %target
+  - ласково почесывает %target за ушком
+  - нежно расчесывает пальчиками за ушком %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: уши
+
+- type: interaction
+  id: EarsKiss
+  name: Поцеловать ушки
+  icon: _Sunrise/Interface/ERP/ears.png
+  emotes:
+  - нежно целует ушко %target
+  - ласково целует ушки %target
+  - с теплотой целует ушки %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagBlacklist:
+  - Predator
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  userTagBlacklist:
+  - mask
+  category: уши

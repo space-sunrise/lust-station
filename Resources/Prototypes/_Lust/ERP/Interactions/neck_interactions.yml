@@ -1,0 +1,86 @@
+﻿- type: interaction
+  id: NeckNuzzleVulpaStyle
+  name: Потереться мордочкой о шею
+  icon: _Sunrise/Interface/ERP/nuzzle_neck_vulpa.png
+  emotes:
+  - нежно трётся мордочкой о шею %target
+  - мягко касается мордочкой шеи %target, создавая приятное ощущение
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  UserTagWhitelist:
+  - Vulpakin
+  UserTagBlacklist:
+  - mask
+  category: шея
+
+- type: interaction
+  id: NeckKiss
+  name: Поцеловать в шею
+  icon: _Sunrise/Interface/ERP/neck.png
+  emotes:
+  - целует %target за шею
+  - нежно целует %target за шею
+  - слегка целует %target за шею
+  - настойчиво целует %target за шею
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userMoanChance: 0
+  targetMoanChance: 0
+  UserTagBlacklist:
+  - mask
+  category: шея
+
+- type: interaction
+  id: NeckLick
+  name: Полизать шею
+  icon: _Sunrise/Interface/ERP/neck.png
+  emotes:
+  - прильнул к шее %target языком
+  - касается шеи %target своим язычком
+  - страстно облизывает шею %target, оставляя на ней влажный след
+  - слегка облизнул шею %target
+  - игриво проводит языком по шее %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  UserTagBlacklist:
+  - mask
+  category: шея
+
+- type: interaction
+  id: NeckBite
+  name: Укусить за шею
+  icon: _Sunrise/Interface/ERP/neck.png
+  emotes:
+  - игриво кусает %target за шею
+  - слегка прикусывает шею %target
+  - нежно покусывает шейку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  UserTagBlacklist:
+  - mask
+  category: шея

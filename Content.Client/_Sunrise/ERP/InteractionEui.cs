@@ -49,15 +49,13 @@ namespace Content.Client._Sunrise.ERP
                     _window.UserSex = req.UserSex;
                     _window.TargetSex = req.TargetSex;
                     _window.Erp = req.ErpAllowed;
+                    _window.UserTags = req.UserTags;
+                    _window.TargetTags = req.TargetTags;
                     _window.Populate();
                     break;
             }
         }
 
-        public void Sendmessage(string msg)
-        {
-            _chat.SendMessage(msg, Shared.Chat.ChatSelectChannel.Local);
-        }
         public void RequestLove()
         {
             if (!_player.LocalEntity.HasValue) return;
@@ -101,9 +99,29 @@ namespace Content.Client._Sunrise.ERP
             _window.UserHasClothing = euiState.UserHasClothing;
             _window.TargetHasClothing = euiState.TargetHasClothing;
             _window.Erp = euiState.ErpAllowed;
+            if (euiState.UserTags != null) { _window.UserTags = euiState.UserTags; } else { _window.UserTags = new(); }
+            if (euiState.TargetTags != null) { _window.TargetTags = euiState.TargetTags; } else { _window.TargetTags = new(); }
             _window.Populate();
 
         }
+
+        private List<(ItemList.Item, TimeSpan, string?)> _disabledItems = new();
+
+        public void FrameUpdate(FrameEventArgs args)
+        {
+            foreach((var item, var time, var text) in _disabledItems)
+            {
+                item.Text = text + $" ({(time - _gameTiming.CurTime).Seconds} сек.)";
+                if(_gameTiming.CurTime >= time)
+                {
+                    item.Text = text;
+                    item.Disabled = false;
+                    _disabledItems.Remove((item, time, text));
+                    break;
+                }
+            }
+        }
+
 
         public void OnItemSelect(ItemList.ItemListSelectedEventArgs args)
         {
@@ -112,6 +130,8 @@ namespace Content.Client._Sunrise.ERP
                 if (!_player.LocalEntity.HasValue) return;
                 if (!_player.LocalEntity.Value.IsValid()) return;
                 var item = args.ItemList[args.ItemIndex];
+                item.Disabled = true;
+                _disabledItems.Add((item, _gameTiming.CurTime + TimeSpan.FromSeconds(5), item.Text));
                 if (item.Metadata == null) return;
                 InteractionPrototype interaction = (InteractionPrototype) item.Metadata;
                 if (interaction.Emotes.Count > 0)
@@ -123,7 +143,7 @@ namespace Content.Client._Sunrise.ERP
                     if(_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
                         emote = emote.Replace("%target", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager));
                     else
-                        emote = emote.Replace("%target", "себя");
+                        emote = emote.Replace("%target", interaction.SelfEmoteOverride.Replace("self", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager)));
                     _chat.SendMessage(emote, Shared.Chat.ChatSelectChannel.Emotes);
                 }
                 if (interaction.Sounds.Count > 0)
@@ -133,7 +153,8 @@ namespace Content.Client._Sunrise.ERP
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));
-                _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(2);
+                SendMessage(new SendInteractionToServer(interaction.ID));
+                _window.TimeUntilAllow = _gameTiming.CurTime + TimeSpan.FromSeconds(0.5);
             }
         }
     }

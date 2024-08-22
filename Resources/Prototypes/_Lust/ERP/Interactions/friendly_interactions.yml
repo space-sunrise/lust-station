@@ -1,0 +1,237 @@
+﻿# 1. ДРУЖЕСКИЕ ДЕЙСТВИЯ
+
+- type: interaction
+  id: FriendlyHandshake
+  name: Пожать руку
+  icon: _Sunrise/Interface/ERP/hand_shake.png
+  emotes:
+  - жмёт руку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyPatShoulder
+  name: Похлопать по плечу
+  icon: _Sunrise/Interface/ERP/pat_shoulder.png
+  emotes:
+  - хлопает по плечу %target
+  #  sounds:
+  #  - path: /Audio/_Sunrise/ERP/kiss1.ogg НУЖЕН ЗВУК
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyHug
+  name: Обнять
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - обнимает %target
+  - крепко обнимает %target
+  - прижимает к себе %target
+  sounds:
+  - path: /Audio/Effects/thudswoosh.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyHighfive
+  name: Дать пять
+  icon: _Sunrise/Interface/ERP/high_five.png
+  emotes:
+  - даёт пять %target
+  #  sounds:
+  #  - path: /Audio/_Sunrise/ERP/SOME.OGG НУЖЕН ЗВУК
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyKissHand
+  name: Поцеловать руку
+  icon: _Sunrise/Interface/ERP/kiss_hand.png
+  emotes:
+  - берет %target за руку и целует в кисть
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyPatHead
+  name: Погладить по голове
+  icon: _Sunrise/Interface/ERP/pet_head.png
+  emotes:
+  - гладит %target по голове
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyShoulderMassage
+  name: Помассировать плечи
+  icon: _Sunrise/Interface/ERP/shoulder_massage.png
+  emotes:
+  - массирует плечи %target
+  - делает массаж плечей %target
+  - разминает плечи %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyFelinidRubsCheek
+  name: Потереться как котик
+  icon: _Sunrise/Interface/ERP/face_rub_cat.png
+  emotes:
+  - нежно трется щекой об %target
+  - ласково трется щекой об %target
+  - по-кошачьи трется щекой об %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Felinid
+  category: дружба
+
+- type: interaction
+  id: FriendlyHeadTailpats
+  name: Погладить хвостиком
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - нежно гладит хвостиком голову %target
+  - ласково гладит хвостиком по спине %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: дружба
+
+- type: interaction
+  id: FriendlyTailPull
+  name: Дернуть за хвост
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - резко дергает за хвост %target
+  - грубо дергает за хвост %target
+  - неожиданно дергает хвост %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: дружба
+
+- type: interaction
+  id: FriendlyBlowslap
+  name: Дать пощечину
+  icon: _Sunrise/Interface/ERP/blow_slap.png
+  emotes:
+  - резко бьет ладонью по щеке %target
+  - сильно шлепает %target по лицу ладонью
+  - с громким хлопком ударяет %target по щеке ладонью
+  - дает ладонью звонкую пощечину %target
+  sounds:
+  - path: /Audio/_Lust/ERP/slap/slap_1.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_2.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_3.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_4.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_5.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyNoseBoop
+  name: Тронуть кончик носа пальцем
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - прикасается пальцем к кончику носа %target, буп!
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  targetTagWhitelist:
+  - Human
+  - Felinid
+  - SlimePerson
+  - Vulpkanin
+  - TajaranSpecies
+  - Swine
+  - Dwarf
+  - Demon
+  category: дружба
+
+- type: interaction
+  id: FriendlyFlyingKiss
+  name: Воздушный поцелуй
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - посылает воздушный поцелуй %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Sunrise/ERP/kiss2.ogg
+  - path: /Audio/_Sunrise/ERP/kiss3.ogg
+  - path: /Audio/_Sunrise/ERP/kiss4.ogg
+  - path: /Audio/_Sunrise/ERP/kiss5.ogg
+  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyFingerTap
+  name: Потрогать спину пальцем
+  icon: _Sunrise/Interface/ERP/friendly.png
+  emotes:
+  - трогает пальцем спину %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+# - type: interaction
+#  id: ALotOfKisses
+#  name: Одарить шквалом поцелуев
+#  icon: _Sunrise/Interface/ERP/friendly.png
+#  emotes:
+#  - устраивает град поцелуев, ни оставляя сухого места на %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+#  userSex: Unsexed
+#  targetSex: Unsexed
+#  erp: true # поцелуи - ЕРП
+#  lovePercentUser: 4
+#  lovePercentTarget: 4
+
+#сплестись пальчиками

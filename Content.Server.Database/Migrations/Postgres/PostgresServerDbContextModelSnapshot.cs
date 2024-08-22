@@ -782,6 +782,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("integer")
                         .HasColumnName("age");
 
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("anal_virginity");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("text")
@@ -861,6 +866,11 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("species");
+
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("virginity");
 
                     b.Property<string>("Voice")
                         .IsRequired()

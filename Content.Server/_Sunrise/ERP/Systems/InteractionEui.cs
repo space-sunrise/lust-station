@@ -23,6 +23,8 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly bool _userHasClothing;
         private readonly bool _targetHasClothing;
         private readonly bool _erpAllowed;
+        private readonly HashSet<string> _userTags;
+        private readonly HashSet<string> _targetTags;
 
         [Dependency] private readonly IRobustRandom _random = default!;
 
@@ -32,7 +34,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         public IEntityManager _entManager;
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         private Dictionary<string, InteractionPrototype> _prototypes = new();
-        public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed)
+        public InteractionEui(NetEntity user, NetEntity target, Sex userSex, bool userHasClothing, Sex targetSex, bool targetHasClothing, bool erpAllowed, HashSet<string> userTags, HashSet<string> targetTags)
         {
             _user = user;
             _target = target;
@@ -41,6 +43,8 @@ namespace Content.Server._Sunrise.ERP.Systems
             _targetSex = targetSex;
             _targetHasClothing = targetHasClothing;
             _erpAllowed = erpAllowed;
+            _userTags = userTags;
+            _targetTags = targetTags;
             _interaction = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<InteractionSystem>();
             _transform = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<TransformSystem>();
             _entManager = IoCManager.Resolve<IEntityManager>();
@@ -80,13 +84,31 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
                         SendMessage(new ResponseLoveMessage(usComp.Love));
                     break;
+                case SendInteractionToServer req:
+                    if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
+                    {
+                        Close();
+                        return;
+                    }
+                    if (!_entManager.GetEntity(_user).Valid) return;
+                    if (!_entManager.GetEntity(_target).Valid) return;
+                    if (req.InteractionPrototype != null)
+                    {
+                        if (_prototypes.ContainsKey(req.InteractionPrototype))
+                        {
+                            var proto = _prototypes[req.InteractionPrototype];
+                            _interaction.ProcessInteraction(_user, _target, proto);
+                        }
+                        else return;
+                    }
+                    break;
                 case RequestInteractionState req:
                     if (!_entManager.GetEntity(req.User).Valid) return;
                     if (!_entManager.GetEntity(req.Target).Valid) return;
                     var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
                     if (!res.HasValue) return;
                     var resVal = res.Value;
-                    SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5));
+                    SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5, resVal.Item6, resVal.Item7));
                     break;
                 case PlaySoundMessage req:
                     if (!_entManager.GetEntity(req.User).Valid) return;
@@ -114,6 +136,8 @@ namespace Content.Server._Sunrise.ERP.Systems
                 TargetSex = _targetSex,
                 TargetHasClothing = _targetHasClothing,
                 ErpAllowed = _erpAllowed,
+                UserTags = _userTags,
+                TargetTags = _targetTags,
             };
         }
 

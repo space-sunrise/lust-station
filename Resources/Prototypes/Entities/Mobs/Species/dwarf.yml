@@ -55,7 +55,9 @@
   - type: Speech
     speechSounds: Bass
   - type: HumanoidAppearance
-    species: Human
+    #sunrise-lust-edit-start
+    species: Dwarf
+    #sunrise-lust-edit-end
     hideLayersOnEquip:
     - Hair
     - Snout
