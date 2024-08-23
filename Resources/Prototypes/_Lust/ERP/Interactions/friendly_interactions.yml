@@ -1,6 +1,4 @@
-﻿# 1. ДРУЖЕСКИЕ ДЕЙСТВИЯ
-
-- type: interaction
+﻿- type: interaction
   id: FriendlyHandshake
   name: Пожать руку
   icon: _Sunrise/Interface/ERP/hand_shake.png
