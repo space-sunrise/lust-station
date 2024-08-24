@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: AnalFingering
   name: Разработать анус пальцем
-  icon: _Sunrise/Interface/ERP/anal.png
+  icon: _Sunrise/Interface/ERP/anal_fingering.png
   emotes:
   - медленно вставляет пальчик в попку %target
   - осторожно проникает пальчиком в попку %target
@@ -29,7 +29,7 @@
 - type: interaction
   id: AnalLick
   name: Поласкать анус языком
-  icon: _Sunrise/Interface/ERP/anal.png
+  icon: _Sunrise/Interface/ERP/anal_lick.png
   emotes:
   - чувственно вылизывает заднюю дырочку %target
   - игриво извивает язычком в анусе %target
@@ -57,7 +57,7 @@
 - type: interaction
   id: AnalFingering2
   name: Трахать анус пальцами
-  icon: _Sunrise/Interface/ERP/anal.png
+  icon: _Sunrise/Interface/ERP/anal_fingering.png
   emotes:
   - активно трахает пальчиками анус %target
   - интенсивно трахает пальчиками анус %target
@@ -83,7 +83,7 @@
 - type: interaction
   id: AnalFuck
   name: Трахать анус членом
-  icon: _Sunrise/Interface/ERP/anal.png
+  icon: _Sunrise/Interface/ERP/cock_near_to_ass.png
   emotes:
   - трахает в попку %target
   - долбит попку %target своим членом

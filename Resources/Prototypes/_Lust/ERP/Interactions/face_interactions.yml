@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: FaceCheekKiss
   name: Чмокнуть в щёчку
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_kiss.png
   emotes:
   - чмокает в щёчку %target
   sounds:
@@ -19,7 +19,7 @@
 - type: interaction
   id: FaceCheeksKiss
   name: Расцеловать щёчки
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png
   emotes:
   - целует %target в обе щёки
   - чмокает %target в обе щёки
@@ -39,7 +39,7 @@
 - type: interaction
   id: FaceCheeksPull
   name: Потискать за щёчки
-  icon: _Sunrise/Interface/ERP/cheeks.png
+  icon: _Sunrise/Interface/ERP/cheeks_pat.png
   emotes:
   - нежно треплет за щёчки %target
   - слегка растягивает щёчки %target
@@ -52,7 +52,7 @@
 - type: interaction
   id: FacePats
   name: Погладить по лицу
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/pet_head.png
   emotes:
   - нежно проводит ладонью по лицу %target
   - ласково гладит ладонью лицо %target
@@ -67,7 +67,7 @@
 - type: interaction
   id: FaceInBoobs
   name: Прижаться грудью к лицу
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_in_boobs.png
   emotes:
   - прижимается грудью к лицу %target
   - прижимает к своей груди лицо %target
@@ -86,7 +86,7 @@
 - type: interaction
   id: FaceThighsCrush
   name: Стиснуть голову ляжками
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/pussy_scissors.png
   emotes:
   - с силой сжимает ляжками голову %target
   - крепко стискивает ляжками голову %target
@@ -106,7 +106,7 @@
 - type: interaction
   id: FaceSitting
   name: Сесть на лицо
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_sitting.png
   emotes:
   - нежно садится попкой на лицо %target
   - медленно опускает попу на лицо %target
@@ -124,7 +124,7 @@
 - type: interaction
   id: FaceDickSlap
   name: Дать пощечину членом
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_dick_slap.png
   emotes:
   - отводит член в сторону, и шлепает им по лицу %target
   - отведя вбок тазом, шлепает членом по лицу %target
@@ -148,7 +148,7 @@
 - type: interaction
   id: FaceLickDoggyStyle
   name: Облизать лицо по-собачьи
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_lick_doggy_style.png
   emotes:
   - по-собачьи облизывает щёки %target
   - по-собачьи облизывает губы %target
@@ -185,7 +185,7 @@
 - type: interaction
   id: CheeksPress
   name: Прижаться щекой к лицу
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/cheeks_press.png
   emotes:
   - нежно прижимается щекой к лицу %target
   - слегка прижимается щекой к лицу %target, создавая близость

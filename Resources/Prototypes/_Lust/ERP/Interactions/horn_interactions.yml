@@ -1,7 +1,7 @@
 - type: interaction
   id: HornsPat
   name: Погладить рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_pat.png
   emotes:
   - нежно поглаживает рожки %target
   - ласково гладит рожки %target
@@ -38,7 +38,7 @@
 - type: interaction
   id: HornsBlowjobFemale
   name: Трахать в рот схватив рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - крепко взяв %target за рожки трахает её в ротик
   - трахает в ротик %target держа её за рожки
@@ -78,7 +78,7 @@
 - type: interaction
   id: HornsBlowjobMale
   name: Трахать в рот схватив рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - крепко взяв %target за рожки трахает его в ротик
   - трахает в ротик %target держа его за рожки
@@ -118,7 +118,7 @@
 - type: interaction
   id: HornsСunnilingusMale
   name: Делать себе куни держа за рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - хватает %target за рожки и прижимает его губки к своей киске
   - сжимая рожки %target окунает его язычок в свою киску
@@ -160,7 +160,7 @@
 - type: interaction
   id: HornsСunnilingusFemale
   name: Делать себе куни держа за рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - хватает %target за рожки и прижимает её губки к своей киске
   - сжимая рожки %target окунает её язычок в свою киску
@@ -202,7 +202,7 @@
 - type: interaction
   id: HornsPussyFuck
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает вагину %target, сжимая её рожки
   - крепко держит рожки %target, и жестко трахает её вагину
@@ -244,7 +244,7 @@
 - type: interaction
   id: HornsAssFuckFemale
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая её рожки
   - крепко держит рожки %target, и жестко трахает её анус
@@ -286,7 +286,7 @@
 - type: interaction
   id: HornsAssFuckMale
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horn.png
+  icon: _Sunrise/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая его рожки
   - крепко держит рожки %target, и жестко трахает его анус
