@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: ButtPaw
   name: Лапать попку
-  icon: _Sunrise/Interface/ERP/hands_on_butt.png
+  icon: _Sunrise/Interface/ERP/butt_paw.png
   emotes:
   - похотливо лапает попку %target
   - сочно сжимает задницу %target
@@ -63,7 +63,7 @@
 - type: interaction
   id: ButtMassage
   name: Помассировать попку
-  icon: _Sunrise/Interface/ERP/hands_on_butt.png
+  icon: _Sunrise/Interface/ERP/butt_massage.png
   emotes:
   - деликатно разминает попку %target
   - старательно массирует попку %target

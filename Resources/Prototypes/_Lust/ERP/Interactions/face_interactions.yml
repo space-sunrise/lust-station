@@ -1,55 +1,4 @@
 ﻿- type: interaction
-  id: FaceCheekKiss
-  name: Чмокнуть в щёчку
-  icon: _Sunrise/Interface/ERP/cheeks.png
-  emotes:
-  - чмокает в щёчку %target
-  sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: лицо
-
-- type: interaction
-  id: FaceCheeksKiss
-  name: Расцеловать щёчки
-  icon: _Sunrise/Interface/ERP/cheeks.png
-  emotes:
-  - целует %target в обе щёки
-  - чмокает %target в обе щёки
-  - расцеловывает %target в обе щеки
-  sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: лицо
-
-- type: interaction
-  id: FaceCheeksPull
-  name: Потискать за щёчки
-  icon: _Sunrise/Interface/ERP/cheeks.png
-  emotes:
-  - нежно треплет за щёчки %target
-  - слегка растягивает щёчки %target
-  - тискает щечки %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  category: лицо
-
-- type: interaction
   id: FacePats
   name: Погладить по лицу
   icon: _Sunrise/Interface/ERP/face.png
@@ -124,7 +73,7 @@
 - type: interaction
   id: FaceDickSlap
   name: Дать пощечину членом
-  icon: _Sunrise/Interface/ERP/face.png
+  icon: _Sunrise/Interface/ERP/face_cock.png
   emotes:
   - отводит член в сторону, и шлепает им по лицу %target
   - отведя вбок тазом, шлепает членом по лицу %target

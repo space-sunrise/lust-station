@@ -106,6 +106,7 @@
   targetSex: Unsexed
   erp: false
   userTagWhitelist:
+  - Tajaran
   - Felinid
   category: дружба
 

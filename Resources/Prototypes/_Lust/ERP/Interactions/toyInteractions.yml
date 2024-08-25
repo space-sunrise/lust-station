@@ -8,7 +8,7 @@
   - ERPDildoEquine
   - ERPDildoKnot
   - ERPDildoTentacle
-  icon: _Sunrise/Interface/ERP/toyIcon.png
+  icon: _Sunrise/Interface/ERP/toy_butt.png
   emotes:
   - вставляет дилдо в анал %target
   - вводит дилдо в анал %target
@@ -33,7 +33,7 @@
   - ERPDildoEquine
   - ERPDildoKnot
   - ERPDildoTentacle
-  icon: _Sunrise/Interface/ERP/toyIcon.png
+  icon: _Sunrise/Interface/ERP/toy_pussy.png
   emotes:
   - вставляет дилдо в киску %target
   - вводит дилдо в киску %target
@@ -59,7 +59,7 @@
   - ERPDildoEquine
   - ERPDildoKnot
   - ERPDildoTentacle
-  icon: _Sunrise/Interface/ERP/toyIcon.png
+  icon: _Sunrise/Interface/ERP/toy_butt.png
   emotes:
   - вставляет дилдо в анал %target
   - вводит дилдо в анал %target
@@ -82,7 +82,7 @@
   name: Вставить член в киску
   inhandObject:
   - ERPNormalFleshlight
-  icon: _Sunrise/Interface/ERP/toyIcon.png
+  icon: _Sunrise/Interface/ERP/toy_pussy.png
   emotes:
   - надевает киску на член %target
   - вставляет член %target в киску

@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: PussyTouch
   name: Поласкать вагину пальцами
-  icon: _Sunrise/Interface/ERP/pussy.png
+  icon: _Sunrise/Interface/ERP/pussy_touch.png
   emotes:
   - подводит свои пальчики к киске %target и нежно ласкает её
   - поглаживает вагину %target
@@ -26,7 +26,7 @@
 - type: interaction
   id: PussyLick
   name: Полизать вагину
-  icon: _Sunrise/Interface/ERP/pussy.png
+  icon: _Sunrise/Interface/ERP/pussy_lick.png
   emotes:
   - нежно лижет вагину %target
   - вылизывает вагину %target
@@ -49,7 +49,7 @@
 - type: interaction
   id: PussyFingering
   name: Трахать вагину пальцами
-  icon: _Sunrise/Interface/ERP/pussy.png
+  icon: _Sunrise/Interface/ERP/pussy_fingering.png
   emotes:
   - медленно вставляет пальцы в лоно %target
   - играется с киской %target своими пальчиками
@@ -73,7 +73,7 @@
 - type: interaction
   id: PussyScissors
   name: Потереться вагинами
-  icon: _Sunrise/Interface/ERP/pussy.png
+  icon: _Sunrise/Interface/ERP/pussy_scissors.png
   emotes:
   - нежно трется вагинами с %target
   - страстно трется вагинами с %target
@@ -102,7 +102,7 @@
 - type: interaction
   id: PussyFuck
   name: Трахать вагину членом
-  icon: _Sunrise/Interface/ERP/pussy.png
+  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
   emotes:
   - проникает в вагину %target
   - резко проникает в вагину %target
