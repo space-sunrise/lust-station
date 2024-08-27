@@ -200,6 +200,7 @@
       - ClothingHeadHatWelding
       - WetFloorSign
       - ClothingHeadHatCone
+      - ClothingHeadHelmetPubgMore  # Sunrise-edit
   - type: EmagLatheRecipes
     emagStaticRecipes:
       - BoxLethalshot
@@ -435,7 +436,6 @@
     - AutolatheMachineCircuitboard
     - CircuitImprinterMachineCircuitboard
     - OreProcessorMachineCircuitboard
-    - MaterialReclaimerMachineCircuitboard
     - ElectrolysisUnitMachineCircuitboard
     - CentrifugeMachineCircuitboard
     - ChemDispenserMachineCircuitboard
@@ -809,12 +809,14 @@
       - MagazineVP70
       - MagazineHIBrowning
       - MagazineDeagle
+      - ClothingHeadHelmetPubg
     # Sunrise-end
     dynamicRecipes:
       - BoxBeanbag
       - BoxShotgunIncendiary
       - BoxShotgunUranium
       - BoxShellTranquilizer
+      - ClothingBackpackElectropack
       - ExplosivePayload
       - FlashPayload
       - GrenadeBlast
@@ -860,7 +862,6 @@
       - WeaponLaserCannon
       - WeaponLaserCarbine
       - WeaponXrayCannon
-      - ClothingBackpackElectropack
       - WeaponEnergyGun       # Sunrise - Energy Gun
       - WeaponEnergyGunMini   # Sunrise - Miniature Energy Gun
       - WeaponEnergyGunPistol # Sunrise - PDW-9 Energy Pistol
@@ -1225,17 +1226,18 @@
     - type: Lathe
       idleState: icon
       runningState: building
+      defaultProductionAmount: 10
       staticRecipes:
-        - SheetSteel30
-        - SheetGlass30
-        - SheetRGlass30
-        - SheetPlasma30
-        - SheetPGlass30
-        - SheetRPGlass30
-        - SheetUranium30
-        - IngotGold30
-        - IngotSilver30
-        - MaterialBananium10
+        - SheetSteel
+        - SheetGlass1
+        - SheetRGlass
+        - SheetPlasma1
+        - SheetPGlass1
+        - SheetRPGlass1
+        - SheetUranium1
+        - IngotGold1
+        - IngotSilver1
+        - MaterialBananium1
         - MaterialDiamond
 
 - type: entity
@@ -1252,19 +1254,19 @@
     materialUseMultiplier: 0.75
     timeMultiplier: 0.5
     staticRecipes:
-      - SheetSteel30
-      - SheetGlass30
-      - SheetRGlass30
-      - SheetPlasma30
-      - SheetPGlass30
-      - SheetRPGlass30
-      - SheetPlasteel30
-      - SheetUranium30
-      - SheetUGlass30
-      - SheetRUGlass30
-      - IngotGold30
-      - IngotSilver30
-      - MaterialBananium10
+      - SheetSteel
+      - SheetGlass1
+      - SheetRGlass
+      - SheetPlasma1
+      - SheetPGlass1
+      - SheetRPGlass1
+      - SheetPlasteel1
+      - SheetUranium1
+      - SheetUGlass1
+      - SheetRUGlass1
+      - IngotGold1
+      - IngotSilver1
+      - MaterialBananium1
       - MaterialDiamond
 
 - type: entity
