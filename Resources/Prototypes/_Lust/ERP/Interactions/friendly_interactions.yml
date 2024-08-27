@@ -112,7 +112,7 @@
 - type: interaction
   id: FriendlyHeadTailpats
   name: Погладить хвостиком
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/pat_tail.png
   emotes:
   - нежно гладит хвостиком голову %target
   - ласково гладит хвостиком по спине %target
@@ -132,7 +132,7 @@
 - type: interaction
   id: FriendlyTailPull
   name: Дернуть за хвост
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/friendly_tail_pull.png
   emotes:
   - резко дергает за хвост %target
   - грубо дергает за хвост %target
@@ -174,7 +174,7 @@
 - type: interaction
   id: FriendlyNoseBoop
   name: Тронуть кончик носа пальцем
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/friendly_nose_boop.png
   emotes:
   - прикасается пальцем к кончику носа %target, буп!
   userSex: Unsexed
@@ -194,7 +194,7 @@
 - type: interaction
   id: FriendlyFlyingKiss
   name: Воздушный поцелуй
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/friendly_flying_kiss.png
   emotes:
   - посылает воздушный поцелуй %target
   sounds:
@@ -212,7 +212,7 @@
 - type: interaction
   id: FriendlyFingerTap
   name: Потрогать спину пальцем
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png
   emotes:
   - трогает пальцем спину %target
   userSex: Unsexed

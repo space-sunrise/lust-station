@@ -17,7 +17,7 @@
 - type: interaction
   id: BoobsPaw
   name: Полапать грудь
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_paw.png
   emotes:
   - резко хватает за грудь %target
   - неожиданно берет за грудь %target
@@ -36,7 +36,7 @@
 - type: interaction
   id: BoobsMassage
   name: Массировать грудь
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_massage.png
   emotes:
   - деликатно разминает грудь %target
   - старательно массирует грудь %target
@@ -60,7 +60,7 @@
 - type: interaction
   id: BoobsManyKisses
   name: Расцеловать грудь
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_many_kisses.png
   emotes:
   - страстно покрывает поцелуями грудь %target
   - нежно расцеловывает грудь %target
@@ -83,7 +83,7 @@
 - type: interaction
   id: BoobsSlap
   name: Шлепнуть по груди
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_slap.png
   emotes:
   - наотмашь шлепает ладонью по груди %target
   - делает смачный шлепок по груди %target, заставляя её трястись
@@ -105,7 +105,7 @@
 - type: interaction
   id: BoobsSqueeze
   name: Поласкать грудь руками
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_squeeze.png
   emotes:
   - медленно сжимает в ладони грудь %target
   - нежно гладит грудь %target
@@ -128,7 +128,7 @@
 - type: interaction
   id: BoobsSuck
   name: Поласкать соски ртом
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_suck.png
   emotes:
   - нежно сосёт соски %target
   - ласкает язычком соски %target
@@ -156,7 +156,7 @@
 - type: interaction
   id: BoobsFuck
   name: Трахать грудь
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Sunrise/Interface/ERP/boobs_fuck.png
   emotes:
   - ритмично просовывает член между грудей %target
   - сжимая руками грудь %target, быстро трахает членом её грудь

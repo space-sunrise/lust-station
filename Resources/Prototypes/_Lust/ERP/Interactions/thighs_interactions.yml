@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: LegsLick
   name: Полизать ляжки
-  icon: _Sunrise/Interface/ERP/thights.png
+  icon: _Sunrise/Interface/ERP/legs_lick.png
   emotes:
   - облизывает ляжки %target своим язычком
   - покрывает поцелуями и лизаниями ляжки %target
@@ -27,7 +27,7 @@
 - type: interaction
   id: LegsStrokeBetween
   name: Погладить промежность
-  icon: _Sunrise/Interface/ERP/thights.png
+  icon: _Sunrise/Interface/ERP/legs_stroke_between.png
   emotes:
   - аккуратно проводит пальцами по промежности %target
   - медленно ласкает промежность %target
@@ -45,7 +45,7 @@
 - type: interaction
   id: LegsFeetLick
   name: Полизать ступни
-  icon: _Sunrise/Interface/ERP/feet.png
+  icon: _Sunrise/Interface/ERP/legs_feet_lick.png
   emotes:
   - ласкает язычком пальчики на ногах %target
   - проходит своим язычком по ступням %target
@@ -65,7 +65,7 @@
 - type: interaction
   id: LegsCockFuck
   name: Трахать между бедер
-  icon: _Sunrise/Interface/ERP/thights.png
+  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
   emotes:
   - водит членом по бёдрам %target, а затем проталкивает свой пенис между них
   - пихает свой член между бёдер %target, ритмично двигая им

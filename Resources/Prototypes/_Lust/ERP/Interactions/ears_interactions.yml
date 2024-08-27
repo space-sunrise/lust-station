@@ -83,7 +83,7 @@
 - type: interaction
   id: EarsKiss
   name: Поцеловать ушки
-  icon: _Sunrise/Interface/ERP/ears.png
+  icon: _Sunrise/Interface/ERP/ears_kiss.png
   emotes:
   - нежно целует ушко %target
   - ласково целует ушки %target

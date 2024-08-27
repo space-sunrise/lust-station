@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: MouthQuickPeck
   name: Чмокнуть в губы
-  icon: _Sunrise/Interface/ERP/lips.png
+  icon: _Sunrise/Interface/ERP/gentle_kiss.png
   emotes:
   - быстро чмокает %target в губы
   - дарит лёгкий поцелуй %target
@@ -21,7 +21,7 @@
 - type: interaction
   id: MouthKissLips
   name: Поцеловать в губы
-  icon: _Sunrise/Interface/ERP/lips.png
+  icon: _Sunrise/Interface/ERP/gentle_kiss.png
   emotes:
   - целует %target
   - нежно целует %target
@@ -57,7 +57,7 @@
 - type: interaction
   id: MouthBlowjob
   name: Заставить отсосать
-  icon: _Sunrise/Interface/ERP/mouth.png
+  icon: _Sunrise/Interface/ERP/cock_blowjob.png
   emotes:
   - заставляет сосать %target
   - заставляет делать минет %target
@@ -82,7 +82,7 @@
 - type: interaction
   id: MouthHairFaceFuckMale
   name: Трахнуть в рот схватив волосы
-  icon: _Sunrise/Interface/ERP/hair.png
+  icon: _Sunrise/Interface/ERP/hair_face_fuck.png
   emotes:
   - намотав на кулак волосы %target долбит членом его ротик
   - крепко сжав волосы %target делает себе минет его ротиком
@@ -109,7 +109,7 @@
 - type: interaction
   id: MouthHairFaceFuckFemale
   name: Трахнуть в рот схватив волосы
-  icon: _Sunrise/Interface/ERP/hair.png
+  icon: _Sunrise/Interface/ERP/hair_face_fuck.png
   emotes:
   - намотав на кулак волосы %target долбит членом её ротик
   - крепко сжав волосы %target делает себе минет её ротиком
