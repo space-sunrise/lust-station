@@ -8,14 +8,3 @@
     Heat: 0.8
     Poison: 0.8
     Cellular: 1.5
-
-- type: damageModifierSet
-  id: Fur # for fluffy pidors
-  coefficients:
-    Blunt: 1
-    Piercing: 0.9
-    Slash: 1.2
-    Cold: 0.6
-    Heat: 1.4
-    Poison: 0.8
-    Cellular: 1
