@@ -40,6 +40,12 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    # Sunrise-start
+    Otryjka:
+      collection: Otryjka
+      params:
+        volume: -12
+    # Sunrise-end
 
 - type: emoteSounds
   id: FemaleHuman
@@ -104,6 +110,12 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: DeathGasp
+    # Sunrise-start
+    Otryjka:
+      collection: Otryjka
+      params:
+        volume: -12
+    # Sunrise-end
 
 - type: emoteSounds
   id: FemaleReptilian
@@ -303,6 +315,12 @@
       collection: MaleGasp
     DefaultDeathgasp:
       collection: MaleDeathGasp
+    # Sunrise-start
+    Otryjka:
+      collection: Otryjka
+      params:
+        volume: -12
+    # Sunrise-end
   params:
     variation: 0.125
     pitch: 0.75
