@@ -96,8 +96,8 @@ public sealed partial class InteractionWindow : FancyWindow
 
     private void DescriptionPopulate()
     {
-        DevLeft.DisposeAllChildren();
-        DevRight.DisposeAllChildren();
+        DescriptionLeft.DisposeAllChildren();
+        DescriptionRight.DisposeAllChildren();
 
         if (!_player.LocalEntity.HasValue) return;
         if (!UserSex.HasValue) return;
