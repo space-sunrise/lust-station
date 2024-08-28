@@ -169,7 +169,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         var (characterGui, profileEditor) = EnsureGui();
         characterGui.ReloadCharacterPickers();
         profileEditor.SetProfile(
-            (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter,
+            (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter,
             _preferencesManager.Preferences?.SelectedCharacterIndex);
     }
 
@@ -367,7 +367,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
             return;
 
         // Sunrtise-Start
-        var undervearSlots = new List<string> { "bra", "pants", "socks" };
+        var undervearSlots = new List<string> { "bra", "pants", "socks", "plug" };
         // Sunrtise-End
 
         foreach (var group in roleLoadout.SelectedLoadouts.Values)
@@ -417,7 +417,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                         // Try startinggear first
                         if (_prototypeManager.TryIndex(loadoutProto.StartingGear, out var loadoutGear))
                         {
-                            var itemType = ((IEquipmentLoadout) loadoutGear).GetGear(slot.Name);
+                            var itemType = ((IEquipmentLoadout)loadoutGear).GetGear(slot.Name);
 
                             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
@@ -432,7 +432,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
                         }
                         else
                         {
-                            var itemType = ((IEquipmentLoadout) loadoutProto).GetGear(slot.Name);
+                            var itemType = ((IEquipmentLoadout)loadoutProto).GetGear(slot.Name);
 
                             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
                             {
@@ -455,7 +455,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
 
         foreach (var slot in slots)
         {
-            var itemType = ((IEquipmentLoadout) gear).GetGear(slot.Name);
+            var itemType = ((IEquipmentLoadout)gear).GetGear(slot.Name);
 
             if (_inventory.TryUnequip(dummy, slot.Name, out var unequippedItem, silent: true, force: true, reparent: false))
             {

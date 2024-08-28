@@ -19,6 +19,13 @@
     state: rpg
   - type: StaticPrice
     price: 20
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 5
+    unequipDelay: 5
+  # LUST STATION END
 
 - type: entity
   id: CartridgeRocketSlow
@@ -39,6 +46,13 @@
       state: frag
     - type: StaticPrice
       price: 20
+  # LUST STATION START
+    - type: Clothing
+      slots:
+      - PLUG
+      equipDelay: 5
+      unequipDelay: 5
+  # LUST STATION END
 
 # Grenades
 
@@ -54,6 +68,13 @@
   - type: Item
     size: Small
   - type: Sprite
+# LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 3
+    unequipDelay: 3
+# LUST STATION END
 
 - type: entity
   id: GrenadeBaton
@@ -154,6 +175,13 @@
   - type: Item
     size: Small
   - type: Sprite
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 6
+    unequipDelay: 6
+  # LUST STATION END
 
 - type: entity
   id: CannonBall
