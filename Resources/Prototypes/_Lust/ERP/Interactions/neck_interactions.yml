@@ -21,7 +21,7 @@
 - type: interaction
   id: NeckKiss
   name: Поцеловать в шею
-  icon: _Sunrise/Interface/ERP/neck.png
+  icon: _Sunrise/Interface/ERP/kiss_neck.png
   emotes:
   - целует %target за шею
   - нежно целует %target за шею
@@ -48,7 +48,7 @@
 - type: interaction
   id: NeckLick
   name: Полизать шею
-  icon: _Sunrise/Interface/ERP/neck.png
+  icon: _Sunrise/Interface/ERP/lick_neck.png
   emotes:
   - прильнул к шее %target языком
   - касается шеи %target своим язычком
@@ -71,7 +71,7 @@
 - type: interaction
   id: NeckBite
   name: Укусить за шею
-  icon: _Sunrise/Interface/ERP/neck.png
+  icon: _Sunrise/Interface/ERP/bite_neck.png
   emotes:
   - игриво кусает %target за шею
   - слегка прикусывает шею %target
