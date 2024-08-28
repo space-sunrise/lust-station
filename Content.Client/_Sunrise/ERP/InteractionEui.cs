@@ -70,7 +70,7 @@ namespace Content.Client._Sunrise.ERP
             if (!_player.LocalEntity.Value.IsValid()) return;
             if (!_window.TargetEntityId.Value.IsValid()) return;
             if (!_window.IsOpen) return;
-            SendMessage(new RequestInteractionState(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value));
+            SendMessage(new RequestInteractionState());
         }
 
         private void OnClosed()

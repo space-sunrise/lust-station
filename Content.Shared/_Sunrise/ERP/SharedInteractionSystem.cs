@@ -81,13 +81,6 @@ namespace Content.Shared._Sunrise.ERP
     [NetSerializable, Serializable]
     public sealed class RequestInteractionState : EuiMessageBase
     {
-        public NetEntity User;
-        public NetEntity Target;
-        public RequestInteractionState(NetEntity user, NetEntity target)
-        {
-            User = user;
-            Target = target;
-        }
     }
 
     [Serializable, NetSerializable]
