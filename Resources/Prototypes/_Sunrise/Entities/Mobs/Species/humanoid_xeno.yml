@@ -77,6 +77,7 @@
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
+    - map: ["plug"]
     - map: ["jumpsuit"]
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]

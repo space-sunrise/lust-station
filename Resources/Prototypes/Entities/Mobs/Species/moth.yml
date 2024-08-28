@@ -94,6 +94,7 @@
       - map: ["bra"]
       - map: ["pants"]
       - map: ["socks"]
+      - map: ["plug"]
       - map: ["jumpsuit"]
       # Sunrise-end
       - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]

@@ -46,6 +46,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"pants", "PANTS"}, // Sunrise-edit
         {"socks", "SOCKS"}, // Sunrise-edit
         {"bra", "BRA"}, // Sunrise-edit
+        {"plug", "PLUG"}, // Sunrise-edit
         {"id", "IDCARD"},
         {"pocket1", "POCKET1"},
         {"pocket2", "POCKET2"},

@@ -33,6 +33,13 @@
   - type: Appearance
   - type: Extractable
     grindableSolutionName: food
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 # Subclasses
 
@@ -849,7 +856,7 @@
         name: food-sequence-content-tomato
       skewer:
         name: food-sequence-content-tomato
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-tomato
 
@@ -960,7 +967,7 @@
         name: food-sequence-content-tomato
       skewer:
         name: food-sequence-content-tomato
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-tomato
 
@@ -1166,7 +1173,7 @@
         name: food-sequence-content-corn
       skewer:
         name: food-sequence-content-corn
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-corn
 
@@ -1311,7 +1318,7 @@
         name: food-sequence-content-mushroom
       skewer:
         name: food-sequence-content-mushroom
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-mushroom
 
@@ -1477,7 +1484,7 @@
         name: food-sequence-content-chili
       skewer:
         name: food-sequence-content-chili
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-pepper
 
@@ -1517,7 +1524,7 @@
         name: food-sequence-content-chilly
       skewer:
         name: food-sequence-content-chilly
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-bluepepper
 
@@ -1672,7 +1679,7 @@
         name: food-sequence-content-mushroom
       skewer:
         name: food-sequence-content-mushroom
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-mushroom
 
@@ -1913,7 +1920,7 @@
         name: food-sequence-content-mushroom
       skewer:
         name: food-sequence-content-mushroom
-        sprite: 
+        sprite:
           sprite: Objects/Consumable/Food/skewer.rsi
           state: skewer-mushroom
 

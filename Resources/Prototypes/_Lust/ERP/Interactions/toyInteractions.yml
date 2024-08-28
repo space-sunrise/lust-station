@@ -22,6 +22,7 @@
   erp: true
   lovePercentTarget: 8
   useSelf: true
+  targetVirginityLoss: anal
 
 - type: interaction
   id: ERPtoyPlaceholderDildo2
@@ -48,6 +49,7 @@
   lovePercentTarget: 8
   useSelf: true
   selfEmoteOverride: self
+  targetVirginityLoss: female
 
 - type: interaction
   id: ERPtoyPlaceholderDildo3
@@ -74,6 +76,7 @@
   lovePercentTarget: 8
   useSelf: true
   selfEmoteOverride: self
+  targetVirginityLoss: anal
 
 # Fleshflights
 
