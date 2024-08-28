@@ -24,6 +24,7 @@
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
+    - map: ["plug"]
     - map: ["jumpsuit"]
     # Sunrise-end
     - map: ["enum.HumanoidVisualLayers.LHand"]
@@ -330,6 +331,7 @@
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
+    - map: ["plug"]
     - map: ["jumpsuit"]
     # Sunrise-end
     - map: ["enum.HumanoidVisualLayers.LHand"]
