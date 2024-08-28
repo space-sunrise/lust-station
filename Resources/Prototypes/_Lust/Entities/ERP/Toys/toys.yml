@@ -10,6 +10,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/dildo.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -23,6 +30,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fleshlight.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -36,6 +50,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_avian.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -49,6 +70,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_dragon.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -62,6 +90,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_equine.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -75,6 +110,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_knot.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -88,6 +130,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_tentacle.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -101,6 +150,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_green.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -114,6 +170,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_red.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -127,6 +190,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_teal.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   parent: BaseItem
@@ -140,6 +210,13 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_yellow.rsi
+  # LUST STATION START
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+  # LUST STATION END
 
 - type: entity
   id: ERPShibariRope
@@ -169,3 +246,4 @@
         Blunt: 0
   - type: UseDelay
     delay: 3
+  - type: Clickable
