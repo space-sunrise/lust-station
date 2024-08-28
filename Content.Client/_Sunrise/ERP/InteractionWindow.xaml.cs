@@ -286,8 +286,8 @@ public sealed partial class InteractionWindow : FancyWindow
         {
             UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
             _eui.RequestState();
+            _eui.RequestLove();
         }
-        _eui.RequestLove();
     }
 
 
