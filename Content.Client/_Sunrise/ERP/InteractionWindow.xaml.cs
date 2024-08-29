@@ -63,9 +63,11 @@ public sealed partial class InteractionWindow : FancyWindow
         DescriptionButton.OnPressed += SetModeToDescription;
         DevButton.OnPressed += SetModeToDev;
         PopulateByFilter("", false);
-        // ModeButtons.Visible = false;
-        //Descriptions.Visible = false;
-        DevButton.Visible = true;
+        ModeButtons.Visible = true;
+        // TODO: Спрайты для описаний.
+        DescriptionButton.Visible = false;
+        // Dev Windnow
+        DevButton.Visible = false;
     }
 
     private void SetModeToInteraction(BaseButton.ButtonEventArgs obj)
@@ -96,8 +98,8 @@ public sealed partial class InteractionWindow : FancyWindow
 
     private void DescriptionPopulate()
     {
-        DevLeft.DisposeAllChildren();
-        DevRight.DisposeAllChildren();
+        DescriptionLeft.DisposeAllChildren();
+        DescriptionRight.DisposeAllChildren();
 
         if (!_player.LocalEntity.HasValue) return;
         if (!UserSex.HasValue) return;
@@ -117,7 +119,7 @@ public sealed partial class InteractionWindow : FancyWindow
             t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
             t.Modulate = UserHumanoid.SkinColor;
             t.Margin = new(15);
-            TextureLeft.AddChild(t);
+            DescriptionLeft.AddChild(t);
         }
 
         var targets = _entManager.GetEntity(TargetEntityId);
@@ -141,7 +143,7 @@ public sealed partial class InteractionWindow : FancyWindow
             t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
             t.Margin = new(15);
             t.Modulate = TargetHumanoid.SkinColor;
-            TextureRight.AddChild(t);
+            DescriptionRight.AddChild(t);
         }
     }
 
@@ -282,12 +284,11 @@ public sealed partial class InteractionWindow : FancyWindow
     {
         base.FrameUpdate(args);
         _eui.FrameUpdate(args);
-        if (_gameTiming.CurTime > UntilUpdate)
-        {
-            UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
-            _eui.RequestState();
-        }
-        _eui.RequestLove();
+        if (_gameTiming.CurTime <= UntilUpdate)
+            return;
+
+        UntilUpdate = _gameTiming.CurTime + TimeSpan.FromSeconds(1);
+        _eui.RequestState();
     }
 
 

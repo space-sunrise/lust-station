@@ -7,7 +7,6 @@ using Robust.Shared.Prototypes;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Random;
 using Content.Client.Chat.Managers;
-using Robust.Shared.Audio.Systems;
 using Robust.Client.Player;
 using Robust.Shared.Timing;
 using Content.Shared.IdentityManagement;
@@ -24,14 +23,11 @@ namespace Content.Client._Sunrise.ERP
         [Dependency] private readonly IChatManager _chat = default!;
         [Dependency] private readonly IPlayerManager _player = default!;
         [Dependency] private readonly IGameTiming _gameTiming = default!;
-        private readonly SharedAudioSystem _audio; 
         public InteractionEui()
         {
             _entManager = IoCManager.Resolve<IEntityManager>();
             _window = new InteractionWindow(this);
             _window.OnClose += OnClosed;
-
-            _audio = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<SharedAudioSystem>();
         }
 
         public override void HandleMessage(EuiMessageBase msg)
@@ -40,10 +36,8 @@ namespace Content.Client._Sunrise.ERP
 
             switch (msg)
             {
-                case ResponseLoveMessage req:
-                    _window.LoveBar.Value = req.Percent;
-                    break;
                 case ResponseInteractionState req:
+                    _window.LoveBar.Value = req.UserLovePercent;
                     _window.UserHasClothing = req.UserHasClothing;
                     _window.TargetHasClothing = req.TargetHasClothing;
                     _window.UserSex = req.UserSex;
@@ -70,7 +64,7 @@ namespace Content.Client._Sunrise.ERP
             if (!_player.LocalEntity.Value.IsValid()) return;
             if (!_window.TargetEntityId.Value.IsValid()) return;
             if (!_window.IsOpen) return;
-            SendMessage(new RequestInteractionState(_entManager.GetNetEntity(_player.LocalEntity.Value), _window.TargetEntityId.Value));
+            SendMessage(new RequestInteractionState());
         }
 
         private void OnClosed()
@@ -102,7 +96,6 @@ namespace Content.Client._Sunrise.ERP
             if (euiState.UserTags != null) { _window.UserTags = euiState.UserTags; } else { _window.UserTags = new(); }
             if (euiState.TargetTags != null) { _window.TargetTags = euiState.TargetTags; } else { _window.TargetTags = new(); }
             _window.Populate();
-
         }
 
         private List<(ItemList.Item, TimeSpan, string?)> _disabledItems = new();
@@ -149,7 +142,7 @@ namespace Content.Client._Sunrise.ERP
                 if (interaction.Sounds.Count > 0)
                 {
                     SendMessage(new PlaySoundMessage(_entManager.GetNetEntity(_player.LocalEntity.Value), interaction.Sounds));
-                    
+
                 }
                 if (!_window.TargetEntityId.HasValue) return;
                 SendMessage(new AddLoveMessage(interaction.ID));

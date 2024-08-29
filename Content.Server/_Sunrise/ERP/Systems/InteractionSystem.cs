@@ -4,26 +4,21 @@ using Content.Shared.Database;
 using Content.Shared.Verbs;
 using Robust.Shared.Player;
 using Robust.Shared.Utility;
-using Robust.Server.GameObjects;
 using Robust.Shared.Random;
 using Content.Server.EUI;
 using Content.Shared.Humanoid;
-using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Chat.Systems;
 using Content.Shared._Sunrise.ERP;
-using Content.Shared.Damage;
 namespace Content.Server._Sunrise.ERP.Systems
 {
     public sealed class InteractionSystem : EntitySystem
     {
         [Dependency] private readonly EuiManager _eui = default!;
-        [Dependency] protected readonly ItemSlotsSystem ItemSlotsSystem = default!;
-        [Dependency] protected readonly IGameTiming _gameTiming = default!;
-        [Dependency] protected readonly ChatSystem _chat = default!;
-        [Dependency] protected readonly IRobustRandom _random = default!;
-        [Dependency] protected readonly DamageableSystem _damageable = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly ChatSystem _chat = default!;
+        [Dependency] private readonly IRobustRandom _random = default!;
         public override void Initialize()
         {
             base.Initialize();
@@ -31,13 +26,13 @@ namespace Content.Server._Sunrise.ERP.Systems
             SubscribeLocalEvent<InteractionComponent, GetVerbsEvent<Verb>>(AddVerbs);
         }
 
-        public (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>)? RequestMenu(EntityUid User, EntityUid Target)
+        public (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? RequestMenu(EntityUid User, EntityUid Target)
         {
             if (GetInteractionData(User, Target, out var dataNullable)) {
                 if (dataNullable.HasValue)
                 {
                     var data = dataNullable.Value;
-                    return (data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7);
+                    return (data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7, data.Item8);
                 }
                 return null;
             }
@@ -45,7 +40,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         }
 
 
-        public bool GetInteractionData(EntityUid user, EntityUid target, out (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>)? data)
+        public bool GetInteractionData(EntityUid user, EntityUid target, out (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? data)
         {
             if (TryComp<InteractionComponent>(target, out var targetInteraction) && TryComp<InteractionComponent>(user, out var userInteraction))
             {
@@ -137,9 +132,9 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                     userTags.Add(userHumanoid.Species.Id);
                     targetTags.Add(targetHumanoid.Species.Id);
-                    data = (userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp, userTags, targetTags);
+                    data = (userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp, userTags, targetTags, userInteraction.Love);
                     return true;
-                    
+
                 }
             }
             data = null;
@@ -228,7 +223,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                     {
                         Spawn("PuddleSemen", Transform(User).Coordinates);
                     }
-                } 
+                }
             }
 
             if (percentTarget != 0)
@@ -260,12 +255,11 @@ namespace Content.Server._Sunrise.ERP.Systems
             if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
                 return;
 
-
             var player = actor.PlayerSession;
             if (!args.CanInteract || !args.CanAccess) return;
             args.Verbs.Add(new Verb
             {
-                Priority = -1,
+                Priority = 9,
                 Text = "Взаимодействовать с...",
                 Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/heart.png")),
                 Act = () =>

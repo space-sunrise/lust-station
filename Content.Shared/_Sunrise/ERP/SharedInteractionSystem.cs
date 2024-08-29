@@ -53,18 +53,6 @@ namespace Content.Shared._Sunrise.ERP
         }
     }
 
-
-    [NetSerializable, Serializable]
-    public sealed class ResponseLoveMessage : EuiMessageBase
-    {
-        public float Percent;
-
-        public ResponseLoveMessage(float percent)
-        {
-            Percent = percent;
-        }
-    }
-
     [NetSerializable, Serializable]
     public sealed class PlaySoundMessage : EuiMessageBase
     {
@@ -81,13 +69,6 @@ namespace Content.Shared._Sunrise.ERP
     [NetSerializable, Serializable]
     public sealed class RequestInteractionState : EuiMessageBase
     {
-        public NetEntity User;
-        public NetEntity Target;
-        public RequestInteractionState(NetEntity user, NetEntity target)
-        {
-            User = user;
-            Target = target;
-        }
     }
 
     [Serializable, NetSerializable]
@@ -100,8 +81,9 @@ namespace Content.Shared._Sunrise.ERP
         public bool ErpAllowed;
         public HashSet<string> UserTags;
         public HashSet<string> TargetTags;
+        public float UserLovePercent;
 
-        public ResponseInteractionState(Sex userSex, Sex targetSex, bool userHasClothing, bool targetHasClothing, bool erp, HashSet<string> userTags, HashSet<string> targetTags)
+        public ResponseInteractionState(Sex userSex, Sex targetSex, bool userHasClothing, bool targetHasClothing, bool erp, HashSet<string> userTags, HashSet<string> targetTags, float userLovePercent)
         {
             UserSex = userSex;
             TargetSex = targetSex;
@@ -110,6 +92,7 @@ namespace Content.Shared._Sunrise.ERP
             ErpAllowed = erp;
             UserTags = userTags;
             TargetTags = targetTags;
+            UserLovePercent = userLovePercent;
         }
     }
 

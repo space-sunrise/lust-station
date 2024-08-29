@@ -27,8 +27,9 @@ namespace Content.Server._Sunrise.ERP.Systems
         private readonly HashSet<string> _targetTags;
 
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly IGameTiming _timing = default!;
 
-        private readonly InteractionSystem _interaction; 
+        private readonly InteractionSystem _interaction;
         private readonly TransformSystem _transform;
         private readonly SharedAudioSystem _audio;
         public IEntityManager _entManager;
@@ -55,6 +56,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
+            Logger.Info($"HandleMessage: {msg}. {_timing.CurTime}");
             switch (msg)
             {
                 case AddLoveMessage req:
@@ -81,8 +83,6 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (!_entManager.GetEntity(_user).Valid) return;
                     if (!_entManager.GetEntity(_target).Valid) return;
                     _interaction.AddLove(_user, _target, percentUser, percentTarget);
-                    if (_entManager.TryGetComponent<InteractionComponent>(_entManager.GetEntity(_user), out var usComp))
-                        SendMessage(new ResponseLoveMessage(usComp.Love));
                     break;
                 case SendInteractionToServer req:
                     if (!_transform.InRange(_transform.GetMoverCoordinates(_entManager.GetEntity(_user)), _transform.GetMoverCoordinates(_entManager.GetEntity(_target)), 2))
@@ -99,16 +99,22 @@ namespace Content.Server._Sunrise.ERP.Systems
                             var proto = _prototypes[req.InteractionPrototype];
                             _interaction.ProcessInteraction(_user, _target, proto);
                         }
-                        else return;
                     }
                     break;
                 case RequestInteractionState req:
-                    if (!_entManager.GetEntity(req.User).Valid) return;
-                    if (!_entManager.GetEntity(req.Target).Valid) return;
-                    var res = _interaction.RequestMenu(_entManager.GetEntity(req.User), _entManager.GetEntity(req.Target));
+                    if (!_entManager.GetEntity(_user).Valid) return;
+                    if (!_entManager.GetEntity(_target).Valid) return;
+                    var res = _interaction.RequestMenu(_entManager.GetEntity(_user), _entManager.GetEntity(_target));
                     if (!res.HasValue) return;
                     var resVal = res.Value;
-                    SendMessage(new ResponseInteractionState(resVal.Item1, resVal.Item3, resVal.Item2, resVal.Item4, resVal.Item5, resVal.Item6, resVal.Item7));
+                    SendMessage(new ResponseInteractionState(resVal.Item1,
+                        resVal.Item3,
+                        resVal.Item2,
+                        resVal.Item4,
+                        resVal.Item5,
+                        resVal.Item6,
+                        resVal.Item7,
+                        resVal.Item8));
                     break;
                 case PlaySoundMessage req:
                     if (!_entManager.GetEntity(req.User).Valid) return;
