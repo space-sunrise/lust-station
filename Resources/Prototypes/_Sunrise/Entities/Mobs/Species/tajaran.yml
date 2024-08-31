@@ -3,6 +3,10 @@
   id: BaseMobTajaran
   abstract: true
   components:
+  # Sunrise-Lust edit start
+  - type: Interaction
+    erp: true
+  # Sunrise-Lust edit end
   - type: HumanoidAppearance
     species: Tajaran
     hideLayersOnEquip:

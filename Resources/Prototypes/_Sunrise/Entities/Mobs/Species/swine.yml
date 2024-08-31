@@ -4,6 +4,10 @@
   id: BaseMobSwine
   abstract: true
   components:
+  # Sunrise-Lust edit start
+  - type: Interaction
+    erp: false
+  # Sunrise-Lust edit end
   - type: Absorbable
   - type: HumanoidAppearance
     species: Swine

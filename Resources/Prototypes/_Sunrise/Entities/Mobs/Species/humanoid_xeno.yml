@@ -5,6 +5,10 @@
   name: Urist McXeno
   abstract: true
   components:
+  # Sunrise-Lust edit start
+  - type: Interaction
+    erp: false
+  # Sunrise-Lust edit end
   - type: Absorbable
   - type: Respirator
     damage:
