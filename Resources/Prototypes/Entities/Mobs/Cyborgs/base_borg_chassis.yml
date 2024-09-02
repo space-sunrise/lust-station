@@ -34,7 +34,7 @@
     baseWalkSpeed : 2.5
     baseSprintSpeed : 4.5
   - type: Sprite
-    sprite: _Lust/Mobs/Silicon/chassis.rsi
+    sprite: Mobs/Silicon/chassis.rsi
   - type: RotationVisuals
     horizontalRotation: 90
   - type: MobState
@@ -322,6 +322,14 @@
 #  - type: ShowMindShieldIcons Sunrise-Edit
   - type: BorgCrewManifestViewer # Sunrise-Edit
 
+- type: entity # Lust added. Specially for new borg sprites
+  parent: BaseBorgChassisNT
+  id: BaseBorgChassisNTNextGen
+  save: false
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Lust/Mobs/Silicon/chassis.rsi
 
 - type: entity
   id: BaseBorgChassisSyndicate

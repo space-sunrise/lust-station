@@ -1,6 +1,6 @@
 - type: entity
   id: BorgChassisGeneric
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   components:
   - type: Sprite
     layers:
@@ -42,7 +42,7 @@
 
 - type: entity
   id: BorgChassisMining
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: salvage cyborg
   components:
   - type: Sprite
@@ -113,7 +113,7 @@
 
 - type: entity
   id: BorgChassisEngineer
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: engineer cyborg
   components:
   - type: Sprite
@@ -178,13 +178,13 @@
 
 - type: entity
   id: BorgChassisJanitor
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: janitor cyborg
   components:
   - type: Sprite
     layers:
     - state: janitor
-      map: ["movement"]
+      # map: ["movement"] - Lust edit. There are no animated sprites
     - state: janitor_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -249,13 +249,13 @@
 
 - type: entity
   id: BorgChassisMedical
-  parent: [BaseBorgChassisNT, ShowMedicalIcons]
+  parent: [BaseBorgChassisNTNextGen, ShowMedicalIcons] # Lust edit. Specially for new borg sprites, ShowMedicalIcons
   name: medical cyborg
   components:
   - type: Sprite
     layers:
     - state: medical
-      map: ["movement"]
+      # map: ["movement"] - Lust edit. There are no animated sprites
     - state: medical_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -327,7 +327,7 @@
 
 - type: entity
   id: BorgChassisService
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: service cyborg
   components:
   - type: Sprite
