@@ -48,6 +48,7 @@
   - type: Sprite
     layers:
     - state: miner
+      map: ["enum.RestVisuals.Base"] # Lust added
     # map: ["movement"] - Lust edit. There are no animated sprites
     - state: miner_e_r
       map: ["enum.BorgVisualLayers.Light"]
@@ -57,6 +58,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: miner_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
 #  Lust edit. There are no animated sprites
 #  - type: SpriteMovement
 #    movementLayers:
@@ -111,6 +117,11 @@
     baseWalkSpeed : 2.5
     baseSprintSpeed : 3.5
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionMiner
+  # Lust edit end
 
 - type: entity
   id: BorgChassisEngineer
@@ -120,6 +131,7 @@
   - type: Sprite
     layers:
     - state: engineer
+      map: ["enum.RestVisuals.Base"] # Lust added
     - state: engineer_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -128,6 +140,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: engineer_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
@@ -176,6 +193,11 @@
     instantActions:
     - HandheldStationMapUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionEngineer
+  # Lust edit end
 
 - type: entity
   id: BorgChassisJanitor
@@ -185,6 +207,7 @@
   - type: Sprite
     layers:
     - state: janitor
+      map: ["enum.RestVisuals.Base"] # Lust added
     # map: ["movement"] - Lust edit. There are no animated sprites
     - state: janitor_e_r
       map: ["enum.BorgVisualLayers.Light"]
@@ -194,6 +217,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: janitor_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
 #  Lust edit. There are no animated sprites
 #  - type: SpriteMovement
 #    movementLayers:
@@ -248,6 +276,11 @@
     instantActions:
     - HandheldStationMapUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionJanitor
+  # Lust edit end
 
 - type: entity
   id: BorgChassisMedical
@@ -257,6 +290,7 @@
   - type: Sprite
     layers:
     - state: medical
+      map: ["enum.RestVisuals.Base"] # Lust added
     # map: ["movement"] - Lust edit. There are no animated sprites
     - state: medical_e_r
       map: ["enum.BorgVisualLayers.Light"]
@@ -266,6 +300,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: medical_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
 #  Lust edit. There are no animated sprites
 #  - type: SpriteMovement
 #    movementLayers:
@@ -327,6 +366,11 @@
     worldTargetActions:
     - HandheldHealthAnalyzerUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionMedical
+  # Lust edit end
 
 - type: entity
   id: BorgChassisService
@@ -336,6 +380,7 @@
   - type: Sprite
     layers:
     - state: service
+      map: ["enum.RestVisuals.Base"] # Lust added
     - state: service_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -344,6 +389,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: service_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -380,6 +430,11 @@
     interactFailureString: petting-failure-service-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionService
+  # Lust edit end
 
 - type: entity
   id: BorgChassisSyndicateAssault

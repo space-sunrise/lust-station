@@ -322,7 +322,7 @@
 #  - type: ShowMindShieldIcons Sunrise-Edit
   - type: BorgCrewManifestViewer # Sunrise-Edit
 
-- type: entity # Lust added. Specially for new borg sprites
+- type: entity # Lust added. Specially for new borg sprites and abilities
   parent: BaseBorgChassisNT
   id: BaseBorgChassisNTNextGen
   save: false
@@ -330,6 +330,12 @@
   components:
   - type: Sprite
     sprite: _Lust/Mobs/Silicon/chassis.rsi
+  - type: Appearance
+  - type: RestAbility
+    disableableStringLayers:
+    - light
+    disableableEnumLayers:
+    - enum.BorgVisualLayers.Light
 
 - type: entity
   id: BaseBorgChassisSyndicate
