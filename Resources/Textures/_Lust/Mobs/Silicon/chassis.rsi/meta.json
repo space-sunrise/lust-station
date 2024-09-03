@@ -28,12 +28,10 @@
       "directions": 4
     },
     {
-      "name": "engineer_tipped",
-      "directions": 4
+      "name": "engineer_tipped"
     },
     {
-      "name": "engineer_wreck",
-      "directions": 4
+      "name": "engineer_wreck"
     },
     {
       "name": "janitor",
@@ -56,12 +54,10 @@
       "directions": 4
     },
     {
-      "name": "janitor_tipped",
-      "directions": 4
+      "name": "janitor_tipped"
     },
     {
-      "name": "janitor_wreck",
-      "directions": 4
+      "name": "janitor_wreck"
     },
     {
       "name": "medical",
@@ -84,12 +80,10 @@
       "directions": 4
     },
     {
-      "name": "medical_tipped",
-      "directions": 4
+      "name": "medical_tipped"
     },
     {
-      "name": "medical_wreck",
-      "directions": 4
+      "name": "medical_wreck"
     },
     {
       "name": "miner",
@@ -112,12 +106,10 @@
       "directions": 4
     },
     {
-      "name": "miner_tipped",
-      "directions": 4
+      "name": "miner_tipped"
     },
     {
-      "name": "miner_wreck",
-      "directions": 4
+      "name": "miner_wreck"
     },
     {
       "name": "robot",
@@ -136,8 +128,7 @@
       "directions": 4
     },
     {
-      "name": "robot_wreck",
-      "directions": 4
+      "name": "robot_wreck"
     },
     {
       "name": "service",
@@ -160,12 +151,10 @@
       "directions": 4
     },
     {
-      "name": "service_tipped",
-      "directions": 4
+      "name": "service_tipped"
     },
     {
-      "name": "service_wreck",
-      "directions": 4
+      "name": "service_wreck"
     }
   ]
 }
