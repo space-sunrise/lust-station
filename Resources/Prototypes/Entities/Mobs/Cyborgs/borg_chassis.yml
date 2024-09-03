@@ -48,7 +48,7 @@
   - type: Sprite
     layers:
     - state: miner
-      map: ["movement"]
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: miner_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -57,13 +57,14 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: miner_moving
-    noMovementLayers:
-      movement:
-        state: miner
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: miner_moving
+#    noMovementLayers:
+#      movement:
+#        state: miner
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
@@ -184,7 +185,7 @@
   - type: Sprite
     layers:
     - state: janitor
-      # map: ["movement"] - Lust edit. There are no animated sprites
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: janitor_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -193,13 +194,14 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: janitor_moving
-    noMovementLayers:
-      movement:
-        state: janitor
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: janitor_moving
+#    noMovementLayers:
+#      movement:
+#        state: janitor
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -255,7 +257,7 @@
   - type: Sprite
     layers:
     - state: medical
-      # map: ["movement"] - Lust edit. There are no animated sprites
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: medical_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -264,13 +266,14 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: medical_moving
-    noMovementLayers:
-      movement:
-        state: medical
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: medical_moving
+#    noMovementLayers:
+#      movement:
+#        state: medical
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
