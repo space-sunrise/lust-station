@@ -1,0 +1,40 @@
+- type: entity
+  name: TSF spawner
+  id: TSFSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - sprite: Objects/Tools/appraisal-tool.rsi
+          state: icon
+    - type: RandomSpawner
+      prototypes:
+      - RandomHumanoidTSF
+
+- type: entity
+  id: RandomHumanoidTSF
+  name: TSF trader
+  components:
+    - type: Sprite
+      sprite: Objects/Tools/appraisal-tool.rsi
+      state: icon
+    - type: RandomHumanoidSpawner
+      settings: TSFTrader
+
+- type: randomHumanoidSettings
+  id: TSFTrader
+  parent: EventHumanoid
+  speciesBlacklist: 
+  - Diona
+  - Vox
+  components:
+    - type: GhostRole
+      name: ghost-role-information-tsf-name
+      description: ghost-role-information-tsf-description
+      rules: ghost-role-information-nonantagonist-rules
+      raffle:
+        settings: short
+    - type: Loadout
+      prototypes: [ TSF ]
+      roleLoadout: [ RoleSurvivalStandard ]

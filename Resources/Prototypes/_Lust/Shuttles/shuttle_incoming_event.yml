@@ -1,0 +1,4 @@
+- type: preloadedGrid
+  id: TravelingTSF
+  path: /Maps/_Lust/Shuttles/ShuttleEvent/TSFs.yml
+  copies: 2

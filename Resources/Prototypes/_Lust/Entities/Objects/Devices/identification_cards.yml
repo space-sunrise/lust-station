@@ -1,0 +1,11 @@
+- type: entity
+  parent: IDCardStandard
+  id: TSFIDCard
+  name: ID карта торговца ОПЗ
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idcargotechnician
+  - type: PresetIdCard
+    job: TSFs

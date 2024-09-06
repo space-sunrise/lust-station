@@ -1,0 +1,13 @@
+- type: entity
+  parent: BasePDA
+  id: TSFPDA
+  name: КПК торговца ОПЗ
+  description: ОПЗ как всегда...
+  components:
+  - type: Pda
+    id: TSFIDCard
+    state: pda-cargo
+  - type: PdaBorderColor
+    borderColor: "#e39751"
+  - type: Icon
+    state: pda-cargo

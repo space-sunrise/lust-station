@@ -1,0 +1,27 @@
+- type: entityTable
+  id: UnknownShuttlesTSFTable
+  table: !type:AllSelector
+    children:
+    - id: UnknownShuttleTSF
+
+- type: entity
+  abstract: true
+  parent: BaseGameRule
+  id: BaseFriendlyShuttleRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-tsf-shuttle-incoming
+    startAudio:
+      path: /Audio/Announcements/announce.ogg 
+    weight: 5
+    reoccurrenceDelay: 30
+    duration: 1
+  - type: RuleGrids
+  - type: LoadMapRule
+
+- type: entity
+  parent: BaseFriendlyShuttleRule
+  id: UnknownShuttleTSF
+  components:
+  - type: LoadMapRule
+    preloadedGrid: TravelingTSF

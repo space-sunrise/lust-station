@@ -1,0 +1,30 @@
+- type: startingGear
+  id: TSF
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCargo
+    shoes: ClothingShoesLeather
+    id: TSFPDA
+    back: ClothingBackpackSatchel
+    ears: ClothingHeadsetFreelance
+    belt: ClothingBeltStorageWaistbag
+    head: ClothingHeadHatCargosoftFlipped
+    eyes: ClothingEyesGlassesSunglasses
+    outerClothing: ClothingOuterWinterColorOrange
+    hands: ClothingHandsGlovesLeatherHoS
+  storage:
+   back:
+   - Telebaton
+
+# просто для айди -_-
+- type: job
+  id: TSFs
+  name: торговец ОПЗ
+  description: job-description-cargotech
+  playTimeTracker: JobTSF
+  startingGear: CargoTechGear
+  icon: "JobIconCargoTechnician"
+  supervisors: job-supervisors-qm
+  displayWeight: 0
+  access:
+  - Cargo
+  - Maintenance
