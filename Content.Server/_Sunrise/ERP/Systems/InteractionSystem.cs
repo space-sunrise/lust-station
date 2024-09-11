@@ -44,74 +44,78 @@ namespace Content.Server._Sunrise.ERP.Systems
         {
             if (TryComp<InteractionComponent>(target, out var targetInteraction) && TryComp<InteractionComponent>(user, out var userInteraction))
             {
+
+                bool erp = true;
+                bool userClothing = false;
+                bool targetClothing = false;
+                if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
+
+                HashSet<string> userTags = new();
+                HashSet<string> targetTags = new();
+
+                if (TryComp<ContainerManagerComponent>(user, out var container))
+                {
+                    if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
+                    if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
+
+                    foreach (var c in container.Containers)
+                    {
+                        if (c.Value.ContainedEntities.Count != 0) userTags.Add(c.Key);
+                        foreach (var value in c.Value.ContainedEntities)
+                        {
+                            var m = MetaData(value);
+                            if (m.EntityPrototype != null)
+                            {
+                                var s = m.EntityPrototype.ID;
+                                userTags.Add(s);
+                                userTags.Add(s + "Unstrict");
+                                var parents = m.EntityPrototype.Parents;
+                                if (parents != null)
+                                {
+                                    foreach (var parent in parents)
+                                    {
+                                        userTags.Add(parent + "Unstrict");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if (TryComp<ContainerManagerComponent>(target, out var targetContainer))
+                {
+                    if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
+                    if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
+
+                    foreach (var c in targetContainer.Containers)
+                    {
+                        if (c.Value.ContainedEntities.Count != 0) targetTags.Add(c.Key);
+                        foreach (var value in c.Value.ContainedEntities)
+                        {
+                            var m = MetaData(value);
+                            if (m.EntityPrototype != null)
+                            {
+                                var s = m.EntityPrototype.ID;
+                                targetTags.Add(s);
+                                targetTags.Add(s + "Unstrict");
+                                var parents = m.EntityPrototype.Parents;
+                                if (parents != null)
+                                {
+                                    foreach (var parent in parents)
+                                    {
+                                        targetTags.Add(parent + "Unstrict");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                var userSex = Sex.Unsexed;
+                var targetSex = Sex.Unsexed;
+
                 if (TryComp<HumanoidAppearanceComponent>(target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(user, out var userHumanoid))
                 {
-                    bool erp = true;
-                    bool userClothing = false;
-                    bool targetClothing = false;
-                    if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
-
-                    HashSet<string> userTags = new();
-                    HashSet<string> targetTags = new();
-
-                    if (TryComp<ContainerManagerComponent>(user, out var container))
-                    {
-                        if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
-                        if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
-
-                        foreach (var c in container.Containers)
-                        {
-                            if (c.Value.ContainedEntities.Count != 0) userTags.Add(c.Key);
-                            foreach (var value in c.Value.ContainedEntities)
-                            {
-                                var m = MetaData(value);
-                                if (m.EntityPrototype != null)
-                                {
-                                    var s = m.EntityPrototype.ID;
-                                    userTags.Add(s);
-                                    userTags.Add(s + "Unstrict");
-                                    var parents = m.EntityPrototype.Parents;
-                                    if (parents != null)
-                                    {
-                                        foreach (var parent in parents)
-                                        {
-                                            userTags.Add(parent + "Unstrict");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    if (TryComp<ContainerManagerComponent>(target, out var targetContainer))
-                    {
-                        if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
-                        if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
-
-                        foreach (var c in targetContainer.Containers)
-                        {
-                            if (c.Value.ContainedEntities.Count != 0) targetTags.Add(c.Key);
-                            foreach (var value in c.Value.ContainedEntities)
-                            {
-                                var m = MetaData(value);
-                                if (m.EntityPrototype != null)
-                                {
-                                    var s = m.EntityPrototype.ID;
-                                    targetTags.Add(s);
-                                    targetTags.Add(s + "Unstrict");
-                                    var parents = m.EntityPrototype.Parents;
-                                    if (parents != null)
-                                    {
-                                        foreach (var parent in parents)
-                                        {
-                                            targetTags.Add(parent + "Unstrict");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-
                     foreach (var spec in userHumanoid.MarkingSet.Markings)
                     {
                         userTags.Add(spec.Key.ToString());
@@ -132,10 +136,15 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                     userTags.Add(userHumanoid.Species.Id);
                     targetTags.Add(targetHumanoid.Species.Id);
-                    data = (userHumanoid.Sex, userClothing, targetHumanoid.Sex, targetClothing, erp, userTags, targetTags, userInteraction.Love);
-                    return true;
-
+                    targetSex = targetHumanoid.Sex;
+                    userSex = userHumanoid.Sex;
                 }
+
+                if (TryComp<SexComponent>(target, out var targetSexComp)) targetSex = targetSexComp.Sex;
+                if (TryComp<SexComponent>(user, out var userSexComp)) userSex = userSexComp.Sex;
+
+                data = (userSex, userClothing, targetSex, targetClothing, erp, userTags, targetTags, userInteraction.Love);
+                return true;
             }
             data = null;
             return false;
