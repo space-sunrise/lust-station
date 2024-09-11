@@ -170,12 +170,6 @@ namespace Content.Server._Sunrise.ERP.Systems
                 if (entity == User && _random.Prob(prototype.UserMoanChance) ||
                    entity == Target && _random.Prob(prototype.TargetMoanChance)) _chat.TryEmoteWithChat(entity, "Moan", ChatTransmitRange.Normal);
 
-
-                //if (entity == User && prototype.UserDamage != null)
-                //    _damageable.TryChangeDamage(entity, prototype.UserDamage, origin: User);
-                //if (entity == Target && prototype.UserDamage != null)
-                //    _damageable.TryChangeDamage(entity, prototype.TargetDamage, origin: User); // Юзер по умолчанию является тем, кто наносит дамаг, т.к он использует действие
-
                 if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid))
                 {
                     switch(humanoid.Sex)

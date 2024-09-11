@@ -25,7 +25,6 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public bool Erp = false; // Это ЕРП-действие?
     [DataField] public HashSet<string> InhandObject = new(); // Требуемый в руке объект у юзера
     [DataField] public bool UseSelf = false; // Можно ли использовать на себе?
-    [DataField] public string SelfEmoteOverride = "себя";
     [DataField] public string Category = "standart"; // Категория действия
     [DataField] public int SortOrder = 0; // Порядок действия в категории
 

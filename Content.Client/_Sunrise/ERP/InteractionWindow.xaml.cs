@@ -207,6 +207,7 @@ public sealed partial class InteractionWindow : FancyWindow
                 }
                 if (proto.Category.ToLower() != category) continue;
                 if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
+                if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value && proto.UseSelf) continue;
                 if (string.IsNullOrEmpty(filter) ||
                     proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
                 {
