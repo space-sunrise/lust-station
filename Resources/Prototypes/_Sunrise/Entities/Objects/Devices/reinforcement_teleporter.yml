@@ -7,7 +7,7 @@
   components:
   - type: GhostRole
     name: Медицинский борг синдиката
-    description: Смерть НТ.
+    description: Смерть Qillu.
     rules: Normal syndicate antagonist rules apply. Work with whoever called you in, and don't harm them.
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgSyndicateMedicalBattery
@@ -21,7 +21,7 @@
   components:
   - type: GhostRole
     name: Борг синдиката "Жнец"
-    description: Смерть НТ.
+    description: Смерть Qillu.
     rules: Normal syndicate antagonist rules apply. Work with whoever called you in, and don't harm them.
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgSyndicateReaperBattery
@@ -49,7 +49,7 @@
   components:
   - type: GhostRole
     name: Тяжелый боевой борг синдиката
-    description: Смерть НТ.
+    description: Смерть Qillu.
     rules: Normal syndicate antagonist rules apply. Work with whoever called you in, and don't harm them.
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgHeavySyndicateCombatBattery
@@ -63,7 +63,7 @@
   components:
   - type: GhostRole
     name: Диверсионный борг синдиката
-    description: Смерть НТ.
+    description: Смерть Qillu.
     rules: Normal syndicate antagonist rules apply. Work with whoever called you in, and don't harm them.
   - type: GhostRoleMobSpawner
     prototype: PlayerBorgSpiderSyndicateBattery
