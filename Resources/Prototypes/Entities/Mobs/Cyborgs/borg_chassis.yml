@@ -108,11 +108,6 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 3.5
@@ -182,13 +177,6 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: TTS
-    voice: AdventureCore
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
@@ -267,11 +255,6 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: FootstepModifier
-    footstepSoundCollection:
-      path: /Audio/Effects/Fluids/watersplash.ogg
-      params:
-        volume: -5
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
@@ -344,9 +327,6 @@
     access: [["Medical"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgDutch
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepHoverBorg
   - type: SolutionScanner
   - type: InteractionPopup
     interactSuccessString: petting-success-medical-cyborg
@@ -354,8 +334,6 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: TTS
-    voice: TurretFloor
   - type: FabricateCandy
   - type: MovementSpeedModifier
     baseWalkSpeed : 3

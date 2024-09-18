@@ -336,6 +336,13 @@
     - light
     disableableEnumLayers:
     - enum.BorgVisualLayers.Light
+  - type: TTS
+    voice: TemplarAssasin
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCyborgSpider
+      params:
+        volume: -15
 
 - type: entity
   id: BaseBorgChassisSyndicate
