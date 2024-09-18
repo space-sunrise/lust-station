@@ -10,8 +10,8 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Lust/Mobs/Silicon/chassis.rsi
-      state: miner_tipped
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: miner_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
@@ -22,8 +22,8 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Lust/Mobs/Silicon/chassis.rsi
-      state: engineer_tipped
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: engineer_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
@@ -34,8 +34,8 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Lust/Mobs/Silicon/chassis.rsi
-      state: janitor_tipped
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: janitor_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
@@ -46,8 +46,8 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Lust/Mobs/Silicon/chassis.rsi
-      state: medical_tipped
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: medical_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
@@ -58,8 +58,8 @@
   components:
   - type: InstantAction
     icon:
-      sprite: _Lust/Mobs/Silicon/chassis.rsi
-      state: service_tipped
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: service_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
