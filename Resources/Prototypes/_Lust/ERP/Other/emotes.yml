@@ -2,7 +2,7 @@
   id: Moan
   name: Стонать
   category: Vocal
-  icon: Interface/Emotes/sigh.png
+  icon: Interface/Emotes/moan.png
   whitelist:
     components:
     - Vocal
