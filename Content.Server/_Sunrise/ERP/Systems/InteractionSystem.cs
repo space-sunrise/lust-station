@@ -55,8 +55,10 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                 if (TryComp<ContainerManagerComponent>(user, out var container))
                 {
-                    if (container.Containers["jumpsuit"].ContainedEntities.Count != 0) userClothing = true;
-                    if (container.Containers["outerClothing"].ContainedEntities.Count != 0) userClothing = true;
+                    if (container.Containers.TryGetValue("jumpsuit", out var userJumpsuit))
+                        if (userJumpsuit.ContainedEntities.Count != 0) userClothing = true;
+                    if (container.Containers.TryGetValue("outerClothing", out var userOuterClothing))
+                        if (userOuterClothing.ContainedEntities.Count != 0) userClothing = true;
 
                     foreach (var c in container.Containers)
                     {
@@ -84,8 +86,10 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                 if (TryComp<ContainerManagerComponent>(target, out var targetContainer))
                 {
-                    if (targetContainer.Containers["jumpsuit"].ContainedEntities.Count != 0) targetClothing = true;
-                    if (targetContainer.Containers["outerClothing"].ContainedEntities.Count != 0) targetClothing = true;
+                    if (targetContainer.Containers.TryGetValue("jumpsuit", out var targetJumpsuit))
+                        if (targetJumpsuit.ContainedEntities.Count != 0) targetClothing = true;
+                    if (targetContainer.Containers.TryGetValue("outerClothing", out var targetOuterClothing))
+                        if (targetOuterClothing.ContainedEntities.Count != 0) targetClothing = true;
 
                     foreach (var c in targetContainer.Containers)
                     {
