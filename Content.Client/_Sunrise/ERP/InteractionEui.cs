@@ -133,10 +133,7 @@ namespace Content.Client._Sunrise.ERP
                     if (!_window.TargetEntityId.Value.IsValid()) return;
                     string emote = _random.Pick(interaction.Emotes);
                     emote = emote.Replace("%user", Identity.Name(_player.LocalEntity.Value, _entManager));
-                    if(_player.LocalEntity.Value != _entManager.GetEntity(_window.TargetEntityId.Value))
-                        emote = emote.Replace("%target", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager));
-                    else
-                        emote = emote.Replace("%target", interaction.SelfEmoteOverride.Replace("self", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager)));
+                    emote = emote.Replace("%target", Identity.Name(_entManager.GetEntity(_window.TargetEntityId.Value), _entManager));
                     _chat.SendMessage(emote, Shared.Chat.ChatSelectChannel.Emotes);
                 }
                 if (interaction.Sounds.Count > 0)
