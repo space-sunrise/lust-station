@@ -7,9 +7,8 @@
   - слегка прикусывает ушко %target
   - нежно кусает ушко %target
   - игриво кусает за ушко %target
-  - нямкает ушко %target
   userSex: Unsexed
-  targetSex: Male
+  targetSex: Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -23,7 +22,7 @@
   - Moth
   - Arachnid
   - Vox
-  userTagWhitelist:
+  userTagBlacklist:
   - mask
   category: уши
 
@@ -36,8 +35,8 @@
   - трепетно касается ушек %target
   - ласково поглаживает ушки %target
   - бережно ласкает ушки %target
-  - нежно проводит по ушкам %target своей ладонью
-  - аккуратно гладит за ушками %target
+  - нежно проводит пальцами по ушкам %target
+  - аккуратно гладит ушки %target
   userSex: Unsexed
   targetSex: Unsexed
   erp: true

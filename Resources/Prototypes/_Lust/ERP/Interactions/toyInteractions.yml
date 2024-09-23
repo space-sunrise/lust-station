@@ -1,3 +1,5 @@
+# Dildos
+
 - type: interaction
   id: ERPtoyPlaceholderDildo
   name: Вставить дилдо в анал
@@ -18,10 +20,12 @@
   - медленно вводит дилдо в анал %target
   - наслаждаясь, вставляет дилдо в анал %target
   targetSex: Male
-  targetWithoutCloth: true
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   erp: true
   lovePercentTarget: 8
-  useSelf: true
   targetVirginityLoss: anal
 
 - type: interaction
@@ -36,19 +40,20 @@
   - ERPDildoTentacle
   icon: _Sunrise/Interface/ERP/toy_pussy.png
   emotes:
-  - вставляет дилдо в киску %target
-  - вводит дилдо в киску %target
-  - аккуратно вставляет дилдо в киску %target
+  - вставляет дилдо в вагину %target
+  - вводит дилдо в вагину %target
+  - аккуратно вставляет дилдо в вагину %target
   - глубоко вставляет дилдо в вагину %target
-  - резко вставляет дилдо в анал %target
-  - медленно вводит дилдо в анал %target
-  - наслаждаясь, вставляет дилдо в анал %target
+  - резко вставляет дилдо в вагину %target
+  - медленно вводит дилдо в вагину %target
+  - наслаждаясь, вставляет дилдо в вагину %target
   targetSex: Female
-  targetWithoutCloth: true
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   erp: true
   lovePercentTarget: 8
-  useSelf: true
-  selfEmoteOverride: self
   targetVirginityLoss: female
 
 - type: interaction
@@ -71,11 +76,12 @@
   - медленно вводит дилдо в анал %target
   - наслаждаясь, вставляет дилдо в анал %target
   targetSex: Female
-  targetWithoutCloth: true
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   erp: true
   lovePercentTarget: 8
-  useSelf: true
-  selfEmoteOverride: self
   targetVirginityLoss: anal
 
 # Fleshflights
@@ -95,10 +101,123 @@
   - резко вставляет член %target в киску
   - наслаждаясь, надевает киску на член %target
   targetSex: Male
-  targetWithoutCloth: true
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   erp: true
   lovePercentTarget: 8
-  useSelf: true
-  selfEmoteOverride: self
 
 # банан секс игрушка
+
+### На себе ###
+
+- type: interaction
+  id: ERPSelftoyPlaceholderFleshflight1
+  name: Вставить член в киску
+  inhandObject:
+  - ERPNormalFleshlight
+  icon: _Sunrise/Interface/ERP/toy_pussy.png
+  emotes:
+  - надевает киску на свой член
+  - вставляет член в киску
+  - медленно надевает киску на член
+  - глубоко вставляет член в киску
+  - аккуратно надевает киску на свой член
+  - резко вставляет свой член в киску
+  - наслаждаясь, надевает киску на член
+  targetSex: Male
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  useSelf: true
+  erp: true
+  lovePercentTarget: 8
+
+- type: interaction
+  id: ERPSelftoyPlaceholderDildo
+  name: Вставить дилдо в анал
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toy_butt.png
+  emotes:
+  - вставляет дилдо себе в анал
+  - вводит дилдо в свой анал
+  - аккуратно вставляет дилдо в анал
+  - глубоко вставляет дилдо в анал
+  - резко вставляет дилдо в анал
+  - медленно вводит дилдо в анал
+  - наслаждаясь, вставляет дилдо в анал
+  targetSex: Male
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  erp: true
+  useSelf: true
+  lovePercentTarget: 8
+  targetVirginityLoss: anal
+
+- type: interaction
+  id: ERPSelftoyPlaceholderDildo2
+  name: Вставить дилдо в вагину
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toy_pussy.png
+  emotes:
+  - вставляет дилдо в вагину
+  - вводит дилдо в вагину
+  - аккуратно вставляет дилдо в вагину
+  - глубоко вставляет дилдо в вагину
+  - резко вставляет дилдо в вагину
+  - медленно вводит дилдо в вагину
+  - наслаждаясь, вставляет дилдо в вагину
+  targetSex: Female
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  erp: true
+  useSelf: true
+  lovePercentTarget: 8
+  targetVirginityLoss: female
+
+- type: interaction
+  id: ERPSelftoyPlaceholderDildo3
+  name: Вставить дилдо в анал
+  inhandObject:
+  - ERPNormalDildo
+  - ERPDildoAvian
+  - ERPDildoDragon
+  - ERPDildoEquine
+  - ERPDildoKnot
+  - ERPDildoTentacle
+  icon: _Sunrise/Interface/ERP/toy_butt.png
+  emotes:
+  - вставляет дилдо в анал
+  - вводит дилдо в анал
+  - аккуратно вставляет дилдо в анал
+  - глубоко вставляет дилдо в анал
+  - резко вставляет дилдо в анал
+  - медленно вводит дилдо в анал
+  - наслаждаясь, вставляет дилдо в анал
+  targetSex: Female
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  erp: true
+  useSelf: true
+  lovePercentTarget: 8
+  targetVirginityLoss: anal
