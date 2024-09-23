@@ -3,9 +3,9 @@
   name: Погладить рожки
   icon: _Sunrise/Interface/ERP/horns_pat.png
   emotes:
-  - нежно поглаживает рожки %target
+  - нежно гладит рожки %target
   - ласково гладит рожки %target
-  - аккуратно проводит ладонью по рожкам %target
+  - с теплотой гладит рожки %target
   userSex: Male
   targetSex: Female
   erp: true

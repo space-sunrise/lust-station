@@ -19,13 +19,13 @@
   name: Полапать грудь
   icon: _Sunrise/Interface/ERP/boobs_paw.png
   emotes:
-  - резко хватает за грудь %target
-  - неожиданно берет за грудь %target
+  - хватает за грудь %target
+  - неожиданно сжимает грудь %target
   - быстро сжимает грудь %target
   - бесстыже лапает грудь %target
   - похотливо лапает грудь %target
   - медленно сжимает грудь %target
-  - нежно проводит ладонью по груди %target
+  - нежно мнет грудь %target
   userSex: Unsexed
   targetSex: Female
   erp: true

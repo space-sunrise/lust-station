@@ -1,4 +1,6 @@
-﻿- type: interaction
+﻿# 4. ШЕЯ
+
+- type: interaction
   id: NeckNuzzleVulpaStyle
   name: Потереться мордочкой о шею
   icon: _Sunrise/Interface/ERP/nuzzle_neck_vulpa.png

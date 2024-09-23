@@ -1,9 +1,9 @@
 ﻿- type: interaction
   id: FaceCheekKiss
-  name: Чмокнуть в щёчку
+  name: Чмокнуть в щёку
   icon: _Sunrise/Interface/ERP/cheeks_kiss.png
   emotes:
-  - чмокает в щёчку %target
+  - чмокает в щёку %target
   sounds:
   - path: /Audio/_Sunrise/ERP/kiss1.ogg
   - path: /Audio/_Sunrise/ERP/kiss2.ogg
@@ -18,8 +18,8 @@
 
 - type: interaction
   id: FaceCheeksKiss
-  name: Расцеловать щёчки
-  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png
+  name: Расцеловать щёки
+  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png #Звук двух поцелуев
   emotes:
   - целует %target в обе щёки
   - чмокает %target в обе щёки
@@ -41,7 +41,7 @@
   name: Потискать за щёчки
   icon: _Sunrise/Interface/ERP/cheeks_pat.png
   emotes:
-  - нежно треплет за щёчки %target
+  - нежно треплет щёчки %target
   - слегка растягивает щёчки %target
   - тискает щечки %target
   userSex: Unsexed
@@ -62,6 +62,56 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
+  category: лицо
+
+- type: interaction
+  id: FacePress
+  name: Прижаться щекой к лицу
+  icon: _Sunrise/Interface/ERP/cheeks_press.png
+  emotes:
+  - нежно прижимается щекой к лицу %target
+  - слегка прижимается щекой к лицу %target, создавая близость
+  - с теплотой прижимается щекой к лицу %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: лицо
+
+- type: interaction
+  id: FaceLickDoggyStyle
+  name: Облизать лицо по-собачьи
+  icon: _Sunrise/Interface/ERP/face_lick_doggy_style.png
+  emotes:
+  - по-собачьи облизывает щёки %target
+  - по-собачьи облизывает губы %target
+  - по-собачьи лижет в нос %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Vulpkanin
+  targetTagBlacklist:
+  - mask
+  category: лицо
+
+- type: interaction
+  id: FaceRubCat
+  name: Потереться как котик
+  icon: _Sunrise/Interface/ERP/face_rub_cat.png
+  emotes:
+  - по-кошачьи трется щекой об лицо %target
+  - как котик трется головой об %target
+  - мурлыкая, трется ушками об %target
+  sounds:
+  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  userTagWhitelist:
+  - Felinid
   category: лицо
 
 - type: interaction
@@ -113,7 +163,7 @@
   - крепко прижимается попкой к лицу %target
   - садится своей попкой на лицо %target
   - шлепается задницей на лицо %target
-  - садится на лицо %target своей задницей
+  - опускает задницу на лицо %target
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -146,53 +196,18 @@
   category: лицо
 
 - type: interaction
-  id: FaceLickDoggyStyle
-  name: Облизать лицо по-собачьи
-  icon: _Sunrise/Interface/ERP/face_lick_doggy_style.png
+  id: FaceFeet
+  name: Поласкать лицо ступней
+  icon: _Sunrise/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
   emotes:
-  - по-собачьи облизывает щёки %target
-  - по-собачьи облизывает губы %target
-  - по-собачьи лижет в нос %target
-  sounds:
-  - path: /Audio/_Lust/ERP/lick1.ogg
-  - path: /Audio/_Lust/ERP/lick2.ogg
+  - прижимается ступней к лицу %target
+  - нежно гладит ступней лицо %target
+  - проводит ступней по лицу %target
   userSex: Unsexed
   targetSex: Unsexed
-  erp: false
-  userTagWhitelist:
-  - Vulpkanin
-  targetTagBlacklist:
-  - mask
-  category: лицо
-
-- type: interaction
-  id: FaceRubCat
-  name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/face_rub_cat.png
-  emotes:
-  - по-кошачьи трется щекой об лицо %target
-  - как котик трется головой об %target
-  - мурлыкая, трется ушками об %target
-  sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  userTagWhitelist:
-  - Felinid
-  category: лицо
-
-- type: interaction
-  id: CheeksPress
-  name: Прижаться щекой к лицу
-  icon: _Sunrise/Interface/ERP/cheeks_press.png
-  emotes:
-  - нежно прижимается щекой к лицу %target
-  - слегка прижимается щекой к лицу %target, создавая близость
-  - с теплотой прижимается щекой к лицу %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 3
   category: лицо
 
 #тесно прижимается грудью к телу %target
