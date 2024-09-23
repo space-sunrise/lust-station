@@ -1,6 +1,6 @@
 - type: entity
   id: BorgChassisGeneric
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   components:
   - type: Sprite
     layers:
@@ -42,13 +42,14 @@
 
 - type: entity
   id: BorgChassisMining
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: salvage cyborg
   components:
   - type: Sprite
     layers:
     - state: miner
-      map: ["movement"]
+      map: ["enum.RestVisuals.Base"] # Lust added
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: miner_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -57,13 +58,19 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: miner_moving
-    noMovementLayers:
-      movement:
-        state: miner
+    # Lust edit start
+    - state: miner_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: miner_moving
+#    noMovementLayers:
+#      movement:
+#        state: miner
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
@@ -101,24 +108,25 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
   - type: MovementSpeedModifier
     baseWalkSpeed : 2.5
     baseSprintSpeed : 3.5
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionMiner
+  # Lust edit end
 
 - type: entity
   id: BorgChassisEngineer
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: engineer cyborg
   components:
   - type: Sprite
     layers:
     - state: engineer
+      map: ["enum.RestVisuals.Base"] # Lust added
     - state: engineer_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -127,6 +135,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: engineer_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
@@ -164,27 +177,26 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: TTS
-    voice: AdventureCore
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionEngineer
+  # Lust edit end
 
 - type: entity
   id: BorgChassisJanitor
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: janitor cyborg
   components:
   - type: Sprite
     layers:
     - state: janitor
-      map: ["movement"]
+      map: ["enum.RestVisuals.Base"] # Lust added
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: janitor_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -193,13 +205,19 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: janitor_moving
-    noMovementLayers:
-      movement:
-        state: janitor
+    # Lust edit start
+    - state: janitor_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: janitor_moving
+#    noMovementLayers:
+#      movement:
+#        state: janitor
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -237,25 +255,26 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: FootstepModifier
-    footstepSoundCollection:
-      path: /Audio/Effects/Fluids/watersplash.ogg
-      params:
-        volume: -5
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionJanitor
+  # Lust edit end
 
 - type: entity
   id: BorgChassisMedical
-  parent: [BaseBorgChassisNT, ShowMedicalIcons]
+  parent: [BaseBorgChassisNTNextGen, ShowMedicalIcons] # Lust edit. Specially for new borg sprites, ShowMedicalIcons
   name: medical cyborg
   components:
   - type: Sprite
     layers:
     - state: medical
-      map: ["movement"]
+      map: ["enum.RestVisuals.Base"] # Lust added
+    # map: ["movement"] - Lust edit. There are no animated sprites
     - state: medical_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -264,13 +283,19 @@
       shader: unshaded
       map: ["light"]
       visible: false
-  - type: SpriteMovement
-    movementLayers:
-      movement:
-        state: medical_moving
-    noMovementLayers:
-      movement:
-        state: medical
+    # Lust edit start
+    - state: medical_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
+#  Lust edit. There are no animated sprites
+#  - type: SpriteMovement
+#    movementLayers:
+#      movement:
+#        state: medical_moving
+#    noMovementLayers:
+#      movement:
+#        state: medical
   - type: BorgChassis
     maxModules: 5 # Sunrise-Edit
     moduleWhitelist:
@@ -302,9 +327,6 @@
     access: [["Medical"], ["Command"], ["Research"]]
   - type: Inventory
     templateId: borgDutch
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepHoverBorg
   - type: SolutionScanner
   - type: InteractionPopup
     interactSuccessString: petting-success-medical-cyborg
@@ -312,8 +334,6 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   # Sunrise-start
-  - type: TTS
-    voice: TurretFloor
   - type: FabricateCandy
   - type: MovementSpeedModifier
     baseWalkSpeed : 3
@@ -324,15 +344,21 @@
     worldTargetActions:
     - HandheldHealthAnalyzerUnpowered
   # Sunrise-end
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionMedical
+  # Lust edit end
 
 - type: entity
   id: BorgChassisService
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust edit. Specially for new borg sprites
   name: service cyborg
   components:
   - type: Sprite
     layers:
     - state: service
+      map: ["enum.RestVisuals.Base"] # Lust added
     - state: service_e_r
       map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
@@ -341,6 +367,11 @@
       shader: unshaded
       map: ["light"]
       visible: false
+    # Lust edit start
+    - state: service_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    # Lust edit end
   - type: BorgChassis
     maxModules: 4
     moduleWhitelist:
@@ -377,6 +408,11 @@
     interactFailureString: petting-failure-service-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  # Lust edit start
+  - type: ActionGrant
+    actions:
+    - RestActionService
+  # Lust edit end
 
 - type: entity
   id: BorgChassisSyndicateAssault

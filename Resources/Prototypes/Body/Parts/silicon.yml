@@ -4,9 +4,9 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Objects/Specific/Robotics/cyborg_parts.rsi
+    sprite: _Lust/Objects/Specific/Robotics/cyborg_parts.rsi # Lust edit
   - type: Icon
-    sprite: Objects/Specific/Robotics/cyborg_parts.rsi
+    sprite: _Lust/Objects/Specific/Robotics/cyborg_parts.rsi # Lust edit
   - type: Damageable
     damageContainer: Inorganic
   - type: BodyPart

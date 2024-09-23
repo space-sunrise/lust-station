@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Skyrat-tg at commit https://github.com/Skyrat-SS13/Skyrat-tg/commit/bb8d8f968abdddc1dcf86ceda8d47001d531e321",
+  "states": [
+    {
+      "name": "engineer",
+      "directions": 4
+    },
+    {
+      "name": "engineer_e",
+      "directions": 4
+    },
+    {
+      "name": "engineer_e_r",
+      "directions": 4
+    },
+    {
+      "name": "engineer_l",
+      "directions": 4
+    },
+    {
+      "name": "engineer_rest",
+      "directions": 4
+    },
+    {
+      "name": "engineer_tipped"
+    },
+    {
+      "name": "engineer_wreck"
+    },
+    {
+      "name": "janitor",
+      "directions": 4
+    },
+    {
+      "name": "janitor_e",
+      "directions": 4
+    },
+    {
+      "name": "janitor_e_r",
+      "directions": 4
+    },
+    {
+      "name": "janitor_l",
+      "directions": 4
+    },
+    {
+      "name": "janitor_rest",
+      "directions": 4
+    },
+    {
+      "name": "janitor_tipped"
+    },
+    {
+      "name": "janitor_wreck"
+    },
+    {
+      "name": "medical",
+      "directions": 4
+    },
+    {
+      "name": "medical_e",
+      "directions": 4
+    },
+    {
+      "name": "medical_e_r",
+      "directions": 4
+    },
+    {
+      "name": "medical_l",
+      "directions": 4
+    },
+    {
+      "name": "medical_rest",
+      "directions": 4
+    },
+    {
+      "name": "medical_tipped"
+    },
+    {
+      "name": "medical_wreck"
+    },
+    {
+      "name": "miner",
+      "directions": 4
+    },
+    {
+      "name": "miner_e",
+      "directions": 4
+    },
+    {
+      "name": "miner_e_r",
+      "directions": 4
+    },
+    {
+      "name": "miner_l",
+      "directions": 4
+    },
+    {
+      "name": "miner_rest",
+      "directions": 4
+    },
+    {
+      "name": "miner_tipped"
+    },
+    {
+      "name": "miner_wreck"
+    },
+    {
+      "name": "robot",
+      "directions": 4
+    },
+    {
+      "name": "robot_e",
+      "directions": 4
+    },
+    {
+      "name": "robot_e_r",
+      "directions": 4
+    },
+    {
+      "name": "robot_l",
+      "directions": 4
+    },
+    {
+      "name": "robot_wreck"
+    },
+    {
+      "name": "service",
+      "directions": 4
+    },
+    {
+      "name": "service_e",
+      "directions": 4
+    },
+    {
+      "name": "service_e_r",
+      "directions": 4
+    },
+    {
+      "name": "service_l",
+      "directions": 4
+    },
+    {
+      "name": "service_rest",
+      "directions": 4
+    },
+    {
+      "name": "service_tipped"
+    },
+    {
+      "name": "service_wreck"
+    }
+  ]
+}

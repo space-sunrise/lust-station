@@ -1,0 +1,65 @@
+﻿- type: entity
+  id: BaseRestAction
+  abstract: true
+  name: RestActionName
+  description: RestActionDesc
+
+- type: entity
+  id: RestActionMiner
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: miner_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionEngineer
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: engineer_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionJanitor
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: janitor_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionMedical
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: medical_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionService
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: service_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
