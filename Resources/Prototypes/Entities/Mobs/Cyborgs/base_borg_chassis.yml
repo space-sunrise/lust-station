@@ -343,6 +343,12 @@
       collection: FootstepCyborgSpider
       params:
         volume: -15
+  # LUST ERP
+  - type: Interaction
+    erp: true
+  - type: Sex
+    sex: female
+  # LUST ERP
 
 - type: entity
   id: BaseBorgChassisSyndicate
