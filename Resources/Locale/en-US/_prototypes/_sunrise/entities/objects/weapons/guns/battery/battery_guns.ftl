@@ -26,6 +26,6 @@ ent-WeaponEarthGovLaserSniper = EarthGov heavy laser rifle
 ent-WeaponSyndieLaserGun = S-13 «Чёрная мамба»
     .desc = Модернизированный «Лектер», переделаный под плазменый энергомодуль.
 ent-WeaponSyndieLaserPistol = SAM-300
-    .desc = Лазерный пистолет Синдиката, разработанный на базе пистолета капитана НТ.
+    .desc = Лазерный пистолет Синдиката, разработанный на базе пистолета капитана Qillu.
 ent-WeaponLaserMinigun = UVL-21 «Виверна»
     .desc = Тяжелое оружие массового поражения разработанное на основе минигана.

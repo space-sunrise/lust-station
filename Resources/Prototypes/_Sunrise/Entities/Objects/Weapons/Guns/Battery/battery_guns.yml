@@ -602,12 +602,12 @@
   - type: Battery
     maxCharge: 3000
     startingCharge: 3000
-    
+
 - type: entity
   name: SAM-300
   parent: BaseWeaponBattery
   id: WeaponSyndieLaserPistol
-  description: Лазерный пистолет Синдиката, разработанный на базе пистолета капитана НТ.
+  description: Лазерный пистолет Синдиката, разработанный на базе пистолета капитана Qillu.
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Battery/syndielaserpistol.rsi

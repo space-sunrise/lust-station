@@ -28,7 +28,7 @@ figurines-boxer-4 = Не смотри на меня, его застрелили
 # figurines-boxer-
 
 figurines-captain-1 = Экипаж, диск от ядерной бомбы надежно спрятан у меня в заднице.
-figurines-captain-2 = Слава НТ!
+figurines-captain-2 = Слава НТ.. ой, слава Qillu!
 figurines-captain-3 = Ядерный диск в безопасности. Где? Где-то.
 figurines-hos-1 = Космический закон? Что?
 figurines-hos-2 = Пристрелил клоуна.
