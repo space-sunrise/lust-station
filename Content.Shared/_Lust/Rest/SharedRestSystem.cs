@@ -1,6 +1,9 @@
 ﻿using Content.Shared.DoAfter;
+using Content.Shared.Light.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
+using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Toggleable;
 using Robust.Shared.Timing;
 
 namespace Content.Shared._Lust.Rest;
@@ -15,9 +18,15 @@ public sealed class SharedRestSystem : EntitySystem
     {
         base.Initialize();
 
+        // Сидение
         SubscribeLocalEvent<RestAbilityComponent, RestActionEvent>(OnActionToggled);
         SubscribeLocalEvent<RestAbilityComponent, RestDoAfterEvent>(OnSuccess);
+
+        // Совместимость
+        SubscribeLocalEvent<HandheldLightComponent, ActionLightToggledSunriseEvent>(OnToggleAction);
     }
+
+    #region Base
 
     private void OnActionToggled(EntityUid uid, RestAbilityComponent ability, RestActionEvent args)
     {
@@ -79,4 +88,29 @@ public sealed class SharedRestSystem : EntitySystem
 
         _movementSpeedModifier.ChangeBaseSpeed(uid, walkSpeed, sprintSpeed, movementSpeed.Acceleration);
     }
+
+    #endregion
+
+    #region Compability
+
+    /// <summary>
+    /// Метод, созданный для предотвращения использования фонарика в присяде.
+    /// Потому что его использование у борга переключает его лампочки на спрайте и висят в воздухе
+    /// Кусок большого щиткода, который покрывает недостаток спрайтов
+    /// </summary>
+    private void OnToggleAction(EntityUid uid, HandheldLightComponent component, ActionLightToggledSunriseEvent args)
+    {
+        // Только для боргов
+        if (!HasComp<BorgChassisComponent>(uid))
+            return;
+
+        if (!TryComp<RestAbilityComponent>(uid, out var restComponent))
+            return;
+
+        // Перехватываем ивент, чтобы он не сработал, если мы сидим.
+        if (restComponent.IsResting)
+            args.Cancel();
+    }
+
+    #endregion
 }
