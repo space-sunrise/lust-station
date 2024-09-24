@@ -9,7 +9,6 @@ using Content.Shared.Interaction;
 using Content.Shared.Light;
 using Content.Shared.Light.Components;
 using Content.Shared.Rounding;
-using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Toggleable;
 using Content.Shared.Verbs;
 using JetBrains.Annotations;
