@@ -1,18 +1,12 @@
 ﻿using Content.Shared.DoAfter;
 using Content.Shared.Light.Components;
-using Content.Shared.Movement.Components;
-using Content.Shared.Movement.Systems;
 using Content.Shared.Silicons.Borgs.Components;
-using Content.Shared.Toggleable;
-using Robust.Shared.Timing;
 
 namespace Content.Shared._Lust.Rest;
 
-public sealed class SharedRestSystem : EntitySystem
+public abstract class SharedRestSystem : EntitySystem
 {
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movementSpeedModifier = default!;
 
     public override void Initialize()
     {
@@ -20,7 +14,6 @@ public sealed class SharedRestSystem : EntitySystem
 
         // Сидение
         SubscribeLocalEvent<RestAbilityComponent, RestActionEvent>(OnActionToggled);
-        SubscribeLocalEvent<RestAbilityComponent, RestDoAfterEvent>(OnSuccess);
 
         // Совместимость
         SubscribeLocalEvent<HandheldLightComponent, ActionLightToggledSunriseEvent>(OnToggleAction);
@@ -38,55 +31,6 @@ public sealed class SharedRestSystem : EntitySystem
         };
 
         _doAfter.TryStartDoAfter(doAfterEventArgs);
-    }
-
-    private void OnSuccess(EntityUid uid, RestAbilityComponent ability, RestDoAfterEvent args)
-    {
-        if (args.Handled)
-            return;
-
-        if (args.Cancelled)
-            return;
-
-        if (!_timing.IsFirstTimePredicted)
-            return;
-
-        ability.IsResting = !ability.IsResting;
-        Dirty(uid, ability);
-
-        RaiseLocalEvent(uid, new RestChangeSpriteEvent{Entity = uid});
-        ToggleRestLogic(uid, ability);
-
-        args.Handled = true;
-    }
-
-    /// <summary>
-    /// !!SHITCODE ALERT!! Запрещает двигаться, посредством сбрасывания скорости в ноль, пока цель сидит
-    /// </summary>
-    /// <param name="uid">Цель</param>
-    /// <param name="ability">Компонент сидения, в нем хранится бекап данных</param>
-    private void ToggleRestLogic(EntityUid uid, RestAbilityComponent ability)
-    {
-        if (!TryComp<MovementSpeedModifierComponent>(uid, out var movementSpeed))
-            return;
-
-        var walkSpeed = 0f;
-        var sprintSpeed = 0f;
-
-        if (ability.IsResting)
-        {
-            ability.PreviousWalkSpeed = movementSpeed.BaseWalkSpeed;
-            ability.PreviousSprintSpeed = movementSpeed.BaseSprintSpeed;
-
-            Dirty(uid, ability);
-        }
-        else
-        {
-            walkSpeed = ability.PreviousWalkSpeed;
-            sprintSpeed = ability.PreviousSprintSpeed;
-        }
-
-        _movementSpeedModifier.ChangeBaseSpeed(uid, walkSpeed, sprintSpeed, movementSpeed.Acceleration);
     }
 
     #endregion

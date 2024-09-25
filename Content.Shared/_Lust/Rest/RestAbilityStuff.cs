@@ -5,22 +5,21 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared._Lust.Rest;
 
-[RegisterComponent, NetworkedComponent]
+/// <summary>
+/// Компонент, дающий возможность сидеть или вставать.
+/// </summary>
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class RestAbilityComponent : Component
 {
-    [DataField] public bool IsResting;
+    /// <summary>
+    /// Находимся ли мы в положении сидя?
+    /// </summary>
+    [DataField, AutoNetworkedField] public bool IsResting;
 
+    /// <summary>
+    /// КД дуафтера для начала сидения/вставания
+    /// </summary>
     [DataField] public TimeSpan Cooldown = TimeSpan.FromSeconds(1);
-
-    /// <summary>
-    /// Бекап скорости передвижения, так как она сбрасывается до нуля при сидении
-    /// </summary>
-    public float PreviousWalkSpeed;
-
-    /// <summary>
-    /// Бекап скорости передвижения, так как она сбрасывается до нуля при сидении
-    /// </summary>
-    public float PreviousSprintSpeed;
 
     /// <summary>
     /// Список слоев, которые будут выключаться вместе с основным спрайтом. В строках.
@@ -49,9 +48,10 @@ public sealed partial class RestActionEvent : InstantActionEvent {}
 [Serializable, NetSerializable]
 public sealed partial class RestDoAfterEvent : SimpleDoAfterEvent {}
 
+[Serializable, NetSerializable]
 public sealed partial class RestChangeSpriteEvent : EntityEventArgs
 {
-    public EntityUid Entity;
+    public NetEntity Entity;
 }
 
 public sealed partial class ActionLightToggledSunriseEvent : CancellableEntityEventArgs {}
