@@ -42,6 +42,8 @@ public enum RestVisuals : byte
     Resting,
 }
 
+#region Events
+
 public sealed partial class RestActionEvent : InstantActionEvent {}
 
 [Serializable, NetSerializable]
@@ -51,3 +53,7 @@ public sealed partial class RestChangeSpriteEvent : EntityEventArgs
 {
     public EntityUid Entity;
 }
+
+public sealed partial class ActionLightToggledSunriseEvent : CancellableEntityEventArgs {}
+
+#endregion
