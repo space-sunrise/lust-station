@@ -3,17 +3,22 @@ using Robust.Client.GameObjects;
 
 namespace Content.Client._Lust.Rest;
 
-public sealed class ClientRestSystem : EntitySystem
+public sealed class RestSystem : SharedRestSystem
 {
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<RestAbilityComponent, RestChangeSpriteEvent>(OnSuccess);
+        SubscribeNetworkEvent<RestChangeSpriteEvent>(OnSuccess);
     }
 
-    private void OnSuccess(EntityUid uid, RestAbilityComponent ability, RestChangeSpriteEvent args)
+    private void OnSuccess(RestChangeSpriteEvent args)
     {
+        var uid = GetEntity(args.Entity);
+
+        if (!TryComp<RestAbilityComponent>(uid, out var ability))
+            return;
+
         if (!TryComp<SpriteComponent>(uid, out var sprite))
             return;
 
@@ -29,27 +34,31 @@ public sealed class ClientRestSystem : EntitySystem
     /// <param name="visible">Выключаем или включаем</param>
     /// <param name="stringLayers">Список переключаемых слоев в строках</param>
     /// <param name="enumLayers">Список переключаемых слоев в енумах</param>
-    private void ToggleBaseLayers(SpriteComponent sprite, bool visible, HashSet<string>? stringLayers = null, HashSet<Enum>? enumLayers = null )
+    private void ToggleBaseLayers(SpriteComponent sprite, bool visible, HashSet<string> stringLayers, HashSet<Enum> enumLayers)
     {
         // Переключаем базовый спрайт
         sprite.LayerSetVisible(RestVisuals.Base, visible);
 
         // Все, что ниже, лютое говно, но зато работает без вопросов.
 
-        if (stringLayers == null || stringLayers.Count == 0)
+        ToggleLayers(sprite, visible, stringLayers);
+        ToggleLayers(sprite, visible, enumLayers);
+    }
+
+    /// <summary>
+    /// Метод переключения слоев
+    /// </summary>
+    /// <param name="sprite">Спрайт компонент</param>
+    /// <param name="visible">Выключаем или включаем</param>
+    /// <param name="layers">Список переключаемых слоев</param>
+    /// <typeparam name="T">Тип передаваемых в HashSet данных</typeparam>
+    private void ToggleLayers<T>(SpriteComponent sprite, bool visible, HashSet<T> layers) where T: notnull
+    {
+        if (layers.Count == 0)
             return;
 
         // Переключаем все слои на спрайте, переданные как лишние
-        foreach (var layer in stringLayers)
-        {
-            sprite.LayerSetVisible(layer, visible);
-        }
-
-        if (enumLayers == null || enumLayers.Count == 0)
-            return;
-
-        // Переключаем все слои на спрайте, переданные как лишние
-        foreach (var layer in enumLayers)
+        foreach (var layer in layers)
         {
             sprite.LayerSetVisible(layer, visible);
         }
