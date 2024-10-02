@@ -1,9 +1,6 @@
 ent-RubberStampIAA = печать агента внутренних дел
     .desc = { ent-RubberStampMime.desc }
     .suffix = НЕ МАППИТЬ
-ent-RubberStampPsychologist = печать психолога
-    .desc = { ent-RubberStampMime.desc }
-    .suffix = НЕ МАППИТЬ
 ent-RubberStampMagistrat = печать магистрата
     .desc = { ent-RubberStampBase.desc }
     .suffix = НЕ МАППИТЬ
@@ -11,3 +8,7 @@ ent-RubberStampNtrep = печать представителя Qillu
     .desc = { ent-RubberStampBase.desc }
     .suffix = НЕ МАППИТЬ
 stamp-component-stamped-name-ntrep = Представитель Qillu
+ent-RubberStampAdj = печать адъютанта
+    .desc = Клеймо, объединяющее отделы в хорошо отлаженную машину тоталитаризма.
+    .suffix = НЕ МАППИТЬ
+stamp-component-stamped-name-adj = Адъютант

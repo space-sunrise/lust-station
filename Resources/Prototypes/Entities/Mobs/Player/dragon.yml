@@ -106,6 +106,7 @@
     - Pacified
     - RadiationProtection
     - Drowsiness
+    - Adrenaline
   - type: Temperature
     heatDamageThreshold: 800
   - type: Metabolizer
@@ -153,6 +154,10 @@
   - type: CollectiveMind
     minds:
     - Carp
+  - type: NightVision
+    isToggle: true
+    color: "#808080"
+    playSoundOn: false
   # Sunrise-End
 
 - type: entity
@@ -251,3 +256,4 @@
     priority: 2
     checkCanAccess: false
     range: 0
+    itemIconStyle: BigAction
