@@ -64,8 +64,8 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 5
-  lovePercentTarget: 5
+  lovePercentUser: 3
+  lovePercentTarget: 3
   category: губы
 
 - type: interaction

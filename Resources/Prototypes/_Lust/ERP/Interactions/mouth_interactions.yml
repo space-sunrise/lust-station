@@ -27,51 +27,6 @@
   category: рот
 
 - type: interaction
-  id: GentleKiss
-  name: Нежный поцелуй
-  icon: _Sunrise/Interface/ERP/kissIcon.png
-  emotes:
-  - нежно касается губами губ %target
-  - слегка касается губами губ %target
-  - в нежном поцелуе соединяется губами с %target
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 3
-  category: губы
-
-- type: interaction
-  id: PlayfulNibble
-  name: Куснуть за губки
-  icon: _Sunrise/Interface/ERP/nibbleIcon.png
-  emotes:
-  - игриво прикусывает губу %target
-  - нежно кусает губу %target, добавляя страсти
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 3
-  category: губы
-
-- type: interaction
-  id: FrenchKiss
-  name: Французский поцелуй
-  icon: _Sunrise/Interface/ERP/frenchKissIcon.png
-  emotes:
-  - страстно целует %target с игрой языков
-  - переплетается языками в страстном поцелуе с %target
-  - страстно соединяет губы с губами %target
-  - с любовью целует %target в губы
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: true
-  lovePercentUser: 5
-  lovePercentTarget: 5
-  category: губы
-
-- type: interaction
   id: MouthKissLips
   name: Поцеловать в губы
   icon: _Sunrise/Interface/ERP/gentle_kiss.png
