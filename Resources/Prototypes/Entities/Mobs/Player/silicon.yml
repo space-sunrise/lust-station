@@ -70,6 +70,7 @@
     canShuttle: false
     title: comms-console-announcement-title-station-ai
     color: "#2ed2fd"
+    announceVoice: PortalGlados
 
 
 # Ai
@@ -290,11 +291,12 @@
   - type: ContainerComp
     proto: AiHeld
     container: station_ai_mind_slot
+  - type: Damageable
   - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 100
+        damage: 500
       behaviors:
       - !type:PlaySoundBehavior
         sound:
