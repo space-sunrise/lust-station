@@ -154,6 +154,28 @@
   category: грудь
 
 - type: interaction
+  id: BoobsSuck1
+  name: Пососать соски
+  icon: _Sunrise/Interface/ERP/boobs_suck.png
+  emotes:
+  - нежно сосёт соски %target
+  - жадно сосет грудь %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: грудь
+
+- type: interaction
   id: BoobsFuck
   name: Трахать грудь
   icon: _Sunrise/Interface/ERP/boobs_fuck.png
