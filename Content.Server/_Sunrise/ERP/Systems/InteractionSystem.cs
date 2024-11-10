@@ -1,6 +1,7 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
 
 using System.Diagnostics.CodeAnalysis;
+using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
 using Content.Shared._Sunrise.ERP.Components;
 using Content.Shared.Database;
@@ -18,6 +19,7 @@ using Content.Shared._Sunrise.ERP;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
 
 namespace Content.Server._Sunrise.ERP.Systems
@@ -234,9 +236,11 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (TryComp<SolutionContainerManagerComponent>(Target, out var solutionComponent) &&
                         _solutionContainerSystem.TryGetSolution((Target, solutionComponent),
                             DefaultBloodSolutionName,
-                            out _))
+                            out var containerSolution) &&
+                        TryComp<BloodstreamComponent>(Target, out var bloodstreamComponent))
                     {
-                        _bloodstream.TryModifyBloodLevel(Target, prototype.Coefficient * prototype.AmountLactate * -1);
+                        _solutionContainerSystem.SplitSolution(containerSolution.Value,
+                            prototype.Coefficient * prototype.AmountLactate);
                     }
 
                     var targetPrototype = DefaultLactationSolution;
@@ -269,14 +273,16 @@ namespace Content.Server._Sunrise.ERP.Systems
                     if (TryComp<SolutionContainerManagerComponent>(User, out var userSolutionComponent) &&
                         _solutionContainerSystem.TryGetSolution((User, userSolutionComponent),
                             DefaultChemicalsSolutionName,
-                            out var targetSolution) &&
+                            out var userSolution) &&
                         TryComp<SolutionContainerManagerComponent>(Target, out var targetSolutionComponent) &&
                         _solutionContainerSystem.TryGetSolution((Target, targetSolutionComponent),
                             DefaultBloodSolutionName,
-                            out _))
+                            out var targetSolution) &&
+                        TryComp<BloodstreamComponent>(Target, out var bloodstreamComponent))
                     {
-                        _bloodstream.TryModifyBloodLevel(Target, prototype.Coefficient * prototype.AmountLactate * -1);
-                        _solutionContainerSystem.TryAddReagent((User, targetSolution),
+                        _solutionContainerSystem.SplitSolution(targetSolution.Value,
+                            prototype.Coefficient * prototype.AmountLactate);
+                        _solutionContainerSystem.TryAddReagent(userSolution.Value,
                             DefaultLactationSolution,
                             prototype.AmountLactate);
                     }
