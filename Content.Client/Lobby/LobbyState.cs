@@ -19,6 +19,7 @@ using Content.Server.GameTicking.Prototypes;
 using Content.Shared._Sunrise.Lobby;
 using Content.Shared._Sunrise.ServersHub;
 using Content.Shared._Sunrise.SunriseCCVars;
+using Content.Shared.GameTicking;  // Sunrise-edit
 using Robust.Shared.Configuration;
 using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
