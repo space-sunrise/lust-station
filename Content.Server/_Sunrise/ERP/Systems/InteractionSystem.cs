@@ -1,4 +1,7 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
+
+using System.Diagnostics.CodeAnalysis;
+using Content.Server.Body.Systems;
 using Content.Shared._Sunrise.ERP.Components;
 using Content.Shared.Database;
 using Content.Shared.Verbs;
@@ -10,7 +13,13 @@ using Content.Shared.Humanoid;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 using Content.Server.Chat.Systems;
+using Content.Server.Fluids.EntitySystems;
 using Content.Shared._Sunrise.ERP;
+using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Components.SolutionManager;
+using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Hands.Components;
+
 namespace Content.Server._Sunrise.ERP.Systems
 {
     public sealed class InteractionSystem : EntitySystem
@@ -19,6 +28,20 @@ namespace Content.Server._Sunrise.ERP.Systems
         [Dependency] private readonly IGameTiming _gameTiming = default!;
         [Dependency] private readonly ChatSystem _chat = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
+        [Dependency] private readonly PuddleSystem _puddle = default!;
+        [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
+        [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+
+        public static string DefaultBloodSolutionName = "bloodstream";
+        public static string DefaultChemicalsSolutionName = "chemicals";
+        public static string DefaultLactationSolution = "Milk";
+
+        public static List<string> AcceptableSolutions = new List<string>()
+        {
+            "drink",
+            "beaker",
+        };
+
         public override void Initialize()
         {
             base.Initialize();
@@ -200,6 +223,83 @@ namespace Content.Server._Sunrise.ERP.Systems
                     }
                 }
             }
+
+            // Process Lactation
+            if (prototype.LactationStimulationFlag)
+            {
+                if (Target == User)
+                {
+                    var targetXform = Transform(Target);
+                    // Проверка чтоб на боргов не влияли ограничения на лактацию
+                    if (TryComp<SolutionContainerManagerComponent>(Target, out var solutionComponent) &&
+                        _solutionContainerSystem.TryGetSolution((Target, solutionComponent),
+                            DefaultBloodSolutionName,
+                            out _))
+                    {
+                        _bloodstream.TryModifyBloodLevel(Target, prototype.Coefficient * prototype.AmountLactate * -1);
+                    }
+
+                    var targetPrototype = DefaultLactationSolution;
+                    if (prototype.LactationSolution != null)
+                        targetPrototype = prototype.LactationSolution;
+
+                    // Это условие проверяет что - у цели есть руки, у цели в руках есть что-то, это что-то является допустимым контейнером
+                    if (TryComp<HandsComponent>(Target, out var handsComponent) &&
+                        handsComponent.ActiveHandEntity != null &&
+                        TryComp<SolutionContainerManagerComponent>(handsComponent.ActiveHandEntity,
+                            out var containerSolutionManager) &&
+                        CheckContaining((handsComponent.ActiveHandEntity.Value, containerSolutionManager),
+                            AcceptableSolutions,
+                            out var containerSolutionEntity))
+                    {
+                        _solutionContainerSystem.TryAddReagent(containerSolutionEntity.Value,
+                            DefaultLactationSolution,
+                            prototype.AmountLactate);
+                    }
+                    else
+                    {
+                        _puddle.TrySplashSpillAt(Target,
+                            targetXform.Coordinates,
+                            new Solution(targetPrototype, prototype.AmountLactate, _bloodstream.GetEntityBloodData(Target)),
+                            out _);
+                    }
+                }
+                else
+                {
+                    if (TryComp<SolutionContainerManagerComponent>(User, out var userSolutionComponent) &&
+                        _solutionContainerSystem.TryGetSolution((User, userSolutionComponent),
+                            DefaultChemicalsSolutionName,
+                            out var targetSolution) &&
+                        TryComp<SolutionContainerManagerComponent>(Target, out var targetSolutionComponent) &&
+                        _solutionContainerSystem.TryGetSolution((Target, targetSolutionComponent),
+                            DefaultBloodSolutionName,
+                            out _))
+                    {
+                        _bloodstream.TryModifyBloodLevel(Target, prototype.Coefficient * prototype.AmountLactate * -1);
+                        _solutionContainerSystem.TryAddReagent((User, targetSolution),
+                            DefaultLactationSolution,
+                            prototype.AmountLactate);
+                    }
+                }
+            }
+        }
+
+        // Вспомогательная функция. Оффы сделали что стаканы и мензурки имеют разные названия Solution..
+        private bool CheckContaining(Entity<SolutionContainerManagerComponent?> entity,
+            List<string> acceptable,
+            [NotNullWhen(true)] out Entity<SolutionComponent>? solutionEntity)
+        {
+            foreach (var solutionString in acceptable)
+            {
+                if (_solutionContainerSystem.TryGetSolution(entity, solutionString, out solutionEntity))
+                {
+
+                    return true;
+                }
+            }
+
+            solutionEntity = null;
+            return false;
         }
 
         public void AddLove(NetEntity entity, NetEntity target, int percentUser, int percentTarget)
