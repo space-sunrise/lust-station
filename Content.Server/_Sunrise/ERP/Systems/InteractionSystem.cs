@@ -52,7 +52,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                 {"Human", DefaultLactationSolution},
                 {"Vox", DefaultLactationSolution},
                 {"Reptilian", DefaultLactationSolution},
-                {"Slime", "Slime"},
+                {"SlimePerson", "Slime"},
                 {"Dwarf", DefaultLactationSolution},
                 {"Diona", "Sap"},
                 {"Demon", DefaultLactationSolution},
@@ -259,7 +259,9 @@ namespace Content.Server._Sunrise.ERP.Systems
                 return;
             var targetPrototype = speciesMilk;
 
-            if (targetUid == userUid)
+            var forcedFlag = prototype.ID == "BoobsMilkDecant";
+
+            if (targetUid == userUid || forcedFlag)
             {
                 var targetXform = Transform(targetUid);
                 // Проверка чтоб на боргов не влияли ограничения на лактацию
@@ -274,7 +276,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                 }
 
                 // Это условие проверяет что - у цели есть руки, у цели в руках есть что-то, это что-то является допустимым контейнером
-                if (TryComp<HandsComponent>(targetUid, out var handsComponent) &&
+                if (TryComp<HandsComponent>(forcedFlag ? userUid : targetUid, out var handsComponent) &&
                     handsComponent.ActiveHandEntity != null &&
                     TryComp<SolutionContainerManagerComponent>(handsComponent.ActiveHandEntity,
                         out var containerSolutionManager) &&
