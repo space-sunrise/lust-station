@@ -154,7 +154,7 @@
   category: грудь
 
 - type: interaction
-  id: BoobsSuck1
+  id: BoobsSuckLactation
   name: Пососать соски
   icon: _Sunrise/Interface/ERP/boobs_suck.png
   emotes:
@@ -180,7 +180,7 @@
   lactationStimulationFlag: true
 
 - type: interaction
-  id: BoobsSuck2
+  id: BoobsSuckSelf
   name: Сцежить молоко
   icon: _Sunrise/Interface/ERP/boobs_suck.png
   emotes:
