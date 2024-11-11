@@ -213,6 +213,42 @@
     },
     {
       "name": "service_r_leg+o"
-    }
+    },
+      {
+          "name": "peace_l_arm"
+      },
+      {
+          "name": "peace_r_arm"
+      },
+      {
+          "name": "peace_l_leg"
+      },
+      {
+          "name": "peace_r_leg"
+      },
+      {
+          "name": "peace_chest"
+      },
+      {
+          "name": "peace_head"
+      },
+      {
+          "name": "peace_head+o"
+      },
+      {
+          "name": "peace_chest+o"
+      },
+      {
+          "name": "peace_l_arm+o"
+      },
+      {
+          "name": "peace_r_arm+o"
+      },
+      {
+          "name": "peace_l_leg+o"
+      },
+      {
+          "name": "peace_r_leg+o"
+      }
   ]
 }
