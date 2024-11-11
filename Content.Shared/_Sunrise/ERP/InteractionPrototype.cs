@@ -54,5 +54,4 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public bool LactationStimulationFlag = false;
     [DataField] public FixedPoint2 AmountLactate = 5;
     [DataField] public float Coefficient = 0.2f;
-    [DataField] public string? LactationSolution;
 }

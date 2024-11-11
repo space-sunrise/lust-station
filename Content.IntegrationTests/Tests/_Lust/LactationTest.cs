@@ -54,7 +54,6 @@ public sealed class LactationTest
                 Erp = true,
                 Icon = new SpriteSpecifier.Texture(new ResPath("_Sunrise/Interface/ERP/boobs_suck.png")),
                 InhandObject = new HashSet<string>(),
-                LactationSolution = null,
                 LactationStimulationFlag = true,
                 LovePercentTarget = 5,
                 LovePercentUser = 0,

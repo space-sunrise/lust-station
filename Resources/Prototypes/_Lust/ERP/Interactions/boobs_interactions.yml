@@ -176,6 +176,7 @@
   userTagBlacklist:
   - mask
   category: грудь
+  coefficient: 1.4
   lactationStimulationFlag: true
 
 - type: interaction
@@ -183,7 +184,9 @@
   name: Сцежить молоко
   icon: _Sunrise/Interface/ERP/boobs_suck.png
   emotes:
-  - DO THIS LATER
+  - %target прикасается к своей груди ласково сжимая соски
+  - %target прикасается к соскам немного грубо сжимая их
+  - %target ласкает свои соски
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
@@ -199,33 +202,9 @@
   - mask
   category: грудь
   lactationStimulationFlag: true
+  amountLactate: 7
   useSelf: true
   coefficient: 1
-
-#- type: interaction
-#  id: BoobsSuckSelf
-#  name: Пососать соски
-#  icon: _Sunrise/Interface/ERP/boobs_suck.png
-#  emotes:
-#  - нежно сосёт соски %target
-#  - жадно сосет грудь %target
-#  - нежно покусывает соски %target
-#  - игриво покусывает соски %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex: Unsexed
-#  targetSex: Female
-#  erp: true
-#  lovePercentTarget: 5
-#  targetTagBlacklist:
-#  - bra
-#  - jumpsuit
-#  - outerClothing
-#  userTagBlacklist:
-#  - mask
-#  category: грудь
-#  lactationStimulationFlag: true
 
 - type: interaction
   id: BoobsFuck

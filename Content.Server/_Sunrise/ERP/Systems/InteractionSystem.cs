@@ -21,6 +21,8 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
+using Content.Shared.Humanoid.Prototypes;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -43,6 +45,21 @@ namespace Content.Server._Sunrise.ERP.Systems
             "drink",
             "beaker",
         };
+
+        private static Dictionary<string, string?> MilkConvertation =
+            new Dictionary<string, string?>()
+            {
+                {"Human", DefaultLactationSolution},
+                {"Vox", DefaultLactationSolution},
+                {"Reptilian", DefaultLactationSolution},
+                {"Slime", "Slime"},
+                {"Dwarf", DefaultLactationSolution},
+                {"Diona", "Sap"},
+                {"Demon", DefaultLactationSolution},
+                {"Tajaran", DefaultLactationSolution},
+                {"Felinid", DefaultLactationSolution},
+                {"Vulpkanin", DefaultLactationSolution},
+            };
 
         public override void Initialize()
         {
@@ -229,65 +246,85 @@ namespace Content.Server._Sunrise.ERP.Systems
             // Process Lactation
             if (prototype.LactationStimulationFlag)
             {
-                if (Target == User)
+                HandleLactation(ref User, ref Target, ref prototype);
+            }
+        }
+
+        public void HandleLactation(ref EntityUid userUid, ref EntityUid targetUid, ref InteractionPrototype prototype)
+        {
+            if (!TryComp<HumanoidAppearanceComponent>(targetUid, out var humanoid))
+                return;
+
+            if (!GetMilkSolution((targetUid, humanoid), out var speciesMilk))
+                return;
+            var targetPrototype = speciesMilk;
+
+            if (targetUid == userUid)
+            {
+                var targetXform = Transform(targetUid);
+                // Проверка чтоб на боргов не влияли ограничения на лактацию
+                if (TryComp<SolutionContainerManagerComponent>(targetUid, out var solutionComponent) &&
+                    _solutionContainerSystem.TryGetSolution((targetUid, solutionComponent),
+                        DefaultBloodSolutionName,
+                        out var containerSolution) &&
+                    TryComp<BloodstreamComponent>(targetUid, out var bloodstreamComponent))
                 {
-                    var targetXform = Transform(Target);
-                    // Проверка чтоб на боргов не влияли ограничения на лактацию
-                    if (TryComp<SolutionContainerManagerComponent>(Target, out var solutionComponent) &&
-                        _solutionContainerSystem.TryGetSolution((Target, solutionComponent),
-                            DefaultBloodSolutionName,
-                            out var containerSolution) &&
-                        TryComp<BloodstreamComponent>(Target, out var bloodstreamComponent))
-                    {
-                        _solutionContainerSystem.SplitSolution(containerSolution.Value,
-                            prototype.Coefficient * prototype.AmountLactate);
-                    }
+                    _solutionContainerSystem.SplitSolution(containerSolution.Value,
+                        prototype.Coefficient * prototype.AmountLactate);
+                }
 
-                    var targetPrototype = DefaultLactationSolution;
-                    if (prototype.LactationSolution != null)
-                        targetPrototype = prototype.LactationSolution;
-
-                    // Это условие проверяет что - у цели есть руки, у цели в руках есть что-то, это что-то является допустимым контейнером
-                    if (TryComp<HandsComponent>(Target, out var handsComponent) &&
-                        handsComponent.ActiveHandEntity != null &&
-                        TryComp<SolutionContainerManagerComponent>(handsComponent.ActiveHandEntity,
-                            out var containerSolutionManager) &&
-                        CheckContaining((handsComponent.ActiveHandEntity.Value, containerSolutionManager),
-                            AcceptableSolutions,
-                            out var containerSolutionEntity))
-                    {
-                        _solutionContainerSystem.TryAddReagent(containerSolutionEntity.Value,
-                            DefaultLactationSolution,
-                            prototype.AmountLactate);
-                    }
-                    else
-                    {
-                        _puddle.TrySplashSpillAt(Target,
-                            targetXform.Coordinates,
-                            new Solution(targetPrototype, prototype.AmountLactate, _bloodstream.GetEntityBloodData(Target)),
-                            out _);
-                    }
+                // Это условие проверяет что - у цели есть руки, у цели в руках есть что-то, это что-то является допустимым контейнером
+                if (TryComp<HandsComponent>(targetUid, out var handsComponent) &&
+                    handsComponent.ActiveHandEntity != null &&
+                    TryComp<SolutionContainerManagerComponent>(handsComponent.ActiveHandEntity,
+                        out var containerSolutionManager) &&
+                    CheckContaining((handsComponent.ActiveHandEntity.Value, containerSolutionManager),
+                        AcceptableSolutions,
+                        out var containerSolutionEntity))
+                {
+                    _solutionContainerSystem.TryAddReagent(containerSolutionEntity.Value,
+                        targetPrototype,
+                        prototype.AmountLactate);
                 }
                 else
                 {
-                    if (TryComp<SolutionContainerManagerComponent>(User, out var userSolutionComponent) &&
-                        _solutionContainerSystem.TryGetSolution((User, userSolutionComponent),
-                            DefaultChemicalsSolutionName,
-                            out var userSolution) &&
-                        TryComp<SolutionContainerManagerComponent>(Target, out var targetSolutionComponent) &&
-                        _solutionContainerSystem.TryGetSolution((Target, targetSolutionComponent),
-                            DefaultBloodSolutionName,
-                            out var targetSolution) &&
-                        TryComp<BloodstreamComponent>(Target, out var bloodstreamComponent))
-                    {
-                        _solutionContainerSystem.SplitSolution(targetSolution.Value,
-                            prototype.Coefficient * prototype.AmountLactate);
-                        _solutionContainerSystem.TryAddReagent(userSolution.Value,
-                            DefaultLactationSolution,
-                            prototype.AmountLactate);
-                    }
+                    _puddle.TrySplashSpillAt(targetUid,
+                        targetXform.Coordinates,
+                        new Solution(targetPrototype, prototype.AmountLactate, _bloodstream.GetEntityBloodData(targetUid)),
+                        out _);
                 }
             }
+            else
+            {
+                if (TryComp<SolutionContainerManagerComponent>(userUid, out var userSolutionComponent) &&
+                    _solutionContainerSystem.TryGetSolution((userUid, userSolutionComponent),
+                        DefaultChemicalsSolutionName,
+                        out var userSolution) &&
+                    TryComp<SolutionContainerManagerComponent>(targetUid, out var targetSolutionComponent) &&
+                    _solutionContainerSystem.TryGetSolution((targetUid, targetSolutionComponent),
+                        DefaultBloodSolutionName,
+                        out var targetSolution) &&
+                    TryComp<BloodstreamComponent>(targetUid, out var bloodstreamComponent))
+                {
+                    _solutionContainerSystem.SplitSolution(targetSolution.Value,
+                        prototype.Coefficient * prototype.AmountLactate);
+                    _solutionContainerSystem.TryAddReagent(userSolution.Value,
+                        targetPrototype,
+                        prototype.AmountLactate);
+                }
+            }
+        }
+
+        private bool GetMilkSolution(Entity<HumanoidAppearanceComponent> entity,
+            [NotNullWhen(true)] out string? speciesMilk)
+        {
+            speciesMilk = null;
+            if (MilkConvertation.TryGetValue(entity.Comp.Species, out var milkString) && milkString != null)
+            {
+                speciesMilk = milkString;
+                return true;
+            }
+            return false;
         }
 
         // Вспомогательная функция. Оффы сделали что стаканы и мензурки имеют разные названия Solution..
