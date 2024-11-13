@@ -1,4 +1,6 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
+
+using Content.Shared.FixedPoint;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Robust.Shared.Audio;
@@ -47,4 +49,9 @@ public sealed partial class InteractionPrototype : IPrototype
     [DataField] public HashSet<string> TargetTagWhitelist = new();
     [DataField] public HashSet<string> TargetTagBlacklist = new();
     [DataField] public float TargetMoanChance = 0;
+
+    // Для лактации
+    [DataField] public bool LactationStimulationFlag = false;
+    [DataField] public FixedPoint2 AmountLactate = 5;
+    [DataField] public float Coefficient = 0.2f;
 }
