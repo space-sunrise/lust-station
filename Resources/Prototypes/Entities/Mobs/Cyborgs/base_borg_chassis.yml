@@ -343,14 +343,15 @@
   save: false
   abstract: true
   components:
-  - type: Sprite
-    sprite: _Lust/Mobs/Silicon/chassis.rsi
-  - type: Appearance
-  - type: RestAbility
-    disableableStringLayers:
-    - light
-    disableableEnumLayers:
-    - enum.BorgVisualLayers.Light
+  # TODO: Я в душе не ебу как чинить этих ваших боргов для ебли после ПРа ПЖБ, так что ебитесь с этим сами.
+  #- type: Sprite
+  #  sprite: _Lust/Mobs/Silicon/chassis.rsi
+  #- type: Appearance
+  #- type: RestAbility
+  #  disableableStringLayers:
+  #  - light
+  #  disableableEnumLayers:
+  #  - enum.BorgVisualLayers.Light
   - type: TTS
     voice: TemplarAssasin
   - type: FootstepModifier
