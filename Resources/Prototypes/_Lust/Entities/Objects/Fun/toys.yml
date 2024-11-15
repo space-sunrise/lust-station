@@ -28,11 +28,11 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushie-anna
-  - type: Interaction
-    erp: true
   - type: EmoteOnUse
     values:
-    - emote-moan
+    - Moan
+  - type: Vocal
+  - type: Emoting
   - type: EmitSoundOnUse
     sound:
       collection: FemaleMoan

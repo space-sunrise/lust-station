@@ -28,8 +28,7 @@ public sealed class EmoteOnUseSystem : EntitySystem
         if (!TryComp<UseDelayComponent>(uid, out var useDelayComponent) || _useDelay.IsDelayed((uid, useDelayComponent)))
             return;
 
-        var emote = Loc.GetString(_random.Pick(component.Values));
-        _chat.TryEmoteWithChat(uid, emote);
+        _chat.TryEmoteWithChat(uid, _random.Pick(component.Values));
         _useDelay.TryResetDelay((uid, useDelayComponent));
     }
 }
