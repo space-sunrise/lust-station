@@ -10,7 +10,9 @@
     - state: plushie-aname-unshaded
       shader: unshaded
   - type: SpeakOnUse
-    pack:
+    pack: LoviAptechku
+  - type: TTS
+    voice: Triss
 
 - type: localizedDataset
   id: LoviAptechku
