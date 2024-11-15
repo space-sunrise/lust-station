@@ -1,0 +1,38 @@
+﻿- type: entity
+  id: PlushieAnameGermanikum
+  parent: BasePlushie
+  name: Plush Aname Germanikum
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    layers:
+    - state: plushie-aname
+    - state: plushie-aname-unshaded
+      shader: unshaded
+  - type: SpeakOnUse
+    pack: LoviAptechku
+  - type: TTS
+    voice: Triss
+
+- type: localizedDataset
+  id: LoviAptechku
+  values:
+    prefix: lovi-aptechku-
+    count: 1
+
+- type: entity
+  id: PlushieAnnaLisechanskaya
+  parent: BasePlushie
+  name: Plush Anna Lisechanskaya
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie-anna
+  - type: EmoteOnUse
+    values:
+    - Moan
+  - type: Vocal
+  - type: Emoting
+  - type: EmitSoundOnUse
+    sound:
+      collection: FemaleMoan
