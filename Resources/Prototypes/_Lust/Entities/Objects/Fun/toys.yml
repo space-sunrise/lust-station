@@ -30,3 +30,9 @@
     state: plushie-anna
   - type: Interaction
     erp: true
+  - type: EmoteOnUse
+    values:
+    - emote-moan
+  - type: EmitSoundOnUse
+    sound:
+      collection: FemaleMoan
