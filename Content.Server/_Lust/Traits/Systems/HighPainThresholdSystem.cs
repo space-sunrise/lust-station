@@ -11,14 +11,25 @@ public sealed class HighPainThresholdSystem : EntitySystem
     /// <inheritdoc/>
     public override void Initialize()
     {
-        SubscribeLocalEvent<HighPainThresholdTraitComponent, ComponentInit>(OnInit);
+        SubscribeLocalEvent<HighPainThresholdTraitComponent, ComponentInit>(OhHighPainInit);
+        SubscribeLocalEvent<FragilityTraitComponent, ComponentInit>(OnFragilityInit);
     }
 
-    private void OnInit(EntityUid uid, HighPainThresholdTraitComponent component, ComponentInit args)
+    private void OhHighPainInit(EntityUid uid, HighPainThresholdTraitComponent component, ComponentInit args)
     {
         if (!TryComp(uid, out MobThresholdsComponent? thresholdsComponent))
             return;
         var critDmg = _threshold.GetThresholdForState(uid, MobState.Critical, thresholdsComponent);
         _threshold.SetMobStateThreshold(uid, critDmg - component.Decrease, MobState.Critical, thresholdsComponent);
+    }
+
+    private void OnFragilityInit(EntityUid uid, FragilityTraitComponent component, ComponentInit args)
+    {
+        if (!TryComp(uid, out MobThresholdsComponent? thresholdsComponent))
+            return;
+        var critDmg = _threshold.GetThresholdForState(uid, MobState.Critical, thresholdsComponent);
+        var deadDmg = _threshold.GetThresholdForState(uid, MobState.Dead, thresholdsComponent);
+        _threshold.SetMobStateThreshold(uid, critDmg - component.Decrease, MobState.Critical, thresholdsComponent);
+        _threshold.SetMobStateThreshold(uid, deadDmg - component.Decrease, MobState.Dead, thresholdsComponent);
     }
 }
