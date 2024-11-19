@@ -1,0 +1,103 @@
+﻿- type: trait
+  id: HighPainThreshold
+  name: trait-highpainthreshold-name
+  description: trait-highpainthreshold-desc
+  category: Quirks
+  components:
+  - type: HighPainThresholdTrait
+
+- type: trait
+  id: Fragility
+  name: trait-fragility-name
+  description: trait-fragility-desc
+  category: Quirks
+  components:
+  - type: FragilityTrait
+
+- type: trait
+  id: LowStamina
+  name: trait-lowStamina-name
+  description: trait-lowStamina-desc
+  category: Quirks
+  components:
+  - type: LowStaminaTrait
+
+- type: trait
+  id: Astma
+  name: trait-astma-name
+  description: trait-astma-desc
+  category: Quirks
+  components:
+  - type: AstmaTrait
+
+- type: trait
+  id: Coughing
+  name: trait-coughing-name
+  description: trait-coughing-desc
+  category: Quirks
+  components:
+  - type: CoughingTrait
+
+- type: trait
+  id: Clumsiness
+  name: trait-clumsiness-name
+  description: trait-clumsiness-desc
+  category: Quirks
+  components:
+  - type: Clumsy
+
+- type: trait
+  id: Hardweightdrunk
+  name: trait-hardweightdrunk-name
+  description: trait-hardweightdrunk-desc
+  category: Quirks
+  components:
+  - type: HardWeightDrunkTrait
+
+- type: trait
+  id: Encoded
+  name: trait-encoded-name
+  description: trait-encoded-desc
+  category: Quirks
+  components:
+  - type: EncodedTrait
+
+- type: trait
+  id: Darklook
+  name: trait-darklook-name
+  description: trait-darklook-desc
+  category: Quirks
+  components:
+  - type: DarkLookTrait
+
+- type: trait
+  id: Implanted
+  name: trait-implanted-name
+  description: trait-implanted-desc
+  category: Quirks
+  components:
+  - type: ImplantedTrait
+
+- type: trait
+  id: Fonegosia
+  name: trait-fonegosia-name
+  description: trait-fonegosia-desc
+  category: Quirks
+  components:
+  - type: FonagosiaTrait
+
+- type: trait
+  id: Prozopagosia
+  name: trait-prozopagosia-name
+  description: trait-prozopagosia-desc
+  category: Quirks
+  components:
+  - type: ProzopagosiaTrait
+
+- type: trait
+  id: Gemofilia
+  name: trait-gemofilia-name
+  description: trait-gemofilia-desc
+  category: Quirks
+  components:
+  - type: GemofiliaTrait
