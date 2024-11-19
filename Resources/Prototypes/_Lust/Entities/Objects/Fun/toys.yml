@@ -36,3 +36,5 @@
   - type: EmitSoundOnUse
     sound:
       collection: FemaleMoan
+  - type: UseDelay
+    delay: 10
