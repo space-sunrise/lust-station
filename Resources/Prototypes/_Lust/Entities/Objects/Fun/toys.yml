@@ -36,3 +36,30 @@
   - type: EmitSoundOnUse
     sound:
       collection: FemaleMoan
+
+- type: entity
+  id: PlushieShiroSolo
+  parent: BasePlushie
+  name: Plush Shiro fon Volph
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shiro-solo
+
+- type: entity
+  id: PlushieShiroHeart
+  parent: BasePlushie
+  name: Plush Shiro fon Volph with heart
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shiro-heart
+
+- type: entity
+  id: PlushieIv
+  parent: BasePlushie
+  name: Iv Potrokhova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: iv-heart
