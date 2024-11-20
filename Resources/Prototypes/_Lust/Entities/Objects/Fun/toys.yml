@@ -36,6 +36,8 @@
   - type: EmitSoundOnUse
     sound:
       collection: FemaleMoan
+  - type: UseDelay
+    delay: 10
 
 - type: entity
   id: PlushieShiroSolo

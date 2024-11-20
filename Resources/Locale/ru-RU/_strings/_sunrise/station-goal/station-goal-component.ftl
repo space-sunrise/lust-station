@@ -445,11 +445,11 @@ station-goal-farm =
     ⠀=============================================
     ⠀                            [italic]Место для печатей[/italic]
 station-goal-training-crew =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -475,11 +475,11 @@ station-goal-training-crew =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-creation-of-furs =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -501,11 +501,11 @@ station-goal-creation-of-furs =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-saboteurs =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -530,11 +530,11 @@ station-goal-saboteurs =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-reconnaissance-in-force =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -555,11 +555,11 @@ station-goal-reconnaissance-in-force =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-reports =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -585,11 +585,11 @@ station-goal-reports =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-intelligent-weapons =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -615,11 +615,11 @@ station-goal-intelligent-weapons =
     ⠀                            [italic]Место для печатей[/italic]
 
 station-goal-medical-replenishment =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -666,11 +666,11 @@ station-goal-medical-replenishment =
      =============================================
     ⠀                            [italic]Место для печатей[/italic]
 station-goal-anomaly =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -693,11 +693,11 @@ station-goal-anomaly =
     ⠀=============================================
     ⠀                            [italic]Место для печатей[/italic]
 station-goal-testing-sb =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -721,11 +721,11 @@ station-goal-testing-sb =
     ⠀=============================================
     ⠀                            [italic]Место для печатей[/italic]
 station-goal-cyborgs =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
@@ -746,11 +746,11 @@ station-goal-cyborgs =
     ⠀=============================================
     ⠀                            [italic]Место для печатей[/italic]
 station-goal-delegates =
-    ⠀[color=#1b487e]███░███░░░░██░░░░[/color]
-    ⠀[color=#1b487e]░██░████░░░██░░░░[/color]      [head=3]Документ[/head]
-    ⠀[color=#1b487e]░░█░██░██░░██░█░░[/color]              [head=3]Nanotrasen[/head]
-    ⠀[color=#1b487e]░░░░██░░██░██░██░[/color] [bold]     ОЦК-КОМ[/bold]
-    ⠀[color=#1b487e]░░░░██░░░████░███[/color]
+    ⠀[color=#800080]░░░░░░█████░░░███[/color]
+   ⠀[color=#800080]░░░░██░░░░░░░░░██[/color]      [head=3]Документ[/head]
+   ⠀[color=#800080]░░░░██░░░░░██░░░█[/color]              [head=3]Qillu[/head]
+   ⠀[color=#800080]█░░░░░░░░░░██░░░░[/color] [bold]     ЦК-КОМ[/bold]
+   ⠀[color=#800080]██░░░░█████░░░░░░[/color]
     ⠀=============================================
     ⠀            ЦЕЛЬ СМЕНЫ { $station }
     ⠀=============================================
