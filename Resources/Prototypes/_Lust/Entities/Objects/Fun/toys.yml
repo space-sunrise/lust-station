@@ -65,3 +65,24 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: iv-heart
+
+- type: localizedDataset
+  id: TailerMurlikinPhrases
+  values:
+    prefix: tailer-murlikin-
+    count: 3
+
+- type: entity
+  id: PlushieTailerMurlikin
+  parent: BasePlushie
+  name: Plush Tailer Murlikin
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: tailer-murlikin
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: ElderLyonsFL3
+  - type: UseDelay
+    delay: 3
