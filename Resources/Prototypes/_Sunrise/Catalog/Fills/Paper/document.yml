@@ -1,5 +1,5 @@
 - type: entity
-  parent: Paper
+  parent: PaperOffice
   id: PrintedDocument
   abstract: true
   description: Bureaucratic unit. A document printed on a printer.
