@@ -140,3 +140,15 @@
   id: 162
   time: '2024-11-21T17:16:25.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/84
+- author: Euphoriya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0441\u043E\u043B\
+      \u043D\u0446\u0435\u0437\u0430\u0449\u0438\u0442\u043D\u044B\u0435 \u043E\u0447\
+      \u043A\u0438 \u0441 \u0432\u0441\u0442\u0440\u043E\u0435\u043D\u043D\u044B\u043C\
+      \ NVG [\u041F\u041D\u0412] \u0432 \u0430\u043F\u043B\u0438\u043D\u043A \u0410\
+      \u0433\u0435\u043D\u0442\u043E\u0432 \u0421\u0438\u043D\u0434\u0438\u043A\u0430\
+      \u0442\u0430."
+    type: Add
+  id: 163
+  time: '2024-11-21T19:22:35.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/85
