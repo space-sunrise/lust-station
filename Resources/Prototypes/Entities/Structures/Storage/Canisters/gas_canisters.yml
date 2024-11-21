@@ -106,6 +106,16 @@
       locked: false
 
 - type: entity
+  id: StorageCanisterBase
+  parent: StorageCanister
+  components:
+  - type: Construction
+    graph: StorageCanister
+    node: done
+    containers:
+    - entity_storage
+
+- type: entity
   parent: GasCanister
   id: StorageCanister
   name: storage canister
