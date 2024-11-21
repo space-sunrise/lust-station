@@ -122,3 +122,21 @@
   id: 160
   time: '2024-11-21T17:15:18.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/76
+- author: pacable
+  changes:
+  - message: "\u041A\u043E\u0440\u043E\u043B\u044C \u043A\u0440\u044B\u0441 \u0431\
+      \u044B\u043B \u0438\u0437\u043C\u0435\u043D\u0435\u043D \u043D\u0430 \u043A\u043E\
+      \u0440\u043E\u043B\u0435\u0432\u0443 \u043A\u0440\u044B\u0441."
+    type: Tweak
+  id: 161
+  time: '2024-11-21T17:17:01.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/77
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0422\u0430\u0439\u043B\u0435\u0440 \u041C\u0443\u0440\
+      \u043B\u044B\u043A\u0438\u043D."
+    type: Add
+  id: 162
+  time: '2024-11-21T17:16:25.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/84
