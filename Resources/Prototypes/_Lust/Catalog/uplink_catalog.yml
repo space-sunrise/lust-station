@@ -1,0 +1,12 @@
+﻿- type: listing
+  id: UplinkClothingGlassesNVG
+  name: uplink-clothing-glasses-nvg-name
+  description: uplink-clothing-glasses-nvg-desc
+  productEntity: ClothingEyesGlassesNVG
+  discountCategory: veryRareDiscounts
+  iscountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 5
+  categories:
+  - UplinkWearables
