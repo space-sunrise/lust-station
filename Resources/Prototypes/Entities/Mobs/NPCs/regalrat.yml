@@ -22,7 +22,7 @@
     - SimpleHostile
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: Mobs/Animals/regalrat.rsi
+    sprite: _Lust/Mobs/Animals/regalrat.rsi # Sunrise-Lust edit
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: regalrat
