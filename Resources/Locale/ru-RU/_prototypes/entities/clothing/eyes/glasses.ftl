@@ -30,5 +30,3 @@ ent-ClothingEyesGlassesChemical = очки химического анализа
     .desc = Очки, позволяющие сканировать химический состав раствора.
 ent-ClothingEyesVisorNinja = очки ниндзя
     .desc = Усовершенствованные очки, защищающие глаза ниндзя от вспышек света.
-ent-ClothingEyesGlassesNVG = { ent-ClothingEyesGlassesSunglasses }
-    .desc = { ent-ClothingEyesGlassesSunglasses.desc }
