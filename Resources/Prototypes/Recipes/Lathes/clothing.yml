@@ -177,18 +177,6 @@
   id: ClothingUniformJumpskirtChaplain
   result: ClothingUniformJumpskirtChaplain
 
-## Adj
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpsuitAdjutant
-  result: ClothingUniformJumpsuitAdjutant
-
-- type: latheRecipe
-  parent: BaseCommandJumpsuitRecipe
-  id: ClothingUniformJumpskirtAdjutant
-  result: ClothingUniformJumpskirtAdjutant
-
 ## Chef
 
 - type: latheRecipe
@@ -638,11 +626,6 @@
   id: ClothingOuterWinterRD
   result: ClothingOuterWinterRD
 
-- type: latheRecipe
-  parent: BaseCommandCoatRecipe
-  id: ClothingOuterCoatAdjutant
-  result: ClothingOuterCoatAdjutant
-
 # Winter coats
 - type: latheRecipe
   parent: BaseCoatRecipe
@@ -824,21 +807,6 @@
   parent: BaseCommandHatRecipe
   id: ClothingHeadHatBeretCmo
   result: ClothingHeadHatBeretCmo
-
-- type: latheRecipe
-  parent: BaseCommandHatRecipe
-  id: ClothingHeadHatCapAdjutant
-  result: ClothingHeadHatCapAdjutant
-
-- type: latheRecipe
-  parent: BaseCommandHatRecipe
-  id: ClothingHeadHatBeretAdjutant
-  result: ClothingHeadHatBeretAdjutant
-
-- type: latheRecipe
-  parent: BaseCommandHatRecipe
-  id: ClothingHeadHatGarrisonCapAdjutant
-  result: ClothingHeadHatGarrisonCapAdjutant
 
 # Non-command hats
 
