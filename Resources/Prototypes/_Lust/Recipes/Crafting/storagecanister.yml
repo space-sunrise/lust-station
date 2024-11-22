@@ -5,6 +5,6 @@
   startNode: start
   targetNode: done
   category: construction-category-storage
-  description: A tall steel box that cannot be locked.
+  description: A canister that can contain any type of gas. It can be attached to connector ports using a wrench.
   icon: { sprite: Structures/Storage/canister.rsi, state: yellow }
   objectType: Structure

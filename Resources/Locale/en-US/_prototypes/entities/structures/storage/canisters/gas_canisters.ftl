@@ -1,9 +1,5 @@
 ent-GasCanister = gas canister
     .desc = A canister that can contain any type of gas. It can be attached to connector ports using a wrench.
-ent-StorageCanister = storage canister
-    .desc = { ent-GasCanister.desc }
-ent-StorageCanisterBase = { ent-storagecanister }
-    .desc = { ent-GasCanister.desc }
 ent-AirCanister = air canister
     .desc = A canister that can contain any type of gas. This one is supposed to contain air mixture. It can be attached to connector ports using a wrench.
 ent-OxygenCanister = oxygen canister
