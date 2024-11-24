@@ -95,3 +95,12 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: niko
+
+- type: entity
+  id: PlushieMira
+  parent: BasePlushie
+  name: Plush mira
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: mira
