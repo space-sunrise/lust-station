@@ -104,3 +104,14 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: mira
+
+- type: entity
+  id: PlushieNeiiria
+  parent:
+  - EmitMeow
+  - BasePlushie
+  name: Plush Neiiria
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: neiiria
