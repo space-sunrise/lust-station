@@ -86,3 +86,21 @@
     voice: ElderLyonsFL3
   - type: UseDelay
     delay: 3
+
+- type: entity
+  id: PlushieNiko
+  parent: BasePlushie
+  name: Plush niko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: niko
+
+- type: entity
+  id: PlushieMira
+  parent: BasePlushie
+  name: Plush mira
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: mira
