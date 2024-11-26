@@ -413,7 +413,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             {
                 Priority = 9,
                 Text = "Взаимодействовать с...",
-                Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/heart.png")),
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Lust/Interface/ERP/heart.png")),
                 Act = () =>
                 {
                     if (!args.CanInteract || !args.CanAccess) return;

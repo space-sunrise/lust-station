@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: FeetLick1
   name: Вылизать ножки
-  icon: _Sunrise/Interface/ERP/legs_feet_lick.png
+  icon: _Lust/Interface/ERP/legs_feet_lick.png
   emotes:
   - лижет ножки %target
   - начинает лизать ножки %target
@@ -9,7 +9,7 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -20,7 +20,7 @@
 - type: interaction
   id: FeetMouth
   name: Прислонить ножку ко рту
-  icon: _Sunrise/Interface/ERP/feet_mouth.png
+  icon: _Lust/Interface/ERP/feet_mouth.png
   emotes:
   - снимает обувь с одной ступни и тычет ножкой в лицо %target
   - снимает обувь с одной ступни и прислоняет ножку ко рту %target
@@ -28,7 +28,7 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -39,7 +39,7 @@
 - type: interaction
   id: FeetLick2
   name: Лизать ступни
-  icon: _Sunrise/Interface/ERP/legs_feet_lick.png
+  icon: _Lust/Interface/ERP/legs_feet_lick.png
   emotes:
   - ласкает язычком пальчики на ногах %target
   - проходит по ступням %target своим язычком
@@ -57,7 +57,7 @@
 - type: interaction
   id: FeetJob
   name: Погладить член ступней
-  icon: _Sunrise/Interface/ERP/cock_footjob.png
+  icon: _Lust/Interface/ERP/cock_footjob.png
   emotes:
   - гладит ступней член %target
   - ласкает ступней член %target
@@ -76,7 +76,7 @@
 - type: interaction
   id: FeetShoesLick
   name: Лизать обувь
-  icon: _Sunrise/Interface/ERP/feet_shoes_lick.png
+  icon: _Lust/Interface/ERP/feet_shoes_lick.png
   emotes:
   - старательно вылизывает языком обувь %target
   - тщательно проходит языком по подошве обуви %target

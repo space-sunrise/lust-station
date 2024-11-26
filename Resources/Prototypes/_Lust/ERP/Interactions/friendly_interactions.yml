@@ -3,7 +3,7 @@
 - type: interaction
   id: FriendlyHandshake
   name: Пожать руку
-  icon: _Sunrise/Interface/ERP/hand_shake.png
+  icon: _Lust/Interface/ERP/hand_shake.png
   emotes:
   - жмёт руку %target
   userSex: Unsexed
@@ -14,11 +14,11 @@
 - type: interaction
   id: FriendlyPatShoulder
   name: Похлопать по плечу
-  icon: _Sunrise/Interface/ERP/pat_shoulder.png
+  icon: _Lust/Interface/ERP/pat_shoulder.png
   emotes:
   - хлопает по плечу %target
   #  sounds:
-  #  - path: /Audio/_Sunrise/ERP/kiss1.ogg НУЖЕН ЗВУК
+  #  - path: /Audio/_Lust/ERP/kiss1.ogg НУЖЕН ЗВУК
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -27,7 +27,7 @@
 - type: interaction
   id: FriendlyHug
   name: Обнять
-  icon: _Sunrise/Interface/ERP/friendly.png
+  icon: _Lust/Interface/ERP/friendly.png
   emotes:
   - обнимает %target
   - крепко обнимает %target
@@ -42,11 +42,11 @@
 - type: interaction
   id: FriendlyHighfive
   name: Дать пять
-  icon: _Sunrise/Interface/ERP/high_five.png
+  icon: _Lust/Interface/ERP/high_five.png
   emotes:
   - даёт пять %target
   #  sounds:
-  #  - path: /Audio/_Sunrise/ERP/SOME.OGG НУЖЕН ЗВУК
+  #  - path: /Audio/_Lust/ERP/SOME.OGG НУЖЕН ЗВУК
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -55,16 +55,16 @@
 - type: interaction
   id: FriendlyKissHand
   name: Поцеловать руку
-  icon: _Sunrise/Interface/ERP/kiss_hand.png
+  icon: _Lust/Interface/ERP/kiss_hand.png
   emotes:
   - берет %target за руку и целует в кисть
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -73,7 +73,7 @@
 - type: interaction
   id: FriendlyPatHead
   name: Погладить по голове
-  icon: _Sunrise/Interface/ERP/pet_head.png
+  icon: _Lust/Interface/ERP/pet_head.png
   emotes:
   - гладит %target по голове
   userSex: Unsexed
@@ -84,7 +84,7 @@
 - type: interaction
   id: FriendlyShoulderMassage
   name: Помассировать плечи
-  icon: _Sunrise/Interface/ERP/shoulder_massage.png
+  icon: _Lust/Interface/ERP/shoulder_massage.png
   emotes:
   - массирует плечи %target
   - делает массаж плечей %target
@@ -97,7 +97,7 @@
 - type: interaction
   id: FriendlyFelinidRubsCheek
   name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/face_rub_cat.png
+  icon: _Lust/Interface/ERP/face_rub_cat.png
   emotes:
   - нежно трется щекой об %target
   - ласково трется щекой об %target
@@ -112,7 +112,7 @@
 - type: interaction
   id: FriendlyHeadTailpats
   name: Погладить хвостиком
-  icon: _Sunrise/Interface/ERP/pat_tail.png
+  icon: _Lust/Interface/ERP/pat_tail.png
   emotes:
   - нежно гладит хвостиком голову %target
   - ласково гладит хвостиком по спине %target
@@ -132,7 +132,7 @@
 - type: interaction
   id: FriendlyTailPull
   name: Дернуть за хвост
-  icon: _Sunrise/Interface/ERP/friendly_tail_pull.png
+  icon: _Lust/Interface/ERP/friendly_tail_pull.png
   emotes:
   - резко дергает за хвост %target
   - грубо дергает за хвост %target
@@ -153,7 +153,7 @@
 - type: interaction
   id: FriendlyBlowslap
   name: Дать пощечину
-  icon: _Sunrise/Interface/ERP/blow_slap.png
+  icon: _Lust/Interface/ERP/blow_slap.png
   emotes:
   - резко бьет ладонью по щеке %target
   - сильно шлепает %target по лицу ладонью
@@ -174,7 +174,7 @@
 - type: interaction
   id: FriendlyNoseBoop
   name: Тронуть кончик носа пальцем
-  icon: _Sunrise/Interface/ERP/friendly_nose_boop.png
+  icon: _Lust/Interface/ERP/friendly_nose_boop.png
   emotes:
   - прикасается пальцем к носу %target, буп!
   userSex: Unsexed
@@ -194,16 +194,16 @@
 - type: interaction
   id: FriendlyFlyingKiss
   name: Воздушный поцелуй
-  icon: _Sunrise/Interface/ERP/friendly_flying_kiss.png
+  icon: _Lust/Interface/ERP/friendly_flying_kiss.png
   emotes:
   - посылает воздушный поцелуй %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -212,7 +212,7 @@
 - type: interaction
   id: FriendlyFingerTap
   name: Потрогать спину пальцем
-  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png
+  icon: _Lust/Interface/ERP/friendly_finger_tap.png
   emotes:
   - трогает пальцем спину %target
   userSex: Unsexed
@@ -223,7 +223,7 @@
 - type: interaction
   id: FriendlyJojoPosing
   name: Принять крутую позу #Сюда бы звук какой-нибудь подходящий
-  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png
+  icon: _Lust/Interface/ERP/friendly_finger_tap.png
   emotes:
   - принимает крутую позу
   - встает в крутую позу
@@ -237,7 +237,7 @@
 #- type: interaction
 #  id: FriendlyShowTongue
 #  name: Высунуть язык
-#  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png #КАРТИНКА
+#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА
 #  emotes:
 #  - открывает рот и высовывает язык на всю длину
 #  userSex: Unsexed
@@ -249,7 +249,7 @@
 #- type: interaction
 #  id: FriendlyVulpaBreath
 #  name: Дышать по-собачьи
-#  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png #КАРТИНКА ЗВУК
+#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА ЗВУК
 #  emotes:
 #  - быстро дышит с высунутым языком
 #  - быстро дышит с открытой пастью
@@ -264,7 +264,7 @@
 #- type: interaction
 #  id: FriendlyPushups
 #  name: Делать отжимания
-#  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png #КАРТИНКА звук Салютует
+#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА звук Салютует
 #  emotes:
 #  - отжимается от пола
 #  userSex: Unsexed
@@ -276,7 +276,7 @@
 #- type: interaction
 #  id: FriendlyGrimace
 #  name: Скорчить рожу
-#  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png #картинка звук
+#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #картинка звук
 #  emotes:
 #  - корчит рожу %target
 #  userSex: Unsexed
@@ -288,7 +288,7 @@
 #- type: interaction
 #  id: FriendlyGrimace
 #  name: Показать фак
-#  icon: _Sunrise/Interface/ERP/friendly_finger_tap.png #картинка звук из Салютует
+#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #картинка звук из Салютует
 #  emotes:
 #  - показывает фак %target
 #  - резко показывает фак %target
@@ -302,7 +302,7 @@
 - type: interaction
   id: FriendlyButtSlap
   name: Шлёпнуть себя по жопе
-  icon: _Sunrise/Interface/ERP/slap_butt.png
+  icon: _Lust/Interface/ERP/slap_butt.png
   emotes:
   - наотмашь шлепает себя по жопе
   - делает смачный шлепок по своей жопе
@@ -320,7 +320,7 @@
 - type: interaction
   id: FriendlyButtTwerk
   name: Тверкать задницей
-  icon: _Sunrise/Interface/ERP/slap_butt.png #КАРТИНКА
+  icon: _Lust/Interface/ERP/slap_butt.png #КАРТИНКА
   emotes:
   - быстро тверкает задницей
   - ритмично тверкает задницей
@@ -336,7 +336,7 @@
 # - type: interaction
 #  id: ALotOfKisses
 #  name: Одарить шквалом поцелуев
-#  icon: _Sunrise/Interface/ERP/friendly.png
+#  icon: _Lust/Interface/ERP/friendly.png
 #  emotes:
 #  - устраивает град поцелуев, ни оставляя сухого места на %target
 #  sounds:

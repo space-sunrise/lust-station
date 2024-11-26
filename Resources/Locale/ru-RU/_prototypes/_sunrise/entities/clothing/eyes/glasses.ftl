@@ -8,5 +8,3 @@ ent-ClothingEyesGlassesWelding = сварочные очки
     .desc = Это сварочные очки. Это небольшой предмет. Защищает глаза от сварщиков.
 ent-ClothingEyesSunGlassesHudSkill = солнечные очки умений
     .desc = Очки с встроенным HUD умений, показывающим историю трудовой деятельности ближайших членов экипажа Qillu.
-ent-ClothingEyesGlassesNVG = { ent-ClothingEyesGlassesSunglasses }
-    .desc = { ent-ClothingEyesGlassesSunglasses.desc }
