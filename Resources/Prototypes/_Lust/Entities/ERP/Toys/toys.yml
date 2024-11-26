@@ -1,5 +1,26 @@
 - type: entity
-  parent: BaseItem
+  abstract: true
+  id: BaseERPPlug
+  components:
+  - type: Clothing
+    slots:
+    - PLUG
+    equipDelay: 4
+    unequipDelay: 4
+
+- type: entity
+  abstract: true
+  id: BaseERPDildo
+  components:
+  - type: EmbeddableProjectile
+    minimumSpeed: 4
+    sound: /Audio/Weapons/pop.ogg
+  - type: ThrowingAngle
+    angle: 0
+  - type: LandAtCursor
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPNormalDildo
   name: normal dildo
   description: Just a based dildo, nothing else. Should I tell you where you can put it?
@@ -10,16 +31,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/dildo.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug]
   id: ERPNormalFleshlight
   name: normal fleshlight
   description: Just a based fleshlight, nothing else. Should I tell you what you can put inside?
@@ -30,16 +44,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fleshlight.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPDildoAvian
   name: avian dildo
   description: This dildo is modeled after avian anatomy. Ready to soar to new heights of pleasure?
@@ -50,16 +57,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_avian.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPDildoDragon
   name: dragon dildo
   description: This dildo has a dragon-inspired design. Are you ready to feel hot adventure?
@@ -70,16 +70,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_dragon.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPDildoEquine
   name: equine dildo
   description: Designed to resemble equine anatomy, this dildo offers a wild ride!
@@ -90,16 +83,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_equine.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPDildoKnot
   name: knot dildo
   description: This knot dildo is perfect for those looking for a snug fit. Get ready for a tight experience!
@@ -110,16 +96,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_knot.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug, BaseERPDildo]
   id: ERPDildoTentacle
   name: tentacle dildo
   description: With a tentacle design, this dildo is for those adventurous enough to embrace the unknown!
@@ -130,16 +109,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/d_tentacle.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug]
   id: ERPGreenFleshlight
   name: green fleshlight
   description: Just a green fleshlight, nothing else. Ready to explore the green zone?
@@ -150,16 +122,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_green.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug]
   id: ERPRedFleshlight
   name: red fleshlight
   description: Just a red fleshlight, nothing else. Are you ready for a hot experience?
@@ -170,16 +135,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_red.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug]
   id: ERPTealFleshlight
   name: teal fleshlight
   description: Just a teal fleshlight, nothing else. Dive into the depths of pleasure.
@@ -190,16 +148,9 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_teal.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
-  parent: BaseItem
+  parent: [BaseItem, BaseERPPlug]
   id: ERPYellowFleshlight
   name: yellow fleshlight
   description: Just a yellow fleshlight, nothing else. Brighten up your intimate moments.
@@ -210,13 +161,6 @@
   - type: Item
     size: Tiny
     sprite: _Lust/ERP/Toys/fl_yellow.rsi
-  # LUST STATION START
-  - type: Clothing
-    slots:
-    - PLUG
-    equipDelay: 4
-    unequipDelay: 4
-  # LUST STATION END
 
 - type: entity
   id: ERPShibariRope
