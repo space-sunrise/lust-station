@@ -120,7 +120,7 @@
     - MinorAntagonists
   - type: Grammar
     attributes:
-      gender: male
+      gender: female
   - type: Sharp
   # Sunrise-Lust start
   - type: TTS
