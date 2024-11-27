@@ -122,6 +122,10 @@
     attributes:
       gender: male
   - type: Sharp
+  # Sunrise-Lust start
+  - type: TTS
+    voice: Planya
+  # Sunrise-Lust end
 
 - type: entity
   id: MobRatKingBuff
