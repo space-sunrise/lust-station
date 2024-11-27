@@ -104,3 +104,39 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: mira
+
+- type: entity
+  id: EmitPurr
+  abstract: true
+  components:
+  - type: MeleeWeapon
+    soundHit:
+      collection: FelinidPurrs
+      params:
+        volume: 100
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnUse
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnActivate
+    sound:
+      collection: FelinidPurrs
+
+- type: entity
+  id: PlushieNeiiria
+  parent:
+  - EmitPurr
+  - BasePlushie
+  name: Plush Neiiria
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: neiiria
