@@ -120,8 +120,12 @@
     - MinorAntagonists
   - type: Grammar
     attributes:
-      gender: male
+      gender: female
   - type: Sharp
+  # Sunrise-Lust start
+  - type: TTS
+    voice: Planya
+  # Sunrise-Lust end
 
 - type: entity
   id: MobRatKingBuff
