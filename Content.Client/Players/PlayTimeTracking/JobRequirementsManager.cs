@@ -124,6 +124,17 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         }
         // Sunrise-End
 
+        // Sunrise-Lust start
+        if (profile != null)
+        {
+            if (job.SexBlacklist.Contains(profile.Sex))
+            {
+                reason = FormattedMessage.FromUnformatted(Loc.GetString("job-sex-restriction", ("name", Loc.GetString($"humanoid-profile-editor-sex-{profile.Sex.ToString().ToLower()}-text").ToLower())));
+                return false;
+            }
+        }
+        // Sunrise-Lust end
+
         return CheckRoleRequirements(job, profile, out reason);
     }
 

@@ -83,6 +83,9 @@
           StationAi: [ 1, 1 ]
           Borg: [ 22, 22 ]
           SecurityCombatBorg: [ 2, 2 ]
+          # Lust-start
+          ComMaid: [ 1, 1 ]
+          # Lust-end
       - type: StationGoal
         goals:
         - Shuttle

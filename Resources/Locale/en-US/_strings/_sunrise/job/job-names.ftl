@@ -28,6 +28,7 @@ job-name-clown-borg = клоун киборг
 job-name-barber = парикмахер
 job-name-pathologist = патологоанатом
 job-name-adjutant = адъютант
+job-name-commaid = горничная командования
 # Перевод трекеров времени
 JobCentCommOfficial = представитель Центком
 JobMagistrat = магистрат
