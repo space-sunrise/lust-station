@@ -140,3 +140,21 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: neiiria
+
+- type: entity
+  id: PlushieCharlieFleur
+  parent: BasePlushie
+  name: Plush Charlie
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: charlie_fleur
+
+- type: entity
+  id: PlushieSashaChernyh
+  parent: BasePlushie
+  name: Plush Sasha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sasha_chernyh
