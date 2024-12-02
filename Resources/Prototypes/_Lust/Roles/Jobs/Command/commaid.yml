@@ -4,8 +4,8 @@
   description: job-description-commaid
   playTimeTracker: JobComMaid
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Service
+    - !type:RoleTimeRequirement
+      role: JobJanitor
       time: 36000
     - !type:DepartmentTimeRequirement
       department: Command

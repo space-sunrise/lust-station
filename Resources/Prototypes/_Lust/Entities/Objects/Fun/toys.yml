@@ -162,7 +162,7 @@
 - type: localizedDataset
   id: KharshaPhrases
   values:
-    refix: kharsha-
+    prefix: kharsha-
     count: 1
 
 - type: entity
