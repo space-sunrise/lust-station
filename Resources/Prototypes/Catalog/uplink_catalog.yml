@@ -81,14 +81,6 @@
     Telecrystal: 8
   categories:
   - UplinkWeaponry
-#Sunrise-start
-  conditions:
-    - !type:StoreWhitelistCondition
-      blacklist:
-        tags:
-          - SyndieAgentUplink
-          - AssaultOpsUplink
-#Sunrise-end
 
 - type: listing
   id: UplinkEnergyDagger
@@ -244,9 +236,9 @@
   productEntity: ClothingBackpackDuffelSyndicateFilledGrenadeLauncher
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 15
+    Telecrystal: 8
   cost:
-    Telecrystal: 20
+    Telecrystal: 12
   categories:
   - UplinkWeaponry
 #Sunrise-start
@@ -1541,21 +1533,21 @@
         components:
           - SurplusBundle
 
-#- type: listing
-#  id: UplinkDeathAcidifierImplanter
-#  name: uplink-death-acidifier-implant-name
-#  description: uplink-death-acidifier-implant-desc
-#  icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
-#  productEntity: DeathAcidifierImplanter
-#  cost:
-#    Telecrystal: 4
-#  categories:
-#    - UplinkImplants
-#  conditions:
-#    - !type:StoreWhitelistCondition
-#      whitelist:
-#        tags:
-#          - NukeOpsUplink
+- type: listing
+  id: UplinkDeathAcidifierImplanter
+  name: uplink-death-acidifier-implant-name
+  description: uplink-death-acidifier-implant-desc
+  icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
+  productEntity: DeathAcidifierImplanter
+  categories:
+    - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SyndieAgentUplink
+  - !type:ListingLimitedStockCondition
+    stock: 1
 
 - type: listing
   id: UplinkUplinkImplanter # uplink uplink real
