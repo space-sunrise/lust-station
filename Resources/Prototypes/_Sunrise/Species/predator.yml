@@ -8,7 +8,7 @@
   markingLimits: MobPredatorMarkingLimits
   dollPrototype: MobPredatorDummy
   skinColoration: None
-  sponsorOnly: true
+  sponsorOnly: false # Lust-edit
 
 - type: speciesBaseSprites
   id: MobPredatorSprites
