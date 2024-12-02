@@ -14,3 +14,14 @@
           tags:
           - Knife
           - Sidearm
+
+- type: entity
+  parent: BunnyShoes
+  id: BunnyShoesFilled
+  suffix: Bunny, Filled
+  components:
+  - type: StorageFill
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife
