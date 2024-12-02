@@ -140,3 +140,63 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: neiiria
+
+- type: entity
+  id: PlushieCharlieFleur
+  parent: BasePlushie
+  name: Plush Charlie
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: charlie_fleur
+
+- type: entity
+  id: PlushieSashaChernyh
+  parent: BasePlushie
+  name: Plush Sasha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sasha_chernyh
+
+- type: localizedDataset
+  id: KharshaPhrases
+  values:
+    refix: kharsha-
+    count: 1
+
+- type: entity
+  id: PlushieKharsha
+  parent: BasePlushie
+  name: Plush Kharsha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: kharsha
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: SironaRyan
+  - type: UseDelay
+    delay: 3
+
+- type: localizedDataset
+  id: DobitchikPhrases
+  values:
+    prefix: dobitchik-
+    count: 1
+
+- type: entity
+  id: PlushieDobitchik
+  parent: BasePlushie
+  name: Plush Dobitchik
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: dobitchik
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: Anduin
+  - type: UseDelay
+    delay: 3
