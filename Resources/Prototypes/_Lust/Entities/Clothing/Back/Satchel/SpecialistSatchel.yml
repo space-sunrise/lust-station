@@ -1,8 +1,8 @@
-﻿type: entity
-parent: ClothingBackpackSatchel
-id: ClothingBackpackSatchelSpecialist
-name: Specialist Satchel
-description: A small hip bag to showcase your membership of the elite.
-components:
-- type: Sprite
+﻿- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelSpecialist
+  name: Specialist Satchel
+  description: A small hip bag to showcase your membership of the elite.
+  components:
+  - type: Sprite
   sprite: _Lust/Clothing/Back/Satchels/SpecialistSatchel.rsi
