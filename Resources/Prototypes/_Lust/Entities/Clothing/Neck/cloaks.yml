@@ -87,3 +87,12 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/rd_special_cloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleBlackSpeicalist
+  name: Specialist`s Cloak
+  description: Cloak which used by Centcomm Elite Forces. Maybe you see that one in last time of your life.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/SpecialistMantle.rsi
