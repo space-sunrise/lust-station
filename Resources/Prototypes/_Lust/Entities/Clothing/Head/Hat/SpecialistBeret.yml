@@ -1,0 +1,10 @@
+﻿- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSpecialistBetet
+  name: Specialist Beret
+  description: A beret showing that the wearer is a member of the Qillu Elite Force Corps.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/SpecialistBeret.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/SpecialistBeret.rsi
