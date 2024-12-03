@@ -1,0 +1,10 @@
+﻿- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSpecialistBlackJumpSuit
+  name: Speicalist Uniform
+  description: Central Command Elite Force Uniform. Looks intimidating.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
