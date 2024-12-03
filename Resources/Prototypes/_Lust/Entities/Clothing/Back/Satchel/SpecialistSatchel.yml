@@ -5,4 +5,4 @@
   description: A small hip bag to showcase your membership of the elite.
   components:
   - type: Sprite
-  sprite: _Lust/Clothing/Back/Satchels/SpecialistSatchel.rsi
+  sprite: Textures/_Lust/Clothing/Back/Satchels/SpecialistSatchel.rsi
