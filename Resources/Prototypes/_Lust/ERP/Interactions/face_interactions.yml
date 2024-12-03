@@ -1,16 +1,16 @@
 ﻿- type: interaction
   id: FaceCheekKiss
   name: Чмокнуть в щёку
-  icon: _Sunrise/Interface/ERP/cheeks_kiss.png
+  icon: _Lust/Interface/ERP/cheeks_kiss.png
   emotes:
   - чмокает в щёку %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -19,18 +19,18 @@
 - type: interaction
   id: FaceCheeksKiss
   name: Расцеловать щёки
-  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png #Звук двух поцелуев
+  icon: _Lust/Interface/ERP/cheeks_kiss_both.png #Звук двух поцелуев
   emotes:
   - целует %target в обе щёки
   - чмокает %target в обе щёки
   - расцеловывает %target в обе щеки
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -39,7 +39,7 @@
 - type: interaction
   id: FaceCheeksPull
   name: Потискать за щёчки
-  icon: _Sunrise/Interface/ERP/cheeks_pat.png
+  icon: _Lust/Interface/ERP/cheeks_pat.png
   emotes:
   - нежно треплет щёчки %target
   - слегка растягивает щёчки %target
@@ -52,13 +52,13 @@
 - type: interaction
   id: FacePats
   name: Погладить по лицу
-  icon: _Sunrise/Interface/ERP/pet_head.png
+  icon: _Lust/Interface/ERP/pet_head.png
   emotes:
   - нежно проводит ладонью по лицу %target
   - ласково гладит ладонью лицо %target
   - слегка поглаживает ладонью лицо %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -67,7 +67,7 @@
 - type: interaction
   id: FacePress
   name: Прижаться щекой к лицу
-  icon: _Sunrise/Interface/ERP/cheeks_press.png
+  icon: _Lust/Interface/ERP/cheeks_press.png
   emotes:
   - нежно прижимается щекой к лицу %target
   - слегка прижимается щекой к лицу %target, создавая близость
@@ -80,7 +80,7 @@
 - type: interaction
   id: FaceLickDoggyStyle
   name: Облизать лицо по-собачьи
-  icon: _Sunrise/Interface/ERP/face_lick_doggy_style.png
+  icon: _Lust/Interface/ERP/face_lick_doggy_style.png
   emotes:
   - по-собачьи облизывает щёки %target
   - по-собачьи облизывает губы %target
@@ -100,13 +100,13 @@
 - type: interaction
   id: FaceRubCat
   name: Потереться как котик
-  icon: _Sunrise/Interface/ERP/face_rub_cat.png
+  icon: _Lust/Interface/ERP/face_rub_cat.png
   emotes:
   - по-кошачьи трется щекой об лицо %target
   - как котик трется головой об %target
   - мурлыкая, трется ушками об %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -117,13 +117,13 @@
 - type: interaction
   id: FaceInBoobs
   name: Прижаться грудью к лицу
-  icon: _Sunrise/Interface/ERP/face_in_boobs.png
+  icon: _Lust/Interface/ERP/face_in_boobs.png
   emotes:
   - прижимается грудью к лицу %target
   - прижимает к своей груди лицо %target
   - погружает в свою грудь лицо %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Female
   targetSex: Unsexed
   erp: true
@@ -136,14 +136,14 @@
 - type: interaction
   id: FaceThighsCrush
   name: Стиснуть голову ляжками
-  icon: _Sunrise/Interface/ERP/pussy_scissors.png
+  icon: _Lust/Interface/ERP/pussy_scissors.png
   emotes:
   - с силой сжимает ляжками голову %target
   - крепко стискивает ляжками голову %target
   - полностью обхватывает ляжками голову %target
   - плотно сжимает ляжками голову %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -156,7 +156,7 @@
 - type: interaction
   id: FaceSitting
   name: Сесть на лицо
-  icon: _Sunrise/Interface/ERP/face_sitting.png
+  icon: _Lust/Interface/ERP/face_sitting.png
   emotes:
   - нежно садится попкой на лицо %target
   - медленно опускает попу на лицо %target
@@ -174,14 +174,14 @@
 - type: interaction
   id: FaceDickSlap
   name: Дать пощечину членом
-  icon: _Sunrise/Interface/ERP/face_dick_slap.png
+  icon: _Lust/Interface/ERP/face_dick_slap.png
   emotes:
   - отводит член в сторону, и шлепает им по лицу %target
   - отведя вбок тазом, шлепает членом по лицу %target
   - звонко шлепает членом по лицу %target
   - сочно шлепает членом по щеке %target
   sounds:
-  - path: /Audio/_Lust/ERP/blow_slap.ogg
+  - path: /Audio/_Lust/ERP/clap2.ogg
   userSex: Male
   targetSex: Unsexed
   erp: true
@@ -198,7 +198,7 @@
 - type: interaction
   id: FaceFeet
   name: Поласкать лицо ступней
-  icon: _Sunrise/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
+  icon: _Lust/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
   emotes:
   - прижимается ступней к лицу %target
   - нежно гладит ступней лицо %target

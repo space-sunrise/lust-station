@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: PussyTouch
   name: Поласкать вагину пальцами
-  icon: _Sunrise/Interface/ERP/pussy_touch.png
+  icon: _Lust/Interface/ERP/pussy_touch.png
   emotes:
   - нежно ласкает пальчиками вагину %target
   - ритмично ласкает пальцами вагину %target
@@ -13,10 +13,10 @@
   - возбужденно ласкает пальцами вагину %target
   - ритмично поглаживает пальцами вагину %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Female
   erp: true
@@ -31,7 +31,7 @@
 - type: interaction
   id: PussyLick
   name: Полизать вагину
-  icon: _Sunrise/Interface/ERP/pussy_lick.png
+  icon: _Lust/Interface/ERP/pussy_lick.png
   emotes:
   - медленно проводит языком по вагине %target
   - нежно вылизывает вагину %target
@@ -44,7 +44,7 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Female
   erp: true
@@ -59,7 +59,7 @@
 - type: interaction
   id: PussyFingering
   name: Трахать вагину пальцами
-  icon: _Sunrise/Interface/ERP/pussy_fingering.png
+  icon: _Lust/Interface/ERP/pussy_fingering.png
   emotes:
   - медленно проникает пальцами в вагину %target
   - быстро трахает пальцами вагину %target
@@ -67,10 +67,10 @@
   - возбужденно трахает пальцами вагину %target
   - нежно входит пальцами в вагину %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Female
   erp: true
@@ -85,17 +85,17 @@
 - type: interaction
   id: PussyScissors
   name: Потереться вагинами
-  icon: _Sunrise/Interface/ERP/pussy_scissors.png
+  icon: _Lust/Interface/ERP/pussy_scissors.png
   emotes:
   - нежно трется вагинами с %target
   - страстно трется вагинами с %target
   - двигает бедрами, прижимаясь вагинами с %target
   - возбужденно трется вагинами с %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Female
   erp: true
@@ -114,7 +114,7 @@
 - type: interaction
   id: PussyFuck
   name: Трахать вагину членом
-  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
+  icon: _Lust/Interface/ERP/legs_cock_fuck.png
   emotes:
   - быстро трахает членом вагину %target
   - жестко трахает членом вагину %target
@@ -122,10 +122,10 @@
   - полностью входит членом в вагину %target
   - страстно трахает членом вагину %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true
@@ -146,7 +146,7 @@
 - type: interaction
   id: PussySelfTouch
   name: Поласкать свою вагину
-  icon: _Sunrise/Interface/ERP/pussy_touch.png
+  icon: _Lust/Interface/ERP/pussy_touch.png
   emotes:
   - нежно ласкает пальчиками свою вагину
   - медленно ласкает свою вагину пальцами
@@ -155,10 +155,10 @@
   - возбужденно ласкает свою вагину пальцами
   - ритмично поглаживает пальцами свою вагину
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Female
   erp: true
@@ -173,7 +173,7 @@
 - type: interaction
   id: PussySelfFingering
   name: Трахать свою вагину пальцами
-  icon: _Sunrise/Interface/ERP/pussy_fingering.png
+  icon: _Lust/Interface/ERP/pussy_fingering.png
   emotes:
   - медленно проникает пальцами в свою вагину
   - быстро трахает пальцами свою вагину
@@ -181,10 +181,10 @@
   - возбужденно трахает пальцами свою вагину
   - нежно входит пальцами в свою вагину
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Female
   erp: true

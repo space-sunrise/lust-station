@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: AnalFingering
   name: Разработать анус пальцем
-  icon: _Sunrise/Interface/ERP/anal_fingering.png
+  icon: _Lust/Interface/ERP/anal_fingering.png
   emotes:
   - медленно вставляет пальчик в попку %target
   - осторожно проникает пальчиком в попку %target
@@ -11,10 +11,10 @@
   - потихоньку засовывает пальчик в попку %target
   - проскальзывает пальчиком в попку %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -29,7 +29,7 @@
 - type: interaction
   id: AnalLick
   name: Поласкать анус языком
-  icon: _Sunrise/Interface/ERP/anal_lick.png
+  icon: _Lust/Interface/ERP/anal_lick.png
   emotes:
   - чувственно вылизывает заднюю дырочку %target
   - игриво извивает язычком в анусе %target
@@ -57,7 +57,7 @@
 - type: interaction
   id: AnalFingering2
   name: Трахать анус пальцами
-  icon: _Sunrise/Interface/ERP/anal_fingering.png
+  icon: _Lust/Interface/ERP/anal_fingering.png
   emotes:
   - активно трахает пальчиками анус %target
   - интенсивно трахает пальчиками анус %target
@@ -65,10 +65,10 @@
   - увлеченно трахает пальчиками анус %target
   - быстро долбит пальчиками анус %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -83,7 +83,7 @@
 - type: interaction
   id: AnalFuck
   name: Трахать анус членом
-  icon: _Sunrise/Interface/ERP/cock_near_to_ass.png
+  icon: _Lust/Interface/ERP/cock_near_to_ass.png
   emotes:
   - трахает в попку %target
   - долбит попку %target своим членом
@@ -91,10 +91,10 @@
   - резко проникает в задницу %target
   - медленно входит в попку %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Unsexed
   erp: true

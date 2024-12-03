@@ -1,5 +1,5 @@
-ent-MobRatKing = крысиный король
-    .desc = Он крысюк и он тут босс.
+ent-MobRatKing = крысиная королева
+    .desc = Она крысюк и она тут босс.
 ent-MobRatKingBuff = { ent-MobRatKing }
     .suffix = Качок
     .desc = { ent-MobRatKing.desc }

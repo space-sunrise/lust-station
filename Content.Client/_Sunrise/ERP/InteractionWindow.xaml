@@ -56,7 +56,7 @@
                 <TextureRect SetSize="30 30"
                              Stretch="KeepAspectCentered"
                              HorizontalAlignment="Right"
-                             TexturePath="/Textures/_Sunrise/Interface/ERP/heartIcon.png"/>
+                             TexturePath="/Textures/_Lust/Interface/ERP/heartIcon.png"/>
             </BoxContainer>
             <BoxContainer Name="ModeButtons"
                           Orientation="Horizontal"

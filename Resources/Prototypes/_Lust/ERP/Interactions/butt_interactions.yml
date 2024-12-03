@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: ButtPaw
   name: Лапать попку
-  icon: _Sunrise/Interface/ERP/butt_paw.png
+  icon: _Lust/Interface/ERP/hands_on_butt.png
   emotes:
   - похотливо лапает попку %target
   - сочно сжимает задницу %target
@@ -20,7 +20,7 @@
 - type: interaction
   id: ButtManyKisses
   name: Расцеловать попку
-  icon: _Sunrise/Interface/ERP/kiss_butt.png
+  icon: _Lust/Interface/ERP/kiss_butt.png
   emotes:
   - страстно покрывает поцелуями попку %target
   - нежно расцеловывает попку %target
@@ -44,7 +44,7 @@
 - type: interaction
   id: ButtSlap
   name: Шлёпнуть по жопе
-  icon: _Sunrise/Interface/ERP/slap_butt.png
+  icon: _Lust/Interface/ERP/slap_butt.png
   emotes:
   - наотмашь шлепает по жопе %target
   - делает смачный шлепок по жопе %target
@@ -63,7 +63,7 @@
 - type: interaction
   id: ButtMassage
   name: Помассировать попку
-  icon: _Sunrise/Interface/ERP/butt_massage.png
+  icon: _Lust/Interface/ERP/butt_massage.png
   emotes:
   - деликатно разминает попку %target
   - старательно массирует попку %target
@@ -86,15 +86,15 @@
 - type: interaction
   id: ButtFuck
   name: Трахать между ягодиц
-  icon: _Sunrise/Interface/ERP/cock_near_to_ass.png
+  icon: _Lust/Interface/ERP/cock_near_to_ass.png
   emotes:
   - скользит членом между булок %target
   - трахает упругие булочки %target своим членом
   - сжимая попку %target, трахает её между булочек
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
   userSex: Male
   targetSex: Unsexed
   erp: true
@@ -109,7 +109,7 @@
 - type: interaction
   id: PatTail
   name: Погладить хвост
-  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
   emotes:
   - нежно гладит хвостик %target
   - ласково проводит ладонью по хвосту %target

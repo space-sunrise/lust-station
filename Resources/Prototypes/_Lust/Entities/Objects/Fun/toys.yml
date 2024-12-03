@@ -38,3 +38,165 @@
       collection: FemaleMoan
   - type: UseDelay
     delay: 10
+
+- type: entity
+  id: PlushieShiroSolo
+  parent: BasePlushie
+  name: Plush Shiro fon Volph
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shiro-solo
+
+- type: entity
+  id: PlushieShiroHeart
+  parent: BasePlushie
+  name: Plush Shiro fon Volph with heart
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shiro-heart
+
+- type: entity
+  id: PlushieIv
+  parent: BasePlushie
+  name: Iv Potrokhova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: iv-heart
+
+- type: localizedDataset
+  id: TailerMurlikinPhrases
+  values:
+    prefix: tailer-murlikin-
+    count: 3
+
+- type: entity
+  id: PlushieTailerMurlikin
+  parent: BasePlushie
+  name: Plush Tailer Murlikin
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: tailer-murlikin
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: ElderLyonsFL3
+  - type: UseDelay
+    delay: 3
+
+- type: entity
+  id: PlushieNiko
+  parent: BasePlushie
+  name: Plush niko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: niko
+
+- type: entity
+  id: PlushieMira
+  parent: BasePlushie
+  name: Plush mira
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: mira
+
+- type: entity
+  id: EmitPurr
+  abstract: true
+  components:
+  - type: MeleeWeapon
+    soundHit:
+      collection: FelinidPurrs
+      params:
+        volume: 100
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnUse
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidPurrs
+  - type: EmitSoundOnActivate
+    sound:
+      collection: FelinidPurrs
+
+- type: entity
+  id: PlushieNeiiria
+  parent:
+  - EmitPurr
+  - BasePlushie
+  name: Plush Neiiria
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: neiiria
+
+- type: entity
+  id: PlushieCharlieFleur
+  parent: BasePlushie
+  name: Plush Charlie
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: charlie_fleur
+
+- type: entity
+  id: PlushieSashaChernyh
+  parent: BasePlushie
+  name: Plush Sasha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sasha_chernyh
+
+- type: localizedDataset
+  id: KharshaPhrases
+  values:
+    prefix: kharsha-
+    count: 1
+
+- type: entity
+  id: PlushieKharsha
+  parent: BasePlushie
+  name: Plush Kharsha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: kharsha
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: SironaRyan
+  - type: UseDelay
+    delay: 3
+
+- type: localizedDataset
+  id: DobitchikPhrases
+  values:
+    prefix: dobitchik-
+    count: 1
+
+- type: entity
+  id: PlushieDobitchik
+  parent: BasePlushie
+  name: Plush Dobitchik
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: dobitchik
+  - type: SpeakOnUse
+    pack: TailerMurlikinPhrases
+  - type: TTS
+    voice: Anduin
+  - type: UseDelay
+    delay: 3

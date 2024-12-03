@@ -62,6 +62,7 @@
       200: Dead
   - type: Inventory
     speciesId: human
+  - type: FootprintEmitter
 
 - type: entity
   save: false
