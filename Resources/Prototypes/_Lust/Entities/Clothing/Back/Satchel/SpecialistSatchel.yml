@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelLapkeeSet
-  name: сумка специалиста
-  description: Небольшая набедренная сумка для демонстрации вашей принадлежности к элите.
+  id: ClothingBackpackSpecialistSatchel
+  name: Specialist Satchel
+  description: Elite Forces member Satchel.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Back/Satchels/SpecialistSatchel.rsi
