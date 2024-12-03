@@ -18,3 +18,5 @@ ent-ClothingNeckQmSpecialCloak = особый плащ КМ
     .desc = Невероятно стильный плащ КМ. Выглядит дорого и очень богато!
 ent-ClothingNeckRdSpecialCloak = особый плащ НР
     .desc = Невероятно стильный плащ НР. Выглядит дорого и очень богато!
+ent-ClothingNeckMantleBlackSpeicalist = наплечная мантия Специалиста
+    .desc = Наплечная мантия Элитных сил Qillu. Её владелец не намерен шутить с вами.

@@ -91,7 +91,7 @@
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckMantleBlackSpeicalist
-  name: Specialist`s Cloak
+  name: Specialist Mantle
   description: Cloak which used by Centcomm Elite Forces. Maybe you see that one in last time of your life.
   components:
   - type: Sprite
