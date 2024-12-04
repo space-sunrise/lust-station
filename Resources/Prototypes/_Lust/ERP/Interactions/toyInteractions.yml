@@ -91,6 +91,7 @@
   name: Вставить член в киску
   inhandObject:
   - ERPNormalFleshlight
+  - PlushieAnnaLisechanskaya
   icon: _Lust/Interface/ERP/toy_pussy.png
   emotes:
   - надевает киску на член %target
@@ -117,6 +118,7 @@
   name: Вставить член в киску
   inhandObject:
   - ERPNormalFleshlight
+  - PlushieAnnaLisechanskaya
   icon: _Lust/Interface/ERP/toy_pussy.png
   emotes:
   - надевает киску на свой член
