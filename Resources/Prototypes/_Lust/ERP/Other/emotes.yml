@@ -1,6 +1,6 @@
 - type: emote
   id: Moan
-  name: Стонать
+  name: chat-emote-name-moan
   category: Vocal
   icon: Interface/Emotes/sigh.png
   whitelist:
