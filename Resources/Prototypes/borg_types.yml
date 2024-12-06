@@ -214,9 +214,7 @@
   petFailureString: petting-failure-janitor-cyborg
   addComponents:
   - type: FootprintAreaCleaner
-
   # Lust-start
-  addComponents:
   - type: ActionGrant
     actions:
     - RestActionJanitor
