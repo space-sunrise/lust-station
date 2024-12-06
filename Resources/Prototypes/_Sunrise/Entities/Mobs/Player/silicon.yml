@@ -63,6 +63,9 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSyndicate
+  # Lust-start
+  - type: StandingState
+  # Lust-end
 
 - type: entity
   id: PlayerBorgSyndicateReaperBattery
@@ -79,6 +82,9 @@
         cell_slot:
           name: power-cell-slot-component-slot-name-default
           startingItem: PowerCellSyndicate
+    # Lust-start
+    - type: StandingState
+    # Lust-end
 
 - type: entity
   id: PlayerBorgHeavySyndicateCombatBattery
@@ -98,6 +104,9 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSyndicate
+  # Lust-start
+  - type: StandingState
+  # Lust-end
 
 - type: entity
   id: PlayerBorgSyndicateAssaultBattery
@@ -117,6 +126,9 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSyndicate
+  # Lust-start
+  - type: StandingState
+  # Lust-end
 
 - type: entity
   id: PlayerBorgSpiderSyndicateBattery
@@ -136,6 +148,10 @@
       cell_slot:
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellSyndicate
+  # Lust-start
+  - type: StandingState
+  # Lust-end
+
 
 - type: entity
   id: DeathSquadDirectivesCircuitBoard
