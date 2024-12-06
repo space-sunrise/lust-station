@@ -54,7 +54,7 @@
   - type: ContainerFill
     containers:
       borg_brain:
-      - Boris
+      - Sofia
       borg_module:
       - BorgModuleSyndicateGeneric
       - BorgModuleSyndicateMedical
@@ -62,10 +62,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
-  # Lust-start
-  - type: StandingState
-  # Lust-end
+        startingItem: PowerCellSyndicate
 
 - type: entity
   id: PlayerBorgSyndicateReaperBattery
@@ -76,21 +73,19 @@
     - type: ContainerFill
       containers:
         borg_brain:
-          - Boris
+          - Sofia
     - type: ItemSlots
       slots:
         cell_slot:
           name: power-cell-slot-component-slot-name-default
-          startingItem: PowerCellHyper
-    # Lust-start
-    - type: StandingState
-    # Lust-end
+          startingItem: PowerCellSyndicate
 
 - type: entity
   id: PlayerBorgHeavySyndicateCombatBattery
   parent: BorgChassisSyndicateHeavy
   suffix: Battery, Tools
   components:
+  - type: NukeOperative
   - type: ContainerFill
     containers:
       borg_brain:
@@ -102,10 +97,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
-  # Lust-start
-  - type: StandingState
-  # Lust-end
+        startingItem: PowerCellSyndicate
 
 - type: entity
   id: PlayerBorgSyndicateAssaultBattery
@@ -124,10 +116,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
-  # Lust-start
-  - type: StandingState
-  # Lust-end
+        startingItem: PowerCellSyndicate
 
 - type: entity
   id: PlayerBorgSpiderSyndicateBattery
@@ -146,10 +135,7 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-        startingItem: PowerCellHyper
-  # Lust-start
-  - type: StandingState
-  # Lust-end
+        startingItem: PowerCellSyndicate
 
 - type: entity
   id: DeathSquadDirectivesCircuitBoard

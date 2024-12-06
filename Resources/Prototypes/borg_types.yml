@@ -212,6 +212,8 @@
   # Pet
   petSuccessString: petting-success-janitor-cyborg
   petFailureString: petting-failure-janitor-cyborg
+  addComponents:
+  - type: FootprintAreaCleaner
 
   # Lust-start
   addComponents:
