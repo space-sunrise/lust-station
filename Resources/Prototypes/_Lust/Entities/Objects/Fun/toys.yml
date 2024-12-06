@@ -174,7 +174,7 @@
     sprite: _Lust/Objects/Fun/toys.rsi
     state: kharsha
   - type: SpeakOnUse
-    pack: DobitchikPhrases
+    pack: KharshaPhrases
   - type: TTS
     voice: SironaRyan
   - type: UseDelay
@@ -255,5 +255,16 @@
     state: plushie_pinkers
   - type: SpeakOnUse
     pack: PinkersPhrases
+  - type: TTS
+    voice: Mana
   - type: UseDelay
     delay: 3
+
+- type: entity
+  id: PlushieAliceSimonova
+  parent: BasePlushie
+  name: Plush Alice Simonova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie-alice-simonova
