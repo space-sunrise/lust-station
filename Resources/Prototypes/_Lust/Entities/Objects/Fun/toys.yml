@@ -268,3 +268,12 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushie-alice-simonova
+
+- type: entity
+  id: PlushieRx1984
+  parent: BasePlushie
+  name: Plush RX1984
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie-rx
