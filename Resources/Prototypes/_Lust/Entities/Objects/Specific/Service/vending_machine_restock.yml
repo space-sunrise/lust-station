@@ -13,3 +13,19 @@
     - state: green_bit
       shader: unshaded
     - state: refill_underwear
+
+- type: entity
+  parent: BaseVendingMachineRestock
+  id: VendingMachineRestockKinkMate
+  name: KinkMate restock box
+  description: Got no more panties in your KinkMate? No problem, just put it inside a vendor!
+  components:
+  - type: VendingMachineRestock
+    canRestock:
+    - KinkMateInventory
+  - type: Sprite
+    layers:
+    - state: base
+    - state: green_bit
+      shader: unshaded
+    - state: refill_kink
