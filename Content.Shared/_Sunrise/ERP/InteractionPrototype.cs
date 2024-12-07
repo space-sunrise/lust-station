@@ -21,7 +21,7 @@ public sealed partial class InteractionPrototype : IPrototype
     public string Name = default!; //Обнять, Дать пять, что-либо ещё..
 
 
-    [DataField] public SpriteSpecifier Icon = new SpriteSpecifier.Texture(new("/Textures/_Sunrise/Interface/ERP/blankIcon.png")); //Иконка рядом с текстом
+    [DataField] public SpriteSpecifier Icon = new SpriteSpecifier.Texture(new("/Textures/_Lust/Interface/ERP/blankIcon.png")); //Иконка рядом с текстом
     [DataField] public List<SoundSpecifier> Sounds = new(); // Звуки
     [DataField] public HashSet<string> Emotes = new(); // Эмоуты, которые проигрывает юзер
     [DataField] public bool Erp = false; // Это ЕРП-действие?

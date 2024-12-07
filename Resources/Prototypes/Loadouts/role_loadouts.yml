@@ -40,7 +40,7 @@
 # Silicons
 - type: roleLoadout
   id: JobStationAi
-  nameDataset: names_ai
+  nameDataset: NamesAI
 
 # Civilian
 - type: roleLoadout
@@ -351,6 +351,7 @@
   - GroupSpeciesBreathTool
   # Sunrise-start
   - SpecialLoadout # Lust Station
+  - AtmosphericsConsole
   - Bra
   - Pants
   - Socks
@@ -387,6 +388,7 @@
   - GroupSpeciesBreathTool
   # Sunrise-start
   - SpecialLoadout # Lust Station
+  - AtmosphericsConsole
   - Bra
   - Pants
   - Socks
@@ -405,6 +407,7 @@
   - GroupSpeciesBreathTool
   # Sunrise-start
   - SpecialLoadout # Lust Station
+  - AtmosphericsConsole
   - Bra
   - Pants
   - Socks

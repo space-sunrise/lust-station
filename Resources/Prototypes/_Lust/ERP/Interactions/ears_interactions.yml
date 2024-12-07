@@ -1,7 +1,7 @@
 - type: interaction
   id: EarsBite
   name: Кусь за ушко
-  icon: _Sunrise/Interface/ERP/bite_ears.png
+  icon: _Lust/Interface/ERP/bite_ears.png
   emotes:
   - делает кусь за ушко %target
   - слегка прикусывает ушко %target
@@ -29,7 +29,7 @@
 - type: interaction
   id: EarsPat
   name: Погладить ушки
-  icon: _Sunrise/Interface/ERP/pat_ears.png
+  icon: _Lust/Interface/ERP/pat_ears.png
   emotes:
   - нежно гладит пальчиками ушки %target
   - трепетно касается ушек %target
@@ -57,7 +57,7 @@
 - type: interaction
   id: EarsScratch
   name: Почесать за ушком
-  icon: _Sunrise/Interface/ERP/pat_ears.png
+  icon: _Lust/Interface/ERP/pat_ears.png
   emotes:
   - нежно чешет за ушком %target
   - ласково почесывает %target за ушком
@@ -82,18 +82,18 @@
 - type: interaction
   id: EarsKiss
   name: Поцеловать ушки
-  icon: _Sunrise/Interface/ERP/ears_kiss.png
+  icon: _Lust/Interface/ERP/ears_kiss.png
   emotes:
   - нежно целует ушко %target
   - ласково целует ушки %target
   - с теплотой целует ушки %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true

@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: BoobsCuddle
   name: Прижаться к груди
-  icon: _Sunrise/Interface/ERP/boobs.png
+  icon: _Lust/Interface/ERP/boobs.png
   emotes:
   - прижимается лицом к груди %target
   - утыкается лицом в грудь %target
@@ -17,7 +17,7 @@
 - type: interaction
   id: BoobsPaw
   name: Полапать грудь
-  icon: _Sunrise/Interface/ERP/boobs_paw.png
+  icon: _Lust/Interface/ERP/boobs_paw.png
   emotes:
   - хватает за грудь %target
   - неожиданно сжимает грудь %target
@@ -36,7 +36,7 @@
 - type: interaction
   id: BoobsMassage
   name: Массировать грудь
-  icon: _Sunrise/Interface/ERP/boobs_massage.png
+  icon: _Lust/Interface/ERP/boobs_massage.png
   emotes:
   - деликатно разминает грудь %target
   - старательно массирует грудь %target
@@ -60,7 +60,7 @@
 - type: interaction
   id: BoobsManyKisses
   name: Расцеловать грудь
-  icon: _Sunrise/Interface/ERP/boobs_many_kisses.png
+  icon: _Lust/Interface/ERP/boobs_many_kisses.png
   emotes:
   - страстно покрывает поцелуями грудь %target
   - нежно расцеловывает грудь %target
@@ -83,7 +83,7 @@
 - type: interaction
   id: BoobsSlap
   name: Шлепнуть по груди
-  icon: _Sunrise/Interface/ERP/boobs_slap.png
+  icon: _Lust/Interface/ERP/boobs_slap.png
   emotes:
   - наотмашь шлепает ладонью по груди %target
   - делает смачный шлепок по груди %target, заставляя её трястись
@@ -105,7 +105,7 @@
 - type: interaction
   id: BoobsSqueeze
   name: Поласкать грудь руками
-  icon: _Sunrise/Interface/ERP/boobs_squeeze.png
+  icon: _Lust/Interface/ERP/boobs_squeeze.png
   emotes:
   - медленно сжимает в ладони грудь %target
   - нежно гладит грудь %target
@@ -128,7 +128,7 @@
 - type: interaction
   id: BoobsSuck
   name: Поласкать соски ртом
-  icon: _Sunrise/Interface/ERP/boobs_suck.png
+  icon: _Lust/Interface/ERP/boobs_suck.png
   emotes:
   - нежно сосёт соски %target
   - ласкает язычком соски %target
@@ -139,7 +139,7 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -156,7 +156,7 @@
 - type: interaction
   id: BoobsSuckLactation
   name: Пососать соски
-  icon: _Sunrise/Interface/ERP/boobs_suck.png
+  icon: _Lust/Interface/ERP/boobs_suck.png
   emotes:
   - нежно сосёт соски %target
   - жадно сосет грудь %target
@@ -182,7 +182,7 @@
 - type: interaction
   id: BoobsMilkDecantSelf
   name: Сцедить молоко
-  icon: _Sunrise/Interface/ERP/boobs_suck.png
+  icon: _Lust/Interface/ERP/boobs_suck.png
   emotes:
   - "%target прикасается к своей груди ласково сжимая соски"
   - "%target прикасается к соскам немного грубо сжимая их"
@@ -207,7 +207,7 @@
 - type: interaction
   id: BoobsMilkDecant  # Не менять
   name: Сцедить молоко
-  icon: _Sunrise/Interface/ERP/boobs_suck.png
+  icon: _Lust/Interface/ERP/boobs_suck.png
   emotes:
   - прикасается к груди %target ласково сжимая соски
   - прикасается к соскам %target немного грубо сжимая их
@@ -230,7 +230,7 @@
 - type: interaction
   id: BoobsFuck
   name: Трахать грудь
-  icon: _Sunrise/Interface/ERP/boobs_fuck.png
+  icon: _Lust/Interface/ERP/boobs_fuck.png
   emotes:
   - ритмично просовывает член между грудей %target
   - сжимая руками грудь %target, быстро трахает членом её грудь
@@ -238,10 +238,10 @@
   - активно трахает членом грудь %target
   - страстно трахает членом сжатую грудь %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true

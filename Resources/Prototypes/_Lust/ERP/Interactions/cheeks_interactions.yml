@@ -1,16 +1,16 @@
 ﻿- type: interaction
   id: CheeksKiss
   name: Чмокнуть в щёчку
-  icon: _Sunrise/Interface/ERP/cheeks_kiss.png
+  icon: _Lust/Interface/ERP/cheeks_kiss.png
   emotes:
   - чмокает в щёчку %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -19,18 +19,18 @@
 - type: interaction
   id: CheeksKissBoth
   name: Расцеловать в обе щёки
-  icon: _Sunrise/Interface/ERP/cheeks_kiss_both.png
+  icon: _Lust/Interface/ERP/cheeks_kiss_both.png
   emotes:
   - целует %target в обе щёки
   - чмокает %target в обе щёки
   - расцеловывает %target в обе щеки
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -39,7 +39,7 @@
 - type: interaction
   id: CheeksPat
   name: Потискать за щёки
-  icon: _Sunrise/Interface/ERP/cheeks_pat.png
+  icon: _Lust/Interface/ERP/cheeks_pat.png
   emotes:
   - нежно треплет за щёчки %target
   - слегка растягивает щёчки %target

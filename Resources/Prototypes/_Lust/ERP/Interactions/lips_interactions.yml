@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: GentleKiss
   name: Нежный поцелуй
-  icon: _Sunrise/Interface/ERP/gentle_kiss.png
+  icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - нежно касается губами губ %target
   - с любовью целует %target в губы
@@ -15,7 +15,7 @@
 - type: interaction
   id: QuickPeck
   name: Чмокнуть в губы
-  icon: _Sunrise/Interface/ERP/gentle_kiss.png
+  icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - быстро чмокает %target в губы
   - дарит лёгкий поцелуй %target
@@ -29,7 +29,7 @@
 - type: interaction
   id: DeepKiss
   name: Глубокий поцелуй
-  icon: _Sunrise/Interface/ERP/gentle_kiss.png
+  icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - глубоко целует %target, увлекаясь
   - страстно соединяет губы с губами %target
@@ -43,7 +43,7 @@
 - type: interaction
   id: PlayfulNibble
   name: Куснуть за губки
-  icon: _Sunrise/Interface/ERP/playful_nibble.png
+  icon: _Lust/Interface/ERP/playful_nibble.png
   emotes:
   - игриво прикусывает губу %target
   - нежно кусает губу %target, добавляя страсти
@@ -57,7 +57,7 @@
 - type: interaction
   id: FrenchKiss
   name: Французский поцелуй
-  icon: _Sunrise/Interface/ERP/gentle_kiss.png
+  icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - страстно целует %target с игрой языков
   - глубоко целует %target
@@ -71,7 +71,7 @@
 - type: interaction
   id: KissLips
   name: Поцеловать в губы
-  icon: _Sunrise/Interface/ERP/kiss_lips.png
+  icon: _Lust/Interface/ERP/kiss_lips.png
   emotes:
   - целует %target
   - нежно целует %target
@@ -85,12 +85,12 @@
   - слегка целует %target, заводя руку за шею
   - настойчиво целует %target, заводя руку за шею
   sounds:
-  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true # поцелуи - ЕРП

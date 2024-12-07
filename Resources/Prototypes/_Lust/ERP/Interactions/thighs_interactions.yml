@@ -1,7 +1,7 @@
 ﻿#- type: interaction
 #  id: LegsKiss
 #  name: Целовать ножки
-#  icon: _Sunrise/Interface/ERP/legs_lick.png #КАРТИНКУ
+#  icon: _Lust/Interface/ERP/legs_lick.png #КАРТИНКУ
 #  emotes:
 #  - осыпает поцелуями ножки %target
 #  - покрывает поцелуями ножки %target
@@ -9,12 +9,12 @@
 #  - страстно целует ножки %target
 #  - сочно прижимается губами к ножке %target
 #  sounds:
-#  - path: /Audio/_Sunrise/ERP/kiss1.ogg
-#  - path: /Audio/_Sunrise/ERP/kiss2.ogg
-#  - path: /Audio/_Sunrise/ERP/kiss3.ogg
-#  - path: /Audio/_Sunrise/ERP/kiss4.ogg
-#  - path: /Audio/_Sunrise/ERP/kiss5.ogg
-#  - path: /Audio/_Sunrise/ERP/kiss6.ogg
+#  - path: /Audio/_Lust/ERP/kiss1.ogg
+#  - path: /Audio/_Lust/ERP/kiss2.ogg
+#  - path: /Audio/_Lust/ERP/kiss3.ogg
+#  - path: /Audio/_Lust/ERP/kiss4.ogg
+#  - path: /Audio/_Lust/ERP/kiss5.ogg
+#  - path: /Audio/_Lust/ERP/kiss6.ogg
 #  userSex: Unsexed
 #  targetSex: Unsexed
 #  erp: true
@@ -27,7 +27,7 @@
 - type: interaction
   id: LegsLick
   name: Полизать ножки
-  icon: _Sunrise/Interface/ERP/legs_lick.png
+  icon: _Lust/Interface/ERP/legs_lick.png
   emotes:
   - медленно проводит языком по ножкам %target
   - жадно вылизывает ножки %target
@@ -51,7 +51,7 @@
 #- type: interaction
 #  id: LegsFeetKiss
 #  name: Целовать ступни
-#  icon: _Sunrise/Interface/ERP/legs_feet_lick.png #ПИКЧА
+#  icon: _Lust/Interface/ERP/legs_feet_lick.png #ПИКЧА
 #  emotes:
 #  - нежно прикасается губами к ступням %target
 #  - страстно целует ступни %target
@@ -72,7 +72,7 @@
 - type: interaction
   id: LegsFeetLick
   name: Полизать ступни
-  icon: _Sunrise/Interface/ERP/legs_feet_lick.png
+  icon: _Lust/Interface/ERP/legs_feet_lick.png
   emotes:
   - ласкает язычком пальчики на ногах %target
   - проходит своим язычком по ступням %target
@@ -92,7 +92,7 @@
 - type: interaction
   id: LegsStrokeBetween
   name: Погладить промежность
-  icon: _Sunrise/Interface/ERP/legs_stroke_between.png
+  icon: _Lust/Interface/ERP/legs_stroke_between.png
   emotes:
   - аккуратно проводит пальцами по промежности %target
   - медленно ласкает промежность %target
@@ -110,7 +110,7 @@
 - type: interaction
   id: LegsCockFuck
   name: Трахать между бедер
-  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
+  icon: _Lust/Interface/ERP/legs_cock_fuck.png
   emotes:
   - страстно трахает членом сжатые ляжки %target
   - быстро долбит членом сжатые ляжки %target
@@ -118,10 +118,10 @@
   - медленно водит членом между ляжек %target
   - с наслаждением трахает ляжки %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Unsexed
   erp: true

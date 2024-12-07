@@ -22,7 +22,7 @@
     - SimpleHostile
   - type: Sprite
     drawdepth: SmallMobs
-    sprite: Mobs/Animals/regalrat.rsi
+    sprite: _Lust/Mobs/Animals/regalrat.rsi # Sunrise-Lust edit
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: regalrat
@@ -55,7 +55,7 @@
     animation: WeaponArcClaw
     damage:
       types:
-        Slash: 12
+        Slash: 16  # Sunrise-edit
         Piercing: 8
   - type: Body
     prototype: Rat
@@ -100,8 +100,8 @@
       - FootstepSound
   - type: NoSlip
   - type: RatKing
-    hungerPerArmyUse: 25
-    hungerPerDomainUse: 50
+    hungerPerArmyUse: 15  # Sunrise-edit
+    hungerPerDomainUse: 50  # Sunrise-edit
   - type: MobsterAccent
   - type: Speech
     speechVerb: SmallMob
@@ -120,8 +120,17 @@
     - MinorAntagonists
   - type: Grammar
     attributes:
-      gender: male
+      gender: female
   - type: Sharp
+  # Sunrise-start
+  - type: Bloodstream
+    bleedReductionAmount: 1
+    bloodRefreshAmount: 1.5
+  # Sunrise-end
+  # Sunrise-Lust start
+  - type: TTS
+    voice: Planya
+  # Sunrise-Lust end
 
 - type: entity
   id: MobRatKingBuff
@@ -224,8 +233,8 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      15: Critical
-      30: Dead
+      40: Critical  # Sunrise-edit
+      60: Dead  # Sunrise-edit
   - type: Stamina
     critThreshold: 60
   - type: MeleeWeapon

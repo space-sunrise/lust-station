@@ -1,7 +1,7 @@
 ﻿- type: interaction
   id: CockLegPat
   name: Поласкать член ножкой
-  icon: _Sunrise/Interface/ERP/cock_footjob.png
+  icon: _Lust/Interface/ERP/cock_footjob.png
   emotes:
   - ласкает ножкой член %target
   - игриво проводит ножкой по члену %target
@@ -25,7 +25,7 @@
 - type: interaction
   id: CockFootjob
   name: Подрочить член ступнями
-  icon: _Sunrise/Interface/ERP/cock_footjob.png
+  icon: _Lust/Interface/ERP/cock_footjob.png
   emotes:
   - нежно дрочит ножками член %target
   - сжимает и трахает ножками член %target
@@ -35,10 +35,10 @@
   - возбужденно дрочит ножками член %target
   - гладит ножками вдоль члена %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -53,7 +53,7 @@
 - type: interaction
   id: CockFapBoobs
   name: Подрочить член грудью
-  icon: _Sunrise/Interface/ERP/boobs_fuck.png
+  icon: _Lust/Interface/ERP/boobs_fuck.png
   emotes:
   - возбужденно трахает членом %target между своих грудок
   - активно дрочит член %target своей грудью
@@ -61,10 +61,10 @@
   - ритмично дрочит грудями член %target
   - сжимая грудями член %target, увлеченно двигает ими вверх-вниз
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Male
   erp: true
@@ -83,7 +83,7 @@
 - type: interaction
   id: CockTailFap
   name: Поласкать член хвостиком
-  icon: _Sunrise/Interface/ERP/cock_tail_fap.png
+  icon: _Lust/Interface/ERP/cock_tail_fap.png
   emotes:
   - похотливо обвивает хвостиком член %target
   - нежно дрочит хвостиком член %target
@@ -91,10 +91,10 @@
   - игриво поглаживает хвостиком член %target
   - сжимает и трахает хвостиком член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -117,7 +117,7 @@
 - type: interaction
   id: CockFap
   name: Подрочить член рукой
-  icon: _Sunrise/Interface/ERP/cock_fap.png
+  icon: _Lust/Interface/ERP/cock_fap.png
   emotes:
   - нежно мастурбирует член %target
   - ритмично мастурбирует член %target
@@ -128,10 +128,10 @@
   - поглаживает пальцами член %target
   - медленно, от головки до основания дрочит член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -146,7 +146,7 @@
 - type: interaction
   id: CockTongueFap
   name: Поласкать член длинным языком
-  icon: _Sunrise/Interface/ERP/cock_tongue_fap.png
+  icon: _Lust/Interface/ERP/cock_tongue_fap.png
   emotes:
   - обвивает длинным языком и дрочит член %target
   - страстно сжимает и дрочит длинным языком член %target
@@ -155,10 +155,10 @@
   - оплетает длинным языком и двигает вверх-вниз вдоль члена %target
   - игриво скользит длинным языком вдоль члена %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -181,7 +181,7 @@
 - type: interaction
   id: CockBlowjob
   name: Сделать минет
-  icon: _Sunrise/Interface/ERP/cock_blowjob.png
+  icon: _Lust/Interface/ERP/cock_blowjob.png
   emotes:
   - нежно сосет член %target
   - ласкает язычком у себя во рту член %target
@@ -198,10 +198,10 @@
   - жадно сосет член %target
   - насаживается ротиком на член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -218,17 +218,17 @@
 - type: interaction
   id: CockVaginaGrind
   name: Потереться об член вагиной
-  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
+  icon: _Lust/Interface/ERP/legs_cock_fuck.png
   emotes:
   - сидя сверху, возбужденно трется вагиной об член %target
   - сидя сверху, прижимается вагиной к члену %target и двигает бедрами
   - увлеченно скользит вагиной вдоль члена %target
   - страстно трется вагиной об член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Male
   erp: true
@@ -247,7 +247,7 @@
 - type: interaction
   id: CockFuckThighs
   name: Трахнуть член бёдрами
-  icon: _Sunrise/Interface/ERP/cock_near_to_ass.png
+  icon: _Lust/Interface/ERP/cock_near_to_ass.png
   emotes:
   - сжимает и трахает бедрами член %target
   - страстно трахает бедрами член %target
@@ -255,10 +255,10 @@
   - медленно скользит бедрами вдоль члена %target
   - возбужденно сжимает бедрами член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -276,7 +276,7 @@
 - type: interaction
   id: CockSlimeSex
   name: Ласкать член слизью
-  icon: _Sunrise/Interface/ERP/cock_slime_sex.png
+  icon: _Lust/Interface/ERP/cock_slime_sex.png
   emotes:
   - обволакивает слизью член %target и чувственно его трахает
   - присасывается к члену %target слизью и начинает его дрочить
@@ -285,10 +285,10 @@
   - до основания погружает в слизь член %target и присасывается к нему
   - сочно причмокивая, сосет слизью член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -305,7 +305,7 @@
 - type: interaction
   id: CockCowgirl
   name: Трахнуть член вагиной
-  icon: _Sunrise/Interface/ERP/legs_cock_fuck.png
+  icon: _Lust/Interface/ERP/legs_cock_fuck.png
   emotes:
   - возбужденно седлает вагиной член %target
   - страстно скачет вагиной на члене %target
@@ -313,10 +313,10 @@
   - резко опускается вагиной на член %target
   - грубо скачет вагиной на члене %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Male
   erp: true
@@ -335,7 +335,7 @@
 - type: interaction
   id: CockCowboy
   name: Трахнуть член попкой
-  icon: _Sunrise/Interface/ERP/cock_near_to_ass.png
+  icon: _Lust/Interface/ERP/cock_near_to_ass.png
   emotes:
   - возбужденно седлает попкой член %target
   - страстно скачет попкой на члене %target
@@ -343,10 +343,10 @@
   - резко опускается попкой на член %target
   - уверенно садится попкой на член %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -365,7 +365,7 @@
 - type: interaction
   id: CockSelfFap
   name: Подрочить свой член
-  icon: _Sunrise/Interface/ERP/cock_fap.png
+  icon: _Lust/Interface/ERP/cock_fap.png
   emotes:
   - нежно мастурбирует свой член
   - ритмично мастурбирует свой член
@@ -376,10 +376,10 @@
   - поглаживает пальцами свой член
   - медленно, от головки до основания дрочит свой член
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true

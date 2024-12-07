@@ -1,6 +1,6 @@
 ﻿# Neck
 - type: loadout # Lust Station
-  id: EngineerNeck
+  id: EngineerCloak
   sponsorOnly: true
   equipment:
     neck: ClothingNeckEngCloak

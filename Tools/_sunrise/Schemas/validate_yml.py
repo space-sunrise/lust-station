@@ -65,7 +65,7 @@ def check_translations(root_dir, ignore_list, ignore_files):
                                         add_error(rel_path, line_num, f'Не переведённая строка "{key}": {line.strip()}')
                                 elif is_english(value):
                                     add_error(rel_path, line_num, f'Не переведённая строка "{key}": {line.strip()}')
-                                    
+
     #for dirpath, _, filenames in os.walk(en_locale_dir):
     #    for filename in filenames:
     #        if filename.endswith('.ftl'):
@@ -92,14 +92,17 @@ def check_translations(root_dir, ignore_list, ignore_files):
     #                            elif has_russian(value):
     #                                add_error(rel_path, line_num, f'Русская строка "{key}": {line.strip()}')
 
-def check_yml_files(dir: str, ignore_list: List[str]):
+def check_yml_files(dir: str, ignore_list: List[str], ignore_files: List[str]):  # Sunrise-Lust edit
     key_pattern = re.compile(r'^(name|description|suffix|rules|desc):\s*(.+)')
-    
+
     for yml_rel in iglob("**/*.yml", root_dir=dir, recursive=True):
+        if any(ignored in yml_rel for ignored in ignore_files):  # Sunrise-Lust edit
+            continue  # Sunrise-Lust edit
+
         yml_path = os.path.join(dir, yml_rel)
         with open(yml_path, 'r', encoding='utf-8') as file:
             content = file.readlines()
-            
+
             for i, line in enumerate(content, start=1):
                 match = key_pattern.match(line.strip())
                 if match:
@@ -124,7 +127,7 @@ if __name__ == "__main__":
 
     check_translations(args.localization_dir, ignore_list, ignore_files)
 
-    check_yml_files(args.yml_dir, ignore_list)
+    check_yml_files(args.yml_dir, ignore_list, ignore_files)  # Sunrise-Lust edit
 
     if errors:
         for error in errors:

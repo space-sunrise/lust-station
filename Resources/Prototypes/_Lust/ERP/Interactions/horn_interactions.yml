@@ -1,7 +1,7 @@
 - type: interaction
   id: HornsPat
   name: Погладить рожки
-  icon: _Sunrise/Interface/ERP/horns_pat.png
+  icon: _Lust/Interface/ERP/horns_pat.png
   emotes:
   - нежно гладит рожки %target
   - ласково гладит рожки %target
@@ -38,16 +38,16 @@
 - type: interaction
   id: HornsBlowjobFemale
   name: Трахать в рот схватив рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - крепко взяв %target за рожки трахает её в ротик
   - трахает в ротик %target держа её за рожки
   - взяв %target за рожки, делает себе минет её ротиком
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true
@@ -78,16 +78,16 @@
 - type: interaction
   id: HornsBlowjobMale
   name: Трахать в рот схватив рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - крепко взяв %target за рожки трахает его в ротик
   - трахает в ротик %target держа его за рожки
   - взяв %target за рожки, делает себе минет его ротиком
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Male
   erp: true
@@ -118,7 +118,7 @@
 - type: interaction
   id: HornsСunnilingusMale
   name: Делать себе куни держа за рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - хватает %target за рожки и прижимает его губки к своей киске
   - сжимая рожки %target окунает его язычок в свою киску
@@ -126,10 +126,10 @@
   - крепко держа за рожки %target, ласкает свою киску его язычком
   - притягивает к себе за рожки %target, заставляя вылизывать свою киску
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Male
   erp: true
@@ -160,7 +160,7 @@
 - type: interaction
   id: HornsСunnilingusFemale
   name: Делать себе куни держа за рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - хватает %target за рожки и прижимает её губки к своей киске
   - сжимая рожки %target окунает её язычок в свою киску
@@ -168,10 +168,10 @@
   - крепко держа за рожки %target, ласкает свою киску её язычком
   - притягивает к себе за рожки %target, заставляя вылизывать свою киску
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Female
   targetSex: Female
   erp: true
@@ -202,7 +202,7 @@
 - type: interaction
   id: HornsPussyFuck
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает вагину %target, сжимая её рожки
   - крепко держит рожки %target, и жестко трахает её вагину
@@ -210,10 +210,10 @@
   - сжимая рожки %target, натягивает их на себя и трахает её вагину
   - на всю длину входит членом в вагину %target, прижимая её за рожки
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true
@@ -244,7 +244,7 @@
 - type: interaction
   id: HornsAssFuckFemale
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая её рожки
   - крепко держит рожки %target, и жестко трахает её анус
@@ -252,10 +252,10 @@
   - сжимая рожки %target, натягивает их и трахает членом её анус
   - на всю длину входит членом в анус %target, прижимая её за рожки
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true
@@ -286,7 +286,7 @@
 - type: interaction
   id: HornsAssFuckMale
   name: Трахать вагину держа за рожки
-  icon: _Sunrise/Interface/ERP/horns_ass_female.png
+  icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая его рожки
   - крепко держит рожки %target, и жестко трахает его анус
@@ -294,10 +294,10 @@
   - сжимая рожки %target, натягивает их и трахает членом его анус
   - на всю длину входит членом в анус %target, прижимая его за рожки
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Male
   erp: true

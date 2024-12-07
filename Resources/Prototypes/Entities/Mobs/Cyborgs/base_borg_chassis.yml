@@ -237,7 +237,7 @@
   - type: Pullable
   - type: Puller
     needsHands: false
-  - type: StandingState
+#  - type: StandingState # Lust-edit
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -299,6 +299,9 @@
   parent: [BaseBorgChassis, BaseBorgTransponder]
   abstract: true
   components:
+  - type: RandomMetadata
+    nameSegments:
+      - names_borg
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -341,35 +344,6 @@
   - type: BorgCrewManifestViewer
   - type: StationRecordKeyStorage
   # Sunrise-End
-
-- type: entity # Lust added. Specially for new borg sprites and abilities
-  parent: BaseBorgChassisNT
-  id: BaseBorgChassisNTNextGen
-  save: false
-  abstract: true
-  components:
-  # TODO: Я в душе не ебу как чинить этих ваших боргов для ебли после ПРа ПЖБ, так что ебитесь с этим сами.
-  #- type: Sprite
-  #  sprite: _Lust/Mobs/Silicon/chassis.rsi
-  #- type: Appearance
-  #- type: RestAbility
-  #  disableableStringLayers:
-  #  - light
-  #  disableableEnumLayers:
-  #  - enum.BorgVisualLayers.Light
-  - type: TTS
-    voice: TemplarAssasin
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
-  # LUST ERP
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female
-  # LUST ERP
 
 - type: entity
   id: BaseBorgChassisSyndicate
@@ -456,3 +430,21 @@
     - EmagImmune
   # Sunrise-end
 
+- type: entity
+  id: BaseBorgChassisDerelict
+  parent: BaseBorgChassis
+  abstract: true
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen #The seemingly best fit. It was a regular NT cyborg once, after all.
+  - type: Access
+    enabled: false
+    groups:
+    - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it..
+  - type: AccessReader
+    access: [["Command"], ["Research"]]
+  - type: StartIonStormed
+    ionStormAmount: 3
+  - type: IonStormTarget
+    chance: 1
