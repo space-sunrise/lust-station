@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: ClothingHeadBase
-  id: ClothingHeadHatSpecialistBeret
+  id: ClothingHeadHatSpecialistBeretSafno_S
   name: Specialist Beret
   description: A beret showing that the wearer is a member of the Qillu Elite Force Corps.
   components:

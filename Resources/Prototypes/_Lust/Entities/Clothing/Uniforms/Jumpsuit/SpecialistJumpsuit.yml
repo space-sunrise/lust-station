@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformSpecialistBlackJumpSuit
+  id: ClothingUniformSpecialistBlackJumpSuitSafno_S
   name: Speicalist Uniform
   description: Central Command Elite Force Uniform. Looks intimidating.
   components:
