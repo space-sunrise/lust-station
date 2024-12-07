@@ -1,6 +1,6 @@
 - type: entity
   id: BorgChassisSelectable
-  parent: BaseBorgChassisNTNextGen
+  parent: BaseBorgChassisNTNextGen # Lust-edit
   components:
   - type: Sprite
     layers:
@@ -14,6 +14,14 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
+    # Lust-start
+    - state: robot_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    - state: robot_wreck
+      map: [ "enum.BorgVisualLayers.Wrecked" ]
+      visible: false
+    # Lust-end
   - type: BorgChassis
     # Default borg can take no modules until selected type.
     maxModules: 0

@@ -1,0 +1,27 @@
+- type: entity
+  parent: BaseBorgChassisNT
+  id: BaseBorgChassisNTNextGen
+  save: false
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Lust/Mobs/Silicon/chassis.rsi
+  - type: RestAbility
+    disableableStringLayers:
+    - light
+    disableableEnumLayers:
+    - enum.BorgVisualLayers.LightStatus
+    - enum.BorgVisualLayers.Light
+    - enum.BorgVisualLayers.Body
+  - type: Appearance
+  - type: TTS
+    voice: TemplarAssasin
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepCyborgSpider
+      params:
+        volume: -15
+  - type: Interaction
+    erp: true
+  - type: Sex
+    sex: female

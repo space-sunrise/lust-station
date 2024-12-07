@@ -1,5 +1,8 @@
 ﻿using Content.Shared._Lust.Rest;
 using Robust.Client.GameObjects;
+using Content.Client.Silicons.Borgs;
+using Content.Shared.Silicons.Borgs;
+using Content.Shared.Silicons.Borgs.Components;
 
 namespace Content.Client._Lust.Rest;
 
@@ -37,7 +40,7 @@ public sealed class RestSystem : SharedRestSystem
     private void ToggleBaseLayers(SpriteComponent sprite, bool visible, HashSet<string> stringLayers, HashSet<Enum> enumLayers)
     {
         // Переключаем базовый спрайт
-        sprite.LayerSetVisible(RestVisuals.Base, visible);
+        sprite.LayerSetVisible(BorgVisualLayers.Body, visible);
 
         // Все, что ниже, лютое говно, но зато работает без вопросов.
 

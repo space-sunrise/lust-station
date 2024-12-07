@@ -1,20 +1,28 @@
 - type: entity
   id: BorgChassisSecurityCombat
-  parent: BaseBorgChassisNT
+  parent: BaseBorgChassisNTNextGen # Lust-edit
   name: security combat cyborg
   components:
+    # Lust-start
   - type: Sprite
-    sprite: _Sunrise/Mobs/Silicon/chassis.rsi
     layers:
     - state: sec_mk2
+      map: ["enum.BorgVisualLayers.Body", "movement" ]
     - state: sec_mk2_e_r
-      map: [ "enum.BorgVisualLayers.Light" ]
+      map: ["enum.BorgVisualLayers.Light"]
       shader: unshaded
       visible: false
     - state: sec_mk2_l
       shader: unshaded
-      map: [ "light" ]
+      map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
+    - state: sec_mk2_rest
+      map: [ "enum.RestVisuals.Resting" ]
+      visible: false
+    - state: sec_mk2_wreck
+      map: [ "enum.BorgVisualLayers.Wrecked" ]
+      visible: false
+    # Lust-end
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepCyborgSpider
@@ -98,6 +106,11 @@
     - PortableSurveillanceCameraMonitor
     worldTargetActions:
     - ForensicScanner
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionSecMk2
+  # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateReaper

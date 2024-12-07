@@ -237,7 +237,7 @@
   - type: Pullable
   - type: Puller
     needsHands: false
-  - type: StandingState
+#  - type: StandingState # Lust-edit
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -344,35 +344,6 @@
   - type: BorgCrewManifestViewer
   - type: StationRecordKeyStorage
   # Sunrise-End
-
-- type: entity # Lust added. Specially for new borg sprites and abilities
-  parent: BaseBorgChassisNT
-  id: BaseBorgChassisNTNextGen
-  save: false
-  abstract: true
-  components:
-  # TODO: Я в душе не ебу как чинить этих ваших боргов для ебли после ПРа ПЖБ, так что ебитесь с этим сами.
-  #- type: Sprite
-  #  sprite: _Lust/Mobs/Silicon/chassis.rsi
-  #- type: Appearance
-  #- type: RestAbility
-  #  disableableStringLayers:
-  #  - light
-  #  disableableEnumLayers:
-  #  - enum.BorgVisualLayers.Light
-  - type: TTS
-    voice: TemplarAssasin
-  - type: FootstepModifier
-    footstepSoundCollection:
-      collection: FootstepCyborgSpider
-      params:
-        volume: -15
-  # LUST ERP
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female
-  # LUST ERP
 
 - type: entity
   id: BaseBorgChassisSyndicate

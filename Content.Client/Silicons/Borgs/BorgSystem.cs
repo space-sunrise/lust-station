@@ -3,6 +3,7 @@ using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
 using Robust.Shared.Containers;
+using Content.Shared._Lust.Rest; // Lust-edit
 
 namespace Content.Client.Silicons.Borgs;
 
@@ -10,7 +11,6 @@ namespace Content.Client.Silicons.Borgs;
 public sealed class BorgSystem : SharedBorgSystem
 {
     [Dependency] private readonly AppearanceSystem _appearance = default!;
-
     public override void Initialize()
     {
         base.Initialize();
@@ -43,7 +43,7 @@ public sealed class BorgSystem : SharedBorgSystem
         base.OnRemoved(uid, component, args);
         UpdateBorgAppearance(uid, component);
     }
-
+    // Lust-start
     private void UpdateBorgAppearance(EntityUid uid,
         BorgChassisComponent? component = null,
         AppearanceComponent? appearance = null,
@@ -51,22 +51,45 @@ public sealed class BorgSystem : SharedBorgSystem
     {
         if (!Resolve(uid, ref component, ref appearance, ref sprite))
             return;
+        if (!TryComp<RestAbilityComponent>(uid, out var ability))
+            return;
 
         if (_appearance.TryGetData<MobState>(uid, MobStateVisuals.State, out var state, appearance))
         {
             if (state != MobState.Alive)
             {
+                sprite.LayerSetVisible(BorgVisualLayers.Body, false);
                 sprite.LayerSetVisible(BorgVisualLayers.Light, false);
+                sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
+                sprite.LayerSetVisible(RestVisuals.Resting, false);
+                sprite.LayerSetVisible(BorgVisualLayers.Wrecked, true);
                 return;
             }
+            if (state == MobState.Alive)
+            {
+                if (ability.IsResting)
+                sprite.LayerSetVisible(RestVisuals.Resting, true);
+                sprite.LayerSetVisible(BorgVisualLayers.Wrecked, false);
+                sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
+            }
         }
-
         if (!_appearance.TryGetData<bool>(uid, BorgVisuals.HasPlayer, out var hasPlayer, appearance))
             hasPlayer = false;
+        if (ability.IsResting)
+        {
+            sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
+            return;
+        }
+        else
+        {
+            sprite.LayerSetVisible(BorgVisualLayers.Light, component.BrainEntity != null || hasPlayer);
+            sprite.LayerSetState(BorgVisualLayers.Light, hasPlayer ? component.HasMindState : component.NoMindState);
+            sprite.LayerSetVisible(BorgVisualLayers.LightStatus, true);
+            sprite.LayerSetVisible(BorgVisualLayers.Body, true);
+        }
 
-        sprite.LayerSetVisible(BorgVisualLayers.Light, component.BrainEntity != null || hasPlayer);
-        sprite.LayerSetState(BorgVisualLayers.Light, hasPlayer ? component.HasMindState : component.NoMindState);
     }
+    // Lust-end
 
     private void OnMMIAppearanceChanged(EntityUid uid, MMIComponent component, ref AppearanceChangeEvent args)
     {
