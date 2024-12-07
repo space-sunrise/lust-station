@@ -5,6 +5,18 @@
   description: RestActionDesc
 
 - type: entity
+  id: RestActionRobot
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: robot_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
   id: RestActionMiner
   parent: BaseRestAction
   components:
@@ -60,6 +72,54 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: service_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionPeace
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: peace_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionClown
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: clown_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionSec
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: sec_tipped_icon
+    event: !type:RestActionEvent {}
+    checkCanInteract: false
+    checkConsciousness: false
+
+- type: entity
+  id: RestActionSecMk2
+  parent: BaseRestAction
+  components:
+  - type: InstantAction
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: sec_tipped_icon
     event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false

@@ -1,12 +1,41 @@
 {
   "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from Skyrat-tg at commit https://github.com/Skyrat-SS13/Skyrat-tg/commit/bb8d8f968abdddc1dcf86ceda8d47001d531e321 and edited by Lust Station",
   "size": {
     "x": 32,
     "y": 64
   },
-  "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from Skyrat-tg at commit https://github.com/Skyrat-SS13/Skyrat-tg/commit/bb8d8f968abdddc1dcf86ceda8d47001d531e321",
   "states": [
+    {
+      "name": "service_wreck"
+    },
+    {
+      "name": "clown",
+      "directions": 4
+    },
+    {
+      "name": "clown_e",
+      "directions": 4
+    },
+    {
+      "name": "clown_e_r",
+      "directions": 4
+    },
+    {
+      "name": "clown_l",
+      "directions": 4
+    },
+    {
+      "name": "clown_rest",
+      "directions": 4
+    },
+    {
+      "name": "clown_tipped"
+    },
+    {
+      "name": "clown_wreck"
+    },
     {
       "name": "engineer",
       "directions": 4
@@ -112,6 +141,32 @@
       "name": "miner_wreck"
     },
     {
+      "name": "peace",
+      "directions": 4
+    },
+    {
+      "name": "peace_e",
+      "directions": 4
+    },
+    {
+      "name": "peace_e_r",
+      "directions": 4
+    },
+    {
+      "name": "peace_l",
+      "directions": 4
+    },
+    {
+      "name": "peace_rest",
+      "directions": 4
+    },
+    {
+      "name": "peace_tipped"
+    },
+    {
+      "name": "peace_wreck"
+    },
+    {
       "name": "robot",
       "directions": 4
     },
@@ -128,7 +183,66 @@
       "directions": 4
     },
     {
+      "name": "robot_rest",
+      "directions": 4
+    },
+    {
+      "name": "robot_tipped"
+    },
+    {
       "name": "robot_wreck"
+    },
+    {
+      "name": "sec",
+      "directions": 4
+    },
+    {
+      "name": "sec_e",
+      "directions": 4
+    },
+    {
+      "name": "sec_e_r",
+      "directions": 4
+    },
+    {
+      "name": "sec_l",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2_e",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2_e_r",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2_l",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2_rest",
+      "directions": 4
+    },
+    {
+      "name": "sec_mk2_tipped"
+    },
+    {
+      "name": "sec_mk2_wreck"
+    },
+    {
+      "name": "sec_rest",
+      "directions": 4
+    },
+    {
+      "name": "sec_tipped"
+    },
+    {
+      "name": "sec_wreck"
     },
     {
       "name": "service",
@@ -152,9 +266,6 @@
     },
     {
       "name": "service_tipped"
-    },
-    {
-      "name": "service_wreck"
     }
   ]
 }

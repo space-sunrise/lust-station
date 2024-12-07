@@ -21,6 +21,21 @@
         },
         {
             "name": "service_tipped_icon"
+        },
+        {
+            "name": "sec_mk2_tipped_icon"
+        },
+        {
+            "name": "sec_tipped_icon"
+        },
+        {
+            "name": "clown_tipped_icon"
+        },
+        {
+            "name": "peace_tipped_icon"
+        },
+        {
+            "name": "robot_tipped_icon"
         }
     ]
 }

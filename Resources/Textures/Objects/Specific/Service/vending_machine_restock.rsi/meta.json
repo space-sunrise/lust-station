@@ -93,7 +93,7 @@
     {
       "name": "refill_snack"
     },
-	{
+    {
       "name": "refill_honk"
     },
     {
@@ -101,6 +101,9 @@
     },
     {
       "name": "refill_underwear"
+    },
+    {
+      "name": "refill_kink"
     }
   ]
 }
