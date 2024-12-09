@@ -255,7 +255,7 @@
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   # Sunrise-start
   - type: TTS
-    voice: TemplarAssasin
+    voice: TemplarAssasin # Lust-edit
   - type: Climbing
   - type: BorgMagboots
     walkModifier: 0.8
