@@ -54,8 +54,6 @@ public sealed partial class BorgTypePrototype : IPrototype
     [DataField]
     public EntityWhitelist? ModuleWhitelist { get; set; }
 
-
-
     /// <summary>
     /// Inventory template used by this borg.
     /// </summary>
