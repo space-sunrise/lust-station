@@ -63,7 +63,7 @@
   - type: SiliconLawProvider
     laws: NTDefault
   - type: TTS
-    voice: Sentrybot
+    voice: TemplarAssasin
   - type: PointLight
     color: "#a4daff"
     radius: 6
