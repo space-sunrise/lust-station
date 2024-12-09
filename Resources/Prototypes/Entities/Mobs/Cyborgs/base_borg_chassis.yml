@@ -76,10 +76,10 @@
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
 # Lust-start
-#  - type: ActionGrant # Lust-edit
+#  - type: ActionGrant
 #    actions:
 #    - ActionViewLaws
-# Luust-end
+# Lust-end
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
