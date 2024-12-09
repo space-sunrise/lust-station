@@ -5,6 +5,10 @@
   id: BaseMobDemon
   abstract: true
   components:
+  # Sunrise-Lust edit start
+  - type: Interaction
+    erp: true
+  # Sunrise-Lust edit end
   - type: Absorbable
   - type: HumanoidAppearance
     species: Demon
