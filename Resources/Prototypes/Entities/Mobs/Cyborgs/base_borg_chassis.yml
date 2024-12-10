@@ -75,9 +75,11 @@
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
+# Lust-start
+#  - type: ActionGrant
+#    actions:
+#    - ActionViewLaws
+# Lust-end
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
