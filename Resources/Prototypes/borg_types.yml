@@ -376,7 +376,7 @@
   addComponents:
   - type: ShowCriminalRecordIcons
   - type: SiliconLawProvider
-    laws: PeaceStatic
+    laws: RobocopLawset
   - type: Pacified
   - type: FlashImmunity
   - type: FabricateCookie
@@ -557,7 +557,7 @@
   - type: BorgCuffed
   - type: FlashImmunity
   - type: SiliconLawProvider
-    laws: NTDefault
+    laws: RobocopLawset
   - type: Access
     tags:
     - EmergencyShuttleRepealAll

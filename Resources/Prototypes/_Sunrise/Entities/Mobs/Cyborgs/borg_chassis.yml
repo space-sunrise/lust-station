@@ -61,7 +61,7 @@
   - type: AccessReader
     access: [["Security"], ["Command"]]
   - type: SiliconLawProvider
-    laws: NTDefault
+    laws: RobocopLawset
   - type: TTS
     voice: TemplarAssasin # Lust-edit
   - type: PointLight
