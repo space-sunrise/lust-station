@@ -2,7 +2,7 @@
   id: Moan
   name: chat-emote-name-moan
   category: Vocal
-  icon: Interface/Emotes/sigh.png
+  icon: _Lust/Interface/Emotes/moan.png
   whitelist:
     components:
     - Vocal
