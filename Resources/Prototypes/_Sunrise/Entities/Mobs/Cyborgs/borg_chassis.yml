@@ -63,7 +63,7 @@
   - type: SiliconLawProvider
     laws: NTDefault
   - type: TTS
-    voice: Sentrybot
+    voice: TemplarAssasin # Lust-edit
   - type: PointLight
     color: "#a4daff"
     radius: 6
