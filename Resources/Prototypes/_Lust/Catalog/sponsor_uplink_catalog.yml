@@ -162,3 +162,14 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
+
+- type: listing
+  id: UplinkLustDemonHorns
+  productEntity: DemonHorns
+  cost:
+    Suntick: 26
+  categories:
+  - General
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
