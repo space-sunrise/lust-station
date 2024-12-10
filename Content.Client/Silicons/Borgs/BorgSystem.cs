@@ -87,6 +87,7 @@ public sealed class BorgSystem : SharedBorgSystem
             sprite.LayerSetVisible(BorgVisualLayers.Light, component.BrainEntity != null || hasPlayer);
             sprite.LayerSetState(BorgVisualLayers.Light, hasPlayer ? component.HasMindState : component.NoMindState);
             sprite.LayerSetVisible(BorgVisualLayers.Body, true);
+            sprite.LayerSetVisible(RestVisuals.Resting, false);
         }
     }
     // Lust-end
