@@ -68,9 +68,11 @@ public sealed class BorgSystem : SharedBorgSystem
             if (state == MobState.Alive)
             {
                 if (ability.IsResting)
-                sprite.LayerSetVisible(RestVisuals.Resting, true);
+                {
+                    sprite.LayerSetVisible(RestVisuals.Resting, true);
+                    sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
+                }
                 sprite.LayerSetVisible(BorgVisualLayers.Wrecked, false);
-                sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
             }
         }
         if (!_appearance.TryGetData<bool>(uid, BorgVisuals.HasPlayer, out var hasPlayer, appearance))
@@ -78,16 +80,14 @@ public sealed class BorgSystem : SharedBorgSystem
         if (ability.IsResting)
         {
             sprite.LayerSetVisible(BorgVisualLayers.LightStatus, false);
-            return;
+            sprite.LayerSetVisible(BorgVisualLayers.Body, false);
         }
         else
         {
             sprite.LayerSetVisible(BorgVisualLayers.Light, component.BrainEntity != null || hasPlayer);
             sprite.LayerSetState(BorgVisualLayers.Light, hasPlayer ? component.HasMindState : component.NoMindState);
-            sprite.LayerSetVisible(BorgVisualLayers.LightStatus, true);
             sprite.LayerSetVisible(BorgVisualLayers.Body, true);
         }
-
     }
     // Lust-end
 

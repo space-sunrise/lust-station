@@ -75,13 +75,15 @@
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
+# Lust-start
+#  - type: ActionGrant
+#    actions:
+#    - ActionViewLaws
+# Lust-end
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: Crewsimov
+    laws: NTDefault
   - type: IonStormTarget
   - type: Inventory
     templateId: borg
@@ -255,7 +257,7 @@
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   # Sunrise-start
   - type: TTS
-    voice: FactCore
+    voice: TemplarAssasin # Lust-edit
   - type: Climbing
   - type: BorgMagboots
     walkModifier: 0.8
