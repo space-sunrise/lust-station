@@ -179,6 +179,12 @@
       worldTargetActions:
       - Emag
     # Sunrise-End
+    # Lust-start
+    - type: ActionGrant
+      actions:
+      - ActionViewLaws
+    - type: StandingState
+    # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateMedical
@@ -229,6 +235,12 @@
       - Emag
       - HandheldHealthAnalyzerUnpowered
     # Sunrise-End
+    # Lust-start
+    - type: ActionGrant
+      actions:
+      - ActionViewLaws
+    - type: StandingState
+    # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateSaboteur
@@ -265,6 +277,12 @@
       interactFailureString: petting-failure-syndicate-cyborg
       interactSuccessSound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
+    # Lust-start
+    - type: ActionGrant
+      actions:
+      - ActionViewLaws
+    - type: StandingState
+    # Lust-end
 
 - type: entity
   id: BorgChassisDerelict
@@ -297,3 +315,9 @@
     interactFailureString: petting-failure-derelict-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: StandingState
+  # Lust-end

@@ -98,10 +98,10 @@
   - type: MovementSpeedModifier
     baseSprintSpeed: 4.0
     baseWalkSpeed: 2.0
-  - type: DamagedByFlashing
-    flashDamage:
-      types:
-        Shock: 5.0
+#  - type: DamagedByFlashing
+#    flashDamage:
+#      types:
+#        Shock: 5.0
 #  - type: NightVision
 #    isToggle: true
 #    color: "#808080"
