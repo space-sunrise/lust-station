@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: ClothingShoesMilitaryBase
-  id: ClothingShoesSpecialistBoots
+  id: ClothingShoesSpecialistBootsSafno_S
   name: Specialist Boots
   description: Heavy lined boots. Quality made and well cared for.
   components:

@@ -1,6 +1,6 @@
 ﻿- type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSpecialistSatchel
+  id: ClothingBackpackSpecialistSatchelSafno_S
   name: Specialist Satchel
   description: Elite Forces member Satchel.
   components:
