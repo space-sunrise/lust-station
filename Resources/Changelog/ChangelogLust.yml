@@ -298,3 +298,19 @@
   id: 178
   time: '2024-12-10T00:07:14.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/115
+- author: JunterFox
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043C\u0430\u043D\
+      \u0442\u0438\u044F \u0428\u0430\u0445\u0442\u0451\u0440\u0430"
+    type: Add
+  id: 179
+  time: '2024-12-11T23:39:25.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/118
+- author: Nrd & Boy Boyevich
+  changes:
+  - message: "\u0438\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u0438\u043A\
+      \u043E\u043D\u043A\u0430 \u0441\u0442\u043E\u043D\u0430"
+    type: Fix
+  id: 180
+  time: '2024-12-11T23:39:37.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/117
