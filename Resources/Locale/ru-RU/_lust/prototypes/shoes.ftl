@@ -1,2 +1,2 @@
-﻿ent-ClothingShoesSpecialistBoots = Укреплённые ботинки Специалиста
+﻿ent-ClothingShoesSpecialistBootsSafno_S = Укреплённые ботинки Специалиста
     .desc = Подкованные сапоги армейского образца. Сделаны качественно и хорошо ухожены.
