@@ -133,7 +133,7 @@
 - type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
   id: TailAnalFuck
   name: Проникнуть хвостом в анус
-  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
   emotes: #Доделать после рефактора
   - нежно гладит хвостик %target
   - ласково проводит ладонью по хвосту %target

@@ -206,10 +206,10 @@
   - игриво трется членом о киску %target
   - заведенно двигает членом вдоль киски %target, делая ее более мокрой
   sounds:
-  - path: /Audio/_Sunrise/ERP/hlup.ogg
-  - path: /Audio/_Sunrise/ERP/hlup2.ogg
-  - path: /Audio/_Sunrise/ERP/hlup3.ogg
-  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex: Male
   targetSex: Female
   erp: true

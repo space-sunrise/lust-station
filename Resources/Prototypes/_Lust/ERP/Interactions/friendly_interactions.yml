@@ -125,7 +125,7 @@
   - как котик трется головой об %target
   - мурлыкая, трется ушками об %target
   sounds:
-  - path: /Audio/_Sunrise/ERP/clothes_rub.ogg
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -343,7 +343,7 @@
   - нежно мурчит на ушко %target
   - поднося свою голову ближе к %target, начинает мурчать на ушко
   sounds:
-  - path: _Sunrise/Voice/Felinid/cat_purr1.ogg
+  - path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
