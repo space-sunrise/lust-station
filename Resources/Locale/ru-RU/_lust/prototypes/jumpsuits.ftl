@@ -1,4 +1,4 @@
-﻿ent-ClothingUniformSpecialistBlackJumpSuit = костюм специалиста
+ent-ClothingUniformSpecialistBlackJumpSuitSafno_S = Костюм Специалиста
     .desc = Форма специалиста Элитных Сил Центрального Командования. Выглядит устрашающе.
 
 ent-ClothingUniformJumpsuitLoona = лунный топ с черными шортами

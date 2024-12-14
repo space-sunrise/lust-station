@@ -13,3 +13,7 @@
   - type: FootstepModifier
     footstepSoundCollection:
       collection: FootstepBoots
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.50
+    sprintModifier: 1.50
