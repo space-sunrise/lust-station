@@ -1,9 +1,9 @@
 ﻿# 4. ШЕЯ
 
 - type: interaction
-  id: NeckNuzzleVulpaStyle
+  id: NeckNuzzle
   name: Потереться мордочкой о шею
-  icon: _Lust/Interface/ERP/nuzzle_neck_vulpa.png
+  icon: _Lust/Interface/ERP/ERP2.png
   emotes:
   - нежно трётся мордочкой о шею %target
   - мягко касается мордочкой шеи %target, создавая приятное ощущение
@@ -14,8 +14,6 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  userTagWhitelist:
-  - Vulpakin
   userTagBlacklist:
   - mask
   category: шея
@@ -86,3 +84,20 @@
   userTagBlacklist:
   - mask
   category: шея
+
+- type: interaction
+  id: SoftNeckСhoke
+  name: Слабо душить [ERP]
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - хватает за шею %target, и, страстно смотря в глаза, немного сдавливая её
+  - медленно подносит руку к шее %target, а затем нежно сдавливает её пальцами
+  - с небольшой силой сдавливает шею %target своей рукой
+  - хватает рукой шею %target и, сдавливая её, вскруживает голову %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  category: шея
+

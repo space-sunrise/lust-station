@@ -7,6 +7,8 @@
   - утыкается лицом в грудь %target
   - прижимается щекой к груди %target
   - кладет голову на грудь %target
+  sounds:
+  - path: /Audio/Effects/thudswoosh.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -126,6 +128,29 @@
   category: грудь
 
 - type: interaction
+  id: BoobsBite
+  name: Кусьнуть соски зубами
+  icon: _Lust/Interface/ERP/boobs_suck.png
+  emotes:
+  - нежно кусает соски %target, оставляя на них немного слюны
+  - прикусывает соски %target, слегка оттягивая те своими зубами, в результате даруя волну удовольствия %target
+  - совершает серию легких укусов, заставляя соски %target приятно побаливать
+  - с усилием кусает соски %target, оставляя видимый на них след от зубов
+  - игриво покусывает соски %target, словно подготавливает их к чему-то большему
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: грудь
+
+- type: interaction
   id: BoobsSuck
   name: Поласкать соски ртом
   icon: _Lust/Interface/ERP/boobs_suck.png
@@ -195,6 +220,7 @@
   erp: true
   lovePercentTarget: 5
   targetTagBlacklist:
+  - Reptilian
   - bra
   - jumpsuit
   - outerClothing
@@ -255,4 +281,42 @@
   - bra
   - jumpsuit
   - outerClothing
+  category: грудь
+
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: TailBoobsPlay
+  name: Ласкать грудь хвостом
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  emotes: #Доделать после рефактора
+  - нежно гладит хвостик %target
+  - ласково проводит ладонью по хвосту %target
+  - игриво поглаживает ладонью хвостик %target
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: хвост
+
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: BoobsSnuggle
+  name: Прижаться грудью
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - тесно прижимается грудью к телу %target
+  - подходя ближе к своей цели, прижимает к своей груди %target
+  - захватывает своей грудью %target в крепкие объятия
+  userSex: Female
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 1
   category: грудь

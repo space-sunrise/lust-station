@@ -88,6 +88,25 @@
   category: рот
 
 - type: interaction
+  id: MouthFingering
+  name: Сунуть большой палец в рот
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - засовывает большой палец в рот %target
+  - отодвигает щеку %target своим пальцем
+  - проникает большим пальцем в рот %target
+  sounds:
+  - path: /Audio/_Lust/ERP/fingerlick/fingerlick.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 0
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - mask
+  category: рот
+
+- type: interaction
   id: MouthHairFaceFuckMale
   name: Трахнуть в рот схватив волосы
   icon: _Lust/Interface/ERP/hair_face_fuck.png
@@ -140,3 +159,26 @@
   - jumpsuit
   - outerClothing
   category: волосы
+
+#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+#  id: TailMouthFuck
+#  name: Проникнуть хвостом в рот
+#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
+#  emotes:
+#  - нежно гладит хвостик %target
+#  - ласково проводит ладонью по хвосту %target
+#  - игриво поглаживает ладонью хвостик %target
+#  userSex: Male
+#  targetSex: Female
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  targetTagWhitelist:
+#  - Vulpkanin
+#  - Felinid
+#  - Demon
+#  - Reptilian
+#  - CatTailStripes
+#  - SlimeCatTail
+#  - SlimeCatTailStripes
+#  category: хвост

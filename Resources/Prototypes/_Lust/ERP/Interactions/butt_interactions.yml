@@ -107,30 +107,48 @@
   category: попа
 
 - type: interaction
-  id: PatTail
-  name: Погладить хвост
-  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  id: Whip
+  name: Выпороть
+  inhandObject:
+  - CableMVStack
+  - CableHVStack
+  - CableApcStack
+  - ClothingBeltSuspendersBlack
+  - ClothingBeltSuspendersRed
+  - ClothingBeltBandolier
+  - Gohei
+  icon: _Lust/Interface/ERP/ERP2.png
   emotes:
-  - нежно гладит хвостик %target
-  - ласково проводит ладонью по хвосту %target
-  - игриво поглаживает ладонью хвостик %target
+  - крепко удерживания в руках плетевидный предмет, выпарывает %target
+  - замахиваясь, с силой выпарывает %target, делая удар за ударом по телу
+  - выпарывает %target, оставляя множество румянцев на теле
+  sounds:
+  - path: /Audio/_Lust/ERP/whip/whip_1.ogg
+  - path: /Audio/_Lust/ERP/whip/whip_2.ogg
+  - path: /Audio/_Lust/ERP/whip/whip_3.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
-  lovePercentUser: 3
-  lovePercentTarget: 6
-  userMoanChance: 0
-  targetMoanChance: 0
-  targetTagWhitelist:
-  - Vulpkanin
-  - Felinid
-  - Demon
-  - Reptilian
-  - CatTailStripes
-  - SlimeCatTail
-  - SlimeCatTailStripes
-  category: хвост
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  category: попа
 
-#трахать в анус держа хвост
-#трахать в вагину держа хвост
-#трахать в вагину держа хвост
+- type: interaction
+  id: ButtBite
+  name: Кусь за попу
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - делает кусь за попу %target
+  - слегка прикусывает попу %target
+  - нежно кусает булки %target
+  - игриво кусает за попу %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: попа

@@ -98,23 +98,6 @@
   category: лицо
 
 - type: interaction
-  id: FaceRubCat
-  name: Потереться как котик
-  icon: _Lust/Interface/ERP/face_rub_cat.png
-  emotes:
-  - по-кошачьи трется щекой об лицо %target
-  - как котик трется головой об %target
-  - мурлыкая, трется ушками об %target
-  sounds:
-  - path: /Audio/_Lust/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
-  erp: false
-  userTagWhitelist:
-  - Felinid
-  category: лицо
-
-- type: interaction
   id: FaceInBoobs
   name: Прижаться грудью к лицу
   icon: _Lust/Interface/ERP/face_in_boobs.png
@@ -203,6 +186,8 @@
   - прижимается ступней к лицу %target
   - нежно гладит ступней лицо %target
   - проводит ступней по лицу %target
+  sounds:
+  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -210,5 +195,3 @@
   lovePercentTarget: 3
   category: лицо
 
-#тесно прижимается грудью к телу %target
-#прижимается грудью к руке %target

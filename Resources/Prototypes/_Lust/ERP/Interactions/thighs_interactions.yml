@@ -1,28 +1,28 @@
-﻿#- type: interaction
-#  id: LegsKiss
-#  name: Целовать ножки
-#  icon: _Lust/Interface/ERP/legs_lick.png #КАРТИНКУ
-#  emotes:
-#  - осыпает поцелуями ножки %target
-#  - покрывает поцелуями ножки %target
-#  - нежно гладит и целует ножки %target
-#  - страстно целует ножки %target
-#  - сочно прижимается губами к ножке %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/kiss1.ogg
-#  - path: /Audio/_Lust/ERP/kiss2.ogg
-#  - path: /Audio/_Lust/ERP/kiss3.ogg
-#  - path: /Audio/_Lust/ERP/kiss4.ogg
-#  - path: /Audio/_Lust/ERP/kiss5.ogg
-#  - path: /Audio/_Lust/ERP/kiss6.ogg
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userTagBlacklist:
-#  - mask
-#  category: ляжки
+﻿- type: interaction
+  id: LegsKiss
+  name: Целовать ножки
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - осыпает поцелуями ножки %target
+  - покрывает поцелуями ножки %target
+  - нежно гладит и целует ножки %target
+  - страстно целует ножки %target
+  - сочно прижимается губами к ножке %target
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  userTagBlacklist:
+  - mask
+  category: ляжки
 
 - type: interaction
   id: LegsLick
@@ -48,26 +48,26 @@
   - outerClothing
   category: ляжки
 
-#- type: interaction
-#  id: LegsFeetKiss
-#  name: Целовать ступни
-#  icon: _Lust/Interface/ERP/legs_feet_lick.png #ПИКЧА
-#  emotes:
-#  - нежно прикасается губами к ступням %target
-#  - страстно целует ступни %target
-#  - осыпает поцелуями ступни %target
-#  - прижимается губами к ступням %target
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  targetTagBlacklist:
-#  - shoes
-#  - socks
-#  userTagBlacklist:
-#  - mask
-#  category: ляжки
+- type: interaction
+  id: LegsFeetKiss
+  name: Целовать ступни
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - нежно прикасается губами к ступням %target
+  - страстно целует ступни %target
+  - осыпает поцелуями ступни %target
+  - прижимается губами к ступням %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 4
+  targetTagBlacklist:
+  - shoes
+  - socks
+  userTagBlacklist:
+  - mask
+  category: ляжки
 
 - type: interaction
   id: LegsFeetLick
@@ -77,6 +77,9 @@
   - ласкает язычком пальчики на ногах %target
   - проходит своим язычком по ступням %target
   - страстно облизывает ступни %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -100,11 +103,33 @@
   - поглаживает пальчиками между ног %target
   - игриво поглаживает промежность %target
   - ласкает ладонью промежность %target
+  sounds:
+  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
+  category: ляжки
+
+- type: interaction
+  id: LegsBite
+  name: Кусь за ляжку
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - делает кусь за ляжку %target
+  - слегка прикусывает ляжку %target
+  - нежно кусает ляжку %target
+  - игриво кусает за ляжку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
   category: ляжки
 
 - type: interaction

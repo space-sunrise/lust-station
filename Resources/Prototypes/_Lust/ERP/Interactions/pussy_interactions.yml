@@ -196,3 +196,123 @@
   - jumpsuit
   - outerClothing
   category: вагина
+
+- type: interaction
+  id: PussyFriction
+  name: Тереться членом о киску
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - прислоняет член к киске %target, совершая поступальные движения вдоль неё
+  - игриво трется членом о киску %target
+  - заведенно двигает членом вдоль киски %target, делая ее более мокрой
+  sounds:
+  - path: /Audio/_Sunrise/ERP/hlup.ogg
+  - path: /Audio/_Sunrise/ERP/hlup2.ogg
+  - path: /Audio/_Sunrise/ERP/hlup3.ogg
+  - path: /Audio/_Sunrise/ERP/hlup4.ogg
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 8
+  lovePercentTarget: 8
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: вагина
+
+- type: interaction
+  id: ClitorBite
+  name: Прикусить клитор зубами
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - нежно кусает клитор %target, оставляя на нем немного слюны
+  - прикусывает клитор %target, слегка оттягивая его на себя, в результате даруя волну незабываемого удовольствия %target
+  - совершает серию легких укусов, заставляя клитор %target приятно побаливать
+  - игриво покусывает клитор %target, словно подготавливая киску к чему-то большему
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 7
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: вагина
+
+- type: interaction
+  id: ClitorLick
+  name: Играть с клитором язычком
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - медленно и нежно обводит круги вокруг клитора своим языком, даруя сильное удовольствие %target
+  - играется с клитором %target, вырисовывая на нем различные узоры своим языком
+  - игриво водит языком по клитору %target, покрывая его своей слюной
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 9
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: вагина
+
+#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+#  id: HoldTailPussyFuck
+#  name: Трахать в вагину держа хвост
+#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
+#  emotes: #Доделать после рефактора
+#  - нежно гладит хвостик %target
+#  - ласково проводит ладонью по хвосту %target
+#  - игриво поглаживает ладонью хвостик %target
+#  userSex: Male
+#  targetSex: Female
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  targetTagWhitelist:
+#  - Vulpkanin
+#  - Felinid
+#  - Demon
+#  - Reptilian
+#  - CatTailStripes
+#  - SlimeCatTail
+#  - SlimeCatTailStripes
+#  category: хвост
+
+#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+#  id: TailPussyFuck
+#  name: Проникнуть хвостом в вагину
+#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
+#  emotes: #Доделать после рефактора
+#  - нежно гладит хвостик %target
+#  - ласково проводит ладонью по хвосту %target
+#  - игриво поглаживает ладонью хвостик %target
+#  userSex: Male
+#  targetSex: Female
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  targetTagWhitelist:
+#  - Vulpkanin
+#  - Felinid
+#  - Demon
+#  - Reptilian
+#  - CatTailStripes
+#  - SlimeCatTail
+#  - SlimeCatTailStripes
+#  category: хвост
