@@ -14,3 +14,15 @@
         Blunt: 0.80
         Slash: 0.85
         Heat: 0.80
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitLoona
+  name: moon top with black shorts
+  description: These clothes seem to have been worn before you without being removed, torn and worn in places, the urge to howl at the top of your lungs comes over you.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/loona.rsi
+  - type: Clothing
+    sprite: _Lust/ERP/Stuff/loona.rsi
+

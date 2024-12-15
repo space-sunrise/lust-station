@@ -1,2 +1,48 @@
-#трахать в анус держа хвост
-#трахать в вагину держа хвост
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: PatTail
+  name: Погладить хвост
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  emotes: #Доделать после рефактора
+  - нежно гладит хвостик %target
+  - ласково проводит ладонью по хвосту %target
+  - игриво поглаживает ладонью хвостик %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 3
+  lovePercentTarget: 6
+  userMoanChance: 0
+  targetMoanChance: 0
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: хвост
+
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: HoldTailPussyFuck
+  name: Проникнуть хвостом в вагину
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  emotes: #Доделать после рефактора
+  - нежно гладит хвостик %target
+  - ласково проводит ладонью по хвосту %target
+  - игриво поглаживает ладонью хвостик %target
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: хвост
+

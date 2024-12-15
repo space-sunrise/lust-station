@@ -6,6 +6,8 @@
   icon: _Lust/Interface/ERP/hand_shake.png
   emotes:
   - жмёт руку %target
+  sounds:
+  - path: /Audio/_Lust/ERP/handshake/handshake.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -17,8 +19,8 @@
   icon: _Lust/Interface/ERP/pat_shoulder.png
   emotes:
   - хлопает по плечу %target
-  #  sounds:
-  #  - path: /Audio/_Lust/ERP/kiss1.ogg НУЖЕН ЗВУК
+  sounds:
+  - path: /Audio/_Lust/ERP/clap/sev_clap.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -40,13 +42,31 @@
   category: дружба
 
 - type: interaction
+  id: FriendlySniff
+  name: Обнюхать
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - обхюнивает %target
+  - приближает свой нос, обнюхивая %target
+  - нюхает %target
+  sounds:
+  - path: /Audio/_Lust/ERP/sniff/sniff_1.ogg
+  - path: /Audio/_Lust/ERP/sniff/sniff_2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
   id: FriendlyHighfive
   name: Дать пять
   icon: _Lust/Interface/ERP/high_five.png
   emotes:
   - даёт пять %target
-  #  sounds:
-  #  - path: /Audio/_Lust/ERP/SOME.OGG НУЖЕН ЗВУК
+  sounds:
+  - path: /Audio/_Lust/ERP/clap/five1.ogg
+  - path: /Audio/_Lust/ERP/clap/five2.ogg
+  - path: /Audio/_Lust/ERP/clap/five3.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -76,6 +96,8 @@
   icon: _Lust/Interface/ERP/pet_head.png
   emotes:
   - гладит %target по голове
+  sounds:
+  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -95,13 +117,15 @@
   category: дружба
 
 - type: interaction
-  id: FriendlyFelinidRubsCheek
+  id: FaceRubCat
   name: Потереться как котик
   icon: _Lust/Interface/ERP/face_rub_cat.png
   emotes:
-  - нежно трется щекой об %target
-  - ласково трется щекой об %target
-  - по-кошачьи трется щекой об %target
+  - по-кошачьи трется щекой об лицо %target
+  - как котик трется головой об %target
+  - мурлыкая, трется ушками об %target
+  sounds:
+  - path: /Audio/_Lust/ERP/clothes_rub.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -151,7 +175,7 @@
   category: дружба
 
 - type: interaction
-  id: FriendlyBlowslap
+  id: FriendlyBlowSlap
   name: Дать пощечину
   icon: _Lust/Interface/ERP/blow_slap.png
   emotes:
@@ -166,6 +190,29 @@
   - path: /Audio/_Lust/ERP/slap/slap_4.ogg
   - path: /Audio/_Lust/ERP/slap/slap_5.ogg
   - path: /Audio/_Lust/ERP/slap/slap_6.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_7.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyWristSlap
+  name: Дать подзатыльник
+  icon: _Lust/Interface/ERP/blow_slap.png
+  emotes:
+  - резко бьет ладонью по затылку %target
+  - сильно шлепает %target по затылку своей ладонью
+  - с громким хлопком ударяет %target по затылку своей ладонью
+  - дает ладонью смачный подзатыльник %target
+  sounds:
+  - path: /Audio/_Lust/ERP/slap/slap_1.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_2.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_3.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_4.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_5.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_6.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_7.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
@@ -180,15 +227,6 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
-  targetTagWhitelist:
-  - Human
-  - Felinid
-  - SlimePerson
-  - Vulpkanin
-  - TajaranSpecies
-  - Swine
-  - Dwarf
-  - Demon
   category: дружба
 
 - type: interaction
@@ -222,82 +260,171 @@
 
 - type: interaction
   id: FriendlyJojoPosing
-  name: Принять крутую позу #Сюда бы звук какой-нибудь подходящий
+  name: Принять крутую позу
   icon: _Lust/Interface/ERP/friendly_finger_tap.png
   emotes:
   - принимает крутую позу
   - встает в крутую позу
   - позирует играя мускулами
+  - делает jojo reference
+  sounds:
+  - path: /Audio/_Lust/ERP/coolpose/coolpose.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
   useSelf: true
   category: дружба
 
-#- type: interaction
-#  id: FriendlyShowTongue
-#  name: Высунуть язык
-#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА
-#  emotes:
-#  - открывает рот и высовывает язык на всю длину
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: false
-#  useSelf: true
-#  category: дружба
+- type: interaction
+  id: NeckСhoke
+  name: Душить
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - сильно сдавливает шею %target своими пальцами
+  - обхатывает шею %target рукой, сдавливая её
+  - схватил за горло %target и с силой сжал его своими пальцами
+  - хватает рукой шею %target и, сдавливая её, заставляет %target задыхаться
+  sounds:
+  - path: /Audio/_Lust/ERP/chock/neckchock_1.ogg
+  - path: /Audio/_Lust/ERP/chock/neckchock_2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
 
-#- type: interaction
-#  id: FriendlyVulpaBreath
-#  name: Дышать по-собачьи
-#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА ЗВУК
-#  emotes:
-#  - быстро дышит с высунутым языком
-#  - быстро дышит с открытой пастью
+- type: interaction
+  id: FriendlyBackMassage
+  name: Помассировать спину
+  icon: _Lust/Interface/ERP/shoulder_massage.png
+  emotes:
+  - массирует спину %target
+  - делает массаж спины %target
+  - разминает спину %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+
+#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+#  id: TailIntertwine
+#  name: Сплестись хвостами
+#  icon: _Sunrise/Interface/ERP/pat_tail.png
+#  emotes: #Доделать после рефактора
+#  - нежно гладит хвостик %target
+#  - ласково проводит ладонью по хвосту %target
+#  - игриво поглаживает ладонью хвостик %target
 #  userSex: Unsexed
 #  targetSex: Unsexed
 #  erp: false
-#  useSelf: true
 #  targetTagWhitelist:
-#  - Vulpcanin
-#  category: дружба
+#  - Vulpkanin
+#  - Felinid
+#  - Demon
+#  - Reptilian
+#  - CatTailStripes
+#  - SlimeCatTail
+#  - SlimeCatTailStripes
+#  userTagWhitelist:
+#  - Vulpkanin
+#  - Felinid
+#  - Demon
+#  - Reptilian
+#  - CatTailStripes
+#  - SlimeCatTail
+#  - SlimeCatTailStripes
+#  category: хвост
 
-#- type: interaction
-#  id: FriendlyPushups
-#  name: Делать отжимания
-#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #КАРТИНКА звук Салютует
-#  emotes:
-#  - отжимается от пола
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: false
-#  useSelf: true
-#  category: дружба
+- type: interaction
+  id: EarsMrrr
+  name: Помурчать на ушко
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - нежно мурчит на ушко %target
+  - поднося свою голову ближе к %target, начинает мурчать на ушко
+  sounds:
+  - path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  targetTagBlacklist:
+  - Vulpkanin
+  - HumanoidXeno
+  - Diona
+  - Reptilian
+  - Moth
+  - Arachnid
+  - Vox
+  category: дружба
 
-#- type: interaction
-#  id: FriendlyGrimace
-#  name: Скорчить рожу
-#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #картинка звук
-#  emotes:
-#  - корчит рожу %target
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: false
-#  useSelf: true
-#  category: дружба
+- type: interaction
+  id: FriendlyShowTongue
+  name: Высунуть язык
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - открывает рот и высовывает язык на всю длину
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  useSelf: true
+  category: дружба
 
-#- type: interaction
-#  id: FriendlyGrimace
-#  name: Показать фак
-#  icon: _Lust/Interface/ERP/friendly_finger_tap.png #картинка звук из Салютует
-#  emotes:
-#  - показывает фак %target
-#  - резко показывает фак %target
-#  - медленно показывает фак %target
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: false
-#  useSelf: true
-#  category: дружба
+- type: interaction
+  id: FriendlyVulpaBreath
+  name: Дышать по-собачьи
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - быстро дышит с высунутым языком
+  - быстро дышит с открытой пастью
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  useSelf: true
+  targetTagWhitelist:
+  - Vulpcanin
+  category: дружба
+
+- type: interaction
+  id: FriendlyPushups
+  name: Делать отжимания
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - отжимается от пола
+  sounds:
+  - path: /Audio/Effects/Emotes/salute.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  useSelf: true
+  category: дружба
+
+- type: interaction
+  id: FriendlyGrimace
+  name: Скорчить рожу
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - корчит рожу
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  useSelf: true
+  category: дружба
+
+- type: interaction
+  id: FriendlyFuck
+  name: Показать фак
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - показывает фак %target
+  - резко показывает фак %target
+  - медленно показывает фак %target
+  sounds:
+  - path: /Audio/Effects/Emotes/salute.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  useSelf: true
+  category: дружба
 
 - type: interaction
   id: FriendlyButtSlap
@@ -332,19 +459,5 @@
   erp: false
   useSelf: true
   category: дружба
-
-# - type: interaction
-#  id: ALotOfKisses
-#  name: Одарить шквалом поцелуев
-#  icon: _Lust/Interface/ERP/friendly.png
-#  emotes:
-#  - устраивает град поцелуев, ни оставляя сухого места на %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: true # поцелуи - ЕРП
-#  lovePercentUser: 4
-#  lovePercentTarget: 4
 
 #сплестись пальчиками

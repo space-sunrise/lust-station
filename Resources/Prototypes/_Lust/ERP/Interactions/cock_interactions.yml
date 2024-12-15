@@ -224,6 +224,7 @@
   - сидя сверху, прижимается вагиной к члену %target и двигает бедрами
   - увлеченно скользит вагиной вдоль члена %target
   - страстно трется вагиной об член %target
+  - прислоняет киску к члену %target, совершая поступальные движения вдоль него
   sounds:
   - path: /Audio/_Lust/ERP/hlup.ogg
   - path: /Audio/_Lust/ERP/hlup2.ogg
@@ -391,5 +392,26 @@
   - outerClothing
   category: член
 
+- type: interaction
+  id: CockBite
+  name: Прикусить член зубами
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - нежно кусает головку члена %target
+  - прикусывает ствол члена %target, игриво оттягивая кожицу зубами
+  - совершает серию легких укусов, заставляя член %target приятно побаливать
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 2
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  userTagBlacklist:
+  - mask
+  category: член
+
+
 #наступить на член
-#ласкать член шестью лапками

@@ -44,6 +44,9 @@
   - ласкает язычком пальчики на ногах %target
   - проходит по ступням %target своим язычком
   - щекочет язычком пяточки %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -62,6 +65,8 @@
   - гладит ступней член %target
   - ласкает ступней член %target
   - поглаживает ступней член %target
+  sounds:
+  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
   userSex: Unsexed
   targetSex: Male
   erp: true
@@ -81,6 +86,9 @@
   - старательно вылизывает языком обувь %target
   - тщательно проходит языком по подошве обуви %target
   - медленно проводит языком по обуви %target
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true

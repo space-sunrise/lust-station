@@ -48,3 +48,19 @@
   targetSex: Unsexed
   erp: false
   category: щёки
+
+- type: interaction
+  id: CheeksLick
+  name: Облизнуть щёку
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - игриво взглянув в глаза %target, облизывает щеку
+  - проводит языком по щеке %target, оставляя мокрый след
+  - приближаясь к щеке %target, проводит по ней языком
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: щёки

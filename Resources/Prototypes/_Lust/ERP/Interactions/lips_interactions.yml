@@ -4,7 +4,15 @@
   icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - нежно касается губами губ %target
-  - с любовью целует %target в губы
+  - слегка касается губами губ %target
+  - в нежном поцелуе соединяется губами с %target
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -19,6 +27,13 @@
   emotes:
   - быстро чмокает %target в губы
   - дарит лёгкий поцелуй %target
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -33,6 +48,13 @@
   emotes:
   - глубоко целует %target, увлекаясь
   - страстно соединяет губы с губами %target
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -47,6 +69,13 @@
   emotes:
   - игриво прикусывает губу %target
   - нежно кусает губу %target, добавляя страсти
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -60,7 +89,16 @@
   icon: _Lust/Interface/ERP/gentle_kiss.png
   emotes:
   - страстно целует %target с игрой языков
-  - глубоко целует %target
+  - переплетается языками в страстном поцелуе с %target
+  - страстно соединяет губы с губами %target
+  - с любовью целует %target в губы
+  sounds:
+  - path: /Audio/_Lust/ERP/kiss1.ogg
+  - path: /Audio/_Lust/ERP/kiss2.ogg
+  - path: /Audio/_Lust/ERP/kiss3.ogg
+  - path: /Audio/_Lust/ERP/kiss4.ogg
+  - path: /Audio/_Lust/ERP/kiss5.ogg
+  - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: true
@@ -93,7 +131,21 @@
   - path: /Audio/_Lust/ERP/kiss6.ogg
   userSex: Unsexed
   targetSex: Unsexed
-  erp: true # поцелуи - ЕРП
+  erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
   category: губы
+
+- type: interaction
+  id: ALotOfKisses
+  name: Одарить шквалом поцелуев
+  icon: _Lust/Interface/ERP/friendly.png
+  emotes:
+  - совершает град поцелуев, ни оставляя сухого места на %target
+  sounds:
+  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 4
+  lovePercentTarget: 4

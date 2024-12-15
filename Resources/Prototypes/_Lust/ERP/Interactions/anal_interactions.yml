@@ -111,3 +111,44 @@
   category: анал
   targetVirginityLoss: anal
   userVirginityLoss: male
+
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: HoldTailAnusFuck
+  name: Трахать в анус держа хвост
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  emotes: #Доделать после рефактора
+  - нежно гладит хвостик %target
+  - ласково проводит ладонью по хвосту %target
+  - игриво поглаживает ладонью хвостик %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  category: хвост
+
+- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+  id: TailAnalFuck
+  name: Проникнуть хвостом в анус
+  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
+  emotes: #Доделать после рефактора
+  - нежно гладит хвостик %target
+  - ласково проводит ладонью по хвосту %target
+  - игриво поглаживает ладонью хвостик %target
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Vulpkanin
+  - Felinid
+  - Demon
+  - Reptilian
+  - CatTailStripes
+  - SlimeCatTail
+  - SlimeCatTailStripes
+  category: хвост

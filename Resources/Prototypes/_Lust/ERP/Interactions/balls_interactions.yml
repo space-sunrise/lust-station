@@ -1,0 +1,61 @@
+- type: interaction
+  id: BallsSqueeze
+  name: Пожмакать яички
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - медленно сжимает в ладони яйца %target
+  - аккуратно мнет рукой яички %target
+  - возбужденно ласкает пальцами яички %target
+  - слегка сжимает и оттягивает кижицу мошонки %target
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: яйца
+
+- type: interaction
+  id: BallsLick
+  name: Поласкать яички языком
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - играет с яичками %target своим языком
+  - нежно полизывает яйца %target, делая их мокрыми от слюны
+  - водит языком от одного яичка до другого, заставляя %target возбуждаться сильнее
+  - полностью вылизывает яички %target, обволакивая их в свою слюну
+  sounds:
+  - path: /Audio/_Lust/ERP/lick1.ogg
+  - path: /Audio/_Lust/ERP/lick2.ogg
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 6
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: яйца
+
+- type: interaction
+  id: BallsBite
+  name: Нежно укусить яичко
+  icon: _Lust/Interface/ERP/ERP2.png
+  emotes:
+  - нежно кусает яички %target
+  - тянет кожицу мошонки %target своими зубами
+  - покусывает яички %target, отправляя по его мошонке волны слабой боли
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - bra
+  - jumpsuit
+  - outerClothing
+  category: яйца
