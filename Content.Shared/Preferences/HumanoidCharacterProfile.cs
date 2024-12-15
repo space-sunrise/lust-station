@@ -137,7 +137,7 @@ namespace Content.Shared.Preferences
         /// </summary>
         [DataField]
         public PreferenceUnavailableMode PreferenceUnavailable { get; private set; } =
-            PreferenceUnavailableMode.StayInLobby; // Sunrise-Edit
+            PreferenceUnavailableMode.SpawnAsOverflow;
 
         public HumanoidCharacterProfile(
             string name,
@@ -620,7 +620,7 @@ namespace Content.Shared.Preferences
             var prefsUnavailableMode = PreferenceUnavailable switch
             {
                 PreferenceUnavailableMode.StayInLobby => PreferenceUnavailableMode.StayInLobby,
-                //PreferenceUnavailableMode.SpawnAsOverflow => PreferenceUnavailableMode.SpawnAsOverflow, // Sunrise-Edit
+                PreferenceUnavailableMode.SpawnAsOverflow => PreferenceUnavailableMode.SpawnAsOverflow,
                 _ => PreferenceUnavailableMode.StayInLobby // Invalid enum values.
             };
 

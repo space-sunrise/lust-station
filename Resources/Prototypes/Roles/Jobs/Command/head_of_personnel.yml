@@ -20,7 +20,8 @@
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
-  canBeAntag: false
+  canBeAntag: true # Sunrise-Edit
+  antagAdvantage: 20 # Sunrise-Edit
   radioBold: true # Sunrise-Edit
   displayWeight: 90 # Sunrise-Edit
   access:
@@ -52,8 +53,6 @@
   - Medical
   - Barber  # Sunrise-edit
   special:
-  - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff

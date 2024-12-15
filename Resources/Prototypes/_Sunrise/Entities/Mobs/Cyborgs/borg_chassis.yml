@@ -31,7 +31,7 @@
   - type: BorgCuffed
   - type: FlashImmunity
   - type: ShowJobIcons
-#  - type: ShowMindShieldIcons Sunrise-Edit
+  - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: BorgTransponder
     sprite:
@@ -234,7 +234,7 @@
         volume: -15
   - type: FlashImmunity
   - type: ShowJobIcons
-#  - type: ShowMindShieldIcons Sunrise-Edit
+  - type: ShowMindShieldIcons
   - type: ShowCriminalRecordIcons
   - type: GhostRole
     makeSentient: true
