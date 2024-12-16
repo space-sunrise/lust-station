@@ -31,6 +31,7 @@ job-name-adjutant = адъютант
 job-name-commaid = горничная командования
 # Перевод трекеров времени
 JobCentCommOfficial = представитель Центком
+JobCentCommOperator = оператор Центком
 JobMagistrat = магистрат
 JobSeniorEngineer = ведущий инженер
 JobSeniorOfficer = инструктор СБ
