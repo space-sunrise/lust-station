@@ -9,7 +9,8 @@
     - state: plushie-aname
     - state: plushie-aname-unshaded
       shader: unshaded
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: LoviAptechku
   - type: TTS
     voice: Triss
