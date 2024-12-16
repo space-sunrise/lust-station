@@ -80,7 +80,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: tailer-murlikin
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: TailerMurlikinPhrases
   - type: TTS
     voice: ElderLyonsFL3
@@ -173,7 +174,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: kharsha
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: KharshaPhrases
   - type: TTS
     voice: SironaRyan
@@ -194,7 +196,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: dobitchik
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: DobitchikPhrases
   - type: TTS
     voice: Anduin
@@ -215,7 +218,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plush_medi
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: MediPhrases
   - type: UseDelay
     delay: 3
@@ -234,7 +238,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushie_vaxel
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: VaxelPhrases
   - type: UseDelay
     delay: 3
@@ -253,7 +258,8 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushie_pinkers
-  - type: SpeakOnUse
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
     pack: PinkersPhrases
   - type: TTS
     voice: Mana
