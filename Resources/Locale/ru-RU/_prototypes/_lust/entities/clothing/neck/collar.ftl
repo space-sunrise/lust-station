@@ -1,0 +1,12 @@
+ent-ClothingNeckCollar1 = чокер с сердечком
+    .desc = Чёрный чокер с розовым сердечком на передней части.
+ent-ClothingNeckCollar2 = сетчатый чокер
+    .desc = Чёрный сетчатый чокер, плотно облегающий шею.
+ent-ClothingNeckCollar3 = чокер с кругом
+    .desc = Чёрный чокер с металлическим кругом на передней части.
+ent-ClothingNeckCollar4 = { ent-ClothingNeckCollar1 }
+    .desc = { ent-ClothingNeckCollar1.desc }
+ent-ClothingNeckSpikeCollar = шипастый ошейник
+    .desc = Шипастый ошейник для острых игр.
+ent-ClothingNeckRibbon = лента
+    .desc = Миленькая красная лента.

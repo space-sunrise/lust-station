@@ -23,9 +23,24 @@
     ClothingShoesSchoolBlack: 2
     ClothingShoesSchoolWhite: 2
     ClothingUniformJumpsuitLoona: 3
+    PlugBox: 3
+    ERPVibroStick: 3
+    ERPVibroEgg: 3
+    ERPStrapOn: 3
+    ERPWhip: 3
+    ERPBeads: 3
+    RemoteSignaller: 5
     # Bunny uniform
     BunnyUniform: 2
     BunnyShoes: 2
     BunnyButterfly: 2
     BunnyEars: 2
     BunnyManjets: 2
+    # Collars
+    ClothingNeckShockCollar: 2
+    ClothingNeckCollar1: 3
+    ClothingNeckCollar2: 3
+    ClothingNeckCollar3: 3
+    ClothingNeckCollar4: 3
+    ClothingNeckSpikeCollar: 3
+    ClothingNeckRibbon: 3

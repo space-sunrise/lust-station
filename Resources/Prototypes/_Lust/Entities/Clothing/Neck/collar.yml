@@ -1,0 +1,153 @@
+- type: entity
+  parent: Clothing
+  id: ClothingNeckShockCollar
+  name: shock collar
+  suffix: SelfUnremovable
+  description: An electric collar that shocks on the signal.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/shock_collar.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/shock_collar.rsi
+    stripDelay: 10
+    equipDelay: 5
+    quickEquip: true
+    slots:
+    - neck
+  - type: SelfUnremovableClothing
+  - type: ShockOnTrigger
+    damage: 1
+    duration: 3
+    cooldown: 4
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckCollar1
+  name: collar with heart
+  description: Black choker with a pink heart on the front.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar1.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar1.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckCollar2
+  name: mesh collar
+  description: Black mesh choker that fits snugly around the neck.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar2.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar2.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckCollar3
+  name: collar with circle
+  description: Black choker with metal circle on the front.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar3.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar3.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckCollar4
+  name: collar with heart
+  description: Black choker with a pink heart on the front.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar4.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar4.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckSpikeCollar
+  name: spike collar
+  description: Spiked collar for spicy play.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/spike_collar.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/spike_collar.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: Clothing
+  id: ClothingNeckRibbon
+  name: ribbon
+  description: Cutie red ribbon.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    quickEquip: true
+    slots:
+    - neck
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+
