@@ -173,8 +173,8 @@
   - type: Handcuff
     cuffedRSI: _Lust/ERP/Stuff/shibari.rsi
     bodyIconState: body-overlay
-    breakoutTime: 3 # Keep in mind that's a toy
-    uncuffTime: 1.5 # /\
+    breakoutTime: 6 # Keep in mind that's a toy
+    uncuffTime: 6 # /\
   - type: Sprite
     sprite: _Lust/ERP/Stuff/shibari.rsi
     state: handcuff
@@ -189,5 +189,170 @@
       types:
         Blunt: 0
   - type: UseDelay
-    delay: 3
+    delay: 6
   - type: Clickable
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPBeads
+  name: beads
+  description: Several anal balls of different sizes, tied on a strong thread.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/beads.rsi
+    state: icon
+    scale: 0.7,0.7
+  - type: Item
+    size: Small
+    sprite: _Lust/ERP/Toys/beads.rsi
+
+- type: entity
+  parent: [BaseItem]
+  id: ERPWhip
+  name: whip
+  description: A black whip designed for passionate bed games.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/whip.rsi
+    state: icon
+    scale: 0.8,0.8
+  - type: Item
+    size: Normal
+    sprite: _Lust/ERP/Toys/whip.rsi
+  - type: StaminaDamageOnHit
+    damage: 8
+  - type: MeleeWeapon
+    soundHit:
+      collection: Whips
+      params:
+          variation: 0.03
+          volume: 3
+    soundNoDamage:
+      collection: Whips
+      params:
+          variation: 0.03
+          volume: 3
+    damage:
+      types:
+        Blunt: 0
+
+- type: entity
+  parent: [BaseItem]
+  id: ERPStrapOn
+  name: strap on
+  description: A belted dildo designed for couples who want to switch roles.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/strap_on.rsi
+    state: icon
+    scale: 0.9,0.9
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/strap_on.rsi
+    quickEquip: true
+    slots:
+    - belt
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPVibroEgg
+  name: vibro egg
+  description: A small pink egg-like device connected to the remote.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/vibro_egg.rsi
+    state: icon
+    scale: 0.9,0.9
+  - type: Item
+    size: Small
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/vibro_egg.rsi
+    quickEquip: true
+    slots:
+    - PLUG
+  - type: VibratingToy
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+    - Toggle
+    - On
+    - Off
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPVibroStick
+  name: vibro stick
+  description: A standard vibrator that can deliver a sea of pleasurable sensations.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/vibro_stick.rsi
+    state: icon
+    scale: 0.8,0.8
+  - type: Item
+    size: Small
+    sprite: _Lust/ERP/Toys/vibro_stick.rsi
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - PLUG
+  - type: VibratingToy
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 0
+
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPPlug1
+  name: plug
+  description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/plug.rsi
+    state: icon1
+    scale: 0.7,0.7
+  - type: Item
+    size: Tiny
+    sprite: _Lust/ERP/Toys/plug.rsi
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPPlug2
+  name: plug
+  description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/plug.rsi
+    state: icon2
+    scale: 0.7,0.7
+  - type: Item
+    size: Tiny
+    sprite: _Lust/ERP/Toys/plug.rsi
+
+- type: entity
+  parent: [BaseItem, BaseERPPlug]
+  id: ERPPlug3
+  name: plug
+  description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/plug.rsi
+    state: icon3
+    scale: 0.7,0.7
+  - type: Item
+    size: Tiny
+    sprite: _Lust/ERP/Toys/plug.rsi
+
+
+- type: soundCollection
+  id: Whips
+  files:
+  - /Audio/_Lust/ERP/whip/whip_1.ogg
+  - /Audio/_Lust/ERP/whip/whip_2.ogg
+  - /Audio/_Lust/ERP/whip/whip_3.ogg
