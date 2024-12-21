@@ -4,6 +4,7 @@ using Content.Server.Speech.Components;
 using Content.Shared.Speech.EntitySystems;
 using Content.Shared.StatusEffect;
 using Robust.Shared.Random;
+using Content.Server._Lust.Toys.Components;
 
 namespace Content.Server.Speech.EntitySystems
 {
@@ -31,6 +32,15 @@ namespace Content.Server.Speech.EntitySystems
 
         private void OnAccent(EntityUid uid, StutteringAccentComponent component, AccentGetEvent args)
         {
+            // Lust-start
+            if (TryComp<VibratingComponent>(uid, out var pu))
+            {
+                component.MatchRandomProb = 0.3f;
+                component.FourRandomProb = 0;
+                component.ThreeRandomProb = 0;
+                component.CutRandomProb = 0;
+            }
+            // Lust-end
             args.Message = Accentuate(args.Message, component);
         }
 

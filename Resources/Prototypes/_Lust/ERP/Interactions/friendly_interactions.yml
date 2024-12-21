@@ -416,14 +416,12 @@
   icon: _Lust/Interface/ERP/ERP2.png
   emotes:
   - показывает фак %target
-  - резко показывает фак %target
-  - медленно показывает фак %target
+  - элегантно показывает фак %target
   sounds:
   - path: /Audio/Effects/Emotes/salute.ogg
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
-  useSelf: true
   category: дружба
 
 - type: interaction

@@ -1,0 +1,16 @@
+- type: entity
+  name: plug box
+  parent: BoxCardboard
+  id: PlugBox
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/plug.rsi
+    state: plug_box
+  - type: Storage
+    grid:
+    - 0,0,2,0
+  - type: StorageFill
+    contents:
+      - id: ERPPlug1 # Its alternating on purpose for the light replacer.
+      - id: ERPPlug2
+      - id: ERPPlug3
