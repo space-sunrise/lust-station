@@ -58,3 +58,7 @@ JobSecurityCombatBorg = боевой киборг СБ
 JobPeaceBorg = миротворец
 JobClownBorg = клоун киборг
 JobMedicalPathologist = Патологоанатом
+JobUSSPCrew = Сотрудник СССП
+JobUSSPGuard = Милиция СССП
+JobUSSPSoldier = Солдат СССП
+JobUSSPOfficer = Офицер СССП

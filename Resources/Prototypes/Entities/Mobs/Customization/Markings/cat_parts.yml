@@ -2,7 +2,6 @@
   id: CatEars
   bodyPart: Special
   markingCategory: Special
-  speciesRestriction: []
   sponsorOnly: false # Lust Station
   coloring:
     default:
@@ -26,7 +25,6 @@
   id: CatTail
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: []
   sponsorOnly: false # Lust Station
   coloring:
     default:
