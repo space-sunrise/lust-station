@@ -143,7 +143,8 @@
     - RadiationProtection
     - Drowsiness
     - Adrenaline
-    - LoveEffect  # Sunrise-Aphrodesiac
+    - LoveEffect  # Sunrise-Edit
+    - Jump # Sunrise-Edit
   - type: Body
     prototype: Human
     requiredLegs: 2
@@ -252,6 +253,7 @@
   - type: Carriable
   - type: CanEscapeInventory
   - type: Mood
+  - type: EmoteAnimation
   # Sunrise-End
   - type: Barotrauma
     damage:
