@@ -1,3 +1,4 @@
+using Content.Server._Lust.ErpStatus;
 using Content.Server.Access.Systems;
 using Content.Server.DetailExaminable;
 using Content.Server.Holiday;
@@ -32,7 +33,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Sunrise.Interfaces.Shared; // Sunrise-Sponsors
+using Content.Sunrise.Interfaces.Shared;
 
 namespace Content.Server.Station.Systems;
 
@@ -228,12 +229,14 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 else
                 {
                     AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
-                    EnsureComp<DetailExaminableComponent>(entity.Value).Erp = profile.Erp;
-                    if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-                    EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
-                    EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
-                    if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
                 }
+                // Lust-Station-Start
+                EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
+                if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
+                EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
+                EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+                if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+                // Lust-Station-End
             }
             // Sunrise-End
         }

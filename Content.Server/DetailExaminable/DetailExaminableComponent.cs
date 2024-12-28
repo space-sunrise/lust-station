@@ -8,9 +8,5 @@ namespace Content.Server.DetailExaminable
         [DataField("content", required: true)]
         [ViewVariables(VVAccess.ReadWrite)]
         public string Content = "";
-
-        [DataField("erp", required: true)]
-        [ViewVariables(VVAccess.ReadWrite)]
-        public Erp Erp = Erp.Ask;
     }
 }

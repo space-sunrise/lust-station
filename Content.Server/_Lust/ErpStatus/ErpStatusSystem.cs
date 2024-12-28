@@ -3,9 +3,9 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 
-namespace Content.Server.DetailExaminable
+namespace Content.Server._Lust.ErpStatus
 {
-    public sealed class DetailExaminableSystem : EntitySystem
+    public sealed class ErpStatusSystem : EntitySystem
     {
         [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
 
@@ -13,10 +13,10 @@ namespace Content.Server.DetailExaminable
         {
             base.Initialize();
 
-            SubscribeLocalEvent<DetailExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+            SubscribeLocalEvent<ErpStatusComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
         }
 
-        private void OnGetExamineVerbs(EntityUid uid, DetailExaminableComponent component, GetVerbsEvent<ExamineVerb> args)
+        private void OnGetExamineVerbs(EntityUid uid, ErpStatusComponent component, GetVerbsEvent<ExamineVerb> args)
         {
             if (Identity.Name(args.Target, EntityManager) != MetaData(args.Target).EntityName)
                 return;
@@ -28,14 +28,15 @@ namespace Content.Server.DetailExaminable
                 Act = () =>
                 {
                     var markup = new FormattedMessage();
-                    markup.AddMarkupOrThrow(component.Content);
+                    markup.AddMarkupOrThrow("\n");
+                    markup.AddMarkupOrThrow(Loc.GetString($"detail-examinable-erp-{component.Erp.ToString().ToLowerInvariant()}-text"));
                     _examineSystem.SendExamineTooltip(args.User, uid, markup, false, false);
                 },
-                Text = Loc.GetString("detail-examinable-verb-text"),
+                Text = Loc.GetString("erp-status-verb-text"),
                 Category = VerbCategory.Examine,
                 Disabled = !detailsRange,
-                Message = detailsRange ? null : Loc.GetString("detail-examinable-verb-disabled"),
-                Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/examine.svg.192dpi.png"))
+                Message = detailsRange ? null : Loc.GetString("erp-status-verb-disabled"),
+                Icon = new SpriteSpecifier.Texture(new ("/Textures/_Lust/Interface/ERP/heart.png"))
             };
 
             args.Verbs.Add(verb);
