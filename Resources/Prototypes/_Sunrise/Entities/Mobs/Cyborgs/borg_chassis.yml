@@ -93,8 +93,8 @@
     - Hydroponics
     - Atmospherics
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
-    baseSprintSpeed : 4.5
+    baseWalkSpeed : 2.5
+    baseSprintSpeed : 3.5
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -341,7 +341,7 @@
     nameSegments:
     - BorgNamesERT
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3.5
+    baseWalkSpeed : 2.5
     baseSprintSpeed : 4
   - type: Tag
     tags:
@@ -482,8 +482,8 @@
       params:
         volume: -5
   - type: MovementSpeedModifier
-    baseWalkSpeed : 3
-    baseSprintSpeed : 4
+    baseWalkSpeed : 2
+    baseSprintSpeed : 3
   - type: InnateItem
     worldTargetActions:
     - Emag
