@@ -274,7 +274,7 @@
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
-    state: plushie-alice-simonova
+    state: alisa_simonova_de_mori
 
 - type: entity
   id: PlushieRx1984
@@ -284,3 +284,192 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushie-rx
+
+- type: entity
+  id: PlushieKlaraIsaeva
+  parent: BasePlushie
+  name: Plush Klara Isaeva
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: klara_isaeva
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: KlaraIsaevaPhrases
+  - type: TTS
+    voice: KarinaPetrovaTB
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: KlaraIsaevaPhrases
+  values:
+    prefix: klara-isaeva-
+    count: 1
+
+- type: entity
+  id: PlushieSaiHaks
+  parent: BasePlushie
+  name: Plush Sai Haks
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sai_haks2
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieCosmicStarDust
+  parent: BasePlushie
+  name: Cosmic Star Dust
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: cosmic_star_dust
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Moth/moth_scream.ogg
+    params:
+      volume: 5
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieRatmirSaphirov
+  parent: BasePlushie
+  name: Plush Ratmir Saphirov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: ratmir_saphirov
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieMikeSchmidt
+  parent: BasePlushie
+  name: Plush Mike Schmidt
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: mike_schmidt
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: MikeSchmidtPhrases
+  - type: TTS
+    voice: Warcraft3Artas2
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: MikeSchmidtPhrases
+  values:
+    prefix: mike-schmidt-
+    count: 3
+
+- type: entity
+  id: PlushieBormanSerkiroboy
+  parent: BasePlushie
+  name: Plushie Borman Serkiroboy
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: borman_sekiroboy
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: BormanSerkiroBoyPhrases
+  - type: TTS
+    voice: Warcraft3Artas2
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: BormanSerkiroboyPhrases 
+  values:
+    prefix: 
+    count: 1
+
+- type: entity
+  id: PlushieBlobaBlabo
+  parent: BasePlushie
+  name: Bloba Blabo
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: bloba_blabo
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Slime/slime_squish.ogg
+    params:
+      volume: 5
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieDragonaft
+  parent: BasePlushie
+  name: Plushie Dragonaft
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: dragonaft
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: DragonaftPhrases
+  - type: TTS
+    voice: Crysis2Operator3v1
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: DragonaftPhrases 
+  values:
+    prefix: dragonaft-
+    count: 2
+
+- type: entity
+  id: PlushieIgorVolkov
+  parent: BasePlushie
+  name: Igor Volkov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: igor_volkov
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: IgorVolkovPhrases
+  - type: TTS
+    voice: TF2Soldier
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: IgorVolkovPhrases 
+  values:
+    prefix: igor-volkov-
+    count: 1
+
+- type: entity
+  id: PlushieAlisaSaygak
+  parent: BasePlushie
+  name: Alisa Saygak
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alisa_saygak
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieKuromiOlink
+  parent: BasePlushie
+  name: Kuromi Olink
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: kuromi_olink
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
+
