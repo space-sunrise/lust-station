@@ -314,9 +314,14 @@
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
-    state: sai_haks2
+    state: sai_haks1
+  - type: EmitSoundOnUse
+      sound:
+        path: /Audio/Weapons/Guns/MagIn/kinetic_reload.ogg
+      params:
+        volume: 100
   - type: UseDelay
-    delay: 5
+    delay: 10
 
 - type: entity
   id: PlushieCosmicStarDust
@@ -330,7 +335,7 @@
     sound:
       path: /Audio/Voice/Moth/moth_scream.ogg
     params:
-      volume: 5
+      volume: 100
   - type: UseDelay
     delay: 5
 
@@ -401,7 +406,7 @@
     sound:
       path: /Audio/Voice/Slime/slime_squish.ogg
     params:
-      volume: 5
+      volume: 100
   - type: UseDelay
     delay: 5
 
@@ -473,3 +478,132 @@
   - type: UseDelay
     delay: 5
 
+- type: entity
+  id: PlushieSonyaKarpova
+  parent: BasePlushie
+  name: Sonya Karpova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sonya_karpova
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Voice/Vulpkanin/dog_growl3.ogg
+    params:
+      volume: 100
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieIvanBykov
+  parent: BasePlushie
+  name: Ivan Bykov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: ivan_bykov
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: IvanBykovPhrases
+  - type: TTS
+    voice: Horner
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: IvanBykovPhrases 
+  values:
+    prefix: ivan-bykov-
+    count: 1
+
+- type: entity
+  id: PlushieMichaelScott
+  parent: BasePlushie
+  name: Michael Scott
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: michael_scott
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: MichaelScottPhrases
+  - type: TTS
+    voice: Jackie
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: MichaelScottPhrases 
+  values:
+    prefix: michael-scott-
+    count: 3
+
+- type: entity
+  id: PlushieStrickland
+  parent: BasePlushie
+  name: Strickland
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: strickland
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+    params:
+      volume: 100
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieCarolinaKalinina
+  parent: BasePlushie
+  name: Carolina Kalinina
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: carolina_kalinina
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Effects/explosionfar.ogg
+    params:
+      volume: 100
+  - type: UseDelay
+    delay: 60
+
+- type: entity
+  id: PlushieAlexanderTarando
+  parent: BasePlushie
+  name: Alexander Tarando
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alexander_tarando
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/Plushie/kept_you_waiting_huh.ogg"
+    params:
+      volume: 100
+  - type: UseDelay
+    delay: 15
+
+- type: entity
+  id: PlushieChars
+  parent: BasePlushie
+  name: Chars
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie_chars
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: CharsPhrases
+  - type: TTS
+    voice: VictorRookwood
+  - type: UseDelay
+    delay: 5
+
+- type: localizedDataset
+  id: CharsPhrases 
+  values:
+    prefix: Chars-
+    count: 1

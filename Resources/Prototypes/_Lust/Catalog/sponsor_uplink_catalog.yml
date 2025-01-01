@@ -284,3 +284,79 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: UplinkPlushieSonyaKarpova
+  productEntity: PlushieSonyaKarpova
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieIvanBykov
+  productEntity: PlushieIvanBykov
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieMichaelScott
+  productEntity: PlushieMichaelScott
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieStrickland
+  productEntity: PlushieStrickland
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieCarolinaKalinina
+  productEntity: PlushieCarolinaKalinina
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieAlexanderTarando
+  productEntity: PlushieAlexanderTarando
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkPlushieChars
+  productEntity: PlushieChars
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
