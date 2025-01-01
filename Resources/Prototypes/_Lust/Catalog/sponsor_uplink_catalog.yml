@@ -284,3 +284,35 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: UplinkLustPlushieEuphaEverek
+  productEntity: PlushieEuphaEverek
+  cost:
+    Suntick: 12
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkLustPlushieAlexandrLimenski
+  productEntity: PlushieAlexandrLimenski
+  cost:
+    Suntick: 12
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkLustPlushieRendyCamble
+  productEntity: PlushieRendyCamble
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1

@@ -384,9 +384,9 @@
     delay: 5
 
 - type: localizedDataset
-  id: BormanSerkiroboyPhrases 
+  id: BormanSerkiroboyPhrases
   values:
-    prefix: 
+    prefix:
     count: 1
 
 - type: entity
@@ -422,7 +422,7 @@
     delay: 5
 
 - type: localizedDataset
-  id: DragonaftPhrases 
+  id: DragonaftPhrases
   values:
     prefix: dragonaft-
     count: 2
@@ -444,7 +444,7 @@
     delay: 5
 
 - type: localizedDataset
-  id: IgorVolkovPhrases 
+  id: IgorVolkovPhrases
   values:
     prefix: igor-volkov-
     count: 1
@@ -473,3 +473,69 @@
   - type: UseDelay
     delay: 5
 
+- type: entity
+  id: PlushieEuphaEverek
+  parent: BasePlushie
+  name: Plush Eupha Everek
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: eupha_everek
+  - type: EmoteOnUse
+    values:
+    - Moan
+  - type: Vocal
+  - type: Emoting
+  - type: EmitSoundOnUse
+    sound:
+      collection: EuphMoan
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: UseDelay
+    delay: 4
+  - type: Interaction
+    erp: true
+  - type: Sex
+    sex: female
+
+- type: entity
+  id: PlushieRendyCamble
+  parent: BasePlushie
+  name: Rendy Camble
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie_rend
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/rendy_boom.ogg
+      params:
+        volume: -8
+  - type: UseDelay
+    delay: 15
+
+- type: entity
+  id: PlushieAlexandrLimenski
+  parent: BasePlushie
+  name: Alexandr Limenski
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alexandr_limenski
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/huem_po_lbu.ogg
+      params:
+        volume: -2
+  - type: UseDelay
+    delay: 5
