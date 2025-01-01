@@ -86,35 +86,3 @@
             # Lust-start
             ComMaid: [ 1, 1 ]
             # Lust-end
-        - type: StationGoal
-          goals:
-          - Shuttle
-          - Singularity
-          - SolarPanels
-          - Artifacts
-          - Bank
-          - Zoo
-          - MiningOutpost
-          - Tesla
-          - XenobiologyRepair
-          - VirusologyAmbusol
-          - Containment
-          - WeaponsSecurity
-          - MaintsRepair
-          - DormsBuild
-          - BattleShuttle
-          - Transit
-          - NukeRoom
-          - Permabrig
-          - Farm
-          - Delegates
-          - Cyborgs
-          - Testing
-          - Anomaly
-          - Replenishment
-          - IntelWeapons
-          - Reports
-          - Reconnaissance
-          - Saboteurs
-          - Furs
-          - Crew
