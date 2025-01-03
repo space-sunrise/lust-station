@@ -384,9 +384,9 @@
     delay: 5
 
 - type: localizedDataset
-  id: BormanSerkiroboyPhrases 
+  id: BormanSerkiroBoyPhrases
   values:
-    prefix: 
+    prefix: borman-serkiroboy-
     count: 1
 
 - type: entity
@@ -400,8 +400,8 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Voice/Slime/slime_squish.ogg
-    params:
-      volume: 5
+      params:
+        volume: 5
   - type: UseDelay
     delay: 5
 
@@ -422,7 +422,7 @@
     delay: 5
 
 - type: localizedDataset
-  id: DragonaftPhrases 
+  id: DragonaftPhrases
   values:
     prefix: dragonaft-
     count: 2
@@ -444,7 +444,7 @@
     delay: 5
 
 - type: localizedDataset
-  id: IgorVolkovPhrases 
+  id: IgorVolkovPhrases
   values:
     prefix: igor-volkov-
     count: 1
