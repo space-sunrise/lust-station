@@ -230,15 +230,15 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 {
                     AddComp<DetailExaminableComponent>(entity.Value).Content = flavortext;
                 }
-                // Lust-Station-Start
-                EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
-                if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-                EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
-                EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
-                if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
-                // Lust-Station-End
             }
             // Sunrise-End
+            // Lust-Station-Start
+            EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
+            if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
+            EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
+            EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+            if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+            // Lust-Station-End
         }
 
         DoJobSpecials(job, entity.Value);
