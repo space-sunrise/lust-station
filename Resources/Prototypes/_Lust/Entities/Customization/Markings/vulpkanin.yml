@@ -20,6 +20,27 @@
     state: tail_doubletone_wag_second
 
 - type: marking
+  id: MoonTailStatic
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sponsorOnly: false
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_tail_static.rsi
+    state: tail_doubletone_prime
+  - sprite: _Lust/Customization/Markings/moon_tail_static.rsi
+    state: tail_doubletone_second
+
+- type: marking
   id: VulpMoonLegs
   markingCategory: Legs
   bodyPart: LLeg
