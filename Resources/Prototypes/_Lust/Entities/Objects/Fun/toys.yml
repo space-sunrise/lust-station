@@ -329,8 +329,8 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Voice/Moth/moth_scream.ogg
-    params:
-      volume: 5
+      params:
+        volume: 5
   - type: UseDelay
     delay: 5
 
