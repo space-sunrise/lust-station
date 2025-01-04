@@ -80,6 +80,10 @@
             "directions": 4
         },
         {
+            "name": "moon",
+            "directions": 4
+        },
+        {
             "name": "shaved_unisex",
             "directions": 4
         }
