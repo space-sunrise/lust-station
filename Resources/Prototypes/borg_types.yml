@@ -115,7 +115,7 @@
   id: mining
 
   # Sunrise-Start
-  job: MinerBorg
+  job: MiningBorg
   # Sunrise-End
 
   # Description

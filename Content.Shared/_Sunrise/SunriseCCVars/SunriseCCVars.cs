@@ -238,14 +238,14 @@ public sealed class SunriseCCVars
      */
 
     public static readonly CVarDef<bool> CryoTeleportEnable =
-        CVarDef.Create("cryo_teleport.enable", false, CVar.SERVERONLY);
+        CVarDef.Create("cryo_teleport.enable", true, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> CryoTeleportTransferDelay =
+        CVarDef.Create("cryo_teleport.transfer_delay", 5, CVar.SERVERONLY);
 
     /*
      * Damage
      */
-
-    public static readonly CVarDef<bool> DamageOverlay =
-        CVarDef.Create("damage.overlay", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     public static readonly CVarDef<float> DamageVariance =
         CVarDef.Create("damage.variance", 0.15f, CVar.SERVER | CVar.REPLICATED);
@@ -340,16 +340,16 @@ public sealed class SunriseCCVars
         CVarDef.Create("bunny_hop.enable", true, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<float> BunnyHopSpeedUpPerJump =
-        CVarDef.Create("bunny_hop.speed_up_per_jump", 0.01f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("bunny_hop.speed_up_per_jump", 0.005f, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<float> BunnyHopSpeedLimit =
-        CVarDef.Create("bunny_hop.speed_limit", 3.0f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("bunny_hop.speed_limit", 2.0f, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<float> BunnyHopMinSpeedThreshold =
         CVarDef.Create("bunny_hop.min_speed_threshold", 4.0f, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<float> BunnyHopSpeedBoostWindow =
-        CVarDef.Create("bunny_hop.speed_boost_window", 0.620f, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("bunny_hop.speed_boost_window", 0.610f, CVar.SERVER | CVar.REPLICATED);
 
     /**
      * Flip
@@ -392,4 +392,17 @@ public sealed class SunriseCCVars
 
     public static readonly CVarDef<int> FlavorTextBaseLength =
         CVarDef.Create("flavor_text.length", 512, CVar.SERVER | CVar.REPLICATED);
+
+    /*
+     * Damage Overlay
+     */
+
+    public static readonly CVarDef<bool> DamageOverlayEnable =
+        CVarDef.Create("damage_overlay.enable", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    public static readonly CVarDef<bool> DamageOverlaySelf =
+        CVarDef.Create("damage_overlay.self", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    public static readonly CVarDef<bool> DamageOverlayStructures =
+        CVarDef.Create("damage_overlay.structures", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 }
