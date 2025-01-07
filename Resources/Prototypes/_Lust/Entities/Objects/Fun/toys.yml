@@ -473,3 +473,102 @@
   - type: UseDelay
     delay: 5
 
+- type: entity
+  id: PlushieEuphaEverek
+  parent: BasePlushie
+  name: Eupha Everek
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: eupha_everek
+  - type: EmoteOnUse
+    values:
+    - Moan
+  - type: Vocal
+  - type: Emoting
+  - type: EmitSoundOnUse
+    sound:
+      collection: EuphMoan
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Lust/ERP/euphtrig.ogg
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 4
+  - type: Interaction
+    erp: true
+  - type: Sex
+    sex: female
+
+- type: entity
+  id: PlushieRandyCamble
+  parent: BasePlushie
+  name: Randy Camble
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie_rend
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/rendy_boom.ogg
+      params:
+        volume: -8
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 15
+
+- type: entity
+  id: PlushieAlexandrLimenski
+  parent: BasePlushie
+  name: Alexandr Limenski
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alexandr_limenski
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/huem_po_lbu.ogg
+      params:
+        volume: -2
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieHimaAisetova
+  parent: BasePlushie
+  name: Hima Aisetova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushiechitas
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/bonk.ogg
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieShonRoz
+  parent: BasePlushie
+  name: Shon Roz
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shon_roz
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/ooh_la_la.ogg
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
