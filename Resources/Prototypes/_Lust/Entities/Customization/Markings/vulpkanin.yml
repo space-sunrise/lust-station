@@ -1,0 +1,78 @@
+- type: marking
+  id: MoonTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sponsorOnly: false
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_tail.rsi
+    state: tail_doubletone_wag_prime
+  - sprite: _Lust/Customization/Markings/moon_tail.rsi
+    state: tail_doubletone_wag_second
+
+- type: marking
+  id: MoonTailStatic
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Vulpkanin]
+  sponsorOnly: false
+  coloring:
+    default:
+      type:
+        !type:CategoryColoring
+        category: Hair
+      fallbackTypes:
+      - !type:CategoryColoring
+        category: FacialHair
+      - !type:SkinColoring
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_tail_static.rsi
+    state: tail_doubletone_prime
+  - sprite: _Lust/Customization/Markings/moon_tail_static.rsi
+    state: tail_doubletone_second
+
+- type: marking
+  id: VulpMoonLegs
+  markingCategory: Legs
+  bodyPart: LLeg
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_markings.rsi
+    state: points_moon-legs
+
+- type: marking
+  id: VulpMoonArms
+  markingCategory: Arms
+  bodyPart: LArm
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_markings.rsi
+    state: points_moon-arms
+
+- type: marking
+  id: VulpMoonHead
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_markings.rsi
+    state: points_moon-head
+
+- type: marking
+  id: VulpMoonBelly
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Vulpkanin]
+  sprites:
+  - sprite: _Lust/Customization/Markings/moon_markings.rsi
+    state: points_moon-chest
+

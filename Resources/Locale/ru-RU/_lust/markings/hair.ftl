@@ -17,3 +17,4 @@ marking-HairPunk = Мамин панк
 marking-HairShavedFemale = Женская с выбритым боком
 marking-HairShavedFemaleUnisex = Унисекс с пучком
 marking-HairTuranga = Джунгли
+marking-HairMoon = Адская гончая

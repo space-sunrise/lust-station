@@ -1,0 +1,6 @@
+marking-MoonTail = Адская гончая (Анимация)
+marking-MoonTailStatic = Адская гончая (Статичный)
+marking-VulpMoonLegs = Ноги Вульпканина (Адская гончая)
+marking-VulpMoonArms = Руки Вульпканина (Адская гончая)
+marking-VulpMoonHead = Голова Вульпканина (Адская гончая)
+marking-VulpMoonBelly = Живот Вульпканина (Адская гончая)

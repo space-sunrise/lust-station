@@ -149,3 +149,11 @@
   sprites:
   - sprite: _Lust/Customization/Markings/hair.rsi
     state: shaved_unisex
+
+- type: marking
+  id: HairMoon
+  bodyPart: Hair
+  markingCategory: Hair
+  sprites:
+  - sprite: _Lust/Customization/Markings/hair.rsi
+    state: moon
