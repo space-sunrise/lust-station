@@ -7,7 +7,7 @@
   components:
   # Sunrise-Lust edit start
   - type: Interaction
-    erp: false
+    erp: true
   # Sunrise-Lust edit end
   - type: Absorbable
   - type: Hunger

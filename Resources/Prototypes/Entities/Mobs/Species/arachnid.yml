@@ -6,8 +6,10 @@
   abstract: true
   components:
   - type: Absorbable
+  # Sunrise-Lust edit start
   - type: Interaction
-    erp: false
+    erp: true
+  # Sunrise-Lust edit end
   - type: Body
     prototype: Arachnid
     requiredLegs: 2 # It would be funny if arachnids could use their little back limbs to move around once they lose their legs, but just something to consider post-woundmed
