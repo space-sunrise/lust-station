@@ -10,12 +10,14 @@ using Content.Client.Chat.Managers;
 using Robust.Client.Player;
 using Robust.Shared.Timing;
 using Content.Shared.IdentityManagement;
+using Robust.Client.Graphics;
+
 namespace Content.Client._Sunrise.ERP
 {
     [UsedImplicitly]
     public sealed class InteractionEui : BaseEui
     {
-        private readonly InteractionWindow _window;
+        private InteractionWindow _window;
         public IEntityManager _entManager;
 
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
@@ -27,7 +29,10 @@ namespace Content.Client._Sunrise.ERP
         {
             _entManager = IoCManager.Resolve<IEntityManager>();
             _window = new InteractionWindow(this);
-            _window.OnClose += OnClosed;
+            _window.OnClose += () =>
+            {
+                SendMessage(new CloseEuiMessage());
+            };
         }
 
         public override void HandleMessage(EuiMessageBase msg)
@@ -67,13 +72,9 @@ namespace Content.Client._Sunrise.ERP
             SendMessage(new RequestInteractionState());
         }
 
-        private void OnClosed()
-        {
-            SendMessage(new CloseEuiMessage());
-        }
-
         public override void Opened()
         {
+            base.Opened();
             _window.OpenCenteredLeft();
         }
 

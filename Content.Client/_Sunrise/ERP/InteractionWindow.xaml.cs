@@ -15,29 +15,34 @@ using Content.Shared.Hands.Components;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using Content.Client.UserInterface.Controls;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+
 namespace Content.Client._Sunrise.ERP;
 
 [GenerateTypedNameReferences]
 public sealed partial class InteractionWindow : FancyWindow
 {
-    private readonly SpriteSystem _spriteSystem;
     [Dependency] private readonly EntityManager _entManager = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
+    private readonly SpriteSystem _spriteSystem;
+    private readonly InteractionEui _eui;
     public NetEntity? TargetEntityId { get; set; }
     public Sex? UserSex { get; set; }
     public Sex? TargetSex { get; set; }
     public bool UserHasClothing { get; set; }
     public bool TargetHasClothing { get; set; }
+
+    /// <summary>
+    /// ЕРП-статус
+    /// </summary>
     public bool Erp { get; set; }
 
     public HashSet<string>? UserTags { get; set; }
     public HashSet<string>? TargetTags { get; set; }
-
     public ProgressBar LoveBar;
     public TimeSpan TimeUntilAllow = TimeSpan.Zero;
-    private readonly InteractionEui _eui;
     public TimeSpan UntilUpdate = TimeSpan.Zero;
     public InteractionWindow(InteractionEui eui)
     {
@@ -61,7 +66,7 @@ public sealed partial class InteractionWindow : FancyWindow
         ModeButtons.Visible = true;
         // TODO: Спрайты для описаний.
         DescriptionButton.Visible = false;
-        // Dev Windnow
+        // Dev Window
         DevButton.Visible = false;
     }
 
@@ -96,71 +101,99 @@ public sealed partial class InteractionWindow : FancyWindow
         DescriptionLeft.DisposeAllChildren();
         DescriptionRight.DisposeAllChildren();
 
-        if (!_player.LocalEntity.HasValue) return;
-        if (!UserSex.HasValue) return;
-        if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var UserInteraction)) return;
-        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var UserHumanoid)) return;
+        if (!_player.LocalEntity.HasValue)
+            return;
+
+        if (!UserSex.HasValue)
+            return;
+
+        if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var userInteraction))
+            return;
+
+        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var userHumanoid))
+            return;
+
         SpriteLeft.SetEntity(_player.LocalEntity.Value);
-        UserName.Text = $"{Identity.Name(_player.LocalEntity.Value, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
+        UserName.Text = $"{Identity.Name(_player.LocalEntity.Value,
+                        _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString(
+                        $"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
         UserName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
-        foreach (var i in UserInteraction.GenitalSprites)
+
+        foreach (var sprite in userInteraction.GenitalSprites)
         {
-            if (UserHasClothing) break;
-            var t = new TextureRect();
-            t.TexturePath = i;
-            t.SetSize = new(125, 125);
-            t.VerticalAlignment = VAlignment.Top;
-            t.HorizontalAlignment = HAlignment.Center;
-            t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
-            t.Modulate = UserHumanoid.SkinColor;
-            t.Margin = new(15);
-            DescriptionLeft.AddChild(t);
+            if (UserHasClothing)
+                break;
+
+            var texture = new TextureRect();
+
+            texture.TexturePath = sprite;
+            texture.SetSize = new(125, 125);
+            texture.VerticalAlignment = VAlignment.Top;
+            texture.HorizontalAlignment = HAlignment.Center;
+            texture.Stretch = TextureRect.StretchMode.KeepAspectCentered;
+            texture.Modulate = userHumanoid.SkinColor;
+            texture.Margin = new(15);
+            DescriptionLeft.AddChild(texture);
         }
 
         var targets = _entManager.GetEntity(TargetEntityId);
         if (!targets.HasValue) return;
         var target = targets.Value;
-        if (!TargetEntityId.HasValue) return;
-        if (!TargetSex.HasValue) return;
-        if (!_entManager.TryGetComponent<InteractionComponent>(target, out var TargetInteraction)) return;
-        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(target, out var TargetHumanoid)) return;
+
+        if (!TargetEntityId.HasValue)
+            return;
+
+        if (!TargetSex.HasValue)
+            return;
+
+        if (!_entManager.TryGetComponent<InteractionComponent>(target, out var targetInteraction))
+            return;
+
+        if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(target, out var targetHumanoid))
+            return;
+
         SpriteRight.SetEntity(target);
         TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
         TargetName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
-        foreach (var i in TargetInteraction.GenitalSprites)
+        foreach (var sprite in targetInteraction.GenitalSprites)
         {
-            if (TargetHasClothing) break;
-            var t = new TextureRect();
-            t.TexturePath = i;
-            t.SetSize = new(125, 125);
-            t.VerticalAlignment = VAlignment.Top;
-            t.HorizontalAlignment = HAlignment.Center;
-            t.Stretch = TextureRect.StretchMode.KeepAspectCentered;
-            t.Margin = new(15);
-            t.Modulate = TargetHumanoid.SkinColor;
-            DescriptionRight.AddChild(t);
+            if (TargetHasClothing)
+                break;
+
+            var texture = new TextureRect();
+            texture.TexturePath = sprite;
+            texture.SetSize = new(125, 125);
+            texture.VerticalAlignment = VAlignment.Top;
+            texture.HorizontalAlignment = HAlignment.Center;
+            texture.Stretch = TextureRect.StretchMode.KeepAspectCentered;
+            texture.Margin = new(15);
+            texture.Modulate = targetHumanoid.SkinColor;
+            DescriptionRight.AddChild(texture);
         }
     }
 
     private void DevPopulate()
     {
 
-        if (!_player.LocalEntity.HasValue) return;
+        if (!_player.LocalEntity.HasValue)
+            return;
 
         if (UserTags != null)
         {
-            foreach (var i in UserTags)
+            foreach (var tag in UserTags)
             {
-                DevLeft.AddItem(i, null, false);
+                DevLeft.AddItem(tag, null, false);
             }
         }
-        if (!TargetEntityId.HasValue) return;
+
+        if (!TargetEntityId.HasValue)
+            return;
 
         if (TargetTags != null)
         {
-            foreach (var i in TargetTags)
+            foreach (var tag in TargetTags)
             {
-                DevRight.AddItem(i, null, false);
+                DevRight.AddItem(tag, null, false);
             }
         }
     }
@@ -172,10 +205,15 @@ public sealed partial class InteractionWindow : FancyWindow
     private List<(string, Robust.Client.Graphics.Texture, InteractionPrototype)> oldItemList = new();
     private void PopulateByFilter(string filter, bool check = true)
     {
-        if (!_player.LocalEntity.HasValue) return;
-        if (!TargetEntityId.HasValue) return;
+        if (!_player.LocalEntity.HasValue)
+            return;
+
+        if (!TargetEntityId.HasValue)
+            return;
+
         var uid = _player.LocalEntity.Value;
         var protos = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToArray();
+
         Array.Sort(protos, (x, y) => x.SortOrder.CompareTo(y.SortOrder));
         List<(string, Robust.Client.Graphics.Texture, InteractionPrototype)> itemList = new();
         foreach (string category in new List<string>
@@ -191,56 +229,61 @@ public sealed partial class InteractionWindow : FancyWindow
                 {
                     if (_entManager.TryGetComponent<HandsComponent>(uid, out var hands))
                     {
-                        if (hands.ActiveHand == null) continue;
-                        if (hands.ActiveHand.Container == null) continue;
-                        if (!hands.ActiveHand.Container.ContainedEntity.HasValue) continue;
-                        if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta)) continue;
-                        if (meta.EntityPrototype == null) continue;
-                        if (!proto.InhandObject.Contains(meta.EntityPrototype.ID)) continue;
+                        if (hands.ActiveHand == null)
+                            continue;
+
+                        if (hands.ActiveHand.Container == null)
+                            continue;
+
+                        if (!hands.ActiveHand.Container.ContainedEntity.HasValue)
+                            continue;
+
+                        if (!_entManager.TryGetComponent<MetaDataComponent>(hands.ActiveHand.Container.ContainedEntity.Value, out var meta))
+                            continue;
+
+                        if (meta.EntityPrototype == null)
+                            continue;
+
+                        if (!proto.InhandObject.Contains(meta.EntityPrototype.ID))
+                            continue;
                     }
-                    else continue;
                 }
-                if (proto.Category.ToLower() != category) continue;
-                if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf) continue;
-                if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value && proto.UseSelf) continue;
+
+                if (proto.Category.ToLower() != category)
+                    continue;
+
+                if (_entManager.GetEntity(TargetEntityId.Value) == _player.LocalEntity.Value && !proto.UseSelf)
+                    continue;
+
+                if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value && proto.UseSelf)
+                    continue;
+
                 if (string.IsNullOrEmpty(filter) ||
                     proto.Name.ToLowerInvariant().Contains(filter.Trim().ToLowerInvariant()))
                 {
                     var texture = _spriteSystem.Frame0(proto.Icon);
-                    if (UserHasClothing && proto.UserWithoutCloth) continue;
-                    if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
-                    if (!Erp && proto.Erp) continue;
-                    if (UserTags != null)
-                    {
-                        if (proto.UserTagWhitelist.Count > 0)
-                        {
-                            foreach (var tag in proto.UserTagWhitelist)
-                            {
-                                if (!UserTags.Contains(tag)) goto CONTINUE;
-                            }
-                        }
-                        foreach (var tag in UserTags)
-                        {
-                            if (proto.UserTagBlacklist.Contains(tag)) goto CONTINUE;
-                        }
-                    }
 
-                    if (TargetTags != null)
-                    {
-                        if (proto.TargetTagWhitelist.Count > 0)
-                        {
-                            foreach (var tag in proto.TargetTagWhitelist)
-                            {
-                                if (!TargetTags.Contains(tag)) goto CONTINUE;
-                            }
-                        }
-                        foreach (var tag in TargetTags)
-                        {
-                            if (proto.TargetTagBlacklist.Contains(tag)) goto CONTINUE;
-                        }
-                    }
+                    if (UserHasClothing && proto.UserWithoutCloth)
+                        continue;
+
+                    if (TargetHasClothing && proto.TargetWithoutCloth)
+                        continue;
+
+                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed)
+                        continue;
+
+                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed)
+                        continue;
+
+                    if (!Erp && proto.Erp)
+                        continue;
+
+                    if (!AreTagsAllowed(UserTags, proto.UserTagWhitelist, proto.UserTagBlacklist))
+                        goto CONTINUE;
+
+                    if (!AreTagsAllowed(TargetTags, proto.TargetTagWhitelist, proto.TargetTagBlacklist))
+                        goto CONTINUE;
+
                     //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
                     itemList.Add((proto.Name, texture, proto));
                 }
@@ -291,15 +334,17 @@ public sealed partial class InteractionWindow : FancyWindow
     public void Populate()
     {
         var prototypes = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToList();
+
         UserDescription.DisposeAllChildren();
         TargetDescription.DisposeAllChildren();
-        //Проверки nullable-типов
-        if (!TargetEntityId.HasValue) return;
-        if (!UserSex.HasValue) return;
-        if (!TargetSex.HasValue) return;
-        if (!_player.LocalEntity.HasValue) return;
 
-        if (!TargetEntityId.Value.Valid) return;
+        //Проверки nullable-типов
+        if (!TargetEntityId.HasValue || !UserSex.HasValue ||
+        !TargetSex.HasValue || !_player.LocalEntity.HasValue)
+            return;
+
+        if (!TargetEntityId.Value.Valid)
+            return;
 
         //Аминь
         if (Erp)
@@ -342,5 +387,33 @@ public sealed partial class InteractionWindow : FancyWindow
             PopulateByFilter(SearchBar.Text);
         }
         ItemInteractions.OnItemSelected += _eui.OnItemSelect;
+    }
+
+    private static bool AreTagsAllowed(HashSet<string>? tags, HashSet<string> whiteListTags, HashSet<string> blackListTags)
+    {
+
+        if (tags != null)
+        {
+            if (whiteListTags.Count > 0)
+            {
+                foreach (var tag in whiteListTags)
+                {
+                    if (tags.Contains(tag))
+                        return true;
+                }
+                return false;
+            }
+
+            if (blackListTags.Count > 0)
+            {
+                foreach (var tag in blackListTags)
+                {
+                    if (tags.Contains(tag))
+                        return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
