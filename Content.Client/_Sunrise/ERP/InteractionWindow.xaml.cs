@@ -351,32 +351,43 @@ public sealed partial class InteractionWindow : FancyWindow
         {
             //Юзер
             UserDescription.AddChild(new Label { Text = "Вы...", StyleClasses = { StyleNano.StyleClassLabelBig } }); ;
-            if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
-            else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
             UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
-            if (UserSex.Value == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+
+            if (UserHasClothing)
+                UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
+            else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
+
+            if (UserSex.Value == Sex.Male)
+                UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
+
+            if (UserSex.Value == Sex.Female)
+            {
+                UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+                UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            }
             //Таргет
             if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
             {
                 TargetDescription.AddChild(new Label { Text = Identity.Name(_eui._entManager.GetEntity(TargetEntityId.Value), _eui._entManager, _player.LocalEntity.Value) + "...", StyleClasses = { StyleNano.StyleClassLabelBig } });
-                if (TargetHasClothing) TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
+                if (TargetHasClothing)
+                    TargetDescription.AddChild(new Label { Text = "...Обладает одеждой" });
                 else
                 {
                     TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
                     TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
-                    if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
-                    if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
-                }
-                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
-            }
 
+                    if (TargetSex.Value == Sex.Male)
+                        TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
+
+                    if (TargetSex.Value == Sex.Female)
+                        TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+
+                }
+                if (TargetSex.Value == Sex.Female)
+                    TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+            }
         }
-        else
-        {
-            ErpProgress.Dispose();
-        }
+        else ErpProgress.Dispose();
 
         if (DescriptionContainer.Visible)
         {
