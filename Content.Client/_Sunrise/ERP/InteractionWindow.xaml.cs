@@ -15,7 +15,6 @@ using Content.Shared.Hands.Components;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using Content.Client.UserInterface.Controls;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Content.Client._Sunrise.ERP;
 

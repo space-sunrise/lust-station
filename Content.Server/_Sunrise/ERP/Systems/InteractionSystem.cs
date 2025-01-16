@@ -416,7 +416,7 @@ namespace Content.Server._Sunrise.ERP.Systems
                     comp.ActualLove = MathF.Max(0, comp.ActualLove - 0.001f);
                 }
 
-                if (comp.Love < 0.0001)
+                if (comp.Love < 0.00001)
                     comp.Love = 0;
 
                 if (comp.ActualLove < 0)
