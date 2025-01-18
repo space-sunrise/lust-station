@@ -29,6 +29,11 @@ job-name-barber = парикмахер
 job-name-pathologist = патологоанатом
 job-name-adjutant = адъютант
 job-name-commaid = горничная командования
+job-name-usspcrew = Сотрудник СССП
+job-name-usspguard = Милиция СССП
+job-name-usspsoldier = Солдат СССП
+job-name-usspofficer = Офицер СССП
+job-name-usspcaptain = Капитан СССП
 # Перевод трекеров времени
 JobCentCommOfficial = представитель Центком
 JobCentCommOperator = оператор Центком
@@ -62,3 +67,4 @@ JobUSSPCrew = Сотрудник СССП
 JobUSSPGuard = Милиция СССП
 JobUSSPSoldier = Солдат СССП
 JobUSSPOfficer = Офицер СССП
+JobUSSPCaptain = Капитан СССП
