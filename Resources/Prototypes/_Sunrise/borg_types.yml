@@ -198,7 +198,7 @@
 
   addComponents:
   - type: TTS
-    voice: Sentrybot
+    voice: TemplarAssasin
   - type: InnateItem
     instantActions:
     - PortableSurveillanceCameraMonitorUnpowered
