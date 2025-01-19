@@ -35,7 +35,7 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPNormalFleshlight
-  name: normal fleshlight
+  name: human fleshlight
   description: Just a based fleshlight, nothing else. Should I tell you what you can put inside?
   components:
   - type: Sprite
@@ -113,7 +113,7 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPGreenFleshlight
-  name: green fleshlight
+  name: green slime fleshlight
   description: Just a green fleshlight, nothing else. Ready to explore the green zone?
   components:
   - type: Sprite
@@ -126,7 +126,7 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPRedFleshlight
-  name: red fleshlight
+  name: red demon fleshlight
   description: Just a red fleshlight, nothing else. Are you ready for a hot experience?
   components:
   - type: Sprite
@@ -139,7 +139,7 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPTealFleshlight
-  name: teal fleshlight
+  name: teal vulpkanin fleshlight
   description: Just a teal fleshlight, nothing else. Dive into the depths of pleasure.
   components:
   - type: Sprite
@@ -152,7 +152,7 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPYellowFleshlight
-  name: yellow fleshlight
+  name: yellow felinid fleshlight
   description: Just a yellow fleshlight, nothing else. Brighten up your intimate moments.
   components:
   - type: Sprite

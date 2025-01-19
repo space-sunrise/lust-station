@@ -30,6 +30,8 @@
     ERPWhip: 3
     ERPBeads: 3
     RemoteSignaller: 5
+    ClothingMaskMuzzle: 3
+    ClothingEyesBlindfold: 3
     # Bunny uniform
     BunnyUniform: 2
     BunnyShoes: 2
