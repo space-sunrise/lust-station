@@ -6,18 +6,17 @@
   - нежно гладит рожки %target
   - ласково гладит рожки %target
   - с теплотой гладит рожки %target
-  userSex: Male
-  targetSex: Female
+  userSex: Unsexed
+  targetSex: Unsexed
   erp: true
-  lovePercentUser: 2
-  lovePercentTarget: 4
+  lovePercentUser: 0
+  lovePercentTarget: 0
   userMoanChance: 0
   targetMoanChance: 0
-  userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -29,11 +28,7 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
-  - mask
-  category: рога
+  category: лицо
 
 - type: interaction
   id: HornsBlowjobFemale
@@ -58,6 +53,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -69,11 +67,9 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
+  targetTagBlackList:
   - mask
-  category: рога
+  category: лицо
 
 - type: interaction
   id: HornsBlowjobMale
@@ -98,6 +94,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -109,11 +108,9 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
+  targetTagBlackList:
   - mask
-  category: рога
+  category: лицо
 
 - type: interaction
   id: HornsСunnilingusMale
@@ -140,6 +137,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -151,11 +151,9 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
+  targetTagBlackList:
   - mask
-  category: рога
+  category: вагина
 
 - type: interaction
   id: HornsСunnilingusFemale
@@ -182,6 +180,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -193,11 +194,9 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
+  targetTagBlackList:
   - mask
-  category: рога
+  category: вагина
 
 - type: interaction
   id: HornsPussyFuck
@@ -224,6 +223,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -235,11 +237,9 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
-  - mask
-  category: рога
+  category: вагина
+  targetVirginityLoss: female
+  userVirginityLoss: male
 
 - type: interaction
   id: HornsAssFuckFemale
@@ -266,6 +266,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -277,15 +280,13 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
-  - mask
-  category: рога
+  category: попа
+  targetVirginityLoss: anal
+  userVirginityLoss: male
 
 - type: interaction
   id: HornsAssFuckMale
-  name: Трахать вагину держа за рожки
+  name: Трахать анус держа за рожки
   icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая его рожки
@@ -308,6 +309,9 @@
   - jumpsuit
   - outerClothing
   targetTagWhitelist:
+  - DemonHornsDeer
+  - DemonCowHorns
+  - DemonHornsSmall
   - LizardHornsAngler
   - LizardHornsCurled
   - LizardHornsRam
@@ -319,8 +323,6 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  - DemonCowHorns
-  - DemonHornsDeer
-  - DemonHornsSmall
-  - mask
-  category: рога
+  category: попа
+  targetVirginityLoss: anal
+  userVirginityLoss: male

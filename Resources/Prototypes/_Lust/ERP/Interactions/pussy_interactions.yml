@@ -41,6 +41,9 @@
   - причмокивая, вылизывает вагину %target
   - трахает своим язычком вагину %target
   - быстро двигает язычком в вагине %target
+  - нежно лижет клитор %target
+  - импульсивно лижет клитор %target
+  - страстно вылизывает клитор %target
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
@@ -121,6 +124,10 @@
   - ритмично долбит членом вагину %target
   - полностью входит членом в вагину %target
   - страстно трахает членом вагину %target
+  - нежно вводит член в вагину %target
+  - медленно проникает членом в вагину %target
+  - до упора входит членов в вагину %target
+  - медленно входит членом в вагину %target
   sounds:
   - path: /Audio/_Lust/ERP/hlup.ogg
   - path: /Audio/_Lust/ERP/hlup2.ogg
@@ -271,48 +278,47 @@
   - mask
   category: вагина
 
-#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
-#  id: HoldTailPussyFuck
-#  name: Трахать в вагину держа хвост
-#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
-#  emotes: #Доделать после рефактора
-#  - нежно гладит хвостик %target
-#  - ласково проводит ладонью по хвосту %target
-#  - игриво поглаживает ладонью хвостик %target
-#  userSex: Male
-#  targetSex: Female
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 10
-#  targetTagWhitelist:
-#  - Vulpkanin
-#  - Felinid
-#  - Demon
-#  - Reptilian
-#  - CatTailStripes
-#  - SlimeCatTail
-#  - SlimeCatTailStripes
-#  category: хвост
+- type: interaction
+  id: HoldTailPussyFuck
+  name: Трахать в вагину держа хвост
+  icon: _Lust/Interface/ERP/legs_cock_fuck_tail.png
+  emotes:
+  - быстро трахает членом вагину %target, держа за хвост
+  - жестко трахает членом вагину %target, взяв за хвост
+  - ухватившись за хвост - ритмично долбит членом вагину %target
+  - полностью входит членом в вагину %target, держа за хвост
+  - страстно трахает членом вагину %target, ухватившись за хвост
+  - нежно вводит член в вагину %target, держа за хвост
+  - держа за хвост - медленно проникает членом в вагину %target
+  - до упора входит членом в вагину %target, схватившись за хвост
+  - держа за хвост - медленно входит членом в вагину %target
+  userSex: Male
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  targetTagWhitelist:
+  - Tail
+  category: хвост
 
-#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
-#  id: TailPussyFuck
-#  name: Проникнуть хвостом в вагину
-#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
-#  emotes: #Доделать после рефактора
-#  - нежно гладит хвостик %target
-#  - ласково проводит ладонью по хвосту %target
-#  - игриво поглаживает ладонью хвостик %target
-#  userSex: Male
-#  targetSex: Female
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 10
-#  targetTagWhitelist:
-#  - Vulpkanin
-#  - Felinid
-#  - Demon
-#  - Reptilian
-#  - CatTailStripes
-#  - SlimeCatTail
-#  - SlimeCatTailStripes
-#  category: хвост
+- type: interaction
+  id: TailPussyFuck
+  name: Проникнуть хвостом в вагину
+  icon: _Lust/Interface/ERP/pussy_tail_fuck.png
+  emotes:
+  - медленно вставляет свой хвост в вагину %target
+  - осторожно проникает своим хвостом в вагину %target
+  - нежно поглаживает своим хвостом вагину %target
+  - аккуратно разрабатывает своим хвостом вагину %target
+  - плавно вставляет свой хвост в вагину %target
+  - потихоньку засовывает свой хвост в вагину %target
+  - проникает своим хвостом в вагину %target
+  userSex: Unsexed
+  targetSex: Female
+  erp: true
+  lovePercentUser: 10
+  lovePercentTarget: 10
+  userTagWhitelist:
+  - Tail
+  category: хвост
+

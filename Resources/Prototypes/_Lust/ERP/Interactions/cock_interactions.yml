@@ -105,13 +105,7 @@
   - jumpsuit
   - outerClothing
   userTagWhitelist:
-  - Vulpkanin
-  - Felinid
-  - Demon
-  - CatTailStripes
-  - SlimeCatTail
-  - SlimeCatTailStripes
-  - Reptilian
+  - Tail
   category: член
 
 - type: interaction
@@ -301,7 +295,7 @@
   - pants
   - jumpsuit
   - outerClothing
-  category: слаймолюд
+  category: член
 
 - type: interaction
   id: CockCowgirl
@@ -413,5 +407,19 @@
   - mask
   category: член
 
-
-#наступить на член
+- type: interaction
+  id: CockFootStep
+  name: Наступить на член
+  icon: _Lust/Interface/ERP/cock_footjob.png
+  emotes:
+  - наступает ногой на член %target
+  - прижимает член %target своей ступней
+  userSex: Unsexed
+  targetSex: Male
+  erp: true
+  lovePercentTarget: 5
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: член

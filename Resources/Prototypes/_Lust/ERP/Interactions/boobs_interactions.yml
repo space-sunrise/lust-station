@@ -1,4 +1,4 @@
-﻿- type: interaction
+﻿type: interaction
   id: BoobsCuddle
   name: Прижаться к груди
   icon: _Lust/Interface/ERP/boobs.png
@@ -283,30 +283,24 @@
   - outerClothing
   category: грудь
 
-- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+- type: interaction
   id: TailBoobsPlay
   name: Ласкать грудь хвостом
-  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
-  emotes: #Доделать после рефактора
-  - нежно гладит хвостик %target
-  - ласково проводит ладонью по хвосту %target
-  - игриво поглаживает ладонью хвостик %target
-  userSex: Male
+  icon: _Lust/Interface/ERP/boobs_tail.png
+  emotes:
+  - нежно гладит хвостиком грудь %target
+  - ласково проводит хвостиком по груди %target
+  - игриво поглаживает хвостиком грудь %target
+  userSex: Unsexed
   targetSex: Female
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
-  targetTagWhitelist:
-  - Vulpkanin
-  - Felinid
-  - Demon
-  - Reptilian
-  - CatTailStripes
-  - SlimeCatTail
-  - SlimeCatTailStripes
+  userTagWhitelist:
+  - Tail
   category: хвост
 
-- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+- type: interaction
   id: BoobsSnuggle
   name: Прижаться грудью
   icon: _Lust/Interface/ERP/ERP2.png

@@ -1,6 +1,4 @@
-﻿# 1. ДРУЖЕСКИЕ ДЕЙСТВИЯ
-
-- type: interaction
+﻿- type: interaction
   id: FriendlyHandshake
   name: Пожать руку
   icon: _Lust/Interface/ERP/hand_shake.png
@@ -136,7 +134,7 @@
 - type: interaction
   id: FriendlyHeadTailpats
   name: Погладить хвостиком
-  icon: _Lust/Interface/ERP/pat_tail.png
+  icon: _Lust/Interface/ERP/tail.png
   emotes:
   - нежно гладит хвостиком голову %target
   - ласково гладит хвостиком по спине %target
@@ -306,34 +304,23 @@
   category: дружба
 
 
-#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
-#  id: TailIntertwine
-#  name: Сплестись хвостами
-#  icon: _Sunrise/Interface/ERP/pat_tail.png
-#  emotes: #Доделать после рефактора
-#  - нежно гладит хвостик %target
-#  - ласково проводит ладонью по хвосту %target
-#  - игриво поглаживает ладонью хвостик %target
-#  userSex: Unsexed
-#  targetSex: Unsexed
-#  erp: false
-#  targetTagWhitelist:
-#  - Vulpkanin
-#  - Felinid
-#  - Demon
-#  - Reptilian
-#  - CatTailStripes
-#  - SlimeCatTail
-#  - SlimeCatTailStripes
-#  userTagWhitelist:
-#  - Vulpkanin
-#  - Felinid
-#  - Demon
-#  - Reptilian
-#  - CatTailStripes
-#  - SlimeCatTail
-#  - SlimeCatTailStripes
-#  category: хвост
+- type: interaction
+  id: TailIntertwine
+  name: Сплестись хвостами
+  icon: _Lust/Interface/ERP/tail_hug.png
+  emotes:
+  - нежно сплетается хвостами с %target
+  - аккуратно сплетает свой хвост с хвостом %target
+  - обволакивает хвост %target своим хвостом
+  - играется своим хвостом с хвостом %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  targetTagWhitelist:
+  - Tail
+  userTagWhitelist:
+  - Tail
+  category: хвост
 
 - type: interaction
   id: EarsMrrr
@@ -347,7 +334,7 @@
   userSex: Unsexed
   targetSex: Unsexed
   erp: false
-  targetTagBlacklist:
+  userTagBlacklist:
   - Vulpkanin
   - HumanoidXeno
   - Diona
@@ -355,6 +342,7 @@
   - Moth
   - Arachnid
   - Vox
+  - Predator
   category: дружба
 
 - type: interaction
@@ -458,4 +446,15 @@
   useSelf: true
   category: дружба
 
-#сплестись пальчиками
+- type: interaction
+  id: FriendlyFingerIntertwine
+  name: Сплестись пальчиками
+  icon: _Lust/Interface/ERP/friendly.png
+  emotes:
+  - слетается своим пальцем с пальцем %target
+  - нежно берёт палец %target и сплетает со своим
+  - аккуратно сплетает пальцы с %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
