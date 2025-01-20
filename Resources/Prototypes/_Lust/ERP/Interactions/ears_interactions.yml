@@ -14,14 +14,19 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  targetTagBlacklist:
-  - Predator
-  - HumanoidXeno
-  - Diona
-  - Reptilian
-  - Moth
-  - Arachnid
-  - Vox
+  targetTagWhitelist:
+  - FelinidEarsBasic
+  - CatEarsStubby
+  - CatEarsCurled
+  - CatEarsTorn
+  - CatTailStripes
+  - SlimeCatEars
+  - SlimeCatEarsStubby
+  - SlimeCatEarsCurled
+  - SlimeCatEarsTorn
+  - SlimeCatTailStripes
+  - Vulpkanin
+  - Tajaran
   userTagBlacklist:
   - mask
   category: уши
@@ -46,14 +51,19 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  targetTagBlacklist:
-  - Predator
-  - HumanoidXeno
-  - Diona
-  - Reptilian
-  - Moth
-  - Arachnid
-  - Vox
+  targetTagWhitelist:
+  - FelinidEarsBasic
+  - CatEarsStubby
+  - CatEarsCurled
+  - CatEarsTorn
+  - CatTailStripes
+  - SlimeCatEars
+  - SlimeCatEarsStubby
+  - SlimeCatEarsCurled
+  - SlimeCatEarsTorn
+  - SlimeCatTailStripes
+  - Vulpkanin
+  - Tajaran
   category: уши
 
 - type: interaction
@@ -73,14 +83,19 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  targetTagBlacklist:
-  - Predator
-  - HumanoidXeno
-  - Diona
-  - Reptilian
-  - Moth
-  - Arachnid
-  - Vox
+  targetTagWhitelist:
+  - FelinidEarsBasic
+  - CatEarsStubby
+  - CatEarsCurled
+  - CatEarsTorn
+  - CatTailStripes
+  - SlimeCatEars
+  - SlimeCatEarsStubby
+  - SlimeCatEarsCurled
+  - SlimeCatEarsTorn
+  - SlimeCatTailStripes
+  - Vulpkanin
+  - Tajaran
   category: уши
 
 - type: interaction
@@ -105,14 +120,19 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  targetTagBlacklist:
-  - Predator
-  - HumanoidXeno
-  - Diona
-  - Reptilian
-  - Moth
-  - Arachnid
-  - Vox
+  targetTagWhitelist:
+  - FelinidEarsBasic
+  - CatEarsStubby
+  - CatEarsCurled
+  - CatEarsTorn
+  - CatTailStripes
+  - SlimeCatEars
+  - SlimeCatEarsStubby
+  - SlimeCatEarsCurled
+  - SlimeCatEarsTorn
+  - SlimeCatTailStripes
+  - Vulpkanin
+  - Tajaran
   userTagBlacklist:
   - mask
   category: уши
@@ -135,14 +155,19 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
-  targetTagBlacklist:
-  - Predator
-  - HumanoidXeno
-  - Diona
-  - Reptilian
-  - Moth
-  - Arachnid
-  - Vox
+  targetTagWhitelist:
+  - FelinidEarsBasic
+  - CatEarsStubby
+  - CatEarsCurled
+  - CatEarsTorn
+  - CatTailStripes
+  - SlimeCatEars
+  - SlimeCatEarsStubby
+  - SlimeCatEarsCurled
+  - SlimeCatEarsTorn
+  - SlimeCatTailStripes
+  - Vulpkanin
+  - Tajaran
   userTagBlacklist:
   - mask
   category: уши

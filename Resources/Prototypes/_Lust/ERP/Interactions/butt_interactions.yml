@@ -152,3 +152,20 @@
   - jumpsuit
   - outerClothing
   category: попа
+
+- type: interaction
+  id: ButtTailPaw
+  name: Погладить хвостом попку
+  icon: _Lust/Interface/ERP/butt_tail.png
+  emotes:
+  - нежно гладит попу %target своим хвостом
+  - аккуратно проводит своим хвостом по попке %target
+  - игриво поглаживает своим хвостом попку %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: true
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  userTagWhitelist:
+  - Tail
+  category: попа

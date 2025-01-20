@@ -112,43 +112,49 @@
   targetVirginityLoss: anal
   userVirginityLoss: male
 
-- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+- type: interaction
   id: HoldTailAnusFuck
   name: Трахать в анус держа хвост
-  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
-  emotes: #Доделать после рефактора
-  - нежно гладит хвостик %target
-  - ласково проводит ладонью по хвосту %target
-  - игриво поглаживает ладонью хвостик %target
-  userSex: Unsexed
+  icon: _Lust/Interface/ERP/cock_near_to_ass_tail.png
+  emotes:
+  - трахает в попку держа за хвост %target
+  - ухватившись за хвост - долбит попку %target
+  - на всю длину входит в попку %target, держа за хвост
+  - резко проникает в задницу %target, схватившись за хвост
+  - держа за хвост - медленно входит в попку %target
+  sounds:
+  - path: /Audio/_Lust/ERP/hlup.ogg
+  - path: /Audio/_Lust/ERP/hlup2.ogg
+  - path: /Audio/_Lust/ERP/hlup3.ogg
+  - path: /Audio/_Lust/ERP/hlup4.ogg
+  userSex: Male
   targetSex: Unsexed
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
   targetTagWhitelist:
-  - Vulpkanin
-  - Felinid
+  - Tail
   category: хвост
+  targetVirginityLoss: anal
+  userVirginityLoss: male
 
-- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
+- type: interaction
   id: TailAnalFuck
   name: Проникнуть хвостом в анус
-  icon: _Lust/Interface/ERP/pat_tail.png # TODO add tail on PNG
-  emotes: #Доделать после рефактора
-  - нежно гладит хвостик %target
-  - ласково проводит ладонью по хвосту %target
-  - игриво поглаживает ладонью хвостик %target
-  userSex: Male
-  targetSex: Female
+  icon: _Lust/Interface/ERP/butt_tail_fuck.png
+  emotes:
+  - медленно вставляет свой хвост в попку %target
+  - осторожно проникает своим хвостом в попку %target
+  - нежно поглаживает своим хвостом анус %target
+  - аккуратно разрабатывает своим хвостом попку %target
+  - плавно вставляет свой хвост в попку %target
+  - потихоньку засовывает свой хвост в попку %target
+  - проникает своим хвостом в попку %target
+  userSex: Unsexed
+  targetSex: Unsexed
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
-  targetTagWhitelist:
-  - Vulpkanin
-  - Felinid
-  - Demon
-  - Reptilian
-  - CatTailStripes
-  - SlimeCatTail
-  - SlimeCatTailStripes
+  userTagWhitelist:
+  - Tail
   category: хвост

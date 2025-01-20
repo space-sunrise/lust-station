@@ -124,6 +124,8 @@
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 5
+  targetTagWhitelist:
+  - Hair
   targetTagBlacklist:
   - mask
   - hair
@@ -151,6 +153,8 @@
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 5
+  targetTagWhitelist:
+  - Hair
   targetTagBlacklist:
   - mask
   - hair
@@ -159,26 +163,3 @@
   - jumpsuit
   - outerClothing
   category: волосы
-
-#- type: interaction #НЕ РАБОТАЕТ. ЖДЕМ РЕФАКТОР
-#  id: TailMouthFuck
-#  name: Проникнуть хвостом в рот
-#  icon: _Sunrise/Interface/ERP/pat_tail.png # TODO add tail on PNG
-#  emotes:
-#  - нежно гладит хвостик %target
-#  - ласково проводит ладонью по хвосту %target
-#  - игриво поглаживает ладонью хвостик %target
-#  userSex: Male
-#  targetSex: Female
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 10
-#  targetTagWhitelist:
-#  - Vulpkanin
-#  - Felinid
-#  - Demon
-#  - Reptilian
-#  - CatTailStripes
-#  - SlimeCatTail
-#  - SlimeCatTailStripes
-#  category: хвост
