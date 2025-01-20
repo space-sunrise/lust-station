@@ -299,7 +299,13 @@
   lovePercentTarget: 10
   targetTagWhitelist:
   - Tail
-  category: хвост
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
+  category: вагина
+  targetVirginityLoss: female
+  userVirginityLoss: male
 
 - type: interaction
   id: TailPussyFuck
@@ -319,6 +325,10 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagWhitelist:
-  - Tail
+  - Demon
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   category: хвост
 

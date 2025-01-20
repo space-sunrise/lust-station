@@ -50,10 +50,10 @@
   name: Полизать шею
   icon: _Lust/Interface/ERP/lick_neck.png
   emotes:
-  - прильнул к шее %target языком
+  - прилегает к шее %target языком
   - касается шеи %target своим язычком
   - страстно облизывает шею %target, оставляя на ней влажный след
-  - слегка облизнул шею %target
+  - слегка облизывает шею %target
   - игриво проводит языком по шее %target
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
