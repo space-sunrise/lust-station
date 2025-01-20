@@ -160,7 +160,7 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagWhitelist:
-  - Tail
+  - Demon
   targetTagBlacklist:
   - pants
   - jumpsuit
