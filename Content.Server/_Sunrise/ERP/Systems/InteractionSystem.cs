@@ -1,4 +1,5 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/lust-station/blob/master/CLA.txt
+
 using System.Diagnostics.CodeAnalysis;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
@@ -18,10 +19,10 @@ using Content.Shared._Sunrise.ERP;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.FixedPoint;
 using Content.Shared.Hands.Components;
-using Content.Shared.Ghost;
-using Content.Shared.GameTicking;
-using Content.Server.GameTicking;
+using Content.Shared.Humanoid.Prototypes;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -34,7 +35,6 @@ namespace Content.Server._Sunrise.ERP.Systems
         [Dependency] private readonly PuddleSystem _puddle = default!;
         [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
         [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-        [Dependency] private readonly GameTicker _gameTicker = default!;
 
         public static string DefaultBloodSolutionName = "bloodstream";
         public static string DefaultChemicalsSolutionName = "chemicals";
@@ -60,183 +60,169 @@ namespace Content.Server._Sunrise.ERP.Systems
                 {"Felinid", DefaultLactationSolution},
                 {"Vulpkanin", DefaultLactationSolution},
             };
-        private readonly Dictionary<ICommonSession, InteractionEui> _openUis = new();
+
         public override void Initialize()
         {
             base.Initialize();
             SubscribeLocalEvent<InteractionComponent, ComponentInit>(OnComponentInit);
             SubscribeLocalEvent<InteractionComponent, GetVerbsEvent<Verb>>(AddVerbs);
-            SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
         }
 
-        private void OnComponentInit(EntityUid uid, InteractionComponent component, ComponentInit args)
+        public (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? RequestMenu(EntityUid User, EntityUid Target)
         {
-        }
-        private void AddVerbs(EntityUid uid, InteractionComponent comp, GetVerbsEvent<Verb> args)
-        {
-            if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
-                return;
-
-            if (!args.CanInteract || !args.CanAccess)
-                return;
-
-            var player = actor.PlayerSession;
-
-            args.Verbs.Add(new Verb
-            {
-                Priority = 9,
-                Text = "Взаимодействовать с...",
-                Icon = new SpriteSpecifier.Texture(new("/Textures/_Lust/Interface/ERP/heart.png")),
-                Act = () => OpenInteractionEui(player, args),
-                Impact = LogImpact.Low,
-            });
-        }
-
-        private void OnPlayerAttached(PlayerAttachedEvent message)
-        {
-
-            if (!_openUis.ContainsKey(message.Player))
-                return;
-
-            if (!HasComp<GhostComponent>(message.Entity))
-                return;
-
-            CloseEui(message.Player);
-        }
-
-        public void Reset(RoundRestartCleanupEvent ev)
-        {
-            foreach (var session in _openUis.Keys)
-            {
-                CloseEui(session);
+            if (GetInteractionData(User, Target, out var dataNullable)) {
+                if (dataNullable.HasValue)
+                {
+                    var data = dataNullable.Value;
+                    return (data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7, data.Item8);
+                }
+                return null;
             }
-
-            _openUis.Clear();
+            return null;
         }
+
 
         public bool GetInteractionData(EntityUid user, EntityUid target, out (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? data)
         {
-            data = null;
-
-            if (!TryComp<InteractionComponent>(target, out var targetInteraction) || !TryComp<InteractionComponent>(user, out var userInteraction))
-                return false;
-
-            bool erp = true;
-            bool userClothing = CheckClothing(user, out var userTags);
-            bool targetClothing = CheckClothing(target, out var targetTags);
-
-            if (!targetInteraction.Erp || !userInteraction.Erp)
-                erp = false;
-
-            var (userSex, targetSex) = SexCheck(user, target, userTags, targetTags);
-
-            data = (userSex, userClothing, targetSex, targetClothing, erp, userTags, targetTags, userInteraction.Love);
-            return true;
-        }
-
-        private bool CheckClothing(EntityUid uid, out HashSet<string> tags)
-        {
-            tags = new HashSet<string>();
-
-            if (!TryComp<ContainerManagerComponent>(uid, out var containerManager))
-                return false;
-
-            bool hasClothing = false;
-
-            foreach (var container in containerManager.Containers)
+            if (TryComp<InteractionComponent>(target, out var targetInteraction) && TryComp<InteractionComponent>(user, out var userInteraction))
             {
-                if (container.Value.ContainedEntities.Count > 0)
-                {
-                    tags.Add(container.Key);
-                    hasClothing |= container.Key == "jumpsuit" || container.Key == "outerClothing";
-                }
 
-                foreach (var value in container.Value.ContainedEntities)
+                bool erp = true;
+                bool userClothing = false;
+                bool targetClothing = false;
+                if (!targetInteraction.Erp || !userInteraction.Erp) erp = false;
+
+                HashSet<string> userTags = new();
+                HashSet<string> targetTags = new();
+
+                if (TryComp<ContainerManagerComponent>(user, out var container))
                 {
-                    var meta = MetaData(value);
-                    if (meta.EntityPrototype != null)
+                    if (container.Containers.TryGetValue("jumpsuit", out var userJumpsuit))
+                        if (userJumpsuit.ContainedEntities.Count != 0) userClothing = true;
+                    if (container.Containers.TryGetValue("outerClothing", out var userOuterClothing))
+                        if (userOuterClothing.ContainedEntities.Count != 0) userClothing = true;
+
+                    foreach (var c in container.Containers)
                     {
-                        var proto = meta.EntityPrototype.ID;
-                        tags.Add(proto);
-                        tags.Add(proto + "Unstrict");
-                        if (meta.EntityPrototype.Parents != null)
+                        if (c.Value.ContainedEntities.Count != 0) userTags.Add(c.Key);
+                        foreach (var value in c.Value.ContainedEntities)
                         {
-                            foreach (var parent in meta.EntityPrototype.Parents)
+                            var m = MetaData(value);
+                            if (m.EntityPrototype != null)
                             {
-                                tags.Add(parent + "Unstrict");
+                                var s = m.EntityPrototype.ID;
+                                userTags.Add(s);
+                                userTags.Add(s + "Unstrict");
+                                var parents = m.EntityPrototype.Parents;
+                                if (parents != null)
+                                {
+                                    foreach (var parent in parents)
+                                    {
+                                        userTags.Add(parent + "Unstrict");
+                                    }
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            return hasClothing;
-        }
-
-        private (Sex userSex, Sex targetSex) SexCheck(EntityUid user, EntityUid target, HashSet<string> userTags, HashSet<string> targetTags)
-        {
-            var userSex = Sex.Unsexed;
-            var targetSex = Sex.Unsexed;
-
-            if (TryComp<HumanoidAppearanceComponent>(user, out var userHumanoid))
-            {
-                AddTagsFromMarkings(userHumanoid, userTags);
-                userTags.Add(userHumanoid.Species.Id);
-                userSex = userHumanoid.Sex;
-            }
-
-            if (TryComp<HumanoidAppearanceComponent>(target, out var targetHumanoid))
-            {
-                AddTagsFromMarkings(targetHumanoid, targetTags);
-                targetTags.Add(targetHumanoid.Species.Id);
-                targetSex = targetHumanoid.Sex;
-            }
-
-            userSex = TryComp<SexComponent>(user, out var userSexComp) ? userSexComp.Sex : userSex;
-            targetSex = TryComp<SexComponent>(target, out var targetSexComp) ? targetSexComp.Sex : targetSex;
-
-            return (userSex, targetSex);
-        }
-
-        private void AddTagsFromMarkings(HumanoidAppearanceComponent humanoid, HashSet<string> tags)
-        {
-            foreach (var spec in humanoid.MarkingSet.Markings)
-            {
-                tags.Add(spec.Key.ToString());
-                foreach (var val in spec.Value)
+                if (TryComp<ContainerManagerComponent>(target, out var targetContainer))
                 {
-                    tags.Add(val.MarkingId);
+                    if (targetContainer.Containers.TryGetValue("jumpsuit", out var targetJumpsuit))
+                        if (targetJumpsuit.ContainedEntities.Count != 0) targetClothing = true;
+                    if (targetContainer.Containers.TryGetValue("outerClothing", out var targetOuterClothing))
+                        if (targetOuterClothing.ContainedEntities.Count != 0) targetClothing = true;
+
+                    foreach (var c in targetContainer.Containers)
+                    {
+                        if (c.Value.ContainedEntities.Count != 0) targetTags.Add(c.Key);
+                        foreach (var value in c.Value.ContainedEntities)
+                        {
+                            var m = MetaData(value);
+                            if (m.EntityPrototype != null)
+                            {
+                                var s = m.EntityPrototype.ID;
+                                targetTags.Add(s);
+                                targetTags.Add(s + "Unstrict");
+                                var parents = m.EntityPrototype.Parents;
+                                if (parents != null)
+                                {
+                                    foreach (var parent in parents)
+                                    {
+                                        targetTags.Add(parent + "Unstrict");
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
+
+                var userSex = Sex.Unsexed;
+                var targetSex = Sex.Unsexed;
+
+                if (TryComp<HumanoidAppearanceComponent>(target, out var targetHumanoid) && TryComp<HumanoidAppearanceComponent>(user, out var userHumanoid))
+                {
+                    foreach (var spec in userHumanoid.MarkingSet.Markings)
+                    {
+                        userTags.Add(spec.Key.ToString());
+                        foreach (var val in spec.Value)
+                        {
+                            userTags.Add(val.MarkingId);
+                        }
+                    }
+
+                    foreach (var spec in targetHumanoid.MarkingSet.Markings)
+                    {
+                        targetTags.Add(spec.Key.ToString());
+                        foreach (var val in spec.Value)
+                        {
+                            targetTags.Add(val.MarkingId);
+                        }
+                    }
+
+                    userTags.Add(userHumanoid.Species.Id);
+                    targetTags.Add(targetHumanoid.Species.Id);
+                    targetSex = targetHumanoid.Sex;
+                    userSex = userHumanoid.Sex;
+                }
+
+                if (TryComp<SexComponent>(target, out var targetSexComp)) targetSex = targetSexComp.Sex;
+                if (TryComp<SexComponent>(user, out var userSexComp)) userSex = userSexComp.Sex;
+
+                data = (userSex, userClothing, targetSex, targetClothing, erp, userTags, targetTags, userInteraction.Love);
+                return true;
             }
+            data = null;
+            return false;
         }
+
         public void ProcessInteraction(NetEntity user, NetEntity target, InteractionPrototype prototype)
         {
-            var netUser = GetEntity(user);
-            var netTarget = GetEntity(target);
+            var User = GetEntity(user);
+            var Target = GetEntity(target);
 
-            foreach (var entity in new List<EntityUid> {netUser, netTarget})
+            foreach(var entity in new List<EntityUid> {User, Target})
             {
                 if (!TryComp<InteractionComponent>(entity, out var interaction)) continue;
                 //Virginity check
 
-                if ((entity == netUser && prototype.UserVirginityLoss == VirginityLoss.anal ||
-                    entity == netTarget && prototype.TargetVirginityLoss == VirginityLoss.anal) &&
+                if((entity == User && prototype.UserVirginityLoss == VirginityLoss.anal ||
+                    entity == Target && prototype.TargetVirginityLoss == VirginityLoss.anal) &&
                     interaction.AnalVirginity == Virginity.Yes)
                 {
                     interaction.AnalVirginity = Virginity.No;
                     _chat.TrySendInGameICMessage(entity, "лишается анальной девственности", InGameICChatType.Emote, false);
                 }
-                if (entity == netUser && _random.Prob(prototype.UserMoanChance) ||
-                   entity == netTarget && _random.Prob(prototype.TargetMoanChance)) _chat.TryEmoteWithChat(entity, "Moan", ChatTransmitRange.Normal);
+                if (entity == User && _random.Prob(prototype.UserMoanChance) ||
+                   entity == Target && _random.Prob(prototype.TargetMoanChance)) _chat.TryEmoteWithChat(entity, "Moan", ChatTransmitRange.Normal);
 
                 if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid))
                 {
-                    switch (humanoid.Sex)
+                    switch(humanoid.Sex)
                     {
                         case Sex.Male:
-                            if ((entity == netUser && prototype.UserVirginityLoss == VirginityLoss.male ||
-                                entity == netTarget && prototype.TargetVirginityLoss == VirginityLoss.male) &&
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.male ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.male) &&
                                 interaction.Virginity == Virginity.Yes)
                             {
                                 interaction.Virginity = Virginity.No;
@@ -244,8 +230,8 @@ namespace Content.Server._Sunrise.ERP.Systems
                             }
                             break;
                         case Sex.Female:
-                            if ((entity == netUser && prototype.UserVirginityLoss == VirginityLoss.female ||
-                                entity == netTarget && prototype.TargetVirginityLoss == VirginityLoss.female) &&
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.female ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.female) &&
                                 interaction.Virginity == Virginity.Yes)
                             {
                                 interaction.Virginity = Virginity.No;
@@ -260,7 +246,7 @@ namespace Content.Server._Sunrise.ERP.Systems
             // Process Lactation
             if (prototype.LactationStimulationFlag)
             {
-                HandleLactation(ref netUser, ref netTarget, ref prototype);
+                HandleLactation(ref User, ref Target, ref prototype);
             }
         }
 
@@ -365,41 +351,83 @@ namespace Content.Server._Sunrise.ERP.Systems
         {
             var User = GetEntity(entity);
             var Target = GetEntity(target);
+            if (!TryComp<InteractionComponent>(User, out var compUser)) return;
+            if (!TryComp<InteractionComponent>(Target, out var compTarget)) return;
 
-            if (!TryComp<InteractionComponent>(User, out var compUser))
-                return;
-
-            if (!TryComp<InteractionComponent>(Target, out var compTarget))
-                return;
-
-            UpdateLove(ref compUser, percentUser, User, "EffectHearts");
-            UpdateLove(ref compTarget, percentTarget, Target, "EffectHearts");
-        }
-
-        private void UpdateLove(ref InteractionComponent comp, int percent, EntityUid entity, string effect)
-        {
-            if (percent == 0)
-                return;
-
-            if (_gameTiming.CurTime > comp.LoveDelay)
+            if (percentUser != 0)
             {
-                comp.ActualLove += (percent + _random.Next(-percent / 2, percent / 2)) / 100f;
-                comp.TimeFromLastErp = _gameTiming.CurTime;
-            }
-            Spawn(effect, Transform(entity).Coordinates);
-
-            if (comp.Love >= 1)
-            {
-                comp.ActualLove = 0;
-                comp.Love = 0.95f;
-                comp.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
-                _chat.TrySendInGameICMessage(entity, "кончает!", InGameICChatType.Emote, false);
-
-                if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid) && humanoid.Sex == Sex.Male)
+                if (_gameTiming.CurTime > compUser.LoveDelay)
                 {
-                    Spawn("PuddleSemen", Transform(entity).Coordinates);
+                    compUser.ActualLove += (percentUser + _random.Next(-percentUser / 2, percentUser / 2)) / 100f;
+                    compUser.TimeFromLastErp = _gameTiming.CurTime;
+                }
+                Spawn("EffectHearts", Transform(User).Coordinates);
+            }
+            if (compUser.Love >= 1)
+            {
+                compUser.ActualLove = 0;
+                compUser.Love = 0.95f;
+                compUser.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
+                _chat.TrySendInGameICMessage(User, "кончает!", InGameICChatType.Emote, false);
+                if(TryComp<HumanoidAppearanceComponent>(User, out var humuser))
+                {
+                    if(humuser.Sex == Sex.Male)
+                    {
+                        Spawn("PuddleSemen", Transform(User).Coordinates);
+                    }
                 }
             }
+
+            if (percentTarget != 0)
+            {
+                if (_gameTiming.CurTime > compTarget.LoveDelay)
+                {
+                    compTarget.ActualLove += (percentTarget + _random.Next(-percentTarget / 2, percentTarget / 2)) / 100f;
+                    compTarget.TimeFromLastErp = _gameTiming.CurTime;
+                }
+                Spawn("EffectHearts", Transform(Target).Coordinates);
+            }
+            if (compTarget.Love >= 1)
+            {
+                compTarget.ActualLove = 0;
+                compTarget.Love = 0.95f;
+                compTarget.LoveDelay = _gameTiming.CurTime + TimeSpan.FromMinutes(1);
+                _chat.TrySendInGameICMessage(Target, "кончает!", InGameICChatType.Emote, false);
+                if (TryComp<HumanoidAppearanceComponent>(Target, out var taruser))
+                {
+                    if (taruser.Sex == Sex.Male)
+                    {
+                        Spawn("PuddleSemen", Transform(Target).Coordinates);
+                    }
+                }
+            }
+        }
+        private void AddVerbs(EntityUid uid, InteractionComponent comp, GetVerbsEvent<Verb> args)
+        {
+            if (!EntityManager.TryGetComponent(args.User, out ActorComponent? actor))
+                return;
+
+            var player = actor.PlayerSession;
+            if (!args.CanInteract || !args.CanAccess) return;
+            args.Verbs.Add(new Verb
+            {
+                Priority = 9,
+                Text = "Взаимодействовать с...",
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Lust/Interface/ERP/heart.png")),
+                Act = () =>
+                {
+                    if (!args.CanInteract || !args.CanAccess) return;
+                    if (GetInteractionData(args.User, args.Target, out var dataNullable))
+                    {
+                        if (dataNullable.HasValue)
+                        {
+                            var data = dataNullable.Value;
+                            _eui.OpenEui(new InteractionEui(GetNetEntity(args.User), GetNetEntity(args.Target), data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7), player);
+                        }
+                    }
+                },
+                Impact = LogImpact.Low,
+            });
         }
 
         public override void Update(float frameTime)
@@ -409,70 +437,18 @@ namespace Content.Server._Sunrise.ERP.Systems
             var query = EntityQueryEnumerator<InteractionComponent>();
             while (query.MoveNext(out var uid, out var comp))
             {
-                float loveChange = (comp.Love - comp.ActualLove) * frameTime;
-                comp.Love -= loveChange;
+                comp.Love -= ((comp.Love - comp.ActualLove) / 1) * frameTime;
                 if (_gameTiming.CurTime - comp.TimeFromLastErp > TimeSpan.FromSeconds(15) && comp.Love > 0)
                 {
-                    comp.ActualLove = MathF.Max(0, comp.ActualLove - 0.001f);
+                    comp.ActualLove -= 0.001f;
                 }
-
-                if (comp.Love < 0.00001)
-                    comp.Love = 0;
-
-                if (comp.ActualLove < 0)
-                    comp.ActualLove = 0;
+                if (comp.Love < 0) comp.Love = 0;
+                if (comp.ActualLove < 0) comp.ActualLove = 0;
             }
         }
 
-        public (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? RequestMenu(EntityUid User, EntityUid Target)
+        private void OnComponentInit(EntityUid uid, InteractionComponent component, ComponentInit args)
         {
-            if (GetInteractionData(User, Target, out var dataNullable)) {
-                if (dataNullable.HasValue)
-                {
-                    var data = dataNullable.Value;
-                    return (data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7, data.Item8);
-                }
-                return null;
-            }
-            return null;
-        }
-
-
-        public void OpenInteractionEui(ICommonSession player, GetVerbsEvent<Verb> args)
-        {
-
-            if (!_gameTicker.PlayerGameStatuses.TryGetValue(player.UserId, out var status))
-                return;
-
-            if ((player.AttachedEntity is not { Valid: true } attached ||
-             EntityManager.HasComponent<GhostComponent>(attached)) && status != PlayerGameStatus.NotReadyToPlay)
-                CloseEui(player);
-
-            if (!args.CanInteract || !args.CanAccess)
-                return;
-
-            if (_openUis.ContainsKey(player))
-                CloseEui(player);
-
-            if (GetInteractionData(args.User, args.Target, out var dataNullable))
-            {
-                if (dataNullable.HasValue)
-                {
-                    var data = dataNullable.Value;
-                    var eui = _openUis[player] = new InteractionEui(GetNetEntity(args.User), GetNetEntity(args.Target), data.Item1, data.Item2, data.Item3, data.Item4, data.Item5, data.Item6, data.Item7);
-                    _eui.OpenEui(eui, player);
-                }
-            }
-        }
-
-        public void CloseEui(ICommonSession session)
-        {
-            if (!_openUis.ContainsKey(session))
-                return;
-
-            _openUis.Remove(session, out var eui);
-
-            eui?.Close();
         }
     }
 }
