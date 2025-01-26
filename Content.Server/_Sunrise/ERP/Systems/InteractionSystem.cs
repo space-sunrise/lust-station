@@ -21,7 +21,6 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Ghost;
 using Content.Shared.GameTicking;
-using Content.Server.GameTicking;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -34,7 +33,6 @@ namespace Content.Server._Sunrise.ERP.Systems
         [Dependency] private readonly PuddleSystem _puddle = default!;
         [Dependency] private readonly BloodstreamSystem _bloodstream = default!;
         [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-        [Dependency] private readonly GameTicker _gameTicker = default!;
 
         public static string DefaultBloodSolutionName = "bloodstream";
         public static string DefaultChemicalsSolutionName = "chemicals";
@@ -441,11 +439,7 @@ namespace Content.Server._Sunrise.ERP.Systems
         public void OpenInteractionEui(ICommonSession player, GetVerbsEvent<Verb> args)
         {
 
-            if (!_gameTicker.PlayerGameStatuses.TryGetValue(player.UserId, out var status))
-                return;
-
-            if ((player.AttachedEntity is not { Valid: true } attached ||
-             EntityManager.HasComponent<GhostComponent>(attached)) && status != PlayerGameStatus.NotReadyToPlay)
+            if ((player.AttachedEntity is not { Valid: true } attached || EntityManager.HasComponent<GhostComponent>(attached)))
                 CloseEui(player);
 
             if (!args.CanInteract || !args.CanAccess)
