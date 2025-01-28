@@ -1,16 +1,16 @@
-﻿- type: entity
-  parent: BasePDA
-  id: CommaidPDA
-  name: Command maid PDA
-  components:
-  - type: Sprite
-  - type: Pda
-    id: CommaidIDCard
-  - type: Appearance
-    appearanceDataInit:
-      enum.PdaVisuals.PdaType:
-        !type:String
-        pda-commaid
-  - type: Icon
-    sprite: _Lust/Objects/Devices/pda.rsi
-    state: pda-commaid
+﻿#- type: entity
+#  parent: BasePDA
+#  id: CommaidPDA
+#  name: Command maid PDA
+#  components:
+#  - type: Sprite
+#  - type: Pda
+#    id: CommaidIDCard
+#  - type: Appearance
+#    appearanceDataInit:
+#      enum.PdaVisuals.PdaType:
+#        !type:String
+#        pda-commaid
+#  - type: Icon
+#    sprite: _Lust/Objects/Devices/pda.rsi
+#    state: pda-commaid
