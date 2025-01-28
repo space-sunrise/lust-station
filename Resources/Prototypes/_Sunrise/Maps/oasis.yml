@@ -89,7 +89,7 @@
             MedicalBorg: [ 4, 4 ]
             SecurityBorg: [ 4, 4 ]
             # Lust-start
-            ComMaid: [ 1, 1 ]
+           # ComMaid: [ 1, 1 ]
             # Lust-end
         - type: StationGoal
           goals:
