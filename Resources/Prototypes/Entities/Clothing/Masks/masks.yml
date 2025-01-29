@@ -374,7 +374,8 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: HideLayerClothing
+  - type: HideLayerClothing #LUST-START
+  - type: EyeProtection #LUST-END
     slots:
     - Hair
     - Snout

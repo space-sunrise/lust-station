@@ -22,8 +22,8 @@
       sprite: _Sunrise/Clothing/Hands/Gloves/centcom_naval.rsi
     - type: Insulated
 
-- type: entity
-  parent: ClothingHandsBase
+- type: entity #LUST-START
+  parent: ClothingHandsGlovesCombat
   id: ClothingHandsGlovesLeatherHoS
   name: leather gloves
   description: Stylish black leather gloves.
@@ -32,6 +32,7 @@
     sprite: _Sunrise/Clothing/Hands/Gloves/hos.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Hands/Gloves/hos.rsi
+  - type: Insulated
 
 - type: entity
   parent: ClothingHandsBase
