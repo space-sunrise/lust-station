@@ -134,6 +134,10 @@
   lovePercentTarget: 10
   targetTagWhitelist:
   - Tail
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   category: хвост
   targetVirginityLoss: anal
   userVirginityLoss: male
@@ -156,5 +160,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagWhitelist:
-  - Tail
+  - Demon
+  targetTagBlacklist:
+  - pants
+  - jumpsuit
+  - outerClothing
   category: хвост

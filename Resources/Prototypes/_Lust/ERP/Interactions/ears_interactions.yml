@@ -16,6 +16,13 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - FelinidEarsBasic
+  - FelinidEarsCurled
+  - FelinidEarsDroopy
+  - FelinidEarsFuzzy
+  - FelinidEarsStubby
+  - FelinidEarsTall
+  - FelinidEarsTorn
+  - FelinidEarsWide
   - CatEarsStubby
   - CatEarsCurled
   - CatEarsTorn
@@ -53,6 +60,13 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - FelinidEarsBasic
+  - FelinidEarsCurled
+  - FelinidEarsDroopy
+  - FelinidEarsFuzzy
+  - FelinidEarsStubby
+  - FelinidEarsTall
+  - FelinidEarsTorn
+  - FelinidEarsWide
   - CatEarsStubby
   - CatEarsCurled
   - CatEarsTorn
@@ -85,6 +99,13 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - FelinidEarsBasic
+  - FelinidEarsCurled
+  - FelinidEarsDroopy
+  - FelinidEarsFuzzy
+  - FelinidEarsStubby
+  - FelinidEarsTall
+  - FelinidEarsTorn
+  - FelinidEarsWide
   - CatEarsStubby
   - CatEarsCurled
   - CatEarsTorn
@@ -122,6 +143,13 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - FelinidEarsBasic
+  - FelinidEarsCurled
+  - FelinidEarsDroopy
+  - FelinidEarsFuzzy
+  - FelinidEarsStubby
+  - FelinidEarsTall
+  - FelinidEarsTorn
+  - FelinidEarsWide
   - CatEarsStubby
   - CatEarsCurled
   - CatEarsTorn
@@ -157,6 +185,13 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - FelinidEarsBasic
+  - FelinidEarsCurled
+  - FelinidEarsDroopy
+  - FelinidEarsFuzzy
+  - FelinidEarsStubby
+  - FelinidEarsTall
+  - FelinidEarsTorn
+  - FelinidEarsWide
   - CatEarsStubby
   - CatEarsCurled
   - CatEarsTorn
