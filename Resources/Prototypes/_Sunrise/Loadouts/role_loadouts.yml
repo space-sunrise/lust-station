@@ -35,11 +35,12 @@
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
+  - SunriseSecurityGun
   - Bra
   - Pants
   - Socks
   - CommonPets
+  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobCentCommOfficial
@@ -95,11 +96,12 @@
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
+  - SunriseSecurityGun
   - Bra
   - Pants
   - Socks
   - CommonPets
+  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobSeniorResearcher
@@ -121,17 +123,42 @@
 - type: roleLoadout
   id: JobSeniorPhysician
   groups:
+  - SeniorPhysicianHead
+  - SeniorPhysicianMask
   - SeniorPhysicianJumpsuit
+  - SeniorPhysicianGloves
   - MedicalBackpack
-  - MedicalGloves
-  - MedicalMask
+  - SeniorPhysicianOuterClothing
+  - SeniorPhysicianNeck
   - SeniorPhysicianBelt
-  - MedicalShoes
+  - SeniorPhysicianShoes
   - SurvivalMedical
   - Trinkets
+  - MedicalTrinkets
   - Glasses
   - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobMedicalPathologist
+  groups:
+  - PathologistHead
+  - PathologistMask
+  - MedicalDoctorJumpsuit
+  - PathologistGloves
+  - MedicalBackpack
+  - PathologistOuterClothing
+  - PathologistNeck
+  - PathologistShoes
+  - GroupTankHarness
+  - Glasses
+  - SurvivalMedical
+  - Trinkets
+  - MedicalTrinkets
+  - GroupSpeciesBreathToolMedical
   - Bra
   - Pants
   - Socks
@@ -140,13 +167,17 @@
 - type: roleLoadout
   id: JobSeniorEngineer
   groups:
+  - SeniorEngineerHead
+  - SeniorEngineerMask
   - SeniorEngineerJumpsuit
-  - StationEngineerBackpack
-  - StationEngineerOuterClothing
-  - StationEngineerShoes
-  - AtmosphericsConsole
+  - SeniorEngineerGloves
+  - StationSeniorEngineerBackpack
+  - SeniorEngineerOuterClothing
+  - SeniorEngineerNeck
+  - SeniorEngineerShoes
   - SurvivalExtended
   - Trinkets
+  - TrinketsEngineering
   - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
@@ -179,8 +210,7 @@
   - StationEngineerJumpsuit
   - StationEngineerBackpack
   - StationEngineerOuterClothing
-  - StationEngineerShoes
-  - AtmosphericsConsole
+  - TrinketsEngineering
   - Trinkets
   - SurvivalExtended
   - GroupSpeciesBreathTool
@@ -247,11 +277,12 @@
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
+  - SunriseSecurityGun
   - Bra
   - Pants
   - Socks
   - CommonPets
+  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobPrisonChef
@@ -349,23 +380,6 @@
   - Pants
   - Socks
   - CommonPets
-
-- type: roleLoadout
-  id: JobMedicalPathologist
-  groups:
-  - MedicalMask
-  - MedicalDoctorJumpsuit
-  - MedicalGloves
-  - MedicalBackpack
-  - MedicalShoes
-  - GroupTankHarness
-  - Glasses
-  - SurvivalMedical
-  - Trinkets
-  - GroupSpeciesBreathToolMedical
-  - Bra
-  - Pants
-  - Socks
 
 - type: roleLoadout
   id: JobAdjutant
