@@ -1,0 +1,19 @@
+- type: reagent
+  id: Stonium
+  name: reagent-name-stonium
+  group: Special
+  desc: reagent-desc-stonium
+  physicalDesc: reagent-physical-desc-stonium
+  flavor: funny
+  color: "#db4dff"
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:Emote
+        emote: Moan
+        probability: 0.4
+        showInChat: true
+      - !type:PopupMessage
+        type: Local
+        messages: [ "stonium-effect1", "stonium-effect2" ]
+        probability: 0.1

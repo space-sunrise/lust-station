@@ -1,0 +1,10 @@
+- type: reaction
+  id: Stonium
+  impact: Medium
+  reactants:
+    Leporazine:
+      amount: 1
+    Happiness:
+      amount: 1
+  products:
+    Stonium: 3
