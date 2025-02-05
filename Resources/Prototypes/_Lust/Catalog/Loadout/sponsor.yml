@@ -1,0 +1,29 @@
+- type: sponsorLoadout
+  id: LustStationUplink40Loadout
+  equipment: LustStationUplink40
+
+- type: startingGear
+  id: LustStationUplink40
+  storage:
+    back:
+    - LustStationUplink40
+
+- type: sponsorLoadout
+  id: LustStationUplink70Loadout
+  equipment: LustStationUplink70
+
+- type: startingGear
+  id: LustStationUplink70
+  storage:
+    back:
+    - LustStationUplink70
+
+- type: sponsorLoadout
+  id: LustStationUplink90Loadout
+  equipment: LustStationUplink90
+
+- type: startingGear
+  id: LustStationUplink90
+  storage:
+    back:
+    - LustStationUplink90
