@@ -56,7 +56,6 @@ namespace Content.Server._Sunrise.ERP.Systems
         public override void HandleMessage(EuiMessageBase msg)
         {
             base.HandleMessage(msg);
-            Logger.Info($"HandleMessage: {msg}. {_timing.CurTime}");
             switch (msg)
             {
                 case AddLoveMessage req:
