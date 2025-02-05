@@ -2,15 +2,15 @@
   parent: BaseItem
   id: Suntick
   categories: [ HideSpawnMenu ]
-  suffix: 20 ST
-  name: Suntick
+  suffix: 20 LC
+  name: Lust Coin
   description: Incredibly attractive and beautiful coins that open the door to the world of a cute little shop.
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Specific/Donate/suntick.rsi
+    sprite: _Lust/lustcoin.rsi # Lust-Station-Edit
     state: telecrystal
   - type: Item
-    sprite: _Sunrise/Objects/Specific/Donate/suntick.rsi
+    sprite: _Lust/lustcoin.rsi # Lust-Station-Edit
     size: Tiny
   - type: Stack
     count: 20
@@ -26,7 +26,7 @@
 - type: entity
   parent: Suntick
   id: Suntick1
-  suffix: 1 ST
+  suffix: 1 LC
   categories: [ HideSpawnMenu ]
   components:
   - type: Stack
@@ -35,7 +35,7 @@
 - type: entity
   parent: Suntick
   id: Suntick5
-  suffix: 5 ST
+  suffix: 5 LC
   categories: [ HideSpawnMenu ]
   components:
   - type: Stack
@@ -45,7 +45,7 @@
   parent: Suntick
   id: Suntick10
   categories: [ HideSpawnMenu ]
-  suffix: 10 ST
+  suffix: 10 LC
   components:
   - type: Stack
     count: 10
