@@ -26,11 +26,13 @@ public sealed partial class AdminLogManager
         "admin_logs_cache_log_count",
         "How many logs are in cache.");
 
-    // TODO ADMIN LOGS cache previous {MaxRoundsCached} rounds on startup
     public void CacheNewRound()
     {
         List<SharedAdminLog>? list = null;
-
+    
+        if (_roundsLogCache.ContainsKey(_currentRoundId))
+            return;
+    
         _roundsLogCacheQueue.Enqueue(_currentRoundId);
         if (_roundsLogCacheQueue.Count > MaxRoundsCached)
         {
@@ -41,9 +43,9 @@ public sealed partial class AdminLogManager
                 list.Clear();
             }
         }
-
+    
         list ??= new List<SharedAdminLog>(LogListInitialSize);
-
+    
         _roundsLogCache.Add(_currentRoundId, list);
         CacheRoundCount.Set(_roundsLogCache.Count);
     }
