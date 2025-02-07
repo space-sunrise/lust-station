@@ -31,11 +31,6 @@ public sealed partial class AdminLogManager
     {
         List<SharedAdminLog>? list = null;
 
-        // LUST EDIT
-        if (_roundsLogCache.ContainsKey(_currentRoundId))
-            return;
-        // LUST EDIT
-
         _roundsLogCacheQueue.Enqueue(_currentRoundId);
         if (_roundsLogCacheQueue.Count > MaxRoundsCached)
         {
