@@ -29,9 +29,11 @@ public sealed partial class AdminLogManager
     public void CacheNewRound()
     {
         List<SharedAdminLog>? list = null;
-    
+
+        // SUNRISE EDIT
         if (_roundsLogCache.ContainsKey(_currentRoundId))
             return;
+        // SUNRISE EDIT
     
         _roundsLogCacheQueue.Enqueue(_currentRoundId);
         if (_roundsLogCacheQueue.Count > MaxRoundsCached)
