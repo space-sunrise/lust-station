@@ -10,15 +10,15 @@ using Content.Client.Chat.Managers;
 using Robust.Client.Player;
 using Robust.Shared.Timing;
 using Content.Shared.IdentityManagement;
-
 namespace Content.Client._Sunrise.ERP
 {
     [UsedImplicitly]
     public sealed class InteractionEui : BaseEui
     {
-        private InteractionWindow _window;
+        private readonly InteractionWindow _window;
         public IEntityManager _entManager;
 
+        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
         [Dependency] private readonly IChatManager _chat = default!;
         [Dependency] private readonly IPlayerManager _player = default!;
@@ -27,10 +27,7 @@ namespace Content.Client._Sunrise.ERP
         {
             _entManager = IoCManager.Resolve<IEntityManager>();
             _window = new InteractionWindow(this);
-            _window.OnClose += () =>
-            {
-                SendMessage(new CloseEuiMessage());
-            };
+            _window.OnClose += OnClosed;
         }
 
         public override void HandleMessage(EuiMessageBase msg)
@@ -70,9 +67,13 @@ namespace Content.Client._Sunrise.ERP
             SendMessage(new RequestInteractionState());
         }
 
+        private void OnClosed()
+        {
+            SendMessage(new CloseEuiMessage());
+        }
+
         public override void Opened()
         {
-            base.Opened();
             _window.OpenCenteredLeft();
         }
 
@@ -101,10 +102,10 @@ namespace Content.Client._Sunrise.ERP
 
         public void FrameUpdate(FrameEventArgs args)
         {
-            foreach ((var item, var time, var text) in _disabledItems)
+            foreach((var item, var time, var text) in _disabledItems)
             {
                 item.Text = text + $" ({(time - _gameTiming.CurTime).Seconds} сек.)";
-                if (_gameTiming.CurTime >= time)
+                if(_gameTiming.CurTime >= time)
                 {
                     item.Text = text;
                     item.Disabled = false;
