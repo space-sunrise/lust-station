@@ -30,11 +30,11 @@ public sealed partial class AdminLogManager
     {
         List<SharedAdminLog>? list = null;
 
-        // SUNRISE EDIT
+        // LUST EDIT
         if (_roundsLogCache.ContainsKey(_currentRoundId))
             return;
-        // SUNRISE EDIT
-    
+        // LUST EDIT
+
         _roundsLogCacheQueue.Enqueue(_currentRoundId);
         if (_roundsLogCacheQueue.Count > MaxRoundsCached)
         {
@@ -45,9 +45,9 @@ public sealed partial class AdminLogManager
                 list.Clear();
             }
         }
-    
+
         list ??= new List<SharedAdminLog>(LogListInitialSize);
-    
+
         _roundsLogCache.Add(_currentRoundId, list);
         CacheRoundCount.Set(_roundsLogCache.Count);
     }
