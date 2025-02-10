@@ -40,6 +40,7 @@
       types:
         Blunt: 2
         Slash: 3
+  - type: Carriable
 
 
 - type: entity

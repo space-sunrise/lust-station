@@ -74,6 +74,7 @@
       - "footprint-left-bare-dwarf"
     rightBareFootState:
       - "footprint-right-bare-dwarf"
+  - type: Carriable
   # Sunrise edit end 0_0
 
 - type: entity
