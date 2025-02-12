@@ -18,6 +18,7 @@
   startingGear: NtrLeaderGear
   icon: JobIconNtrLeader
   supervisors: job-supervisors-ntrg
+  setPreference: false # Lust edit
   canBeAntag: false
   access:
     - Command
@@ -89,6 +90,7 @@
   startingGear: NtrLeaderGear
   icon: JobIconNtrGuard
   supervisors: job-supervisors-ntrg
+  setPreference: false # Lust edit
   canBeAntag: false
   access:
     - Command
