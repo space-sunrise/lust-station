@@ -20,7 +20,6 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Ghost;
-using Content.Shared.GameTicking;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -65,7 +64,6 @@ namespace Content.Server._Sunrise.ERP.Systems
             SubscribeLocalEvent<InteractionComponent, ComponentInit>(OnComponentInit);
             SubscribeLocalEvent<InteractionComponent, GetVerbsEvent<Verb>>(AddVerbs);
             SubscribeLocalEvent<PlayerAttachedEvent>(OnPlayerAttached);
-            SubscribeLocalEvent<RoundRestartCleanupEvent>(Reset);
         }
 
         private void OnComponentInit(EntityUid uid, InteractionComponent component, ComponentInit args)
@@ -101,16 +99,6 @@ namespace Content.Server._Sunrise.ERP.Systems
                 return;
 
             CloseEui(message.Player);
-        }
-
-        public void Reset(RoundRestartCleanupEvent ev)
-        {
-            foreach (var session in _openUis.Keys)
-            {
-                CloseEui(session);
-            }
-
-            _openUis.Clear();
         }
 
         public bool GetInteractionData(EntityUid user, EntityUid target, out (Sex, bool, Sex, bool, bool, HashSet<string>, HashSet<string>, float)? data)
@@ -468,5 +456,6 @@ namespace Content.Server._Sunrise.ERP.Systems
 
             eui?.Close();
         }
+
     }
 }
