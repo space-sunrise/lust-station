@@ -40,3 +40,7 @@ ent-ERPPlug3 = { ent-ERPPlug1 }
     .desc = { ent-ERPPlug1.desc }
 ent-ERPPlug4 = { ent-ERPPlug1 }
     .desc = { ent-ERPPlug1.desc }
+ent-ERPFoxTailPlug = лисий хвост
+    .desc = Время для ролевых игр!
+ent-ERPCatTailPlug = кошачий хвост
+    .desc = Мурр!
