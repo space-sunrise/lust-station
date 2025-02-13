@@ -1271,6 +1271,11 @@ namespace Content.Client.Lobby.UI
                 case Sex.Female:
                     Profile = Profile?.WithGender(Gender.Female);
                     break;
+                // Lust-start
+                case Sex.Futanari:
+                    Profile = Profile?.WithGender(Gender.Female);
+                    break;
+                // Lust-end
                 default:
                     Profile = Profile?.WithGender(Gender.Epicene);
                     break;

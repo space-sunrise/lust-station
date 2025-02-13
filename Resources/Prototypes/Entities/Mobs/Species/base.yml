@@ -214,6 +214,7 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: MaleHuman
+      Futanari: FemaleHuman # Lust-Edit
   - type: Emoting
   - type: BodyEmotes
     soundsId: GeneralBodyEmotes

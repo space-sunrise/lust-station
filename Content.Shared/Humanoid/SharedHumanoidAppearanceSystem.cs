@@ -48,6 +48,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     {
         {Sex.Male, "Voljin"},
         {Sex.Female, "Amina"},
+        {Sex.Futanari, "Amina"}, // Lust-edit
         {Sex.Unsexed, "Charlotte"}
     };
     // Sunrise-TTS-End

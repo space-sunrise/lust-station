@@ -8,6 +8,7 @@
   markingLimits: MobVulpkaninMarkingLimits
   dollPrototype: MobVulpkaninDummy
   skinColoration: Hues
+  sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: speciesBaseSprites
   id: MobVulpkaninSprites

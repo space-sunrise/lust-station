@@ -12,6 +12,7 @@
   femaleFirstNames: names_moth_first_female
   maleLastNames: names_moth_last # Russian-LastnameGender
   femaleLastNames: names_moth_last # Russian-LastnameGender
+  sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: speciesBaseSprites
   id: MobMothSprites

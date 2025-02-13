@@ -33,6 +33,11 @@ public sealed partial class InventoryComponent : Component
     /// </summary>
     [DataField]
     public Dictionary<string, DisplacementData> MaleDisplacements = new();
+
+    // Lust-start
+    [DataField]
+    public Dictionary<string, DisplacementData> FutanariDisplacements = new();
+    // Lust-end
 }
 
 /// <summary>

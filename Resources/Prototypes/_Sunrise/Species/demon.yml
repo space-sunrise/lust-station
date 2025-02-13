@@ -13,6 +13,7 @@
   maleLastNames: names_last_male
   femaleLastNames: names_last_female
   naming: firstlast
+  sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: speciesBaseSprites
   id: MobDemonSprites
