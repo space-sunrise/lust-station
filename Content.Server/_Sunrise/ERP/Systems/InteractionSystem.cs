@@ -239,8 +239,8 @@ namespace Content.Server._Sunrise.ERP.Systems
                             }
                             break;
                         case Sex.Futanari:
-                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.futanati ||
-                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.futanati) &&
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.futanari ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.futanari) &&
                                 interaction.Virginity == Virginity.Yes)
                             {
                                 interaction.Virginity = Virginity.No;
