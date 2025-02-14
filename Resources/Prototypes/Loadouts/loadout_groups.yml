@@ -85,8 +85,9 @@
   loadouts:
   - EmergencyNitrogen
   - EmergencyOxygen
-  - EmergencyWithoutGas  # Sunrise-Edit
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyWithoutGas  # Sunrise-Edit
+  - EmergencyDwarf  # Sunrise-Edit
 
 - type: loadoutGroup
   id: GroupEVATank
@@ -490,6 +491,7 @@
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasClown # Sunrise-Edit
+  - EmergencyDwarfClown # Sunrise-Edit
 
 - type: loadoutGroup
   id: MimeHead
@@ -546,6 +548,8 @@
   - EmergencyNitrogenMime
   - EmergencyOxygenMime
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyWithoutGasMime # Sunrise-Edit
+  - EmergencyDwarfMime # Sunrise-Edit
 
 - type: loadoutGroup
   id: MusicianJumpsuit
@@ -951,6 +955,7 @@
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasExtended # Sunrise-Edit
+  - EmergencyDwarfExtended # Sunrise-Edit
 
 # Science
 - type: loadoutGroup
@@ -1200,6 +1205,7 @@
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSecurity # Sunrise-Edit
+  - EmergencyDwarfSecurity # Sunrise-Edit
 
 - type: loadoutGroup
   id: SecurityStar
@@ -1512,6 +1518,7 @@
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasMedical # Sunrise-Edit
+  - EmergencyDwarfMedical # Sunrise-Edit
 
 # Wildcards
 - type: loadoutGroup
@@ -1555,6 +1562,7 @@
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSyndicate # Sunrise-Edit
+  - EmergencyDwarfSyndicate # Sunrise-Edit
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

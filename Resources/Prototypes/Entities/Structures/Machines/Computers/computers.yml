@@ -39,6 +39,8 @@
           True: { visible: false }
           False: { visible: true }
   - type: AtmosAlertsComputer
+    beepSound:
+      path: /Audio/_Sunrise/Effects/beeps.ogg
   - type: ActivatableUI
     singleUser: true
     key: enum.AtmosAlertsComputerUiKey.Key
@@ -1260,10 +1262,8 @@
     radius: 1.5
     energy: 1.6
     color: "#b89f25"
-  # Sunrise-Start
   - type: AccessReader
-    access: [ [ "Quartermaster" ], [ "HeadOfPersonnel" ] ]
-  # Sunrise-End
+    access: [["Cargo"]]
   - type: GuideHelp
     guides:
     - Cargo
