@@ -175,6 +175,7 @@ namespace Content.Server._Sunrise.Fugitive
             {
                 Sex.Male => Loc.GetString("fugitive-report-sex-m"),
                 Sex.Female => Loc.GetString("fugitive-report-sex-f"),
+                Sex.Futanari => Loc.GetString("fugitive-report-sex-f"), // Lust-edit
                 _ => Loc.GetString("fugitive-report-sex-n")
             };
 

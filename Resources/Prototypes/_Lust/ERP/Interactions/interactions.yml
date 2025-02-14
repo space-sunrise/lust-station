@@ -6,8 +6,10 @@
   - медленно проводит влажным языком по телу %target, оставляя мокрый след от живота до паха
   - приподносит голову к животику %target и, высунув свой язык, проводит им вплоть до паха
   - посмотрев на %target игривым взглядом, проводит своим языком мокрую дорожку от жиовотика до паха
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 4

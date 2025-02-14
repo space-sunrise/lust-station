@@ -6,8 +6,10 @@
   - нежно гладит рожки %target
   - ласково гладит рожки %target
   - с теплотой гладит рожки %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 0
   lovePercentTarget: 0
@@ -43,8 +45,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -84,8 +90,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Male
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Male
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -127,8 +136,10 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Female
-  targetSex: Male
+  userSex:
+  - Female
+  targetSex:
+  - Male
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -170,8 +181,10 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Female
-  targetSex: Female
+  userSex:
+  - Female
+  targetSex:
+  - Female
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -213,8 +226,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
@@ -243,7 +259,7 @@
 
 - type: interaction
   id: HornsAssFuckFemale
-  name: Трахать вагину держа за рожки
+  name: Трахать анус держа за рожки
   icon: _Lust/Interface/ERP/horns_ass_female.png
   emotes:
   - ритмично трахает анус %target, сжимая её рожки
@@ -256,8 +272,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
@@ -299,8 +319,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Male
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Male
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10

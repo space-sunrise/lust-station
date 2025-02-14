@@ -10,8 +10,10 @@
   - игриво поглаживает попку %target
   - медленно сжимает попку %target
   - бесстыже лапает задницу %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 3
@@ -29,8 +31,10 @@
   - сжимает и расцеловывает попку %target
   sounds:
   - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 3
@@ -53,8 +57,10 @@
   - смачно шлепает ладонью по заднице %target
   sounds:
   - path: /Audio/_Lust/ERP/clap1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -73,8 +79,10 @@
   - ритмично массирует попку %target
   - медленно массирует попку %target
   - методично массирует попку %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -95,8 +103,11 @@
   - path: /Audio/_Lust/ERP/hlup.ogg
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
-  userSex: Male
-  targetSex: Unsexed
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 7
   lovePercentTarget: 3
@@ -126,8 +137,10 @@
   - path: /Audio/_Lust/ERP/whip/whip_1.ogg
   - path: /Audio/_Lust/ERP/whip/whip_2.ogg
   - path: /Audio/_Lust/ERP/whip/whip_3.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5
@@ -142,8 +155,10 @@
   - слегка прикусывает попу %target
   - нежно кусает булки %target
   - игриво кусает за попу %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5
@@ -161,8 +176,10 @@
   - нежно гладит попу %target своим хвостом
   - аккуратно проводит своим хвостом по попке %target
   - игриво поглаживает своим хвостом попку %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5

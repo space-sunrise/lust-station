@@ -10,6 +10,7 @@
   youngAge: 23
   oldAge: 25
   maxAge: 27
+  sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: markingPoints
   id: MobFelinidMarkingLimits

@@ -13,8 +13,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 1
@@ -49,8 +51,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
@@ -74,8 +78,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Unsexed
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -97,8 +104,10 @@
   - проникает большим пальцем в рот %target
   sounds:
   - path: /Audio/_Lust/ERP/fingerlick/fingerlick.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 0
   lovePercentTarget: 5
@@ -119,8 +128,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Male
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Male
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 5
@@ -148,8 +160,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 5

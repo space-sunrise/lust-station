@@ -32,7 +32,7 @@ public sealed partial class InteractionPrototype : IPrototype
 
 
 
-    [DataField] public Sex UserSex = Sex.Unsexed; //Unsexed = любой
+    [DataField] public List<Sex> UserSex = [];
     [DataField] public VirginityLoss UserVirginityLoss = VirginityLoss.no;
     [DataField] public bool UserWithoutCloth = false; //Нужно ли, чтобы на энтити не было комбенизона / скафандра
     [DataField] public int LovePercentUser = 0; // Сколько процентов добавлять к шкале "окончания"
@@ -42,7 +42,7 @@ public sealed partial class InteractionPrototype : IPrototype
 
 
     // Тоже самое, но таргет
-    [DataField] public Sex TargetSex = Sex.Unsexed;
+    [DataField] public List<Sex> TargetSex = [];
     [DataField] public VirginityLoss TargetVirginityLoss = VirginityLoss.no;
     [DataField] public bool TargetWithoutCloth = false;
     [DataField] public int LovePercentTarget = 0;

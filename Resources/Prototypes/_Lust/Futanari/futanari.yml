@@ -1,0 +1,11 @@
+- type: humanoidBaseSprite
+  id: MobHumanHeadFutanari
+  baseSprite:
+    sprite: Mobs/Species/Human/parts.rsi
+    state: head_f
+
+- type: humanoidBaseSprite
+  id: MobHumanTorsoFutanari
+  baseSprite:
+    sprite: _Lust/Mobs/Species/Human/parts.rsi
+    state: torso_fut
