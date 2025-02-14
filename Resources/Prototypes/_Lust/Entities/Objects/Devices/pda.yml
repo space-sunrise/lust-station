@@ -13,4 +13,5 @@
         !type:String
         pda-commaid
   - type: Icon
+    sprite: _Lust/Objects/Devices/pda.rsi
     state: pda-commaid
