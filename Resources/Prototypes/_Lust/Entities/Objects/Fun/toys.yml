@@ -265,7 +265,7 @@
     delay: 1
 
 - type: localizedDataset
-  id: BykovPhrases
+  id: bykovPhrases
   values:
     prefix: bykov-
     count: 2
@@ -280,7 +280,7 @@
     state: bykov
   - type: TriggerOnActivate
   - type: SpeakOnTrigger
-    pack: BykovPhrases
+    pack: bykovPhrases
   - type: TTS
     voice: TF2Soldier
   - type: UseDelay
