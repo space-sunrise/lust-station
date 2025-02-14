@@ -41,64 +41,6 @@
     delay: 10
 
 - type: entity
-  id: PlushieShiroSolo
-  parent: BasePlushie
-  name: Plush Shiro fon Volph
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: shiro-solo
-
-- type: entity
-  id: PlushieShiroHeart
-  parent: BasePlushie
-  name: Plush Shiro fon Volph with heart
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: shiro-heart
-
-- type: entity
-  id: PlushieIv
-  parent: BasePlushie
-  name: Iv Potrokhova
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: iv-heart
-
-- type: localizedDataset
-  id: TailerMurlikinPhrases
-  values:
-    prefix: tailer-murlikin-
-    count: 3
-
-- type: entity
-  id: PlushieTailerMurlikin
-  parent: BasePlushie
-  name: Plush Tailer Murlikin
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: tailer-murlikin
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: TailerMurlikinPhrases
-  - type: TTS
-    voice: ElderLyonsFL3
-  - type: UseDelay
-    delay: 3
-
-- type: entity
-  id: PlushieNiko
-  parent: BasePlushie
-  name: Plush niko
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: niko
-
-- type: entity
   id: PlushieMira
   parent: BasePlushie
   name: Plush mira
@@ -106,51 +48,6 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: mira
-
-- type: entity
-  id: EmitPurr
-  abstract: true
-  components:
-  - type: MeleeWeapon
-    soundHit:
-      collection: FelinidPurrs
-      params:
-        volume: 100
-  - type: EmitSoundOnTrigger
-    sound:
-      collection: FelinidPurrs
-  - type: EmitSoundOnCollide
-    sound:
-      collection: FelinidPurrs
-  - type: EmitSoundOnUse
-    sound:
-      collection: FelinidPurrs
-  - type: EmitSoundOnLand
-    sound:
-      collection: FelinidPurrs
-  - type: EmitSoundOnActivate
-    sound:
-      collection: FelinidPurrs
-
-- type: entity
-  id: PlushieNeiiria
-  parent:
-  - EmitPurr
-  - BasePlushie
-  name: Plush Neiiria
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: neiiria
-
-- type: entity
-  id: PlushieCharlieFleur
-  parent: BasePlushie
-  name: Plush Charlie
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: charlie_fleur
 
 - type: entity
   id: PlushieSashaChernyh
@@ -180,48 +77,6 @@
     pack: KharshaPhrases
   - type: TTS
     voice: SironaRyan
-  - type: UseDelay
-    delay: 3
-
-- type: localizedDataset
-  id: DobitchikPhrases
-  values:
-    prefix: dobitchik-
-    count: 2
-
-- type: entity
-  id: PlushieDobitchik
-  parent: BasePlushie
-  name: Plush Dobitchik
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: dobitchik
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: DobitchikPhrases
-  - type: TTS
-    voice: Anduin
-  - type: UseDelay
-    delay: 3
-
-- type: localizedDataset
-  id: MediPhrases
-  values:
-    prefix: medi-
-    count: 1
-
-- type: entity
-  id: PlushieMedi
-  parent: BasePlushie
-  name: Plush Medi
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: plush_medi
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: MediPhrases
   - type: UseDelay
     delay: 3
 
@@ -277,37 +132,6 @@
     state: alisa_simonova_de_mori
 
 - type: entity
-  id: PlushieRx1984
-  parent: BasePlushie
-  name: Plush RX1984
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: plushie-rx
-
-- type: entity
-  id: PlushieKlaraIsaeva
-  parent: BasePlushie
-  name: Plush Klara Isaeva
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: klara_isaeva
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: KlaraIsaevaPhrases
-  - type: TTS
-    voice: KarinaPetrovaTB
-  - type: UseDelay
-    delay: 5
-
-- type: localizedDataset
-  id: KlaraIsaevaPhrases
-  values:
-    prefix: klara-isaeva-
-    count: 1
-
-- type: entity
   id: PlushieSaiHaks
   parent: BasePlushie
   name: Plush Sai Haks
@@ -315,93 +139,6 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: sai_haks2
-  - type: UseDelay
-    delay: 5
-
-- type: entity
-  id: PlushieCosmicStarDust
-  parent: BasePlushie
-  name: Cosmic Star Dust
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: cosmic_star_dust
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Voice/Moth/moth_scream.ogg
-      params:
-        volume: 5
-  - type: UseDelay
-    delay: 5
-
-- type: entity
-  id: PlushieRatmirSaphirov
-  parent: BasePlushie
-  name: Plush Ratmir Saphirov
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: ratmir_saphirov
-  - type: UseDelay
-    delay: 5
-
-- type: entity
-  id: PlushieMikeSchmidt
-  parent: BasePlushie
-  name: Plush Mike Schmidt
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: mike_schmidt
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: MikeSchmidtPhrases
-  - type: TTS
-    voice: Warcraft3Artas2
-  - type: UseDelay
-    delay: 5
-
-- type: localizedDataset
-  id: MikeSchmidtPhrases
-  values:
-    prefix: mike-schmidt-
-    count: 3
-
-- type: entity
-  id: PlushieBormanSerkiroboy
-  parent: BasePlushie
-  name: Plushie Borman Serkiroboy
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: borman_sekiroboy
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: BormanSerkiroBoyPhrases
-  - type: TTS
-    voice: Warcraft3Artas2
-  - type: UseDelay
-    delay: 5
-
-- type: localizedDataset
-  id: BormanSerkiroBoyPhrases
-  values:
-    prefix: borman-serkiroboy-
-    count: 1
-
-- type: entity
-  id: PlushieBlobaBlabo
-  parent: BasePlushie
-  name: Bloba Blabo
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: bloba_blabo
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Voice/Slime/slime_squish.ogg
-      params:
-        volume: 5
   - type: UseDelay
     delay: 5
 
@@ -426,52 +163,6 @@
   values:
     prefix: dragonaft-
     count: 2
-
-- type: entity
-  id: PlushieIgorVolkov
-  parent: BasePlushie
-  name: Igor Volkov
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: igor_volkov
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: IgorVolkovPhrases
-  - type: TTS
-    voice: TF2Soldier
-  - type: UseDelay
-    delay: 5
-
-- type: localizedDataset
-  id: IgorVolkovPhrases
-  values:
-    prefix: igor-volkov-
-    count: 1
-
-- type: entity
-  id: PlushieAlisaSaygak
-  parent: BasePlushie
-  name: Alisa Saygak
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: alisa_saygak
-  - type: TriggerOnActivate
-  - type: UseDelay
-    delay: 5
-
-- type: entity
-  id: PlushieKuromiOlink
-  parent: BasePlushie
-  name: Kuromi Olink
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: kuromi_olink
-  - type: TriggerOnActivate
-  - type: UseDelay
-    delay: 5
 
 - type: entity
   id: PlushieEuphaEverek
@@ -559,16 +250,38 @@
     delay: 5
 
 - type: entity
-  id: PlushieShonRoz
+  id: PlushieMaksimDedov
   parent: BasePlushie
-  name: Shon Roz
+  name: Maksim Dedov
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
-    state: shon_roz
+    state: ded_plushie
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Lust/ooh_la_la.ogg
+      path: /Audio/Items/Toys/toysqueak1.ogg
   - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 1
+
+- type: localizedDataset
+  id: BykovPhrases
+  values:
+    prefix: bykov-
+    count: 2
+
+- type: entity
+  id: PlushieIvanBykov
+  parent: BasePlushie
+  name: Ivan Bykov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: bykov
+  - type: TriggerOnActivate
+  - type: SpeakOnTrigger
+    pack: BykovPhrases
+  - type: TTS
+    voice: TF2Soldier
   - type: UseDelay
     delay: 5

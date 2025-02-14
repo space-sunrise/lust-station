@@ -1,3 +1,0 @@
-mike-schmidt-1 = Йо 
-mike-schmidt-2 = Во-во 
-mike-schmidt-3 = Это такой конец...
