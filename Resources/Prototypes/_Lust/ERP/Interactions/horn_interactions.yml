@@ -138,6 +138,7 @@
   - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex:
   - Female
+  - Futanari
   targetSex:
   - Male
   erp: true
@@ -183,8 +184,10 @@
   - path: /Audio/_Lust/ERP/hlup4.ogg
   userSex:
   - Female
+  - Futanari
   targetSex:
   - Female
+  - Futanari
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
@@ -231,6 +234,7 @@
   - Futanari
   targetSex:
   - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
