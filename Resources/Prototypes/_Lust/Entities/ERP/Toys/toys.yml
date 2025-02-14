@@ -338,6 +338,46 @@
     size: Tiny
     sprite: _Lust/ERP/Toys/plug.rsi
 
+- type: entity
+  parent: [BaseItem]
+  id: ERPFoxTailPlug
+  name: fox tail plug
+  description: Time to some roleplaying.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/fox_tail.rsi
+    state: icon
+    scale: 0.9,0.9
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/fox_tail.rsi
+    slots:
+    - PLUG
+    quickEquip: true
+    equipDelay: 4
+    unequipDelay: 4
+
+- type: entity
+  parent: [BaseItem]
+  id: ERPCatTailPlug
+  name: cat tail plug
+  description: Murr!
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/cat_tail.rsi
+    state: icon
+    scale: 0.9,0.9
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/cat_tail.rsi
+    slots:
+    - PLUG
+    quickEquip: true
+    equipDelay: 4
+    unequipDelay: 4
+
 
 - type: soundCollection
   id: Whips
