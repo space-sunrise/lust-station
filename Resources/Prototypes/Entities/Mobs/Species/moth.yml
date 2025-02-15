@@ -54,6 +54,7 @@
       Male: UnisexMoth
       Female: UnisexMoth
       Unsexed: UnisexMoth
+      Futanari: UnisexMoth # Lust-edit
   - type: MovementSpeedModifier
     weightlessAcceleration: 1.5 # Move around more easily in space.
     weightlessFriction: 1

@@ -35,6 +35,7 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: FemaleHuman
+      Futanari: FemaleHuman # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Demon

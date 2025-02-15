@@ -25,6 +25,7 @@
       Male: MaleVulpkanin
       Female: FemaleVulpkanin
       Unsexed: MaleVulpkanin
+      Futanari: FemaleVulpkanin # Lust-edit
   - type: Eye
   - type: CameraRecoil
   - type: Examiner

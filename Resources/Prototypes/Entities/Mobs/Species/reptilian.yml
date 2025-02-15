@@ -45,6 +45,7 @@
       Male: MaleReptilian
       Female: FemaleReptilian
       Unsexed: MaleReptilian
+      Futanari: FemaleReptilian # Lust-edit
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
