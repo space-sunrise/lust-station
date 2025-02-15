@@ -88,9 +88,13 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         if (sexMorph)
             protoId = HumanoidVisualLayersExtension.GetSexMorph(key, component.Sex, protoId);
 
-        var proto = _prototypeManager.Index<HumanoidSpeciesSpriteLayer>(protoId);
-        component.BaseLayers[key] = proto;
+        // Lust-start
+        if (_prototypeManager.TryIndex(protoId, out HumanoidSpeciesSpriteLayer? proto))
+            component.BaseLayers[key] = proto;
 
+        if (proto == null)
+            return;
+        // Lust-end
         if (proto.MatchSkin)
             layer.Color = component.SkinColor.WithAlpha(proto.LayerAlpha);
 

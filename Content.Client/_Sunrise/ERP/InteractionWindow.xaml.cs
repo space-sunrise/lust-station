@@ -308,6 +308,7 @@ public sealed partial class InteractionWindow : FancyWindow
             if (UserSex == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
             if (UserSex == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
             if (UserSex == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
             if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
             if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
             //Таргет
@@ -321,6 +322,7 @@ public sealed partial class InteractionWindow : FancyWindow
                     TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
                     if (TargetSex == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
                     if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
+                    if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
                     if (TargetSex == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
                 }
                 if (TargetSex == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
