@@ -116,6 +116,7 @@
       Male: MaleFelinid
       Female: FemaleFelinid
       Unsexed: MaleFelinid
+      Futanari: FemaleFelinid # Lust-edit
   - type: Respirator
     damage:
       types:
