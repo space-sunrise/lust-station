@@ -1225,6 +1225,7 @@
 # Sunrise-start
   - BeretSeniorPhysician
   - MedicalBeret
+  - ParamedicBeret
   - NurseHat
   - BlueSurgeryCap
   - GreenSurgeryCap
@@ -1454,6 +1455,7 @@
   loadouts:
 # Sunrise-start
   - MedicalBeret
+  - ParamedicBeret
   - NurseHat
   - BlueSurgeryCap
   - GreenSurgeryCap
