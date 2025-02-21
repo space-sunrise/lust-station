@@ -17,8 +17,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 8
@@ -48,8 +51,11 @@
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
   - path: /Audio/_Lust/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 9
@@ -74,8 +80,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 9
@@ -99,8 +108,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Female
-  targetSex: Female
+  userSex:
+  - Female
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 9
@@ -133,8 +146,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
@@ -166,8 +183,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   useSelf: true
   lovePercentTarget: 8
@@ -192,8 +212,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   useSelf: true
   lovePercentUser: 4
@@ -217,8 +240,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 8
   lovePercentTarget: 8
@@ -241,8 +268,11 @@
   - прикусывает клитор %target, слегка оттягивая его на себя, в результате даруя волну незабываемого удовольствия %target
   - совершает серию легких укусов, заставляя клитор %target приятно побаливать
   - игриво покусывает клитор %target, словно подготавливая киску к чему-то большему
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 7
@@ -265,8 +295,11 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 9
@@ -292,8 +325,12 @@
   - держа за хвост - медленно проникает членом в вагину %target
   - до упора входит членом в вагину %target, схватившись за хвост
   - держа за хвост - медленно входит членом в вагину %target
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
@@ -319,8 +356,11 @@
   - плавно вставляет свой хвост в вагину %target
   - потихоньку засовывает свой хвост в вагину %target
   - проникает своим хвостом в вагину %target
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10

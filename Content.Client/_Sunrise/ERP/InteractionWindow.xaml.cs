@@ -28,8 +28,8 @@ public sealed partial class InteractionWindow : FancyWindow
     private readonly SpriteSystem _spriteSystem;
     private readonly InteractionEui _eui;
     public NetEntity? TargetEntityId { get; set; }
-    public Sex? UserSex { get; set; }
-    public Sex? TargetSex { get; set; }
+    public Sex UserSex { get; set; }
+    public Sex TargetSex { get; set; }
     public bool UserHasClothing { get; set; }
     public bool TargetHasClothing { get; set; }
 
@@ -103,9 +103,6 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!_player.LocalEntity.HasValue)
             return;
 
-        if (!UserSex.HasValue)
-            return;
-
         if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var userInteraction))
             return;
 
@@ -115,7 +112,7 @@ public sealed partial class InteractionWindow : FancyWindow
         SpriteLeft.SetEntity(_player.LocalEntity.Value);
         UserName.Text = $"{Identity.Name(_player.LocalEntity.Value,
                         _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString(
-                        $"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
+                        $"erp-panel-sex-{UserSex.ToString().ToLowerInvariant()}-text")}";
         UserName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
 
         foreach (var sprite in userInteraction.GenitalSprites)
@@ -142,8 +139,6 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!TargetEntityId.HasValue)
             return;
 
-        if (!TargetSex.HasValue)
-            return;
 
         if (!_entManager.TryGetComponent<InteractionComponent>(target, out var targetInteraction))
             return;
@@ -152,7 +147,7 @@ public sealed partial class InteractionWindow : FancyWindow
             return;
 
         SpriteRight.SetEntity(target);
-        TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
+        // TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
         TargetName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
         foreach (var sprite in targetInteraction.GenitalSprites)
         {
@@ -268,10 +263,10 @@ public sealed partial class InteractionWindow : FancyWindow
                     if (TargetHasClothing && proto.TargetWithoutCloth)
                         continue;
 
-                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed)
+                    if (!proto.UserSex.Contains(UserSex) && !proto.UserSex.Contains(Sex.Unsexed))
                         continue;
 
-                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed)
+                    if (!proto.TargetSex.Contains(TargetSex) && !proto.TargetSex.Contains(Sex.Unsexed))
                         continue;
 
                     if (!Erp && proto.Erp)
@@ -338,11 +333,8 @@ public sealed partial class InteractionWindow : FancyWindow
         TargetDescription.DisposeAllChildren();
 
         //Проверки nullable-типов
-        if (!TargetEntityId.HasValue || !UserSex.HasValue ||
-        !TargetSex.HasValue || !_player.LocalEntity.HasValue)
-            return;
-
-        if (!TargetEntityId.Value.Valid)
+        if (!TargetEntityId.HasValue
+         || !_player.LocalEntity.HasValue)
             return;
 
         //Аминь
@@ -356,12 +348,18 @@ public sealed partial class InteractionWindow : FancyWindow
                 UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
 
-            if (UserSex.Value == Sex.Male)
+            if (UserSex == Sex.Male)
                 UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
 
-            if (UserSex.Value == Sex.Female)
+            if (UserSex == Sex.Female)
             {
                 UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+                UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            }
+            if (UserSex == Sex.Futanari)
+            {
+                UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+                UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
                 UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
             }
             //Таргет
@@ -375,15 +373,27 @@ public sealed partial class InteractionWindow : FancyWindow
                     TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
                     TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
 
-                    if (TargetSex.Value == Sex.Male)
+                    if (TargetSex == Sex.Male)
                         TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
 
-                    if (TargetSex.Value == Sex.Female)
+                    if (TargetSex == Sex.Futanari)
+                    {
+                        TargetDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+                        TargetDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
+                    }
+
+                    if (TargetSex == Sex.Female)
                         TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
 
                 }
-                if (TargetSex.Value == Sex.Female)
+                if (TargetSex == Sex.Female)
                     TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+
+                if (TargetSex == Sex.Futanari)
+                {
+                    TargetDescription.AddChild(new Label { Text = "...Обладает подозрительной аурой" });
+                    TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+                }
             }
         }
         else ErpProgress.Dispose();

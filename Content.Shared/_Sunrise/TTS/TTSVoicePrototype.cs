@@ -13,7 +13,7 @@ public sealed class TTSVoicePrototype : IPrototype
     public string Name { get; } = string.Empty;
 
     [DataField(required: true)]
-    public Sex Sex { get; }
+    public List<Sex> Sex { get; } = new();
 
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField(required: true)]

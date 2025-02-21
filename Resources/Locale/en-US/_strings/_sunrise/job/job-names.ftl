@@ -37,8 +37,7 @@ job-name-usspcaptain = Капитан СССП
 # NTR
 job-name-ntrguard = Оператор ИСН
 job-name-ntrleader = Командир ИСН
-# Lust-Station
-job-name-commaid = горничная командования
+job-name-ntrofficer = Офицер ИСН
 # Перевод трекеров времени
 JobCentCommOfficial = представитель Центком
 JobCentCommOperator = оператор Центком
@@ -74,5 +73,4 @@ JobUSSPSoldier = Солдат СССП
 JobUSSPOfficer = Офицер СССП
 JobNtrGuard = Оператор ИСН
 JobNtrLeadGuard = Командир ИСН
-# Lust-Station
-JobCommMaid = Горничная командования
+JobNtrOfficer = Офицер ИСН

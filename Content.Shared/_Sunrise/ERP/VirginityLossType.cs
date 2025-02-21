@@ -4,6 +4,7 @@ namespace Content.Shared._Sunrise.ERP
     {
         male,
         female,
+        futanari,
         anal,
         no
     }

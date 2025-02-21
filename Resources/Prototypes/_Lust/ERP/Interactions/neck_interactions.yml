@@ -7,8 +7,10 @@
   emotes:
   - нежно трётся мордочкой о шею %target
   - мягко касается мордочкой шеи %target, создавая приятное ощущение
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -34,8 +36,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -59,8 +63,10 @@
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
   - path: /Audio/_Lust/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -76,8 +82,10 @@
   - игриво кусает %target за шею
   - слегка прикусывает шею %target
   - нежно покусывает шейку %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
@@ -94,8 +102,10 @@
   - медленно подносит руку к шее %target, а затем нежно сдавливает её пальцами
   - с небольшой силой сдавливает шею %target своей рукой
   - хватает рукой шею %target и, сдавливая её, вскруживает голову %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4

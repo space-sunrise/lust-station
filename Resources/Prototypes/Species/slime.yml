@@ -8,6 +8,7 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+  sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: speciesBaseSprites
   id: MobSlimeSprites

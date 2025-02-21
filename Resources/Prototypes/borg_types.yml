@@ -339,3 +339,10 @@
   # Pet
   petSuccessString: petting-success-service-cyborg
   petFailureString: petting-failure-service-cyborg
+  # Lust-start
+  addComponents:
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+    - RestActionService
+  # Lust-end

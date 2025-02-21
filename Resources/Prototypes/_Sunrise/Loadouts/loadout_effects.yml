@@ -5,6 +5,7 @@
     sex:
     - Female
     - Unsexed
+    - Futanari # Lust-Edit
 
 - type: loadoutEffectGroup
   id: MaleMoment

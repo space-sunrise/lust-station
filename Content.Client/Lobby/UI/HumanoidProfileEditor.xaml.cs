@@ -1105,6 +1105,13 @@ namespace Content.Client.Lobby.UI
             _loadoutWindow.RefreshLoadouts(roleLoadout, session, collection);
             _loadoutWindow.OpenCenteredLeft();
 
+            _loadoutWindow.OnNameChanged += name =>
+            {
+                roleLoadout.EntityName = name;
+                Profile = Profile.WithLoadout(roleLoadout);
+                SetDirty();
+            };
+
             _loadoutWindow.OnLoadoutPressed += (loadoutGroup, loadoutProto) =>
             {
                 roleLoadout.AddLoadout(loadoutGroup, loadoutProto, _prototypeManager);
@@ -1271,6 +1278,11 @@ namespace Content.Client.Lobby.UI
                 case Sex.Female:
                     Profile = Profile?.WithGender(Gender.Female);
                     break;
+                // Lust-start
+                case Sex.Futanari:
+                    Profile = Profile?.WithGender(Gender.Female);
+                    break;
+                // Lust-end
                 default:
                     Profile = Profile?.WithGender(Gender.Epicene);
                     break;

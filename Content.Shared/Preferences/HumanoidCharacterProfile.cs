@@ -32,6 +32,7 @@ namespace Content.Shared.Preferences
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int MaxNameLength = 32;
+        public const int MaxLoadoutNameLength = 32;
 
         /// <summary>
         /// Job preferences for initial spawn.
@@ -280,6 +281,11 @@ namespace Content.Shared.Preferences
                 case Sex.Female:
                     gender = Gender.Female;
                     break;
+                // Lust-start
+                case Sex.Futanari:
+                    gender = Gender.Female;
+                    break;
+                // Lust-end
             }
 
             var name = GetName(species, gender);
@@ -552,6 +558,7 @@ namespace Content.Shared.Preferences
             {
                 Sex.Male => Sex.Male,
                 Sex.Female => Sex.Female,
+                Sex.Futanari => Sex.Futanari, // Lust-edit
                 Sex.Unsexed => Sex.Unsexed,
                 _ => Sex.Male // Invalid enum values.
             };
@@ -764,7 +771,7 @@ namespace Content.Shared.Preferences
         // Sunrise-TTS-Start
         public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
         {
-            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex.Contains(sex) || voice.Sex.Contains(Sex.Unsexed)); // Lust-edit
         }
         // Sunrise-TTS-End
 
