@@ -44,6 +44,7 @@
   name: body-slim
   sexRestrictions:
   - Male
+  - Futanari
   sprites:
     Head: MobHumanSlimHead
     Hair: MobHumanoidAnyMarking
