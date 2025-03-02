@@ -24,7 +24,10 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Male
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -57,7 +60,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -65,39 +72,6 @@
   erp: true
   lovePercentTarget: 8
   targetVirginityLoss: female
-
-- type: interaction
-  id: ERPtoyPlaceholderDildo3
-  name: Вставить дилдо в анал
-  inhandObject:
-  - ERPNormalDildo
-  - ERPDildoAvian
-  - ERPDildoDragon
-  - ERPDildoEquine
-  - ERPDildoKnot
-  - ERPDildoTentacle
-  icon: _Lust/Interface/ERP/toy_butt.png
-  emotes:
-  - вставляет дилдо в анал %target
-  - вводит дилдо в анал %target
-  - аккуратно вставляет дилдо в анал %target
-  - глубоко вставляет дилдо в анал %target
-  - резко вставляет дилдо в анал %target
-  - медленно вводит дилдо в анал %target
-  - наслаждаясь, вставляет дилдо в анал %target
-  sounds:
-  - path: /Audio/_Lust/ERP/hlup.ogg
-  - path: /Audio/_Lust/ERP/hlup2.ogg
-  - path: /Audio/_Lust/ERP/hlup3.ogg
-  - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Female
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  erp: true
-  lovePercentTarget: 8
-  targetVirginityLoss: anal
 
 # Fleshflights
 
@@ -125,7 +99,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Male
+  userSex:
+  - Unsexed
+  targetSex:
+  - Futanari
+  - Male
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -161,7 +139,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Male
+  userSex:
+  - Futanari
+  - Male
+  targetSex:
+  - Unsexed
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -194,7 +176,10 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Male
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -228,7 +213,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Female
+  userSex:
+  - Female
+  - Futanari
+  targetSex:
+  - Unsexed
   targetTagBlacklist:
   - pants
   - jumpsuit
@@ -237,37 +226,3 @@
   useSelf: true
   lovePercentTarget: 8
   targetVirginityLoss: female
-
-- type: interaction
-  id: ERPSelftoyPlaceholderDildo3
-  name: Вставить дилдо в анал
-  inhandObject:
-  - ERPNormalDildo
-  - ERPDildoAvian
-  - ERPDildoDragon
-  - ERPDildoEquine
-  - ERPDildoKnot
-  - ERPDildoTentacle
-  icon: _Lust/Interface/ERP/toy_butt.png
-  emotes:
-  - вставляет дилдо в анал
-  - вводит дилдо в анал
-  - аккуратно вставляет дилдо в анал
-  - глубоко вставляет дилдо в анал
-  - резко вставляет дилдо в анал
-  - медленно вводит дилдо в анал
-  - наслаждаясь, вставляет дилдо в анал
-  sounds:
-  - path: /Audio/_Lust/ERP/hlup.ogg
-  - path: /Audio/_Lust/ERP/hlup2.ogg
-  - path: /Audio/_Lust/ERP/hlup3.ogg
-  - path: /Audio/_Lust/ERP/hlup4.ogg
-  targetSex: Female
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
-  erp: true
-  useSelf: true
-  lovePercentTarget: 8
-  targetVirginityLoss: anal

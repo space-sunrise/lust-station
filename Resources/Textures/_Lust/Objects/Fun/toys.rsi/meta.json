@@ -8,43 +8,10 @@
   },
   "states": [
     {
-      "name": "shiro-heart"
-    },
-    {
-      "name": "shiro-solo"
-    },
-    {
-      "name": "tailer-murlikin"
-    },
-    {
       "name": "alisa_simonova_de_mori"
     },
     {
-      "name": "alisa_saygak"
-    },
-    {
-      "name": "bloba_blabo"
-    },
-    {
-      "name": "borman_sekiroboy"
-    },
-    {
-      "name": "cosmic_star_dust"
-    },
-    {
       "name": "dragonaft"
-    },
-    {
-      "name": "igor_volkov"
-    },
-    {
-      "name": "kuromi_olink"
-    },
-    {
-      "name": "mike_schmidt"
-    },
-    {
-      "name": "ratmir_saphirov"
     },
     {
       "name": "sai_haks1"
@@ -53,19 +20,7 @@
       "name": "sai_haks2"
     },
     {
-      "name": "klara_isaeva"
-    },
-    {
       "name": "mira"
-    },
-    {
-      "name": "neiiria"
-    },
-    {
-      "name": "niko"
-    },
-    {
-      "name": "plush_medi"
     },
     {
       "name": "plushie_pinkers"
@@ -83,22 +38,10 @@
       "name": "plushie-anna"
     },
     {
-      "name": "plushie-rx"
-    },
-    {
       "name": "sasha_chernyh"
     },
     {
-      "name": "dobitchik"
-    },
-    {
-      "name": "iv-heart"
-    },
-    {
       "name": "kharsha"
-    },
-    {
-      "name": "charlie_fleur"
     },
     {
       "name": "eupha_everek"
@@ -113,7 +56,10 @@
       "name": "plushiechitas"
     },
     {
-      "name": "shon_roz"
-    }
+      "name": "ded_plushie"
+      },
+    {
+      "name": "bykov"
+      }
   ]
 }

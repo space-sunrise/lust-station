@@ -8,6 +8,10 @@
     erp: true
   - type: Hunger
   - type: Thirst
+    dehydrationDamage:
+      types:
+        Bloodloss: 0.5
+        Asphyxiation: 0.5
   - type: Icon
     sprite: Mobs/Species/Vox/parts.rsi
     state: vox_m
@@ -88,12 +92,12 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
-    - map: [ "outerClothing" ]
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
-    - map: [ "neck" ]
+    - map: [ "outerClothing" ]
     - map: [ "back" ]
+    - map: [ "neck" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
     - map: [ "enum.HumanoidVisualLayers.Hair" ]
     - map: [ "enum.HumanoidVisualLayers.HeadSide" ]

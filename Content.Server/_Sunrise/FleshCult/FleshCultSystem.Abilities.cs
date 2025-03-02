@@ -3,6 +3,7 @@ using System.Numerics;
 using Content.Server.Body.Components;
 using Content.Server.Construction.Components;
 using Content.Server.Traits.Assorted;
+using Content.Shared._Sunrise;
 using Content.Shared._Sunrise.FleshCult;
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Part;
@@ -269,8 +270,8 @@ public sealed partial class FleshCultSystem
                 }
             }
 
-            var skeletonSprites = _prototypeManager.Index<HumanoidSpeciesBaseSpritesPrototype>("MobSkeletonSprites");
-            foreach (var (key, id) in skeletonSprites.Sprites)
+            var bodyType = _prototypeManager.Index<BodyTypePrototype>("SkeletonNormal");
+            foreach (var (key, id) in bodyType.Sprites)
             {
                 if (key != HumanoidVisualLayers.Head)
                 {
@@ -495,25 +496,25 @@ public sealed partial class FleshCultSystem
 
         foreach (var slot in args.CheckSlots)
         {
-            if (_inventory.TryGetSlotEntity(uid, slot, out var entity) &&
-                HasComp<FleshBodyModComponent>(entity))
+            if (_inventory.TryGetSlotEntity(uid, slot, out var entity))
             {
-                _popup.PopupEntity(Loc.GetString("flesh-cultist-transform-conflict"),
-                    uid, uid, PopupType.Large);
-                return;
+                if (HasComp<FleshBodyModComponent>(entity))
+                {
+                    _popup.PopupEntity(Loc.GetString("flesh-cultist-transform-conflict"),
+                        uid, uid, PopupType.Large);
+                    return;
+                }
+
+               if (_tagSystem.HasAnyTag(entity.Value, args.CheckTags))
+               {
+                   _inventory.TryUnequip(uid, slot, true, true);
+               }
             }
         }
 
         _inventory.TryGetSlotEntity(uid, args.TargetSlot, out var equippedItem);
         if (equippedItem != null)
         {
-            if (HasComp<FleshBodyModComponent>(equippedItem.Value))
-            {
-                _popup.PopupEntity(Loc.GetString("flesh-cultist-transform-conflict"),
-                    uid, uid, PopupType.Large);
-                return;
-            }
-
             if (TryComp(equippedItem.Value, out MetaDataComponent? metaData) && metaData.EntityPrototype != null &&
                 metaData.EntityPrototype.ID == args.Prototype)
             {

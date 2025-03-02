@@ -6,8 +6,10 @@
   - жмёт руку %target
   sounds:
   - path: /Audio/_Lust/ERP/handshake/handshake.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -19,8 +21,10 @@
   - хлопает по плечу %target
   sounds:
   - path: /Audio/_Lust/ERP/clap/sev_clap.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -34,8 +38,10 @@
   - прижимает к себе %target
   sounds:
   - path: /Audio/Effects/thudswoosh.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -50,8 +56,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/sniff/sniff_1.ogg
   - path: /Audio/_Lust/ERP/sniff/sniff_2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -65,8 +73,10 @@
   - path: /Audio/_Lust/ERP/clap/five1.ogg
   - path: /Audio/_Lust/ERP/clap/five2.ogg
   - path: /Audio/_Lust/ERP/clap/five3.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -83,8 +93,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -96,8 +108,10 @@
   - гладит %target по голове
   sounds:
   - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -109,8 +123,10 @@
   - массирует плечи %target
   - делает массаж плечей %target
   - разминает плечи %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -124,8 +140,10 @@
   - мурлыкая, трется ушками об %target
   sounds:
   - path: /Audio/_Lust/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   userTagWhitelist:
   - Felinid
@@ -138,8 +156,10 @@
   emotes:
   - нежно гладит хвостиком голову %target
   - ласково гладит хвостиком по спине %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   userTagWhitelist:
   - Vulpkanin
@@ -159,8 +179,10 @@
   - резко дергает за хвост %target
   - грубо дергает за хвост %target
   - неожиданно дергает хвост %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   targetTagWhitelist:
   - Vulpkanin
@@ -189,8 +211,10 @@
   - path: /Audio/_Lust/ERP/slap/slap_5.ogg
   - path: /Audio/_Lust/ERP/slap/slap_6.ogg
   - path: /Audio/_Lust/ERP/slap/slap_7.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -211,8 +235,10 @@
   - path: /Audio/_Lust/ERP/slap/slap_5.ogg
   - path: /Audio/_Lust/ERP/slap/slap_6.ogg
   - path: /Audio/_Lust/ERP/slap/slap_7.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -222,8 +248,10 @@
   icon: _Lust/Interface/ERP/friendly_nose_boop.png
   emotes:
   - прикасается пальцем к носу %target, буп!
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -240,8 +268,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -251,8 +281,10 @@
   icon: _Lust/Interface/ERP/friendly_finger_tap.png
   emotes:
   - трогает пальцем спину %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -267,8 +299,10 @@
   - делает jojo reference
   sounds:
   - path: /Audio/_Lust/ERP/coolpose/coolpose.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -285,8 +319,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/chock/neckchock_1.ogg
   - path: /Audio/_Lust/ERP/chock/neckchock_2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -298,8 +334,10 @@
   - массирует спину %target
   - делает массаж спины %target
   - разминает спину %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -313,8 +351,10 @@
   - аккуратно сплетает свой хвост с хвостом %target
   - обволакивает хвост %target своим хвостом
   - играется своим хвостом с хвостом %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   targetTagWhitelist:
   - Tail
@@ -331,8 +371,10 @@
   - поднося свою голову ближе к %target, начинает мурчать на ушко
   sounds:
   - path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   userTagBlacklist:
   - Vulpkanin
@@ -351,8 +393,10 @@
   icon: _Lust/Interface/ERP/ERP2.png
   emotes:
   - открывает рот и высовывает язык на всю длину
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -364,8 +408,10 @@
   emotes:
   - быстро дышит с высунутым языком
   - быстро дышит с открытой пастью
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   targetTagWhitelist:
@@ -380,8 +426,10 @@
   - отжимается от пола
   sounds:
   - path: /Audio/Effects/Emotes/salute.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -392,8 +440,10 @@
   icon: _Lust/Interface/ERP/ERP2.png
   emotes:
   - корчит рожу
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -407,8 +457,10 @@
   - элегантно показывает фак %target
   sounds:
   - path: /Audio/Effects/Emotes/salute.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -424,8 +476,10 @@
   - смачно шлепает ладонью себе по заднице
   sounds:
   - path: /Audio/_Lust/ERP/clap1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -440,8 +494,10 @@
   - активно тверкает задницей
   sounds:
   - path: /Audio/_Lust/ERP/clap1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   useSelf: true
   category: дружба
@@ -454,7 +510,9 @@
   - слетается своим пальцем с пальцем %target
   - нежно берёт палец %target и сплетает со своим
   - аккуратно сплетает пальцы с %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба

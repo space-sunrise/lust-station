@@ -238,6 +238,15 @@ namespace Content.Server._Sunrise.ERP.Systems
                                 _chat.TrySendInGameICMessage(entity, "теряет девственность", InGameICChatType.Emote, false);
                             }
                             break;
+                        case Sex.Futanari:
+                            if ((entity == User && prototype.UserVirginityLoss == VirginityLoss.futanari ||
+                                entity == Target && prototype.TargetVirginityLoss == VirginityLoss.futanari) &&
+                                interaction.Virginity == Virginity.Yes)
+                            {
+                                interaction.Virginity = Virginity.No;
+                                _chat.TrySendInGameICMessage(entity, "лишается девственности", InGameICChatType.Emote, false);
+                            }
+                            break;
                         default: break;
                     }
                 }

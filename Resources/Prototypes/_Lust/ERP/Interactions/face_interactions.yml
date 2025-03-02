@@ -11,8 +11,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: лицо
 
@@ -31,8 +33,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: лицо
 
@@ -44,8 +48,10 @@
   - нежно треплет щёчки %target
   - слегка растягивает щёчки %target
   - тискает щечки %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: лицо
 
@@ -59,8 +65,10 @@
   - слегка поглаживает ладонью лицо %target
   sounds:
   - path: /Audio/_Lust/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: лицо
 
@@ -72,8 +80,10 @@
   - нежно прижимается щекой к лицу %target
   - слегка прижимается щекой к лицу %target, создавая близость
   - с теплотой прижимается щекой к лицу %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: лицо
 
@@ -88,8 +98,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   userTagWhitelist:
   - Vulpkanin
@@ -107,8 +119,10 @@
   - погружает в свою грудь лицо %target
   sounds:
   - path: /Audio/_Lust/ERP/clothes_rub.ogg
-  userSex: Female
-  targetSex: Unsexed
+  userSex:
+  - Female
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 4
@@ -127,8 +141,10 @@
   - плотно сжимает ляжками голову %target
   sounds:
   - path: /Audio/_Lust/ERP/clothes_rub.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 5
@@ -147,8 +163,10 @@
   - садится своей попкой на лицо %target
   - шлепается задницей на лицо %target
   - опускает задницу на лицо %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 6
   lovePercentTarget: 3
@@ -165,8 +183,11 @@
   - сочно шлепает членом по щеке %target
   sounds:
   - path: /Audio/_Lust/ERP/clap2.ogg
-  userSex: Male
-  targetSex: Unsexed
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
@@ -188,8 +209,10 @@
   - проводит ступней по лицу %target
   sounds:
   - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3

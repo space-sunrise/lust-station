@@ -153,8 +153,8 @@ public sealed partial class AdminVerbSystem
                     PopupType.MediumCaution);
                 var board = Spawn("ChessBoard", xform.Coordinates);
                 var session = _tabletopSystem.EnsureSession(Comp<TabletopGameComponent>(board));
-                xform.Coordinates = EntityCoordinates.FromMap(_mapManager, session.Position);
-                xform.WorldRotation = Angle.Zero;
+                xform.Coordinates = _transformSystem.ToCoordinates(session.Position);
+                _transformSystem.SetWorldRotationNoLerp((args.Target, xform), Angle.Zero);
             },
             Impact = LogImpact.Extreme,
             Message = string.Join(": ", chessName, Loc.GetString("admin-smite-chess-dimension-description"))

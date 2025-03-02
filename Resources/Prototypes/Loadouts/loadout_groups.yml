@@ -85,8 +85,9 @@
   loadouts:
   - EmergencyNitrogen
   - EmergencyOxygen
-  - EmergencyWithoutGas  # Sunrise-Edit
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyWithoutGas  # Sunrise-Edit
+  - EmergencyDwarf  # Sunrise-Edit
 
 - type: loadoutGroup
   id: GroupEVATank
@@ -112,6 +113,7 @@
   loadouts:
   - CaptainHead
   - CaptainCap
+  - EliteCaptainCap #Sunrise-Edit
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -130,6 +132,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
+  - CaptainEliteCloak # Sunrise-Edit
   - CaptainSpecialCloak # Lust Station
 
 - type: loadoutGroup
@@ -146,6 +149,7 @@
   loadouts:
   - CaptainOuterArmor # Sunrise-Edit
   - CaptainOuterCoat # Sunrise-Edit
+  - CaptainOuterOverCoat  # Sunrise-Edit
   - CaptainWintercoat
 
 - type: loadoutGroup
@@ -490,6 +494,7 @@
   - EmergencyOxygenClown
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasClown # Sunrise-Edit
+  - EmergencyDwarfClown # Sunrise-Edit
 
 - type: loadoutGroup
   id: MimeHead
@@ -546,6 +551,8 @@
   - EmergencyNitrogenMime
   - EmergencyOxygenMime
   - LoadoutSpeciesVoxNitrogen
+  - EmergencyWithoutGasMime # Sunrise-Edit
+  - EmergencyDwarfMime # Sunrise-Edit
 
 - type: loadoutGroup
   id: MusicianJumpsuit
@@ -843,6 +850,7 @@
 - type: loadoutGroup
   id: StationEngineerHead
   name: loadout-group-station-engineer-head
+  minLimit: 0
   loadouts:
 #sunrise-start
   - Sunrise-EngineerHeadBeret
@@ -951,6 +959,7 @@
   - EmergencyOxygenExtended
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasExtended # Sunrise-Edit
+  - EmergencyDwarfExtended # Sunrise-Edit
 
 # Science
 - type: loadoutGroup
@@ -1046,6 +1055,11 @@
   loadouts:
   - HeadofSecurityHead
   - HeadofSecurityBeret
+  #Sunrise-Start
+  - HeadofSecurityHatCap
+  - HeadofSecurityCapUSSPBlack
+  - HeadofSecurityCapLeather
+  #Sunrise-End
 
 - type: loadoutGroup
   id: HeadofSecurityJumpsuit
@@ -1057,6 +1071,8 @@
   - HeadofSecurityTurtleneckSkirt
   - HeadofSecurityFormalSuit
   - HeadofSecurityFormalSkirt
+  - HeadofSecurityJumpsuitHoSOld  #Sunrise-Edit
+  - HeadofSecurityJumpsuitUSSPBlack #Sunrise-Edit
 
 - type: loadoutGroup
   id: HeadofSecurityNeck
@@ -1065,6 +1081,8 @@
   loadouts:
   - HeadofSecurityCloak
   - HeadofSecurityMantle
+  - HeadofSecurityDarthHOSCloak #Sunrise-Edit
+  - HeadofSecurityCloakHOSCloak #Sunrise-Edit
   - HosSpecialCloak # Lust Station
 
 - type: loadoutGroup
@@ -1073,6 +1091,12 @@
   loadouts:
   - HeadofSecurityCoat
   - HeadofSecurityWinterCoat
+  #Sunrise-Start
+  - HeadofSecurityGreatcoat
+  - HeadofSecurityGreatcoatBlack
+  - HeadofSecurityOvercoat
+  - HeadofSecurityUSSPBlack
+  #Sunrise-End
 
 - type: loadoutGroup
   id: WardenHead
@@ -1200,6 +1224,7 @@
   - EmergencyOxygenSecurity
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSecurity # Sunrise-Edit
+  - EmergencyDwarfSecurity # Sunrise-Edit
 
 - type: loadoutGroup
   id: SecurityStar
@@ -1512,6 +1537,7 @@
   - EmergencyOxygenMedical
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasMedical # Sunrise-Edit
+  - EmergencyDwarfMedical # Sunrise-Edit
 
 # Wildcards
 - type: loadoutGroup
@@ -1555,6 +1581,7 @@
   - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSyndicate # Sunrise-Edit
+  - EmergencyDwarfSyndicate # Sunrise-Edit
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

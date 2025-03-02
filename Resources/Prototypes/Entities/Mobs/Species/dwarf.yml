@@ -10,6 +10,11 @@
     erp: true
   - type: Hunger
   - type: Thirst
+    baseDecayRate: 0.2
+    dehydrationDamage:
+      types:
+        Bloodloss: 0.5
+        Asphyxiation: 0.5
   - type: Icon
     sprite: Mobs/Species/Slime/parts.rsi # It was like this beforehand, no idea why.
     state: full
@@ -50,6 +55,7 @@
       Male: UnisexDwarf
       Female: FemaleDwarf
       Unsexed: UnisexDwarf
+      Futanari: FemaleDwarf # Lust-edit
   - type: ReplacementAccent
     accent: dwarf
   - type: Speech
@@ -68,6 +74,46 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      pants-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: panties
+      socks-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: socks
+      bra-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: bra
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: hardsuit
   # Sunrise edit ;3
   - type: FootprintEmitter
     leftBareFootState:
@@ -91,3 +137,43 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: gloves
+      pants-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: panties
+      socks-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: socks
+      bra-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: bra
+      outerClothing-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: outer
+      hardsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Human/displacement.rsi
+            state: hardsuit

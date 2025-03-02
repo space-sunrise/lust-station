@@ -1,3 +1,4 @@
+using Content.Shared._Sunrise;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Humanoid.Prototypes;
@@ -41,10 +42,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         var oldLayers = new HashSet<HumanoidVisualLayers>(component.BaseLayers.Keys);
         component.BaseLayers.Clear();
 
-        // add default species layers
-        var speciesProto = _prototypeManager.Index(component.Species);
-        var baseSprites = _prototypeManager.Index<HumanoidSpeciesBaseSpritesPrototype>(speciesProto.SpriteSet);
-        foreach (var (key, id) in baseSprites.Sprites)
+        var bodyTypeProto = _prototypeManager.Index(component.BodyType);
+        foreach (var (key, id) in bodyTypeProto.Sprites)
         {
             oldLayers.Remove(key);
             if (!component.CustomBaseLayers.ContainsKey(key))
@@ -88,9 +87,13 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         if (sexMorph)
             protoId = HumanoidVisualLayersExtension.GetSexMorph(key, component.Sex, protoId);
 
-        var proto = _prototypeManager.Index<HumanoidSpeciesSpriteLayer>(protoId);
-        component.BaseLayers[key] = proto;
+        // Lust-start
+        if (_prototypeManager.TryIndex(protoId, out HumanoidSpeciesSpriteLayer? proto))
+            component.BaseLayers[key] = proto;
 
+        if (proto == null)
+            return;
+        // Lust-end
         if (proto.MatchSkin)
             layer.Color = component.SkinColor.WithAlpha(proto.LayerAlpha);
 
@@ -194,6 +197,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Sex = profile.Sex;
         humanoid.Gender = profile.Gender;
         humanoid.Age = profile.Age;
+        humanoid.BodyType = profile.BodyType;
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;

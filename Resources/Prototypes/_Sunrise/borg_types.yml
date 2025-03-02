@@ -206,6 +206,7 @@
     worldTargetActions:
     - ForensicScanner
   - type: ShowCriminalRecordIcons
+  - type: ShowMindShieldIcons
   - type: BorgCuffed
   - type: FlashImmunity
   - type: SiliconLawProvider

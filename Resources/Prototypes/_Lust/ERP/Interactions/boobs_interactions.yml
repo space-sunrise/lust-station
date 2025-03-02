@@ -9,8 +9,10 @@
   - кладет голову на грудь %target
   sounds:
   - path: /Audio/Effects/thudswoosh.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
@@ -28,8 +30,11 @@
   - похотливо лапает грудь %target
   - медленно сжимает грудь %target
   - нежно мнет грудь %target
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 3
@@ -48,8 +53,11 @@
   - ритмично массирует грудь %target
   - медленно массирует грудь %target
   - методично массирует грудь %target
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -71,7 +79,11 @@
   - сжимает и расцеловывает грудь %target
   sounds:
   - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -93,8 +105,11 @@
   - широко размахнувшись, шлёпает по груди %target
   sounds:
   - path: /Audio/_Lust/ERP/clap1.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 5
@@ -116,8 +131,11 @@
   - играет пальчиками с сосками %target
   - слегка сжимает и оттягивает соски %target
   - теребит пальчиками соски %target
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
@@ -137,8 +155,10 @@
   - совершает серию легких укусов, заставляя соски %target приятно побаливать
   - с усилием кусает соски %target, оставляя видимый на них след от зубов
   - игриво покусывает соски %target, словно подготавливает их к чему-то большему
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 7
@@ -165,8 +185,10 @@
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
   - path: /Audio/_Lust/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 7
@@ -190,8 +212,11 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentTarget: 12
   targetTagBlacklist:
@@ -215,8 +240,11 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentTarget: 5
   targetTagBlacklist:
@@ -240,8 +268,11 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentTarget: 10
   targetTagBlacklist:
@@ -268,8 +299,12 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Female
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 8
   lovePercentTarget: 4
@@ -291,8 +326,11 @@
   - нежно гладит хвостиком грудь %target
   - ласково проводит хвостиком по груди %target
   - игриво поглаживает хвостиком грудь %target
-  userSex: Unsexed
-  targetSex: Female
+  userSex:
+  - Unsexed
+  targetSex:
+  - Female
+  - Futanari
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
@@ -308,8 +346,11 @@
   - тесно прижимается грудью к телу %target
   - подходя ближе к своей цели, прижимает к своей груди %target
   - захватывает своей грудью %target в крепкие объятия
-  userSex: Female
-  targetSex: Unsexed
+  userSex:
+  - Female
+  - Futanari
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 1

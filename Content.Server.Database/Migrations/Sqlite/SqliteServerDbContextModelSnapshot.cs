@@ -779,6 +779,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
+                    b.Property<string>("BodyType")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("body_type");
+
                     b.Property<string>("AnalVirginity")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -863,16 +868,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
-
+                    // LUST START
                     b.Property<string>("Virginity")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("virginity");
-
+                    // LUST END
+                    // Sunrise-TTS-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("voice");
+                    // Sunrise-TTS-End
 
                     b.HasKey("Id")
                         .HasName("PK_profile");
@@ -940,6 +947,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER")
                         .HasColumnName("profile_role_loadout_id");
+
+                    b.Property<string>("EntityName")
+                        .HasMaxLength(256)
+                        .HasColumnType("TEXT")
+                        .HasColumnName("entity_name");
 
                     b.Property<int>("ProfileId")
                         .HasColumnType("INTEGER")

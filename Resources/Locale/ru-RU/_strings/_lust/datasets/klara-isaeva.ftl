@@ -1,1 +1,0 @@
-klara-isaeva-1 = Пиво!! 

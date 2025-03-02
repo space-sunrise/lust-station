@@ -13,8 +13,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
@@ -34,8 +36,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 1
@@ -55,8 +59,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 4
@@ -76,8 +82,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
@@ -99,8 +107,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 5
   lovePercentTarget: 5
@@ -129,8 +139,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
@@ -144,8 +156,10 @@
   - совершает град поцелуев, ни оставляя сухого места на %target
   sounds:
   - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 4

@@ -1,1 +1,0 @@
-borman-serkiroboy-1 = Айо!

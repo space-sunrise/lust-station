@@ -10,8 +10,10 @@
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
   - path: /Audio/_Lust/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
@@ -29,8 +31,10 @@
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
   - path: /Audio/_Lust/ERP/kiss1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
@@ -47,8 +51,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 0
   lovePercentTarget: 3
@@ -67,8 +73,11 @@
   - поглаживает ступней член %target
   sounds:
   - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-  userSex: Unsexed
-  targetSex: Male
+  userSex:
+  - Unsexed
+  targetSex:
+  - Male
+  - Futanari
   erp: true
   lovePercentUser: 0
   lovePercentTarget: 3
@@ -89,8 +98,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3

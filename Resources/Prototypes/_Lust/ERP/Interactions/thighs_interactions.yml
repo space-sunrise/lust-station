@@ -15,8 +15,10 @@
   - path: /Audio/_Lust/ERP/kiss4.ogg
   - path: /Audio/_Lust/ERP/kiss5.ogg
   - path: /Audio/_Lust/ERP/kiss6.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -36,8 +38,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -57,8 +61,10 @@
   - страстно целует ступни %target
   - осыпает поцелуями ступни %target
   - прижимается губами к ступням %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -80,8 +86,10 @@
   sounds:
   - path: /Audio/_Lust/ERP/lick1.ogg
   - path: /Audio/_Lust/ERP/lick2.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
@@ -105,8 +113,10 @@
   - ласкает ладонью промежность %target
   sounds:
   - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
@@ -121,8 +131,10 @@
   - слегка прикусывает ляжку %target
   - нежно кусает ляжку %target
   - игриво кусает за ляжку %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5
@@ -147,8 +159,11 @@
   - path: /Audio/_Lust/ERP/hlup2.ogg
   - path: /Audio/_Lust/ERP/hlup3.ogg
   - path: /Audio/_Lust/ERP/hlup4.ogg
-  userSex: Male
-  targetSex: Unsexed
+  userSex:
+  - Male
+  - Futanari
+  targetSex:
+  - Unsexed
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 5

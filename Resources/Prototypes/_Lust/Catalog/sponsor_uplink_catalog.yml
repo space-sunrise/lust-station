@@ -21,72 +21,6 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieTailerMurlikin
-  productEntity: PlushieTailerMurlikin
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieShiroSolo
-  productEntity: PlushieShiroSolo
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieShiroHeart
-  productEntity: PlushieShiroHeart
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieIv
-  productEntity: PlushieIv
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieNeiiria
-  productEntity: PlushieNeiiria
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieCharlieFleur
-  productEntity: PlushieCharlieFleur
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
   id: UplinkLustPlushieSashaChernyh
   productEntity: PlushieSashaChernyh
   cost:
@@ -100,28 +34,6 @@
 - type: listing
   id: UplinkLustPlushieKharsha
   productEntity: PlushieKharsha
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieDobitchik
-  productEntity: PlushieDobitchik
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieMedi
-  productEntity: PlushieMedi
   cost:
     Suntick: 4
   categories:
@@ -175,107 +87,8 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieKlaraIsaeva
-  productEntity: PlushieKlaraIsaeva
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
   id: UplinkLustPlushieSaiHaks
   productEntity: PlushieSaiHaks
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieCosmicStarDust
-  productEntity: PlushieCosmicStarDust
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieRatmirSaphirov
-  productEntity: PlushieRatmirSaphirov
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieMikeSchmidt
-  productEntity: PlushieMikeSchmidt
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieBormanSerkiroboy
-  productEntity: PlushieBormanSerkiroboy
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieBlobaBlabo
-  productEntity: PlushieBlobaBlabo
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieIgorVolkov
-  productEntity: PlushieIgorVolkov
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieAlisaSaygak
-  productEntity: PlushieAlisaSaygak
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkPlushieKuromiOlink
-  productEntity: PlushieKuromiOlink
   cost:
     Suntick: 4
   categories:
@@ -329,8 +142,19 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieShonRoz
-  productEntity: PlushieShonRoz
+  id: UplinkLustPlushieMaksimDedov
+  productEntity: PlushieMaksimDedov
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkLustPlushieIvanBykov
+  productEntity: PlushieIvanBykov
   cost:
     Suntick: 4
   categories:

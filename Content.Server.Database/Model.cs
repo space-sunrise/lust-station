@@ -54,15 +54,15 @@ namespace Content.Server.Database
                 .IsUnique();
 
             modelBuilder.Entity<Profile>()
-                .HasIndex(p => new { p.Slot, PrefsId = p.PreferenceId })
+                .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
                 .IsUnique();
 
             modelBuilder.Entity<Antag>()
-                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.AntagName })
+                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
                 .IsUnique();
 
             modelBuilder.Entity<Trait>()
-                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.TraitName })
+                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
                 .IsUnique();
 
             modelBuilder.Entity<ProfileRoleLoadout>()
@@ -110,15 +110,15 @@ namespace Content.Server.Database
                 .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<AdminFlag>()
-                .HasIndex(f => new { f.Flag, f.AdminId })
+                .HasIndex(f => new {f.Flag, f.AdminId})
                 .IsUnique();
 
             modelBuilder.Entity<AdminRankFlag>()
-                .HasIndex(f => new { f.Flag, f.AdminRankId })
+                .HasIndex(f => new {f.Flag, f.AdminRankId})
                 .IsUnique();
 
             modelBuilder.Entity<AdminLog>()
-                .HasKey(log => new { log.RoundId, log.Id });
+                .HasKey(log => new {log.RoundId, log.Id});
 
             modelBuilder.Entity<AdminLog>()
                 .Property(log => log.Id);
@@ -143,7 +143,7 @@ namespace Content.Server.Database
                 .HasIndex(round => round.StartDate);
 
             modelBuilder.Entity<AdminLogPlayer>()
-                .HasKey(logPlayer => new { logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId });
+                .HasKey(logPlayer => new {logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId});
 
             modelBuilder.Entity<ServerBan>()
                 .HasIndex(p => p.PlayerUserId);
@@ -403,6 +403,9 @@ namespace Content.Server.Database
         public string FlavorText { get; set; } = null!;
         public int Age { get; set; }
         public string Sex { get; set; } = null!;
+
+        public string BodyType { get; set; } = null!;
+
         public string Erp { get; set; } = null!; // Lust-ERP
         public string Virginity { get; set; } = null!; // Lust-ERP
         public string AnalVirginity { get; set; } = null!; // Lust-ERP
@@ -483,6 +486,12 @@ namespace Content.Server.Database
         /// The corresponding role prototype on the profile.
         /// </summary>
         public string RoleName { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Custom name of the role loadout if it supports it.
+        /// </summary>
+        [MaxLength(256)]
+        public string? EntityName { get; set; }
 
         /// <summary>
         /// Store the saved loadout groups. These may get validated and removed when loaded at runtime.
@@ -985,6 +994,8 @@ namespace Content.Server.Database
         BabyJail = 4,
         /// Results from rejected connections with external API checking tools
         IPChecks = 5,
+        /// Results from rejected connections who are authenticated but have no modern hwid associated with them.
+        NoHwid = 6
     }
 
     public class ServerBanHit

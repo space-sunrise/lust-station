@@ -9,6 +9,11 @@
     erp: true
   - type: Hunger
   - type: Thirst
+    baseDecayRate: 0.3
+    dehydrationDamage:
+      types:
+        Bloodloss: 0.5
+        Asphyxiation: 0.5
   - type: Icon
     sprite: Mobs/Species/Slime/parts.rsi
     state: full
@@ -54,6 +59,7 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+      Futanari: FemaleSlime # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime

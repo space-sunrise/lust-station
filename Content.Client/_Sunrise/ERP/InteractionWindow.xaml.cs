@@ -26,8 +26,8 @@ public sealed partial class InteractionWindow : FancyWindow
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     public NetEntity? TargetEntityId { get; set; }
-    public Sex? UserSex { get; set; }
-    public Sex? TargetSex { get; set; }
+    public Sex UserSex { get; set; }
+    public Sex TargetSex { get; set; }
     public bool UserHasClothing { get; set; }
     public bool TargetHasClothing { get; set; }
     public bool Erp { get; set; }
@@ -97,11 +97,10 @@ public sealed partial class InteractionWindow : FancyWindow
         DescriptionRight.DisposeAllChildren();
 
         if (!_player.LocalEntity.HasValue) return;
-        if (!UserSex.HasValue) return;
         if (!_entManager.TryGetComponent<InteractionComponent>(_player.LocalEntity.Value, out var UserInteraction)) return;
         if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(_player.LocalEntity.Value, out var UserHumanoid)) return;
         SpriteLeft.SetEntity(_player.LocalEntity.Value);
-        UserName.Text = $"{Identity.Name(_player.LocalEntity.Value, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
+        // UserName.Text = $"{Identity.Name(_player.LocalEntity.Value, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{UserSex.Value.ToString().ToLowerInvariant()}-text")}";
         UserName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
         foreach (var i in UserInteraction.GenitalSprites)
         {
@@ -121,11 +120,10 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!targets.HasValue) return;
         var target = targets.Value;
         if (!TargetEntityId.HasValue) return;
-        if (!TargetSex.HasValue) return;
         if (!_entManager.TryGetComponent<InteractionComponent>(target, out var TargetInteraction)) return;
         if (!_entManager.TryGetComponent<HumanoidAppearanceComponent>(target, out var TargetHumanoid)) return;
         SpriteRight.SetEntity(target);
-        TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
+        // TargetName.Text = $"{Identity.Name(target, _eui._entManager, _player.LocalEntity.Value)}\n\n{Loc.GetString($"erp-panel-sex-{TargetSex.Value.ToString().ToLowerInvariant()}-text")}";
         TargetName.SetOnlyStyleClass(StyleNano.StyleClassLabelSmall);
         foreach (var i in TargetInteraction.GenitalSprites)
         {
@@ -209,8 +207,8 @@ public sealed partial class InteractionWindow : FancyWindow
                     var texture = _spriteSystem.Frame0(proto.Icon);
                     if (UserHasClothing && proto.UserWithoutCloth) continue;
                     if (TargetHasClothing && proto.TargetWithoutCloth) continue;
-                    if (UserSex != proto.UserSex && proto.UserSex != Sex.Unsexed) continue;
-                    if (TargetSex != proto.TargetSex && proto.TargetSex != Sex.Unsexed) continue;
+                    if (!proto.UserSex.Contains(UserSex) && !proto.UserSex.Contains(Sex.Unsexed)) continue;
+                    if (!proto.TargetSex.Contains(TargetSex) && !proto.TargetSex.Contains(Sex.Unsexed)) continue;
                     if (!Erp && proto.Erp) continue;
                     if (UserTags != null)
                     {
@@ -295,8 +293,6 @@ public sealed partial class InteractionWindow : FancyWindow
         TargetDescription.DisposeAllChildren();
         //Проверки nullable-типов
         if (!TargetEntityId.HasValue) return;
-        if (!UserSex.HasValue) return;
-        if (!TargetSex.HasValue) return;
         if (!_player.LocalEntity.HasValue) return;
 
         if (!TargetEntityId.Value.Valid) return;
@@ -309,9 +305,12 @@ public sealed partial class InteractionWindow : FancyWindow
             if (UserHasClothing) UserDescription.AddChild(new Label { Text = "...Обладаете одеждой" });
             else UserDescription.AddChild(new Label { Text = "...Не обладаете одеждой" });
             UserDescription.AddChild(new Label { Text = "...Обладаете анусом" });
-            if (UserSex.Value == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
-            if (UserSex.Value == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            if (UserSex == Sex.Male) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
+            if (UserSex == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+            if (UserSex == Sex.Female) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+            if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете грудью" });
+            if (UserSex == Sex.Futanari) UserDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
             //Таргет
             if (_entManager.GetEntity(TargetEntityId.Value) != _player.LocalEntity.Value)
             {
@@ -321,10 +320,14 @@ public sealed partial class InteractionWindow : FancyWindow
                 {
                     TargetDescription.AddChild(new Label { Text = "...Не обладает одеждой" });
                     TargetDescription.AddChild(new Label { Text = "...Обладает анусом" });
-                    if (TargetSex.Value == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
-                    if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
+                    if (TargetSex == Sex.Male) TargetDescription.AddChild(new Label { Text = "...Обладает пенисом" });
+                    if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладаете пенисом" });
+                    if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладаете вагиной" });
+                    if (TargetSex == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает вагиной" });
                 }
-                if (TargetSex.Value == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+                if (TargetSex == Sex.Female) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+                if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладает грудью" });
+                if (TargetSex == Sex.Futanari) TargetDescription.AddChild(new Label { Text = "...Обладает подозрительной аурой" });
             }
 
         }
