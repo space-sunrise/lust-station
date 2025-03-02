@@ -458,3 +458,36 @@
   targetSex: Unsexed
   erp: false
   category: дружба
+
+- type: interaction
+  id: FriendlyNoseClick
+  name: Дать по носу
+  icon: _Lust/Interface/ERP/friendly_nose_boop.png
+  emotes:
+  - бьёт пальцем по носу %target
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
+
+- type: interaction
+  id: FriendlyFofan
+  name: Дать фофан
+  icon: _Lust/Interface/ERP/blow_slap.png
+  emotes:
+  - натягивает средний палец, после со всей силы дает по лбу %target
+  - натягивает указательный палец, после со всей силы дает по лбу %target
+  - натягивает средний палец, удерживая его большим пальцем, после бьёт по лбу %target
+  - натягивает указательный палец, удерживая его большим пальцем, после бьёт по лбу %target
+  sounds:
+  - path: /Audio/_Lust/ERP/slap/slap_1.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_2.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_3.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_4.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_5.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_6.ogg
+  - path: /Audio/_Lust/ERP/slap/slap_7.ogg
+  userSex: Unsexed
+  targetSex: Unsexed
+  erp: false
+  category: дружба
