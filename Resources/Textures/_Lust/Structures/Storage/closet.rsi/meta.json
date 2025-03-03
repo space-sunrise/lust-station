@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Taken from idk",
+  "license": "CC-BY-SA-3.0",
+  "states": [
+    {
+        "name": "representative_door"
+    },
+    {
+        "name": "hop"
+    },
+    {
+        "name": "hop_open"
+    },
+    {
+        "name": "sparking",
+        "delays": [
+          [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        ]
+      },
+      {
+        "name": "locked"
+      },
+      {
+        "name": "unlocked"
+      },
+      {
+        "name": "welded"
+      }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CLA",
+    "copyright": "This shit made by SqerDust",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "default"
+        },
+        {
+            "name": "idadjutant"
+        },
+        {
+            "name": "orange-space-prison"
+        },
+        {
+            "name": "prisoner-space-prison"
+        },
+        {
+            "name": "silver"
+        },
+        {
+            "name": "idprisoner-space-prison"
+        }
+    ]
+}
