@@ -10,7 +10,7 @@
 #        amount: 2
 #      - id: MagazinePistolSubMachineGunTopMounted
 #        amount: 4
-
+# Lust-edit
 #- type: entity
 #  id: CrateArmoryShotgun
 #  parent: [ CrateWeaponSecure, BaseSecurityContraband ]
@@ -23,7 +23,7 @@
 #        amount: 2
 #      - id: BoxLethalshot
 #        amount: 4
-
+# Lust-edit
 - type: entity
   id: CrateTrackingImplants
   parent: [ CrateWeaponSecure, BaseSecurityContraband ]
