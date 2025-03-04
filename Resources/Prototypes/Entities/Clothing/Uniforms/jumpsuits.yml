@@ -821,7 +821,7 @@
 #    sprite: Clothing/Uniforms/Jumpsuit/centcomformal.rsi
 #  - type: Clothing
 #    sprite: Clothing/Uniforms/Jumpsuit/centcomformal.rsi
-
+# Lust-edit
 - type: entity
   parent: [ClothingUniformBase, BaseCommandContraband]
   id: ClothingUniformJumpsuitHosFormal
