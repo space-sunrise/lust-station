@@ -23,7 +23,7 @@ public sealed class StandingStateSystem : SharedStandingStateSystem
             .Register<SharedStandingStateSystem>();
 
         SubscribeLocalEvent<RotationVisualsComponent, MoveEvent>(OnMove);
-        SubscribeLocalEvent<StandingStateComponent, AppearanceChangeEvent>(OnAppearanceChanged);
+        // SubscribeLocalEvent<StandingStateComponent, AppearanceChangeEvent>(OnAppearanceChanged); // LUST EDIT
     }
 
     private void ToggleStanding(ICommonSession? session)
@@ -35,15 +35,15 @@ public sealed class StandingStateSystem : SharedStandingStateSystem
         RaiseNetworkEvent(new ChangeLayingDownEvent());
     }
 
-    // Sunrise-Start
-    private void OnAppearanceChanged(EntityUid uid, StandingStateComponent component, ref AppearanceChangeEvent args)
-    {
-        if (args.Sprite == null)
-            return;
+    // // Sunrise-Start
+    // private void OnAppearanceChanged(EntityUid uid, StandingStateComponent component, ref AppearanceChangeEvent args)
+    // {
+    //     if (args.Sprite == null)
+    //         return;
 
-        args.Sprite.DrawDepth = component.CurrentState == StandingState.Laying ? (int) DrawDepth.SmallMobs : (int) DrawDepth.Mobs;
-    }
-    // Sunrise-End
+    //     args.Sprite.DrawDepth = component.CurrentState == StandingState.Laying ? (int) DrawDepth.SmallMobs : (int) DrawDepth.Mobs;
+    // }
+    // // Sunrise-End // LUST EDIT
 
     private void OnMove(EntityUid uid, RotationVisualsComponent component, ref MoveEvent args)
     {
