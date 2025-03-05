@@ -613,18 +613,18 @@ public sealed partial class AdminVerbSystem
             };
             args.Verbs.Add(nyanify);
 
-            var killSignName = Loc.GetString("admin-smite-kill-sign-name").ToLowerInvariant();
+            var killSignName = Loc.GetString("admin-smite-fuck-sign-name").ToLowerInvariant(); // Lust-edit
             Verb killSign = new()
             {
                 Text = killSignName,
                 Category = VerbCategory.Smite,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/killsign.rsi"), "icon"),
+                Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "icon"), // Lust-edit
                 Act = () =>
                 {
                     EnsureComp<KillSignComponent>(args.Target);
                 },
                 Impact = LogImpact.Extreme,
-                Message = string.Join(": ", killSignName, Loc.GetString("admin-smite-kill-sign-description"))
+                Message = string.Join(": ", killSignName, Loc.GetString("admin-smite-fuck-sign-description")) // Lust-edit
             };
             args.Verbs.Add(killSign);
 
