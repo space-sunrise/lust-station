@@ -1,0 +1,62 @@
+- type: entity
+  parent: BaseItem
+  id: BedsheetBase
+  name: BedsheetBase
+  abstract: true
+  description: A surprisingly soft linen bedsheet.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Bed
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
+    noRot: true
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - neck
+  - type: StaticPrice
+    price: 100
+  - type: Tag
+    tags:
+    - Bedsheet
+
+- type: entity
+  id: BedsheetCaptain
+  parent: BedsheetBase
+  name: captain's bedsheet
+  description: It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
+  components:
+  - type: Sprite
+    state: sheetcaptain
+  - type: Clothing
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
+  - type: StealTarget
+    stealGroup: HeadBedsheet
+
+- type: entity
+  id: BedsheetCentcom
+  parent: BedsheetBase
+  name: CentComm bedsheet
+  description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
+  components:
+  - type: Sprite
+    state: sheetcentcom
+  - type: Clothing
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
+  - type: StealTarget
+    stealGroup: HeadBedsheet
+
+- type: entity
+  id: BedsheetNT
+  parent: BedsheetBase
+  name: NT bedsheet
+  description: It has the Nanotrasen logo on it and an aura of duty.
+  components:
+  - type: Sprite
+    state: sheetNT
+  - type: Clothing
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
