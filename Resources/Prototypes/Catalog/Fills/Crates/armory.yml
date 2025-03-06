@@ -10,7 +10,7 @@
 #        amount: 2
 #      - id: MagazinePistolSubMachineGunTopMounted
 #        amount: 4
-# Lust-edit
+#
 #- type: entity
 #  id: CrateArmoryShotgun
 #  parent: [ CrateWeaponSecure, BaseSecurityContraband ]
@@ -31,7 +31,7 @@
   description: Contains a handful of tracking implanters. Good for prisoners you'd like to release but still keep track of.
   components:
   - type: Sprite
-    sprite: _Lust/Structures/Storage/Crates/weapon.rsi
+    sprite: _Lust/Structures/Storage/Crates/weapon.rsi #Lust-edit
   - type: StorageFill
     contents:
       - id: TrackingImplanter
