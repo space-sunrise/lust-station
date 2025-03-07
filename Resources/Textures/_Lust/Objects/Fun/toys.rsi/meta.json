@@ -60,6 +60,18 @@
       },
     {
       "name": "bykov"
+      },
+      {
+        "name": "ntb-inhand-right",
+        "directions": 4
+      },
+      {
+        "name": "ntb-inhand-left",
+        "directions": 4
+      },
+      {
+        "name": "ntb",
+        "directions": 4
       }
   ]
 }

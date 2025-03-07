@@ -564,6 +564,8 @@
   name: representative locker
   parent: LockerBaseSecure
   components:
+  - type: Sprite
+    sprite: _Lust/Structures/Storage/closet.rsi #Lust-edit
   - type: Appearance
   - type: AccessReader
     access: [["Ntrep"]]

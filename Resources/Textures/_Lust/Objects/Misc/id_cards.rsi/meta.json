@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CLA",
-    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt",
+    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt, made bt gardsnake",
     "size": {
         "x": 32,
         "y": 32
@@ -31,6 +31,60 @@
         },
         {
             "name": "idcommaid"
+        },
+        {
+            "name": "admin"
+        },
+        {
+            "name": "centcom"
+        },
+        {
+            "name": "ert_chaplain"
+        },
+        {
+            "name": "ert_commander"
+        },
+        {
+            "name": "ert_engineer"
+        },
+        {
+            "name": "ert_janitor"
+        },
+        {
+            "name": "ert_medic"
+        },
+        {
+            "name": "ert_security"
+        },
+        {
+            "name": "gold"
+        },
+        {
+            "name": "idcentcom"
+        },
+        {
+            "name": "orange"
+        },
+        {
+            "name": "prisoner_001"
+        },
+        {
+            "name": "prisoner_002"
+        },
+        {
+            "name": "prisoner_003"
+        },
+        {
+            "name": "prisoner_004"
+        },
+        {
+            "name": "prisoner_005"
+        },
+        {
+            "name": "prisoner_006"
+        },
+        {
+            "name": "prisoner_007"
         }
     ]
 }
