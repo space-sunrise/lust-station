@@ -1,7 +1,7 @@
 - type: entity
-  name: envelope
+  name: envelopeqi
   parent: BaseItem
-  id: Envelope
+  id: EnvelopeQillu
   description: 'A small envelope for keeping prying eyes off of your sensitive documents.'
   components:
   - type: Sprite
