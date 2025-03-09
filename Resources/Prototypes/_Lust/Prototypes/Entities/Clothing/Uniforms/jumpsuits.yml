@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitCentcomFormal
+  id: ClothingUniformJumpsuitCentcomFormalQillu
   name: central command formal suit
   description: A suit for special occasions.
   components:

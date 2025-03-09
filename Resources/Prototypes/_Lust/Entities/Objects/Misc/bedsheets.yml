@@ -1,7 +1,7 @@
 - type: entity
   parent: BaseItem
-  id: BedsheetBase
-  name: BedsheetBase
+  id: BedsheetBaseQillu
+  name: BedsheetBaseQillu
   abstract: true
   description: A surprisingly soft linen bedsheet.
   placement:
@@ -25,38 +25,38 @@
     - Bedsheet
 
 - type: entity
-  id: BedsheetCaptain
-  parent: BedsheetBase
+  id: BedsheetCaptainQillu
+  parent: BedsheetBaseQillu
   name: captain's bedsheet
   description: It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
   components:
   - type: Sprite
-    state: sheetcaptain
+    state: sheetcaptainqillu
   - type: Clothing
     sprite: _Lust/Objects/Misc/bedsheets.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
 
 - type: entity
-  id: BedsheetCentcom
-  parent: BedsheetBase
+  id: BedsheetCentcomQillu
+  parent: BedsheetBaseQillu
   name: CentComm bedsheet
   description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
   components:
   - type: Sprite
-    state: sheetcentcom
+    state: sheetcentcomqillu
   - type: Clothing
     sprite: _Lust/Objects/Misc/bedsheets.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
 
 - type: entity
-  id: BedsheetNT
-  parent: BedsheetBase
-  name: NT bedsheet
-  description: It has the Nanotrasen logo on it and an aura of duty.
+  id: BedsheetNTQillu
+  parent: BedsheetBaseQillu
+  name: Qillu bedsheet
+  description: It has the Qillu logo on it and an aura of lust.
   components:
   - type: Sprite
-    state: sheetNT
+    state: sheetNTqillu
   - type: Clothing
     sprite: _Lust/Objects/Misc/bedsheets.rsi
