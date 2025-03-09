@@ -572,4 +572,4 @@
   - type: EntityStorageVisuals
     stateBaseClosed: hop
     stateDoorOpen: hop_open
-    stateDoorClosed: representative_door
+    stateDoorClosed: representative_doorqillu #Lust-edit

@@ -8,7 +8,7 @@
   "license": "CC-BY-SA-3.0",
   "states": [
     {
-        "name": "representative_door"
+        "name": "representative_doorqillu"
     },
     {
         "name": "hop"
@@ -35,6 +35,18 @@
       },
       {
         "name": "welded"
-      }
+      },
+      {
+        "name": "generic"
+      },
+    {
+        "name": "generic_door"
+    },
+    {
+        "name": "generic_icon"
+    },
+    {
+        "name": "generic_open"
+    }
   ]
 }
