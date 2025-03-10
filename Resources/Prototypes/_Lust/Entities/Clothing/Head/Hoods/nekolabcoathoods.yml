@@ -1,0 +1,63 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHoodCoatNekoBase
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hoods/catHood.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hoods/catHood.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    - HeadTop
+    - HeadSide
+
+- type: entity
+  parent: ClothingHeadHatHoodCoatNekoBase
+  id: ClothingHeadHatHoodCoatNeko
+  categories: [ HideSpawnMenu ]
+  name: neko coat hood
+  description: You look some cute. Nyaa..
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Head/Hoods/catHood.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Head/Hoods/catHood.rsi
+
+- type: entity
+  parent: ClothingHeadHatHoodCoatNekoBase
+  id: ClothingHeadHatHoodCoatNekoBlue
+  categories: [ HideSpawnMenu ]
+  name: neko coat hood
+  description: You look some cute. Nyaa..
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Head/Hoods/catHoodBlue.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Head/Hoods/catHoodBlue.rsi
+
+- type: entity
+  parent: ClothingHeadHatHoodCoatNekoBase
+  id: ClothingHeadHatHoodCoatNekoGreen
+  categories: [ HideSpawnMenu ]
+  name: neko coat hood
+  description: You look some cute. Nyaa..
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Head/Hoods/catHoodGreen.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Head/Hoods/catHoodGreen.rsi
+
+- type: entity
+  parent: ClothingHeadHatHoodCoatNekoBase
+  id: ClothingHeadHatHoodCoatNekoPurple
+  categories: [ HideSpawnMenu ]
+  name: neko coat hood
+  description: You look some cute. Nyaa..
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Head/Hoods/catHoodPurple.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Head/Hoods/catHoodPurple.rsi
