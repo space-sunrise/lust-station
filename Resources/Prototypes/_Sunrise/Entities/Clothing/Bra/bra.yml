@@ -38,9 +38,9 @@
     equippedState: female_assblastusa
 
 - type: entity
-  parent: ClothingBraStorageBase
+  parent: ClothingBraStorageBaseAdv
   id: ClothingBraBikini
-  name: women's bra-bikini
+  name: женский бюстгальтер-бикини
   description: A bra with a tight swimsuit.
   components:
   - type: Sprite

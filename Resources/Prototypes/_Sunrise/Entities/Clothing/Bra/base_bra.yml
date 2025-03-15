@@ -36,3 +36,23 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
+
+- type: entity
+  abstract: true
+  parent: ClothingBraBase
+  id: ClothingBraStorageBaseAdv
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,1
+    maxItemSize: Medium
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+
+
