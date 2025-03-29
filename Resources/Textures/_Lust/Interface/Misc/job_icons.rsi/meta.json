@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CLA",
-    "copyright": "Created by pacable for Lust Station",
+    "copyright": "Created by pacable for Lust Station, made by gardsnake",
     "size": {
         "x": 8,
         "y": 8
@@ -9,6 +9,9 @@
     "states": [
         {
             "name": "commaid"
+        },
+        {
+            "name": "Nanotrasen"
         }
     ]
 }

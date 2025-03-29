@@ -356,6 +356,11 @@
     - HEAD
   - type: Speech
     speechVerb: Reptilian # for pais (In the secret stash)
+  - type: Tag
+    tags:
+    - ClothMade
+    - Payload
+    - PlushieLizard
 
 - type: entity
   parent: PlushieLizard
@@ -786,6 +791,8 @@
   components:
   - type: Sprite
     state: plushie_snake
+  - type: Item
+    heldPrefix: plushiesnake
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/rattle.ogg
@@ -809,6 +816,13 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Items/Toys/rattle.ogg
+  - type: Clothing
+    quickEquip: false
+    equippedPrefix: plushiesnake
+    slots:
+    - NECK
+  - type: Speech
+    speechVerb: Reptilian # for pais (In the secret stash)
 
 - type: entity
   parent: BasePlushie
@@ -1341,11 +1355,11 @@
   description: Specially designed to inflict maximum psychological damage to Syndicate operatives.
   components:
   - type: Sprite
-    sprite: Objects/Fun/toys.rsi
+    sprite: _Lust/Objects/Fun/toys.rsi/balloon.rsi
     state: ntb
   - type: Item
     size: Small
-    sprite: Objects/Fun/toys.rsi
+    sprite: _Lust/Objects/Fun/toys.rsi/balloon.rsi
     heldPrefix: ntb
   - type: Damageable
     damageContainer: Inorganic
@@ -1625,6 +1639,7 @@
     - type: DisarmMalus
       malus: 0
     - type: MeleeWeapon
+      wideAnimationRotation: -135
       soundHit:
         collection: RubberHammer
         params:

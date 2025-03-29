@@ -1,0 +1,143 @@
+- type: entity
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterCoatMedNeko
+  name: neko coat
+  description: You look very cute in this outfit.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCat.rsi
+      layers:
+      - state: icon
+        map: [ "unfoldedLayer" ]
+      - state: icon-open
+        map: ["foldedLayer"]
+        visible: false
+    - type: Clothing
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCat.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Caustic: 0.75
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHatHoodCoatNeko
+    - type: Appearance
+    - type: Foldable
+      canFoldInsideContainer: true
+      unfoldVerbText: fold-zip-verb
+      foldVerbText: fold-unzip-verb
+    - type: FoldableClothing
+      foldedEquippedPrefix: open
+      foldedHeldPrefix: open
+
+- type: entity
+  parent: [ ClothingOuterCoatMedNeko, ClothingOuterWinterCoatToggleable ]
+  id: ClothingOuterCoatMedNekoOpened
+  name: neko coat opened
+
+- type: entity
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterCoatMedNekoBlue
+  name: blue neko coat
+  description: You look very cute in this outfit.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatBlue.rsi
+      layers:
+      - state: icon
+        map: [ "unfoldedLayer" ]
+      - state: icon-open
+        map: ["foldedLayer"]
+        visible: false
+    - type: Clothing
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatBlue.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Caustic: 0.75
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHatHoodCoatNekoBlue
+    - type: Appearance
+    - type: Foldable
+      canFoldInsideContainer: true
+      unfoldVerbText: fold-zip-verb
+      foldVerbText: fold-unzip-verb
+    - type: FoldableClothing
+      foldedEquippedPrefix: open
+      foldedHeldPrefix: open
+
+- type: entity
+  parent: [ ClothingOuterCoatMedNekoBlue, ClothingOuterWinterCoatToggleable ]
+  id: ClothingOuterCoatMedNekoBlueOpened
+  name: blue neko coat opened
+
+- type: entity
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterCoatMedNekoGreen
+  name: green neko coat
+  description: You look very cute in this outfit.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatGreen.rsi
+      layers:
+      - state: icon
+        map: [ "unfoldedLayer" ]
+      - state: icon-open
+        map: ["foldedLayer"]
+        visible: false
+    - type: Clothing
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatGreen.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Caustic: 0.75
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHatHoodCoatNekoGreen
+    - type: Appearance
+    - type: Foldable
+      canFoldInsideContainer: true
+      unfoldVerbText: fold-zip-verb
+      foldVerbText: fold-unzip-verb
+    - type: FoldableClothing
+      foldedEquippedPrefix: open
+      foldedHeldPrefix: open
+
+- type: entity
+  parent: [ ClothingOuterCoatMedNekoGreen, ClothingOuterWinterCoatToggleable ]
+  id: ClothingOuterCoatMedNekoGreenOpened
+  name: green neko coat opened
+
+- type: entity
+  parent: ClothingOuterWinterCoatToggleable
+  id: ClothingOuterCoatMedNekoPurple
+  name: purple neko coat
+  description: You look very cute in this outfit.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatPurple.rsi
+      layers:
+      - state: icon
+        map: [ "unfoldedLayer" ]
+      - state: icon-open
+        map: ["foldedLayer"]
+        visible: false
+    - type: Clothing
+      sprite: _Lust/Clothing/OuterClothing/Misc/labCoatCatPurple.rsi
+    - type: Armor
+      modifiers:
+        coefficients:
+          Caustic: 0.75
+    - type: ToggleableClothing
+      clothingPrototype: ClothingHeadHatHoodCoatNekoPurple
+    - type: Appearance
+    - type: Foldable
+      canFoldInsideContainer: true
+      unfoldVerbText: fold-zip-verb
+      foldVerbText: fold-unzip-verb
+    - type: FoldableClothing
+      foldedEquippedPrefix: open
+      foldedHeldPrefix: open
+
+- type: entity
+  parent: [ ClothingOuterCoatMedNekoPurple, ClothingOuterWinterCoatToggleable ]
+  id: ClothingOuterCoatMedNekoPurpleOpened
+  name: purple neko coat opened

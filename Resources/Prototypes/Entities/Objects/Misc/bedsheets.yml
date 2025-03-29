@@ -332,7 +332,7 @@
   components:
   - type: Butcherable
     spawned:
-    - id: ClothingOuterGhostSheet #ghostly!
+    - id: ClothingOuterGhostSheet
       amount: 1
   - type: Sprite
     state: sheetwhite

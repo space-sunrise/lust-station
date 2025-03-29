@@ -88,16 +88,6 @@ public sealed class SunriseCCVars
         CVarDef.Create("game.godmode_end", false, CVar.SERVERONLY);
 
     /*
-     * Peaceful Round End
-     */
-
-    /// <summary>
-    /// Making everyone a pacifist at the end of a round.
-    /// </summary>
-    public static readonly CVarDef<bool> PeacefulRoundEnd =
-        CVarDef.Create("game.peaceful_end", false, CVar.SERVERONLY);
-
-    /*
      * Queue
      */
 
@@ -268,7 +258,7 @@ public sealed class SunriseCCVars
 
     public static readonly CVarDef<bool> NPCDisableWithoutPlayers = CVarDef.Create("npc.disable_without_players", true);
 
-    public static readonly CVarDef<float> NPCDisableDistance = CVarDef.Create("npc.disable_distance", 15f);
+    public static readonly CVarDef<float> NPCDisableDistance = CVarDef.Create("npc.disable_distance", 20f);
 
     /*
      * Vote
@@ -386,9 +376,6 @@ public sealed class SunriseCCVars
 
     public static readonly CVarDef<string> VigersRayVictims =
         CVarDef.Create("vigers_ray.victims", "", CVar.SERVERONLY);
-
-    public static readonly CVarDef<bool> DisableGameRules =
-        CVarDef.Create("vigers_ray.disable_game_rules", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Flavor Profile

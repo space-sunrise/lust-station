@@ -3,7 +3,7 @@
   alias:
     - survival
   name: survival-title
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: true # Sunrise-Edit
   description: survival-description
   minPlayers: 50 # Sunrise-Edit
@@ -96,7 +96,7 @@
   - greenshift
   - shittersafarideluxeedition
   name: greenshift-title
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: false # Sunrise-Edit
   description: greenshift-description
   rules:
@@ -158,17 +158,17 @@
     - tator
   name: traitor-title
   description: traitor-description
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: true # Sunrise-Edit
   minPlayers: 5 # Sunrise-Edit: 5 players for TRAITORS
   rules:
-    - Traitor
-    - LiteSubGamemodesRule
-    - MiddleSubGamemodesRule
-    - BasicStationEventScheduler
-    - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
+  - DummyNonAntagChance
+  - Traitor
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Deathmatch
@@ -189,16 +189,17 @@
     - nukeops
   name: nukeops-title
   description: nukeops-description
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: true # Sunrise-Edit
   minPlayers: 20 # Sunrise-Edit: 20 players for NUKEOPS
   rules:
-    - Nukeops
-    - LiteSubGamemodesRule # Только лайтовые под-антаги, чтобы не было кооперации станции с генокрадами против ЯО.
-    - BasicStationEventScheduler
-    - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
+  - Nukeops
+  - DummyNonAntagChance
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Revolutionary
@@ -208,16 +209,33 @@
     - revolutionaries
   name: rev-title
   description: rev-description
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: true # Sunrise-Edit
   minPlayers: 15 # Sunrise-Edit: 15 players for REVOLUTIONARY
   rules:
-    - Revolutionary
-    - LiteSubGamemodesRule # Только лайтовые под-антаги.
-    - BasicStationEventScheduler
-    - MeteorSwarmScheduler
-    - SpaceTrafficControlEventScheduler
-    - BasicRoundstartVariation
+  - DummyNonAntagChance
+  - Revolutionary
+  - SubGamemodesRule
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Wizard
+  alias:
+  - wizard
+  name: wizard-title
+  description: wizard-description
+  showInVote: false
+  rules:
+  - Wizard
+  - DummyNonAntagChance
+  - SubGamemodesRuleNoWizard #No Dual Wizards at the start, midround is fine
+  - BasicStationEventScheduler
+  - MeteorSwarmScheduler
+  - SpaceTrafficControlEventScheduler
+  - BasicRoundstartVariation
 
 - type: gamePreset
   id: Zombie
@@ -229,7 +247,7 @@
   - zomber
   name: zombie-title
   description: zombie-description
-  showInVote: true # Sunrise-Edit
+  showInVote: false # Sunrise-Edit
   hide: true # Sunrise-Edit
   minPlayers: 20 # Sunrise-Edit: 20 players for ZOMBIES
   rules:
