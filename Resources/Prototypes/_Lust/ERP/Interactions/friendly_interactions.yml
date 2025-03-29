@@ -523,8 +523,10 @@
   icon: _Lust/Interface/ERP/friendly_nose_boop.png
   emotes:
   - бьёт пальцем по носу %target
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
 
@@ -545,7 +547,9 @@
   - path: /Audio/_Lust/ERP/slap/slap_5.ogg
   - path: /Audio/_Lust/ERP/slap/slap_6.ogg
   - path: /Audio/_Lust/ERP/slap/slap_7.ogg
-  userSex: Unsexed
-  targetSex: Unsexed
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
   erp: false
   category: дружба
