@@ -89,7 +89,7 @@
   - BlueShieldJumpsuit
   - BlueShieldBackpack
   - Trinkets
-  - Survival
+  - SurvivalSecurity
   - GroupSpeciesBreathTool
   - SpecialLoadout # Lust Station
   - Bra
@@ -286,6 +286,7 @@
   - SecurityPilotJumpsuit
   - SecurityBackpack
   - SecurityShoes
+  - SecurityBelt
   - SurvivalSecurity
   - Trinkets
   - SecurityTrinkets
@@ -401,6 +402,23 @@
   - AdjutantOuterClothing
   - AdjutantBackpack
   - AdjutantHead
+  - Trinkets
+  - Survival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - CommonPets
+
+- type: roleLoadout
+  id: JobMailCarrier
+  groups:
+  - GroupTankHarness
+  - MailCarrierJumpsuit
+  - SunriseCargoTechGloves
+  - CargoTechnicianBackpack
+  - SunriseCargoTechNeck
+  - TrinketsCargo
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool

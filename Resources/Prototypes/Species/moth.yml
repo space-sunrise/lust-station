@@ -10,10 +10,10 @@
   markingLimits: MobMothMarkingLimits
   dollPrototype: MobMothDummy
   skinColoration: Hues
-  maleFirstNames: names_moth_first_male
-  femaleFirstNames: names_moth_first_female
-  maleLastNames: names_moth_last
-  femaleLastNames: names_moth_last
+  maleFirstNames: NamesMothFirstMale
+  femaleFirstNames: NamesMothFirstFemale
+  maleLastNames: NamesMothLast
+  femaleLastNames: NamesMothLast
   sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: bodyType
@@ -22,6 +22,8 @@
   sprites:
     Head: MobMothHead
     Snout: MobHumanoidAnyMarking
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobMothTorso
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
@@ -95,6 +97,12 @@
       points: 1
       required: false
     Head:
+      points: 1
+      required: false
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
       points: 1
       required: false
     Chest:

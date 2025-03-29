@@ -1,40 +1,11 @@
-- type: dataset
-  id: RegalRatNameKingdom
+- type: localizedDataset
+  id: NamesRegalratKingdom
   values:
-  - Чумная
-  - Миазмовая
-  - Туннельная
-  - Хламовая
-  - Мусорная
-  - Крысина
-  - Паразитная
-  - Сырная
-  - Жующая
-  - Большая
-  - Грязная
-  - Водосточная
-  - Помойная
-  - Сервисная
-  - Конкретная
-  - Из нержавеющей стали
+    prefix: names-regal-rat-kingdom-dataset-
+    count: 15
 
-- type: dataset
-  id: RegalRatNameTitle
+- type: localizedDataset
+  id: NamesRegalratTitle
   values:
-  - Королева
-  - Леди
-  - Принцесса
-  - Императрица
-  - Глава
-  - Повелительница
-  - Мастерица
-  - Сёгунша
-  - Боярыня
-  - Царица
-  - Фанатка
-  - Ценительница
-  - Президентша
-  - Мэрша
-  - Босса
-  - Пророчица
-  - Сыр
+    prefix: names-regal-rat-title-dataset-
+    count: 17

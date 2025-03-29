@@ -51,6 +51,7 @@
   - type: RadiationBlocker
     resistance: 2
   - type: BlockWeather
+  - type: SunShadowCast
 
 - type: entity
   parent: BaseWall
@@ -80,7 +81,7 @@
         acts: [ "Destruction" ]
 
   - type: IconSmooth
-    key: bricks
+    key: walls
     base: brick
 
 - type: entity
@@ -213,6 +214,11 @@
   - type: IconSmooth
     key: walls
     base: cult
+  # Sunrise-Start
+  - type: Construction
+    graph: CultGirder
+    node: wall
+  # Sunrise-End
 
 - type: entity
   parent: BaseWall
