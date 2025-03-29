@@ -1,0 +1,21 @@
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingBeerCostume
+  name: beer costume
+  description: Vodka beer vodka beer after party deer.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/beer_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/beer_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingPivozavr
+  name: pivozavr tshirt
+  description: For real skufs.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/pivozavrtshirt.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/pivozavrtshirt.rsi
