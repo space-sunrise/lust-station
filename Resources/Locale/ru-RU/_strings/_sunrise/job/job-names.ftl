@@ -79,3 +79,4 @@ JobClownBorg = клоун киборг
 JobBarber = парикмахер
 JobAdjutant = адъютант
 JobMailCarrier = почтальон
+job-name-commaid = горничная командования
