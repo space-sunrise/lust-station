@@ -579,17 +579,6 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: Valtos
-  name: tts-voice-name-valtos
-  # Lust-start
-  sex:
-  - Female
-  - Futanari
-  # Lust-end
-  speaker: valtos
-  provider: ntts.fdev.team
-
-- type: ttsVoice
   id: Khajiit
   name: tts-voice-name-khajiit
   # Lust-start

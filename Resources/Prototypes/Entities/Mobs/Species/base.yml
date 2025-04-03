@@ -271,6 +271,7 @@
   abstract: true
   components:
   # Sunrise-Start
+  - type: DarkenedVision
   - type: CanEscapeInventory
   - type: Mood
   - type: CritHeartbeat
