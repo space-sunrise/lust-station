@@ -206,7 +206,7 @@ public sealed class SunriseCCVars
             CVarDef.Create("planet_prison.enable", true, CVar.SERVERONLY);
 
     public static readonly CVarDef<int> MinPlayersPlanetPrison =
-        CVarDef.Create("planet_prison.min_players", 60, CVar.SERVERONLY);
+        CVarDef.Create("planet_prison.min_players", 0, CVar.SERVERONLY);
 
     /*
      * MaxLoadedChunks
@@ -278,7 +278,7 @@ public sealed class SunriseCCVars
 
     public static readonly CVarDef<int> VotingsDelay = CVarDef.Create("vote.votings_delay", 60);
 
-    public static readonly CVarDef<int> MapVotingCount = CVarDef.Create("vote.map_voting_count", 3);
+    public static readonly CVarDef<int> MapVotingCount = CVarDef.Create("vote.map_voting_count", 5);
 
     public static readonly CVarDef<int> RoundVotingCount = CVarDef.Create("vote.round_voting_count", 3);
 
@@ -414,4 +414,11 @@ public sealed class SunriseCCVars
 
     public static readonly CVarDef<bool> ChatPointingVisuals =
         CVarDef.Create("chat_icon_pointing.enable", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /*
+     * Mute new ghost role sound
+     */
+
+    public static readonly CVarDef<bool> MuteGhostRoleNotification =
+        CVarDef.Create("ghost.mute_role_notification", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 }
