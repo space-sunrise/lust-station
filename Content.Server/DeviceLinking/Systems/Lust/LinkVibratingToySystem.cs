@@ -1,7 +1,7 @@
-using Content.Server.DeviceLinking.Events;
 using Content.Server.Speech.Components;
 using Content.Server._Lust.Toys.Components;
 using Content.Shared._Lust.Toys.Components;
+using Content.Shared.DeviceLinking.Events;
 using Content.Shared.Verbs;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Systems;
