@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Numerics;
 using Content.Server._Sunrise.BloodCult.GameRule;
 using Content.Server._Sunrise.BloodCult.Runes.Comps;
@@ -320,7 +320,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                     out var vapor))
                 return;
 
-            if (vapor.Value.Comp.Solution.Any(x => x.Reagent.Prototype == "Holywater"))
+            if (vapor.Value.Comp.Solution.Any(x => x.Reagent.Prototype == "holywater"))
             {
                 Del(uid);
             }
