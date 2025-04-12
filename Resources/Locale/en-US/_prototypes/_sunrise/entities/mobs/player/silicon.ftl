@@ -44,6 +44,3 @@ ent-DeathSquadDirectivesCircuitBoard = circuit board (Death Squad Directives)
     .desc = An electronics board containing the Death Squad Directives lawset.
 ent-ERTDirectivesCircuitBoard = circuit board (ERT Directives)
     .desc = An electronics board containing the ERT Directives lawset.
-ent-SyndieIntellicard = Syndieintellicard
-    .desc = A storage device for AIs but from evil guys!
-    .suffix = Empty

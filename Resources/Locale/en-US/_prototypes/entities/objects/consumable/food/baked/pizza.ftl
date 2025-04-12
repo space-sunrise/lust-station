@@ -48,7 +48,3 @@ ent-FoodPizzaCotton = cotton pizza
     .desc = Flat fabric cotton dough with cotton topping. Incredible.
 ent-FoodPizzaCottonSlice = slice of cotton pizza
     .desc = A slice of cotton pizza. Cotton included.
-ent-FoodPizzaWorldpeas = world peazza
-    .desc = Modern diplomacy in the shape of a disc.
-ent-FoodPizzaWorldpeasSlice = slice of world peazza
-    .desc = Dividing the world up is a small price to pay for harmony.

@@ -62,20 +62,42 @@ plant-analyzer-potency-ludicrous = нелепо большое
 plant-analyzer-potency-immeasurable = немерено большое
 plant-analyzer-print = Печать
 plant-analyzer-printout-missing = Н/Д
-plant-analyzer-printout = [color=#9FED58][head=2]Отчет анализатора растений[/head][/color]{ $nl }──────────────────────────────{ $nl }[bullet/] Вид: { $seedName }{ $nl }{ $indent }[bullet/] Пригодность: { $viable ->
-        [no] [color=red]Нет[/color]
-        [yes] [color=green]Да[/color]
-       *[other] { LOC("plant-analyzer-printout-missing") }
-    }{ $nl }{ $indent }[bullet/] Выносливость: { $endurance }{ $nl }{ $indent }[bullet/] Продолжительность жизни: { $lifespan }{ $nl }{ $indent }[bullet/] Продукт: [color=#a4885c]{ $produce }[/color]{ $nl }{ $indent }[bullet/] Кудзу: { $kudzu ->
-        [no] [color=green]Нет[/color]
-        [yes] [color=red]Да[/color]
-       *[other] { LOC("plant-analyzer-printout-missing") }
-    }{ $nl }[bullet/] Профиль роста:{ $nl }{ $indent }[bullet/] Вода: [color=cyan]{ $water }[/color]{ $nl }{ $indent }[bullet/] Питательные вещества: [color=orange]{ $nutrients }[/color]{ $nl }{ $indent }[bullet/] Токсины: [color=yellowgreen]{ $toxins }[/color]{ $nl }{ $indent }[bullet/] Вредители: [color=magenta]{ $pests }[/color]{ $nl }{ $indent }[bullet/] Сорняки: [color=red]{ $weeds }[/color]{ $nl }[bullet/] Профиль окружающей среды:{ $nl }{ $indent }[bullet/] Состав: [bold]{ $gasesIn }[/bold]{ $nl }{ $indent }[bullet/] Давление: [color=lightblue]{ $kpa }kPa ± { $kpaTolerance }kPa[/color]{ $nl }{ $indent }[bullet/] Температура: [color=lightsalmon]{ $temp }°k ± { $tempTolerance }°k[/color]{ $nl }{ $indent }[bullet/] Освещение: [color=gray][bold]{ $lightLevel } ± { $lightTolerance }[/bold][/color]{ $nl }[bullet/] Цветы: { $yield ->
-        [-1] { LOC("plant-analyzer-printout-missing") }
-        [0] [color=red]0[/color]
-       *[other] [color=lightgreen]{ $yield } { $potency }[/color]
-    }{ $nl }[bullet/] Семена: { $seeds ->
-        [no] [color=red]Нет[/color]
-        [yes] [color=green]Да[/color]
-       *[other] { LOC("plant-analyzer-printout-missing") }
-    }{ $nl }[bullet/] Химические вещества: [color=gray][bold]{ $chemicals }[/bold][/color]{ $nl }[bullet/] Выбросы: [bold]{ $gasesOut }[/bold]
+plant-analyzer-printout = [color=#9FED58][head=2]Отчет анализатора растений[/head][/color]{$nl
+}──────────────────────────────{$nl
+}[bullet/] Вид: {$seedName}{$nl
+}{$indent}[bullet/] Пригодность: {$viable ->
+[no][color=red]Нет[/color]
+[yes][color=green]Да[/color]
+*[other]{LOC("plant-analyzer-printout-missing")}
+    }{$nl
+}{$indent}[bullet/] Выносливость: {$endurance}{$nl
+}{$indent}[bullet/] Продолжительность жизни: {$lifespan}{$nl
+}{$indent}[bullet/] Продукт: [color=#a4885c]{$produce}[/color]{$nl
+}{$indent}[bullet/] Кудзу: {$kudzu ->
+[no][color=green]Нет[/color]
+[yes][color=red]Да[/color]
+*[other]{LOC("plant-analyzer-printout-missing")}
+    }{$nl
+}[bullet/] Профиль роста:{$nl
+}{$indent}[bullet/] Вода: [color=cyan]{$water}[/color]{$nl
+}{$indent}[bullet/] Питательные вещества: [color=orange]{$nutrients}[/color]{$nl
+}{$indent}[bullet/] Токсины: [color=yellowgreen]{$toxins}[/color]{$nl
+}{$indent}[bullet/] Вредители: [color=magenta]{$pests}[/color]{$nl
+}{$indent}[bullet/] Сорняки: [color=red]{$weeds}[/color]{$nl
+}[bullet/] Профиль окружающей среды:{$nl
+}{$indent}[bullet/] Состав: [bold]{$gasesIn}[/bold]{$nl
+}{$indent}[bullet/] Давление: [color=lightblue]{$kpa}kPa ± {$kpaTolerance}kPa[/color]{$nl
+}{$indent}[bullet/] Температура: [color=lightsalmon]{$temp}°k ± {$tempTolerance}°k[/color]{$nl
+}{$indent}[bullet/] Освещение: [color=gray][bold]{$lightLevel} ± {$lightTolerance}[/bold][/color]{$nl
+}[bullet/] Цветы: {$yield ->
+[-1]{LOC("plant-analyzer-printout-missing")}
+[0][color=red]0[/color]
+*[other][color=lightgreen]{$yield} {$potency}[/color]
+    }{$nl
+}[bullet/] Семена: {$seeds ->
+[no][color=red]Нет[/color]
+[yes][color=green]Да[/color]
+*[other]{LOC("plant-analyzer-printout-missing")}
+    }{$nl
+}[bullet/] Химические вещества: [color=gray][bold]{$chemicals}[/bold][/color]{$nl
+}[bullet/] Выбросы: [bold]{$gasesOut}[/bold]
