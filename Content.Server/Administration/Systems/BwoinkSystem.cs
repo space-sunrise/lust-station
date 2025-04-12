@@ -827,7 +827,7 @@ namespace Content.Server.Administration.Systems
             LogBwoink(msg);
 
             // Sunrise-Start
-            var sentAt = DateTimeOffset.Now;
+            var sentAt = DateTimeOffset.UtcNow;
             _dbManager.AddAHelpMessage(senderSession.UserId, message.UserId, message.Text, sentAt, message.PlaySound, message.AdminOnly);
             // Sunrise-End
 
