@@ -20,7 +20,7 @@ plant-analyzer-soil-empty = В этом { $holder } нет непоглощен�
 plant-analyzer-component-environemt = Это [color=green]{ $seedName }[/color] требует атмосферы при уровне давления [color=lightblue]{ $kpa }кПа ± { $kpaTolerance }кПа[/color], температуры [color=lightsalmon]{ $temp }°к ± { $tempTolerance }°к[/color] и уровня освещения [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
 plant-analyzer-component-environemt-void = Это [color=green]{ $seedName }[/color] должно выращиваться [bolditalic]в вакууме космоса[/bolditalic] при уровне освещения [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
 plant-analyzer-component-environemt-gas = Это [color=green]{ $seedName }[/color] требует атмосферы, содержащей [bold]{ $gases }[/bold] при уровне давления [color=lightblue]{ $kpa }кПа ± { $kpaTolerance }кПа[/color], температуры [color=lightsalmon]{ $temp }°к ± { $tempTolerance }°к[/color] и уровне освещения [color=white]{ $lightLevel } ± { $lightTolerance }[/color].
-plant-analyzer-produce-plural = { MAKEPLURAL($thing) }
+plant-analyzer-produce-plural = { $thing }
 plant-analyzer-output =
     { $yield ->
         [0]
