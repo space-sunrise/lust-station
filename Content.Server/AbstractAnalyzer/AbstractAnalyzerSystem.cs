@@ -84,7 +84,7 @@ public abstract class AbstractAnalyzerSystem<TAnalyzerComponent, TAnalyzerDoAfte
 
         var doAfterCancelled = !_doAfterSystem.TryStartDoAfter(new DoAfterArgs(EntityManager, args.User, uid.Comp.ScanDelay, new TAnalyzerDoAfterEvent(), uid, target: args.Target, used: uid)
         {
-            NeedHand = true,
+            NeedHand = args.NeedHand, // Sunrise-Edit
             BreakOnMove = true,
         });
 
