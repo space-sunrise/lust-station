@@ -57,7 +57,11 @@ public abstract class AbstractAnalyzerSystem<TAnalyzerComponent, TAnalyzerDoAfte
 
             //Get distance between analyzer and the scanned entity
             var targetCoordinates = Transform(target).Coordinates;
-            if (!_transformSystem.InRange(targetCoordinates, transform.Coordinates, component.MaxScanRange))
+            if (component.MaxScanRange != null &&
+                !_transformSystem.InRange(
+                    targetCoordinates,
+                    transform.Coordinates,
+                    component.MaxScanRange.Value))
             {
                 //Range too far, disable updates
                 StopAnalyzingEntity((uid, component), target);
