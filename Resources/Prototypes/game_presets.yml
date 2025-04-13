@@ -25,6 +25,7 @@
   hide: true # Sunrise-Edit
   description: kessler-syndrome-description
   rules:
+    - MeteorSwarmMildScheduler
     - KesslerSyndromeScheduler
     - RampingStationEventScheduler
     - SpaceTrafficControlEventScheduler
