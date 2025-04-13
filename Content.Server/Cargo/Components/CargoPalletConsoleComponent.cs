@@ -7,4 +7,11 @@ namespace Content.Server.Cargo.Components;
 
 [RegisterComponent]
 [Access(typeof(CargoSystem))]
-public sealed partial class CargoPalletConsoleComponent : Component;
+public sealed partial class CargoPalletConsoleComponent : Component
+{
+    [DataField("soundError")] public SoundSpecifier ErrorSound =
+        new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg");
+
+    [DataField("soundConfirm")]
+    public SoundSpecifier ConfirmSound = new SoundPathSpecifier("/Audio/Effects/Cargo/ping.ogg");
+}

@@ -194,13 +194,6 @@ public sealed class ReflectSystem : EntitySystem
             return false;
         }
 
-        // Sunrise-Start
-        if ((reflect.Reflects & reflective) == 0x0)
-        {
-            newDirection = null;
-            return false;
-        }
-
         if (reflect.Slot != null &&
             !_inventorySystem.TryGetSlotEntity(user, reflect.Slot, out var slotEntity) &&
             slotEntity != reflector)
