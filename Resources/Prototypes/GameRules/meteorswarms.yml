@@ -153,7 +153,7 @@
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
-    EndAudio:
+    endAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
     # Sunrise-End
   - type: MeteorSwarm
@@ -173,7 +173,7 @@
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
-    EndAudio:
+    endAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
     # Sunrise-End
   - type: MeteorSwarm
@@ -194,7 +194,7 @@
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
-    EndAudio:
+    endAudio:
       path: /Audio/_Sunrise/Announcements/announce_dig.ogg
     # Sunrise-End
   - type: MeteorSwarm
