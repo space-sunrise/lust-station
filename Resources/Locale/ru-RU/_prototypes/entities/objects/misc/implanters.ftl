@@ -66,6 +66,3 @@ ent-RadioImplanterCentcomm = { ent-BaseImplantOnlyImplanter }
 ent-DeathRattleImplanterCentcomm = { ent-BaseImplantOnlyImplanter }
     .suffix = centcomm death rattle
     .desc = { ent-BaseImplantOnlyImplanter.desc }
-ent-SmokeScreenImplanter = { ent-Implanter }
-    .desc = { ent-BaseImplantOnlyImplanterSyndi.desc }
-    .suffix = Дым

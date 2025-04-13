@@ -1,6 +1,6 @@
-ent-CultVeilShifter = veil shifter
-    .desc = A staff that radiates strange energy.
-ent-CultTorch = void torch
-    .desc = Strange torch.
-ent-CultShuttleCurse = curse orb
-    .desc = Strange stone orb that pulsates with red light.
+ent-CultVeilShifter = преобразователь покрова
+    .desc = Посох, излучающий странную энергию.
+ent-CultTorch = факел пустоты
+    .desc = Странный факел.
+ent-CultShuttleCurse = сфера проклятия
+    .desc = Cтранная каменная сфера, пульсирующая красным светом.

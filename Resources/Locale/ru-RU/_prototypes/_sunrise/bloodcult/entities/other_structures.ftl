@@ -1,4 +1,4 @@
-ent-AirlockGlassCult = runic airlock
-    .desc = Strange glass airlock with a rune.
-ent-CultGirder = runic girder
-    .desc = A large structural assembly made out of metal. This one have a rune on it.
+ent-AirlockGlassCult = рунический шлюз
+    .desc = Странный стеклянный шлюз с руной.
+ent-CultGirder = руническая балка
+    .desc = Большой конструктивный элемент, изготовленный из металла. На этом есть руна.

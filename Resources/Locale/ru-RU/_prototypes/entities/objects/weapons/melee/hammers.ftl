@@ -1,5 +1,5 @@
-ent-Sledgehammer = sledgehammer
-    .desc = The perfect tool for wanton carnage.
+ent-Sledgehammer = кувалда
+    .desc = Идеальный инструмент для кровавой бойни.
 ent-Mjollnir = Mjollnir
     .desc = A weapon worthy of a god, able to strike with the force of a lightning bolt. It crackles with barely contained energy.
 ent-SingularityHammer = Singularity Hammer

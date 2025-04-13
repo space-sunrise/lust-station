@@ -1,2 +1,2 @@
-ent-CultistCuffs = { ent-Handcuffs }
-    .desc = { ent-Handcuffs.desc }
+ent-CultistCuffs = теневые оковы
+    .desc = ...

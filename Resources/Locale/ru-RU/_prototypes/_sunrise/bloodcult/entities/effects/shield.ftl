@@ -1,4 +1,4 @@
-ent-CultBarrier = { ent-BaseStructure }
-    .desc = { ent-BaseStructure.desc }
+ent-CultBarrier = барьер культа
+    .desc = Можно уничтожить ритуальным кинжалом.
 ent-CultBarrierJuggernaut = { ent-CultBarrier }
     .desc = { ent-CultBarrier.desc }

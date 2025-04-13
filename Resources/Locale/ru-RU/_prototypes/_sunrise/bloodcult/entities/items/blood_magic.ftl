@@ -1,4 +1,4 @@
-ent-CultBloodSpell = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
-ent-CultBloodOrb = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
+ent-CultBloodSpell = кровавый обряд
+    .desc = ...
+ent-CultBloodOrb = кровавая сфера
+    .desc = ...

@@ -14620,3 +14620,12 @@
   id: 998
   time: '2025-04-12T01:05:07.0000000+00:00'
   url: https://github.com/space-sunrise/space-station-14/pull/1755
+- author: agranomys
+  changes:
+  - message: "\u041E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u0438 \u0434\
+      \u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0432 \u043F\u0443\u043B \u0441\
+      \u0442\u0430\u043D\u0446\u0438\u044F loop."
+    type: Add
+  id: 999
+  time: '2025-04-12T20:20:59.0000000+00:00'
+  url: https://github.com/space-sunrise/space-station-14/pull/1732

@@ -1,4 +1,4 @@
-ent-WetStone = { ent-BaseItem }
-    .desc = { ent-BaseItem.desc }
-ent-CultSharpener = { ent-WetStone }
-    .desc = { ent-WetStone.desc }
+ent-WetStone = точильный камень
+    .desc = Используется для заточки кромок стальных инструментов.
+ent-CultSharpener = древний точильный камень
+    .desc = Используется для заточки кромок стальных инструментов.

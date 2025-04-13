@@ -1,8 +1,8 @@
-ent-CultRobeModify = flagellant's attire
-    .desc = Some religious clothes.
-ent-CultOuterArmor = armored mantle
-    .desc = At first glance, it seems that this is a simple robe, but it has elements of armor on it.
-ent-CultMirrorShield = mirror shield
-    .desc = Shield with a mirror on a front side, which has some religious sign.
-ent-CultClothingBlindfold = zealot's blindfold
-    .desc = A blindfold endowed with a strange power.
+ent-CultRobeModify = одеяние флагелланта
+    .desc = Какая-то религиозная роба.
+ent-CultOuterArmor = бронированная мантия
+    .desc = С первого взгляда кажется, что это простая мантия, но на ней имеется элементы брони.
+ent-CultMirrorShield = зеркальный щит
+    .desc = Щит с зеркалом на лицевой стороне, на котором изображен какой-то религиозный знак.
+ent-CultClothingBlindfold = повязка Зилота
+    .desc = Повязка, наделенная странной силой.
