@@ -11,11 +11,11 @@
   - SunriseOasis
   - SunriseConvex
   - SunriseLoop
-  #- SunriseBox БОКСА БОЛЬШЕ НЕТ
+  - SunriseBox
   # Неиграбельно
   #- SunriseReach
   #- SunriseCorvaxGelta
-  #- SunriseRelic 
+  #- SunriseRelic
   # SUNRISE-TODO: Старые-новые карты
   #- Glacier
   #- Shoukou
