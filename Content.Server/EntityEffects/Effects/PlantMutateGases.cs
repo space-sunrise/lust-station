@@ -21,7 +21,6 @@ public sealed partial class PlantMutateExudeGasses : EntityEffect
     // Sunrise-Start
     private static readonly HashSet<Gas> BlacklistedGases = new()
     {
-        Gas.Frezon,
         Gas.BZ,
         Gas.Healium,
         Gas.Nitrium
@@ -81,7 +80,6 @@ public sealed partial class PlantMutateConsumeGasses : EntityEffect
     // Sunrise-Start
     private static readonly HashSet<Gas> BlacklistedGases = new()
     {
-        Gas.Frezon,
         Gas.BZ,
         Gas.Healium,
         Gas.Nitrium
