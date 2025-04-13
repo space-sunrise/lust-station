@@ -1,8 +1,8 @@
 - type: gameMap
   id: SunriseLoop
-  mapName: 'Loop Station'
+  mapName: 'Loop'
   mapPath: /Maps/_Sunrise/Station/loop.yml
-  minPlayers: 35
+  minPlayers: 30
   maxPlayers: 70
   maxRandomOffset: 0
   randomRotation: false
