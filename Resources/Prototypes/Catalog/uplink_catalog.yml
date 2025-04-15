@@ -1699,7 +1699,7 @@
   productEntity: ClothingOuterVestWeb
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 2
+    Telecrystal: 1
   cost:
     Telecrystal: 3
   categories:
@@ -1873,7 +1873,7 @@
   description: uplink-clothing-hardsuit-chameleon-desc
   productEntity: ClothingOuterHardsuitChameleon
   discountCategory: rareDiscounts
-  discountDownTo: 
+  discountDownTo:
     Telecrystal: 5
   cost:
     Telecrystal: 8
