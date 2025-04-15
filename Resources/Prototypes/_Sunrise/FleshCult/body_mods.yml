@@ -79,7 +79,6 @@
         Slash: 0.3
         Piercing: 0.3
         Heat: 0.5
-    ingoreKnockdown: true
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.85
