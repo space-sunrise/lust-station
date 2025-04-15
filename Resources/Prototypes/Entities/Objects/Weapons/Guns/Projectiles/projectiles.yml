@@ -220,10 +220,6 @@
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/taser_hit.ogg"
     forceSound: true
-  # Sunrise start
-  - type: StaminaDamageOnCollide
-    damage: 33
-  # Sunrise end
   - type: StunOnCollide
     knockdownAmount: 0.5 #Sunrise-Edit
 
