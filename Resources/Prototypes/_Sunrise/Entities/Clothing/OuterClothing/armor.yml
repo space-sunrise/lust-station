@@ -63,7 +63,6 @@
         Heat: 0.6
         Radiation: 0.6
         Caustic: 0.6
-    ingoreKnockdown: true
   - type: ExplosionResistance
     damageCoefficient: 0.65
   - type: PressureProtection
