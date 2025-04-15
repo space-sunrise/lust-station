@@ -382,7 +382,7 @@ public sealed partial class GunSystem : SharedGunSystem
                     // Checks if the laser should pass over unless targeted by its user
                     foreach (var collide in rayCastResults)
                     {
-                        if (collide.HitEntity != gun.Target &&
+                        if (!gun.Targets.Contains(collide.HitEntity) &&
                             CompOrNull<RequireProjectileTargetComponent>(collide.HitEntity)?.Active == true)
                         {
                             continue;
@@ -492,10 +492,10 @@ public sealed partial class GunSystem : SharedGunSystem
         EntityUid gunUid,
         EntityUid? user)
     {
-        if (gun.Target is { } target && !TerminatingOrDeleted(target))
+        if (gun.Targets.Count > 0 && !TerminatingOrDeleted(gun.Targets.First()))
         {
             var targeted = EnsureComp<TargetedProjectileComponent>(uid);
-            targeted.Target = target;
+            targeted.Targets = new(gun.Targets);
             Dirty(uid, targeted);
         }
 
