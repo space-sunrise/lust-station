@@ -142,7 +142,7 @@ public sealed partial class GunComponent : Component
     /// Who the gun is being requested to shoot at directly.
     /// </summary>
     [ViewVariables]
-    public EntityUid? Target = null;
+    public HashSet<EntityUid> Targets = new();
 
     /// <summary>
     ///     The base value for how many shots to fire per burst.
