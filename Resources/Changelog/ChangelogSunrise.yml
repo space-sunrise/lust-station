@@ -14736,3 +14736,11 @@
     type: Tweak
   id: 1006
   time: '2025-04-15T00:54:32.790500+00:00'
+- author: agranomys
+  changes:
+  - message: "\u0441\u0442\u0430\u043D\u0446\u0438\u044F loop \u0431\u044B\u043B\u0430\
+      \ \u043E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u0430."
+    type: Tweak
+  id: 1007
+  time: '2025-04-15T00:59:51.0000000+00:00'
+  url: https://github.com/space-sunrise/space-station-14/pull/1780
