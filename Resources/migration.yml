@@ -581,6 +581,20 @@ ToxinChemistryBottle: ChemistryBottleToxin
 # 2025-03-29
 ClothingBackpackDuffelSyndicateRaidBundle: ClothingBackpackSyndicateRaidBundle
 
+# 2025-04-14
+MailRobustToolsSpam: MailSpamLetter
+MailNanotrasenSpam: MailSpamLetter
+MailSyndicateSpam: MailSpamLetter
+MailAlternativeDimensionSpam: MailSpamLetter
+MailNarsieCultSpam: MailSpamLetter
+MailRageCageSpam: MailSpamLetter
+MailVoyageAdvertisementSpam: MailSpamLetter
+MailScienceSpiderClanSpam: MailSpamLetter
+MailAllAccessSpam: MailSpamLetter
+MailCentcommRetributionSpam: MailSpamLetter
+MailEvilLizardSpam: MailSpamLetter
+MailParentsNeedMoneySpam: MailSpamLetter
+
 # Sunrise migrations
 AirlockExternalGlassShuttleArrivals: AirlockExternalGlassShuttleArrivalsLocked
 AirlockHatchSyndicate: AirlockHatchSyndicateLocked
