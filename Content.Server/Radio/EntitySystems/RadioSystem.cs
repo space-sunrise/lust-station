@@ -113,16 +113,17 @@ public sealed class RadioSystem : EntitySystem
             speech = evntProto;
         else
             speech = _chat.GetSpeechVerb(messageSource, message);
+
+        var content = escapeMarkup
+            ? FormattedMessage.EscapeText(message)
+            : message;
+
         // Sunrise-Start
         if (GetIdCardIsBold(messageSource))
         {
             message = $"[bold]{message}[/bold]";
         }
         // Sunrise-End
-
-        var content = escapeMarkup
-            ? FormattedMessage.EscapeText(message)
-            : message;
 
         var wrappedMessage = Loc.GetString(speech.Bold ? "chat-radio-message-wrap-bold" : "chat-radio-message-wrap",
             ("color", channel.Color),
