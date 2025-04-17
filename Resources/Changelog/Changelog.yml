@@ -1,132 +1,4 @@
 ﻿Entries:
-- author: ScarKy0
-  changes:
-  - message: You can now pet the AI Core.
-    type: Add
-  id: 7693
-  time: '2024-12-09T16:10:13.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33788
-- author: joshepvodka
-  changes:
-  - message: Added flavor profiles to beverages that missed them.
-    type: Add
-  - message: Tweaked some drink flavor profiles.
-    type: Tweak
-  - message: Soda/Booze dispenser will now always eject the shaker/glass before any
-      bottle or jug.
-    type: Tweak
-  id: 7694
-  time: '2024-12-09T17:12:57.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33505
-- author: ArtisticRoomba
-  changes:
-  - message: SMES now gives visual feedback for if the maintenance panel is open.
-    type: Fix
-  id: 7695
-  time: '2024-12-10T10:00:18.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33808
-- author: metalgearsloth
-  changes:
-  - message: Fix blank newlines on examine tooltips (e.g. tables).
-    type: Fix
-  id: 7696
-  time: '2024-12-10T13:45:20.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33813
-- author: slarticodefast
-  changes:
-  - message: Fixed the greytide virus event affecting non-station maps.
-    type: Fix
-  id: 7697
-  time: '2024-12-11T14:30:29.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33806
-- author: metalgearsloth
-  changes:
-  - message: Fix battery self-recharging items like the antique laser gun from mispredicting.
-    type: Fix
-  id: 7698
-  time: '2024-12-11T15:58:02.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33384
-- author: BramvanZijp
-  changes:
-  - message: The Head of Security's Energy Shotgun has regained its ability to self
-      recharge, but only if the weapon has not been discharged in the last 10 seconds.
-    type: Add
-  - message: The Head of Security's Energy Shotgun now has a varying amount of shots
-      depending on the firing mode.
-    type: Tweak
-  - message: Energy based weapons with differing energy consumption depending on the
-      fire-mode will now update the ammo counter on the HUD when switching between
-      fire-modes.
-    type: Fix
-  id: 7699
-  time: '2024-12-11T16:21:04.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/32104
-- author: Winkarst-cpu
-  changes:
-  - message: The A.P.E. guidebook entry now contains information about Sigma particles
-      and transformation effects.
-    type: Tweak
-  id: 7700
-  time: '2024-12-12T14:24:35.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33558
-- author: lzk228
-  changes:
-  - message: Disabled evac after declaring nuke war is increased from 15 to 25 minutes.
-    type: Tweak
-  id: 7701
-  time: '2024-12-13T03:10:21.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33628
-- author: LevitatingTree
-  changes:
-  - message: Lizards can now eat the Five Alarm Burger!
-    type: Fix
-  id: 7702
-  time: '2024-12-13T13:53:56.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33848
-- author: Southbridge
-  changes:
-  - message: Paper documents now support the [mono] tag.
-    type: Add
-  id: 7703
-  time: '2024-12-13T14:24:35.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33830
-- author: yuitop
-  changes:
-  - message: Anchoring now has higher priority over stashing.
-    type: Tweak
-  id: 7704
-  time: '2024-12-13T23:00:46.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/31779
-- author: Nimfar11
-  changes:
-  - message: Changes the colour of the Borg binary channel to a different shade of
-      blue.
-    type: Tweak
-  id: 7705
-  time: '2024-12-14T16:03:18.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33841
-- author: Litraxx
-  changes:
-  - message: Renamed the Dungeon Master lawset to Game Master lawset
-    type: Fix
-  id: 7706
-  time: '2024-12-16T11:52:03.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33678
-- author: psykana
-  changes:
-  - message: Zombies can now see initial infected
-    type: Add
-  id: 7707
-  time: '2024-12-16T11:53:13.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33665
-- author: Plykiya
-  changes:
-  - message: Bombs like stingers and clustergrenades now trigger when destroyed due
-      to damage.
-    type: Fix
-  id: 7708
-  time: '2024-12-16T12:08:08.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/31108
 - author: Beck Thompson
   changes:
   - message: Added some new scrap that contains uranium and plasma that can be found
@@ -3904,3 +3776,136 @@
   id: 8192
   time: '2025-04-15T22:49:58.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/36595
+- author: slarticodefast, Flareguy
+  changes:
+  - message: Added the Desynchronizer, an experimental device that allows the user
+      to temporarily make themselves invincible, invisible, & immobile. Unlock it
+      through experimental science today!
+    type: Add
+  - message: Gravity Manipulation technology is now a tier 2 technology.
+    type: Tweak
+  id: 8193
+  time: '2025-04-16T01:33:39.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35752
+- author: RedBookcase
+  changes:
+  - message: Minor blueprint tweaks and a new stored sprite for blueprints.
+    type: Tweak
+  id: 8194
+  time: '2025-04-16T10:12:22.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36609
+- author: SlamBamActionman
+  changes:
+  - message: Unfolded bandanas/lab coats now fit in crates again.
+    type: Fix
+  id: 8195
+  time: '2025-04-16T11:54:42.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36625
+- author: metalgearsloth
+  changes:
+  - message: Fixes tippy messages being too sh-
+    type: Fix
+  id: 8196
+  time: '2025-04-16T12:23:41.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36616
+- author: SlamBamActionman
+  changes:
+  - message: Closed pet carriers no longer push players or lockers.
+    type: Fix
+  id: 8197
+  time: '2025-04-16T14:12:30.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36627
+- author: Flareguy, ArtisticRoomba
+  changes:
+  - message: Added the Temperature Gun. It can shoot body-temperature-changing bolts.
+      Unlock them through arsenal science today!
+    type: Add
+  - message: Experimental Battery Ammo technology is no longer available to research..
+    type: Remove
+  id: 8198
+  time: '2025-04-16T17:58:35.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35447
+- author: UpAndLeaves
+  changes:
+  - message: Most clothing will no longer provide protection against zombification
+    type: Tweak
+  - message: Blunt/Slash/Piercing resistance will now provide weak protection against
+      zombification.
+    type: Tweak
+  - message: Winter coats are now moderately effective against zombification.
+    type: Tweak
+  - message: Bio suits are now very effective against zombification.
+    type: Tweak
+  - message: Security bio suits are now lightly armored.
+    type: Tweak
+  - message: Bio suits now only have 5% slowdown.
+    type: Tweak
+  id: 8199
+  time: '2025-04-16T18:21:45.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36485
+- author: ScarKy0
+  changes:
+  - message: A basic sheet crate can now be ordered for 1660 spesos. It contains 30
+      steel, glass and plastic.
+    type: Add
+  id: 8200
+  time: '2025-04-16T19:20:36.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36419
+- author: sowelipililimute
+  changes:
+  - message: The medical and security techfabs now announce new recipes that they
+      can fabricate as they are researched
+    type: Add
+  id: 8201
+  time: '2025-04-16T19:29:25.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/34959
+- author: Linkbro1
+  changes:
+  - message: changed MV and HV cable item sprites, changed MV cable structure sprites
+    type: Tweak
+  id: 8202
+  time: '2025-04-16T20:26:25.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/34955
+- author: ciaran
+  changes:
+  - message: Fixed duplicate crew monitor console entries for crew with tracking implants
+    type: Fix
+  id: 8203
+  time: '2025-04-16T21:14:05.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35918
+- author: Seam_Less
+  changes:
+  - message: Standardized the In-Hand Sprites for all gloves
+    type: Tweak
+  id: 8204
+  time: '2025-04-16T22:15:38.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35997
+- author: DissidentBullet
+  changes:
+  - message: Monkeys can now wear juggernaut suits
+    type: Add
+  id: 8205
+  time: '2025-04-16T23:14:28.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/34121
+- author: SpaceRox1244
+  changes:
+  - message: Cargo can now order handheld artifact containers for transporting small
+      artifacts.
+    type: Add
+  id: 8206
+  time: '2025-04-16T23:35:57.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/33327
+- author: ScarKy0
+  changes:
+  - message: Hydroponics tray flatpacks can now be bought for 750 spesos.
+    type: Add
+  id: 8207
+  time: '2025-04-16T23:51:00.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36630
+- author: EmoGarbage404
+  changes:
+  - message: Fixed artifacts sometimes having negative research values.
+    type: Fix
+  id: 8208
+  time: '2025-04-17T03:14:17.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36642
