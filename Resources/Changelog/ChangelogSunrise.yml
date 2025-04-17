@@ -14810,3 +14810,13 @@
   id: 1013
   time: '2025-04-17T03:27:30.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1828
+- author: Focstor, Furo, non_stop_smetana
+  changes:
+  - message: "\u0411\u0430\u0440\u0440\u0430\u0442\u0440\u0438 \u0441\u043D\u043E\u0432\
+      \u0430 \u0432\u0432\u0435\u0434\u0435\u043D\u0430 \u0432 \u0438\u0433\u0440\u0443\
+      \ (\u0432\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435 \u043A\
+      \u0430\u0440\u0442\u044B Barratry)"
+    type: Add
+  id: 1014
+  time: '2025-04-17T21:51:17.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1788
