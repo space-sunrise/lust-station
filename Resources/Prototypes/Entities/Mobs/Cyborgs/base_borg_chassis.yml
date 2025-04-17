@@ -16,6 +16,7 @@
     soundHit:
       collection: MetalThud
   - type: CombatMode
+  - type: NoSlip
   - type: StaticPrice
     price: 1250
   - type: Fixtures
@@ -35,7 +36,7 @@
   - type: Sprite
     sprite: Mobs/Silicon/chassis.rsi
   - type: RotationVisuals
-    defaultRotation: 90
+    defaultRotation: 90 # Sunrise-Edit
     horizontalRotation: 90
   - type: MobState
     allowedStates:
@@ -122,6 +123,7 @@
       - BorgChassis
       - RoboticsConsole
   - type: WiresPanel
+    openingTool: Prying
     openDelay: 3
   - type: ActivatableUIRequiresPanel
   - type: NameIdentifier
