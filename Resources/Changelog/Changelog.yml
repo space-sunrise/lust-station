@@ -1,48 +1,4 @@
 ﻿Entries:
-- author: Southbridge
-  changes:
-  - message: Paper documents now support the [mono] tag.
-    type: Add
-  id: 7703
-  time: '2024-12-13T14:24:35.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33830
-- author: yuitop
-  changes:
-  - message: Anchoring now has higher priority over stashing.
-    type: Tweak
-  id: 7704
-  time: '2024-12-13T23:00:46.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/31779
-- author: Nimfar11
-  changes:
-  - message: Changes the colour of the Borg binary channel to a different shade of
-      blue.
-    type: Tweak
-  id: 7705
-  time: '2024-12-14T16:03:18.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33841
-- author: Litraxx
-  changes:
-  - message: Renamed the Dungeon Master lawset to Game Master lawset
-    type: Fix
-  id: 7706
-  time: '2024-12-16T11:52:03.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33678
-- author: psykana
-  changes:
-  - message: Zombies can now see initial infected
-    type: Add
-  id: 7707
-  time: '2024-12-16T11:53:13.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33665
-- author: Plykiya
-  changes:
-  - message: Bombs like stingers and clustergrenades now trigger when destroyed due
-      to damage.
-    type: Fix
-  id: 7708
-  time: '2024-12-16T12:08:08.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/31108
 - author: Beck Thompson
   changes:
   - message: Added some new scrap that contains uranium and plasma that can be found
@@ -3910,3 +3866,46 @@
   id: 8202
   time: '2025-04-16T20:26:25.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/34955
+- author: ciaran
+  changes:
+  - message: Fixed duplicate crew monitor console entries for crew with tracking implants
+    type: Fix
+  id: 8203
+  time: '2025-04-16T21:14:05.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35918
+- author: Seam_Less
+  changes:
+  - message: Standardized the In-Hand Sprites for all gloves
+    type: Tweak
+  id: 8204
+  time: '2025-04-16T22:15:38.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/35997
+- author: DissidentBullet
+  changes:
+  - message: Monkeys can now wear juggernaut suits
+    type: Add
+  id: 8205
+  time: '2025-04-16T23:14:28.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/34121
+- author: SpaceRox1244
+  changes:
+  - message: Cargo can now order handheld artifact containers for transporting small
+      artifacts.
+    type: Add
+  id: 8206
+  time: '2025-04-16T23:35:57.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/33327
+- author: ScarKy0
+  changes:
+  - message: Hydroponics tray flatpacks can now be bought for 750 spesos.
+    type: Add
+  id: 8207
+  time: '2025-04-16T23:51:00.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36630
+- author: EmoGarbage404
+  changes:
+  - message: Fixed artifacts sometimes having negative research values.
+    type: Fix
+  id: 8208
+  time: '2025-04-17T03:14:17.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36642
