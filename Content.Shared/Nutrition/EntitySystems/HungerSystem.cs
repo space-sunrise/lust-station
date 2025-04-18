@@ -128,6 +128,7 @@ public sealed class HungerSystem : EntitySystem
         entity.Comp.LastAuthoritativeHungerChangeTime = _timing.CurTime;
         entity.Comp.LastAuthoritativeHungerValue = ClampHungerWithinThresholds(entity.Comp, value);
         DirtyField(entity.Owner, entity.Comp, nameof(HungerComponent.LastAuthoritativeHungerChangeTime));
+        DirtyField(entity.Owner, entity.Comp, nameof(HungerComponent.LastAuthoritativeHungerValue));
     }
 
     private void UpdateCurrentThreshold(EntityUid uid, HungerComponent? component = null)
@@ -140,6 +141,7 @@ public sealed class HungerSystem : EntitySystem
             return;
 
         component.CurrentThreshold = calculatedHungerThreshold;
+        DirtyField(uid, component, nameof(HungerComponent.CurrentThreshold));
         DoHungerThresholdEffects(uid, component);
     }
 
@@ -176,10 +178,12 @@ public sealed class HungerSystem : EntitySystem
         if (component.HungerThresholdDecayModifiers.TryGetValue(component.CurrentThreshold, out var modifier))
         {
             component.ActualDecayRate = component.BaseDecayRate * modifier;
+            DirtyField(uid, component, nameof(HungerComponent.ActualDecayRate));
             SetAuthoritativeHungerValue((uid, component), GetHunger(component));
         }
 
         component.LastThreshold = component.CurrentThreshold;
+        DirtyField(uid, component, nameof(HungerComponent.LastThreshold));
     }
 
     private void DoContinuousHungerEffects(EntityUid uid, HungerComponent? component = null)

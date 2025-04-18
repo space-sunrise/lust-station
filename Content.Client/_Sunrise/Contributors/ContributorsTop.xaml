@@ -4,7 +4,7 @@
     <BoxContainer Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
         <BoxContainer Orientation="Horizontal"
                      HorizontalExpand="True"
-                     Margin="0 0 15 0">
+                     Margin="5 0 15 0">
             <customControls:VSeparator/>
             <Label Text="{Loc 'contributors-column-ss14'}"
                    SizeFlagsStretchRatio="2"

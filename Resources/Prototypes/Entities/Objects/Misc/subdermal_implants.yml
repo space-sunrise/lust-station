@@ -420,7 +420,6 @@
    - type: MindShieldImplant
    - type: Tag
      tags:
-       - MindShield
        - SubdermalImplant
 
 # Centcomm implants
