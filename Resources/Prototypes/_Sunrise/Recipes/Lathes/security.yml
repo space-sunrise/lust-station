@@ -69,16 +69,6 @@
     Steel: 145
 
 - type: latheRecipe
-  id: BoxShotgunFlare
-  result: BoxShotgunFlare
-  categories:
-  - Ammo
-  completetime: 25
-  materials:
-    Steel: 150
-    Plastic: 150
-
-- type: latheRecipe
   id: MagazineM16A4
   result: MagazineM16A4
   categories:

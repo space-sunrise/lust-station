@@ -104,8 +104,10 @@
   components:
   - type: LimitedCharges
     maxCharges: 3
-    renewCharges: true # Sunrise-Edit
-    renewChargeDelay: 120 # Sunrise-Edit
+  # Sunrise-Start
+  - type: AutoRecharge
+    rechargeDuration: 120
+  # Sunrise-End
   - type: InstantAction
     useDelay: 5 # Sunrise-Edit
     checkCanInteract: false
@@ -136,8 +138,10 @@
   components:
   - type: LimitedCharges
     maxCharges: 3
-    renewCharges: true # Sunrise-Edit
-    renewChargeDelay: 120 # Sunrise-Edit
+  # Sunrise-Start
+  - type: AutoRecharge
+    rechargeDuration: 120
+  # Sunrise-End
   - type: InstantAction
     checkCanInteract: false
     useDelay: 5
@@ -175,8 +179,10 @@
   components:
   - type: LimitedCharges
     maxCharges: 2
-    renewCharges: true # Sunrise-Edit
-    renewChargeDelay: 360 # Sunrise-Edit
+  # Sunrise-Start
+  - type: AutoRecharge
+    rechargeDuration: 360
+  # Sunrise-End
   - type: InstantAction
     checkCanInteract: false
     useDelay: 5
@@ -196,8 +202,10 @@
     popup: dna-scrambler-action-popup
   - type: LimitedCharges
     maxCharges: 1
-    renewCharges: true # Sunrise-Edit
-    renewChargeDelay: 300 # Sunrise-Edit
+  # Sunrise-Start
+  - type: AutoRecharge
+    rechargeDuration: 300
+  # Sunrise-End
   - type: InstantAction
     useDelay: 5 # Sunrise-Edit
     itemIconStyle: BigAction

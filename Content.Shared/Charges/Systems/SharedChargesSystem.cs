@@ -1,3 +1,4 @@
+using Content.Shared.Actions;
 using Content.Shared.Actions.Events;
 using Content.Shared.Charges.Components;
 using Content.Shared.Examine;
@@ -9,6 +10,7 @@ namespace Content.Shared.Charges.Systems;
 public abstract class SharedChargesSystem : EntitySystem
 {
     [Dependency] protected readonly IGameTiming _timing = default!;
+    [Dependency] private readonly SharedActionsSystem _actionsSystem = default!;
 
     /*
      * Despite what a bunch of systems do you don't need to continuously tick linear number updates and can just derive it easily.
@@ -64,6 +66,12 @@ public abstract class SharedChargesSystem : EntitySystem
 
     private void OnChargesPerformed(Entity<LimitedChargesComponent> ent, ref ActionPerformedEvent args)
     {
+        if (HasComp<DeleteWithoutChargesComponent>(ent.Owner) && (ent.Comp.LastCharges - 1 <= 0))
+        {
+            _actionsSystem.RemoveAction(args.Performer, ent.Owner);
+            return;
+        }
+
         AddCharges((ent.Owner, ent.Comp), -1);
     }
 
