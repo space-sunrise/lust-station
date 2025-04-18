@@ -142,7 +142,7 @@ public sealed class RadioSystem : EntitySystem
             NetEntity.Invalid,
             null);
         var chatMsg = new MsgChatMessage { Message = chat };
-        var ev = new RadioReceiveEvent(FormattedMessage.RemoveMarkupPermissive(message), messageSource, channel, radioSource, chatMsg, []); // Sunrise-TTS
+        var ev = new RadioReceiveEvent(FormattedMessage.RemoveMarkupPermissive(message), messageSource, channel, radioSource, chatMsg);
 
         var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
         RaiseLocalEvent(ref sendAttemptEv);
@@ -153,6 +153,7 @@ public sealed class RadioSystem : EntitySystem
         var hasActiveServer = HasActiveServer(sourceMapId, channel.ID);
         var sourceServerExempt = _exemptQuery.HasComp(radioSource);
 
+        var receivers = new List<EntityUid>(); // Sunrise-TTS
         var radioQuery = EntityQueryEnumerator<ActiveRadioComponent, TransformComponent>();
         while (canSend && radioQuery.MoveNext(out var receiver, out var radio, out var transform))
         {
@@ -180,9 +181,10 @@ public sealed class RadioSystem : EntitySystem
 
             // send the message
             RaiseLocalEvent(receiver, ref ev);
+            receivers.Add(receiver); // Sunrise-TTS
         }
 
-        RaiseLocalEvent(new RadioSpokeEvent(messageSource, message, ev.Receivers.ToArray())); // Sunrise-TTS
+        RaiseLocalEvent(new RadioSpokeEvent(messageSource, message, receivers.ToArray())); // Sunrise-TTS
 
         if (name != Name(messageSource))
             _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Radio message from {ToPrettyString(messageSource):user} as {name} on {channel.LocalizedName}: {message}");
