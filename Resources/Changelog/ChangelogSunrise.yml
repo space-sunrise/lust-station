@@ -14848,3 +14848,16 @@
   id: 1017
   time: '2025-04-18T21:21:15.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1856
+- author: agranomys
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D \u044D\u0432\u0430\u043A\u0443\
+      \u0430\u0446\u0438\u043E\u043D\u043D\u044B\u0439 \u0448\u0430\u0442\u0442\u043B\
+      \ \u043D\u0430 \u0441\u0442\u0430\u043D\u0446\u0438\u0438 loop."
+    type: Tweak
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u0440\u0430\
+      \u0437\u043B\u0438\u0447\u043D\u044B\u0435 \u043D\u0435\u0434\u043E\u0447\u0435\
+      \u0442\u044B \u0441\u0442\u0430\u043D\u0446\u0438\u0438 loop."
+    type: Fix
+  id: 1018
+  time: '2025-04-18T21:22:26.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1854
