@@ -1,33 +1,4 @@
 ﻿Entries:
-- author: Plykiya
-  changes:
-  - message: Cargo armor crate now correctly indicates that it contains bulletproof
-      vests.
-    type: Fix
-  id: 7736
-  time: '2024-12-19T17:21:28.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33414
-- author: Piras314
-  changes:
-  - message: Removed the nuke song "Clearly Nuclear" on request of the author.
-    type: Remove
-  id: 7737
-  time: '2024-12-20T14:35:55.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33971
-- author: VlaDOS1408
-  changes:
-  - message: The Communication Console UI is now resizable.
-    type: Fix
-  id: 7738
-  time: '2024-12-20T16:17:13.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33655
-- author: RatIRL
-  changes:
-  - message: Added All-Hostile ballistic turret.
-    type: Add
-  id: 7739
-  time: '2024-12-20T20:34:53.0000000+00:00'
-  url: https://github.com/space-wizards/space-station-14/pull/33970
 - author: Beck Thompson
   changes:
   - message: Defibrillator cooldowns are now clearly visible.
@@ -3906,3 +3877,38 @@
   id: 8236
   time: '2025-04-18T19:56:57.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/34627
+- author: Ilya246
+  changes:
+  - message: The actions hotbar now has up to 10 more hotkeys accessible through the
+      shift key.
+    type: Add
+  id: 8237
+  time: '2025-04-18T22:45:20.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/33872
+- author: lzk228
+  changes:
+  - message: Fixed breaking small mobs (e.g. mice) mask after getting into an air
+      flow.
+    type: Fix
+  id: 8238
+  time: '2025-04-18T22:52:09.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/33888
+- author: YoungThugSS14
+  changes:
+  - message: The Diona and Gingerbread species now get unique typing indicators
+    type: Add
+  id: 8239
+  time: '2025-04-18T23:19:05.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/36126
+- author: Rainbeon
+  changes:
+  - message: Fixed Revolvers not correctly reloading from Speedloaders when the Revolver
+      is partially loaded.
+    type: Fix
+  - message: Speedloaders will now prioritize loading the active and upcoming chambers
+      in a Revolver when the Speedloader is only partially filled, rather than the
+      ones farthest away.
+    type: Fix
+  id: 8240
+  time: '2025-04-18T23:26:44.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/32396
