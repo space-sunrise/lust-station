@@ -182,25 +182,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             profile = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
         }
 
-        if (loadout != null)
-        {
-            EquipRoleLoadout(entity.Value, loadout, roleProto!);
-        }
-
-        if (prototype?.StartingGear != null)
-        {
-            var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
-            EquipStartingGear(entity.Value, startingGear, raiseEvent: false);
-        }
-
-        var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
-        RaiseLocalEvent(entity.Value, ref gearEquippedEv);
-
         if (profile != null)
         {
-            if (prototype != null)
-                SetPdaAndIdCardData(entity.Value, profile.Name, prototype, station);
-
             _humanoidSystem.LoadProfile(entity.Value, profile);
             _metaSystem.SetEntityName(entity.Value, profile.Name);
 
@@ -226,6 +209,25 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 }
             }
             // Sunrise-End
+        }
+
+        if (loadout != null)
+        {
+            EquipRoleLoadout(entity.Value, loadout, roleProto!);
+        }
+
+        if (prototype?.StartingGear != null)
+        {
+            var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
+            EquipStartingGear(entity.Value, startingGear, raiseEvent: false);
+        }
+
+        var gearEquippedEv = new StartingGearEquippedEvent(entity.Value);
+        RaiseLocalEvent(entity.Value, ref gearEquippedEv);
+
+        if (prototype != null && TryComp<MetaDataComponent>(entity.Value, out var metaData))
+        {
+            SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station);
         }
 
         DoJobSpecials(job, entity.Value);

@@ -137,11 +137,7 @@ public sealed class ReflectSystem : EntitySystem
             _transform.SetLocalRotation(projectile, newRot.ToAngle());
         }
 
-        if (_netManager.IsServer)
-        {
-            _popup.PopupEntity(Loc.GetString("reflect-shot"), user);
-            _audio.PlayPvs(reflect.SoundOnReflect, user, AudioHelpers.WithVariation(0.05f, _random));
-        }
+        PlayAudioAndPopup(reflect, user);
 
         if (Resolve(projectile, ref projectileComp, false))
         {
@@ -173,6 +169,16 @@ public sealed class ReflectSystem : EntitySystem
         {
             args.Direction = dir.Value;
             args.Reflected = true;
+        }
+    }
+
+    private void PlayAudioAndPopup(ReflectComponent reflect, EntityUid user)
+    {
+        // Can probably be changed for prediction
+        if (_netManager.IsServer)
+        {
+            _popup.PopupEntity(Loc.GetString("reflect-shot"), user);
+            _audio.PlayPvs(reflect.SoundOnReflect, user);
         }
     }
 
@@ -233,22 +239,10 @@ public sealed class ReflectSystem : EntitySystem
         }
         // Sunrise-End
 
-        if (_netManager.IsServer)
-        {
-            _popup.PopupEntity(Loc.GetString("reflect-shot"), user);
-            _audio.PlayPvs(reflect.SoundOnReflect, user, AudioHelpers.WithVariation(0.05f, _random));
-        }
-        if (reflect.OverrideAngle is not null)
-        {
-            var overrideAngle = _transform.GetWorldRotation(reflector)  + reflect.OverrideAngle.Value;
-            newDirection = new Vector2((float)Math.Cos(overrideAngle), (float)Math.Sin(overrideAngle));
-            newDirection = newDirection.Value.Normalized();
-        }
-        else
-        {
-            var spread = _random.NextAngle(-reflect.Spread / 2, reflect.Spread / 2);
-            newDirection = -spread.RotateVec(direction);
-        }
+        PlayAudioAndPopup(reflect, user);
+
+        var spread = _random.NextAngle(-reflect.Spread / 2, reflect.Spread / 2);
+        newDirection = -spread.RotateVec(direction);
 
         if (shooter != null)
             _adminLogger.Add(LogType.HitScanHit, LogImpact.Medium, $"{ToPrettyString(user)} reflected hitscan from {ToPrettyString(shotSource)} shot by {ToPrettyString(shooter.Value)}");

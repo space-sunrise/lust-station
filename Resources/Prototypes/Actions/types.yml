@@ -102,13 +102,12 @@
   name: Break Free
   description: Activating your freedom implant will free you from any hand restraints
   components:
+  - type: LimitedCharges
+    maxCharges: 3
+    renewCharges: true # Sunrise-Edit
+    renewChargeDelay: 120 # Sunrise-Edit
   - type: InstantAction
-    charges: 3
-    # Sunrise-Start
-    renewCharges: true
-    renewChargeDelay: 120
-    useDelay: 5
-    # Sunrise-End
+    useDelay: 5 # Sunrise-Edit
     checkCanInteract: false
     itemIconStyle: BigAction
     priority: -20
@@ -135,13 +134,12 @@
   name: Activate EMP
   description: Triggers a small EMP pulse around you
   components:
+  - type: LimitedCharges
+    maxCharges: 3
+    renewCharges: true # Sunrise-Edit
+    renewChargeDelay: 120 # Sunrise-Edit
   - type: InstantAction
     checkCanInteract: false
-    charges: 3
-    # Sunrise-Start
-    renewCharges: true
-    renewChargeDelay: 120
-    # Sunrise-End
     useDelay: 5
     itemIconStyle: BigAction
     priority: -20
@@ -175,13 +173,12 @@
   name: SCRAM!
   description: Randomly teleports you within a large distance.
   components:
+  - type: LimitedCharges
+    maxCharges: 2
+    renewCharges: true # Sunrise-Edit
+    renewChargeDelay: 360 # Sunrise-Edit
   - type: InstantAction
     checkCanInteract: false
-    charges: 2
-    # Sunrise-Start
-    renewCharges: true
-    renewChargeDelay: 360 #Sunrise
-    # Sunrise-End
     useDelay: 5
     itemIconStyle: BigAction
     priority: -20
@@ -197,13 +194,12 @@
   components:
   - type: ConfirmableAction
     popup: dna-scrambler-action-popup
+  - type: LimitedCharges
+    maxCharges: 1
+    renewCharges: true # Sunrise-Edit
+    renewChargeDelay: 300 # Sunrise-Edit
   - type: InstantAction
-    charges: 1
-    # Sunrise-Start
-    renewCharges: true
-    renewChargeDelay: 300
-    useDelay: 5
-    # Sunrise-End
+    useDelay: 5 # Sunrise-Edit
     itemIconStyle: BigAction
     priority: -20
     icon:
