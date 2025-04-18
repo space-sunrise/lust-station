@@ -4,6 +4,7 @@ using Content.Server.Popups;
 using Content.Server.Roles;
 using Content.Shared.Database;
 using Content.Shared.Implants;
+using Content.Shared.Implants.Components;
 using Content.Shared.Mindshield.Components;
 using Content.Shared.Revolutionary.Components;
 using Robust.Shared.Containers;
@@ -42,7 +43,7 @@ public sealed class MindShieldSystem : EntitySystem
     // Sunrise-Start
     public void ImplantCheck(EntityUid uid, SubdermalImplantComponent comp, ref ImplantEjectEvent ev)
     {
-        if (_tag.HasTag(ev.Implant, MindShieldTag) && ev.Implanted != null)
+        if (HasComp<MindShieldImplantComponent>(ev.Implant) && ev.Implanted != null)
         {
             RemCompDeferred<MindShieldComponent>(ev.Implanted.Value);
         }
