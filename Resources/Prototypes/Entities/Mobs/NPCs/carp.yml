@@ -15,7 +15,7 @@
           true
     - type: NpcFactionMember
       factions:
-      - Carps
+      - Carps # Sunrise-Edit
     - type: Sprite
       drawdepth: Mobs
       sprite: Mobs/Aliens/Carps/space.rsi
