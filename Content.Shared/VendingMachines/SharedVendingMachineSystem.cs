@@ -408,7 +408,8 @@ public abstract partial class SharedVendingMachineSystem : EntitySystem
                 }
 
                 // Sunrise-start
-                if (TryComp<PlayerCountDependentStockComponent>(uid, out var dependentStockComponent))
+                if (TryComp<PlayerCountDependentStockComponent>(uid, out var dependentStockComponent) &&
+                    type == InventoryType.Regular)
                 {
                     restock = (uint) Math.Floor(
                         amount + Math.Pow(_player.PlayerCount, 0.8f) * dependentStockComponent.Coefficient);
