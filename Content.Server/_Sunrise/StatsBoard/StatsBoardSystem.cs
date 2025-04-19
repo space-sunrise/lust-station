@@ -40,6 +40,7 @@ public sealed class StatsBoardSystem : EntitySystem
     [Dependency] private readonly MindSystem _mindSystem = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
 
     private (EntityUid? killer, EntityUid? victim, TimeSpan time) _firstMurder = (null, null, TimeSpan.Zero);
     private EntityUid? _hamsterKiller;
@@ -67,10 +68,10 @@ public sealed class StatsBoardSystem : EntitySystem
 
     private void OnMindAdded(EntityUid uid, ActorComponent comp, MindAddedMessage ev)
     {
-        if (_statisticEntries.ContainsKey(uid) || ev.Mind.Comp.Session == null || HasComp<GhostComponent>(uid))
+        if (_statisticEntries.ContainsKey(uid) || ev.Mind.Comp.UserId == null || HasComp<GhostComponent>(uid))
             return;
 
-        var value = new StatisticEntry(MetaData(uid).EntityName, ev.Mind.Comp.Session.UserId);
+        var value = new StatisticEntry(MetaData(uid).EntityName, ev.Mind.Comp.UserId.Value);
         _statisticEntries.Add(uid, value);
     }
 
@@ -750,9 +751,9 @@ public sealed class StatsBoardSystem : EntitySystem
     {
         string? username = null;
 
-        if (_mindSystem.TryGetMind(uid, out var mindId, out var mind))
+        if (_mindSystem.TryGetMind(uid, out var mindId, out var mind) && _player.TryGetSessionById(mind.UserId, out var session))
         {
-            username = mind.Session?.Name;
+            username = session.Name;
         }
 
         return username;

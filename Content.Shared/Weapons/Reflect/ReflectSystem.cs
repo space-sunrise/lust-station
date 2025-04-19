@@ -107,19 +107,37 @@ public sealed class ReflectSystem : EntitySystem
             return false;
         }
 
-        var rotation = _random.NextAngle(-reflect.Spread / 2, reflect.Spread / 2).Opposite();
-        var existingVelocity = _physics.GetMapLinearVelocity(projectile, component: physics);
-        var relativeVelocity = existingVelocity - _physics.GetMapLinearVelocity(user);
-        var newVelocity = rotation.RotateVec(relativeVelocity);
+        // Sunrise-Start
+        if (reflect.OverrideAngle is not null)
+        {
+            var overrideAngle = _transform.GetWorldRotation(reflector) + reflect.OverrideAngle.Value;
 
-        // Have the velocity in world terms above so need to convert it back to local.
-        var difference = newVelocity - existingVelocity;
+            var existingVelocity = _physics.GetMapLinearVelocity(projectile, component: physics);
+            var relativeVelocity = existingVelocity - _physics.GetMapLinearVelocity(user);
+            var speed = relativeVelocity.Length();
 
-        _physics.SetLinearVelocity(projectile, physics.LinearVelocity + difference, body: physics);
+            var newVelocity = new Vector2((float)Math.Cos(overrideAngle), (float)Math.Sin(overrideAngle)) * speed;
 
-        var locRot = Transform(projectile).LocalRotation;
-        var newRot = rotation.RotateVec(locRot.ToVec());
-        _transform.SetLocalRotation(projectile, newRot.ToAngle());
+            var difference = newVelocity - existingVelocity;
+            _physics.SetLinearVelocity(projectile, physics.LinearVelocity + difference, body: physics);
+            _transform.SetLocalRotation(projectile, overrideAngle);
+        }
+        else
+        {
+            var rotation = _random.NextAngle(-reflect.Spread / 2, reflect.Spread / 2).Opposite();
+            var existingVelocity = _physics.GetMapLinearVelocity(projectile, component: physics);
+            var relativeVelocity = existingVelocity - _physics.GetMapLinearVelocity(user);
+            var newVelocity = rotation.RotateVec(relativeVelocity);
+
+            var difference = newVelocity - existingVelocity;
+
+            _physics.SetLinearVelocity(projectile, physics.LinearVelocity + difference, body: physics);
+
+            var locRot = Transform(projectile).LocalRotation;
+            var newRot = rotation.RotateVec(locRot.ToVec());
+            _transform.SetLocalRotation(projectile, newRot.ToAngle());
+        }
+        // Sunrise-End
 
         PlayAudioAndPopup(reflect, user);
 

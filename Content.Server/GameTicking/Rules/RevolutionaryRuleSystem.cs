@@ -183,7 +183,7 @@ public sealed class RevolutionaryRuleSystem : GameRuleSystem<RevolutionaryRuleCo
 
         // Check if the user has a ban on "Revolutionary"
         // Check if the user has a ban on "Revolutionary"
-        if (mind != null && mind.Session != null && _banManager.IsAntagBanned(mind.Session.UserId, "Rev"))
+        if (mind != null && mind.UserId.HasValue && _banManager.IsAntagBanned(mind.UserId.Value, "Rev"))
         {
             KillDueToBan(ev.Target);
             return;

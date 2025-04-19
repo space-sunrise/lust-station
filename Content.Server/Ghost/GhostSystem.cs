@@ -219,8 +219,8 @@ namespace Content.Server.Ghost
 
             //OnGhostAttempt(mindId, component.CanReturn, mind: mind);
             // Sunrise-Edit
-            if (mind.Session != null)
-                OpenAcceptEui(mindId, mind.Session);
+            if (_player.TryGetSessionById(mind.UserId, out var session))
+                OpenAcceptEui(mindId, session);
         }
 
         private void OnGhostStartup(EntityUid uid, GhostComponent component, ComponentStartup args)
@@ -632,8 +632,8 @@ namespace Content.Server.Ghost
 
             var ghost = SpawnGhost((mindId, mind), position, canReturn);
             // Sunrise-Start
-            if (mind.Session != null)
-                _newLifeSystem.SetNextAllowRespawn(mind.Session.UserId, _gameTiming.CurTime + TimeSpan.FromMinutes(_newLifeSystem.NewLifeTimeout));
+            if (mind.UserId.HasValue)
+                _newLifeSystem.SetNextAllowRespawn(mind.UserId.Value, _gameTiming.CurTime + TimeSpan.FromMinutes(_newLifeSystem.NewLifeTimeout));
             // Sunrise-End
 
             if (ghost == null)
