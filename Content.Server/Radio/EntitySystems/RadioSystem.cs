@@ -130,7 +130,7 @@ public sealed class RadioSystem : EntitySystem
         // Sunrise-Start
         if (GetIdCardIsBold(messageSource))
         {
-            message = $"[bold]{message}[/bold]";
+            content = $"[bold]{content}[/bold]";
         }
         // Sunrise-End
 
