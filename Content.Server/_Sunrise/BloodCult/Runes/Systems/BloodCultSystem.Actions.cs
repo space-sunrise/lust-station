@@ -303,7 +303,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             var armor = Spawn(ArmorPrototypeId, coordinates);
             var shoes = Spawn(ShoesPrototypeId, coordinates);
             var bola = Spawn(BolaPrototypeId, coordinates);
-            var blade = Spawn(cultPrototype.RitualDaggerProto, coordinates);
+            var blade = Spawn(cultPrototype.CultBladeProto, coordinates);
 
             _inventorySystem.TryUnequip(args.Target, "head");
             _inventorySystem.TryUnequip(args.Target, "outerClothing");

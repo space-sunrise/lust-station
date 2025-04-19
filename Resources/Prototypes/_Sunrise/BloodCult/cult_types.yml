@@ -2,6 +2,7 @@
   id: NarsieCult
   cultType: Narsie
   ritualDaggerProto: NarsieRitualDagger
+  cultBladeProto: NarsieEldritchBlade
   godProto: Narsie
   startingItems:
   - NarsieRitualDagger
@@ -11,6 +12,7 @@
   id: NarbeeCult
   cultType: Narbee
   ritualDaggerProto: NarbeeRitualDagger
+  cultBladeProto: NarbeeEldritchBlade
   godProto: Narbee
   startingItems:
   - NarbeeRitualDagger
@@ -20,6 +22,7 @@
   id: ReaperCult
   cultType: Reaper
   ritualDaggerProto: ReaperRitualDagger
+  cultBladeProto: ReaperEldritchBlade
   godProto: Reaper
   startingItems:
   - ReaperRitualDagger

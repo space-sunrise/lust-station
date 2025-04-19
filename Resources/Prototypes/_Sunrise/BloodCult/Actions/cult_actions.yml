@@ -55,9 +55,9 @@
       state: stun
     itemIconStyle: NoItem
     event: !type:CultStunTargetActionEvent
-    charges: 1
-    renewCharges: false
-    deleteActionsWithoutCharges: true
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: DeleteWithoutCharges
 
 - type: entity
   id: ActionShadowShackles
@@ -75,9 +75,9 @@
       state: shackles
     itemIconStyle: NoItem
     event: !type:CultShadowShacklesTargetActionEvent
-    charges: 4
-    renewCharges: false
-    deleteActionsWithoutCharges: true
+  - type: LimitedCharges
+    maxCharges: 4
+  - type: DeleteWithoutCharges
 
 
 - type: entity
@@ -91,9 +91,9 @@
       state: emp
     event: !type:CultEmpPulseTargetActionEvent
     useDelay: 5
-    charges: 1
-    renewCharges: false
-    deleteActionsWithoutCharges: true
+  - type: LimitedCharges
+    maxCharges: 1
+  - type: DeleteWithoutCharges
 
 - type: entity
   id: ActionCultTeleport
@@ -133,9 +133,9 @@
         state: equip
       itemIconStyle: NoItem
       event: !type:CultSummonCombatEquipmentTargetActionEvent
-      charges: 1
-      renewCharges: false
-      deleteActionsWithoutCharges: true
+    - type: LimitedCharges
+      maxCharges: 1
+    - type: DeleteWithoutCharges
 
 - type: entity
   id: InstantActionSummonCultDagger
@@ -148,9 +148,9 @@
         state: blood_dagger
       event: !type:CultSummonDaggerActionEvent
       useDelay: 5
-      charges: 1
-      renewCharges: false
-      deleteActionsWithoutCharges: true
+    - type: LimitedCharges
+      maxCharges: 1
+    - type: DeleteWithoutCharges
 
 - type: entity
   id: ActionCultReturnBloodSpear

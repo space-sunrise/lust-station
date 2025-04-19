@@ -329,7 +329,7 @@ public sealed class HTNSystem : EntitySystem
             component.PlanAccumulator -= frameTime;
 
         // We'll still try re-planning occasionally even when we're updating in case new data comes in.
-        if (component.PlanAccumulator <= 0f)
+        if ((component.ConstantlyReplan || component.Plan is null) && component.PlanAccumulator <= 0f)
         {
             RequestPlan(component);
         }
@@ -463,7 +463,7 @@ public sealed class HTNSystem : EntitySystem
         if (component.PlanningJob != null)
             return;
 
-        component.PlanAccumulator += component.PlanCooldown;
+        component.PlanAccumulator = component.PlanCooldown;
         var cancelToken = new CancellationTokenSource();
         var branchTraversal = component.Plan?.BranchTraversalRecord;
 

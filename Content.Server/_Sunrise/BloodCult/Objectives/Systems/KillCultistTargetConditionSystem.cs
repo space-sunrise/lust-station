@@ -3,6 +3,7 @@ using System.Linq;
 using Content.Server._Sunrise.BloodCult.GameRule;
 using Content.Server._Sunrise.BloodCult.Objectives.Components;
 using Content.Shared.Mind;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Objectives.Components;
 using Content.Shared.Roles.Jobs;
 
@@ -13,6 +14,8 @@ public sealed class KillCultistTargetsConditionSystem : EntitySystem
     [Dependency] private readonly SharedJobSystem _job = default!;
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly EntityManager _entityManager = default!;
 
     public override void Initialize()
     {
@@ -84,12 +87,11 @@ public sealed class KillCultistTargetsConditionSystem : EntitySystem
 
     private bool GetTagretProgress(EntityUid target)
     {
-        // deleted or gibbed or something, counts as dead
-        if (!TryComp<MindComponent>(target, out var mind) || mind.OwnedEntity == null)
+        // цель мертва или гибнута, в идеале перенести в sacrifice руны
+        if (_mobState.IsDead(target) || !_entityManager.EntityExists(target))
             return true;
 
-        // dead is success
-        return _mind.IsCharacterDeadIc(mind);
+        return false;
     }
 
     private float KillCultistTargetsProgress(EntityUid? mindId)

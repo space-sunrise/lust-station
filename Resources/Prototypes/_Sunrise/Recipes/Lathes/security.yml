@@ -69,16 +69,6 @@
     Steel: 145
 
 - type: latheRecipe
-  id: BoxShotgunFlare
-  result: BoxShotgunFlare
-  categories:
-  - Ammo
-  completetime: 25
-  materials:
-    Steel: 150
-    Plastic: 150
-
-- type: latheRecipe
   id: MagazineM16A4
   result: MagazineM16A4
   categories:
@@ -664,3 +654,12 @@
     Plasma: 1200
     Glass: 300
     Plastic: 50
+
+- type: latheRecipe
+  parent: BaseWeaponRecipeLong
+  id: WeaponGunLaserCarbineSemi
+  result: WeaponGunLaserCarbineSemi
+  materials:
+    Steel: 2000
+    Plastic: 500
+    Gold: 500

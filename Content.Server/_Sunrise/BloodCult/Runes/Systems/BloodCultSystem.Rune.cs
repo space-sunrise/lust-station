@@ -177,15 +177,9 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                 if (rule == null)
                     return false;
 
-                var targetsKilled = true;
+                var targetsKill = _bloodCultRuleSystem.TargetsKill();
 
-                var targets = _bloodCultRuleSystem.GetTargets();
-                foreach (var mindComponent in targets)
-                {
-                    targetsKilled = _mindSystem.IsCharacterDeadIc(mindComponent);
-                }
-
-                if (!targetsKilled)
+                if (!targetsKill)
                 {
                     _popupSystem.PopupEntity("Цели не были принесены в жертву.", whoCalled, whoCalled);
                     return false;
@@ -426,20 +420,13 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
 
             bool result;
 
-            var cultTargets = _bloodCultRuleSystem.GetTargets();
+            var cultTargets = rule.CultTargets;
 
             if (state.CurrentState != MobState.Dead)
             {
                 var hasMind = _mindSystem.TryGetMind(victim.Value, out var mindId, out var mind);
 
-                var isTarget = false;
-                if (mind != null)
-                {
-                    foreach (var mindComponent in cultTargets)
-                    {
-                        isTarget = mind.Session == mindComponent.Session;
-                    }
-                }
+                var isTarget = cultTargets.Contains(victim.Value);
 
                 var jobAllowConvert = !HasComp<MindShieldComponent>(victim.Value);
 

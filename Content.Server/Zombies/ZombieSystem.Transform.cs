@@ -40,7 +40,9 @@ using Content.Shared.Prying.Components;
 using Content.Shared.Traits.Assorted;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Ghost.Roles.Components;
+using Content.Shared.Roles;
 using Content.Shared.Tag;
+using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.Zombies;
@@ -66,6 +68,8 @@ public sealed partial class ZombieSystem
     [Dependency] private readonly NPCSystem _npc = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly NameModifierSystem _nameMod = default!;
+    [Dependency] private readonly SharedRoleSystem _roles = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly GhostSystem _ghostSystem = default!;
     [Dependency] private readonly IBanManager _banManager = default!;
 
@@ -255,7 +259,7 @@ public sealed partial class ZombieSystem
 
         //He's gotta have a mind
         var hasMind = _mind.TryGetMind(target, out var mindId, out var mind);
-        if (hasMind && _mind.TryGetSession(mindId, out var session))
+        if (hasMind && mind != null && _player.TryGetSessionById(mind.UserId, out var session))
         {
             // Check if the user has a ban on "Zombie"
             if (_banManager.IsAntagBanned(session.UserId, zombiecomp.ZombieRoleId))
