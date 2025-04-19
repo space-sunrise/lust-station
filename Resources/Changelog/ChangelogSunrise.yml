@@ -14918,3 +14918,19 @@
   id: 1022
   time: '2025-04-19T09:41:03.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1864
+- author: SplikZerys
+  changes:
+  - message: "\u0422\u0435\u043F\u0435\u0440\u044C \u0432 \u0433\u043E\u043B\u043E\
+      \u0441\u043E\u0432\u0430\u043D\u0438\u044F\u0445 \u0437\u0430 \u043A\u0430\u0440\
+      \u0442\u0443 \u0432\u0441\u0435\u0433\u0434\u0430 \u0438\u043C\u0435\u044E\u0442\
+      \u0441\u044F \u0414\u0435\u043B\u044C\u0442\u0430, \u0411\u043E\u043A\u0441\
+      \ \u0438 \u041C\u0435\u0442\u0430."
+    type: Tweak
+  - message: "\u0411\u0430\u0440\u0440\u0430\u0442\u0440\u0438, \u041B\u0443\u043F\
+      \ \u0438 \u041F\u0430\u043A\u0435\u0434 \u043F\u043E\u043B\u0443\u0447\u0438\
+      \u043B\u0438 \u0431\u043E\u043B\u0435\u0435 \u044D\u043C\u043A\u0438\u0435 \u0421\
+      \u041C\u042D\u0421\u044B"
+    type: Add
+  id: 1023
+  time: '2025-04-19T13:11:41.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1870
