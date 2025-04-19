@@ -15093,3 +15093,12 @@
   id: 1033
   time: '2025-04-19T23:44:56.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1876
+- author: agranomys
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D material silo \u0432\
+      \ \u043E\u0442\u0434\u0435\u043B \u0420\u041D\u0414 \u043D\u0430 \u0441\u0442\
+      \u0430\u043D\u0446\u0438\u0438 loop."
+    type: Add
+  id: 1034
+  time: '2025-04-19T23:54:00.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1882
