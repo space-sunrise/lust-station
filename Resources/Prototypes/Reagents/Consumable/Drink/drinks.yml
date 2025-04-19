@@ -670,3 +670,18 @@
         - !type:OrganType
           type: Dwarf
           shouldHave: false
+
+- type: reagent
+  id: Tortuga
+  name: reagent-name-tortuga
+  parent: BaseDrink
+  desc: reagent-desc-tortuga
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: tortuga
+  color: "#1c8c40"
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/tortuga.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false

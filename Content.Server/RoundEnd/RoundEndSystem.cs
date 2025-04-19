@@ -20,6 +20,7 @@ using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
+using Content.Shared.DeviceNetwork.Components;
 using Timer = Robust.Shared.Timing.Timer;
 
 namespace Content.Server.RoundEnd
