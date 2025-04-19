@@ -3,7 +3,6 @@
   mapName: 'Packed'
   mapPath: /Maps/_Sunrise/Station/packed.yml
   minPlayers: 0
-  maxPlayers: 35
   stations:
     Packed:
       stationProto: StandardNanotrasenStation
