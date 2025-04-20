@@ -2,7 +2,7 @@
   id: SunrisePlasma
   mapName: 'Plasma'
   mapPath: /Maps/_Sunrise/Station/plasma.yml
-  minPlayers: 40
+  minPlayers: 0
   maxRandomOffset: 0
   randomRotation: false
   stations:

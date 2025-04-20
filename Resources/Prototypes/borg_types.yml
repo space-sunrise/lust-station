@@ -124,7 +124,7 @@
   dummyPrototype: BorgChassisMining
 
   # Functional
-  extraModuleCount: 4
+  extraModuleCount: 5
   moduleWhitelist:
     tags:
     - BorgModuleGeneric
@@ -133,6 +133,7 @@
   defaultModules:
   - BorgModuleStandart
   - BorgModuleMining
+  - BorgModuleGrapplingGun
   - BorgModuleGPS
   - BorgModuleJetpack # Sunrise-Edit
 

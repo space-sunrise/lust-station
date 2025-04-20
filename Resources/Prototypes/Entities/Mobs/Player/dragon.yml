@@ -32,7 +32,7 @@
         true
   - type: NpcFactionMember
     factions:
-    - Carps
+    - Dragon
   - type: Speech
     speechVerb: LargeMob
   - type: CombatMode
@@ -194,6 +194,13 @@
   - type: GuideHelp
     guides:
     - MinorAntagonists
+  # Sunrise-start
+  - type: Tag
+    tags:
+    - CannotSuicide
+    - DoorBumpOpener
+    - CarpRiftHealTarget
+  # Sunrise-end
 
 - type: entity
   categories: [ HideSpawnMenu ]
