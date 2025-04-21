@@ -391,6 +391,7 @@
 - type: ghostTheme
   id: HoloGirl
   name: ghost-theme-holo-girl
+  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/holo_girl.rsi
     state: holo_animated
