@@ -15121,3 +15121,12 @@
     type: Tweak
   id: 1035
   time: '2025-04-21T04:35:13.185499+00:00'
+- author: banumbas
+  changes:
+  - message: "\u041D\u043E\u0432\u0430\u044F \u0433\u043E\u0441\u0442 \u0442\u0435\
+      \u043C\u0430 \u0434\u043B\u044F \u043A\u043E\u043D\u0442\u0440\u0438\u0431\u044C\
+      \u044E\u0442\u043E\u0440\u043E\u0432."
+    type: Add
+  id: 1036
+  time: '2025-04-21T04:38:02.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1897
