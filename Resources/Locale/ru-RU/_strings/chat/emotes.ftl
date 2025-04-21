@@ -33,6 +33,8 @@ chat-emote-name-robotbeep = Робот
 chat-emote-name-yawn = Зевать
 chat-emote-name-snore = Храпеть
 chat-emote-name-whines = Скулить
+chat-emote-name-moan = Стонать
+
 # Сообщение
 chat-emote-msg-scream = кричит!
 chat-emote-msg-laugh = смеётся
@@ -68,3 +70,4 @@ chat-emote-msg-monkeyscreeches = кричит
 chat-emote-msg-yawn = зевает
 chat-emote-msg-snore = храпит
 chat-emote-msg-whines = скулит!
+chat-emote-msg-moan = стонет
