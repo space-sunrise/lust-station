@@ -17310,7 +17310,7 @@ entities:
     - type: Transform
       pos: 60.1106,-33.548744
       parent: 2
-- proto: Bed
+- proto: DoubleBed
   entities:
   - uid: 479
     components:
