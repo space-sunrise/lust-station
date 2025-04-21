@@ -15130,3 +15130,19 @@
   id: 1036
   time: '2025-04-21T04:38:02.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1897
+- author: justjhel
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0437\u0430\u0449\
+      \u0438\u0442\u0430 \u043E\u0442 \u0432\u0437\u0440\u044B\u0432\u043E\u0432 \u0438\
+      \ \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u043E\u0433\
+      \u043E \u0443\u0440\u043E\u043D\u0430 \u0434\u0440\u0430\u043A\u043E\u043D\u0443"
+    type: Add
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u0437\u0430\u0449\u0438\
+      \u0442\u0430 \u043E\u0442 \u043C\u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\
+      \u043A\u043E\u0433\u043E \u0438 \u0444\u0438\u0437\u0438\u0447\u0435\u0441\u043A\
+      \u043E\u0433\u043E \u0443\u0440\u043E\u043D\u0430 \u0434\u0440\u0430\u043A\u043E\
+      \u043D\u0443."
+    type: Tweak
+  id: 1037
+  time: '2025-04-21T04:39:49.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1889
