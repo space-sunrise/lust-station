@@ -26,3 +26,13 @@
   - type: Clothing
     sprite: _Lust/ERP/Stuff/loona.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEroform
+  name: Erotic business form
+  description: A red office shirt, unbuttoned at the chest, and a black jacket, which are complemented by skinny shorts. It will suit you for a long and passionate work with documents.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/eroform.rsi
+  - type: Clothing
+    sprite: _Lust/ERP/Stuff/eroform.rsi
