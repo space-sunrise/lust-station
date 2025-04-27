@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingAlcoholichka
+  name: Alcoholic T-shirt
+  description: Perfect for a hat with earflaps.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/alcoholichka.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/alcoholichka.rsi
