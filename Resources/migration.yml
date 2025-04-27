@@ -614,7 +614,7 @@ MediumXenoArtifactItem: ComplexXenoArtifactItem
 VariedXenoArtifactItem: ComplexXenoArtifactItem
 
 # 2025-04-26
-ComputerCargoShuttle: ComputerShuttleCargo
+#ComputerCargoShuttle: ComputerShuttleCargo
 CargoShuttleComputerCircuitboard: CargoShuttleConsoleCircuitboard
 
 # Sunrise migrations

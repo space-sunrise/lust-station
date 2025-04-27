@@ -29,8 +29,6 @@
     pilotBlacklist:
       species:
       - Felinid
-    openStateDirections: 4
-    brokenStateDirections: 1
   - type: MeleeWeapon
     hidden: true
     attackRate: 1

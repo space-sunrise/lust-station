@@ -506,7 +506,7 @@
     - MopItem
     - BorgBucket
     - BorgSprayBottle
-    - HoloprojectorBorg
+    - HoloprojectorJanitorBorg # Sunrise-Edit
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: cleaning-module }
 

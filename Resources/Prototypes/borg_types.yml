@@ -118,7 +118,7 @@
   - BorgModuleStandart
   - BorgModuleMining
   - BorgModuleTraversal
-  - BorgModuleGPS
+  - BorgModuleAppraisal
   - BorgModuleJetpack # Sunrise-Edit
 
   radioChannels:
@@ -167,7 +167,6 @@
   - BorgModuleStandart
   - BorgModuleAdvancedCleaning # Sunrise-Edit
   - BorgModuleCustodial
-  - BorgModuleLightReplacer
 
   radioChannels:
   - Science
@@ -215,8 +214,7 @@
 
   defaultModules:
   - BorgModuleStandart
-  - BorgModuleAdvancedTreatment # Sunrise-Edit
-  - BorgModuleDefibrillator # Sunrise-Edit
+  - BorgModuleChemical
   - BorgModuleTopicals
   - BorgModuleRescue
 

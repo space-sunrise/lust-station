@@ -22,8 +22,6 @@
 
 - type: constructionGraph
   id: LockerMechConstruction
-  name: LockerMech 
-  description: Create LockerMech.
   start: start
   graph:
   - node: start
@@ -108,10 +106,10 @@
           data: 6
       - material: Steel
         amount: 5
-        name: step-lockermech-treads
-        icon:
-          sprite: "Structures/conveyor.rsi"
-          state: "conveyor_loose"
+        #name: step-lockermech-treads
+        #icon:
+        #  sprite: "Structures/conveyor.rsi"
+        #  state: "conveyor_loose"
         doAfter: 7
         completed:
         - !type:VisualizerDataInt
@@ -135,19 +133,42 @@
           data: 9
       - tag: CapacitorStockPart
         name: step-lockermech-capacitors
-        amount: 3
         icon:
-          sprite: "Objects/Misc/stock_parts.rsi"
-          state: "capacitor"
-        doAfter: 3
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 1
+
+      - tag: CapacitorStockPart
+        name: step-lockermech-capacitors
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 1
+
+      - tag: CapacitorStockPart
+        name: step-lockermech-capacitors
+        icon:
+          sprite: Objects/Misc/stock_parts.rsi
+          state: capacitor
+        doAfter: 1
 
       - tag: MicroManipulatorStockPart
         name: step-lockermech-manipulators
-        amount: 2
         icon:
           sprite: "Objects/Misc/stock_parts.rsi"
           state: "micro_mani"
-        doAfter: 3
+        doAfter: 1
+        completed:
+        - !type:VisualizerDataInt
+          key: "enum.MechAssemblyVisuals.State"
+          data: 10
+
+      - tag: MicroManipulatorStockPart
+        name: step-lockermech-manipulators
+        icon:
+          sprite: "Objects/Misc/stock_parts.rsi"
+          state: "micro_mani"
+        doAfter: 1
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -185,10 +206,10 @@
     - !type:BuildMech
       mechPrototype: MechLocker
 
-# Единый рецепт 
+# Единый рецепт
 - type: construction
   id: LockerMech
-  name: LockerMech 
+  name: LockerMech
   description: Slow, but sealed mech. Assembled from trash.
   graph: LockerMechConstruction
   startNode: start
