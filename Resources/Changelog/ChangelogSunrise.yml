@@ -15416,3 +15416,39 @@
   id: 1055
   time: '2025-04-27T20:24:35.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1974
+- author: TERRISS
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0431\u0435\u0440\u0435\
+      \u0442 \u0410\u0442\u043C\u043E\u0441\u0444\u0435\u0440\u043D\u043E\u0433\u043E\
+      \ \u0442\u0435\u0445\u043D\u0438\u043A\u0430."
+    type: Add
+  id: 1056
+  time: '2025-04-27T20:26:09.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1952
+- author: agranomys
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u043E \u043A\u043E\u043B\u0438\
+      \u0447\u0435\u0441\u0442\u0432\u043E \u043A\u0440\u043E\u0432\u0438 \u0443 \u043A\
+      \u0440\u044B\u0441\u0438\u043D\u044B\u0445 \u0441\u043B\u0443\u0433."
+    type: Tweak
+  id: 1057
+  time: '2025-04-27T20:27:16.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1937
+- author: TERRISS
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0430\u0442\u043C\u043E\
+      \u0441\u0444\u0435\u0440\u043D\u044B\u0439 \u043A\u0440\u0435\u0441\u0442."
+    type: Add
+  id: 1058
+  time: '2025-04-27T20:26:32.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1942
+- author: Cokolr
+  changes:
+  - message: "\u0423\u043B\u044C\u0442\u0440\u0430 \u0432\u043E\u0437\u0432\u0440\u0430\
+      \u0449\u0435\u043D\u0430 \u0432 \u0444\u0430\u0431\u0440\u0438\u043A\u0430\u0442\
+      \u043E\u0440 \u044D\u043A\u0437\u043E\u043A\u043E\u0441\u0442\u044E\u043C\u043E\
+      \u0432."
+    type: Tweak
+  id: 1059
+  time: '2025-04-27T20:26:48.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1940
