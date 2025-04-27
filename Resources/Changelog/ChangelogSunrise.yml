@@ -15479,3 +15479,13 @@
   id: 1062
   time: '2025-04-27T20:37:31.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1931
+- author: VigersRay
+  changes:
+  - message: "\u041A\u043E\u043B\u0438\u0437\u0438\u044F \u0441\u0443\u0449\u0435\u0441\
+      \u0442\u0432 \u0442\u0435\u043F\u0435\u0440\u044C \u0440\u0430\u0431\u043E\u0442\
+      \u0430\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u0432 \u0431\u043E\u0435\
+      \u0432\u043E\u043C \u0440\u0435\u0436\u0438\u043C\u0435."
+    type: Tweak
+  id: 1063
+  time: '2025-04-27T22:01:09.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1988
