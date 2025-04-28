@@ -805,7 +805,7 @@
   category: construction-category-structures
   description: A mechanical door that permits one-way access and prevents tailgating.
   icon:
-    sprite: Structures/Doors/turnstile.rsi
+    sprite: _Sunrise/Structures/Doors/turnstile.rsi #Sunrise-edit
     state: turnstile
   objectType: Structure
   placementMode: SnapgridCenter
