@@ -15489,3 +15489,24 @@
   id: 1063
   time: '2025-04-27T22:01:09.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1988
+- author: agranomys
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u0435 \u0442\u0443\
+      \u0440\u043D\u0438\u043A\u0435\u0442\u043E\u0432 \u043D\u0430 \u0441\u0442\u0430\
+      \u043D\u0446\u0438\u044E loop."
+    type: Add
+  id: 1064
+  time: '2025-04-28T01:35:53.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1992
+- author: agranomys
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0441\u0442\u0430\
+      \u043D\u0446\u0438\u044F xeno (\u043D\u0435 \u0432 \u043F\u0443\u043B)"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043A\u0441\u0435\
+      \u043D\u043E\u043C\u043E\u0440\u0444\u043D\u044B\u0435 \u0441\u0442\u0435\u043D\
+      \u044B, \u043F\u043B\u0438\u0442\u043A\u0438, \u043E\u043A\u043D\u0430"
+    type: Add
+  id: 1065
+  time: '2025-04-28T22:21:19.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1847
