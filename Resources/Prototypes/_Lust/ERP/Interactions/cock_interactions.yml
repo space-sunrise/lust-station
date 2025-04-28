@@ -19,9 +19,9 @@
   lovePercentUser: 3
   lovePercentTarget: 6
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - носки
   userMoanChance: 0
   category: член
 
@@ -51,9 +51,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - носки
   category: член
 
 - type: interaction
@@ -81,13 +81,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - jumpsuit
-  - outerClothing
-  - bra
+  - грудь
   category: член
 
 - type: interaction
@@ -114,9 +110,9 @@
   lovePercentUser: 4
   lovePercentTarget: 7
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - хвост
   userTagWhitelist:
   - Tail
   category: член
@@ -148,9 +144,9 @@
   lovePercentUser: 4
   lovePercentTarget: 8
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - гладкие перчатки
   category: член
 
 - type: interaction
@@ -178,17 +174,15 @@
   lovePercentUser: 4
   lovePercentTarget: 8
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - рот
   userTagWhitelist:
   - Vulpkanin
   - Demon
   - Reptilian
   - Predator
   - SlimePerson
-  userTagBlacklist:
-  - mask
   category: член
 
 - type: interaction
@@ -224,11 +218,9 @@
   lovePercentUser: 4
   lovePercentTarget: 9
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - mask
+  - рот
   category: член
 
 - type: interaction
@@ -256,13 +248,9 @@
   lovePercentUser: 7
   lovePercentTarget: 7
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   category: член
 
 - type: interaction
@@ -289,12 +277,9 @@
   lovePercentUser: 5
   lovePercentTarget: 10
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - ляжки
   category: член
 
 - type: interaction
@@ -324,9 +309,9 @@
   userTagWhitelist:
   - SlimePerson
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - ладони
   category: член
 
 - type: interaction
@@ -354,13 +339,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   category: член
 
 - type: interaction
@@ -387,13 +368,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
   category: член
 
 - type: interaction
@@ -422,10 +399,8 @@
   erp: true
   useSelf: true
   lovePercentTarget: 10
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  userTagBlacklist:
+  - член
   category: член
 
 - type: interaction
@@ -445,11 +420,9 @@
   lovePercentUser: 2
   lovePercentTarget: 5
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - член
   userTagBlacklist:
-  - mask
+  - рот
   category: член
 
 - type: interaction
@@ -467,7 +440,7 @@
   erp: true
   lovePercentTarget: 5
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - носки
   category: член

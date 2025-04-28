@@ -71,3 +71,8 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon

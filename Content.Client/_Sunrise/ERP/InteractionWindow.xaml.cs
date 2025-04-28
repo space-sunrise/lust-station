@@ -15,6 +15,9 @@ using Content.Shared.Hands.Components;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.ERP.Components;
 using Content.Client.UserInterface.Controls;
+using Robust.Shared.Containers;
+using Content.Shared.Tag;
+using Content.Shared.Clothing.Components;
 
 namespace Content.Client._Sunrise.ERP;
 
@@ -205,15 +208,233 @@ public sealed partial class InteractionWindow : FancyWindow
         if (!TargetEntityId.HasValue)
             return;
 
+        var targets = _entManager.GetEntity(TargetEntityId);
+        if (!targets.HasValue) return;
         var uid = _player.LocalEntity.Value;
+        var tid = targets.Value;        
+        if (!_entManager.TryGetComponent<ContainerManagerComponent>(uid, out var UserInventory)) return;
+        if (!_entManager.TryGetComponent<ContainerManagerComponent>(tid, out var TargetInventory)) return;
+        
+        HashSet<string> UserCategories = new HashSet<string> {""};
+        HashSet<string> UserItemCategories = new HashSet<string> {""};
+
+        if (UserTags != null)
+        {
+            foreach (var tag in UserTags)
+            {
+                if (tag == "jumpsuit")
+                if (UserInventory.Containers.TryGetValue("jumpsuit", out var con))
+                {
+                    UserItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "яйца", "член", "вагина", "анал"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "NudeBottom") {UserItemCategories = new HashSet<string> {"грудь"}; break;}
+                        else if (tgs == "NudeTop") {UserItemCategories = new HashSet<string> {"ляжки", "попа", "яйца", "член", "вагина", "анал"}; break;}
+                        else if (tgs == "CommandSuit") {UserItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "вагина", "анал"}; break;}
+                    }  
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "outerClothing")
+                if (UserInventory.Containers.TryGetValue("outerClothing", out var con))
+                {
+                    UserItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "яйца", "член", "вагина", "анал"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "NudeBottom") {UserItemCategories = new HashSet<string> {"грудь"}; break;}
+                        else if (tgs == "NudeFull") {UserItemCategories = new HashSet<string> {}; break;}
+                        else if (tgs == "FullCovered") {UserItemCategories = new HashSet<string> {"щёки", "губы", "шея", "уши", "волосы",
+                        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал", "лицо"}; break;}
+                        else if (tgs == "FullBodyOuter") {UserItemCategories = new HashSet<string> {"грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал", "шея"}; break;}
+                    }  
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "head")
+                if (UserInventory.Containers.TryGetValue("head", out var con))
+                {
+                    UserItemCategories = new HashSet<string> {"волосы"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "TopCovered") {UserItemCategories = new HashSet<string> {"уши", "волосы"}; break;}
+                        else if (tgs == "FullCovered") {UserItemCategories = new HashSet<string> {"уши", "волосы", "рот", "лицо", "губы", "щёки"}; break;}
+                    }  
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "gloves")
+                if (UserInventory.Containers.TryGetValue("gloves", out var con))
+                {
+                    UserItemCategories = new HashSet<string> {"ладони", "гладкие перчатки"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "SmoothGloves") {UserItemCategories = new HashSet<string> {"ладони"}; break;}
+                        else if (tgs == "Ring") {UserItemCategories = new HashSet<string> {}; break;}
+                    }  
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "mask")
+                if (UserInventory.Containers.TryGetValue("mask", out var con))
+                {
+                    UserItemCategories = new HashSet<string> {"рот"};
+                    if (_entManager.TryGetComponent<MaskComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    if (UserJumpsuitTags.IsToggled)
+                    UserItemCategories = new HashSet<string> {};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "bra")
+                {
+                    UserItemCategories = new HashSet<string> {"грудь"};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "pants")
+                {
+                    UserItemCategories = new HashSet<string> {"яйца", "член", "вагина", "анал"};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "socks")
+                {
+                    UserItemCategories = new HashSet<string> {"ступни"};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "shoes")
+                {
+                    UserItemCategories = new HashSet<string> {"носки", "ступни"};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+                if (tag == "neck")
+                {
+                    UserItemCategories = new HashSet<string> {"шея"};
+                    UserCategories.UnionWith(UserItemCategories);
+                }
+
+            }
+        }
+
+        HashSet<string> TargetCategories = new HashSet<string> {""};
+        HashSet<string> TargetItemCategories = new HashSet<string> {""};
+
+        if (TargetTags != null)
+        {
+            foreach (var tag in TargetTags)
+            {
+                if (tag == "jumpsuit")
+                if (TargetInventory.Containers.TryGetValue("jumpsuit", out var con))
+                {
+                    TargetItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "яйца", "член", "вагина", "анал"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "NudeBottom") {TargetItemCategories = new HashSet<string> {"грудь"}; break;}
+                        else if (tgs == "NudeTop") {TargetItemCategories = new HashSet<string> {"ляжки", "попа", "яйца", "член", "вагина", "анал"}; break;}
+                        else if (tgs == "CommandSuit") {TargetItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "вагина", "анал"}; break;}
+                    }  
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "outerClothing")
+                if (TargetInventory.Containers.TryGetValue("outerClothing", out var con))
+                {
+                    TargetItemCategories = new HashSet<string> {"грудь", "ляжки", "попа", "яйца", "член", "вагина", "анал"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "NudeBottom") {TargetItemCategories = new HashSet<string> {"грудь"}; break;}
+                        else if (tgs == "NudeFull") {TargetItemCategories = new HashSet<string> {}; break;}
+                        else if (tgs == "FullCovered") {TargetItemCategories = new HashSet<string> {"щёки", "губы", "шея", "уши", "волосы",
+                        "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал", "лицо", "хвост", "ладони", "гладкие перчатки"}; break;}
+                        else if (tgs == "FullBodyOuter") {TargetItemCategories = new HashSet<string> {"грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал", "шея", "ладони", "гладкие перчатки"}; break;}
+                    }  
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "head")
+                if (TargetInventory.Containers.TryGetValue("head", out var con))
+                {
+                    TargetItemCategories = new HashSet<string> {"волосы"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "TopCovered") {TargetItemCategories = new HashSet<string> {"уши", "волосы"}; break;}
+                        else if (tgs == "FullCovered") {TargetItemCategories = new HashSet<string> {"уши", "волосы", "рот", "лицо", "губы", "щёки"}; break;}
+                    }  
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "gloves")
+                if (TargetInventory.Containers.TryGetValue("gloves", out var con))
+                {
+                    TargetItemCategories = new HashSet<string> {"ладони", "гладкие перчатки"};
+                    if (_entManager.TryGetComponent<TagComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    foreach (var tgs in UserJumpsuitTags.Tags)
+                    {
+                        if (tgs == "SmoothGloves") {TargetItemCategories = new HashSet<string> {"ладони"}; break;}
+                        else if (tgs == "Ring") {TargetItemCategories = new HashSet<string> {}; break;}
+                    }  
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "mask")
+                if (TargetInventory.Containers.TryGetValue("mask", out var con))
+                {
+                    TargetItemCategories = new HashSet<string> {"рот"};
+                    if (_entManager.TryGetComponent<MaskComponent>(con.ContainedEntities[0], out var UserJumpsuitTags))
+                    if (UserJumpsuitTags.IsToggled)
+                    TargetItemCategories = new HashSet<string> {};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "bra")
+                {
+                    TargetItemCategories = new HashSet<string> {"грудь"};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "pants")
+                {
+                    TargetItemCategories = new HashSet<string> {"яйца", "член", "вагина", "анал"};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "socks")
+                {
+                    TargetItemCategories = new HashSet<string> {"ступни"};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "shoes")
+                {
+                    TargetItemCategories = new HashSet<string> {"носки", "ступни"};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+
+                if (tag == "neck")
+                {
+                    TargetItemCategories = new HashSet<string> {"шея"};
+                    TargetCategories.UnionWith(TargetItemCategories);
+                }
+                
+            }
+        }
+
         var protos = _prototypeManager.EnumeratePrototypes<InteractionPrototype>().ToArray();
 
         Array.Sort(protos, (x, y) => x.SortOrder.CompareTo(y.SortOrder));
         List<(string, Robust.Client.Graphics.Texture, InteractionPrototype)> itemList = new();
         foreach (string category in new List<string>
-        {"standart", "дружба", "щёки", "губы", "шея", "уши", "волосы", "хвост", "рога", "крылья",
+        {"standart", "дружба", "щёки", "губы", "шея", "волосы", "хвост", "крылья",
         "рот", "грудь", "ступни", "ляжки", "попа", "яйца", "член", "вагина", "анал",
-            "лицо"}
+            "лицо", "рога", "уши"}
         )
         {
             foreach (var proto in protos)
@@ -257,11 +478,9 @@ public sealed partial class InteractionWindow : FancyWindow
                 {
                     var texture = _spriteSystem.Frame0(proto.Icon);
 
-                    if (UserHasClothing && proto.UserWithoutCloth)
-                        continue;
+                    if (UserHasClothing && proto.UserWithoutCloth) continue;
 
-                    if (TargetHasClothing && proto.TargetWithoutCloth)
-                        continue;
+                    if (TargetHasClothing && proto.TargetWithoutCloth) continue;
 
                     if (!proto.UserSex.Contains(UserSex) && !proto.UserSex.Contains(Sex.Unsexed))
                         continue;
@@ -272,10 +491,10 @@ public sealed partial class InteractionWindow : FancyWindow
                     if (!Erp && proto.Erp)
                         continue;
 
-                    if (!AreTagsAllowed(UserTags, proto.UserTagWhitelist, proto.UserTagBlacklist))
+                    if (!AreTagsAllowed(UserTags, proto.UserTagWhitelist, proto.UserTagBlacklist, UserCategories))
                         goto CONTINUE;
 
-                    if (!AreTagsAllowed(TargetTags, proto.TargetTagWhitelist, proto.TargetTagBlacklist))
+                    if (!AreTagsAllowed(TargetTags, proto.TargetTagWhitelist, proto.TargetTagBlacklist, TargetCategories))
                         goto CONTINUE;
 
                     //ItemInteractions.AddItem(proto.Name, texture, metadata: proto);
@@ -409,31 +628,33 @@ public sealed partial class InteractionWindow : FancyWindow
         ItemInteractions.OnItemSelected += _eui.OnItemSelect;
     }
 
-    private static bool AreTagsAllowed(HashSet<string>? tags, HashSet<string> whiteListTags, HashSet<string> blackListTags)
+    private static bool AreTagsAllowed(HashSet<string>? tags, HashSet<string> whiteListTags, HashSet<string> blackListTags,  HashSet<string> categories)
     {
 
+         bool state = true;
         if (tags != null)
         {
-            if (whiteListTags.Count > 0)
-            {
-                foreach (var tag in whiteListTags)
-                {
-                    if (tags.Contains(tag))
-                        return true;
-                }
-                return false;
-            }
 
             if (blackListTags.Count > 0)
             {
                 foreach (var tag in blackListTags)
                 {
-                    if (tags.Contains(tag))
-                        return false;
+                    if (categories.Contains(tag))
+                    {
+                        state = false; break;
+                    }
                 }
             }
-        }
 
-        return true;
+            if (whiteListTags.Count > 0)
+            {
+                    if (!whiteListTags.Any(tag => tags.Contains(tag)))
+                    {
+                        state = false;
+                    }
+            }
+        
+        }
+        return state;
     }
 }

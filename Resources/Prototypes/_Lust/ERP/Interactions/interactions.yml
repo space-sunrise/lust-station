@@ -13,4 +13,8 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 4
+  targetTagBlacklist:
+  - вагина
+  userTagBlacklist:
+  - рот
   category: лицо

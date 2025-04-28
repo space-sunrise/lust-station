@@ -64,6 +64,7 @@
       cell_slot: !type:ContainerSlot
   - type: Tag
     tags:
+    - TopCovered
     - WhitelistChameleon
 
 - type: entity

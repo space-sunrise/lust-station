@@ -22,8 +22,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
+  targetTagBlacklist:
+  - ляжки
   userTagBlacklist:
-  - mask
+  - рот
   category: ляжки
 
 - type: interaction
@@ -45,11 +47,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
-  userTagBlacklist:
-  - mask
   targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - ляжки
+  userTagBlacklist:
+  - рот
   category: ляжки
 
 - type: interaction
@@ -69,10 +70,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - shoes
-  - socks
+  - ступни
   userTagBlacklist:
-  - mask
+  - рот
   category: ляжки
 
 - type: interaction
@@ -94,10 +94,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - shoes
-  - socks
+  - ступни
   userTagBlacklist:
-  - mask
+  - рот
   category: ляжки
 
 - type: interaction
@@ -139,9 +138,9 @@
   lovePercentUser: 1
   lovePercentTarget: 5
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - ляжки
+  userTagBlacklist:
+  - рот
   category: ляжки
 
 - type: interaction
@@ -168,10 +167,7 @@
   lovePercentUser: 10
   lovePercentTarget: 5
   targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - ляжки
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: ляжки

@@ -17,6 +17,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 3
+  targetTagBlacklist:
+  - попа
+  userTagBlacklist:
+  - гладкие перчатки
   category: попа
 
 - type: interaction
@@ -39,10 +43,9 @@
   lovePercentUser: 2
   lovePercentTarget: 3
   targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - попа
   userTagBlacklist:
-  - mask
+  - рот
   category: попа
 
 - type: interaction
@@ -87,8 +90,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - попа
+  userTagBlacklist:
+  - рот
   category: попа
 
 - type: interaction
@@ -112,9 +116,9 @@
   lovePercentUser: 7
   lovePercentTarget: 3
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  userTagBlacklist:
+  - член
   category: попа
 
 - type: interaction
@@ -144,6 +148,8 @@
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5
+  targetTagBlacklist:
+  - попа
   category: попа
 
 - type: interaction
@@ -163,9 +169,9 @@
   lovePercentUser: 1
   lovePercentTarget: 5
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - попа
+  userTagBlacklist:
+  - рот
   category: попа
 
 - type: interaction
@@ -183,6 +189,10 @@
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 5
+  targetTagBlacklist:
+  - попа
+  userTagBlacklist:
+  - хвост
   userTagWhitelist:
   - Tail
   category: попа

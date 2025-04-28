@@ -18,6 +18,11 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: false
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
@@ -69,6 +74,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -80,6 +86,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -208,6 +215,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -219,6 +227,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -299,6 +308,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -310,5 +320,6 @@
   - type: Tag
     tags:
     - ClothMade
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon

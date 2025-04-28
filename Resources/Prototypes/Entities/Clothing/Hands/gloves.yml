@@ -144,6 +144,9 @@
   - type: Fiber
     fiberMaterial: fibers-latex
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves
 
 - type: entity
   parent: ClothingHandsButcherable
@@ -160,6 +163,9 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves
 ####
 - type: entity
   parent: ClothingHandsButcherable
@@ -296,6 +302,11 @@
   - type: Insulated
   - type: Fiber
     fiberColor: fibers-black
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - SmoothGloves
 
 - type: entity
   parent: [ BaseSecurityCargoContraband, ClothingHandsGlovesCombat ]
@@ -332,6 +343,11 @@
     damageProtection:
       flatReductions:
         Heat: 0 # no protection
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - SmoothGloves
 
 - type: entity
   parent: ClothingHandsBase
@@ -368,6 +384,11 @@
     damageProtection:
       flatReductions:
         Heat: 0 # no protection
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+    - SmoothGloves
 
 - type: entity
   # Intentionally named after regular gloves, they're meant to be sneaky.

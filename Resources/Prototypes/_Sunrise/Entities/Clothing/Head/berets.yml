@@ -12,6 +12,7 @@
     tags:
     - ClothMade
     - HamsterWearable
+    - TopCovered
     - WhitelistChameleon
 
 - type: entity
@@ -28,6 +29,7 @@
     tags:
     - ClothMade
     - HamsterWearable
+    - TopCovered
     - WhitelistChameleon
 
 - type: entity
@@ -44,6 +46,7 @@
     tags:
     - ClothMade
     - HamsterWearable
+    - TopCovered
     - WhitelistChameleon
 
 - type: entity
@@ -60,4 +63,5 @@
     tags:
     - ClothMade
     - HamsterWearable
+    - TopCovered
     - WhitelistChameleon

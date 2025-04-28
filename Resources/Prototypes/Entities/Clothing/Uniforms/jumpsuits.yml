@@ -67,6 +67,11 @@
     sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
   - type: Clothing
     sprite: Clothing/Uniforms/Jumpsuit/captain.rsi
+  - type: Tag
+    tags:
+      - ClothMade
+      - CommandSuit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingUniformBase

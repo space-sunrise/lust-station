@@ -19,6 +19,9 @@
     sprite: Clothing/Head/Misc/cake.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/cake.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -32,6 +35,10 @@
     sprite: Clothing/Head/Misc/chickenhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -74,6 +81,10 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+  - type: Tag
+    tags:
+    - FullCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -109,6 +120,10 @@
     sprite: Clothing/Head/Misc/richard.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -122,6 +137,10 @@
     sprite: Clothing/Head/Misc/skubhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - FullCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -135,6 +154,7 @@
     sprite: Clothing/Head/Misc/shrine-maidens-wig.rsi
   - type: Tag
     tags:
+    - TopCovered
     - HamsterWearable
     - WhitelistChameleon
 
@@ -155,6 +175,10 @@
       Plastic: 100
   - type: StaticPrice
     price: 25
+  - type: Tag
+    tags:
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -244,6 +268,10 @@
     sprite: Clothing/Head/Misc/squiddy.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  - type: Tag
+    tags:
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -255,6 +283,10 @@
     sprite: Clothing/Head/Misc/red_racoon.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/red_racoon.rsi
+  - type: Tag
+    tags:
+    - FullCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: Clothing

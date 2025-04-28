@@ -16,6 +16,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: щёки
 
 - type: interaction
@@ -38,6 +42,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: щёки
 
 - type: interaction
@@ -53,6 +61,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - гладкие перчатки
   category: щёки
 
 - type: interaction
@@ -71,4 +83,8 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: щёки

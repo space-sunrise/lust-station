@@ -8,6 +8,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/centcom_officer_black.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/centcom_officer_black.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -19,6 +24,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/ntrg_hat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/ntrg_hat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -30,6 +40,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_cap.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_cap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -41,6 +56,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_beret.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -52,6 +72,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/ERT_leader_beret.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/ERT_leader_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -63,6 +88,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/hoshat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/hoshat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -74,6 +104,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/warden_alt.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/warden_alt.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -85,6 +120,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/beret_security_medic.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/beret_security_medic.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -96,6 +136,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/caphat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/caphat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -107,6 +152,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/blueshield.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/blueshield.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -118,6 +168,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/prisonguard.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/prisonguard.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -129,6 +184,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/prisonguard_beret.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/prisonguard_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -140,6 +200,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/cap.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/cap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -151,6 +216,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/iaahat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/iaahat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -162,6 +232,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/ussp.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/ussp.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -173,6 +248,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/hoscap.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/hoscap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -191,6 +271,11 @@
       head:
       - state: equipped-HELMET
         shader: unshaded
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -202,6 +287,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/qmhat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/qmhat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -213,6 +303,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/hophat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/hophat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -224,6 +319,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/cptcap.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/cptcap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
@@ -235,6 +335,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/cmospecialhat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/cmospecialhat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -246,6 +351,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/cmohat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/cmohat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -257,6 +367,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/ntrep.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/ntrep.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -267,6 +382,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/pathologist_helmet.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/pathologist_helmet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -278,6 +398,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/adjutant_beret.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/adjutant_beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -289,6 +414,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/garrisoncap_adj.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/garrisoncap_adj.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -300,6 +430,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/adjcap.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/adjcap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -311,6 +446,11 @@
     sprite: _Sunrise/Clothing/Head/Hats/hat_with_paces.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/hat_with_paces.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -344,3 +484,8 @@
     sprite: _Sunrise/Clothing/Head/Hats/mailman.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Head/Hats/mailman.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered
+    - WhitelistChameleon

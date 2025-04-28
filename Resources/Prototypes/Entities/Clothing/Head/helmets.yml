@@ -26,6 +26,11 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - TopCovered
+    - SecurityHelmet
 
 #Basic Helmet (Security Helmet)
 - type: entity
@@ -41,6 +46,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - TopCovered
     - SecurityHelmet
 
 #Mercenary Helmet
@@ -109,6 +115,11 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.95
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullCovered
+    - SecurityHelmet
 
 #Bombsuit Helmet
 - type: entity
@@ -136,6 +147,11 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullCovered
+    - SecurityHelmet
 
 #Janitorial Bombsuit Helmet
 - type: entity
@@ -169,6 +185,11 @@
         Slash: 0.8
         Piercing: 0.9
         Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullCovered
+    - SecurityHelmet
 
 #Space Ninja Helmet
 - type: entity
@@ -255,6 +276,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
     - FireHelmet
   - type: HideLayerClothing
     slots:
@@ -288,6 +310,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
     - FireHelmet
   - type: HideLayerClothing
     slots:

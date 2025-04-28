@@ -21,6 +21,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -112,6 +113,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -129,6 +131,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -147,6 +150,7 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -161,6 +165,9 @@
     sprite: Clothing/Head/Hoods/rad.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/rad.rsi
+  - type: Tag
+    tags:
+    - FullCovered
   - type: Armor
     modifiers:
       coefficients:
@@ -188,6 +195,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -203,6 +211,9 @@
     sprite: Clothing/Head/Hoods/iansuit.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/iansuit.rsi
+  - type: Tag
+    tags:
+    - TopCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -218,6 +229,9 @@
     sprite: Clothing/Head/Hoods/carpsuit.rsi
   - type: Clothing
     sprite: Clothing/Head/Hoods/carpsuit.rsi
+  - type: Tag
+    tags:
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -253,6 +267,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered
   - type: HideLayerClothing
     slots:
     - Hair
@@ -770,6 +785,7 @@
     sprite: Clothing/Head/Hoods/voidcloak.rsi
   - type: Tag
     tags:
+    - TopCovered
     - WhitelistChameleon
   - type: HideLayerClothing
     slots:

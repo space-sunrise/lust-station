@@ -22,6 +22,11 @@
         Heat: 0.80
   - type: ExplosionResistance
     damageCoefficient: 0.90
+  - type: Tag
+    tags:
+    - Vest
+    - WhitelistChameleon
+    - NudeBottom
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
@@ -33,6 +38,7 @@
     tags:
     - Vest
     - WhitelistChameleon
+    - NudeBottom
   # Sunrise-End
 
 #Alternate / slim basic armor vest
@@ -69,6 +75,11 @@
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: GroupExamine
+  - type: Tag
+    tags:
+    - Vest
+    - FullBodyOuter
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -89,6 +100,10 @@
         Heat: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.80
+  - type: Tag
+    tags:
+    - Vest
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterArmorBase
@@ -112,6 +127,10 @@
     reflects:
       - Energy
     slot: outerClothing # Sunrise-Edit
+  - type: Tag
+    tags:
+    - Vest
+    - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseSyndicateContraband ]
@@ -336,6 +355,7 @@
   - type: Tag
     tags:
     - Vest
+    - NudeBottom
     - WhitelistChameleon
   # Sunrise-End
 

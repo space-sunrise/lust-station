@@ -100,6 +100,11 @@
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageToggleableBase
@@ -156,10 +161,17 @@
       coefficients:
         Caustic: 0.75
 
+
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLab]
   id: ClothingOuterCoatLabOpened
   name: lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -180,6 +192,13 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabChem]
   id: ClothingOuterCoatLabChemOpened
   name: chemist lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
+
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -200,6 +219,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabViro]
   id: ClothingOuterCoatLabViroOpened
   name: virologist lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -220,6 +245,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabGene]
   id: ClothingOuterCoatLabGeneOpened
   name: geneticist lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -242,6 +273,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabCmo]
   id: ClothingOuterCoatLabCmoOpened
   name: chief medical officer's lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -262,6 +299,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRnd]
   id: ClothingOuterCoatRndOpened
   name: scientist lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -282,6 +325,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRobo]
   id: ClothingOuterCoatRoboOpened
   name: roboticist lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -303,6 +352,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatRD]
   id: ClothingOuterCoatRDOpened
   name: research director lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -375,6 +430,11 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom
+      - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseSyndicateContraband]
@@ -436,6 +496,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabSeniorResearcher]
   id: ClothingOuterCoatLabSeniorResearcherOpened
   name: senior researcher lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -456,6 +522,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabSeniorPhysician]
   id: ClothingOuterCoatLabSeniorPhysicianOpened
   name: senior physician lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -483,3 +555,9 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatExpensive]
   id: ClothingOuterCoatExpensiveOpened
   name: expensive coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull
+      - WhitelistChameleon
