@@ -15528,3 +15528,21 @@
   id: 1067
   time: '2025-04-28T22:48:48.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2004
+- author: agranomys
+  changes:
+  - message: "\u0441\u043F\u0440\u0430\u0439\u0442\u044B \u043D\u043E\u0432\u044B\u0445\
+      \ \u0448\u043B\u044E\u0437\u043E\u0432 \u0443\u0442\u0438\u043B\u0438\u0437\u0430\
+      \u0442\u043E\u0440\u043E\u0432 \u0431\u044B\u043B\u0438 \u0437\u0430\u043C\u0435\
+      \u043D\u0435\u043D\u044B."
+    type: Tweak
+  id: 1068
+  time: '2025-04-28T22:52:15.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1996
+- author: Ladn101, Alternativ_
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0451\u043D \u0441\u043F\u0440\u0430\u0439\
+      \u0442  \u0442\u0443\u0440\u043D\u0438\u043A\u0435\u0442\u0430."
+    type: Tweak
+  id: 1069
+  time: '2025-04-28T22:52:29.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1994
