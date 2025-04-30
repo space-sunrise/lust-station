@@ -97,7 +97,7 @@
     tags:
     - Sidearm
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Battery/taser.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/taser.rsi
     quickEquip: false
     slots:
     - Belt
@@ -114,7 +114,7 @@
     tags:
     - Sidearm
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Battery/taser.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/taser.rsi
     quickEquip: false
     slots:
     - Belt
@@ -607,7 +607,7 @@
     - Taser
     - Sidearm
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/taser.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/taser.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
