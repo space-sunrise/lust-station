@@ -1,2 +1,29 @@
 ﻿- type: Tag
+  id: CommandSuit
+
+- type: Tag
+  id: FaceCovered
+
+- type: Tag
+  id: FullCovered
+
+- type: Tag
+  id: NudeBottom
+
+- type: Tag
+  id: NudeFull
+
+- type: Tag
+  id: NudeTop
+
+- type: Tag
+  id: OpenNeck  
+
+- type: Tag
+  id: SmoothGloves
+
+- type: Tag
   id: StunSword
+
+- type: Tag
+  id: TopCovered

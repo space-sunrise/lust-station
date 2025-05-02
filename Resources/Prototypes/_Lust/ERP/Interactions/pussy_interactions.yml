@@ -26,9 +26,9 @@
   lovePercentUser: 4
   lovePercentTarget: 8
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  userTagBlacklist:
+  - гладкие перчатки
   category: вагина
 
 - type: interaction
@@ -60,9 +60,9 @@
   lovePercentUser: 4
   lovePercentTarget: 9
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  userTagBlacklist:
+  - рот
   category: вагина
 
 - type: interaction
@@ -89,9 +89,9 @@
   lovePercentUser: 4
   lovePercentTarget: 9
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  userTagBlacklist:
+  - гладкие перчатки
   category: вагина
 
 - type: interaction
@@ -118,13 +118,9 @@
   lovePercentUser: 9
   lovePercentTarget: 9
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   category: вагина
 
 - type: interaction
@@ -156,13 +152,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: вагина
   targetVirginityLoss: female
   userVirginityLoss: male
@@ -191,10 +183,8 @@
   erp: true
   useSelf: true
   lovePercentTarget: 8
-  targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  userTagBlacklist:
+  - вагина
   category: вагина
 
 - type: interaction
@@ -222,9 +212,8 @@
   lovePercentUser: 4
   lovePercentTarget: 9
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  - гладкие перчатки
   category: вагина
 
 - type: interaction
@@ -250,13 +239,9 @@
   lovePercentUser: 8
   lovePercentTarget: 8
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: вагина
 
 - type: interaction
@@ -277,11 +262,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - вагина
   userTagBlacklist:
-  - mask
+  - рот
   category: вагина
 
 - type: interaction
@@ -304,11 +287,9 @@
   lovePercentUser: 3
   lovePercentTarget: 9
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - вагина
   userTagBlacklist:
-  - mask
+  - рот
   category: вагина
 
 - type: interaction
@@ -337,9 +318,10 @@
   targetTagWhitelist:
   - Tail
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  - хвост
+  userTagBlacklist:
+  - член
   category: вагина
   targetVirginityLoss: female
   userVirginityLoss: male
@@ -367,8 +349,8 @@
   userTagWhitelist:
   - Demon
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  userTagBlacklist:
+  - хвост
   category: хвост
 

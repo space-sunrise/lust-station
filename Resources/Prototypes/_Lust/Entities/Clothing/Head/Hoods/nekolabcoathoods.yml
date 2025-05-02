@@ -13,6 +13,11 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Tag
+    tags:
+      - ClothMade
+      - TopCovered
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadHatHoodCoatNekoBase

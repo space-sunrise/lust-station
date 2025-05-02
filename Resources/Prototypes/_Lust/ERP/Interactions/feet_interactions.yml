@@ -17,6 +17,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - носки
   category: ступни
 
 - type: interaction
@@ -38,6 +42,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - носки
   category: ступни
 
 - type: interaction
@@ -59,8 +67,9 @@
   lovePercentUser: 0
   lovePercentTarget: 3
   targetTagBlacklist:
-  - shoes
-  - socks
+  - ступни
+  userTagBlacklist:
+  - рот
   category: ступни
 
 - type: interaction
@@ -82,9 +91,9 @@
   lovePercentUser: 0
   lovePercentTarget: 3
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  userTagBlacklist:
+  - носки
   category: ступни
 
 - type: interaction
@@ -105,6 +114,8 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
+  userTagBlacklist:
+  - лицо
   targetTagWhitelist:
   - shoes
   category: ступни

@@ -16,14 +16,28 @@
   - type: Tag
     tags:
     - HamsterWearable
+    - FaceCovered # Lust-Edit
     - WhitelistChameleon
   - type: HideLayerClothing
     layers:
       Snout: Mask
     hideOnToggle: true
 
+# Lust-Start
 - type: entity
-  parent: [ClothingMaskGas, BaseSecurityContraband]
+  abstract: true
+  parent: ClothingMaskGas
+  id: ClothingMaskGasFaceOpen
+  name: gas mask covered
+  components:
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+# Lust-End
+
+- type: entity
+  parent: [ClothingMaskGasFaceOpen, BaseSecurityContraband] # Lust-Edit
   id: ClothingMaskGasSecurity
   name: security gas mask
   description: A standard issue Security gas mask.
@@ -78,7 +92,7 @@
         Heat: 0.80
 
 - type: entity
-  parent: [ClothingMaskGasAtmos, BaseCommandContraband]
+  parent: [ClothingMaskGas, BaseCommandContraband]
   id: ClothingMaskGasCaptain
   name: captain's gas mask
   description: Nanotrasen cut corners and repainted a spare atmospheric gas mask, but don't tell anyone.
@@ -378,6 +392,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -423,6 +438,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -470,6 +486,7 @@
   - type: Tag
     tags:
     - HamsterWearable
+    - FaceCovered # Lust-Edit
     - WhitelistChameleon
   - type: HideLayerClothing
     slots:
@@ -491,6 +508,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -507,6 +530,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -523,6 +552,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -539,6 +574,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -555,6 +596,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -571,6 +618,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskBase
@@ -696,6 +749,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered
 
 # Entity tables
 - type: entityTable

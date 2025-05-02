@@ -23,9 +23,9 @@
   userMoanChance: 0
   targetMoanChance: 0
   targetTagBlacklist:
-  - mask
+  - рот
   userTagBlacklist:
-  - mask
+  - рот
   category: рот
 
 - type: interaction
@@ -61,9 +61,9 @@
   userMoanChance: 0
   targetMoanChance: 0
   targetTagBlacklist:
-  - mask
+  - рот
   userTagBlacklist:
-  - mask
+  - рот
   category: рот
 
 - type: interaction
@@ -87,11 +87,9 @@
   lovePercentUser: 9
   lovePercentTarget: 5
   targetTagBlacklist:
-  - mask
+  - рот
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: рот
 
 - type: interaction
@@ -112,7 +110,9 @@
   lovePercentUser: 0
   lovePercentTarget: 5
   targetTagBlacklist:
-  - mask
+  - рот
+  userTagBlacklist:
+  - гладкие перчатки
   category: рот
 
 - type: interaction
@@ -139,12 +139,10 @@
   targetTagWhitelist:
   - Hair
   targetTagBlacklist:
-  - mask
-  - hair
+  - рот
+  - волосы
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: волосы
 
 - type: interaction
@@ -172,10 +170,8 @@
   targetTagWhitelist:
   - Hair
   targetTagBlacklist:
-  - mask
-  - hair
+  - рот
+  - волосы
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: волосы

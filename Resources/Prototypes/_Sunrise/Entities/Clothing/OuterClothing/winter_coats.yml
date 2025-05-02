@@ -28,3 +28,8 @@
       - state: winterbits-equipped-OUTERCLOTHING
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterColorCyan
+  - type: Tag
+    tags:
+      - ClothMade
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon

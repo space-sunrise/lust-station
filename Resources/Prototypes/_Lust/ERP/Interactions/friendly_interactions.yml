@@ -61,6 +61,8 @@
   targetSex:
   - Unsexed
   erp: false
+  userTagBlacklist:
+  - рот
   category: дружба
 
 - type: interaction
@@ -98,6 +100,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - ладони
+  userTagBlacklist:
+  - рот
   category: дружба
 
 - type: interaction
@@ -113,6 +119,8 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - волосы
   category: дружба
 
 - type: interaction
@@ -128,6 +136,8 @@
   targetSex:
   - Unsexed
   erp: false
+  userTagBlacklist:
+  - гладкие перчатки
   category: дружба
 
 - type: interaction
@@ -147,6 +157,10 @@
   erp: false
   userTagWhitelist:
   - Felinid
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - щёки
   category: дружба
 
 - type: interaction
@@ -169,6 +183,10 @@
   - CatTailStripes
   - SlimeCatTail
   - SlimeCatTailStripes
+  targetTagBlacklist:
+  - волосы
+  userTagBlacklist:
+  - хвост
   category: дружба
 
 - type: interaction
@@ -339,6 +357,8 @@
   targetSex:
   - Unsexed
   erp: false
+  userTagBlacklist:
+  - гладкие перчатки
   category: дружба
 
 
@@ -360,6 +380,10 @@
   - Tail
   userTagWhitelist:
   - Tail
+  targetTagBlacklist:
+  - хвост
+  userTagBlacklist:
+  - хвост
   category: хвост
 
 - type: interaction
@@ -385,6 +409,8 @@
   - Arachnid
   - Vox
   - Predator
+  targetTagBlacklist:
+  - волосы
   category: дружба
 
 - type: interaction
@@ -399,6 +425,8 @@
   - Unsexed
   erp: false
   useSelf: true
+  userTagBlacklist:
+  - рот
   category: дружба
 
 - type: interaction
@@ -416,6 +444,8 @@
   useSelf: true
   targetTagWhitelist:
   - Vulpcanin
+  userTagBlacklist:
+  - рот
   category: дружба
 
 - type: interaction
@@ -482,6 +512,9 @@
   - Unsexed
   erp: false
   useSelf: true
+  userTagBlacklist:
+  - попа
+  - гладкие перчатки
   category: дружба
 
 - type: interaction
@@ -515,6 +548,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - гладкие перчатки
+  userTagBlacklist:
+  - гладкие перчатки
   category: дружба
 
 - type: interaction

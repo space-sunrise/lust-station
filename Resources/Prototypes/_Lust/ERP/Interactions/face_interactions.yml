@@ -16,6 +16,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: лицо
 
 - type: interaction
@@ -38,6 +42,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: лицо
 
 - type: interaction
@@ -53,6 +61,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - щёки
+  userTagBlacklist:
+  - рот
   category: лицо
 
 - type: interaction
@@ -70,6 +82,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - гладкие перчатки
   category: лицо
 
 - type: interaction
@@ -85,6 +101,10 @@
   targetSex:
   - Unsexed
   erp: false
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - щёки
   category: лицо
 
 - type: interaction
@@ -106,7 +126,9 @@
   userTagWhitelist:
   - Vulpkanin
   targetTagBlacklist:
-  - mask
+  - лицо
+  userTagBlacklist:
+  - рот
   category: лицо
 
 - type: interaction
@@ -150,6 +172,8 @@
   lovePercentTarget: 5
   userMoanChance: 0
   targetMoanChance: 0
+  userTagBlacklist:
+  - ляжки
   category: лицо
 
 - type: interaction
@@ -170,6 +194,10 @@
   erp: true
   lovePercentUser: 6
   lovePercentTarget: 3
+  targetTagBlacklist:
+  - попа
+  userTagBlacklist:
+  - лицо
   category: лицо
 
 - type: interaction
@@ -193,10 +221,10 @@
   lovePercentTarget: 6
   userMoanChance: 0
   targetMoanChance: 0
+  targetTagBlacklist:
+  - лицо
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   category: лицо
 
 - type: interaction
@@ -216,4 +244,8 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
+  targetTagBlacklist:
+  - лицо
+  userTagBlacklist:
+  - носки
   category: лицо

@@ -16,9 +16,10 @@
   lovePercentUser: 1
   lovePercentTarget: 6
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - яйца
+  userTagBlacklist:
+  - ладони
+  - гладкие перчатки
   category: яйца
 
 - type: interaction
@@ -42,9 +43,9 @@
   lovePercentUser: 1
   lovePercentTarget: 6
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - яйца
+  userTagBlacklist:
+  - рот
   category: яйца
 
 - type: interaction
@@ -64,7 +65,7 @@
   lovePercentUser: 1
   lovePercentTarget: 5
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - яйца
+  userTagBlacklist:
+  - рот
   category: яйца

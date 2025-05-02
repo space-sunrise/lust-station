@@ -59,6 +59,12 @@
   - type: Clothing
     sprite: _Sunrise/Clothing/Mask/death.rsi
   - type: BreathMask
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingMaskGasAtmos
@@ -283,11 +289,16 @@
   - type: Clothing
     sprite: _Sunrise/Clothing/Mask/facecast.rsi
   - type: BreathMask
-  - type: Tag
   - type: HideLayerClothing
     slots:
     - Snout
   - type: FaceCast
+  # Lust-Start
+  - type: Tag
+    tags:
+    - FaceCovered
+  # Lust-End
+  
 
 - type: entity
   parent: [ ClothingMaskGas, BaseSecurityContraband ]
@@ -302,6 +313,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair

@@ -82,6 +82,11 @@
         Piercing: 0.6
         Heat: 0.5
         Caustic: 0.9 # Sunrise-Edit
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom  # Lust-Edit
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -99,6 +104,11 @@
         Blunt: 0.9
         Slash: 0.9
         Piercing: 0.8
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom  # Lust-Edit
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -117,6 +127,11 @@
         Slash: 0.8
         Piercing: 0.65
         Heat: 0.9
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -139,6 +154,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatNtrep]
   id: ClothingOuterCoatNtrepOpen
   name: nt representive jacket
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -153,6 +174,11 @@
     modifiers:
       coefficients:
         Caustic: 0.75
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -164,6 +190,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/adjutantcoat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/adjutantcoat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -175,6 +206,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/cecoat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/cecoat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -191,6 +227,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatCMOOvercoat]
   id: ClothingOuterCoatLabCMOOvercoatOpened
   name: cmo lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -202,6 +244,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/hopcoat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/hopcoat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterCoatHoSGreatcoat, BaseSecurityContraband]
@@ -213,6 +260,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/hos_coat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/hos_coat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -224,6 +276,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/iaacoat.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/iaacoat.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -255,6 +312,12 @@
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterCoatLabResearchDirector]
   id: ClothingOuterCoatLabResearchDirectorOpened
   name: research director lab coat
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull  # Lust-Edit
+      - WhitelistChameleon
 
 
 - type: entity
@@ -278,6 +341,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/kim.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/kim.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterBase
@@ -289,6 +357,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/disco.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/disco.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
@@ -333,6 +406,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/atmosian.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/atmosian.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterBase
@@ -344,6 +422,11 @@
     sprite: _Sunrise/Clothing/OuterClothing/Coats/coatchristmas.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Coats/coatchristmas.rsi
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -367,11 +450,22 @@
     damageCoefficient: 0.85
   - type: Item
     size: Huge
+  - type: Tag
+    tags:
+      - Vest
+      - NudeBottom  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterStorageFoldableBaseOpened, ClothingOuterArmorNTRGLead]
   id: ClothingOuterArmorNTRGLeadOpened
   name: trenchcoat NTRG Sqaud
+  components:
+  - type: Tag
+    tags:
+      - Vest
+      - NudeFull  # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase]

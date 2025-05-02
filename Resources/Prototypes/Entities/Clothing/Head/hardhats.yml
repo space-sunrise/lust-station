@@ -65,6 +65,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - TopCovered # Lust-Edit
 
 - type: entity
   parent: ClothingHeadHatHardhatBase

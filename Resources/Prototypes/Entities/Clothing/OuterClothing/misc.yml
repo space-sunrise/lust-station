@@ -8,6 +8,13 @@
     sprite: Clothing/OuterClothing/Misc/apron.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/apron.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseClothingOuterSounds] # Sunrise
@@ -20,6 +27,13 @@
     sprite: Clothing/OuterClothing/Misc/apronbar.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/apronbar.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseClothingOuterSounds] # Sunrise
@@ -32,6 +46,13 @@
     sprite: Clothing/OuterClothing/Misc/apronbotanist.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/apronbotanist.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseClothingOuterSounds] # Sunrise
@@ -44,6 +65,13 @@
     sprite: Clothing/OuterClothing/Misc/apronchef.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/apronchef.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseClothingOuterSounds] # Sunrise
@@ -66,6 +94,12 @@
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/black_hoodie.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -77,6 +111,12 @@
     sprite: Clothing/OuterClothing/Misc/grey_hoodie.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/grey_hoodie.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -93,6 +133,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FullCovered # Lust-Edit
 
 - type: entity
   parent: [ClothingOuterBaseToggleable, BaseClothingOuterSounds] # Sunrise
@@ -106,6 +147,12 @@
     sprite: Clothing/OuterClothing/Misc/chaplain_hoodie.rsi
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodChaplainHood
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -119,6 +166,12 @@
     sprite: Clothing/OuterClothing/Misc/classicponcho.rsi
   - type: AddAccentClothing
     accent: SpanishAccent
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -130,6 +183,12 @@
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/cultrobes.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -154,6 +213,12 @@
     sprite: Clothing/OuterClothing/Misc/poncho.rsi
   - type: AddAccentClothing
     accent: SpanishAccent
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -165,6 +230,12 @@
     sprite: Clothing/OuterClothing/Misc/santa.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/santa.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullBodyOuter
+  # Lust-End
 
 - type: entity
   abstract: true
@@ -239,6 +310,12 @@
     sprite: Clothing/OuterClothing/Misc/nunrobe.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/nunrobe.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -254,6 +331,12 @@
     graph: GhostSheet
     node: ghost_sheet
   - type: IdentityBlocker
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -265,6 +348,12 @@
     sprite: Clothing/OuterClothing/Misc/hospitalgown.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/hospitalgown.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -301,6 +390,12 @@
         color: "#000000"
   - type: TemperatureProtection
     coolingCoefficient: 0.3
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -337,6 +432,12 @@
         color: "#000000"
   - type: TemperatureProtection
     coolingCoefficient: 0.3
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -373,6 +474,12 @@
         color: "#000000"
   - type: TemperatureProtection
     coolingCoefficient: 0.3
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeFull
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
@@ -384,3 +491,9 @@
     sprite: Clothing/OuterClothing/Misc/red_racoon.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Misc/red_racoon.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FullCovered
+  # Lust-End

@@ -6,3 +6,8 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Hands/manjets.rsi
+  - type: Tag
+    tags:
+      - ClothMade
+      - Ring
+      - WhitelistChameleon

@@ -6,3 +6,8 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/bunny_uniform.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
