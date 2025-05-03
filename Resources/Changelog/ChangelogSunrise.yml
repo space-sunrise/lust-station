@@ -15688,3 +15688,13 @@
   id: 1081
   time: '2025-05-02T23:39:00.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/1904
+- author: justjhel
+  changes:
+  - message: "\u0414\u0440\u0430\u043A\u043E\u043D\u0443 \u043F\u043E\u043D\u0438\u0436\
+      \u0435\u043D\u044B \u0440\u0435\u0437\u0438\u0441\u0442\u044B \u043E\u0442 \u043C\
+      \u0435\u0445\u0430\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0445 \u0438 \u043E\
+      \u0436\u043E\u0433\u043E\u0432."
+    type: Tweak
+  id: 1082
+  time: '2025-05-03T12:03:44.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2007
