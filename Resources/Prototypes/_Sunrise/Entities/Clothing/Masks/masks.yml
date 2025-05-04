@@ -21,10 +21,6 @@
     sprite: _Sunrise/Clothing/Mask/atmosian.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Mask/atmosian.rsi
-  - type: Armor
-    modifiers:
-      coefficients:
-        Heat: 0.80
 
 - type: entity
   parent: ClothingMaskGasERT
