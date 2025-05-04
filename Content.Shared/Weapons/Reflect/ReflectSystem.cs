@@ -152,7 +152,7 @@ public sealed class ReflectSystem : EntitySystem
             projectile.Comp.Weapon = user;
             Dirty(projectile, projectile.Comp);
 
-            var reflectedEv = new ReflectedEvent(projectile.Comp.Shooter, projectileComp.Weapon.Value, projectileComp.Damage, reflective.Reflective);
+            var reflectedEv = new ReflectedEvent(projectile.Comp.Shooter, projectile.Comp.Weapon.Value, projectile.Comp.Damage, reflective.Reflective);
             RaiseLocalEvent(reflector, reflectedEv);
         }
         else
@@ -180,7 +180,7 @@ public sealed class ReflectSystem : EntitySystem
         }
 
         if (reflector.Comp.Slot != null &&
-            !_inventorySystem.TryGetSlotEntity(user, reflect.Slot, out var slotEntity) &&
+            !_inventorySystem.TryGetSlotEntity(user, reflector.Comp.Slot, out var slotEntity) &&
             slotEntity != reflector)
         {
             newDirection = null;
