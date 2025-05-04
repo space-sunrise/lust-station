@@ -92,3 +92,4 @@ loadout-group-mail-jumpsuit = Почтальон, комбинезон
 loadout-group-mail-backpack = Почтальон, рюкзак
 loadout-group-cargo-trinkets = Безделушки СНБ
 loadout-group-security-gun = СБ, оружие
+loadout-group-hos-gun = ГСБ, оружие
