@@ -15708,3 +15708,13 @@
   id: 1083
   time: '2025-05-04T00:46:56.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2035
+- author: mafiznik3
+  changes:
+  - message: "\u0443\u0432\u0435\u043B\u0438\u0447\u0435\u043D \u043B\u0438\u043C\u0438\
+      \u0442 \u0441\u043B\u0443\u0433 \u043A\u043E\u0440\u043E\u043B\u044F \u043A\u0440\
+      \u044B\u0441, \u0430 \u0442\u0430\u043A \u0436\u0435 \u0438\u0445 \u0443\u0440\
+      \u043E\u043D."
+    type: Tweak
+  id: 1084
+  time: '2025-05-04T16:22:46.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2032
