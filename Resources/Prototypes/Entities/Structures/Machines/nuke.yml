@@ -69,6 +69,15 @@
     location: nuclear bomb
   - type: StealTarget
     stealGroup: NuclearBomb
+  - type: Tag
+    tags:
+    - GhostOnlyWarp
+  - type: WarpPoint
+    follow: true
+    location: nuclear bomb
+    blacklist:
+      tags:
+      - GhostOnlyWarp
   - type: Construction
     graph: NuclearBomb
     deconstructionTarget: disarmed
