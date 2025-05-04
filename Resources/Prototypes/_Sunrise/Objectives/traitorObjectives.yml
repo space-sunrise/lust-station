@@ -44,3 +44,15 @@
     stealGroup: SupermatterSliver
     objectiveNoOwnerText: objective-condition-steal-supermatter-sliver
     descriptionText: objective-description-steal-supermatter-sliver
+
+- type: entity
+  parent: BaseTraitorStealObjective
+  id: HandheldFaxStealObjective
+  components:
+  - type: Objective
+    difficulty: 1.5
+  - type: NotJobRequirement
+    job: NanoTrasenRepresentative
+  - type: StealCondition
+    stealGroup: HandheldFax
+    owner: job-name-ntrep
