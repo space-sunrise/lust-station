@@ -16,8 +16,10 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
+  targetTagBlacklist:
+  - шея
   userTagBlacklist:
-  - mask
+  - лицо
   category: шея
 
 - type: interaction
@@ -45,8 +47,10 @@
   lovePercentTarget: 4
   userMoanChance: 0
   targetMoanChance: 0
+  targetTagBlacklist:
+  - шея
   userTagBlacklist:
-  - mask
+  - рот
   category: шея
 
 - type: interaction
@@ -70,8 +74,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 4
+  targetTagBlacklist:
+  - шея
   userTagBlacklist:
-  - mask
+  - рот
   category: шея
 
 - type: interaction
@@ -89,8 +95,10 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 6
+  targetTagBlacklist:
+  - шея
   userTagBlacklist:
-  - mask
+  - рот
   category: шея
 
 - type: interaction

@@ -40,3 +40,15 @@
     - Scarf
     - ClothMade
     - WhitelistChameleon
+# Lust-Start
+- type: entity
+  abstract: true
+  parent: ClothingNeckBase
+  id: ClothingCloakBase
+  components:
+  - type: Tag
+    tags:
+    - OpenNeck
+    - ClothMade
+    - WhitelistChameleon
+# Lust-End

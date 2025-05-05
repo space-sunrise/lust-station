@@ -23,9 +23,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  userTagBlacklist:
+  - гладкие перчатки
   category: анал
 
 - type: interaction
@@ -51,11 +51,9 @@
   lovePercentUser: 3
   lovePercentTarget: 6
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
   userTagBlacklist:
-  - mask
+  - рот
   category: анал
 
 - type: interaction
@@ -81,9 +79,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  userTagBlacklist:
+  - гладкие перчатки
   category: анал
 
 - type: interaction
@@ -109,14 +107,10 @@
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
-  userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  userTagBlacklist:
+  - член
   category: анал
   targetVirginityLoss: anal
   userVirginityLoss: male
@@ -147,9 +141,10 @@
   targetTagWhitelist:
   - Tail
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  - хвост
+  userTagBlacklist:
+  - член
   category: хвост
   targetVirginityLoss: anal
   userVirginityLoss: male
@@ -176,7 +171,7 @@
   userTagWhitelist:
   - Demon
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
+  userTagBlacklist:
+  - хвост
   category: хвост

@@ -215,6 +215,7 @@
   - type: Tag
     tags:
     - Hardsuit
+    - FullBodyOuter  # Lust-Edit
     - WhitelistChameleon
 
 - type: entity

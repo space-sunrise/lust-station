@@ -129,6 +129,7 @@
   - type: Tag
     tags:
     - Hardsuit
+    - FullBodyOuter # Lust-Edit
     - WhitelistChameleon
     - HardsuitSpatio
 
@@ -587,6 +588,7 @@
     tags:
     - MonkeyWearable
     - Hardsuit
+    - FullBodyOuter # Lust-Edit
     - WhitelistChameleon
 
 # Syndicate Medic Hardsuit
@@ -605,6 +607,7 @@
   - type: Tag
     tags:
     - Hardsuit
+    - FullBodyOuter # Lust-Edit
     - WhitelistChameleon
 
 #Syndicate Elite Hardsuit
@@ -742,6 +745,7 @@
   - type: Tag
     tags:
     - MonkeyWearable
+    - FullBodyOuter # Lust-Edit
 
 #Wizard Hardsuit
 - type: entity
@@ -949,6 +953,7 @@
   - type: Tag
     tags:
     - Hardsuit
+    - FullBodyOuter # Lust-Edit
     - WhitelistChameleon
 
 #ERT Janitor Hardsuit

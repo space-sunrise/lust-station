@@ -36,8 +36,10 @@
   - SlimeCatTailStripes
   - Vulpkanin
   - Tajaran
+  targetTagBlacklist:
+  - уши
   userTagBlacklist:
-  - mask
+  - рот
   category: уши
 
 - type: interaction
@@ -82,6 +84,10 @@
   - SlimeCatTailStripes
   - Vulpkanin
   - Tajaran
+  targetTagBlacklist:
+  - уши
+  userTagBlacklist:
+  - ладони
   category: уши
 
 - type: interaction
@@ -123,6 +129,10 @@
   - SlimeCatTailStripes
   - Vulpkanin
   - Tajaran
+  targetTagBlacklist:
+  - уши
+  userTagBlacklist:
+  - ладони
   category: уши
 
 - type: interaction
@@ -169,8 +179,10 @@
   - SlimeCatTailStripes
   - Vulpkanin
   - Tajaran
+  targetTagBlacklist:
+  - уши
   userTagBlacklist:
-  - mask
+  - рот
   category: уши
 
 - type: interaction
@@ -213,6 +225,8 @@
   - SlimeCatTailStripes
   - Vulpkanin
   - Tajaran
+  targetTagBlacklist:
+  - уши
   userTagBlacklist:
-  - mask
+  - рот
   category: уши

@@ -62,9 +62,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
+  userTagBlacklist:
+  - гладкие перчатки
   category: грудь
 
 - type: interaction
@@ -88,10 +88,9 @@
   lovePercentUser: 2
   lovePercentTarget: 4
   targetTagBlacklist:
-  - jumpsuit
-  - outerClothing
+  - грудь
   userTagBlacklist:
-  - mask
+  - рот
   category: грудь
 
 - type: interaction
@@ -114,9 +113,9 @@
   lovePercentUser: 2
   lovePercentTarget: 5
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
+  userTagBlacklist:
+  - гладкие перчатки
   category: грудь
 
 - type: interaction
@@ -140,9 +139,9 @@
   lovePercentUser: 3
   lovePercentTarget: 6
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
+  userTagBlacklist:
+  - гладкие перчатки
   category: грудь
 
 - type: interaction
@@ -163,11 +162,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
   userTagBlacklist:
-  - mask
+  - рот
   category: грудь
 
 - type: interaction
@@ -193,11 +190,9 @@
   lovePercentUser: 3
   lovePercentTarget: 7
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
   userTagBlacklist:
-  - mask
+  - рот
   category: грудь
 
 - type: interaction
@@ -220,11 +215,9 @@
   erp: true
   lovePercentTarget: 12
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
   userTagBlacklist:
-  - mask
+  - рот
   category: грудь
   coefficient: 1.4
   lactationStimulationFlag: true
@@ -248,10 +241,7 @@
   erp: true
   lovePercentTarget: 5
   targetTagBlacklist:
-  - Reptilian
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
   category: грудь
   lactationStimulationFlag: true
   amountLactate: 7
@@ -276,9 +266,9 @@
   erp: true
   lovePercentTarget: 10
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
+  userTagBlacklist:
+  - гладкие перчатки
   category: грудь
   lactationStimulationFlag: true
   amountLactate: 5
@@ -309,13 +299,9 @@
   lovePercentUser: 8
   lovePercentTarget: 4
   userTagBlacklist:
-  - jumpsuit
-  - outerClothing
-  - pants
+  - член
   targetTagBlacklist:
-  - bra
-  - jumpsuit
-  - outerClothing
+  - грудь
   category: грудь
 
 - type: interaction
@@ -334,6 +320,10 @@
   erp: true
   lovePercentUser: 10
   lovePercentTarget: 10
+  userTagBlacklist:
+  - хвост
+  targetTagBlacklist:
+  - грудь
   userTagWhitelist:
   - Tail
   category: хвост

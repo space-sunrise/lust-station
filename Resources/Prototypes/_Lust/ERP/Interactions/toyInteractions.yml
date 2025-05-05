@@ -29,9 +29,7 @@
   targetSex:
   - Unsexed
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
   erp: true
   lovePercentTarget: 8
   targetVirginityLoss: anal
@@ -66,9 +64,7 @@
   - Female
   - Futanari
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   erp: true
   lovePercentTarget: 8
   targetVirginityLoss: female
@@ -105,9 +101,7 @@
   - Futanari
   - Male
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   erp: true
   lovePercentTarget: 8
 
@@ -145,9 +139,7 @@
   targetSex:
   - Unsexed
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   useSelf: true
   erp: true
   lovePercentTarget: 8
@@ -181,9 +173,7 @@
   targetSex:
   - Unsexed
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - анал
   erp: true
   useSelf: true
   lovePercentTarget: 8
@@ -219,9 +209,7 @@
   targetSex:
   - Unsexed
   targetTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   erp: true
   useSelf: true
   lovePercentTarget: 8

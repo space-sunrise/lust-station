@@ -8,6 +8,10 @@
       sprite: _Sunrise/Clothing/Head/Helmets/security_medic.rsi
     - type: Clothing
       sprite: _Sunrise/Clothing/Head/Helmets/security_medic.rsi
+    - type: Tag
+      tags:
+      - TopCovered # Lust-Edit
+      - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBase
@@ -25,6 +29,11 @@
         Blunt: 0.85
         Slash: 0.85
         Piercing: 0.85
+  - type: Tag
+    tags:
+    - ClothMade
+    - FullCovered # Lust-Edit
+    - WhitelistChameleon
 
 - type: entity
   parent: [ClothingHeadBase, BaseRestrictedContraband, BaseFoldable]
@@ -56,6 +65,11 @@
         Piercing: 0.85
   - type: ExplosionResistance
     damageCoefficient: 0.95
+  - type: Tag
+    tags:
+    - ClothMade
+    - FullCovered # Lust-Edit
+    - WhitelistChameleon
 
 #ERT Amber EVA Helmet
 - type: entity

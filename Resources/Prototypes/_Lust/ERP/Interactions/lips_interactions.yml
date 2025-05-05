@@ -20,6 +20,10 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -43,6 +47,10 @@
   erp: true
   lovePercentUser: 1
   lovePercentTarget: 1
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -66,6 +74,10 @@
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 4
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -89,6 +101,10 @@
   erp: true
   lovePercentUser: 3
   lovePercentTarget: 3
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -114,6 +130,10 @@
   erp: true
   lovePercentUser: 5
   lovePercentTarget: 5
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -146,6 +166,10 @@
   erp: true
   lovePercentUser: 2
   lovePercentTarget: 2
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
   category: губы
 
 - type: interaction
@@ -163,3 +187,8 @@
   erp: true
   lovePercentUser: 4
   lovePercentTarget: 4
+  targetTagBlacklist:
+  - рот
+  userTagBlacklist:
+  - рот
+  category: губы

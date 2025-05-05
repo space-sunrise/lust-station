@@ -74,6 +74,13 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -109,6 +116,13 @@
     sprite: Clothing/Head/Misc/richard.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -122,6 +136,13 @@
     sprite: Clothing/Head/Misc/skubhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -244,6 +265,13 @@
     sprite: Clothing/Head/Misc/squiddy.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -255,6 +283,13 @@
     sprite: Clothing/Head/Misc/red_racoon.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/red_racoon.rsi
+    # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered
+  # Lust-End
 
 - type: entity
   parent: Clothing

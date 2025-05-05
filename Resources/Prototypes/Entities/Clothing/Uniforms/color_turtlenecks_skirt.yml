@@ -1,6 +1,6 @@
 # White Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorWhite
   name: white turtleneck with skirt
   description: A generic white turtleneck with no rank markings.
@@ -27,7 +27,7 @@
 
 # Grey Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorGrey
   name: grey turtleneck with skirt
   description: A tasteful grey turtleneck that reminds you of the good old days.
@@ -58,7 +58,7 @@
 
 # Black Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorBlack
   name: black turtleneck with skirt
   description: A generic black turtleneck with no rank markings.
@@ -89,7 +89,7 @@
 
 # Blue Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorBlue
   name: blue turtleneck with skirt
   description: A generic blue turtleneck with no rank markings.
@@ -120,7 +120,7 @@
 
 # Dark Blue Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorDarkBlue
   name: dark blue turtleneck with skirt
   description: A generic dark blue turtleneck with no rank markings.
@@ -151,7 +151,7 @@
 
 # Teal Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorTeal
   name: teal turtleneck with skirt
   description: A generic teal turtleneck with no rank markings.
@@ -182,7 +182,7 @@
 
 # Green Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorGreen
   name: green turtleneck with skirt
   description: A generic green turtleneck with no rank markings.
@@ -213,7 +213,7 @@
 
  # Dark Green Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorDarkGreen
   name: dark green turtleneck with skirt
   description: A generic dark green turtleneck with no rank markings.
@@ -244,7 +244,7 @@
 
 # Orange Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorOrange
   name: orange turtleneck with skirt
   description: A generic orange turtleneck with no rank markings.
@@ -275,7 +275,7 @@
 
 # Pink Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorPink
   name: pink turtleneck with skirt
   description: A generic pink turtleneck with no rank markings.
@@ -306,7 +306,7 @@
 
 # Red Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorRed
   name: red turtleneck with skirt
   description: A generic red turtleneck with no rank markings.
@@ -337,7 +337,7 @@
 
 # Yellow Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorYellow
   name: yellow turtleneck with skirt
   description: A generic yellow turtleneck with no rank markings.
@@ -368,7 +368,7 @@
 
 # Purple Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorPurple
   name: purple turtleneck with skirt
   description: A generic light purple turtleneck with no rank markings.
@@ -399,7 +399,7 @@
 
 # Light Brown Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorLightBrown
   name: light brown turtleneck with skirt
   description: A generic light brown turtleneck with no rank markings.
@@ -430,7 +430,7 @@
 
 # Brown Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorBrown
   name: brown turtleneck with skirt
   description: A generic brown turtleneck with no rank markings.
@@ -461,7 +461,7 @@
 
 # Maroon Turtleneck
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase # Lust-Edit
   id: ClothingUniformTurtleneckSkirtColorMaroon
   name: maroon turtleneck with skirt
   description: A generic maroon turtleneck with no rank markings.

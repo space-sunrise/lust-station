@@ -17,4 +17,8 @@
   targetMoanChance: 0
   targetTagWhitelist:
   - Tail
+  targetTagBlacklist:
+  - хвост
+  userTagBlacklist:
+  - гладкие перчатки
   category: хвост

@@ -8,6 +8,13 @@
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/bomber.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
@@ -25,6 +32,13 @@
     - id: FlippoEngravedLighter
   - type: ExplosionResistance
     damageCoefficient: 1 #its a coat. it doesnt do shit
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterCoatDetectiveLoadout]
@@ -46,6 +60,7 @@
     contents:
     - id: SmokingPipeFilledTobacco
     - id: FlippoLighter #Not the steal objective, only difference from normal detective trenchcoat
+  
 
 - type: entity
   parent: ClothingOuterStorageBase
@@ -57,6 +72,13 @@
     sprite: Clothing/OuterClothing/Coats/gentlecoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/gentlecoat.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   abstract: true
@@ -100,6 +122,13 @@
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/hos_trenchcoat.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: ClothingOuterStorageToggleableBase
@@ -140,6 +169,13 @@
         reagents:
         - ReagentId: Fiber
           Quantity: 20
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -375,6 +411,13 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
+  # Lust-Start
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - Vest
+    - NudeBottom
+  # Lust-End
 
 - type: entity
   parent: [ClothingOuterStorageBase, BaseSyndicateContraband]

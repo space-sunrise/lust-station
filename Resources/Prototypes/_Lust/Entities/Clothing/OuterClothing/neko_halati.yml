@@ -69,6 +69,12 @@
   parent: [ ClothingOuterCoatMedNekoBlue, ClothingOuterWinterCoatToggleable ]
   id: ClothingOuterCoatMedNekoBlueOpened
   name: blue neko coat opened
+  components:
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -105,6 +111,12 @@
   parent: [ ClothingOuterCoatMedNekoGreen, ClothingOuterWinterCoatToggleable ]
   id: ClothingOuterCoatMedNekoGreenOpened
   name: green neko coat opened
+  components:
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -141,3 +153,9 @@
   parent: [ ClothingOuterCoatMedNekoPurple, ClothingOuterWinterCoatToggleable ]
   id: ClothingOuterCoatMedNekoPurpleOpened
   name: purple neko coat opened
+  components:
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
