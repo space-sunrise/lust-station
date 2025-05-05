@@ -77,6 +77,12 @@ internal struct SunriseRichTextEntry
         // Bear with me here.
         // I am so deeply sorry for the person adding stuff to this in the future.
 
+        HideControls();
+        foreach (var control in TagControls.Values)
+        {
+            control.Orphan();
+        }
+
         Height = defaultFont.GetHeight(uiScale);
         LineBreaks.Clear();
 
