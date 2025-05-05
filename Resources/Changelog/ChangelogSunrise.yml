@@ -16041,3 +16041,17 @@
   id: 1102
   time: '2025-05-05T13:50:22.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2053
+- author: ANJEK_NAVERNO
+  changes:
+  - message: "\u041A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u043F\
+      \u0438\u0440\u0430\u0442\u044B \u043E\u0433\u0440\u0430\u0431\u0438\u043B\u0438\
+      \ \u0447\u0430\u0441\u0442\u044C \u043E\u0431\u043B\u043E\u043C\u043A\u043E\u0432\
+      \ \u0432 \u043A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\u043A\u043E\u043C\
+      \ \u043F\u0440\u043E\u0441\u0442\u0440\u0430\u043D\u0441\u0442\u0432\u0435(\u0441\
+      \u043E\u043A\u0440\u0430\u0449\u0451\u043D \u043B\u0443\u0442 \u043E\u0431\u043B\
+      \u043E\u043C\u043A\u043E\u0432 \u0441\u0438\u043D\u0434\u0438\u043A\u0430\u0442\
+      \u0430)."
+    type: Fix
+  id: 1103
+  time: '2025-05-05T17:02:58.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2075
