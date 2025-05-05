@@ -1,0 +1,28 @@
+- type: entity
+  id: ERPSexRack
+  parent: ChairBase
+  name: бдсм стойка
+  description: Мягкая стойка с ремнями, но для чего она?...
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Furniture/sexrack.rsi
+    state: sexrack
+  - type: Strap
+    position: Stand
+    buckleOffsets:
+    - "0,+0.05"
+
+# Упакованная стойка
+
+- type: entity
+  id: ERPSexRackFlatpack
+  parent: BaseFlatpack
+  name: упакованная бдсм стойка
+  description: Упаковка, при помощи которой можно создать бдсм стойку.
+  components:
+  - type: Flatpack
+    entity: ERPSexRack
+  - type: Sprite
+    sprite: _Lust/ERP/Furniture/sexrack.rsi
+    layers:
+    - state: sexrack-flatpack
