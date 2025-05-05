@@ -15998,3 +15998,15 @@
   id: 1098
   time: '2025-05-05T09:08:31.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2060
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 5-\u0442\u0438\
+      \ \u0441\u0435\u043A\u0443\u043D\u0434\u043D\u0430\u044F \u0437\u0430\u0434\u0435\
+      \u0440\u0436\u043A\u0430 \u043D\u0430 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\
+      \u043E\u0435 \u043F\u043E\u0434\u043D\u044F\u0442\u0438\u0435 \u0444\u0435\u043B\
+      \u0438\u043D\u0438\u0434\u043E\u0432, \u0433\u0430\u043C\u043B\u0435\u0442\u0430\
+      \ \u0438 \u043C\u044B\u0448\u0435\u0439."
+    type: Tweak
+  id: 1099
+  time: '2025-05-05T11:53:16.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/1936
