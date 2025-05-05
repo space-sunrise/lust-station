@@ -64,9 +64,6 @@
   - type: InteractionOutline
   - type: CargoSellBlacklist
   - type: ArrivalsBlacklist
-  - type: WarpPoint
-    follow: true
-    location: nuclear bomb
   - type: StealTarget
     stealGroup: NuclearBomb
   - type: Tag
