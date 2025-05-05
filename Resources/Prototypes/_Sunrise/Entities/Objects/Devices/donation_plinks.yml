@@ -167,8 +167,58 @@
 #  LUST STATION  #
 ##################
 
+# Erotic
 - type: entity
-  parent: BaseDonationPlink
+  parent: BaseItem
+  id: BaseDonationPlinkLust
+  components:
+  - type: Item
+    size: Small
+    sprite: _Lust/lust_uplink.rsi
+  - type: UserInterface
+    interfaces:
+      enum.StoreUiKey.Key:
+        type: StoreBoundUserInterface
+  - type: ActivatableUI
+    key: enum.StoreUiKey.Key
+  - type: Sprite
+    sprite: _Lust/lust_uplink.rsi
+    layers:
+    - state: icon-on
+  - type: Appearance
+  - type: StaticPrice
+    price: 100
+  - type: Store
+    categories:
+      - General
+      - SecurityThings
+      - CMOHeadOfDepartment
+      - CEHeadOfDepartment
+      - RDHeadOfDepartment
+      - HOPHeadOfDepartment
+      - CaptainHeadOfDepartment
+      - IAAHeadOfDepartment
+      - ScienceThings
+      - MedicalThings
+      - ServiceThings
+      - CargoThings
+      - EngineeringThings
+      - SpecialThings
+      - Friends
+      - Cloaks
+      - QMHeadOfDepartment
+      - Music
+      - Erotic
+    currencyWhitelist:
+      - Suntick
+    balance:
+      Suntick: 0
+  - type: Tag
+    tags:
+      - SunriseUplink
+
+- type: entity
+  parent: BaseDonationPlinkLust
   id: LustStationUplink40
   categories: [ HideSpawnMenu ]
   name: Lust portable shop
