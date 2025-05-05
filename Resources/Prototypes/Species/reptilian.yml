@@ -13,6 +13,7 @@
   maleFirstNames: NamesReptilianMale
   femaleFirstNames: NamesReptilianFemale
   naming: FirstDashFirst
+  buttScanTexture: /Textures/_Sunrise/ButtsScans/reptilian.png # Sunrise-Edit
   sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: bodyType

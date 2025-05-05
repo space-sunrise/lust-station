@@ -10,6 +10,7 @@
   markingLimits: MobSlimeMarkingLimits
   dollPrototype: MobSlimePersonDummy
   skinColoration: Hues
+  buttScanTexture: /Textures/_Sunrise/ButtsScans/slime.png # Sunrise-Edit
   sexes: [Male, Female, Futanari] # Lust-edit
 
 - type: bodyType
