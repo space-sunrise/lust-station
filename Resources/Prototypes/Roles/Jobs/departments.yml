@@ -33,6 +33,7 @@
   - Zookeeper
   - ServiceWorker
   - Barber # Sunrise-Roles
+  - ComMaid  # Sunrise-Lust edit
 
 - type: department
   id: CentralCommand
