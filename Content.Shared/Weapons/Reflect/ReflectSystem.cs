@@ -4,7 +4,6 @@ using Content.Shared._Sunrise.Events;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.Hands;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item.ItemToggle;
@@ -33,8 +32,6 @@ public sealed class ReflectSystem : EntitySystem
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
 
     public override void Initialize()
     {
@@ -178,45 +175,6 @@ public sealed class ReflectSystem : EntitySystem
             newDirection = null;
             return false;
         }
-
-        if (reflector.Comp.Slot != null &&
-            !_inventorySystem.TryGetSlotEntity(user, reflector.Comp.Slot, out var slotEntity) &&
-            slotEntity != reflector)
-        {
-            newDirection = null;
-            return false;
-        }
-
-        if (reflector.Comp.NeedHand)
-        {
-            var inHand = false;
-            var hands = _handsSystem.EnumerateHands(user);
-            {
-                foreach (var hand in hands)
-                {
-                    if (hand.HeldEntity == reflector)
-                    {
-                        inHand = true;
-                    }
-                }
-            }
-
-            if (!inHand)
-            {
-                newDirection = null;
-                return false;
-            }
-        }
-
-        if (reflector.Comp.NeedActiveHand && !_handsSystem.TryGetActiveItem(user, out var activeItem))
-        {
-            if (activeItem != reflector)
-            {
-                newDirection = null;
-                return false;
-            }
-        }
-        // Sunrise-End
 
         PlayAudioAndPopup(reflector.Comp, user);
 

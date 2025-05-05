@@ -58,18 +58,6 @@ public sealed partial class ReflectComponent : Component
     // Sunrise-Start
     [DataField("overrideAngle"), ViewVariables(VVAccess.ReadWrite), AutoNetworkedField]
     public Angle? OverrideAngle;
-
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField, AutoNetworkedField]
-    public string? Slot;
-
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField, AutoNetworkedField]
-    public bool NeedHand;
-
-    [ViewVariables(VVAccess.ReadWrite)]
-    [DataField, AutoNetworkedField]
-    public bool NeedActiveHand;
     // Sunrise-End
 }
 

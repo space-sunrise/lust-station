@@ -91,7 +91,6 @@
     reflects:
       - Energy
     reflectingInHands: false
-    slot: outerClothing # Sunrise-Edit
 
 #Detective's vest
 - type: entity
