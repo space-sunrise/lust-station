@@ -72,7 +72,6 @@
   - type: Reflect
     reflectProb: .35
     spread: 45
-    needActiveHand: true # Sunrise-Edit
   # Sunrise-start
   - type: Tag
     tags:
@@ -231,7 +230,6 @@
   - type: Reflect
     reflectProb: .15
     spread: 45
-    needActiveHand: true # Sunrise-Edit
   - type: Tag
     tags:
     - Write
@@ -343,7 +341,6 @@
   - type: Reflect
     reflectProb: .75
     spread: 75
-    needActiveHand: true # Sunrise-Edit
   - type: FlipOnAttack # Sunrise-Edit
     probability: 0.5 # Sunrise-Edit
 
