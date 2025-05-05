@@ -45736,7 +45736,7 @@ entities:
     - type: Transform
       pos: -6.5221434,-13.381658
       parent: 2
-- proto: ClothingOuterHardsuitSyndicate
+- proto: ClothingOuterEVASuitSyndicate
   entities:
   - uid: 5955
     components:
