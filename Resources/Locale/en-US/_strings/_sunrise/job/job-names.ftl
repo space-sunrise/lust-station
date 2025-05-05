@@ -1,6 +1,6 @@
 job-name-magistrat = магистрат
 job-name-centcomop = оператор Центком
-job-name-blueshield = офицер «Синий Щит»
+job-name-blueshield-officer = офицер «Синий Щит»
 job-name-blueshield-ensign = лейтенант «Синий Щит»
 job-name-iaa = агент внутренних дел
 job-name-senior-engineer = ведущий инженер
