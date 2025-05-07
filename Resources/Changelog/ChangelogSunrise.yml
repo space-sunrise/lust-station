@@ -16152,3 +16152,21 @@
   id: 1111
   time: '2025-05-07T00:27:37.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2098
+- author: Non_stop_smetana
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0441\u0443\u043F\
+      \u0435\u0440\u043C\u0430\u0442\u0435\u0440\u0438\u044F"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0434\u0435\u043F\u0430\
+      \u0440\u0442\u0430\u043C\u0435\u043D\u0442 \u0421\u0429"
+    type: Add
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u044D\u043A\u043E\u043D\
+      \u043E\u043C\u0438\u043A\u0430, \u0442\u0435\u043F\u0435\u0440\u044C \u043E\u043D\
+      \u0430 \u0420\u0410\u0411\u041E\u0422\u0410\u0415\u0422"
+    type: Tweak
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u0431\u0430\
+      \u0433\u0438"
+    type: Fix
+  id: 1112
+  time: '2025-05-07T14:17:36.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2110
