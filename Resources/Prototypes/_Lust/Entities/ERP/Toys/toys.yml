@@ -385,3 +385,34 @@
   - /Audio/_Lust/ERP/whip/whip_1.ogg
   - /Audio/_Lust/ERP/whip/whip_2.ogg
   - /Audio/_Lust/ERP/whip/whip_3.ogg
+
+- type: entity
+  parent: BaseItem
+  id: toyhandcuff
+  name: toy handcuffs
+  description: Soft toy handcuffs. Classic!
+  components:
+  - type: Item
+    size: Small
+  - type: Handcuff
+    cuffedRSI: _Lust/ERP/Stuff/handcuff.rsi
+    bodyIconState: body-overlay
+    breakoutTime: 3
+    cuffTime: 7
+    uncuffTime: 3
+    stunBonus: 4
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/handcuff.rsi
+    state: handcuff
+  - type: Tag
+    tags:
+    - Handcuffs
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    resetOnHandSelected: false
+    animation: WeaponArcDisarm
+    damage:
+      types:
+        Blunt: 0
+  - type: UseDelay
+    delay: 3
