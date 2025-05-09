@@ -55,9 +55,9 @@
   lovePercentUser: 9
   lovePercentTarget: 5
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  targetTagBlacklist:
+  - рот
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -73,8 +73,6 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  targetTagBlacklist:
-  - mask
   category: лицо
 
 - type: interaction
@@ -98,10 +96,10 @@
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
+  targetTagBlacklist:
+  - рот
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -117,8 +115,6 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  targetTagBlacklist:
-  - mask
   category: лицо
 
 - type: interaction
@@ -145,9 +141,9 @@
   lovePercentUser: 9
   lovePercentTarget: 5
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
+  targetTagBlacklist:
+  - рот
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -163,8 +159,6 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  targetTagBlacklist:
-  - mask
   category: вагина
 
 - type: interaction
@@ -191,10 +185,10 @@
   erp: true
   lovePercentUser: 9
   lovePercentTarget: 5
+  targetTagBlacklist:
+  - рот
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - вагина
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -210,8 +204,6 @@
   - LizardHornsAyrshire
   - LizardHornsArgali
   - LizardHornsDouble
-  targetTagBlacklist:
-  - mask
   category: вагина
 
 - type: interaction
@@ -239,9 +231,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  targetTagBlacklist:
+  - вагина
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -286,9 +278,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  targetTagBlacklist:
+  - анал
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
@@ -332,9 +324,9 @@
   lovePercentUser: 10
   lovePercentTarget: 10
   userTagBlacklist:
-  - pants
-  - jumpsuit
-  - outerClothing
+  - член
+  targetTagBlacklist:
+  - анал
   targetTagWhitelist:
   - DemonHornsDeer
   - DemonCowHorns
