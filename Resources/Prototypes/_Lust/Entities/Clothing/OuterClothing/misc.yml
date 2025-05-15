@@ -1,0 +1,42 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatAdjutantJacket
+  name: formal adjutant jacket
+  description: Business jacket of the Adjutant for a professional look.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/misc/formaladj.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/misc/formaladj.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.8
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatRDcostume
+  name: formal RD costume
+  description: The bright, outwardly pleasant suit of the research director.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/misc/formalRD.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/misc/formalRD.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.75
+        Radiation: 0.9

@@ -1,0 +1,62 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBlackCap
+  name: black captain hat
+  description: Black captain stylish hat.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/blackcap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/blackcap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadFormalCMO
+  name: formal CMO cap
+  description: Stylish head doctor's cap, looks catchy.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/formalCMO.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/formalCMO.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadFormalWarden
+  name: formal warden cap
+  description: Stylish wardens cap, looks catchy.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/formalwarden.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/formalwarden.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadWhiteCap
+  name: black captain cap
+  description: White captain stylish cap.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/whitecap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/whitecap.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadWhiteHelmet
+  name: black captain helmet
+  description: White captain stylish helmet.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/whitecaphelm.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/whitecaphelm.rsi
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon

@@ -1,0 +1,30 @@
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: ClothingShoesSpecialistBootsSafno_S
+  name: Specialist Boots
+  description: Heavy lined boots. Quality made and well cared for.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Shoes/Boots/SpecialistBoots.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Shoes/Boots/SpecialistBoots.rsi
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBoots
+  - type: NoSlip
+  - type: ClothingSpeedModifier
+    walkModifier: 1.50
+    sprintModifier: 1.50
+
+- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: ClothingShoesFormalQMBoots
+  name: formal QM boots
+  description: Boots made of thick leather with a sheath for a small knife
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Shoes/Boots/formalQM.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Shoes/Boots/formalQM.rsi

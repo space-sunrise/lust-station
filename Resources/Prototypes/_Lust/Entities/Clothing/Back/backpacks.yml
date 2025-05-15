@@ -1,0 +1,89 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBattleHoSPack
+  name: HoS's battle backpack
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/battle_hospack.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackBlackCap
+  name: black captain backpack
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/blackcap.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackFormalAd
+  name: formal adjutant backpack
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/formalad.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackIAA
+  name: IAA backpack
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/IAA.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalCEBackpack
+  name: formal CE backpack
+  description: Working style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/formalCE.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalCMOBackpack
+  name: formal CMO backpack
+  description: There may be something in this backpack that will save the lives of the crew!
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/formalCMO.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalPQBackpack
+  name: formal PQ backpack
+  description: A thick and high-quality backpack.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/PQ.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalQMBackpack
+  name: formal QM backpack
+  description: Obviously a very roomy backpack
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/formalQM.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingFormalWardenBackpack
+  name: formal warden backpack
+  description: If you try hard, you can carry half of the armory in this backpack.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/formalwarden.rsi
+
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackWhiteCap
+  name: white captain backpack
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpacks/whitecap.rsi
