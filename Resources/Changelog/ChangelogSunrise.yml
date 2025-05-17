@@ -16445,3 +16445,13 @@
   id: 1125
   time: '2025-05-12T20:50:35.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2136
+- author: Noychik
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0442\u0435\u043A\
+      \u0441\u0442\u0443\u0440\u0430 \u0442\u0440\u043E\u0439\u043D\u043E\u0433\u043E\
+      \ \u0448\u0430\u0445\u0442\u0435\u0440\u0441\u043A\u043E\u0433\u043E \u0448\u043B\
+      \u044E\u0437\u0430"
+    type: Tweak
+  id: 1126
+  time: '2025-05-17T08:53:21.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2111
