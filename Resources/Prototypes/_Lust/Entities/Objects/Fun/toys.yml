@@ -309,8 +309,7 @@
   - type: Emoting
   - type: TTS
     voice: KateSmirnovaTВ
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female
+  - type: Speech
+    speechSounds: Lizard
+
   
