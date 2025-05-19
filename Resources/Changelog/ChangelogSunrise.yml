@@ -16455,3 +16455,13 @@
   id: 1126
   time: '2025-05-17T08:53:21.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2111
+- author: darvin7531
+  changes:
+  - message: "\u0438\u0441\u043F\u0440\u0430\u0432\u0438\u043B \u043F\u0443\u0442\u044C\
+      \ \u0434\u043E \u0441\u043F\u0440\u0430\u0439\u0442\u0430 \u043F\u0440\u043E\
+      \u0442\u0438\u0432\u043E\u0433\u0430\u0437\u0430 \u0421\u0438\u043D\u0435\u0433\
+      \u043E \u0429\u0438\u0442\u0430"
+    type: Fix
+  id: 1127
+  time: '2025-05-19T16:22:02.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2180
