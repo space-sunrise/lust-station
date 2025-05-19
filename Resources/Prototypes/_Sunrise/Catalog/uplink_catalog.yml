@@ -1503,6 +1503,24 @@
     - AtmosphericTechnician
 
 - type: listing
+  id: uplinkCArmouredJumpsuit
+  name: uplink-armoured-jumpsuit-name
+  description: uplink-armoured-jumpsuit-desc
+  productEntity: ClothingUniformJumpsuitArmouredBlack
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 8
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - AssaultOpsUplink
+
+- type: listing
   id: UplinkSyndicateCircuitBoard
   name: uplink-syndicate-law-name
   description: uplink-syndicate-law-desc
