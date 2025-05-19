@@ -261,3 +261,9 @@
   values:
     prefix: figurines-hamlet-
     count: 8
+
+- type: localizedDataset
+  id: FigurinesAndrea
+  values:
+    prefix: figurines-andrea-
+    count: 5
