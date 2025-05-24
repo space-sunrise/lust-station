@@ -54,4 +54,4 @@
     gloves: ClothingHandsGlovesCombat
   storage:
     back:
-    - HandheldCrewMonitor # Sunrise-TODO: Мониторинг командования.
+    - HandheldBSOCrewMonitor

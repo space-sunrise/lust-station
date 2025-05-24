@@ -1047,8 +1047,8 @@
 # Plushies
 
 - type: listing
-  id: UplinkSunrisePlushieUunaMiira
-  productEntity: PlushieUunaMiira
+  id: UplinkSunrisePlushieUunaKatsuhiro
+  productEntity: PlushieUunaKatsuhiro
   cost:
     Suntick: 4
   categories:
