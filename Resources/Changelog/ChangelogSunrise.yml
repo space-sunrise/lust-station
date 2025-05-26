@@ -16840,3 +16840,20 @@
   id: 1145
   time: '2025-05-26T22:37:22.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2172
+- author: banumbas
+  changes:
+  - message: "\u041F\u043E\u0447\u0438\u043D\u0438\u043B \u043F\u0435\u0440\u0435\u043F\
+      \u0443\u0442\u0430\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0438 \u043A\u0441\
+      \u0435\u043D\u043E."
+    type: Fix
+  - message: "\u041F\u043E\u0447\u0438\u043D\u0438\u043B \u043F\u0435\u0440\u0435\u043F\
+      \u0443\u0442\u0430\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0438 \u044F\u0443\
+      \u0442\u0436."
+    type: Fix
+  - message: "\u041F\u043E\u0447\u0438\u043D\u0438\u043B \u043F\u0435\u0440\u0435\u043F\
+      \u0443\u0442\u0430\u043D\u043D\u044B\u0435 \u0440\u0443\u043A\u0438 \u0442\u0440\
+      \u043E\u0442\u0442\u0438\u043D\u043E\u0432."
+    type: Fix
+  id: 1146
+  time: '2025-05-26T22:46:57.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2176
