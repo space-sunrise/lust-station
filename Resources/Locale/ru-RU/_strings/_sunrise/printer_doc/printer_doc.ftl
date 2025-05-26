@@ -8,7 +8,6 @@ printerdoc-menu-copy = Копировать
 printerdoc-menu-copy-available = Можно копировать
 printerdoc-menu-copy-unavailable = Нечего копировать
 printerdoc-menu-search-placeholder = Поиск...
-
 doc-template-report-station-name = Отчет о ситуации на станции
 doc-template-report-on-elimination-of-violations-name = Отчет об устранении нарушений
 doc-template-report-department-name = Отчет о работе отдела

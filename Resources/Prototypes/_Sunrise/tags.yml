@@ -358,6 +358,9 @@
   id: SheetPaper
 
 - type: Tag
+  id: PowerCellHigh
+
+- type: Tag
   id: RiotShield
 
 - type: Tag
