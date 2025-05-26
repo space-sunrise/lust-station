@@ -20,6 +20,7 @@
   - type: StaticPrice
     price: 100
   - type: Store
+    ownerOnly: true
     categories:
       - General
       - SecurityThings
