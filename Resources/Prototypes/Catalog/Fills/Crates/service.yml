@@ -145,19 +145,6 @@
     - id: BrbSign
 
 - type: entity
-  id: CrateServiceBureaucracyINC
-  parent: CrateGenericSteel
-  name: INC crate
-  description: printer paper with ink
-  components:
-  - type: StorageFill
-    contents:
-    - id: SheetPaper
-      amount: 1
-    - id: DrinkInc
-      amount: 2
-
-- type: entity
   id: CrateServiceFaxMachine
   parent: CrateGenericSteel
   name: fax machine crate

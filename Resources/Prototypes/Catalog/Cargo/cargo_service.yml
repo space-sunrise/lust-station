@@ -88,8 +88,6 @@
   category: cargoproduct-category-name-service
   group: market
 
-
-
 - type: cargoProduct
   id: ServiceFaxMachine
   icon:
