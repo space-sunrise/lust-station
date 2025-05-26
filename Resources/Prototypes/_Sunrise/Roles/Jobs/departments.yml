@@ -14,7 +14,7 @@
 #  id: BlueShield
 #  name: department-Blueshield
 #  description: department-Blueshield-description
-#  color: "#005bfb"  # Иначе плохо видно
+#  color: "#0f4e81"
 #  roles:
 #    - BlueShieldEnsign
 #    - BlueShieldOfficer
