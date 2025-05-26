@@ -3,5 +3,9 @@
   name: id-card-access-level-mail
 
 - type: accessLevel
+  id: CargoPurchaseAccess
+  name: id-card-access-level-cargo-purchase-access
+
+- type: accessLevel
   id: Mining
   name: id-card-access-level-mining
