@@ -228,7 +228,7 @@
     - id: BoxEncryptionKeyMedical
     - id: ClothingBackpackDuffelSurgeryFilled
     - id: ClothingCloakCmo
-#    - id: ClothingEyesHudMedical # Sunrise-edit
+    #    - id: ClothingEyesHudMedical # Sunrise-edit
     - id: ClothingHandsGlovesNitrile
     - id: ClothingHeadHatBeretCmo
     - id: ClothingHeadsetAltMedical
@@ -239,12 +239,6 @@
     #Sunrise-start
     - id: ClothingEyesUniversalMedicalHud
     - id: AdvancedDefibrillator
-    - id: LauncherSyringeMed
-      prob: 0.6
-    - id: BoxMiniSyringe
-      prob: 0.8
-    - id: BoxMiniSyringe
-      prob: 0.20
     - id: VariantCubeBoxSunrise
     #Sunrise-end
     - id: MedicalTechFabCircuitboard
