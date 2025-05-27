@@ -16483,13 +16483,6 @@ entities:
     - type: Transform
       pos: 50.376198,30.620008
       parent: 2
-- proto: BoxMiniSyringe
-  entities:
-  - uid: 1140
-    components:
-    - type: Transform
-      pos: -0.71074677,52.50585
-      parent: 2
 - proto: BoxMouthSwab
   entities:
   - uid: 1141

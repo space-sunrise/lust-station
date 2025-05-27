@@ -150,7 +150,7 @@ namespace Content.Server.Cargo.Systems
             if (!_accessReaderSystem.IsAllowed(player, uid))
             {
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-order-not-allowed"));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -162,7 +162,7 @@ namespace Content.Server.Cargo.Systems
                 !TryGetOrderDatabase(station, out var orderDatabase))
             {
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-station-not-found"));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -177,7 +177,7 @@ namespace Content.Server.Cargo.Systems
             if (!_protoMan.HasIndex<EntityPrototype>(order.ProductId))
             {
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-invalid-product"));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -188,7 +188,7 @@ namespace Content.Server.Cargo.Systems
             if (amount >= capacity)
             {
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-too-many"));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -199,7 +199,7 @@ namespace Content.Server.Cargo.Systems
             {
                 order.OrderQuantity = cappedAmount;
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-snip-snip"));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
             }
 
             var cost = order.Price * order.OrderQuantity;
@@ -209,7 +209,7 @@ namespace Content.Server.Cargo.Systems
             if (cost > accountBalance)
             {
                 ConsolePopup(args.Actor, Loc.GetString("cargo-console-insufficient-funds", ("cost", cost)));
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -224,7 +224,7 @@ namespace Content.Server.Cargo.Systems
                 if (ev.FulfillmentEntity == null)
                 {
                     ConsolePopup(args.Actor, Loc.GetString("cargo-console-unfulfilled"));
-                    PlayDenySound(uid, component.ErrorSound);
+                    PlayDenySound(uid, component);
                     return;
                 }
             }
@@ -386,7 +386,7 @@ namespace Content.Server.Cargo.Systems
 
             if (!TryAddOrder(stationUid.Value, component.Account, data, orderDatabase))
             {
-                PlayDenySound(uid, component.ErrorSound);
+                PlayDenySound(uid, component);
                 return;
             }
 
@@ -433,12 +433,21 @@ namespace Content.Server.Cargo.Systems
             _popup.PopupCursor(text, actor);
         }
 
-        private void PlayDenySound(EntityUid uid, SoundSpecifier errorSound) // Sunrise-Edit
+        private void PlayDenySound(EntityUid uid, CargoOrderConsoleComponent component)
         {
             if (_timing.CurTime >= component.NextDenySoundTime)
             {
                 component.NextDenySoundTime = _timing.CurTime + component.DenySoundDelay;
-                _audio.PlayPvs(_audio.ResolveSound(errorSound), uid);
+                _audio.PlayPvs(_audio.ResolveSound(component.ErrorSound), uid);
+            }
+        }
+
+        private void PlayDenySound(EntityUid uid, CargoPalletConsoleComponent component)
+        {
+            if (_timing.CurTime >= component.NextDenySoundTime)
+            {
+                component.NextDenySoundTime = _timing.CurTime + component.DenySoundDelay;
+                _audio.PlayPvs(_audio.ResolveSound(component.ErrorSound), uid);
             }
         }
 

@@ -86,11 +86,13 @@
 # Sunrise-Start
 - type: typingIndicator
   id: sun
+  idleState: sunrise0
   typingState: sunrise0
   offset: 0, 0.125
 
 - type: typingIndicator
   id: syndibot
+  idleState: syndibot0
   typingState: syndibot0
   offset: 0, 0.125
 # Sunrise-End

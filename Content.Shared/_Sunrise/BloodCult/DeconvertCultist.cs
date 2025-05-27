@@ -1,15 +1,16 @@
 ﻿using System.Threading;
-using Content.Server.Popups;
-using Content.Server.Stunnable;
 using Content.Shared._Sunrise.BloodCult.Components;
+using Content.Shared._Sunrise.BloodCult.Pentagram;
 using Content.Shared.EntityEffects;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Popups;
+using Content.Shared.Stunnable;
 using Content.Shared.Tag;
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Timer = Robust.Shared.Timing.Timer;
 
-namespace Content.Server._Sunrise.BloodCult.HolyWater;
+namespace Content.Shared._Sunrise.BloodCult;
 
 [ImplicitDataDefinitionForInheritors]
 [MeansImplicitUse]
@@ -32,15 +33,15 @@ public sealed partial class DeconvertCultist : EntityEffect
         if (component.HolyConvertToken != null)
             return;
 
-        var random = new Random();
+        var random = new System.Random();
         var convert = random.Next(1, 101) <= component.HolyConvertChance;
         if (!convert)
             return;
 
-        args.EntityManager.System<StunSystem>()
+        args.EntityManager.System<SharedStunSystem>()
             .TryParalyze(uid, TimeSpan.FromSeconds(5f), true);
         var target = Identity.Name(uid, args.EntityManager);
-        args.EntityManager.System<PopupSystem>()
+        args.EntityManager.System<SharedPopupSystem>()
             .PopupEntity(Loc.GetString("holy-water-started-converting", ("target", target)), uid);
 
         component.HolyConvertToken = new CancellationTokenSource();
@@ -56,8 +57,8 @@ public sealed partial class DeconvertCultist : EntityEffect
 
         cultist.HolyConvertToken = null;
         entityManager.RemoveComponent<BloodCultistComponent>(uid);
-        if (entityManager.HasComponent<PentagramComponent>(uid))
-            entityManager.RemoveComponent<PentagramComponent>(uid);
+        if (entityManager.HasComponent<SharedPentagramComponent>(uid))
+            entityManager.RemoveComponent<SharedPentagramComponent>(uid);
         if (entityManager.HasComponent<CultMemberComponent>(uid))
             entityManager.RemoveComponent<CultMemberComponent>(uid);
         entityManager.System<TagSystem>().RemoveTag(uid, "Cultist");

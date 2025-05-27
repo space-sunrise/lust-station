@@ -219,7 +219,7 @@ public sealed partial class CargoSystem
         if (!_accessReaderSystem.IsAllowed(player, uid))
         {
             ConsolePopup(args.Actor, Loc.GetString("cargo-console-order-not-allowed"));
-            PlayDenySound(uid, component.ErrorSound);
+            PlayDenySound(uid, component);
             return;
         }
         // Sunrise-End

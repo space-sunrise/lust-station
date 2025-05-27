@@ -2,7 +2,7 @@ using Content.Server.Sunrise.FleshCult;
 using Content.Shared.EntityEffects;
 using Robust.Shared.Prototypes;
 
-namespace Content.Server._Sunrise.FleshCult;
+namespace Content.Shared._Sunrise.FleshCult;
 
 public sealed partial class CauseFleshCultInfection : EntityEffect
 {

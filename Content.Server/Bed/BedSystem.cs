@@ -1,6 +1,6 @@
 using Content.Server.Bed.Components;
 using Content.Server.Body.Systems;
-using Content.Shared.Actions;
+using Content.Server.Power.EntitySystems;
 using Content.Shared.Bed;
 using Content.Shared.Bed.Components;
 using Content.Shared.Bed.Sleep;
@@ -10,7 +10,6 @@ using Content.Shared.Damage;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Power;
-using Robust.Shared.Timing;
 
 namespace Content.Server.Bed
 {
@@ -20,8 +19,6 @@ namespace Content.Server.Bed
         [Dependency] private readonly EmagSystem _emag = default!;
         [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
         [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-        [Dependency] private readonly IGameTiming _timing = default!;
-        [Dependency] private readonly ActionContainerSystem _actionContainer = default!;
 
         private EntityQuery<SleepingComponent> _sleepingQuery;
 
@@ -31,35 +28,11 @@ namespace Content.Server.Bed
 
             _sleepingQuery = GetEntityQuery<SleepingComponent>();
 
-            // Sunrise-Start
-            SubscribeLocalEvent<CanSleepOnBuckleComponent, UnstrappedEvent>(OnUnstrapped);
-            SubscribeLocalEvent<CanSleepOnBuckleComponent, StrappedEvent>(OnStrapped);
-            // Sunrise-End
-
             SubscribeLocalEvent<StasisBedComponent, StrappedEvent>(OnStasisStrapped);
             SubscribeLocalEvent<StasisBedComponent, UnstrappedEvent>(OnStasisUnstrapped);
             SubscribeLocalEvent<StasisBedComponent, PowerChangedEvent>(OnPowerChanged);
             SubscribeLocalEvent<StasisBedComponent, GotEmaggedEvent>(OnEmagged);
         }
-
-        // Sunrise-Start
-        private void OnStrapped(Entity<CanSleepOnBuckleComponent> bed, ref StrappedEvent args)
-        {
-            var canSleep = EnsureComp<CanSleepComponent>(args.Buckle);
-            _actionsSystem.AddAction(args.Buckle.Owner, ref canSleep.SleepAction, SleepingSystem.SleepActionId, args.Buckle.Owner);
-        }
-
-        private void OnUnstrapped(Entity<CanSleepOnBuckleComponent> bed, ref UnstrappedEvent args)
-        {
-            if (!TryComp<CanSleepComponent>(args.Buckle.Owner, out var canSleep))
-                return;
-
-            RemComp<CanSleepComponent>(args.Buckle.Owner);
-            _actionsSystem.RemoveAction(args.Buckle.Owner, canSleep.SleepAction);
-            if (canSleep.SleepAction != null)
-                _actionContainer.RemoveAction(canSleep.SleepAction.Value);
-        }
-        // Sunrise-End
 
         public override void Update(float frameTime)
         {

@@ -136,7 +136,7 @@ public sealed class AbsorbentSystem : SharedAbsorbentSystem
 
         if (footPrints.Count > 0)
         {
-            if (!_solutionContainerSystem.TryGetSolution(args.Used, AbsorbentComponent.SolutionName, out var absorberSoln))
+            if (!_solutionContainerSystem.TryGetSolution(args.Used, component.SolutionName, out var absorberSoln))
                 return;
 
             var tileCenterPos = _mapSystem.GridTileToLocal(gridUid.Value, grid, tileRef.GridIndices);

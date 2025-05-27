@@ -53,7 +53,7 @@ public sealed class ChameleonClothingSystem : SharedChameleonClothingSystem
         }
        // Sunrise-start
         if (!TryComp(uid, out ToggleableClothingComponent? helmet)
-            || !proto.TryGetComponent(out ToggleableClothingComponent? protoHelmet, _factory))
+            || !proto.TryGetComponent(out ToggleableClothingComponent? protoHelmet, Factory))
             return;
 
         if (!_proto.TryIndex(protoHelmet.ClothingPrototype.Id, out var prototypeHelmetOther))

@@ -40,7 +40,7 @@ public sealed class MechSystem : SharedMechSystem
 
     private void UpdateAppearance(EntityUid uid, MechComponent component, SpriteComponent sprite)
     {
-        if (!_sprite.LayerExists((uid, args.Sprite), MechVisualLayers.Base))
+        if (!_sprite.LayerExists((uid, sprite), MechVisualLayers.Base))
             return;
 
         var state = component.BaseState;
@@ -61,7 +61,7 @@ public sealed class MechSystem : SharedMechSystem
             drawDepth = DrawDepth.SmallMobs;
         }
 
-        _sprite.LayerSetRsiState((uid, args.Sprite), MechVisualLayers.Base, state);
-        _sprite.SetDrawDepth((uid, args.Sprite), (int)drawDepth);
+        _sprite.LayerSetRsiState((uid, sprite), MechVisualLayers.Base, state);
+        _sprite.SetDrawDepth((uid, sprite), (int)drawDepth);
     }
 }

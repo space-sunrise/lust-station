@@ -135,7 +135,7 @@ namespace Content.Server._Sunrise.Fugitive
 
             if (_roleSystem.MindHasRole<FugitiveRoleComponent>(mindId))
             {
-                _roleSystem.MindTryRemoveRole<FugitiveRoleComponent>(mindId);
+                _roleSystem.MindRemoveRole<FugitiveRoleComponent>(mindId);
             }
 
             _roleSystem.MindAddRole(mindId, MindRole);

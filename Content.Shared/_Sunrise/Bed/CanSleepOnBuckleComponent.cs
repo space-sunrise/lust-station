@@ -1,4 +1,4 @@
-namespace Content.Server.Bed.Components
+namespace Content.Shared._Sunrise.Bed
 {
     [RegisterComponent]
     public sealed partial class CanSleepOnBuckleComponent : Component

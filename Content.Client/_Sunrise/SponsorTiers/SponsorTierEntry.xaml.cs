@@ -337,7 +337,8 @@ public sealed partial class SponsorTierEntry : Control
                 Scale = new Vector2(4, 4),
             };
 
-            _entityManager.System<HumanoidAppearanceSystem>().ApplyMarking(markingProto, null, true, humanoidAppearance, spriteComponent);
+            _entityManager.System<HumanoidAppearanceSystem>().ApplyMarking(markingProto, null, true,
+                (dummyEnt, humanoidAppearance, spriteComponent));
 
             view.SetEntity(dummyEnt);
             _spriteViews.Add(view);

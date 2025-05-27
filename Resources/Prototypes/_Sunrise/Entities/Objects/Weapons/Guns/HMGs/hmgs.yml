@@ -20,6 +20,7 @@
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/HMGs/minigun_shot.ogg
   - type: ClothingSlotAmmoProvider
+  - type: SlotBasedConnectedContainer
     targetSlot: BACK
     providerWhitelist:
       tags:

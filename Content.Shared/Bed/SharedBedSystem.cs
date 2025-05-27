@@ -3,7 +3,6 @@ using Content.Shared.Bed.Components;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Buckle.Components;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 
 namespace Content.Shared.Bed;
 
@@ -18,10 +17,34 @@ public abstract class SharedBedSystem : EntitySystem
     {
         base.Initialize();
 
+        // Sunrise-Start
+        SubscribeLocalEvent<_Sunrise.Bed.CanSleepOnBuckleComponent, UnstrappedEvent>(OnUnstrapped);
+        SubscribeLocalEvent<_Sunrise.Bed.CanSleepOnBuckleComponent, StrappedEvent>(OnStrapped);
+        // Sunrise-End
+
         SubscribeLocalEvent<HealOnBuckleComponent, MapInitEvent>(OnHealMapInit);
         SubscribeLocalEvent<HealOnBuckleComponent, StrappedEvent>(OnStrapped);
         SubscribeLocalEvent<HealOnBuckleComponent, UnstrappedEvent>(OnUnstrapped);
     }
+
+    // Sunrise-Start
+    private void OnStrapped(Entity<_Sunrise.Bed.CanSleepOnBuckleComponent> bed, ref StrappedEvent args)
+    {
+        var canSleep = EnsureComp<CanSleepComponent>(args.Buckle);
+        _actionsSystem.AddAction(args.Buckle.Owner, ref canSleep.SleepAction, SleepingSystem.SleepActionId, args.Buckle.Owner);
+    }
+
+    private void OnUnstrapped(Entity<_Sunrise.Bed.CanSleepOnBuckleComponent> bed, ref UnstrappedEvent args)
+    {
+        if (!TryComp<CanSleepComponent>(args.Buckle.Owner, out var canSleep))
+            return;
+
+        RemComp<CanSleepComponent>(args.Buckle.Owner);
+        _actionsSystem.RemoveAction(args.Buckle.Owner, canSleep.SleepAction);
+        if (canSleep.SleepAction != null)
+            _actConts.RemoveAction(canSleep.SleepAction.Value);
+    }
+    // Sunrise-End
 
     private void OnHealMapInit(Entity<HealOnBuckleComponent> ent, ref MapInitEvent args)
     {
@@ -33,16 +56,10 @@ public abstract class SharedBedSystem : EntitySystem
     {
         EnsureComp<HealOnBuckleHealingComponent>(bed);
         bed.Comp.NextHealTime = Timing.CurTime + TimeSpan.FromSeconds(bed.Comp.HealTime);
-        _actionsSystem.AddAction(args.Buckle, ref bed.Comp.SleepAction, SleepingSystem.SleepActionId, bed);
-        Dirty(bed);
-
-        // Single action entity, cannot strap multiple entities to the same bed.
-        DebugTools.AssertEqual(args.Strap.Comp.BuckledEntities.Count, 1);
     }
 
     private void OnUnstrapped(Entity<HealOnBuckleComponent> bed, ref UnstrappedEvent args)
     {
-        _actionsSystem.RemoveAction(args.Buckle, bed.Comp.SleepAction);
         _sleepingSystem.TryWaking(args.Buckle.Owner);
         RemComp<HealOnBuckleHealingComponent>(bed);
     }
