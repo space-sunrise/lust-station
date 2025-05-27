@@ -42,3 +42,8 @@
   - Mail  # Sunrise-edit
   - CargoPurchaseAccess  # Sunrise-edit
   - ResearchConsoleAccess  # Sunrise-edit
+
+- type: accessGroup
+  id: General
+  tags:
+  - Maintenance

@@ -623,7 +623,7 @@
     - LightReplacer
     - CrowbarBorg # Sunrise-Edit
     - ScrewdriverBorg # Sunrise-Edit
-    - SoapNT
+    - SoapBorg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: light-replacer-module }
 
@@ -638,7 +638,7 @@
     - state: icon-mop
   - type: ItemBorgModule
     items:
-    - Bucket
+    - Bucket # Sunrise-Edit
     - BorgSprayBottle
     - HoloprojectorJanitorBorg # Sunrise-Edit
   - type: BorgModuleIcon
@@ -656,7 +656,7 @@
     - state: icon-mop-adv
   - type: ItemBorgModule
     items:
-    - BorgBucket
+    - BorgBucket # Sunrise-Edit
     - HoloprojectorJanitorBorg # Sunrise-Edit
     - SprayBottleSpaceCleanerBorg # Sunrise-Edit
     - BorgDropper
@@ -748,7 +748,7 @@
     - state: icon-chemist
   - type: ItemBorgModule
     items:
-    - HypoBorgMedical
+    - HypoBorgMedical # Sunrise-Edit
     - Syringe
     - BorgDropper
     - BorgBeaker
@@ -1155,7 +1155,7 @@
   parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: XenoborgModuleSword
   name: sword xenoborg module
-  description: Module with an energy dagger.
+  description: Module with a kukri knife.
   components:
   - type: Sprite
     layers:
@@ -1163,16 +1163,16 @@
     - state: icon-xenoborg-sword
   - type: ItemBorgModule
     items:
-    - EnergyDaggerLoudBlue
+    - KukriKnife
     - JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword-module }
 
 - type: entity
   parent: [ BaseXenoborgModuleScout, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: XenoborgModuleFastSword
-  name: fast sword xenoborg module
-  description: Module with a crusher dagger.
+  id: XenoborgModuleEnergySword
+  name: energy sword xenoborg module
+  description: Module with an energy dagger.
   components:
   - type: Sprite
     layers:
@@ -1180,7 +1180,7 @@
     - state: icon-xenoborg-sword2
   - type: ItemBorgModule
     items:
-    - WeaponCrusherDagger
+    - EnergyDaggerLoudBlue
     - JetpackXenoborg
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-sword2-module }

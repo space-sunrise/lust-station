@@ -12,6 +12,7 @@ public sealed class StealthSystem : SharedStealthSystem
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+    [Dependency] private readonly SpriteSystem _sprite = default!;
 
     private ShaderInstance _shader = default!;
     private ShaderInstance _noMirageShader = default!; // Sunrise-Edit
@@ -42,7 +43,7 @@ public sealed class StealthSystem : SharedStealthSystem
         if (!Resolve(uid, ref component, ref sprite, false))
             return;
 
-        sprite.Color = Color.White;
+        _sprite.SetColor((uid, sprite), Color.White);
         // Sunrise-Start
         if (component.Mirage)
             sprite.PostShader = enabled ? _shader : null;
@@ -103,6 +104,6 @@ public sealed class StealthSystem : SharedStealthSystem
         // Sunrise-End
 
         visibility = MathF.Max(0, visibility);
-        args.Sprite.Color = new Color(visibility, visibility, 1, 1);
+        _sprite.SetColor((uid, args.Sprite), new Color(visibility, visibility, 1, 1));
     }
 }
