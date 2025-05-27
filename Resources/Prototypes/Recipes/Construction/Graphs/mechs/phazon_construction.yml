@@ -84,7 +84,7 @@
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 10
-          
+
       - tag: MechPhasicScanningModule
         name: phasic scanning module
         icon:
@@ -102,11 +102,11 @@
           key: "enum.MechAssemblyVisuals.State"
           data: 12
 
-      - tag: CapacitorStockPart
-        name: capacitor
+      - tag: MicroManipulatorStockPart
+        name: step-manipulator-name
         icon:
           sprite: Objects/Misc/stock_parts.rsi
-          state: capacitor
+          state: micro_mani
         completed:
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
@@ -118,7 +118,7 @@
         - !type:VisualizerDataInt
           key: "enum.MechAssemblyVisuals.State"
           data: 14
-          
+
       - tag: AnomalyCore
         name: any anomaly core
         icon:
@@ -208,7 +208,7 @@
 
       - tool: Welding
         doAfter: 1
-       
+
   - node: phazon
     actions:
     - !type:BuildMech
