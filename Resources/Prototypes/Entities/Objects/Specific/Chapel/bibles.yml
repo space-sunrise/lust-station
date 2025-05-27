@@ -4,6 +4,7 @@
   parent: BaseStorageItem
   id: Bible
   components:
+  - type: BibleWaterConvert # Lust-Edit
   - type: UseDelay
     delay: 10.0
   - type: Bible

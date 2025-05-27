@@ -1,9 +1,14 @@
 ﻿using System.Linq;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
+using Content.Shared.Chemistry.EntitySystems;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Popups;
 using Robust.Server.Audio;
+using Robust.Shared.Containers;
+using Content.Server.Bible.Components;
 
 namespace Content.Server._Sunrise.BloodCult.HolyWater;
 
@@ -11,6 +16,7 @@ public sealed class HolyWaterSystem : EntitySystem
 {
     [Dependency] private readonly AudioSystem _audio = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+        [Dependency] private readonly EntityManager _entManager = default!;
 
     public override void Initialize()
     {
@@ -21,33 +27,49 @@ public sealed class HolyWaterSystem : EntitySystem
 
     private void OnBibleInteract(EntityUid uid, BibleWaterConvertComponent component, AfterInteractEvent args)
     {
-        if (HasComp<MobStateComponent>(uid))
+        if (HasComp<MobStateComponent>(args.Target))
             return;
 
-        if (!TryComp<SolutionContainerManagerComponent>(args.Target, out var container) || container.Solutions == null)
+        if (!HasComp<BibleUserComponent>(args.User))
             return;
 
-        foreach (var solution in container.Solutions!.Values.Where(solution =>
-                     solution.ContainsReagent(component.ConvertedId, null)))
-        {
-            foreach (var reagent in solution.Contents)
+        if (!HasComp<SolutionContainerManagerComponent>(args.Target))
+            return;
+
+        if (TryComp<ContainerManagerComponent>(args.Target, out var container))
             {
-                if (reagent.Reagent.Prototype != component.ConvertedId)
-                    continue;
+                foreach (var solution in container.Containers)
+                {
+                    var solutions = container.Containers
+                    .Where(kvp => kvp.Key.StartsWith("solution@"))
+                    .Select(kvp => kvp.Key)
+                    .ToList();
 
-                var amount = reagent.Quantity;
+                    foreach(var solutionKey in solutions)
+                    {
+                        if (container.Containers.TryGetValue(solutionKey, out var liquidCon))
+                        if (_entManager.TryGetComponent<SolutionComponent>(liquidCon.ContainedEntities[0], out var con))
+                        {
+                            foreach (var reagent in con.Solution.Contents)
+                            {
+                                if (reagent.Reagent.Prototype != component.ConvertedId)
+                                    continue;
 
-                solution.RemoveReagent(reagent.Reagent.Prototype, reagent.Quantity);
-                solution.AddReagent(component.ConvertedToId, amount);
+                                var amount = reagent.Quantity;
 
-                if (args.Target == null)
-                    return;
+                                con.Solution.RemoveReagent(reagent.Reagent.Prototype, reagent.Quantity);
+                                con.Solution.AddReagent(component.ConvertedToId, amount);
 
-                _popup.PopupEntity(Loc.GetString("holy-water-converted"), args.Target.Value, args.User);
-                _audio.PlayPvs("/Audio/Effects/holy.ogg", args.Target.Value);
+                                _popup.PopupEntity(Loc.GetString("holy-water-converted"), args.Target.Value, args.User);
+                                _audio.PlayPvs("/Audio/Effects/holy.ogg", args.Target.Value);
 
-                return;
+                                return;
+                            }
+                        }    
+                    }
+
+                } 
             }
-        }
     }
+    
 }
