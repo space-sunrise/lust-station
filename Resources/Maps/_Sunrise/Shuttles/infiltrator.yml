@@ -4827,10 +4827,6 @@ entities:
         29:
           position: 7,2
           _rotation: South
-    - type: UserInterface
-      actors:
-        enum.StorageUiKey.Key:
-        - invalid
     - type: ContainerContainer
       containers:
         storagebase: !type:Container
