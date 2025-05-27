@@ -622,36 +622,6 @@ entities:
     - type: Transform
       pos: 14.7274475,5.829152
       parent: 1
-- proto: BoxMiniSyringe
-  entities:
-  - uid: 301
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 302
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 304
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 305
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: CableApcExtension
   entities:
   - uid: 39
@@ -2195,36 +2165,6 @@ entities:
       containers:
         solution@beaker: !type:ContainerSlot
           ent: 3
-- proto: LauncherSyringeMed
-  entities:
-  - uid: 298
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 299
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 300
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
-  - uid: 303
-    components:
-    - type: Transform
-      parent: 297
-    - type: Physics
-      canCollide: False
-    - type: InsideEntityStorage
 - proto: LockerChemistryFilled
   entities:
   - uid: 296
