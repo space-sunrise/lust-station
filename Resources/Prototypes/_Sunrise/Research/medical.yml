@@ -55,6 +55,18 @@
   - HemostatAdvanced
 
 - type: technology
+  id: MedicalHyposprays
+  name: research-technology-medical-hyposprays
+  icon:
+    sprite: _Sunrise/Objects/Specific/Medical/hypospray.rsi
+    state: med-hypospray
+  discipline: Biochemical
+  tier: 2
+  cost: 6500
+  recipeUnlocks:
+  - HyposprayMedical
+
+- type: technology
   id: ImplantExtractor
   name: research-technology-implant-extractor
   icon:
