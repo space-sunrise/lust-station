@@ -105767,8 +105767,6 @@ entities:
       pos: -9.5,-66.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 78
     - type: AtmosPipeColor
