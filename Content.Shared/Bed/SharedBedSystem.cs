@@ -61,6 +61,7 @@ public abstract class SharedBedSystem : EntitySystem
 
     private void OnUnstrapped(Entity<HealOnBuckleComponent> bed, ref UnstrappedEvent args)
     {
+        _actionsSystem.RemoveAction(args.Buckle.Owner, bed.Comp.SleepAction);
         _sleepingSystem.TryWaking(args.Buckle.Owner);
         RemComp<HealOnBuckleHealingComponent>(bed);
     }
