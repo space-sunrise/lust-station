@@ -362,3 +362,6 @@
 
 - type: Tag
   id: RiotShieldStrobe
+
+- type: Tag
+  id: DockCentComm

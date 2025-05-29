@@ -733,3 +733,6 @@ SpawnPointBlueShield: SpawnPointBlueShieldOfficer
 SuitStorageBlueShield: null
 LockerBlueShieldEnsignFilled: null
 LockerBlueShieldOfficerFilled: null
+PoweredLightBlueInterior: null
+RandomItem: null
+TableWoodReinforced: null
