@@ -33,6 +33,7 @@ public abstract class SharedActionsSystem : EntitySystem
     [Dependency] private   readonly SharedTransformSystem _transform = default!;
 
     private EntityQuery<ActionComponent> _actionQuery;
+    private EntityQuery<TargetActionComponent> _targetActionQuery;
     private EntityQuery<ActionsComponent> _actionsQuery;
     private EntityQuery<MindComponent> _mindQuery;
 
@@ -987,6 +988,33 @@ public abstract class SharedActionsSystem : EntitySystem
 
         ent.Comp.IconColor = color;
         DirtyField(ent, ent.Comp, nameof(ActionComponent.IconColor));
+    }
+
+    public void SetCheckCanInteract(Entity<ActionComponent?> ent, bool value)
+    {
+        if (!_actionQuery.Resolve(ent, ref ent.Comp) || ent.Comp.CheckCanInteract == value)
+            return;
+
+        ent.Comp.CheckCanInteract = value;
+        DirtyField(ent, ent.Comp, nameof(ActionComponent.CheckCanInteract));
+    }
+
+    public void SetCheckCanAccess(Entity<TargetActionComponent?> ent, bool value)
+    {
+        if (!_targetActionQuery.Resolve(ent, ref ent.Comp) || ent.Comp.CheckCanAccess == value)
+            return;
+
+        ent.Comp.CheckCanAccess = value;
+        DirtyField(ent, ent.Comp, nameof(TargetActionComponent.CheckCanAccess));
+    }
+
+    public void SetIgnoreContainer(Entity<TargetActionComponent?> ent, bool value)
+    {
+        if (!_targetActionQuery.Resolve(ent, ref ent.Comp) || ent.Comp.IgnoreContainer == value)
+            return;
+
+        ent.Comp.IgnoreContainer = value;
+        DirtyField(ent, ent.Comp, nameof(TargetActionComponent.IgnoreContainer));
     }
 
     /// <summary>

@@ -10,6 +10,7 @@ namespace Content.Shared.Actions.Components;
 /// Requires <see cref="ActionComponent"/>.
 /// </summary>
 [RegisterComponent, NetworkedComponent, Access(typeof(SharedActionsSystem))]
+[AutoGenerateComponentState(true, true)]
 [EntityCategory("Actions")]
 public sealed partial class TargetActionComponent : Component
 {
@@ -34,7 +35,7 @@ public sealed partial class TargetActionComponent : Component
     /// <remarks>
     ///     Even if this is false, the <see cref="Range"/> will still be checked.
     /// </remarks>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool CheckCanAccess = true;
 
     [DataField]
@@ -57,7 +58,7 @@ public sealed partial class TargetActionComponent : Component
     public bool TargetingIndicator = true;
 
     // Sunrise-Start
-    [DataField("ignoreContainer")]
+    [DataField, AutoNetworkedField]
     public bool IgnoreContainer;
     // Sunrise-End
 }
