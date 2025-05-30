@@ -95,9 +95,9 @@
   description: Captain's formal jacket, inlaid with gold.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/OuterClothing/Coats/whitecapcoat.rsi
+    sprite: _Lust/Clothing/OuterClothing/Coat/whitecapcoat.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/OuterClothing/Coats/whitecapcoat.rsi
+    sprite: _Lust/Clothing/OuterClothing/Coat/whitecapcoat.rsi
   - type: Armor
     modifiers:
       coefficients:

@@ -204,3 +204,12 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/whitecapcloakform.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapQl
+  name: white captain cap
+  description: White royal captain cap.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/whitecapql.rsi

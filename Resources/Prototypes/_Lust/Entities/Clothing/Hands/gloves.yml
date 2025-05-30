@@ -29,3 +29,18 @@
     fiberMaterial: fibers-leather
     fiberColor: fibers-white
   - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesButtler
+  name: the butler gloves
+  description: The butler's neat gloves.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Hands/gloves/buttler.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Hands/gloves/buttler.rsi
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-white
+  - type: FingerprintMask

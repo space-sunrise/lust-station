@@ -28,7 +28,7 @@
 - type: entity
   parent: ClothingBackpackDuffel
   id: ClothingBackpackDuffelIAAduf
-  name: IAA duffle bag
+  name: IAA duffel bag
   description: A large duffel bag for all documents.
   components:
     - type: Sprite

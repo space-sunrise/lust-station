@@ -11,7 +11,7 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformWhiteCap
+  id: ClothingUniformWhiteCapSkirt
   name: white captain jumpskirt
   description: Captain white uniform. Looks stylish.
   components:

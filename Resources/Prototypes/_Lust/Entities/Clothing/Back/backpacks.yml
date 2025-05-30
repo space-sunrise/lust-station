@@ -27,15 +27,6 @@
 
 - type: entity
   parent: ClothingBackpack
-  id: ClothingBackpackIAA
-  name: IAA backpack
-  description: On style.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Back/Backpacks/IAA.rsi
-
-- type: entity
-  parent: ClothingBackpack
   id: ClothingFormalCEBackpack
   name: formal CE backpack
   description: Working style.
@@ -51,15 +42,6 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Back/Backpacks/formalCMO.rsi
-
-- type: entity
-  parent: ClothingBackpack
-  id: ClothingFormalPQBackpack
-  name: formal PQ backpack
-  description: A thick and high-quality backpack.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Back/Backpacks/PQ.rsi
 
 - type: entity
   parent: ClothingBackpack
