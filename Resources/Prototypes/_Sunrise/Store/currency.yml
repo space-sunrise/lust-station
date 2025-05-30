@@ -3,4 +3,4 @@
   displayName: Lust Coin # Lust-Station-Edit
   cash:
     1: Suntick1
-  canWithdraw: true
+  canWithdraw: false

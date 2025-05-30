@@ -29,9 +29,9 @@
     state: plushie-hop
 
 - type: entity
-  id: PlushieUunaMiira
+  id: PlushieUunaKatsuhiro
   parent: BasePlushie
-  name: UunaMiira
+  name: Uuna Katsuhiro
   description: A dark elf with a bright soul.
   components:
   - type: Sprite
@@ -39,6 +39,11 @@
     state: mintypresent
   - type: EmitSoundOnUse
     sound:
+      collection: SQUEE
+      params:
+        volume: 5
+  - type: MeleeWeapon
+    soundHit:
       collection: SQUEE
       params:
         volume: 5
@@ -51,7 +56,7 @@
     sound:
       path: /Audio/_Sunrise/Voice/Vulpkanin/dog_growl1.ogg
   - type: UseDelay
-    delay: 5
+    delay: 3
 
 - type: entity
   id: PlushieFour

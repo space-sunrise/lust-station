@@ -7,6 +7,7 @@
   storage:
     back:
     - LustStationUplink40
+    - Suntick40
 
 - type: sponsorLoadout
   id: LustSponsorTier2
@@ -16,7 +17,8 @@
   id: LustSponsorTier2
   storage:
     back:
-    - LustStationUplink70
+    - LustStationUplink
+    - Suntick80
 
 - type: sponsorLoadout
   id: LustSponsorTier3
@@ -26,4 +28,5 @@
   id: LustSponsorTier3
   storage:
     back:
-    - LustStationUplink90
+    - LustStationUplink100
+    - Suntick100
