@@ -769,3 +769,12 @@
   id: 214
   time: '2025-05-31T19:56:19.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/249
+- author: ASLEEP
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0438\u0433\u0440\
+      \u0443\u0448\u0435\u0447\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u0447\u043D\
+      \u0438\u043A\u0438"
+    type: Add
+  id: 215
+  time: '2025-05-31T20:07:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/244
