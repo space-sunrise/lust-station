@@ -279,11 +279,3 @@ figurines-hamlet-5 = Пип!
 figurines-hamlet-6 = Фвип!
 figurines-hamlet-7 = Хип!
 figurines-hamlet-8 = ТОЛЬКО НЕ В МИКРОВОЛНОВКУ!
-
-# figurines-custom
-
-figurines-andrea-1 = Да да даa
-figurines-andrea-2 = Конечно конечно
-figurines-andrea-3 = А ты настоящий?
-figurines-andrea-4 = Я люблю тюленей
-figurines-andrea-5 = Ахахахаха

@@ -165,7 +165,7 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
-# Erotic 
+# Erotic
 
 - type: listing
   id: UplinkLustEroticERPNormalDildo
@@ -394,17 +394,6 @@
     Suntick: 35
   categories:
   - Erotic
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-
-- type: listing
-  id: UplinkLustPlushieAndrea
-  productEntity: PlushieAndrea
-  cost:
-    Suntick: 12
-  categories:
-  - SpecialThings
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
