@@ -1,0 +1,15 @@
+ent-ClothingNeckShockCollar = shock collar
+    .desc = An electric collar that shocks on the signal.
+    .suffix = SelfUnremovable
+ent-ClothingNeckCollar1 = collar with heart
+    .desc = Black choker with a pink heart on the front.
+ent-ClothingNeckCollar2 = mesh collar
+    .desc = Black mesh choker that fits snugly around the neck.
+ent-ClothingNeckCollar3 = collar with circle
+    .desc = Black choker with metal circle on the front.
+ent-ClothingNeckCollar4 = collar with heart
+    .desc = Black choker with a pink heart on the front.
+ent-ClothingNeckSpikeCollar = spike collar
+    .desc = Spiked collar for spicy play.
+ent-ClothingNeckRibbon = ribbon
+    .desc = Cutie red ribbon.
