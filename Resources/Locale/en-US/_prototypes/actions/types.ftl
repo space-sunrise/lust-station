@@ -1,5 +1,13 @@
+ent-BaseAction = { "" }
+    .desc = { "" }
+ent-BaseMentalAction = { ent-BaseAction }
+    .desc = { ent-BaseAction.desc }
 ent-BaseSuicideAction = { "" }
     .desc = { "" }
+ent-BaseImplantAction = { ent-BaseAction }
+    .desc = { ent-BaseAction.desc }
+ent-BaseToggleAction = { ent-BaseAction }
+    .desc = { ent-BaseAction.desc }
 ent-ActionScream = Scream
     .desc = AAAAAAAAAAAAAAAAAAAAAAAAA
 ent-ActionTurnUndead = Turn Undead
