@@ -1,5 +1,7 @@
 ent-ClothingMaskGas = противогаз
     .desc = Закрывающая лицо маска, которую можно подключить к дыхательному баллону.
+ent-ClothingMaskGasFaceOpen = gas mask covered
+    .desc = { ent-ClothingMaskGas.desc }
 ent-ClothingMaskGasSecurity = противогаз СБ
     .desc = Стандартный противогаз Службы безопасности.
 ent-ClothingMaskGasSyndicate = противогаз синдиката
