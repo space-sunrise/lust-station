@@ -288,6 +288,7 @@
 
 - type: entity
   parent: PlushieLizard
+  id: PlushieSvyashenLuna
   name: Svyashen-Luna
   components:
   - type: Sprite
