@@ -30,3 +30,5 @@ ent-PlushieMaksimDedov = Maksim Dedov
     .desc = { ent-BasePlushie.desc }
 ent-PlushieIvanBykov = Ivan Bykov
     .desc = { ent-BasePlushie.desc }
+ent-PlushieSvyashenLuna = Svyashen-Luna
+    .desc = { ent-BasePlushie.desc }
