@@ -285,3 +285,11 @@
     voice: TF2Soldier
   - type: UseDelay
     delay: 5
+
+- type: entity
+  parent: PlushieLizard
+  name: Svyashen-Luna
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: luna
