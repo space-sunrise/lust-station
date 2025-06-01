@@ -684,7 +684,15 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkChemicals
+  - UplinkChemicals 
+  # Sunrise-Start
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - SubdermalImplant
+      - NukeOpsUplink 
+  # Sunrise-End
 
 - type: listing
   id: UplinkHypoDart
@@ -1226,6 +1234,26 @@
     blacklist:
       components:
       - SurplusBundle
+
+- type: listing
+  id: UplinkStarterKit
+  name: uplink-starter-kit-name
+  description: uplink-starter-kit-desc
+  productEntity: ClothingBackpackDuffelSyndicateFilledStarterKit
+  cost:
+    Telecrystal: 40
+  categories:
+  - UplinkDisruption
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+        - NukeOpsUplink
+    - !type:BuyerWhitelistCondition
+      blacklist:
+        components:
+        - SurplusBundle
+
 
 - type: listing
   id: UplinkSingarityBeacon

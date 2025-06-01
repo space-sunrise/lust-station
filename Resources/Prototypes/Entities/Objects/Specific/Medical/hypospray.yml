@@ -154,9 +154,6 @@
     maxFillLevels: 1
     changeColor: false
     emptySpriteName: firstaid_empty
-  - type: Tag
-    tags:
-    - Trash
   - type: PhysicalComposition
     materialComposition:
       Plastic: 50
@@ -190,8 +187,6 @@
           Quantity: 12
         - ReagentId: TranexamicAcid
           Quantity: 3
-  - type: Tag
-    tags: []
 
 - type: entity
   name: poison auto-injector
@@ -229,8 +224,6 @@
           Quantity: 10
         - ReagentId: Epinephrine
           Quantity: 5
-  - type: Tag
-    tags: []
 
 - type: entity
   name: brute auto-injector
@@ -273,8 +266,6 @@
           Quantity: 15
         - ReagentId: TranexamicAcid
           Quantity: 5
-  - type: Tag
-    tags: []
 
 - type: entity
   name: burn auto-injector
@@ -317,8 +308,6 @@
           Quantity: 10
         - ReagentId: Leporazine
           Quantity: 10
-  - type: Tag
-    tags: []
 
 - type: entity
   name: rad auto-injector
@@ -361,8 +350,6 @@
           Quantity: 15
         - ReagentId: Bicaridine
           Quantity: 5
-  - type: Tag
-    tags: []
 
 - type: entity
   name: puncturase auto-injector
@@ -405,8 +392,6 @@
           Quantity: 10
         - ReagentId: TranexamicAcid
           Quantity: 5
-  - type: Tag
-    tags: []
 
 - type: entity
   name: pyrazine auto-injector
@@ -449,8 +434,6 @@
           Quantity: 10
         - ReagentId: Dermaline
           Quantity: 10
-  - type: Tag
-    tags: []
 
 - type: entity
   name: airloss auto-injector
@@ -493,8 +476,6 @@
           Quantity: 20
         - ReagentId: DexalinPlus
           Quantity: 20
-  - type: Tag
-    tags: []
 
 - type: entity
   name: space medipen
@@ -538,8 +519,6 @@
             Quantity: 10
           - ReagentId: Barozine
             Quantity: 20
-  - type: Tag
-    tags: []
 
 - type: entity
   name: hyperzine injector
@@ -584,8 +563,6 @@
     injectOnly: true
   - type: StaticPrice
     price: 500
-  - type: Tag
-    tags: []
 
 - type: entity
   name: hyperzine microinjector
@@ -625,8 +602,6 @@
     emptySpriteName: microstimpen_empty
   - type: StaticPrice
     price: 100
-  - type: Tag
-    tags: []
 
 - type: entity
   name: combat medipen
@@ -671,8 +646,6 @@
     injectOnly: true
   - type: StaticPrice
     price: 500
-  - type: Tag
-    tags: []
 
 - type: entity
   name: pen
@@ -740,5 +713,3 @@
     transferAmount: 1
     onlyAffectsMobs: false
     injectOnly: true
-  - type: Tag
-    tags: []

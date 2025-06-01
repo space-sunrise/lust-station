@@ -14,7 +14,6 @@ namespace Content.Shared.Clothing.EntitySystems;
 
 public abstract class SharedChameleonClothingSystem : EntitySystem
 {
-    [Dependency] private readonly IComponentFactory _factory = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly ClothingSystem _clothingSystem = default!;
     [Dependency] private readonly ContrabandSystem _contraband = default!;
@@ -68,7 +67,7 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
 
         // item sprite logic
         if (TryComp(uid, out ItemComponent? item) &&
-            proto.TryGetComponent(out ItemComponent? otherItem, _factory))
+            proto.TryGetComponent(out ItemComponent? otherItem, Factory))
         {
             _itemSystem.CopyVisuals(uid, otherItem, item);
         }
@@ -111,19 +110,19 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
         if (helmet.ClothingUid == null)
             return;
 
-        if (!proto.TryGetComponent(out ToggleableClothingComponent? protoHelmet, _factory))
+        if (!proto.TryGetComponent(out ToggleableClothingComponent? protoHelmet, Factory))
             return;
 
         if (!_proto.TryIndex(protoHelmet.ClothingPrototype.Id, out var prototypeHelmetOther))
             return;
 
         if (TryComp(helmet.ClothingUid, out ClothingComponent? helmetClothing)
-            && prototypeHelmetOther.TryGetComponent(out ClothingComponent? otherHelmetClothing, _factory))
+            && prototypeHelmetOther.TryGetComponent(out ClothingComponent? otherHelmetClothing, Factory))
         {
             _clothingSystem.CopyVisuals(helmet.ClothingUid.Value, otherHelmetClothing, helmetClothing);
         }
         if (TryComp(helmet.ClothingUid, out AppearanceComponent? helmetApperance)
-            && prototypeHelmetOther.TryGetComponent(out AppearanceComponent? otherHelmetApperance, _factory))
+            && prototypeHelmetOther.TryGetComponent(out AppearanceComponent? otherHelmetApperance, Factory))
         {
             _appearance.AppendData(otherHelmetApperance, helmet.ClothingUid.Value);
             Dirty(uid, helmetApperance);
@@ -182,7 +181,7 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
             return false;
 
         // check if it is marked as valid chameleon target
-        if (!proto.TryGetComponent(out TagComponent? tag, _factory) || !_tag.HasTag(tag, WhitelistChameleonTag))
+        if (!proto.TryGetComponent(out TagComponent? tag, Factory) || !_tag.HasTag(tag, WhitelistChameleonTag))
             return false;
 
         if (requiredTag != null && !_tag.HasTag(tag, requiredTag))

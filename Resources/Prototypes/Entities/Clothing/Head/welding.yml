@@ -149,12 +149,14 @@
 
   # Sunrise-Start
 - type: entity
+  parent: BaseAction
   id: ActionToggleWeldingMask
   name: Adjust Welding Mask
   description: Covers or reveals your face.
   components:
-  - type: InstantAction
+  - type: Action
     useDelay: 1
     itemIconStyle: BigItem
+  - type: InstantAction
     event: !type:ToggleActionEvent
   # Sunrise-End

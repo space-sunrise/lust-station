@@ -20,8 +20,9 @@
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/HMGs/minigun_shot.ogg
   - type: ClothingSlotAmmoProvider
+  - type: SlotBasedConnectedContainer
     targetSlot: BACK
-    providerWhitelist:
+    containerWhitelist:
       tags:
       - PowerpackMinigunMG100
   - type: Appearance

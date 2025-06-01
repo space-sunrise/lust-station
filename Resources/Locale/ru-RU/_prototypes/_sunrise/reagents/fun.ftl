@@ -15,3 +15,5 @@ reagent-desc-celliminol = Химикат криогенного действия
 reagent-name-grcoffee = Измельченный кофе
 reagent-desc-grcoffee = Измельченные зерна кофе.
 reagent-physical-desc-grcoffee = Коричневая жидкость, слегка густоватая.
+reagent-name-inc = чернила
+reagent-desc-inc = чернила

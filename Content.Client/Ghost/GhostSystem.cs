@@ -19,6 +19,7 @@ namespace Content.Client.Ghost
         [Dependency] private readonly SharedActionsSystem _actions = default!;
         [Dependency] private readonly PointLightSystem _pointLightSystem = default!;
         [Dependency] private readonly ContentEyeSystem _contentEye = default!;
+        [Dependency] private readonly SpriteSystem _sprite = default!;
         [Dependency] private readonly AudioSystem _audioSystem = default!;
         [Dependency] private readonly IConfigurationManager _cfg = default!; // Sunrise-Edit
 
@@ -41,7 +42,7 @@ namespace Content.Client.Ghost
                 var query = AllEntityQuery<GhostComponent, SpriteComponent>();
                 while (query.MoveNext(out var uid, out _, out var sprite))
                 {
-                    sprite.Visible = value || uid == _playerManager.LocalEntity;
+                    _sprite.SetVisible((uid, sprite), value || uid == _playerManager.LocalEntity);
                 }
             }
         }
@@ -78,7 +79,7 @@ namespace Content.Client.Ghost
         private void OnStartup(EntityUid uid, GhostComponent component, ComponentStartup args)
         {
             if (TryComp(uid, out SpriteComponent? sprite))
-                sprite.Visible = GhostVisibility || uid == _playerManager.LocalEntity;
+                _sprite.SetVisible((uid, sprite), GhostVisibility || uid == _playerManager.LocalEntity);
         }
 
         private void OnToggleLighting(EntityUid uid, EyeComponent component, ToggleLightingActionEvent args)
@@ -156,7 +157,7 @@ namespace Content.Client.Ghost
         private void OnGhostState(EntityUid uid, GhostComponent component, ref AfterAutoHandleStateEvent args)
         {
             if (TryComp<SpriteComponent>(uid, out var sprite))
-                sprite.LayerSetColor(0, component.Color);
+                _sprite.LayerSetColor((uid, sprite), 0, component.Color);
 
             if (uid != _playerManager.LocalEntity)
                 return;

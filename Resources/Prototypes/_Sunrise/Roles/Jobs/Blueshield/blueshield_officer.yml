@@ -1,8 +1,8 @@
-#- type: job
-#  id: BlueShieldOfficer
-#  name: job-name-blueshield-officer
-#  description: job-description-blueshield-officer
-#  playTimeTracker: JobBlueShield
+- type: job
+  id: BlueShieldOfficer
+  name: job-name-blueshield-officer
+  description: job-description-blueshield-officer
+  playTimeTracker: JobBlueShield
 #  requirements:
 #    - !type:DepartmentTimeRequirement
 #      department: Security
