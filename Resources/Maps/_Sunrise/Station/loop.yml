@@ -82299,13 +82299,6 @@ entities:
     - type: Transform
       pos: -59.509956,65.62154
       parent: 2
-- proto: LauncherSyringeMed
-  entities:
-  - uid: 18198
-    components:
-    - type: Transform
-      pos: -73.429146,23.364283
-      parent: 2
 - proto: Lighter
   entities:
   - uid: 11815
@@ -84174,23 +84167,6 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: MiniSyringeFresium
-  entities:
-  - uid: 18199
-    components:
-    - type: Transform
-      pos: -73.780716,22.991907
-      parent: 2
-  - uid: 18200
-    components:
-    - type: Transform
-      pos: -73.54445,22.922464
-      parent: 2
-  - uid: 18201
-    components:
-    - type: Transform
-      pos: -73.28039,22.922464
-      parent: 2
 - proto: Mirror
   entities:
   - uid: 12041

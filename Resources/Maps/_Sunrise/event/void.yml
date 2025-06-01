@@ -29470,14 +29470,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: 100.71605,9.692456
       parent: 1
-- proto: ClothingOuterHardsuitBasic
-  entities:
-  - uid: 10661
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 101.575424,16.473705
-      parent: 1
 - proto: ClothingOuterHardsuitBlueShield
   entities:
   - uid: 10659

@@ -435,4 +435,14 @@ public sealed partial class SunriseCCVars : CVars
 
     public static readonly CVarDef<bool> PlayHeartBeatSound =
         CVarDef.Create("heartbeat.play_sound", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /**
+     * Transit hub
+     */
+
+    /// <summary>
+    /// До сколько часов общего наиграного времени игроки будут появляться на станции даже в позднем присоединеии.
+    /// </summary>
+    public static readonly CVarDef<int> ArrivalsMinHours =
+        CVarDef.Create("transithub.arrivals_min_hours", 0, CVar.SERVER | CVar.ARCHIVE);
 }

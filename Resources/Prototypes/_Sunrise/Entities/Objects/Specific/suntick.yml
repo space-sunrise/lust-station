@@ -52,15 +52,6 @@
 
 - type: entity
   parent: Suntick
-  id: Suntick10
-  categories: [ HideSpawnMenu ]
-  suffix: 10 ST
-  components:
-  - type: Stack
-    count: 40
-
-- type: entity
-  parent: Suntick
   id: Suntick40
   categories: [ HideSpawnMenu ]
   suffix: 40 ST

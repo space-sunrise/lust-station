@@ -193,13 +193,15 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/pump.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
-  - type: Tag
-    tags:
-    - WeaponShotgunKammerer
   - type: Gun
     fireRate: 1
     soundGunshot:
       collection: m3 # Sunrise-Edit
+  - type: GunSpreadModifier
+    spread: 0.6
+  - type: Tag
+    tags:
+    - WeaponShotgunKammerer
 
 - type: entity
   name: sawn-off shotgun

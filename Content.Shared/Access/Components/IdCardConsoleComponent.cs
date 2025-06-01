@@ -10,9 +10,6 @@ namespace Content.Shared.Access.Components;
 [Access(typeof(SharedIdCardConsoleSystem))]
 public sealed partial class IdCardConsoleComponent : Component
 {
-    public const int MaxFullNameLength = 30;
-    public const int MaxJobTitleLength = 30;
-
     public static string PrivilegedIdCardSlotId = "IdCardConsole-privilegedId";
     public static string TargetIdCardSlotId = "IdCardConsole-targetId";
 
@@ -79,6 +76,8 @@ public sealed partial class IdCardConsoleComponent : Component
         "Magistrat", // Sunrise-Edit
         "Barber", // Sunrise-Edit
         "Mail", // Sunrise-Edit
+        "CargoPurchaseAccess", // Sunrise-Edit
+        "ResearchConsoleAccess", // Sunrise-Edit
     };
 
     [Serializable, NetSerializable]

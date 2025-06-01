@@ -54,6 +54,9 @@ namespace Content.Client.Lobby.UI
             LeaveButton.OnPressed += _ => _consoleHost.ExecuteCommand("disconnect");
             OptionsButton.OnPressed += _ => UserInterfaceManager.GetUIController<OptionsUIController>().ToggleWindow();
 
+            //CollapseButton.OnPressed += _ => TogglePanel(false);
+            //ExpandButton.OnPressed += _ => TogglePanel(true);
+
             // Sunrise-start
             ChatHider.OnKeyBindUp += args =>
             {
@@ -242,6 +245,12 @@ namespace Content.Client.Lobby.UI
                     break;
             }
         }
+
+        //private void TogglePanel(bool value)
+        //{
+        //    RightSide.Visible = value;
+        //    ExpandPanel.Visible = !value;
+        //}
 
         // Sunrise-start
         protected override void Draw(DrawingHandleScreen handle)
