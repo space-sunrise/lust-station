@@ -34,7 +34,6 @@ chat-emote-name-yawn = Зевать
 chat-emote-name-snore = Храпеть
 chat-emote-name-whines = Скулить
 chat-emote-name-moan = Стонать
-
 # Сообщение
 chat-emote-msg-scream = кричит!
 chat-emote-msg-laugh = смеётся
