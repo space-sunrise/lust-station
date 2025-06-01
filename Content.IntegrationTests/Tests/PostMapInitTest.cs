@@ -106,12 +106,9 @@ namespace Content.IntegrationTests.Tests
             "SunriseFland",
             "SunriseMarathon",
             "SunriseCentComm",
-            "SunrisePlanetDelta",
             "SunriseBagel",
             "SunriseReach",
-            "SunriseTrain",
             "PlanetPrison",
-            "SunriseCog",
             "SunriseCorvaxGelta",
             "SunriseMeta",
             "SunriseOasis"

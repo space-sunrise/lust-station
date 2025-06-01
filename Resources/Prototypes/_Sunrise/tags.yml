@@ -160,9 +160,6 @@
   id: MicroManipulatorStockPart
 
 - type: Tag
-  id: MatterBinStockPart
-
-- type: Tag
   id: PartRodMetal
 
 - type: Tag
@@ -356,3 +353,15 @@
 
 - type: Tag
   id: SheetPaper
+
+- type: Tag
+  id: PowerCellHigh
+
+- type: Tag
+  id: RiotShield
+
+- type: Tag
+  id: RiotShieldStrobe
+
+- type: Tag
+  id: DockCentComm

@@ -609,7 +609,9 @@ namespace Content.Client.Stylesheets
             var paperBackground = new StyleBoxTexture
             {
                 Texture = resCache.GetTexture("/Textures/Interface/Paper/paper_background_default.svg.96dpi.png"),
-                Modulate = Color.FromHex("#eaedde"), // A light cream
+                // Sunrise-Edit
+                // Modulate = Color.FromHex("#eaedde"), // A light cream
+                Modulate = Color.FromHex("#ffffff"), // White
             };
             paperBackground.SetPatchMargin(StyleBox.Margin.All, 16.0f);
 
@@ -1644,6 +1646,10 @@ namespace Content.Client.Stylesheets
 
                 Element<TextureButton>().Class("CrossButtonRed").Pseudo(TextureButton.StylePseudoClassHover)
                     .Prop(Control.StylePropertyModulateSelf, Color.FromHex("#753131")),
+
+                //
+                Element<TextureButton>().Class("Refresh")
+                    .Prop(TextureButton.StylePropertyTexture, resCache.GetTexture("/Textures/Interface/Nano/circular_arrow.svg.96dpi.png")),
                 // ---
 
                 // Profile Editor

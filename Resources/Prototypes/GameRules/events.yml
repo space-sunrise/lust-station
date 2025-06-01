@@ -229,6 +229,12 @@
         color: Green
         sound: /Audio/Misc/ninja_greeting.ogg
       components:
+      # Sunrise edit start
+      - type: GhostPanelAntagonistMarker
+        name: ghost-panel-antagonist-ninja-name
+        description: ghost-panel-antagonist-ninja-description
+        priority: 40
+      # Sunrise edit end
       - type: SpaceNinja
       - type: NpcFactionMember
         factions:
@@ -540,7 +546,7 @@
     earliestStart: 35
     weight: 5.5
     minimumPlayers: 20
-    duration: 1
+    duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
   - type: RuleGrids
   - type: LoadMapRule
     gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
@@ -556,6 +562,12 @@
       roleLoadout:
       - RoleSurvivalNukie
       components:
+      # Sunrise edit start
+      - type: GhostPanelAntagonistMarker
+        name: ghost-panel-antagonist-loneops-name
+        description: ghost-panel-antagonist-loneops-description
+        priority: 20
+      # Sunrise edit end
       - type: NukeOperative
       - type: RandomMetadata
         nameSegments:

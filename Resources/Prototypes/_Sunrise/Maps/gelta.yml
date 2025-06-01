@@ -15,7 +15,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'TG'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency_gelta.yml
+          emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency.yml
         - type: StationJobs
           availableJobs:
             #command
@@ -74,8 +74,8 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             #blueshield
-#            BlueShieldEnsign: [ 1, 1 ]
-#            BlueShieldOfficer: [ 5, 5 ]
+            # BlueShieldEnsign: [ 1, 1 ]
+            # BlueShieldOfficer: [ 5, 5 ]
             #law
             IAA: [ 1, 1 ]
             Lawyer: [ 3, 3 ]

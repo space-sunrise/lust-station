@@ -67,7 +67,7 @@ public sealed class FoorprintAreaCleaningSystem : EntitySystem
 
         if (footPrints.Count > 0)
         {
-            if (!_solutionContainerSystem.TryGetSolution(uid, AbsorbentComponent.SolutionName, out var absorberSoln))
+            if (!_solutionContainerSystem.TryGetSolution(uid, absorbent.SolutionName, out var absorberSoln))
                 return;
 
             var tileCenterPos = _mapSystem.GridTileToLocal(gridUid, grid, tileRef.GridIndices);
