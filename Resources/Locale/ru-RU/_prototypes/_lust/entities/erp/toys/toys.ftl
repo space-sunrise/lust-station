@@ -44,3 +44,5 @@ ent-ERPFoxTailPlug = лисий хвост
     .desc = Время для ролевых игр!
 ent-ERPCatTailPlug = кошачий хвост
     .desc = Мурр!
+ent-toyhandcuff = Игрушечные наручники
+    .desc = Мягкие игрушечные наручники. Классика!
