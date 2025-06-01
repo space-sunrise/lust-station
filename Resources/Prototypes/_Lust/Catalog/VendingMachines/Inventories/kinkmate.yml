@@ -39,12 +39,13 @@
     ERPSexRackFlatpack: 3
     ClothingMaskMuzzle: 3
     ClothingEyesBlindfold: 3
+    ToyHandcuffs: 4
+    # Glowsticks
     GlowstickBase: 3
     GlowstickRed: 3
     GlowstickPurple: 3
     GlowstickYellow: 3
     GlowstickBlue: 3
-    toyhandcuff: 4
     # Bunny uniform
     BunnyUniform: 2
     BunnyShoes: 2
