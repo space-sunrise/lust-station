@@ -1,3 +1,6 @@
+ent-ClothingNeckShockCollar = шоковый ошейник
+    .desc = Электрический ошейник, который бьет током по сигналу.
+    .suffix = Самонеснимаемый
 ent-ClothingNeckCollar1 = чокер с сердечком
     .desc = Чёрный чокер с розовым сердечком на передней части.
 ent-ClothingNeckCollar2 = сетчатый чокер

@@ -1,2 +1,2 @@
-﻿ent-BunnyManjets = манжеты
+ent-BunnyManjets = манжеты
     .desc = Красивые манжеты от кого-то костюма.

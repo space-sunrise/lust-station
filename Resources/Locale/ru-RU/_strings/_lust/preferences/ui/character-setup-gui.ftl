@@ -1,1 +1,1 @@
-﻿job-sex-restriction = Не доступно для данного пола: { $name }
+job-sex-restriction = Не доступно для данного пола: { $name }

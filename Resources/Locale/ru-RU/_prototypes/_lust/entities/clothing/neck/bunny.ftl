@@ -1,2 +1,2 @@
-﻿ent-BunnyButterfly = бабочка с воротником
+ent-BunnyButterfly = бабочка с воротником
     .desc = Бабочка для шеи с белым воротником.

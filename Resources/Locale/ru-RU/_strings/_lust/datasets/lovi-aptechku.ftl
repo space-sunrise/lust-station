@@ -1,1 +1,1 @@
-﻿lovi-aptechku-1 = Лови аптечку!
+lovi-aptechku-1 = Лови аптечку!
