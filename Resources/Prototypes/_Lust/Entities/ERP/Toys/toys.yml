@@ -388,7 +388,7 @@
 
 - type: entity
   parent: BaseItem
-  id: toyhandcuff
+  id: ToyHandcuffs
   name: toy handcuffs
   description: Soft toy handcuffs. Classic!
   components:

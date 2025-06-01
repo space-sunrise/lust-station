@@ -16,6 +16,7 @@
     ERPNormalFleshlight: 8
     # Other stuff
     ERPShibariRope: 5
+    # Uniforms
     ClothingUniformSkirtLustMaid: 4
     ClothingUniformEroticRedUnderwear: 4
     ClothingUniformJumpskirtJapaneseSchool: 3
@@ -24,6 +25,8 @@
     ClothingShoesSchoolWhite: 2
     ClothingUniformJumpsuitLoona: 3
     ClothingUniformJumpsuitEroform: 3
+    ClothingUniformSuccubus: 2
+    # ERP toys
     PlugBox: 3
     ERPCatTailPlug: 3
     ERPFoxTailPlug: 3
@@ -36,12 +39,13 @@
     ERPSexRackFlatpack: 3
     ClothingMaskMuzzle: 3
     ClothingEyesBlindfold: 3
+    ToyHandcuffs: 4
+    # Glowsticks
     GlowstickBase: 3
     GlowstickRed: 3
     GlowstickPurple: 3
     GlowstickYellow: 3
     GlowstickBlue: 3
-    toyhandcuff: 4
     # Bunny uniform
     BunnyUniform: 2
     BunnyShoes: 2
@@ -56,6 +60,7 @@
     ClothingNeckCollar4: 3
     ClothingNeckSpikeCollar: 3
     ClothingNeckRibbon: 3
+    # Cat paws
     ClothingHandsCatPawsWhite: 3
     ClothingHandsCatPawsBrown: 3
     ClothingHandsCatPawsBlack: 3
