@@ -48,7 +48,7 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idsecurityofficer
+    - state: idsecuritypilot
   - type: PresetIdCard
     job: SecurityPilot
 
@@ -106,7 +106,7 @@
   name: prisoner ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi  #Lust-edit
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
     layers:
     - state: prisoner-space-prison
     - state: idprisoner-space-prison
@@ -160,7 +160,6 @@
   name: NanoTrasen representative ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: ert_commander
   - type: PresetIdCard
@@ -186,7 +185,7 @@
   description: Adjutant ID card.
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi #Lust-edit
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idadjutant

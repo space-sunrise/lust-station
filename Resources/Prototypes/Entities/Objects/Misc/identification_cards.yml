@@ -509,7 +509,6 @@
   name: ERT leader ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_commander
@@ -524,7 +523,6 @@
   name: ERT chaplain ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_chaplain # we have the sprite for the id but dont have chaplain ERT equipment for now.
@@ -539,7 +537,6 @@
   name: ERT engineer ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_engineer
@@ -552,7 +549,6 @@
   name: ERT janitor ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_janitor
@@ -565,7 +561,6 @@
   name: ERT medic ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_medic
@@ -578,7 +573,6 @@
   name: ERT security ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_security
