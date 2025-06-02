@@ -18,32 +18,6 @@
   id: CaptainJumpskirt
   equipment:
     jumpsuit: ClothingUniformJumpskirtCaptain
-#Lust-Start
-- type: loadout
-  id: CaptainBlackSkirt
-  equipment:
-    jumpsuit: ClothingUniformBlackCapSkirt
-
-- type: loadout
-  id: CaptainWhiteSkirt
-  equipment:
-    jumpsuit: ClothingUniformWhiteCapSkirt
-
-- type: loadout
-  id: CaptainBlackSuit
-  equipment:
-    jumpsuit: ClothingUniformBlackCap
-
-- type: loadout
-  id: CaptainWhiteSuit
-  equipment:
-    jumpsuit: ClothingUniformWhiteCap
-
-- type: loadout
-  id: CaptainWhiteFormalSuit
-  equipment:
-    jumpsuit: ClothingUniformFormalWhiteCap
-#Lust-End
 
 - type: loadout
   id: CaptainFormalSuit

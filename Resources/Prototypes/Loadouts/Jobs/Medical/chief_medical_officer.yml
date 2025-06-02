@@ -29,29 +29,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtCMOTurtle
 
-#Lust-Start
-- type: loadout
-  id: ChiefMedicalOfficerFormalUniform
-  equipment:
-    jumpsuit: ClothingUniformFormalCMOSuit
-
-#Back
-- type: loadout
-  id: ChiefMedicalOfficerBackpack
-  equipment:
-    back: ClothingFormalCMOBackpack
-
-- type: loadout
-  id: ChiefMedicalOfficerDuffel
-  equipment:
-    back: ClothingFormalCMODuffelBag
-
-- type: loadout
-  id: ChiefMedicalOfficerSatchel
-  equipment:
-    back: ClothingBackpackSatchelFormalCMO
-#Lust-End
-
 # Head
 - type: loadout
   id: ChiefMedicalOfficerBeret
@@ -62,13 +39,6 @@
   id: CMOMedicalHeadMirror
   equipment:
     head: ClothingHeadMirror
-
-#Lust-Start
-- type: loadout
-  id: CMOFormalHat
-  equipment:
-    head: ClothingHeadFormalCMO
-#Lust-End
 
 # Neck
 - type: loadout
@@ -99,10 +69,3 @@
   id: ChiefMedicalOfficerWintercoat
   equipment:
     outerClothing: ClothingOuterWinterCMO
-
-#Lust-Start
-- type: loadout
-  id: ChiefMedicalofficerFormalCoat
-  equipment:
-    outerclothing: ClothingOuterCoatCMOFormalCoat
-#Lust-End

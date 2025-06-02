@@ -4,13 +4,6 @@
   equipment:
     head: ClothingHeadHatWarden
 
-#Lust-Start
-- type: loadout
-  id: WardenFormalHat
-  equipment:
-    head: ClothingHeadFormalWarden
-#Lust-End
-
 - type: loadout
   id: WardenBeret
   equipment:
@@ -27,29 +20,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtWarden
 
-#Lust-Start
-- type: loadout
-  id: WardenFormalSuit
-  equipment:
-    jumpsuit: ClothingUniformFormalWardensuit
-
-#Backpack
-- type: loadout
-  id: WardenFormalBackpack
-  equipment:
-    back: ClothingFormalWardenBackpack
-
-- type: loadout
-  id: WardenFormalDuffel
-  equipment:
-    back: ClothingFormalWardenDuffelBag
-
-- type: loadout
-  id: WardenFormalSatchel
-  equipment:
-    back: ClothingBackpackSatchelFormalWarden
-#Lust-End
-
 # OuterClothing
 - type: loadout
   id: WardenCoat
@@ -60,10 +30,3 @@
   id: WardenArmoredWinterCoat
   equipment:
     outerClothing: ClothingOuterWinterWarden
-
-#Lust-Start
-- type: loadout
-  id: WardenFormalCoat
-  equipment:
-    outerClothing: ClothingOuterCoatWardenCoat
-#Lust-End

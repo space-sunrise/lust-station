@@ -3,3 +3,26 @@
   sponsorOnly: true
   equipment:
     neck: ClothingNeckQmSpecialCloak
+
+# Shoes
+- type: loadout
+  id: QuartermasterBoots
+  equipment:
+    shoes: ClothingShoesFormalQMBoots
+
+
+# Backpack
+- type: loadout
+  id: QuartermasterBacpack
+  equipment:
+    back: ClothingFormalQMBackpack
+
+- type: loadout
+  id: QuartermasterDuffel
+  equipment:
+    back: ClothingFormalQMDuffelBag
+
+- type: loadout
+  id: QuartermasterSatchel
+  equipment:
+    back: ClothingBackpackSatchelLeather

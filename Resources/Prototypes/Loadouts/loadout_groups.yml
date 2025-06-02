@@ -170,16 +170,6 @@
   - CaptainCloakWhiteCeremonial
 # Lust-End
 
-#Lust-Start
-- type: loadoutGroup
-  id: CaptainHands
-  name: loadout-group-captain-gloves
-  loadouts:
-  - CaptainGloves
-  - CaptainGlovesWhite
-  - CaptainGlovesBlack
-#Lust-End
-
 - type: loadoutGroup
   id: CaptainBackpack
   name: loadout-group-captain-backpack
@@ -752,17 +742,7 @@
   - Sunrise-ShoesPurple
   - Sunrise-ShoesLeather
 #Sunrise-end
-#Lust-Start
-  - QuartermasterBoots
-
-- type: loadoutGroup
-  id: CargoQuartermasterBackpack
-  name: loadout-group-quartermaster-backpack
-  loadouts:
-  - QuartermasterBacpack
-  - QuartermasterSatchel
-  - QuartermasterDuffel
-#Lust-End
+  - QuartermasterBoots # Lust-add
 
 - type: loadoutGroup
   id: CargoTechnicianHead
@@ -1169,15 +1149,6 @@
   - HeadofSecurityScarf #Sunrise-Edit
   - HosSpecialCloak # Lust Station
   - HeadofSecurityCeremonialCloak #Lust-Edit
-#Lust-Start
-- type: loadoutGroup
-  id: HeadofSecurityBack
-  name: loadout-group-head-of-security-back
-  loadouts:
-  - HeadofSecurityBackpack
-  - HeadofSecurityDuffel
-  - HeadofSecuritySatchel
-#Lust-End
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -1220,16 +1191,6 @@
   - WardenCoat
   - WardenArmoredWinterCoat
   - WardenFormalCoat #Lust-Edit
-
-#Lust-Start
-- type: loadoutGroup
-  id: WardenBackpack
-  name: loadout-group-warden-backpack
-  loadouts: 
-  - WardenFormalBackpack
-  - WardenFormalDuffel
-  - WardenFormalSatchel
-#Lust-End
 
 - type: loadoutGroup
   id: SecurityHead
@@ -1412,16 +1373,6 @@
   - Sunrise-WinterColorBlue
   - ParamedicWindbreaker
 # Sunrise-end
-
-#Lust-Start
-- type: loadoutGroup
-  id: ChiefMedicalOfficerBack
-  name: loadout-group-chief-medical-officer-back
-  loadouts:
-  - ChiefMedicalOfficerBackpack
-  - ChiefMedicalOfficerDuffel
-  - ChiefMedicalOfficerSatchel
-#Lust-End
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerNeck
