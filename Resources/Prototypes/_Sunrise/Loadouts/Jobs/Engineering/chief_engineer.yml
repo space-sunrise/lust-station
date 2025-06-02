@@ -22,23 +22,6 @@
   equipment:
     back: ClothingBackpackDuffelCE
 
-#Lust-Start
-- type: loadout
-  id: ChiefEngineerFormalBackpack
-  equipment:
-    back: ClothingFormalCEBackpack
-
-- type: loadout
-  id: ChiefEngineerFormalDuffel
-  equipment:
-    back: ClothingBackpackDuffelFormalCE
-
-- type: loadout
-  id: ChiefEngineerFormalSatchel
-  equipment:
-    back: ClothingBackpackSatchelFormalCE
-#Lust-End
-
 # Head
 - type: loadout
   id: ChiefEngineerHead
