@@ -150,4 +150,23 @@
     tags:
     - WhitelistChameleon
 
-
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBellCollar
+  name: bell collar
+  description: A way to inform others about your presence, or just to annoy everyone around you!
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    quickEquip: true
+    slots:
+    - neck
+#  - type: EmitSoundOnWearerMove # It doesn't work. yet. uncomment when pr from sr will be merged
+#    sound:
+#      collection: FootstepJester
+  - type: EmitSoundOnErp
+    sound:
+      collection: FootstepJester
