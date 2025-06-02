@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CLA",
-    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt",
+    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt, IDs were redesigned by Gardsnake.",
     "size": {
         "x": 32,
         "y": 32
@@ -99,6 +99,48 @@
         },
         {
             "name": "idmail"
+        },
+        {
+            "name": "idsecuritypilot"
+        },
+        {
+            "name": "idmusician"
+        },
+        {
+            "name": "idpassenger"
+        },
+        {
+            "name": "idmime"
+        },
+        {
+            "name": "idbrigmedic"
+        },
+        {
+            "name": "idintern-tech"
+        },
+        {
+            "name": "idintern-cadet"
+        },
+        {
+            "name": "idintern-med"
+        },
+        {
+            "name": "idintern-sci"
+        },
+        {
+            "name": "idintern-service"
+        },
+        {
+            "name": "ert_medic"
+        },
+        {
+            "name": "ert_security"
+        },
+        {
+            "name": "ert_engineer"
+        },
+        {
+            "name": "ert_janitor"
         }
     ]
 }
