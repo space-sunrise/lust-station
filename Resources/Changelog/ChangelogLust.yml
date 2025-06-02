@@ -805,3 +805,14 @@
   id: 218
   time: '2025-06-01T17:29:07.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/256
+- author: Hart_ty
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D \u0441\u043F\u0440\u0430\u0439\
+      \u0442 \u043A\u0430\u0441\u0442\u0435\u0442\u0430 \u041A\u0432\u0430\u0440\u0442\
+      \u0438\u0440\u043C\u0435\u0439\u0441\u0442\u0435\u0440\u0430. \u0422\u0435\u043F\
+      \u0435\u0440\u044C \u043D\u0430 \u043D\u0451\u043C \u044D\u043C\u0431\u043B\u0435\
+      \u043C\u0430 Qillu."
+    type: Tweak
+  id: 219
+  time: '2025-06-02T15:08:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/261
