@@ -1,4 +1,5 @@
-﻿using Content.Server.Movement.Systems;
+﻿using Content.Server.Damage.Systems;
+using Content.Server.Movement.Systems;
 using Content.Server.Popups;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Interaction.Events;

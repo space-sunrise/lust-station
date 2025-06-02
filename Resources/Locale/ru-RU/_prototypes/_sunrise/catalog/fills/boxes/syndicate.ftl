@@ -20,3 +20,5 @@ ent-LMGIncendiaryKit = Коробка с зажигательными короб
     .desc = Перезаряжаю! Содержит 4 магазина для L6 Saw или DL6902
 ent-LMGUraniumKit = Коробка с урановыми коробами для пулемёта
     .desc = Перезаряжаю! Содержит 4 магазина для L6 Saw или DL6902
+ent-LMGUraniumAmmoKit = комплект урановых патронов для L6 Saw
+    .desc = { ent-BoxCardboard.desc }

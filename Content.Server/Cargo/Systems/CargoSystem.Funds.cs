@@ -41,7 +41,7 @@ public sealed partial class CargoSystem
         if (!_accessReaderSystem.IsAllowed(args.Actor, ent))
         {
             ConsolePopup(args.Actor, Loc.GetString("cargo-console-order-not-allowed"));
-            PlayDenySound(ent, ent.Comp.ErrorSound);
+            PlayDenySound(ent, ent.Comp);
             return;
         }
 
@@ -93,7 +93,7 @@ public sealed partial class CargoSystem
         if (!_accessReaderSystem.FindAccessTags(args.Actor).Intersect(ent.Comp.RemoveLimitAccess).Any())
         {
             ConsolePopup(args.Actor, Loc.GetString("cargo-console-order-not-allowed"));
-            PlayDenySound(ent, ent.Comp.ErrorSound);
+            PlayDenySound(ent, ent.Comp);
             return;
         }
 

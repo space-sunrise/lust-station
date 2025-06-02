@@ -154,6 +154,9 @@ ignore_list:
   - 'v 1.6'
   - 'Sol Dry'
   - 'Ds ujdjhbnt nhfyckbnjv.'
+  - SS14
+  - scar-h
+  - N
   # Sunrise-Lust start
   - 'Qillu'
   - 'QL'
@@ -181,6 +184,8 @@ ignore_files:
   - 'flesh_hugger.ftl'
   - 'flesh_spider.ftl'
   - 'spells-actions.ftl'
+  - artifact-component.ftl
+  - plant-analyzer-component.ftl
   # Sunrise-Lust start
   - 'friendly_interactions.yml'
   - 'anal_interactions.yml'

@@ -143,7 +143,6 @@ public sealed class NightVisionDeviceSystem : EntitySystem
         if (ent.Comp.IsPowered)
         {
             var draw = Comp<PowerCellDrawComponent>(ent.Owner);
-            _cell.QueueUpdate((ent.Owner, draw));
             _cell.SetDrawEnabled((ent.Owner, draw), ent.Comp.Activated);
         }
 

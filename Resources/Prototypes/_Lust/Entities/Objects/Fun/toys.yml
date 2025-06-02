@@ -259,7 +259,7 @@
     state: ded_plushie
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/Items/Toys/toysqueak1.ogg
+      path: /Audio/_Lust/half-life_crowbar.ogg
   - type: TriggerOnActivate
   - type: UseDelay
     delay: 1
@@ -285,3 +285,12 @@
     voice: TF2Soldier
   - type: UseDelay
     delay: 5
+
+- type: entity
+  parent: PlushieLizard
+  id: PlushieSvyashenLuna
+  name: Svyashen-Luna
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: luna

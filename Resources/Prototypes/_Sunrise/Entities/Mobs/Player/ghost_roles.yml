@@ -249,7 +249,6 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: MedipenCombatInjector
-    pocket2: LauncherSyringePistol
   inhand:
   - MedkitAdvancedFilled
   - DefibrillatorCompact
@@ -289,7 +288,7 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMedicalFilled
     pocket1: MedipenCombatInjector
-    pocket2: LauncherSyringeRapidFilled
+    pocket2: LauncherSyringe
   inhand:
   - MedkitCombatFilled
   - AdvancedDefibrillator

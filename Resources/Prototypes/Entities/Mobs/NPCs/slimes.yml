@@ -32,9 +32,7 @@
     baseSprintSpeed: 4
   - type: FootstepModifier
     footstepSoundCollection:
-      path: /Audio/Effects/Footsteps/slime1.ogg
-      params:
-        volume: 3
+      collection: FootstepSlime
   - type: Tag
     tags:
     - FootstepSound
@@ -181,6 +179,10 @@
 # Sunrise-start
     - type: Carriable
     - type: CanEscapeInventory
+    - type: GhostPanelAntagonistMarker
+      name: ghost-panel-antagonist-slime-name
+      description: ghost-panel-antagonist-slime-description
+      priority: 80
 # Sunrise-end
 
 - type: entity
@@ -229,6 +231,10 @@
 # Sunrise-start
     - type: Carriable
     - type: CanEscapeInventory
+    - type: GhostPanelAntagonistMarker
+      name: ghost-panel-antagonist-slime-name
+      description: ghost-panel-antagonist-slime-description
+      priority: 80
 # Sunrise-end
 
 - type: entity
@@ -276,4 +282,8 @@
 # Sunrise-start
     - type: Carriable
     - type: CanEscapeInventory
+    - type: GhostPanelAntagonistMarker
+      name: ghost-panel-antagonist-slime-name
+      description: ghost-panel-antagonist-slime-description
+      priority: 80
 # Sunrise-end

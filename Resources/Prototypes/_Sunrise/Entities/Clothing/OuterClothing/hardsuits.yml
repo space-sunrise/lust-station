@@ -444,7 +444,7 @@
     price: 0
 
 - type: entity
-  parent: ClothingOuterHardsuitBasic
+  parent: ClothingOuterHardsuitEVA
   id: ClothingOuterHardsuitChameleon
   name: syndicate chameleon
   description: Looking at his material, Sci-fi images inadvertently pop up in your head.
@@ -464,7 +464,7 @@
       - Thief
     - type: ChameleonClothing
       slot: [outerClothing]
-      default: ClothingOuterHardsuitBasic
+      default: ClothingOuterHardsuitEVA
       requireTag: WhitelistChameleonSuit
     - type: UserInterface
       interfaces:

@@ -147,3 +147,21 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuccubus
+  name: succubus uniform
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/succubus_uniform.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull

@@ -160,7 +160,7 @@ namespace Content.Server._Sunrise.PlanetPrison
 
             if (_roleSystem.MindHasRole<PlanetPrisonerRoleComponent>(mindId))
             {
-                _roleSystem.MindTryRemoveRole<PlanetPrisonerRoleComponent>(mindId);
+                _roleSystem.MindRemoveRole<PlanetPrisonerRoleComponent>(mindId);
             }
 
             _roleSystem.MindAddRole(mindId, MindRole);

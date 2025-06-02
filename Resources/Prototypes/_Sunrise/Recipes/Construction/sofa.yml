@@ -1,14 +1,11 @@
 - type: construction
-  name: sofa
+  name: construction-graph-tag-sofa
   id: SofaMiddle
   graph: Sofas
   startNode: start
   targetNode: sofaMiddle
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: sofamiddle
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -16,16 +13,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: sofa left
+  name: construction-graph-tag-sofa-left
   id: SofaLeft
   graph: Sofas
   startNode: start
   targetNode: sofaLeft
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: sofaend_left
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -33,16 +27,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: sofa right
+  name: construction-graph-tag-sofa-right
   id: SofaRight
   graph: Sofas
   startNode: start
   targetNode: sofaRight
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: sofaend_right
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -50,16 +41,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: sofa corner
+  name: construction-graph-tag-sofa-corner
   id: SofaCorner
   graph: Sofas
   startNode: start
   targetNode: sofaCorner
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: sofacorner
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -67,16 +55,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: black sofa
+  name: construction-graph-tag-black-sofa
   id: CorpSofaMiddle
   graph: Sofas
   startNode: start
   targetNode: corpsofaMiddle
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: corp_sofamiddle
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -84,16 +69,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: black sofa left
+  name: construction-graph-tag-black-sofa-left
   id: CorpSofaLeft
   graph: Sofas
   startNode: start
   targetNode: corpsofaLeft
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: corp_sofaend_left
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -101,16 +83,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: black sofa right
+  name: construction-graph-tag-black-sofa-right
   id: CorpSofaRight
   graph: Sofas
   startNode: start
   targetNode: corpsofaRight
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: corp_sofaend_right
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
@@ -118,16 +97,13 @@
   - !type:TileNotBlocked
 
 - type: construction
-  name: black sofa corner
+  name: construction-graph-tag-black-sofa-corner
   id: CorpSofaCorner
   graph: Sofas
   startNode: start
   targetNode: corpsofaCorner
   category: construction-category-furniture
-  description: Nap throne for the snack-powered royalty.
-  icon:
-    sprite: _Sunrise/Structures/Furniture/sofa.rsi
-    state: corp_sofacorner
+  description: construction-graph-tag-sofa-desc
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false

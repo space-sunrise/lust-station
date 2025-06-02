@@ -66,6 +66,11 @@
   copyright: "Sprited by discord: odlieerr"
   source: "https://github.com/space-sunrise/space-station-14"
 
+- files: [ "steel_dirty.png" ]
+  license: "CC-BY-SA-3.0"
+  copyright: "Originally created by github user @moonheart08, then modified by @Flareguy, then modified again by github user @moomoobeef."
+  source: "https://github.com/space-wizards/space-station-14/"
+
 - files: ["arcadeblue.png", "arcadered.png"]
   license: "CLA"
   copyright: "Sprited by discord: odlieerr"

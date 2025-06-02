@@ -1,5 +1,5 @@
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxSurvival
   name: survival box
   description: It's a box with basic internals inside.
@@ -10,6 +10,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -19,6 +20,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -36,6 +38,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -45,6 +48,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -55,7 +59,7 @@
     currentLabel: reagent-name-nitrogen
 
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxSurvivalEngineering
   name: extended-capacity survival box
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
@@ -66,6 +70,7 @@
     - id: ClothingMaskBreath
     - id: ExtendedEmergencyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -75,6 +80,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -92,6 +98,7 @@
     - id: ClothingMaskBreath
     - id: ExtendedEmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -101,6 +108,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -111,7 +119,7 @@
     currentLabel: reagent-name-nitrogen
 
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxSurvivalSecurity
   name: survival box
   description: It's a box with basic internals inside.
@@ -122,6 +130,7 @@
     - id: ClothingMaskGasSecurity
     - id: ExtendedEmergencyOxygenTankFilled #Sunrise-Edit
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -131,6 +140,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -148,6 +158,7 @@
     - id: ClothingMaskGasSecurity
     - id: ExtendedEmergencyNitrogenTankFilled #Sunrise-Edit
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -157,6 +168,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -167,7 +179,7 @@
     currentLabel: reagent-name-nitrogen
 
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxSurvivalMedical
   name: survival box
   description: It's a box with basic internals inside.
@@ -178,6 +190,7 @@
     - id: ClothingMaskBreathMedical
     - id: EmergencyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -187,6 +200,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -204,6 +218,7 @@
     - id: ClothingMaskBreathMedical
     - id: EmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -213,6 +228,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -223,7 +239,7 @@
     currentLabel: reagent-name-nitrogen
 
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxHug
   name: box of hugs
   description: A special box for sensitive people.
@@ -240,6 +256,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyFunnyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -249,6 +266,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Tag
@@ -265,6 +283,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -274,6 +293,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
     - id: DrinkWaterBottleFull
   - type: Label
@@ -289,6 +309,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -298,6 +319,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodBreadBaguette
     - id: DrinkWaterBottleFull
 
@@ -311,6 +333,7 @@
     - id: ClothingMaskBreath
     - id: EmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -320,6 +343,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodBreadBaguette
     - id: DrinkWaterBottleFull
   - type: Sprite
@@ -330,7 +354,31 @@
     currentLabel: reagent-name-nitrogen
 
 - type: entity
-  parent: BoxSurvivalBase
+  parent: BoxSurvivalBase # Sunrise-Edit
+  id: BoxMimeMoth
+  suffix: Mime, Emergency moth
+  components:
+  - type: StorageFill
+    contents:
+    - id: ClothingMaskBreath
+    - id: EmergencyOxygenTankFilled
+    - id: EmergencyMedipen
+    # Sunrise-Start
+    - id: SpaceMedipen
+    - id: GlowstickRed
+      orGroup: Glowstick
+    - id: GlowstickPurple
+      orGroup: Glowstick
+    - id: GlowstickYellow
+      orGroup: Glowstick
+    - id: GlowstickBlue
+      orGroup: Glowstick
+    # Sunrise-End
+    - id: FoodBreadBaguetteCotton
+    - id: DrinkWaterBottleFull
+
+- type: entity
+  parent: BoxSurvivalBase # Sunrise-Edit
   id: BoxSurvivalSyndicate
   name: extended-capacity survival box
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
@@ -341,6 +389,7 @@
     - id: ClothingMaskGasSyndicate
     - id: ExtendedEmergencyOxygenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -350,6 +399,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
   - type: Sprite
     layers:
@@ -366,6 +416,7 @@
     - id: ClothingMaskGasSyndicate
     - id: ExtendedEmergencyNitrogenTankFilled
     - id: EmergencyMedipen
+    # Sunrise-Start
     - id: SpaceMedipen
     - id: GlowstickRed
       orGroup: Glowstick
@@ -375,6 +426,7 @@
       orGroup: Glowstick
     - id: GlowstickBlue
       orGroup: Glowstick
+    # Sunrise-End
     - id: FoodSnackNutribrick
   - type: Sprite
     layers:

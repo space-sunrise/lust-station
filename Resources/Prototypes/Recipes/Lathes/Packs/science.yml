@@ -47,6 +47,7 @@
   recipes:
   - PowerCellMicroreactor
   - PowerCellHigh
+  - PowerCellHyper
   - PowerCageSmall # Sunrise-edit
 
 - type: latheRecipePack

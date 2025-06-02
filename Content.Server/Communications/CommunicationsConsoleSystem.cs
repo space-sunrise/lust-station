@@ -223,7 +223,6 @@ namespace Content.Server.Communications
             if (stationUid != null)
             {
                 _alertLevelSystem.SetLevel(stationUid.Value, message.Level, true, true);
-                RaiseLocalEvent(new AlertAccessesEvent(stationUid.Value)); // Sunrise-added
             }
         }
 
@@ -261,7 +260,9 @@ namespace Content.Server.Communications
             Loc.TryGetString(comp.Title, out var title);
             title ??= comp.Title;
 
-            msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
+            if (comp.AnnounceSentBy)
+                msg += "\n" + Loc.GetString("comms-console-announcement-sent-by") + " " + author;
+
             if (comp.Global)
             {
                 // Sunrise-start

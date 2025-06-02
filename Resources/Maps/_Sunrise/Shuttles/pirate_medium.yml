@@ -1090,13 +1090,6 @@ entities:
     - type: Transform
       pos: -7.2017837,-9.2111435
       parent: 1
-- proto: BoxMiniSyringe
-  entities:
-  - uid: 391
-    components:
-    - type: Transform
-      pos: 0.5902469,-11.434221
-      parent: 1
 - proto: BoxShotgunIncendiary
   entities:
   - uid: 753
@@ -4320,13 +4313,6 @@ entities:
       parent: 490
     - type: Physics
       canCollide: False
-- proto: LauncherSyringeRapidFilled
-  entities:
-  - uid: 630
-    components:
-    - type: Transform
-      pos: -0.5854852,-11.109983
-      parent: 1
 - proto: LightReplacerEmpty
   entities:
   - uid: 565
