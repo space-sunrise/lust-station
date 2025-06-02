@@ -164,9 +164,9 @@
     quickEquip: true
     slots:
     - neck
-#  - type: EmitSoundOnWearerMove # It doesn't work. yet. uncomment when pr from sr will be merged
-#    sound:
-#      collection: FootstepJester
+  - type: EmitSoundOnWearerMove
+    sound:
+      collection: FootstepJester
   - type: EmitSoundOnErp
     sound:
       collection: FootstepJester
