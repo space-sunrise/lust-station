@@ -36,6 +36,11 @@
     sprite: _Lust/ERP/Stuff/eroform.rsi
   - type: Clothing
     sprite: _Lust/ERP/Stuff/eroform.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
 
 - type: entity
   parent: ClothingUniformBase
@@ -147,11 +152,6 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - NudeFull
 
 - type: entity
   parent: ClothingUniformBase
