@@ -21,6 +21,7 @@ using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Inventory;
+using Robust.Shared.Map;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -409,9 +410,18 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                 if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid) && humanoid.Sex == Sex.Male)
                 {
-                    Spawn("PuddleSemen", Transform(entity).Coordinates);
+                    SpawnSemen("Semen", Transform(entity).Coordinates);
                 }
             }
+        }
+
+        private void SpawnSemen(string prototype, EntityCoordinates coordinates)
+        {
+            _puddle.TrySpillAt(
+                coordinates,
+                new Solution(prototype, 2f),
+                out _,
+                false);
         }
 
         public override void Update(float frameTime)
