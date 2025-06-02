@@ -118,21 +118,6 @@
   - NanoTrasenRepresentativeCoatOpen
   - QilluRepresentativeCoat #Lust-Edit
 
-#Lust-Start
-- type: loadoutGroup
-  id: QilluRepresentativeBackpack
-  name: loadout-group-qillurepresentative-backpack
-  loadouts: 
-  - QilluRepresentativeSatchel
-
-- type: loadoutGroup
-  id: QilluRepresentativeNeck
-  name: loadout-group-qillurepresentative-neck
-  loadouts:
-  - QilluRepresentativeCloak
-  - QilluRepresentativeMantle
-#Lust-End
-
 - type: loadoutGroup
   id: BlueShieldBackpack
   name: loadout-group-blueshield-backpack
