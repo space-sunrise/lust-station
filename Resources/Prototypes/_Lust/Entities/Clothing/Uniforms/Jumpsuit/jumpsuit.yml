@@ -136,13 +136,14 @@
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitecap.rsi
 
+
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformButtler
-  name: the butler suit
-  description: Buttler suit. Looks royal.
+  id: ClothingUniformWhiteLawyerSuit
+  name: the lawyer white suit
+  description: White Lawyer suit. Looks royal.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/buttler.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/buttler.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi

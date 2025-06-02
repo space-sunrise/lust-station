@@ -1,0 +1,33 @@
+#Jumpsuit
+- type: loadout
+  id: IAAuniform
+  equipment:
+    jumpsuit: ClothingUniformFormalIAA
+
+#Outerclothing
+- type: loadout
+  id: IAAcoat
+  equipment:
+    outerClothing: ClothingOuterCoatIAAFormalCoat
+
+#Backpack
+- type: loadout
+  id: IAAduffel
+  equipment:
+    back: ClothingBackpackDuffelIAAduf
+
+- type: loadout
+  id: IAAsatchel
+  equipment:
+    back: ClothingBackpackSatchelLeather
+
+#Neck
+- type: loadout
+  id: IAAcape
+  equipment:
+    neck: ClothingNeckCloakIAAcape
+
+- type: loadout
+  id: IAAformalmantle
+  equipment:
+    neck: ClothingNeckCloakIAAFormalMantle

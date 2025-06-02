@@ -143,6 +143,23 @@
   equipment:
     head: ClothingHeadHatCapLeatherHoS
 #Sunrise-End
+#Lust-Start
+#Backpack
+- type: loadout
+  id: HeadofSecurityBackpack
+  equipment:
+    back: ClothingBackpackBattleHoSPack
+
+- type: loadout
+  id: HeadofSecurityDuffel
+  equipment:
+    back: ClothingBackpackDuffelHoSDuf
+
+- type: loadout
+  id: HeadofSecuritySatchel
+  equipment:
+    back: ClothingBackpackSatchelBattleHoSSat
+#Lust-End
 
 # Neck
 - type: loadout
@@ -177,6 +194,13 @@
   effects:
   - !type:GroupLoadoutEffect
     proto: MasterHoS
+
+#Lust-Start
+- type: loadout
+  id: HeadofSecurityCeremonialCloak
+  equipment:
+    neck: ClothingNeckCloakBattleHoS
+#Lust-End
 
 # OuterClothing
 - type: loadout
@@ -219,3 +243,14 @@
   equipment:
     outerClothing: ClothingOuterCoatHoSOvercoat
 #Sunrise-End
+#Lust-Start
+- type: loadout
+  id: HeadofSecurityWinterGorka
+  equipment:
+    outerClothing: ClothingOuterWinterGorka
+
+- type: loadout
+  id: HeadofSecurityVest
+  equipment:
+    outerClothing: ClothingOuterArmorHoSBattleVest
+#Lust-End

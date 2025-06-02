@@ -111,3 +111,27 @@
     - Vest
     - NudeBottom
     - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  id: ClothingOuterCoatBlackCap
+  name: captain's black jacket
+  description: Captain's formal jacket, inlaid with gold.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/blackcapcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/blackcapcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.5
+        Caustic: 0.9
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom
+    - WhitelistChameleon

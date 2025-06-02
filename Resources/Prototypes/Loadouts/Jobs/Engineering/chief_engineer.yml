@@ -29,6 +29,13 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtChiefEngineerTurtle
 
+#Lust-Start
+- type: loadout
+  id: ChiefEngineerFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformFormalCE
+#Lust-End
+
 # Neck
 - type: loadout
   id: ChiefEngineerCloak

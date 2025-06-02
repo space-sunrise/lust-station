@@ -24,3 +24,27 @@
   id: NanoTrasenRepresentativeCoatOpen
   equipment:
     outerClothing: ClothingOuterCoatNtrepOpen
+
+#Lust-Start
+- type: loadout
+  id: QilluRepresentativeCoat
+  equipment:
+    outerClothing: ClothingOuterCoatPQCoat
+
+#Neck
+- type: loadout
+  id: QilluRepresentativeCloak
+  equipment:
+    neck: ClothingNeckCloakPQCloak
+
+- type: loadout
+  id: QilluRepresentativeMantle
+  equipment:
+    neck: ClothingNeckCloakPQMantle
+
+#Backpack
+- type: loadout
+  id: QilluRepresentativeSatchel
+  equipment:
+    back: ClothingBackpackSatchelLeather
+#Lust-End

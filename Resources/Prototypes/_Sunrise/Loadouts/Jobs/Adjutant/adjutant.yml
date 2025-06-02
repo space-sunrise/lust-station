@@ -8,6 +8,13 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitAdjutant
 
+#Lust-Start
+- type: loadout
+  id: AdjutantFormalJumpsuit
+  equipment: 
+    jumpsuit: ClothingUniformFormalAdj
+#Lust-End
+
 - type: loadout
   id: AdjutantBackpack
   equipment:
@@ -17,7 +24,18 @@
   id: AdjutantSatchel
   equipment:
     back: ClothingBackpackSatchelLeather
+  
+#Lust-Start
+- type: loadout
+  id: AdjutantFormalBackpack
+  equipment:
+    back: ClothingBackpackFormalAd
 
+- type: loadout
+  id: AdjutantFormalDuffel
+  equipment:
+    back: ClothingBackpackDuffelFormaladduf
+#Lust-End
 - type: loadout
   id: AdjutantDuffel
   equipment:
@@ -43,5 +61,9 @@
   equipment:
     outerClothing: ClothingOuterCoatAdjutant
 
-
-
+#Lust-Start
+- type: loadout
+  id: AdjutantFormalCoat
+  equipment:
+    outerClothing: ClothingOuterCoatAdjutantJacket
+#Lust-End

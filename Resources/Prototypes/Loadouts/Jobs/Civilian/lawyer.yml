@@ -48,7 +48,17 @@
   id: LawyerJumpskirtGood
   equipment:
     jumpsuit: ClothingUniformJumpskirtLawyerGood
+#Lust-Start
+- type: loadout
+  id: LawyerJumpskirtWhite
+  equipment:
+    jumpsuit: ClothingUniformWhiteLawyerSkirt
 
+- type: loadout
+  id: LawyerJumpsuitWhite
+  equipment:
+    jumpsuit: ClothingUniformWhiteLawyerSuit
+#Lust-End
 # Neck
 - type: loadout
   id: LawyerNeck

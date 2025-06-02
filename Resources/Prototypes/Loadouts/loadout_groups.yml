@@ -127,6 +127,11 @@
   - CaptainHead
   - CaptainCap
   - EliteCaptainCap #Sunrise-Edit
+#Lust-Start
+  - CaptainHeadBlack
+  - CaptainHeadWhite
+  - CaptainHeadHelmWhite
+#Lust-End
 
 - type: loadoutGroup
   id: CaptainJumpsuit
@@ -136,6 +141,13 @@
   - CaptainJumpskirt
   - CaptainFormalSuit
   - CaptainFormalSkirt
+#Lust-Start
+  - CaptainBlackSkirt
+  - CaptainWhiteSkirt
+  - CaptainBlackSuit
+  - CaptainWhiteSuit
+  - CaptainWhiteFormalSuit
+#Lust-End
 
 - type: loadoutGroup
   id: CaptainNeck
@@ -148,6 +160,25 @@
   - CaptainEliteCloak # Sunrise-Edit
   - CapitainScarf # Sunrise-Edit
   - CaptainSpecialCloak # Lust Station
+#Lust-Start
+  - CaptainCloakBlack
+  - CaptainMantleBlack
+  - CaptainCloakBlackCeremonial
+  - CaptainMantleWhite
+  - CaptainCloakWhite
+  - CaptainCloakWhiteFormal
+  - CaptainCloakWhiteCeremonial
+# Lust-End
+
+#Lust-Start
+- type: loadoutGroup
+  id: CaptainHands
+  name: loadout-group-captain-gloves
+  loadouts:
+  - CaptainGloves
+  - CaptainGlovesWhite
+  - CaptainGlovesBlack
+#Lust-End
 
 - type: loadoutGroup
   id: CaptainBackpack
@@ -156,6 +187,14 @@
   - CaptainBackpack
   - CaptainSatchel
   - CaptainDuffel
+#Lust-Start
+  - CaptainBackpackBlack
+  - CaptainBackpackWhite
+  - CaptainDuffelWhite
+  - CaptainDuffelBlack
+  - CaptainSatchelBlack
+  - CaptainSatchelWhite
+#Lust-End
 
 - type: loadoutGroup
   id: CaptainOuterClothing
@@ -165,6 +204,10 @@
   - CaptainOuterCoat # Sunrise-Edit
   - CaptainOuterOverCoat  # Sunrise-Edit
   - CaptainWintercoat
+#Lust-Start
+  - CaptainOuterCoatWhite
+  - CaptainOuterCoatBlack
+#Lust-End
 
 - type: loadoutGroup
   id: HoPHead
@@ -337,6 +380,10 @@
   - LawyerJumpskirtRed
   - LawyerJumpsuitGood
   - LawyerJumpskirtGood
+#Lust-Start
+  - LawyerJumpskirtWhite
+  - LawyerJumpsuitWhite
+#Lust-End
 
 - type: loadoutGroup
   id: LawyerNeck
@@ -703,6 +750,17 @@
   - Sunrise-ShoesPurple
   - Sunrise-ShoesLeather
 #Sunrise-end
+#Lust-Start
+  - QuartermasterBoots
+
+- type: loadoutGroup
+  id: CargoQuartermasterBackpack
+  name: loadout-group-quartermaster-backpack
+  loadouts:
+  - QuartermasterBacpack
+  - QuartermasterSatchel
+  - QuartermasterDuffel
+#Lust-End
 
 - type: loadoutGroup
   id: CargoTechnicianHead
@@ -811,6 +869,7 @@
   - ChiefEngineerJumpskirt
   - ChiefEngineerTurtleneck
   - ChiefEngineerTurtleneckSkirt
+  - ChiefEngineerFormalJumpsuit #Lust-Edit
 
 - type: loadoutGroup
   id: ChiefEngineerNeck
@@ -997,6 +1056,7 @@
   loadouts:
   - ResearchDirectorJumpsuit
   - ResearchDirectorJumpskirt
+  - ResearchDirectorFormalSuit #Lust-Edit
 
 - type: loadoutGroup
   id: ResearchDirectorOuterClothing
@@ -1005,6 +1065,7 @@
   loadouts:
   - ResearchDirectorLabCoat
   - ResearchDirectorWintercoat
+  - ResearchDirectorFormalCoat #Lust-Edit
 
 - type: loadoutGroup
   id: ResearchDirectorShoes
@@ -1105,6 +1166,16 @@
   - HeadofSecurityCloakHOSCloak #Sunrise-Edit
   - HeadofSecurityScarf #Sunrise-Edit
   - HosSpecialCloak # Lust Station
+  - HeadofSecurityCeremonialCloak #Lust-Edit
+#Lust-Start
+- type: loadoutGroup
+  id: HeadofSecurityBack
+  name: loadout-group-head-of-security-back
+  loadouts:
+  - HeadofSecurityBackpack
+  - HeadofSecurityDuffel
+  - HeadofSecuritySatchel
+#Lust-End
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -1118,6 +1189,10 @@
   - HeadofSecurityOvercoat
   - HeadofSecurityUSSPBlack
   #Sunrise-End
+#Lust-Start
+  - HeadofSecurityWinterGorka
+  - HeadofSecurityVest
+#Lust-End
 
 - type: loadoutGroup
   id: WardenHead
@@ -1126,6 +1201,7 @@
   loadouts:
   - WardenHead
   - WardenBeret
+  - WardenFormalHat #Lust-Edit
 
 - type: loadoutGroup
   id: WardenJumpsuit
@@ -1133,6 +1209,7 @@
   loadouts:
   - WardenJumpsuit
   - WardenJumpskirt
+  - WardenFormalSuit #Lust-Edit
 
 - type: loadoutGroup
   id: WardenOuterClothing
@@ -1140,6 +1217,17 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - WardenFormalCoat #Lust-Edit
+
+#Lust-Start
+- type: loadoutGroup
+  id: WardenBackpack
+  name: loadout-group-warden-backpack
+  loadouts: 
+  - WardenFormalBackpack
+  - WardenFormalDuffel
+  - WardenFormalSatchel
+#Lust-End
 
 - type: loadoutGroup
   id: SecurityHead
@@ -1281,6 +1369,7 @@
   - Sunrise-HatBluesoft
   - MedicalHeadMirror
 # Sunrise-end
+  - CMOFormalHat #Lust-Edit
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerJumpsuit
@@ -1290,6 +1379,7 @@
   - ChiefMedicalOfficerJumpskirt
   - ChiefMedicalOfficerTurtleneckJumpsuit
   - ChiefMedicalOfficerTurtleneckJumpskirt
+  - ChiefMedicalOfficerFormalUniform #Lust-Edit
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerOuterClothing
@@ -1301,6 +1391,7 @@
 # Sunrise-start
   - RegularLabCoat
   - Sunrise-CoatLabViro
+  - ChiefMedicalofficerFormalCoat #Lust-Edit
   - ChemistLabCoat
   - Sunrise-CoatLabGene
   - CoatLabSeniorPhysician
@@ -1319,6 +1410,16 @@
   - Sunrise-WinterColorBlue
   - ParamedicWindbreaker
 # Sunrise-end
+
+#Lust-Start
+- type: loadoutGroup
+  id: ChiefMedicalOfficerBack
+  name: loadout-group-chief-medical-officer-back
+  loadouts:
+  - ChiefMedicalOfficerBackpack
+  - ChiefMedicalOfficerDuffel
+  - ChiefMedicalOfficerSatchel
+#Lust-End
 
 - type: loadoutGroup
   id: ChiefMedicalOfficerNeck

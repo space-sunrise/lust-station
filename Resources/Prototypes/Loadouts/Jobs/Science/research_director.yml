@@ -44,6 +44,13 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtResearchDirector
 
+#Lust-Start
+- type: loadout
+  id: ResearchDirectorFormalSuit
+  equipment:
+    jumpsuit: ClothingUniformFormalRDsuit
+#Lust-End
+
 # OuterClothing
 - type: loadout
   id: ResearchDirectorLabCoat
@@ -54,3 +61,10 @@
   id: ResearchDirectorWintercoat
   equipment:
     outerClothing: ClothingOuterWinterRD
+
+#Lust-Start
+- type: loadout
+  id: ResearchDirectorFormalCoat
+  equipment:
+    outerClothing: ClothingOuterCoatRDcostume
+#Lust-End
