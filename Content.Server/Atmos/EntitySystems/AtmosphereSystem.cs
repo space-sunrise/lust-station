@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
-using Content.Server.Body.Systems;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Shared.Atmos.EntitySystems;
@@ -9,7 +7,6 @@ using Content.Shared.Decals;
 using Content.Shared.Doors.Components;
 using Content.Shared.Maps;
 using JetBrains.Annotations;
-using Microsoft.Extensions.ObjectPool;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
@@ -18,7 +15,6 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using System.Linq;
 using System.Diagnostics;
-using Content.Shared.Atmos;
 
 namespace Content.Server.Atmos.EntitySystems;
 
@@ -53,22 +49,10 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
 
     private string[] _burntDecals = [];
 
-    private readonly DefaultObjectPool<TileAtmosphere> _tilePool;
-    private readonly DefaultObjectPool<GasMixture> _mixturePool;
-
     private readonly Stopwatch _frameStopwatch = new();
     private float _lastFrameTime;
     private float _averageFrameTime;
     private int _frameCount;
-
-    public AtmosphereSystem()
-    {
-        var tilePolicy = new DefaultPooledObjectPolicy<TileAtmosphere>();
-        var mixturePolicy = new DefaultPooledObjectPolicy<GasMixture>();
-
-        _tilePool = new DefaultObjectPool<TileAtmosphere>(tilePolicy, 1000);
-        _mixturePool = new DefaultObjectPool<GasMixture>(mixturePolicy, 1000);
-    }
 
     public override void Initialize()
     {
