@@ -28,14 +28,13 @@ namespace Content.Server.Atmos.EntitySystems
 
             for (var i = 0; i < Atmospherics.Directions; i++)
             {
-                var direction = (AtmosDirection) (1 << i);
-                if(tile.AdjacentBits.IsFlagSet(direction))
+                if(tile.AdjacentBits.IsFlagSet(CachedDirections[i]))
                     adjacentTileLength++;
             }
 
             for(var i = 0; i < Atmospherics.Directions; i++)
             {
-                var direction = (AtmosDirection) (1 << i);
+                var direction = CachedDirections[i];
                 if (!tile.AdjacentBits.IsFlagSet(direction)) continue;
                 var enemyTile = tile.AdjacentTiles[i];
 
@@ -54,13 +53,13 @@ namespace Content.Server.Atmos.EntitySystems
                     }
 
                     shouldShareAir = true;
-                } else if (CompareExchange(tile, enemyTile) != GasCompareResult.NoExchange)
+                }
+                else if (CompareExchange(tile, enemyTile) != GasCompareResult.NoExchange)
                 {
                     AddActiveTile(gridAtmosphere, enemyTile);
                     if (ExcitedGroups)
                     {
-                        var excitedGroup = tile.ExcitedGroup;
-                        excitedGroup ??= enemyTile.ExcitedGroup;
+                        var excitedGroup = tile.ExcitedGroup ?? enemyTile.ExcitedGroup;
 
                         if (excitedGroup == null)
                         {

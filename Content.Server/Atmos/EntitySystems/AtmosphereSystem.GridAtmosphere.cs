@@ -15,18 +15,21 @@ public sealed partial class AtmosphereSystem
     private static readonly AtmosDirection[] CachedDirections;
     private static readonly int[] CachedOppositeIndices;
     private static readonly AtmosDirection[] CachedOppositeDirections;
+    private static readonly Vector2i[] CachedOffsets;
 
     static AtmosphereSystem()
     {
         CachedDirections = new AtmosDirection[Atmospherics.Directions];
         CachedOppositeIndices = new int[Atmospherics.Directions];
         CachedOppositeDirections = new AtmosDirection[Atmospherics.Directions];
+        CachedOffsets = new Vector2i[Atmospherics.Directions];
 
         for (var i = 0; i < Atmospherics.Directions; i++)
         {
             CachedDirections[i] = (AtmosDirection)(1 << i);
             CachedOppositeIndices[i] = i.ToOppositeIndex();
             CachedOppositeDirections[i] = (AtmosDirection)(1 << CachedOppositeIndices[i]);
+            CachedOffsets[i] = ((AtmosDirection)(1 << i)).ToVec();
         }
     }
 
@@ -197,7 +200,7 @@ public sealed partial class AtmosphereSystem
         for (var i = 0; i < Atmospherics.Directions; i++)
         {
             var direction = CachedDirections[i];
-            var adjacentIndices = tile.GridIndices.Offset(direction);
+            var adjacentIndices = tile.GridIndices + CachedOffsets[i];
 
             TileAtmosphere? adjacent;
             if (!tile.NoGridTile)

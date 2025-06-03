@@ -255,7 +255,6 @@ namespace Content.Server.Atmos.EntitySystems
             float volume)
         {
             var atmos = ent.Comp1;
-            var mapGrid = ent.Comp3;
 
             if (tile.AirtightData.NoAirWhenBlocked && tile.AirtightData.BlockedDirections != AtmosDirection.Invalid)
             {
