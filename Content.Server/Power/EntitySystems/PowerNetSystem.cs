@@ -30,20 +30,13 @@ namespace Content.Server.Power.EntitySystems
         private readonly PowerState _powerState = new();
         private readonly HashSet<PowerNet> _powerNetReconnectQueue = new();
         private readonly HashSet<ApcNet> _apcNetReconnectQueue = new();
-        private BatteryRampPegSolver.UpdateNetworkJob _networkJob;
+        private float _updateAccumulator;
+        private const float UpdateInterval = 0.5f;
 
         private EntityQuery<ApcPowerReceiverBatteryComponent> _apcBatteryQuery;
         private EntityQuery<BatteryComponent> _batteryQuery;
 
         private BatteryRampPegSolver _solver = new();
-
-        public PowerNetSystem()
-        {
-            _networkJob = new BatteryRampPegSolver.UpdateNetworkJob
-            {
-                Solver = _solver
-            };
-        }
 
         public override void Initialize()
         {
@@ -283,95 +276,88 @@ namespace Content.Server.Power.EntitySystems
         {
             base.Update(frameTime);
 
+            _updateAccumulator += frameTime;
+            if (_updateAccumulator < UpdateInterval)
+                return;
+
+            _updateAccumulator = 0;
+
             ReconnectNetworks();
 
-            RecalculateGroupedNets();
+            // Synchronize batteries
+            RaiseLocalEvent(new NetworkBatteryPreSync());
 
-            var preSyncEvent = new NetworkBatteryPreSync();
-            RaiseLocalEvent(preSyncEvent);
+            // Run power solver.
+            _solver.Tick(frameTime, _powerState, _parMan);
 
-            if (_powerState.GroupedNets != null)
+            // Synchronize batteries, the other way around.
+            RaiseLocalEvent(new NetworkBatteryPostSync());
+
+            var apcPowerReceiverQuery = AllEntityQuery<ApcPowerReceiverComponent>();
+            while (apcPowerReceiverQuery.MoveNext(out var uid, out var apcReceiver))
             {
-                foreach (var group in _powerState.GroupedNets)
-                {
-                    if (group.Count > 100)
-                    {
-                        try
-                        {
-                            _networkJob.Networks = group;
-                            _networkJob.State = _powerState;
-                            _networkJob.FrameTime = frameTime;
-                            _parMan.ProcessNow(_networkJob, group.Count);
-                        }
-                        catch (Exception e)
-                        {
-                            foreach (var network in group)
-                            {
-                                _solver.UpdateNetwork(network, _powerState, frameTime);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        foreach (var network in group)
-                        {
-                            _solver.UpdateNetwork(network, _powerState, frameTime);
-                        }
-                    }
-                }
+                UpdateApcPowerReceiverSingle(uid, apcReceiver, frameTime);
             }
 
-            var postSyncEvent = new NetworkBatteryPostSync();
-            RaiseLocalEvent(postSyncEvent);
-
-            ValidatePowerState();
-
-            UpdateComponents(frameTime);
-        }
-
-        private void ValidatePowerState()
-        {
-            foreach (var battery in _powerState.Batteries.Values)
+            var powerConsumererQuery = AllEntityQuery<PowerConsumerComponent>();
+            while (powerConsumererQuery.MoveNext(out var uid, out var consumer))
             {
-                if (battery.CurrentStorage < 0 || battery.CurrentStorage > battery.Capacity)
-                {
-                    battery.CurrentStorage = Math.Clamp(battery.CurrentStorage, 0, battery.Capacity);
-                }
+                UpdatePowerConsumerSingle(uid, consumer);
+            }
+
+            var powerNetworkBatteryQuery = AllEntityQuery<PowerNetworkBatteryComponent>();
+            while (powerNetworkBatteryQuery.MoveNext(out var uid, out var powerNetBattery))
+            {
+                UpdateNetworkBatterySingle(uid, powerNetBattery);
             }
         }
 
-        private void UpdateComponents(float frameTime)
-        {
-            var apcQuery = EntityQueryEnumerator<ApcPowerReceiverComponent>();
-            var consumerQuery = EntityQueryEnumerator<PowerConsumerComponent>();
-            var batteryQuery = EntityQueryEnumerator<PowerNetworkBatteryComponent>();
-
-            while (apcQuery.MoveNext(out var uid, out var apcReceiver))
-            {
-                UpdateApcReceiver(uid, apcReceiver, frameTime);
-            }
-
-            while (consumerQuery.MoveNext(out var uid, out var consumer))
-            {
-                UpdateConsumer(uid, consumer);
-            }
-
-            while (batteryQuery.MoveNext(out var uid, out var battery))
-            {
-                UpdateBattery(uid, battery);
-            }
-        }
-
-        private void UpdateApcReceiver(EntityUid uid, ApcPowerReceiverComponent apcReceiver, float frameTime)
+        private void UpdateApcPowerReceiverSingle(EntityUid uid, ApcPowerReceiverComponent apcReceiver, float frameTime)
         {
             var mapId = Transform(uid).MapUid;
             var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
+
             var powered = isAlwaysPowered || IsPoweredCalculate(apcReceiver);
+
+            MetaDataComponent? metadata = null;
+
+            if (_apcBatteryQuery.TryComp(uid, out var apcBattery) && _batteryQuery.TryComp(uid, out var battery))
+            {
+                apcReceiver.Load = apcBattery.IdleLoad;
+
+                var requireBattery = !powered && !apcReceiver.PowerDisabled;
+
+                if (requireBattery)
+                {
+                    _battery.SetCharge(uid, battery.CurrentCharge - apcBattery.IdleLoad * frameTime, battery);
+                }
+                else if (powered && !_battery.IsFull(uid, battery))
+                {
+                    apcReceiver.Load += apcBattery.BatteryRechargeRate * apcBattery.BatteryRechargeEfficiency;
+                    _battery.SetCharge(uid, battery.CurrentCharge + apcBattery.BatteryRechargeRate * frameTime, battery);
+                }
+
+                var enableBattery = requireBattery && battery.CurrentCharge > 0;
+
+                if (apcBattery.Enabled != enableBattery)
+                {
+                    apcBattery.Enabled = enableBattery;
+                    metadata = MetaData(uid);
+                    Dirty(uid, apcBattery, metadata);
+
+                    var apcBatteryEv = new ApcPowerReceiverBatteryChangedEvent(enableBattery);
+                    RaiseLocalEvent(uid, ref apcBatteryEv);
+
+                    _appearance.SetData(uid, PowerDeviceVisuals.BatteryPowered, enableBattery);
+                }
+
+                powered |= enableBattery;
+            }
 
             if (!apcReceiver.Recalculate && apcReceiver.Powered == powered)
                 return;
 
-            var metadata = MetaData(uid);
+            metadata ??= MetaData(uid);
             if (Paused(uid, metadata))
                 return;
 
@@ -383,21 +369,22 @@ namespace Content.Server.Power.EntitySystems
             RaiseLocalEvent(uid, ref ev);
         }
 
-        private void UpdateConsumer(EntityUid uid, PowerConsumerComponent consumer)
+        private void UpdatePowerConsumerSingle(EntityUid uid, PowerConsumerComponent consumer)
         {
             var mapId = Transform(uid).MapUid;
             var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
 
             var newRecv = isAlwaysPowered ? consumer.DrawRate : consumer.NetworkLoad.ReceivingPower;
-            if (MathHelper.CloseToPercent(consumer.LastReceived, newRecv))
+            ref var lastRecv = ref consumer.LastReceived;
+            if (MathHelper.CloseToPercent(lastRecv, newRecv))
                 return;
 
-            consumer.LastReceived = newRecv;
+            lastRecv = newRecv;
             var msg = new PowerConsumerReceivedChanged(newRecv, consumer.DrawRate);
             RaiseLocalEvent(uid, ref msg);
         }
 
-        private void UpdateBattery(EntityUid uid, PowerNetworkBatteryComponent powerNetBattery)
+        private void UpdateNetworkBatterySingle(EntityUid uid, PowerNetworkBatteryComponent powerNetBattery)
         {
             var mapId = Transform(uid).MapUid;
             var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
@@ -440,8 +427,6 @@ namespace Content.Server.Power.EntitySystems
             }
 
             _powerNetReconnectQueue.Clear();
-
-            _powerState.GroupedNets = null;
         }
 
         private bool IsPoweredCalculate(ApcPowerReceiverComponent comp)
@@ -557,53 +542,6 @@ namespace Content.Server.Power.EntitySystems
         public void Validate()
         {
             _solver.Validate(_powerState);
-        }
-
-        private void RecalculateGroupedNets()
-        {
-            if (_powerState.GroupedNets != null)
-                return;
-
-            var nets = _powerState.Networks.Values.ToList();
-            var groups = new List<List<PowerState.Network>>();
-            var visited = new HashSet<PowerState.Network>();
-
-            foreach (var net in nets)
-            {
-                if (visited.Contains(net))
-                    continue;
-
-                var group = new List<PowerState.Network>();
-                var queue = new Queue<PowerState.Network>();
-                queue.Enqueue(net);
-                visited.Add(net);
-
-                while (queue.Count > 0)
-                {
-                    var current = queue.Dequeue();
-                    group.Add(current);
-
-                    foreach (var batteryId in current.BatteryLoads.Concat(current.BatterySupplies))
-                    {
-                        var battery = _powerState.Batteries[batteryId];
-                        if (battery.LinkedNetworkCharging != default && !visited.Contains(_powerState.Networks[battery.LinkedNetworkCharging]))
-                        {
-                            queue.Enqueue(_powerState.Networks[battery.LinkedNetworkCharging]);
-                            visited.Add(_powerState.Networks[battery.LinkedNetworkCharging]);
-                        }
-                        if (battery.LinkedNetworkDischarging != default && !visited.Contains(_powerState.Networks[battery.LinkedNetworkDischarging]))
-                        {
-                            queue.Enqueue(_powerState.Networks[battery.LinkedNetworkDischarging]);
-                            visited.Add(_powerState.Networks[battery.LinkedNetworkDischarging]);
-                        }
-                    }
-                }
-
-                if (group.Count > 0)
-                    groups.Add(group);
-            }
-
-            _powerState.GroupedNets = groups;
         }
     }
 

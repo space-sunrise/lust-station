@@ -127,24 +127,6 @@ namespace Content.Server.Power.Pow3r
                 _storage = Array.Empty<Slot>();
             }
 
-            public GenIdStorage(int initialCapacity)
-            {
-                if (initialCapacity <= 0)
-                    throw new ArgumentException("Initial capacity must be greater than 0", nameof(initialCapacity));
-
-                _storage = new Slot[initialCapacity];
-
-                for (var i = 0; i < initialCapacity - 1; i++)
-                {
-                    _storage[i].NextSlot = i + 1;
-                    _storage[i].Generation = 1;
-                }
-                _storage[initialCapacity - 1].NextSlot = int.MaxValue;
-                _storage[initialCapacity - 1].Generation = 1;
-
-                _nextFree = 0;
-            }
-
             public static GenIdStorage<T> FromEnumerable(IEnumerable<(NodeId, T)> enumerable)
             {
                 var storage = new GenIdStorage<T>();

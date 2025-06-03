@@ -114,6 +114,7 @@ namespace Content.Server.Power.Pow3r
                 if (!load.Enabled || load.Paused)
                     continue;
 
+                DebugTools.Assert(load.DesiredPower >= 0);
                 demand += load.DesiredPower;
             }
 
@@ -188,8 +189,6 @@ namespace Content.Server.Power.Pow3r
 
                     battery.AvailableSupply = Math.Min(scaledSpace, supplyAndPassthrough);
                     battery.LoadingNetworkDemand = unmet;
-                    battery.MaxEffectiveSupply = Math.Min(battery.CurrentStorage / frameTime,
-                        battery.MaxSupply + battery.CurrentReceiving * battery.Efficiency);
 
                     battery.MaxEffectiveSupply = Math.Min(battery.CurrentStorage / frameTime, battery.MaxSupply + battery.CurrentReceiving * battery.Efficiency);
                     totalBatterySupply += battery.AvailableSupply;

@@ -25,12 +25,23 @@ zzzz-fmt-power-watts =
 # Therefore 1 kilowatt-hour is equal to 3,600,000 joules (3.6MJ)
 zzzz-fmt-power-joules =
     { TOSTRING($divided, "F1") } { $places ->
-        [0] Дж
-        [1] кДж
-        [2] МДж
-        [3] ГДж
-        [4] ТДж
-       *[5] ???
-    }
+    [0] Дж
+    [1] кДж
+    [2] МДж
+    [3] ГДж
+    [4] ТДж
+    *[5] ???
+        }
+
+# Used internally by the ENERGYWATTHOURS() function.
+zzzz-fmt-energy-watt-hours = { TOSTRING($divided, "F1") } { $places ->
+    [0] Wh
+    [1] kWh
+    [2] MWh
+    [3] GWh
+    [4] TWh
+    *[5] ???
+}
+
 # Used internally by the PLAYTIME() function.
 zzzz-fmt-playtime = { $hours }Ч { $minutes }М
