@@ -152,21 +152,53 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckBellCollar
-  name: bell collar
-  description: A way to inform others about your presence, or just to annoy everyone around you!
+  id: ClothingNeckBellCollarBase
+  abstract: true
+  name: bell choker
+  description: Cute choker with a bell.
   components:
-  - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
-    state: icon
-  - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
-    quickEquip: true
-    slots:
-    - neck
   - type: EmitSoundOnWearerMove
     sound:
       collection: FootstepJester
   - type: EmitSoundOnErp
     sound:
       collection: FootstepJester
+
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarPink
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    quickEquip: true
+    slots:
+    - neck
+
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarYellow
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    quickEquip: true
+    slots:
+    - neck
+
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarPlain
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    quickEquip: true
+    slots:
+    - neck
