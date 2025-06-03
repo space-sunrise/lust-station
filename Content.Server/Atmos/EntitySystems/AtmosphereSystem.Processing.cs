@@ -1,4 +1,3 @@
-using System.Linq;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.Piping.Components;
 using Content.Shared.Atmos;
@@ -31,9 +30,6 @@ namespace Content.Server.Atmos.EntitySystems
         private int _currentRunAtmosphereIndex;
         private bool _simulationPaused;
 
-        private const int BatchSize = 32;
-        private readonly Dictionary<EntityUid, HashSet<Vector2i>> _activeTileCache = new();
-
         private TileAtmosphere GetOrNewTile(EntityUid owner, GridAtmosphereComponent atmosphere, Vector2i index, bool invalidateNew = true)
         {
             var tile = atmosphere.Tiles.GetOrNew(index, out var existing);
@@ -43,9 +39,11 @@ namespace Content.Server.Atmos.EntitySystems
             if (invalidateNew)
                 atmosphere.InvalidatedCoords.Add(index);
 
-            tile.GridIndex = owner;
-            tile.GridIndices = index;
-            return tile;
+            var newTile = GetTileFromPool();
+            newTile.GridIndex = owner;
+            newTile.GridIndices = index;
+            atmosphere.Tiles[index] = newTile;
+            return newTile;
         }
 
         private readonly List<Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent>> _currentRunAtmosphere = new();
@@ -234,8 +232,18 @@ namespace Content.Server.Atmos.EntitySystems
             DebugTools.Assert(tile.Air?.Immutable ?? false);
             tile.MapAtmosphere = false;
             atmos.MapTiles.Remove(tile);
-            tile.Air = null;
-            tile.AirArchived = null;
+
+            if (tile.Air != null)
+            {
+                ReturnMixtureToPool(tile.Air);
+                tile.Air = null;
+            }
+            if (tile.AirArchived != null)
+            {
+                ReturnMixtureToPool(tile.AirArchived);
+                tile.AirArchived = null;
+            }
+
             tile.ArchivedCycle = 0;
             tile.LastShare = 0f;
             tile.Space = false;
@@ -264,8 +272,14 @@ namespace Content.Server.Atmos.EntitySystems
                 if (tile.Air == null)
                     return;
 
+                ReturnMixtureToPool(tile.Air);
                 tile.Air = null;
-                tile.AirArchived = null;
+                if (tile.AirArchived != null)
+                {
+                    ReturnMixtureToPool(tile.AirArchived);
+                    tile.AirArchived = null;
+                }
+
                 tile.ArchivedCycle = 0;
                 tile.LastShare = 0f;
                 tile.Hotspot = new Hotspot();
@@ -275,7 +289,9 @@ namespace Content.Server.Atmos.EntitySystems
             if (tile.Air != null)
                 return;
 
-            tile.Air = new GasMixture(volume){Temperature = Atmospherics.T20C};
+            tile.Air = GetMixtureFromPool();
+            tile.Air.Volume = volume;
+            tile.Air.Temperature = Atmospherics.T20C;
 
             if (data.FixVacuum)
                 GridFixTileVacuum(tile);
@@ -558,65 +574,163 @@ namespace Content.Server.Atmos.EntitySystems
 
         private void UpdateProcessing(float frameTime)
         {
-            if (_simulationPaused)
-                return;
-
-            var atmosTime = RealAtmosTime();
-            var maxTime = AtmosMaxProcessTime;
-            var startTime = _gameTiming.RealTime;
-
             _simulationStopwatch.Restart();
 
-            foreach (var ent in _currentRunAtmosphere)
+            if (!_simulationPaused)
             {
-                if (!_activeTileCache.TryGetValue(ent.Owner, out var cache))
+                _currentRunAtmosphereIndex = 0;
+                _currentRunAtmosphere.Clear();
+
+                var query = EntityQueryEnumerator<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent>();
+                while (query.MoveNext(out var uid, out var atmos, out var overlay, out var grid, out var xform ))
                 {
-                    cache = new HashSet<Vector2i>();
-                    _activeTileCache[ent.Owner] = cache;
-                }
-                cache.Clear();
-                foreach (var tile in ent.Comp1.ActiveTiles)
-                {
-                    cache.Add(tile.GridIndices);
+                    _currentRunAtmosphere.Add((uid, atmos, overlay, grid, xform));
                 }
             }
 
-            for (var i = 0; i < _currentRunAtmosphere.Count; i += BatchSize)
+            // We set this to true just in case we have to stop processing due to time constraints.
+            _simulationPaused = true;
+
+            for (; _currentRunAtmosphereIndex < _currentRunAtmosphere.Count; _currentRunAtmosphereIndex++)
             {
-                var batchSize = Math.Min(BatchSize, _currentRunAtmosphere.Count - i);
-                for (var j = 0; j < batchSize; j++)
+                var ent = _currentRunAtmosphere[_currentRunAtmosphereIndex];
+                var (owner, atmosphere, visuals, grid, xform) = ent;
+
+                if (xform.MapUid == null
+                    || TerminatingOrDeleted(xform.MapUid.Value)
+                    || xform.MapID == MapId.Nullspace)
                 {
-                    var ent = _currentRunAtmosphere[i + j];
-                    ProcessTileBatch(ent, atmosTime);
+                    Log.Error($"Attempted to process atmos without a map? Entity: {ToPrettyString(owner)}. Map: {ToPrettyString(xform?.MapUid)}. MapId: {xform?.MapID}");
+                    continue;
                 }
 
-                if (_simulationStopwatch.Elapsed.TotalMilliseconds > maxTime)
-                    break;
-            }
+                if (atmosphere.LifeStage >= ComponentLifeStage.Stopping || Paused(owner) || !atmosphere.Simulated)
+                    continue;
 
-            _simulationStopwatch.Restart();
-        }
+                atmosphere.Timer += frameTime;
 
-        private void ProcessTileBatch(
-            Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent,
-            float atmosTime)
-        {
-            var gridAtmosphere = ent.Comp1;
-            var activeTiles = gridAtmosphere.ActiveTiles;
+                if (atmosphere.Timer < AtmosTime)
+                    continue;
 
-            var tilesArray = activeTiles.ToArray();
+                // We subtract it so it takes lost time into account.
+                atmosphere.Timer -= AtmosTime;
 
-            for (var i = 0; i < tilesArray.Length; i += BatchSize)
-            {
-                var batchSize = Math.Min(BatchSize, tilesArray.Length - i);
-                for (var j = 0; j < batchSize; j++)
+                var map = new Entity<MapAtmosphereComponent?>(xform.MapUid.Value, _mapAtmosQuery.CompOrNull(xform.MapUid.Value));
+
+                switch (atmosphere.State)
                 {
-                    var tile = tilesArray[i + j];
-                    if (tile.Air == null) continue;
+                    case AtmosphereProcessingState.Revalidate:
+                        if (!ProcessRevalidate(ent))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
 
-                    ProcessCell(ent, tile, (int)atmosTime);
+                        atmosphere.ProcessingPaused = false;
+
+                        // Next state depends on whether monstermos equalization is enabled or not.
+                        // Note: We do this here instead of on the tile equalization step to prevent ending it early.
+                        //       Therefore, a change to this CVar might only be applied after that step is over.
+                        atmosphere.State = MonstermosEqualization
+                            ? AtmosphereProcessingState.TileEqualize
+                            : AtmosphereProcessingState.ActiveTiles;
+                        continue;
+                    case AtmosphereProcessingState.TileEqualize:
+                        if (!ProcessTileEqualize(ent))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.ActiveTiles;
+                        continue;
+                    case AtmosphereProcessingState.ActiveTiles:
+                        if (!ProcessActiveTiles(ent))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        // Next state depends on whether excited groups are enabled or not.
+                        atmosphere.State = ExcitedGroups ? AtmosphereProcessingState.ExcitedGroups : AtmosphereProcessingState.HighPressureDelta;
+                        continue;
+                    case AtmosphereProcessingState.ExcitedGroups:
+                        if (!ProcessExcitedGroups(ent))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.HighPressureDelta;
+                        continue;
+                    case AtmosphereProcessingState.HighPressureDelta:
+                        if (!ProcessHighPressureDelta((ent, ent)))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.Hotspots;
+                        continue;
+                    case AtmosphereProcessingState.Hotspots:
+                        if (!ProcessHotspots(ent))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        // Next state depends on whether superconduction is enabled or not.
+                        // Note: We do this here instead of on the tile equalization step to prevent ending it early.
+                        //       Therefore, a change to this CVar might only be applied after that step is over.
+                        atmosphere.State = Superconduction
+                            ? AtmosphereProcessingState.Superconductivity
+                            : AtmosphereProcessingState.PipeNet;
+                        continue;
+                    case AtmosphereProcessingState.Superconductivity:
+                        if (!ProcessSuperconductivity(atmosphere))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.PipeNet;
+                        continue;
+                    case AtmosphereProcessingState.PipeNet:
+                        if (!ProcessPipeNets(atmosphere))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.AtmosDevices;
+                        continue;
+                    case AtmosphereProcessingState.AtmosDevices:
+                        if (!ProcessAtmosDevices(ent, map))
+                        {
+                            atmosphere.ProcessingPaused = true;
+                            return;
+                        }
+
+                        atmosphere.ProcessingPaused = false;
+                        atmosphere.State = AtmosphereProcessingState.Revalidate;
+
+                        // We reached the end of this atmosphere's update tick. Break out of the switch.
+                        break;
                 }
+
+                // And increase the update counter.
+                atmosphere.UpdateCounter++;
             }
+
+            // We finished processing all atmospheres successfully, therefore we won't be paused next tick.
+            _simulationPaused = false;
         }
     }
 
