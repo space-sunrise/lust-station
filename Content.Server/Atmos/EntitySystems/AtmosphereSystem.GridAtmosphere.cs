@@ -6,11 +6,30 @@ using Content.Shared.Atmos.Reactions;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Utility;
+using System.Runtime.CompilerServices;
 
 namespace Content.Server.Atmos.EntitySystems;
 
 public sealed partial class AtmosphereSystem
 {
+    private static readonly AtmosDirection[] CachedDirections;
+    private static readonly int[] CachedOppositeIndices;
+    private static readonly AtmosDirection[] CachedOppositeDirections;
+
+    static AtmosphereSystem()
+    {
+        CachedDirections = new AtmosDirection[Atmospherics.Directions];
+        CachedOppositeIndices = new int[Atmospherics.Directions];
+        CachedOppositeDirections = new AtmosDirection[Atmospherics.Directions];
+
+        for (var i = 0; i < Atmospherics.Directions; i++)
+        {
+            CachedDirections[i] = (AtmosDirection)(1 << i);
+            CachedOppositeIndices[i] = i.ToOppositeIndex();
+            CachedOppositeDirections[i] = (AtmosDirection)(1 << CachedOppositeIndices[i]);
+        }
+    }
+
     private void InitializeGridAtmosphere()
     {
         SubscribeLocalEvent<GridAtmosphereComponent, ComponentInit>(OnGridAtmosphereInit);
@@ -160,6 +179,7 @@ public sealed partial class AtmosphereSystem
     /// <summary>
     /// Update array of adjacent tiles and the adjacency flags.
     /// </summary>
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private void UpdateAdjacentTiles(
         Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent,
         TileAtmosphere tile,
@@ -168,13 +188,15 @@ public sealed partial class AtmosphereSystem
         var uid = ent.Owner;
         var atmos = ent.Comp1;
         var blockedDirs = tile.AirtightData.BlockedDirections;
+
         if (activate)
             AddActiveTile(atmos, tile);
 
         tile.AdjacentBits = AtmosDirection.Invalid;
+
         for (var i = 0; i < Atmospherics.Directions; i++)
         {
-            var direction = (AtmosDirection)(1 << i);
+            var direction = CachedDirections[i];
             var adjacentIndices = tile.GridIndices.Offset(direction);
 
             TileAtmosphere? adjacent;
@@ -193,10 +215,10 @@ public sealed partial class AtmosphereSystem
             if (activate)
                 AddActiveTile(atmos, adjacent);
 
-            var oppositeIndex = i.ToOppositeIndex();
-            var oppositeDirection = (AtmosDirection)(1 << oppositeIndex);
+            var oppositeIndex = CachedOppositeIndices[i];
+            var oppositeDirection = CachedOppositeDirections[i];
 
-            if (adjBlockDirs.IsFlagSet(oppositeDirection) || blockedDirs.IsFlagSet(direction))
+            if ((adjBlockDirs & oppositeDirection) != 0 || (blockedDirs & direction) != 0)
             {
                 // Adjacency is blocked by some airtight entity.
                 tile.AdjacentBits &= ~direction;
@@ -214,7 +236,7 @@ public sealed partial class AtmosphereSystem
             }
 
             DebugTools.Assert(!(tile.AdjacentBits.IsFlagSet(direction) ^
-                                adjacent.AdjacentBits.IsFlagSet(oppositeDirection)));
+                              adjacent.AdjacentBits.IsFlagSet(oppositeDirection)));
 
             if (!adjacent.AdjacentBits.IsFlagSet(adjacent.MonstermosInfo.CurrentTransferDirection))
                 adjacent.MonstermosInfo.CurrentTransferDirection = AtmosDirection.Invalid;

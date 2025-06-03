@@ -14,6 +14,8 @@ namespace Content.Server.Atmos.EntitySystems
 
         private GasReactionPrototype[] _gasReactions = Array.Empty<GasReactionPrototype>();
         private float[] _gasSpecificHeats = new float[Atmospherics.TotalNumberOfGases];
+        private readonly float[] _cachedHeatCapacities = new float[Atmospherics.TotalNumberOfGases];
+        private readonly float[] _cachedMoles = new float[Atmospherics.TotalNumberOfGases];
 
         /// <summary>
         ///     List of gas reactions ordered by priority.
@@ -48,32 +50,27 @@ namespace Content.Server.Atmos.EntitySystems
         /// <param name="applyScaling"> Whether the internal heat capacity scaling should be applied. This should not be
         /// used outside of atmospheric related heat transfer.</param>
         /// <returns></returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public float GetHeatCapacity(GasMixture mixture, bool applyScaling)
         {
             var scale = GetHeatCapacityCalculation(mixture.Moles, mixture.Immutable);
-
-            // By default GetHeatCapacityCalculation() has the heat-scale divisor pre-applied.
-            // So if we want the un-scaled heat capacity, we have to multiply by the scale.
             return applyScaling ? scale : scale * HeatScale;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private float GetHeatCapacity(GasMixture mixture)
-            =>  GetHeatCapacityCalculation(mixture.Moles, mixture.Immutable);
+            => GetHeatCapacityCalculation(mixture.Moles, mixture.Immutable);
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private float GetHeatCapacityCalculation(float[] moles, bool space)
         {
-            // Little hack to make space gas mixtures have heat capacity, therefore allowing them to cool down rooms.
             if (space && MathHelper.CloseTo(NumericsHelpers.HorizontalAdd(moles), 0f))
             {
                 return Atmospherics.SpaceHeatCapacity;
             }
 
-            Span<float> tmp = stackalloc float[moles.Length];
-            NumericsHelpers.Multiply(moles, GasSpecificHeats, tmp);
-            // Adjust heat capacity by speedup, because this is primarily what
-            // determines how quickly gases heat up/cool.
-            return MathF.Max(NumericsHelpers.HorizontalAdd(tmp), Atmospherics.MinimumHeatCapacity);
+            NumericsHelpers.Multiply(moles, GasSpecificHeats, _cachedHeatCapacities);
+            return MathF.Max(NumericsHelpers.HorizontalAdd(_cachedHeatCapacities), Atmospherics.MinimumHeatCapacity);
         }
 
         /// <summary>
@@ -123,9 +120,11 @@ namespace Content.Server.Atmos.EntitySystems
                 var receiverHeatCapacity = GetHeatCapacity(receiver);
                 var giverHeatCapacity = GetHeatCapacity(giver);
                 var combinedHeatCapacity = receiverHeatCapacity + giverHeatCapacity;
+
                 if (combinedHeatCapacity > Atmospherics.MinimumHeatCapacity)
                 {
-                    receiver.Temperature = (GetThermalEnergy(giver, giverHeatCapacity) + GetThermalEnergy(receiver, receiverHeatCapacity)) / combinedHeatCapacity;
+                    receiver.Temperature = (GetThermalEnergy(giver, giverHeatCapacity) +
+                                         GetThermalEnergy(receiver, receiverHeatCapacity)) / combinedHeatCapacity;
                 }
             }
 
@@ -147,7 +146,7 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             float? sourceHeatCapacity = null;
-            var buffer = new float[Atmospherics.AdjustedNumberOfGases];
+            var buffer = _cachedMoles;
 
             foreach (var receiver in receivers)
             {
@@ -156,10 +155,8 @@ namespace Content.Server.Atmos.EntitySystems
 
                 var fraction = receiver.Volume / totalVolume;
 
-                // Set temperature, if necessary.
                 if (MathF.Abs(receiver.Temperature - source.Temperature) > Atmospherics.MinimumTemperatureDeltaToConsider)
                 {
-                    // Often this divides a pipe net into new and completely empty pipe nets
                     if (receiver.TotalMoles == 0)
                         receiver.Temperature = source.Temperature;
                     else
@@ -167,12 +164,13 @@ namespace Content.Server.Atmos.EntitySystems
                         sourceHeatCapacity ??= GetHeatCapacity(source);
                         var receiverHeatCapacity = GetHeatCapacity(receiver);
                         var combinedHeatCapacity = receiverHeatCapacity + sourceHeatCapacity.Value * fraction;
+
                         if (combinedHeatCapacity > Atmospherics.MinimumHeatCapacity)
-                            receiver.Temperature = (GetThermalEnergy(source, sourceHeatCapacity.Value * fraction) + GetThermalEnergy(receiver, receiverHeatCapacity)) / combinedHeatCapacity;
+                            receiver.Temperature = (GetThermalEnergy(source, sourceHeatCapacity.Value * fraction) +
+                                                 GetThermalEnergy(receiver, receiverHeatCapacity)) / combinedHeatCapacity;
                     }
                 }
 
-                // transfer moles
                 NumericsHelpers.Multiply(source.Moles, fraction, buffer);
                 NumericsHelpers.Add(receiver.Moles, buffer);
             }
