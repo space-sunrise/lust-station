@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using Content.Server.Atmos.Components;
 using Content.Server.Atmos.Piping.Components;
 using Content.Shared.Atmos;
@@ -14,7 +13,7 @@ namespace Content.Server.Atmos.EntitySystems
 {
     public sealed partial class AtmosphereSystem
     {
-        [Robust.Shared.IoC.Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private readonly IGameTiming _gameTiming = default!;
 
         private readonly Stopwatch _simulationStopwatch = new();
 
@@ -33,17 +32,15 @@ namespace Content.Server.Atmos.EntitySystems
 
         private TileAtmosphere GetOrNewTile(EntityUid owner, GridAtmosphereComponent atmosphere, Vector2i index, bool invalidateNew = true)
         {
-            if (atmosphere.Tiles.TryGetValue(index, out var tile))
+            var tile = atmosphere.Tiles.GetOrNew(index, out var existing);
+            if (existing)
                 return tile;
-
-            tile = GetTileFromPool();
-            tile.GridIndex = owner;
-            tile.GridIndices = index;
-            atmosphere.Tiles[index] = tile;
 
             if (invalidateNew)
                 atmosphere.InvalidatedCoords.Add(index);
 
+            tile.GridIndex = owner;
+            tile.GridIndices = index;
             return tile;
         }
 
@@ -229,51 +226,55 @@ namespace Content.Server.Atmos.EntitySystems
         private void RemoveMapAtmos(GridAtmosphereComponent atmos, TileAtmosphere tile)
         {
             DebugTools.Assert(tile.MapAtmosphere);
-            DebugTools.Assert(atmos.MapTiles.Contains(tile));
-
-            atmos.MapTiles.Remove(tile);
+            DebugTools.AssertNotNull(tile.Air);
+            DebugTools.Assert(tile.Air?.Immutable ?? false);
             tile.MapAtmosphere = false;
-
-            if (tile.Air != null)
-            {
-                ReturnMixtureToPool(tile.Air);
-                tile.Air = null;
-            }
-
-            if (tile.AirArchived != null)
-            {
-                ReturnMixtureToPool(tile.AirArchived);
-                tile.AirArchived = null;
-            }
-
-            atmos.InvalidatedCoords.Add(tile.GridIndices);
+            atmos.MapTiles.Remove(tile);
+            tile.Air = null;
+            tile.AirArchived = null;
+            tile.ArchivedCycle = 0;
+            tile.LastShare = 0f;
+            tile.Space = false;
         }
 
+        /// <summary>
+        /// Check whether a grid-tile should have an air mixture, and give it one if it doesn't already have one.
+        /// </summary>
         private void UpdateTileAir(
             Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> ent,
             TileAtmosphere tile,
             float volume)
         {
-            var atmos = ent.Comp1;
-
-            if (tile.AirtightData.NoAirWhenBlocked && tile.AirtightData.BlockedDirections != AtmosDirection.Invalid)
+            if (tile.MapAtmosphere)
             {
-                if (tile.Air != null)
-                {
-                    ReturnMixtureToPool(tile.Air);
-                    tile.Air = null;
-                }
+                DebugTools.AssertNotNull(tile.Air);
+                DebugTools.Assert(tile.Air?.Immutable ?? false);
                 return;
             }
 
-            if (tile.Air == null)
+            var data = tile.AirtightData;
+            var fullyBlocked = data.BlockedDirections == AtmosDirection.All;
+
+            if (fullyBlocked && data.NoAirWhenBlocked)
             {
-                tile.Air = GetMixtureFromPool();
-                tile.Air.Volume = volume;
-                tile.Air.Temperature = Atmospherics.T20C;
+                if (tile.Air == null)
+                    return;
+
+                tile.Air = null;
+                tile.AirArchived = null;
+                tile.ArchivedCycle = 0;
+                tile.LastShare = 0f;
+                tile.Hotspot = new Hotspot();
+                return;
             }
 
-            atmos.InvalidatedCoords.Add(tile.GridIndices);
+            if (tile.Air != null)
+                return;
+
+            tile.Air = new GasMixture(volume){Temperature = Atmospherics.T20C};
+
+            if (data.FixVacuum)
+                GridFixTileVacuum(tile);
         }
 
         private void QueueRunTiles(

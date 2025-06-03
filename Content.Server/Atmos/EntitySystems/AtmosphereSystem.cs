@@ -157,24 +157,4 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
     {
         _burntDecals = _protoMan.EnumeratePrototypes<DecalPrototype>().Where(x => x.Tags.Contains("burnt")).Select(x => x.ID).ToArray();
     }
-
-    private TileAtmosphere GetTileFromPool()
-    {
-        var tile = _tilePool.Get();
-        tile.Reset();
-        return tile;
-    }
-
-    private GasMixture GetMixtureFromPool()
-    {
-        var mixture = _mixturePool.Get();
-        mixture.Clear();
-        return mixture;
-    }
-
-    private void ReturnMixtureToPool(GasMixture mixture)
-    {
-        mixture.Clear();
-        _mixturePool.Return(mixture);
-    }
 }
