@@ -31,8 +31,8 @@
   - type: Tag
     tags:
     - HiViz
+    - WhitelistChameleon
     - Vest # Sunrise-Add
-    - WhitelistChameleon # Sunrise-Add
 
 #(Bartender) vest
 - type: entity
