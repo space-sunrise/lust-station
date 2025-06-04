@@ -9,3 +9,24 @@
   sponsorOnly: true
   equipment:
     belt: ClothingSheathBeltSecurityFilled
+
+#Backpack
+- type: loadout
+  id: HeadofSecurityBackpack
+  equipment:
+    back: ClothingBackpackBattleHoSPack
+
+- type: loadout
+  id: HeadofSecurityDuffel
+  equipment:
+    back: ClothingBackpackDuffelHoSDuf
+
+- type: loadout
+  id: HeadofSecuritySatchel
+  equipment:
+    back: ClothingBackpackSatchelBattleHoSSat
+
+- type: loadout
+  id: HeadofSecurityCeremonialCloak
+  equipment:
+    neck: ClothingNeckCloakBattleHoS

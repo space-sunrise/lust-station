@@ -1,0 +1,52 @@
+﻿- type: loadoutGroup
+  id: QilluRepresentativeBackpack
+  name: loadout-group-qillurepresentative-backpack
+  loadouts:
+  - QilluRepresentativeSatchel
+
+- type: loadoutGroup
+  id: QilluRepresentativeNeck
+  name: loadout-group-qillurepresentative-neck
+  loadouts:
+  - QilluRepresentativeCloak
+  - QilluRepresentativeMantle
+
+- type: loadoutGroup
+  id: CaptainHands
+  name: loadout-group-captain-gloves
+  loadouts:
+  - CaptainGloves
+  - CaptainGlovesWhite
+  - CaptainGlovesBlack
+
+- type: loadoutGroup
+  id: CargoQuartermasterBackpack
+  name: loadout-group-quartermaster-backpack
+  loadouts:
+  - QuartermasterBacpack
+  - QuartermasterSatchel
+  - QuartermasterDuffel
+
+- type: loadoutGroup
+  id: HeadofSecurityBack
+  name: loadout-group-head-of-security-back
+  loadouts:
+  - HeadofSecurityBackpack
+  - HeadofSecurityDuffel
+  - HeadofSecuritySatchel
+
+- type: loadoutGroup
+  id: WardenBackpack
+  name: loadout-group-warden-backpack
+  loadouts:
+  - WardenFormalBackpack
+  - WardenFormalDuffel
+  - WardenFormalSatchel
+
+- type: loadoutGroup
+  id: ChiefMedicalOfficerBack
+  name: loadout-group-chief-medical-officer-back
+  loadouts:
+  - ChiefMedicalOfficerBackpack
+  - ChiefMedicalOfficerDuffel
+  - ChiefMedicalOfficerSatchel

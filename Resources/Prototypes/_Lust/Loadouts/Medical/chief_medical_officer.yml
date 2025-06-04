@@ -4,3 +4,34 @@
   sponsorOnly: true
   equipment:
     neck: ClothingNeckCmoSpecialCloak
+
+- type: loadout
+  id: ChiefMedicalOfficerFormalUniform
+  equipment:
+    jumpsuit: ClothingUniformFormalCMOSuit
+
+#Back
+- type: loadout
+  id: ChiefMedicalOfficerBackpack
+  equipment:
+    back: ClothingFormalCMOBackpack
+
+- type: loadout
+  id: ChiefMedicalOfficerDuffel
+  equipment:
+    back: ClothingFormalCMODuffelBag
+
+- type: loadout
+  id: ChiefMedicalOfficerSatchel
+  equipment:
+    back: ClothingBackpackSatchelFormalCMO
+
+- type: loadout
+  id: CMOFormalHat
+  equipment:
+    head: ClothingHeadFormalCMO
+
+- type: loadout
+  id: ChiefMedicalofficerFormalCoat
+  equipment:
+    outerclothing: ClothingOuterCoatCMOFormalCoat

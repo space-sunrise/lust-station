@@ -1,0 +1,19 @@
+﻿- type: loadout
+  id: AdjutantFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformFormalAdj
+
+- type: loadout
+  id: AdjutantFormalBackpack
+  equipment:
+    back: ClothingBackpackFormalAd
+
+- type: loadout
+  id: AdjutantFormalDuffel
+  equipment:
+    back: ClothingBackpackDuffelFormaladduf
+
+- type: loadout
+  id: AdjutantFormalCoat
+  equipment:
+    outerClothing: ClothingOuterCoatAdjutantJacket

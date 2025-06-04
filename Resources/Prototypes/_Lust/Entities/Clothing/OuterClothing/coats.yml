@@ -1,0 +1,137 @@
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatIAAFormalCoat
+  name: formal IAA coat
+  description: Business jacket of the IAA for a professional look.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/IAAformcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/IAAformcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatCMOFormalCoat
+  name: formal CMO coat
+  description: Luxury medical coat.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/CMOformcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/CMOformcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Caustic: 0.8
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatPQCoat
+  name: formal PQ coat
+  description: An expensive coat made of thick materials.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/PQcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/PQcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.7
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatWardenCoat
+  name: formal warden coat
+  description: A jacket that inspires fear in law enforcement by its very appearance.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/formalwarden.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/formalwarden.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.7
+        Heat: 0.7
+        Caustic: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  id: ClothingOuterCoatWhiteCap
+  name: captain's white jacket
+  description: Captain's formal jacket, inlaid with gold.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/whitecapcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/whitecapcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.5
+        Caustic: 0.9
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  id: ClothingOuterCoatBlackCap
+  name: captain's black jacket
+  description: Captain's formal jacket, inlaid with gold.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/blackcapcoat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/blackcapcoat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.6
+        Heat: 0.5
+        Caustic: 0.9
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom
+    - WhitelistChameleon

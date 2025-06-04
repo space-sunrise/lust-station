@@ -1,0 +1,19 @@
+﻿- type: loadout
+  id: ChiefEngineerFormalBackpack
+  equipment:
+    back: ClothingFormalCEBackpack
+
+- type: loadout
+  id: ChiefEngineerFormalDuffel
+  equipment:
+    back: ClothingBackpackDuffelFormalCE
+
+- type: loadout
+  id: ChiefEngineerFormalSatchel
+  equipment:
+    back: ClothingBackpackSatchelFormalCE
+
+- type: loadout
+  id: ChiefEngineerFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformFormalCE

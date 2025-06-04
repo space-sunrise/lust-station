@@ -1,0 +1,9 @@
+﻿- type: loadout
+  id: LawyerJumpskirtWhite
+  equipment:
+    jumpsuit: ClothingUniformWhiteLawyerSkirt
+
+- type: loadout
+  id: LawyerJumpsuitWhite
+  equipment:
+    jumpsuit: ClothingUniformWhiteLawyerSuit
