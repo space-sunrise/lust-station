@@ -60,6 +60,9 @@
     ClothingNeckCollar4: 3
     ClothingNeckSpikeCollar: 3
     ClothingNeckRibbon: 3
+    ClothingNeckBellCollarPlain: 3
+    ClothingNeckBellCollarPink: 3
+    ClothingNeckBellCollarYellow: 3
     # Cat paws
     ClothingHandsCatPawsWhite: 3
     ClothingHandsCatPawsBrown: 3

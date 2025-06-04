@@ -1,0 +1,32 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBlackCapSkirt
+  name: black captain jumpskirt
+  description: Captain black uniform. Looks stylish.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/blackcap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/blackcap.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformWhiteCapSkirt
+  name: white captain jumpskirt
+  description: Captain white uniform. Looks stylish.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitecap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitecap.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformWhiteLawyerSkirt
+  name: white lawyer jumpskirt
+  description: Lawyer white uniform. Looks stylish.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi

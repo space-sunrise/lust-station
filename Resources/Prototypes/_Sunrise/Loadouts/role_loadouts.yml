@@ -1,9 +1,12 @@
 - type: roleLoadout
   id: JobIAA
   groups:
-  - LawyerNeck
-  - LawyerJumpsuit
-  - CommonBackpack
+#Lust-Start
+  - IAAneck
+  - IAAuniform
+  - IAAcoat
+  - IAAback
+#Lust-End
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
@@ -377,7 +380,10 @@
   groups:
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-  - CommonBackpack
+#Lust-Start
+  - QilluRepresentativeBackpack
+  - QilluRepresentativeNeck
+#Lust-End
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool

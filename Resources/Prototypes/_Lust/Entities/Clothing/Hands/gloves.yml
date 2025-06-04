@@ -1,0 +1,31 @@
+- type: entity
+  parent: [ClothingHandsBase, BaseCommandContraband]
+  id: ClothingHandsGlovesCaptainBlack
+  name: captain black gloves
+  description: Regal black gloves, with a nice gold trim. Swanky.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Hands/gloves/blackcap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Hands/gloves/blackcap.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-black
+  - type: FingerprintMask
+
+- type: entity
+  parent: [ClothingHandsBase, BaseCommandContraband]
+  id: ClothingHandsGlovesCaptainWhite
+  name: captain white gloves
+  description: Regal white gloves, with a nice gold trim. Swanky.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Hands/gloves/whitecap.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Hands/gloves/whitecap.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-white
+  - type: FingerprintMask

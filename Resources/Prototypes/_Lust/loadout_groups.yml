@@ -17,3 +17,42 @@
   minLimit: 0
   loadouts:
   - MedicalCloak
+
+#IAA
+- type: loadoutGroup
+  id: IAAuniform
+  name: loadout-group-IAA-uniform
+  loadouts:
+  - IAAuniform
+  - LawyerJumpsuit
+  - LawyerJumpskirt
+  - LawyerJumpsuitBlue
+  - LawyerJumpskirtBlue
+  - LawyerJumpsuitPurple
+  - LawyerJumpskirtPurple
+  - LawyerJumpsuitRed
+  - LawyerJumpskirtRed
+  - LawyerJumpsuitGood
+  - LawyerJumpskirtGood
+  - LawyerJumpskirtWhite
+  - LawyerJumpsuitWhite
+
+- type: loadoutGroup
+  id: IAAneck
+  name: loadout-group-IAA-neck
+  loadouts:
+  - IAAcape
+  - IAAformalmantle
+
+- type: loadoutGroup
+  id: IAAcoat
+  name: loadout-group-IAA-coat
+  loadouts:
+  - IAAcoat
+
+- type: loadoutGroup
+  id: IAAback
+  name: loadout-group-IAA-backpack
+  loadouts:
+  - IAAduffel
+  - IAAsatchel

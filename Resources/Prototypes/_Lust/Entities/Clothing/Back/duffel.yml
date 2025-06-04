@@ -1,0 +1,80 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelHoSDuf
+  name: HoS duffel bag
+  description: A large duffel bag for all weapons you need to eliminate clown.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/battle_hosduf.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBlackCapDuf
+  name: black captain duffel bag
+  description: A large duffel bag for all documents.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/blackcap.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelFormaladduf
+  name: formal adjutant duffel bag
+  description: A large duffel bag for all documents.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/formalad.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelIAAduf
+  name: IAA duffel bag
+  description: A large duffel bag for all documents.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/IAA.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelFormalCE
+  name: formal CE duffel bag
+  description: A large duffel bag for all instruments.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/formalCE.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingFormalCMODuffelBag
+  name: formal CMO duffel bag
+  description: A bag that can hold several dead Felinids at once.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Duffel/formalCMO.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingFormalQMDuffelBag
+  name: formal QM duffel bag
+  description: Judging by its appearance, this bag is often used.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Duffel/formalQM.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingFormalWardenDuffelBag
+  name: formal warden duffel bag
+  description: You can hide the corpse of a naughty prisoner in this backpack.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Duffel/formalwarden.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelWhiteCapDuf
+  name: white captain duffel bag
+  description: A large duffel bag for all documents.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffel/whitecap.rsi

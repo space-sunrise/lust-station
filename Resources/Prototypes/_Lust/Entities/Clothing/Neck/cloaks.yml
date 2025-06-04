@@ -105,3 +105,111 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/Miner.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBattleHoS
+  name: HoS's battle cloak
+  description: A warlike cloak for true connoisseurs of heavy weapons!
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/hosbattlecloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlackCapCloak
+  name: black captain cloak
+  description: Stylish black cloak.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/blackcap.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlackCapMantle
+  name: black captain mantle
+  description: Stylish black mantle, with gold stripes.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/blackcapmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakBlackCapCeremonial
+  name: black captain ceremonial cloak
+  description: A large raincoat with the qillu logo on the back.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/blackcapql.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakIAAcape
+  name: IAA cape
+  description: A bureaucrat's cape!
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/IAAcape.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakIAAFormalMantle
+  name: IAA formal mantle
+  description: A bureaucrat's mantle!
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/IAAmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakPQCloak
+  name: PQ cloak
+  description: An impressive cape with the Qillu logo.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/PQcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakPQMantle
+  name: PQ mantle
+  description: The mantle is made of thick leather. Obviously expensive.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/PQmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapMantle
+  name: white captain mantle
+  description: Stylish white mantle, with gold stripes.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/whitecapmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapCloak
+  name: white captain cloak
+  description: Stylish white cloak.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/whitecapcloak.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapFormalCloak
+  name: white captain formal cloak
+  description: Stylish white cloak.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/whitecapcloakform.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakWhiteCapQl
+  name: white captain cap
+  description: White royal captain cap.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/whitecapql.rsi

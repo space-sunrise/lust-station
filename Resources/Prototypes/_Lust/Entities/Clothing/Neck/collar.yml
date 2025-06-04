@@ -150,4 +150,55 @@
     tags:
     - WhitelistChameleon
 
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckBellCollarBase
+  abstract: true
+  name: bell choker
+  description: Cute choker with a bell.
+  components:
+  - type: EmitSoundOnWearerMove
+    sound:
+      collection: FootstepJester
+  - type: EmitSoundOnErp
+    sound:
+      collection: FootstepJester
 
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarPink
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    quickEquip: true
+    slots:
+    - neck
+
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarYellow
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    quickEquip: true
+    slots:
+    - neck
+
+- type: entity
+  parent: ClothingNeckBellCollarBase
+  id: ClothingNeckBellCollarPlain
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    quickEquip: true
+    slots:
+    - neck

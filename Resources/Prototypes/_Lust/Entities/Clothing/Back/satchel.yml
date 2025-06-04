@@ -1,0 +1,62 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBattleHoSSat
+  name: HoS satchel
+  description: Black sathel with red tape for best security units.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/battle_hossat.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelBlackCap
+  name: black captain satchel
+  description: Royal satchel for best of the best.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/blackcap.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelIAA
+  name: IAA satchel
+  description: The bag with the smell of papers.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/IAA.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelFormalCE
+  name: formal CE satchel
+  description: A bag with the smell of welding fuel.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/formalCE.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelFormalCMO
+  name: formal CMO satchel
+  description: A bag that smelled of chemicals, were they all used for their intended purpose?..
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/formalCMO.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelFormalWarden
+  name: formal Warden satchel
+  description: Lightweight bag for complex tasks
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/formalwarden.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelWhiteCap
+  name: white captain satchel
+  description: Royal satchel for best of the best.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchel/whitecap.rsi
