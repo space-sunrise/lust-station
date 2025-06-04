@@ -254,7 +254,7 @@ public abstract class SharedStandingStateSystem : EntitySystem
 
         Down(uid, dropHeldItems: false);
 
-        _physics.SetLinearVelocity(uid, physics.LinearVelocity * 2f, body: physics);
+        _physics.SetLinearVelocity(uid, physics.LinearVelocity * 4f, body: physics);
         _statusEffects.TryAddStatusEffect<FallComponent>(uid,
             FallStatusEffectKey,
             TimeSpan.FromSeconds(1),

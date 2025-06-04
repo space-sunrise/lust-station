@@ -17330,3 +17330,10 @@
   id: 1172
   time: '2025-06-04T11:56:27.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2278
+- author: VigersRay
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043F\u043E\u0434\
+      \u043A\u0430\u0442."
+    type: Fix
+  id: 1173
+  time: '2025-06-04T12:43:51.050043+00:00'
