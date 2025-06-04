@@ -20,6 +20,7 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Ghost;
+using Content.Shared.Inventory;
 using Robust.Shared.Map;
 
 namespace Content.Server._Sunrise.ERP.Systems
@@ -257,6 +258,22 @@ namespace Content.Server._Sunrise.ERP.Systems
             if (prototype.LactationStimulationFlag)
             {
                 HandleLactation(ref netUser, ref netTarget, ref prototype);
+            }
+
+            RaiseClothingEvent(netUser);
+            RaiseClothingEvent(netTarget);
+        }
+
+        private void RaiseClothingEvent(EntityUid target)
+        {
+            if (!TryComp(target, out InventoryComponent? comp))
+                return;
+
+            var ev = new ClothingErpOccuredEvent();
+            var enumerator = new InventorySystem.InventorySlotEnumerator(comp);
+            while (enumerator.NextItem(out var item, out var slot))
+            {
+                RaiseLocalEvent(item, ev);
             }
         }
 
