@@ -28,3 +28,109 @@
   id: CaptainWhiteFormalSuit
   equipment:
     jumpsuit: ClothingUniformFormalWhiteCap
+
+- type: loadout
+  id: CaptainHeadBlack
+  equipment:
+    head: ClothingHeadBlackCap
+
+- type: loadout
+  id: CaptainHeadWhite
+  equipment:
+    head: ClothingHeadWhiteCap
+
+- type: loadout
+  id: CaptainHeadHelmWhite
+  equipment:
+    head: ClothingHeadWhiteHelmet
+
+- type: loadout
+  id: CaptainCloakBlack
+  equipment:
+    neck: ClothingNeckCloakBlackCapCloak
+
+- type: loadout
+  id: CaptainMantleBlack
+  equipment:
+    neck: ClothingNeckCloakBlackCapMantle
+
+- type: loadout
+  id: CaptainCloakBlackCeremonial
+  equipment:
+    neck: ClothingNeckCloakBlackCapCeremonial
+
+- type: loadout
+  id: CaptainMantleWhite
+  equipment:
+    neck: ClothingNeckCloakWhiteCapMantle
+
+- type: loadout
+  id: CaptainCloakWhite
+  equipment:
+    neck: ClothingNeckCloakWhiteCapCloak
+
+- type: loadout
+  id: CaptainCloakWhiteFormal
+  equipment:
+    neck: ClothingNeckCloakWhiteCapFormalCloak
+
+- type: loadout
+  id: CaptainCloakWhiteCeremonial
+  equipment:
+    neck: ClothingNeckCloakWhiteCapQl
+
+- type: loadout
+  id: CaptainBackpackBlack
+  equipment:
+    back: ClothingBackpackBlackCap
+
+- type: loadout
+  id: CaptainBackpackWhite
+  equipment:
+    back: ClothingBackpackWhiteCap
+
+- type: loadout
+  id: CaptainDuffelWhite
+  equipment:
+    back: ClothingBackpackDuffelWhiteCapDuf
+
+- type: loadout
+  id: CaptainDuffelBlack
+  equipment:
+    back: ClothingBackpackDuffelBlackCapDuf
+
+- type: loadout
+  id: CaptainSatchelBlack
+  equipment:
+    back: ClothingBackpackSatchelBlackCap
+
+- type: loadout
+  id: CaptainSatchelWhite
+  equipment:
+    back: ClothingBackpackSatchelWhiteCap
+
+- type: loadout
+  id: CaptainOuterCoatWhite
+  equipment:
+    outerClothing: ClothingOuterCoatWhiteCap
+
+- type: loadout
+  id: CaptainOuterCoatBlack
+  equipment:
+    outerClothing: ClothingOuterCoatBlackCap
+
+#Gloves
+- type: loadout
+  id: CaptainGloves
+  equipment:
+    gloves: ClothingHandsGlovesCaptain
+
+- type: loadout
+  id: CaptainGlovesBlack
+  equipment:
+    gloves: ClothingHandsGlovesCaptainBlack
+
+- type: loadout
+  id: CaptainGlovesWhite
+  equipment:
+    gloves: ClothingHandsGlovesCaptainWhite
