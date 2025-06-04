@@ -56,7 +56,7 @@ public abstract class SharedStandingStateSystem : EntitySystem
 
     private static float _fallDeadChance;
 
-    public const float FallModifier = 0.4f;
+    public const float FallModifier = 0.2f;
 
     private const int StandingCollisionLayer = (int) CollisionGroup.LowImpassable;
 

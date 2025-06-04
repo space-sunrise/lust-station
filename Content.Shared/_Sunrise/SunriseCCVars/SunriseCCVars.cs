@@ -446,6 +446,9 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<int> ArrivalsMinHours =
         CVarDef.Create("transithub.arrivals_min_hours", 0, CVar.SERVER | CVar.ARCHIVE);
 
+    public static readonly CVarDef<bool> ArrivalsRoundStartSpawn =
+        CVarDef.Create("transithub.arrivals_round_start_spawn", true, CVar.SERVER | CVar.ARCHIVE);
+
     /*
      * Random items-artifacts
      */

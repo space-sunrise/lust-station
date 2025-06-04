@@ -31,5 +31,6 @@
   - BaseStationAllEventsEligible
   - BaseStationNanotrasen
   - BaseStationDeliveries
+  - BaseStationTransitHub
   components:
   - type: Transform
