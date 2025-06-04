@@ -1,8 +1,11 @@
 ﻿using System.Linq;
 using Content.Server._Sunrise.Helpers;
+using Content.Server.Power.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared.Body.Organ;
+using Content.Shared.Body.Part;
+using Content.Shared.Doors.Electronics;
 using Content.Shared.GameTicking;
 using Content.Shared.Item;
 using Content.Shared.Xenoarchaeology.Artifact.Components;
@@ -31,7 +34,13 @@ public sealed class RandomXenoArtifactsSystem : EntitySystem
     private static EntityPrototype? _baseParentPrototype;
 
     private EntityQuery<TransformComponent> _xform;
+
+    private EntityQuery<DoorElectronicsComponent> _doorElectronics;
+    private EntityQuery<ApcElectronicsComponent> _apcElectronics;
     private EntityQuery<OrganComponent> _organs;
+    private EntityQuery<BodyPartComponent> _bodyParts;
+
+    private EntityQuery<StationRandomXenoArtifactComponent> _avaliableStations;
 
     private ISawmill _sawmill = default!;
 
@@ -45,7 +54,14 @@ public sealed class RandomXenoArtifactsSystem : EntitySystem
         SubscribeLocalEvent<RoundStartedEvent>(OnRoundStarted);
 
         _xform = GetEntityQuery<TransformComponent>();
+
+        _doorElectronics = GetEntityQuery<DoorElectronicsComponent>();
+        _apcElectronics = GetEntityQuery<ApcElectronicsComponent>();
         _organs = GetEntityQuery<OrganComponent>();
+        _bodyParts = GetEntityQuery<BodyPartComponent>();
+
+        _avaliableStations = GetEntityQuery<StationRandomXenoArtifactComponent>();
+
 
         _sawmill = Logger.GetSawmill("sunrise.random_artifacts");
     }
@@ -100,11 +116,23 @@ public sealed class RandomXenoArtifactsSystem : EntitySystem
 
         var station = _station.GetOwningStation(ent, ent.Comp);
 
-        if (!HasComp<StationRandomXenoArtifactComponent>(station))
+        if (!_avaliableStations.HasComp(station))
             return false;
 
-        // Чтобы органы внутри персонажей не становились артефактами
+        // Блеклист компонентов, которые не должны становиться артефактами.
+        // Все это какие-то предметы, внутри других предметов, которые достаются через жопу.
+        // Поэтому делать их артефактами ну такое себе
+
+        if (_doorElectronics.HasComp(ent))
+            return false;
+
+        if (_apcElectronics.HasComp(ent))
+            return false;
+
         if (_organs.HasComp(ent))
+            return false;
+
+        if (_bodyParts.HasComp(ent))
             return false;
 
         return true;
