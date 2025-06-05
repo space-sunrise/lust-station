@@ -26,6 +26,8 @@
 
 Space Station 14 — это ролевая игра, вдохновлённая культовой классикой Space Station 13. Space Station 14 наполнена весельем и хаосом. С первого взгляда игра кажется сложной, и это так, но мы поможем тебе освоиться в этой игре и найти своё место. Игра работает на собственном движке [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), написанном на C#.
 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/space-sunrise/sunrise-station?utm_source=oss&utm_medium=github&utm_campaign=space-sunrise%2Fsunrise-station&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+
 ## Документация
 
 На официальном [сайте с документацией](https://docs.spacestation14.io/) имеется вся необходимая информация о контенте SS14, движке, дизайне игры и многом другом. Также представлено множество полезных материалов для начинающих разработчиков.
