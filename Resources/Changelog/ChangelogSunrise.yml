@@ -17384,3 +17384,14 @@
   id: 1176
   time: '2025-06-05T14:40:22.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2282
+- author: Noychik & Kamenshik975
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0444\u0438\u0433\
+      \u0443\u0440\u043A\u0430 \u041E\u0421\u0429"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0444\u0438\u0433\
+      \u0443\u0440\u043A\u0430 \u0418\u0421\u041D\u0430"
+    type: Add
+  id: 1177
+  time: '2025-06-05T14:43:26.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2247
