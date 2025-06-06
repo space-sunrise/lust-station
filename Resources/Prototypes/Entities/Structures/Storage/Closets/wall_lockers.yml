@@ -182,3 +182,16 @@
       blue: BlueAlertAccessesHOS
       gamma: GammaAlertAccesses
     # Sunrise-end
+
+- type: entity
+  parent: BaseWallLocker
+  id: LockerWallEvacRepair
+  name: evac repair wall locker
+  components:
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: eng
+    stateDoorOpen: eng_open
+    stateDoorClosed: eng_evac_door
+  - type: AccessReader
+    access: [["Engineering"]]
