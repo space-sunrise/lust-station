@@ -893,7 +893,10 @@
 - type: ttsVoice
   id: HeartstoneBob
   name: tts-voice-name-heartstone-bob1
-  sex: Male
+  #Lust-Start
+  sex: 
+  - Male
+  #Lust-End
   speaker: hearthstone_bob1
   provider: sunrise
   sponsorOnly: false
@@ -901,7 +904,10 @@
 - type: ttsVoice
   id: HeartstoneRexar
   name: tts-voice-name-heartstone-rexar
-  sex: Male
+  #Lust-Start
+  sex: 
+  - Male
+  #Lust-End
   speaker: hearthstone_rexar
   provider: sunrise
   sponsorOnly: false
