@@ -21,3 +21,7 @@ ent-ClothingNeckBellCollarYellow = желтый { ent-ClothingNeckBellCollarBase
     .desc = { ent-ClothingNeckBellCollarBase.desc }
 ent-ClothingNeckBellCollarPlain = { ent-ClothingNeckBellCollarBase }
     .desc = { ent-ClothingNeckBellCollarBase.desc }
+ent-ClothingNeckCollarCross = чокер с крестиком
+    .desc = Черный чокер с крестиком.
+ent-ClothingNeckCollarStar = чокер с звездой
+    .desc = Черный чокер с звездой.

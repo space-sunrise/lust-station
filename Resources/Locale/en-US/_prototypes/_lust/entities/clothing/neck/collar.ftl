@@ -21,3 +21,7 @@ ent-ClothingNeckBellCollarYellow = yellow { ent-ClothingNeckBellCollarBase }
     .desc = { ent-ClothingNeckBellCollarBase.desc }
 ent-ClothingNeckBellCollarPlain = gray { ent-ClothingNeckBellCollarBase }
     .desc = { ent-ClothingNeckBellCollarBase.desc }
+ent-ClothingNeckCollarCross = choker with a cross
+    .desc = { ent-ClothingNeckBase.desc }
+ent-ClothingNeckCollarStar = choker with a star
+    .desc = { ent-ClothingNeckBase.desc }
