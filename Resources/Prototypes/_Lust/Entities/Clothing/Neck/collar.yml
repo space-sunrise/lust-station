@@ -202,3 +202,29 @@
     quickEquip: true
     slots:
     - neck
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCollarCross
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar_cross.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar_cross.rsi
+    quickEquip: true
+    slots:
+    - neck
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCollarStar
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Toys/neck_accessories/collar_star.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/ERP/Toys/neck_accessories/collar_star.rsi
+    quickEquip: true
+    slots:
+    - neck
