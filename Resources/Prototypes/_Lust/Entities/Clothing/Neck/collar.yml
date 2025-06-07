@@ -6,9 +6,9 @@
   description: An electric collar that shocks on the signal.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/shock_collar.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/shock_collar.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/shock_collar.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/shock_collar.rsi
     stripDelay: 10
     equipDelay: 5
   - type: SelfUnremovableClothing
@@ -28,9 +28,9 @@
   description: Black choker with a pink heart on the front.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar1.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar1.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar1.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar1.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -39,9 +39,9 @@
   description: Black mesh choker that fits snugly around the neck.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar2.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar2.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar2.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar2.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -50,9 +50,9 @@
   description: Black choker with metal circle on the front.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar3.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar3.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar3.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar3.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -61,9 +61,9 @@
   description: Black choker with a pink heart on the front.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar4.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar4.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar4.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar4.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -72,9 +72,9 @@
   description: Spiked collar for spicy play.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/spike_collar.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/spike_collar.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/spike_collar.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/spike_collar.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -83,9 +83,9 @@
   description: Cutie red ribbon.
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/ribbon.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/ribbon.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/ribbon.rsi
     quickEquip: true
 
 - type: entity
@@ -111,42 +111,42 @@
   id: ClothingNeckBellCollarPink
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar5.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar5.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar5.rsi
 
 - type: entity
   parent: ClothingNeckBellCollarBase
   id: ClothingNeckBellCollarYellow
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar6.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar6.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar6.rsi
 
 - type: entity
   parent: ClothingNeckBellCollarBase
   id: ClothingNeckBellCollarPlain
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar7.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar7.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar7.rsi
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCollarCross
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar_cross.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar_cross.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar_cross.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar_cross.rsi
 
 - type: entity
   parent: ClothingNeckBase
   id: ClothingNeckCollarStar
   components:
   - type: Sprite
-    sprite: _Lust/ERP/Toys/neck_accessories/collar_star.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar_star.rsi
   - type: Clothing
-    sprite: _Lust/ERP/Toys/neck_accessories/collar_star.rsi
+    sprite: _Lust/ERP/Toys/NeckAccessories/collar_star.rsi
