@@ -17408,3 +17408,20 @@
   id: 1178
   time: '2025-06-07T21:54:08.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2290
+- author: iDesmond
+  changes:
+  - message: "\u041F\u041E\u0414 \u0421\u0411 \u0431\u043E\u043B\u0435\u0435 \u043D\
+      \u0435 \u0431\u0430\u0433\u0443\u0435\u0442\u0441\u044F \u0438 \u0438\u043C\u0435\
+      \u0435\u0442 \u043D\u043E\u0440\u043C\u0430\u043B\u044C\u043D\u0443\u044E \u0441\
+      \u043A\u043E\u0440\u043E\u0441\u0442\u044C \u0432 \u043A\u043E\u0441\u043C\u043E\
+      \u0441\u0435."
+    type: Fix
+  - message: "\u041C\u0435\u0445\u0438 \u0431\u043E\u043B\u0435\u0435 \u043D\u0435\
+      \ \u0431\u0430\u0433\u0443\u044E\u0442\u0441\u044F \u0438 \u043D\u0435 \u0442\
+      \u0435\u0440\u044F\u044E\u0442 \u0441\u043A\u043E\u0440\u043E\u0441\u0442\u044C\
+      , \u0435\u0441\u043B\u0438 \u0438\u0445 \u043F\u043E\u0442\u0430\u0449\u0438\
+      \u0442\u044C \u0440\u0443\u043A\u0430\u043C\u0438."
+    type: Fix
+  id: 1179
+  time: '2025-06-07T21:56:02.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2288
