@@ -64,7 +64,7 @@
 - type: entity
   id: BaseBarSignAlignTile
   parent: BaseBarSign
-  sufix: AlignTile
+  suffix: AlignTile
   abstract: true
   components:
   - type: Fixtures
