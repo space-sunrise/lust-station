@@ -757,4 +757,14 @@ public sealed class AccessReaderSystem : EntitySystem
 
         Dirty(ent);
     }
+
+    public void UpdateAccess(Entity<AccessReaderComponent> ent, string currentLevel)
+    {
+        if (ent.Comp.AlertAccesses.TryGetValue(currentLevel, out var value))
+            ent.Comp.Group = value;
+        else
+            ent.Comp.Group = null;
+
+        Dirty(ent);
+    }
 }

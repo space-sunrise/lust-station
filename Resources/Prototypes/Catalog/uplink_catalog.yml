@@ -614,6 +614,13 @@
     Telecrystal: 3
   categories:
   - UplinkAmmo
+  # Sunrise-Start
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - AssaultOpsUplink
+  # Sunrise-End
 
 # For the Cobra
 - type: listing
@@ -707,14 +714,14 @@
   cost:
     Telecrystal: 6
   categories:
-  - UplinkChemicals 
+  - UplinkChemicals
   # Sunrise-Start
   conditions:
   - !type:StoreWhitelistCondition
     blacklist:
       tags:
       - SubdermalImplant
-      - NukeOpsUplink 
+      - NukeOpsUplink
   # Sunrise-End
 
 - type: listing

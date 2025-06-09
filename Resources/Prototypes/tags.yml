@@ -30,9 +30,6 @@
 - type: Tag
   id: AppraisalTool
 
-- type: Tag #Sunrise-Edit
-  id: Apron #Sunrise-Edit
-
 - type: Tag
   id: Apron
 
@@ -1412,9 +1409,6 @@
 
 - type: Tag
   id: UraniumGlassShard
-
-- type: Tag #Sunrise-Edit
-  id: UtilityBelt #Sunrise-Edit
 
 - type: Tag
   id: UtilityBelt
