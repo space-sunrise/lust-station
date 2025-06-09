@@ -9,7 +9,6 @@ using Robust.Shared.Utility;
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Whitelist;
 using System.Linq;
-using Content.Server.Body.Components;
 
 namespace Content.Shared.Body.Systems
 {
