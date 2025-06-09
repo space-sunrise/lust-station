@@ -21,6 +21,7 @@
     minAngle: -23
     maxAngle: -44
   - type: Gun
+    projectileSpeed: 55
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -68,8 +69,8 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 13
+    pvsIncrease: 1.5
   - type: UseDelay
     delay: 0.5
   - type: GunRequiresWield
@@ -97,6 +98,7 @@
     minAngle: -20
     maxAngle: -40
   - type: Gun
+    projectileSpeed: 55
     fireRate: 2
     minAngle: 28
     maxAngle: 48
@@ -142,8 +144,8 @@
     sprintModifier: 0.5
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 9
+    pvsIncrease: 1.25
   - type: ChamberMagazineAmmoProvider
     autoEject: true
     boltClosed: null
@@ -171,6 +173,7 @@
     minAngle: -23
     maxAngle: -43
   - type: Gun
+    projectileSpeed: 55
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -224,8 +227,8 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 15
+    pvsIncrease: 2
 
 - type: entity
   name: M1 Garand
