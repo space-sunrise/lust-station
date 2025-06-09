@@ -308,6 +308,21 @@
       collection: MaleSevereCough
       params:
         variation: 0.125
+  - type: EmitSoundOnActivate
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
   - type: TriggerOnActivate
   - type: UseDelay
     delay: 1
