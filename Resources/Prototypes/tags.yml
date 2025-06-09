@@ -34,6 +34,9 @@
   id: Apron #Sunrise-Edit
 
 - type: Tag
+  id: Apron
+
+- type: Tag
   id: Arrow
 
 - type: Tag
@@ -1412,6 +1415,9 @@
 
 - type: Tag #Sunrise-Edit
   id: UtilityBelt #Sunrise-Edit
+
+- type: Tag
+  id: UtilityBelt
 
 - type: Tag
   id: Vegetable
