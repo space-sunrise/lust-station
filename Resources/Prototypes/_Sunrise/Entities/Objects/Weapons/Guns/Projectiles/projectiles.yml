@@ -110,6 +110,24 @@
     reflective:
     - Energy
 
+- type: entity
+  id: BulletGrenadeFragLight
+  name: light frag grenade
+  parent: BaseBulletGrenade
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 5
+    intensitySlope: 3
+    totalIntensity: 60
+    maxTileBreak: 0
+
 # Shells that used for friendship and duster
 
 - type: entity

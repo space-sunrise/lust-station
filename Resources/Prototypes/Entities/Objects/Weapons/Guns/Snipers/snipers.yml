@@ -83,6 +83,7 @@
     - SemiAuto
     soundGunshot:
       collection: awp # Sunrise-Edit
+    projectileSpeed: 55 # Sunrise-Edit
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -94,8 +95,8 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 10 # Sunrise-Edit
+    pvsIncrease: 1 # Sunrise-Edit
   - type: StaticPrice
     price: 3500
 

@@ -715,9 +715,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: synd_sec }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 15
-  cost:
     Telecrystal: 30
+  cost:
+    Telecrystal: 65
   categories:
   - UplinkAllies
   conditions:
@@ -740,9 +740,9 @@
   icon: { sprite: _Sunrise/Mobs/Silicon/heavy_syndicate_borg.rsi, state: heavy }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 25
-  cost:
     Telecrystal: 50
+  cost:
+    Telecrystal: 85
   categories:
   - UplinkAllies
   conditions:
@@ -765,9 +765,9 @@
   icon: { sprite: _Sunrise/Mobs/Silicon/chassis.rsi, state: spider }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 10
+    Telecrystal: 25
   cost:
-    Telecrystal: 20
+    Telecrystal: 45
   categories:
   - UplinkAllies
   conditions:
@@ -790,9 +790,9 @@
   icon: { sprite: Mobs/Silicon/chassis.rsi, state: synd_medical }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 10
-  cost:
     Telecrystal: 20
+  cost:
+    Telecrystal: 40
   categories:
   - UplinkAllies
   conditions:
@@ -815,9 +815,9 @@
   icon: { sprite: _Sunrise/Mobs/Silicon/chassis.rsi, state: syndi_reaper }
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 20
-  cost:
     Telecrystal: 35
+  cost:
+    Telecrystal: 55
   categories:
   - UplinkAllies
   conditions:
