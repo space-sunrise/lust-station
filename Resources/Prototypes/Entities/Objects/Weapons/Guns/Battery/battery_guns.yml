@@ -629,7 +629,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: BulletTaser
+    proto: BulletTaserSunrise #Sunrise-Edit
     fireCost: 100 #Sunrise-Edit
   - type: MagazineVisuals
     magState: mag
