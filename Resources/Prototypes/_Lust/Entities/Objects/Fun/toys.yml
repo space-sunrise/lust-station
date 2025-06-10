@@ -326,3 +326,22 @@
   - type: TriggerOnActivate
   - type: UseDelay
     delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieArelitt
+  name: Plushie Arelitt Varmolnd
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: arelitt-varmolnd
+    scale: 1.15, 1.15
+  - type: Item
+    size: Large
+  - type: EmitSoundOnLand
+    sound:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+  - type: UseDelay
+    delay: 1
