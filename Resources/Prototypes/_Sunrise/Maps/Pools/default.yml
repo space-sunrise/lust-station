@@ -1,23 +1,22 @@
 # НЕ ДОБАВЛЯТЬ НОВЫЕ КАРТЫ БЕЗ МОЕГО РЕВЬЮ! ~ SplikZerys
-# ВСЕ КАРТЫ ДОЛЖНЫ ИМЕТЬ SMESExtended ВМЕСТО БАЗОВОГО SMESBasic!
 
 - type: gameMapPool
   id: SunriseMapPool
   maps:
   # НАИБОЛЕЕ ПРИОРИТЕТНЫЕ КАРТЫ
-  - SunriseDelta
-  - SunriseBox
-  - SunriseMeta
+  - SunriseDelta # Прибытие стыкуется, но лишь 2 доками. Эвак стыкуется лишь 2 доками.
+  #- SunriseBox # Прибытие не стыкуется, эвак стыкуется лишь 1 доком.
+  #- SunriseMeta # Прибытие не стыкуется. Эвак наклоняется после стыковки.
   # МЕНЕЕ ВАЖНЫЕ:
-  - SunriseBarratry
-  - SunriseFland
-  - SunriseMarathon
-  - SunriseBagel
-  - SunrisePlasma
-  - SunrisePacked
-  - SunriseOasis
-  - SunriseConvex
-  - SunriseLoop
+  #- SunriseBarratry # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseFland # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseMarathon # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseBagel # Прибытие стыкуется но не туда. Эвак залазит в станцию.
+  - SunrisePlasma # Прибытие стыкуется лишь 1 доком. Эвак стыкуется лишь 2 доками.
+  #- SunrisePacked # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseOasis # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseConvex # Прибытие не стыкуется. Эвак залазит в станцию.
+  #- SunriseLoop # Прибытие не стыкуется. Эвак залазит в станцию.
   # НЕИГРАБЕЛЬНЫЕ:
   #- SunriseReach
   #- SunriseCorvaxGelta

@@ -45,6 +45,7 @@
   name: passenger ID card
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
     layers:
     - state: default
     - state: idpassenger
@@ -273,6 +274,7 @@
   name: mime ID card
   components:
   - type: Sprite
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
     layers:
     - state: default
     - state: idmime
@@ -591,6 +593,7 @@
   name: musician ID card
   components:
     - type: Sprite
+      sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
       layers:
         - state: default
         - state: idmusician
@@ -624,6 +627,7 @@
     - Maintenance
     - SyndicateAgent
   - type: Sprite
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
     layers:
     - state: default
     - state: idpassenger

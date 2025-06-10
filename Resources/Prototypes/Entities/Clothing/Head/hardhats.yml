@@ -66,12 +66,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
-      HeadTop: HEAD
-      HeadSide: HEAD
+    - TopCovered # Lust-Editn
 
 - type: entity
   parent: ClothingHeadHatHardhatBase
