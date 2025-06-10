@@ -870,3 +870,22 @@
   id: 224
   time: '2025-06-07T21:19:07.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/271
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0438\u0433\u0440\u0443\u0448\u043A\u0430 \u0410\
+      \u0440\u0435\u043B\u0438\u0442\u0442 \u0412\u0435\u0440\u043C\u043E\u043B\u044C\
+      \u043D\u0434."
+    type: Add
+  id: 225
+  time: '2025-06-10T15:39:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/274
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0424\u0440\u0430\u043D\u0446 \u042D\u0432\u0430\u043D\
+      \u0441."
+    type: Add
+  id: 226
+  time: '2025-06-10T15:20:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/273
