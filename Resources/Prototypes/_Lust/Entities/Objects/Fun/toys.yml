@@ -294,3 +294,35 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: luna
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieFranzEvans
+  name: Plushie Franz Evans
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: franz-evans
+  - type: EmitSoundOnUse
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnActivate
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 1
