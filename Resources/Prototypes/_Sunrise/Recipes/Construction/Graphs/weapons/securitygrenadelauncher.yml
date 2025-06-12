@@ -1,0 +1,17 @@
+- type: constructionGraph
+  id: GrenadeLauncherSecurity
+  start: start
+  graph:
+    - node: start
+      entity: WeaponFlareGunSecurity
+      edges:
+        - to: auto
+          steps:
+            - tag: UpgradeFlareGun
+              doAfter: 8
+          completed:
+            - !type:AdminLog
+              message: "Converted FlareGun to GrenadeLauncher"
+              impact: High
+    - node: auto
+      entity: WeaponGrenadeLauncherSecurity
