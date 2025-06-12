@@ -74,6 +74,8 @@
   - type: UseDelay
     delay: 0.5
   - type: GunRequiresWield
+  - type: StaticPrice
+    price: 5000
 
 - type: entity
   name: BR-64
@@ -229,6 +231,8 @@
   - type: EyeCursorOffset
     maxOffset: 15
     pvsIncrease: 2
+  - type: StaticPrice
+    price: 10000
 
 - type: entity
   name: M1 Garand
