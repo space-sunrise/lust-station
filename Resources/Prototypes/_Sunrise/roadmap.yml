@@ -112,8 +112,8 @@
       goals:
         station_goals_rework:
           id: station_goals_rework
-          name:
-          desc:
+          name: Station Goals Rework
+          desc: bebra
           state: Planned
         borer:
           id: borer

@@ -116,7 +116,6 @@
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
   - type: Sprite
     netsync: false
     sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Magazines/Rifle/sr127_mag.rsi
