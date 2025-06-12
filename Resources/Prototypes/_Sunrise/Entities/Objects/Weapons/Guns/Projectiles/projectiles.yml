@@ -62,7 +62,7 @@
     layers:
     - state: emp_pulse
   - type: EmpOnTrigger
-    range: 4
+    range: 2
     energyConsumption: 30000
     disableDuration: 10
   - type: Ammo

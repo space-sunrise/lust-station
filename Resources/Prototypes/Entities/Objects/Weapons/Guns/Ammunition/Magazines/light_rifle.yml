@@ -13,7 +13,7 @@
     whitelist:
       tags:
         - CartridgeLightRifle
-    proto: CartridgeLightRifle
+    proto: SunriseCartridgeLightRifle #Sunrise-Edit
     capacity: 30
   - type: Item
     size: Small
@@ -44,7 +44,7 @@
     tags:
       - MagazineLightRifleBox
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: SunriseCartridgeLightRifle #Sunrise-Edit
     capacity: 100
   - type: Item
   - type: Sprite
@@ -62,7 +62,7 @@
   parent: MagazineLightRifleBox
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleIncendiary
+    proto: SunriseCartridgeLightRifleIncendiary #Sunrise-Edit
   - type: Sprite
     layers:
     - state: red
@@ -76,7 +76,7 @@
   parent: MagazineLightRifleBox
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleUranium
+    proto: SunriseCartridgeLightRifleUranium #Sunrise-Edit
   - type: Sprite
     layers:
     - state: uranium
@@ -92,7 +92,7 @@
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: SunriseCartridgeLightRifle #Sunrise-Edit
   - type: Sprite
     layers:
     - state: red
@@ -139,7 +139,7 @@
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold non-harmful chalk ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRiflePractice
+    proto: SunriseCartridgeLightRiflePractice #Sunrise-Edit
   - type: Sprite
     layers:
     - state: practice
@@ -164,7 +164,7 @@
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold exotic uranium-core ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleUranium
+    proto: SunriseCartridgeLightRifleUranium #Sunrise-Edit
   - type: Sprite
     layers:
     - state: uranium
@@ -189,7 +189,7 @@
   description: Curved 30-round double stack magazine for combat rifles. Intended to hold self-igniting incendiary ammunition.
   components:
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifleIncendiary
+    proto: SunriseCartridgeLightRifleIncendiary #Sunrise-Edit
 
 - type: entity
   id: MagazineLightRifleMaxim
@@ -200,7 +200,7 @@
     tags:
       - MagazineLightRiflePan
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: SunriseCartridgeLightRifle #Sunrise-Edit
     capacity: 96
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/maxim.rsi
@@ -214,7 +214,7 @@
     tags:
       - MagazineLightRifleBox
   - type: BallisticAmmoProvider
-    proto: CartridgeLightRifle
+    proto: SunriseCartridgeLightRifle #Sunrise-Edit
     capacity: 80
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/LightRifle/pk_box.rsi

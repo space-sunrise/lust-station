@@ -55,6 +55,9 @@
   id: CartridgeRail
 
 - type: Tag
+  id: CartridgeHeavyRifleNT
+
+- type: Tag
   id: MiniSyringe
 
 - type: Tag
