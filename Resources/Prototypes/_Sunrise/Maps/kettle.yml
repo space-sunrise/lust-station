@@ -12,8 +12,8 @@
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
-        - type: StationEmergencyShuttle # TODO: Нужен другой шаттл, этот удален
-          emergencyShuttlePath: /Maps/Shuttles/emergency_courser.yml
+        - type: StationEmergencyShuttle
+          emergencyShuttlePath: /Maps/Shuttles/emergency.yml
         - type: StationJobs
           availableJobs:
             #service
