@@ -100,7 +100,6 @@ namespace Content.IntegrationTests.Tests
             "SunriseBagel",
             "SunriseReach",
             "PlanetPrison",
-            "SunriseMeta",
             "SunriseOasis"
         };
 
