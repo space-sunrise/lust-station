@@ -17573,3 +17573,12 @@
     type: Fix
   id: 1190
   time: '2025-06-09T21:57:50.328704+00:00'
+- author: Kitael
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u043A\u0430\u0440\u0442\
+      \u0430 \u043F\u043B\u0430\u043D\u0435\u0442\u0430\u0440\u043D\u043E\u0439 \u0442\
+      \u044E\u0440\u044C\u043C\u044B."
+    type: Tweak
+  id: 1191
+  time: '2025-06-12T18:20:58.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2344
