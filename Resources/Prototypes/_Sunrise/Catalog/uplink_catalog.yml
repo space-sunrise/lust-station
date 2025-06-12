@@ -672,7 +672,7 @@
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiemedic.rsi, state: icon }
   productEntity: ClothingOuterHardsuitSyndieMedicBiocode
   cost:
-    Telecrystal: 8
+    Telecrystal: 9
   categories:
   - UplinkWearables
   conditions:

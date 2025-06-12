@@ -286,6 +286,16 @@
     Steel: 193
 
 - type: latheRecipe
+  parent: BaseWeaponRecipeSidearm
+  id: FlareGunSecurityUpgrade
+  result: FlareGunSecurityUpgrade
+  categories:
+  - Weapons
+  materials:
+    Plastic: 50
+    Steel: 250
+
+- type: latheRecipe
   id: ClothingHeadHelmetPubg
   result: ClothingHeadHelmetPubg
   categories:

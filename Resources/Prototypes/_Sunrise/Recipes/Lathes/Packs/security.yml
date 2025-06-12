@@ -30,7 +30,7 @@
     - WeaponEnergyGunMini
     - WeaponEnergyGunPistol
     - WeaponGunLaserCarbineAutomatic
-    - ClothingShoesBootsMagCombat
+    - FlareGunSecurityUpgrade
     - BaseMagazinePistolCaselessRifleExtended
     - MagazinePPSH41Extended
     - MagazineMP5Extended
@@ -50,6 +50,6 @@
     - ShellFlashArtillery
     - EnergyDomeDirectionalTurtle
     - ClothingHeadHelmetPubg
-    - ClothingShoesBootsMagCombat
     - ClothingShoesBootsMagSec
+    - ClothingShoesBootsMagCombat
     - WeaponTemperatureGun
