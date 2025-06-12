@@ -110,6 +110,11 @@
     planing:
       name: Планируется
       goals:
+        station_goals_rework:
+          id: station_goals_rework
+          name:
+          desc:
+          state: Planned
         borer:
           id: borer
           name: Brainworm
