@@ -183,7 +183,7 @@
   - Ammo
   completetime: 5
   materials:
-    Steel: 325
+    Steel: 500
 
 - type: latheRecipe
   id: MagazineG36
@@ -194,14 +194,14 @@
   materials:
     Steel: 325
 
-- type: latheRecipe
-  id: MagazineM28
-  result: MagazineM28
-  categories:
-  - Ammo
-  completetime: 5
-  materials:
-    Steel: 325
+# - type: latheRecipe
+#   id: MagazineM28 #Есть MagazineAR18
+#   result: MagazineM28
+#   categories:
+#   - Ammo
+#   completetime: 5
+#   materials:
+#     Steel: 325
 
 - type: latheRecipe
   id: MagazineFamas
@@ -228,7 +228,7 @@
   - Ammo
   completetime: 5
   materials:
-    Steel: 505
+    Steel: 800
 
 - type: latheRecipe
   id: MagazineV31
