@@ -641,6 +641,7 @@
   - type: ItemBorgModule
     items:
     - Bucket # Sunrise-Edit
+    - BorgTrashBag # Sunrise-Edit
     - BorgSprayBottle
     - HoloprojectorJanitorBorg # Sunrise-Edit
   - type: BorgModuleIcon
@@ -659,6 +660,7 @@
   - type: ItemBorgModule
     items:
     - BorgBucket # Sunrise-Edit
+    - BorgTrashBag # Sunrise-Edit
     - HoloprojectorJanitorBorg # Sunrise-Edit
     - SprayBottleSpaceCleanerBorg # Sunrise-Edit
     - BorgDropper
