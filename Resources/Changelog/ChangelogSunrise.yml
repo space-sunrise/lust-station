@@ -17803,3 +17803,15 @@
   id: 1206
   time: '2025-06-13T07:54:37.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/2352
+- author: KaiserMaus
+  changes:
+  - message: "\u0414\u0440\u0430\u0433\u0443\u043D\u043E\u0432 \u0434\u043E\u0431\u0430\
+      \u0432\u043B\u0435\u043D \u0432 \u0410\u043F\u043B\u0438\u043D\u043A \u0421\u0438\
+      \u043D\u0434\u0438\u043A\u0430\u0442\u0430."
+    type: Tweak
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043C\u0435\u0442\
+      \u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u043F\u0430\u0442\u0440\u043E\
+      \u043D\u044B 7.62\u044554\u043C\u043CR \u0438 7.62\u044551\u043C\u043C NT."
+    type: Tweak
+  id: 1207
+  time: '2025-06-13T08:12:07.430227+00:00'
