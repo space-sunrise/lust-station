@@ -4,7 +4,7 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 06/13/2025 00:37:53
+  time: 06/13/2025 01:34:18
   entityCount: 2525
 maps: []
 grids:
@@ -6474,13 +6474,6 @@ entities:
     - type: Transform
       pos: -8.5,21.5
       parent: 1
-- proto: ComputerEmergencyShuttle
-  entities:
-  - uid: 557
-    components:
-    - type: Transform
-      pos: -10.5,18.5
-      parent: 1
 - proto: ComputerPowerMonitoring
   entities:
   - uid: 1220
@@ -6494,6 +6487,13 @@ entities:
     components:
     - type: Transform
       pos: -10.5,21.5
+      parent: 1
+- proto: ComputerShuttle
+  entities:
+  - uid: 557
+    components:
+    - type: Transform
+      pos: -10.5,18.5
       parent: 1
 - proto: CrowbarRed
   entities:
@@ -7952,7 +7952,7 @@ entities:
       pos: -12.5,-25.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -2195.4548
+      secondsUntilStateChange: -2269.716
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
