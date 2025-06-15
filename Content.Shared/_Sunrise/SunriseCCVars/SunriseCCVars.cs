@@ -464,4 +464,10 @@ public sealed partial class SunriseCCVars : CVars
     /// </summary>
     public static readonly CVarDef<float> ItemToArtifactRatio =
         CVarDef.Create("random_artifacts.ratio", 0.55f, CVar.SERVER | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Вроде все очевидно
+    /// </summary>
+    public static readonly CVarDef<string> IpWhitelist =
+        CVarDef.Create("admin.ip_whitelist", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 }

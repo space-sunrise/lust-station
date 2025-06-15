@@ -46,7 +46,7 @@ public sealed class RadioSystem : EntitySystem
     // Sunrise start
     private const string NoIdIconPath = "/Textures/Interface/Misc/job_icons.rsi/NoId.png";
     private const string StationAiIconPath = "/Textures/Interface/Misc/job_icons.rsi/StationAi.png";
-    private const string BorgIconPath = "/Textures/Interface/Misc/job_icons.rsi/Borg.png";
+    private const string BorgIconPath = "/Textures/_Sunrise/Interface/Misc/job_icons.rsi/Borg.png";
     // Sunrise end
 
     public override void Initialize()
