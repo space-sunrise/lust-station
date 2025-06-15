@@ -1,8 +1,14 @@
 import os
 import shutil
+import argparse
 
-CLONE_DIR = "SunrisePrivate"
-TARGET_DIRS = ["Resources", ".github", "Content.Client", "Content.Server", "Content.Shared", "Content.Packaging"]
+def parse_args():
+    parser = argparse.ArgumentParser(description='Move files from SunrisePrivate repository')
+    parser.add_argument('--clone-dir', required=True,
+                      help='Directory containing the cloned repository')
+    parser.add_argument('--target-dirs', nargs='+', required=True,
+                      help='List of target directories to move')
+    return parser.parse_args()
 
 def merge_directories(src_dir, dst_dir):
     for item in os.listdir(src_dir):
@@ -18,9 +24,9 @@ def merge_directories(src_dir, dst_dir):
                 os.remove(dst_item)
             shutil.copy2(src_item, dst_item)
 
-def move_directories():
-    for directory in TARGET_DIRS:
-        src = os.path.join(CLONE_DIR, directory)
+def move_directories(clone_dir, target_dirs):
+    for directory in target_dirs:
+        src = os.path.join(clone_dir, directory)
         dst = directory
         if os.path.exists(src):
             print(f"Transfer {directory} ...")
@@ -30,7 +36,8 @@ def move_directories():
                 shutil.move(src, dst)
 
 def main():
-    move_directories()
+    args = parse_args()
+    move_directories(args.clone_dir, args.target_dirs)
     print("Private files move")
 
 if __name__ == "__main__":
