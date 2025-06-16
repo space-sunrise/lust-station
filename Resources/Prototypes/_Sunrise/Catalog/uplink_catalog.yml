@@ -30,6 +30,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkClothingEyesGlassesThermal
@@ -49,6 +50,7 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkClothingEyesHudSyndicateMech
@@ -68,6 +70,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineShotgun
@@ -106,6 +109,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineShotgunUranium
@@ -122,6 +126,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 # For the LMG
 - type: listing
@@ -142,6 +147,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 
 - type: listing
@@ -159,6 +165,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineLightRifleBoxUranium
@@ -175,6 +182,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 
 - type: listing
@@ -191,6 +199,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkCaselessAmmoKit
@@ -206,6 +215,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkSMGIncendiaryAmmoKit
@@ -221,6 +231,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkSMGUraniumAmmoKit
@@ -236,6 +247,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkShotGunAmmoKit
@@ -251,6 +263,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkShotGunIncendiaryAmmoKit
@@ -266,6 +279,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkShotGunUraniumAmmoKit
@@ -281,6 +295,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkLMGAmmoKit
@@ -296,6 +311,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkLMGIncendiaryAmmoKit
@@ -311,6 +327,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkLMGUraniumAmmoKit
@@ -326,6 +343,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkCrateAmmokitBundle
@@ -345,6 +363,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 # For the SIAR52
 - type: listing
@@ -379,6 +398,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineBauer127
@@ -398,6 +418,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineDragunov
@@ -436,6 +457,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 # for the hristov
 - type: listing
@@ -472,6 +494,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkGrenadeBlast
@@ -491,6 +514,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkGrenadeEMP
@@ -510,6 +534,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkBoomboxBundle
@@ -538,6 +563,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkClothingBackpackSyndie
@@ -555,6 +581,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkClothingBackpackSyndieAJ100Filled
@@ -611,6 +638,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkClothingBackpackSyndieSIAR52Filled
@@ -643,6 +671,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkWeaponSyndieLaserGun
@@ -661,6 +690,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkWeaponDragunov
@@ -699,28 +729,29 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
-# - type: listing
-#   id: UplinkHardsuitSyndieCommander
-#   name: uplink-hardsuit-syndie-commander-name
-#   description: uplink-hardsuit-syndie-commander-desc
-#   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
-#   productEntity: ClothingOuterHardsuitSyndieCommanderBiocode
-#   cost:
-#     Telecrystal: 12
-#   categories:
-#   - UplinkWearables
-#   conditions:
-#   - !type:ListingLimitedStockCondition
-#     stock: 1
-#   - !type:StoreWhitelistCondition
-#     whitelist:
-#       tags:
-#       - NukeOpsUplink
-#   - !type:BuyerWhitelistCondition
-#     blacklist:
-#       components:
-#       - SurplusBundle
+- type: listing
+  id: UplinkHardsuitSyndieCommander
+  name: uplink-hardsuit-syndie-commander-name
+  description: uplink-hardsuit-syndie-commander-desc
+  icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndiecommander.rsi, state: icon }
+  productEntity: ClothingOuterHardsuitSyndieCommanderBiocode
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkWearables
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
 - type: listing
   id: UplinkHardsuitSyndieMedic
@@ -939,6 +970,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkHypo
@@ -1007,6 +1039,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkPolytrinicAcidChemistryBottle
@@ -1041,6 +1074,7 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
       components:
       - SurplusBundle
 
@@ -1079,6 +1113,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1103,6 +1138,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1127,6 +1163,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1151,6 +1188,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechTeslaCannon
@@ -1170,6 +1208,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechShotgun
@@ -1189,6 +1228,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechShotgunIncendiary
@@ -1208,6 +1248,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 # - type: listing
 #   id: UplinkMechUltraRifle
@@ -1227,6 +1268,7 @@
 #     whitelist:
 #       tags:
 #       - NukeOpsUplink
+#       - LoneOpsUplink
 
 - type: listing
   id: UplinkMechIon
@@ -1246,6 +1288,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechChainSword
@@ -1263,6 +1306,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechAMLG90
@@ -1282,6 +1326,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMechVindictor
@@ -1301,6 +1346,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1323,6 +1369,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1375,6 +1422,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
     blacklist:
       components:
       - SurplusBundle
@@ -1396,6 +1444,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
   - !type:BuyerWhitelistCondition
     blacklist:
       components:
@@ -1418,6 +1467,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
   - !type:BuyerWhitelistCondition
     blacklist:
       components:
@@ -1538,3 +1588,4 @@
     blacklist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink

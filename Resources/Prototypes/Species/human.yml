@@ -47,6 +47,7 @@
   - Male
   - Futanari
   sprites:
+    Special: MobHumanoidAnyMarking
     Head: MobHumanSlimHead
     Hair: MobHumanoidAnyMarking
     FacialHair: MobHumanoidAnyMarking
@@ -82,7 +83,7 @@
       points: 1 # Sunrise-Sponsors
       required: false
     HeadTop:
-      points: 1 # Sunrise-Sponsors
+      points: 1
       required: false
     Chest:
       points: 2
