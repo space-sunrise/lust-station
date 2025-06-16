@@ -38,6 +38,9 @@
   id: AnomalyCore
 
 - type: Tag
+  id: LoneOpsUplink
+
+- type: Tag
   id: Flash
 
 # Catridges:
