@@ -418,6 +418,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkMagazineDragunov
@@ -728,6 +729,7 @@
     whitelist:
       tags:
       - NukeOpsUplink
+      - LoneOpsUplink
 
 - type: listing
   id: UplinkHardsuitSyndieCommander
