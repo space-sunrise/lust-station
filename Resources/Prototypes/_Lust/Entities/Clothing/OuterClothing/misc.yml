@@ -5,9 +5,9 @@
   description: Business jacket of the Adjutant for a professional look.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/OuterClothing/misc/formaladj.rsi
+    sprite: _Lust/Clothing/OuterClothing/Misc/formaladj.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/OuterClothing/misc/formaladj.rsi
+    sprite: _Lust/Clothing/OuterClothing/Misc/formaladj.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -27,9 +27,9 @@
   description: The bright, outwardly pleasant suit of the research director.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/OuterClothing/misc/formalRD.rsi
+    sprite: _Lust/Clothing/OuterClothing/Misc/formalRD.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/OuterClothing/misc/formalRD.rsi
+    sprite: _Lust/Clothing/OuterClothing/Misc/formalRD.rsi
   - type: Tag
     tags:
     - ClothMade

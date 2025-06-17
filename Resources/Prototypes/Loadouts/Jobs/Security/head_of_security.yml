@@ -219,14 +219,4 @@
   equipment:
     outerClothing: ClothingOuterCoatHoSOvercoat
 #Sunrise-End
-#Lust-Start
-- type: loadout
-  id: HeadofSecurityWinterGorka
-  equipment:
-    outerClothing: ClothingOuterWinterGorka
 
-- type: loadout
-  id: HeadofSecurityVest
-  equipment:
-    outerClothing: ClothingOuterArmorHoSBattleVest
-#Lust-End
