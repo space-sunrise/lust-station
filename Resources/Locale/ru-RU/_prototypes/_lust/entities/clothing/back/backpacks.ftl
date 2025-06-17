@@ -1,0 +1,16 @@
+ent-ClothingBackpackBattleHoSPack = боевой рюкзак ГСБ
+    .desc = On style.
+ent-ClothingBackpackBlackCap = черный рюкзак капитана
+    .desc = On style.
+ent-ClothingBackpackFormalAd = формальный рюкзак адьютанта
+    .desc = On style.
+ent-ClothingFormalCEBackpack = формальный рюкзак СИ
+    .desc = Working style.
+ent-ClothingFormalCMOBackpack = formal CMO backpack
+    .desc = There may be something in this backpack that will save the lives of the crew!
+ent-ClothingFormalQMBackpack = formal QM backpack
+    .desc = Obviously a very roomy backpack
+ent-ClothingFormalWardenBackpack = formal warden backpack
+    .desc = If you try hard, you can carry half of the armory in this backpack.
+ent-ClothingBackpackWhiteCap = white captain backpack
+    .desc = On style.

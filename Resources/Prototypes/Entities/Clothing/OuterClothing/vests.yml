@@ -28,12 +28,17 @@
       - state: equipped-OUTERCLOTHING-unshaded
         shader: shaded
         #same trick here
+  - type: Reflect
+    reflectProb: 0.02
+    reflects:
+    - Energy
+    reflectingInHands: false
   - type: Tag
     tags:
     - HiViz
+    - WhitelistChameleon
     - Vest # Sunrise-Add
     - NudeBottom # Lust-Edit
-    - WhitelistChameleon # Sunrise-Add
 
 #(Bartender) vest
 - type: entity

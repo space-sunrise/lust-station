@@ -1,8 +1,8 @@
 using Content.Server.Body.Components;
-using Content.Shared.EntityEffects.Effects;
 using Content.Server.Fluids.EntitySystems;
 using Content.Server.Popups;
 using Content.Shared.Alert;
+using Content.Shared.Body.Events;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Reaction;
@@ -10,6 +10,7 @@ using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.Drunk;
+using Content.Shared.EntityEffects.Effects;
 using Content.Shared.FixedPoint;
 using Content.Shared.Forensics;
 using Content.Shared.Forensics.Components;
@@ -19,6 +20,7 @@ using Content.Shared.Popups;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Speech.EntitySystems;
 using Robust.Server.Audio;
+using Robust.Shared.Audio;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -204,10 +206,13 @@ public sealed class BloodstreamSystem : EntitySystem
         }
 
         // TODO probably cache this or something. humans get hurt a lot
-        if (!_prototypeManager.TryIndex<DamageModifierSetPrototype>(ent.Comp.DamageBleedModifiers, out var modifiers))
+        if (!_prototypeManager.TryIndex(ent.Comp.DamageBleedModifiers, out var modifiers))
             return;
 
-        var bloodloss = DamageSpecifier.ApplyModifierSet(args.DamageDelta, modifiers);
+        // some reagents may deal and heal different damage types in the same tick, which means DamageIncreased will be true
+        // but we only want to consider the dealt damage when causing bleeding
+        var damage = DamageSpecifier.GetPositive(args.DamageDelta);
+        var bloodloss = DamageSpecifier.ApplyModifierSet(damage, modifiers);
 
         if (bloodloss.Empty)
             return;
@@ -226,7 +231,7 @@ public sealed class BloodstreamSystem : EntitySystem
         var prob = Math.Clamp(totalFloat / 25, 0, 1);
         if (totalFloat > 0 && _robustRandom.Prob(prob))
         {
-            TryModifyBloodLevel(ent, (-total) / 5, ent);
+            TryModifyBloodLevel(ent, -total / 5, ent);
             _audio.PlayPvs(ent.Comp.InstantBloodSound, ent);
         }
 
@@ -247,17 +252,29 @@ public sealed class BloodstreamSystem : EntitySystem
     /// </summary>
     private void OnHealthBeingExamined(Entity<BloodstreamComponent> ent, ref HealthBeingExaminedEvent args)
     {
-        // Shows profusely bleeding at half the max bleed rate.
-        if (ent.Comp.BleedAmount > ent.Comp.MaxBleedAmount / 2)
+        // Shows massively bleeding at 0.75x the max bleed rate.
+        if (ent.Comp.BleedAmount > ent.Comp.MaxBleedAmount * 0.75f)
         {
             args.Message.PushNewline();
-            args.Message.AddMarkupOrThrow(Loc.GetString("bloodstream-component-profusely-bleeding", ("target", ent.Owner)));
+            args.Message.AddMarkupOrThrow(Loc.GetString("bloodstream-component-massive-bleeding", ("target", ent.Owner)));
         }
-        // Shows bleeding message when bleeding, but less than profusely.
-        else if (ent.Comp.BleedAmount > 0)
+        // Shows bleeding message when bleeding above half the max rate, but less than massively.
+        else if (ent.Comp.BleedAmount > ent.Comp.MaxBleedAmount * 0.5f)
+        {
+            args.Message.PushNewline();
+            args.Message.AddMarkupOrThrow(Loc.GetString("bloodstream-component-strong-bleeding", ("target", ent.Owner)));
+        }
+        // Shows bleeding message when bleeding above 0.25x the max rate, but less than half the max.
+        else if (ent.Comp.BleedAmount > ent.Comp.MaxBleedAmount * 0.25f)
         {
             args.Message.PushNewline();
             args.Message.AddMarkupOrThrow(Loc.GetString("bloodstream-component-bleeding", ("target", ent.Owner)));
+        }
+        // Shows bleeding message when bleeding below 0.25x the max cap
+        else if (ent.Comp.BleedAmount > 0)
+        {
+            args.Message.PushNewline();
+            args.Message.AddMarkupOrThrow(Loc.GetString("bloodstream-component-slight-bleeding", ("target", ent.Owner)));
         }
 
         // If the mob's blood level is below the damage threshhold, the pale message is added.
@@ -383,6 +400,10 @@ public sealed class BloodstreamSystem : EntitySystem
 
             tempSolution.RemoveAllSolution();
         }
+
+        // Sunrise added start - звуки кровотечения(капающей крови)
+        _audio.PlayPvs(component.BloodDrippingSound, uid, AudioParams.Default.WithVolume(-1f));
+        // Sunrise added end
 
         _solutionContainerSystem.UpdateChemicals(component.TemporarySolution.Value);
 

@@ -1,10 +1,7 @@
 # Sunrise
 # Код
-/Content.Shared/** @VigersRay @ThereDrD0
-/Content.Server/** @VigersRay @ThereDrD0
-/Content.Client/** @VigersRay @ThereDrD0
-/Content.Tests/** @VigersRay @ThereDrD0
+/Content.*/** @VigersRay @pxc1984
 /Tools/** @VigersRay
 
 # Прототипы
-/Resources/Prototypes/** @KaiserMaus
+/Resources/Prototypes/** @pxc1984

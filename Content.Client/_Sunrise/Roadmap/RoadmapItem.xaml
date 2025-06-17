@@ -2,30 +2,27 @@
     xmlns="https://spacestation14.io"
     xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:roadmap="clr-namespace:Content.Client._Sunrise.Roadmap"
-    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Margin="0 0 0 5">
     <PanelContainer>
         <PanelContainer.PanelOverride>
-            <gfx:StyleBoxFlat 
-                BackgroundColor="#232228"
-                BorderColor="#2a292f"
-                BorderThickness="1"
+            <gfx:StyleBoxFlat
+                BackgroundColor="#121111"
                 ContentMarginRightOverride="10"
                 ContentMarginTopOverride="5"
                 ContentMarginBottomOverride="5"/>
         </PanelContainer.PanelOverride>
         <BoxContainer Orientation="Horizontal" SeparationOverride="0">
             <BoxContainer Orientation="Vertical" HorizontalExpand="True">
-                <Button Name="HeaderButton" 
+                <Button Name="HeaderButton"
                         Access="Public"
                         MinHeight="35"
                         StyleClasses="NoStyle">
                     <BoxContainer Orientation="Horizontal" Margin="10 0 0 0">
-                        <Label Name="HeaderLabel" 
-                               StyleClasses="LabelSubText" 
+                        <Label Name="HeaderLabel"
+                               StyleClasses="LabelSubText"
                                HorizontalExpand="True"/>
-                        <Label Name="StateText" 
-                               Access="Public" 
+                        <Label Name="StateText"
+                               Access="Public"
                                StyleClasses="LabelSubText"
                                Margin="10 0 0 0"/>
                     </BoxContainer>
@@ -34,22 +31,22 @@
                        Text="{Loc ui-roadmap-click-for-details}"
                        FontColorOverride="#666666"
                        Margin="10 2 0 0"/>
-                <BoxContainer Name="ContentsContainer" 
-                             Access="Public" 
-                             Orientation="Vertical" 
+                <BoxContainer Name="ContentsContainer"
+                             Access="Public"
+                             Orientation="Vertical"
                              Visible="False"
                              Margin="10 5 0 0">
-                    <RichTextLabel Name="Contents" 
-                                  Access="Public" 
+                    <RichTextLabel Name="Contents"
+                                  Access="Public"
                                   RectClipContent="True"
-                                  StyleClasses="LabelSubText" 
+                                  StyleClasses="LabelSubText"
                                   Margin="0 5"/>
                 </BoxContainer>
             </BoxContainer>
-            <PanelContainer Name="StateColor" 
-                           Access="Public" 
-                           VerticalExpand="True" 
-                           MinWidth="3" 
+            <PanelContainer Name="StateColor"
+                           Access="Public"
+                           VerticalExpand="True"
+                           MinWidth="3"
                            MaxWidth="3">
                 <PanelContainer.PanelOverride>
                     <gfx:StyleBoxFlat />

@@ -1,0 +1,10 @@
+ent-ClothingHeadBlackCap = black captain hat
+    .desc = Black captain stylish hat.
+ent-ClothingHeadFormalCMO = formal CMO cap
+    .desc = Stylish head doctor's cap, looks catchy.
+ent-ClothingHeadFormalWarden = formal warden cap
+    .desc = Stylish wardens cap, looks catchy.
+ent-ClothingHeadWhiteCap = white captain cap
+    .desc = White captain stylish cap.
+ent-ClothingHeadWhiteHelmet = white captain helmet
+    .desc = White captain stylish helmet.

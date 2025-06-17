@@ -64,7 +64,7 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     This amount of TC will be given to each nukie
     /// </summary>
     [DataField]
-    public FixedPoint2 WarTcAmountPerNukie = 50;
+    public FixedPoint2 WarTcAmountPerNukie = 45; // Sunrise-edit
 
     // Sunrise-Start
     [DataField]
@@ -83,7 +83,7 @@ public sealed partial class NukeopsRuleComponent : Component
     ///     Time crew can't call emergency shuttle after war declaration.
     /// </summary>
     [DataField]
-    public TimeSpan WarEvacShuttleDisabled = TimeSpan.FromMinutes(25);
+    public TimeSpan WarEvacShuttleDisabled = TimeSpan.FromMinutes(30); // Sunrise-edit
 
     /// <summary>
     ///     Minimal operatives count for war declaration

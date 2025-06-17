@@ -20,6 +20,8 @@ using Content.Shared.Chemistry.Components.SolutionManager;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Ghost;
+using Content.Shared.Inventory;
+using Robust.Shared.Map;
 
 namespace Content.Server._Sunrise.ERP.Systems
 {
@@ -257,6 +259,22 @@ namespace Content.Server._Sunrise.ERP.Systems
             {
                 HandleLactation(ref netUser, ref netTarget, ref prototype);
             }
+
+            RaiseClothingEvent(netUser);
+            RaiseClothingEvent(netTarget);
+        }
+
+        private void RaiseClothingEvent(EntityUid target)
+        {
+            if (!TryComp(target, out InventoryComponent? comp))
+                return;
+
+            var ev = new ClothingErpOccuredEvent();
+            var enumerator = new InventorySystem.InventorySlotEnumerator(comp);
+            while (enumerator.NextItem(out var item, out var slot))
+            {
+                RaiseLocalEvent(item, ev);
+            }
         }
 
         public void HandleLactation(ref EntityUid userUid, ref EntityUid targetUid, ref InteractionPrototype prototype)
@@ -392,9 +410,18 @@ namespace Content.Server._Sunrise.ERP.Systems
 
                 if (TryComp<HumanoidAppearanceComponent>(entity, out var humanoid) && humanoid.Sex == Sex.Male)
                 {
-                    Spawn("PuddleSemen", Transform(entity).Coordinates);
+                    SpawnSemen("Semen", Transform(entity).Coordinates);
                 }
             }
+        }
+
+        private void SpawnSemen(string prototype, EntityCoordinates coordinates)
+        {
+            _puddle.TrySpillAt(
+                coordinates,
+                new Solution(prototype, 2f),
+                out _,
+                false);
         }
 
         public override void Update(float frameTime)

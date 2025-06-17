@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Linq;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.Power.Components;
@@ -35,6 +36,11 @@ namespace Content.Server.Power.EntitySystems
         private EntityQuery<BatteryComponent> _batteryQuery;
 
         private BatteryRampPegSolver _solver = new();
+
+        private readonly Stopwatch _frameStopwatch = new();
+        private float _lastFrameTime;
+        private float _averageFrameTime;
+        private int _frameCount;
 
         public override void Initialize()
         {
@@ -272,6 +278,8 @@ namespace Content.Server.Power.EntitySystems
 
         public override void Update(float frameTime)
         {
+            _frameStopwatch.Restart();
+
             base.Update(frameTime);
 
             ReconnectNetworks();
@@ -291,6 +299,16 @@ namespace Content.Server.Power.EntitySystems
             UpdateApcPowerReceiver(frameTime);
             UpdatePowerConsumer();
             UpdateNetworkBattery();
+
+            _frameStopwatch.Stop();
+            _lastFrameTime = (float)_frameStopwatch.Elapsed.TotalMilliseconds;
+            _averageFrameTime = (_averageFrameTime * _frameCount + _lastFrameTime) / (_frameCount + 1);
+            _frameCount++;
+
+            if (_frameCount % 100 == 0)
+            {
+                Logger.Debug($"PowerNetSystem: Last frame time: {_lastFrameTime:F2}ms, Average frame time: {_averageFrameTime:F2}ms"); // Sunrise-edit
+            }
         }
 
         private void ReconnectNetworks()
@@ -336,6 +354,7 @@ namespace Content.Server.Power.EntitySystems
             {
                 var mapId = Transform(uid).MapUid;
                 var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
+
                 var powered = isAlwaysPowered || IsPoweredCalculate(apcReceiver);
 
                 MetaDataComponent? metadata = null;
@@ -400,10 +419,7 @@ namespace Content.Server.Power.EntitySystems
             var enumerator = EntityQueryEnumerator<PowerConsumerComponent>();
             while (enumerator.MoveNext(out var uid, out var consumer))
             {
-                var mapId = Transform(uid).MapUid;
-                var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
-
-                var newRecv = isAlwaysPowered ? consumer.DrawRate : consumer.NetworkLoad.ReceivingPower;
+                var newRecv = consumer.NetworkLoad.ReceivingPower;
                 ref var lastRecv = ref consumer.LastReceived;
                 if (MathHelper.CloseToPercent(lastRecv, newRecv))
                     continue;
@@ -419,11 +435,8 @@ namespace Content.Server.Power.EntitySystems
             var enumerator = EntityQueryEnumerator<PowerNetworkBatteryComponent>();
             while (enumerator.MoveNext(out var uid, out var powerNetBattery))
             {
-                var mapId = Transform(uid).MapUid;
-                var isAlwaysPowered = HasComp<AlwaysPoweredMapComponent>(mapId);
-
                 var lastSupply = powerNetBattery.LastSupply;
-                var currentSupply = isAlwaysPowered ? powerNetBattery.MaxSupply : powerNetBattery.CurrentSupply;
+                var currentSupply = powerNetBattery.CurrentSupply;
 
                 if (lastSupply == 0f && currentSupply != 0f)
                 {

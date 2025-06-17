@@ -644,6 +644,46 @@ ClothingNeckCloakMiner: null
 MatterBinStockPart: MicroManipulatorStockPart
 CapacitorStockPart: MicroManipulatorStockPart
 
+# 2025-05-26 Turrets
+WeaponEnergyTurretStation: WeaponEnergyTurretSecurity
+WeaponEnergyTurretStationControlPanel: WeaponEnergyTurretSecurityControlPanel
+WeaponEnergyTurretStationMachineCircuitboard: WeaponEnergyTurretSecurityMachineCircuitboard
+
+# 2025-05-30
+SpawnHonkBot: SpawnMobHonkBot
+
+# 2025-06-01
+CrateFoodPizzaLarge: CrateFoodPizza
+CrateFoodSoftdrinksLarge: CrateFoodSoftdrinks
+
+# 2025-06-09
+BarSignAlignTile: BarSign
+BarSignComboCafeAlignTile: BarSignComboCafe
+BarSignEmergencyRumPartyAlignTile: BarSignEmergencyRumParty
+BarSignLV426AlignTile: BarSignLV426
+BarSignMaidCafeAlignTile: BarSignMaidCafe
+BarSignMalteseFalconAlignTile: BarSignMalteseFalcon
+BarSignOfficerBeerskyAlignTile: BarSignOfficerBeersky
+BarSignRobustaCafeAlignTile: BarSignRobustaCafe
+BarSignTheAleNathAlignTile: BarSignTheAleNath
+BarSignTheBirdCageAlignTile: BarSignTheBirdCage
+BarSignTheCoderbusAlignTile: BarSignTheCoderbus
+BarSignTheDrunkCarpAlignTile: BarSignTheDrunkCarp
+BarSignEngineChangeAlignTile: BarSignEngineChange
+BarSignTheHarmbatonAlignTile: BarSignTheHarmbaton
+BarSignTheLightbulbAlignTile: BarSignTheLightbulb
+BarSignTheLooseGooseAlignTile: BarSignTheLooseGoose
+BarSignTheNetAlignTile: BarSignTheNet
+BarSignTheOuterSpessAlignTile: BarSignTheOuterSpess
+BarSignTheSinguloAlignTile: BarSignTheSingulo
+BarSignTheSunAlignTile: BarSignTheSun
+BarSignWiggleRoomAlignTile: BarSignWiggleRoom
+BarSignZocaloAlignTile: BarSignZocalo
+BarSignEmprahAlignTile: BarSignEmprah
+BarSignSpacebucksAlignTile: BarSignSpacebucks
+BarSignMaltroachAlignTile: BarSignMaltroach
+BarSignWhiskeyEchoesAlignTile: BarSignWhiskeyEchoes
+
 # Sunrise migrations
 AirlockExternalGlassShuttleArrivals: AirlockExternalGlassShuttleArrivalsLocked
 AirlockHatchSyndicate: AirlockHatchSyndicateLocked
@@ -736,13 +776,24 @@ LockerBlueShieldOfficerFilled: null
 PoweredLightBlueInterior: null
 RandomItem: null
 TableWoodReinforced: null
+BoxMiniSyringe: null
+LauncherSyringeMed: null
+PlushieUunaMiira: null
+
+# Кто удалил и не добавил в миграции
+PrintedDocumentClosingIndictment: null
+PrintedDocumentPermissionDisposeBody: null
+PrintedDocumentDeathCertificate: null
+PrintedDocumentReportOnTheChaptersMeeting: null
+SheetPrinter1: null
+BorgModuleDefibrillator: null
 
 # Lust migrations
 VendingMachineCoffeeMigrateUnderwear: VendingMachineUnderwear
 VendingMachineDonutMigrateKinko: VendingMachineKink
-SignNanotrasen1: SignQillu1
-SignNanotrasen2: SignQillu2
-SignNanotrasen3: SignQillu3
-SignNanotrasen4: SignQillu1
-SignNanotrasen5: SignQillu2
+SignNanotrasen1: null
+SignNanotrasen2: SignQillu1
+SignNanotrasen3: SignQillu2
+SignNanotrasen4: SignQillu3
+SignNanotrasen5: null
 toyhandcuff: ToyHandcuffs

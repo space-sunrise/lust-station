@@ -181,6 +181,7 @@ flavor-complex-true-nature = like the true nature of reality
 flavor-complex-false-meat = not entirely unlike meat
 flavor-complex-paper = like mushy pulp
 flavor-complex-compressed-meat = like compressed meat
+flavor-complex-dog-food = like dog food
 
 # Drink-specific flavors.
 
@@ -285,7 +286,7 @@ flavor-complex-mimosa = like an early brunch
 flavor-complex-thesunalsorises = like an absinthe daiquiri
 flavor-complex-whiskeysour = like whiskey and egg
 flavor-complex-zombiecocktail = like eating brains
-flavor-complex-absinthe = like anise
+flavor-complex-absinthe = like bitter anise
 flavor-complex-blue-curacao = like orange flowers
 flavor-complex-acidspit = like French battery acid
 flavor-complex-allies-cocktail = like medicinal tincture

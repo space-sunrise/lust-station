@@ -163,15 +163,10 @@ public sealed class SolutionTransferSystem : EntitySystem
     public FixedPoint2 Transfer(EntityUid user,
         EntityUid sourceEntity,
         Entity<SolutionComponent> source,
-        Entity<SolutionTransferComponent?> targetEntity, // Sunrise edit
+        EntityUid targetEntity,
         Entity<SolutionComponent> target,
         FixedPoint2 amount)
     {
-        // Sunrise added start
-        if (!Resolve(targetEntity.Owner, ref targetEntity.Comp))
-            return FixedPoint2.Zero;
-        // Sunrise added end
-
         var transferAttempt = new SolutionTransferAttemptEvent(sourceEntity, targetEntity);
 
         // Check if the source is cancelling the transfer
@@ -209,8 +204,9 @@ public sealed class SolutionTransferSystem : EntitySystem
         var solution = _solution.SplitSolution(source, actualAmount);
         _solution.AddSolution(target, solution);
 
-        // Sunrise added start
-        _audio.PlayPvs(targetEntity.Comp.TransferSound, targetEntity);
+        // Sunrise added start - звук перемещения жидкости
+        if (TryComp<SolutionTransferComponent>(sourceEntity, out var transferComponent))
+            _audio.PlayPvs(transferComponent.TransferSound, targetEntity);
         // Sunrise added end
 
         var ev = new SolutionTransferredEvent(sourceEntity, targetEntity, user, actualAmount);

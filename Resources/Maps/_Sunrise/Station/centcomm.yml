@@ -8208,8 +8208,8 @@ entities:
       pos: -2.5,-2.5
       parent: 2
     - type: FaxMachine
-      name: Центральное Командование
-      destinationAddress: Центральное Командование
+      name: Центральное командование
+      destinationAddress: Центральное командование
 - proto: filingCabinet
   entities:
   - uid: 964
@@ -22844,12 +22844,12 @@ entities:
   - uid: 3473
     components:
     - type: MetaData
-      name: Центральное Коммандование
+      name: Центральное командование
     - type: Transform
       pos: -0.5,3.5
       parent: 2
     - type: WarpPoint
-      location: Центральное Коммандование
+      location: Центральное командование
 - proto: WaterTankFull
   entities:
   - uid: 3474

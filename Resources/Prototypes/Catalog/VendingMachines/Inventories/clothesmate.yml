@@ -100,6 +100,7 @@
     ClothingHeadHatCorpsoft: 2
     ClothingHeadFishCap: 2
     ClothingHeadRastaHat: 2
+    ClothingHeadPropellerHat: 2
     ClothingBeltStorageWaistbag: 3
     ClothingEyesGlasses: 6
     ClothingHandsGlovesColorBlack: 4
@@ -143,6 +144,7 @@
     ClothingBackpackSatchelWhite: 2
     ClothingBackpackSatchelYellow: 2
     ClothingAlcoholichka: 4
+    ClothingNeckAmethystHeart: 2
 #Sunrise-end
   contrabandInventory:
     ClothingMaskNeckGaiter: 2

@@ -291,7 +291,10 @@ namespace Content.Server.GameTicking
 
             EntityUid? mobMaybe = null;
             var spawnPointType = SpawnPointType.Arrivals;
-            if (jobPrototype.AlwaysUseSpawner || overall < TimeSpan.FromHours(_cfg.GetCVar(SunriseCCVars.ArrivalsMinHours)))
+            if (jobPrototype.AlwaysUseSpawner ||
+                overall < TimeSpan.FromHours(_cfg.GetCVar(SunriseCCVars.ArrivalsMinHours)) ||
+                !_cfg.GetCVar(SunriseCCVars.ArrivalsRoundStartSpawn)
+                )
             {
                 lateJoin = false;
                 spawnPointType = SpawnPointType.Job;
