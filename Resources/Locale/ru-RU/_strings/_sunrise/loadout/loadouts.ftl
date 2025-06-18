@@ -60,3 +60,14 @@ Mime-loadout = Снаряжение мима
 Musician-loadout = Снаряжение музыканта
 Passenger-loadout = Снаряжение пассажира
 ServiceWorker-loadout = Снаряжение сервисного работника
+#Silicons
+StationAi-loadout = Название Станционного ИИ
+Borg-loadout = Название киборга
+ClownBorg-loadout = Название киборга
+EngineerBorg-loadout = Название киборга
+JanitorBorg-loadout = Название киборга
+MedicalBorg-loadout = Название киборга
+MiningBorg-loadout = Название киборга
+PeaceBorg-loadout = Название киборга
+SecurityBorg-loadout = Название киборга
+ServiceBorg-loadout = Название киборга
