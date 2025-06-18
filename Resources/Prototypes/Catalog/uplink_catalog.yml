@@ -166,9 +166,9 @@
   productEntity: EnergyShieldBiocode
   discountCategory: veryRareDiscounts
   discountDownTo:
-    Telecrystal: 4
+    Telecrystal: 3  # Sunrise-Edit
   cost:
-    Telecrystal: 8
+    Telecrystal: 6  # Sunrise-Edit
   categories:
   - UplinkWeaponry
   #Sunrise-start
@@ -177,6 +177,8 @@
     blacklist:
       tags:
       - AssaultOpsUplink
+      - NukeOpsUplink
+      - LoneOpsUplink
   #Sunrise-end
 
 - type: listing
