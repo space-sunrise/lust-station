@@ -944,30 +944,30 @@
       components:
       - SurplusBundle
 
-- type: listing
-  id: UplinkReinforcementRadioSyndicateCyborgReaper
-  name: uplink-reinforcement-radio-syndicate-cyborg-reaper-name
-  description: uplink-reinforcement-radio-syndicate-cyborg-reaper-desc
-  productEntity: ReinforcementRadioSyndicateCyborgReaper
-  icon: { sprite: _Sunrise/Mobs/Silicon/chassis.rsi, state: syndi_reaper }
-  discountCategory: veryRareDiscounts
-  discountDownTo:
-    Telecrystal: 35
-  cost:
-    Telecrystal: 55
-  categories:
-  - UplinkAllies
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 2
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
-  - !type:BuyerWhitelistCondition
-    blacklist:
-      components:
-      - SurplusBundle
+# - type: listing #Todo: Reaper borgs rework
+#   id: UplinkReinforcementRadioSyndicateCyborgReaper
+#   name: uplink-reinforcement-radio-syndicate-cyborg-reaper-name
+#   description: uplink-reinforcement-radio-syndicate-cyborg-reaper-desc
+#   productEntity: ReinforcementRadioSyndicateCyborgReaper
+#   icon: { sprite: _Sunrise/Mobs/Silicon/chassis.rsi, state: syndi_reaper }
+#   discountCategory: veryRareDiscounts
+#   discountDownTo:
+#     Telecrystal: 35
+#   cost:
+#     Telecrystal: 55
+#   categories:
+#   - UplinkAllies
+#   conditions:
+#   - !type:ListingLimitedStockCondition
+#     stock: 2
+#   - !type:StoreWhitelistCondition
+#     whitelist:
+#       tags:
+#       - NukeOpsUplink
+#   - !type:BuyerWhitelistCondition
+#     blacklist:
+#       components:
+#       - SurplusBundle
 
 - type: listing
   id: UplinkHandcuffs
