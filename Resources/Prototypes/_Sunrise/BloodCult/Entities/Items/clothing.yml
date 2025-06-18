@@ -5,6 +5,12 @@
   description: Some religious clothes.
   components:
   - type: CultRobeModifier
+  - type: Biocode
+    factions:
+    - BloodCult
+  - type: FactionClothingBlocker
+    factions:
+    - BloodCult
 
 - type: entity
   id: CultOuterArmor
@@ -27,6 +33,9 @@
     delay: 10.0
   # Нихуя технологии у культистов да?
   - type: Biocode
+    factions:
+    - BloodCult
+  - type: FactionClothingBlocker
     factions:
     - BloodCult
 
@@ -95,3 +104,9 @@
   - type: ShowHealthIcons
     damageContainers:
     - Biological
+  - type: Biocode
+    factions:
+    - BloodCult
+  - type: FactionClothingBlocker
+    factions:
+    - BloodCult

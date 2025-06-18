@@ -7,8 +7,6 @@
     factions:
     - Syndicate
   - type: FactionClothingBlocker
-    factions:
-    - Syndicate
   - type: StaticPrice
     price: 3000
 
@@ -21,8 +19,6 @@
     factions:
     - Syndicate
   - type: FactionClothingBlocker
-    factions:
-    - Syndicate
   - type: StaticPrice
     price: 4000
 
