@@ -36,6 +36,9 @@
     useRate: 0
   - type: UseDelay
     delay: 10.0
+  - type: Biocode
+    factions:
+    - Syndicate
 
 - type: entity
   name: BR-50c "Bastion"
@@ -66,7 +69,7 @@
         startingItem: PowerCellNanoTrasen
         whitelist:
           tags:
-            - PowerCell 
+            - PowerCell
   - type: EnergyDomeGenerator
     damageEnergyDraw: 3
     domePrototype: EnergyDomeMediumBlue
@@ -104,7 +107,7 @@
         startingItem: PowerCellNanoTrasen
         whitelist:
           tags:
-            - PowerCell 
+            - PowerCell
   - type: EnergyDomeGenerator
     damageEnergyDraw: 5
     domePrototype: EnergyDomeSmallBlue

@@ -1,8 +1,9 @@
 - type: bloodCult
   id: NarsieCult
   cultType: Narsie
-  ritualDaggerProto: NarsieRitualDagger
-  cultBladeProto: NarsieEldritchBlade
+  daggerProto: NarsieRitualDagger
+  bladeProto: NarsieEldritchBlade
+  halberdProto: NarsieHalberd
   godProto: Narsie
   startingItems:
   - NarsieRitualDagger
@@ -11,8 +12,9 @@
 - type: bloodCult
   id: NarbeeCult
   cultType: Narbee
-  ritualDaggerProto: NarbeeRitualDagger
-  cultBladeProto: NarbeeEldritchBlade
+  daggerProto: NarbeeRitualDagger
+  bladeProto: NarbeeEldritchBlade
+  halberdProto: NarbeeHalberd
   godProto: Narbee
   startingItems:
   - NarbeeRitualDagger
@@ -21,8 +23,9 @@
 - type: bloodCult
   id: ReaperCult
   cultType: Reaper
-  ritualDaggerProto: ReaperRitualDagger
-  cultBladeProto: ReaperEldritchBlade
+  daggerProto: ReaperRitualDagger
+  bladeProto: ReaperEldritchBlade
+  halberdProto: ReaperHalberd
   godProto: Reaper
   startingItems:
   - ReaperRitualDagger

@@ -11,6 +11,24 @@
   parent: ClothingOuterArmorCult
   name: armored mantle
   description: At first glance, it seems that this is a simple robe, but it has elements of armor on it.
+  components:
+  - type: Battery
+    maxCharge: 50
+    startingCharge: 50
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 50
+    autoRechargePause: true
+    autoRechargePauseTime: 9
+  - type: EnergyDomeGenerator
+    damageEnergyDraw: 1
+    domePrototype: EnergyDomeCult
+  - type: UseDelay
+    delay: 10.0
+  # Нихуя технологии у культистов да?
+  - type: Biocode
+    factions:
+    - BloodCult
 
 - type: entity
   id: CultMirrorShield

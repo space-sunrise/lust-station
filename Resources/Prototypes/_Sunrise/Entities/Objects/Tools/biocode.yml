@@ -3,6 +3,9 @@
   id: EnergyDomeGeneratorBackpackSyndieBiocode
   suffix: BIOCODE
   components:
+  - type: Biocode
+    factions:
+    - Syndicate
   - type: FactionClothingBlocker
     factions:
     - Syndicate
@@ -14,6 +17,9 @@
   id: EnergyDomeGeneratorPersonalSyndieBiocode
   suffix: BIOCODE
   components:
+  - type: Biocode
+    factions:
+    - Syndicate
   - type: FactionClothingBlocker
     factions:
     - Syndicate
