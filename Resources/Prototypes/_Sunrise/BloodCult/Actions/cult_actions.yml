@@ -10,6 +10,9 @@
       sprite: /Textures/_Sunrise/BloodCult/actions_cult.rsi
       state: transmute
     itemIconStyle: NoItem
+  - type: TargetAction
+    range: 2
+    checkCanAccess: true
   - type: EntityTargetAction
     canTargetSelf: false
     event: !type:CultTwistedConstructionActionEvent
@@ -56,6 +59,9 @@
       sprite: /Textures/_Sunrise/BloodCult/actions_cult.rsi
       state: stun
     itemIconStyle: NoItem
+  - type: TargetAction
+    range: 2
+    checkCanAccess: true
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:
@@ -79,6 +85,9 @@
       sprite: /Textures/_Sunrise/BloodCult/actions_cult.rsi
       state: shackles
     itemIconStyle: NoItem
+  - type: TargetAction
+    range: 2
+    checkCanAccess: true
   - type: EntityTargetAction
     canTargetSelf: false
     whitelist:
@@ -120,8 +129,9 @@
         state: teleport
       itemIconStyle: NoItem
     - type: TargetAction
-      deselectOnMiss: true
       repeat: false
+      range: 2
+      checkCanAccess: true
     - type: EntityTargetAction
       whitelist:
         components:
@@ -142,8 +152,8 @@
         state: equip
       itemIconStyle: NoItem
     - type: TargetAction
-      deselectOnMiss: true
       repeat: false
+      range: 2
     - type: EntityTargetAction
       canTargetSelf: true
       whitelist:
