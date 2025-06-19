@@ -113,7 +113,7 @@
     sprite: Objects/Weapons/Melee/cult_halberd.rsi
     quickEquip: false
     slots:
-    - back
+    - Back
     - suitStorage
   - type: UseDelay
     delay: 1
@@ -137,7 +137,7 @@
   - type: Item
     size: Ginormous
   - type: Sprite
-    sprite: _Sunrise/BloodCult/blood_spear.rsi
+    sprite: _Sunrise/BloodCult/Entities/blood_spear.rsi
     state: icon
   - type: ThrowingAngle
     angle: 225
@@ -292,3 +292,39 @@
     state: hell_blade
   - type: Item
     heldPrefix: hell_blade
+
+- type: entity
+  parent: TrueHalberd
+  id: NarsieHalberd
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Melee/cult_halberd.rsi
+    state: icon
+
+- type: entity
+  parent: TrueHalberd
+  id: ReaperHalberd
+  components:
+  - type: Sprite
+    sprite: _Sunrise/BloodCult/Entities/reaper_halberd.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Sunrise/BloodCult/Entities/reaper_halberd.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+
+- type: entity
+  parent: TrueHalberd
+  id: NarbeeHalberd
+  components:
+  - type: Sprite
+    sprite: _Sunrise/BloodCult/Entities/narbee_halberd.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Sunrise/BloodCult/Entities/narbee_halberd.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage

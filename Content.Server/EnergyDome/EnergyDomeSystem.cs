@@ -2,6 +2,7 @@ using Content.Server.DeviceLinking.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
+using Content.Shared._Sunrise.Biocode;
 using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Content.Shared.DeviceLinking.Events;
@@ -14,6 +15,7 @@ using Content.Shared.Timing;
 using Content.Shared.Toggleable;
 using Content.Shared.Verbs;
 using Content.Shared.EnergyDome;
+using Robust.Server.Containers;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 
@@ -29,6 +31,8 @@ public sealed partial class EnergyDomeSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly PowerCellSystem _powerCell = default!;
     [Dependency] private readonly DeviceLinkSystem _signalSystem = default!;
+    [Dependency] private readonly ContainerSystem _containerSystem = default!;
+    [Dependency] private readonly BiocodeSystem _biocodeSystem = default!;
 
     public override void Initialize()
     {
@@ -95,6 +99,17 @@ public sealed partial class EnergyDomeSystem : EntitySystem
 
     private void OnActivatedInWorld(Entity<EnergyDomeGeneratorComponent> generator, ref ActivateInWorldEvent args)
     {
+        // Sunrise-Start
+        if (!_containerSystem.ContainsEntity(args.User, generator.Owner))
+            return;
+
+        if (TryComp<BiocodeComponent>(generator.Owner, out var biocodedComponent))
+        {
+            if (!_biocodeSystem.CanUse(args.User, biocodedComponent.Factions))
+                return;
+        }
+        // Sunrise-End
+
         if (generator.Comp.CanInteractUse)
             AttemptToggle(generator, !generator.Comp.Enabled);
     }
@@ -112,6 +127,17 @@ public sealed partial class EnergyDomeSystem : EntitySystem
     {
         if (!args.CanAccess || !args.CanInteract || !generator.Comp.CanInteractUse)
             return;
+
+        // Sunrise-Start
+        if (!_containerSystem.ContainsEntity(args.User, generator.Owner))
+            return;
+
+        if (TryComp<BiocodeComponent>(generator.Owner, out var biocodedComponent))
+        {
+            if (!_biocodeSystem.CanUse(args.User, biocodedComponent.Factions))
+                return;
+        }
+        // Sunrise-End
 
         var @event = args;
         ActivationVerb verb = new()
@@ -132,6 +158,17 @@ public sealed partial class EnergyDomeSystem : EntitySystem
     {
         if (args.Handled)
             return;
+
+        // Sunrise-Start
+        if (!_containerSystem.ContainsEntity(args.Performer, generator.Owner))
+            return;
+
+        if (TryComp<BiocodeComponent>(generator.Owner, out var biocodedComponent))
+        {
+            if (!_biocodeSystem.CanUse(args.Performer, biocodedComponent.Factions))
+                return;
+        }
+        // Sunrise-End
 
         AttemptToggle(generator, !generator.Comp.Enabled);
 

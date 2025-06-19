@@ -562,7 +562,7 @@
       damageContainer: Shield
     # Sunrise-Start
     - type: BatterySelfRecharger
-      autoRechargeRate: 50
+      autoRechargeRate: 75
       autoRecharge: true
       autoRechargePause: true
       autoRechargePauseTime: 5

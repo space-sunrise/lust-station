@@ -86,7 +86,7 @@
   - type: Action
     icon: { sprite: Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
   - type: InstantAction
-    event: !type:ScreamActionEvent
+    event: !type:ToggleActionEvent
 
 - type: entity
   parent: BaseAction

@@ -444,7 +444,7 @@
       cultistFactoryProduction-MirrorShield:
       - CultMirrorShield
       cultistFactoryProduction-Halberd:
-      - TrueHalberd
+      - NarsieHalberd
 
 - type: entity
   id: NarbeeCultForge
@@ -460,7 +460,7 @@
     stateOn: hell_forge
   - type: Construction
     graph: NarbeeCultForge
-    node: hell_forge
+    node: narbee_forge
   - type: CultistFactory
     products:
       cultistFactoryProduction-EldritchBlade:
@@ -472,7 +472,7 @@
       cultistFactoryProduction-MirrorShield:
       - CultMirrorShield
       cultistFactoryProduction-Halberd:
-      - TrueHalberd
+      - NarbeeHalberd
 
 - type: entity
   id: ReaperCultForge
@@ -500,7 +500,7 @@
       cultistFactoryProduction-MirrorShield:
       - CultMirrorShield
       cultistFactoryProduction-Halberd:
-      - TrueHalberd
+      - ReaperHalberd
 
 - type: cultStructure
   id: CultStructureNarsieAltarTome
