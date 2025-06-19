@@ -9,8 +9,6 @@
     factions:
     - BloodCult
   - type: FactionClothingBlocker
-    factions:
-    - BloodCult
 
 - type: entity
   id: CultOuterArmor
@@ -36,8 +34,6 @@
     factions:
     - BloodCult
   - type: FactionClothingBlocker
-    factions:
-    - BloodCult
 
 - type: entity
   id: CultMirrorShield
@@ -108,5 +104,3 @@
     factions:
     - BloodCult
   - type: FactionClothingBlocker
-    factions:
-    - BloodCult
