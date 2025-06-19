@@ -46,6 +46,7 @@
   equipment:
     head: ClothingHeadEliteCaptainCap
 
+
 # Neck
 - type: loadout
   id: CaptainCloak
@@ -79,41 +80,4 @@
   equipment:
     neck: ClothingNeckMantleCap
 
-# Back
-- type: loadout
-  id: CaptainBackpack
-  equipment:
-    back: ClothingBackpackCaptain
 
-- type: loadout
-  id: CaptainSatchel
-  equipment:
-    back: ClothingBackpackSatchelCaptain
-
-- type: loadout
-  id: CaptainDuffel
-  equipment:
-    back: ClothingBackpackDuffelCaptain
-
-# Outer clothing
-- type: loadout
-  id: CaptainOuterArmor
-  equipment:
-    outerClothing: ClothingOuterArmorCaptainCarapace
-
-#Sunrise-Start
-- type: loadout
-  id: CaptainOuterCoat
-  equipment:
-    outerClothing: ClothingOuterCoatCaptain
-
-- type: loadout
-  id: CaptainOuterOverCoat
-  sponsorOnly: true
-  equipment:
-    outerClothing: ClothingOuterCoatCaptainOvercoat
-#Sunrise-End
-- type: loadout
-  id: CaptainWintercoat
-  equipment:
-    outerClothing: ClothingOuterWinterCap
