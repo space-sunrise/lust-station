@@ -36,3 +36,5 @@ ent-PlushieFranzEvans = Plushie Franz Evans
     .desc = { ent-BasePlushie.desc }
 ent-PlushieArelitt = Plushie Arelitt Varmolnd
     .desc = { ent-BasePlushie.desc }
+ent-BalloonQillu = qillu balloon
+    .desc = Specially designed to inflict maximum psychological damage to Syndicate operatives.

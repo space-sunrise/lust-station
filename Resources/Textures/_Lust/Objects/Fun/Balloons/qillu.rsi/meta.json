@@ -1,20 +1,20 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Made by discrod/gardsnake",
+  "copyright": "Made for Qillu, Lust Station by gardsnake.",
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "ntb-inhand-left"
+      "name": "qb-inhand-left"
     },
     {
-      "name": "ntb-inhand-right"
+      "name": "qb-inhand-right"
     },
     {
-      "name": "ntb"
+      "name": "qb"
     }
   ]
 }

@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: BedsheetBaseQillu
+  id: DoubleBedsheetBaseQillu
   name: BedsheetBaseQillu
   abstract: true
   description: A surprisingly soft linen bedsheet.
@@ -10,14 +10,10 @@
     - Bed
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/bedsheets.rsi
+    sprite: _Lust/Objects/Misc/doublebedsheets.rsi
     noRot: true
   - type: Item
     size: Small
-  - type: Clothing
-    quickEquip: true
-    slots:
-    - neck
   - type: StaticPrice
     price: 100
   - type: Tag
@@ -25,38 +21,32 @@
     - Bedsheet
 
 - type: entity
-  id: BedsheetCaptainQillu
-  parent: BedsheetBaseQillu
+  id: DoubleBedsheetCaptainQillu
+  parent: DoubleBedsheetBaseQillu
   name: captain's bedsheet
   description: It has a Qillu symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
   components:
   - type: Sprite
     state: sheetcaptain
-  - type: Clothing
-    sprite: _Lust/Clothing/Neck/Bedsheets/captain.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
 
 - type: entity
-  id: BedsheetCentcomQillu
-  parent: BedsheetBaseQillu
+  id: DoubleBedsheetCentcomQillu
+  parent: DoubleBedsheetBaseQillu
   name: CentComm bedsheet
   description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
   components:
   - type: Sprite
     state: sheetcentcom
-  - type: Clothing
-    sprite: _Lust/Clothing/Neck/Bedsheets/centcom.rsi
   - type: StealTarget
     stealGroup: HeadBedsheet
 
 - type: entity
-  id: BedsheetQillu
-  parent: BedsheetBaseQillu
+  id: DoubleBedsheetQillu
+  parent: DoubleBedsheetBaseQillu
   name: Qillu bedsheet
   description: It has the Qillu logo on it and an aura of lust.
   components:
   - type: Sprite
     state: sheetqillu
-  - type: Clothing
-    sprite: _Lust/Clothing/Neck/Bedsheets/qillu.rsi

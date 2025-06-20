@@ -345,3 +345,22 @@
         variation: 0.125
   - type: UseDelay
     delay: 1
+
+- type: entity
+  parent: BaseItem
+  id: BalloonQillu
+  name: qillu balloon
+  description: Specially designed to inflict maximum psychological damage to Syndicate operatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
+    state: qb
+  - type: Item
+    size: Small
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
+    heldPrefix: qb
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - Balloon

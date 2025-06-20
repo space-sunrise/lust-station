@@ -8,13 +8,10 @@
   },
   "states": [
     {
-      "name": "sheetqillu"
+        "name": "qillu"
     },
     {
-      "name": "sheetcaptain"
-    },
-    {
-      "name": "sheetcentcom"
+        "name": "qillu-equipped"
     }
   ]
 }
