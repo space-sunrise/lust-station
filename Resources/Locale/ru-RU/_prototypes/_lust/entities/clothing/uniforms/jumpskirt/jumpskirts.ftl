@@ -4,3 +4,5 @@ ent-ClothingUniformWhiteCapSkirt = white captain jumpskirt
     .desc = Captain white uniform. Looks stylish.
 ent-ClothingUniformWhiteLawyerSkirt = white lawyer jumpskirt
     .desc = Lawyer white uniform. Looks stylish.
+ent-ClothingUniformJumpskirtCentcomFormalDressQillu = торжественное платье Центком Qillu
+    .desc = Платье для особых случаев.

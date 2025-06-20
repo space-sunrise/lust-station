@@ -30,3 +30,15 @@
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtCentcomFormalDressQillu
+  name: qillu central command formal dress
+  description: A dress for special occasions.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcomformaldress.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcomformaldress.rsi
+

@@ -332,9 +332,9 @@
   name: secure weapon crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _Lust/Structures/Storage/Crates/weapon.rsi #Lust-edit
   - type: Sprite
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _Lust/Structures/Storage/Crates/weapon.rsi #Lust-edit
   - type: AccessReader
     access: [["Armory"]]
 

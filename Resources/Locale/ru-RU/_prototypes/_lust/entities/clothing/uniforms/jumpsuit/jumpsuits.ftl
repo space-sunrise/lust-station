@@ -26,3 +26,5 @@ ent-ClothingUniformWhiteLawyerSuit = the lawyer white suit
     .desc = White Lawyer suit. Looks royal.
 ent-ClothingUniformSuccubus = кроваво-красный костюм
     .desc = Повседневный наряд, едва ли соответствующий общественным нормам приличия, даже несмотря на то, что состоит из пиджака и рубашки. Интересно, почему?
+ent-ClothingUniformJumpsuitCentcomFormalQillu = торжественный костюм Центком Qillu
+    .desc = Костюм для особых случаев.
