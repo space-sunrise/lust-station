@@ -119,10 +119,18 @@
 - type: entity
   parent: AirlockGlassShuttle
   id: AirlockExternalGlassCentCommShuttle
-  suffix: External, CentComm, Glass, Docking
+  suffix: External, CentComm, Glass, Docking, AutoDock
   components:
   - type: PriorityDock
     tag: DockCentComm
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassMiningShuttle
+  suffix: External, Mining, Glass, Docking, AutoDock
+  components:
+  - type: PriorityDock
+    tag: DockMining
 
 - type: entity
   parent: AirlockExternalGlassShuttleArrivals

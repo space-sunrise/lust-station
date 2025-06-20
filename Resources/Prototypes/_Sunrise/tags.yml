@@ -384,3 +384,6 @@
 
 - type: Tag
   id: DockCentComm
+
+- type: Tag
+  id: DockMining
