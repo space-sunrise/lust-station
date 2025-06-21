@@ -8,11 +8,13 @@
   },
   "states": [
     {
-        "name": "qillu"
+      "name": "poster1_legit"
     },
     {
-        "name": "qillu-equipped",
-        "directions": 4
+      "name": "poster2_legit"
+    },
+    {
+      "name": "poster3_legit"
     }
   ]
 }

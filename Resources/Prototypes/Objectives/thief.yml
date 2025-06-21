@@ -397,12 +397,12 @@
 
 - type: entity
   parent: BaseThiefStealStructureObjective
-  id: AltarNanotrasenStealObjective
+  id: AltarQilluStealObjective # Lust-Edit
   components:
   - type: NotJobRequirement
     job: Chaplain
   - type: StealCondition
-    stealGroup: AltarNanotrasen
+    stealGroup: AltarQillu # Lust-Edit
   - type: Objective
     difficulty: 0.5
 

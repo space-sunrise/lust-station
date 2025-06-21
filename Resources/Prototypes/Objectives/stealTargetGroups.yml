@@ -337,10 +337,10 @@
     state: booze
 
 - type: stealTargetGroup
-  id: AltarNanotrasen
+  id: AltarQillu # Lust-Edit
   name: steal-target-groups-altar-nanotrasen
   sprite:
-    sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
+    sprite: _Lust/Structures/Furniture/Altars/Gods/qillu.rsi # Lust-Edit
     state: nanotrasen
 
 - type: stealTargetGroup

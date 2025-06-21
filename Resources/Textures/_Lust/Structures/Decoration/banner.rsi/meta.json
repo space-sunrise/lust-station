@@ -8,11 +8,7 @@
   },
   "states": [
     {
-        "name": "qillu"
-    },
-    {
-        "name": "qillu-equipped",
-        "directions": 4
+      "name": "banner_qillu"
     }
   ]
 }

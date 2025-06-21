@@ -1,6 +1,6 @@
-ent-SignQillu1 = qillu sign 1
-    .desc = Part 1.
-ent-SignQillu2 = qillu sign 2
-    .desc = Part 2.
-ent-SignQillu3 = qillu sign 3
-    .desc = Part 3.
+ent-SignQillu1 = логотип Qillu часть 1
+    .desc = Первая часть логотипа великой корпорации!
+ent-SignQillu2 = логотип Qillu часть 2
+    .desc = Вторая часть логотипа великой корпорации!
+ent-SignQillu3 = логотип Qillu часть 3
+    .desc = Третья часть логотипа великой корпорации!

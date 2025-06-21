@@ -8,8 +8,10 @@
     ClothingUniformJumpsuitCentcomOfficer: 3
     ClothingUniformJumpsuitCentcomOfficial: 3
     ClothingUniformJumpsuitCentcomAgent: 3
+    # Lust-Start
     ClothingUniformJumpsuitCentcomFormalQillu: 3
     ClothingUniformJumpskirtCentcomFormalDressQillu: 3
+    # Lust-End
     ClothingHeadHatCentcom: 3
     ClothingHeadHatCentcomcap: 3
     ClothingMaskGasCentcom: 3
