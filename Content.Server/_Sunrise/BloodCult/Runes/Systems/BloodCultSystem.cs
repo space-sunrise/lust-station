@@ -104,7 +104,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         private static EntProtoId TeleportInEffect = "CultTeleportInEffect";
         private static EntProtoId TeleportOutEffect = "CultTeleportOutEffect";
         private static EntProtoId HelmetPrototypeId = "ClothingHeadHelmetCult";
-        private static EntProtoId ArmorPrototypeId = "ClothingOuterArmorCult";
+        private static EntProtoId ArmorPrototypeId = "CultOuterArmor";
         private static EntProtoId ShoesPrototypeId = "ClothingShoesCult";
         private static EntProtoId BolaPrototypeId = "CultBola";
         private static EntProtoId CuffsPrototypeId = "CultistCuffs";

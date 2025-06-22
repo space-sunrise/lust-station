@@ -48,6 +48,8 @@ public sealed class GridDockSystem : EntitySystem
             rootUid.Value.Owner,
             shuttleComp,
             target.Value,
+            5f,
+            5f,
             priorityTag: component.PriorityTag,
             ignored: true);
     }
