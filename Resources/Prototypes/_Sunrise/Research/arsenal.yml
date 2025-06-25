@@ -104,7 +104,6 @@
   - MagazineG36Extended
   - MagazineFamasExtended
   - MagazineV31Extended
-  #- MagazineBauer127Extended
   - MagazineBR64Extended
   - MagazineDragunovExtended
 
@@ -120,6 +119,7 @@
   cost: 7500
   recipeUnlocks:
   - ClothingShoesBootsMagCombat
+  - ModularReceiverAuto
   technologyPrerequisites:
   - AdvancedRiotControl
 

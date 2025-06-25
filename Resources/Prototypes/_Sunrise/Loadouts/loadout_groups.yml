@@ -225,6 +225,18 @@
   - SunriseWeaponEnergyGun
   - SunriseWeaponTaser
 
+# Security  Detective
+- type: loadoutGroup
+  id: SunriseWeaponDetective
+  name: loadout-group-security-gun
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - DetectiveWeapon
+  - DetectiveWeapon20h
+  - DetectiveWeapon50h
+  - DetectiveWeapon50h2
+
 # Security  HoS
 - type: loadoutGroup
   id: SunriseSecurityGunHos

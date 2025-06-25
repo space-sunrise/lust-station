@@ -31,7 +31,7 @@
   productEntity: ClothingBackpackDuffelWeaponSubMachineGunP90Filled
   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: p90 }
   cost:
-    Bluecrystal: 17 #C-20r Analog
+    Bluecrystal: 18 #C-20r Analog
   categories:
   - NTAutoGun
   conditions:
@@ -365,10 +365,10 @@
 
 - type: listing
   id: NTUplinkSunriseMagazineP90
-  productEntity: MagazineP90
+  productEntity: MagazineP90Extended
   icon: { sprite: _Sunrise/Interface/Misc/nt_icons.rsi, state: mag_p90 }
   cost:
-    Crystallite: 4
+    Crystallite: 6
   categories:
     - NTAmmo
   conditions:

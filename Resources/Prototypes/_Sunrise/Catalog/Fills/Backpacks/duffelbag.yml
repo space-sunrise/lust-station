@@ -70,7 +70,7 @@
     - type: StorageFill
       contents:
         - id: WeaponSubMachineGunP90
-        - id: MagazineP90
+        - id: MagazineP90Extended
           amount: 3
 
 - type: entity
