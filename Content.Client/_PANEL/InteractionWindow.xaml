@@ -1,0 +1,82 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                xmlns:customControls="clr-namespace:Content.Client.Administration.UI.CustomControls"
+                xmlns:style="clr-namespace:Content.Client.Stylesheets"
+                Title="Взаимодействия"
+                SetWidth="476"
+                MinWidth="420"
+                SetHeight="600"
+                MaxHeight="600"
+                MinHeight="600"
+                Resizable="True">
+    <PanelContainer Name="BasedPanel">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#161619"/>
+        </PanelContainer.PanelOverride>
+
+        <BoxContainer Name="BasedContainer" Orientation="Vertical" VerticalExpand="True">
+            <!-- Описания пользователя и цели -->
+            <BoxContainer Name="Descriptions" Orientation="Horizontal" MaxHeight="200" VerticalAlignment="Top">
+                <SpriteView Name = "UserSprite" Scale="3 3"/>
+                <controls:VSpacer Spacing="10"/>
+                <BoxContainer Name="UserDescription" Orientation="Vertical" HorizontalExpand="True" Margin="10" MinWidth="10"/>
+                <controls:VSpacer Spacing="10"/>
+                <BoxContainer Name="TargetDescription" Orientation="Vertical" HorizontalExpand="True" Margin="10" MinWidth="10"/>
+                <controls:VSpacer Spacing="10"/>
+                <SpriteView Name = "TargetSprite" Scale="3 3"/>
+            </BoxContainer>
+            <BoxContainer Name="ErpProgress" Orientation="Horizontal" HorizontalAlignment="Stretch" HorizontalExpand="True" MaxHeight="20" 
+                          VerticalAlignment="Top"
+                          Margin="4">
+                <ProgressBar
+                    Margin="3 3 3 3"
+                    Name="ProgressBar"
+                    MinValue="0"
+                    MaxValue="1"
+                    SetHeight="20"
+                    HorizontalExpand="True"
+                    HorizontalAlignment="Stretch">
+                </ProgressBar>
+            </BoxContainer>
+            <!-- Кнопки выбора режима -->
+            <BoxContainer Name="ModeButtons" Orientation="Horizontal" HorizontalAlignment="Stretch" MinSize="410 30" Margin="3">
+                <Button Name="InteractionButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="Взаимодействия" Margin="5"/>
+                <Button Name="DescriptionButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="Описания" Margin="5"/>
+                <Button Name="FavoriteButton" ToggleMode="True" HorizontalExpand="True" VerticalExpand="True" Text="Избранные" Margin="5"/>
+            </BoxContainer>
+
+            <!-- Разделительная линия -->
+            <controls:HLine Color="{x:Static style:StyleNano.ButtonColorDefault}" Thickness="6" Margin="5" Access="Public"/>
+
+            <!-- Список взаимодействий -->
+            <BoxContainer Name = "InteractionSelector" Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True" Access ="Public" Margin="6 6">
+                <Control MinSize="10 0" />
+                <LineEdit Name="SearchBar" PlaceHolder="Поиск..." HorizontalExpand="True" Margin="4 4" Access="Public"/>
+                <controls:ListContainer Name="InteractionListContainer"
+                        Access="Public"
+                        Toggle="False"
+                        Group="False"
+                        MinSize="100 0"/>
+            </BoxContainer>
+            <!-- Детальное описание объекта и цели -->
+            <BoxContainer Name="DescriptionContainer" VerticalExpand="True" Margin="4 0" Visible ="false"> 
+                <!-- Левая сторона (пользователь) -->
+                <BoxContainer Name="DescriptionLeft" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Name="UserName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalExpand="True" HorizontalAlignment="Center"/>
+                    </BoxContainer>
+                </BoxContainer>
+                <customControls:HSeparator StyleClasses="LowDivider" />
+                <!-- Правая сторона (цель) -->
+                <BoxContainer Name="DescriptionRight" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True">
+                    <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
+                        <Label Name="TargetName" Text="Урист Макчеловек" VerticalAlignment="Top" HorizontalExpand="True" HorizontalAlignment="Center"/>
+                    </BoxContainer>
+                </BoxContainer>
+            </BoxContainer>
+
+        </BoxContainer>
+    </PanelContainer>
+</controls:FancyWindow>
