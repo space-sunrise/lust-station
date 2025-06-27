@@ -1,4 +1,4 @@
-﻿name: Publish Mapping
+﻿name: Publish Stable
 
 concurrency:
   group: publish-mapping
