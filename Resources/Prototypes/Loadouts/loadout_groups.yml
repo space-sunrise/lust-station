@@ -1259,6 +1259,7 @@
   minLimit: 0
   loadouts:
   - DetectiveTie
+  - DetectiveTieHorrific #Sunrise-add
   - SecurityCloak # Lust Station
 
 - type: loadoutGroup
