@@ -107,7 +107,7 @@
 
 - type: loadout
   id: ChristmasBra
-  sponsorOnly: true
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
