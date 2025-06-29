@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Created by discord:bulbo44kkey for Lust Station",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "curved",
+            "directions": 4
+        },
+        {
+            "name": "twisted",
+            "directions": 4
+        },
+        {
+            "name": "sheep",
+            "directions": 4
+        },
+        {
+            "name": "bull",
+            "directions": 4
+        }
+    ]
+}
