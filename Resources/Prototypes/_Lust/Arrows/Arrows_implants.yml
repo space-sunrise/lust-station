@@ -29,7 +29,7 @@
   parent: BaseSubdermalImplant
   id: BlinkImplant
   name: Jump Implant
-  description: This implant lets the user break out of hand restraints up to three times before ceasing to function anymore.
+  description: Allows the user to instantly teleport to a targeted location up to three times before depleting.
   noSpawn: true
   components:
     - type: SubdermalImplant
