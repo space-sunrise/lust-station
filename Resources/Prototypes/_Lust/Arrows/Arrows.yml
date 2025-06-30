@@ -1589,7 +1589,7 @@
 
 - type: entity
   name: Carnage
-  parent: [BaseWeaponShotgun, BaseSyndicateContraband]
+  parent: [BaseItem, BaseSyndicateContraband]
   suffix: Arrows
   id: WeaponShotgunCarnage
   description: The specialized "Carnage" shotgun uses .60 caliber shotgun shells.
