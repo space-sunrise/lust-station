@@ -532,10 +532,10 @@
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 10
+        maxVol: 20
         reagents:
         - ReagentId: StimulantsArrows
-          Quantity: 10
+          Quantity: 20
 
 #МАГНИТКИ
 - type: entity
