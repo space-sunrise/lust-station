@@ -183,7 +183,7 @@
 
 - type: loadout
   id: ThighChristmasSocks
-  sponsorOnly: true
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
