@@ -126,6 +126,7 @@
   noSpawn: true
   components:
   - type: Action
+    useDelay: 90
     sound: !type:SoundPathSpecifier
       path: /Audio/Machines/Nuke/nuke_alarm.ogg
     icon:
@@ -140,7 +141,7 @@
   parent: BaseSubdermalImplant
   id: SmiteImplant
   name: Overload Implant
-  description: This implant lets the user break out of hand restraints up to three times before ceasing to function anymore.
+  description: Point your cursor at a person and activate the overload, and any electrical devices will destroy the target.
   noSpawn: true
   components:
     - type: SubdermalImplant

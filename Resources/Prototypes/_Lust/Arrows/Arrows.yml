@@ -652,7 +652,7 @@
         type: CommunicationsConsoleBoundUserInterface
   - type: Prayable
     sentMessage: prayer-chat-announcement-title-arrows
-    notifiactionPrefix: prayer-chat-announcement-notifiaction-prefix-arrows
+    notifiactionPrefix: prayer-chat-announcement-notification-prefix-arrows
     verb: prayer-verbs-arrows
     verbImage: null
   - type: CrewMonitoringServer
