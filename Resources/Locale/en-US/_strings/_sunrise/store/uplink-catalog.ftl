@@ -15,7 +15,8 @@ uplink-grenade-blast-name = Фугасная граната
 uplink-grenade-blast-desc = Фугасная граната. Совместима с "China-Lake".
 uplink-magazine-siar52-name = Магазин ПП (.25 безгильзовый)
 uplink-magazine-siar52-desc = Магазин ПП на 30 патронов. Совместим с SIAR-52.
-
+uplink-magazine-bulldog-uraniumslug-desc = Shotgun magazine with 8 shells filled with uranium slugs. Compatible with the Bulldog.
+uplink-magazine-bulldog-uranium-desc = Shotgun magazine with 8 shells filled with uranium pellet. Compatible with the Bulldog.
 ## Misc
 
 uplink-music-boombox-name = Музыкальный набор синдиката
