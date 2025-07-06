@@ -1707,9 +1707,8 @@
     raffle:
       settings: default
     requirements:
-      - !type:DepartmentTimeRequirement
-        department: Silicons
-        time: 54000
+      - !type:OverallPlaytimeRequirement
+        time: 72000
   - type: GhostTakeoverAvailable
   - type: NameIdentifier
     group: StationAi
