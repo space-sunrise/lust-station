@@ -1,5 +1,5 @@
-ent-NTDefaultCircuitBoard = плата законов (НТ Стандарт)
-    .desc = Электронная плата, содержащая набор законов НТ Стандарт.
+ent-NTDefaultCircuitBoard = плата законов (Qillu Стандарт)
+    .desc = Электронная плата, содержащая набор законов Qillu Стандарт.
 ent-AsimovCircuitBoard = плата законов (Азимов)
     .desc = Электронная плата, содержащая набор законов Азимова.
 ent-CorporateCircuitBoard = плата законов (Корпорат)
