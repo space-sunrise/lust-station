@@ -889,3 +889,23 @@
   id: 226
   time: '2025-06-10T15:20:03.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/273
+- author: darneya, Vitalitaalalita
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0427\u0412\u041A\
+      \ \"Arrows\"."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0448\u0430\u0442\u0442\
+      \u043B \u0427\u0412\u041A \"Arrows\"."
+    type: Add
+  id: 227
+  time: '2025-07-05T13:06:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/291
+- author: Kendrick
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0440\u043E\u0433\u0430 \u0430\u0440\u043A\u0430\u043D\u0430\u043C\
+      ."
+    type: Add
+  id: 228
+  time: '2025-07-06T13:31:39.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/286
