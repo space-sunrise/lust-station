@@ -108,7 +108,7 @@
 
 - type: loadout
   id: ChristmasWomanPants
-  sponsorOnly: true
+  sponsorOnly: false # Lust Station
   effects:
   - !type:GroupLoadoutEffect
     proto: WomanMoment
