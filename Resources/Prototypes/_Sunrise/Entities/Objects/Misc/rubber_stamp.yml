@@ -34,7 +34,7 @@
   components:
   - type: Stamp
     stampedName: stamp-component-stamped-name-ntrep
-    stampedColor: "#fcc032"
+    stampedColor: "#E000E0" #lust_Station-edit
     stampState: "paper_stamp-ntrep"
   - type: Sprite
     sprite: _Sunrise/Objects/Misc/stamps.rsi
@@ -67,7 +67,7 @@
   - type: Sprite
     sprite: _Sunrise/Objects/Misc/stamps.rsi
     state: stamp-adj
-    
+
 - type: entity
   name: Head of Prison rubber stamp
   parent: RubberStampBase
