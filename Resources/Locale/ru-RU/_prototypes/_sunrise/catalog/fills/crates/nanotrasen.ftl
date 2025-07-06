@@ -4,6 +4,6 @@ ent-CrateCommandNTGygaxBundle = набор Qillu "Гигакс"
 ent-CrateCommandMarauderBundle = набор Qillu "Мародёр"
     .desc = Содержит набор тяжело бронированного меха Qillu.
     .suffix = Заполненный
-ent-CrateCommandSeraphBundle = набор Qillu"Серафим"
+ent-CrateCommandSeraphBundle = набор Qillu "Серафим"
     .desc = Содержит набор элитного тяжело бронированного меха Qillu.
     .suffix = Заполненный

@@ -1,6 +1,6 @@
 ent-NotekeeperCartridge = картридж Заметки
     .desc = Программа для хранения заметок
-ent-NanoTaskCartridge = картридж QilluЗадач
+ent-NanoTaskCartridge = картридж Qillu Задач
     .desc = Программа, позволяющая вести список задач.
 ent-NewsReaderCartridge = картридж Новости
     .desc = Программа для чтения новостей
