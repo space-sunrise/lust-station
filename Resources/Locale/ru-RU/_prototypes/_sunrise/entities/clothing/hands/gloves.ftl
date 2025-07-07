@@ -1,7 +1,7 @@
 ent-ClothingHandsGlovesAerostatic = аэростатические перчатки
     .desc = Дышащие красные перчатки для профессиональной работы с ручкой и блокнотом.
 ent-ClothingHandsGlovesCentcomNaval = перчатки флота Qillu
-    .desc = Пара высококачественных плотных перчаток, украшенных золотым шитьём, которые выдаются командующим флотом Nanotrasen.
+    .desc = Пара высококачественных плотных перчаток, украшенных золотым шитьём, которые выдаются командующим флотом Qillu.
 ent-ClothingHandsGlovesLeatherHoS = кожаные перчатки
     .desc = Стильные чёрные кожаные перчатки.
 ent-ClothingHandsGlovesNitrileBlack = чёрные нитриловые перчатки

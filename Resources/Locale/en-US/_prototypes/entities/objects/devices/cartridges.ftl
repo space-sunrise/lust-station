@@ -1,6 +1,6 @@
 ent-NotekeeperCartridge = notekeeper cartridge
     .desc = A program for keeping notes.
-ent-NanoTaskCartridge = NanoTask cartridge
+ent-NanoTaskCartridge = Qillu cartridge
     .desc = A program that allows you to keep a list of tasks to do.
 ent-NewsReaderCartridge = news cartridge
     .desc = A program for reading news.

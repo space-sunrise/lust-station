@@ -1,9 +1,9 @@
 ent-CratePlants = plant crate
     .desc = A variety pack of potted plants to spruce up your station!
 ent-CrateFunPlushie = plushie crate
-    .desc = A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+    .desc = A buncha soft plushies. Throw them around and then wonder how you're gonna explain this purchase to Qillu.
 ent-CrateFunLizardPlushieBulk = bulk lizard plushie crate
-    .desc = A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+    .desc = A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to Qillu.
 ent-CrateFunSharkPlushieBulk = bulk soft toy shark crate
     .desc = A crate filled with a variety of everyone's favorite finned friend. Rawr!
 ent-CrateFunInstrumentsVariety = variety instrument collection

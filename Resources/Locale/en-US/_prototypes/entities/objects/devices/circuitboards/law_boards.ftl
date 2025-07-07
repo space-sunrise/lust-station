@@ -1,5 +1,5 @@
-ent-NTDefaultCircuitBoard = law board (NT Default)
-    .desc = An electronics board containing the NT Default lawset.
+ent-NTDefaultCircuitBoard = law board (Qillu Default)
+    .desc = An electronics board containing the Qillu Default lawset.
 ent-AsimovCircuitBoard = law board (Crewsimov)
     .desc = An electronics board containing the Crewsimov lawset.
 ent-CorporateCircuitBoard = law board (Corporate)
