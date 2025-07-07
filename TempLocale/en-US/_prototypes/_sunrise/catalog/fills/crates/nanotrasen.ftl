@@ -1,0 +1,9 @@
+ent-CrateCommandNTGygaxBundle = Qillu gygax bundle
+    .desc = Contains a set of Qillu light armored mechs.
+    .suffix = Filled
+ent-CrateCommandMarauderBundle = Qillu Marauder Bundle
+    .desc = Contains a set of Qillu heavy armored mechs.
+    .suffix = Filled
+ent-CrateCommandSeraphBundle = Qillu Seraph Bundle
+    .desc = Contains a set of Qillu elite heavy armored mechs.
+    .suffix = Filled

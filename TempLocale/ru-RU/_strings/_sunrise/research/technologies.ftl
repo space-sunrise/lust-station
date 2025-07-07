@@ -1,0 +1,12 @@
+research-discipline-biochemical = Биохимия
+research-technology-basic-surgery = Базовая хирургия
+research-technology-basic-cyberlimbs = Базовые кибер-конечности
+research-technology-implant-extractor = Извлечение имплантов
+research-technology-advanced-surgery = Продвинутая хирургия
+research-technology-handcraft-nvd = Кустарные ПНВ
+research-technology-basic-nvd = Продвинутое ПНВ
+research-technology-basic-thermals = Термальные Сканеры
+research-technology-extended-amunitions = Расширенные магазины
+research-technology-phazon = Фазон
+research-technology-cargo-bluespace-equipment = Блюспейс экипировка карго
+research-technology-medical-hyposprays = Гипоспреи

@@ -1,0 +1,17 @@
+ent-ClothingBeltSyndieWebbing = syndie webbing
+    .desc = Pretty roomy ammunition storage.
+ent-ClothingBeltBlueShieldWebbing = blueshield's webbing
+    .desc = Blue?!
+ent-ClothingBeltPrisonGuardianFilled = { ent-ClothingBeltSecurity }
+    .suffix = Filled
+    .desc = { ent-ClothingBeltSecurity.desc }
+ent-ClothingBeltHoS = head of security's belt
+    .desc = A security belt, but made of quality material.
+ent-ClothingBeltMedicalCMO = CMO's medical belt
+    .desc = A sterile belt with many pockets for pills and other medications, emphasizing that you should treat with style.
+ent-ClothingBeltReaperWebbing = chest rig
+    .desc = A set of tactical webbing worn by Syndicate boarding parties.
+ent-ClothingBeltSheathSyndicate = rapier sheath
+    .desc = A sinister, thin sheath, suitable for a rapier.
+ent-ClothingBeltMilitaryWebbingMedSunrise = medical chest rig
+    .desc = A set of tactical webbing worn by Gorlex Marauder medic operatives have additional layer of durathread for keeping chemical inside safety.

@@ -1,0 +1,12 @@
+ent-LockerBlueShieldOfficerFilled = { ent-LockerBlueShield }
+    .suffix = Filled
+    .desc = { ent-LockerBlueShield.desc }
+ent-LockerBlueShieldEnsignFilled = { ent-LockerBlueShieldEnsign }
+    .suffix = Ensign, Filled
+    .desc = { ent-LockerBlueShieldEnsign.desc }
+ent-LockerBlueshieldFilled = { ent-LockerBlueshield }
+    .suffix = Filled
+    .desc = { ent-LockerBlueshield.desc }
+ent-LockerBlueshieldFilledUplink = { ent-LockerBlueshield }
+    .suffix = Filled, Uplink
+    .desc = { ent-LockerBlueshield.desc }

@@ -1,0 +1,16 @@
+ent-ClothingBackpackBattleHoSPack = HoS's battle backpack
+    .desc = On style.
+ent-ClothingBackpackBlackCap = black captain backpack
+    .desc = On style.
+ent-ClothingBackpackFormalAd = formal adjutant backpack
+    .desc = On style.
+ent-ClothingFormalCEBackpack = formal CE backpack
+    .desc = Working style.
+ent-ClothingFormalCMOBackpack = formal CMO backpack
+    .desc = There may be something in this backpack that will save the lives of the crew!
+ent-ClothingFormalQMBackpack = formal QM backpack
+    .desc = Obviously a very roomy backpack
+ent-ClothingFormalWardenBackpack = formal warden backpack
+    .desc = If you try hard, you can carry half of the armory in this backpack.
+ent-ClothingBackpackWhiteCap = white captain backpack
+    .desc = On style.
