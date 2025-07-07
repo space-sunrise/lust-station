@@ -19,7 +19,7 @@ def process_ftl_files(locale_dir: Path):
         for pattern, replacement in REPLACEMENTS.items():
             content = re.sub(pattern, replacement, content)
         file_path.write_text(content, encoding="utf-8")
-    print(f"✅ Обработка завершена для {locale_dir}")
+    print(f"Обработка завершена для {locale_dir}")
 
 if __name__ == "__main__":
     if "--path" in sys.argv:
