@@ -1,1 +1,1 @@
-chat-radio-UGE = Government of the Earth
+chat-radio-UGE = United Government of Earth
