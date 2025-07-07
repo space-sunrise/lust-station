@@ -1,3 +1,6 @@
 ent-ClothingHeadsetCommaid =
     гарнитура горничной командования
-    { ent-ClothingHeadset.desc }
+    .desc = Гарнитура Горничной Командования.
+
+ent-ClothingHeadsetUGE = гарнитура Правительства Земли
+    .desc = Иногда в ушах начинает звенеть от тишины, вам стоит рассказать шутку.
