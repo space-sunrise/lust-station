@@ -1,0 +1,103 @@
+- type: entity
+  parent: BaseAction
+  id: SandevistanToggleAction
+  name: '[color=green]Toggle Sandevistan[/color]'
+  description: Turn the Sandevistan implant
+  components:
+  - type: Action
+    icon: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon }
+    iconOn: { sprite: Interface/Actions/actions_fakemindshield.rsi, state: icon-on }
+    itemIconStyle: NoItem
+    useDelay: 1
+  - type: InstantAction
+    event: !type:SandevistanToggleEvent
+  - type: Tag
+    tags:
+    - SandevistanImplant
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: SandevistanImplant
+  name: Sandevistan implant
+  description: This implant allows the implanter to move and act at highest heart rate.
+  categories: [ HideSpawnMenu ]
+  components:
+      - type: SubdermalImplant
+        implantAction: SandevistanToggleAction
+      - type: SandevistanImplant
+
+- type: entity
+  id: SandevistanImplanter
+  name: Sandevistan implant
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: SandevistanImplant
+
+
+- type: entity
+  parent: [BaseImplantAction, BaseSuicideAction]
+  id: ActionActivateDeathTeleporter
+  name: Activate Death-teleporter
+  description: Activates your death-teleporter.
+  components:
+  - type: Action
+    itemIconStyle: BigAction
+    priority: -20
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: DeathTeleporterImplant
+  name: death-teleporter implant
+  description: This implant teleport the user and their equipment upon death.
+  #categories: [ HideSpawnMenu ] Sunrsie-Edit
+  components:
+  - type: SubdermalImplant
+    #permanent: true Sunrsie-Edit
+    implantAction: ActionActivateDeathTeleporter
+  - type: TriggerOnMobstateChange
+    mobState:
+      - Dead
+  - type: EmitSoundOnTrigger
+    sound: /Audio/Magic/ethereal_enter.ogg
+  - type: TriggerImplantAction
+  - type: SpawnOnTrigger
+    proto: EffectDesynchronizerTeleport
+  - type: Tag
+    tags:
+    - SubdermalImplant
+    - DeathAcidifier
+  - type: DeleteParentOnTrigger
+
+- type: entity
+  id: DeathTeleporterImplanter
+  name: death-teleporter implant
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: DeathTeleporterImplant
+
+- type: entity
+  id: EffectDesynchronizerTeleport
+  parent: Acidifier
+  name: Emergency evacuation teleport
+  description: teleport you far away from any kind of danger.
+  components:
+  - type: Transform
+    anchored: True
+  - type: Sprite
+    drawdepth: Effects
+    noRot: true
+    layers:
+    - shader: unshaded
+      map: ["enum.EffectLayers.Unshaded"]
+      sprite: Effects/chronofield.rsi
+      state: chronofield
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Magic/ethereal_enter.ogg
+  - type: PointLight
+    color: SkyBlue
+    radius: 3
+    energy: 1
+    netsync: false
