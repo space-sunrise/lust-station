@@ -43,6 +43,9 @@
 - type: Tag
   id: Flash
 
+- type: Tag
+  id: CreepyLaugh
+
 # Catridges:
 
 - type: Tag
