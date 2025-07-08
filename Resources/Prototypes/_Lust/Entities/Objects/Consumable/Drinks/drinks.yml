@@ -1,0 +1,16 @@
+- type: entity
+  parent: DrinkGlass
+  id: DrinkSexOnTheBeachGlass
+  name: sex on the beach
+  description: A bright drink with an enticing aroma... The name speaks for itself.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+        reagents:
+        - ReagentId: SexOnTheBeach
+          Quantity: 30
+  - type: Icon
+    sprite: _Lust/Objects/Consumable/Drinks/sexonthebeach.rsi
+    state: icon
