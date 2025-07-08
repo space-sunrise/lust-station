@@ -1,4 +1,4 @@
-﻿using Content.Shared._Sunrise.Antags.Abductor;
+using Content.Shared._Sunrise.Antags.Abductor;
 using Content.Shared.Tag;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
