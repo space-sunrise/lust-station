@@ -85,7 +85,7 @@
           limit: 20
           reagents:
           - ReagentId: Nocturine
-            Quantity: 5
+            Quantity: 2.5
 
       damage: !type:ItemSwitchState
         verb: wonderprode-damage
