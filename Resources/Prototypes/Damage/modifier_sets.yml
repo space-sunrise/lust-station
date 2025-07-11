@@ -256,6 +256,7 @@
     Blunt: 0.08
     Caustic: 0.0
     Cellular: 0.0
+    Mangleness: 0.0 # Sunrise-Edit
     Cold: 0.0
     Heat: -0.5 # heat damage cauterizes wounds, but will still hurt obviously.
     Holy: 0
