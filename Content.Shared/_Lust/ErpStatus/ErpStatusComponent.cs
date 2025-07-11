@@ -1,4 +1,5 @@
 using Robust.Shared.GameStates;
+using Content.Shared.Humanoid;
 
 namespace Content.Shared._Lust.ErpStatus
 {
@@ -6,6 +7,6 @@ namespace Content.Shared._Lust.ErpStatus
     public sealed partial class ErpStatusComponent : Component
     {
         [DataField(required: true)]
-        public Humanoid.Erp Erp = Humanoid.Erp.Ask;
+        public Erp Erp = Erp.Ask;
     }
 }
