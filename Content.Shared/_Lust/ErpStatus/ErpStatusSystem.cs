@@ -3,7 +3,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 
-namespace Content.Server._Lust.ErpStatus
+namespace Content.Shared._Lust.ErpStatus
 {
     public sealed class ErpStatusSystem : EntitySystem
     {
@@ -36,7 +36,7 @@ namespace Content.Server._Lust.ErpStatus
                 Category = VerbCategory.Examine,
                 Disabled = !detailsRange,
                 Message = detailsRange ? null : Loc.GetString("erp-status-verb-disabled"),
-                Icon = new SpriteSpecifier.Texture(new ("/Textures/_Lust/Interface/ERP/heart.png"))
+                Icon = new SpriteSpecifier.Texture(new("/Textures/_Lust/Interface/ERP/heart.png"))
             };
 
             args.Verbs.Add(verb);

@@ -1,4 +1,4 @@
-﻿using Content.Server._Lust.ErpStatus;
+﻿using Content.Shared._Lust.ErpStatus;
 using Content.Server.Access.Systems;
 using Content.Server.Holiday;
 using Content.Server.Humanoid;
