@@ -345,3 +345,51 @@
         variation: 0.125
   - type: UseDelay
     delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieAsyaFartuna
+  name: Plushie Asya Fartuna
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: asya_fartuna
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
+  - type: UseDelay
+    delay: 5
+  - type: Interaction
+    erp: true
+  - type: Sex
+    sex: female
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieBlizzard
+  name: Plushie Blizzard
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: blizzard
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieRustemBrich
+  name: Plushie Rustem Brich
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: rustem_brich
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/vremya_dengi.ogg
+  - type: UseDelay
+    delay: 4
+  - type: TTS
+    voice: Sidorovich
