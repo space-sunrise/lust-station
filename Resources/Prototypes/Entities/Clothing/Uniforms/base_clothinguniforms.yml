@@ -75,23 +75,8 @@
   - type: Clothing
     slots: [innerclothing]
     femaleMask: UniformTop
-  # Lust-Start
-  - type: Tag
-    tags:
-    - ClothMade
-    - WhitelistChameleon
-    - NudeBottom
-  # Lust-End
 
-# Lust-Start
 - type: entity
   abstract: true
   parent: ClothingUniformBase
   id: ClothingUniformCommand
-  components:
-  - type: Tag
-    tags:
-    - ClothMade
-    - WhitelistChameleon
-    - CommandSuit
-  # Lust-End

@@ -336,7 +336,6 @@
     - ClothMade
     - Recyclable
     - PrisonUniform
-    - NudeBottom # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -913,5 +912,4 @@
   - type: Tag
     tags:
     - ClownSuit
-    - NudeBottom # Lust-Edit
     - WhitelistChameleon

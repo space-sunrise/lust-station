@@ -21,7 +21,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FullCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -113,7 +112,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -131,7 +129,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -149,7 +146,6 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
   - type: HideLayerClothing
     slots:
@@ -178,13 +174,6 @@
     - Snout
     - HeadTop
     - HeadSide
-  # Lust-Start
-  - type: Tag
-    tags:
-    - HamsterWearable
-    - TopCovered
-    - WhitelistChameleon
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -199,7 +188,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -265,7 +253,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FullCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -784,7 +771,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
