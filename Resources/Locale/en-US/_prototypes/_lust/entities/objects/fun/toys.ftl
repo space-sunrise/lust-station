@@ -40,5 +40,5 @@ ent-PlushieAsyaFartuna = Plushie Asya Fartuna
     .desc = { ent-BasePlushie.desc }
 ent-PlushieBlizzard = Plushie Blizzard
     .desc = { ent-BasePlushie.desc }
-ent-PlushieRustemBrich = Плюшевый Рустем Брич
+ent-PlushieRustemBrich = Плюшевый Rustem Brich
     .desc = { ent-BasePlushie.desc }

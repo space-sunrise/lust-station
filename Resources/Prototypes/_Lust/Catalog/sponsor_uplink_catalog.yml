@@ -188,6 +188,17 @@
     stock: 1
 
 - type: listing
+  id: UplinkLustArelitt
+  productEntity: PlushieArelitt
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: UplinkLustAsyaFartuna
   productEntity: PlushieAsyaFartuna
   cost:
