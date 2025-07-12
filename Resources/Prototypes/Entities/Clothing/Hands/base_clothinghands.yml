@@ -95,17 +95,3 @@
   components:
   - type: StaticPrice
     price: 275
-
-
-# Lust-Start
-- type: entity
-  abstract: true
-  parent: ClothingHandsBase
-  id: ClothingHandsSmooth
-  components:
-  - type: Tag
-    tags:
-    - ClothMade
-    - SmoothGloves
-    - WhitelistChameleon
-# Lust-End

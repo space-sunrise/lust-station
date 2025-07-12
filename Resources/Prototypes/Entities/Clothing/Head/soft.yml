@@ -18,13 +18,6 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: false
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - TopCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
@@ -46,14 +39,6 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: true
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - TopCovered
-  # Lust-End
-  
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable

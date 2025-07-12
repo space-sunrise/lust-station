@@ -13,12 +13,6 @@
     clothingVisuals:
       neck:
       - state: comm-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -35,12 +29,6 @@
     clothingVisuals:
       neck:
       - state: donk-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -57,12 +45,6 @@
     clothingVisuals:
       neck:
       - state: earth-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -79,12 +61,6 @@
     clothingVisuals:
       neck:
       - state: logistika-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -101,12 +77,6 @@
     clothingVisuals:
       neck:
       - state: med-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -123,12 +93,6 @@
     clothingVisuals:
       neck:
       - state: nakamura-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -145,12 +109,6 @@
     clothingVisuals:
       neck:
       - state: nano-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -167,12 +125,6 @@
     clothingVisuals:
       neck:
       - state: sind-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -189,12 +141,6 @@
     clothingVisuals:
       neck:
       - state: vit-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -211,9 +157,3 @@
     clothingVisuals:
       neck:
       - state: reedpin-equipped
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End

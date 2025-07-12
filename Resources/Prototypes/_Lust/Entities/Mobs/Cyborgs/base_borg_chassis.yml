@@ -21,7 +21,3 @@
       collection: FootstepCyborgSpider
       params:
         volume: -15
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female

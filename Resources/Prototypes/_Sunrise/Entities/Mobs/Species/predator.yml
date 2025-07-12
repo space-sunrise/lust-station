@@ -5,10 +5,6 @@
   name: Urist McPredator
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
   - type: Absorbable
   - type: Hunger
   - type: Icon # It will not have an icon in the adminspawn menu without this. Body parts seem fine for whatever reason.

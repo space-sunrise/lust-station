@@ -9,7 +9,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       HeadTop : HEAD
@@ -43,7 +42,6 @@
     tags:
     - WhitelistChameleon
     - SecurityHelmet
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -126,13 +124,6 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - SecurityHelmet
-    - FullCovered
-  # Lust-End
 
 #Bombsuit Helmet
 - type: entity
@@ -163,12 +154,6 @@
     - Snout
     - HeadTop
     - HeadSide
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - FullCovered
-  # Lust-End
 
 #Janitorial Bombsuit Helmet
 - type: entity
@@ -208,11 +193,6 @@
   - type: HideLayerClothing
     layers:
       Hair: HEAD
-  # Lust-Start
-  - type: Tag
-    tags:
-    - FullCovered
-  # Lust-End
 
 #Space Ninja Helmet
 - type: entity
@@ -228,7 +208,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FullCovered # Lust-Edit
   - type: IngestionBlocker
   - type: IdentityBlocker
   - type: HideLayerClothing
@@ -308,7 +287,6 @@
     tags:
     - WhitelistChameleon
     - FireHelmet
-    - FullCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -340,7 +318,6 @@
     tags:
     - WhitelistChameleon
     - FireHelmet
-    - FullCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       Hair: HEAD

@@ -11,7 +11,6 @@
   - type: Tag
     tags:
     - ClothMade
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -32,12 +31,11 @@
   - type: Tag
     tags:
     - ClothMade
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
   parent: [ClothingHeadHeadHatBaseFlipped, ClothingHeadHatCyansoft]
   id: ClothingHeadHatCyansoftFlipped
   name: cyan cap
-  
+
 

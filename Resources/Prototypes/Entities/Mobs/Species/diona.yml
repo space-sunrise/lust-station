@@ -6,8 +6,6 @@
   abstract: true
   components:
   - type: Absorbable
-  - type: Interaction
-    erp: true
   - type: HumanoidAppearance
     species: Diona
   - type: Hunger
