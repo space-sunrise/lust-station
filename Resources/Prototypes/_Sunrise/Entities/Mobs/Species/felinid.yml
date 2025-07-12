@@ -5,10 +5,6 @@
   id: MobFelinidBase
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
   - type: Absorbable
   - type: OwOAccent
   - type: Speech

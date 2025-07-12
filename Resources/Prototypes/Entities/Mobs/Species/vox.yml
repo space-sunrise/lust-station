@@ -4,8 +4,6 @@
   abstract: true
   components:
   - type: Absorbable
-  - type: Interaction
-    erp: true
   - type: Hunger
   - type: Thirst
     dehydrationDamage:

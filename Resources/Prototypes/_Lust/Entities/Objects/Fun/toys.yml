@@ -195,10 +195,6 @@
   - type: TriggerOnActivate
   - type: UseDelay
     delay: 4
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female
 
 - type: entity
   id: PlushieRandyCamble
