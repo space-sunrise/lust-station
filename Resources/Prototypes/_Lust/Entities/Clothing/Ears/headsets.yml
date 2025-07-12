@@ -13,3 +13,18 @@
     sprite: _Lust/Clothing/Ears/commaid_headset.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Ears/commaid_headset.rsi
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetUGE
+  name: United Government of Earth headset
+  description: Special headset United Government of Earth
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyUGE
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/command.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/command.rsi

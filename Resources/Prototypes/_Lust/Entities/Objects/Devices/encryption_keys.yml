@@ -1,0 +1,25 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyUGE
+  name: Encryption key "United Government of Earth"
+  description: The Earth government... You should definitely hear what they have to say.
+  components:
+  - type: EncryptionKey
+    channels:
+    - UGE
+    - MT
+    - Law
+    - CentCom
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    defaultChannel: UGE
+  - type: Sprite
+    layers:
+    - state: crypt_red
+    - state: cap_label
