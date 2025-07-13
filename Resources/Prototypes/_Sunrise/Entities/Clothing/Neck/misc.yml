@@ -10,12 +10,6 @@
     sprite: _Sunrise/Clothing/Neck/Misc/sunrisebadge.rsi
   - type: TypingIndicatorClothing
     proto: sun
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
 
 - type: entity
   parent: ClothingNeckBase

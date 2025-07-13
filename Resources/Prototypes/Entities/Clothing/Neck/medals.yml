@@ -13,7 +13,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -31,7 +30,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -47,7 +45,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -63,7 +60,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -79,7 +75,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -95,7 +90,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -111,7 +105,6 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -129,4 +122,3 @@
     tags:
       - Medal
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit

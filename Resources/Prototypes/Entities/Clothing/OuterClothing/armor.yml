@@ -23,13 +23,6 @@
         Heat: 0.80
   - type: ExplosionResistance
     damageCoefficient: 0.90
-  # Lust-Start
-  - type: Tag
-    tags:
-    - Vest
-    - NudeBottom
-    - WhitelistChameleon
-  # Lust-End
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
@@ -40,7 +33,6 @@
   - type: Tag
     tags:
     - Vest
-    - NudeBottom # Lust-Edit
     - WhitelistChameleon
   # Sunrise-End
 

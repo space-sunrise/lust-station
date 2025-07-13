@@ -8,7 +8,6 @@ using Content.Server.PDA;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
 using Content.Shared._Sunrise.SunriseCCVars;
-using Content.Shared._Sunrise.ERP.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
@@ -189,11 +188,11 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             }
             // Sunrise-End
             // Lust-Station-Start
-            EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
-            if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-            EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
-            EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
-            if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+            // EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
+            // if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
+            // EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
+            // EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+            // if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
             // Lust-Station-End
         }
 

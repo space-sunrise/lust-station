@@ -25,19 +25,6 @@
     - ClothMade
     - WhitelistChameleon
 
-# Lust-Start
-- type: entity
-  abstract: true
-  parent: ClothingHeadBase
-  id: ClothingHeadTopCovered
-  components:
-  - type: Tag
-    tags:
-      - ClothMade
-      - WhitelistChameleon
-      - FullCovered
-# Lust-End
-
 - type: entity
   abstract: true
   parent: ClothingHeadBase
@@ -117,11 +104,6 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot {}
-  # Lust-Start
-  - type: Tag
-    tags:
-    - TopCovered
-  # Lust-Start
 
 - type: entity
   abstract: true
@@ -152,7 +134,6 @@
     tags:
     - WhitelistChameleon
     - HelmetEVA
-    - FullCovered # Lust-Edit
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -201,7 +182,6 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FullCovered # Lust-Edit
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -267,11 +247,6 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2 #recharge of 2 makes total drain 1w / s so max charge is 1:1 with time. Time to fully charge should be 5 minutes. Having recharge gives light an extended flicker period which gives you some warning to return to light area.
-  # Lust-Start
-  - type: Tag
-    tags:
-    - FullCovered
-  # Lust-Start
 
 - type: entity
   abstract: true
@@ -302,8 +277,3 @@
     - Hair
     - HeadTop
     - HeadSide
-  # Lust-Start
-  - type: Tag
-    tags:
-    - TopCovered
-  # Lust-Start

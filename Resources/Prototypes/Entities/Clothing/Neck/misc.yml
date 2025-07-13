@@ -90,7 +90,7 @@
     sprite: Clothing/Neck/Misc/lawyerbadge.rsi
   - type: TypingIndicatorClothing
     proto: lawyer
-  
+
 
 - type: entity
   parent: ClothingNeckBase
@@ -107,4 +107,3 @@
     tags:
     - Trash
     - WhitelistChameleon
-    - OpenNeck # Lust-Edit

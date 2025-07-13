@@ -74,7 +74,6 @@
   - type: Tag
     tags:
     - ClothMade
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -242,7 +241,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -259,13 +257,6 @@
     proto: robot
   - type: IdentityBlocker
   - type: IngestionBlocker
-  # Lust-Start
-  - type: Tag
-    tags:
-    - ClothMade
-    - FullCovered
-    - WhitelistChameleon
-  # Lust-End
 
 - type: entity
   parent: [ClothingHeadTopCovered, BaseCommandContraband] # Lust-Edit
@@ -307,7 +298,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -325,7 +315,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -365,7 +354,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -384,7 +372,6 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
 
 - type: entity
   parent: ClothingHeadTopCovered # Lust-Edit
@@ -447,7 +434,6 @@
     - WhitelistChameleon
     - ClothMade
     - Recyclable
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -524,7 +510,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
   - type: HideLayerClothing
     layers:
@@ -685,7 +670,6 @@
     - WhitelistChameleon
     - ClothMade
     - Recyclable
-    - TopCovered # Lust-Edit
   - type: HideLayerClothing
     slots:
     - Hair
@@ -728,7 +712,6 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
     - WhitelistChameleon
 
 - type: entity
@@ -817,13 +800,6 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
-  - type: Tag
-    tags:
-    - ClothMade
-    - FullCovered
-    - WhitelistChameleon
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -841,13 +817,6 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
-  - type: Tag
-    tags:
-    - ClothMade
-    - FullCovered
-    - WhitelistChameleon
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadTopCovered # Lust-Edit
@@ -1133,13 +1102,6 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
-  - type: Tag
-    tags:
-    - ClothMade
-    - FullCovered
-    - WhitelistChameleon
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -1206,7 +1168,6 @@
   - type: Tag
     tags:
     - BrimFlatcapGrey
-    - TopCovered # Lust-Edit
   - type: Sprite
     sprite: Clothing/Head/Hats/greyflatcap.rsi
   - type: Clothing
@@ -1221,7 +1182,6 @@
   - type: Tag
     tags:
     - BrimFlatcapBrown
-    - TopCovered # Lust-Edit
   - type: Sprite
     sprite: Clothing/Head/Hats/brownflatcap.rsi
   - type: Clothing
@@ -1307,7 +1267,6 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - TopCovered # Lust-Edit
   - type: Flammable
     fireSpread: true
     canResistFire: false

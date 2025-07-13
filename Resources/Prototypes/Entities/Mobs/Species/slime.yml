@@ -5,8 +5,6 @@
   abstract: true
   components:
   - type: Absorbable
-  - type: Interaction
-    erp: true
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.3
