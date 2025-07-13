@@ -95,3 +95,13 @@
   components:
   - type: StaticPrice
     price: 275
+
+- type: entity
+  abstract: true
+  parent: ClothingHandsBase
+  id: ClothingHandsSmooth
+  components:
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

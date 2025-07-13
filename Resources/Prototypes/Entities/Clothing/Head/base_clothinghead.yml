@@ -47,6 +47,16 @@
 - type: entity
   abstract: true
   parent: ClothingHeadBase
+  id: ClothingHeadTopCovered
+  components:
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: ClothingHeadBase
   id: ClothingHeadLightBase
   name: base helmet with light
   categories: [ HideSpawnMenu ]

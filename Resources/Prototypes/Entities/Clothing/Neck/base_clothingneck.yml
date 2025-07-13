@@ -45,3 +45,13 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
+
+- type: entity
+  abstract: true
+  parent: ClothingNeckBase
+  id: ClothingCloakBase
+  components:
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon

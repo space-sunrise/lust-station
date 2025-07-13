@@ -74,7 +74,6 @@
     tags:
     - WhitelistChameleon
     - ClothMade
-    - NudeFull
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -116,7 +115,6 @@
     tags:
     - WhitelistChameleon
     - ClothMade
-    - NudeFull
 
 - type: entity
   parent: ClothingOuterWinterCoatToggleable
@@ -158,4 +156,3 @@
     tags:
     - WhitelistChameleon
     - ClothMade
-    - NudeFull
