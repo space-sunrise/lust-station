@@ -82,126 +82,142 @@
     - "%user с теплотой прижимается щекой к лицу %target"
   cooldown: 3
 
-#- type: interaction
-#  id: FaceInBoobs
-#  name: "Прижаться грудью к лицу"
-#  icon: _Lust/Interface/ERP/face_in_boobs.png
-#  appearConditions:
-#    - !type:SexCondition
-#      checkInitiator: true
-#      checkTarget: false
-#      requiredSex: [ Female ]
-#  interactionMessages:
-#    - "прижимается грудью к лицу %target"
-#    - "прижимает к своей груди лицо %target"
-#    - "погружает в свою грудь лицо %target"
-#  interactionSounds:
-#    - FacePatsSound
-#  userSex:
-#    - Female
-#  targetSex:
-#    - Unsexed
-#  erp: true
-#  lovePercentUser: 4
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  category: лицо
-#
-#- type: interaction
-#  id: FaceThighsCrush
-#  name: Стиснуть голову ляжками
-#  icon: _Lust/Interface/ERP/pussy_scissors.png
-#  interactionMessages:
-#    - с силой сжимает ляжками голову %target
-#    - крепко стискивает ляжками голову %target
-#    - полностью обхватывает ляжками голову %target
-#    - плотно сжимает ляжками голову %target
-#  interactionSounds:
-#    - path: /Audio/_Lust/ERP/clothes_rub.ogg
-#  userSex:
-#    - Unsexed
-#  targetSex:
-#    - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 5
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  userTagBlacklist:
-#    - ляжки
-#  category: лицо
-#
-#- type: interaction
-#  id: FaceSitting
-#  name: Сесть на лицо
-#  icon: _Lust/Interface/ERP/face_sitting.png
-#  interactionMessages:
-#    - нежно садится попкой на лицо %target
-#    - медленно опускает попу на лицо %target
-#    - крепко прижимается попкой к лицу %target
-#    - садится своей попкой на лицо %target
-#    - шлепается задницей на лицо %target
-#    - опускает задницу на лицо %target
-#  userSex:
-#    - Unsexed
-#  targetSex:
-#    - Unsexed
-#  erp: true
-#  lovePercentUser: 6
-#  lovePercentTarget: 3
-#  targetTagBlacklist:
-#    - попа
-#  userTagBlacklist:
-#    - лицо
-#  category: лицо
-#
-#- type: interaction
-#  id: FaceDickSlap
-#  name: Дать пощечину членом
-#  icon: _Lust/Interface/ERP/face_dick_slap.png
-#  interactionMessages:
-#    - отводит член в сторону, и шлепает им по лицу %target
-#    - отведя вбок тазом, шлепает членом по лицу %target
-#    - звонко шлепает членом по лицу %target
-#    - сочно шлепает членом по щеке %target
-#  interactionSounds:
-#    - path: /Audio/_Lust/ERP/clap2.ogg
-#  userSex:
-#    - Male
-#    - Futanari
-#  targetSex:
-#    - Unsexed
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 6
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagBlacklist:
-#    - лицо
-#  userTagBlacklist:
-#    - член
-#  category: лицо
-#
-#- type: interaction
-#  id: FaceFeet
-#  name: Поласкать лицо ступней
-#  icon: _Lust/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
-#  interactionMessages:
-#    - прижимается ступней к лицу %target
-#    - нежно гладит ступней лицо %target
-#    - проводит ступней по лицу %target
-#  interactionSounds:
-#    - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-#  userSex:
-#    - Unsexed
-#  targetSex:
-#    - Unsexed
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 3
-#  targetTagBlacklist:
-#    - лицо
-#  userTagBlacklist:
-#    - носки
-#  category: лицо
+- type: interaction
+  id: FaceInBoobs
+  name: "Прижаться грудью к лицу"
+  icon: FaceInBoobs
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Female ]
+  interactionMessages:
+    - "%user прижимается грудью к лицу %target"
+    - "%user прижимает к своей груди лицо %target"
+    - "%user погружает в свою грудь лицо %target"
+  interactionSounds:
+    - FacePatsSound
+  loveUser: 4
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: FaceThighsCrush
+  name: "Стиснуть голову ляжками"
+  icon: FaceThighsCrush
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "ляжки" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user с силой сжимает ляжками голову %target"
+    - "%user крепко стискивает ляжками голову %target"
+    - "%user полностью обхватывает ляжками голову %target"
+    - "%user плотно сжимает ляжками голову %target"
+  interactionSounds:
+    - FacePatsSound
+  loveUser: 2
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: FaceSitting
+  name: "Сесть на лицо"
+  icon: FaceSitting
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "лицо" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "попа" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно садится попкой на лицо %target"
+    - "%user медленно опускает попу на лицо %target"
+    - "%user крепко прижимается попкой к лицу %target"
+    - "%user садится своей попкой на лицо %target"
+    - "%user шлепается задницей на лицо %target"
+    - "%user опускает задницу на лицо %target"
+  loveUser: 6
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: FaceDickSlap
+  name: "Дать пощечину членом"
+  icon: FaceDickSlapIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Male, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "член" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "лицо" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user отводит член в сторону, и шлепает им по лицу %target"
+    - "%user отведя вбок тазом, шлепает членом по лицу %target"
+    - "%user звонко шлепает членом по лицу %target"
+    - "%user сочно шлепает членом по щеке %target"
+  interactionSounds:
+    - Clap2
+  loveUser: 3
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: FaceFeet
+  name: Поласкать лицо ступней
+  icon: FeetMouthIcon #возможно подкорректировать пикчу нужно
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Male, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "носки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "лицо" ]
+      requireExposed: true
+  interactionMessages:
+    - "user прижимается ступней к лицу %target"
+    - "user нежно гладит ступней лицо %target"
+    - "%user проводит ступней по лицу %target"
+  interactionSounds:
+    - FriendlyStroke
+  loveUser: 3
+  loveTarget: 3
+  cooldown: 3

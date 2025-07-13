@@ -27,3 +27,13 @@
   id: Kiss6
   name: "Чмок 6"
   sound: /Audio/_Lust/Interactions/kiss6.ogg
+
+- type: interactionSound
+  id: Clap1
+  name: "Хлопок 1"
+  sound: /Audio/_Lust/Interactions/clap1.ogg
+
+- type: interactionSound
+  id: Clap2
+  name: "Хлопок 2"
+  sound: /Audio/_Lust/Interactions/clap2.ogg
