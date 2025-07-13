@@ -1,0 +1,118 @@
+- type: interaction
+  id: FaceCheekKiss
+  name: "Чмокнуть в щёку"
+  #  icon: _Lust/Interface/ERP/cheeks_kiss.png
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "щёки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user чмокает в щёку %target"
+  #  sounds:
+  #  - path: /Audio/_Lust/ERP/kiss1.ogg
+  #  - path: /Audio/_Lust/ERP/kiss2.ogg
+  #  - path: /Audio/_Lust/ERP/kiss3.ogg
+  #  - path: /Audio/_Lust/ERP/kiss4.ogg
+  #  - path: /Audio/_Lust/ERP/kiss5.ogg
+  #  - path: /Audio/_Lust/ERP/kiss6.ogg
+  cooldown: 3
+
+- type: interaction
+  id: FaceCheeksKiss
+  name: "Расцеловать щёки"
+  #  icon: _Lust/Interface/ERP/cheeks_kiss_both.png #Звук двух поцелуев
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "щёки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user целует %target в обе щёки"
+  - "%user чмокает %target в обе щёки"
+  - "%user расцеловывает %target в обе щеки"
+  #  sounds:
+  #  - path: /Audio/_Lust/ERP/kiss1.ogg
+  #  - path: /Audio/_Lust/ERP/kiss2.ogg
+  #  - path: /Audio/_Lust/ERP/kiss3.ogg
+  #  - path: /Audio/_Lust/ERP/kiss4.ogg
+  #  - path: /Audio/_Lust/ERP/kiss5.ogg
+  #  - path: /Audio/_Lust/ERP/kiss6.ogg
+  cooldown: 3
+
+- type: interaction
+  id: FaceDickSlap
+  name: "Дать пощечину членом"
+  #  icon: _Lust/Interface/ERP/face_dick_slap.png
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "лицо" ]
+    requireExposed: true
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    RequiredSex: [ Male, Futanari ]
+  interactionMessages:
+  - "%user отводит член в сторону, и шлепает им по лицу %target"
+  - "%user отведя вбок тазом, шлепает членом по лицу %target"
+  - "%user звонко шлепает членом по лицу %target"
+  - "%user сочно шлепает членом по щеке %target"
+#  sounds:
+#  - path: /Audio/_Lust/ERP/clap2.ogg
+#  lovePercentUser: 3
+#  lovePercentTarget: 6
+
+- type: interaction
+  id: FaceFeet
+  name: "Поласкать лицо ступней"
+  #  icon: _Lust/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "носки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "лицо" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user прижимается ступней к лицу %target"
+  - "%user нежно гладит ступней лицо %target"
+  - "%user проводит ступней по лицу %target"
+#  sounds:
+#  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
+#  lovePercentUser: 3
+#  lovePercentTarget: 3

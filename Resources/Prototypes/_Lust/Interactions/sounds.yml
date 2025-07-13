@@ -1,0 +1,4 @@
+#- type: interactionSound
+#  id: FacePatsSound
+#  name: "Шорох одежды"
+#  sound: /Audio/_Sunrise/Interactions/clothes_rub.ogg
