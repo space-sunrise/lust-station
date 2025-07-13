@@ -1,4 +1,344 @@
-#- type: interactionIcon
-#  id: FaceCheeksPullIcon
-#  name: "Потискать за щёчки"
-#  icon: /Textures/_Sunrise/Interactions/cheeks_pat.png
+- type: interactionIcon
+  id: AnalFingeringIcon
+  name: "Анальный фистинг"
+  icon: /Textures/_Sunrise/Interactions/anal_fingering.png
+
+- type: interactionIcon
+  id: AnalLickIcon
+  name: "Анальный лизинг"
+  icon: /Textures/_Sunrise/Interactions/anal_lick.png
+
+- type: interactionIcon
+  id: BiteEarsIcon
+  name: "Укус ушей"
+  icon: /Textures/_Sunrise/Interactions/bite_ears.png
+
+- type: interactionIcon
+  id: BiteEarsHumanIcon
+  name: "Укус ушей (человек)"
+  icon: /Textures/_Sunrise/Interactions/bite_ears_human.png
+
+- type: interactionIcon
+  id: BiteNeckIcon
+  name: "Укус шеи"
+  icon: /Textures/_Sunrise/Interactions/bite_neck.png
+
+- type: interactionIcon
+  id: BoobsFickIcon
+  name: "Трахать грудь"
+  icon: /Textures/_Sunrise/Interactions/boobs_fick.png
+
+- type: interactionIcon
+  id: BoobsKissManyIcon
+  name: "Множество поцелуев груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_kiss_many.png
+
+- type: interactionIcon
+  id: BoobsMassageIcon
+  name: "Массаж груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_massage.png
+
+- type: interactionIcon
+  id: BoobsPawIcon
+  name: "Ласка груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_paw.png
+
+- type: interactionIcon
+  id: BoobsSlapIcon
+  name: "Пощечина по груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_slap.png
+
+- type: interactionIcon
+  id: BoobsSqueezeIcon
+  name: "Сдавливание груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_squeeze.png
+
+- type: interactionIcon
+  id: BoobsSuckIcon
+  name: "Сосание груди"
+  icon: /Textures/_Sunrise/Interactions/boobs_suck.png
+
+- type: interactionIcon
+  id: BoobsTailIcon
+  name: "Грудь (хвост)"
+  icon: /Textures/_Sunrise/Interactions/boobs_tail.png
+
+- type: interactionIcon
+  id: ButtMassageIcon
+  name: "Массаж ягодиц"
+  icon: /Textures/_Sunrise/Interactions/butt_massage.png
+
+- type: interactionIcon
+  id: ButtTailIcon
+  name: "Ягодицы (хвост)"
+  icon: /Textures/_Sunrise/Interactions/butt_tail.png
+
+- type: interactionIcon
+  id: ButtTailFuckIcon
+  name: "Трахать ягодицы (хвост)"
+  icon: /Textures/_Sunrise/Interactions/butt_tail_fuck.png
+
+- type: interactionIcon
+  id: CheeksKissBothIcon
+  name: "Поцелуй в обе щеки"
+  icon: /Textures/_Sunrise/Interactions/cheeks_kiss_both.png
+
+- type: interactionIcon
+  id: CheeksPressIcon
+  name: "Прижимание щек"
+  icon: /Textures/_Sunrise/Interactions/cheeks_press.png
+
+- type: interactionIcon
+  id: CockBlowjobIcon
+  name: "Минет"
+  icon: /Textures/_Sunrise/Interactions/cock_blowjob.png
+
+- type: interactionIcon
+  id: CockFapIcon
+  name: "Дрочить член"
+  icon: /Textures/_Sunrise/Interactions/cock_fap.png
+
+- type: interactionIcon
+  id: CockFootjobIcon
+  name: "Футбол (член)"
+  icon: /Textures/_Sunrise/Interactions/cock_footjob.png
+
+- type: interactionIcon
+  id: CockNearToAssIcon
+  name: "Член рядом с анусом"
+  icon: /Textures/_Sunrise/Interactions/cock_near_to_ass.png
+
+- type: interactionIcon
+  id: CockNearToAssTailIcon
+  name: "Член рядом с анусом (хвост)"
+  icon: /Textures/_Sunrise/Interactions/cock_near_to_ass_tail.png
+
+- type: interactionIcon
+  id: CockSlimeSexIcon
+  name: "Слизень (член) секс"
+  icon: /Textures/_Sunrise/Interactions/cock_slime_sex.png
+
+- type: interactionIcon
+  id: CockSlimeSexConIcon
+  name: "Слизень (член) секс (кон)"
+  icon: /Textures/_Sunrise/Interactions/cock_slime_sex_con.png
+
+- type: interactionIcon
+  id: CockSlimeSexVbolIcon
+  name: "Слизень (член) секс (Vbol)"
+  icon: /Textures/_Sunrise/Interactions/cock_slime_sex_vbol.png
+
+- type: interactionIcon
+  id: CockTailFapIcon
+  name: "Дрочить член (хвост)"
+  icon: /Textures/_Sunrise/Interactions/cock_tail_fap.png
+
+- type: interactionIcon
+  id: EarsKissIcon
+  name: "Поцелуй ушей"
+  icon: /Textures/_Sunrise/Interactions/ears_kiss.png
+
+- type: interactionIcon
+  id: ERP1Icon
+  name: "ERP 1"
+  icon: /Textures/_Sunrise/Interactions/ERP1.png
+
+- type: interactionIcon
+  id: ERP2Icon
+  name: "ERP 2"
+  icon: /Textures/_Sunrise/Interactions/ERP2.png
+
+- type: interactionIcon
+  id: ERP3Icon
+  name: "ERP 3"
+  icon: /Textures/_Sunrise/Interactions/ERP3.png
+
+- type: interactionIcon
+  id: ERP4Icon
+  name: "ERP 4"
+  icon: /Textures/_Sunrise/Interactions/ERP4.png
+
+- type: interactionIcon
+  id: FaceDickSlapIcon
+  name: "Пощечина членом по лицу"
+  icon: /Textures/_Sunrise/Interactions/face_dick_slap.png
+
+- type: interactionIcon
+  id: FaceInBoobsIcon
+  name: "Лицо в груди"
+  icon: /Textures/_Sunrise/Interactions/face_in_boobs.png
+
+- type: interactionIcon
+  id: FaceSittingIcon
+  name: "Сидеть на лице"
+  icon: /Textures/_Sunrise/Interactions/face_sitting.png
+
+- type: interactionIcon
+  id: FeetMouthIcon
+  name: "Ноги во рту"
+  icon: /Textures/_Sunrise/Interactions/feet_mouth.png
+
+- type: interactionIcon
+  id: FeetShoesLickIcon
+  name: "Лизать обувь"
+  icon: /Textures/_Sunrise/Interactions/feet_shoes_lick.png
+
+- type: interactionIcon
+  id: FriendlyFlyingKissIcon
+  name: "Дружеский воздушный поцелуй"
+  icon: /Textures/_Sunrise/Interactions/friendly_flying_kiss.png
+
+- type: interactionIcon
+  id: GentleKissIcon
+  name: "Нежный поцелуй"
+  icon: /Textures/_Sunrise/Interactions/gentle_kiss.png
+
+- type: interactionIcon
+  id: HairFaceFuckIcon
+  name: "Трахать лицо волосами"
+  icon: /Textures/_Sunrise/Interactions/hair_face_fuck.png
+
+- type: interactionIcon
+  id: HandsOnButtIcon
+  name: "Руки на ягодицах"
+  icon: /Textures/_Sunrise/Interactions/hands_on_butt.png
+
+- type: interactionIcon
+  id: HeartIcon
+  name: "Сердце"
+  icon: /Textures/_Sunrise/Interactions/heart.png
+
+- type: interactionIcon
+  id: HeartIconConIcon
+  name: "Сердце (кон)"
+  icon: /Textures/_Sunrise/Interactions/heart_icon_con.png
+
+- type: interactionIcon
+  id: HornsAssFemaleIcon
+  name: "Рога (женская задница)"
+  icon: /Textures/_Sunrise/Interactions/horns_ass_female.png
+
+- type: interactionIcon
+  id: HornsBlowjobFemaleIcon
+  name: "Рога (женский минет)"
+  icon: /Textures/_Sunrise/Interactions/horns_blowjob_female.png
+
+- type: interactionIcon
+  id: KissButtIcon
+  name: "Поцелуй ягодиц"
+  icon: /Textures/_Sunrise/Interactions/kiss_butt.png
+
+- type: interactionIcon
+  id: KissHandIcon
+  name: "Поцелуй руки"
+  icon: /Textures/_Sunrise/Interactions/kiss_hand.png
+
+- type: interactionIcon
+  id: KissLipsIcon
+  name: "Поцелуй в губы"
+  icon: /Textures/_Sunrise/Interactions/kiss_lips.png
+
+- type: interactionIcon
+  id: KissNeckIcon
+  name: "Поцелуй в шею"
+  icon: /Textures/_Sunrise/Interactions/kiss_neck.png
+
+- type: interactionIcon
+  id: KittyIcon
+  name: "Китти"
+  icon: /Textures/_Sunrise/Interactions/kitty.png
+
+- type: interactionIcon
+  id: LegsCockFuckIcon
+  name: "Трахать член ногами"
+  icon: /Textures/_Sunrise/Interactions/legs_cock_fuck.png
+
+- type: interactionIcon
+  id: LegsCockFuckTailIcon
+  name: "Трахать член ногами (хвост)"
+  icon: /Textures/_Sunrise/Interactions/legs_cock_fuck_tail.png
+
+- type: interactionIcon
+  id: LegsLickIcon
+  name: "Лизать ноги"
+  icon: /Textures/_Sunrise/Interactions/legs_lick.png
+
+- type: interactionIcon
+  id: LegsStrokeBetweenIcon
+  name: "Поглаживание между ногами"
+  icon: /Textures/_Sunrise/Interactions/legs_stroke_between.png
+
+- type: interactionIcon
+  id: LickNeckIcon
+  name: "Лизать шею"
+  icon: /Textures/_Sunrise/Interactions/lick_neck.png
+
+- type: interactionIcon
+  id: NuzzleNeckIcon
+  name: "Тереться носом о шею"
+  icon: /Textures/_Sunrise/Interactions/nuzzle_neck.png
+
+- type: interactionIcon
+  id: NuzzleNeckVulgaIcon
+  name: "Тереться носом о шею (вульгарно)"
+  icon: /Textures/_Sunrise/Interactions/nuzzle_neck_vulga.png
+
+- type: interactionIcon
+  id: PatEarsIcon
+  name: "Гладить уши"
+  icon: /Textures/_Sunrise/Interactions/pat_ears.png
+
+- type: interactionIcon
+  id: PatEarsHumanIcon
+  name: "Гладить уши (человек)"
+  icon: /Textures/_Sunrise/Interactions/pat_ears_human.png
+
+- type: interactionIcon
+  id: PatEarsHuman2Icon
+  name: "Гладить уши (человек) 2"
+  icon: /Textures/_Sunrise/Interactions/pat_ears_human_2.png
+
+- type: interactionIcon
+  id: PlayfulNibbleIcon
+  name: "Игривый укус"
+  icon: /Textures/_Sunrise/Interactions/playful_nibble.png
+
+- type: interactionIcon
+  id: PussyFingeringIcon
+  name: "Фингеринг"
+  icon: /Textures/_Sunrise/Interactions/pussy_fingering.png
+
+- type: interactionIcon
+  id: PussyLickIcon
+  name: "Лизать киску"
+  icon: /Textures/_Sunrise/Interactions/pussy_lick.png
+
+- type: interactionIcon
+  id: PussySchsoIcon
+  name: "Шиксо"
+  icon: /Textures/_Sunrise/Interactions/pussy_schso.png
+
+- type: interactionIcon
+  id: PussyTailFuckIcon
+  name: "Трахать киску (хвост)"
+  icon: /Textures/_Sunrise/Interactions/pussy_tail_fuck.png
+
+- type: interactionIcon
+  id: PussyTouchIcon
+  name: "Трогать киску"
+  icon: /Textures/_Sunrise/Interactions/pussy_touch.png
+
+- type: interactionIcon
+  id: SlapButtIcon
+  name: "Шлепок по ягодицам"
+  icon: /Textures/_Sunrise/Interactions/slap_butt.png
+
+- type: interactionIcon
+  id: ToyButtIcon
+  name: "Игрушка (ягодицы)"
+  icon: /Textures/_Sunrise/Interactions/toy_butt.png
+
+- type: interactionIcon
+  id: ToyPussyIcon
+  name: "Игрушка (киска)"
+  icon: /Textures/_Sunrise/Interactions/toy_pussy.png
