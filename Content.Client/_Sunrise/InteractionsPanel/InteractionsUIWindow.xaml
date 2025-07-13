@@ -8,14 +8,14 @@
 
     <PanelContainer>
         <PanelContainer.PanelOverride>
-            <gfx:StyleBoxFlat BackgroundColor="#0f1419"/>
+            <gfx:StyleBoxFlat BackgroundColor="#1a0f1a"/>
         </PanelContainer.PanelOverride>
 
         <BoxContainer Orientation="Vertical" Margin="0">
 
             <PanelContainer Name="TopUserInfoBox" Margin="6 4 6 0">
                 <PanelContainer.PanelOverride>
-                    <gfx:StyleBoxFlat BackgroundColor="#1a2332"/>
+                    <gfx:StyleBoxFlat BackgroundColor="#231a23"/>
                 </PanelContainer.PanelOverride>
 
                 <BoxContainer Orientation="Horizontal"
@@ -27,7 +27,7 @@
 
                     <PanelContainer Margin="0 0 8 0">
                         <PanelContainer.PanelOverride>
-                            <gfx:StyleBoxFlat BackgroundColor="#243340"/>
+                            <gfx:StyleBoxFlat BackgroundColor="#332433"/>
                         </PanelContainer.PanelOverride>
 
                         <BoxContainer Orientation="Vertical"
@@ -36,7 +36,7 @@
 
                             <PanelContainer Margin="0 0 0 6">
                                 <PanelContainer.PanelOverride>
-                                    <gfx:StyleBoxFlat BackgroundColor="#2c4455"/>
+                                    <gfx:StyleBoxFlat BackgroundColor="#442c44"/>
                                 </PanelContainer.PanelOverride>
 
                                 <SpriteView Name="UserSpriteView"
@@ -47,7 +47,7 @@
                             </PanelContainer>
 
                             <Label Name="NameUser"
-                                FontColorOverride="#00d4ff"
+                                   FontColorOverride="#ff69b4"
                                 HorizontalAlignment="Center"
                                 StyleClasses="LabelSubText"
                                 Margin="0 4 0 0" MaxSize="142 124" MaxWidth="140" />
@@ -63,7 +63,7 @@
 
                     <PanelContainer Name="TargetContainer" Margin="8 0 0 0">
                         <PanelContainer.PanelOverride>
-                            <gfx:StyleBoxFlat BackgroundColor="#243340"/>
+                            <gfx:StyleBoxFlat BackgroundColor="#332433"/>
                         </PanelContainer.PanelOverride>
 
                         <BoxContainer Orientation="Vertical"
@@ -72,7 +72,7 @@
 
                             <PanelContainer Margin="0 0 0 6">
                                 <PanelContainer.PanelOverride>
-                                    <gfx:StyleBoxFlat BackgroundColor="#2c4455"/>
+                                    <gfx:StyleBoxFlat BackgroundColor="#442c44"/>
                                 </PanelContainer.PanelOverride>
 
                                 <SpriteView Name="TargetSpriteView"
@@ -83,7 +83,7 @@
                             </PanelContainer>
 
                             <Label Name="NameTarget"
-                                   FontColorOverride="#00d4ff"
+                                   FontColorOverride="#ff69b4"
                                    HorizontalAlignment="Center"
                                    StyleClasses="LabelSubText"
                                    Margin="0 4 0 0" MaxSize="142 124" MaxWidth="142" />
@@ -102,7 +102,7 @@
 
                 <PanelContainer>
                     <PanelContainer.PanelOverride>
-                        <gfx:StyleBoxFlat BackgroundColor="#1a2332"/>
+                        <gfx:StyleBoxFlat BackgroundColor="#231a23"/>
                     </PanelContainer.PanelOverride>
 
                     <BoxContainer Orientation="Vertical" Margin="0">
@@ -131,7 +131,7 @@
 
                 <PanelContainer Margin="0 0 0 0">
                     <PanelContainer.PanelOverride>
-                        <gfx:StyleBoxFlat BackgroundColor="#1a2332"/>
+                        <gfx:StyleBoxFlat BackgroundColor="#231a23"/>
                     </PanelContainer.PanelOverride>
 
                     <BoxContainer Orientation="Vertical" Margin="0">
@@ -172,13 +172,13 @@
 
                 <PanelContainer>
                     <PanelContainer.PanelOverride>
-                        <gfx:StyleBoxFlat BackgroundColor="#1a2332"/>
+                        <gfx:StyleBoxFlat BackgroundColor="#231a23"/>
                     </PanelContainer.PanelOverride>
 
                     <BoxContainer Orientation="Vertical" Margin="0">
 
                         <Label Text="⚙ НАСТРОЙКИ"
-                               FontColorOverride="#00d4ff"
+                               FontColorOverride="#ff69b4"
                                HorizontalAlignment="Center"
                                StyleClasses="LabelHeading"
                                Margin="0 10"/>
@@ -191,10 +191,10 @@
                                           Margin="0 0 8 0"/>
                                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                                     <Label Text="Разрешить другим видеть ваши действия?"
-                                           FontColorOverride="#b8e6ff"
+                                           FontColorOverride="#ffb6c1"
                                            VerticalAlignment="Center"/>
                                     <Label Text="Выключено: только вы и партнер видите действия.&#10;Включено: все игроки поблизости видят эмоуты."
-                                           FontColorOverride="#7a9db3"
+                                           FontColorOverride="#b39db3"
                                            StyleClasses="LabelSubText"
                                            Margin="0 2 0 0"
                                            MaxWidth="320"/>
@@ -207,10 +207,10 @@
                                           Margin="0 0 8 0"/>
                                 <BoxContainer Orientation="Vertical" HorizontalExpand="True">
                                     <Label Text="Скрыть верхнюю панель с персонажами?"
-                                           FontColorOverride="#b8e6ff"
+                                           FontColorOverride="#ffb6c1"
                                            VerticalAlignment="Center"/>
                                     <Label Text="Позволяет освободить больше места под &#10; взаимодействия."
-                                           FontColorOverride="#7a9db3"
+                                           FontColorOverride="#b39db3"
                                            StyleClasses="LabelSubText"
                                            Margin="0 2 0 0"
                                            MaxWidth="320"/>

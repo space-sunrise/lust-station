@@ -37,16 +37,16 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
 
     #region Color Scheme
 
-    private static readonly Color PrimaryColor = new Color(0, 212, 255);      // #00d4ff
-    private static readonly Color SecondaryColor = new Color(184, 230, 255);   // #b8e6ff
-    private static readonly Color BackgroundMedium = new Color(26, 35, 50);    // #1a2332
-    private static readonly Color BackgroundLight = new Color(36, 51, 64);     // #243340
-    private static readonly Color BackgroundHighlight = new Color(44, 68, 85); // #2c4455
-    private static readonly Color ErrorColor = new Color(255, 69, 58);         // #ff453a
-    private static readonly Color SuccessColor = new Color(48, 209, 88);       // #30d158
-    private static readonly Color TextMuted = new Color(142, 142, 147);        // #8e8e93
-    private static readonly Color FavoriteColor = new Color(255, 214, 10);     // #ffd60a
-    private static readonly Color FavoriteHoverColor = new Color(255, 180, 0); // #ffb400
+    private static readonly Color PrimaryColor = new Color(255, 105, 180);      // #ff69b4 - яркий розовый
+    private static readonly Color SecondaryColor = new Color(255, 182, 193);    // #ffb6c1 - светло-розовый
+    private static readonly Color BackgroundMedium = new Color(35, 26, 35);     // #231a23 - темный с розовым
+    private static readonly Color BackgroundLight = new Color(51, 36, 51);      // #332433 - серо-розовый
+    private static readonly Color BackgroundHighlight = new Color(68, 44, 68);  // #442c44 - светло-серо-розовый
+    private static readonly Color ErrorColor = new Color(255, 69, 58);          // #ff453a - оставляем красный
+    private static readonly Color SuccessColor = new Color(255, 105, 180);      // #ff69b4 - розовый вместо зеленого
+    private static readonly Color TextMuted = new Color(147, 142, 147);         // #938e93 - серый с розовым
+    private static readonly Color FavoriteColor = new Color(255, 215, 0);       // #ffd700 - золотой
+    private static readonly Color FavoriteHoverColor = new Color(255, 185, 15); // #ffb90f - темнее золотого
 
     #endregion
 
@@ -1008,7 +1008,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         var categoryLabel = new Label
         {
             Text = $"Категория: {GetCategoryName(interaction.CategoryId)}",
-            FontColorOverride = new Color(208, 166, 92)
+            FontColorOverride = new Color(255, 192, 203)
         };
 
         categoryBox.AddChild(categoryLabel);
