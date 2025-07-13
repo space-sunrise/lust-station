@@ -44,6 +44,7 @@
     - Flip # Sunrise-Edit
     - Fall # Sunrise-Edit
   - type: EmoteAnimation # Sunrise-Edit
+  - type: Interactions
   - type: MobState
     allowedStates:
     - Alive

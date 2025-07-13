@@ -1,4 +1,5 @@
 ﻿using Content.Client._Sunrise.Contributors;
+using Content.Client._Sunrise.InteractionsPanel.Models;
 using Content.Client._Sunrise.IoC;
 using Content.Client._Sunrise.ServersHub;
 using Content.Client.Administration.Managers;
@@ -68,6 +69,7 @@ namespace Content.Client.IoC
             collection.Register<ServersHubManager>();
             collection.Register<ContributorsManager>();
             SunriseClientContentIoC.Register();
+            collection.Register<CustomInteractionService, CustomInteractionService>(true);
             // Sunrise-End
         }
     }
