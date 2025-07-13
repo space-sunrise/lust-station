@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterCoatHoSTrench
+  parent: [ClothingOuterCoatHoSTrench, AllowSuitStorageClothing]
   id: ClothingOuterArmorHoSBattleVest
   name: HoS battle vest
   description: A vest that will save your precious life
