@@ -18557,3 +18557,13 @@
     type: Fix
   id: 1251
   time: '2025-07-13T01:53:27.301069+00:00'
+- author: ReWAFFlution
+  changes:
+  - message: "3 \u043D\u043E\u0432\u044B\u0445 \u0445\u0432\u043E\u0441\u0442\u0430\
+      \ \u0434\u043B\u044F \u043B\u044E\u0434\u0435\u0439, \u0432 \u043C\u0435\u043D\
+      \u044E \u043A\u0430\u0441\u0442\u043E\u043C\u0438\u0437\u0430\u0446\u0438\u0438\
+      ."
+    type: Add
+  id: 1252
+  time: '2025-07-13T08:37:27.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2544
