@@ -16,6 +16,7 @@
   - type: Tag
     tags:
       - ClothMade
+      - TopCovered
       - WhitelistChameleon
 
 - type: entity

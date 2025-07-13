@@ -17,6 +17,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - NudeBottom
     - WhitelistChameleon
 
 - type: entity
@@ -32,6 +33,7 @@
   - type: Tag
     tags:
     - ClothMade
+    - NudeBottom
     - WhitelistChameleon
   - type: Armor
     modifiers:

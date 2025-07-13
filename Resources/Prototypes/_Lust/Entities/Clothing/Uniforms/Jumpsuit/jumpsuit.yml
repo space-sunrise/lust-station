@@ -40,6 +40,7 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+    - NudeFull
 
 - type: entity
   parent: ClothingUniformBase
@@ -163,3 +164,4 @@
     tags:
     - WhitelistChameleon
     - ClothMade
+    - NudeFull
