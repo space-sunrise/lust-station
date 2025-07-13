@@ -1,118 +1,207 @@
 - type: interaction
   id: FaceCheekKiss
   name: "Чмокнуть в щёку"
-  #  icon: _Lust/Interface/ERP/cheeks_kiss.png
+  icon: CheeksKissBothIcon
   category: Face
   appearConditions:
-  - !type:HasTargetCondition
-    allowSelfTargeting: false
-  - !type:BodyAreaTagCondition
-    checkInitiator: false
-    checkTarget: true
-    categories: [ "щёки" ]
-    requireExposed: true
-  - !type:BodyAreaTagCondition
-    checkInitiator: true
-    checkTarget: false
-    categories: [ "рот" ]
-    requireExposed: true
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
   interactionMessages:
-  - "%user чмокает в щёку %target"
-  #  sounds:
-  #  - path: /Audio/_Lust/ERP/kiss1.ogg
-  #  - path: /Audio/_Lust/ERP/kiss2.ogg
-  #  - path: /Audio/_Lust/ERP/kiss3.ogg
-  #  - path: /Audio/_Lust/ERP/kiss4.ogg
-  #  - path: /Audio/_Lust/ERP/kiss5.ogg
-  #  - path: /Audio/_Lust/ERP/kiss6.ogg
+    - "%user чмокает в щёку %target"
+  interactioninteractionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
   cooldown: 3
 
 - type: interaction
   id: FaceCheeksKiss
   name: "Расцеловать щёки"
-  #  icon: _Lust/Interface/ERP/cheeks_kiss_both.png #Звук двух поцелуев
+  icon: CheeksKissBothIcon
   category: Face
   appearConditions:
-  - !type:HasTargetCondition
-    allowSelfTargeting: false
-  - !type:BodyAreaTagCondition
-    checkInitiator: false
-    checkTarget: true
-    categories: [ "щёки" ]
-    requireExposed: true
-  - !type:BodyAreaTagCondition
-    checkInitiator: true
-    checkTarget: false
-    categories: [ "рот" ]
-    requireExposed: true
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
   interactionMessages:
-  - "%user целует %target в обе щёки"
-  - "%user чмокает %target в обе щёки"
-  - "%user расцеловывает %target в обе щеки"
-  #  sounds:
-  #  - path: /Audio/_Lust/ERP/kiss1.ogg
-  #  - path: /Audio/_Lust/ERP/kiss2.ogg
-  #  - path: /Audio/_Lust/ERP/kiss3.ogg
-  #  - path: /Audio/_Lust/ERP/kiss4.ogg
-  #  - path: /Audio/_Lust/ERP/kiss5.ogg
-  #  - path: /Audio/_Lust/ERP/kiss6.ogg
+    - "%user целует %target в обе щёки"
+    - "%user чмокает %target в обе щёки"
+    - "%user расцеловывает %target в обе щеки"
+  interactioninteractionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
   cooldown: 3
 
 - type: interaction
-  id: FaceDickSlap
-  name: "Дать пощечину членом"
-  #  icon: _Lust/Interface/ERP/face_dick_slap.png
+  id: FacePress
+  name: "Прижаться щекой к лицу"
+  icon: CheeksPressIcon
   category: Face
   appearConditions:
-  - !type:HasTargetCondition
-    allowSelfTargeting: false
-  - !type:BodyAreaTagCondition
-    checkInitiator: true
-    checkTarget: false
-    categories: [ "член" ]
-    requireExposed: true
-  - !type:BodyAreaTagCondition
-    checkInitiator: false
-    checkTarget: true
-    categories: [ "лицо" ]
-    requireExposed: true
-  - !type:SexCondition
-    checkInitiator: true
-    checkTarget: false
-    RequiredSex: [ Male, Futanari ]
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
   interactionMessages:
-  - "%user отводит член в сторону, и шлепает им по лицу %target"
-  - "%user отведя вбок тазом, шлепает членом по лицу %target"
-  - "%user звонко шлепает членом по лицу %target"
-  - "%user сочно шлепает членом по щеке %target"
-#  sounds:
-#  - path: /Audio/_Lust/ERP/clap2.ogg
+    - "%user нежно прижимается щекой к лицу %target"
+    - "%user слегка прижимается щекой к лицу %target, создавая близость"
+    - "%user с теплотой прижимается щекой к лицу %target"
+  cooldown: 3
+
+#- type: interaction
+#  id: FaceInBoobs
+#  name: "Прижаться грудью к лицу"
+#  icon: _Lust/Interface/ERP/face_in_boobs.png
+#  appearConditions:
+#    - !type:SexCondition
+#      checkInitiator: true
+#      checkTarget: false
+#      requiredSex: [ Female ]
+#  interactionMessages:
+#    - "прижимается грудью к лицу %target"
+#    - "прижимает к своей груди лицо %target"
+#    - "погружает в свою грудь лицо %target"
+#  interactionSounds:
+#    - FacePatsSound
+#  userSex:
+#    - Female
+#  targetSex:
+#    - Unsexed
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 4
+#  userMoanChance: 0
+#  targetMoanChance: 0
+#  category: лицо
+#
+#- type: interaction
+#  id: FaceThighsCrush
+#  name: Стиснуть голову ляжками
+#  icon: _Lust/Interface/ERP/pussy_scissors.png
+#  interactionMessages:
+#    - с силой сжимает ляжками голову %target
+#    - крепко стискивает ляжками голову %target
+#    - полностью обхватывает ляжками голову %target
+#    - плотно сжимает ляжками голову %target
+#  interactionSounds:
+#    - path: /Audio/_Lust/ERP/clothes_rub.ogg
+#  userSex:
+#    - Unsexed
+#  targetSex:
+#    - Unsexed
+#  erp: true
+#  lovePercentUser: 2
+#  lovePercentTarget: 5
+#  userMoanChance: 0
+#  targetMoanChance: 0
+#  userTagBlacklist:
+#    - ляжки
+#  category: лицо
+#
+#- type: interaction
+#  id: FaceSitting
+#  name: Сесть на лицо
+#  icon: _Lust/Interface/ERP/face_sitting.png
+#  interactionMessages:
+#    - нежно садится попкой на лицо %target
+#    - медленно опускает попу на лицо %target
+#    - крепко прижимается попкой к лицу %target
+#    - садится своей попкой на лицо %target
+#    - шлепается задницей на лицо %target
+#    - опускает задницу на лицо %target
+#  userSex:
+#    - Unsexed
+#  targetSex:
+#    - Unsexed
+#  erp: true
+#  lovePercentUser: 6
+#  lovePercentTarget: 3
+#  targetTagBlacklist:
+#    - попа
+#  userTagBlacklist:
+#    - лицо
+#  category: лицо
+#
+#- type: interaction
+#  id: FaceDickSlap
+#  name: Дать пощечину членом
+#  icon: _Lust/Interface/ERP/face_dick_slap.png
+#  interactionMessages:
+#    - отводит член в сторону, и шлепает им по лицу %target
+#    - отведя вбок тазом, шлепает членом по лицу %target
+#    - звонко шлепает членом по лицу %target
+#    - сочно шлепает членом по щеке %target
+#  interactionSounds:
+#    - path: /Audio/_Lust/ERP/clap2.ogg
+#  userSex:
+#    - Male
+#    - Futanari
+#  targetSex:
+#    - Unsexed
+#  erp: true
 #  lovePercentUser: 3
 #  lovePercentTarget: 6
-
-- type: interaction
-  id: FaceFeet
-  name: "Поласкать лицо ступней"
-  #  icon: _Lust/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
-  category: Face
-  appearConditions:
-  - !type:HasTargetCondition
-    allowSelfTargeting: false
-  - !type:BodyAreaTagCondition
-    checkInitiator: false
-    checkTarget: true
-    categories: [ "носки" ]
-    requireExposed: true
-  - !type:BodyAreaTagCondition
-    checkInitiator: true
-    checkTarget: false
-    categories: [ "лицо" ]
-    requireExposed: true
-  interactionMessages:
-  - "%user прижимается ступней к лицу %target"
-  - "%user нежно гладит ступней лицо %target"
-  - "%user проводит ступней по лицу %target"
-#  sounds:
-#  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
+#  userMoanChance: 0
+#  targetMoanChance: 0
+#  targetTagBlacklist:
+#    - лицо
+#  userTagBlacklist:
+#    - член
+#  category: лицо
+#
+#- type: interaction
+#  id: FaceFeet
+#  name: Поласкать лицо ступней
+#  icon: _Lust/Interface/ERP/feet_mouth.png #возможно подкорректировать пикчу нужно
+#  interactionMessages:
+#    - прижимается ступней к лицу %target
+#    - нежно гладит ступней лицо %target
+#    - проводит ступней по лицу %target
+#  interactionSounds:
+#    - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
+#  userSex:
+#    - Unsexed
+#  targetSex:
+#    - Unsexed
+#  erp: true
 #  lovePercentUser: 3
 #  lovePercentTarget: 3
+#  targetTagBlacklist:
+#    - лицо
+#  userTagBlacklist:
+#    - носки
+#  category: лицо

@@ -1,0 +1,84 @@
+﻿#- type: interaction
+#  id: FriendlyKissHand
+#  name: Поцеловать руку
+#  icon: _Lust/Interface/ERP/kiss_hand.png
+#  emotes:
+#  - берет %target за руку и целует в кисть
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: false
+#  targetTagBlacklist:
+#  - ладони
+#  userTagBlacklist:
+#  - рот
+#  category: дружба
+#
+#- type: interaction
+#  id: FriendlyFlyingKiss
+#  name: Воздушный поцелуй
+#  icon: _Lust/Interface/ERP/friendly_flying_kiss.png
+#  emotes:
+#  - посылает воздушный поцелуй %target
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: false
+#  category: дружба
+#
+#- type: interaction
+#  id: FriendlyButtSlap
+#  name: Шлёпнуть себя по жопе
+#  icon: _Lust/Interface/ERP/slap_butt.png
+#  emotes:
+#  - наотмашь шлепает себя по жопе
+#  - делает смачный шлепок по своей жопе
+#  - звонко шлёпает себя по филейной части тела
+#  - широко размахнувшись, шлёпает по своей жопе
+#  - смачно шлепает ладонью себе по заднице
+#  sounds:
+#  - path: /Audio/_Lust/ERP/clap1.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: false
+#  useSelf: true
+#  userTagBlacklist:
+#  - попа
+#  - гладкие перчатки
+#  category: дружба
+#
+#- type: interaction
+#  id: FriendlyButtTwerk
+#  name: Тверкать задницей
+#  icon: _Lust/Interface/ERP/slap_butt.png #КАРТИНКА
+#  emotes:
+#  - быстро тверкает задницей
+#  - ритмично тверкает задницей
+#  - активно тверкает задницей
+#  sounds:
+#  - path: /Audio/_Lust/ERP/clap1.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: false
+#  useSelf: true
+#  category: дружба

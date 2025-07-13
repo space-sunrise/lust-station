@@ -1,0 +1,194 @@
+﻿#- type: interaction
+#  id: GentleKiss
+#  name: Нежный поцелуй
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - нежно касается губами губ %target
+#  - слегка касается губами губ %target
+#  - в нежном поцелуе соединяется губами с %target
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 3
+#  lovePercentTarget: 3
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: QuickPeck
+#  name: Чмокнуть в губы
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - быстро чмокает %target в губы
+#  - дарит лёгкий поцелуй %target
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 1
+#  lovePercentTarget: 1
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: DeepKiss
+#  name: Глубокий поцелуй
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - глубоко целует %target, увлекаясь
+#  - страстно соединяет губы с губами %target
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 4
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: PlayfulNibble
+#  name: Куснуть за губки
+#  icon: _Lust/Interface/ERP/playful_nibble.png
+#  emotes:
+#  - игриво прикусывает губу %target
+#  - нежно кусает губу %target, добавляя страсти
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 3
+#  lovePercentTarget: 3
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: FrenchKiss
+#  name: Французский поцелуй
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - страстно целует %target с игрой языков
+#  - переплетается языками в страстном поцелуе с %target
+#  - страстно соединяет губы с губами %target
+#  - с любовью целует %target в губы
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 5
+#  lovePercentTarget: 5
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: KissLips
+#  name: Поцеловать в губы
+#  icon: _Lust/Interface/ERP/kiss_lips.png
+#  emotes:
+#  - целует %target
+#  - нежно целует %target
+#  - слегка целует %target
+#  - целует %target, заводя руку за шею и прижимая к себе
+#  - нежно целует %target, заводя руку за шею и прижимая к себе
+#  - слегка целует %target, заводя руку за шею и прижимая к себе
+#  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+#  - целует %target, заводя руку за шею
+#  - нежно целует %target, заводя руку за шею
+#  - слегка целует %target, заводя руку за шею
+#  - настойчиво целует %target, заводя руку за шею
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 2
+#  lovePercentTarget: 2
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы
+#
+#- type: interaction
+#  id: ALotOfKisses
+#  name: Одарить шквалом поцелуев
+#  icon: _Lust/Interface/ERP/friendly.png
+#  emotes:
+#  - совершает град поцелуев, ни оставляя сухого места на %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 4
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: губы

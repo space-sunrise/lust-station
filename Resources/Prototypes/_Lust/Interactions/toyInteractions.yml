@@ -1,0 +1,216 @@
+## Dildos
+#
+#- type: interaction
+#  id: ERPtoyPlaceholderDildo
+#  name: Вставить дилдо в анал
+#  inhandObject:
+#  - ERPNormalDildo
+#  - ERPDildoAvian
+#  - ERPDildoDragon
+#  - ERPDildoEquine
+#  - ERPDildoKnot
+#  - ERPDildoTentacle
+#  icon: _Lust/Interface/ERP/toy_butt.png
+#  emotes:
+#  - вставляет дилдо в анал %target
+#  - вводит дилдо в анал %target
+#  - аккуратно вставляет дилдо в анал %target
+#  - глубоко вставляет дилдо в анал %target
+#  - резко вставляет дилдо в анал %target
+#  - медленно вводит дилдо в анал %target
+#  - наслаждаясь, вставляет дилдо в анал %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  targetTagBlacklist:
+#  - анал
+#  erp: true
+#  lovePercentTarget: 8
+#  targetVirginityLoss: anal
+#
+#- type: interaction
+#  id: ERPtoyPlaceholderDildo2
+#  name: Вставить дилдо в вагину
+#  inhandObject:
+#  - ERPNormalDildo
+#  - ERPDildoAvian
+#  - ERPDildoDragon
+#  - ERPDildoEquine
+#  - ERPDildoKnot
+#  - ERPDildoTentacle
+#  icon: _Lust/Interface/ERP/toy_pussy.png
+#  emotes:
+#  - вставляет дилдо в вагину %target
+#  - вводит дилдо в вагину %target
+#  - аккуратно вставляет дилдо в вагину %target
+#  - глубоко вставляет дилдо в вагину %target
+#  - резко вставляет дилдо в вагину %target
+#  - медленно вводит дилдо в вагину %target
+#  - наслаждаясь, вставляет дилдо в вагину %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  targetTagBlacklist:
+#  - вагина
+#  erp: true
+#  lovePercentTarget: 8
+#  targetVirginityLoss: female
+#
+## Fleshflights
+#
+#- type: interaction
+#  id: ERPtoyPlaceholderFleshflight1
+#  name: Вставить член в киску
+#  inhandObject:
+#  - ERPNormalFleshlight
+#  - ERPGreenFleshlight
+#  - ERPRedFleshlight
+#  - ERPTealFleshlight
+#  - ERPYellowFleshlight
+#  - PlushieAnnaLisechanskaya
+#  icon: _Lust/Interface/ERP/toy_pussy.png
+#  emotes:
+#  - надевает киску на член %target
+#  - вставляет член %target в киску
+#  - медленно надевает киску на член %target
+#  - глубоко вставляет член %target в киску
+#  - аккуратно надевает киску на член %target
+#  - резко вставляет член %target в киску
+#  - наслаждаясь, надевает киску на член %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Futanari
+#  - Male
+#  targetTagBlacklist:
+#  - член
+#  erp: true
+#  lovePercentTarget: 8
+#
+## банан секс игрушка
+#
+#### На себе ###
+#
+#- type: interaction
+#  id: ERPSelftoyPlaceholderFleshflight1
+#  name: Вставить член в киску
+#  inhandObject:
+#  - ERPNormalFleshlight
+#  - ERPGreenFleshlight
+#  - ERPRedFleshlight
+#  - ERPTealFleshlight
+#  - ERPYellowFleshlight
+#  - PlushieAnnaLisechanskaya
+#  icon: _Lust/Interface/ERP/toy_pussy.png
+#  emotes:
+#  - надевает киску на свой член
+#  - вставляет член в киску
+#  - медленно надевает киску на член
+#  - глубоко вставляет член в киску
+#  - аккуратно надевает киску на свой член
+#  - резко вставляет свой член в киску
+#  - наслаждаясь, надевает киску на член
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Futanari
+#  - Male
+#  targetSex:
+#  - Unsexed
+#  targetTagBlacklist:
+#  - член
+#  useSelf: true
+#  erp: true
+#  lovePercentTarget: 8
+#
+#- type: interaction
+#  id: ERPSelftoyPlaceholderDildo
+#  name: Вставить дилдо в анал
+#  inhandObject:
+#  - ERPNormalDildo
+#  - ERPDildoAvian
+#  - ERPDildoDragon
+#  - ERPDildoEquine
+#  - ERPDildoKnot
+#  - ERPDildoTentacle
+#  icon: _Lust/Interface/ERP/toy_butt.png
+#  emotes:
+#  - вставляет дилдо себе в анал
+#  - вводит дилдо в свой анал
+#  - аккуратно вставляет дилдо в анал
+#  - глубоко вставляет дилдо в анал
+#  - резко вставляет дилдо в анал
+#  - медленно вводит дилдо в анал
+#  - наслаждаясь, вставляет дилдо в анал
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  targetTagBlacklist:
+#  - анал
+#  erp: true
+#  useSelf: true
+#  lovePercentTarget: 8
+#  targetVirginityLoss: anal
+#
+#- type: interaction
+#  id: ERPSelftoyPlaceholderDildo2
+#  name: Вставить дилдо в вагину
+#  inhandObject:
+#  - ERPNormalDildo
+#  - ERPDildoAvian
+#  - ERPDildoDragon
+#  - ERPDildoEquine
+#  - ERPDildoKnot
+#  - ERPDildoTentacle
+#  icon: _Lust/Interface/ERP/toy_pussy.png
+#  emotes:
+#  - вставляет дилдо в вагину
+#  - вводит дилдо в вагину
+#  - аккуратно вставляет дилдо в вагину
+#  - глубоко вставляет дилдо в вагину
+#  - резко вставляет дилдо в вагину
+#  - медленно вводит дилдо в вагину
+#  - наслаждаясь, вставляет дилдо в вагину
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Female
+#  - Futanari
+#  targetSex:
+#  - Unsexed
+#  targetTagBlacklist:
+#  - вагина
+#  erp: true
+#  useSelf: true
+#  lovePercentTarget: 8
+#  targetVirginityLoss: female

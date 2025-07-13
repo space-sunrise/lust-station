@@ -1,0 +1,356 @@
+﻿#- type: interaction
+#  id: PussyTouch
+#  name: Поласкать вагину пальцами
+#  icon: _Lust/Interface/ERP/pussy_touch.png
+#  emotes:
+#  - нежно ласкает пальчиками вагину %target
+#  - ритмично ласкает пальцами вагину %target
+#  - игриво поглаживает пальчиками вагину %target
+#  - аккуратно водит пальчиками по вагине %target
+#  - медленно ласкает пальцами вагину %target
+#  - слегка проводит пальцами по вагине %target
+#  - быстро трет пальцами вагину %target
+#  - возбужденно ласкает пальцами вагину %target
+#  - ритмично поглаживает пальцами вагину %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 8
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - гладкие перчатки
+#  category: вагина
+#
+#- type: interaction
+#  id: PussyLick
+#  name: Полизать вагину
+#  icon: _Lust/Interface/ERP/pussy_lick.png
+#  emotes:
+#  - медленно проводит языком по вагине %target
+#  - нежно вылизывает вагину %target
+#  - жадно вылизывает вагину %target
+#  - страстно вылизывает вагину %target
+#  - присасывается губами к вагине %target
+#  - причмокивая, вылизывает вагину %target
+#  - трахает своим язычком вагину %target
+#  - быстро двигает язычком в вагине %target
+#  - нежно лижет клитор %target
+#  - импульсивно лижет клитор %target
+#  - страстно вылизывает клитор %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/lick1.ogg
+#  - path: /Audio/_Lust/ERP/lick2.ogg
+#  - path: /Audio/_Lust/ERP/kiss1.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 9
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - рот
+#  category: вагина
+#
+#- type: interaction
+#  id: PussyFingering
+#  name: Трахать вагину пальцами
+#  icon: _Lust/Interface/ERP/pussy_fingering.png
+#  emotes:
+#  - медленно проникает пальцами в вагину %target
+#  - быстро трахает пальцами вагину %target
+#  - страстно долбит пальцами вагину %target
+#  - возбужденно трахает пальцами вагину %target
+#  - нежно входит пальцами в вагину %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 9
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - гладкие перчатки
+#  category: вагина
+#
+#- type: interaction
+#  id: PussyScissors
+#  name: Потереться вагинами
+#  icon: _Lust/Interface/ERP/pussy_scissors.png
+#  emotes:
+#  - нежно трется вагинами с %target
+#  - страстно трется вагинами с %target
+#  - двигает бедрами, прижимаясь вагинами с %target
+#  - возбужденно трется вагинами с %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Female
+#  - Futanari
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 9
+#  lovePercentTarget: 9
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - вагина
+#  category: вагина
+#
+#- type: interaction
+#  id: PussyFuck
+#  name: Трахать вагину членом
+#  icon: _Lust/Interface/ERP/legs_cock_fuck.png
+#  emotes:
+#  - быстро трахает членом вагину %target
+#  - жестко трахает членом вагину %target
+#  - ритмично долбит членом вагину %target
+#  - полностью входит членом в вагину %target
+#  - страстно трахает членом вагину %target
+#  - нежно вводит член в вагину %target
+#  - медленно проникает членом в вагину %target
+#  - до упора входит членов в вагину %target
+#  - медленно входит членом в вагину %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - член
+#  category: вагина
+#  targetVirginityLoss: female
+#  userVirginityLoss: male
+#
+#- type: interaction
+#  id: PussySelfTouch
+#  name: Поласкать свою вагину
+#  icon: _Lust/Interface/ERP/pussy_touch.png
+#  emotes:
+#  - нежно ласкает пальчиками свою вагину
+#  - медленно ласкает свою вагину пальцами
+#  - слегка проводит пальцами по своей вагине
+#  - быстро трет свою вагину пальцами
+#  - возбужденно ласкает свою вагину пальцами
+#  - ритмично поглаживает пальцами свою вагину
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  useSelf: true
+#  lovePercentTarget: 8
+#  userTagBlacklist:
+#  - вагина
+#  category: вагина
+#
+#- type: interaction
+#  id: PussySelfFingering
+#  name: Трахать свою вагину пальцами
+#  icon: _Lust/Interface/ERP/pussy_fingering.png
+#  emotes:
+#  - медленно проникает пальцами в свою вагину
+#  - быстро трахает пальцами свою вагину
+#  - страстно долбит пальцами свою вагину
+#  - возбужденно трахает пальцами свою вагину
+#  - нежно входит пальцами в свою вагину
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  useSelf: true
+#  lovePercentUser: 4
+#  lovePercentTarget: 9
+#  targetTagBlacklist:
+#  - вагина
+#  - гладкие перчатки
+#  category: вагина
+#
+#- type: interaction
+#  id: PussyFriction
+#  name: Тереться членом о киску
+#  icon: _Lust/Interface/ERP/ERP2.png
+#  emotes:
+#  - прислоняет член к киске %target, совершая поступальные движения вдоль неё
+#  - игриво трется членом о киску %target
+#  - заведенно двигает членом вдоль киски %target, делая ее более мокрой
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 8
+#  lovePercentTarget: 8
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - член
+#  category: вагина
+#
+#- type: interaction
+#  id: ClitorBite
+#  name: Прикусить клитор зубами
+#  icon: _Lust/Interface/ERP/ERP2.png
+#  emotes:
+#  - нежно кусает клитор %target, оставляя на нем немного слюны
+#  - прикусывает клитор %target, слегка оттягивая его на себя, в результате даруя волну незабываемого удовольствия %target
+#  - совершает серию легких укусов, заставляя клитор %target приятно побаливать
+#  - игриво покусывает клитор %target, словно подготавливая киску к чему-то большему
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 3
+#  lovePercentTarget: 7
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - рот
+#  category: вагина
+#
+#- type: interaction
+#  id: ClitorLick
+#  name: Играть с клитором язычком
+#  icon: _Lust/Interface/ERP/ERP2.png
+#  emotes:
+#  - медленно и нежно обводит круги вокруг клитора своим языком, даруя сильное удовольствие %target
+#  - играется с клитором %target, вырисовывая на нем различные узоры своим языком
+#  - игриво водит языком по клитору %target, покрывая его своей слюной
+#  sounds:
+#  - path: /Audio/_Lust/ERP/lick1.ogg
+#  - path: /Audio/_Lust/ERP/lick2.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 3
+#  lovePercentTarget: 9
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - рот
+#  category: вагина
+#
+#- type: interaction
+#  id: HoldTailPussyFuck
+#  name: Трахать в вагину держа хвост
+#  icon: _Lust/Interface/ERP/legs_cock_fuck_tail.png
+#  emotes:
+#  - быстро трахает членом вагину %target, держа за хвост
+#  - жестко трахает членом вагину %target, взяв за хвост
+#  - ухватившись за хвост - ритмично долбит членом вагину %target
+#  - полностью входит членом в вагину %target, держа за хвост
+#  - страстно трахает членом вагину %target, ухватившись за хвост
+#  - нежно вводит член в вагину %target, держа за хвост
+#  - держа за хвост - медленно проникает членом в вагину %target
+#  - до упора входит членом в вагину %target, схватившись за хвост
+#  - держа за хвост - медленно входит членом в вагину %target
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  targetTagWhitelist:
+#  - Tail
+#  targetTagBlacklist:
+#  - вагина
+#  - хвост
+#  userTagBlacklist:
+#  - член
+#  category: вагина
+#  targetVirginityLoss: female
+#  userVirginityLoss: male
+#
+#- type: interaction
+#  id: TailPussyFuck
+#  name: Проникнуть хвостом в вагину
+#  icon: _Lust/Interface/ERP/pussy_tail_fuck.png
+#  emotes:
+#  - медленно вставляет свой хвост в вагину %target
+#  - осторожно проникает своим хвостом в вагину %target
+#  - нежно поглаживает своим хвостом вагину %target
+#  - аккуратно разрабатывает своим хвостом вагину %target
+#  - плавно вставляет свой хвост в вагину %target
+#  - потихоньку засовывает свой хвост в вагину %target
+#  - проникает своим хвостом в вагину %target
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 10
+#  userTagWhitelist:
+#  - Demon
+#  targetTagBlacklist:
+#  - вагина
+#  userTagBlacklist:
+#  - хвост
+#  category: хвост
+#

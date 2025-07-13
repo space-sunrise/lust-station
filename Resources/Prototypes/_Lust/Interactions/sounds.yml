@@ -1,4 +1,29 @@
-#- type: interactionSound
-#  id: FacePatsSound
-#  name: "Шорох одежды"
-#  sound: /Audio/_Sunrise/Interactions/clothes_rub.ogg
+- type: interactionSound
+  id: Kiss1
+  name: "Чмок 1"
+  sound: /Audio/_Lust/Interactions/kiss1.ogg
+
+- type: interactionSound
+  id: Kiss2
+  name: "Чмок 2"
+  sound: /Audio/_Lust/Interactions/kiss2.ogg
+
+- type: interactionSound
+  id: Kiss3
+  name: "Чмок 3"
+  sound: /Audio/_Lust/Interactions/kiss3.ogg
+
+- type: interactionSound
+  id: Kiss4
+  name: "Чмок 4"
+  sound: /Audio/_Lust/Interactions/kiss4.ogg
+
+- type: interactionSound
+  id: Kiss5
+  name: "Чмок 5"
+  sound: /Audio/_Lust/Interactions/kiss5.ogg
+
+- type: interactionSound
+  id: Kiss6
+  name: "Чмок 6"
+  sound: /Audio/_Lust/Interactions/kiss6.ogg

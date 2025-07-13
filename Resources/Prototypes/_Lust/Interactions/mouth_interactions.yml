@@ -1,0 +1,177 @@
+﻿#- type: interaction
+#  id: MouthQuickPeck
+#  name: Чмокнуть в губы
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - чмокает в губы %target
+#  - слегка чмокает в губы %target
+#  - нежно чмокает в губы %target
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 1
+#  lovePercentTarget: 1
+#  userMoanChance: 0
+#  targetMoanChance: 0
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: рот
+#
+#- type: interaction
+#  id: MouthKissLips
+#  name: Поцеловать в губы
+#  icon: _Lust/Interface/ERP/gentle_kiss.png
+#  emotes:
+#  - целует %target
+#  - нежно целует %target
+#  - слегка целует %target
+#  - целует %target, заводя руку за шею и прижимая к себе
+#  - нежно целует %target, заводя руку за шею и прижимая к себе
+#  - слегка целует %target, заводя руку за шею и прижимая к себе
+#  - настойчиво целует %target, заводя руку за шею и прижимая к себе
+#  - целует %target, заводя руку за шею
+#  - нежно целует %target, заводя руку за шею
+#  - слегка целует %target, заводя руку за шею
+#  - настойчиво целует %target, заводя руку за шею
+#  interactionSounds:
+#    - Kiss1
+#    - Kiss2
+#    - Kiss3
+#    - Kiss4
+#    - Kiss5
+#    - Kiss6
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 2
+#  lovePercentTarget: 2
+#  userMoanChance: 0
+#  targetMoanChance: 0
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - рот
+#  category: рот
+#
+#- type: interaction
+#  id: MouthBlowjob
+#  name: Заставить отсосать
+#  icon: _Lust/Interface/ERP/cock_blowjob.png
+#  emotes:
+#  - заставляет сосать %target
+#  - заставляет делать минет %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 9
+#  lovePercentTarget: 5
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - член
+#  category: рот
+#
+#- type: interaction
+#  id: MouthFingering
+#  name: Сунуть большой палец в рот
+#  icon: _Lust/Interface/ERP/ERP2.png
+#  emotes:
+#  - засовывает большой палец в рот %target
+#  - отодвигает щеку %target своим пальцем
+#  - проникает большим пальцем в рот %target
+#  sounds:
+#  - path: /Audio/_Lust/ERP/fingerlick/fingerlick.ogg
+#  userSex:
+#  - Unsexed
+#  targetSex:
+#  - Unsexed
+#  erp: true
+#  lovePercentUser: 0
+#  lovePercentTarget: 5
+#  targetTagBlacklist:
+#  - рот
+#  userTagBlacklist:
+#  - гладкие перчатки
+#  category: рот
+#
+#- type: interaction
+#  id: MouthHairFaceFuckMale
+#  name: Трахнуть в рот схватив волосы
+#  icon: _Lust/Interface/ERP/hair_face_fuck.png
+#  emotes:
+#  - намотав на кулак волосы %target долбит членом его ротик
+#  - крепко сжав волосы %target делает себе минет его ротиком
+#  - сжимая рукой волосы %target, грубо трахает его в ротик
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Male
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 5
+#  targetTagWhitelist:
+#  - Hair
+#  targetTagBlacklist:
+#  - рот
+#  - волосы
+#  userTagBlacklist:
+#  - член
+#  category: волосы
+#
+#- type: interaction
+#  id: MouthHairFaceFuckFemale
+#  name: Трахнуть в рот схватив волосы
+#  icon: _Lust/Interface/ERP/hair_face_fuck.png
+#  emotes:
+#  - намотав на кулак волосы %target долбит членом её ротик
+#  - крепко сжав волосы %target делает себе минет её ротиком
+#  - сжимая рукой волосы %target, грубо трахает её в ротик
+#  sounds:
+#  - path: /Audio/_Lust/ERP/hlup.ogg
+#  - path: /Audio/_Lust/ERP/hlup2.ogg
+#  - path: /Audio/_Lust/ERP/hlup3.ogg
+#  - path: /Audio/_Lust/ERP/hlup4.ogg
+#  userSex:
+#  - Male
+#  - Futanari
+#  targetSex:
+#  - Female
+#  - Futanari
+#  erp: true
+#  lovePercentUser: 10
+#  lovePercentTarget: 5
+#  targetTagWhitelist:
+#  - Hair
+#  targetTagBlacklist:
+#  - рот
+#  - волосы
+#  userTagBlacklist:
+#  - член
+#  category: волосы
