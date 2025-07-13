@@ -13,7 +13,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
 
 #Syndicate EVA
@@ -31,7 +31,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
   - type: StaticPrice
     price: 1000 # Helmet is 500
@@ -80,7 +80,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
 
 #NTSRA Voidsuit / Ancient Voidsuit

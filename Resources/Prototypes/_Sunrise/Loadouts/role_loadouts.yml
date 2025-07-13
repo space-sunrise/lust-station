@@ -1,20 +1,15 @@
 - type: roleLoadout
   id: JobIAA
   groups:
-#Lust-Start
-  - IAAneck
-  - IAAuniform
-  - IAAcoat
-  - IAAback
-#Lust-End
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobMagistrat
@@ -23,11 +18,9 @@
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobNtrOfficer
@@ -40,7 +33,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobBrigmedic
@@ -55,8 +47,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
-  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobCentCommOfficial
@@ -66,11 +56,9 @@
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobCentCommOperator
@@ -80,11 +68,9 @@
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobBlueShieldEnsign
@@ -99,7 +85,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobBlueShieldOfficer
@@ -111,11 +96,9 @@
   - Trinkets
   - SurvivalSecurity
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobSeniorOfficer
@@ -133,8 +116,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
-  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobSeniorResearcher
@@ -147,11 +128,9 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobSeniorPhysician
@@ -170,7 +149,6 @@
   - MedicalTrinkets
   - Glasses
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -195,7 +173,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobSeniorEngineer
@@ -212,11 +189,9 @@
   - Trinkets
   - TrinketsEngineering
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobRoboticist
@@ -230,11 +205,9 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPrisonEngineer
@@ -247,11 +220,9 @@
   - Trinkets
   - SurvivalExtended
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPrisonPilot
@@ -263,11 +234,9 @@
   - SecurityTrinkets
   - SurvivalSecurity
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPrisonWorker
@@ -277,11 +246,9 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPrisonGuard
@@ -294,11 +261,9 @@
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobSecurityPilot
@@ -315,8 +280,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
-  - SpecialLoadout # Lust Station
 
 - type: roleLoadout
   id: JobPrisonChef
@@ -331,11 +294,9 @@
   - Survival
   - Trinkets
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPrisonDoctor
@@ -352,11 +313,9 @@
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobHeadOfPrison
@@ -369,29 +328,22 @@
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathToolSecurity
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobNanoTrasenRepresentative
   groups:
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-#Lust-Start
-  - QilluRepresentativeBackpack
-  - QilluRepresentativeNeck
-#Lust-End
+  - CommonBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobBarber
@@ -401,22 +353,18 @@
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobPlanetPrisoner
   groups:
   - PrisonerJumpsuit
   - GroupSpeciesBreathTool
-  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobAdjutant
@@ -431,7 +379,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: JobMailCarrier
@@ -448,7 +395,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
 - type: roleLoadout
   id: RoleSurvivalAssaultOps
@@ -476,7 +422,6 @@
   - Bra
   - Pants
   - Socks
-  - CommonPets
 
   # Silicons
 

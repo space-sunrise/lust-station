@@ -16,13 +16,14 @@
   - type: Tag
     tags:
     - HamsterWearable
+    - FaceCovered # INTERACTIONS
     - WhitelistChameleon
   - type: HideLayerClothing
     layers:
       Snout: Mask
     hideOnToggle: true
 
-# Lust-Start
+# SUNRISE EDIT
 - type: entity
   abstract: true
   parent: ClothingMaskGas
@@ -33,10 +34,10 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-# Lust-End
+# SUNRISE EDIT
 
 - type: entity
-  parent: [ClothingMaskGasFaceOpen, BaseSecurityContraband] # Lust-Edit
+  parent: [ClothingMaskGasFaceOpen, BaseSecurityContraband] # SUNRISE EDIT
   id: ClothingMaskGasSecurity
   name: security gas mask
   description: A standard issue Security gas mask.
@@ -352,6 +353,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
   - type: HideLayerClothing
     slots:
     - Hair
@@ -385,6 +387,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
   - type: HideLayerClothing
     slots:
     - Hair
@@ -423,6 +426,7 @@
   - type: Tag
     tags:
     - HamsterWearable
+    - FaceCovered # INTERACTIONS
     - WhitelistChameleon
   - type: HideLayerClothing
     slots:
@@ -444,6 +448,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -460,6 +470,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -476,6 +492,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -492,6 +514,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -508,6 +536,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -524,6 +558,12 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskBase
@@ -664,6 +704,10 @@
       Glass: 100
   - type: StaticPrice
     price: 100
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - FaceCovered # INTERACTIONS
 
 # Entity tables
 - type: entityTable

@@ -462,7 +462,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
             Text = interaction.Name,
             ToolTip = interaction.Description,
             HorizontalExpand = true,
-            MinHeight = 54,
+            MinHeight = 40,
+            MaxHeight = 45,
             StyleClasses = { "ButtonSquare" },
             Disabled = isOnCooldown
         };
@@ -477,8 +478,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
                 HorizontalAlignment = HAlignment.Left,
                 VerticalAlignment = VAlignment.Center,
                 Margin = new Thickness(10, 0, 10, 0),
-                MinSize = new Vector2(64, 64),
-                MaxSize = new Vector2(64, 64)
+                // MinSize = new Vector2(64, 64),
+                // MaxSize = new Vector2(64, 64)
             };
             button.AddChild(iconRect);
         }
@@ -528,8 +529,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
 
         var favoriteButton = new Button
         {
-            MinSize = new Vector2(32, 62),
-            MaxSize = new Vector2(32, 62),
+            MinSize = new Vector2(32, 45),
+            MaxSize = new Vector2(32, 45),
             StyleClasses = { "ButtonSquare" },
             Margin = new Thickness(2, 0, 0, 0),
             VerticalAlignment = VAlignment.Center
@@ -603,7 +604,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
             Text = interaction.Name,
             ToolTip = interaction.Description,
             HorizontalExpand = true,
-            MinHeight = 54,
+            MinHeight = 40,
+            MaxHeight = 45,
             StyleClasses = { "ButtonSquare" },
             Disabled = isOnCooldown,
         };
@@ -619,8 +621,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
                 HorizontalAlignment = HAlignment.Left,
                 VerticalAlignment = VAlignment.Center,
                 Margin = new Thickness(10, 0, 10, 0),
-                MinSize = new Vector2(64, 64),
-                MaxSize = new Vector2(64, 64)
+                // MinSize = new Vector2(64, 64),
+                // MaxSize = new Vector2(64, 64)
             };
             button.AddChild(iconRect);
         }
@@ -670,8 +672,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
 
         var favoriteButton = new Button
         {
-            MinSize = new Vector2(32, 62),
-            MaxSize = new Vector2(32, 62),
+            MinSize = new Vector2(32, 44),
+            MaxSize = new Vector2(32, 44),
             StyleClasses = { "ButtonSquare" },
             Margin = new Thickness(2, 0, 0, 0),
             VerticalAlignment = VAlignment.Center

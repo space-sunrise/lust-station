@@ -4,7 +4,8 @@
                xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
                Title="Interactions Panel"
-               MinSize="475 700">
+               MinSize="475 600"
+               SetSize="475 600">
 
     <PanelContainer>
         <PanelContainer.PanelOverride>
