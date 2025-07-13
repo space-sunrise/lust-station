@@ -37,3 +37,33 @@
   id: Clap2
   name: "Хлопок 2"
   sound: /Audio/_Lust/Interactions/clap2.ogg
+
+- type: interactionSound
+  id: Hlup1
+  name: "Хлюп 1"
+  sound: /Audio/_Lust/Interactions/hlup.ogg
+
+- type: interactionSound
+  id: Hlup2
+  name: "Хлюп 2"
+  sound: /Audio/_Lust/Interactions/hlup2.ogg
+
+- type: interactionSound
+  id: Hlup3
+  name: "Хлюп 3"
+  sound: /Audio/_Lust/Interactions/hlup3.ogg
+
+- type: interactionSound
+  id: Hlup1
+  name: "Хлюп 4"
+  sound: /Audio/_Lust/Interactions/hlup4.ogg
+
+- type: interactionSound
+  id: Lick1
+  name: "Лизание 1"
+  sound: /Audio/_Lust/Interactions/lick1.ogg
+
+- type: interactionSound
+  id: Lick2
+  name: "Лизание 2"
+  sound: /Audio/_Lust/Interactions/lick2.ogg
