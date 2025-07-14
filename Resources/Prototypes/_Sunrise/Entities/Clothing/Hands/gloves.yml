@@ -48,13 +48,13 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - SmoothGloves
+    - SmoothGloves # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 
 - type: entity
@@ -72,13 +72,13 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - SmoothGloves
+    - SmoothGloves # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 
 - type: entity
@@ -96,13 +96,13 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - SmoothGloves
+    - SmoothGloves # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 
 - type: entity
@@ -120,13 +120,13 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - SmoothGloves
+    - SmoothGloves # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 
 - type: entity
@@ -144,13 +144,13 @@
   - type: Fiber
     fiberMaterial: fibers-nitrile
   - type: FingerprintMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - SmoothGloves
+    - SmoothGloves # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingHandsBase

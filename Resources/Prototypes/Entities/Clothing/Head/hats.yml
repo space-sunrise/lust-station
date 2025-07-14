@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatBeaverHat
   name: beaver hat
   description: 'Gentlemen?'
@@ -62,7 +62,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSecurityTrooper
   name: trooper hat
   description: A campaign hat for the Nanotrasen Troopers, comes with a case too, but you lost it.
@@ -74,11 +74,11 @@
   - type: Tag
     tags:
     - ClothMade
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatCasa
   name: casa
   description: Cone-shaped hat.
@@ -217,7 +217,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatBowlerHat
   name: bowler hat
   description: Stylish bowler hat.
@@ -228,7 +228,7 @@
     sprite: Clothing/Head/Hats/bowler_hat.rsi
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseCommandContraband] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseCommandContraband] # SUNRISE EDIT
   id: ClothingHeadHatCaptain
   name: captain's hardhat
   description: It's good being the king.
@@ -242,7 +242,7 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
 
 - type: entity
@@ -259,16 +259,16 @@
     proto: robot
   - type: IdentityBlocker
   - type: IngestionBlocker
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - ClothMade
-    - FullCovered
+    - FullCovered # INTERACTIONS
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseCommandContraband] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseCommandContraband] # SUNRISE EDIT
   id: ClothingHeadHatCentcom
   name: CentComm brand hat
   description: "It's good to be the emperor."
@@ -279,7 +279,7 @@
     sprite: Clothing/Head/Hats/centcom.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatChef
   name: chef's hat
   description: "It's a hat used by chefs to keep hair out of your food. Judging by the food in the mess, they don't work."
@@ -307,11 +307,11 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatFedoraBrown
   name: brown fedora
   description: It's a brown fedora.
@@ -325,11 +325,11 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatFedoraGrey
   name: grey fedora
   description: It's a grey fedora.
@@ -351,7 +351,7 @@
     sprite: Clothing/Head/Hats/fez.rsi
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseCommandContraband] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseCommandContraband] # SUNRISE EDIT
   id: ClothingHeadHatHopcap
   name: head of personnel's cap
   description: A grand, stylish head of personnel's cap.
@@ -365,11 +365,11 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseCommandContraband] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseCommandContraband] # SUNRISE EDIT
   id: ClothingHeadHatHoshat
   name: head of security cap
   description: The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.
@@ -384,10 +384,10 @@
     - Recyclable
     - HamsterWearable
     - WhitelistChameleon
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatOutlawHat
   name: outlaw's hat
   description: A hat that makes you look like you carry a notched pistol, numbered one and nineteen more.
@@ -400,7 +400,7 @@
     price: 500
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatWitch1
   name: witch hat
   description: A witch hat.
@@ -422,7 +422,7 @@
     sprite: Clothing/Head/Hats/paper.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatPirate
   name: pirate hat
   description: 'Yo ho ho and a bottle of rum!'
@@ -433,7 +433,7 @@
     sprite: Clothing/Head/Hats/pirate.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatPlaguedoctor
   name: plague doctor hat
   description: These were once used by plague doctors.
@@ -447,7 +447,7 @@
     - WhitelistChameleon
     - ClothMade
     - Recyclable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
   - type: HideLayerClothing
     layers:
       Hair: HEAD
@@ -466,7 +466,7 @@
     sprite: Clothing/Head/Hats/redwizard.rsi
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseFoldable] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseFoldable] # SUNRISE EDIT
   id: ClothingHeadHatSantahat
   name: santa hat
   description: A festive hat worn by Santa Claus. Now with a foldable beard.
@@ -497,7 +497,7 @@
 
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSombrero
   name: sombrero
   description: "Perfectly for Space Mexico, si?"
@@ -510,7 +510,7 @@
     accent: SpanishAccent
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSurgcapBlue
   name: surgical cap
   description: A blue cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
@@ -524,7 +524,7 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
     - WhitelistChameleon
   - type: HideLayerClothing
     layers:
@@ -533,7 +533,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSurgcapGreen
   name: surgical cap
   description: A green cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
@@ -549,7 +549,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSurgcapPurple
   name: surgical cap
   description: A purple cap surgeons wear during operations. Keeps their hair from tickling your internal organs.
@@ -583,7 +583,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadTopCovered, BaseFoldable] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseFoldable] # SUNRISE EDIT
   id: ClothingHeadHatUshanka
   name: ushanka
   description: "Perfect for winter in Siberia, da?"
@@ -608,7 +608,7 @@
       visible: false
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatCanadaBeanie
   name: beanie
   description: Red, white and snug. It radiates a homely feeling, if your home happens to be chilly and filled with coffeehouses.
@@ -685,13 +685,13 @@
     - WhitelistChameleon
     - ClothMade
     - Recyclable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
   - type: HideLayerClothing
     slots:
     - Hair
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatWizardFake
   name: fake wizard hat
   description: It has WIZZARD written across it in sequins. Comes with a cool beard.
@@ -708,7 +708,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingHeadTopCovered, BaseMagicalContraband ] # Lust-Edit
+  parent: [ClothingHeadTopCovered, BaseMagicalContraband ] # SUNRISE EDIT
   id: ClothingHeadHatWizardBase
   components:
   - type: WizardClothes
@@ -728,7 +728,7 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # SUNRISE EDIT
     - WhitelistChameleon
 
 - type: entity
@@ -743,7 +743,7 @@
     sprite: Clothing/Head/Hats/xmascrown.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatTrucker
   name: trucker hat
   description: Formerly Chucks, this hat is yours now.
@@ -817,13 +817,13 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - ClothMade
-    - FullCovered
+    - FullCovered # INTERACTIONS
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingHeadBase
@@ -841,16 +841,16 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - ClothMade
-    - FullCovered
+    - FullCovered # INTERACTIONS
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadFishCap
   name: fishing cap
   description: Women fear me. Fish fear me. Men turn their eyes away from me. As I walk no beast dares make a sound in my presence. I am alone on this barren Earth.
@@ -861,7 +861,7 @@
     sprite: Clothing/Head/Hats/fishcap.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadWehcellentCap
   name: wehcellent cap
   description: It was a net hat! Tiders wear them all the time! It's got airholes in the back to keep a cross-breeze going and everything!
@@ -905,7 +905,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadSafari
   name: safari hat
   description: Keeps the sun out of your eyes. Makes you a target for the locals.
@@ -916,7 +916,7 @@
     sprite: Clothing/Head/Hats/safarihat.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatJester
   name: jester hat
   description: A hat with bells, to add some merriness to the suit.
@@ -927,7 +927,7 @@
       sprite: Clothing/Head/Hats/jester.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatJesterAlt
   components:
     - type: Sprite
@@ -958,7 +958,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatPirateTricord
   name: pirate hat
   description: 'Yo ho ho and a bottle of rum!'
@@ -1010,7 +1010,7 @@
     sprite: Clothing/Head/Hats/syndiecap.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatSyndieMAA
   name: master at arms hat
   description: Master at arms hat, looks intimidating, I doubt that you will like to communicate with its owner...
@@ -1032,7 +1032,7 @@
     sprite: Clothing/Head/Hats/tacticalmaidheadband.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatHetmanHat
   name: hetman hat
   description: From the Zaporozhian Sich with love.
@@ -1043,7 +1043,7 @@
     sprite: Clothing/Head/Hats/hetman_hat.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatMagician
   name: magician's tophat
   description: "A magician's tophat."
@@ -1133,13 +1133,13 @@
       Hair: HEAD
       HeadTop : HEAD
       HeadSide : HEAD
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - ClothMade
-    - FullCovered
+    - FullCovered # INTERACTIONS
     - WhitelistChameleon
-  # Lust-End
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingHeadBase
@@ -1198,7 +1198,7 @@
     sprite: Clothing/Head/Hats/party_water_cup.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatGreyFlatcap
   name: grey flatcap
   description: Fashionable for both the working class and old man Jenkins.
@@ -1206,14 +1206,14 @@
   - type: Tag
     tags:
     - BrimFlatcapGrey
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
   - type: Sprite
     sprite: Clothing/Head/Hats/greyflatcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/greyflatcap.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatBrownFlatcap
   name: brown flatcap
   description: Stupid clown! You made me look bad!
@@ -1221,14 +1221,14 @@
   - type: Tag
     tags:
     - BrimFlatcapBrown
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
   - type: Sprite
     sprite: Clothing/Head/Hats/brownflatcap.rsi
   - type: Clothing
     sprite: Clothing/Head/Hats/brownflatcap.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatCowboyBrown
   name: brown cowboy hat
   description: This hat ain't big enough for the both of us.
@@ -1292,7 +1292,7 @@
       sprite: Clothing/Head/Hats/cowboyhatbountyhunter.rsi
 
 - type: entity
-  parent: ClothingHeadTopCovered # Lust-Edit
+  parent: ClothingHeadTopCovered # SUNRISE EDIT
   id: ClothingHeadHatStrawHat
   name: straw hat
   description: A fancy hat for hot days! Not recommended to wear near fires.
@@ -1307,7 +1307,7 @@
   - type: Tag
     tags:
     - HamsterWearable
-    - TopCovered # Lust-Edit
+    - TopCovered # INTERACTIONS
   - type: Flammable
     fireSpread: true
     canResistFire: false

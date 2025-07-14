@@ -45,7 +45,8 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
-# Lust-Start
+
+  # SUNRISE EDIT
 - type: entity
   abstract: true
   parent: ClothingNeckBase
@@ -53,7 +54,7 @@
   components:
   - type: Tag
     tags:
-    - OpenNeck
+    - OpenNeck # INTERACTIONS
     - ClothMade
     - WhitelistChameleon
-# Lust-End
+# SUNRISE EDIT

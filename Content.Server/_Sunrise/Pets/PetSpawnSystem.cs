@@ -1,11 +1,12 @@
 // © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt
+
+using Content.Server._Sunrise.PlayerCache;
+using Content.Server._Sunrise.SponsorValidation;
+using Content.Shared._Sunrise.Pets;
 using Content.Shared.GameTicking;
 using Robust.Shared.Prototypes;
-using Content.Server._Sunrise.SponsorValidation;
-using Content.Server._Sunrise.PlayerCache;
-using Content.Shared._Sunrise.Pets;
 
-namespace Content.Server._Sunrise.PetSpawn;
+namespace Content.Server._Sunrise.Pets;
 
 public sealed class PetSpawnSystem : EntitySystem
 {
