@@ -39,10 +39,6 @@
   name: Рот
 
 - type: interactionCategory
-  id: Neck
-  name: Шея
-
-- type: interactionCategory
   id: Pussy
   name: Вагина
 
