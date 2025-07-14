@@ -1,23 +1,22 @@
-﻿#- type: interaction
-#  id: BoobsCuddle
-#  name: Прижаться к груди
-#  icon: _Lust/Interface/ERP/boobs.png
-#  emotes:
-#  - прижимается лицом к груди %target
-#  - утыкается лицом в грудь %target
-#  - прижимается щекой к груди %target
-#  - кладет голову на грудь %target
-#  sounds:
-#  - path: /Audio/Effects/thudswoosh.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 2
-#  category: грудь
-#
+﻿- type: interaction
+  id: BoobsCuddle
+  name: Прижаться к груди
+  icon: FaceInBoobsIcon
+  emotes:
+  - "%user прижимается лицом к груди %target"
+  - "%user утыкается лицом в грудь %target"
+  - "%user прижимается щекой к груди %target"
+  - "%user кладет голову на грудь %target"
+  sounds:
+  - path: /Audio/Effects/thudswoosh.ogg
+  userSex:
+  - Unsexed
+  targetSex:
+  - Unsexed
+  lovePercentUser: 2
+  lovePercentTarget: 2
+  category: грудь
+
 #- type: interaction
 #  id: BoobsPaw
 #  name: Полапать грудь
