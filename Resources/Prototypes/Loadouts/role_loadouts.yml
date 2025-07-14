@@ -4,6 +4,7 @@
   groups:
   - CaptainHead
   - CaptainNeck
+  - CaptainHands #Lust-Edit
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainOuterClothing
@@ -11,6 +12,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -30,6 +32,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -63,6 +66,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -81,6 +85,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -97,6 +102,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -116,6 +122,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -132,6 +139,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -149,6 +157,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -169,6 +178,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -189,6 +199,7 @@
   - JanitorPlunger
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -207,6 +218,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -226,6 +238,7 @@
   - SurvivalClown
   - Trinkets
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -246,6 +259,7 @@
   - SurvivalMime
   - Trinkets
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -264,6 +278,7 @@
   - Instruments
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -283,7 +298,7 @@
   # Sunrise-start
   - SunriseQuartermasterGloves
   # Sunrise-end
-  - CargoTechnicianBackpack
+  - CargoQuartermasterBackpack #Lust-Edit
   - QuartermasterOuterClothing
   # Sunrise-start
   - QuartermasterNeck
@@ -294,6 +309,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - TrinketsCargo
   - Bra
   - Pants
@@ -327,6 +343,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -353,6 +370,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 # Engineering
@@ -383,6 +401,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -411,6 +430,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -440,6 +460,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -468,6 +489,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 # Science
@@ -487,6 +509,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -509,6 +532,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -525,6 +549,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -537,7 +562,7 @@
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
-  - SecurityBackpack
+  - HeadofSecurityBack #Lust-Edit
   - SecurityBelt
   - HeadofSecurityOuterClothing
   - SecurityShoes
@@ -551,6 +576,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -558,7 +584,7 @@
   groups:
   - WardenHead
   - WardenJumpsuit
-  - SecurityBackpack
+  - WardenBackpack #Lust-Edit
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
@@ -572,6 +598,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -594,6 +621,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -612,6 +640,7 @@
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
   - SunriseWeaponDetective
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -627,6 +656,7 @@
   - GroupSpeciesBreathToolSecurity
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -647,7 +677,7 @@
   - SunriseChiefMedicalOfficerGloves
 # Sunrise-end
 #  - MedicalGloves  #Sunrise-edit
-  - MedicalBackpack
+  - ChiefMedicalOfficerBack #Lust-Edit
   - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
@@ -660,6 +690,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -686,6 +717,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -715,6 +747,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -746,6 +779,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -777,6 +811,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 # Wildcards
@@ -790,6 +825,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -806,6 +842,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
@@ -838,6 +875,7 @@
   - Bra
   - Pants
   - Socks
+  - SpecialLoadout # Lust Station
   # Sunrise-end
 
 - type: roleLoadout
@@ -852,6 +890,7 @@
   - Trinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
+  - SpecialLoadout # Lust Station
   - Bra
   - Pants
   - Socks
