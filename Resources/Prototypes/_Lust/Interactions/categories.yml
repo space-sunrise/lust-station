@@ -9,3 +9,8 @@
 - type: interactionCategory
   id: Boobs
   name: Грудь
+
+- type: interactionCategory
+  id: Butt
+  name: Попа
+

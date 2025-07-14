@@ -73,3 +73,17 @@
   name: "Много поцелуев"
   sound: /Audio/_Lust/Interactions/alot_of_kisses.ogg
 
+- type: interactionSound
+  id: Whip1
+  name: "Плеть 1"
+  sound: /Audio/_Lust/Interactions/whip/whip_1.ogg
+
+- type: interactionSound
+  id: Whip2
+  name: "Плеть 2"
+  sound: /Audio/_Lust/Interactions/whip/whip_2.ogg
+
+- type: interactionSound
+  id: Whip3
+  name: "Плеть 3"
+  sound: /Audio/_Lust/Interactions/whip/whip_3.ogg
