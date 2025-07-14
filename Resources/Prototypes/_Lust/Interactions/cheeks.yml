@@ -16,6 +16,10 @@
       checkTarget: true
       categories: [ "щёки" ]
       requireExposed: true
+  interactionMessages:
+  - "%user целует %target в обе щёки"
+  - "%user чмокает %target в обе щёки"
+  - "%user расцеловывает %target в обе щеки"
   interactionSounds:
     - Kiss1
     - Kiss2

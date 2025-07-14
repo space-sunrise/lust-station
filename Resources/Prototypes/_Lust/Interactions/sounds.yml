@@ -54,7 +54,7 @@
   sound: /Audio/_Lust/Interactions/hlup3.ogg
 
 - type: interactionSound
-  id: Hlup1
+  id: Hlup4
   name: "Хлюп 4"
   sound: /Audio/_Lust/Interactions/hlup4.ogg
 
