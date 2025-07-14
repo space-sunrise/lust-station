@@ -3,6 +3,9 @@
   name: "Прижаться к груди"
   icon: FaceInBoobsIcon
   category: Boobs
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
   interactionMessages:
   - "%user прижимается лицом к груди %target"
   - "%user утыкается лицом в грудь %target"
