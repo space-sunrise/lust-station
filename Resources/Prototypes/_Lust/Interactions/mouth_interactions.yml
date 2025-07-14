@@ -1,177 +1,204 @@
-﻿#- type: interaction
-#  id: MouthQuickPeck
-#  name: Чмокнуть в губы
-#  icon: _Lust/Interface/ERP/gentle_kiss.png
-#  emotes:
-#  - чмокает в губы %target
-#  - слегка чмокает в губы %target
-#  - нежно чмокает в губы %target
-#  interactionSounds:
-#    - Kiss1
-#    - Kiss2
-#    - Kiss3
-#    - Kiss4
-#    - Kiss5
-#    - Kiss6
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 1
-#  lovePercentTarget: 1
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagBlacklist:
-#  - рот
-#  userTagBlacklist:
-#  - рот
-#  category: рот
-#
-#- type: interaction
-#  id: MouthKissLips
-#  name: Поцеловать в губы
-#  icon: _Lust/Interface/ERP/gentle_kiss.png
-#  emotes:
-#  - целует %target
-#  - нежно целует %target
-#  - слегка целует %target
-#  - целует %target, заводя руку за шею и прижимая к себе
-#  - нежно целует %target, заводя руку за шею и прижимая к себе
-#  - слегка целует %target, заводя руку за шею и прижимая к себе
-#  - настойчиво целует %target, заводя руку за шею и прижимая к себе
-#  - целует %target, заводя руку за шею
-#  - нежно целует %target, заводя руку за шею
-#  - слегка целует %target, заводя руку за шею
-#  - настойчиво целует %target, заводя руку за шею
-#  interactionSounds:
-#    - Kiss1
-#    - Kiss2
-#    - Kiss3
-#    - Kiss4
-#    - Kiss5
-#    - Kiss6
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 2
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagBlacklist:
-#  - рот
-#  userTagBlacklist:
-#  - рот
-#  category: рот
-#
-#- type: interaction
-#  id: MouthBlowjob
-#  name: Заставить отсосать
-#  icon: _Lust/Interface/ERP/cock_blowjob.png
-#  emotes:
-#  - заставляет сосать %target
-#  - заставляет делать минет %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/hlup.ogg
-#  - path: /Audio/_Lust/ERP/hlup2.ogg
-#  - path: /Audio/_Lust/ERP/hlup3.ogg
-#  - path: /Audio/_Lust/ERP/hlup4.ogg
-#  userSex:
-#  - Male
-#  - Futanari
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 9
-#  lovePercentTarget: 5
-#  targetTagBlacklist:
-#  - рот
-#  userTagBlacklist:
-#  - член
-#  category: рот
-#
-#- type: interaction
-#  id: MouthFingering
-#  name: Сунуть большой палец в рот
-#  icon: _Lust/Interface/ERP/ERP2.png
-#  emotes:
-#  - засовывает большой палец в рот %target
-#  - отодвигает щеку %target своим пальцем
-#  - проникает большим пальцем в рот %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/fingerlick/fingerlick.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 0
-#  lovePercentTarget: 5
-#  targetTagBlacklist:
-#  - рот
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: рот
-#
-#- type: interaction
-#  id: MouthHairFaceFuckMale
-#  name: Трахнуть в рот схватив волосы
-#  icon: _Lust/Interface/ERP/hair_face_fuck.png
-#  emotes:
-#  - намотав на кулак волосы %target долбит членом его ротик
-#  - крепко сжав волосы %target делает себе минет его ротиком
-#  - сжимая рукой волосы %target, грубо трахает его в ротик
-#  sounds:
-#  - path: /Audio/_Lust/ERP/hlup.ogg
-#  - path: /Audio/_Lust/ERP/hlup2.ogg
-#  - path: /Audio/_Lust/ERP/hlup3.ogg
-#  - path: /Audio/_Lust/ERP/hlup4.ogg
-#  userSex:
-#  - Male
-#  - Futanari
-#  targetSex:
-#  - Male
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 5
-#  targetTagWhitelist:
-#  - Hair
-#  targetTagBlacklist:
-#  - рот
-#  - волосы
-#  userTagBlacklist:
-#  - член
-#  category: волосы
-#
-#- type: interaction
-#  id: MouthHairFaceFuckFemale
-#  name: Трахнуть в рот схватив волосы
-#  icon: _Lust/Interface/ERP/hair_face_fuck.png
-#  emotes:
-#  - намотав на кулак волосы %target долбит членом её ротик
-#  - крепко сжав волосы %target делает себе минет её ротиком
-#  - сжимая рукой волосы %target, грубо трахает её в ротик
-#  sounds:
-#  - path: /Audio/_Lust/ERP/hlup.ogg
-#  - path: /Audio/_Lust/ERP/hlup2.ogg
-#  - path: /Audio/_Lust/ERP/hlup3.ogg
-#  - path: /Audio/_Lust/ERP/hlup4.ogg
-#  userSex:
-#  - Male
-#  - Futanari
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 5
-#  targetTagWhitelist:
-#  - Hair
-#  targetTagBlacklist:
-#  - рот
-#  - волосы
-#  userTagBlacklist:
-#  - член
-#  category: волосы
+﻿- type: interaction
+  id: MouthQuickPeck
+  name: "Чмокнуть в губы"
+  icon: GentleKissIcon
+  category: Mouth
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user чмокает в губы %target"
+  - "%user слегка чмокает в губы %target"
+  - "%user нежно чмокает в губы %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 1
+
+- type: interaction
+  id: MouthKissLips
+  name: "Поцеловать в губы"
+  icon: GentleKissIcon
+  category: Mouth
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user целует %target"
+  - "%user нежно целует %target"
+  - "%user слегка целует %target"
+  - "%user целует %target, заводя руку за шею и прижимая к себе"
+  - "%user нежно целует %target, заводя руку за шею и прижимая к себе"
+  - "%user слегка целует %target, заводя руку за шею и прижимая к себе"
+  - "%user настойчиво целует %target, заводя руку за шею и прижимая к себе"
+  - "%user целует %target, заводя руку за шею"
+  - "%user нежно целует %target, заводя руку за шею"
+  - "%user слегка целует %target, заводя руку за шею"
+  - "%user настойчиво целует %target, заводя руку за шею"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 2
+  loveTarget: 2
+  cooldown: 2
+
+- type: interaction
+  id: MouthBlowjob
+  name: "Заставить отсосать"
+  icon: CockBlowjobIcon
+  category: Mouth
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user заставляет сосать %target"
+  - "%user заставляет делать минет %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 9
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: MouthFingering
+  name: "Сунуть большой палец в рот"
+  icon: ERP2Icon
+  category: Mouth
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user засовывает большой палец в рот %target"
+  - "%user отодвигает щеку %target своим пальцем"
+  - "%user проникает большим пальцем в рот %target"
+  interactionSounds:
+  - FinterLick
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: MouthHairFaceFuckMale
+  name: "Трахнуть в рот схватив волосы"
+  icon: HairFaceFuckIcon
+  category: Hair
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "волосы", "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user намотав на кулак волосы %target долбит членом его ротик"
+  - "%user крепко сжав волосы %target делает себе минет его ротиком"
+  - "%user сжимая рукой волосы %target, грубо трахает его в ротик"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: MouthHairFaceFuckFemale
+  name: "Трахнуть в рот схватив волосы"
+  icon: HairFaceFuckIcon
+  category: Hair
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот", "волосы" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user намотав на кулак волосы %target долбит членом её ротик"
+  - "%user крепко сжав волосы %target делает себе минет её ротиком"
+  - "%user сжимая рукой волосы %target, грубо трахает её в ротик"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 5
+  cooldown: 3

@@ -87,3 +87,8 @@
   id: Whip3
   name: "Плеть 3"
   sound: /Audio/_Lust/Interactions/whip/whip_3.ogg
+
+- type: interactionSound
+  id: FinterLick
+  name: "Лизать палец"
+  sound: /Audio/_Lust/Interactions/fingerlick/fingerlick.ogg.ogg
