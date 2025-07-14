@@ -38,308 +38,398 @@
   loveTarget: 2
   cooldown: 3
 
-#- type: interaction
-#  id: BoobsMassage
-#  name: Массировать грудь
-#  icon: _Lust/Interface/ERP/boobs_massage.png
-#  interactionMessages:
-#  - деликатно разминает грудь %target
-#  - старательно массирует грудь %target
-#  - нежно массирует грудь %target
-#  - круговыми движениями массирует грудь %target
-#  - плавно массирует грудь %target
-#  - ритмично массирует грудь %target
-#  - медленно массирует грудь %target
-#  - методично массирует грудь %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsManyKisses
-#  name: Расцеловать грудь
-#  icon: _Lust/Interface/ERP/boobs_many_kisses.png
-#  interactionMessages:
-#  - страстно покрывает поцелуями грудь %target
-#  - нежно расцеловывает грудь %target
-#  - причмокивая, расцеловывает грудь %target
-#  - увлеченно покрывает поцелуями грудь %target
-#  - сжимает и расцеловывает грудь %target
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - рот
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsSlap
-#  name: Шлепнуть по груди
-#  icon: _Lust/Interface/ERP/boobs_slap.png
-#  interactionMessages:
-#  - наотмашь шлепает ладонью по груди %target
-#  - делает смачный шлепок по груди %target, заставляя её трястись
-#  - звонко шлепает ладонью грудь %target
-#  - широко размахнувшись, шлёпает по груди %target
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/clap1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 5
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsSqueeze
-#  name: Поласкать грудь руками
-#  icon: _Lust/Interface/ERP/boobs_squeeze.png
-#  interactionMessages:
-#  - медленно сжимает в ладони грудь %target
-#  - нежно гладит грудь %target
-#  - аккуратно мнет ладонями грудь %target
-#  - возбужденно ласкает пальцами грудь %target
-#  - играет пальчиками с сосками %target
-#  - слегка сжимает и оттягивает соски %target
-#  - теребит пальчиками соски %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 6
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsBite
-#  name: Кусьнуть соски зубами
-#  icon: _Lust/Interface/ERP/boobs_suck.png
-#  interactionMessages:
-#  - нежно кусает соски %target, оставляя на них немного слюны
-#  - прикусывает соски %target, слегка оттягивая те своими зубами, в результате даруя волну удовольствия %target
-#  - совершает серию легких укусов, заставляя соски %target приятно побаливать
-#  - с усилием кусает соски %target, оставляя видимый на них след от зубов
-#  - игриво покусывает соски %target, словно подготавливает их к чему-то большему
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 7
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - рот
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsSuck
-#  name: Поласкать соски ртом
-#  icon: _Lust/Interface/ERP/boobs_suck.png
-#  interactionMessages:
-#  - нежно сосёт соски %target
-#  - ласкает язычком соски %target
-#  - страстно водит язычком вокруг сосков %target
-#  - увлеченно вылизывает соски %target
-#  - игриво теребит язычком соски %target
-#  - жадно сосет грудь %target
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  - path: /Audio/_Lust/ERP/kiss1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 7
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - рот
-#  category: грудь
-#
-#- type: interaction
-#  id: BoobsSuckLactation
-#  name: Пососать соски
-#  icon: _Lust/Interface/ERP/boobs_suck.png
-#  interactionMessages:
-#  - нежно сосёт соски %target
-#  - жадно сосет грудь %target
-#  - нежно покусывает соски %target
-#  - игриво покусывает соски %target
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentTarget: 12
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - рот
-#  category: грудь
+- type: interaction
+  id: BoobsMassage
+  name: "Массировать грудь"
+  icon: BoobsMassageIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "гладкие перчатки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user деликатно разминает грудь %target"
+    - "%user старательно массирует грудь %target"
+    - "%user нежно массирует грудь %target"
+    - "%user круговыми движениями массирует грудь %target"
+    - "%user плавно массирует грудь %target"
+    - "%user ритмично массирует грудь %target"
+    - "%user медленно массирует грудь %target"
+    - "%user методично массирует грудь %target"
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: BoobsManyKisses
+  name: "Расцеловать грудь"
+  icon: BoobsManyKissesIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user страстно покрывает поцелуями грудь %target"
+    - "%user нежно расцеловывает грудь %target"
+    - "%user причмокивая, расцеловывает грудь %target"
+    - "%user увлеченно покрывает поцелуями грудь %target"
+    - "%user сжимает и расцеловывает грудь %target"
+  interactionSounds:
+    - ALotOfKisses
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: BoobsSlap
+  name: "Шлепнуть по груди"
+  icon: BoobsSlapIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "гладкие перчатки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user наотмашь шлепает ладонью по груди %target"
+    - "%user делает смачный шлепок по груди %target, заставляя её трястись"
+    - "%user звонко шлепает ладонью грудь %target"
+    - "%user широко размахнувшись, шлёпает по груди %target"
+  interactionSounds:
+    - Clap1
+  loveUser: 2
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: BoobsSqueeze
+  name: "Поласкать грудь руками"
+  icon: BoobsSqueezeIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "гладкие перчатки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user медленно сжимает в ладони грудь %target"
+    - "%user нежно гладит грудь %target"
+    - "%user аккуратно мнет ладонями грудь %target"
+    - "%user возбужденно ласкает пальцами грудь %target"
+    - "%user играет пальчиками с сосками %target"
+    - "%user слегка сжимает и оттягивает соски %target"
+    - "%user теребит пальчиками соски %target"
+  loveUser: 3
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: BoobsBite
+  name: "Кусьнуть соски зубами"
+  icon: BoobsSuckIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно кусает соски %target, оставляя на них немного слюны"
+    - "%user прикусывает соски %target, слегка оттягивая те своими зубами, в результате даруя волну удовольствия %target"
+    - "%user совершает серию легких укусов, заставляя соски %target приятно побаливать"
+    - "%user с усилием кусает соски %target, оставляя видимый на них след от зубов"
+    - "%user игриво покусывает соски %target, словно подготавливает их к чему-то большему"
+  loveUser: 3
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: BoobsSuck
+  name: "Поласкать соски ртом"
+  icon: BoobsSuckIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно сосёт соски %target"
+    - "%user ласкает язычком соски %target"
+    - "%user страстно водит язычком вокруг сосков %target"
+    - "%user увлеченно вылизывает соски %target"
+    - "%user игриво теребит язычком соски %target"
+    - "%user жадно сосет грудь %target"
+  interactionSounds:
+    - Lick1
+    - Lick2
+    - Kiss1
+  loveUser: 3
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: BoobsSuckLactation
+  name: "Пососать соски"
+  icon: BoobsSuckIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно сосёт соски %target"
+    - "%user жадно сосет грудь %target"
+    - "%user нежно покусывает соски %target"
+    - "%user игриво покусывает соски %target"
+  interactionSounds:
+    - Lick1
+    - Lick2
+  loveTarget: 8
+  loveUser: 1
+  cooldown: 3
 #  coefficient: 1.4
 #  lactationStimulationFlag: true
-#
-#- type: interaction
-#  id: BoobsMilkDecantSelf
-#  name: Сцедить молоко
-#  icon: _Lust/Interface/ERP/boobs_suck.png
-#  interactionMessages:
-#  - "%target прикасается к своей груди ласково сжимая соски"
-#  - "%target прикасается к соскам немного грубо сжимая их"
-#  - "%target ласкает свои соски"
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentTarget: 5
-#  targetTagBlacklist:
-#  - грудь
-#  category: грудь
+
+- type: interaction
+  id: BoobsMilkDecantSelf
+  name: "Сцедить молоко"
+  icon: BoobsSuckIcon
+  category: Boobs
+  appearConditions:
+    - !type:SelfOnlyCondition
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Female, Futanari ]
+    - !type:HasTargetCondition
+      allowSelfTargeting: true
+      requiredTarget: self
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%target прикасается к своей груди ласково сжимая соски"
+    - "%target прикасается к соскам немного грубо сжимая их"
+    - "%target ласкает свои соски"
+  interactionSounds:
+    - Lick1
+    - Lick2
+  loveTarget: 5
+  cooldown: 3
 #  lactationStimulationFlag: true
 #  amountLactate: 7
-#  useSelf: true
 #  coefficient: 1
-#
-#- type: interaction
-#  id: BoobsMilkDecant  # Не менять
-#  name: Сцедить молоко
-#  icon: _Lust/Interface/ERP/boobs_suck.png
-#  interactionMessages:
-#  - прикасается к груди %target ласково сжимая соски
-#  - прикасается к соскам %target немного грубо сжимая их
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentTarget: 10
-#  targetTagBlacklist:
-#  - грудь
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: грудь
+
+- type: interaction
+  id: BoobsMilkDecant
+  name: "Сцедить молоко"
+  icon: BoobsSuckIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "гладкие перчатки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user прикасается к груди %target ласково сжимая соски"
+    - "%user прикасается к соскам %target немного грубо сжимая их"
+  interactionSounds:
+    - Lick1
+    - Lick2
+  loveUser: 1
+  loveTarget: 5
+  cooldown: 3
+# TODO нужен код
 #  lactationStimulationFlag: true
 #  amountLactate: 5
 #  coefficient: 1.5
-#
-#- type: interaction
-#  id: BoobsFuck
-#  name: Трахать грудь
-#  icon: _Lust/Interface/ERP/boobs_fuck.png
-#  interactionMessages:
-#  - ритмично просовывает член между грудей %target
-#  - сжимая руками грудь %target, быстро трахает членом её грудь
-#  - возбужденно скользит членом между грудей %target
-#  - активно трахает членом грудь %target
-#  - страстно трахает членом сжатую грудь %target
-#  interactionSounds:
-#  - path: /Audio/_Lust/ERP/hlup.ogg
-#  - path: /Audio/_Lust/ERP/hlup2.ogg
-#  - path: /Audio/_Lust/ERP/hlup3.ogg
-#  - path: /Audio/_Lust/ERP/hlup4.ogg
-#  userSex:
-#  - Male
-#  - Futanari
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 8
-#  lovePercentTarget: 4
-#  userTagBlacklist:
-#  - член
-#  targetTagBlacklist:
-#  - грудь
-#  category: грудь
-#
-#- type: interaction
-#  id: TailBoobsPlay
-#  name: Ласкать грудь хвостом
-#  icon: _Lust/Interface/ERP/boobs_tail.png
-#  interactionMessages:
-#  - нежно гладит хвостиком грудь %target
-#  - ласково проводит хвостиком по груди %target
-#  - игриво поглаживает хвостиком грудь %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 10
-#  lovePercentTarget: 10
-#  userTagBlacklist:
-#  - хвост
-#  targetTagBlacklist:
-#  - грудь
-#  userTagWhitelist:
-#  - Tail
-#  category: хвост
-#
-#- type: interaction
-#  id: BoobsSnuggle
-#  name: Прижаться грудью
-#  icon: _Lust/Interface/ERP/ERP2.png
-#  interactionMessages:
-#  - тесно прижимается грудью к телу %target
-#  - подходя ближе к своей цели, прижимает к своей груди %target
-#  - захватывает своей грудью %target в крепкие объятия
-#  userSex:
-#  - Female
-#  - Futanari
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 1
-#  lovePercentTarget: 1
-#  category: грудь
+
+- type: interaction
+  id: BoobsFuck
+  name: "Трахать грудь"
+  icon: ERP2Icon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Male, Futanari ]
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "член" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user ритмично просовывает член между грудей %target"
+    - "%user сжимая руками грудь %target, быстро трахает членом её грудь"
+    - "%user возбужденно скользит членом между грудей %target"
+    - "%user активно трахает членом грудь %target"
+    - "%user страстно трахает членом сжатую грудь %target"
+  interactionSounds:
+    - Hlupl1
+    - Hlupl2
+    - Hlupl3
+    - Hlupl4
+  loveUser: 8
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: TailBoobsPlay
+  name: "Ласкать грудь хвостом"
+  icon: BoobsTailIcon
+  category: Tail
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "грудь" ]
+      requireExposed: true
+    - !type:HasVisualLayerCondition
+      checkTarget: false
+      checkInitiator: true
+      layer: Tail
+  interactionMessages:
+    - "%user нежно гладит хвостиком грудь %target"
+    - "%user ласково проводит хвостиком по груди %target"
+    - "%user игриво поглаживает хвостиком грудь %target"
+  loveUser: 6
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: BoobsSnuggle
+  name: "Прижаться грудью"
+  icon: ERP2Icon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Female, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "грудь" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user тесно прижимается грудью к телу %target"
+    - "%user подходя ближе к своей цели, прижимает к своей груди %target"
+    - "%user захватывает своей грудью %target в крепкие объятия"
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3

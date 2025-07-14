@@ -342,3 +342,8 @@
   id: ToyPussyIcon
   name: "Игрушка (киска)"
   icon: /Textures/_Sunrise/Interactions/toy_pussy.png
+
+- type: interactionIcon
+  id: BoobsManyKissesIcon
+  name: "Много поцелуев (грудь)"
+  icon: /Textures/_Sunrise/Interactions/boobs_many_kisses.png

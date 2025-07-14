@@ -67,3 +67,9 @@
   id: Lick2
   name: "Лизание 2"
   sound: /Audio/_Lust/Interactions/lick2.ogg
+
+- type: interactionSound
+  id: ALotOfKisses
+  name: "Много поцелуев"
+  sound: /Audio/_Lust/Interactions/alot_of_kisses.ogg
+
