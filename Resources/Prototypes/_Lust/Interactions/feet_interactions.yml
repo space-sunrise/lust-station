@@ -1,121 +1,146 @@
-﻿#- type: interaction
-#  id: FeetLick1
-#  name: Вылизать ножки
-#  icon: _Lust/Interface/ERP/legs_feet_lick.png
-#  emotes:
-#  - лижет ножки %target
-#  - начинает лизать ножки %target
-#  - подносит свой рот к ножкам %target, и начинает их лизать
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  - path: /Audio/_Lust/ERP/kiss1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 2
-#  targetTagBlacklist:
-#  - лицо
-#  userTagBlacklist:
-#  - носки
-#  category: ступни
-#
-#- type: interaction
-#  id: FeetMouth
-#  name: Прислонить ножку ко рту
-#  icon: _Lust/Interface/ERP/feet_mouth.png
-#  emotes:
-#  - снимает обувь с одной ступни и тычет ножкой в лицо %target
-#  - снимает обувь с одной ступни и прислоняет ножку ко рту %target
-#  - подносит свою ножку к лицу %target, заставляя лизать её
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  - path: /Audio/_Lust/ERP/kiss1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 2
-#  targetTagBlacklist:
-#  - лицо
-#  userTagBlacklist:
-#  - носки
-#  category: ступни
-#
-#- type: interaction
-#  id: FeetLick2
-#  name: Лизать ступни
-#  icon: _Lust/Interface/ERP/legs_feet_lick.png
-#  emotes:
-#  - ласкает язычком пальчики на ногах %target
-#  - проходит по ступням %target своим язычком
-#  - щекочет язычком пяточки %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 0
-#  lovePercentTarget: 3
-#  targetTagBlacklist:
-#  - ступни
-#  userTagBlacklist:
-#  - рот
-#  category: ступни
-#
-#- type: interaction
-#  id: FeetJob
-#  name: Погладить член ступней
-#  icon: _Lust/Interface/ERP/cock_footjob.png
-#  emotes:
-#  - гладит ступней член %target
-#  - ласкает ступней член %target
-#  - поглаживает ступней член %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Male
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 0
-#  lovePercentTarget: 3
-#  targetTagBlacklist:
-#  - член
-#  userTagBlacklist:
-#  - носки
-#  category: ступни
-#
-#- type: interaction
-#  id: FeetShoesLick
-#  name: Лизать обувь
-#  icon: _Lust/Interface/ERP/feet_shoes_lick.png
-#  emotes:
-#  - старательно вылизывает языком обувь %target
-#  - тщательно проходит языком по подошве обуви %target
-#  - медленно проводит языком по обуви %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 3
-#  lovePercentTarget: 3
-#  userTagBlacklist:
-#  - лицо
-#  targetTagWhitelist:
-#  - shoes
-#  category: ступни
+﻿- type: interaction
+  id: FeetLick1
+  name: "Вылизать ножки"
+  icon: LegsLickIcon
+  category: Feet
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "носки" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user лижет ножки %target"
+  - "%user начинает лизать ножки %target"
+  - "%user подносит свой рот к ножкам %target, и начинает их лизать"
+  interactionSounds:
+  - Lick1
+  - Lick2
+  - Kiss1
+  loveUser: 2
+  loveTarget: 2
+  cooldown: 3
+
+- type: interaction
+  id: FeetMouth
+  name: "Прислонить ножку ко рту"
+  icon: FeetMouthIcon
+  category: Feet
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "носки" ] # "Ножка" относится к ноге инициатора
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "лицо" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user снимает обувь с одной ступни и тычет ножкой в лицо %target"
+  - "%user снимает обувь с одной ступни и прислоняет ножку ко рту %target"
+  - "%user подносит свою ножку к лицу %target, заставляя лизать её"
+  interactionSounds:
+  - Lick1
+  - Lick2
+  - Kiss1
+  loveUser: 2
+  loveTarget: 2
+  cooldown: 3
+
+- type: interaction
+  id: FeetLick2
+  name: "Лизать ступни"
+  icon: LegsLickIcon
+  category: Feet
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "ступни" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user ласкает язычком пальчики на ногах %target"
+  - "%user проходит по ступням %target своим язычком"
+  - "%user щекочет язычком пяточки %target"
+  interactionSounds:
+  - Lick1
+  - Lick2
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: FeetJob
+  name: "Погладить член ступней"
+  icon: CockFootjobIcon
+  category: Feet
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "носки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user гладит ступней член %target"
+  - "%user ласкает ступней член %target"
+  - "%user поглаживает ступней член %target"
+  interactionSounds:
+  - Stroke1
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: FeetShoesLick
+  name: "Лизать обувь"
+  icon: FeetShoesLickIcon
+  category: Feet
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "shoes" ]
+  interactionMessages:
+  - "%user старательно вылизывает языком обувь %target"
+  - "%user тщательно проходит языком по подошве обуви %target"
+  - "%user медленно проводит языком по обуви %target"
+  interactionSounds:
+  - Lick1
+  - Lick2
+  loveUser: 3
+  loveTarget: 3
+  cooldown: 3

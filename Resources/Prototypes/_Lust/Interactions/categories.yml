@@ -21,3 +21,11 @@
 - type: interactionCategory
   id: Cock
   name: Член
+
+- type: interactionCategory
+  id: Ears
+  name: Уши
+
+- type: interactionCategory
+  id: Feet
+  name: Ножки
