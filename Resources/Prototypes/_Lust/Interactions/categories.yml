@@ -29,3 +29,27 @@
 - type: interactionCategory
   id: Feet
   name: Ножки
+
+- type: interactionCategory
+  id: Lips
+  name: Губы
+
+- type: interactionCategory
+  id: Mouth
+  name: Рот
+
+- type: interactionCategory
+  id: Neck
+  name: Шея
+
+- type: interactionCategory
+  id: Pussy
+  name: Вагина
+
+- type: interactionCategory
+  id: Thighs
+  name: Ляжки
+
+- type: interactionCategory
+  id: Wings
+  name: Крылья
