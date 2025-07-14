@@ -772,7 +772,7 @@ public sealed partial class AdminVerbSystem
                 });
             },
             Impact = LogImpact.Medium,
-            Message = "Изменить визуальный масштаб объекта (ScaleSpriteComponent)",
+            Message = "Изменить визуальный масштаб объекта",
             Priority = (int) TricksVerbPriorities.AdjustStack - 1,
         };
         args.Verbs.Add(scaleSprite);
