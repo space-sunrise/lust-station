@@ -23,7 +23,8 @@
   category: HeightTraits
   cost: 1
   blacklist:
-  - Felinid # И так слишком мелкие
+    species:
+      - Felinid
   components:
   - type: ScaleSprite
     scale: 1,0.9
