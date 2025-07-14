@@ -1,4 +1,8 @@
 - type: interactionCategory
   id: Anal
-  name: анал
+  name: Анал
+
+- type: interactionCategory
+  id: Balls
+  name: Яйца
 
