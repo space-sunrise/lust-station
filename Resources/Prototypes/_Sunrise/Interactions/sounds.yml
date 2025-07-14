@@ -112,3 +112,8 @@
   id: FriendlySalute
   name: "Салют"
   sound: /Audio/Effects/Emotes/salute.ogg
+
+- type: interactionSound
+  id: FriendlyThudswoosh
+  name: "Обнимашки"
+  sound: /Audio/Effects/thudswoosh.ogg
