@@ -1,49 +1,48 @@
 ﻿- type: interaction
   id: BoobsCuddle
-  name: Прижаться к груди
+  name: "Прижаться к груди"
   icon: FaceInBoobsIcon
-  emotes:
+  category: Boobs
+  interactionMessages:
   - "%user прижимается лицом к груди %target"
   - "%user утыкается лицом в грудь %target"
   - "%user прижимается щекой к груди %target"
   - "%user кладет голову на грудь %target"
-  sounds:
-  - path: /Audio/Effects/thudswoosh.ogg
-  userSex:
-  - Unsexed
-  targetSex:
-  - Unsexed
-  lovePercentUser: 2
-  lovePercentTarget: 2
-  category: грудь
+  interactionSounds:
+  - FriendlyThudswoosh
+  loveUser: 2
+  loveTarget: 2
+  cooldown: 3
 
-#- type: interaction
-#  id: BoobsPaw
-#  name: Полапать грудь
-#  icon: _Lust/Interface/ERP/boobs_paw.png
-#  emotes:
-#  - хватает за грудь %target
-#  - неожиданно сжимает грудь %target
-#  - быстро сжимает грудь %target
-#  - бесстыже лапает грудь %target
-#  - похотливо лапает грудь %target
-#  - медленно сжимает грудь %target
-#  - нежно мнет грудь %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Female
-#  - Futanari
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 3
-#  category: грудь
-#
+- type: interaction
+  id: BoobsPaw
+  name: "Полапать грудь"
+  icon: BoobsPawIcon
+  category: Boobs
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: false
+      checkTarget: true
+      requiredSex: [ Female, Futanari ]
+  interactionMessages:
+  - "%user хватает за грудь %target"
+  - "%user неожиданно сжимает грудь %target"
+  - "%user быстро сжимает грудь %target"
+  - "%user бесстыже лапает грудь %target"
+  - "%user похотливо лапает грудь %target"
+  - "%user медленно сжимает грудь %target"
+  - "%user нежно мнет грудь %target"
+  loveUser: 1
+  loveTarget: 2
+  cooldown: 3
+
 #- type: interaction
 #  id: BoobsMassage
 #  name: Массировать грудь
 #  icon: _Lust/Interface/ERP/boobs_massage.png
-#  emotes:
+#  interactionMessages:
 #  - деликатно разминает грудь %target
 #  - старательно массирует грудь %target
 #  - нежно массирует грудь %target
@@ -70,13 +69,13 @@
 #  id: BoobsManyKisses
 #  name: Расцеловать грудь
 #  icon: _Lust/Interface/ERP/boobs_many_kisses.png
-#  emotes:
+#  interactionMessages:
 #  - страстно покрывает поцелуями грудь %target
 #  - нежно расцеловывает грудь %target
 #  - причмокивая, расцеловывает грудь %target
 #  - увлеченно покрывает поцелуями грудь %target
 #  - сжимает и расцеловывает грудь %target
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/alot_of_kisses.ogg
 #  userSex:
 #  - Unsexed
@@ -96,12 +95,12 @@
 #  id: BoobsSlap
 #  name: Шлепнуть по груди
 #  icon: _Lust/Interface/ERP/boobs_slap.png
-#  emotes:
+#  interactionMessages:
 #  - наотмашь шлепает ладонью по груди %target
 #  - делает смачный шлепок по груди %target, заставляя её трястись
 #  - звонко шлепает ладонью грудь %target
 #  - широко размахнувшись, шлёпает по груди %target
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/clap1.ogg
 #  userSex:
 #  - Unsexed
@@ -121,7 +120,7 @@
 #  id: BoobsSqueeze
 #  name: Поласкать грудь руками
 #  icon: _Lust/Interface/ERP/boobs_squeeze.png
-#  emotes:
+#  interactionMessages:
 #  - медленно сжимает в ладони грудь %target
 #  - нежно гладит грудь %target
 #  - аккуратно мнет ладонями грудь %target
@@ -147,7 +146,7 @@
 #  id: BoobsBite
 #  name: Кусьнуть соски зубами
 #  icon: _Lust/Interface/ERP/boobs_suck.png
-#  emotes:
+#  interactionMessages:
 #  - нежно кусает соски %target, оставляя на них немного слюны
 #  - прикусывает соски %target, слегка оттягивая те своими зубами, в результате даруя волну удовольствия %target
 #  - совершает серию легких укусов, заставляя соски %target приятно побаливать
@@ -170,14 +169,14 @@
 #  id: BoobsSuck
 #  name: Поласкать соски ртом
 #  icon: _Lust/Interface/ERP/boobs_suck.png
-#  emotes:
+#  interactionMessages:
 #  - нежно сосёт соски %target
 #  - ласкает язычком соски %target
 #  - страстно водит язычком вокруг сосков %target
 #  - увлеченно вылизывает соски %target
 #  - игриво теребит язычком соски %target
 #  - жадно сосет грудь %target
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/lick1.ogg
 #  - path: /Audio/_Lust/ERP/lick2.ogg
 #  - path: /Audio/_Lust/ERP/kiss1.ogg
@@ -198,12 +197,12 @@
 #  id: BoobsSuckLactation
 #  name: Пососать соски
 #  icon: _Lust/Interface/ERP/boobs_suck.png
-#  emotes:
+#  interactionMessages:
 #  - нежно сосёт соски %target
 #  - жадно сосет грудь %target
 #  - нежно покусывает соски %target
 #  - игриво покусывает соски %target
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/lick1.ogg
 #  - path: /Audio/_Lust/ERP/lick2.ogg
 #  userSex:
@@ -225,11 +224,11 @@
 #  id: BoobsMilkDecantSelf
 #  name: Сцедить молоко
 #  icon: _Lust/Interface/ERP/boobs_suck.png
-#  emotes:
+#  interactionMessages:
 #  - "%target прикасается к своей груди ласково сжимая соски"
 #  - "%target прикасается к соскам немного грубо сжимая их"
 #  - "%target ласкает свои соски"
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/lick1.ogg
 #  - path: /Audio/_Lust/ERP/lick2.ogg
 #  userSex:
@@ -251,10 +250,10 @@
 #  id: BoobsMilkDecant  # Не менять
 #  name: Сцедить молоко
 #  icon: _Lust/Interface/ERP/boobs_suck.png
-#  emotes:
+#  interactionMessages:
 #  - прикасается к груди %target ласково сжимая соски
 #  - прикасается к соскам %target немного грубо сжимая их
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/lick1.ogg
 #  - path: /Audio/_Lust/ERP/lick2.ogg
 #  userSex:
@@ -277,13 +276,13 @@
 #  id: BoobsFuck
 #  name: Трахать грудь
 #  icon: _Lust/Interface/ERP/boobs_fuck.png
-#  emotes:
+#  interactionMessages:
 #  - ритмично просовывает член между грудей %target
 #  - сжимая руками грудь %target, быстро трахает членом её грудь
 #  - возбужденно скользит членом между грудей %target
 #  - активно трахает членом грудь %target
 #  - страстно трахает членом сжатую грудь %target
-#  sounds:
+#  interactionSounds:
 #  - path: /Audio/_Lust/ERP/hlup.ogg
 #  - path: /Audio/_Lust/ERP/hlup2.ogg
 #  - path: /Audio/_Lust/ERP/hlup3.ogg
@@ -307,7 +306,7 @@
 #  id: TailBoobsPlay
 #  name: Ласкать грудь хвостом
 #  icon: _Lust/Interface/ERP/boobs_tail.png
-#  emotes:
+#  interactionMessages:
 #  - нежно гладит хвостиком грудь %target
 #  - ласково проводит хвостиком по груди %target
 #  - игриво поглаживает хвостиком грудь %target
@@ -331,7 +330,7 @@
 #  id: BoobsSnuggle
 #  name: Прижаться грудью
 #  icon: _Lust/Interface/ERP/ERP2.png
-#  emotes:
+#  interactionMessages:
 #  - тесно прижимается грудью к телу %target
 #  - подходя ближе к своей цели, прижимает к своей груди %target
 #  - захватывает своей грудью %target в крепкие объятия
