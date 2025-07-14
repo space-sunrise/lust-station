@@ -1,232 +1,147 @@
-#- type: interaction
-#  id: EarsBite
-#  name: Кусь за ушко
-#  icon: _Lust/Interface/ERP/bite_ears.png
-#  emotes:
-#  - делает кусь за ушко %target
-#  - слегка прикусывает ушко %target
-#  - нежно кусает ушко %target
-#  - игриво кусает за ушко %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagWhitelist:
-#  - FelinidEarsBasic
-#  - FelinidEarsCurled
-#  - FelinidEarsDroopy
-#  - FelinidEarsFuzzy
-#  - FelinidEarsStubby
-#  - FelinidEarsTall
-#  - FelinidEarsTorn
-#  - FelinidEarsWide
-#  - CatEarsStubby
-#  - CatEarsCurled
-#  - CatEarsTorn
-#  - CatTailStripes
-#  - SlimeCatEars
-#  - SlimeCatEarsStubby
-#  - SlimeCatEarsCurled
-#  - SlimeCatEarsTorn
-#  - SlimeCatTailStripes
-#  - Vulpkanin
-#  - Tajaran
-#  targetTagBlacklist:
-#  - уши
-#  userTagBlacklist:
-#  - рот
-#  category: уши
-#
-#- type: interaction
-#  id: EarsPat
-#  name: Погладить ушки
-#  icon: _Lust/Interface/ERP/pat_ears.png
-#  emotes:
-#  - нежно гладит пальчиками ушки %target
-#  - трепетно касается ушек %target
-#  - ласково поглаживает ушки %target
-#  - бережно ласкает ушки %target
-#  - нежно проводит пальцами по ушкам %target
-#  - аккуратно гладит ушки %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/stroke/stroke_1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagWhitelist:
-#  - FelinidEarsBasic
-#  - FelinidEarsCurled
-#  - FelinidEarsDroopy
-#  - FelinidEarsFuzzy
-#  - FelinidEarsStubby
-#  - FelinidEarsTall
-#  - FelinidEarsTorn
-#  - FelinidEarsWide
-#  - CatEarsStubby
-#  - CatEarsCurled
-#  - CatEarsTorn
-#  - CatTailStripes
-#  - SlimeCatEars
-#  - SlimeCatEarsStubby
-#  - SlimeCatEarsCurled
-#  - SlimeCatEarsTorn
-#  - SlimeCatTailStripes
-#  - Vulpkanin
-#  - Tajaran
-#  targetTagBlacklist:
-#  - уши
-#  userTagBlacklist:
-#  - ладони
-#  category: уши
-#
-#- type: interaction
-#  id: EarsScratch
-#  name: Почесать за ушком
-#  icon: _Lust/Interface/ERP/pat_ears.png
-#  emotes:
-#  - нежно чешет за ушком %target
-#  - ласково почесывает %target за ушком
-#  - нежно расчесывает пальчиками за ушком %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/skratch/skratch_1.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagWhitelist:
-#  - FelinidEarsBasic
-#  - FelinidEarsCurled
-#  - FelinidEarsDroopy
-#  - FelinidEarsFuzzy
-#  - FelinidEarsStubby
-#  - FelinidEarsTall
-#  - FelinidEarsTorn
-#  - FelinidEarsWide
-#  - CatEarsStubby
-#  - CatEarsCurled
-#  - CatEarsTorn
-#  - CatTailStripes
-#  - SlimeCatEars
-#  - SlimeCatEarsStubby
-#  - SlimeCatEarsCurled
-#  - SlimeCatEarsTorn
-#  - SlimeCatTailStripes
-#  - Vulpkanin
-#  - Tajaran
-#  targetTagBlacklist:
-#  - уши
-#  userTagBlacklist:
-#  - ладони
-#  category: уши
-#
-#- type: interaction
-#  id: EarsKiss
-#  name: Поцеловать ушки
-#  icon: _Lust/Interface/ERP/ears_kiss.png
-#  emotes:
-#  - нежно целует ушко %target
-#  - ласково целует ушки %target
-#  - с теплотой целует ушки %target
-#  interactionSounds:
-#    - Kiss1
-#    - Kiss2
-#    - Kiss3
-#    - Kiss4
-#    - Kiss5
-#    - Kiss6
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagWhitelist:
-#  - FelinidEarsBasic
-#  - FelinidEarsCurled
-#  - FelinidEarsDroopy
-#  - FelinidEarsFuzzy
-#  - FelinidEarsStubby
-#  - FelinidEarsTall
-#  - FelinidEarsTorn
-#  - FelinidEarsWide
-#  - CatEarsStubby
-#  - CatEarsCurled
-#  - CatEarsTorn
-#  - CatTailStripes
-#  - SlimeCatEars
-#  - SlimeCatEarsStubby
-#  - SlimeCatEarsCurled
-#  - SlimeCatEarsTorn
-#  - SlimeCatTailStripes
-#  - Vulpkanin
-#  - Tajaran
-#  targetTagBlacklist:
-#  - уши
-#  userTagBlacklist:
-#  - рот
-#  category: уши
-#
-#- type: interaction
-#  id: EarsLick
-#  name: Облизать ушко
-#  icon: _Lust/Interface/ERP/ERP2.png
-#  emotes:
-#  - нежно облизывает ушко %target, делая его мокреньким
-#  - ласково лижет ушки %target
-#  - проводит языком по ушкам %target
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: true
-#  lovePercentUser: 2
-#  lovePercentTarget: 4
-#  userMoanChance: 0
-#  targetMoanChance: 0
-#  targetTagWhitelist:
-#  - FelinidEarsBasic
-#  - FelinidEarsCurled
-#  - FelinidEarsDroopy
-#  - FelinidEarsFuzzy
-#  - FelinidEarsStubby
-#  - FelinidEarsTall
-#  - FelinidEarsTorn
-#  - FelinidEarsWide
-#  - CatEarsStubby
-#  - CatEarsCurled
-#  - CatEarsTorn
-#  - CatTailStripes
-#  - SlimeCatEars
-#  - SlimeCatEarsStubby
-#  - SlimeCatEarsCurled
-#  - SlimeCatEarsTorn
-#  - SlimeCatTailStripes
-#  - Vulpkanin
-#  - Tajaran
-#  targetTagBlacklist:
-#  - уши
-#  userTagBlacklist:
-#  - рот
-#  category: уши
+- type: interaction
+  id: EarsBite
+  name: "Кусь за ушко"
+  icon: BiteEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user делает кусь за ушко %target"
+  - "%user слегка прикусывает ушко %target"
+  - "%user нежно кусает ушко %target"
+  - "%user игриво кусает за ушко %target"
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsPat
+  name: "Погладить ушки"
+  icon: PatEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ладони" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно гладит пальчиками ушки %target"
+  - "%user трепетно касается ушек %target"
+  - "%user ласково поглаживает ушки %target"
+  - "%user бережно ласкает ушки %target"
+  - "%user нежно проводит пальцами по ушкам %target"
+  - "%user аккуратно гладит ушки %target"
+  interactionSounds:
+  - Stroke1
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsScratch
+  name: "Почесать за ушком"
+  icon: PatEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ладони" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно чешет за ушком %target"
+  - "%user ласково почесывает %target за ушком"
+  - "%user нежно расчесывает пальчиками за ушком %target"
+  interactionSounds:
+  - FriendlyStroke
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsKiss
+  name: "Поцеловать ушки"
+  icon: EarsKissIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно целует ушко %target"
+  - "%user ласково целует ушки %target"
+  - "%user с теплотой целует ушки %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsLick
+  name: "Облизать ушко"
+  icon: ERP2Icon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно облизывает ушко %target, делая его мокреньким"
+  - "%user ласково лижет ушки %target"
+  - "%user проводит языком по ушкам %target"
+  interactionSounds:
+  - Lick1
+  - Lick2
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
