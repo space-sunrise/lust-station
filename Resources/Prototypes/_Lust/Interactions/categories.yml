@@ -14,3 +14,6 @@
   id: Butt
   name: Попа
 
+- type: interactionCategory
+  id: Cheeks
+  name: Щёки

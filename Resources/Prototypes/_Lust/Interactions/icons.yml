@@ -347,3 +347,8 @@
   id: BoobsManyKissesIcon
   name: "Много поцелуев (грудь)"
   icon: /Textures/_Sunrise/Interactions/boobs_many_kisses.png
+
+- type: interactionIcon
+  id: CheeksKissIcon
+  name: "Поцелуй щёк"
+  icon: /Textures/_Sunrise/Interactions/cheeks_kiss.png

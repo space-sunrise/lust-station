@@ -1,89 +1,116 @@
-﻿#- type: interaction
-#  id: CheeksKiss
-#  name: Чмокнуть в щёчку
-#  icon: _Lust/Interface/ERP/cheeks_kiss.png
-#  emotes:
-#  interactionSounds:
-#    - Kiss1
-#    - Kiss2
-#    - Kiss3
-#    - Kiss4
-#    - Kiss5
-#    - Kiss6
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: false
-#  targetTagBlacklist:
-#  - щёки
-#  userTagBlacklist:
-#  - рот
-#  category: щёки
-#
-#- type: interaction
-#  id: CheeksKissBoth
-#  name: Расцеловать в обе щёки
-#  icon: _Lust/Interface/ERP/cheeks_kiss_both.png
-#  emotes:
-#  - целует %target в обе щёки
-#  - чмокает %target в обе щёки
-#  - расцеловывает %target в обе щеки
-#  interactionSounds:
-#    - Kiss1
-#    - Kiss2
-#    - Kiss3
-#    - Kiss4
-#    - Kiss5
-#    - Kiss6
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: false
-#  targetTagBlacklist:
-#  - щёки
-#  userTagBlacklist:
-#  - рот
-#  category: щёки
-#
-#- type: interaction
-#  id: CheeksPat
-#  name: Потискать за щёки
-#  icon: _Lust/Interface/ERP/cheeks_pat.png
-#  emotes:
-#  - нежно треплет за щёчки %target
-#  - слегка растягивает щёчки %target
-#  - тискает щечки %target
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: false
-#  targetTagBlacklist:
-#  - щёки
-#  userTagBlacklist:
-#  - гладкие перчатки
-#  category: щёки
-#
-#- type: interaction
-#  id: CheeksLick
-#  name: Облизнуть щёку
-#  icon: _Lust/Interface/ERP/ERP2.png
-#  emotes:
-#  - игриво взглянув в глаза %target, облизывает щеку
-#  - проводит языком по щеке %target, оставляя мокрый след
-#  - приближаясь к щеке %target, проводит по ней языком
-#  sounds:
-#  - path: /Audio/_Lust/ERP/lick1.ogg
-#  - path: /Audio/_Lust/ERP/lick2.ogg
-#  userSex:
-#  - Unsexed
-#  targetSex:
-#  - Unsexed
-#  erp: false
-#  targetTagBlacklist:
-#  - щёки
-#  userTagBlacklist:
-#  - рот
-#  category: щёки
+﻿- type: interaction
+  id: CheeksKiss
+  name: "Чмокнуть в щёчку"
+  icon: CheeksKissIcon
+  category: Cheeks
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3
+
+- type: interaction
+  id: CheeksKissBoth
+  name: "Расцеловать в обе щёки"
+  icon: CheeksKissBothIcon
+  category: Cheeks
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user целует %target в обе щёки"
+    - "%user чмокает %target в обе щёки"
+    - "%user расцеловывает %target в обе щеки"
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3
+
+- type: interaction
+  id: CheeksPat
+  name: "Потискать за щёки"
+  icon: CheeksPatIcon
+  category: Cheeks
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "гладкие перчатки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно треплет за щёчки %target"
+    - "%user слегка растягивает щёчки %target"
+    - "%user тискает щечки %target"
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3
+
+- type: interaction
+  id: CheeksLick
+  name: "Облизнуть щёку"
+  icon: ERP2Icon
+  category: Cheeks
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user игриво взглянув в глаза %target, облизывает щеку"
+    - "%user проводит языком по щеке %target, оставляя мокрый след"
+    - "%user приближаясь к щеке %target, проводит по ней языком"
+  interactionSounds:
+    - Lick1
+    - Lick2
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3
