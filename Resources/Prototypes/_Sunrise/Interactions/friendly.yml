@@ -145,7 +145,7 @@
     - !type:SpeciesCondition
       checkTarget: false
       checkInitiator: true
-      allowedSpecies: [Vulpkanin, Slime, Felinid, Demon, Reptilian]
+      allowedSpecies: [Vulpkanin, SlimePerson, Felinid, Demon, Reptilian]
     - !type:HasVisualLayerCondition
       checkTarget: false
       checkInitiator: true

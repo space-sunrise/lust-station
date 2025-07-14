@@ -17,3 +17,7 @@
 - type: interactionCategory
   id: Cheeks
   name: Щёки
+
+- type: interactionCategory
+  id: Cock
+  name: Член

@@ -352,3 +352,8 @@
   id: CheeksKissIcon
   name: "Поцелуй щёк"
   icon: /Textures/_Sunrise/Interactions/cheeks_kiss.png
+
+- type: interactionIcon
+  id: CockTongueFap
+  name: "Ласкание члена языком"
+  icon: /Textures/_Sunrise/Interactions/cock_tongue_fap.png
