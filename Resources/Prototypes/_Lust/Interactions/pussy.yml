@@ -2,7 +2,7 @@
   id: PussyTouch
   name: "Поласкать вагину пальцами"
   icon: PussyTouchIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -43,7 +43,7 @@
   id: PussyLick
   name: "Полизать вагину"
   icon: PussyLickIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -85,7 +85,7 @@
   id: PussyFingering
   name: "Трахать вагину пальцами"
   icon: PussyFingeringIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -122,7 +122,7 @@
   id: PussyScissors
   name: "Потереться вагинами"
   icon: PussyScissorsIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -162,7 +162,7 @@
   id: PussyFuck
   name: "Трахать вагину членом"
   icon: LegsCockFuckIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -209,7 +209,7 @@
   id: PussySelfTouch
   name: "Поласкать свою вагину"
   icon: PussyTouchIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:SelfOnlyCondition
   - !type:SexCondition
@@ -240,7 +240,7 @@
   id: PussySelfFingering
   name: "Трахать свою вагину пальцами"
   icon: PussyFingeringIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:SelfOnlyCondition
   - !type:SexCondition
@@ -270,7 +270,7 @@
   id: PussyFriction
   name: "Тереться членом о киску"
   icon: ERP2Icon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -309,7 +309,7 @@
   id: ClitorBite
   name: "Прикусить клитор зубами"
   icon: ERP2Icon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -340,7 +340,7 @@
   id: ClitorLick
   name: "Играть с клитором язычком"
   icon: ERP2Icon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -373,7 +373,7 @@
   id: HoldTailPussyFuck
   name: "Трахать в вагину держа хвост"
   icon: LegsCockFuckTailIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
