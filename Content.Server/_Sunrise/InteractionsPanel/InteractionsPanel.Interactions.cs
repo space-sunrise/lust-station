@@ -388,9 +388,6 @@ public partial class InteractionsPanel
             .Replace("%user", userName)
             .Replace("%target", targetName);
 
-        if (!template.Contains("%user") && !template.Contains("%target"))
-            result = $"{userName} {template} {targetName}";
-
         return result;
     }
 }
