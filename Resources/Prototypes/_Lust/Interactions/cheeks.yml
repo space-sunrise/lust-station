@@ -113,8 +113,8 @@
     - "%user проводит языком по щеке %target, оставляя мокрый след"
     - "%user приближаясь к щеке %target, проводит по ней языком"
   interactionSounds:
-    - Lick1
-    - Lick2
+    - FaceLickDoggyStyleSound1
+    - FaceLickDoggyStyleSound2
   loveUser: 1
   loveTarget: 1
   cooldown: 3

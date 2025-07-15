@@ -231,8 +231,8 @@
     - "%user игриво теребит язычком соски %target"
     - "%user жадно сосет грудь %target"
   interactionSounds:
-    - Lick1
-    - Lick2
+    - FaceLickDoggyStyleSound1
+    - FaceLickDoggyStyleSound2
     - Kiss1
   loveUser: 3
   loveTarget: 7
@@ -266,8 +266,8 @@
     - "%user нежно покусывает соски %target"
     - "%user игриво покусывает соски %target"
   interactionSounds:
-    - Lick1
-    - Lick2
+    - FaceLickDoggyStyleSound1
+    - FaceLickDoggyStyleSound2
   loveTarget: 8
   loveUser: 1
   cooldown: 3
@@ -298,8 +298,8 @@
     - "%target прикасается к соскам немного грубо сжимая их"
     - "%target ласкает свои соски"
   interactionSounds:
-    - Lick1
-    - Lick2
+    - FaceLickDoggyStyleSound1
+    - FaceLickDoggyStyleSound2
   loveTarget: 5
   cooldown: 3
 #  lactationStimulationFlag: true
@@ -332,8 +332,8 @@
     - "%user прикасается к груди %target ласково сжимая соски"
     - "%user прикасается к соскам %target немного грубо сжимая их"
   interactionSounds:
-    - Lick1
-    - Lick2
+    - FaceLickDoggyStyleSound1
+    - FaceLickDoggyStyleSound2
   loveUser: 1
   loveTarget: 5
   cooldown: 3
