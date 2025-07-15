@@ -22,9 +22,6 @@
   description: trait-short-quirk-desc
   category: HeightTraits
   cost: 1
-  blacklist:
-    species:
-      - Felinid
   components:
   - type: ScaleSprite
     scale: 1,0.9
