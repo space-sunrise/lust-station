@@ -94,7 +94,7 @@
 - type: interaction
   id: LegsFeetLick
   name: "Полизать ступни"
-  icon: LegsFeetLickIcon
+  icon: LegsLickIcon
   category: Legs
   appearConditions:
   - !type:HasTargetCondition

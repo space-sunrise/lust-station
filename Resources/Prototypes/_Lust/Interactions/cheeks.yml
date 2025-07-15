@@ -67,7 +67,7 @@
 - type: interaction
   id: CheeksPat
   name: "Потискать за щёки"
-  icon: CheeksPatIcon
+  icon: CheeksPressIcon
   category: Cheeks
   appearConditions:
     - !type:HasTargetCondition

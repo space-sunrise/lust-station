@@ -85,7 +85,7 @@
 - type: interaction
   id: FaceInBoobs
   name: "Прижаться грудью к лицу"
-  icon: FaceInBoobs
+  icon: FaceInBoobsIcon
   category: Face
   appearConditions:
     - !type:HasTargetCondition
