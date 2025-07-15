@@ -26,7 +26,7 @@
 - type: interactionIcon
   id: BoobsFickIcon
   name: "Трахать грудь"
-  icon: /Textures/_Lust/Interactions/boobs_fick.png
+  icon: /Textures/_Lust/Interactions/boobs_fuck.png
 
 - type: interactionIcon
   id: BoobsKissManyIcon
@@ -126,7 +126,7 @@
 - type: interactionIcon
   id: CockSlimeSexVbolIcon
   name: "Слизень (член) секс (Vbol)"
-  icon: /Textures/_Lust/Interactions/cock_slime_sex_vbol.png
+  icon: /Textures/_Lust/Interactions/cock_slime_sex_obol.png
 
 - type: interactionIcon
   id: CockTailFapIcon
