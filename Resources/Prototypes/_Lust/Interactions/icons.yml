@@ -31,7 +31,7 @@
 - type: interactionIcon
   id: BoobsKissManyIcon
   name: "Множество поцелуев груди"
-  icon: /Textures/_Lust/Interactions/boobs_kiss_many.png
+  icon: /Textures/_Lust/Interactions/boobs_many_kisses.png
 
 - type: interactionIcon
   id: BoobsMassageIcon
@@ -194,16 +194,6 @@
   icon: /Textures/_Lust/Interactions/hands_on_butt.png
 
 - type: interactionIcon
-  id: HeartIcon
-  name: "Сердце"
-  icon: /Textures/_Lust/Interactions/heart.png
-
-- type: interactionIcon
-  id: HeartIconConIcon
-  name: "Сердце (кон)"
-  icon: /Textures/_Lust/Interactions/heart_icon_con.png
-
-- type: interactionIcon
   id: HornsAssFemaleIcon
   name: "Рога (женская задница)"
   icon: /Textures/_Lust/Interactions/horns_ass_female.png
@@ -271,7 +261,7 @@
 - type: interactionIcon
   id: NuzzleNeckVulgaIcon
   name: "Тереться носом о шею (вульгарно)"
-  icon: /Textures/_Lust/Interactions/nuzzle_neck_vulga.png
+  icon: /Textures/_Lust/Interactions/nuzzle_neck_vulpa.png
 
 - type: interactionIcon
   id: PatEarsIcon
