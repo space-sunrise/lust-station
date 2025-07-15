@@ -131,7 +131,7 @@
 - type: interaction
   id: FaceSitting
   name: "Сесть на лицо"
-  icon: FaceSitting
+  icon: FaceSittingIcon
   category: Face
   appearConditions:
     - !type:HasTargetCondition

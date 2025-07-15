@@ -28,7 +28,7 @@
 
 - type: interactionCategory
   id: Feet
-  name: Ножки
+  name: Ступни
 
 - type: interactionCategory
   id: Lips
@@ -57,3 +57,7 @@
 - type: interactionCategory
   id: Fleshlights
   name: Искусственная вагина
+
+- type: interactionCategory
+  id: Legs
+  name: Ножки
