@@ -13,7 +13,7 @@ public sealed partial class SexCondition : IAppearCondition
     public bool CheckTarget { get; private set; } = true;
 
     [DataField]
-    public Sex RequiredSex { get; private set; } = Sex.Unsexed;
+    public List<Sex> RequiredSex { get; private set; } = new();
 
     public bool IsMet(EntityUid initiator, EntityUid target, EntityManager entityManager)
     {
@@ -22,7 +22,7 @@ public sealed partial class SexCondition : IAppearCondition
             if (!entityManager.TryGetComponent<HumanoidAppearanceComponent>(initiator, out var initiatorAppearance))
                 return false;
 
-            if (initiatorAppearance.Sex != RequiredSex)
+            if (!RequiredSex.Contains(initiatorAppearance.Sex))
                 return false;
         }
 
@@ -31,7 +31,7 @@ public sealed partial class SexCondition : IAppearCondition
             if (!entityManager.TryGetComponent<HumanoidAppearanceComponent>(target, out var targetAppearance))
                 return false;
 
-            if (targetAppearance.Sex != RequiredSex)
+            if (!RequiredSex.Contains(targetAppearance.Sex))
                 return false;
         }
 
