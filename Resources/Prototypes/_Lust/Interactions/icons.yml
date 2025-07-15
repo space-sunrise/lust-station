@@ -119,16 +119,6 @@
   icon: /Textures/_Lust/Interactions/cock_slime_sex.png
 
 - type: interactionIcon
-  id: CockSlimeSexConIcon
-  name: "Слизень (член) секс (кон)"
-  icon: /Textures/_Lust/Interactions/cock_slime_sex_con.png
-
-- type: interactionIcon
-  id: CockSlimeSexVbolIcon
-  name: "Слизень (член) секс (Vbol)"
-  icon: /Textures/_Lust/Interactions/cock_slime_sex_obol.png
-
-- type: interactionIcon
   id: CockTailFapIcon
   name: "Дрочить член (хвост)"
   icon: /Textures/_Lust/Interactions/cock_tail_fap.png
