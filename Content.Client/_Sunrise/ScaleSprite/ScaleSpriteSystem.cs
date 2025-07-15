@@ -21,6 +21,6 @@ public sealed class ScaleVisualsSystem : EntitySystem
         if (!TryComp<SpriteComponent>(ent, out var sprite))
             return;
 
-        _sprite.SetScale((ent.Owner, sprite), sprite.Scale * ent.Comp.Scale);
+        _sprite.SetScale((ent.Owner, sprite), ent.Comp.Scale);
     }
 }
