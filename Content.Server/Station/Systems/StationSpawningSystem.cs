@@ -7,6 +7,7 @@ using Content.Server.Mind.Commands;
 using Content.Server.PDA;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
+using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
@@ -188,12 +189,12 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             }
             // Sunrise-End
             // Lust-Station-Start
-            // EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
-            // if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-            // EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
-            // EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
-            // if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
-            // Lust-Station-End
+            EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
+             if (profile.Erp == Erp.No) { EnsureComp<InteractionsComponent>(entity.Value).Erp = false; }
+             EnsureComp<InteractionsComponent>(entity.Value).Virginity = profile.Virginity;
+            EnsureComp<InteractionsComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+             if (EnsureComp<InteractionsComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+             // Lust-Station-End
         }
 
         if (loadout != null)

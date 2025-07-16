@@ -1,12 +1,16 @@
 using System.Numerics;
 using Content.Server.Chat.Systems;
+using Content.Server.Fluids.EntitySystems;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
 using Content.Shared.Chat;
+using Content.Shared.Chemistry.Components;
 using Content.Shared.Clothing;
 using Content.Shared.Database;
+using Content.Shared.FixedPoint;
 using Content.Shared.Hands;
+using Content.Shared.Humanoid;
 using Content.Shared.Input;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
@@ -19,6 +23,11 @@ namespace Content.Server._Sunrise.InteractionsPanel;
 
 public partial class InteractionsPanel
 {
+    [Dependency] private readonly PuddleSystem _puddle = default!;
+
+    private const float LoveDecayRate = 0.5f;
+    private const float OrgasmCooldownSeconds = 15f;
+
     private void InitializeInteractions()
     {
         Subs.BuiEvents<InteractionsComponent>(InteractionWindowUiKey.Key,
@@ -229,8 +238,117 @@ public partial class InteractionsPanel
             SetCooldown(ent.Owner, args.InteractionId, interactionPrototype.Cooldown);
         }
 
+        if (interactionPrototype.LoveUser > 0)
+            ModifyLove(ent.Owner, interactionPrototype.LoveUser);
+
+        if (interactionPrototype.LoveTarget > 0)
+            ModifyLove(target.Value, interactionPrototype.LoveTarget);
+
+        ProcessVirginityLoss(ent.Owner, target.Value, interactionPrototype);
+
+        TryEmitMoan(ent.Owner, interactionPrototype.LoveUser);
+        TryEmitMoan(target.Value, interactionPrototype.LoveTarget);
+
         _log.Add(LogType.Interactions, LogImpact.Medium,
             $"[InteractionsPanel] {ToPretty(ent.Owner)} использует \"{interactionPrototype.ID}\" на {ToPretty(target.Value)}");
+    }
+
+    private void TryEmitMoan(EntityUid uid, FixedPoint2 loveGain)
+    {
+        if (!TryComp<InteractionsComponent>(uid, out var component))
+            return;
+
+        if (loveGain < FixedPoint2.New(10))
+            return;
+
+        if (!_gameTiming.IsFirstTimePredicted)
+            return;
+
+        var now = _gameTiming.CurTime;
+        if (now < component.LastMoanTime + TimeSpan.FromSeconds(5))
+            return;
+
+        component.LastMoanTime = now;
+        Dirty(uid, component);
+
+        _chatSystem.TryEmoteWithChat(uid, "Moan");
+    }
+
+    private void ProcessVirginityLoss(EntityUid user, EntityUid target, InteractionPrototype proto)
+    {
+        TryLoseVirginity(user, proto.UserVirginityLoss);
+        TryLoseVirginity(target, proto.TargetVirginityLoss);
+    }
+
+    private void TryLoseVirginity(EntityUid ent, string type)
+    {
+        if (!TryComp<InteractionsComponent>(ent, out var comp))
+            return;
+
+        if (string.IsNullOrWhiteSpace(type) || type == "none")
+            return;
+
+        var sex = TryComp<HumanoidAppearanceComponent>(ent, out var humanoid)
+            ? humanoid.Sex.ToString().ToLowerInvariant()
+            : "unknown";
+
+        switch (type.ToLowerInvariant())
+        {
+            case "anal":
+                if (comp.AnalVirginity == Virginity.Yes)
+                {
+                    comp.AnalVirginity = Virginity.No;
+                    Dirty(ent, comp);
+                    _chatSystem.TrySendInGameICMessage(ent, "теряет анальную девственность", InGameICChatType.Emote, false);
+                }
+                break;
+
+            case "vaginal":
+            case "female":
+                if (comp.Virginity == Virginity.Yes && sex == "female")
+                {
+                    comp.Virginity = Virginity.No;
+                    Dirty(ent, comp);
+                    _chatSystem.TrySendInGameICMessage(ent, "теряет девственность", InGameICChatType.Emote, false);
+                }
+                break;
+
+            case "male":
+                if (comp.Virginity == Virginity.Yes && sex == "male")
+                {
+                    comp.Virginity = Virginity.No;
+                    Dirty(ent, comp);
+                    _chatSystem.TrySendInGameICMessage(ent, "теряет девственность", InGameICChatType.Emote, false);
+                }
+                break;
+
+            case "futanari":
+                if (comp.Virginity == Virginity.Yes && sex == "futanari")
+                {
+                    comp.Virginity = Virginity.No;
+                    Dirty(ent, comp);
+                    _chatSystem.TrySendInGameICMessage(ent, "теряет девственность", InGameICChatType.Emote, false);
+                }
+                break;
+
+            case "any":
+                if (comp.Virginity == Virginity.Yes)
+                {
+                    comp.Virginity = Virginity.No;
+                    Dirty(ent, comp);
+                    _chatSystem.TrySendInGameICMessage(ent, "теряет девственность", InGameICChatType.Emote, false);
+                }
+                break;
+        }
+    }
+
+    private void SpawnSemen(string prototype, EntityCoordinates coordinates)
+    {
+        _puddle.TrySpillAt(
+            coordinates,
+            new Solution(prototype, 2f),
+            out _,
+            false);
     }
 
     private void HandleCustomInteraction(
@@ -301,10 +419,65 @@ public partial class InteractionsPanel
         base.Update(frameTime);
 
         var query = EntityQueryEnumerator<InteractionsComponent>();
-        while (query.MoveNext(out var uid, out _))
+        while (query.MoveNext(out var uid, out var comp))
         {
             UpdateCooldowns(uid);
+            UpdateLove(uid, comp, frameTime);
         }
+    }
+
+    private void UpdateLove(EntityUid uid, InteractionsComponent comp, float frameTime)
+    {
+        if (comp.LoveAmount <= 0)
+            return;
+
+        comp.LoveAmount -= LoveDecayRate * frameTime;
+
+        if (comp.LoveAmount < 0)
+            comp.LoveAmount = 0;
+
+        Dirty(uid, comp);
+    }
+
+    private void TryOrgasm(EntityUid uid)
+    {
+        if (!TryComp<InteractionsComponent>(uid, out var comp))
+            return;
+
+        if (IsOnCooldown(uid, "orgasm"))
+            return;
+
+        comp.LoveAmount = 0;
+
+        _chatSystem.TrySendInGameICMessage(uid, "кончает", InGameICChatType.Emote, false);
+        _chatSystem.TryEmoteWithChat(uid, "Moan");
+
+        SpawnSemen("Semen", Transform(uid).Coordinates);
+
+        SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
+        Dirty(uid, comp);
+    }
+
+    public void ModifyLove(EntityUid uid, FixedPoint2 amount)
+    {
+        if (!TryComp<InteractionsComponent>(uid, out var comp))
+            return;
+
+        if (IsOnCooldown(uid, "orgasm"))
+            return;
+
+        comp.LoveAmount += amount;
+
+        if (comp.LoveAmount >= comp.MaxLoveAmount)
+        {
+            TryOrgasm(uid);
+        }
+        else if (comp.LoveAmount > comp.MaxLoveAmount)
+        {
+            comp.LoveAmount = comp.MaxLoveAmount;
+        }
+
+        Dirty(uid, comp);
     }
 
     private bool IsOnCooldown(EntityUid user, string interactionId)
@@ -387,9 +560,6 @@ public partial class InteractionsPanel
         var result = template
             .Replace("%user", userName)
             .Replace("%target", targetName);
-
-        if (!template.Contains("%user") && !template.Contains("%target"))
-            result = $"{userName} {template} {targetName}";
 
         return result;
     }
