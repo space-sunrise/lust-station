@@ -1,3 +1,5 @@
+ent-BaseWeaponShotgunSunrise = дробовик
+    .desc = Целься и стреляй.
 ent-WeaponXM1014 = XM1014
     .desc = Боевой дробовик Earth Armories XM1014 - это полуавтоматический дробовик, используемый стрелками в отрядах армии Земли. Использует патроны калибра .50 ружейный.
 ent-WeaponShotgunPaladin12 = дробовик Паладин
