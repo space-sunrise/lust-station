@@ -229,6 +229,7 @@
       damageContainers:
       - Inorganic
       - Silicon
+      - Mech # Sunrise-edit
     - type: InteractionPopup
       interactSuccessString: petting-success-syndicate-cyborg
       interactFailureString: petting-failure-syndicate-cyborg

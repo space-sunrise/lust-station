@@ -78,6 +78,11 @@
     params:
       volume: -15
   addComponents:
+  - type: ShowHealthBars
+    damageContainers:
+    - Inorganic
+    - Silicon
+    - Mech
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
