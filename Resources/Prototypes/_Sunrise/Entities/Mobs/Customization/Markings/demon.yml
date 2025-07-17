@@ -321,6 +321,7 @@
   - sprite: _Sunrise/Mobs/Species/Demon/markings.rsi
     state: tail_trident
 
+- type: marking
   id: EarsArcanaAlt
   bodyPart: HeadSide
   markingCategory: HeadSide
