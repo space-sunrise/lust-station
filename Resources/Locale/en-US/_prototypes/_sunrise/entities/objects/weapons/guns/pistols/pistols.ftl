@@ -1,8 +1,14 @@
+ent-BaseWeaponPistolSunrise = BasePistol
+    .desc = A rooty tooty point and shooty.
+    .suffix = Sunrise
 ent-WeaponPistolVP78 = combat pistol VP-70
     .desc = { ent-BaseWeaponPistol.desc }
 ent-WeaponPistolG22 = Glock-22
     .suffix = Lethal
     .desc = { ent-BaseWeaponPistol.desc }
+ent-WeaponPistolG22Auto = Glock-22 Auto
+    .desc = Designed by Nanotrasen’s Small Arms Division, the Glock-22 Auto is a premium full-automatic sidearm built for superior performance and reliability. Featuring a simple yet robust recoil-operated mechanism, it serves as a high-end replacement for the standard Glock 22. Favored by station security and emergency response teams, it delivers greater firepower and durability in high-risk scenarios. Uses .35 pistol magazines.
+    .suffix = Sunrise, Security
 ent-WeaponPistolHIB88M4 = HI Browning-88 M4
     .desc = { ent-BaseWeaponPistol.desc }
 ent-WeaponPistolACP14 = ACP-14
