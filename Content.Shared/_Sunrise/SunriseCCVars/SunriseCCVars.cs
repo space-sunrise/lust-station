@@ -40,6 +40,12 @@ public sealed partial class SunriseCCVars : CVars
         CVarDef.Create("tts.client_enabled", true, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
+    /// Option to disable TTS queue in radio for client
+    /// </summary>
+    public static readonly CVarDef<bool> TTSClientQueueEnabled =
+        CVarDef.Create("tts.queue_enabled", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
     /// Default volume setting of TTS sound
     /// </summary>
     public static readonly CVarDef<float> TTSVolume =
