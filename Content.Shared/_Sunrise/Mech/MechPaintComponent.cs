@@ -1,18 +1,18 @@
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.FixedPoint;
+using Content.Shared.Mech.EntitySystems;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Shared._Sunrise.Paint;
+namespace Content.Shared._Sunrise.Mech;
 
 /// <summary>
 /// Entity when used on another entity will paint target entity.
 /// </summary>
 [RegisterComponent, NetworkedComponent]
-[Access(typeof(SharedMechPaintSystem))]
 public sealed partial class MechPaintComponent : Component
 {
     /// <summary>
@@ -31,8 +31,8 @@ public sealed partial class MechPaintComponent : Component
     /// How long the doafter will take.
     /// </summary>
     [DataField]
-    public int Delay = 2;
-    
+    public TimeSpan Delay = TimeSpan.FromSeconds(2);
+
     /// <summary>
     /// What mech are paint?
     /// </summary>
