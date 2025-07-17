@@ -1,8 +1,9 @@
 using System.Threading;
+using Robust.Shared.GameStates;
 
-namespace Content.Server.Carrying
+namespace Content.Shared._Sunrise.Carrying
 {
-    [RegisterComponent]
+    [RegisterComponent, NetworkedComponent]
     public sealed partial class CarriableComponent : Component
     {
         /// <summary>
@@ -12,6 +13,10 @@ namespace Content.Server.Carrying
         [DataField("freeHandsRequired")]
         public int FreeHandsRequired = 2;
 
-        public CancellationTokenSource? CancelToken;
+        [DataField]
+        public float WalkSpeedModifier = 0.6f;
+
+        [DataField]
+        public float SprintSpeedModifier = 0.6f;
     }
 }
