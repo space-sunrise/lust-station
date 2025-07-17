@@ -22,9 +22,9 @@
     requireExposed: true
   interactionMessages:
   - "%user медленно сжимает в ладони яйца %target"
-  - "user аккуратно мнет рукой яички %target"
-  - "user возбужденно ласкает пальцами яички %target"
-  - "user слегка сжимает и оттягивает кижицу мошонки %target"
+  - "%user аккуратно мнет рукой яички %target"
+  - "%user возбужденно ласкает пальцами яички %target"
+  - "%user слегка сжимает и оттягивает кижицу мошонки %target"
   loveUser: 1
   loveTarget: 6
   cooldown: 3
