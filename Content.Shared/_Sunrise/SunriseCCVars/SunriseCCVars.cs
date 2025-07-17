@@ -305,9 +305,6 @@ public sealed partial class SunriseCCVars : CVars
      * Ban links.
      */
 
-    public static readonly CVarDef<string> BanForumLink =
-        CVarDef.Create("cl.forum_link", "", CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
-
     public static readonly CVarDef<string> BanDiscordLink =
         CVarDef.Create("cl.discord_link", "", CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
 
