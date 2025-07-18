@@ -799,9 +799,6 @@
     components:
     - type: NightVision
 # NIGHT VISION END
-  - type: PowerCellDraw
-    drawRate: 0
-    useRate: 20
   - type: ShowHealthBars
     damageContainers:
     - Biological
