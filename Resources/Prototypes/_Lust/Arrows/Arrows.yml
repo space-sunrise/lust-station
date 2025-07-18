@@ -242,7 +242,7 @@
 - type: startingGear
   id: MTLeader
   equipment:
-    jumpsuit: ClothingUniformSpecialistBlackJumpSuitSafno_S
+    jumpsuit: ClothingUniformSpecialistBlackJumpSuit
     back: ClothingBackpackArrowsFilled
     mask: ClothingMaskGaiter
     eyes: ClothingEyesGlassesMT
@@ -259,7 +259,7 @@
 - type: startingGear
   id: MTSold
   equipment:
-    jumpsuit: ClothingUniformSpecialistBlackJumpSuitSafno_S
+    jumpsuit: ClothingUniformSpecialistBlackJumpSuit
     back: ClothingBackpackArrowsSoldFilled
     mask: ClothingMaskGaiter
     eyes: ClothingEyesGlassesMT
