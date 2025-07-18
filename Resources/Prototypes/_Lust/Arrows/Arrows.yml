@@ -769,10 +769,36 @@
         shader: unshaded
     slots: [ Eyes ]
   - type: Appearance
-  - type: NightVisionDevice
-    isPowered: true
-    displayColor: "#7FFFD4"
-    displayShader: NVDDisplay
+# NIGHT VISION START
+  - type: ItemToggle
+    predictable: false
+    onUse: false
+    canActivateInhand: false
+    soundActivate:
+      path: /Audio/_Sunrise/Items/Goggles/activate.ogg
+    soundDeactivate:
+      path: /Audio/_Sunrise/Items/Goggles/deactivate.ogg
+    soundFailToActivate:
+      path: /Audio/Machines/button.ogg
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellSmall
+  - type: ToggleCellDraw
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 20
+  - type: ComponentToggler
+    parent: true
+    components:
+    - type: NightVision
+# NIGHT VISION END
   - type: PowerCellDraw
     drawRate: 0
     useRate: 20
