@@ -106,7 +106,7 @@
                                  HorizontalExpand="True"
                                  MinHeight="18"
                                  MinWidth="30"/>
-                    <TextureRect SetSize="30 30"
+                    <TextureRect SetSize="20 20"
                                  Stretch="KeepAspectCentered"
                                  Margin="6 0 0 0"
                                  TexturePath="/Textures/_Lust/heartIcon.png"/>
