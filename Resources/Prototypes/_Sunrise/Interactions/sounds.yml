@@ -36,17 +36,17 @@
 - type: interactionSound
   id: FriendlyFive1
   name: "Дать пять 1"
-  sound: /Audio/_Sunrise/Interactions/chock/five1.ogg
+  sound: /Audio/_Sunrise/Interactions/clap/five1.ogg
 
 - type: interactionSound
   id: FriendlyFive2
   name: "Дать пять 2"
-  sound: /Audio/_Sunrise/Interactions/chock/five2.ogg
+  sound: /Audio/_Sunrise/Interactions/clap/five2.ogg
 
 - type: interactionSound
   id: FriendlyFive3
   name: "Дать пять 3"
-  sound: /Audio/_Sunrise/Interactions/chock/five3.ogg
+  sound: /Audio/_Sunrise/Interactions/clap/five3.ogg
 
 - type: interactionSound
   id: FriendlyXZ
@@ -117,3 +117,13 @@
   id: FriendlyThudswoosh
   name: "Обнимашки"
   sound: /Audio/Effects/thudswoosh.ogg
+
+- type: interactionSound
+  id: Clap1
+  name: "Хлопок 1"
+  sound: /Audio/_Sunrise/Interactions/clap1.ogg
+
+- type: interactionSound
+  id: Clap2
+  name: "Хлопок 2"
+  sound: /Audio/_Sunrise/Interactions/clap2.ogg
