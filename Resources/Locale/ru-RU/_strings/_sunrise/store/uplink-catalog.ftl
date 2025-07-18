@@ -21,7 +21,6 @@ uplink-magazine-bauer127-extended-name = расширенный магазин B
 uplink-mechpaint-mauler-name = балончик краски "МЯУЛЕР"
 uplink-mechpaint-mauler-desc = Содержит краску для Маулера. Превратите огромного МЕХа в милого котика!.
 uplink-magazine-bauer127-extended-desc = Магазин для Bauer127. Содержит 15 патронов калибра .60 антиматериальный.
-
 uplink-magazine-dl6902-name = Короб-магазин DL6902 (7,62мм)
 uplink-magazine-dl6902-desc = Магазин для Dl6902. Содержит 200 патронов калибра 7,62х39мм.
 uplink-magazine-dragunov-desc = Магазин для Драгунова. Содержит 10 патронов калибра 7,62х54R.
