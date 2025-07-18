@@ -29,16 +29,6 @@
   sound: /Audio/_Lust/Interactions/kiss6.ogg
 
 - type: interactionSound
-  id: Clap1
-  name: "Хлопок 1"
-  sound: /Audio/_Lust/Interactions/clap1.ogg
-
-- type: interactionSound
-  id: Clap2
-  name: "Хлопок 2"
-  sound: /Audio/_Lust/Interactions/clap2.ogg
-
-- type: interactionSound
   id: Hlup1
   name: "Хлюп 1"
   sound: /Audio/_Lust/Interactions/hlup.ogg
@@ -81,4 +71,4 @@
 - type: interactionSound
   id: FinterLick
   name: "Лизать палец"
-  sound: /Audio/_Lust/Interactions/fingerlick/fingerlick.ogg.ogg
+  sound: /Audio/_Lust/Interactions/fingerlick/fingerlick.ogg
