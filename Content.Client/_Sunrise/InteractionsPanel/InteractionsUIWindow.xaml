@@ -33,7 +33,7 @@
 
                         <BoxContainer Orientation="Vertical"
                                       HorizontalAlignment="Center"
-                                      Margin="12 10" MaxSize="142 124">
+                                      Margin="12 10">
 
                             <PanelContainer Margin="0 0 0 6">
                                 <PanelContainer.PanelOverride>
@@ -41,17 +41,37 @@
                                 </PanelContainer.PanelOverride>
 
                                 <SpriteView Name="UserSpriteView"
-                                        OverrideDirection="South"
-                                        Scale="1.8, 1.8"
-                                        HorizontalAlignment="Center"
-                                        Margin="8 8 8 8" MaxSize="142 124"/>
+                                            OverrideDirection="South"
+                                            Scale="1.8, 1.8"
+                                            HorizontalAlignment="Center"
+                                            Margin="8 8 8 8" MaxSize="142 124"/>
                             </PanelContainer>
 
                             <Label Name="NameUser"
                                    FontColorOverride="#ff69b4"
-                                HorizontalAlignment="Center"
-                                StyleClasses="LabelSubText"
-                                Margin="0 4 0 0" MaxSize="142 124" MaxWidth="140" />
+                                   HorizontalAlignment="Center"
+                                   StyleClasses="LabelSubText"
+                                   Margin="0 4 0 0"
+                                   MaxWidth="140"
+                                   Text="" />
+
+                            <BoxContainer Orientation="Vertical"
+                                          HorizontalAlignment="Center"
+                                          Margin="0 2 0 0">
+                                <Label Text="Ваши гениталии:"
+                                       FontColorOverride="#ffb6c1"
+                                       HorizontalAlignment="Center"
+                                       StyleClasses="LabelSubText"/>
+
+                                <Label Name="UserGenitalsLabel"
+                                       Margin="0 2 0 0"
+                                       MaxWidth="140"
+                                       MaxHeight="40"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Center"
+                                       StyleClasses="LabelSubText">
+                                </Label>
+                            </BoxContainer>
                         </BoxContainer>
                     </PanelContainer>
                 </BoxContainer>
@@ -69,7 +89,7 @@
 
                         <BoxContainer Orientation="Vertical"
                                       HorizontalAlignment="Center"
-                                      Margin="12 10" MaxSize="142 124">
+                                      Margin="12 10">
 
                             <PanelContainer Margin="0 0 0 6">
                                 <PanelContainer.PanelOverride>
@@ -87,7 +107,27 @@
                                    FontColorOverride="#ff69b4"
                                    HorizontalAlignment="Center"
                                    StyleClasses="LabelSubText"
-                                   Margin="0 4 0 0" MaxSize="142 124" MaxWidth="142" />
+                                   Margin="0 4 0 0"
+                                   MaxWidth="140"
+                                   Text="" />
+
+                            <BoxContainer Orientation="Vertical"
+                                          HorizontalAlignment="Center"
+                                          Margin="0 2 0 0">
+                                <Label Text="Гениталии цели:"
+                                       FontColorOverride="#ffb6c1"
+                                       HorizontalAlignment="Center"
+                                       StyleClasses="LabelSubText"/>
+
+                                <Label Name="TargetGenitalsLabel"
+                                       Margin="0 2 0 0"
+                                       MaxWidth="140"
+                                       MaxHeight="40"
+                                       VerticalAlignment="Top"
+                                       HorizontalAlignment="Center"
+                                       StyleClasses="LabelSubText">
+                                </Label>
+                            </BoxContainer>
                         </BoxContainer>
                     </PanelContainer>
 
