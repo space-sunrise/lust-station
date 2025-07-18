@@ -60,6 +60,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
     private HashSet<string> _customInteractionIds = new();
     private readonly HashSet<string> _openCategories = new();
     private readonly HashSet<string> _favoriteInteractions = new();
+    private NetEntity _targetEntity;
 
     #endregion
 
@@ -75,6 +76,9 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         MainTabContainer.SetTabTitle(0, "Интеракции");
         MainTabContainer.SetTabTitle(1, "Кастом");
         MainTabContainer.SetTabTitle(2, "Настройки");
+
+        ProgressBar.ForegroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(247, 141, 141));
+        ProgressBar.BackgroundStyleBoxOverride = new StyleBoxFlat(backgroundColor: new Color(152, 24, 84));
 
         SearchInput.OnTextChanged += OnSearchTextChanged;
 
@@ -121,6 +125,19 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         base.FrameUpdate(args);
 
         UpdateButtonsState();
+        UpdateLoveProgress();
+    }
+
+    private void UpdateLoveProgress()
+    {
+        if (!_entityManager.TryGetEntity(_targetEntity, out var entity) ||
+            !_entityManager.TryGetComponent<InteractionsComponent>(entity, out var component))
+            return;
+
+        var loveAmount = component.LoveAmount;
+        var loveMax = component.MaxLoveAmount;
+
+        ProgressBar.Value = loveAmount.Float() / loveMax.Float();
     }
 
     public override void Close()
@@ -203,6 +220,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         NetEntity targetEntity,
         List<string> availableInteractionIds)
     {
+        _targetEntity = targetEntity;
         UpdateEntityInformation(userEntity, targetEntity);
         _currentInteractionIds = availableInteractionIds;
         _buttonInteractions.Clear();

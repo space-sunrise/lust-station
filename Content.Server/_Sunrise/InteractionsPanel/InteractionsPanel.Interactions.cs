@@ -258,7 +258,7 @@ public partial class InteractionsPanel
         if (!TryComp<InteractionsComponent>(uid, out var component))
             return;
 
-        if (loveGain < FixedPoint2.New(10))
+        if (loveGain < FixedPoint2.New(5))
             return;
 
         if (!_gameTiming.IsFirstTimePredicted)
