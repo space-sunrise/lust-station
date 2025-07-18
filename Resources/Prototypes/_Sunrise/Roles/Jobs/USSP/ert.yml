@@ -1111,7 +1111,7 @@
     - type: GhostRole
       job: ERTEngineer
     - type: Loadout
-      prototypes: [ ERTEngineerGearAmberEVA ]
+      prototypes: [ ERTEngineerGearAmber ]
 
 - type: entity
   id: RandomHumanoidSpawnerERTEngineerAmberEVAVeteran
@@ -1132,4 +1132,4 @@
     - type: GhostRole
       job: ERTEngineerVeteran
     - type: Loadout
-      prototypes: [ ERTEngineerGearAmberEVA ]
+      prototypes: [ ERTEngineerGearAmber ]

@@ -184,7 +184,7 @@
     - Command
     - CentCom
   - type: AccessReader
-    access: [["AllAccess"]]
+    access: [["Security"], ["Command"], ["Research"]]
   - type: SiliconLawProvider
     laws: ERTLawset
   - type: PointLight
@@ -220,10 +220,7 @@
       300: Dead
   - type: PowerCellDraw # Use it to increase battery life further
     drawRate: 0.5
-  - type: NightVision
-    isOn: true
-    color: "#9efce0"
-    isToggle: true
+  - type: ToggleableNightVision
 
 - type: entity
   id: BorgChassisSyndicateHeavy
