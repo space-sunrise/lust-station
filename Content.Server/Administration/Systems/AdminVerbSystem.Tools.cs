@@ -1,6 +1,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Numerics;
+using Content.Server._Sunrise.ScaleSprite;
 using Content.Server.Administration.Components;
 using Content.Server.Atmos;
 using Content.Server.Atmos.Components;
@@ -56,6 +57,8 @@ public sealed partial class AdminVerbSystem
     [Dependency] private readonly BatterySystem _batterySystem = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly GunSystem _gun = default!;
+    [Dependency] private readonly ScaleSpriteSystem _scaleSpriteSystem = default!; // Sunris-Edit
+
 
     private void AddTricksVerbs(GetVerbsEvent<Verb> args)
     {
@@ -766,9 +769,7 @@ public sealed partial class AdminVerbSystem
             {
                 _quickDialog.OpenDialog<float, float>(player, "Set Scale", "Scale X", "Scale Y", (float scaleX, float scaleY) =>
                 {
-                    var comp = EnsureComp<ScaleSpriteComponent>(args.Target);
-                    comp.Scale = new Vector2(scaleX, scaleY);
-                    Dirty(args.Target, comp);
+                    _scaleSpriteSystem.Scale(args.Target, new Vector2(scaleX, scaleY));
                 });
             },
             Impact = LogImpact.Medium,

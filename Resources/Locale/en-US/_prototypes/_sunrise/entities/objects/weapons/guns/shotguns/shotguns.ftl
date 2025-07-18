@@ -1,3 +1,5 @@
+ent-BaseWeaponShotgunSunrise = BaseWeaponShotgun
+    .desc = A rooty tooty point and shooty.
 ent-WeaponXM1014 = XM1014
     .desc = { ent-BaseWeaponShotgun.desc }
 ent-WeaponShotgunPaladin12 = Paladin pump shotgun
