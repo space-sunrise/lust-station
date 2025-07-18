@@ -137,7 +137,7 @@
   id: MouthHairFaceFuckMale
   name: "Трахнуть в рот схватив волосы"
   icon: HairFaceFuckIcon
-  category: Hair
+  category: Mouth
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -172,7 +172,7 @@
   id: MouthHairFaceFuckFemale
   name: "Трахнуть в рот схватив волосы"
   icon: HairFaceFuckIcon
-  category: Hair
+  category: Mouth
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false

@@ -107,7 +107,7 @@
 - type: interaction
   id: FaceThighsCrush
   name: "Стиснуть голову ляжками"
-  icon: FaceThighsCrush
+  icon: FaceSittingIcon
   category: Face
   appearConditions:
     - !type:HasTargetCondition
