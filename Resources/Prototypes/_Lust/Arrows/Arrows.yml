@@ -744,31 +744,24 @@
 - type: entity
   name: PMC Arrows visor
   id: ClothingEyesGlassesMT
-  parent: [BaseItem, PowerCellSlotSmallItem]
+  parent: [BaseItem, PowerCellSlotSmallItem, BaseNightVisionDevice]
   description: A visor with specialized eyepieces that allow you to collect more information about the staff of various corporations.
   suffix: Arrows
   components:
-  - type: Item
   - type: Sprite
     sprite: _Sunrise/Clothing/Eyes/Glasses/nvd.rsi
     layers:
       - state: icon
       - state: icon-unshaded
         shader: unshaded
-      - state: light-overlay
+      - state: icon-flash
         visible: false
         shader: unshaded
-        map: [ "enum.NVDVisuals.Light" ]
+        map: [ "light" ]
   - type: Clothing
     sprite: _Sunrise/Clothing/Eyes/Glasses/nvd.rsi
     quickEquip: true
-    clothingVisuals:
-      eyes:
-      - state: off-equipped-EYES
-      - state: equipped-EYES-unshaded
-        shader: unshaded
     slots: [ Eyes ]
-  - type: Appearance
 # NIGHT VISION START
   - type: ItemToggle
     predictable: false
