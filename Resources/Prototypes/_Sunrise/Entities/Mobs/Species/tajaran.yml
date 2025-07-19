@@ -3,10 +3,9 @@
   id: BaseMobTajaran
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Absorbable
   - type: HumanoidAppearance
     species: Tajaran
@@ -47,7 +46,6 @@
       Male: MaleFelinid
       Female: FemaleFelinid
       Unsexed: MaleFelinid
-      Futanari: FemaleFelinid # Lust-edit
   - type: Temperature
     heatDamageThreshold: 400
     coldDamageThreshold: 200

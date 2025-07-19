@@ -5,10 +5,9 @@
   id: BaseMobVulpkanin
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Absorbable
   - type: Speech
     speechVerb: Vulpkanin

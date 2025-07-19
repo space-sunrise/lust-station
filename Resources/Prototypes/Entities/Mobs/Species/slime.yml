@@ -4,8 +4,9 @@
   id: BaseMobSlimePerson
   abstract: true
   components:
-  - type: Interaction
-    erp: true
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.3
@@ -63,7 +64,6 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
-      Futanari: FemaleSlime # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime
