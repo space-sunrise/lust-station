@@ -1,7 +1,6 @@
 using System.Collections.Immutable;
 using System.Net;
 using System.Threading.Tasks;
-using Content.Server._SunrisePrivate.AntiNuke;
 using Content.Server.Database;
 using Content.Shared.Database;
 using Content.Shared.Roles;
