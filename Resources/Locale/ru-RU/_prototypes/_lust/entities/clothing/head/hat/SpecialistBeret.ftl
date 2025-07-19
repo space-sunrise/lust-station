@@ -1,2 +1,2 @@
-ent-ClothingHeadHatSpecialistBeretSafno_S = Берет Специалиста
+ent-ClothingHeadHatSpecialistBeret = Берет Специалиста
     .desc = Берет синего цвета со значком Элитных Сил Qillu.

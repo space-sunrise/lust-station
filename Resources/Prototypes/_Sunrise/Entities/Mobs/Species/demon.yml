@@ -34,7 +34,6 @@
       Futanari: FemaleHuman # Lust-edit
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Demon
   - type: MeleeWeapon
     hidden: true
     soundHit:
