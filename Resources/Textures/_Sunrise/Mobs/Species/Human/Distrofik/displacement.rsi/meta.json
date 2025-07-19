@@ -61,6 +61,10 @@
       {
           "name": "hand",
           "directions" : 4
+      },
+      {
+          "name": "marking",
+          "directions" : 4
       }
   ]
 }
