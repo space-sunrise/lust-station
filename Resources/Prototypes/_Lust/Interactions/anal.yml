@@ -31,6 +31,9 @@
   - Hlup4
   loveUser: 2
   loveTarget: 4
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -60,10 +63,13 @@
   - "%user глубоко проникает языком в анус %target"
   - "%user нежно вылизывает анус %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 3
   loveTarget: 6
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -97,6 +103,9 @@
   - Hlup4
   loveUser: 3
   loveTarget: 7
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -136,6 +145,9 @@
   userVirginityLoss: male
   loveUser: 8
   loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -179,6 +191,9 @@
   userVirginityLoss: male
   loveUser: 8
   loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -213,4 +228,7 @@
   - "%user проникает своим хвостом в попку %target"
   loveUser: 8
   loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3

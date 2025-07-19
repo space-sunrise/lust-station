@@ -35,8 +35,11 @@
   - Hlup3
   - Hlup4
   loveUser: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 5
-  # targetVirginityLoss: anal # Закомментировано по образцу
+  targetVirginityLoss: anal
 
 - type: interaction
   id: ERPtoyPlaceholderDildo2
@@ -80,7 +83,10 @@
   - Hlup4
   loveTarget: 8
   cooldown: 5
-  # targetVirginityLoss: female # Закомментировано по образцу
+  targetVirginityLoss: female
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
 
 - type: interaction
   id: ERPtoyPlaceholderFleshflight1
@@ -124,6 +130,9 @@
   - Hlup4
   loveTarget: 8
   cooldown: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
 
 - type: interaction
   id: ERPSelftoyPlaceholderFleshflight1
@@ -167,6 +176,9 @@
   loveUser: 8
   loveTarget: 8
   cooldown: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo
@@ -205,7 +217,10 @@
   - Hlup4
   loveUser: 8
   cooldown: 5
-  # targetVirginityLoss: anal # Закомментировано по образцу
+  targetVirginityLoss: anal
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo2
@@ -248,4 +263,7 @@
   - Hlup4
   loveUser: 8
   cooldown: 5
-  # targetVirginityLoss: female # Закомментировано по образцу
+  targetVirginityLoss: female
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts

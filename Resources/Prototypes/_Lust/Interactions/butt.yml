@@ -4,26 +4,26 @@
   icon: HandsOnButtIcon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:BodyAreaTagCondition
-      checkInitiator: true
-      checkTarget: false
-      categories: [ "гладкие перчатки" ]
-      requireExposed: true
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
   interactionMessages:
-    - "%user похотливо лапает попку %target"
-    - "%user сочно сжимает задницу %target"
-    - "%user резко сжимает попку %target"
-    - "%user аккуратно проводит ладонью по попке %target"
-    - "%user игриво поглаживает попку %target"
-    - "%user медленно сжимает попку %target"
-    - "%user бесстыже лапает задницу %target"
+  - "%user похотливо лапает попку %target"
+  - "%user сочно сжимает задницу %target"
+  - "%user резко сжимает попку %target"
+  - "%user аккуратно проводит ладонью по попке %target"
+  - "%user игриво поглаживает попку %target"
+  - "%user медленно сжимает попку %target"
+  - "%user бесстыже лапает задницу %target"
   loveUser: 2
   loveTarget: 3
   cooldown: 3
@@ -34,26 +34,26 @@
   icon: KissButtIcon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:BodyAreaTagCondition
-      checkInitiator: true
-      checkTarget: false
-      categories: [ "рот" ]
-      requireExposed: true
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
   interactionMessages:
-    - "%user страстно покрывает поцелуями попку %target"
-    - "%user нежно расцеловывает попку %target"
-    - "%user причмокивая, расцеловывает попку %target"
-    - "%user увлеченно покрывает поцелуями попку %target"
-    - "%user сжимает и расцеловывает попку %target"
+  - "%user страстно покрывает поцелуями попку %target"
+  - "%user нежно расцеловывает попку %target"
+  - "%user причмокивая, расцеловывает попку %target"
+  - "%user увлеченно покрывает поцелуями попку %target"
+  - "%user сжимает и расцеловывает попку %target"
   interactionSounds:
-    - ALotOfKisses
+  - ALotOfKisses
   loveUser: 2
   loveTarget: 3
   cooldown: 3
@@ -64,16 +64,16 @@
   icon: SlapButtIcon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
   interactionMessages:
-    - "%user наотмашь шлепает по жопе %target"
-    - "%user делает смачный шлепок по жопе %target"
-    - "%user звонко шлёпает %target по филейной части тела"
-    - "%user широко размахнувшись, шлёпает по жопе %target"
-    - "%user смачно шлепает ладонью по заднице %target"
+  - "%user наотмашь шлепает по жопе %target"
+  - "%user делает смачный шлепок по жопе %target"
+  - "%user звонко шлёпает %target по филейной части тела"
+  - "%user широко размахнувшись, шлёпает по жопе %target"
+  - "%user смачно шлепает ладонью по заднице %target"
   interactionSounds:
-    - Clap1
+  - Clap1
   loveUser: 2
   loveTarget: 4
   cooldown: 3
@@ -84,27 +84,27 @@
   icon: ButtMassageIcon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:BodyAreaTagCondition
-      checkInitiator: true
-      checkTarget: false
-      categories: [ "рот" ]
-      requireExposed: true
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
   interactionMessages:
-    - "%user деликатно разминает попку %target"
-    - "%user старательно массирует попку %target"
-    - "%user нежно массирует попку %target"
-    - "%user круговыми движениями массирует попку %target"
-    - "%user плавно массирует попку %target"
-    - "%user ритмично массирует попку %target"
-    - "%user медленно массирует попку %target"
-    - "%user методично массирует попку %target"
+  - "%user деликатно разминает попку %target"
+  - "%user старательно массирует попку %target"
+  - "%user нежно массирует попку %target"
+  - "%user круговыми движениями массирует попку %target"
+  - "%user плавно массирует попку %target"
+  - "%user ритмично массирует попку %target"
+  - "%user медленно массирует попку %target"
+  - "%user методично массирует попку %target"
   loveUser: 2
   loveTarget: 4
   cooldown: 3
@@ -115,31 +115,31 @@
   icon: CockNearToAssIcon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:SexCondition
-      checkInitiator: true
-      checkTarget: false
-      requiredSex: [ Male, Futanari ]
-    - !type:BodyAreaTagCondition
-      checkInitiator: true
-      checkTarget: false
-      categories: [ "член" ]
-      requireExposed: true
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "анал" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
   interactionMessages:
-    - "%user скользит членом между булок %target"
-    - "%user трахает упругие булочки %target своим членом"
-    - "%user сжимая попку %target, трахает её между булочек"
+  - "%user скользит членом между булок %target"
+  - "%user трахает упругие булочки %target своим членом"
+  - "%user сжимая попку %target, трахает её между булочек"
   interactionSounds:
-    - Hlup1
-    - Hlup2
-    - Hlup3
-    - Hlup4
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
   loveUser: 7
   loveTarget: 3
   cooldown: 3
@@ -150,32 +150,32 @@
   icon: ERP2Icon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:ItemCondition
-      checkInitiator: true
-      checkTarget: false
-      itemWhiteList:
-        - CableMVStack
-        - CableHVStack
-        - CableApcStack
-        - ClothingBeltSuspendersBlack
-        - ClothingBeltSuspendersRed
-        - ClothingBeltBandolier
-        - Gohei
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - CableMVStack
+    - CableHVStack
+    - CableApcStack
+    - ClothingBeltSuspendersBlack
+    - ClothingBeltSuspendersRed
+    - ClothingBeltBandolier
+    - Gohei
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
   interactionMessages:
-    - "%user крепко удерживания в руках плетевидный предмет, выпарывает %target"
-    - "%user замахиваясь, с силой выпарывает %target, делая удар за ударом по телу"
-    - "%user выпарывает %target, оставляя множество румянцев на теле"
+  - "%user крепко удерживания в руках плетевидный предмет, выпарывает %target"
+  - "%user замахиваясь, с силой выпарывает %target, делая удар за ударом по телу"
+  - "%user выпарывает %target, оставляя множество румянцев на теле"
   interactionSounds:
-    - Whip1
-    - Whip2
-    - Whip3
+  - Whip1
+  - Whip2
+  - Whip3
   loveUser: 1
   loveTarget: 5
   cooldown: 3
@@ -186,23 +186,23 @@
   icon: ERP2Icon
   category: Butt
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:BodyAreaTagCondition
-      checkInitiator: true
-      checkTarget: false
-      categories: [ "рот" ]
-      requireExposed: true
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
   interactionMessages:
-    - "%user делает кусь за попу %target"
-    - "%user слегка прикусывает попу %target"
-    - "%user нежно кусает булки %target"
-    - "%user игриво кусает за попу %target"
+  - "%user делает кусь за попу %target"
+  - "%user слегка прикусывает попу %target"
+  - "%user нежно кусает булки %target"
+  - "%user игриво кусает за попу %target"
   loveUser: 1
   loveTarget: 5
   cooldown: 3
@@ -213,21 +213,21 @@
   icon: ButtTailIcon
   category: Tail
   appearConditions:
-    - !type:HasTargetCondition
-      allowSelfTargeting: false
-    - !type:BodyAreaTagCondition
-      checkInitiator: false
-      checkTarget: true
-      categories: [ "попа" ]
-      requireExposed: true
-    - !type:HasVisualLayerCondition
-      checkTarget: false
-      checkInitiator: true
-      layer: Tail
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "попа" ]
+    requireExposed: true
+  - !type:HasVisualLayerCondition
+    checkTarget: false
+    checkInitiator: true
+    layer: Tail
   interactionMessages:
-    - "%user нежно гладит попу %target своим хвостом"
-    - "%user аккуратно проводит своим хвостом по попке %target"
-    - "%user игриво поглаживает своим хвостом попку %target"
+  - "%user нежно гладит попу %target своим хвостом"
+  - "%user аккуратно проводит своим хвостом по попке %target"
+  - "%user игриво поглаживает своим хвостом попку %target"
   loveUser: 1
   loveTarget: 5
   cooldown: 3

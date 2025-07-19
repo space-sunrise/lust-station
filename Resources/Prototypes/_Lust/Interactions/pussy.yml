@@ -37,6 +37,9 @@
   - Hlup4
   loveUser: 4
   loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -79,6 +82,9 @@
   - Kiss1
   loveUser: 4
   loveTarget: 9
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -116,6 +122,9 @@
   - Hlup4
   loveUser: 4
   loveTarget: 9
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -156,6 +165,9 @@
   - Hlup4
   loveUser: 9
   loveTarget: 9
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -201,9 +213,12 @@
   - Hlup4
   loveUser: 10
   loveTarget: 10
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 5
-  # targetVirginityLoss: female # Закомментировано по образцу
-  # userVirginityLoss: male   # Закомментировано по образцу
+  targetVirginityLoss: female
+  userVirginityLoss: male
 
 - type: interaction
   id: PussySelfTouch
@@ -234,6 +249,9 @@
   - Hlup3
   - Hlup4
   loveUser: 4
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -264,6 +282,9 @@
   - Hlup3
   - Hlup4
   loveUser: 4
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -303,6 +324,9 @@
   - Hlup4
   loveUser: 8
   loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -334,6 +358,9 @@
   - "%user игриво покусывает клитор %target, словно подготавливая киску к чему-то большему"
   loveUser: 3
   loveTarget: 7
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -367,6 +394,9 @@
   - FaceLickDoggyStyleSound2
   loveUser: 3
   loveTarget: 9
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -411,9 +441,12 @@
   - "%user держа за хвост - медленно входит членом в вагину %target"
   loveUser: 10
   loveTarget: 10
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 5
-  # targetVirginityLoss: female # Закомментировано по образцу
-  # userVirginityLoss: male   # Закомментировано по образцу
+  targetVirginityLoss: female
+  userVirginityLoss: male
 
 - type: interaction
   id: TailPussyFuck
@@ -447,4 +480,7 @@
   - "%user проникает своим хвостом в вагину %target"
   loveUser: 10
   loveTarget: 10
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 5

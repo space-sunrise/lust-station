@@ -27,6 +27,9 @@
   - "%user слегка сжимает и оттягивает кижицу мошонки %target"
   loveUser: 1
   loveTarget: 6
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -61,6 +64,9 @@
   - FaceLickDoggyStyleSound2
   loveUser: 1
   loveTarget: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
 
 - type: interaction
@@ -91,4 +97,7 @@
   - "%user покусывает яички %target, отправляя по его мошонке волны слабой боли"
   lovePercentUser: 1
   lovePercentTarget: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
   cooldown: 3
