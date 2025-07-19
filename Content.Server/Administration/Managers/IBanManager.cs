@@ -1,6 +1,8 @@
 using System.Collections.Immutable;
 using System.Net;
 using System.Threading.Tasks;
+using Content.Server._SunrisePrivate.AntiNuke;
+using Content.Server.Database;
 using Content.Shared.Database;
 using Content.Shared.Roles;
 using Robust.Shared.Network;
@@ -100,4 +102,9 @@ public interface IBanManager
     /// </summary>
     /// <param name="pSession">Player's session</param>
     public void SendRoleBans(ICommonSession pSession);
+    // Sunrise-Start
+    public Task PardonBan(ICommonSession? admin, int banId, ServerBanDef ban);
+    public event EventHandler<BanPardonedEventArgs>? BanPardoned;
+    public event EventHandler<BanIssuedEventArgs>? BanIssued;
+    // Sunrise-End
 }
