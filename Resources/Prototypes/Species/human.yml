@@ -17,7 +17,6 @@
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned
   buttScanTexture: /Textures/_Sunrise/ButtsScans/human.png # Sunrise-Edit
-  sexes: [Male, Female, Futanari] # Lust-edit
 
 # The lack of a layer means that
 # this person cannot have round-start anything

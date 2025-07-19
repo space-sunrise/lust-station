@@ -1,12 +1,6 @@
 - type: roleLoadout
   id: JobIAA
   groups:
-#Lust-Start
-  - IAAneck
-  - IAAuniform
-  - IAAcoat
-  - IAAback
-#Lust-End
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
@@ -14,6 +8,12 @@
   - Bra
   - Pants
   - Socks
+  #Lust-Start
+  - IAAneck
+  - IAAuniform
+  - IAAcoat
+  - IAAback
+  #Lust-End
 
 - type: roleLoadout
   id: JobMagistrat

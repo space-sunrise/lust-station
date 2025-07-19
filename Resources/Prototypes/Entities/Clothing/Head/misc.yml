@@ -92,13 +92,6 @@
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -150,13 +143,6 @@
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -182,13 +168,6 @@
     - Hair
     - HeadTop
     - HeadSide
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -330,13 +309,6 @@
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -361,13 +333,6 @@
     - HeadTop
     - HeadSide
     - FacialHair
-    # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: Clothing

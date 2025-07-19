@@ -135,21 +135,21 @@
   icon: FriendlyTailIcon
   category: Friendly
   appearConditions:
-  - !type:HasTargetCondition
-    allowSelfTargeting: false
-  - !type:BodyAreaTagCondition
-    checkInitiator: false
-    checkTarget: true
-    categories: [ "волосы"]
-    requireExposed: true
-  - !type:SpeciesCondition
-    checkTarget: false
-    checkInitiator: true
-    allowedSpecies: [Vulpkanin, Slime, Felinid, Demon, Reptilian]
-  - !type:HasVisualLayerCondition
-    checkTarget: false
-    checkInitiator: true
-    layer: Tail
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "волосы"]
+      requireExposed: true
+    - !type:SpeciesCondition
+      checkTarget: false
+      checkInitiator: true
+      allowedSpecies: [Vulpkanin, SlimePerson, Felinid, Demon, Reptilian]
+    - !type:HasVisualLayerCondition
+      checkTarget: false
+      checkInitiator: true
+      layer: Tail
   interactionMessages:
   - "%user нежно гладит хвостиком голову %target"
   - "%user ласково гладит хвостиком по спине %target"

@@ -19,8 +19,8 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
 {
     #region Color Scheme
 
-    private static readonly Color PrimaryColor = new Color(0, 212, 255);      // #00d4ff
-    private static readonly Color SecondaryColor = new Color(184, 230, 255);   // #b8e6ff
+    private static readonly Color PrimaryColor = new Color(255, 105, 180);      // #ff69b4 - яркий розовый
+    private static readonly Color SecondaryColor = new Color(255, 182, 193);    // #ffb6c1 - светло-розовый
     private static readonly Color BackgroundDark = new Color(15, 20, 25);      // #0f1419
     private static readonly Color BackgroundLight = new Color(36, 51, 64);     // #243340
     private static readonly Color BackgroundHighlight = new Color(44, 68, 85); // #2c4455

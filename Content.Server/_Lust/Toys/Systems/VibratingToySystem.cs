@@ -35,7 +35,6 @@ public sealed class VibratingToySystem : SharedToySystem
                 component.TargetWalkSpeed,
                 component.TargetSprintSpeed,
                 component.TargetAcceleration);
-            Dirty(uid, component);
         }
     }
 
@@ -58,7 +57,6 @@ public sealed class VibratingToySystem : SharedToySystem
             component.BaseWalkSpeed = null;
             component.BaseSprintSpeed = null;
             component.BaseAcceleration = null;
-            Dirty(uid, component);
         }
     }
 }

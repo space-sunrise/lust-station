@@ -7,8 +7,6 @@
   - type: Interactions
   # SUNRISE EDIT
   - type: Absorbable
-  - type: Interaction
-    erp: true
   - type: Hunger
   - type: Thirst
     dehydrationDamage:

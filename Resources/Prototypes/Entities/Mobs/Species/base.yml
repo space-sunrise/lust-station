@@ -195,8 +195,6 @@
   - type: Stripping
   - type: UserInterface
     interfaces:
-      enum.InteractionKey.Key:
-        type: InteractionBoundUserInterface
       enum.HumanoidMarkingModifierKey.Key:
         type: HumanoidMarkingModifierBoundUserInterface
       enum.StrippingUiKey.Key:

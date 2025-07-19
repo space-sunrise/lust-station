@@ -869,62 +869,59 @@
 - type: ttsVoice
   id: HearthstoneAlleria
   name: tts-voice-name-hearthstone-alleria
-  # Lust-start
+  #Lust-Start
   sex:
   - Female
-  - Futanari
-  # Lust-end
+  #Lust-End
   speaker: hearthstone_alleria
   provider: sunrise
 
 - type: ttsVoice
   id: HearthstoneLunara
   name: tts-voice-name-hearthstone-lunara
-  # Lust-start
+  #Lust-Start
   sex:
   - Female
-  - Futanari
-  # Lust-end
+  #Lust-End
   speaker: hearthstone_lunara
   provider: sunrise
 
 - type: ttsVoice
   id: SmesharikiBarash
   name: tts-voice-name-barash
-  # Lust-start
+  #Lust-Start
   sex:
   - Male
-  # Lust-end
+  #Lust-End
   speaker: smeshariki_barash
   provider: sunrise
 
 - type: ttsVoice
   id: ChocolateFabricWonka
   name: tts-voice-name-chocolate-fabric-wonka
-  # Lust-start
+  #Lust-Start
   sex:
   - Male
-  # Lust-end
+  #Lust-End
   speaker: chocolatefabric_wonka
   provider: sunrise
 
 - type: ttsVoice
   id: DeathNoteYagami
   name: tts-voice-name-death-note-yagami-light
-  # Lust-start
+  #Lust-Start
   sex:
   - Male
-  # Lust-end
+  #Lust-End
   speaker: deathnote_yagami_light
   provider: sunrise
 
 - type: ttsVoice
   id: Warcraft3Jaina
   name: tts-voice-name-warcraft3-jaina
-  # Lust-start
+  #Lust-Start
   sex:
   - Female
-  - Futanari
-  # Lust-end
+  #Lust-End
   speaker: warcraft3_jaina
   provider: sunrise

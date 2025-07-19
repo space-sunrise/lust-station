@@ -1,0 +1,566 @@
+﻿- type: interaction
+  id: CockLegPat
+  name: "Поласкать член ножкой"
+  icon: CockFootjobIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "носки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user ласкает ножкой член %target"
+  - "%user игриво проводит ножкой по члену %target"
+  - "%user нежно поглаживает ступней член %target"
+  - "%user проводит ножкой вдоль члена %target"
+  - "%user возбужденно гладит ножкой член %target"
+  - "%user слегка наступает ножкой на член %target"
+  - "%user гладит ножкой член %target"
+  loveUser: 3
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: CockFootjob
+  name: "Подрочить член ступнями"
+  icon: CockFootjobIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "носки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно дрочит ножками член %target"
+  - "%user сжимает и трахает ножками член %target"
+  - "%user игриво водит ножками вдоль члена %target"
+  - "%user стискивает и дрочит ножками член %target"
+  - "%user ласкает ножками член %target"
+  - "%user возбужденно дрочит ножками член %target"
+  - "%user гладит ножками вдоль члена %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 3
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: CockFapBoobs
+  name: "Подрочить член грудью"
+  icon: BoobsFickIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Female, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "грудь" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user возбужденно трахает членом %target между своих грудок"
+  - "%user активно дрочит член %target своей грудью"
+  - "%user страстно трахает грудью член %target"
+  - "%user ритмично дрочит грудями член %target"
+  - "%user сжимая грудями член %target, увлеченно двигает ими вверх-вниз"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 3
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: CockTailFap
+  name: "Поласкать член хвостиком"
+  icon: CockTailFapIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "хвост" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:HasVisualLayerCondition
+    checkTarget: false
+    checkInitiator: true
+    layer: Tail
+  interactionMessages:
+  - "%user похотливо обвивает хвостиком член %target"
+  - "%user нежно дрочит хвостиком член %target"
+  - "%user ласкает хвостиком член %target"
+  - "%user игриво поглаживает хвостиком член %target"
+  - "%user сжимает и трахает хвостиком член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 4
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: CockFap
+  name: "Подрочить член рукой"
+  icon: CockFapIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно мастурбирует член %target"
+  - "%user ритмично мастурбирует член %target"
+  - "%user страстно дрочит член %target"
+  - "%user ласкает пальцами головку члена %target"
+  - "%user сжимает и дрочит член %target"
+  - "%user нежно проводит пальцами по члену %target"
+  - "%user поглаживает пальцами член %target"
+  - "%user медленно, от головки до основания дрочит член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 4
+  loveTarget: 8
+  cooldown: 3
+
+- type: interaction
+  id: CockTongueFap
+  name: "Поласкать член длинным языком"
+  icon: CockTongueFap
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user обвивает длинным языком и дрочит член %target"
+  - "%user страстно сжимает и дрочит длинным языком член %target"
+  - "%user ласкает своим длинным языком член %target"
+  - "%user нежно поглаживает длинным языком член %target"
+  - "%user оплетает длинным языком и двигает вверх-вниз вдоль члена %target"
+  - "%user игриво скользит длинным языком вдоль члена %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 4
+  loveTarget: 8
+  cooldown: 3
+
+- type: interaction
+  id: CockBlowjob
+  name: "Сделать минет"
+  icon: CockBlowjobIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно сосет член %target"
+  - "%user ласкает язычком у себя во рту член %target"
+  - "%user ритмично делает глубокий минет %target"
+  - "%user втягивая воздух, засасывает член %target"
+  - "%user берет за щеку член %target"
+  - "%user водит язычком вокруг головки члена %target"
+  - "%user как леденец сосет головку члена %target"
+  - "%user глубоко вставляет в ротик член %target"
+  - "%user скользит вдоль своего языка членом %target"
+  - "%user игриво чмокает головку члена %target"
+  - "%user страстно делает минет %target"
+  - "%user возбужденно вылизывает член %target"
+  - "%user жадно сосет член %target"
+  - "%user насаживается ротиком на член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 4
+  loveTarget: 9
+  cooldown: 3
+
+- type: interaction
+  id: CockVaginaGrind
+  name: "Потереться об член вагиной"
+  icon: LegsCockFuckIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    requiredSex: [ Female, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "вагина" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user сидя сверху, возбужденно трется вагиной об член %target"
+  - "%user сидя сверху, прижимается вагиной к члену %target и двигает бедрами"
+  - "%user увлеченно скользит вагиной вдоль члена %target"
+  - "%user страстно трется вагиной об член %target"
+  - "%user прислоняет киску к члену %target, совершая поступальные движения вдоль него"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 7
+  loveTarget: 7
+  cooldown: 3
+
+- type: interaction
+  id: CockFuckThighs
+  name: "Трахнуть член бёдрами"
+  icon: CockNearToAssIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ляжки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user сжимает и трахает бедрами член %target"
+  - "%user страстно трахает бедрами член %target"
+  - "%user ритмично двигает бедрами вдоль члена %target"
+  - "%user медленно скользит бедрами вдоль члена %target"
+  - "%user возбужденно сжимает бедрами член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 5
+  loveTarget: 10
+  cooldown: 3
+
+- type: interaction
+  id: CockSlimeSex
+  name: "Ласкать член слизью"
+  icon: CockSlimeSexIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ладони" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:SpeciesCondition
+    checkTarget: false
+    checkInitiator: true
+    allowedSpecies: [SlimePerson]
+  interactionMessages:
+  - "%user обволакивает слизью член %target и чувственно его трахает"
+  - "%user присасывается к члену %target слизью и начинает его дрочить"
+  - "%user погружает в свою слизь член %target и обсасывает его"
+  - "%user обвивает и трется слизью вдоль головки члена %target"
+  - "%user до основания погружает в слизь член %target и присасывается к нему"
+  - "%user сочно причмокивая, сосет слизью член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 7
+  loveTarget: 10
+  cooldown: 3
+
+- type: interaction
+  id: CockCowgirl
+  name: "Трахнуть член вагиной"
+  icon: LegsCockFuckIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Female, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "вагина" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user возбужденно седлает вагиной член %target"
+  - "%user страстно скачет вагиной на члене %target"
+  - "%user заведенно трахает вагиной член %target"
+  - "%user резко опускается вагиной на член %target"
+  - "%user грубо скачет вагиной на члене %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 10
+  cooldown: 3
+
+- type: interaction
+  id: CockCowboy
+  name: "Трахнуть член попкой"
+  icon: CockNearToAssIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "анал" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user возбужденно седлает попкой член %target"
+  - "%user страстно скачет попкой на члене %target"
+  - "%user заведенно двигает попкой на члене %target"
+  - "%user резко опускается попкой на член %target"
+  - "%user уверенно садится попкой на член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 10
+  cooldown: 3
+
+- type: interaction
+  id: CockSelfFap
+  name: "Подрочить свой член"
+  icon: CockFapIcon
+  category: Cock
+  appearConditions:
+  - !type:SelfOnlyCondition
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно мастурбирует свой член"
+  - "%user ритмично мастурбирует свой член"
+  - "%user страстно дрочит свой член"
+  - "%user ласкает пальцами головку своего члена"
+  - "%user сжимает и дрочит свой член"
+  - "%user нежно проводит пальцами по своему члену"
+  - "%user поглаживает пальцами свой член"
+  - "%user медленно, от головки до основания дрочит свой член"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 5
+  cooldown: 3
+
+- type: interaction
+  id: CockBite
+  name: "Прикусить член зубами"
+  icon: ERP2Icon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно кусает головку члена %target"
+  - "%user прикусывает ствол члена %target, игриво оттягивая кожицу зубами"
+  - "%user совершает серию легких укусов, заставляя член %target приятно побаливать"
+  loveUser: 2
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: CockFootStep
+  name: "Наступить на член"
+  icon: CockFootjobIcon
+  category: Cock
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "носки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user наступает ногой на член %target"
+  - "%user прижимает член %target своей ступней"
+  loveTarget: 5
+  cooldown: 3

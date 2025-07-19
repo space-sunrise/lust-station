@@ -1,0 +1,89 @@
+﻿- type: interaction
+  id: FriendlyKissHand
+  name: "Поцеловать руку"
+  icon: KissHandIcon
+  category: Friendly
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "ладони" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user берет %target за руку и целует в кисть"
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  cooldown: 3
+
+- type: interaction
+  id: FriendlyFlyingKiss
+  name: "Воздушный поцелуй"
+  icon: FriendlyFlyingKissIcon
+  category: Friendly
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  interactionMessages:
+  - "%user посылает воздушный поцелуй %target"
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  cooldown: 3
+
+- type: interaction
+  id: FriendlyButtSlap
+  name: "Шлёпнуть себя по жопе"
+  icon: SlapButtIcon
+  category: Friendly
+  appearConditions:
+  - !type:SelfOnlyCondition
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "попа" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user наотмашь шлепает себя по жопе"
+  - "%user делает смачный шлепок по своей жопе"
+  - "%user звонко шлёпает себя по филейной части тела"
+  - "%user широко размахнувшись, шлёпает по своей жопе"
+  - "%user смачно шлепает ладонью себе по заднице"
+  interactionSounds:
+  - Clap1
+  cooldown: 3
+
+- type: interaction
+  id: FriendlyButtTwerk
+  name: "Тверкать задницей"
+  icon: SlapButtIcon
+  category: Friendly
+  appearConditions:
+  - !type:SelfOnlyCondition
+  interactionMessages:
+  - "%user быстро тверкает задницей"
+  - "%user ритмично тверкает задницей"
+  - "%user активно тверкает задницей"
+  interactionSounds:
+  - Clap1
+  cooldown: 3
