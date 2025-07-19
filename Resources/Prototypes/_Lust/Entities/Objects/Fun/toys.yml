@@ -182,23 +182,19 @@
       collection: EuphMoan
   - type: EmitSoundOnTrigger
     sound:
-      path: /Audio/_Lust/ERP/euphtrig.ogg
+      path: /Audio/_Lust/Interactions/euphtrig.ogg
   - type: EmitSoundOnActivate
     sound:
-      path: /Audio/_Lust/ERP/euphtrig.ogg
+      path: /Audio/_Lust/Interactions/euphtrig.ogg
   - type: EmitSoundOnLand
     sound:
-      path: /Audio/_Lust/ERP/euphtrig.ogg
+      path: /Audio/_Lust/Interactions/euphtrig.ogg
   - type: EmitSoundOnCollide
     sound:
-      path: /Audio/_Lust/ERP/euphtrig.ogg
+      path: /Audio/_Lust/Interactions/euphtrig.ogg
   - type: TriggerOnActivate
   - type: UseDelay
     delay: 4
-  - type: Interaction
-    erp: true
-  - type: Sex
-    sex: female
 
 - type: entity
   id: PlushieRandyCamble

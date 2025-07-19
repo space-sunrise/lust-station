@@ -4,9 +4,9 @@
   id: BaseMobSlimePerson
   abstract: true
   components:
-  - type: Absorbable
-  - type: Interaction
-    erp: true
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.3
@@ -42,7 +42,13 @@
         type: StrippableBoundUserInterface
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
-  # to prevent bag open/honk spam
+      # Sunrise-start
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
+      enum.VampireMutationUiKey.Key:
+        type: VampireMutationBoundUserInterface
+  - type: Absorbable
+      # Sunrise-end
   - type: UseDelay
     delay: 0.5
   - type: HumanoidAppearance
@@ -58,7 +64,6 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
-      Futanari: FemaleSlime # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime

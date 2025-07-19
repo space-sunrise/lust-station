@@ -63,7 +63,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing]
   id: ClothingOuterCoatWardenCoat
   name: formal warden coat
   description: A jacket that inspires fear in law enforcement by its very appearance.
@@ -89,7 +89,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband, AllowSuitStorageClothing]
   id: ClothingOuterCoatWhiteCap
   name: captain's white jacket
   description: Captain's formal jacket, inlaid with gold.
@@ -113,7 +113,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband]
+  parent: [ClothingOuterArmorBasic, ClothingOuterStorageBase, BaseSecurityCommandContraband, AllowSuitStorageClothing]
   id: ClothingOuterCoatBlackCap
   name: captain's black jacket
   description: Captain's formal jacket, inlaid with gold.

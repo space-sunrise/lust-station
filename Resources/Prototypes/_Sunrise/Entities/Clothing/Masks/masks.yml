@@ -55,12 +55,12 @@
   - type: Clothing
     sprite: _Sunrise/Clothing/Mask/death.rsi
   - type: BreathMask
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FaceCovered
-  # Lust-End
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingMaskGasAtmos
@@ -289,11 +289,11 @@
     slots:
     - Snout
   - type: FaceCast
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - FaceCovered
-  # Lust-End
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 
 - type: entity
@@ -306,7 +306,9 @@
     sprite: _Sunrise/Clothing/Mask/blueshield.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/Mask/blueshield.rsi
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FaceCovered # Lust-Edit
+    - FaceCovered # INTERACTIONS
+  # SUNRISE EDIT

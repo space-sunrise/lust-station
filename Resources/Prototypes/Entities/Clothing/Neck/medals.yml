@@ -12,8 +12,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -30,8 +30,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -46,8 +46,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -62,8 +62,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -78,8 +78,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -94,8 +94,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -110,8 +110,8 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit
 
 - type: entity
   parent: ClothingNeckBase
@@ -128,5 +128,5 @@
   - type: Tag
     tags:
       - Medal
+      - OpenNeck # INTERACTIONS
       - WhitelistChameleon
-      - OpenNeck # Lust-Edit

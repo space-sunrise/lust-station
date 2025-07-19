@@ -1,0 +1,339 @@
+- type: interactionIcon
+  id: AnalFingeringIcon
+  name: "Анальный фистинг"
+  icon: /Textures/_Lust/Interactions/anal_fingering.png
+
+- type: interactionIcon
+  id: AnalLickIcon
+  name: "Анальный лизинг"
+  icon: /Textures/_Lust/Interactions/anal_lick.png
+
+- type: interactionIcon
+  id: BiteEarsIcon
+  name: "Укус ушей"
+  icon: /Textures/_Lust/Interactions/bite_ears.png
+
+- type: interactionIcon
+  id: BiteEarsHumanIcon
+  name: "Укус ушей (человек)"
+  icon: /Textures/_Lust/Interactions/bite_ears_human.png
+
+- type: interactionIcon
+  id: BiteNeckIcon
+  name: "Укус шеи"
+  icon: /Textures/_Lust/Interactions/bite_neck.png
+
+- type: interactionIcon
+  id: BoobsFickIcon
+  name: "Трахать грудь"
+  icon: /Textures/_Lust/Interactions/boobs_fuck.png
+
+- type: interactionIcon
+  id: BoobsKissManyIcon
+  name: "Множество поцелуев груди"
+  icon: /Textures/_Lust/Interactions/boobs_many_kisses.png
+
+- type: interactionIcon
+  id: BoobsMassageIcon
+  name: "Массаж груди"
+  icon: /Textures/_Lust/Interactions/boobs_massage.png
+
+- type: interactionIcon
+  id: BoobsPawIcon
+  name: "Ласка груди"
+  icon: /Textures/_Lust/Interactions/boobs_paw.png
+
+- type: interactionIcon
+  id: BoobsSlapIcon
+  name: "Пощечина по груди"
+  icon: /Textures/_Lust/Interactions/boobs_slap.png
+
+- type: interactionIcon
+  id: BoobsSqueezeIcon
+  name: "Сдавливание груди"
+  icon: /Textures/_Lust/Interactions/boobs_squeeze.png
+
+- type: interactionIcon
+  id: BoobsSuckIcon
+  name: "Сосание груди"
+  icon: /Textures/_Lust/Interactions/boobs_suck.png
+
+- type: interactionIcon
+  id: BoobsTailIcon
+  name: "Грудь (хвост)"
+  icon: /Textures/_Lust/Interactions/boobs_tail.png
+
+- type: interactionIcon
+  id: ButtMassageIcon
+  name: "Массаж ягодиц"
+  icon: /Textures/_Lust/Interactions/butt_massage.png
+
+- type: interactionIcon
+  id: ButtTailIcon
+  name: "Ягодицы (хвост)"
+  icon: /Textures/_Lust/Interactions/butt_tail.png
+
+- type: interactionIcon
+  id: ButtTailFuckIcon
+  name: "Трахать ягодицы (хвост)"
+  icon: /Textures/_Lust/Interactions/butt_tail_fuck.png
+
+- type: interactionIcon
+  id: CheeksKissBothIcon
+  name: "Поцелуй в обе щеки"
+  icon: /Textures/_Lust/Interactions/cheeks_kiss_both.png
+
+- type: interactionIcon
+  id: CheeksPressIcon
+  name: "Прижимание щек"
+  icon: /Textures/_Lust/Interactions/cheeks_press.png
+
+- type: interactionIcon
+  id: CockBlowjobIcon
+  name: "Минет"
+  icon: /Textures/_Lust/Interactions/cock_blowjob.png
+
+- type: interactionIcon
+  id: CockFapIcon
+  name: "Дрочить член"
+  icon: /Textures/_Lust/Interactions/cock_fap.png
+
+- type: interactionIcon
+  id: CockFootjobIcon
+  name: "Футбол (член)"
+  icon: /Textures/_Lust/Interactions/cock_footjob.png
+
+- type: interactionIcon
+  id: CockNearToAssIcon
+  name: "Член рядом с анусом"
+  icon: /Textures/_Lust/Interactions/cock_near_to_ass.png
+
+- type: interactionIcon
+  id: CockNearToAssTailIcon
+  name: "Член рядом с анусом (хвост)"
+  icon: /Textures/_Lust/Interactions/cock_near_to_ass_tail.png
+
+- type: interactionIcon
+  id: CockSlimeSexIcon
+  name: "Слизень (член) секс"
+  icon: /Textures/_Lust/Interactions/cock_slime_sex.png
+
+- type: interactionIcon
+  id: CockTailFapIcon
+  name: "Дрочить член (хвост)"
+  icon: /Textures/_Lust/Interactions/cock_tail_fap.png
+
+- type: interactionIcon
+  id: EarsKissIcon
+  name: "Поцелуй ушей"
+  icon: /Textures/_Lust/Interactions/ears_kiss.png
+
+- type: interactionIcon
+  id: ERP1Icon
+  name: "ERP 1"
+  icon: /Textures/_Lust/Interactions/ERP1.png
+
+- type: interactionIcon
+  id: ERP2Icon
+  name: "ERP 2"
+  icon: /Textures/_Lust/Interactions/ERP2.png
+
+- type: interactionIcon
+  id: ERP3Icon
+  name: "ERP 3"
+  icon: /Textures/_Lust/Interactions/ERP3.png
+
+- type: interactionIcon
+  id: ERP4Icon
+  name: "ERP 4"
+  icon: /Textures/_Lust/Interactions/ERP4.png
+
+- type: interactionIcon
+  id: FaceDickSlapIcon
+  name: "Пощечина членом по лицу"
+  icon: /Textures/_Lust/Interactions/face_dick_slap.png
+
+- type: interactionIcon
+  id: FaceInBoobsIcon
+  name: "Лицо в груди"
+  icon: /Textures/_Lust/Interactions/face_in_boobs.png
+
+- type: interactionIcon
+  id: FaceSittingIcon
+  name: "Сидеть на лице"
+  icon: /Textures/_Lust/Interactions/face_sitting.png
+
+- type: interactionIcon
+  id: FeetMouthIcon
+  name: "Ноги во рту"
+  icon: /Textures/_Lust/Interactions/feet_mouth.png
+
+- type: interactionIcon
+  id: FeetShoesLickIcon
+  name: "Лизать обувь"
+  icon: /Textures/_Lust/Interactions/feet_shoes_lick.png
+
+- type: interactionIcon
+  id: FriendlyFlyingKissIcon
+  name: "Дружеский воздушный поцелуй"
+  icon: /Textures/_Lust/Interactions/friendly_flying_kiss.png
+
+- type: interactionIcon
+  id: GentleKissIcon
+  name: "Нежный поцелуй"
+  icon: /Textures/_Lust/Interactions/gentle_kiss.png
+
+- type: interactionIcon
+  id: HairFaceFuckIcon
+  name: "Трахать лицо волосами"
+  icon: /Textures/_Lust/Interactions/hair_face_fuck.png
+
+- type: interactionIcon
+  id: HandsOnButtIcon
+  name: "Руки на ягодицах"
+  icon: /Textures/_Lust/Interactions/hands_on_butt.png
+
+- type: interactionIcon
+  id: HornsAssFemaleIcon
+  name: "Рога (женская задница)"
+  icon: /Textures/_Lust/Interactions/horns_ass_female.png
+
+- type: interactionIcon
+  id: HornsBlowjobFemaleIcon
+  name: "Рога (женский минет)"
+  icon: /Textures/_Lust/Interactions/horns_blowjob_female.png
+
+- type: interactionIcon
+  id: KissButtIcon
+  name: "Поцелуй ягодиц"
+  icon: /Textures/_Lust/Interactions/kiss_butt.png
+
+- type: interactionIcon
+  id: KissHandIcon
+  name: "Поцелуй руки"
+  icon: /Textures/_Lust/Interactions/kiss_hand.png
+
+- type: interactionIcon
+  id: KissLipsIcon
+  name: "Поцелуй в губы"
+  icon: /Textures/_Lust/Interactions/kiss_lips.png
+
+- type: interactionIcon
+  id: KissNeckIcon
+  name: "Поцелуй в шею"
+  icon: /Textures/_Lust/Interactions/kiss_neck.png
+
+- type: interactionIcon
+  id: KittyIcon
+  name: "Китти"
+  icon: /Textures/_Lust/Interactions/kitty.png
+
+- type: interactionIcon
+  id: LegsCockFuckIcon
+  name: "Трахать член ногами"
+  icon: /Textures/_Lust/Interactions/legs_cock_fuck.png
+
+- type: interactionIcon
+  id: LegsCockFuckTailIcon
+  name: "Трахать член ногами (хвост)"
+  icon: /Textures/_Lust/Interactions/legs_cock_fuck_tail.png
+
+- type: interactionIcon
+  id: LegsLickIcon
+  name: "Лизать ноги"
+  icon: /Textures/_Lust/Interactions/legs_lick.png
+
+- type: interactionIcon
+  id: LegsStrokeBetweenIcon
+  name: "Поглаживание между ногами"
+  icon: /Textures/_Lust/Interactions/legs_stroke_between.png
+
+- type: interactionIcon
+  id: LickNeckIcon
+  name: "Лизать шею"
+  icon: /Textures/_Lust/Interactions/lick_neck.png
+
+- type: interactionIcon
+  id: NuzzleNeckIcon
+  name: "Тереться носом о шею"
+  icon: /Textures/_Lust/Interactions/nuzzle_neck.png
+
+- type: interactionIcon
+  id: NuzzleNeckVulgaIcon
+  name: "Тереться носом о шею (вульгарно)"
+  icon: /Textures/_Lust/Interactions/nuzzle_neck_vulpa.png
+
+- type: interactionIcon
+  id: PatEarsIcon
+  name: "Гладить уши"
+  icon: /Textures/_Lust/Interactions/pat_ears.png
+
+- type: interactionIcon
+  id: PatEarsHumanIcon
+  name: "Гладить уши (человек)"
+  icon: /Textures/_Lust/Interactions/pat_ears_human.png
+
+- type: interactionIcon
+  id: PatEarsHuman2Icon
+  name: "Гладить уши (человек) 2"
+  icon: /Textures/_Lust/Interactions/pat_ears_human_2.png
+
+- type: interactionIcon
+  id: PlayfulNibbleIcon
+  name: "Игривый укус"
+  icon: /Textures/_Lust/Interactions/playful_nibble.png
+
+- type: interactionIcon
+  id: PussyFingeringIcon
+  name: "Фингеринг"
+  icon: /Textures/_Lust/Interactions/pussy_fingering.png
+
+- type: interactionIcon
+  id: PussyLickIcon
+  name: "Лизать киску"
+  icon: /Textures/_Lust/Interactions/pussy_lick.png
+
+- type: interactionIcon
+  id: PussyScissorsIcon
+  name: "Сесть на лицо"
+  icon: /Textures/_Lust/Interactions/pussy_scissors.png
+
+- type: interactionIcon
+  id: PussyTailFuckIcon
+  name: "Трахать киску (хвост)"
+  icon: /Textures/_Lust/Interactions/pussy_tail_fuck.png
+
+- type: interactionIcon
+  id: PussyTouchIcon
+  name: "Трогать киску"
+  icon: /Textures/_Lust/Interactions/pussy_touch.png
+
+- type: interactionIcon
+  id: SlapButtIcon
+  name: "Шлепок по ягодицам"
+  icon: /Textures/_Lust/Interactions/slap_butt.png
+
+- type: interactionIcon
+  id: ToyButtIcon
+  name: "Игрушка (ягодицы)"
+  icon: /Textures/_Lust/Interactions/toy_butt.png
+
+- type: interactionIcon
+  id: ToyPussyIcon
+  name: "Игрушка (киска)"
+  icon: /Textures/_Lust/Interactions/toy_pussy.png
+
+- type: interactionIcon
+  id: BoobsManyKissesIcon
+  name: "Много поцелуев (грудь)"
+  icon: /Textures/_Lust/Interactions/boobs_many_kisses.png
+
+- type: interactionIcon
+  id: CheeksKissIcon
+  name: "Поцелуй щёк"
+  icon: /Textures/_Lust/Interactions/cheeks_kiss.png
+
+- type: interactionIcon
+  id: CockTongueFap
+  name: "Ласкание члена языком"
+  icon: /Textures/_Lust/Interactions/cock_tongue_fap.png

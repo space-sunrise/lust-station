@@ -1,0 +1,23 @@
+- type: reagent
+  id: SexOnTheBeach
+  name: reagent-name-sex-on-the-beach
+  parent: BaseAlcohol
+  desc: reagent-desc-sex-on-the-beach
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: sexonthebeach
+  color: "#b47500"
+  metamorphicSprite:
+    sprite: _Lust/Objects/Consumable/Drinks/sexonthebeach.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.07
+  fizziness: 0.4

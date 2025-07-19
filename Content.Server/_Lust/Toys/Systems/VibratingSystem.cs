@@ -1,8 +1,10 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Jittering;
 using Content.Server._Lust.Toys.Components;
+using Content.Server._Sunrise.InteractionsPanel;
+using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
+using Content.Shared.FixedPoint;
 using Content.Shared.Mobs.Systems;
-using Content.Shared._Sunrise.ERP.Components;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
 
@@ -15,7 +17,7 @@ public sealed class VibratingSystem : EntitySystem
     [Dependency] private readonly ChatSystem _chatSystem = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly JitteringSystem _jittering = default!;
-
+    [Dependency] private readonly InteractionsPanel _panel = default!;
 
     // Добавляет стоны и заполняет панель
     public override void Update(float frameTime)
@@ -23,24 +25,23 @@ public sealed class VibratingSystem : EntitySystem
         base.Update(frameTime);
         var curTime = _timing.CurTime;
 
-        var query = EntityQueryEnumerator<VibratingComponent, InteractionComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var love))
+        var query = EntityQueryEnumerator<VibratingComponent, InteractionsComponent>();
+        while (query.MoveNext(out var uid, out var comp, out _))
         {
             if (!_mobStateSystem.IsAlive(uid))
-                return;
+                continue;
 
             if (curTime < comp.NextMoanTime)
-                return;
+                continue;
 
-            if (curTime > love.LoveDelay)
-            {
-                love.ActualLove += (comp.AddedLove + _random.Next(-comp.AddedLove / 2, comp.AddedLove / 2)) / 100f;
-                love.TimeFromLastErp = curTime;
-            }
+            var raw = comp.AddedLove + _random.Next(-comp.AddedLove / 2, comp.AddedLove / 2);
+            var amount = FixedPoint2.New(raw / 100f); // Переводим в FixedPoint2
+            _panel.ModifyLove(uid, amount);
+
             comp.NextMoanTime = curTime + TimeSpan.FromSeconds(comp.MoanInterval);
+
             _chatSystem.TryEmoteWithChat(uid, "Moan", ignoreActionBlocker: true);
             _jittering.AddJitter(uid, comp.Amplitude, comp.Frequency);
-            Dirty(uid, love);
         }
     }
 }

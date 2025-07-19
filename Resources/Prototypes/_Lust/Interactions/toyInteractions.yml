@@ -1,0 +1,269 @@
+- type: interaction
+  id: ERPtoyPlaceholderDildo
+  name: "Вставить дилдо в анал"
+  icon: ToyButtIcon
+  category: Dildos
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalDildo
+    - ERPDildoAvian
+    - ERPDildoDragon
+    - ERPDildoEquine
+    - ERPDildoKnot
+    - ERPDildoTentacle
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user вставляет дилдо в анал %target"
+  - "%user вводит дилдо в анал %target"
+  - "%user аккуратно вставляет дилдо в анал %target"
+  - "%user глубоко вставляет дилдо в анал %target"
+  - "%user резко вставляет дилдо в анал %target"
+  - "%user медленно вводит дилдо в анал %target"
+  - "%user наслаждаясь, вставляет дилдо в анал %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 5
+  targetVirginityLoss: anal
+
+- type: interaction
+  id: ERPtoyPlaceholderDildo2
+  name: "Вставить дилдо в вагину"
+  icon: ToyPussyIcon
+  category: Dildos
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Female, Futanari ]
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalDildo
+    - ERPDildoAvian
+    - ERPDildoDragon
+    - ERPDildoEquine
+    - ERPDildoKnot
+    - ERPDildoTentacle
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "вагина" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user вставляет дилдо в вагину %target"
+  - "%user вводит дилдо в вагину %target"
+  - "%user аккуратно вставляет дилдо в вагину %target"
+  - "%user глубоко вставляет дилдо в вагину %target"
+  - "%user резко вставляет дилдо в вагину %target"
+  - "%user медленно вводит дилдо в вагину %target"
+  - "%user наслаждаясь, вставляет дилдо в вагину %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveTarget: 8
+  cooldown: 5
+  targetVirginityLoss: female
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+
+- type: interaction
+  id: ERPtoyPlaceholderFleshflight1
+  name: "Вставить член в киску"
+  icon: ToyPussyIcon
+  category: Fleshlights
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Futanari, Male ]
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalFleshlight
+    - ERPGreenFleshlight
+    - ERPRedFleshlight
+    - ERPTealFleshlight
+    - ERPYellowFleshlight
+    - PlushieAnnaLisechanskaya
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user надевает киску на член %target"
+  - "%user вставляет член %target в киску"
+  - "%user медленно надевает киску на член %target"
+  - "%user глубоко вставляет член %target в киску"
+  - "%user аккуратно надевает киску на член %target"
+  - "%user резко вставляет член %target в киску"
+  - "%user наслаждаясь, надевает киску на член %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveTarget: 8
+  cooldown: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+
+- type: interaction
+  id: ERPSelftoyPlaceholderFleshflight1
+  name: "Вставить член в киску"
+  icon: ToyPussyIcon
+  category: Fleshlights
+  appearConditions:
+  - !type:SelfOnlyCondition
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Futanari, Male ]
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalFleshlight
+    - ERPGreenFleshlight
+    - ERPRedFleshlight
+    - ERPTealFleshlight
+    - ERPYellowFleshlight
+    - PlushieAnnaLisechanskaya
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user надевает киску на свой член"
+  - "%user вставляет член в киску"
+  - "%user медленно надевает киску на член"
+  - "%user глубоко вставляет член в киску"
+  - "%user аккуратно надевает киску на свой член"
+  - "%user резко вставляет свой член в киску"
+  - "%user наслаждаясь, надевает киску на член"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 8
+  loveTarget: 8
+  cooldown: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+
+- type: interaction
+  id: ERPSelftoyPlaceholderDildo
+  name: "Вставить дилдо в анал"
+  icon: ToyButtIcon
+  category: Dildos
+  appearConditions:
+  - !type:SelfOnlyCondition
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "анал" ]
+    requireExposed: true
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalDildo
+    - ERPDildoAvian
+    - ERPDildoDragon
+    - ERPDildoEquine
+    - ERPDildoKnot
+    - ERPDildoTentacle
+  interactionMessages:
+  - "%user вставляет дилдо себе в анал"
+  - "%user вводит дилдо в свой анал"
+  - "%user аккуратно вставляет дилдо в анал"
+  - "%user глубоко вставляет дилдо в анал"
+  - "%user резко вставляет дилдо в анал"
+  - "%user медленно вводит дилдо в анал"
+  - "%user наслаждаясь, вставляет дилдо в анал"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 8
+  cooldown: 5
+  targetVirginityLoss: anal
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+
+- type: interaction
+  id: ERPSelftoyPlaceholderDildo2
+  name: "Вставить дилдо в вагину"
+  icon: ToyPussyIcon
+  category: Dildos
+  appearConditions:
+  - !type:SelfOnlyCondition
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Female, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "вагина" ]
+    requireExposed: true
+  - !type:ItemCondition
+    checkInitiator: true
+    checkTarget: false
+    itemWhiteList:
+    - ERPNormalDildo
+    - ERPDildoAvian
+    - ERPDildoDragon
+    - ERPDildoEquine
+    - ERPDildoKnot
+    - ERPDildoTentacle
+  interactionMessages:
+  - "%user вставляет дилдо в вагину"
+  - "%user вводит дилдо в вагину"
+  - "%user аккуратно вставляет дилдо в вагину"
+  - "%user глубоко вставляет дилдо в вагину"
+  - "%user резко вставляет дилдо в вагину"
+  - "%user медленно вводит дилдо в вагину"
+  - "%user наслаждаясь, вставляет дилдо в вагину"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 8
+  cooldown: 5
+  targetVirginityLoss: female
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts

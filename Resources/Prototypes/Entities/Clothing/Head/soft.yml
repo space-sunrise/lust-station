@@ -18,13 +18,13 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: false
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
     - ClothMade
-    - TopCovered
-  # Lust-End
+    - TopCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable
@@ -46,14 +46,14 @@
     - state: icon_flipped
       map: ["foldedLayer"]
       visible: true
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
     - ClothMade
-    - TopCovered
-  # Lust-End
-  
+    - TopCovered # INTERACTIONS
+  # SUNRISE EDIT
+
 
 - type: entity
   parent: ClothingHeadHeadHatBaseFlippable

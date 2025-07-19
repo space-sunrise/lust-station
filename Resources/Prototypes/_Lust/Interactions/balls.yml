@@ -1,0 +1,103 @@
+- type: interaction
+  id: BallsSqueeze
+  name: "Пожмакать яички"
+  icon: ERP2Icon
+  category: Balls
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "яйца" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user медленно сжимает в ладони яйца %target"
+  - "%user аккуратно мнет рукой яички %target"
+  - "%user возбужденно ласкает пальцами яички %target"
+  - "%user слегка сжимает и оттягивает кижицу мошонки %target"
+  loveUser: 1
+  loveTarget: 6
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: BallsLick
+  name: "Поласкать яички языком"
+  icon: ERP2Icon
+  category: Balls
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "яйца" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user играет с яичками %target своим языком"
+  - "%user нежно полизывает яйца %target, делая их мокрыми от слюны"
+  - "%user водит языком от одного яичка до другого, заставляя %target возбуждаться сильнее"
+  - "%user полностью вылизывает яички %target, обволакивая их в свою слюну"
+  interactionSounds:
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
+  loveUser: 1
+  loveTarget: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: BallsBite
+  name: Нежно укусить яичко
+  icon: ERP2Icon
+  category: Balls
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "яйца" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно кусает яички %target"
+  - "%user тянет кожицу мошонки %target своими зубами"
+  - "%user покусывает яички %target, отправляя по его мошонке волны слабой боли"
+  lovePercentUser: 1
+  lovePercentTarget: 5
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3

@@ -1,0 +1,229 @@
+﻿- type: interaction
+  id: GentleKiss
+  name: "Нежный поцелуй"
+  icon: GentleKissIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно касается губами губ %target"
+  - "%user слегка касается губами губ %target"
+  - "%user в нежном поцелуе соединяется губами с %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 3
+  loveTarget: 3
+  cooldown: 2
+
+- type: interaction
+  id: QuickPeck
+  name: "Чмокнуть в губы"
+  icon: GentleKissIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user быстро чмокает %target в губы"
+  - "%user дарит лёгкий поцелуй %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 1
+  loveTarget: 1
+  cooldown: 3
+
+- type: interaction
+  id: DeepKiss
+  name: "Глубокий поцелуй"
+  icon: GentleKissIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user глубоко целует %target, увлекаясь"
+  - "%user страстно соединяет губы с губами %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 4
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: PlayfulNibble
+  name: "Куснуть за губки"
+  icon: PlayfulNibbleIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user игриво прикусывает губу %target"
+  - "%user нежно кусает губу %target, добавляя страсти"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 3
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: FrenchKiss
+  name: "Французский поцелуй"
+  icon: GentleKissIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user страстно целует %target с игрой языков"
+  - "%user переплетается языками в страстном поцелуе с %target"
+  - "%user страстно соединяет губы с губами %target"
+  - "%user с любовью целует %target в губы"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 5
+  loveTarget: 5
+  cooldown: 4
+
+- type: interaction
+  id: KissLips
+  name: "Поцеловать в губы"
+  icon: KissLipsIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user целует %target"
+  - "%user нежно целует %target"
+  - "%user слегка целует %target"
+  - "%user целует %target, заводя руку за шею и прижимая к себе"
+  - "%user нежно целует %target, заводя руку за шею и прижимая к себе"
+  - "%user слегка целует %target, заводя руку за шею и прижимая к себе"
+  - "%user настойчиво целует %target, заводя руку за шею и прижимая к себе"
+  - "%user целует %target, заводя руку за шею"
+  - "%user нежно целует %target, заводя руку за шею"
+  - "%user слегка целует %target, заводя руку за шею"
+  - "%user настойчиво целует %target, заводя руку за шею"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 2
+  loveTarget: 2
+  cooldown: 2
+
+- type: interaction
+  id: ALotOfKisses
+  name: "Одарить шквалом поцелуев"
+  icon: FriendlyIcon
+  category: Lips
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот", "лицо", "шея", "грудь", "живот" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user совершает град поцелуев, ни оставляя сухого места на %target"
+  interactionSounds:
+  - AlotOfKisses1
+  loveUser: 4
+  loveTarget: 4
+  cooldown: 5

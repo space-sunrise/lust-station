@@ -5,9 +5,10 @@
   id: BaseMobMoth
   abstract: true
   components:
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Absorbable
-  - type: Interaction
-    erp: true
   - type: HumanoidAppearance
     species: Moth
     hideLayersOnEquip:
@@ -157,6 +158,13 @@
           32:
             sprite: Mobs/Species/Moth/displacement.rsi
             state: shoes
+  # Sunrise edit ;3
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
+  # Sunrise edit end 0_0
     displacements:
       jumpsuit:
         sizeMaps:
@@ -184,6 +192,11 @@
             sprite: Mobs/Species/Moth/displacement.rsi
             state: shoes
   # Sunrise edit ;3
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
   - type: FootprintEmitter
   - type: Carriable
   # Sunrise edit end 0_0
@@ -223,6 +236,13 @@
           32:
             sprite: Mobs/Species/Moth/displacement.rsi
             state: shoes
+  # Sunrise edit ;3
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
+  # Sunrise edit end 0_0
     displacements:
       jumpsuit:
         sizeMaps:
@@ -249,3 +269,10 @@
           32:
             sprite: Mobs/Species/Moth/displacement.rsi
             state: shoes
+  # Sunrise edit ;3
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Moth/displacement.rsi
+            state: shoes
+  # Sunrise edit end 0_0

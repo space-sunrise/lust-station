@@ -1,0 +1,118 @@
+﻿- type: interaction
+  id: NeckKiss
+  name: "Поцеловать в шею"
+  icon: KissNeckIcon
+  category: Neck
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "шея" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user целует %target за шею"
+  - "%user нежно целует %target за шею"
+  - "%user слегка целует %target за шею"
+  - "%user настойчиво целует %target за шею"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 2
+
+- type: interaction
+  id: NeckLick
+  name: "Полизать шею"
+  icon: LickNeckIcon
+  category: Neck
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "шея" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user прилегает к шее %target языком"
+  - "%user касается шеи %target своим язычком"
+  - "%user страстно облизывает шею %target, оставляя на ней влажный след"
+  - "%user слегка облизывает шею %target"
+  - "%user игриво проводит языком по шее %target"
+  interactionSounds:
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
+  - Kiss1
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: NeckBite
+  name: "Укусить за шею"
+  icon: BiteNeckIcon
+  category: Neck
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "шея" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user игриво кусает %target за шею"
+  - "%user слегка прикусывает шею %target"
+  - "%user нежно покусывает шейку %target"
+  loveUser: 3
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: SoftNeckChoke
+  name: "Слабо душить [ERP]"
+  icon: ERP2Icon
+  category: Neck
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рука" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "шея" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user хватает за шею %target, и, страстно смотря в глаза, немного сдавливая её"
+  - "%user медленно подносит руку к шее %target, а затем нежно сдавливает её пальцами"
+  - "%user с небольшой силой сдавливает шею %target своей рукой"
+  - "%user хватает рукой шею %target и, сдавливая её, вскруживает голову %target"
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 5

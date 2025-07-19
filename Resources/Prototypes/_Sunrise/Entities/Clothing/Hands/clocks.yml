@@ -8,8 +8,8 @@
       sprite: _Sunrise/Clothing/Hands/Clocks/divine_clock.rsi
     - type: Clothing
       sprite: _Sunrise/Clothing/Hands/Clocks/divine_clock.rsi
-    # Lust-Start
+  # SUNRISE EDIT
     - type: Tag
       tags:
       - Ring
-  # Lust-End
+  # SUNRISE EDIT
