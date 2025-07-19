@@ -608,7 +608,7 @@
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Service
+      department: Civilian
       time: 90000 # 25 hours
   accessGroups:
   - AllAccess
@@ -709,7 +709,7 @@
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
-      department: Service
+      department: Civilian
       time: 90000 # 25 hours
   accessGroups:
   - AllAccess

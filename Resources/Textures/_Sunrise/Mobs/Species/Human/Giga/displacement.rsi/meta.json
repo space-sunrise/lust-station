@@ -1,5 +1,7 @@
 {
   "version": 1,
+  "license": "CLA",
+  "copyright": "MADE FOR SUNRISE",
   "size": {
     "x": 32,
     "y": 32

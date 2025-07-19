@@ -25,19 +25,6 @@
     - ClothMade
     - WhitelistChameleon
 
-# SUNRISE EDIT
-- type: entity
-  abstract: true
-  parent: ClothingHeadBase
-  id: ClothingHeadTopCovered
-  components:
-  - type: Tag
-    tags:
-      - ClothMade
-      - WhitelistChameleon
-      - FullCovered # INTERACTIONS
-# SUNRISE EDIT
-
 - type: entity
   abstract: true
   parent: ClothingHeadBase
