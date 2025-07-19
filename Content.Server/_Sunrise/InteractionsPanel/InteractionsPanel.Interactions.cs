@@ -246,22 +246,22 @@ public partial class InteractionsPanel
 
         ProcessVirginityLoss(ent.Owner, target.Value, interactionPrototype);
 
-        TryEmitMoan(ent.Owner, interactionPrototype.LoveUser);
-        TryEmitMoan(target.Value, interactionPrototype.LoveTarget);
+        TryEmitMoan(ent.Owner, interactionPrototype.LoveUser, interactionPrototype.UserMoanChance);
+        TryEmitMoan(target.Value, interactionPrototype.LoveTarget, interactionPrototype.TargetMoanChance);
 
         _log.Add(LogType.Interactions, LogImpact.Medium,
             $"[InteractionsPanel] {ToPretty(ent.Owner)} использует \"{interactionPrototype.ID}\" на {ToPretty(target.Value)}");
     }
 
-    private void TryEmitMoan(EntityUid uid, FixedPoint2 loveGain)
+    private void TryEmitMoan(EntityUid uid, FixedPoint2 loveGain, float chance)
     {
-        if (!TryComp<InteractionsComponent>(uid, out var component))
-            return;
-
-        if (loveGain < FixedPoint2.New(5))
-            return;
-
         if (!_gameTiming.IsFirstTimePredicted)
+            return;
+
+        if (!_random.Prob(chance))
+            return;
+
+        if (!TryComp<InteractionsComponent>(uid, out var component))
             return;
 
         var now = _gameTiming.CurTime;

@@ -46,6 +46,13 @@ public sealed partial class InteractionPrototype : IPrototype
     public string UserVirginityLoss = string.Empty;
 
     [DataField]
+    public float UserMoanChance { get; private set; } = 0f;
+
+    [DataField]
+    public float TargetMoanChance { get; private set; } = 0f;
+
+
+    [DataField]
     public bool SpawnsEffect { get; private set; }
 
     [DataField]
