@@ -3,16 +3,17 @@
   abstract: true
   name: RestActionName
   description: RestActionDesc
+  components:
+  - type: InstantAction
 
 - type: entity
   id: RestActionRobot
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: robot_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -20,11 +21,10 @@
   id: RestActionMiner
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: miner_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -32,11 +32,10 @@
   id: RestActionEngineer
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: engineer_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -44,11 +43,10 @@
   id: RestActionJanitor
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: janitor_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -56,11 +54,10 @@
   id: RestActionMedical
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: medical_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -68,11 +65,10 @@
   id: RestActionService
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: service_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -80,11 +76,10 @@
   id: RestActionPeace
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: peace_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -92,11 +87,10 @@
   id: RestActionClown
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: clown_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -104,11 +98,10 @@
   id: RestActionSec
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: sec_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
 
@@ -116,10 +109,9 @@
   id: RestActionSecMk2
   parent: BaseRestAction
   components:
-  - type: InstantAction
+  - type: Action
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: sec_tipped_icon
-    event: !type:RestActionEvent {}
     checkCanInteract: false
     checkConsciousness: false
