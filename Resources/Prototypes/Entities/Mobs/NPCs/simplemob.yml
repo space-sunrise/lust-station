@@ -33,7 +33,6 @@
     - Flip # Sunrise-Edit
     - Fall # Sunrise-Edit
   - type: EmoteAnimation # Sunrise-Edit
-  - type: Interactions
   - type: Buckle
   - type: StandingState
   - type: Tag
@@ -117,7 +116,6 @@
     - Flip # Sunrise-Edit
     - Fall # Sunrise-Edit
   - type: EmoteAnimation # Sunrise-Edit
-  - type: Interactions
   - type: Bloodstream
     bloodMaxVolume: 150
   - type: MobPrice
