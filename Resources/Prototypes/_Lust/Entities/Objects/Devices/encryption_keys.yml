@@ -7,7 +7,6 @@
   - type: EncryptionKey
     channels:
     - UGE
-    - MT
     - Law
     - CentCom
     - Common

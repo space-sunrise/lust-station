@@ -4,7 +4,11 @@
   name: RestActionName
   description: RestActionDesc
   components:
+  - type: Action
+    checkCanInteract: false
+    checkConsciousness: false
   - type: InstantAction
+    event: !type:RestActionEvent {}
 
 - type: entity
   id: RestActionRobot
@@ -14,8 +18,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: robot_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionMiner
@@ -25,8 +27,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: miner_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionEngineer
@@ -36,8 +36,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: engineer_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionJanitor
@@ -47,8 +45,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: janitor_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionMedical
@@ -58,8 +54,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: medical_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionService
@@ -69,8 +63,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: service_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionPeace
@@ -80,8 +72,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: peace_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionClown
@@ -91,8 +81,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: clown_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionSec
@@ -102,8 +90,6 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: sec_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
 
 - type: entity
   id: RestActionSecMk2
@@ -113,5 +99,3 @@
     icon:
       sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
       state: sec_tipped_icon
-    checkCanInteract: false
-    checkConsciousness: false
