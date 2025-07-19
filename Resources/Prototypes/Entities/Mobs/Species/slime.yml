@@ -4,6 +4,9 @@
   id: BaseMobSlimePerson
   abstract: true
   components:
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.3
