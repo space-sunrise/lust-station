@@ -32,6 +32,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly CustomInteractionService _customInteractionService = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] protected readonly ILocalizationManager Loc = default!;
 
     private readonly SpriteSystem _spriteSystem;
 
@@ -187,13 +188,9 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
             if (!isCustom)
             {
                 if (_prototypeManager.TryIndex<InteractionPrototype>(interactionId, out var prototype))
-                {
-                    interactionName = prototype.Name;
-                }
+                    interactionName = Loc.GetString(prototype.Name);
                 else
-                {
                     continue;
-                }
             }
             else
             {
@@ -367,7 +364,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
 
             if (!categorizedInteractions.TryGetValue(categoryId, out _))
             {
-                var categoryName = category.Name;
+                var categoryName = Loc.GetString(category.Name);
                 categorizedInteractions[categoryId] = (categoryName, new List<object>());
             }
 
@@ -392,7 +389,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
             if (!categorizedInteractions.TryGetValue(categoryId, out _))
             {
                 var category = _prototypeManager.Index<InteractionCategoryPrototype>(categoryId);
-                categorizedInteractions[categoryId] = (category.Name, new List<object>());
+                categorizedInteractions[categoryId] = (Loc.GetString(category.Name), new List<object>());
             }
 
             if (!_favoriteInteractions.Contains(customInteraction.Id))
@@ -1116,7 +1113,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
             return "Не указана";
 
         if (_prototypeManager.TryIndex<InteractionCategoryPrototype>(categoryId, out var category))
-            return category.Name;
+            return Loc.GetString(category.Name);
 
         return categoryId;
     }

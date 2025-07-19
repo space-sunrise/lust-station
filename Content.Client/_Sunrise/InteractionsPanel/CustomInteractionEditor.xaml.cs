@@ -31,6 +31,7 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
     #region Dependencies
 
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] protected readonly ILocalizationManager Loc = default!;
     [Dependency] private readonly CustomInteractionService _customInteractionService = default!;
 
     private readonly SharedAudioSystem _audio = default!;
@@ -147,10 +148,10 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
         _categoryIds[categoryId] = string.Empty;
 
         categoryId++;
-        foreach (var category in _prototypeManager.EnumeratePrototypes<InteractionCategoryPrototype>().OrderBy(c => c.Name))
+        foreach (var category in _prototypeManager.EnumeratePrototypes<InteractionCategoryPrototype>().OrderBy(c => Loc.GetString(c.Name)))
         {
             _categoryIds[categoryId] = category.ID;
-            CategoryOption.AddItem(category.Name, categoryId);
+            CategoryOption.AddItem(Loc.GetString(category.Name), categoryId);
 
             if (category.ID == _interaction.CategoryId)
             {
@@ -166,10 +167,10 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
         _iconIds[iconId] = string.Empty;
 
         iconId++;
-        foreach (var icon in _prototypeManager.EnumeratePrototypes<InteractionIconPrototype>().OrderBy(i => i.Name))
+        foreach (var icon in _prototypeManager.EnumeratePrototypes<InteractionIconPrototype>().OrderBy(i => Loc.GetString(i.Name)))
         {
             _iconIds[iconId] = icon.ID;
-            IconOption.AddItem(icon.Name, iconId);
+            IconOption.AddItem(Loc.GetString(icon.Name), iconId);
 
             if (icon.ID == _interaction.IconId)
             {
@@ -185,10 +186,10 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
         _effectIds[effectId] = string.Empty;
 
         effectId++;
-        foreach (var effect in _prototypeManager.EnumeratePrototypes<InteractionEntityEffectPrototype>().OrderBy(e => e.Name))
+        foreach (var effect in _prototypeManager.EnumeratePrototypes<InteractionEntityEffectPrototype>().OrderBy(e => Loc.GetString(e.Name)))
         {
             _effectIds[effectId] = effect.ID;
-            EffectOption.AddItem(effect.Name, effectId);
+            EffectOption.AddItem(Loc.GetString(effect.Name), effectId);
 
             if (effect.ID == _interaction.EntityEffectId)
             {
@@ -204,10 +205,10 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
         _soundIds[soundId] = string.Empty;
 
         soundId++;
-        foreach (var sound in _prototypeManager.EnumeratePrototypes<InteractionSoundPrototype>().OrderBy(s => s.Name))
+        foreach (var sound in _prototypeManager.EnumeratePrototypes<InteractionSoundPrototype>().OrderBy(s => Loc.GetString(s.Name)))
         {
             _soundIds[soundId] = sound.ID;
-            SoundOption.AddItem(sound.Name, soundId);
+            SoundOption.AddItem(Loc.GetString(sound.Name), soundId);
             soundId++;
         }
 

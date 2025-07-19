@@ -4,6 +4,9 @@
   id: BaseMobSwine
   abstract: true
   components:
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Absorbable
   - type: HumanoidAppearance
     species: Swine
