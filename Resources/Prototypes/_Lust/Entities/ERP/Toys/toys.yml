@@ -382,9 +382,9 @@
 - type: soundCollection
   id: Whips
   files:
-  - /Audio/_Lust/ERP/whip/whip_1.ogg
-  - /Audio/_Lust/ERP/whip/whip_2.ogg
-  - /Audio/_Lust/ERP/whip/whip_3.ogg
+  - /Audio/_Lust/Interactions/whip/whip_1.ogg
+  - /Audio/_Lust/Interactions/whip/whip_2.ogg
+  - /Audio/_Lust/Interactions/whip/whip_3.ogg
 
 - type: entity
   parent: BaseItem

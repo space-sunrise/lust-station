@@ -18,7 +18,7 @@
       requireExposed: true
   interactionMessages:
     - "%user чмокает в щёку %target"
-  interactioninteractionSounds:
+  interactionSounds:
     - Kiss1
     - Kiss2
     - Kiss3
@@ -49,7 +49,7 @@
     - "%user целует %target в обе щёки"
     - "%user чмокает %target в обе щёки"
     - "%user расцеловывает %target в обе щеки"
-  interactioninteractionSounds:
+  interactionSounds:
     - Kiss1
     - Kiss2
     - Kiss3
