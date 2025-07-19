@@ -1,5 +1,5 @@
 ﻿- type: interaction
-  id: FeetLick1
+  id: FeetFaceLickDoggyStyleSound1
   name: "Вылизать ножки"
   icon: LegsLickIcon
   category: Feet
@@ -21,8 +21,8 @@
   - "%user начинает лизать ножки %target"
   - "%user подносит свой рот к ножкам %target, и начинает их лизать"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   - Kiss1
   loveUser: 2
   loveTarget: 2
@@ -51,8 +51,8 @@
   - "%user снимает обувь с одной ступни и прислоняет ножку ко рту %target"
   - "%user подносит свою ножку к лицу %target, заставляя лизать её"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   - Kiss1
   loveUser: 2
   loveTarget: 2
@@ -81,8 +81,8 @@
   - "%user проходит по ступням %target своим язычком"
   - "%user щекочет язычком пяточки %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveTarget: 3
   cooldown: 3
 
@@ -139,8 +139,8 @@
   - "%user тщательно проходит языком по подошве обуви %target"
   - "%user медленно проводит языком по обуви %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 3
   loveTarget: 3
   cooldown: 3

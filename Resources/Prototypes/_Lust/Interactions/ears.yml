@@ -140,8 +140,8 @@
   - "%user ласково лижет ушки %target"
   - "%user проводит языком по ушкам %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 2
   loveTarget: 4
   cooldown: 3

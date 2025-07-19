@@ -74,8 +74,8 @@
   - "%user импульсивно лижет клитор %target"
   - "%user страстно вылизывает клитор %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   - Kiss1
   loveUser: 4
   loveTarget: 9
@@ -363,8 +363,8 @@
   - "%user играется с клитором %target, вырисовывая на нем различные узоры своим языком"
   - "%user игриво водит языком по клитору %target, покрывая его своей слюной"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 3
   loveTarget: 9
   cooldown: 3

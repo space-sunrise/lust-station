@@ -57,8 +57,8 @@
   - "%user страстно лижет ножки %target"
   - "%user игриво водит языком по ножкам %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 2
   loveTarget: 4
   cooldown: 3
@@ -114,8 +114,8 @@
   - "%user проходит своим язычком по ступням %target"
   - "%user страстно облизывает ступни %target"
   interactionSounds:
-  - Lick1
-  - Lick2
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
   loveUser: 2
   loveTarget: 4
   cooldown: 3
