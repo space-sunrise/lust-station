@@ -305,10 +305,10 @@
   - "%user активно трахает членом грудь %target"
   - "%user страстно трахает членом сжатую грудь %target"
   interactionSounds:
-  - Hlupl1
-  - Hlupl2
-  - Hlupl3
-  - Hlupl4
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
   loveUser: 8
   loveTarget: 3
   spawnsEffect: true

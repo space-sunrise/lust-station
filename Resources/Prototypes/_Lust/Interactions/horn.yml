@@ -120,7 +120,7 @@
   id: HornsCunnilingusMale
   name: "Делать куни держа за рожки"
   icon: HornsAssFemaleIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false
@@ -175,7 +175,7 @@
   id: HornsPussyFuck
   name: "Трахать вагину держа за рожки"
   icon: HornsAssFemaleIcon
-  category: Vagina
+  category: Pussy
   appearConditions:
   - !type:HasTargetCondition
     allowSelfTargeting: false

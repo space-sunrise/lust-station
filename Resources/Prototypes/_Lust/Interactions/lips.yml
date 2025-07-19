@@ -223,7 +223,7 @@
   interactionMessages:
   - "%user совершает град поцелуев, ни оставляя сухого места на %target"
   interactionSounds:
-  - AlotOfKisses1
+  - ALotOfKisses
   loveUser: 4
   loveTarget: 4
   cooldown: 5

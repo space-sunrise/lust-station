@@ -828,7 +828,7 @@
   - AdjutantDuffel
 #Lust-Start
   - AdjutantFormalBackpack
-  - ClothingBackpackDuffelFormaladduf
+  - AdjutantFormalDuffel
 #Lust-End
 
 - type: loadoutGroup

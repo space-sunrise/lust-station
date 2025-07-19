@@ -95,8 +95,8 @@
   - "%user нежно кусает яички %target"
   - "%user тянет кожицу мошонки %target своими зубами"
   - "%user покусывает яички %target, отправляя по его мошонке волны слабой боли"
-  lovePercentUser: 1
-  lovePercentTarget: 5
+  loveUser: 1
+  loveTarget: 5
   spawnsEffect: true
   effectChance: 1
   entityEffect: InteractionEffectHearts

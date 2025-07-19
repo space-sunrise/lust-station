@@ -113,7 +113,7 @@
   - "%user ласкает ступней член %target"
   - "%user поглаживает ступней член %target"
   interactionSounds:
-  - Stroke1
+  - FriendlyStroke
   loveTarget: 3
   cooldown: 3
 
