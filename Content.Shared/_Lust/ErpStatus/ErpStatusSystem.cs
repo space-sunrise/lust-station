@@ -3,7 +3,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 
-namespace Content.Server._Lust.ErpStatus
+namespace Content.Shared._Lust.ErpStatus
 {
     public sealed class ErpStatusSystem : EntitySystem
     {
