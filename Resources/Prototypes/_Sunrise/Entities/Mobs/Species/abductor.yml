@@ -47,6 +47,7 @@
         Brute: -0.14
   - type: Bloodstream
     bloodReagent: AbductorBlood
+  - type: Interactions # Lust-edit
   - type: CollectiveMind
     minds:
     - Abductor
