@@ -51,7 +51,7 @@
   - "%user нежно проводит пальцами по ушкам %target"
   - "%user аккуратно гладит ушки %target"
   interactionSounds:
-  - Stroke1
+  - FriendlyStroke
   loveUser: 2
   loveTarget: 4
   cooldown: 3
