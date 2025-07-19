@@ -42,6 +42,42 @@
             32:
               sprite: _Sunrise/Mobs/Species/Human/Fat/displacement.rsi
               state: marking
+      body-slim-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Slim/displacement.rsi
+              state: marking
+      body-slim-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Slim/displacement.rsi
+              state: marking
+      body-distrofik-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Distrofik/displacement.rsi
+              state: marking
+      body-distrofik-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Distrofik/displacement.rsi
+              state: marking
+      body-giga-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Giga/displacement.rsi
+              state: marking
+      body-giga-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Giga/displacement.rsi
+              state: marking
 # MARKINGS END
   # HANDS DISPLACEMENT
   - type: Hands
@@ -524,6 +560,42 @@
           sizeMaps:
             32:
               sprite: _Sunrise/Mobs/Species/Human/Fat/displacement.rsi
+              state: marking
+      body-slim-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Slim/displacement.rsi
+              state: marking
+      body-slim-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Slim/displacement.rsi
+              state: marking
+      body-distrofik-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Distrofik/displacement.rsi
+              state: marking
+      body-distrofik-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Distrofik/displacement.rsi
+              state: marking
+      body-giga-m:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Giga/displacement.rsi
+              state: marking
+      body-giga-f:
+        Hair:
+          sizeMaps:
+            32:
+              sprite: _Sunrise/Mobs/Species/Human/Giga/displacement.rsi
               state: marking
 # MARKINGS END
   # HANDS DISPLACEMENT
