@@ -26,7 +26,7 @@ public sealed class VibratingSystem : EntitySystem
         var curTime = _timing.CurTime;
 
         var query = EntityQueryEnumerator<VibratingComponent, InteractionsComponent>();
-        while (query.MoveNext(out var uid, out var comp, out var love))
+        while (query.MoveNext(out var uid, out var comp, out _))
         {
             if (!_mobStateSystem.IsAlive(uid))
                 continue;
@@ -42,8 +42,6 @@ public sealed class VibratingSystem : EntitySystem
 
             _chatSystem.TryEmoteWithChat(uid, "Moan", ignoreActionBlocker: true);
             _jittering.AddJitter(uid, comp.Amplitude, comp.Frequency);
-
-            Dirty(uid, comp);
         }
     }
 }
