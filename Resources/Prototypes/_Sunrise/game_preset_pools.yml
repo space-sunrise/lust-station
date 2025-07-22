@@ -8,7 +8,7 @@
   id: DefaultHighPopPresetPool
   presets:
     Greenshift: [0, 200]
-    Secret: [2, 200]
+    Secret: [50, 200]
 
 - type: gamePresetPool
   id: DynamicPresetPool
