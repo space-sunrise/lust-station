@@ -960,3 +960,20 @@
     type: Fix
   id: 233
   time: '2025-07-19T10:27:09.120872+00:00'
+- author: kanopus7
+  changes:
+  - message: "\u0410\u0431\u0434\u0443\u043A\u0442\u043E\u0440\u044B \u043F\u043E\u043B\
+      \u0443\u0447\u0438\u043B\u0438 \u0415\u0420\u041F \u043F\u0430\u043D\u0435\u043B\
+      \u044C."
+    type: Add
+  id: 234
+  time: '2025-07-22T15:50:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/316
+- author: ReWAFFlution
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B 6 \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0445 \u0438\u0433\u0440\u0443\u0448\u0435\u043A."
+    type: Add
+  id: 235
+  time: '2025-07-22T15:49:52.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/317
