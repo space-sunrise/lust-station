@@ -7,7 +7,6 @@
   components:
   - type: Interactions
   - type: MultiHandedItem
-    handsNeeded: 2
   - type: Absorbable
   - type: OwOAccent
   - type: Speech
