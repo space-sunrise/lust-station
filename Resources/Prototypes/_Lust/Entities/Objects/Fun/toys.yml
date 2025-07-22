@@ -341,3 +341,135 @@
         variation: 0.125
   - type: UseDelay
     delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieAsyaFartuna
+  name: Plushie Asya Fartuna
+  components:
+  - type: UseDelay
+    delay: 4
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: asya_fartuna
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieRustemBrich
+  name: Plushie Rustem Brich
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: rustem_brich
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/vremya_dengi.ogg
+  - type: UseDelay
+    delay: 4
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieBlizzard
+  name: Plushie Blizzard
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: blizzard
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Item
+    heldPrefix: blizz
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: blizz
+    slots:
+    - HEAD
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieShinyaKucenko
+  name: Plushie Shinya Kucenko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shinya-kucenko
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/Gasp/male_deathgasp_1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Lust/Interactions/skratch/skratch_1.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/Interactions/skratch/skratch_1.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: shinya
+    slots:
+    - NECK
+  - type: Item
+    heldPrefix: shinya
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieUlavaBritz
+  name: Plushie Ulava-Britz
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: ulava-britz
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieSophieKomissarova
+  name: Plushie Sophie Komissarova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sophiekomissarova
+  - type: UseDelay
+    delay: 4
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Defib/defib_charge.ogg
