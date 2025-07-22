@@ -233,6 +233,8 @@ namespace Content.Server.Voting.Managers
             if (presets.Count == 1)
             {
                 var singlePreset = presets.First();
+                _chatManager.DispatchServerAnnouncement(
+                    Loc.GetString("ui-vote-gamemode-auto-set", ("preset", singlePreset.Value)));
                 var ticker = _entityManager.EntitySysManager.GetEntitySystem<GameTicker>();
                 ticker.SetGamePreset(singlePreset.Key);
                 return;
