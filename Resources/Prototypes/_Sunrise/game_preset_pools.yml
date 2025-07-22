@@ -1,28 +1,10 @@
+# НЕ ТРОГАТЬ БЕЗ МОЕГО РАЗРЕШЕНИЯ!!! SplikZerys
+
 - type: gamePresetPool
   id: DefaultPresetPool
   presets:
     - Greenshift
     - Secret
-
-- type: gamePresetPool
-  id: DynamicPresetPool
-  presets:
-  - Nukeops
-  - Traitor
-  - Zombie
-  - Survival
-  - Revolutionary
-  - Wizard
-  - Traitor
-  - BloodCult
-  - AssaultOps
-  - FleshCult
-
-- type: gamePresetPool
-  id: PeacePresetPool
-  presets:
-  - Greenshift
-  - Extra
 
 - type: gamePresetPool
   id: MiddlePresetPool
