@@ -35,6 +35,7 @@ public partial class InteractionsPanel
             subs =>
             {
                 subs.Event<InteractionMessage>(OnInteractionMessageReceived);
+                subs.Event<RequestUndressMessage>(OnUndressMessageReceived);
             });
 
         SubscribeLocalEvent<InteractionsComponent, GetVerbsEvent<AlternativeVerb>>(AddInteractionsVerb);
@@ -49,6 +50,17 @@ public partial class InteractionsPanel
             .Bind(ContentKeyFunctions.Interact, new PointerInputCmdHandler(HandleInteract))
             .Bind(ContentKeyFunctions.Interact, InputCmdHandler.FromDelegate(enabled: TryAutoInteraction))
             .Register<InteractionsPanel>();
+    }
+
+    private void OnUndressMessageReceived(Entity<InteractionsComponent> ent, ref RequestUndressMessage args)
+    {
+        if (_inventory.TryGetSlots(ent, out var slots))
+        {
+            foreach (var slot in slots)
+            {
+                _inventory.TryUnequip(ent, slot.Name, true, false, false);
+            }
+        }
     }
 
     private void TryAutoInteraction(ICommonSession? session)

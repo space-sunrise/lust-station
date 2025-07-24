@@ -134,24 +134,34 @@
                 </BoxContainer>
             </PanelContainer>
 
-            <PanelContainer Margin="0 0 0 0">
-                <PanelContainer.PanelOverride>
-                    <gfx:StyleBoxFlat BackgroundColor="#1a0f1a"/>
-                </PanelContainer.PanelOverride>
-                <BoxContainer Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
-                    <ProgressBar Name="ProgressBar"
-                                 MinValue="0"
-                                 MaxValue="1"
-                                 Value="0"
-                                 HorizontalExpand="True"
-                                 MinHeight="18"
-                                 MinWidth="30"/>
-                    <TextureRect SetSize="20 20"
-                                 Stretch="KeepAspectCentered"
-                                 Margin="6 0 0 0"
-                                 TexturePath="/Textures/_Lust/heartIcon.png"/>
-                </BoxContainer>
-            </PanelContainer>
+            <BoxContainer Orientation="Vertical" Margin="0 0 0 0">
+                <Button Name="UndressButton"
+                        Text="Раздеться"
+                        StyleClasses="ButtonSquare"
+                        MinHeight="26"
+                        HorizontalAlignment="Center"
+                        Margin="10 4 10 4"/>
+
+                <PanelContainer>
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#1a0f1a"/>
+                    </PanelContainer.PanelOverride>
+
+                    <BoxContainer Orientation="Horizontal" Margin="10" VerticalAlignment="Center">
+                        <ProgressBar Name="ProgressBar"
+                                     MinValue="0"
+                                     MaxValue="1"
+                                     Value="0"
+                                     HorizontalExpand="True"
+                                     MinHeight="18"
+                                     MinWidth="30"/>
+                        <TextureRect SetSize="20 20"
+                                     Stretch="KeepAspectCentered"
+                                     Margin="6 0 0 0"
+                                     TexturePath="/Textures/_Lust/heartIcon.png"/>
+                    </BoxContainer>
+                </PanelContainer>
+            </BoxContainer>
 
             <controls:HSpacer Spacing="6" />
 
