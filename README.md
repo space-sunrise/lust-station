@@ -10,7 +10,7 @@
 
 <div class="header" align="center">
 
-[![Discord](https://img.shields.io/discord/1253315855731916821?label=Discord&logo=discord&logoColor=white)](https://discord.gg/lust-station)
+[![Discord](https://img.shields.io/discord/831352358520725506?label=Discord&logo=discord&logoColor=white)](https://discord.gg/aHcWNf5SZu)
 [![Wiki](https://img.shields.io/badge/Wiki-SS14%20SUNRISE-blue)](https://sunrise14.top/wiki/)
 [![Steam](https://img.shields.io/badge/Steam-SS14%20SUNRISE-blue)](https://store.steampowered.com/app/1255460/Space_Station_14/)
 [![Client](https://img.shields.io/badge/Client-Download-blue)](https://spacestation14.io/about/nightlies/)
