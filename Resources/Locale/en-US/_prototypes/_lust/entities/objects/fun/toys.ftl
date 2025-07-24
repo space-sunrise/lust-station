@@ -50,3 +50,5 @@ ent-PlushieUlavaBritz = Plushie Ulava-Britz
     .desc = { ent-BasePlushie.desc }
 ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
     .desc = { ent-BasePlushie.desc }
+ent-PlushieDrasusLeverian = Plushie Drasus Leverian
+    .desc = { ent-BasePlushie.desc }

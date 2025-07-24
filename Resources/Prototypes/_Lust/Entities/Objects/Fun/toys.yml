@@ -473,3 +473,17 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Defib/defib_charge.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDrasusLeverian
+  name: Plushie Drasus Leverian
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: drasus_leverian
+  - type: UseDelay
+    delay: 6
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/Misc/epsilon_cut.ogg
