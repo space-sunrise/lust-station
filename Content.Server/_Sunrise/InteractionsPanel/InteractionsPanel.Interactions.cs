@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Server.Chat.Systems;
 using Content.Server.Fluids.EntitySystems;
+using Content.Shared._Sunrise.Aphrodesiac;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
@@ -429,14 +430,33 @@ public partial class InteractionsPanel
     private void UpdateLove(EntityUid uid, InteractionsComponent comp, float frameTime)
     {
         if (comp.LoveAmount <= 0)
+        {
+            if (TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+            {
+                RemComp<LoveVisionComponent>(uid);
+            }
             return;
+        }
 
         comp.LoveAmount -= LoveDecayRate * frameTime;
-
         if (comp.LoveAmount < 0)
             comp.LoveAmount = 0;
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+        var hasEffect = HasComp<LoveVisionComponent>(uid);
+
+        if (ratio >= 0.33f && !hasEffect)
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private void TryOrgasm(EntityUid uid)
@@ -479,6 +499,19 @@ public partial class InteractionsPanel
         }
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+
+        if (ratio >= 0.33f && !HasComp<LoveVisionComponent>(uid))
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVision) && loveVision.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private bool IsOnCooldown(EntityUid user, string interactionId)
