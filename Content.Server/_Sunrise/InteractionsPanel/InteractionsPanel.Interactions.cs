@@ -346,7 +346,7 @@ public partial class InteractionsPanel
     {
         _puddle.TrySpillAt(
             coordinates,
-            new Solution(prototype, 2f),
+            new Solution(prototype, 4f),
             out _,
             false);
     }
@@ -452,7 +452,8 @@ public partial class InteractionsPanel
         _chatSystem.TrySendInGameICMessage(uid, "кончает", InGameICChatType.Emote, false);
         _chatSystem.TryEmoteWithChat(uid, "Moan");
 
-        SpawnSemen("Semen", Transform(uid).Coordinates);
+        if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearanceComponent) && humanoidAppearanceComponent.Sex == Sex.Male)
+            SpawnSemen("Semen", Transform(uid).Coordinates);
 
         SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
         Dirty(uid, comp);
