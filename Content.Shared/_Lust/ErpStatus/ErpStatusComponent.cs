@@ -3,10 +3,10 @@ using Content.Shared.Humanoid;
 
 namespace Content.Shared._Lust.ErpStatus
 {
-    [RegisterComponent, NetworkedComponent]
+    [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
     public sealed partial class ErpStatusComponent : Component
     {
-        [DataField(required: true)]
+        [DataField(required: true), AutoNetworkedField]
         public Erp Erp = Erp.Ask;
     }
 }

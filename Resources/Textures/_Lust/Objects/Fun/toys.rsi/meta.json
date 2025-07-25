@@ -69,6 +69,48 @@
     },
     {
       "name": "arelitt-varmolnd"
+    },
+    {
+        "name": "blizz-inhand-right",
+        "directions": 4
+    },
+    {
+        "name": "blizz-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "blizz-equipped-HEAD",
+        "directions": 4
+    },
+    {
+        "name": "shinya-inhand-right",
+        "directions": 4
+    },
+    {
+        "name": "shinya-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "shinya-equipped-NECK",
+        "directions": 4
+    },
+    {
+        "name": "asya_fartuna"
+    },
+    {
+        "name": "blizzard"
+    },
+    {
+        "name": "rustem_brich"
+    },
+    {
+        "name": "shinya-kucenko"
+    },
+    {
+        "name": "ulava-britz"
+    },
+    {
+        "name": "sophiekomissarova"
     }
   ]
 }
