@@ -45,6 +45,11 @@ public sealed class RequestSavePosAndCloseMessage : BoundUserInterfaceMessage
 }
 
 [Serializable, NetSerializable]
+public sealed class RequestUndressMessage : BoundUserInterfaceMessage
+{
+}
+
+[Serializable, NetSerializable]
 public sealed class CustomInteractionData
 {
     public string InteractionMessage { get; }

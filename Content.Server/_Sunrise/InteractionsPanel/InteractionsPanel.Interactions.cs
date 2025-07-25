@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Server.Chat.Systems;
 using Content.Server.Fluids.EntitySystems;
+using Content.Shared._Sunrise.Aphrodesiac;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
@@ -34,6 +35,7 @@ public partial class InteractionsPanel
             subs =>
             {
                 subs.Event<InteractionMessage>(OnInteractionMessageReceived);
+                subs.Event<RequestUndressMessage>(OnUndressMessageReceived);
             });
 
         SubscribeLocalEvent<InteractionsComponent, GetVerbsEvent<AlternativeVerb>>(AddInteractionsVerb);
@@ -48,6 +50,17 @@ public partial class InteractionsPanel
             .Bind(ContentKeyFunctions.Interact, new PointerInputCmdHandler(HandleInteract))
             .Bind(ContentKeyFunctions.Interact, InputCmdHandler.FromDelegate(enabled: TryAutoInteraction))
             .Register<InteractionsPanel>();
+    }
+
+    private void OnUndressMessageReceived(Entity<InteractionsComponent> ent, ref RequestUndressMessage args)
+    {
+        if (_inventory.TryGetSlots(ent, out var slots))
+        {
+            foreach (var slot in slots)
+            {
+                _inventory.TryUnequip(ent, slot.Name, true, false, false);
+            }
+        }
     }
 
     private void TryAutoInteraction(ICommonSession? session)
@@ -346,7 +359,7 @@ public partial class InteractionsPanel
     {
         _puddle.TrySpillAt(
             coordinates,
-            new Solution(prototype, 2f),
+            new Solution(prototype, 4f),
             out _,
             false);
     }
@@ -429,14 +442,33 @@ public partial class InteractionsPanel
     private void UpdateLove(EntityUid uid, InteractionsComponent comp, float frameTime)
     {
         if (comp.LoveAmount <= 0)
+        {
+            if (TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+            {
+                RemComp<LoveVisionComponent>(uid);
+            }
             return;
+        }
 
         comp.LoveAmount -= LoveDecayRate * frameTime;
-
         if (comp.LoveAmount < 0)
             comp.LoveAmount = 0;
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+        var hasEffect = HasComp<LoveVisionComponent>(uid);
+
+        if (ratio >= 0.33f && !hasEffect)
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private void TryOrgasm(EntityUid uid)
@@ -452,7 +484,8 @@ public partial class InteractionsPanel
         _chatSystem.TrySendInGameICMessage(uid, "кончает", InGameICChatType.Emote, false);
         _chatSystem.TryEmoteWithChat(uid, "Moan");
 
-        SpawnSemen("Semen", Transform(uid).Coordinates);
+        if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearanceComponent) && humanoidAppearanceComponent.Sex == Sex.Male)
+            SpawnSemen("Semen", Transform(uid).Coordinates);
 
         SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
         Dirty(uid, comp);
@@ -478,6 +511,19 @@ public partial class InteractionsPanel
         }
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+
+        if (ratio >= 0.33f && !HasComp<LoveVisionComponent>(uid))
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVision) && loveVision.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private bool IsOnCooldown(EntityUid user, string interactionId)

@@ -97,10 +97,44 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         CustomInteractionSearchInput.OnTextChanged += OnCustomInteractionSearchTextChanged;
         NewCustomInteractionButton.OnPressed += OnNewCustomInteractionPressed;
 
+        UndressButton.StyleBoxOverride = new StyleBoxFlat
+        {
+            BackgroundColor = BackgroundHighlight,
+            BorderColor = SuccessColor,
+            BorderThickness = new Thickness(1)
+        };
+
+        UndressButton.OnMouseEntered += _ =>
+        {
+            UndressButton.StyleBoxOverride = new StyleBoxFlat
+            {
+                BackgroundColor = BackgroundLight,
+                BorderColor = SecondaryColor,
+                BorderThickness = new Thickness(1)
+            };
+        };
+
+        UndressButton.OnMouseExited += _ =>
+        {
+            UndressButton.StyleBoxOverride = new StyleBoxFlat
+            {
+                BackgroundColor = BackgroundHighlight,
+                BorderColor = SuccessColor,
+                BorderThickness = new Thickness(1)
+            };
+        };
+
+        UndressButton.OnPressed += UndressButtonOnOnPressed;
+
         LoadSavedInteractions();
         LoadOpenCategories();
         LoadFavoriteInteractions();
         InitializeSettings();
+    }
+
+    private void UndressButtonOnOnPressed(BaseButton.ButtonEventArgs obj)
+    {
+        _owner?.SendBoundUserInterfaceMessage(new RequestUndressMessage());
     }
 
     private void InitializeSettings()
@@ -297,17 +331,8 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
 
     private void SetGenitalsText(Label label, string genitalsText)
     {
-        const int maxVisibleChars = 16;
-        var fullText = $"{genitalsText}";
-
-        if (genitalsText.Length > maxVisibleChars)
-        {
-            label.Text = $"{genitalsText.Substring(0, maxVisibleChars - 3)}...";
-        }
-        else
-        {
-            label.Text = fullText;
-        }
+        label.Text = genitalsText;
+        label.ToolTip = genitalsText;
     }
 
     public static string GenitalSlotToString(GenitalSlot slot)
