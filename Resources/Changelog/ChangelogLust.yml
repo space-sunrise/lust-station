@@ -977,3 +977,12 @@
   id: 235
   time: '2025-07-22T15:49:52.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/317
+- author: Ne0shka
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0414\u0440\u0430\u0441\u0443\u0441\u0430 \u041B\u0435\u0432\
+      \u0435\u0440\u0438\u0430\u043D\u0430."
+    type: Add
+  id: 236
+  time: '2025-07-25T08:59:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/320
