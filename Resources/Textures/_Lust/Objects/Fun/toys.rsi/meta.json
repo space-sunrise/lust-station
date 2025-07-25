@@ -71,46 +71,46 @@
       "name": "arelitt-varmolnd"
     },
     {
-        "name": "blizz-inhand-right",
+      "name": "blizz-inhand-right",
         "directions": 4
     },
     {
-        "name": "blizz-inhand-left",
+      "name": "blizz-inhand-left",
         "directions": 4
     },
     {
-        "name": "blizz-equipped-HEAD",
+      "name": "blizz-equipped-HEAD",
         "directions": 4
     },
     {
-        "name": "shinya-inhand-right",
+      "name": "shinya-inhand-right",
         "directions": 4
     },
     {
-        "name": "shinya-inhand-left",
+      "name": "shinya-inhand-left",
         "directions": 4
     },
     {
-        "name": "shinya-equipped-NECK",
+      "name": "shinya-equipped-NECK",
         "directions": 4
     },
     {
-        "name": "asya_fartuna"
+      "name": "asya_fartuna"
     },
     {
-        "name": "blizzard"
+      "name": "blizzard"
     },
     {
-        "name": "rustem_brich"
+      "name": "rustem_brich"
     },
     {
-        "name": "shinya-kucenko"
+      "name": "shinya-kucenko"
     },
     {
-        "name": "ulava-britz"
+      "name": "ulava-britz"
     },
     {
-        "name": "sophiekomissarova"
+      "name": "sophiekomissarova"
     }
   ]
 }

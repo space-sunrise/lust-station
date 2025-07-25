@@ -473,3 +473,30 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Defib/defib_charge.ogg
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDrasusLeverian
+  name: Plushie Drasus Leverian
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    state: icon
+  - type: UseDelay
+    delay: 6
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Lust/Misc/epsilon_cut.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/Misc/epsilon_cut.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Stamp/automatic_stamp.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    slots:
+    - NECK
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
