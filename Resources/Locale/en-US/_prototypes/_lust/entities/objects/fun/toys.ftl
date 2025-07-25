@@ -50,3 +50,6 @@ ent-PlushieUlavaBritz = Plushie Ulava-Britz
     .desc = Turquoise unati. She holds a golden WEH in her hands. She smells of ash and cognac. She likes to snort. She loves her job as a recycler.
 ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
     .desc = Looks after your health better than you do yourself. Choking in the darkness of the techs, you will be glad to see her nearby. The smell of fresh beer hovers around her.
+ent-PlushieDrasusLeverian = Plushie Drasus Leverian
+    .desc = The chief bureaucratic dushnila
+
