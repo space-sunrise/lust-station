@@ -6,20 +6,20 @@ using Content.Server.Speech.EntitySystems;
 
 namespace Content.Server._Sunrise.Speech.EntitySystems;
 
-public sealed class MoldovanAccentSystem : EntitySystem
+public sealed class ItalianAccentSystem : EntitySystem
 {
     [Dependency] private readonly ReplacementAccentSystem _replacement = default!;
     public override void Initialize()
     {
-        SubscribeLocalEvent<MoldovanAccentComponent, AccentGetEvent>(OnAccent);
+        SubscribeLocalEvent<ItalianAccentComponent, AccentGetEvent>(OnAccent);
     }
 
     public string Accentuate(string message)
     {
-        return _replacement.ApplyReplacements(message, "moldovan");
+        return _replacement.ApplyReplacements(message, "italian");
     }
 
-    private void OnAccent(EntityUid uid, MoldovanAccentComponent component, AccentGetEvent args)
+    private void OnAccent(EntityUid uid, ItalianAccentComponent component, AccentGetEvent args)
     {
         args.Message = Accentuate(args.Message);
     }
