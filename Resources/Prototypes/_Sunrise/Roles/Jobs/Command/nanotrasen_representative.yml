@@ -4,12 +4,7 @@
   description: job-description-ntrep
   playTimeTracker: JobNanoTrasenRepresentative
   requirements:
-    - !type:DepartmentTimeRequirement
-      department: Command
-      time: 54000 # 15 hrs
-    - !type:DepartmentTimeRequirement
-      department: Law
-      time: 18000 # 5 hrs
+    - !type:DiscordRoleRequirement #Fish-edit
   startingGear: NanoTrasenRepresentativeGear
   icon: JobIconNanotrasen
   joinNotifyCrew: true

@@ -1,0 +1,30 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "IAA created by vinogradgarden for Fish Station NanotrasenTrainee, CentcommChef, CentcommMedicalDoctor, CentcommBartender, SectoralJudge created by VladSukr for Fish Station",
+    "size": {
+        "x": 8,
+        "y": 8
+    },
+    "states": [
+        {
+            "name": "IAA"
+        },
+        {
+            "name": "NanotrasenTrainee"
+        },
+        {
+            "name": "CentcommChef"
+        },
+        {
+            "name": "CentcommMedicalDoctor"
+        },
+        {
+            "name": "CentcommBartender"
+        },
+        {
+            "name": "SectoralJudge"
+        }
+
+    ]
+}

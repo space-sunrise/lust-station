@@ -1,0 +1,6 @@
+- type: jobIcon
+  parent: JobIconIAA
+  id: JobIconFishIAA
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: IAA

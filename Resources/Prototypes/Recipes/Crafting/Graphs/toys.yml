@@ -9,7 +9,7 @@
             - tag: PlushieGhost
               name: construction-graph-tag-ghost
               icon:
-                sprite: Mobs/Ghosts/ghost_human.rsi
+                sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
                 state: icon
             - tag: Ectoplasm
               name: construction-graph-tag-ectoplasm

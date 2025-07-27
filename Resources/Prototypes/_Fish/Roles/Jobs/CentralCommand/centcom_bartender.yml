@@ -1,0 +1,35 @@
+- type: job
+  id: CentcommBartender
+  name: job-name-bartender
+  description: job-description-bartender
+  playTimeTracker: JobCentcommBartender
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 3600 #1 hrs # Sunrise-RoleTime
+  startingGear: CentcommBartenderGear
+  icon: "JobIconCentcommBartender"
+  overrideConsoleVisibility: false
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  alwaysUseSpawner: true
+  access:
+  - Service
+  - Maintenance
+  - Bar
+  - Kitchen
+  - Hydroponics
+  special:
+   - !type:AddImplantSpecial
+     implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: CentcommBartenderGear
+  equipment:
+    shoes: ClothingShoesColorBlack
+    id: BartenderPDA
+    ears: ClothingHeadsetService
+  #storage:
+    #back:
+    #- Stuff

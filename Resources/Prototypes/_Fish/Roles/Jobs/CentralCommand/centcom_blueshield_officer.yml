@@ -1,0 +1,38 @@
+- type: job
+  id: CentcommBlueShield
+  name: job-name-centcom-blueshield
+  description: job-description-centcom-blueshield
+  playTimeTracker: JobCentcomBlueShield
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 62000 # 20 hrs
+    - !type:AgeRequirement
+      requiredAge: 20
+  startingGear: CentcomBlueShieldGear
+  icon: "JobIconNanotrasen"
+  overrideConsoleVisibility: false
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  alwaysUseSpawner: true
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+   - !type:AddImplantSpecial
+     implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: CentcomBlueShieldGear
+  equipment:
+   shoes: ClothingShoesBootsBlueShieldFilled
+   eyes: ClothingEyesGlassesBlueShield
+   outerClothing: ClothingOuterArmorBlueShield
+   id: BlueShieldOperativePDA
+   ears: ClothingHeadsetFishCentCom
+   gloves: ClothingHandsGlovesCombat
+  storage:
+   back:
+   - HandheldBSOCrewMonitor

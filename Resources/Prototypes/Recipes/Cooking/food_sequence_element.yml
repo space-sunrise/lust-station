@@ -1277,7 +1277,7 @@
   name: food-sequence-cotton-burger-content-plushie-ghost
   scale: 0.8, 0.8
   sprites:
-  - sprite: Mobs/Ghosts/ghost_human.rsi
+  - sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
     state: icon
     noRot: true
 

@@ -27,7 +27,7 @@
   suffix: Wizard
   components:
   - type: Sprite
-    sprite: Mobs/Ghosts/ghost_human.rsi
+    sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
     color: "#60f7eb"
     layers:
     - state: animated

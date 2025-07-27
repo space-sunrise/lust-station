@@ -1,0 +1,10 @@
+- type: entity
+  parent: PaintingBase
+  id: PaintingCentcommVonValantius
+  name: Centcomm von Valantius
+  description: This painting depicts a young and extremely beautiful centcom officer. The sign below states "The pride of Nanotrasen".
+  components:
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Fish/Structures/Wallmounts/paintings.rsi
+    state: elizabeth_von_valantius

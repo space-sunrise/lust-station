@@ -1,0 +1,11 @@
+- type: entity
+  parent: IDCardStandard
+  id: SectoralJudgeIDCard
+  name: sectoral judge ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: silver
+    - state: idmagistrat
+  - type: PresetIdCard
+    job: CentcommSectoralJudge

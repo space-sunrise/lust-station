@@ -1,0 +1,47 @@
+- type: job
+  id: CentcommSectoralJudge
+  name: job-name-centcomm-sectoral-judge
+  description: job-description-centcomm-sectoral-judge
+  playTimeTracker: JobCentcommSectoralJudge
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 108000 #30 hrs
+  startingGear: CentcommSectoralJudgeGear
+  icon: "JobIconCentcommSectoralJudge"
+  overrideConsoleVisibility: false
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  setPreference: true
+  radioBold: true
+  displayWeight: 75
+  alwaysUseSpawner: true
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant, DeathRattleImplantBlueShield ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+
+- type: startingGear
+  id: CentcommSectoralJudgeGear
+  equipment:
+    jumpsuit: MagistratUniformSuit
+    back: ClothingBackpackSatchelLeather
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesColorWhite
+    outerClothing: ClothingOuterRobesJudge
+    id: SectoralJudgePDA
+    ears: ClothingHeadsetFishCentCom
+    head: ClothingHeadHatPwig
+  storage:
+    back:
+    - RubberStampSectoralJudge
+    - Flash
+    - Telebaton

@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpskirtCentcomOfficerBlack
+  name: special operations officer uniform
+  description: Special Operations Officer female uniform, nothing like that. Although... If you have time to read this, it's too late...
+  components:
+  - type: Sprite
+    sprite: _Fish/Clothing/Uniforms/Jumpskirt/centcom_officer_black.rsi
+  - type: Clothing
+    sprite: _Fish/Clothing/Uniforms/Jumpskirt/centcom_officer_black.rsi

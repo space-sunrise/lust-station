@@ -1,0 +1,20 @@
+- type: playTimeTracker
+  id: JobCentCommTrainee
+
+- type: playTimeTracker
+  id: JobCentCommofficer
+
+- type: playTimeTracker
+  id: JobCentcomBlueShield
+
+- type: playTimeTracker
+  id: JobCentcommChef
+
+- type: playTimeTracker
+  id: JobCentcommMedicalDoctor
+
+- type: playTimeTracker
+  id: JobCentcommBartender
+
+- type: playTimeTracker
+  id: JobCentcommSectoralJudge

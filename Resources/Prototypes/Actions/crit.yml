@@ -17,7 +17,7 @@
     startDelay: true
     useDelay: 10
     icon:
-      sprite: Mobs/Ghosts/ghost_human.rsi
+      sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
       state: icon
   - type: InstantAction
     event: !type:CritSuccumbEvent

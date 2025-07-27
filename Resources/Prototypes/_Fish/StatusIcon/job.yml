@@ -1,0 +1,39 @@
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconNanotrasenTrainee
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: NanotrasenTrainee
+  jobName: job-name-centcomoff
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCentcommMedicalDoctor
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: CentcommMedicalDoctor
+  jobName: job-name-centcomm-doctor
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCentcommChef
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: CentcommChef
+  jobName: job-name-centcomm-chef
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCentcommBartender
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: CentcommBartender
+  jobName: job-name-centcomm-bartender
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCentcommSectoralJudge
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: SectoralJudge
+  jobName: job-name-centcomm-sectoral-judge

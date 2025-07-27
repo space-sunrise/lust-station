@@ -1,0 +1,25 @@
+- type: job
+  id: CentcommChef
+  name: job-name-chef
+  description: job-description-chef
+  playTimeTracker: JobCentcommChef
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Civilian
+      time: 3600 #1 hrs # Sunrise-RoleTime
+  startingGear: ChefGear
+  icon: "JobIconCentcommChef"
+  overrideConsoleVisibility: false
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  alwaysUseSpawner: true
+  access:
+  - Service
+  - Maintenance
+  - Kitchen
+  - Hydroponics
+  - Bar
+  special:
+   - !type:AddImplantSpecial
+     implants: [ MindShieldImplant ]

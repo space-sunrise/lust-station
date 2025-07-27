@@ -1,9 +1,11 @@
-- type: job
-  id: BlueShieldEnsign
-  name: job-name-blueshield-ensign
-  description: job-description-blueshield-ensign
-  playTimeTracker: JobBlueShieldEnsign
-#  requirements:
+#Fish-start
+# - type: job
+#   id: BlueShieldEnsign
+#   name: job-name-blueshield-ensign
+#   description: job-description-blueshield-ensign
+#   playTimeTracker: JobBlueShieldEnsign
+#Fish-end
+#   requirements:
 #    - !type:DepartmentTimeRequirement
 #      department: BlueShield
 #      time: 62000 # 20 hrs
@@ -12,11 +14,11 @@
 #      time: 62000 # 20 hrs
 #    - !type:AgeRequirement
 #      requiredAge: 35
-#  startingGear: BlueShieldEnsignGear
-#  icon: JobIconBlueShield
-#  supervisors: job-supervisors-centcom
-#  canBeAntag: false
-#  access:
+#   startingGear: BlueShieldEnsignGear
+#   icon: JobIconBlueShield
+#   supervisors: job-supervisors-centcom
+#   canBeAntag: false
+#   access:
 #    - Command
 #    - Bar
 #    - Service
@@ -37,21 +39,21 @@
 #    - Medical
 #    - BlueShield
 #    - BlueShieldEnsign
-#  special:
+#   special:
 #    - !type:AddImplantSpecial
 #      implants: [ MindShieldImplant ]
-#
-#- type: startingGear
-#  id: BlueShieldEnsignGear
-#  equipment:
+
+# - type: startingGear
+#   id: BlueShieldEnsignGear
+#   equipment:
 #    shoes: ClothingShoesBootsBlueShieldFilled
 #    eyes: ClothingEyesGlassesBlueShield
 #    head: ClothingHeadHatBeretBlueShield
 #    outerClothing: ClothingOuterArmorBlueShield
 #    id: BlueShieldEnsignPDA
 #    ears: ClothingHeadsetBlueShieldEnsign
-#    belt: ClothingBeltBlueShieldWebbingFilled
+#   #  belt: ClothingBeltBlueShieldWebbingFilled У синего щита уже есть в наборе РПС при старте #fish-edit
 #    gloves: ClothingHandsGlovesCombat
-#  storage:
+#   storage:
 #    back:
 #    - HandheldBSOCrewMonitor

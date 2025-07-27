@@ -1,0 +1,22 @@
+- type: entity
+  parent: CaptainPDA
+  id: SectoralJudgePDA
+  name: sectoral judge PDA
+  components:
+  - type: Pda
+    id: SectoralJudgeIDCard
+    penSlot:
+      startingItem: UEGPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-captain
+  - type: PdaBorderColor
+    borderColor: "#7C5D00"
+  - type: Icon
+    state: pda-captain

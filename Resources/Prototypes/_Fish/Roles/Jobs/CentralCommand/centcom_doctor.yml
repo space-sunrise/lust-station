@@ -1,0 +1,27 @@
+- type: job
+  id: CentcommMedicalDoctor
+  name: job-name-doctor
+  description: job-description-doctor
+  playTimeTracker: JobCentcommMedicalDoctor
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 7200 #2 hrs # Sunrise-RoleTime
+  startingGear: DoctorGear
+  icon: "JobIconCentcommMedicalDoctor"
+  supervisors: job-supervisors-centcom
+  displayWeight: 20  # Sunrise
+  canBeAntag: false
+  alwaysUseSpawner: true
+  access:
+  - Medical
+  - Maintenance
+  - Chemistry
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: DoctorDay
+    prototype: WehMedipen
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+

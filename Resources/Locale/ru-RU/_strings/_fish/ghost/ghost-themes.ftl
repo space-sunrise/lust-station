@@ -1,0 +1,1 @@
+ghost-theme-turtle = Черепаха

@@ -17,5 +17,5 @@
     sprite: Markers/jobs.rsi
     layers:
     - state: green
-    - sprite: Mobs/Ghosts/ghost_human.rsi
+    - sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
       state: icon

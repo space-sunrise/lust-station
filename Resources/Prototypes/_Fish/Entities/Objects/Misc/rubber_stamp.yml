@@ -1,0 +1,13 @@
+- type: entity
+  name: sectoral judge rubber stamp
+  parent: RubberStampBase
+  id: RubberStampSectoralJudge
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: Cекторальный судья
+    stampedColor: "#6434A1"
+    stampState: "paper_stamp-rd"
+  - type: Sprite
+    sprite: _Sunrise/Objects/Misc/stamps.rsi
+    state: stamp-specops

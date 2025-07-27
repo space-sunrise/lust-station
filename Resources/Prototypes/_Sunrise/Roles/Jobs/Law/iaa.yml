@@ -4,14 +4,14 @@
   description: job-description-iaa
   playTimeTracker: JobIAA
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Command
-    time: 36000 # 10h Sunrise-RoleTime
-  - !type:DepartmentTimeRequirement
-    department: Security
-    time: 18000 # 5h Sunrise-RoleTime
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 54000 # 15h Sunrise-RoleTime #Fish-edit
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10h Sunrise-RoleTime #Fish-edit
   startingGear: IAAGear
-  icon: "JobIconIAA"
+  icon: "JobIconFishIAA" #Fish-edit
   supervisors: job-supervisors-magistrate
   canBeAntag: false
   displayWeight: 40
@@ -31,7 +31,8 @@
   equipment:
     shoes: ClothingShoesColorBlack
     id: IAAPDA
-    eyes: ClothingEyesGlassesSunglasses
+    neck: ClothingNeckLawDepbadge #Fish-edit
+    eyes: ClothingEyesGlassesHiddenSecurity #Fish-edit
     ears: ClothingHeadsetIAA
     pocket2: HyperLinkBookCorporateLaw
   inhand:

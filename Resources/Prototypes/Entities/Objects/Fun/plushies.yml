@@ -79,7 +79,7 @@
   description: The start of your personal GHOST GANG!
   components:
   - type: Sprite
-    sprite: Mobs/Ghosts/ghost_human.rsi
+    sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
     state: icon
     noRot: true
   - type: Item

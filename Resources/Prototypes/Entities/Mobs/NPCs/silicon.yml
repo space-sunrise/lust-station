@@ -191,9 +191,11 @@
   - type: HTN
     rootTask:
       task: HonkbotCompound
-  - type: Slippery
-    slipData:
-      launchForwardsMultiplier: 2
+  #Fish-start
+  # - type: Slippery
+  #   slipData:
+  #     launchForwardsMultiplier: 2
+  #Fish-end
   - type: Speech
     speechVerb: Cluwne
   - type: StepTrigger

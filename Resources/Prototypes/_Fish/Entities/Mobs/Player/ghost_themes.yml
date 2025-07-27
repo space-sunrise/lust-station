@@ -1,0 +1,9 @@
+
+- type: ghostTheme
+  id: Turtle
+  name: ghost-theme-turtle
+  color: "#fff8"
+  sponsorOnly: true
+  sprite:
+    sprite: _Fish/Mobs/Ghosts/ghost_turtle.rsi
+    state: animated

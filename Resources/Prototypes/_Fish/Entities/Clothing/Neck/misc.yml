@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingCloakBase
+  id: ClothingNeckLawDepbadge
+  name: internal oversight officier badge
+  description: A high-authority badge of Internal Oversight Department of Nanotrasen. Signifies ultimate jurisdiction over all corporate legal matters.
+  components:
+  - type: Sprite
+    sprite: _Fish/Clothing/Neck/Misc/lawdepbadge.rsi
+  - type: Clothing
+    sprite: _Fish/Clothing/Neck/Misc/lawdepbadge.rsi
+  - type: TypingIndicatorClothing
+    proto: lawyer

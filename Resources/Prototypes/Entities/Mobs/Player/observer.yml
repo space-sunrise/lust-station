@@ -40,7 +40,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: Mobs/Ghosts/ghost_human.rsi
+    sprite: _Fish/Mobs/Ghosts/ghost_human.rsi #Fish-edit
     color: "#fff8"
     layers:
     - state: animated
@@ -139,7 +139,7 @@
   description: Toggle the visibility of other ghosts.
   components:
   - type: Action
-    icon: { sprite: Mobs/Ghosts/ghost_human.rsi, state: icon }
+    icon: { sprite: _Fish/Mobs/Ghosts/ghost_human.rsi, state: icon } #Fish-edit
     clientExclusive: true
   - type: InstantAction
     event: !type:ToggleGhostsActionEvent

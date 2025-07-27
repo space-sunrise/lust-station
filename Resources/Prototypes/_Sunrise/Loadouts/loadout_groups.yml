@@ -190,7 +190,7 @@
   name: loadout-group-centcomm-operator-head-hat
   loadouts:
   - HeadHatBeretCentcomNaval
-  - HeadHatCentcomcap
+  # - HeadHatCentcomcap #Fish-Edit
 
 - type: loadoutGroup
   id: ChiefEngineerBackpack
