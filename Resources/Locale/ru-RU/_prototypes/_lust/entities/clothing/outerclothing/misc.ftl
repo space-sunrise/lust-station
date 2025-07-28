@@ -1,4 +1,4 @@
-ent-ClothingOuterCoatAdjutantJacket = formal adjutant jacket
-    .desc = Business jacket of the Adjutant for a professional look.
-ent-ClothingOuterCoatRDcostume = formal RD costume
-    .desc = The bright, outwardly pleasant suit of the research director.
+ent-ClothingOuterCoatAdjutantJacket = формальная куртка адъютанта
+    .desc = Строгий служебный китель для безупречного вида.
+ent-ClothingOuterCoatRDcostume = формальная куртка научного руководителя
+    .desc = Яркий, внешне безобидный костюм, за которым скрывается пытливый ум руководителя исследований.
