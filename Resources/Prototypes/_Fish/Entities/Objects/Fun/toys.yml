@@ -1,0 +1,77 @@
+- type: entity
+  parent: BasePlushie
+  id: Plushiecevulpa
+  name: plushie ce vulpa
+  components:
+  - type: Sprite
+    sprite: _Fish/Objects/Fun/toys.rsi
+    state: plushie-ce-vulpa
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+    soundHit:
+    collection: VulpkaninScreams
+    params:
+      volume: 100
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: PlushieVulpkaninGrowls
+  - type: EmitSoundOnUse
+    sound:
+      collection: PlushieVulpkaninGrowls
+  - type: EmitSoundOnLand
+    sound:
+      collection: VulpkaninScreams
+  - type: EmitSoundOnActivate
+    sound:
+      collection: PlushieVulpkaninGrowls
+  - type: Item
+    heldPrefix: ce-vulpa
+  - type: Clothing
+    quickEquip: false
+    sprite: _Fish/Objects/Fun/toys.rsi
+    equippedPrefix: ce-vulpa
+    slots:
+    - NECK
+
+- type: entity
+  parent: BasePlushie
+  id: Plushieengiexeno
+  name: plushie engie xeno
+  components:
+  - type: Sprite
+    sprite: _Fish/Objects/Fun/toys.rsi
+    state: plushie-engie-xeno
+  - type: UseDelay
+    delay: 4
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Food
+    requiresSpecialDigestion: true
+    useSound:
+      path: /Audio/Items/Toys/mousesqueek.ogg
+  - type: MeleeWeapon
+    wideAnimationRotation: 180
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Item
+    heldPrefix: engie-xeno
+  - type: Clothing
+    quickEquip: false
+    sprite: _Fish/Objects/Fun/toys.rsi
+    equippedPrefix: engie-xeno
+    slots:
+    - NECK

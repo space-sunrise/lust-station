@@ -974,6 +974,31 @@
 
 # Plushies
 
+#Fish-start
+- type: listing
+  id: UplinkSunrisePlushiecevulpa
+  productEntity: Plushiecevulpa
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+
+- type: listing
+  id: UplinkSunrisePlushieengiexeno
+  productEntity: Plushieengiexeno
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  #Fish-end
+
 - type: listing
   id: UplinkSunrisePlushieUunaKatsuhiro
   productEntity: PlushieUunaKatsuhiro
