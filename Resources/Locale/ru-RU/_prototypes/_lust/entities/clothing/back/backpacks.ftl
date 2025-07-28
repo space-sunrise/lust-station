@@ -1,11 +1,11 @@
 ent-ClothingBackpackBattleHoSPack = боевой рюкзак ГСБ
-    .desc = On style.
+    .desc = Служебный рюкзак главы безопасности.
 ent-ClothingBackpackBlackCap = черный рюкзак капитана
-    .desc = On style.
+    .desc = Чёрный. Стильный. Как и положено командующему.
 ent-ClothingBackpackFormalAd = формальный рюкзак адьютанта
-    .desc = On style.
+    .desc = Легкий рюкзак для кипы бумаг.
 ent-ClothingFormalCEBackpack = формальный рюкзак СИ
-    .desc = Working style.
+    .desc = Вместительный рюкзак для пары тройки инструментов.
 ent-ClothingFormalCMOBackpack = формальный рюкзак ГВ
     .desc = В этом рюкзаке может быть то, что спасёт жизни всего экипажа!
 ent-ClothingFormalQMBackpack = формальный рюкзак квартирмейстера
