@@ -1,4 +1,4 @@
-ent-ClothingHandsGlovesCaptainBlack = captain black gloves
-    .desc = Regal black gloves, with a nice gold trim. Swanky.
-ent-ClothingHandsGlovesCaptainWhite = captain white gloves
-    .desc = Regal white gloves, with a nice gold trim. Swanky.
+ent-ClothingHandsGlovesCaptainBlack = чёрные капитанские перчатки
+    .desc = Величественные чёрные перчатки с золотой окантовкой. Выглядят по-королевски.
+ent-ClothingHandsGlovesCaptainWhite = белые капитанские перчатки
+    .desc = Белоснежные перчатки с золотой отделкой. Для тех, кто командует с шиком.

@@ -1,2 +1,2 @@
-ent-ClothingOuterWinterGorka = HoS's gorka
-    .desc = Dense gorka for lovers of order
+ent-ClothingOuterWinterGorka = зимняя горка ГСБ
+    .desc = Плотная штормовка для тех, кто наводит порядок в любую погоду.
