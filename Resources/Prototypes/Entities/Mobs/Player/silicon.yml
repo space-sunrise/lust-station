@@ -73,7 +73,7 @@
     title: comms-console-announcement-title-station-ai
     color: "#5ed7aa"
     announceVoice: PortalGlados # Sunrise-Edit
-    sound: /Audio/_Sunrise/Announcements/announce_dig.ogg # Sunrise-Edit
+    sound: /Audio/Announcements/announce.ogg # Fish-Edit
   - type: ShowJobIcons
   # Sunrise-Start
   - type: ShowThirstIcons

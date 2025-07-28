@@ -17,7 +17,7 @@
       requiredAge: 25
   startingGear: NtrLeaderGear
   icon: JobIconNtrLeader
-  supervisors: job-supervisors-ntrg
+  supervisors: job-supervisors-oversightdep #Fish-edit
   canBeAntag: false
   access:
     - Command
@@ -55,7 +55,7 @@
     mask: ClothingMaskGasNTRGLead
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadCapNTGR
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesBlueShield #Fish-edit
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorNTRG
     id: NtrLeadGuardPDA
@@ -88,7 +88,7 @@
       requiredAge: 25
   startingGear: NtrLeaderGear
   icon: JobIconNtrGuard
-  supervisors: job-supervisors-ntrg
+  supervisors: job-supervisors-oversightdep #Fish-edit
   canBeAntag: false
   access:
     - Command
@@ -125,7 +125,7 @@
     shoes: ClothingShoesBootsCombatFilled
     mask: ClothingMaskGasNTRG
     head: ClothingHeadCapNTGR
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesBlueShield #Fish-edit
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorNTRG
     id: NtrGuardPDA

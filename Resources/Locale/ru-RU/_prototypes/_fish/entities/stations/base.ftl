@@ -1,0 +1,2 @@
+ent-BaseStationFishShuttles = { "" }
+    .desc = { "" }

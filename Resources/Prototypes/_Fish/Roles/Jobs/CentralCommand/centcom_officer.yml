@@ -25,7 +25,7 @@
   startingGear: CentCommOfficerGear
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-centcomhead
   radioBold: true
   canBeAntag: false
   alwaysUseSpawner: true
@@ -41,7 +41,7 @@
   id: CentCommOfficerGear
   equipment:
     # jumpsuit: ClothingUniformJumpsuitCentcomOfficial #Fish-Edit
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsLaceup
     # head: ClothingHeadHatCentcom  #Fish-Edit
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesColorBlack

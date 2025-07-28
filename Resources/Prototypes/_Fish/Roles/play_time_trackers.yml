@@ -18,3 +18,12 @@
 
 - type: playTimeTracker
   id: JobCentcommSectoralJudge
+
+- type: playTimeTracker
+  id: JobRepresentativeBlueShield
+
+- type: playTimeTracker
+  id: JobOversightOfficer
+
+- type: playTimeTracker
+  id: JobSpecOpsOfficer

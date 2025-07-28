@@ -11,7 +11,7 @@
   startingGear: CentcommSectoralJudgeGear
   icon: "JobIconCentcommSectoralJudge"
   overrideConsoleVisibility: false
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-supremecourt
   canBeAntag: false
   setPreference: true
   radioBold: true

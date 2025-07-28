@@ -10,9 +10,15 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 36000 # 10h Sunrise-RoleTime #Fish-edit
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 54000 # 15h Sunrise-RoleTime #Fish-edit
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 36000 # 10h Sunrise-RoleTime #Fish-edit
   startingGear: IAAGear
   icon: "JobIconFishIAA" #Fish-edit
-  supervisors: job-supervisors-magistrate
+  supervisors: job-supervisors-oversight #Fish-edit
   canBeAntag: false
   displayWeight: 40
   access:
@@ -22,6 +28,24 @@
   - Maintenance
   - External
   - Lawyer
+  #Fish-start
+  - Cryogenics
+  - Bar
+  - Janitor
+  - Theatre
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Chemistry
+  - Engineering
+  - Research
+  - Detective
+  - Salvage
+  - Security
+  - Cargo
+  - Atmospherics
+  - Medical
+  #Fish-end
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -29,11 +53,11 @@
 - type: startingGear
   id: IAAGear
   equipment:
-    shoes: ClothingShoesColorBlack
+    shoes: ClothingShoesBootsLaceup #Fish-edit
     id: IAAPDA
     neck: ClothingNeckLawDepbadge #Fish-edit
     eyes: ClothingEyesGlassesHiddenSecurity #Fish-edit
-    ears: ClothingHeadsetIAA
+    ears: ClothingHeadsetMagistrate #Fish-edit
     pocket2: HyperLinkBookCorporateLaw
   inhand:
     - BriefcaseIAAFilled

@@ -1,0 +1,73 @@
+- type: entity
+  name: x-01-a improved multiphase energy gun
+  parent: BaseWeaponBatterySmall
+  id: WeaponEnergyGunMultiphaseImproved
+  description: This is an expensive, modern recreation of an antique laser gun. This gun has several unique firemodes. It doesn't lack the ability to recharge over time.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-disabler
+      shader: unshaded
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/Battery/multiphase_energygun.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: Battery
+    maxCharge: 1000
+    startingCharge: 1000
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 35
+    autoRechargePause: true
+    autoRechargePauseTime: 20
+  - type: EnergyGunFireModes
+    fireModes:
+    - hitscanProto: BulletDisabler
+      fireCost: 50
+      name: energy-gun-disable
+      state: disabler
+      shotType: Hitscan
+    - hitscanProto: BulletEnergyGunLaser
+      fireCost: 100
+      name: energy-gun-lethal
+      state: lethal
+      shotType: Hitscan
+    # - projectileProto: BulletEnergyGunIon
+    #   fireCost: 250
+    #   name: ion
+    #   state: special
+    #  shotType: Projectile
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.EnergyGunFireModeVisuals.State:
+        Firemode:
+          Disabler: { state: mode-disabler }
+          Lethal: { state: mode-lethal }
+          Special: { state: mode-ion }
+  - type: Tag
+    tags:
+    - HighRiskItem
+    - Sidearm
+  - type: StaticPrice
+    price: 750
+  - type: StealTarget
+    stealGroup: WeaponEnergyGunMultiphase

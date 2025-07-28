@@ -11,31 +11,12 @@
   radioBold: true
   supervisors: job-supervisors-centcom
   canBeAntag: false
+  #Fish-start
+  accessGroups:
+  - AllAccess
   access:
-    - Cryogenics
-    - Lawyer
-    - Command
-    - Bar
-    - Service
-    - Maintenance
-    - Janitor
-    - Theatre
-    - Kitchen
-    - Chapel
-    - Hydroponics
-    - External
-    - Chemistry
-    - Engineering
-    - Research
-    - Detective
-    - Salvage
-    - Security
-    - Brig
-    - Cargo
-    - Atmospherics
-    - Cargo
-    - Medical
-    - Ntrep
+  - CentralCommand
+  #Fish-end
   special:
     - !type:AddImplantSpecial
       implants: [ MindShieldImplant, TrackingImplant, DeathRattleImplantBlueShield ]

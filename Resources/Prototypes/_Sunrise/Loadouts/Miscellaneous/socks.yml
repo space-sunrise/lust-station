@@ -1,4 +1,15 @@
 # Для тяночек
+
+#Fish-start
+- type: loadout
+  id: ThighDarkSocks
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: WomanMoment
+  equipment:
+    socks: ClothingThighThin
+#Fish-end
+
 - type: loadout
   id: ThighWhiteSocks
   effects:

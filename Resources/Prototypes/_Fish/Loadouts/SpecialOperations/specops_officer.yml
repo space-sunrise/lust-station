@@ -1,0 +1,10 @@
+
+- type: loadout
+  id: SpecOpsOfficerUniformMale
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
+
+- type: loadout
+  id: SpecOpsOfficerUniformFemale
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCentcomOfficerBlack

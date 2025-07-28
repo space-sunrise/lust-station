@@ -1,0 +1,23 @@
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassFishSecurityShuttle
+  suffix: External, Security, Glass, Docking, AutoDock
+  components:
+  - type: PriorityDock
+    tag: DockFishSecurity
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassFishERTShuttle
+  suffix: External, ERT, Glass, Docking, AutoDock
+  components:
+  - type: PriorityDock
+    tag: DockFishERT
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockExternalGlassFishCBURNShuttle
+  suffix: External, Security, Glass, Docking, AutoDock
+  components:
+  - type: PriorityDock
+    tag: DockFishCBURN

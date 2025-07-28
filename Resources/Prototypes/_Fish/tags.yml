@@ -1,0 +1,8 @@
+- type: Tag
+  id: DockFishSecurity
+
+- type: Tag
+  id: DockFishERT
+
+- type: Tag
+  id: DockFishCBURN

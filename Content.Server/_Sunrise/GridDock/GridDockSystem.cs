@@ -14,10 +14,15 @@ public sealed class GridDockSystem : EntitySystem
     [Dependency] private readonly MapLoaderSystem _loader = default!;
     [Dependency] private readonly ShuttleSystem _shuttles = default!;
     [Dependency] private readonly StationSystem _station = default!;
+    private Vector2 _nextSpawnOffset;
+    private const float GridSeparation = 300f;
+    // Fish-end
 
     public override void Initialize()
     {
+        _nextSpawnOffset = new Vector2(500, 500); // Fish-edit
         SubscribeLocalEvent<SpawnGridAndDockToStationComponent, StationPostInitEvent>(OnStationPostInit);
+        SubscribeLocalEvent<SpawnAdditionalGridsAndDockToStationComponent, StationPostInitEvent>(OnStationPostInitMultiple); // Fish-edit
     }
 
     private void OnStationPostInit(EntityUid uid, SpawnGridAndDockToStationComponent component, StationPostInitEvent args)
@@ -27,25 +32,34 @@ public sealed class GridDockSystem : EntitySystem
 
         var ftlMap = _shuttles.EnsureFTLMap();
         var xformMap = Transform(ftlMap);
+        // Fish-start
+        var spawnPosition = _nextSpawnOffset;
+        _nextSpawnOffset.X += GridSeparation;
+        // Fish-end
         if (!_loader.TryLoadGrid(xformMap.MapID,
                 component.GridPath.Value,
                 out var rootUid,
-                offset: new Vector2(500, 500)))
+                offset: spawnPosition)) // Fish-edit
             return;
 
-        if (!TryComp<ShuttleComponent>(rootUid.Value.Owner, out var shuttleComp))
+        // Fish-start
+        if (rootUid == null)
+            return;
+
+        if (!TryComp<ShuttleComponent>(rootUid.Value, out var shuttleComp))
+            // Fish-end
             return;
 
         var target = _station.GetLargestGrid(Comp<StationDataComponent>(uid));
 
         if (target == null)
         {
-            Log.Error($"GridDockSystem: No target grid found for {ToPrettyString(uid)}");
+            Log.Error($"GridDockSystem: No target station grid found for {ToPrettyString(uid)}"); // Fish-edit
             return;
         }
 
         _shuttles.FTLToDock(
-            rootUid.Value.Owner,
+            rootUid.Value, // Fish-edit
             shuttleComp,
             target.Value,
             5f,
@@ -53,4 +67,55 @@ public sealed class GridDockSystem : EntitySystem
             priorityTag: component.PriorityTag,
             ignored: true);
     }
+
+    // Fish-start
+    private void OnStationPostInitMultiple(EntityUid uid, SpawnAdditionalGridsAndDockToStationComponent component, StationPostInitEvent args)
+    {
+        var target = _station.GetLargestGrid(Comp<StationDataComponent>(uid));
+        if (target == null)
+        {
+            Log.Error($"GridDockSystem: No target station grid found for {ToPrettyString(uid)}. Aborting.");
+            return;
+        }
+
+        var ftlMap = _shuttles.EnsureFTLMap();
+        var xformMap = Transform(ftlMap);
+
+        foreach (var spawnEntry in component.Spawns)
+        {
+            var spawnPosition = _nextSpawnOffset;
+            _nextSpawnOffset.X += GridSeparation;
+
+            if (!_loader.TryLoadGrid(xformMap.MapID,
+                    spawnEntry.GridPath,
+                    out var gridUid,
+                    offset: spawnPosition))
+            {
+                Log.Warning($"Failed to load grid from path: {spawnEntry.GridPath}");
+                continue;
+            }
+
+            if (gridUid == null)
+            {
+                Log.Warning($"Loaded grid from {spawnEntry.GridPath}, but it was empty.");
+                continue;
+            }
+
+            if (!TryComp<ShuttleComponent>(gridUid.Value, out var shuttleComp))
+            {
+                Log.Warning($"Spawned grid {ToPrettyString(gridUid.Value)} from {spawnEntry.GridPath} has no ShuttleComponent. Skipping docking.");
+                continue;
+            }
+
+            _shuttles.FTLToDock(
+                gridUid.Value,
+                shuttleComp,
+                target.Value,
+                5f,
+                5f,
+                priorityTag: spawnEntry.PriorityTag,
+                ignored: true);
+        }
+    }
+    // Fish-end
 }

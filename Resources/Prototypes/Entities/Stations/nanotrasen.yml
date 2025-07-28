@@ -38,6 +38,7 @@
     - BaseStationMeteorSwarmTarget
     - BaseStationRandomXenoArtifact
   # Sunrise-End
+    - BaseStationFishShuttles
   components:
     - type: Transform
 
@@ -56,6 +57,7 @@
     - BaseStationDontSelling
     - BaseStationCryoTeleport
     # Sunrise-End
+    - BaseStationFishSpecOpsShuttles #Fish-edit
   components:
     - type: Transform
     # - type: ProtectedGrid #Fish-edit

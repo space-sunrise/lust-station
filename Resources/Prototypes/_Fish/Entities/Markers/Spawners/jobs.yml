@@ -27,7 +27,7 @@
 - type: entity
   id: SpawnPointCentcommBlueShield
   parent: SpawnPointJobBase
-  name: blue shield operative
+  name: blue shield operative for centcom
   components:
   - type: SpawnPoint
     job_id: CentcommBlueShield
@@ -86,4 +86,47 @@
     layers:
       - state: green
       - state: magistrat
+      - state: jobicon
+
+- type: entity
+  id: SpawnPointRepresentativeBlueShield
+  parent: SpawnPointJobBase
+  name: blue shield operative for nanotrasen representative
+  components:
+  - type: SpawnPoint
+    job_id: RepresentativeBlueShield
+  - type: Sprite
+    sprite: _Sunrise/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: blueshield
+      - state: jobicon
+
+- type: entity
+  id: SpawnPointOversightOfficer
+  parent: SpawnPointJobBase
+  name: Oversight Officer
+  components:
+  - type: SpawnPoint
+    job_id: OversightOfficer
+  - type: Sprite
+    sprite: _Sunrise/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: IAA
+      - state: jobicon
+
+
+- type: entity
+  id: SpawnPointSpecOpsOfficer
+  parent: SpawnPointJobBase
+  name: SpecOPs Officer
+  components:
+  - type: SpawnPoint
+    job_id: SpecOpsOfficer
+  - type: Sprite
+    sprite: _Sunrise/Markers/jobs.rsi
+    layers:
+      - state: green
+      - state: IAA
       - state: jobicon

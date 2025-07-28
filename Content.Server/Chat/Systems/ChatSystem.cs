@@ -66,7 +66,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
 
-    public const string DefaultAnnouncementSound = "/Audio/_Sunrise/Announcements/announce_dig.ogg"; // Sunrise-edit
+    public const string DefaultAnnouncementSound = "/Audio/Announcements/announce.ogg"; // Fish-edit
 
     private bool _loocEnabled = true;
     private bool _deadLoocEnabled;

@@ -1,0 +1,19 @@
+- type: entity
+  id: BaseStationFishShuttles
+  abstract: true
+  components:
+  - type: SpawnAdditionalGridsAndDockToStation
+    spawns:
+    - gridPath: /Maps/_Sunrise/Shuttles/security.yml
+      priorityTag: DockFishSecurity
+
+- type: entity
+  id: BaseStationFishSpecOpsShuttles
+  abstract: true
+  components:
+  - type: SpawnAdditionalGridsAndDockToStation
+    spawns:
+    - gridPath: /Maps/_Fish/Shuttles/SpecialOperations/ert_shuttle_medium.yml
+      priorityTag: DockFishERT
+    - gridPath: /Maps/_Fish/Shuttles/SpecialOperations/cburn_shuttle_large.yml
+      priorityTag: DockFishCBURN

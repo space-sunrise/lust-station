@@ -42,6 +42,7 @@
   equipment:
    shoes: ClothingShoesBootsBlueShieldFilled
    eyes: ClothingEyesGlassesBlueShield
+   head: ClothingHeadHatBeretBlueShield
    outerClothing: ClothingOuterArmorBlueShield
    id: BlueShieldOfficerPDA
    ears: ClothingHeadsetBlueShield

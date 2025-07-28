@@ -1,0 +1,43 @@
+- type: job
+  id: RepresentativeBlueShield
+  name: job-name-blueshield-operative
+  description: job-description-blueshield-operative
+  playTimeTracker: JobRepresentativeBlueShield
+  requirements:
+   - !type:DepartmentTimeRequirement
+     department: BlueShield
+     time: 62000 # 20 hrs
+   - !type:DepartmentTimeRequirement
+     department: Command
+     time: 62000 # 20 hrs
+   - !type:AgeRequirement
+     requiredAge: 25
+  startingGear: CentcomBlueShieldGear
+  icon: JobIconNanotrasen
+  supervisors: job-supervisors-representative
+  canBeAntag: false
+  access:
+   - Command
+   - Bar
+   - Service
+   - Maintenance
+   - Janitor
+   - Theatre
+   - Kitchen
+   - Chapel
+   - Hydroponics
+   - External
+   - Chemistry
+   - Engineering
+   - Research
+   - Salvage
+   - Cargo
+   - Atmospherics
+   - Cargo
+   - Medical
+   - BlueShield
+   - BlueShieldEnsign
+   - Ntrep
+  special:
+   - !type:AddImplantSpecial
+     implants: [ MindShieldImplant ]

@@ -1,0 +1,34 @@
+- files: ["title2.ogg"]
+  license: "Custom"
+  copyright: "Originally composed by Jonathan Dunn for Robocop 2 Gameboy published by Ocean Software. Remixed by Eric Shumaker for his video Dilbert 3. As of October 9th, 2008 nobody owns the rights to this song and copyright action has never been taken against anyone using this song in their projects."
+  source: "https://www.youtube.com/watch?v=4o6_8Unj2mQ"
+
+- files: ["title3.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Title3 by Cuboos. It is a remix of the song 'Tintin on the Moon'. Converted from MP3 to OGG."
+  source: "https://www.youtube.com/watch?v=YKVmXn-Gv0M"
+
+- files: ["title3.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "Title3 by Cuboos. It is a remix of the song 'Tintin on the Moon'. Converted from MP3 to OGG."
+  source: "https://www.youtube.com/watch?v=YKVmXn-Gv0M"
+
+- files: ["mod.flip-flap.ogg"]
+  license: "Custom"
+  copyright: "Flip Flap by X-ceed is licensed under a short but clear license (see flip-flap.txt in this directory) and is free for non-commercial use. It was converted from MOD to WAV using Schism Tracker, in 16 Bit, Non-Interpolated mode, no output equalizer settings, Ramp volume at start of sample enabled. From there it was converted to OGG Vorbis with `ffmpeg -i flip-flap.wav -q 2.9 flip-flap-renc.ogg` (quality scale chosen to match size of the OGG file being replaced). Non-interpolated mode was chosen as the module has a high enough sample rate to balance it out, but seems muffled in other interpolation modes. If 'Ramp volume at start of sample' is not enabled, a clicking phenomenon results."
+  source: "http://aminet.net/package/mods/xceed/Flipflap"
+
+- files: ["every_light_is_blinking_at_once.ogg"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "every light is blinking at once by Sunbeamstress/Lauren Loveless."
+  source: "https://soundcloud.com/sunbeamstress/every-light-is-blinking-at-once"
+
+- files: ["neon.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Created by QAntum for SS220"
+  source: "https://github.com/SerbiaStrong-220"
+
+- files: ["double-u.ogg"]
+  license: "CC-BY-3.0"
+  copyright: "Created by QAntum for SS220"
+  source: "https://github.com/SerbiaStrong-220"

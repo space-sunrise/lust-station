@@ -37,3 +37,20 @@
     sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
     state: SectoralJudge
   jobName: job-name-centcomm-sectoral-judge
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconOversightOfficer
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: OversightOfficer
+  jobName: job-name-centcomm-sectoral-judge
+
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSpecOpsOfficer
+  icon:
+    sprite: /Textures/_Fish/Interface/Misc/job_icons.rsi
+    state: SpecOpsOfficer
+  jobName: job-name-specopsofficer

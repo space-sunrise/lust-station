@@ -25,7 +25,7 @@
 - type: startingGear
   id: CentCommTraineeGear
   equipment:
-    shoes: ClothingShoesBootsCombatFilled
+    shoes: ClothingShoesBootsLaceup
     gloves: ClothingHandsGlovesColorWhite
     outerClothing: ClothingOuterArmorBasicSlim
     id: CentcomPDA

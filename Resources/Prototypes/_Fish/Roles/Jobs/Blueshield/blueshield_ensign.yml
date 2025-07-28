@@ -46,11 +46,11 @@
   equipment:
    shoes: ClothingShoesBootsBlueShieldFilled
    eyes: ClothingEyesGlassesBlueShield
-   head: ClothingHeadHatBeretBlueShield
+   head: ClothingHeadCapBlueShield
    outerClothing: ClothingOuterArmorBlueShield
    id: BlueShieldEnsignPDA
    ears: ClothingHeadsetBlueShieldEnsign
-  #  belt: ClothingBeltBlueShieldWebbingFilled У синего щита уже есть в наборе РПС при старте #fish-edit
+  #  belt: ClothingBeltBlueShieldWebbingFilled У синего щита уже есть в наборе РПС при старте
    gloves: ClothingHandsGlovesCombat
   storage:
    back:

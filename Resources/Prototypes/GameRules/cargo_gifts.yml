@@ -30,7 +30,7 @@
   - type: StationEvent
     startColor: "#18abf5"
     startAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
   - type: CargoGiftsRule
     sender: cargo-gift-default-sender
 

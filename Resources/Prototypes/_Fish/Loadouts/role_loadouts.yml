@@ -107,3 +107,41 @@
   - Bra
   - Pants
   - Socks
+
+- type: roleLoadout
+  id: JobRepresentativeBlueShield
+  groups:
+  - BlueShieldJumpsuit
+  - BlueShieldBackpack
+  - BlueShieldBelt
+  - BlueShieldNeck
+  - Trinkets
+  - SurvivalSecurity
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobOversightOfficer
+  groups:
+  - LawyerJumpsuit
+  - CommonBackpack
+  - Trinkets
+  - Survival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+
+- type: roleLoadout
+  id: JobSpecOpsOfficer
+  groups:
+  - SpecOpsOfficerJumpsuit
+  - CommonBackpack
+  - Trinkets
+  - Survival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks

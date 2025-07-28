@@ -3,3 +3,10 @@
 #   name: loadout-group-centcomm-trainee-outerclothing-vest
 #   loadouts:
 #   - ArmorVestSlim
+
+- type: loadoutGroup
+  id: SpecOpsOfficerJumpsuit
+  name: loadout-group-specops-jumpsuit
+  loadouts:
+  - SpecOpsOfficerUniformMale
+  - SpecOpsOfficerUniformFemale

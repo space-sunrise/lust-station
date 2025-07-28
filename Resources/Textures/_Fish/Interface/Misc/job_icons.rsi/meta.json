@@ -24,7 +24,12 @@
         },
         {
             "name": "SectoralJudge"
+        },
+        {
+            "name": "OversightOfficer"
+        },
+        {
+            "name": "SpecOpsOfficer"
         }
-
     ]
 }

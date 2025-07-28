@@ -12,7 +12,7 @@
       time: 36000 # 10h Sunrise-RoleTime
   startingGear: NtrOfficerGear
   icon: "JobIconNtrGuard"
-  supervisors: job-supervisors-ntrg
+  supervisors: job-supervisors-oversightdep #Fish-edit
   canBeAntag: false
   displayWeight: 40
   access:
@@ -36,6 +36,7 @@
   - Cargo
   - Atmospherics
   - Medical
+  - Lawyer #Fish-edit
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -49,7 +50,7 @@
     mask: ClothingMaskGasNTRGLead
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadCapNTGR
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ClothingEyesGlassesBlueShield #Fish-edit
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorNTRGLead
     id: NtrGuardPDA

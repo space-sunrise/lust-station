@@ -8,7 +8,7 @@
   startingGear: ERTLeaderGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -123,7 +123,7 @@
   startingGear: ERTChaplainGear
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   accessGroups:
   - AllAccess
@@ -218,7 +218,7 @@
   startingGear: ERTEngineerGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -309,7 +309,7 @@
   startingGear: ERTSecurityGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -415,7 +415,7 @@
   startingGear: ERTMedicalGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -498,7 +498,7 @@
   startingGear: ERTJanitorGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   accessGroups:
   - AllAccess
@@ -572,7 +572,7 @@
   startingGear: ERTLeaderGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -604,7 +604,7 @@
   startingGear: ERTChaplainGear
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -630,7 +630,7 @@
   startingGear: ERTEngineerGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -656,7 +656,7 @@
   startingGear: ERTSecurityGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -679,7 +679,7 @@
   startingGear: ERTMedicalGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -705,7 +705,7 @@
   startingGear: ERTJanitorGearEVA
   icon: "JobIconNanotrasen"
   overrideConsoleVisibility: false # Sunrise added
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement
@@ -727,7 +727,7 @@
   setPreference: false
   startingGear: CBURNGear
   icon: "JobIconNanotrasen"
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-specops #Fish-edit
   canBeAntag: false
   requirements:
     - !type:DepartmentTimeRequirement

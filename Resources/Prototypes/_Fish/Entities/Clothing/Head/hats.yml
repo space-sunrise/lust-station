@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapBlueShield
+  name: blueshield's commander cap
+  description: Special blue uniform cap with gold NanoTrasen engraving.
+  components:
+  - type: Sprite
+    sprite: _Fish/Clothing/Head/Hats/blueshield_hat.rsi
+  - type: Clothing
+    sprite: _Fish/Clothing/Head/Hats/blueshield_hat.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+  # SUNRISE EDIT

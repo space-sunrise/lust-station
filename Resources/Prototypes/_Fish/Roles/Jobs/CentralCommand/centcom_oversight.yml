@@ -1,0 +1,49 @@
+- type: job
+  id: OversightOfficer
+  name: job-name-oversightofficer
+  description: job-description-oversightofficer
+  playTimeTracker: JobOversightOfficer
+  requirements:
+    - !type:DiscordRoleRequirement
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 54000 # 15 hrs
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 18000 # 5 hrs
+    - !type:DepartmentTimeRequirement
+      department: Law
+      time: 18000 # 5 hrs
+  startingGear: OversightOfficerGear
+  icon: JobIconOversightOfficer
+  overrideConsoleVisibility: false # Sunrise added
+  supervisors: job-supervisors-oversightdep
+  radioBold: true
+  canBeAntag: false
+  alwaysUseSpawner: true
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant, DeathRattleImplantBlueShield ]
+
+- type: startingGear
+  id: OversightOfficerGear
+  equipment:
+    neck: ClothingNeckLawDepbadge
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadCapNTGR
+    eyes: ClothingEyesGlassesHiddenSecurity
+    gloves: ClothingHandsGlovesColorWhite
+    outerClothing: ClothingOuterArmorNTRGLeadOpened
+    id: NtrLeadGuardPDA
+    ears: ClothingHeadsetFishCentCom
+    belt: BoxFolderCentComClipboard
+    pocket1: WeaponEnergyGunPulseRevolver
+    pocket2: PenCentcom
+  storage:
+    back:
+    # - ClothingOuterHardsuitNTRG
+    - CrowbarRed

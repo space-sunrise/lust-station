@@ -1,7 +1,7 @@
 - type: gameMap
   id: SunriseDelta
   mapName: 'Delta'
-  mapPath: /Maps/_Sunrise/Station/delta.yml
+  mapPath: /Maps/_Fish/Station/delta.yml #Fish-edit
   maxRandomOffset: 0
   randomRotation: false
   minPlayers: 0
@@ -13,7 +13,7 @@
           mapNameTemplate: '{0} Дельта {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
-            prefixCreator: 'TG'
+            prefixCreator: '-RS' #Fish-edit
         - type: StationEmergencyShuttle
           emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency.yml
         - type: StationJobs
@@ -58,10 +58,12 @@
             #security
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
+            Warden: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
             Detective: [ 2, 2 ]
+            Detective: [ 2, 2 ]
             Brigmedic: [ 1, 1 ]
-            SecurityPilot: [ 1, 1 ]
+            SecurityPilot: [ 2, 2 ]
             SecurityOfficer: [ 5, 5 ]
             SecurityCadet: [ 5, 5 ]
             #supply
@@ -76,10 +78,12 @@
             Musician: [ 1, 1 ]
             #blueshield
             BlueShieldEnsign: [ 1, 1 ] #Fish-edit
-            BlueShieldOfficer: [ 3, 3 ] #Fish-edit
+            BlueShieldOfficer: [ 2, 2 ] #Fish-edit
+            RepresentativeBlueShield: [ 1, 1 ] #Fish-edit
             #law
             IAA: [ 1, 1 ]
             Lawyer: [ 3, 3 ]
+            NtrOfficer: [ 3, 3 ] #Fish-edit
             NtrOfficer: [ 3, 3 ] #Fish-edit
             # silicon
             StationAi: [ 1, 1 ]

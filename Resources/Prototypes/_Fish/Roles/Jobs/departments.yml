@@ -7,5 +7,37 @@
    - BlueShieldEnsign
    - BlueShieldOfficer
   #  - BlueShieldOperative
+   - RepresentativeBlueShield
   primary: false
-  weight: 50
+  weight: 60
+
+
+- type: department
+  id: SpecialOperationsAlt
+  name: department-SpecialOperations
+  description: department-SpecialOperations-description
+  color: "#0c344d"
+  roles:
+  - SpecOpsOfficer #Fish-edit
+  weight: 57
+
+- type: department
+  id: Court
+  name: department-Court
+  description: department-Court-description
+  color: "#0c344d"
+  roles:
+  - CentcommSectoralJudge #Fish-edit
+  weight: 55
+
+- type: department
+  id: LawAlt
+  name: department-LawAlt
+  description: department-LawAlt-description
+  color: "#FF5297"
+  roles:
+  - OversightOfficer
+  - IAA
+  - Lawyer
+  - NtrOfficer
+  weight: 52

@@ -134,7 +134,7 @@
     minimumPlayers: 0
   - type: MeteorSwarm
     announcement: station-event-space-dust-start-announcement
-    announcementSound: /Audio/_Sunrise/Announcements/announce_dig.ogg # Sunrise-edit
+    announcementSound: /Audio/Announcements/announce.ogg # Fish-edit
     nonDirectional: true
     meteors:
       MeteorSpaceDust: 1
@@ -156,9 +156,9 @@
     startAnnouncement: station-event-meteor-swarm-start-announcement
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     endAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     # Sunrise-End
   - type: MeteorSwarm
     meteors:
@@ -176,9 +176,9 @@
     startAnnouncement: station-event-meteor-swarm-start-announcement
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     endAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     # Sunrise-End
   - type: MeteorSwarm
     meteors:
@@ -197,9 +197,9 @@
     startAnnouncement: station-event-meteor-swarm-start-announcement
     endAnnouncement: station-event-meteor-swarm-end-announcement
     startAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     endAudio:
-      path: /Audio/_Sunrise/Announcements/announce_dig.ogg
+      path: /Audio/Announcements/announce.ogg # Fish-edit
     # Sunrise-End
   - type: MeteorSwarm
     meteors:
@@ -215,7 +215,7 @@
     weight: 0.05
   - type: MeteorSwarm
     announcement: station-event-meteor-urist-start-announcement
-    announcementSound: /Audio/_Sunrise/Announcements/announce_dig.ogg # Sunrise-edit
+    announcementSound: /Audio/Announcements/announce.ogg # Fish-edit
     meteors:
       MeteorUrist: 1
     waves:
