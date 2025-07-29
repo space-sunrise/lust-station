@@ -16,7 +16,7 @@ RELEASE_DIR = "release"
 # Forks should change these to publish to their own infrastructure.
 #
 ROBUST_CDN_URL = "https://ss14.cdn.shizainc.com/" # Sunrise-Edit
-FORK_ID = "lust_station" # Lust-Edit
+FORK_ID = "paradise_station" # Sunrise-Edit
 
 def main():
     parser = argparse.ArgumentParser()
