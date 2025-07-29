@@ -1156,3 +1156,13 @@
   - type: EmitSoundOnActivate
     sound:
       path: /Audio/_Sunrise/Voice/Vulpkanin/dog_bark2.ogg
+      
+- type: entity
+  id: Olegchmol
+  parent: BasePlushie
+  name: Oleg Chmol
+  description: He's just an optimistic green moth.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/toys.rsi
+    state: Olegchmol
