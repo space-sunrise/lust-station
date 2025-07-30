@@ -65,8 +65,10 @@
   parent: JobIcon
   id: JobIconNanotrasen
   icon:
-    sprite: /Textures/Interface/Misc/job_icons.rsi
-    state: Nanotrasen
+    # Lust-start
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
+    state: Qillu
+    # Lust-end
   jobName: job-name-centcomoff
 
 - type: jobIcon
