@@ -51,6 +51,21 @@
       extendedAccessOptions:
         announcement: access-system-accesses-delay-red
       # Sunrise edit end
+    #Fish-start
+    sierra:
+      announcement: alert-level-sierra-announcement
+      selectable: false
+      sound:
+        path: /Audio/_Sunrise/Misc/siren.ogg # Sunrise-Edit
+        params:
+          volume: -2
+      disableSelection: true
+      color: '#7768B8FF'
+      emergencyLightColor: '#7768B8FF'
+      forceEnableEmergencyLights: true
+      extendedAccessOptions:
+        announcement: access-system-accesses-delay-sierra
+    #Fish-end
     gamma:
       announcement: alert-level-gamma-announcement
       selectable: false
