@@ -71,7 +71,12 @@ public sealed partial class StationCentCommSystem : EntitySystem
                 var mapEnt = _map.GetMapOrInvalid(mapId);
 
                 if (_shuttle.TryAddFTLDestination(mapId, true, out var ftlDestination))
+                //Fish-start
+                {
                     ftlDestination.Whitelist = component.ShuttleWhitelist;
+                    ftlDestination.RequireCoordinateDisk = false;
+                }
+                //Fish-end
 
                 EnsureComp<AlwaysPoweredMapComponent>(mapEnt);
 

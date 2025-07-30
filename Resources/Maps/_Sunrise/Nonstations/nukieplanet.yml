@@ -2376,7 +2376,7 @@ entities:
     - type: GridFill
       addComponents:
       - type: NukeOpsShuttle
-      path: /Maps/_Sunrise/Shuttles/infiltrator.yml
+      path: /Maps/_Fish/Shuttles/infiltrator.yml #Fish-edit
 - proto: AirlockSyndicateGlass
   entities:
   - uid: 19

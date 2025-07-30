@@ -70,6 +70,7 @@ entities:
     - type: OccluderTree
     - type: SpreaderGrid
     - type: Shuttle
+    - type: CentCommShuttle
       dampingModifier: 0.25
     - type: GridPathfinding
     - type: Gravity

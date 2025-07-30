@@ -52,6 +52,8 @@
    ears: ClothingHeadsetBlueShieldEnsign
   #  belt: ClothingBeltBlueShieldWebbingFilled У синего щита уже есть в наборе РПС при старте
    gloves: ClothingHandsGlovesCombat
+   pocket1: BaseUplinkNTERTBlueShield
+   pocket2: WeaponTaser
   storage:
    back:
    - HandheldBSOCrewMonitor

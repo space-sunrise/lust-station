@@ -12,7 +12,7 @@
      time: 62000 # 20 hrs
    - !type:AgeRequirement
      requiredAge: 25
-  startingGear: CentcomBlueShieldGear
+  startingGear: RepresentativeBlueShieldGear
   icon: JobIconNanotrasen
   supervisors: job-supervisors-representative
   canBeAntag: false
@@ -41,3 +41,18 @@
   special:
    - !type:AddImplantSpecial
      implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: RepresentativeBlueShieldGear
+  equipment:
+   shoes: ClothingShoesBootsBlueShieldFilled
+   eyes: ClothingEyesGlassesBlueShield
+   head: ClothingHeadHatBeretBlueShield
+   outerClothing: ClothingOuterArmorBlueShield
+   id: BlueShieldOperativePDA
+   ears: ClothingHeadsetCommand
+   gloves: ClothingHandsGlovesCombat
+   pocket1: BaseUplinkNTERTBlueShield
+  storage:
+   back:
+   - HandheldBSOCrewMonitor

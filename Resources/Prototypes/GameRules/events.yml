@@ -546,7 +546,7 @@
     duration: null # LoneOpsSpawn needs an infinite duration so that it inherits the NukeOpsRule things of an actually appropriate end scrreen (not always "Neutral outcome!") and... ending the game if the station is nuked.
   - type: RuleGrids
   - type: LoadMapRule
-    gridPath: /Maps/Shuttles/ShuttleEvent/striker.yml
+    gridPath: /Maps/_Fish/Shuttles/ShuttleEvent/striker.yml #Fish-edit
   - type: NukeopsRule
     roundEndBehavior: Nothing
   - type: AntagSelection

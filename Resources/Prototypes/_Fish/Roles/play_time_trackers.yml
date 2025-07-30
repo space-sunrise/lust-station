@@ -27,3 +27,6 @@
 
 - type: playTimeTracker
   id: JobSpecOpsOfficer
+
+- type: playTimeTracker
+  id: JobCentCommHead

@@ -10,7 +10,7 @@
   displayName: store-currency-display-bluecrystal
   cash:
     1: Bluecrystal1
-  canWithdraw: true
+  canWithdraw: false #Fish-edit
 
 - type: currency
   id: Crystallite

@@ -631,14 +631,13 @@ binds:
 # Sunrise-Start
 - function: CockGun # Это не то о чем вы подумали, товарищ визард.
   type: State
-  key: C
-- function: Reloading # Да, перезарядка в РП игре на кнопочку.
-  type: State
-  key: R
+  key: R #Fish-edit
+# - function: Reloading # Да, перезарядка в РП игре на кнопочку.
+#   type: State
+#   key: R
 - function: ToggleStanding # Упал-отжался.
   type: State
-  key: Control
-  mod1: Alt
+  key: C #Fish-edit
 - function: Jump # Да, мы прыгаем в 2д игре.
   type: State
   key: Space

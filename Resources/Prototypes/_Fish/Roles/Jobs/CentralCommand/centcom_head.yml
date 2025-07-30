@@ -1,0 +1,88 @@
+- type: job
+  id: CentCommHead
+  name: job-name-centcomhead
+  description: job-description-centcomhead
+  playTimeTracker: JobCentCommHead
+  requirements:
+    - !type:DiscordRoleRequirement
+  weight: 30
+  setPreference: false
+  startingGear: CentCommHeadGear
+  icon: "JobIconNanotrasen"
+  overrideConsoleVisibility: false # Sunrise added
+  supervisors: job-supervisors-centcom
+  radioBold: true
+  canBeAntag: false
+  alwaysUseSpawner: true
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant, DeathRattleImplantCentcomm ]
+
+- type: startingGear
+  id: CentCommHeadGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficial
+    shoes: ClothingShoesBootsLaceup
+    head: ClothingHeadHatCentcomcap
+    eyes: ClothingEyesGlassesSunglasses
+    gloves: ClothingHandsGlovesColorBlack
+    outerClothing: ClothingOuterArmorBasicSlim
+    id: CentcomHeadPDA
+    ears: ClothingHeadsetFishCentCom
+    belt: WeaponPistolN1984
+  storage:
+    back:
+    - PenCentcom
+    - BoxFolderBlack
+
+- type: entity
+  parent: BaseSecurityPDA
+  id: CentcomHeadPDA
+  name: CentComm Head's PDA
+  description: Light green sign of walking bureaucracy.
+  components:
+  - type: Pda
+    id: CentcomHeadIDCard
+    penSlot:
+      startingItem: PenCentcom
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-centcom
+  - type: PdaBorderColor
+    borderColor: "#00842e"
+  - type: Icon
+    state: pda-centcom
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - MedTekCartridge
+      - WantedListCartridge
+      - LogProbeCartridge
+      - AstroNavCartridge
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomHeadIDCard
+  name: command head ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+    - state: idcentcom
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentCommHead

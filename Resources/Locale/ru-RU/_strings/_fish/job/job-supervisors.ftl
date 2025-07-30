@@ -5,4 +5,4 @@ job-supervisors-ertleader = Лидеру Отряда Сил Специальн�
 job-supervisors-centcomhead = Начальнику штаба Центрального Командования
 job-supervisors-specopshead = Директору Специальных Операций
 job-supervisors-supremecourt = Верховному суду Nanotrasen
-job-supervisors-representative = Представителю Nanotrasen
+job-supervisors-representative = Представителю Nanotrasen. ВЫ ОБЯЗАНЫ обеспечивать именно его БЕЗОПАСНОСТЬ

@@ -1,4 +1,5 @@
 job-name-centcomm-sectoral-judge = секторальный судья
+job-name-centcomhead = начальник штаба Центком
 job-name-centcomofficer = офицер Центком
 job-name-centcomtr = стажер Центком
 job-name-centcom-blueshield = оперативник «Синий щит»

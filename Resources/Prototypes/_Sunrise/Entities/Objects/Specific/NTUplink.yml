@@ -117,7 +117,7 @@
         shader: unshaded
   - type: Store
     balance:
-      Bluecrystal: 10
+      Bluecrystal: 9 #Fish-edit
       Crystallite: 10
     buySuccessSound:
       path: /Audio/Effects/Arcade/newgame.ogg

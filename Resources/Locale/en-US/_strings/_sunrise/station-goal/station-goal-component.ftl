@@ -1,9 +1,9 @@
 station-goal-fax-paper-name = бумага
 station-goal-shuttle =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -25,7 +25,7 @@ station-goal-shuttle =
     ⠀— Научному отделу разработать необходимые платы и технологии.
     ⠀— Отделу Снабжения заказать все требуемые материалы.
     ⠀— Инженерному отделу осуществить постройку с нуля на обшивке станции.
-    ⠀— После постройки подать отчёт и запрос на регистрацию судна.
+    ⠀— После постройки подать отчет и запрос на регистрацию судна.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел снабжения, Капитан объекта { $station }[/bold].
 
@@ -35,10 +35,10 @@ station-goal-shuttle =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-singularity =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -69,10 +69,10 @@ station-goal-singularity =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-solar-panels =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -92,7 +92,7 @@ station-goal-solar-panels =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Инженерному отделу построить две солнечные ветки с защитой от метеоритов.
-    ⠀— Энергию от панелей направить в три (3) новых СМЭСа, не подключённых к общей сети станции.
+    ⠀— Энергию от панелей направить в три (3) новых СМЭСа, не подключенных к общей сети станции.
     ⠀— Отделу Снабжения заказать все необходимые материалы.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел снабжения, Капитан объекта { $station }[/bold].
@@ -103,10 +103,10 @@ station-goal-solar-panels =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-artifacts =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -137,10 +137,10 @@ station-goal-artifacts =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-bank =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -171,10 +171,10 @@ station-goal-bank =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-zoo =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -205,10 +205,10 @@ station-goal-zoo =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-mining-outpost =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -223,7 +223,7 @@ station-goal-mining-outpost =
 
     ⠀С целью расширения добывающих мощностей корпорации, вам надлежит создать передовую добывающую платформу.
 
-    ⠀Ваша Цель смены — [bold]постройка орбитального шахтёрского аванпоста[/bold].
+    ⠀Ваша Цель смены — [bold]постройка орбитального шахтерского аванпоста[/bold].
 
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
@@ -238,10 +238,10 @@ station-goal-mining-outpost =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-containment =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -273,10 +273,10 @@ station-goal-containment =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-tesla =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -306,10 +306,10 @@ station-goal-tesla =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-delta-xeno-repair =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -329,7 +329,7 @@ station-goal-delta-xeno-repair =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Восстановить электропитание, атмосферу и внешний вид сектора ксенобиологии.
-    ⠀— После ремонта поймать и поместить в камеры четырёх (4) слаймов любого вида.
+    ⠀— После ремонта поймать и поместить в камеры четырех (4) слаймов любого вида.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел снабжения, Капитан объекта { $station }[/bold].
 
@@ -339,7 +339,7 @@ station-goal-delta-xeno-repair =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-delta-ambusol =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
     ⠀[bold]Форма НТ/КОМ-ЦК-СИТ-ОМЕГА[/bold]
@@ -376,10 +376,10 @@ station-goal-delta-ambusol =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-weapon-sec =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -410,10 +410,10 @@ station-goal-weapon-sec =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-maints-repair =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -433,7 +433,7 @@ station-goal-maints-repair =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Восстановить электропитание, систему жизнеобеспечения и внешний вид всех заброшенных помещений в тех. коридорах.
-    ⠀— По завершении работ предоставить отчёт с документацией по каждому помещению.
+    ⠀— По завершении работ предоставить отчет с документацией по каждому помещению.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
 
@@ -443,10 +443,10 @@ station-goal-maints-repair =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-dorms-build =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -476,10 +476,10 @@ station-goal-dorms-build =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-battle-shuttle =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -510,10 +510,10 @@ station-goal-battle-shuttle =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-transit-time =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 2 часа[/italic]
@@ -543,10 +543,10 @@ station-goal-transit-time =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-nuke-room =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -565,7 +565,7 @@ station-goal-nuke-room =
 
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
-    ⠀— Построить новое хранилище 5х5 вблизи мостика с двойной обшивкой из укреплённых стен.
+    ⠀— Построить новое хранилище 5х5 вблизи мостика с двойной обшивкой из укрепленных стен.
     ⠀— Обеспечить хранилище системой жизнеобеспечения и гермозатворами с дистанционным управлением.
     ⠀— Переместить ядерную боеголовку в новое хранилище.
 
@@ -577,10 +577,10 @@ station-goal-nuke-room =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-permabrig =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -612,10 +612,10 @@ station-goal-permabrig =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-farm =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -636,7 +636,7 @@ station-goal-farm =
 
     ⠀— Построить ферму с вольерами для животных.
     ⠀— Заселить ферму: 4 свиньи, 2 коровы, 6 куриц.
-    ⠀— Обеспечить животных постоянным источником питания. Гибель животных приведёт к провалу цели.
+    ⠀— Обеспечить животных постоянным источником питания. Гибель животных приведет к провалу цели.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Отдел Снабжения, Научный отдел, Сервисный отдел, Капитан объекта { $station }[/bold].
 
@@ -646,10 +646,10 @@ station-goal-farm =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-training-crew =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -669,8 +669,8 @@ station-goal-training-crew =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Каждый отдел должен провести публичную лекцию по своей специализации.
-    ⠀— Цель считается выполненной при проведении минимум трёх (3) успешных лекций.
-    ⠀— Успешная лекция - это обучение 10+ членов ДРУГИХ отделов. Предоставить отчёт по каждой.
+    ⠀— Цель считается выполненной при проведении минимум трех (3) успешных лекций.
+    ⠀— Успешная лекция - это обучение 10+ членов ДРУГИХ отделов. Предоставить отчет по каждой.
 
     ⠀Ответственные за цель: [bold]Инженерный отдел, Научный отдел, Отдел Снабжения, Сервисный отдел, Служба Безопасности, Медицинский отдел, Капитан объекта { $station }[/bold].
 
@@ -680,10 +680,10 @@ station-goal-training-crew =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-creation-of-furs =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -713,10 +713,10 @@ station-goal-creation-of-furs =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-saboteurs =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -748,10 +748,10 @@ station-goal-saboteurs =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-reconnaissance-in-force =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -771,9 +771,9 @@ station-goal-reconnaissance-in-force =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Провести три (3) успешных вылета на планеты с уровнем угрозы "ВЫСОКАЯ".
-    ⠀— Сформировать экспедиционные отряды (утилизаторы, учёный, врач).
+    ⠀— Сформировать экспедиционные отряды (утилизаторы, ученый, врач).
     ⠀— Научным и медицинским сотрудникам запрещается вступать в прямой контакт с опасностью.
-    ⠀— По итогам каждого вылета составить отчёт по форме "Отчёт об экспедиции".
+    ⠀— По итогам каждого вылета составить отчет по форме "Отчет об экспедиции".
 
     ⠀Ответственные за цель: [bold]Научный отдел, Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
 
@@ -783,10 +783,10 @@ station-goal-reconnaissance-in-force =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-reports =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 2 часа[/italic]
@@ -808,8 +808,8 @@ station-goal-reports =
     ⠀— [bold]Отдел Снабжения:[/bold] Аккумулировать на счету 100,000 кредитов.
     ⠀— [bold]Научный отдел:[/bold] Изучить 2 тех. ветки до 3-го уровня.
     ⠀— [bold]Инженерный отдел:[/bold] Настроить один из основных генераторов.
-    ⠀— [bold]Всем отделам:[/bold] Подготовить 10 видов отчётов о деятельности станции.
-    ⠀Все отчёты передать Представителю НаноТрейзен. На выполнение даётся 2 часа.
+    ⠀— [bold]Всем отделам:[/bold] Подготовить 10 видов отчетов о деятельности станции.
+    ⠀Все отчеты передать Представителю НаноТрейзен. На выполнение дается 2 часа.
 
     ⠀Ответственные за цель: [bold]Отдел Снабжения, Инженерный отдел, Научный отдел, Медицинский отдел, Служба Безопасности, Сервисный отдел, Командование, Капитан объекта { $station }[/bold].
 
@@ -819,10 +819,10 @@ station-goal-reports =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-intelligent-weapons =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -854,10 +854,10 @@ station-goal-intelligent-weapons =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-medical-replenishment =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -888,10 +888,10 @@ station-goal-medical-replenishment =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-anomaly =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -911,8 +911,8 @@ station-goal-anomaly =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— Научному отделу сгенерировать или найти четыре (4) аномалии разного типа.
-    ⠀— Провести подробное изучение и составить отчёты для отправки в Центральное Командование.
-    ⠀— Заказы учёных для выполнения цели получают высший приоритет.
+    ⠀— Провести подробное изучение и составить отчеты для отправки в Центральное Командование.
+    ⠀— Заказы ученых для выполнения цели получают высший приоритет.
 
     ⠀Ответственные за цель: [bold]Научный отдел, Капитан объекта { $station }[/bold].
 
@@ -922,10 +922,10 @@ station-goal-anomaly =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-testing-sb =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -948,7 +948,7 @@ station-goal-testing-sb =
     ⠀— Тесты на знание СРП и КЗ.
     ⠀— Учения по разминированию, стрельбе, прохождению полосы препятствий.
     ⠀— Оценку навыков управления мехами и действий при ЧС.
-    ⠀По завершении отослать отчёты с показателями каждого сотрудника.
+    ⠀По завершении отослать отчеты с показателями каждого сотрудника.
 
     ⠀Ответственные за цель: [bold]Служба Безопасности, Капитан объекта { $station }[/bold].
 
@@ -958,10 +958,10 @@ station-goal-testing-sb =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-cyborgs =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -982,7 +982,7 @@ station-goal-cyborgs =
 
     ⠀— [bold]Научному отделу:[/bold] Создать 8 станций подзарядки и по 2 киборга каждой доступной модели.
     ⠀— [bold]Инженерному отделу:[/bold] Построить отдельное помещение для станций подзарядки вблизи ядра ИИ.
-    ⠀— Оснастить киборгов продвинутыми модулями и батареями высокой ёмкости.
+    ⠀— Оснастить киборгов продвинутыми модулями и батареями высокой емкости.
 
     ⠀Ответственные за цель: [bold]Научный отдел, Отдел Снабжения, Инженерный отдел, Капитан объекта { $station }[/bold].
 
@@ -992,10 +992,10 @@ station-goal-cyborgs =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-delegates =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -1017,7 +1017,7 @@ station-goal-delegates =
     ⠀— Привести станцию в идеальное состояние: чистота, ремонт, освещение.
     ⠀— Подготовить угощения и медикаменты на мостик.
     ⠀— Продемонстрировать технологическое превосходство: запустить мощный генератор, изучить технологии, модифицировать отделы.
-    ⠀— По завершении Капитан должен отправить отчёт, а экипаж покинуть станцию.
+    ⠀— По завершении Капитан должен отправить отчет, а экипаж покинуть станцию.
 
     ⠀Ответственные за цель: [bold]Медицинский отдел, Сервисный отдел, Инженерный отдел, Отдел Снабжения, Научный отдел, Капитан объекта { $station }[/bold].
 
@@ -1027,10 +1027,10 @@ station-goal-delegates =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-cleaning-up =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -1049,8 +1049,8 @@ station-goal-cleaning-up =
 
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
-    ⠀— [bold]Немедленно[/bold] отправить на планетоид отряд (утилизаторы, учёные, врач).
-    ⠀— Отряду обойти все комплексы и составить подробный отчёт.
+    ⠀— [bold]Немедленно[/bold] отправить на планетоид отряд (утилизаторы, ученые, врач).
+    ⠀— Отряду обойти все комплексы и составить подробный отчет.
     ⠀— При наличии агрессивной фауны, произвести полную зачистку комплексов и 40% площади планетоида.
     ⠀— Посещение планетоида персоналом, не участвующим в цели, [bold]строго запрещено[/bold].
 
@@ -1062,10 +1062,10 @@ station-goal-cleaning-up =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-humanitarian-aid =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -1096,10 +1096,10 @@ station-goal-humanitarian-aid =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-personnel-recovery =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -1119,8 +1119,8 @@ station-goal-personnel-recovery =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— [bold]Отделу Снабжения:[/bold] Найти и доставить в медотсек минимум пять (5) тел пропавшего персонала.
-    ⠀— [bold]Медицинскому отделу:[/bold] Восстановить тела, одеть, составить отчёт и поместить в криогенный сон.
-    ⠀— Отчёт немедленно отправить на факс в Центральное Командование.
+    ⠀— [bold]Медицинскому отделу:[/bold] Восстановить тела, одеть, составить отчет и поместить в криогенный сон.
+    ⠀— Отчет немедленно отправить на факс в Центральное Командование.
 
     ⠀Ответственные за цель: [bold]Медицинский отдел, Отдел Снабжения, Капитан объекта { $station }[/bold].
 
@@ -1130,10 +1130,10 @@ station-goal-personnel-recovery =
     ⠀⠀
     ⠀[italic]Место для печатей[/italic]
 station-goal-church =
-    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_cmd.png" scale=1]
+    ⠀[tex path="/Textures/_Sunrise/Paper/nanotrasen_form_header_centcom.png" scale=1]
 
 
-    ⠀[bold]Форма НТ/КОМ-ЦК-СИТ[/bold]
+    ⠀[bold]Форма НТ/КОМ-ЦК-ПЦС[/bold]
     ⠀[head=3]Приказ Центрального Командования[/head]
 
     ⠀[italic]Срок исполнения: 3 часа[/italic]
@@ -1153,7 +1153,7 @@ station-goal-church =
     ⠀[italic]Установленная Цель смены может быть заменена, отменена или пересмотрена в ходе смены по решению Центрального Командования в одностроннем порядке.[/italic]
 
     ⠀— [bold]Инженерному отделу:[/bold] Обустроить три помещения для лекций.
-    ⠀— [bold]Сервисному отделу:[/bold] Провести три проповеди/лекции о трёх разных религиях.
+    ⠀— [bold]Сервисному отделу:[/bold] Провести три проповеди/лекции о трех разных религиях.
     ⠀— [bold]Командованию станции:[/bold] Запросить содействие у Юридического отдела Департамента внутреннего надзора для анализа лекций на соответствие законодательству.
     ⠀— [bold]ВАЖНО:[/bold] До конца смены любой акт дискриминации приравнивается к саботажу цели. Нарушитель подлежит помещению в пермабриг.
 
