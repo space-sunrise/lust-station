@@ -153,6 +153,9 @@
   description: artifact-effect-description-spawn-evil-twin
   categories: [ HideSpawnMenu ]
   components:
+  - type: XenoArtifactNode
+    maxDurability: 1
+    triggerDecreasesDurability: true
   - type: ArtifactStartGameRule
     rules:
       EvilTwinSpawn: 2
@@ -199,7 +202,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: XAEShuffle
-    radius: 70
+    radius: 30
 
 - type: entity
   id: SunriseEffectPolyChair
@@ -265,9 +268,37 @@
   components:
   - type: ArtifactRandomTransformation
     prototypeBlacklist:
+    - BaseBloodCultGod
+    - BaseCentcommContraband
+    - BaseClone
+    - BaseGameRule
+    - BaseGrandTheftContraband
+    - BaseMagicalContraband
+    - BaseMajorContraband
+    - BaseMobFleshCult
+    - BaseSyndicateContraband
+    - BaseXenoborgContraband
+    - ContainmentField
+    - FleshHeart
+    - GasMinerBase
+    - ImmovableRod
+    - Incorporeal
+    - MobNarsieBase
+    - MobObserverBase
+    - MobRatvarBase
+    - MobTerminatorBase
+    - MobXenoRounyGhostRole
+    - NuclearGrenade
     - Singularity
+    - SupermatterCrystal
     - TeslaEnergyBall
     - TeslaMiniEnergyBall
+    componentBlacklist:
+    - MapGrid
+    - SurgeryStep
+    - SpawnPoint
+    - Contraband
+    - Meteor
     categoryBlacklist:
     - HideSpawnMenu
     - Debug
