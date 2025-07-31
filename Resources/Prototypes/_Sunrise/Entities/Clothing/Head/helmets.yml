@@ -216,6 +216,7 @@
     tags:
     - WhitelistChameleon
     - SecurityHelmet
+  - type: EyeProtection
 
 #Dogi Helmet
 - type: entity
