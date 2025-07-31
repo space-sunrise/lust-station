@@ -1,5 +1,5 @@
-aphrodesiac-effect1 = Ваша кожа приятно покалывает.
-aphrodesiac-effect2 = Ваше сердце быстро бьётся.
+aphrodisiac-effect1 = Ваша кожа приятно покалывает.
+aphrodisiac-effect2 = Ваше сердце быстро бьётся.
 reagent-effect-guidebook-love =
     { $chance ->
         [1] Вызывает

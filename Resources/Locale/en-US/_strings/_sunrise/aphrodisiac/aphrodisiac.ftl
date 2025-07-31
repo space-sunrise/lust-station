@@ -1,5 +1,5 @@
-aphrodesiac-effect1 = Your skin tingles warmly.
-aphrodesiac-effect2 = Your heart is racing fast.
+aphrodisiac-effect1 = Your skin tingles warmly.
+aphrodisiac-effect2 = Your heart is racing fast.
 reagent-effect-guidebook-love =
     { $chance ->
         [1] Causes
