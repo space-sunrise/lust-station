@@ -27,7 +27,7 @@
   parent: ClothingUniformBase
   id: ClothingUniformWhiteBrideDressFlower
   name: white wedding dress with flower
-  description: A striking black wedding dress with intricate lace detailing. For those who vow eternal love.
+  description: A striking white wedding dress with intricate lace detailing. For those who vow eternal love.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/wedding/white_wedding_dress_flower.rsi

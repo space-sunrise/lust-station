@@ -61,7 +61,7 @@
     - HamsterWearable
     - WhitelistChameleon
 
-#белая свадебная фата
+#чёрная свадебная фата
 - type: entity
   parent: [ClothingHeadBase, BaseFoldable]
   id: ClothingHeadBlackVeil
@@ -83,8 +83,12 @@
   - type: FoldableClothing
     foldedEquippedPrefix: up
     foldedHeldPrefix: up
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
 
-#чёрная свадебная фата
+#белая свадебная фата
 - type: entity
   parent: [ClothingHeadBase, BaseFoldable]
   id: ClothingHeadWhiteVeil
@@ -106,4 +110,7 @@
   - type: FoldableClothing
     foldedEquippedPrefix: up
     foldedHeldPrefix: up
-
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - WhitelistChameleon
