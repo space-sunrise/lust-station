@@ -60,3 +60,50 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
+
+#белая свадебная фата
+- type: entity
+  parent: [ClothingHeadBase, BaseFoldable]
+  id: ClothingHeadBlackVeil
+  name: Black veil
+  description: Elegant veil.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/blackveil.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-up
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/blackveil.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+    foldedEquippedPrefix: up
+    foldedHeldPrefix: up
+
+#чёрная свадебная фата
+- type: entity
+  parent: [ClothingHeadBase, BaseFoldable]
+  id: ClothingHeadWhiteVeil
+  name: White veil
+  description: Elegant veil.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hat/whiteveil.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-up
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hat/whiteveil.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+    foldedEquippedPrefix: up
+    foldedHeldPrefix: up
+

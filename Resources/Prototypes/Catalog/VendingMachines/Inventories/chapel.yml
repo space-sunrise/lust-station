@@ -19,6 +19,12 @@
     ClothingHeadsetService: 2
     ClothingHeadHatWithPaces: 1 # Sunrise
     ClothingNeckStoleTallit: 1 # Sunrise
+    ClothingUniformWhiteBrideDress: 1 # Lust Station
+    ClothingUniformBlackBrideDress: 1 # Lust Station
+    ClothingUniformWhiteGroomSuit: 1 # Lust Station
+    ClothingUniformBlackGroomSuit: 1 # Lust Station
+    ClothingHeadWhiteVeil: 1 # Lust Station
+    ClothingHeadBlackVeil: 1 # Lust Station
     BoxCandle: 2
     BoxCandleSmall: 2
     BoxFacecast: 2 # Sunrise
@@ -30,6 +36,8 @@
     FoodBakedBunHotX: 2
     DrinkWineBottleFull: 1
     ToyFigurineChaplain: 1
+    ClothingUniformWhiteBrideDressFlower: 1 # Lust Station
+    ClothingUniformBlackBrideDressFlower: 1 # Lust Station
   emaggedInventory:
     ClothingOuterArmorCult: 1
     ClothingHeadHelmetCult: 1

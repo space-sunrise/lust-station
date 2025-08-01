@@ -8,3 +8,7 @@ ent-ClothingHeadWhiteCap = white captain cap
     .desc = White captain stylish cap.
 ent-ClothingHeadWhiteHelmet = white captain helmet
     .desc = White captain stylish helmet.
+ent-ClothingHeadWhiteVeil = white elegant veil
+    .desc = A delicate and flowing bridal veil, symbolizing purity and romance.
+ent-ClothingHeadBlackVeil = dark elegant veil
+    .desc = A delicate and flowing bridal veil, symbolizing purity and romance.
