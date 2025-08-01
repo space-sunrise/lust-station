@@ -315,14 +315,13 @@
       heldPrefix: tourniquet
     - type: Healing
       damageContainers:
-        - Biological
+      - Biological
       damage:
-        types: #SUNRISE-EDIT
-          Mangleness: 1 #SUNRISE-EDIT
         groups:
           Brute: 5 # Tourniquets HURT!
         types:
           Asphyxiation: 5 # Essentially Stopping all blood reaching a part of your body
+          Mangleness: 1 #SUNRISE-EDIT
       bloodlossModifier: -10 # Tourniquets stop bleeding
       delay: 0.5
       healingBeginSound:
