@@ -8,3 +8,7 @@ ent-ClothingHeadWhiteCap = white captain cap
     .desc = White captain stylish cap.
 ent-ClothingHeadWhiteHelmet = white captain helmet
     .desc = White captain stylish helmet.
+ent-ClothingHeadWhiteVeil = светлая свадебная фата
+    .desc = Нежная струящаяся фата, символ чистоты и романтики. Часто носится с тиарой или заколками.
+ent-ClothingHeadBlackVeil = тёмная свадебная фата
+    .desc = Нежная струящаяся фата, символ чистоты и романтики. Часто носится с тиарой или заколками.
