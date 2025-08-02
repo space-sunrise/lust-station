@@ -4,8 +4,8 @@ meta:
   engineVersion: 262.0.0
   forkId: ""
   forkVersion: ""
-  time: 07/31/2025 15:43:30
-  entityCount: 362
+  time: 08/02/2025 10:01:33
+  entityCount: 368
 maps: []
 grids:
 - 1
@@ -1040,6 +1040,21 @@ entities:
     - type: Transform
       pos: 10.5,-0.5
       parent: 1
+  - uid: 364
+    components:
+    - type: Transform
+      pos: 11.5,0.5
+      parent: 1
+  - uid: 366
+    components:
+    - type: Transform
+      pos: 11.5,-0.5
+      parent: 1
+  - uid: 368
+    components:
+    - type: Transform
+      pos: 11.5,1.5
+      parent: 1
 - proto: CableMV
   entities:
   - uid: 194
@@ -1792,6 +1807,26 @@ entities:
     components:
     - type: Transform
       pos: 10.5,0.5
+      parent: 1
+    - type: CMExplosionEffect
+- proto: GeneratorWallmountAPU
+  entities:
+  - uid: 363
+    components:
+    - type: Transform
+      pos: 11.5,0.5
+      parent: 1
+    - type: CMExplosionEffect
+  - uid: 365
+    components:
+    - type: Transform
+      pos: 11.5,-0.5
+      parent: 1
+    - type: CMExplosionEffect
+  - uid: 367
+    components:
+    - type: Transform
+      pos: 11.5,1.5
       parent: 1
     - type: CMExplosionEffect
 - proto: GravityGeneratorMini
