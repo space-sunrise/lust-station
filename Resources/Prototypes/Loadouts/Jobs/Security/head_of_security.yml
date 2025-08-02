@@ -220,3 +220,15 @@
     outerClothing: ClothingOuterCoatHoSOvercoat
 #Sunrise-End
 
+#Lust-Start
+- type: loadout
+  id: HeadofSecurityJumpsuitElegant
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantHos
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 360000 #100 hrs
+#Lust-End
