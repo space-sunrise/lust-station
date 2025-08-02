@@ -110,6 +110,13 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitUSSPBlack
 #Sunrise-End
+#Lust-Start
+- type: loadout
+  id: HeadofSecurityJumpsuitElegant
+  sponsorOnly: true
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantHos
+#Lust-End
 
 # Head
 - type: loadout
