@@ -1,9 +1,9 @@
 # НЕ ДОБАВЛЯТЬ НОВЫЕ КАРТЫ БЕЗ МОЕГО РЕВЬЮ! ~ SplikZerys
-
-- type: gameMapPool
-  id: SunriseMapPool
-  maps:
-  - SunriseDelta # Прибытие стыкуется, но лишь 2 доками. Эвак стыкуется лишь 2 доками.
+# Fish-start
+#- type: gameMapPool
+#  id: SunriseMapPool
+#  maps:
+ #- SunriseDelta # Прибытие стыкуется, но лишь 2 доками. Эвак стыкуется лишь 2 доками.
   #- SunrisePlasma # Прибытие стыкуется лишь 1 доком с доступом командования. Эвак стыкуется лишь 2 доками.
   #- SunriseBox # Прибытие не стыкуется, эвак стыкуется лишь 1 доком.
   #- SunriseBarratry # Прибытие не стыкуется. Эвак залазит в станцию.
@@ -26,3 +26,4 @@
   #- Kettle
   #- Tortuga
   #- Arena
+# Fish-end

@@ -3,7 +3,7 @@
   abstract: true
   components:
   - type: SpawnGridAndDockToStation
-    gridPath: /Maps/_Fish/Shuttles/centcom_shuttle.yml #Fish-edit
+    gridPath: /Maps/_Sunrise/Shuttles/centcom_shuttle.yml
     priorityTag: DockCentComm
 
 - type: entity
@@ -34,7 +34,7 @@
   abstract: true
   components:
   - type: StationTransitHub
-    map: /Maps/_Sunrise/Nonstations/transit_hub.yml
+    map: /Maps/_Fish/Nonstations/transit_hub.yml # Fish-edit
     biomes:
     - PlainGrasslands
     - PlainLowDesert

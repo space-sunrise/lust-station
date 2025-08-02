@@ -38,7 +38,7 @@
   abstract: true
   components:
     - type: StationArrivals
-      shuttlePath: /Maps/_Sunrise/Shuttles/arrivals.yml # Sunrise-edit
+      shuttlePath: /Maps/_Fish/Shuttles/arrivals.yml # Fish-edit
 
 - type: entity
   id: BaseStationGateway
@@ -51,7 +51,7 @@
   abstract: true
   components:
     - type: SpawnGridAndDockToStation
-      gridPath: /Maps/_Sunrise/Shuttles/mining.yml
+      gridPath: /Maps/_Fish/Shuttles/mining.yml # Fish-edit
       priorityTag: DockMining
 #    - type: StationCargoShuttle
 #      path: /Maps/Shuttles/cargo.yml
