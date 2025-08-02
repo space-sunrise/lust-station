@@ -386,7 +386,7 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
                 announcementSound: stationShuttleComp.FailureAudio);
 
             // TODO: Need filter extensions or something don't blame me.
-            //_audio.PlayGlobal(stationShuttleComp.FailureAudio, Filter.Broadcast(), true);
+            _audio.PlayGlobal(stationShuttleComp.FailureAudio, Filter.Broadcast(), true); //Fish-edit
             return;
         }
 
@@ -440,13 +440,14 @@ public sealed partial class EmergencyShuttleSystem : EntitySystem
 
         // Play announcement audio.
 
-        // Sunrise-Edit
-        // var audioFile = result.ResultType == ShuttleDockResultType.NoDock
-        //     ? stationShuttleComp.NearbyAudio
-        //     : stationShuttleComp.DockedAudio;
-        //
+        //Fish-start
+        var audioFile = result.ResultType == ShuttleDockResultType.NoDock
+            ? stationShuttleComp.NearbyAudio
+            : stationShuttleComp.DockedAudio;
+
         // TODO: Need filter extensions or something don't blame me.
-        //_audio.PlayGlobal(audioFile, Filter.Broadcast(), true);
+        _audio.PlayGlobal(audioFile, Filter.Broadcast(), true);
+        //Fish-end
     }
 
     private void OnTransitHubInit(EntityUid uid, StationTransitHubComponent component, ComponentInit args) // Sunrise-Edit

@@ -106,7 +106,7 @@
   id: BaseUplinkNTERTBlueShield
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
-  suffix: 8BC, 10C, BlueShield
+  suffix: 9BC, 10C, BlueShield #Fish-edit
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite

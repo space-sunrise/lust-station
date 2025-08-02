@@ -56,7 +56,7 @@
       announcement: alert-level-sierra-announcement
       selectable: false
       sound:
-        path: /Audio/_Sunrise/Misc/siren.ogg # Sunrise-Edit
+        path: /Audio/_Fish/Misc/sierra.ogg # Sunrise-Edit
         params:
           volume: -2
       disableSelection: true

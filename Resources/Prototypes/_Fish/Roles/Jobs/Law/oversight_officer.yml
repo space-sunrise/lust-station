@@ -38,7 +38,7 @@
     eyes: ClothingEyesGlassesHiddenSecurity
     gloves: ClothingHandsGlovesColorWhite
     outerClothing: ClothingOuterArmorNTRGLeadOpened
-    id: NtrLeadGuardPDA
+    id: OversightOfficerPDA
     ears: ClothingHeadsetFishCentCom
     belt: BoxFolderCentComClipboard
     pocket1: WeaponEnergyGunPulseRevolver
@@ -47,3 +47,28 @@
     back:
     # - ClothingOuterHardsuitNTRG
     - CrowbarRed
+
+- type: entity
+  parent: NtrGuardPDA
+  id: OversightOfficerPDA
+  name: Oversight Officer's PDA
+  description: Oversight Officer's PDA
+  components:
+  - type: Pda
+    id: OversightOfficerIDCard
+
+- type: entity
+  parent: IDCardStandard
+  id: OversightOfficerIDCard
+  name: Oversight Officer ID card
+  description: Oversight Officer ID card
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: ntr-captain
+  - type: Item
+    heldPrefix: silver
+  - type: PresetIdCard
+    job: OversightOfficer

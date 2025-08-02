@@ -790,6 +790,10 @@ MagazineG36: null
 MagazineFamas: null
 # Sunrise migrations end
 
+# Fish migrations
+SpawnMechSecPodFilled: null # Не возвращать поды в игры by vinogradragden
+MechSecPod: null # Не возвращать поды в игры by vinogradragden
+# Fish migrations end
 # Lust migrations
 VendingMachineCoffeeMigrateUnderwear: VendingMachineUnderwear
 VendingMachineDonutMigrateKinko: VendingMachineKink

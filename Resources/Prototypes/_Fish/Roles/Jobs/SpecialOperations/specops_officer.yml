@@ -36,10 +36,34 @@
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesCombat
 #    outerClothing: ClothingOuterArmorBasicSlim
-    id: DeathsquadPDA
+    id: SpecOpsOfficerPDA
     ears: ClothingHeadsetFishCentCom
     belt: WeaponPistolN1984
   storage:
     back:
     - PenCentcom
     - BoxFolderBlack
+
+- type: entity
+  parent: CentcomPDA
+  id: SpecOpsOfficerPDA
+  suffix: Death Squad
+  components:
+  - type: Pda
+    id: SpecOpsOfficerIDCard
+  - type: Tag #  Ignore Chameleon tags
+    tags:
+    - DoorBumpOpener
+
+- type: entity
+  parent: IDCardStandard
+  id: SpecOpsOfficerIDCard
+  name: special operations officer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: centcom
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: SpecOpsOfficer

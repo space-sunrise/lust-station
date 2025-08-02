@@ -4,7 +4,7 @@
   components:
   - type: SpawnAdditionalGridsAndDockToStation
     spawns:
-    - gridPath: /Maps/_Sunrise/Shuttles/security.yml
+    - gridPath: /Maps/_Fish/Shuttles/security.yml
       priorityTag: DockFishSecurity
 
 - type: entity

@@ -1,0 +1,4 @@
+- files: ["shuttle_dock.ogg", "shuttlecalled.ogg", "shuttlerecalled.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "additionally edited by vinogradgarden; discord:Basia (437113799137427460); unknown authorship; additional commits from https://github.com/frosty-dev/ss14-amour/commit/0bd2ad5e389a28751db2ecb1b54d5ebef5b1d4fc"
+  source: "https://github.com/TauCetiStation/TauCetiClassic/pull/10207"

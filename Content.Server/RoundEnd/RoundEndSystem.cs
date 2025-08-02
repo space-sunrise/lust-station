@@ -21,6 +21,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Content.Shared.DeviceNetwork.Components;
+using Robust.Shared.Player; //Fish-edit
 using Timer = Robust.Shared.Timing.Timer;
 
 namespace Content.Server.RoundEnd
@@ -198,6 +199,8 @@ namespace Content.Server.RoundEnd
                 null,
                 colorOverride: Color.Gold); // Sunrise-TTS
 
+            _audio.PlayGlobal("/Audio/_Fish/Announcements/shuttlecalled.ogg", Filter.Broadcast(), true); //Fish-edit
+
             LastCountdownStart = _gameTiming.CurTime;
             ExpectedCountdownEnd = _gameTiming.CurTime + countdownTime;
 
@@ -252,7 +255,7 @@ namespace Content.Server.RoundEnd
             _chatSystem.DispatchGlobalAnnouncement(Loc.GetString("round-end-system-shuttle-recalled-announcement"),
                 Loc.GetString("round-end-system-shuttle-sender-announcement"), false, colorOverride: Color.Gold);
 
-            //_audio.PlayGlobal("/Audio/Announcements/shuttlerecalled.ogg", Filter.Broadcast(), true);
+            _audio.PlayGlobal("/Audio/_Fish/Announcements/shuttlerecalled.ogg", Filter.Broadcast(), true); //Fish-edit
 
             LastCountdownStart = null;
             ExpectedCountdownEnd = null;
