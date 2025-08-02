@@ -35,7 +35,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtElegantHos
   name: elegant HOS uniform
-  description: I AM MAN.
+  description: Someone actually paid for this...
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi

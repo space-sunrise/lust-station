@@ -1,2 +1,2 @@
-ent-ClothingUniformJumpskirtElegantHos = Elegant HoS uniform
+ent-ClothingUniformJumpskirtElegantHos = elegant HoS uniform
     .desc = Someone actually paid for this...

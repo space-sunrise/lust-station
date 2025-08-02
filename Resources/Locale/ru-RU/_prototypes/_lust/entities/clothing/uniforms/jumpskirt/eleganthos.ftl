@@ -1,2 +1,2 @@
-ent-ClothingUniformJumpskirtElegantHos = Элегантная форма ГСБ
+ent-ClothingUniformJumpskirtElegantHos = элегантная форма ГСБ
     .desc = А ведь кто-то за это заплатил...
