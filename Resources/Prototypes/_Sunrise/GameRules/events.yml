@@ -66,7 +66,6 @@
     entries:
     - id: MobPibbleVent
       prob: 0.03
-
 - type: entity
   parent: BaseGameRule
   id: AbductorsSpawn
@@ -78,7 +77,7 @@
     duration: 1
   - type: RuleGrids
   - type: LoadMapRule
-    gridPath: /Maps/_Sunrise/Shuttles/abductor_shuttle.yml
+    gridPath: /Maps/_Fish/Shuttles/abductor_shuttle.yml #Fish-edit
   - type: AntagObjectives
     objectives:
     - AbductObjective

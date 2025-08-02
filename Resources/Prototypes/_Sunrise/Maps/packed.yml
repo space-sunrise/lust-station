@@ -1,7 +1,11 @@
 - type: gameMap
   id: SunrisePacked
   mapName: 'Packed'
-  mapPath: /Maps/_Sunrise/Station/packed.yml
+  #Fish-start
+  mapPath: /Maps/_Fish/Station/packed.yml #Fish-edit
+  maxRandomOffset: 0
+  randomRotation: false
+  #Fish-end
   minPlayers: 0
   stations:
     Packed:
@@ -13,7 +17,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'VG'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/_Sunrise/Shuttles/emergency.yml
+          emergencyShuttlePath: /Maps/_Fish/Shuttles/emergency_packed.yml #Fish-edit
         - type: StationJobs
           availableJobs:
             #command
@@ -57,9 +61,9 @@
             HeadOfSecurity: [ 1, 1 ]
             Warden: [ 1, 1 ]
             SeniorOfficer: [ 1, 1 ]
-            Detective: [ 1, 1 ]
+            Detective: [ 2, 2 ] #Fish-edit
             Brigmedic: [ 2, 2 ]
-            SecurityPilot: [ 1, 1 ]
+            SecurityPilot: [ 2, 2 ] #Fish-edit
             SecurityOfficer: [ 4, 4 ]
             SecurityCadet: [ 3, 3 ]
             #supply
@@ -73,11 +77,13 @@
             Mime: [ 1, 1 ]
             Musician: [ 1, 1 ]
             #blueshield
-            # BlueShieldEnsign: [ 1, 1 ]
-            # BlueShieldOfficer: [ 5, 5 ]
+            BlueShieldEnsign: [ 1, 1 ] #Fish-edit
+            BlueShieldOfficer: [ 2, 2 ] #Fish-edit
+            RepresentativeBlueShield: [ 1, 1 ] #Fish-edit
             #law
             IAA: [ 1, 1 ]
             Lawyer: [ 3, 3 ]
+            NtrOfficer: [ 3, 3 ] #Fish-edit
             # silicon
             StationAi: [ 1, 1 ]
             Borg: [ 2, 2 ]
@@ -122,5 +128,4 @@
           - Furs
           - Crew
           - CleaningUp
-          #- VirusFlesh
-
+          - VirusFlesh #Fish-edit
