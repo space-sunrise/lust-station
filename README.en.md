@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="Space Station 14" width="650" src="https://i.postimg.cc/wBtLj7y3/323131321-3.png" />
+  <img alt="Space Station 14" height="128" src="https://fish.station.wiki.shizainc.com/media/fish-alt.png" />
 </p>
 
 <div class="header" align="center">
@@ -11,7 +11,7 @@
 [![GitHub](https://img.shields.io/github/stars/space-sunrise/space-station-14?style=social)](https://github.com/space-sunrise/lust-station)
 ![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/space-sunrise/sunrise-station?utm_source=oss&utm_medium=github&utm_camp aign=space-sunrise%2Fsunrise-station&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
-# Space Station 14 - SUNRISE
+# Space Station 14 — Fish Station
 
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/space-sunrise/lust-station)
 ![GitHub Issues](https://img.shields.io/github/issues/space-sunrise/lust-station)
