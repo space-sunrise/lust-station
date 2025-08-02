@@ -761,6 +761,7 @@ public sealed partial class ShuttleSystem
             _dockSystem.Dock((dockAUid, dockA), (dockBUid, dockB));
         }
 
+        // Sunrise-Start
         if (deletedTrash &&
             TryComp<FixturesComponent>(shuttle.Owner, out var fixtures) &&
             TryComp<MapGridComponent>(shuttle.Owner, out var shuttleGrid))
@@ -778,11 +779,14 @@ public sealed partial class ShuttleSystem
                 _mapManager.FindGridsIntersecting(shuttle.Comp.MapID, aabb, ref grids, includeMap: false);
                 foreach (var grid in grids)
                 {
-                    if (grid.Owner != config.TargetGrid && grid.Owner != shuttle.Owner)
-                        QueueDel(grid);
+                    if (grid.Owner == config.TargetGrid || grid.Owner == shuttle.Owner)
+                        continue;
+
+                    QueueDel(grid);
                 }
             }
         }
+        // Sunrise-End
     }
 
     /// <summary>
