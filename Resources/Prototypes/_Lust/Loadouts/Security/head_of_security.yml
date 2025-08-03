@@ -30,3 +30,14 @@
   id: HeadofSecurityCeremonialCloak
   equipment:
     neck: ClothingNeckCloakBattleHoS
+
+- type: loadout # Lust Station
+  id: HeadofSecurityJumpsuitElegant
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantHos
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobHeadOfSecurity
+      time: 360000 #100 hrs

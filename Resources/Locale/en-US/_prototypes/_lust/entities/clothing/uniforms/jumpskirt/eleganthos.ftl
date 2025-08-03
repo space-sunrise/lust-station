@@ -1,2 +1,2 @@
 ent-ClothingUniformJumpskirtElegantHos = elegant HoS uniform
-    .desc = Someone actually paid for this...
+    .desc = A stylized Security Service uniform that mixes protocol compliance with questionable coquetry.

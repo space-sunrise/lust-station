@@ -35,7 +35,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtElegantHos
   name: elegant HOS uniform
-  description: Someone actually paid for this...
+  description: A stylized Security Service uniform that mixes protocol compliance with questionable coquetry.
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
