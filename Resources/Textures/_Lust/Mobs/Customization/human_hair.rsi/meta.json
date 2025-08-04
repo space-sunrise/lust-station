@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "copyright": "lulpiopio",
+    "license": "CC-BY-SA-3.0",
+    "states": [
+      {
+        "name": "doublebun_long_not",
+        "directions": 4
+      },
+      {
+        "name": "bluntbungs5",
+        "directions": 4
+      },
+      {
+        "name": "bluntbungs6",
+        "directions": 4
+      },
+      {
+        "name": "bluntbungs7",
+        "directions": 4
+      }
+    ]
+  }
