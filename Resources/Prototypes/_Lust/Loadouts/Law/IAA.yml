@@ -19,7 +19,7 @@
 - type: loadout
   id: IAAsatchel
   equipment:
-    back: ClothingBackpackSatchelLeather
+    back: ClothingBackpackSatchelIAA
 
 #Neck
 - type: loadout
