@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Baked Muffin Mango created by VladSukr from Fish Station",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+        "name": "bakedmuffinmango"
+    }
+  ]
+}

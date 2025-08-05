@@ -1,0 +1,9 @@
+- type: flavor
+  id: mango
+  flavorType: Complex
+  description: flavor-complex-mango
+
+- type: flavor
+  id: oxygenmango
+  flavorType: Complex
+  description: flavor-complex-oxygenmango

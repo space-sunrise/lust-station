@@ -759,3 +759,16 @@
     whitelist:
       tags:
       - Ring
+
+#Fish-start
+- type: cargoBounty
+  id: BountyMango
+  reward: 10000
+  description: bounty-description-mangofish
+  entries:
+  - name: bounty-item-mangofish
+    amount: 7
+    whitelist:
+      tags:
+      - Mango
+#Fish-end

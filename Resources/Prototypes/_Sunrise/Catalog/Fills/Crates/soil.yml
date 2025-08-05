@@ -20,6 +20,7 @@
     - id: RiceSeeds
     - id: WatermelonSeeds
     - id: CherrySeeds
+    - id: MangoSeeds #Fish-add
 
 - type: entity
   parent: CrateHydroponics

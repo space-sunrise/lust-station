@@ -1,0 +1,122 @@
+- type: entity
+  name: mango croissant
+  parent: FoodBakedBase
+  id: FoodBakedMangoCroissant
+  description: Wonderful croissant with mango filling.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - butter
+      - mango
+  - type: Sprite
+    sprite: _Fish/Objects/Consumable/Food/Baked/croissantmango.rsi
+    state: croissantmango
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 13
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 7
+        - ReagentId: Butter
+          Quantity: 2
+        - ReagentId: Vitamin
+          Quantity: 4
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 0
+
+- type: entity
+  name: muffin mango
+  parent: FoodInjectableBase
+  id: FoodBakedMuffinMango
+  description: A delicious and spongy little cake.
+  components:
+  - type: Food
+    trash:
+    - FoodPlateMuffinTin
+  - type: Sprite
+    sprite: _Fish/Objects/Consumable/Food/Baked/muffinmango.rsi
+    state: bakedmuffinmango
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 14
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+        - ReagentId: Vitamin
+          Quantity: 4
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - mango
+  - type: Item
+    size: Tiny
+
+- type: entity
+  name: pancake with mango filling
+  parent: FoodBakedPancake
+  id: FoodBakedPancakeMango
+  description: Delicious pancakes with tender pieces of mango.
+  components:
+  - type: Stack
+    stackType: PancakeMa
+    layerStates:
+    - pancakesma1
+    - pancakesma2
+    - pancakesma3
+    - pancakesma4
+    - pancakesma5
+    - pancakesma6
+    - pancakesma7
+    - pancakesma8
+    - pancakesma9
+  - type: Sprite
+    state: pancakesma1
+    layers:
+    - state: pancakesma1
+      map: ["pancakesma1"]
+      visible: false
+    - state: pancakesma2
+      map: ["pancakesma2"]
+      visible: false
+    - state: pancakesma3
+      map: ["pancakesma3"]
+      visible: false
+    - state: pancakesma4
+      map: ["pancakesma4"]
+      visible: false
+    - state: pancakesma5
+      map: ["pancakesma5"]
+      visible: false
+    - state: pancakesma6
+      map: ["pancakesma6"]
+      visible: false
+    - state: pancakesma7
+      map: ["pancakesma7"]
+      visible: false
+    - state: pancakesma8
+      map: ["pancakesma8"]
+      visible: false
+    - state: pancakesma9
+      map: ["pancakesma9"]
+      visible: false
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 11
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 3
+  - type: FlavorProfile
+    flavors:
+      - mango
+  - type: Tag
+    tags:
+    - Pancake
+    - Fruit

@@ -148,3 +148,7 @@ seeds-coffee-arabica-name = coffee arabica
 seeds-coffee-arabica-display-name = coffee arabica plant
 seeds-coffee-robust-name = coffee robust
 seeds-coffee-robust-display-name = coffee robust plant
+seeds-mango-name = mango
+seeds-mango-display-name = mango tree
+seeds-oxygenmango-name = oxygen mango
+seeds-oxygenmango-display-name = oxygen mango tree

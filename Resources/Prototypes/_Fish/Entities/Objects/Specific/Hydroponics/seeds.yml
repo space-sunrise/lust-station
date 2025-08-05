@@ -1,0 +1,19 @@
+- type: entity
+  parent: SeedBase
+  name: packet of mango seeds
+  id: MangoSeeds
+  components:
+    - type: Seed
+      seedId: Mango
+    - type: Sprite
+      sprite: _Fish/Objects/Specific/Hydroponics/mango.rsi
+
+- type: entity
+  parent: SeedBase
+  name: packet of oxygen mango seeds
+  id: OxygenMangoSeeds
+  components:
+    - type: Seed
+      seedId: OxygenMango
+    - type: Sprite
+      sprite: _Fish/Objects/Specific/Hydroponics/oxygen_mango.rsi

@@ -1,0 +1,36 @@
+- type: microwaveMealRecipe
+  id: RecipeMangoCroissant
+  name: mango croissant recipe
+  result: FoodBakedMangoCroissant
+  time: 5
+  group: Dessert
+  solids:
+    FoodCroissantRaw: 1
+    FoodButterSlice: 1
+    FoodMango: 1
+
+- type: microwaveMealRecipe
+  id: RecipeMuffinMango
+  name: muffin mango recipe
+  result: FoodBakedMuffinMango
+  time: 15
+  group: Dessert
+  solids:
+    FoodPlateMuffinTin: 1
+    FoodDoughSlice: 1
+    FoodMango: 1
+  reagents:
+    Sugar: 10
+
+- type: microwaveMealRecipe
+  id: RecipeMangoPancake
+  name: mango pancakes recipe
+  result: FoodBakedPancakeMango
+  time: 5
+  group: Breakfast
+  reagents:
+    Flour: 5
+    Milk: 5
+    Egg: 6
+  solids:
+    FoodMango: 2

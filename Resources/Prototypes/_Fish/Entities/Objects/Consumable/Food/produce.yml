@@ -1,0 +1,67 @@
+- type: entity
+  name: mango
+  parent: FoodProduceBase
+  id: FoodMango
+  description: Mango mango mango mango!
+  components:
+  - type: FlavorProfile
+    flavors:
+      - mango
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 25
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 13
+        - ReagentId: Vitamin
+          Quantity: 5
+  - type: Sprite
+    sprite: _Fish/Objects/Specific/Hydroponics/mango.rsi
+  - type: Produce
+    seedId: Mango
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceMango
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+    - Mango
+
+- type: entity
+  name: oxygen mango
+  parent: [FoodProduceBase, ItemHeftyBase]
+  id: FoodOxygenMango
+  description: mango with iron and oxygen
+  components:
+  - type: FlavorProfile
+    flavors:
+      - oxygenmango
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 40
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 8
+        - ReagentId: Vitamin
+          Quantity: 4
+        - ReagentId: Dexalin
+          Quantity: 10
+        - ReagentId: Saline
+          Quantity: 10
+  - type: Sprite
+    sprite: _Fish/Objects/Specific/Hydroponics/oxygen_mango.rsi
+  - type: Produce
+    seedId: OxygenMango
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuiceMango
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+    - Mango

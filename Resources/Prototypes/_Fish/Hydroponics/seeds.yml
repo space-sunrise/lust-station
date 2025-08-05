@@ -1,0 +1,62 @@
+- type: seed
+  id: Mango
+  name: seeds-mango-name
+  noun: seeds-noun-seeds
+  displayName: seeds-mango-display-name
+  plantRsi: _Fish/Objects/Specific/Hydroponics/mango.rsi
+  packetPrototype: MangoSeeds
+  productPrototypes:
+    - FoodMango
+  mutationPrototypes:
+    - OxygenMango
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 3
+  potency: 10
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 3
+      Max: 13
+      PotencyDivisor: 15
+    Vitamin:
+      Min: 2
+      Max: 6
+      PotencyDivisor: 25
+
+- type: seed
+  id: OxygenMango
+  name: seeds-mango-name
+  noun: seeds-noun-seeds
+  displayName: seeds-oxygenmango-display-name
+  plantRsi: _Fish/Objects/Specific/Hydroponics/oxygen_mango.rsi
+  packetPrototype: OxygenMangoSeeds
+  productPrototypes:
+    - FoodOxygenMango
+  harvestRepeat: Repeat
+  lifespan: 50
+  maturation: 6
+  production: 6
+  yield: 3
+  potency: 10
+  idealLight: 6
+  chemicals:
+    Nutriment:
+      Min: 1
+      Max: 8
+      PotencyDivisor: 15
+    Vitamin:
+      Min: 1
+      Max: 4
+      PotencyDivisor: 15
+    Dexalin:
+      Min: 4
+      Max: 10
+      PotencyDivisor: 15
+    Saline:
+      Min: 4
+      Max: 10
+      PotencyDivisor: 15
+

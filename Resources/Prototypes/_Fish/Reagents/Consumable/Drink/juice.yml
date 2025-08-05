@@ -1,0 +1,9 @@
+- type: reagent
+  id: JuiceMango
+  name: reagent-name-juice-mango
+  parent: BaseJuice
+  desc: reagent-desc-juice-mango
+  physicalDesc: reagent-physical-desc-crisp
+  flavor: mango
+  color: "#f17e31"
+  recognizable: true
