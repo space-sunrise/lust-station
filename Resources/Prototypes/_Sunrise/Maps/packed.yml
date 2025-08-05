@@ -17,7 +17,7 @@
             !type:NanotrasenNameGenerator
             prefixCreator: 'VG'
         - type: StationEmergencyShuttle
-          emergencyShuttlePath: /Maps/_Fish/Shuttles/emergency_packed.yml #Fish-edit
+          emergencyShuttlePath: /Maps/_Fish/Shuttles/emergency.yml #Fish-edit
         - type: StationJobs
           availableJobs:
             #command
