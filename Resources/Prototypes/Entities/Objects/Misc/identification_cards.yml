@@ -489,7 +489,7 @@
   - type: Item
     heldPrefix: blue
   - type: PresetIdCard
-    job: CentCommOfficial # Sunrise-Edit
+    job: CentCommOfficer #Fish-edit
 
 - type: entity  # Sunrise-Start
   parent: IDCardStandard
