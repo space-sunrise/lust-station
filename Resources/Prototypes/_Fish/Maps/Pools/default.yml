@@ -3,10 +3,10 @@
 - type: gameMapPool
   id: SunriseMapPool
   maps:
-  - SunriseDelta
+  - SunriseDelta #Fish-edit
   #- SunrisePlasma # Прибытие стыкуется лишь 1 доком с доступом командования. Эвак стыкуется лишь 2 доками.
   #- SunriseBox # Прибытие не стыкуется, эвак стыкуется лишь 1 доком.
-  #- SunriseBarratry # Прибытие не стыкуется. Эвак залазит в станцию.
+  - SunriseBarratry #Fish-edit
   - SunriseFland #Fish-edit
   - SunrisePacked #Fish-edit
   #- SunriseMarathon # Прибытие не стыкуется. Эвак залазит в станцию.
