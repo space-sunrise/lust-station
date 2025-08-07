@@ -1,7 +1,7 @@
 using System.Numerics;
 using Content.Server.Chat.Systems;
 using Content.Server.Fluids.EntitySystems;
-using Content.Shared._Sunrise.Aphrodesiac;
+using Content.Shared._Sunrise.Aphrodisiac;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
