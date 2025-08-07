@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Fail if we are attempting to run on the stable branch
-      if: ${{GITHUB.REF_NAME == 'stable'}}
+    - name: Fail if not on master branch
+      if: ${{GITHUB.REF_NAME != 'master'}}
       run: exit 1
 
     - name: Set up Python
