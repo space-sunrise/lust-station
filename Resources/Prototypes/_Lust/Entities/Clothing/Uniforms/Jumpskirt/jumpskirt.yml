@@ -30,3 +30,14 @@
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/whitelawyerskirt.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtElegantHos
+  name: elegant HOS uniform
+  description: A stylized Security Service uniform that mixes protocol compliance with questionable coquetry.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
