@@ -362,10 +362,7 @@
   groups:
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-#Lust-Start
-  - QilluRepresentativeBackpack
-  - QilluRepresentativeNeck
-#Lust-End
+  - CommonBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool

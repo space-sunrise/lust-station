@@ -25,14 +25,14 @@
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/security_cloak.rsi
 
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckQilluCloak
-  name: special Qillu cloak
-  description: A purple cloak given to the most loyal employees of the corporation.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Neck/Cloaks/qillu_cloak.rsi
+# - type: entity
+#   parent: ClothingNeckBase
+#   id: ClothingNeckQilluCloak
+#   name: special Qillu cloak
+#   description: A purple cloak given to the most loyal employees of the corporation.
+#   components:
+#   - type: Sprite
+#     sprite: _Lust/Clothing/Neck/Cloaks/qillu_cloak.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -133,14 +133,14 @@
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/blackcapmantle.rsi
 
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckCloakBlackCapCeremonial
-  name: black captain ceremonial cloak
-  description: A large raincoat with the qillu logo on the back.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Neck/Cloaks/blackcapql.rsi
+# - type: entity
+#   parent: ClothingNeckBase
+#   id: ClothingNeckCloakBlackCapCeremonial
+#   name: black captain ceremonial cloak
+#   description: A large raincoat with the qillu logo on the back.
+#   components:
+#   - type: Sprite
+#     sprite: _Lust/Clothing/Neck/Cloaks/blackcapql.rsi
 
 - type: entity
   parent: ClothingNeckBase
@@ -160,14 +160,14 @@
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/IAAmantle.rsi
 
-- type: entity
-  parent: ClothingNeckBase
-  id: ClothingNeckCloakPQCloak
-  name: PQ cloak
-  description: An impressive cape with the Qillu logo.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Neck/Cloaks/PQcloak.rsi
+# - type: entity
+#   parent: ClothingNeckBase
+#   id: ClothingNeckCloakPQCloak
+#   name: PQ cloak
+#   description: An impressive cape with the Qillu logo.
+#   components:
+#   - type: Sprite
+#     sprite: _Lust/Clothing/Neck/Cloaks/PQcloak.rsi
 
 - type: entity
   parent: ClothingNeckBase

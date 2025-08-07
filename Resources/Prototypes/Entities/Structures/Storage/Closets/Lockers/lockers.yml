@@ -690,11 +690,11 @@
   parent: LockerBaseSecure
   components:
   - type: Sprite
-    sprite: _Lust/Structures/Storage/closet.rsi #Lust-edit
+    sprite: Structures/Storage/closet.rsi
   - type: Appearance
   - type: AccessReader
     access: [["Ntrep"]]
   - type: EntityStorageVisuals
     stateBaseClosed: hop
     stateDoorOpen: hop_open
-    stateDoorClosed: representative_doorqillu #Lust-edit
+    stateDoorClosed: representative_door

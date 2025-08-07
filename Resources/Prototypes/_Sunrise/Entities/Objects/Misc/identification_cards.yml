@@ -108,7 +108,7 @@
   name: prisoner ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi  #Lust-edit
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
     layers:
     - state: prisoner-space-prison
     - state: idprisoner-space-prison
@@ -188,7 +188,7 @@
   description: Adjutant ID card.
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi #Lust-edit
+    sprite: _Sunrise/Objects/Misc/id_cards.rsi
     layers:
     - state: default
     - state: idadjutant

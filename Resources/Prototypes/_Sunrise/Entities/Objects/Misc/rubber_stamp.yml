@@ -34,7 +34,7 @@
   components:
   - type: Stamp
     stampedName: stamp-component-stamped-name-ntrep
-    stampedColor: "#E000E0" #lust_Station-edit
+    stampedColor: "#e0b116"
     stampState: "paper_stamp-ntrep"
   - type: Sprite
     sprite: _Sunrise/Objects/Misc/stamps.rsi

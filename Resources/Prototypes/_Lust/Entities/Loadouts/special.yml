@@ -1,9 +1,9 @@
-﻿# Neck
-- type: loadout
-  id: QilluCloak
-  sponsorOnly: true
-  equipment:
-    neck: ClothingNeckQilluCloak
+﻿# # Neck
+# - type: loadout
+#   id: QilluCloak
+#   sponsorOnly: true
+#   equipment:
+#     neck: ClothingNeckQilluCloak
 
 # Other stuff
 

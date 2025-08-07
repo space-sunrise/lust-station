@@ -1,21 +1,21 @@
-﻿- type: loadout
-  id: QilluRepresentativeCoat
-  equipment:
-    outerClothing: ClothingOuterCoatPQCoat
+﻿# - type: loadout
+#   id: QilluRepresentativeCoat
+#   equipment:
+#     outerClothing: ClothingOuterCoatPQCoat
 
-#Neck
-- type: loadout
-  id: QilluRepresentativeCloak
-  equipment:
-    neck: ClothingNeckCloakPQCloak
+# #Neck
+# - type: loadout
+#   id: QilluRepresentativeCloak
+#   equipment:
+#     neck: ClothingNeckCloakPQCloak
 
-- type: loadout
-  id: QilluRepresentativeMantle
-  equipment:
-    neck: ClothingNeckCloakPQMantle
+# - type: loadout
+#   id: QilluRepresentativeMantle
+#   equipment:
+#     neck: ClothingNeckCloakPQMantle
 
-#Backpack
-- type: loadout
-  id: QilluRepresentativeSatchel
-  equipment:
-    back: ClothingBackpackSatchelLeather
+# #Backpack
+# - type: loadout
+#   id: QilluRepresentativeSatchel
+#   equipment:
+#     back: ClothingBackpackSatchelLeather

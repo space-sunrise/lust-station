@@ -802,9 +802,9 @@ SpawnMechSecPodFilled: null
 # Lust migrations
 VendingMachineCoffeeMigrateUnderwear: VendingMachineUnderwear
 VendingMachineDonutMigrateKinko: VendingMachineKink
-SignNanotrasen1: null
-SignNanotrasen2: SignQillu1
-SignNanotrasen3: SignQillu2
-SignNanotrasen4: SignQillu3
-SignNanotrasen5: null
-toyhandcuff: ToyHandcuffs
+# SignNanotrasen1: null
+# SignNanotrasen2: SignQillu1
+# SignNanotrasen3: SignQillu2
+# SignNanotrasen4: SignQillu3
+# SignNanotrasen5: null
+# toyhandcuff: ToyHandcuffs

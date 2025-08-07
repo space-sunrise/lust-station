@@ -436,11 +436,11 @@
   description: Specially designed to inflict maximum psychological damage to Syndicate operatives.
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Fun/balloon.rsi # Lust-edit
+    sprite: Objects/Fun/balloon.rsi
     state: ntb
   - type: Item
     size: Small
-    sprite: _Lust/Objects/Fun/balloon.rsi # Lust-edit
+    sprite: Objects/Fun/balloon.rsi
     heldPrefix: ntb
   - type: Damageable
     damageContainer: Inorganic
