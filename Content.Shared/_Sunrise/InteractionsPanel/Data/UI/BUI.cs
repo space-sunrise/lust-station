@@ -75,7 +75,7 @@ public sealed class CustomInteractionData
 public sealed class InteractionsCVars
 {
     public static readonly CVarDef<bool> EmoteVisibility =
-        CVarDef.Create("interactions.emote", true, CVar.CLIENTONLY);
+        CVarDef.Create("interactions.emote", true, CVar.CLIENT);
 
     public static readonly CVarDef<bool> Expand =
         CVarDef.Create("interactions.expand", false, CVar.CLIENTONLY);
