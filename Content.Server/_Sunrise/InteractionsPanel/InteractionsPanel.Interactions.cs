@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server._Sunrise.PlayerCache;
 using Content.Server.Chat.Systems;
 using Content.Server.Fluids.EntitySystems;
 using Content.Shared._Sunrise.Aphrodisiac;
@@ -17,6 +18,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 
@@ -24,6 +26,7 @@ namespace Content.Server._Sunrise.InteractionsPanel;
 
 public partial class InteractionsPanel
 {
+    [Dependency] private readonly PlayerCacheManager _playerCacheManager = default!;
     [Dependency] private readonly PuddleSystem _puddle = default!;
 
     private const float LoveDecayRate = 0.5f;
@@ -198,8 +201,8 @@ public partial class InteractionsPanel
         if (!CheckAllAppearConditions(interactionPrototype, ent.Owner, target.Value))
             return;
 
-        var userPref = _netConfigManager.GetClientCVar(userSession.Channel, InteractionsCVars.EmoteVisibility);
-        var targetPref = !targetIsPlayer || _netConfigManager.GetClientCVar(targetSession!.Channel, InteractionsCVars.EmoteVisibility);
+        var userPref = _playerCacheManager.GetEmoteVisibility(userSession.UserId);
+        var targetPref = _playerCacheManager.GetEmoteVisibility(targetIsPlayer ? targetSession!.UserId : null);
 
         var rawMsg = _random.Pick(interactionPrototype.InteractionMessages);
         var msg = FormatInteractionMessage(rawMsg, ent.Owner, target.Value);
@@ -373,8 +376,8 @@ public partial class InteractionsPanel
         ICommonSession? targetSession,
         bool targetIsPlayer)
     {
-        var userPref = _netConfigManager.GetClientCVar(userSession.Channel, InteractionsCVars.EmoteVisibility);
-        var targetPref = !targetIsPlayer || _netConfigManager.GetClientCVar(targetSession!.Channel, InteractionsCVars.EmoteVisibility);
+        var userPref = _playerCacheManager.GetEmoteVisibility(userSession.UserId);
+        var targetPref = _playerCacheManager.GetEmoteVisibility(targetIsPlayer ? targetSession!.UserId : null);
 
         var msg = FormatInteractionMessage(data.InteractionMessage, user, target);
 

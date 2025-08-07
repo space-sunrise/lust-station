@@ -1,4 +1,5 @@
 using Robust.Shared.Configuration;
+using Robust.Shared.Network;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared._Sunrise.InteractionsPanel.Data.UI;
@@ -80,7 +81,7 @@ public sealed class CustomInteractionData
 public sealed class InteractionsCVars
 {
     public static readonly CVarDef<bool> EmoteVisibility =
-        CVarDef.Create("interactions.emote", true, CVar.CLIENT);
+        CVarDef.Create("interactions.emote", true, CVar.CLIENTONLY);
 
     public static readonly CVarDef<bool> Expand =
         CVarDef.Create("interactions.expand", false, CVar.CLIENTONLY);
