@@ -793,6 +793,7 @@ MagazineFamas: null
 BaseUplinkNTERT75BC: null
 BaseUplinkNTERT100BC: null
 BaseUplinkNTERT200BC: null
+SupermatterSliver: null
 # Удалить только когда все карты будут обновлены под их удаление
 #AtmosDeviceFanTiny: null
 #AtmosDeviceFanDirectional: null
