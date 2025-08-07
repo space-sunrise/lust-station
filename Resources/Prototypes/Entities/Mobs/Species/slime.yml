@@ -64,6 +64,7 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+      Futanari: FemaleSlime # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime

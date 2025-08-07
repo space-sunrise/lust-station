@@ -44,6 +44,7 @@
       Male: MaleFelinid
       Female: FemaleFelinid
       Unsexed: MaleFelinid
+      Futanari: FemaleFelinid # Lust-edit
   - type: Temperature
     heatDamageThreshold: 400
     coldDamageThreshold: 200
