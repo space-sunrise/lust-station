@@ -1,10 +1,17 @@
-﻿- type: loadout # Lust Station
+﻿# Neck
+- type: loadout
   id: HosSpecialCloak
   sponsorOnly: true
   equipment:
     neck: ClothingNeckHosSpecialCloak
 
-- type: loadout # Lust Station
+- type: loadout
+  id: HeadofSecurityCeremonialCloak
+  equipment:
+    neck: ClothingNeckCloakBattleHoS
+
+# Belt
+- type: loadout
   id: SecuritySheathBelt
   sponsorOnly: true
   equipment:
@@ -16,6 +23,7 @@
   equipment:
     back: ClothingBackpackBattleHoSPack
 
+# Back
 - type: loadout
   id: HeadofSecurityDuffel
   equipment:
@@ -26,12 +34,8 @@
   equipment:
     back: ClothingBackpackSatchelBattleHoSSat
 
+# Suit
 - type: loadout
-  id: HeadofSecurityCeremonialCloak
-  equipment:
-    neck: ClothingNeckCloakBattleHoS
-
-- type: loadout # Lust Station
   id: HeadofSecurityJumpsuitElegant
   equipment:
     jumpsuit: ClothingUniformJumpskirtElegantHos
