@@ -36,7 +36,7 @@ def main():
     engine_version = get_engine_version() or "Не указано"
     build_hash = VERSION or "Не указано"
 
-    content = f"<@&{DISCORD_ROLE_ID}> Новый билд сервера!\n"
+    content = f"<@&{DISCORD_ROLE_ID}> Сервер был обновлен!\n"
     embed = {
         "title": "Обновление сервера",
         "fields": [
