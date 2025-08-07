@@ -21,6 +21,9 @@ jobs:
       with:
         python-version: '3.x'
 
+    - name: Install Dependencies
+      run: pip install pyyaml requests
+
     - uses: actions/checkout@v4.2.2
       with:
         submodules: 'recursive'
