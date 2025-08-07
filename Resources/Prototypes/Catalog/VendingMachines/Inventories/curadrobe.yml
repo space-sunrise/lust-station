@@ -15,9 +15,7 @@
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetService: 2
     PrinterDocFlatpack: 2
-    # Sunrise start
-    LibrarianPointer: 2
-    # Sunrise end
+    LibrarianPointer: 2 # Lust-add
   contrabandInventory:
     ToyFigurineLibrarian: 1
 
