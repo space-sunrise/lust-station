@@ -6,6 +6,8 @@
   name: revenant
   description: A spooky ghostie.
   components:
+  - type: Emag
+    emagType: All
   # Sunrise edit start
   - type: GhostPanelAntagonistMarker
     name: ghost-panel-antagonist-revenant-name
@@ -24,7 +26,6 @@
     - state: active
   - type: StatusEffects
     allowed:
-    - Stun
     - Corporeal
   - type: Damageable
     damageContainer: ManifestedSpirit
@@ -87,10 +88,12 @@
   - type: Reactive
     groups:
       Acidic: [Touch]
-  # Sunrise-start
   - type: Tag
     tags:
-    - NoPaint
+    - SlowImmune
+    - KnockdownImmune
+    - NoPaint # Sunrise-Edit
+  # Sunrise-start
   - type: TTS
     voice: HermaeusMora
   - type: Electrified
