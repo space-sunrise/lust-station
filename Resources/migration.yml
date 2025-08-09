@@ -787,7 +787,6 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
-# SL HITSCAN START
 BoxMagazineRifle: BoxMagazineRifleSP
 MagazineBoxLightRifle: MagazineBoxLightRifleSP
 MagazineBoxPistol: MagazineBoxPistolSP
@@ -799,5 +798,4 @@ MagazineBoxMagnum: MagazineBoxMagnumSP
 SpeedLoaderMagnum: SpeedLoaderMagnumSP
 MagazineBoxRifle: MagazineBoxRifleSP
 BaseCartridgeLightRifle: BaseCartridgeLightRifleSP
-# SL HITSCAN END
 # Sunrise-End
