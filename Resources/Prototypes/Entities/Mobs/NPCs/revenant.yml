@@ -61,10 +61,10 @@
       - EmaggableMedibot
       # borg become killer
       - EmagSiliconLaw
-  - type: PointLight
-    color: MediumPurple
-    radius: 2
-    softness: 1
+#  - type: PointLight
+#    color: MediumPurple
+#    radius: 2
+#    softness: 1
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
@@ -93,12 +93,11 @@
     - NoPaint
   - type: TTS
     voice: HermaeusMora
-  # Sunrise-end
-  # Sunrise-start
   - type: Electrified
     onHandInteract: false
     onInteractUsing: false
     onBump: false
     requirePower: false
     shockDamage: 30
+  - type: ToggleableNightVision
   # Sunrise-end
