@@ -10,3 +10,7 @@ ent-ClothingOuterCoatWhiteCap = captain's white jacket
     .desc = Captain's formal jacket, inlaid with gold.
 ent-ClothingOuterCoatBlackCap = captain's black jacket
     .desc = Captain's formal jacket, inlaid with gold.
+ent-ClothingOuterHoSTrenchElegant = Элегантный тренч ГСБ
+    .desc = Простой и удобный легкобронированный тренч ГСБ с золотыми нашивками.
+ent-ClothingOuterHoSTrenchElegantOpened = Элегантный тренч ГСБ
+    .desc = Простой и удобный легкобронированный тренч ГСБ с золотыми нашивками.
