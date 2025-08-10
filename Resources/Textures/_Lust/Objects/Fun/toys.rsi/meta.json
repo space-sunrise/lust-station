@@ -68,7 +68,10 @@
       "name": "franz-evans"
     },
     {
-      "name": "arelitt-varmolnd"
+        "name": "arelitt-varmolnd"
+    },
+    {
+        "name": "moleron-kucenko"
     },
     {
       "name": "blizz-inhand-right",
@@ -110,7 +113,19 @@
       "name": "ulava-britz"
     },
     {
-      "name": "sophiekomissarova"
+        "name": "sophiekomissarova"
+    },
+    {
+        "name": "moleron-equipped-HELMET",
+        "directions": 4
+    },
+    {
+        "name": "moleron-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "moleron-inhand-right",
+        "directions": 4
     }
   ]
 }
