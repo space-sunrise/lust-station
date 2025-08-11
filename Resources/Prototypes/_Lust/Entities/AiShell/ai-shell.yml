@@ -1,0 +1,15 @@
+# ЭТО ПРОСТО ЗАГЛУШКА ДЛЯ ТЕСТИРОВАНИЯ
+- type: entity
+  id: AiShell
+  name: AI Shell
+  components:
+    - type: AiShell
+    - type: Sprite
+      sprite: Mobs/Ghosts/ghost_human.rsi
+      state: "animated"
+    - type: InputMover
+    - type: MobMover
+    - type: Physics
+    - type: MovementSpeedModifier
+      baseSpeed: 4
+      sprintSpeed: 6
