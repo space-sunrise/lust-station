@@ -5,9 +5,9 @@
   description:
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/OuterClothing/Coat/hos_coat_elegant.rsi
+    sprite: _Lust/Clothing/OuterClothing/Coat/hos_trench_elegant.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/OuterClothing/Coat/hos_coat_elegant.rsi
+    sprite: _Lust/Clothing/OuterClothing/Coat/hos_trench_elegant.rsi
   - type: Armor
     modifiers:
       coefficients:
