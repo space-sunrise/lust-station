@@ -29,12 +29,7 @@
 - type: startingGear
   id: ComMaidGear
   equipment:
-    jumpsuit: ClothingUniformJumpskirtElegantMaid
-    neck: BunnyButterfly
-    head: ClothingHeadNurseHat
     eyes: ClothingEyesGlassesSunglasses
-    gloves: ClothingHandsCatPawsWhite
-    shoes: BunnyShoesFilled
     back: ClothingBackpackSatchelLeather
     id: CommaidPDA
     ears: ClothingHeadsetCommaid
