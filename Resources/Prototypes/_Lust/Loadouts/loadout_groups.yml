@@ -56,8 +56,8 @@
   id: ComMaidHead
   name: loadout-group-commaid-head
   loadouts:
-  - ComMaidHurseHat
-  - ComMaidBonnyEars
+  - ComMaidNurseHat
+  - ComMaidBunnyEars
   - ComMaidTacticalHeadband
 
 - type: loadoutGroup

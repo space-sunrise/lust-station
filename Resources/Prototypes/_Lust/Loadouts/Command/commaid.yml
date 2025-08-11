@@ -34,12 +34,12 @@
 
 # Head
 - type: loadout
-  id: ComMaidHurseHat
+  id: ComMaidNurseHat
   equipment:
     head: ClothingHeadNurseHat
 
 - type: loadout
-  id: ComMaidBonnyEars
+  id: ComMaidBunnyEars
   equipment:
     head: BunnyEars
 
