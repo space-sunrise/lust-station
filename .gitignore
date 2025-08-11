@@ -307,3 +307,7 @@ Resources/MapImages
 # Direnv stuff
 .direnv/
 .idea/
+
+# My own
+runclient-Release.bat
+runserver-Release.bat
