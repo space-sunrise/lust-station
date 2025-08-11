@@ -1,15 +1,37 @@
-# ЭТО ПРОСТО ЗАГЛУШКА ДЛЯ ТЕСТИРОВАНИЯ
+# Частично готовый вариант
 - type: entity
   id: AiShell
   name: AI Shell
+  description: Temporary mobile shell for the station AI.
   components:
     - type: AiShell
     - type: Sprite
-      sprite: Mobs/Ghosts/ghost_human.rsi
-      state: "animated"
+      sprite: Mobs/Ghosts/ghost_human.rsi # ура СПРИТЕ очень НУЖЕН
+      state: animated
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      bodyType: Dynamic
+      fixedRotation: true
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 80
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
     - type: InputMover
     - type: MobMover
-    - type: Physics
     - type: MovementSpeedModifier
-      baseSpeed: 4
-      sprintSpeed: 6
+      baseSpeed: 4.5
+      sprintSpeed: 5.5
+    - type: Eye
+    - type: Examiner
+    - type: MobState
+    - type: StandingState
+    - type: Body
+      prototype: Human

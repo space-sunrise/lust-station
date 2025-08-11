@@ -208,6 +208,9 @@
   - type: ApcPowerReceiver
     powerLoad: 1000
   - type: StationAiCore
+  # Sunrise-add
+  - type: AiShellVerb
+  # Sunrise-add
   - type: StationAiVision
   - type: InteractionOutline
   - type: Sprite
