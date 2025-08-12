@@ -8,7 +8,7 @@
     },
     "states": [
         {
-            "name": "suit-equipped-INNERCLOTHING",
+            "name": "suit-equipped-OUTERCLOTHING",
             "directions": 4
         },
         {

@@ -1,0 +1,49 @@
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformBDSMcutout
+  name: BDSM costume with cutouts
+  description: latex suit for tea parties.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+    slots:
+    - OUTERCLOTHING
+  - type: Tag
+    tags:
+     - WhitelistChameleon
+     - ClothMade
+     - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBDSMzip
+  name: BDSM costume with zip
+  description: latex suit for tough men.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    state: suit
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    equippedPrefix: suit
+    slots:
+      - OUTERCLOTHING
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadBDSMMask
+
+- type: entity
+  parent: Clothing
+  id: ClothingHeadBDSMMask
+  name: BDSM mask with zipper
+  description: latex suit for tough men.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    state: mask
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    equippedPrefix: mask
+
+ 
