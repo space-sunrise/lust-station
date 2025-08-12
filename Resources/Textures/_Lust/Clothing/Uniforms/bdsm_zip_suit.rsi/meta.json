@@ -1,0 +1,33 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "sprites by discord - ghostea404",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "suit-equipped-INNERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "suit-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "suit-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "mask-equipped-HEAD",
+            "directions": 4
+        },
+        {
+            "name": "mask"
+        },
+        {
+            "name": "suit"
+        }
+    ]
+}

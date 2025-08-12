@@ -1,0 +1,42 @@
+- type: entity
+  parent: ClothingHeadHatHoodWinterBase
+  id: BDSMSuitHatHood
+  categories: [ HideSpawnMenu ]
+  name: bdsm suit hood
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+    state: mask
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+    state: mask
+  - type: TemperatureProtection
+    heatingCoefficient: 0
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBDSMcutout
+  name: BDSM costume with cutouts
+  description: latex suit for tea parties.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - NudeFull
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformBDSMzip
+  name: BDSM costume with zip
+  description: latex suit for tough men.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    state: suit
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: ToggleableClothing
+    clothingPrototype: BDSMSuitHatHood
+    slot: head
+ 
