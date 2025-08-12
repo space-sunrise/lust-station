@@ -21,7 +21,6 @@ public sealed partial class LimbSystem : SharedLimbSystem
     [Dependency] private readonly ContainerSystem _containers = default!;
     [Dependency] private readonly BodySystem _body = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly HumanoidAppearanceSystem _humanoidAppearanceSystem = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly IPrototypeManager _prototype = default!;

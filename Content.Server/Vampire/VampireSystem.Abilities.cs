@@ -1,7 +1,6 @@
 using Content.Server.Bible.Components;
 using Content.Server.Body.Components;
 using Content.Server.Flash;
-using Content.Server.Flash.Components;
 using Content.Server.Speech.Components;
 using Content.Server.Storage.Components;
 using Content.Server.Objectives.Components;
@@ -32,6 +31,8 @@ using Robust.Shared.Containers;
 using Robust.Shared.Utility;
 using System.Collections.Frozen;
 using System.Diagnostics.CodeAnalysis;
+using Content.Shared.Flash;
+using Content.Shared.Flash.Components;
 
 namespace Content.Server.Vampire;
 
@@ -393,7 +394,7 @@ public sealed partial class VampireSystem
 
             if (HasComp<HumanoidAppearanceComponent>(entity))
             {
-                _stun.TryParalyze(entity, duration ?? TimeSpan.FromSeconds(3), false);
+                _stun.TryAddParalyzeDuration(entity, duration ?? TimeSpan.FromSeconds(3));
                 _chat.TryEmoteWithoutChat(entity, _prototypeManager.Index<EmotePrototype>(VampireComponent.ScreamEmoteProto), true);
             }
 
@@ -414,14 +415,14 @@ public sealed partial class VampireSystem
 
         if (HasComp<BibleUserComponent>(target))
         {
-            _stun.TryParalyze(vampire, duration ?? TimeSpan.FromSeconds(3), true);
+            _stun.TryAddParalyzeDuration(vampire, duration ?? TimeSpan.FromSeconds(3));
             _chat.TryEmoteWithoutChat(vampire.Owner, _prototypeManager.Index<EmotePrototype>(VampireComponent.ScreamEmoteProto), true);
             if (damage != null)
                 _damageableSystem.TryChangeDamage(vampire.Owner, damage);
             return;
         }
 
-        _stun.TryParalyze(target.Value, duration ?? TimeSpan.FromSeconds(3), true);
+        _stun.TryAddParalyzeDuration(target.Value, duration ?? TimeSpan.FromSeconds(3));
     }
     private void PolymorphSelf(Entity<VampireComponent> vampire, string? polymorphTarget)
     {
@@ -532,7 +533,7 @@ public sealed partial class VampireSystem
             return false;
 
         var attempt = new FlashAttemptEvent(target.Value, vampire.Owner, vampire.Owner);
-        RaiseLocalEvent(target.Value, attempt, true);
+        RaiseLocalEvent(target.Value, ref attempt, true);
 
         if (attempt.Cancelled)
             return false;

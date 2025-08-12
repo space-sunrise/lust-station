@@ -8,6 +8,7 @@ using Content.Shared.FixedPoint;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared._Starlight.Actions.Stasis;
+using Content.Shared.Body.Components;
 using Robust.Shared.Player;
 
 namespace Content.Server._Starlight.Actions.Stasis;
