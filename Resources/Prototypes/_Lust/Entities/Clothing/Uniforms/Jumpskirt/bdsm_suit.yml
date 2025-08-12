@@ -1,46 +1,55 @@
 - type: entity
-  parent: ClothingHeadHatHoodWinterBase
-  id: BDSMSuitHatHood
-  categories: [ HideSpawnMenu ]
-  name: bdsm suit hood
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
-    state: mask
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
-    state: mask
-  - type: TemperatureProtection
-    heatingCoefficient: 0
-- type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
   id: ClothingUniformBDSMcutout
-  name: BDSM costume with cutouts
+  name: bdsm costume with cutouts
   description: latex suit for tea parties.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_cutout_suit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadBDSMMask
+    slot: head
+  - type: ContainerContainer
   - type: Tag
     tags:
     - WhitelistChameleon
+    - ClothMade
     - NudeFull
+
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
   id: ClothingUniformBDSMzip
-  name: BDSM costume with zip
-  description: latex suit for tough men.
+  name: bdsm costume with closure
+  description: Latex suit for tough men.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
     state: suit
   - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpskirt/eroticred.rsi
-    state: suit
-    slot: INNERCLOTHING
-  - type: Tag
-    tags:
-    - WhitelistChameleon
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    equippedPrefix: suit
   - type: ToggleableClothing
-    clothingPrototype: BDSMSuitHatHood
+    clothingPrototype: ClothingHeadBDSMMask
     slot: head
+  - type: ContainerContainer
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadBDSMMask
+  name: bdsm mask with closure
+  description: An integral part of a latex suit for tough men. 
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    state: mask
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
+    equippedPrefix: mask
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - HeadTop
+    - HeadSide
  
