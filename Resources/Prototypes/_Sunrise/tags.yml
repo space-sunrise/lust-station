@@ -374,6 +374,9 @@
   id: CarpRiftHealTarget
 
 - type: Tag
+  id: SheetOfficePaper
+
+- type: Tag
   id: SheetPaper
 
 - type: Tag
@@ -450,3 +453,9 @@
   id: TopCovered
 
 ### INTERACTION TAGS ###
+
+- type: Tag
+  id: SnapPop
+
+- type: Tag
+  id: Table

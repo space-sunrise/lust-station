@@ -26,6 +26,7 @@ using Content.Shared.Climbing.Events;
 using Content.Shared.Buckle.Components;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Coordinates;
+using Content.Shared._Sunrise.Felinid;
 
 namespace Content.Shared._Sunrise.Carrying;
 
@@ -63,7 +64,6 @@ public sealed class SharedCarryingSystem : EntitySystem
         SubscribeLocalEvent<CarryingComponent, VirtualItemDeletedEvent>(OnVirtualItemDeleted);
         SubscribeLocalEvent<CarryingComponent, EntParentChangedMessage>(OnParentChanged);
         SubscribeLocalEvent<CarryingComponent, MobStateChangedEvent>(OnMobStateChanged);
-        SubscribeLocalEvent<CarryingComponent, DownAttemptEvent>(OnDownAttempt);
 
         SubscribeLocalEvent<BeingCarriedComponent, UpdateCanMoveEvent>(OnMoveAttempt);
         SubscribeLocalEvent<BeingCarriedComponent, StandAttemptEvent>(OnStandAttempt);
@@ -146,17 +146,17 @@ public sealed class SharedCarryingSystem : EntitySystem
         if (mod != 0)
             length /= mod;
 
-        if (length >= TimeSpan.FromSeconds(MaxCarryTime))
-        {
-            _popupSystem.PopupPredicted(Loc.GetString("carry-too-heavy"), carried, carrier, PopupType.SmallCaution);
-            return;
-        }
-
         if (!HasComp<KnockedDownComponent>(carried))
             length *= 2f;
 
         if (TryComp<MobStateComponent>(carried, out var mobState) && mobState.CurrentState != MobState.Alive)
             length /= 2f;
+
+        if (length >= TimeSpan.FromSeconds(MaxCarryTime) || HasComp<FelinidComponent>(carrier))
+        {
+            _popupSystem.PopupPredicted(Loc.GetString("carry-too-heavy"), carried, carrier, PopupType.SmallCaution);
+            return;
+        }
 
         var ev = new CarryDoAfterEvent();
         var args = new DoAfterArgs(EntityManager, carrier, length, ev, carried, target: carried)
@@ -224,13 +224,6 @@ public sealed class SharedCarryingSystem : EntitySystem
     {
         DropCarried(uid, component.Carried);
     }
-
-
-    private void OnDownAttempt(EntityUid uid, CarryingComponent comp, DownAttemptEvent args)
-    {
-        args.Cancel();
-    }
-
 
     private void OnMoveAttempt(EntityUid uid, BeingCarriedComponent component, UpdateCanMoveEvent args)
     {

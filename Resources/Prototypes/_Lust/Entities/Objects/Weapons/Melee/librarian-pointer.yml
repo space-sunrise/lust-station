@@ -1,0 +1,25 @@
+- type: entity
+  name: librarian pointer
+  id: LibrarianPointer
+  parent: BaseItem
+  description: a pointer for librarian
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Weapons/Melee/librarian-pointer.rsi
+    layers:
+      - state: librarian-pointer
+        map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 0.2
+    angle: 60
+  - type: StaminaDamageOnHit
+    damage: 8
+  - type: StaminaDamageOnCollide
+    damage: 8
+  - type: UseDelay
+  - type: StaticPrice
+    price: 30
+  

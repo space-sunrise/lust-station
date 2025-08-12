@@ -5,9 +5,7 @@
   id: BaseMobDemon
   abstract: true
   components:
-  # SUNRISE EDIT
   - type: Interactions
-  # SUNRISE EDIT
   - type: Absorbable
   - type: HumanoidAppearance
     species: Demon
@@ -34,6 +32,7 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: FemaleHuman
+      Futanari: FemaleHuman # Lust-edit
   - type: Damageable
     damageContainer: Biological
   - type: MeleeWeapon

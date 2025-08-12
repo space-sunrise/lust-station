@@ -2,8 +2,9 @@ using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
-using Content.Shared._Sunrise.Aphrodesiac;
+using Content.Shared._Sunrise.Aphrodisiac;
 using System.Numerics;
+using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared.CCVar;
 using Content.Shared.StatusEffect;
 using Robust.Shared.Configuration;
@@ -63,31 +64,51 @@ public sealed class LoveVisionOverlay : Overlay
         var playerEntity = _playerManager.LocalEntity;
 
         if (playerEntity == null)
+        {
+            _strength = 0f;
             return;
+        }
 
-        if (!_entityManager.HasComponent<LoveVisionComponent>(playerEntity)
-            || !_entityManager.TryGetComponent<StatusEffectsComponent>(playerEntity, out var status))
+        if (!_entityManager.HasComponent<LoveVisionComponent>(playerEntity))
+        {
+            _strength = 0f;
             return;
+        }
 
-        var statusSys = _sysMan.GetEntitySystem<StatusEffectsSystem>();
-        if (!statusSys.TryGetTime(playerEntity.Value, LoveVisionSystem.LoveVisionKey, out var time, status))
-            return;
+        float ratio = 1f;
 
-        var duration = (float)(time.Value.Item2 - time.Value.Item1).TotalSeconds;
-        var elapsedTime = _timeTicker;
-        _timeTicker += args.DeltaSeconds;
+        if (_entityManager.TryGetComponent<InteractionsComponent>(playerEntity, out var loveComp))
+        {
+            if (loveComp.LoveAmount > 0)
+            {
+                ratio = Math.Clamp((float)(loveComp.LoveAmount / loveComp.MaxLoveAmount).Float(), 0f, 1f);
+            }
+            else
+            {
+                ratio = 1f;
+            }
+        }
 
-        var halfDuration = duration / 2f;
-        var normalizedTime = MathF.Abs(elapsedTime - halfDuration) / halfDuration; // 0 at the middle, 1 at the ends
+        if (_entityManager.TryGetComponent<StatusEffectsComponent>(playerEntity, out var status))
+        {
+            var statusSys = _sysMan.GetEntitySystem<StatusEffectsSystem>();
+            if (statusSys.TryGetTime(playerEntity.Value, LoveVisionSystem.LoveVisionKey, out var time, status))
+            {
+                var duration = (float)(time.Value.Item2 - time.Value.Item1).TotalSeconds;
+                var elapsedTime = _timeTicker;
+                _timeTicker += args.DeltaSeconds;
 
-        // Invert the normalized time to make it peak in the middle
-        var peakFactor = 1f - normalizedTime;
+                var halfDuration = duration / 2f;
+                var normalizedTime = MathF.Abs(elapsedTime - halfDuration) / halfDuration;
+                var peakFactor = 1f - normalizedTime;
 
-        // Adjust strength based on peakFactor
-        _strength += peakFactor * args.DeltaSeconds;
+                _strength = peakFactor * ratio;
+                _strength = Math.Clamp(_strength, 0f, 1f);
+                return;
+            }
+        }
 
-        // Optional: Clamp _strength to a reasonable range if needed, e.g., between 0 and 1
-        _strength = Math.Clamp(_strength, 0f, 1f);
+        _strength = ratio;
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)

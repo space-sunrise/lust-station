@@ -1,2 +1,2 @@
-ent-ClothingOuterArmorHoSBattleVest = HoS battle vest
-    .desc = A vest that will save your precious life
+ent-ClothingOuterArmorHoSBattleVest = тактический жилет ГСБ
+    .desc = Бронежилет в чехле, с несъёмным напашником. Этот жилет спасёт вашу драгоценную шкуру.
