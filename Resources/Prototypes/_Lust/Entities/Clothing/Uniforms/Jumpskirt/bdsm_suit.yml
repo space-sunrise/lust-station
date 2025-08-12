@@ -13,7 +13,7 @@
   - type: TemperatureProtection
     heatingCoefficient: 0
 - type: entity
-  parent: ClothingUniformBase
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformBDSMcutout
   name: BDSM costume with cutouts
   description: latex suit for tea parties.
@@ -33,6 +33,10 @@
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/bdsm_zip_suit.rsi
     state: suit
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/eroticred.rsi
+    state: suit
+    slot: INNERCLOTHING
   - type: Tag
     tags:
     - WhitelistChameleon
