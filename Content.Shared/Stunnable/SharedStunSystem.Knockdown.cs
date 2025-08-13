@@ -53,9 +53,6 @@ public abstract partial class SharedStunSystem
         SubscribeLocalEvent<KnockedDownComponent, RefreshFrictionModifiersEvent>(OnRefreshFriction);
         SubscribeLocalEvent<KnockedDownComponent, TileFrictionEvent>(OnKnockedTileFriction);
 
-        // Knockdown Extenders
-        SubscribeLocalEvent<KnockedDownComponent, DamageChangedEvent>(OnDamaged);
-
         // Handling Alternative Inputs
         SubscribeAllEvent<ForceStandUpEvent>(OnForceStandup);
 
@@ -240,33 +237,8 @@ public abstract partial class SharedStunSystem
         var stand = !entity.Comp2.DoAfterId.HasValue;
         SetAutoStand((entity, entity.Comp2), stand);
 
-        if (!stand || !_standing.TryStandUp((entity, entity.Comp2)))
+        if (!stand || !_standing.TryStandUp(entity))
             CancelKnockdownDoAfter((entity, entity.Comp2));
-    }
-
-    /// <summary>
-    /// A variant of <see cref="CanStand"/> used when we're actually trying to stand.
-    /// Main difference is this one affects autostand datafields and also displays popups.
-    /// </summary>
-    /// <param name="entity">Entity we're checking</param>
-    /// <returns>Returns whether the entity is able to stand</returns>
-    public bool TryStand(Entity<KnockedDownComponent> entity)
-    {
-        if (!KnockdownOver(entity))
-            return false;
-
-        var ev = new StandUpAttemptEvent(entity.Comp.AutoStand);
-        RaiseLocalEvent(entity, ref ev);
-
-        if (ev.Autostand != entity.Comp.AutoStand)
-            SetAutoStand((entity.Owner, entity.Comp), ev.Autostand);
-
-        if (ev.Message != null)
-        {
-            _popup.PopupClient(ev.Message.Value.Item1, entity, entity, ev.Message.Value.Item2);
-        }
-
-        return !ev.Cancelled;
     }
 
     private void OnForceStandup(ForceStandUpEvent msg, EntitySessionEventArgs args)
@@ -289,12 +261,6 @@ public abstract partial class SharedStunSystem
 
         if (args.DamageDelta.GetTotal() >= entity.Comp.KnockdownDamageThreshold)
             RefreshKnockdownTime(entity.Owner, entity.Comp.DefaultKnockedDuration);
-    }
-
-    private void OnKnockdownRefresh(Entity<CrawlerComponent> entity, ref KnockedDownRefreshEvent args)
-    {
-        args.FrictionModifier *= entity.Comp.FrictionModifier;
-        args.SpeedModifier *= entity.Comp.SpeedModifier;
     }
 
     #endregion

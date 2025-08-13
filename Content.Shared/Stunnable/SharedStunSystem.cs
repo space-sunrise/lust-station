@@ -267,7 +267,7 @@ public abstract partial class SharedStunSystem : EntitySystem
             if (drop)
             {
                 var ev = new DropHandItemsEvent();
-                RaiseLocalEvent(uid, ref ev);
+                RaiseLocalEvent(uid, ev);
             }
 
             // Only update Autostand value if it's our first time being knocked down...

@@ -22,6 +22,7 @@ using Content.Shared._Sunrise.CollectiveMind;
 using Content.Shared._RMC14.Xenonids.Screech;
 using Content.Shared.Coordinates;
 using Content.Shared.Flash.Components;
+using Content.Shared.Light.Components;
 
 namespace Content.Server.Changeling;
 

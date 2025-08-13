@@ -194,7 +194,7 @@ public sealed partial class ChangelingSystem : EntitySystem
             // vomit blood
             if (random == 1)
             {
-                _stun.TryAddKnockdownDuration(uid, TimeSpan.FromSeconds(1.5f));
+                _stun.TryAddStunDuration(uid, TimeSpan.FromSeconds(1.5f));
 
                 var solution = new Solution();
 

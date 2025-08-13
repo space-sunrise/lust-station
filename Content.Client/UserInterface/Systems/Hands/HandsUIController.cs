@@ -337,7 +337,7 @@ public sealed class HandsUIController : UIController, IOnStateEntered<GameplaySt
         var button = new HandButton(handName, hand.Location);
         button.StoragePressed += StorageActivate;
         button.Pressed += HandPressed;
-        var uiLocation = location.GetUILocation(); // 🌟Starlight🌟
+        var uiLocation = hand.Location.GetUILocation(); // 🌟Starlight🌟
 
         if (!_handLookup.TryAdd(handName, button))
             return _handLookup[handName];
