@@ -110,8 +110,8 @@ public sealed partial class LimbSystem : SharedLimbSystem
             return;
         }
 
-        _hands.AddHand(bodyId, handId, HandLocation.Middle, hands);
-        _hands.DoPickup(bodyId, hands.Hands[handId], itemId, hands);
+        _hands.AddHand((bodyId, hands), handId, HandLocation.Middle);
+        _hands.DoPickup(bodyId, handId, itemId);
         EnsureComp<UnremoveableComponent>(itemId);
     }
 
@@ -120,11 +120,11 @@ public sealed partial class LimbSystem : SharedLimbSystem
         if (!bodyId.IsValid() || !itemId.IsValid()) return;
 
         if (!TryComp<HandsComponent>(bodyId, out var hands)
-            || !_hands.TryGetHand(bodyId, handId, out var hand, hands))
+            || !_hands.TryGetHand((bodyId, hands), handId, out var hand))
             return;
 
         RemComp<UnremoveableComponent>(itemId);
-        _hands.DoDrop(itemId, hand);
+        _hands.DoDrop(itemId, handId);
         _hands.RemoveHand(bodyId, handId);
     }
 }

@@ -569,7 +569,7 @@ public sealed partial class VampireSystem
         if (args.Cancelled)
             return;
 
-        _statusEffects.TryAddStatusEffect<ForcedSleepingComponent>(args.Target.Value, VampireComponent.SleepStatusEffectProto, args.Duration ?? TimeSpan.FromSeconds(30), false);
+        _statusEffects.TryAddStatusEffect<SleepingComponent>(args.Target.Value, VampireComponent.SleepStatusEffectProto, args.Duration ?? TimeSpan.FromSeconds(30), false);
     }
     #endregion
 
@@ -715,9 +715,6 @@ public sealed partial class VampireSystem
         if (!_interaction.InRangeUnobstructed(vampire.Owner, target, popup: true))
             return false;
 
-        if (_food.IsMouthBlocked(target, vampire))
-            return false;
-
         if (_rotting.IsRotten(target))
         {
             _popup.PopupEntity(Loc.GetString("vampire-blooddrink-rotted"), vampire, vampire, PopupType.SmallCaution);
@@ -747,9 +744,6 @@ public sealed partial class VampireSystem
             return;
 
         if (!HasComp<VampireFangsExtendedComponent>(entity))
-            return;
-
-        if (_food.IsMouthBlocked(entity, entity))
             return;
 
         if (_rotting.IsRotten(args.Target!.Value))

@@ -92,7 +92,7 @@ public sealed class StasisSystem : SharedStasisSystem
         // Remove bleeding when entering stasis
         if (TryComp<BloodstreamComponent>(uid, out var bloodstream))
         {
-            _bloodstreamSystem.TryModifyBleedAmount(uid, -bloodstream.BleedAmount, bloodstream);
+            _bloodstreamSystem.TryModifyBleedAmount((uid, bloodstream), -bloodstream.BleedAmount);
         }
 
         // Send animation event to all clients
@@ -196,8 +196,7 @@ public sealed class StasisSystem : SharedStasisSystem
         // Heal bleeding
         if (TryComp<BloodstreamComponent>(uid, out var bloodstream) && bloodstream.BleedAmount > 0)
         {
-            _bloodstreamSystem.TryModifyBleedAmount(uid, -healingValues.BleedHeal * (float)args.DeltaSeconds,
-                bloodstream);
+            _bloodstreamSystem.TryModifyBleedAmount((uid, bloodstream), -healingValues.BleedHeal * (float)args.DeltaSeconds);
         }
     }
 
