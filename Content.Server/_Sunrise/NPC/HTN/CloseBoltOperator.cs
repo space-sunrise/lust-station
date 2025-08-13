@@ -15,7 +15,6 @@ namespace Content.Server._Sunrise.NPC.HTN;
 public sealed partial class CloseBoltOperator : HTNOperator
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly HandsSystem _handsSystem = default!;
     private GunSystem _gunSystem = default!;
 
     [DataField("shutdownState")]
@@ -34,7 +33,9 @@ public sealed partial class CloseBoltOperator : HTNOperator
         if (!_entManager.TryGetComponent<HandsComponent>(owner, out var hands))
             return HTNOperatorStatus.Failed;
 
-        var heldEntity = _handsSystem.GetActiveItem((owner, hands));
+        var handsSystem = _entManager.System<HandsSystem>();
+
+        var heldEntity = handsSystem.GetActiveItem((owner, hands));
 
         if (heldEntity == null)
             return HTNOperatorStatus.Failed;

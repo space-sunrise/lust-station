@@ -9,7 +9,6 @@ namespace Content.Server._Sunrise.NPC.HTN;
 public sealed partial class IsBoltOpenPrecondition : HTNPrecondition
 {
     [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly HandsSystem _handsSystem = default!;
 
     public override bool IsMet(NPCBlackboard blackboard)
     {
@@ -17,7 +16,9 @@ public sealed partial class IsBoltOpenPrecondition : HTNPrecondition
         if (!_entManager.TryGetComponent<HandsComponent>(owner, out var hands))
             return false;
 
-        var heldEntity = _handsSystem.GetActiveItem((owner, hands));
+        var handsSystem = _entManager.System<HandsSystem>();
+
+        var heldEntity = handsSystem.GetActiveItem((owner, hands));
 
         if (!_entManager.TryGetComponent<ChamberMagazineAmmoProviderComponent>(heldEntity, out var chamber))
             return false;
