@@ -97,5 +97,9 @@
         enum.CommunicationsConsoleUiKey.Key:
           toggleAction: ActionAGhostShowCommunications
     - type: ComplexInteraction
+    - type: Interactions
     - type: InteractionPopup
     - type: StationAiMobile
+    - type: Input
+      context: "human"
+    - type: Actions
