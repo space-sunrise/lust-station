@@ -1,4 +1,3 @@
-# Частично готовый вариант
 - type: entity
   id: AiShell
   name: AI Shell
@@ -6,8 +5,10 @@
   components:
     - type: AiShell
     - type: Sprite
-      sprite: Mobs/Ghosts/ghost_human.rsi # ура СПРИТЕ очень НУЖЕН
-      state: animated
+      sprite: Mobs/Species/Human/parts.rsi
+      noRot: true
+      layers:
+        - state: full
     - type: Clickable
     - type: InteractionOutline
     - type: Physics
@@ -35,3 +36,26 @@
     - type: StandingState
     - type: Body
       prototype: Human
+    - type: Inventory
+      templateId: human
+    - type: ComplexInteraction
+    - type: Hands
+    - type: Puller
+    - type: CombatMode
+    - type: HumanoidAppearance
+      species: Human
+    - type: DoAfter
+    - type: Speech
+    - type: Access
+      groups:
+      - AllAccess
+      - Silicon
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+      - Common
+    - type: ActiveRadio
+      channels:
+      - Binary
+      - Common
