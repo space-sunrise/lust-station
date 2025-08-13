@@ -166,8 +166,12 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiBuiCheck(Entity<StationAiWhitelistComponent> ent, ref BoundUserInterfaceCheckRangeEvent args)
     {
-        if (!HasComp<StationAiHeldComponent>(args.Actor))
+        // Sunrise-start edit
+        if (!HasComp<StationAiHeldComponent>(args.Actor) && !HasComp<StationAiMobileComponent>(args.Actor))
             return;
+        //if (!HasComp<StationAiHeldComponent>(args.Actor))
+        //    return;
+        // Sunrise-end edit
 
         args.Result = BoundUserInterfaceRangeResult.Fail;
 
@@ -198,6 +202,11 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiInRange(Entity<StationAiOverlayComponent> ent, ref InRangeOverrideEvent args)
     {
+        // Sunrise-start-edit
+        if (HasComp<StationAiMobileComponent>(args.User))
+            return;
+        //Sunrise-end-edit
+
         args.Handled = true;
         // Starlight-surgery start
         var target = args.Target;

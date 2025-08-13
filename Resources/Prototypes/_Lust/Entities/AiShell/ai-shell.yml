@@ -4,6 +4,17 @@
   description: Temporary mobile shell for the station AI.
   components:
     - type: AiShell
+    - type: StationAiCore
+    - type: StationAiVision
+      range: 11
+    - type: StationAiWhitelist
+    - type: Tag
+      tags:
+        - StationAi
+    - type: StationAiOverlay
+      allowCrossGrid: true
+    - type: StationAiHeld
+    - type: IgnoreUIRange
     - type: Sprite
       sprite: Mobs/Species/Human/parts.rsi
       noRot: true
@@ -38,8 +49,11 @@
       prototype: Human
     - type: Inventory
       templateId: human
-    - type: ComplexInteraction
     - type: Hands
+    - type: MeleeWeapon
+      damage:
+        types:
+          Blunt: 5
     - type: Puller
     - type: CombatMode
     - type: HumanoidAppearance
@@ -48,14 +62,40 @@
     - type: Speech
     - type: Access
       groups:
-      - AllAccess
-      - Silicon
+        - AllAccess
+        - Silicon
     - type: IntrinsicRadioReceiver
     - type: IntrinsicRadioTransmitter
       channels:
-      - Binary
-      - Common
+        - Binary
+        - Common
+        - Science
     - type: ActiveRadio
       channels:
-      - Binary
-      - Common
+        - Binary
+        - Common
+        - Science
+    - type: ActionGrant
+      actions:
+        - ActionAIViewLaws
+    - type: UserInterface
+      interfaces:
+        enum.CrewMonitoringUIKey.Key:
+          type: CrewMonitoringBoundUserInterface
+        enum.GeneralStationRecordConsoleKey.Key:
+          type: GeneralStationRecordConsoleBoundUserInterface
+        enum.SiliconLawsUiKey.Key:
+          type: SiliconLawBoundUserInterface
+        enum.CommunicationsConsoleUiKey.Key:
+          type: CommunicationsConsoleBoundUserInterface
+    - type: IntrinsicUI
+      uis:
+        enum.CrewMonitoringUIKey.Key:
+          toggleAction: ActionAGhostShowCrewMonitoring
+        enum.GeneralStationRecordConsoleKey.Key:
+          toggleAction: ActionAGhostShowStationRecords
+        enum.CommunicationsConsoleUiKey.Key:
+          toggleAction: ActionAGhostShowCommunications
+    - type: ComplexInteraction
+    - type: InteractionPopup
+    - type: StationAiMobile
