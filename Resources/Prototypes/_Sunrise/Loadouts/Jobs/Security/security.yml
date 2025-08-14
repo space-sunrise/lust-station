@@ -216,7 +216,7 @@
     proto: MasterSecurityCam
 
 - type: startingGear
-  id: SecurityMasterBodycam
+  id: MasterHandheldCamera
   storage:
     back:
     - MasterHandheldCamera
