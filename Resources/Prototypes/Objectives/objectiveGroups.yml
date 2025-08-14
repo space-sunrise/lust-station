@@ -106,7 +106,7 @@
     FreezerHeaterStealObjective: 1
     #TegStealObjective: 1 Sunrise-Edit: Буквально цель на саботаж питания.
     BoozeDispenserStealObjective: 1
-    AltarQilluStealObjective: 1 # Lust-Edit
+    AltarNanotrasenStealObjective: 1
     PlantRDStealObjective: 1
     ToiletGoldenStealObjective: 1
 

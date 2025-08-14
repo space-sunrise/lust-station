@@ -10,7 +10,7 @@
           state: nanotrasen
     - type: RandomSpawner
       prototypes:
-        - AltarQillu # Lust-Edit
+        - AltarNanotrasen
         - AltarChaos
         - AltarDruid
         - AltarToolbox
