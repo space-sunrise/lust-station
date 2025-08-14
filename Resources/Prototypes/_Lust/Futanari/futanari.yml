@@ -36,16 +36,10 @@
     state: torso_fut
 
 - type: humanoidBaseSprite
-  id: MobVulpkaninHeadFutanariBigMuzzle
+  id: MobVulpkaninHeadFutanari
   baseSprite:
     sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
-    state: head_f_big_muzzle
-
-- type: humanoidBaseSprite
-  id: MobVulpkaninHeadFutanariSmallMuzzle
-  baseSprite:
-    sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
-    state: head_f_small_muzzle
+    state: head_f
 
 - type: humanoidBaseSprite
   id: MobVulpkaninTorsoFutanari
