@@ -41,7 +41,7 @@ public sealed partial class ItemCondition : IAppearCondition
         if (!entityManager.TryGetComponent<HandsComponent>(entity, out var handsComponent))
             return false;
 
-        foreach (var heldEntity in handsSystem.EnumerateHeld(entity, handsComponent))
+        foreach (var heldEntity in handsSystem.EnumerateHeld((entity, handsComponent)))
         {
             if (!entityManager.TryGetComponent<MetaDataComponent>(heldEntity, out var meta))
                 return false;

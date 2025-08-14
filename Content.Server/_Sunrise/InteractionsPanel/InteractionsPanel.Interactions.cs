@@ -1,6 +1,8 @@
 using System.Numerics;
+using Content.Server._Sunrise.PlayerCache;
 using Content.Server.Chat.Systems;
 using Content.Server.Fluids.EntitySystems;
+using Content.Shared._Sunrise.Aphrodisiac;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
@@ -16,6 +18,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Map;
+using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 
@@ -23,6 +26,7 @@ namespace Content.Server._Sunrise.InteractionsPanel;
 
 public partial class InteractionsPanel
 {
+    [Dependency] private readonly PlayerCacheManager _playerCacheManager = default!;
     [Dependency] private readonly PuddleSystem _puddle = default!;
 
     private const float LoveDecayRate = 0.5f;
@@ -34,6 +38,7 @@ public partial class InteractionsPanel
             subs =>
             {
                 subs.Event<InteractionMessage>(OnInteractionMessageReceived);
+                subs.Event<RequestUndressMessage>(OnUndressMessageReceived);
             });
 
         SubscribeLocalEvent<InteractionsComponent, GetVerbsEvent<AlternativeVerb>>(AddInteractionsVerb);
@@ -50,6 +55,17 @@ public partial class InteractionsPanel
             .Register<InteractionsPanel>();
     }
 
+    private void OnUndressMessageReceived(Entity<InteractionsComponent> ent, ref RequestUndressMessage args)
+    {
+        if (_inventory.TryGetSlots(ent, out var slots))
+        {
+            foreach (var slot in slots)
+            {
+                _inventory.TryUnequip(ent, slot.Name, true, false, false);
+            }
+        }
+    }
+
     private void TryAutoInteraction(ICommonSession? session)
     {
         if (session?.AttachedEntity is not { Valid: true } player || !Exists(player))
@@ -60,7 +76,7 @@ public partial class InteractionsPanel
 
         if (_ui.IsUiOpen(player, InteractionWindowUiKey.Key))
         {
-            _ui.CloseUi(player, InteractionWindowUiKey.Key);
+            _ui.ServerSendUiMessage(player, InteractionWindowUiKey.Key, new RequestSavePosAndCloseMessage());
             return;
         }
 
@@ -185,8 +201,8 @@ public partial class InteractionsPanel
         if (!CheckAllAppearConditions(interactionPrototype, ent.Owner, target.Value))
             return;
 
-        var userPref = _netConfigManager.GetClientCVar(userSession.Channel, InteractionsCVars.EmoteVisibility);
-        var targetPref = !targetIsPlayer || _netConfigManager.GetClientCVar(targetSession!.Channel, InteractionsCVars.EmoteVisibility);
+        var userPref = _playerCacheManager.GetEmoteVisibility(userSession.UserId);
+        var targetPref = _playerCacheManager.GetEmoteVisibility(targetIsPlayer ? targetSession!.UserId : null);
 
         var rawMsg = _random.Pick(interactionPrototype.InteractionMessages);
         var msg = FormatInteractionMessage(rawMsg, ent.Owner, target.Value);
@@ -346,7 +362,7 @@ public partial class InteractionsPanel
     {
         _puddle.TrySpillAt(
             coordinates,
-            new Solution(prototype, 2f),
+            new Solution(prototype, 4f),
             out _,
             false);
     }
@@ -360,8 +376,8 @@ public partial class InteractionsPanel
         ICommonSession? targetSession,
         bool targetIsPlayer)
     {
-        var userPref = _netConfigManager.GetClientCVar(userSession.Channel, InteractionsCVars.EmoteVisibility);
-        var targetPref = !targetIsPlayer || _netConfigManager.GetClientCVar(targetSession!.Channel, InteractionsCVars.EmoteVisibility);
+        var userPref = _playerCacheManager.GetEmoteVisibility(userSession.UserId);
+        var targetPref = _playerCacheManager.GetEmoteVisibility(targetIsPlayer ? targetSession!.UserId : null);
 
         var msg = FormatInteractionMessage(data.InteractionMessage, user, target);
 
@@ -429,14 +445,33 @@ public partial class InteractionsPanel
     private void UpdateLove(EntityUid uid, InteractionsComponent comp, float frameTime)
     {
         if (comp.LoveAmount <= 0)
+        {
+            if (TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+            {
+                RemComp<LoveVisionComponent>(uid);
+            }
             return;
+        }
 
         comp.LoveAmount -= LoveDecayRate * frameTime;
-
         if (comp.LoveAmount < 0)
             comp.LoveAmount = 0;
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+        var hasEffect = HasComp<LoveVisionComponent>(uid);
+
+        if (ratio >= 0.33f && !hasEffect)
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVisionComp) && loveVisionComp.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private void TryOrgasm(EntityUid uid)
@@ -452,7 +487,8 @@ public partial class InteractionsPanel
         _chatSystem.TrySendInGameICMessage(uid, "кончает", InGameICChatType.Emote, false);
         _chatSystem.TryEmoteWithChat(uid, "Moan");
 
-        SpawnSemen("Semen", Transform(uid).Coordinates);
+        if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearanceComponent) && humanoidAppearanceComponent.Sex == Sex.Male)
+            SpawnSemen("Semen", Transform(uid).Coordinates);
 
         SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
         Dirty(uid, comp);
@@ -478,6 +514,19 @@ public partial class InteractionsPanel
         }
 
         Dirty(uid, comp);
+
+        var ratio = (float)(comp.LoveAmount / comp.MaxLoveAmount).Float();
+
+        if (ratio >= 0.33f && !HasComp<LoveVisionComponent>(uid))
+        {
+            var newComp = AddComp<LoveVisionComponent>(uid);
+            newComp.FromLoveSystem = true;
+            Dirty(uid, newComp);
+        }
+        else if (ratio < 0.33f && TryComp<LoveVisionComponent>(uid, out var loveVision) && loveVision.FromLoveSystem)
+        {
+            RemComp<LoveVisionComponent>(uid);
+        }
     }
 
     private bool IsOnCooldown(EntityUid user, string interactionId)

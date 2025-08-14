@@ -47,7 +47,6 @@
         type: SurgeryBui
       enum.VampireMutationUiKey.Key:
         type: VampireMutationBoundUserInterface
-  - type: Absorbable
       # Sunrise-end
   - type: UseDelay
     delay: 0.5
@@ -64,6 +63,7 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+      Futanari: FemaleSlime # Lust-edit
   - type: Damageable
     damageContainer: Biological
     damageModifierSet: Slime

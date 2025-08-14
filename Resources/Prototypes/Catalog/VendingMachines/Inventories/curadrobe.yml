@@ -15,6 +15,7 @@
     ClothingShoesBootsLaceup: 2
     ClothingHeadsetService: 2
     PrinterDocFlatpack: 2
+    LibrarianPointer: 2 # Lust-add
   contrabandInventory:
     ToyFigurineLibrarian: 1
 

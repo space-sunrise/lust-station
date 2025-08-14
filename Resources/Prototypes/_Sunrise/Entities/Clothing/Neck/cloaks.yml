@@ -5,7 +5,7 @@
   description: The NanoTrasen logo embroidered in gold speaks for itself.
   components:
   - type: Sprite
-    sprite: _Sunrise/Clothing/Neck/Cloaks/centcom_officer_black.rsi
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_officer_black.rsi # LUST STATION EDIT
 
 - type: entity
   parent: ClothingCloakBase # SUNRISE EDIT
