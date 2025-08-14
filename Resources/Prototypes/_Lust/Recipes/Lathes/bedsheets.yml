@@ -1,0 +1,9 @@
+- type: latheRecipe
+  parent: BaseSpecifiedBedsheetRecipe
+  id: BedsheetQillu
+  result: BedsheetQillu
+
+- type: latheRecipe
+  parent: BaseSpecifiedBedsheetRecipe
+  id: DoubleBedsheetQillu
+  result: DoubleBedsheetQillu

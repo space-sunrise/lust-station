@@ -97,6 +97,9 @@
             "name": "pirate"
         },
         {
+            "name": "wizard"
+        },
+        {
             "name": "idcentcom"
         },
         {
@@ -299,6 +302,12 @@
         },
         {
             "name": "idadmin"
+        },
+        {
+            "name": "idwizard"
+        },
+        {
+            "name": "idstationminer"
         }
     ]
 }

@@ -61,9 +61,12 @@
   description: It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
   components:
   - type: Sprite
+    # Lust-start
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
     state: sheetcaptain
   - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/captain.rsi
+    sprite: _Lust/Clothing/Neck/Bedsheets/captain.rsi
+    # Lust-end
   - type: StealTarget
     stealGroup: HeadBedsheet
 
@@ -87,9 +90,12 @@
   description: Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
   components:
   - type: Sprite
+    # Lust-start
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
     state: sheetcentcom
   - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/centcom.rsi
+    sprite: _Lust/Clothing/Neck/Bedsheets/centcom.rsi
+    # Lust-end
   - type: StealTarget
     stealGroup: HeadBedsheet
 
@@ -224,9 +230,12 @@
   description: It has the Nanotrasen logo on it and an aura of duty.
   components:
   - type: Sprite
-    state: sheetNT
+    # Lust-start
+    sprite: _Lust/Objects/Misc/bedsheets.rsi
+    state: sheetqillu
   - type: Clothing
-    sprite: Clothing/Neck/Bedsheets/NT.rsi
+    sprite: _Lust/Clothing/Neck/Bedsheets/qillu.rsi
+    # Lust-end
 
 - type: entity
   id: BedsheetOrange
