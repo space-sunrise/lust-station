@@ -335,8 +335,16 @@ public sealed class ClientClothingSystem : ClothingSystem
                     break;
                 // Lust-start
                 case Sex.Futanari:
-                    if (inventory.FemaleDisplacements.Count > 0)
-                        displacementData = inventory.FemaleDisplacements.GetValueOrDefault(slot);
+
+                    displacementData = inventory.FemaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
+                            ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
+
+                    if (_tagSystem.HasTag(equipment, "Hardsuit"))
+                    {
+                        displacementData = inventory.FemaleDisplacements.GetValueOrDefault(hardsuitKey)
+                                            ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
+                    }
+
                     break;
                 // Lust-end
             }

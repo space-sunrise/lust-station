@@ -156,6 +156,12 @@
     state: head_f_small_muzzle
 
 - type: humanoidBaseSprite
+  id: MobVulpkaninHeadSmallMuzzleFutanari
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
+    state: head_f_small_muzzle
+
+- type: humanoidBaseSprite
   id: MobVulpkaninTorso
   baseSprite:
     sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
@@ -266,3 +272,9 @@
   baseSprite:
     sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
     state: head_f_big_muzzle
+
+- type: humanoidBaseSprite
+  id: MobVulpkaninHeadBigMuzzleFutanari
+  baseSprite:
+    sprite: _Sunrise/Mobs/Species/Vulpkanin/parts.rsi
+    state: head_f_small_muzzle
