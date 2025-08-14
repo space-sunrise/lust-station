@@ -44,8 +44,10 @@
   description: A banner displaying the Nanotrasen logo. It looks rather cheap.
   components:
   - type: Sprite
-    sprite: Structures/Decoration/banner.rsi
-    state: banner
+  # Lust-start
+    sprite: _Lust/Structures/Decoration/banner.rsi
+    state: banner_qillu
+  # Lust-end
 
 - type: entity
   id: BannerCargo

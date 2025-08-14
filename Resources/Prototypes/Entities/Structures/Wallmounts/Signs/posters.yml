@@ -652,8 +652,11 @@
   name: "Nanotrasen Logo"
   description: "A poster depicting the Nanotrasen logo."
   components:
+  # Lust-start
   - type: Sprite
-    state: poster2_legit
+    sprite: _Lust/Structures/Wallmounts/posters.rsi
+    state: poster1_legit
+  # Lust-end
 
 - type: entity
   parent: PosterBase
@@ -1066,8 +1069,11 @@
   name: "Nanotrasen Corporate Perks: Vacation"
   description: "This informational poster provides information on some of the prizes available via the NT Corporate Perks program, including a two-week vacation for two on the resort world Idyllus."
   components:
-    - type: Sprite
-      state: poster48_legit
+  # Lust-start
+  - type: Sprite
+    sprite: _Lust/Structures/Wallmounts/posters.rsi
+    state: poster3_legit
+  # Lust-end
 
 - type: entity
   parent: PosterBase
@@ -1093,8 +1099,11 @@
   name: "Nanotrasen Tactical Game Cards"
   description: "An advertisement for Nanotrasen's TCG cards: BUY MORE CARDS."
   components:
-    - type: Sprite
-      state: poster51_legit
+  # Lust-start
+  - type: Sprite
+    sprite: _Lust/Structures/Wallmounts/posters.rsi
+    state: poster2_legit
+  # Lust-end
 
 - type: entity
   parent: PosterBase

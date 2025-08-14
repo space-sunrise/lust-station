@@ -34,11 +34,13 @@
   name: nanotrasen altar
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
-    state: nanotrasen
+  # Lust-start
+    sprite: _Lust/Structures/Furniture/Altars/Gods/qillu.rsi
+    state: qillu
   - type: Icon
-    sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
-    state: nanotrasen
+    sprite: _Lust/Structures/Furniture/Altars/Gods/qillu.rsi
+    state: qillu
+  # Lust-end
   - type: Destructible
     thresholds:
     - trigger:

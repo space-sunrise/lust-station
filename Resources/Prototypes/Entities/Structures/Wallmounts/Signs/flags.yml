@@ -24,8 +24,11 @@
   name: Nanotrasen flag
   description: Glory to NT! Wait, they really made a flag for a corporation?
   components:
+  # Lust-start
   - type: Sprite
-    state: NT_flag
+    sprite: _Lust/Structures/Wallmounts/flags.rsi
+    state: qillu_flag
+  # Lust-end
 
 - type: entity
   parent: BaseFlag
@@ -35,7 +38,7 @@
   components:
   - type: Sprite
     state: syndie_flag
-    
+
 - type: entity
   parent: BaseFlag
   id: LGBTQFlag
@@ -44,7 +47,7 @@
   components:
   - type: Sprite
     state: lgbtq_flag
-    
+
 - type: entity
   parent: BaseFlag
   id: PirateFlag
