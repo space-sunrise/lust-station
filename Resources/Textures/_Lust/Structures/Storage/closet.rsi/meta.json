@@ -4,7 +4,7 @@
     "x": 32,
     "y": 32
   },
-  "copyright": "Taken from original game, made by gardsnake",
+  "copyright": "Taken from original game, redesigned for Qillu, Lust Station by gardsnake.",
   "license": "CC-BY-SA-3.0",
   "states": [
     {
@@ -17,36 +17,30 @@
         "name": "hop_open"
     },
     {
-        "name": "sparking",
-        "delays": [
-          [
-            0.1,
-            0.1,
-            0.1,
-            0.1
-          ]
-        ]
-      },
-      {
-        "name": "locked"
-      },
-      {
-        "name": "unlocked"
-      },
-      {
-        "name": "welded"
-      },
-      {
         "name": "generic"
-      },
+    },
     {
         "name": "generic_door"
     },
     {
-        "name": "generic_icon"
+        "name": "unlocked"
     },
     {
-        "name": "generic_open"
+        "name": "locked"
+    },
+    {
+        "name": "welded"
+    },
+    {
+        "name": "sparking",
+        "delays": [
+            [
+                0.1,
+                0.1,
+                0.1,
+                0.1
+            ]
+        ]
     }
   ]
 }
