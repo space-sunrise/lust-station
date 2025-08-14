@@ -1,3 +1,7 @@
+ent-ClothingOuterHoSTrenchElegant = Элегантный тренч ГСБ
+    .desc = Простой и удобный легкобронированный тренч ГСБ с золотыми нашивками.
+ent-ClothingOuterHoSTrenchElegantOpened = Элегантный тренч ГСБ
+    .desc = Простой и удобный легкобронированный тренч ГСБ с золотыми нашивками.
 ent-ClothingOuterCoatIAAFormalCoat = формальный сюртук АВД
     .desc = Деловой пиджак АВД для безупречно профессионального вида.
 ent-ClothingOuterCoatCMOFormalCoat = формальный халат ГВ
