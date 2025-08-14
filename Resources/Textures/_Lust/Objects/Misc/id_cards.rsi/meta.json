@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CLA",
-    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt, made bt gardsnake",
+    "copyright": "© SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt, redesigned for Qillu, Lust Station by gardsnake.",
     "size": {
         "x": 32,
         "y": 32
@@ -30,61 +30,275 @@
             "directions": 4
         },
         {
-            "name": "idcommaid"
+            "name": "gold"
         },
         {
-            "name": "admin"
+            "name": "gold-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "gold-inhand-right",
+            "directions": 4
         },
         {
             "name": "centcom"
         },
         {
-            "name": "ert_chaplain"
+            "name": "blue-inhand-left",
+            "directions": 4
         },
         {
-            "name": "ert_commander"
+            "name": "blue-inhand-right",
+            "directions": 4
         },
         {
-            "name": "ert_engineer"
+            "name": "admin"
         },
         {
-            "name": "ert_janitor"
+            "name": "green-inhand-left",
+            "directions": 4
         },
         {
-            "name": "ert_medic"
-        },
-        {
-            "name": "ert_security"
-        },
-        {
-            "name": "gold"
-        },
-        {
-            "name": "idcentcom"
+            "name": "green-inhand-right",
+            "directions": 4
         },
         {
             "name": "orange"
         },
         {
-            "name": "prisoner_001"
+            "name": "orange-inhand-left",
+            "directions": 4
         },
         {
-            "name": "prisoner_002"
+            "name": "orange-inhand-right",
+            "directions": 4
         },
         {
-            "name": "prisoner_003"
+            "name": "idadjutant"
         },
         {
-            "name": "prisoner_004"
+            "name": "adj-inhand-left",
+            "directions": 4
         },
         {
-            "name": "prisoner_005"
+            "name": "adj-inhand-right",
+            "directions": 4
         },
         {
-            "name": "prisoner_006"
+            "name": "prisoner-space-prison"
         },
         {
-            "name": "prisoner_007"
+            "name": "orange-space-prison"
+        },
+        {
+            "name": "syndie"
+        },
+        {
+            "name": "pirate"
+        },
+        {
+            "name": "idcentcom"
+        },
+        {
+            "name": "idbartender"
+        },
+        {
+            "name": "idiaa"
+        },
+        {
+            "name": "idlawyer"
+        },
+        {
+            "name": "idintern-cadet"
+        },
+        {
+            "name": "idintern-med"
+        },
+        {
+            "name": "idintern-sci"
+        },
+        {
+            "name": "idintern-service"
+        },
+        {
+            "name": "idintern-tech"
+        },
+        {
+            "name": "idatmospherictechnician"
+        },
+        {
+            "name": "idcurator"
+        },
+        {
+            "name": "idboxer"
+        },
+        {
+            "name": "idbotanist"
+        },
+        {
+            "name": "idseniorphysician"
+        },
+        {
+            "name": "idbrigmedic"
+        },
+        {
+            "name": "idseniorengineer"
+        },
+        {
+            "name": "idseniorresearcher"
+        },
+        {
+            "name": "ert_medic"
+        },
+        {
+            "name": "idchiefmedicalofficer"
+        },
+        {
+            "name": "idheadofpersonnel"
+        },
+        {
+            "name": "idheadofsecurity"
+        },
+        {
+            "name": "idcommaid"
+        },
+        {
+            "name": "idcargotechnician"
+        },
+        {
+            "name": "iddetective"
+        },
+        {
+            "name": "idprisoner-space-prison"
+        },
+        {
+            "name": "idzookeeper"
+        },
+        {
+            "name": "idstationengineer"
+        },
+        {
+            "name": "ert_engineer"
+        },
+        {
+            "name": "idseniorofficer"
+        },
+        {
+            "name": "idcaptain"
+        },
+        {
+            "name": "idquartermaster"
+        },
+        {
+            "name": "idclown"
+        },
+        {
+            "name": "idcluwne"
+        },
+        {
+            "name": "idblueshield"
+        },
+        {
+            "name": "ert_commander"
+        },
+        {
+            "name": "idmagistrat"
+        },
+        {
+            "name": "idmedicaldoctor"
+        },
+        {
+            "name": "idmime"
+        },
+        {
+            "name": "idmusician"
+        },
+        {
+            "name": "idresearchdirector"
+        },
+        {
+            "name": "idheadofprison-space-prison"
+        },
+        {
+            "name": "ert_security"
+        },
+        {
+            "name": "ntr-captain"
+        },
+        {
+            "name": "ntr-operator"
+        },
+        {
+            "name": "idparamedic"
+        },
+        {
+            "name": "idbarber"
+        },
+        {
+            "name": "idpassenger"
+        },
+        {
+            "name": "idpatologoanatom"
+        },
+        {
+            "name": "idsecuritypilot"
+        },
+        {
+            "name": "idvisitor"
+        },
+        {
+            "name": "idmail"
+        },
+        {
+            "name": "idpsychologist"
+        },
+        {
+            "name": "idreporter"
+        },
+        {
+            "name": "idroboticist"
+        },
+        {
+            "name": "idchaplain"
+        },
+        {
+            "name": "ert_chaplain"
+        },
+        {
+            "name": "idsecurityofficer"
+        },
+        {
+            "name": "idwarden"
+        },
+        {
+            "name": "idchiefengineer"
+        },
+        {
+            "name": "idguardian-space-prison"
+        },
+        {
+            "name": "idprisonpilot-space-prison"
+        },
+        {
+            "name": "idjanitor"
+        },
+        {
+            "name": "ert_janitor"
+        },
+        {
+            "name": "idshaftminer"
+        },
+        {
+            "name": "idscientist"
+        },
+        {
+            "name": "idchemist"
+        },
+        {
+            "name": "idcook"
+        },
+        {
+            "name": "idadmin"
         }
     ]
 }

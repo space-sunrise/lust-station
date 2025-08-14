@@ -4,7 +4,7 @@
   name: blue shield officer ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: silver
     - state: idblueshield
@@ -19,7 +19,7 @@
   name: blue shield ensign ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: gold
     - state: idblueshield
@@ -46,7 +46,7 @@
   name: security pilot ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idsecuritypilot
@@ -95,7 +95,7 @@
   name: brigmedic ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idbrigmedic
@@ -108,7 +108,7 @@
   name: prisoner ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi  #Lust-edit
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: prisoner-space-prison
     - state: idprisoner-space-prison
@@ -121,7 +121,7 @@
   name: guard ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: orange-space-prison
     - state: idguardian-space-prison
@@ -134,7 +134,7 @@
   name: prison pilot ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: orange-space-prison
     - state: idprisonpilot-space-prison
@@ -147,7 +147,7 @@
   name: head of prison ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: orange-space-prison
     - state: idheadofprison-space-prison
@@ -162,7 +162,7 @@
   name: NanoTrasen representative ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: ert_commander
   - type: PresetIdCard
@@ -174,7 +174,7 @@
   name: barber ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idbarber
@@ -188,7 +188,7 @@
   description: Adjutant ID card.
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards_qillu.rsi #Lust-edit
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idadjutant
@@ -201,7 +201,7 @@
   name: Pathologist ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idpatologoanatom
@@ -310,7 +310,7 @@
   suffix: Officer
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: silver
     - state: ntr-operator
@@ -327,7 +327,7 @@
   suffix: Leader
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: silver
     - state: ntr-captain
@@ -342,7 +342,7 @@
   name: mail carrier ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idmail
@@ -355,7 +355,7 @@
   name: mining ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idstationminer

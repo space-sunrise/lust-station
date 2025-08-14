@@ -17,11 +17,11 @@
       path: /Audio/_Sunrise/Items/Handling/ID/drop.ogg
   # Sunrise added end
   - type: Sprite
-    sprite: Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
   - type: Clothing
     slots:
     - idcard
-    sprite: Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
   - type: Item
     size: Small
     heldPrefix: default
@@ -45,7 +45,6 @@
   name: passenger ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
     layers:
     - state: default
     - state: idpassenger
@@ -274,7 +273,6 @@
   name: mime ID card
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
     layers:
     - state: default
     - state: idmime
@@ -466,17 +464,6 @@
   - type: PresetIdCard
     job: Visitor
 
-# Move to _Sunrise
-#- type: entity
-#  parent: IDCardStandard
-#  id: BrigmedicIDCard
-#  name: brigmedic ID card
-#  components:
-#  - type: Sprite
-#    layers:
-#    - state: default
-#    - state: idbrigmedic
-
 - type: entity
   parent: IDCardStandard
   id: CentcomIDCard
@@ -511,7 +498,6 @@
   name: ERT leader ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_commander
@@ -526,7 +512,6 @@
   name: ERT chaplain ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_chaplain # we have the sprite for the id but dont have chaplain ERT equipment for now.
@@ -541,7 +526,6 @@
   name: ERT engineer ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_engineer
@@ -554,7 +538,6 @@
   name: ERT janitor ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_janitor
@@ -567,7 +550,6 @@
   name: ERT medic ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_medic
@@ -580,7 +562,6 @@
   name: ERT security ID card
   components:
   - type: Sprite
-    sprite: _Lust/Objects/Misc/id_cards.rsi #Lust-edit
     layers:
     - state: gold
     - state: ert_security
@@ -593,7 +574,6 @@
   name: musician ID card
   components:
     - type: Sprite
-      sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
       layers:
         - state: default
         - state: idmusician
@@ -627,7 +607,7 @@
     - Maintenance
     - SyndicateAgent
   - type: Sprite
-    sprite: _Sunrise/Objects/Misc/id_cards.rsi # Sunrise-Edit
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: default
     - state: idpassenger
@@ -899,12 +879,12 @@
   description: An ID card that gives you access beyond your wildest dreams.
   components:
   - type: Sprite
-    sprite: Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
     layers:
     - state: admin
     - state: idadmin
   - type: Clothing
-    sprite: Objects/Misc/id_cards.rsi
+    sprite: _Lust/Objects/Misc/id_cards.rsi # Lust-edit
   - type: Item
     heldPrefix: green
   - type: IdCard
