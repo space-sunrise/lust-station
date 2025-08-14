@@ -1,6 +1,7 @@
 using Content.Shared.Electrocution;
 using Content.Shared.Trigger.Components.Effects;
 using Robust.Shared.Containers;
+using Robust.Shared.Timing; // Lust-add
 
 namespace Content.Shared.Trigger.Systems;
 
@@ -8,6 +9,7 @@ public sealed class ShockOnTriggerSystem : EntitySystem
 {
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly SharedElectrocutionSystem _electrocution = default!;
+    [Dependency] private readonly IGameTiming _timing = default!; // Lust-add
 
     public override void Initialize()
     {
@@ -18,6 +20,11 @@ public sealed class ShockOnTriggerSystem : EntitySystem
 
     private void OnTrigger(Entity<ShockOnTriggerComponent> ent, ref TriggerEvent args)
     {
+        // Lust-start
+        if (ent.Comp.PreviousActivation + ent.Comp.Cooldown < _timing.CurTime)
+            return;
+        // Lust-end
+
         if (args.Key != null && !ent.Comp.KeysIn.Contains(args.Key))
             return;
 
