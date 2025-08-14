@@ -115,6 +115,14 @@ public partial class ChatSystem
             SendEntityEmote(source, action, range, nameOverride, hideLog: hideLog, checkEmote: false, ignoreActionBlocker: ignoreActionBlocker);
         }
 
+        // Sunrise-Start
+        if (didEmote && emote.PopupMessages.Count != 0)
+        {
+            var action = Loc.GetString(_random.Pick(emote.PopupMessages), ("entity", source));
+            _popupSystem.PopupEntity(action, source);
+        }
+        // Sunrise-End
+
         return didEmote;
     }
 
