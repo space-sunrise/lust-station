@@ -71,5 +71,3 @@ ent-EngiAlertsMonitorUnpowered = { ent-BaseEngiAlertsMonitor }
     .desc = { ent-BaseEngiAlertsMonitor.desc }
 ent-MasterHandheldCamera = усовершенствованная бодикамера
     .desc = Бодикамера для истинных профи своего дела. Нагнетающе пикает, отпугивая врагов корпорации.
-ent-MasterHandheldCamera = усовершенствованная бодикамера
-    .desc = Бодикамера для истинных профи своего дела. Нагнетающе пикает, отпугивая врагов корпорации.
