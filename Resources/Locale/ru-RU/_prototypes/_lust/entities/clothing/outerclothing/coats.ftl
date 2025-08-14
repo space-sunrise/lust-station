@@ -1,15 +1,3 @@
-ent-ClothingOuterCoatIAAFormalCoat = formal IAA coat
-    .desc = Business jacket of the IAA for a professional look.
-ent-ClothingOuterCoatCMOFormalCoat = formal CMO coat
-    .desc = Luxury medical coat.
-ent-ClothingOuterCoatPQCoat = formal PQ coat
-    .desc = An expensive coat made of thick materials.
-ent-ClothingOuterCoatWardenCoat = formal warden coat
-    .desc = A jacket that inspires fear in law enforcement by its very appearance.
-ent-ClothingOuterCoatWhiteCap = captain's white jacket
-    .desc = Captain's formal jacket, inlaid with gold.
-ent-ClothingOuterCoatBlackCap = captain's black jacket
-    .desc = Captain's formal jacket, inlaid with gold.
 ent-ClothingOuterHoSTrenchElegant = Элегантный тренч ГСБ
     .desc = Простой и удобный легкобронированный тренч ГСБ с золотыми нашивками.
 ent-ClothingOuterHoSTrenchElegantOpened = Элегантный тренч ГСБ
