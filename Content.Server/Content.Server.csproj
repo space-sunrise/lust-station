@@ -29,13 +29,4 @@
     <ProjectReference Include="..\Sunrise\Content.Sunrise.Interfaces.Server\Content.Sunrise.Interfaces.Server.csproj" />
   </ItemGroup>
   <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
-<!-- lust-station-start -->
-  <Target Name="RunReplaceNtScript" AfterTargets="Publish">
-    <MakeDir Directories="$(PublishDir)Locale" />
-    <Exec Condition=" '$(OS)' == 'Windows_NT' "
-          Command="py $(ProjectDir)..\Scripts\replace_nt.py --path $(PublishDir)Locale" />
-   <Exec Condition=" '$(OS)' != 'Windows_NT' "
-          Command="python3 $(ProjectDir)/../Scripts/replace_nt.py --path $(PublishDir)/Locale" />
-  </Target>
-<!-- lust-station-end -->
 </Project>
