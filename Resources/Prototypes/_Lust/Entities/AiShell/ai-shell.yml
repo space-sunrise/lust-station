@@ -1,83 +1,79 @@
+# доделать и затестить
 - type: entity
+  parent: BaseBorgChassis
   id: AiShell
   name: AI Shell
   description: Temporary mobile shell for the station AI.
   components:
     - type: AiShell
-    - type: StationAiCore
+    - type: StationAiMobile
+    - type: StationAiWhitelist
     - type: StationAiVision
       range: 11
-    - type: StationAiWhitelist
+    - type: StationAiHeld
+    - type: IgnoreUIRange
     - type: Tag
       tags:
         - StationAi
-    - type: StationAiOverlay
-      allowCrossGrid: true
-    - type: StationAiHeld
-    - type: IgnoreUIRange
-    - type: Sprite
-      sprite: Mobs/Species/Human/parts.rsi
-      noRot: true
-      layers:
-        - state: full
-    - type: Clickable
-    - type: InteractionOutline
-    - type: Physics
-      bodyType: Dynamic
-      fixedRotation: true
-    - type: Fixtures
-      fixtures:
-        fix1:
-          shape:
-            !type:PhysShapeCircle
-            radius: 0.35
-          density: 80
-          mask:
-            - MobMask
-          layer:
-            - MobLayer
-    - type: InputMover
-    - type: MobMover
-    - type: MovementSpeedModifier
-      baseSpeed: 4.5
-      sprintSpeed: 5.5
-    - type: Eye
-    - type: Examiner
-    - type: MobState
-    - type: StandingState
+
+    - type: BorgChassis
+      maxModules: 0
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellHigh
     - type: Body
       prototype: Human
-    - type: Inventory
-      templateId: human
+    - type: IntrinsicRadioReceiver
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+      - Common
+      - Command
+      - Engineering
+      - Law
+      - Medical
+      - Science
+      - Security
+      - Service
+      - Supply
+    - type: ActiveRadio
+      channels:
+      - Binary
+      - Common
+      - Command
+      - Engineering
+      - Law
+      - Medical
+      - Science
+      - Security
+      - Service
+      - Supply
+
+    - type: ComplexInteraction
+    - type: Interactions
+    - type: InteractionPopup
+    - type: Input
+      context: "human"
+    - type: Puller
+      needsHands: true
     - type: Hands
     - type: MeleeWeapon
       damage:
         types:
           Blunt: 5
-    - type: Puller
-    - type: CombatMode
+    - type: Actions
     - type: HumanoidAppearance
       species: Human
     - type: DoAfter
-    - type: Speech
-    - type: Access
-      groups:
-        - AllAccess
-        - Silicon
-    - type: IntrinsicRadioReceiver
-    - type: IntrinsicRadioTransmitter
-      channels:
-        - Binary
-        - Common
-        - Science
-    - type: ActiveRadio
-      channels:
-        - Binary
-        - Common
-        - Science
-    - type: ActionGrant
-      actions:
-        - ActionAIViewLaws
+    - type: Inventory
+      templateId: ai-shell
+    - type: Clickable
+    - type: InteractionOutline
+    - type: ShowJobIcons
+    - type: ShowHealthBars
+
     - type: UserInterface
       interfaces:
         enum.CrewMonitoringUIKey.Key:
@@ -96,10 +92,15 @@
           toggleAction: ActionAGhostShowStationRecords
         enum.CommunicationsConsoleUiKey.Key:
           toggleAction: ActionAGhostShowCommunications
-    - type: ComplexInteraction
-    - type: Interactions
-    - type: InteractionPopup
-    - type: StationAiMobile
-    - type: Input
-      context: "human"
-    - type: Actions
+
+    - type: Access
+      groups:
+        - AllAccess
+        - Silicon
+    - type: AccessReader
+      access: [ [ "Command" ], [ "Science" ] ]
+    - type: Sprite
+      sprite: Mobs/Species/Human/parts.rsi
+      noRot: true
+      layers:
+        - state: full
