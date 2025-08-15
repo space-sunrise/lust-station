@@ -59,7 +59,7 @@ public sealed partial class AbsorbentComponent : Component
 
     // Sunrise-Start
     [DataField]
-    public float FootprintEnlargement = 0.1f;
+    public float FootprintEnlargement = 10f;
     // Sunrise-End
 }
 
