@@ -1,9 +1,32 @@
 - type: roleLoadout
   id: JobComMaid
   groups:
+  - ComMaidHead
+  - ComMaidJumpsuit
+  - ComMaidNeck
+  - ComMaidShoes
+  - ComMaidGloves
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
   - Bra
   - Pants
   - Socks
+
+- type: loadoutEffectGroup
+  id: MasterSalvage100h
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 360000 #100 hrs
+
+- type: loadoutEffectGroup
+  id: MasterSalvage50h
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 180000 #50 hrs

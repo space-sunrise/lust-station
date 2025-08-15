@@ -1,0 +1,13 @@
+loadout-group-security-neck = Офицер СБ, шея
+loadout-group-engineer-neck = Инженер, шея
+loadout-group-medical-neck = Медик, шея
+loadout-group-special-items = Особое
+loadout-group-IAA-uniform = Агент внутренних дел, униформа
+loadout-group-IAA-neck = Агент внутренних дел, шея
+loadout-group-IAA-coat = Агент внутренних дел, верхняя одежда
+loadout-group-IAA-backpack = Агент внутренних дел, рюкзак
+loadout-group-commaid-head = Горничная командования, голова
+loadout-group-commaid-jumpsuit = Горничная командования, комбинезон
+loadout-group-commaid-neck = Горничная командования, шея
+loadout-group-commaid-shoes = Горничная командования, обувь
+loadout-group-commaid-gloves = Горничная командования, перчатки

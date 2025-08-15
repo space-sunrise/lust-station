@@ -68,7 +68,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         base.Initialize();
 
         SubscribeLocalEvent<ClothingComponent, GetEquipmentVisualsEvent>(OnGetVisuals);
-        SubscribeLocalEvent<ClothingComponent, InventoryTemplateUpdated>(OnInventoryTemplateUpdated);
+        SubscribeLocalEvent<InventoryComponent, InventoryTemplateUpdated>(OnInventoryTemplateUpdated);
 
         SubscribeLocalEvent<InventoryComponent, VisualsChangedEvent>(OnVisualsChanged);
         SubscribeLocalEvent<SpriteComponent, DidUnequipEvent>(OnDidUnequip);
@@ -91,20 +91,19 @@ public sealed class ClientClothingSystem : ClothingSystem
         }
     }
 
-    private void OnInventoryTemplateUpdated(Entity<ClothingComponent> ent, ref InventoryTemplateUpdated args)
+    private void OnInventoryTemplateUpdated(Entity<InventoryComponent> ent, ref InventoryTemplateUpdated args)
     {
-        UpdateAllSlots(ent.Owner, clothing: ent.Comp);
+        UpdateAllSlots(ent.Owner, ent.Comp);
     }
 
     private void UpdateAllSlots(
         EntityUid uid,
-        InventoryComponent? inventoryComponent = null,
-        ClothingComponent? clothing = null)
+        InventoryComponent? inventoryComponent = null)
     {
         var enumerator = _inventorySystem.GetSlotEnumerator((uid, inventoryComponent));
         while (enumerator.NextItem(out var item, out var slot))
         {
-            RenderEquipment(uid, item, slot.Name, inventoryComponent, clothingComponent: clothing);
+            RenderEquipment(uid, item, slot.Name, inventoryComponent);
         }
     }
 
@@ -336,8 +335,16 @@ public sealed class ClientClothingSystem : ClothingSystem
                     break;
                 // Lust-start
                 case Sex.Futanari:
-                    if (inventory.FemaleDisplacements.Count > 0)
-                        displacementData = inventory.FemaleDisplacements.GetValueOrDefault(slot);
+
+                    displacementData = inventory.FemaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
+                            ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
+
+                    if (_tagSystem.HasTag(equipment, "Hardsuit"))
+                    {
+                        displacementData = inventory.FemaleDisplacements.GetValueOrDefault(hardsuitKey)
+                                            ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
+                    }
+
                     break;
                 // Lust-end
             }

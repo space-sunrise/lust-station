@@ -20,6 +20,7 @@ using Content.Client.Lobby;
 using Content.Client.MainMenu;
 using Content.Client.Parallax.Managers;
 using Content.Client.Players.PlayTimeTracking;
+using Content.Client.Playtime;
 using Content.Client.Radiation.Overlays;
 using Content.Client.Replay;
 using Content.Client.Screenshot;
@@ -28,6 +29,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface;
 using Content.Client.Viewport;
 using Content.Client.Voting;
+using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
 using Content.Shared.Ame.Components;
 using Content.Shared.Gravity;
 using Content.Shared.Localizations;
@@ -82,6 +84,7 @@ namespace Content.Client.Entry
         [Dependency] private readonly DebugMonitorManager _debugMonitorManager = default!;
         [Dependency] private readonly TitleWindowManager _titleWindowManager = default!;
         [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
+        [Dependency] private readonly ClientsidePlaytimeTrackingManager _clientsidePlaytimeManager = default!;
         [Dependency] private readonly ServersHubManager _serversHubManager = default!; // Sunrise-Hub
         [Dependency] private readonly ContributorsManager _contributorsManager = default!; // Sunrise-Edit
         [Dependency] private readonly PlayerCacheManager _playerCacheManager = default!; // Sunrise-Edit
@@ -154,6 +157,7 @@ namespace Content.Client.Entry
             _extendedDisconnectInformation.Initialize();
             _jobRequirements.Initialize();
             _playbackMan.Initialize();
+            _clientsidePlaytimeManager.Initialize();
 
             _serversHubManager.Initialize(); // Sunrise-Hub
             _contributorsManager.Initialize(); // Sunrise-Edit
@@ -169,6 +173,9 @@ namespace Content.Client.Entry
             _configManager.SetCVar("interface.resolutionAutoScaleLowerCutoffX", 520);
             _configManager.SetCVar("interface.resolutionAutoScaleLowerCutoffY", 240);
             _configManager.SetCVar("interface.resolutionAutoScaleMinimum", 0.5f);
+
+            _configManager.SetCVar("interactions.window_pos_x", 0); // Sunrise-Edit
+            _configManager.SetCVar("interactions.window_pos_y", 0); // Sunrise-Edit
         }
 
         public override void Shutdown()

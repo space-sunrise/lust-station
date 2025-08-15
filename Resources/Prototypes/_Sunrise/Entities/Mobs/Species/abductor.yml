@@ -8,7 +8,6 @@
   id: BaseMobAbductor
   abstract: true
   components:
-  #- type: Absorbable Starlight: Done on purpose so the abductors don't get absorbed.
   - type: Muted
   - type: HumanoidAppearance
     species: Abductor
@@ -47,6 +46,7 @@
         Brute: -0.14
   - type: Bloodstream
     bloodReagent: AbductorBlood
+  - type: Interactions # Lust-edit
   - type: CollectiveMind
     minds:
     - Abductor

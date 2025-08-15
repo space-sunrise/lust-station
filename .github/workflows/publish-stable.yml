@@ -38,6 +38,9 @@ jobs:
     - name: Move Sunrise Private files
       run: python3 Tools/_sunrise/move_private.py --clone-dir "SunrisePrivate" --target-dirs "Resources" "Content.Client" "Content.Server" "Content.Shared"
 
+    - name: Process localization
+      run: python3 Tools/_lust/replace_nt.py --path Resources/Locale
+
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v3.2.0
       with:
@@ -81,7 +84,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK_LUST }}
         CHANGELOG_FILE: 'Resources/Changelog/ChangelogLust.yml'
-        
+
     - name: Publish discord changelog (Sunrise)
       run: Tools/_sunrise/actions_changelogs_since_last_run.py
       env:

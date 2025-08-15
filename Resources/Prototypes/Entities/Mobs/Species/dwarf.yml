@@ -8,7 +8,6 @@
   # SUNRISE EDIT
   - type: Interactions
   # SUNRISE EDIT
-  - type: Absorbable
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.2
@@ -26,10 +25,6 @@
     damageRecovery:
       types:
         Asphyxiation: -1.0
-  - type: Sprite
-    noRot: true
-    drawdepth: Mobs
-    #scale: 1, 0.8
   - type: Body
     prototype: Dwarf
     requiredLegs: 2
@@ -443,8 +438,6 @@
           32:
             sprite: _Sunrise/Mobs/Species/Human/Distrofik/displacement.rsi
             state: back
-  - type: ScaleSprite
-    scale: 1, 0.8
   # Sunrise-End
 
 - type: entity
@@ -452,7 +445,7 @@
   id: MobDwarfDummy
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
+  - type: ScaleVisuals
     scale: 1, 0.8
   - type: Inventory
     ### Female

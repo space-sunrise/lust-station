@@ -15,9 +15,9 @@
   access:
   - Security
   - Brig
-  - Maintenance
   - Service
   - External
+  - Cryogenics
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
@@ -36,3 +36,7 @@
     back:
     - Flash
     - ClothingEyesGlassesSecurity
+
+- type: chameleonOutfit
+  id: SecurityPilotChameleonOutfit
+  job: SecurityPilot

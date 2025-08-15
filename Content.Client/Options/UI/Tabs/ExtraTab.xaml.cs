@@ -39,10 +39,12 @@ public sealed partial class ExtraTab : Control
 
         Control.AddOptionCheckBox(SunriseCCVars.TTSClientEnabled, TtsClientCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.TTSClientQueueEnabled, TtsClientCheckBoxQueue);
+        Control.AddOptionCheckBox(SunriseCCVars.TTSRadioGhostEnabled, TtsRadioGhostCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.TapePlayerClientEnabled, TapePlayerClientCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.JumpSoundDisable, JumpSoundDisableCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.VoteMusicDisable, VoteMusicDisableCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.MuteGhostRoleNotification, MuteGhostRoleNotificationCheckBox);
+        Control.AddOptionCheckBox(SunriseCCVars.TracesEnabled, TracesCheckBox);
 
         Control.AddOptionCheckBox(SunriseCCVars.PlayHeartBeatSound, PlayHeartbeatSound);
 

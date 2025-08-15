@@ -1,6 +1,6 @@
 ent-ClothingHeadCapCentcomBlack = special operations officer cap
     .desc = The NanoTrasen gold-engraved special cap of the higher ranks, which has long gone through more than one blitzkrieg...
-ent-ClothingHeadCapNTGR = NTRG officer cap
+ent-ClothingHeadCapNTGR = NTRG cap
     .desc = The NanoTrasen Silver-engraved special cap
 ent-ClothingHeadCapCentcomNaval = naval cap
     .desc = A cap worn by those in the Nanotrasen Navy.
@@ -60,3 +60,7 @@ ent-ClothingHeadHatDeerHorns = Deer Horns
     .desc = a Horns, usually worn deer.
 ent-ClothingHeadMailCarrier = mail carrier's hat
     .desc = Smells like a good pension.
+ent-ClothingHeadWhiteVeil = white elegant veil
+    .desc = A delicate and flowing bridal veil, symbolizing purity and romance.
+ent-ClothingHeadBlackVeil = dark elegant veil
+    .desc = A delicate and flowing bridal veil, symbolizing purity and romance.
