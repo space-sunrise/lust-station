@@ -1019,6 +1019,9 @@
 - type: ttsVoice
   id: CRYSIS2AiBlackops04
   name: tts-voice-name-crysis2-ai-blackops-04
-  sex: Male
+  # Lust-start
+  sex:
+  - Male
+  # Lust-end
   speaker: crysis2_blackops_04
   provider: sunrise
