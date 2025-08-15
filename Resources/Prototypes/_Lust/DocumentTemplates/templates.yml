@@ -594,7 +594,7 @@
 
 - type: docTemplate
   id: DeathCertificateLust
-  name: doc-template-death-certificate-name
+  name: doc-template-death-certificate-lust-name
   content: /ServerInfo/Documents/_Lust/Medical/DeathCertificate.xml
   component: Medical
 
