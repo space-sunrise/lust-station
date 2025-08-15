@@ -19,3 +19,10 @@
   color: Pink
   nextDelay: 12
   notifyBySource: true
+
+# Sunrise-add
+- type: chatNotification
+  id: AiShellHolopadCall
+  message: ai-shell-holopad-call
+  color: Cyan
+  nextDelay: 8
