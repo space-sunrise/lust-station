@@ -311,6 +311,14 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         {
             var ev = new ChatNotificationEvent(_downloadChatNotificationPrototype, args.Used, args.User);
             RaiseLocalEvent(held, ref ev);
+
+            // Sunrise-start
+            var shells = EntityQueryEnumerator<StationAiMobileComponent>();
+            while (shells.MoveNext(out var shell, out _))
+            {
+                RaiseLocalEvent(shell, ref ev);
+            }
+            // Sunrise-end
         }
 
         var doAfterArgs = new DoAfterArgs(EntityManager, args.User, cardHasAi ? intelliComp.UploadTime : intelliComp.DownloadTime, new IntellicardDoAfterEvent(), args.Target, ent.Owner)
