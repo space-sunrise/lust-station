@@ -1,5 +1,5 @@
 ent-IngotBase = { ent-BaseItem }
-    .desc = Тяжёлый металлический слиток с выдавленным логотипом Qillu.
+    .desc = Тяжёлый металлический слиток с выдавленным логотипом Nanotrasen.
 ent-IngotGold = золотой слиток
     .suffix = Полный
     .desc = { ent-IngotBase.desc }

@@ -1,6 +1,6 @@
 ent-SpawnPointMagistrat = магистрат
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointNtrep = представитель Qillu
+ent-SpawnPointNtrep = представитель NT
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointBrigmedic = бригмедик
     .desc = { ent-SpawnPointJobBase.desc }
@@ -60,7 +60,7 @@ ent-SpawnPointSecurityBorg = киборг
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointServiceBorg = киборг
     .desc = { ent-SpawnPointJobBase.desc }
-ent-SpawnPointIAA = iaa
+ent-SpawnPointIAA = АВД
     .desc = { ent-SpawnPointJobBase.desc }
 ent-SpawnPointBlueShield = офицер «Синий щит»
     .desc = { ent-SpawnPointJobBase.desc }

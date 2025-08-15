@@ -20,6 +20,9 @@
                 <CheckBox Name="DamageOverlayEnableCheckBox" Text="{Loc 'ui-options-damage-overlay-enable'}" />
                 <CheckBox Name="DamageOverlaySelfCheckBox" Text="{Loc 'ui-options-damage-overlay-self'}" />
                 <CheckBox Name="DamageOverlayStructuresCheckBox" Text="{Loc 'ui-options-damage-overlay-structures'}" />
+                <CheckBox Name="TracesCheckBox"
+                          Text="{Loc 'ui-options-trace'}"
+                          ToolTip="{Loc 'ui-options-trace-tooltip'}" />
 
                 <!-- Audio -->
                 <Label Text="{Loc 'ui-options-sunrise-general-audio'}" StyleClasses="LabelKeyText"/>
@@ -37,7 +40,7 @@
 
                 <!-- Graphics -->
                 <Label Text="{Loc 'ui-options-sunrise-general-graphics'}" StyleClasses="LabelKeyText"/>
-                <CheckBox Name="ChatIconsEnableCheckBox" Text="{Loc 'ui-options-chat-icons-enable'}" />
+                <!-- <CheckBox Name="ChatIconsEnableCheckBox" Text="{Loc 'ui-options-chat-icons-enable'}" /> -->
                 <CheckBox Name="ChatPointingVisualsEnableCheckBox" Text="{Loc 'ui-options-chat-pointing-visuals-enable'}" />
 
             </BoxContainer>

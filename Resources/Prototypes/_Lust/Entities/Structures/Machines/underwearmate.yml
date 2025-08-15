@@ -10,8 +10,8 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
-  - type: Advertise
-    pack: UnderwearMateAds
+  - type: DatasetVocalizer
+    dataset: UnderwearMateAds
   - type: Speech
   - type: Sprite
     sprite: _Lust/Structures/Machines/VendingMachines/underwearmate.rsi

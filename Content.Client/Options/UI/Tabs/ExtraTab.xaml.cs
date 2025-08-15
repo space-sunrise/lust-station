@@ -44,6 +44,7 @@ public sealed partial class ExtraTab : Control
         Control.AddOptionCheckBox(SunriseCCVars.JumpSoundDisable, JumpSoundDisableCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.VoteMusicDisable, VoteMusicDisableCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.MuteGhostRoleNotification, MuteGhostRoleNotificationCheckBox);
+        Control.AddOptionCheckBox(SunriseCCVars.TracesEnabled, TracesCheckBox);
 
         Control.AddOptionCheckBox(SunriseCCVars.PlayHeartBeatSound, PlayHeartbeatSound);
 
@@ -98,7 +99,7 @@ public sealed partial class ExtraTab : Control
         Control.AddOptionCheckBox(SunriseCCVars.DamageOverlaySelf, DamageOverlaySelfCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.DamageOverlayStructures, DamageOverlayStructuresCheckBox);
 
-        Control.AddOptionCheckBox(SunriseCCVars.ChatIconsEnable, ChatIconsEnableCheckBox);
+        // Control.AddOptionCheckBox(SunriseCCVars.ChatIconsEnable, ChatIconsEnableCheckBox);
         Control.AddOptionCheckBox(SunriseCCVars.ChatPointingVisuals, ChatPointingVisualsEnableCheckBox);
 
         Control.Initialize();

@@ -1,7 +1,5 @@
 ent-ClothingHeadBase = { ent-Clothing }
     .desc = { ent-Clothing.desc }
-ent-ClothingHeadTopCovered = { ent-ClothingHeadBase }
-    .desc = { ent-ClothingHeadBase.desc }
 ent-ClothingHeadBaseButcherable = { ent-ClothingHeadBase }
     .desc = { ent-ClothingHeadBase.desc }
 ent-ClothingHeadLightBase = базовый шлем с фонарём
