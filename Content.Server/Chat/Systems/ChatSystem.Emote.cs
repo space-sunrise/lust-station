@@ -97,16 +97,6 @@ public partial class ChatSystem
 
         var didEmote = TryEmoteWithoutChat(source, emote, ignoreActionBlocker);
 
-        // Sunrise-Start
-        if (emote.Animation)
-        {
-            var ev = new AnimationEmoteAttemptEvent(source, emote);
-            RaiseLocalEvent(source, ev, true);
-            if (ev.Cancelled)
-                return false;
-        }
-        // Sunrise-End
-
         // check if proto has valid message for chat
         if (didEmote && emote.ChatMessages.Count != 0)
         {
