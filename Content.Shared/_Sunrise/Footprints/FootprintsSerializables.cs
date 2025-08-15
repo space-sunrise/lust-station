@@ -48,13 +48,13 @@ public sealed partial class PuddleFootprintComponent : Component
     /// Ratio determining how much of puddle's color transfers to footprints
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
-    public float TransferVolume = 25f;
+    public float TransferVolume = 75f;
 
     /// <summary>
     /// Percentage of water content above which footprints won't be created
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
-    public float WaterThresholdPercent = 80f;
+    public float WaterThresholdPercent = 75f;
 }
 
 /// <summary>
@@ -146,7 +146,7 @@ public sealed partial class FootprintEmitterComponent : Component
     public Entity<SolutionComponent>? BodySurfaceSolution;
 
     [ViewVariables(VVAccess.ReadWrite)]
-    public float TransferVolumeFoot = 0.5f;
+    public float TransferVolumeFoot = 1f;
 
     [ViewVariables(VVAccess.ReadWrite)]
     public float TransferVolumeDragMark = 1.0f;
