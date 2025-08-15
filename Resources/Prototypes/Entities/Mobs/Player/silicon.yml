@@ -209,6 +209,10 @@
     powerLoad: 1000
     needsPower: false
   - type: StationAiCore
+  # Sunrise-add
+  - type: AiShellVerb
+  - type: AiCoreActions
+  # Sunrise-add
   - type: StationAiVision
   - type: InteractionOutline
   - type: Sprite

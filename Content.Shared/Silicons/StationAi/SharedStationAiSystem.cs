@@ -18,6 +18,7 @@ using Content.Shared.Power;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.StationAi;
 using Content.Shared.Verbs;
+using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
@@ -69,6 +70,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     private EntityQuery<BroadphaseComponent> _broadphaseQuery;
     private EntityQuery<MapGridComponent> _gridQuery;
 
+    [ValidatePrototypeId<EntityPrototype>]
     private static readonly EntProtoId DefaultAi = "StationAiBrain";
     private readonly ProtoId<ChatNotificationPrototype> _downloadChatNotificationPrototype = "IntellicardDownload";
 
@@ -168,8 +170,12 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiBuiCheck(Entity<StationAiWhitelistComponent> ent, ref BoundUserInterfaceCheckRangeEvent args)
     {
-        if (!HasComp<StationAiHeldComponent>(args.Actor))
+        // Sunrise-start edit
+        if (!HasComp<StationAiHeldComponent>(args.Actor) && !HasComp<StationAiMobileComponent>(args.Actor))
             return;
+        //if (!HasComp<StationAiHeldComponent>(args.Actor))
+        //    return;
+        // Sunrise-end edit
 
         args.Result = BoundUserInterfaceRangeResult.Fail;
 
@@ -200,6 +206,11 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnAiInRange(Entity<StationAiOverlayComponent> ent, ref InRangeOverrideEvent args)
     {
+        // Sunrise-start-edit
+        if (HasComp<StationAiMobileComponent>(args.User))
+            return;
+        //Sunrise-end-edit
+
         args.Handled = true;
         // Starlight-surgery start
         var target = args.Target;
@@ -536,6 +547,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         // Otherwise let generic visualizers handle the appearance update
         _appearance.SetData(entity.Owner, StationAiVisualState.Key, state);
     }
+
+    public virtual void AnnounceIntellicardUsage(EntityUid uid, SoundSpecifier? cue = null) { }
 
     public virtual bool SetVisionEnabled(Entity<StationAiVisionComponent> entity, bool enabled, bool announce = false)
     {

@@ -1,0 +1,21 @@
+- type: entity
+  id: GoToShellAction
+  parent: BaseAction
+  name: go-to-shell
+  components:
+    - type: InstantAction
+      icon:
+        sprite:
+          path: Interface/Actions/harm.png
+      event: !type:GoToShellActionEvent
+
+- type: entity
+  id: ReturnToCoreAction
+  parent: BaseAction
+  name: return-to-core
+  components:
+    - type: InstantAction
+      icon:
+        sprite:
+          path: Interface/Actions/harmOff.png
+      event: !type:ReturnToCoreActionEvent

@@ -77,6 +77,14 @@ public sealed class StationAiSystem : SharedStationAiSystem
                 ev.SourceNameOverride = Loc.GetString("station-ai-turret-component-name", ("name", Name(ent)), ("address", deviceNetwork.Address));
 
             RaiseLocalEvent(ai, ref ev);
+
+            // Sunrise-start
+            var shells = EntityQueryEnumerator<StationAiMobileComponent>();
+            while (shells.MoveNext(out var shell, out _))
+            {
+                RaiseLocalEvent(shell, ref ev);
+            }
+            // Sunrise-end
         }
     }
 
@@ -122,6 +130,14 @@ public sealed class StationAiSystem : SharedStationAiSystem
             ev.SourceNameOverride = tile.ToString();
 
             RaiseLocalEvent(ai, ref ev);
+
+            // Sunrise-start
+            var shells = EntityQueryEnumerator<StationAiMobileComponent>();
+            while (shells.MoveNext(out var shell, out _))
+            {
+                RaiseLocalEvent(shell, ref ev);
+            }
+            // Sunrise-end
         }
     }
 
