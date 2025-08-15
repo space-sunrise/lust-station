@@ -1,4 +1,2 @@
-ent-CartridgeRail = { ent-BaseCartridge }
-    .desc = { ent-BaseCartridge.desc }
-ent-CartridgeRifleRubber = cartridge (.20 rifle rubber)
+ent-CartridgeRifleRubber = cartridge (5.56mm rubber)
     .desc = { ent-BaseCartridgeRifle.desc }

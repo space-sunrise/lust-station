@@ -168,6 +168,7 @@
   - SecurityTourniquet
   - SecurityWeaponMeleeNeedle
   - SecurityHoloprojector
+  - SecurityMasterBodycam
 
 - type: loadoutGroup
   id: CorporateLaw
@@ -227,9 +228,40 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  #- SunriseWeaponPistolG22
-  - SunriseWeaponEnergyGun
-  - SunriseWeaponTaser
+  - GlockBox
+  - ACP14Box
+  - MK58Box
+  - MK58GoldBox
+  - WeaponDominator
+  - WeaponDisabler
+#  - WeaponTaser
+
+# Security Cadet
+- type: loadoutGroup
+  id: SunriseWeaponCadet
+  name: loadout-group-security-gun
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CadetWeaponGlockBox
+  - CadetWeaponACP14Box
+  - CadetWeaponMK58Box
+  - MK58GoldBox
+  - CadetWeaponMiniEnergyGun
+  - CadetWeaponDisabler
+
+# Security  Detective
+- type: loadoutGroup
+  id: SunriseWeaponDetective
+  name: loadout-group-security-gun
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - DetectiveWeapon
+  - DetectiveWeapon20h
+  - DetectiveWeapon50h
+  - DetectiveWeapon50h2
+  - DetectiveWeapon100h
 
 # Security  HoS
 - type: loadoutGroup
@@ -238,14 +270,17 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - SunriseWeaponPistolG22
-  - SunriseWeaponTaser
+  - GlockBox
+  - MK58Box
+  - ACP14Box
+  - MK58GoldBox
   - HeadofSecurityWeapon20h
   - HeadofSecurityWeapon50h
   - HeadofSecurityWeapon50h2
   - HeadofSecurityWeapon100h
-# Medical
+  - HeadofSecurityWeapon100h2
 
+# Medical
 - type: loadoutGroup
   id: SeniorPhysicianJumpsuit
   name: loadout-group-senior-physician-jumpsuit
@@ -801,7 +836,7 @@
   - AdjutantDuffel
 #Lust-Start
   - AdjutantFormalBackpack
-  - ClothingBackpackDuffelFormaladduf
+  - AdjutantFormalDuffel
 #Lust-End
 
 - type: loadoutGroup
@@ -1180,6 +1215,8 @@
   - Sunrise-ScarfBrown
   - Sunrise-ScarfPurple
   - Sunrise-BedsheetCosmos
+  - SalvageSpecialistNeck50h #Lust-Edit
+  - SalvageSpecialistNeck100h #Lust-Edit
 
 - type: loadoutGroup
   id: SunriseSalvageHead
@@ -1220,33 +1257,6 @@
   - TrinketsCargoQueen
   - TrinketsCargoQ
   - TrinketsCargoLGW
-
-- type: loadoutGroup
-  id: CommonPets
-  name: loadout-group-pets
-  minLimit: 0
-  loadouts:
-  - PetRabbit
-  - PetAnteater
-  - PetOctopus
-  - PetNavySeal
-  - PetOtter
-  - PetAlexander
-  - PetMobCrabAtmos
-  - PetMobCorgiIan
-  - PetMobSlimesPet
-  - PetMobCatRuntime
-  - PetMobCorgiLisa
-  - PetMobCatFloppa
-  - PetMobWalter
-  - PetMcGriff
-  - PetMobPossumMorty
-  - PetMobPossumPoppy
-  - PetMobCorgiIanOld
-  - PetMobGoose
-  - PetMobClownGoblin
-  - PetMobCorgiIanPup
-  - PetMobParrot
 
 #Law
 

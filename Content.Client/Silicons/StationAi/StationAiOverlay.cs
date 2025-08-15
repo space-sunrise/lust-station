@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Shared.Silicons.StationAi;
+using Content.Shared.Movement.Components;
 using Robust.Client.Graphics;
 using Robust.Client.Player;
 using Robust.Shared.Enums;
@@ -12,6 +13,10 @@ namespace Content.Client.Silicons.StationAi;
 
 public sealed class StationAiOverlay : Overlay
 {
+    private static readonly ProtoId<ShaderPrototype> CameraStaticShader = "CameraStatic";
+    private static readonly ProtoId<ShaderPrototype> StencilMaskShader = "StencilMask";
+    private static readonly ProtoId<ShaderPrototype> StencilDrawShader = "StencilDraw";
+
     [Dependency] private readonly IClyde _clyde = default!;
     [Dependency] private readonly IEntityManager _entManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
@@ -50,6 +55,12 @@ public sealed class StationAiOverlay : Overlay
         var worldBounds = args.WorldBounds;
 
         var playerEnt = _player.LocalEntity;
+        // Starlight-abductor start
+        if (_entManager.TryGetComponent(playerEnt, out StationAiOverlayComponent? stationAiOverlay)
+            && stationAiOverlay.AllowCrossGrid
+            && _entManager.TryGetComponent(playerEnt, out RelayInputMoverComponent? relay))
+            playerEnt = relay.RelayEntity;
+        // Starlight-abductor end
         _entManager.TryGetComponent(playerEnt, out TransformComponent? playerXform);
         var gridUid = playerXform?.GridUid ?? EntityUid.Invalid;
         _entManager.TryGetComponent(gridUid, out MapGridComponent? grid);
@@ -91,7 +102,7 @@ public sealed class StationAiOverlay : Overlay
             () =>
             {
                 worldHandle.SetTransform(invMatrix);
-                var shader = _proto.Index<ShaderPrototype>("CameraStatic").Instance();
+                var shader = _proto.Index(CameraStaticShader).Instance();
                 worldHandle.UseShader(shader);
                 worldHandle.DrawRect(worldBounds, Color.White);
             },
@@ -114,11 +125,11 @@ public sealed class StationAiOverlay : Overlay
         }
 
         // Use the lighting as a mask
-        worldHandle.UseShader(_proto.Index<ShaderPrototype>("StencilMask").Instance());
+        worldHandle.UseShader(_proto.Index(StencilMaskShader).Instance());
         worldHandle.DrawTextureRect(_stencilTexture!.Texture, worldBounds);
 
         // Draw the static
-        worldHandle.UseShader(_proto.Index<ShaderPrototype>("StencilDraw").Instance());
+        worldHandle.UseShader(_proto.Index(StencilDrawShader).Instance());
         worldHandle.DrawTextureRect(_staticTexture!.Texture, worldBounds);
 
         worldHandle.SetTransform(Matrix3x2.Identity);

@@ -1,3 +1,5 @@
+trait-category-height = Рост
+trait-category-vocal = Голос
 trait-colorblindness-name = Дальтонизм
 trait-colorblindness-desc = Вы видите мир не так, как все.
 trait-OwOAccent-name = акцент OwO
@@ -12,3 +14,5 @@ trait-russian-accent-name = Русский акцент
 trait-russian-accent-desc = Товарищ, это не ваше а наше.
 trait-transliteration-accent-name = Транслитерированный акцент
 trait-transliteration-accent-desc = Ds ujdjhbnt nhfyckbnjv.
+trait-felinid-vocal-name = мурлыкание
+trait-felinid-vocal-desc = Заменяет ваши звуки эмоций фелинидскими. Ня!

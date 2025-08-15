@@ -1,0 +1,354 @@
+- type: interaction
+  id: HornsBlowjobFemale
+  name: "Трахать в рот схватив рожки"
+  icon: HornsAssFemaleIcon
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Female, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:HasVisualLayerCondition
+    checkTarget: true
+    checkInitiator: false
+    layer: Tail
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonHornsDeer
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user крепко взяв %target за рожки трахает её в ротик"
+  - "%user трахает в ротик %target держа её за рожки"
+  - "%user взяв %target за рожки, делает себе минет её ротиком"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 9
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: HornsBlowjobMale
+  name: "Трахать в рот схватив рожки"
+  icon: HornsAssFemaleIcon
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonHornsDeer
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user крепко взяв %target за рожки трахает его в ротик"
+  - "%user трахает в ротик %target держа его за рожки"
+  - "%user взяв %target за рожки, делает себе минет его ротиком"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 9
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: HornsCunnilingusMale
+  name: "Делать куни держа за рожки"
+  icon: HornsAssFemaleIcon
+  category: Pussy
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "вагина" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonHornsDeer
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user хватает %target за рожки и прижимает его губки к своей киске"
+  - "%user сжимая рожки %target окунает его язычок в свою киску"
+  - "%user берет %target за рожки и трется об его язычок своей киской"
+  - "%user крепко держа за рожки %target, ласкает свою киску его язычком"
+  - "%user притягивает к себе за рожки %target, заставляя вылизывать свою киску"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 9
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: HornsPussyFuck
+  name: "Трахать вагину держа за рожки"
+  icon: HornsAssFemaleIcon
+  category: Pussy
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Female, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "вагина" ]
+    requireExposed: true
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonHornsDeer
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user ритмично трахает вагину %target, сжимая её рожки"
+  - "%user крепко держит рожки %target, и жестко трахает её вагину"
+  - "%user стиснув рожки %target, страстно долбит её вагину своим членом"
+  - "%user сжимая рожки %target, натягивает их на себя и трахает её вагину"
+  - "%user на всю длину входит членом в вагину %target, прижимая её за рожки"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 10
+  cooldown: 3
+#  targetVirginityLoss: female
+#  userVirginityLoss: male
+
+- type: interaction
+  id: HornsAssFuckFemale
+  name: "Трахать анус держа за рожки"
+  icon: HornsAssFemaleIcon
+  category: Butt
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Female, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user ритмично трахает анус %target, сжимая её рожки"
+  - "%user крепко держит рожки %target, и жестко трахает её анус"
+  - "%user стиснув рожки %target, страстно долбит её анус своим членом"
+  - "%user сжимая рожки %target, натягивает их и трахает членом её анус"
+  - "%user на всю длину входит членом в анус %target, прижимая её за рожки"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 10
+  cooldown: 3
+#  targetVirginityLoss: anal
+#  userVirginityLoss: male
+
+- type: interaction
+  id: HornsAssFuckMale
+  name: "Трахать анус держа за рожки"
+  icon: HornsAssFemaleIcon
+  category: Butt
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Male ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  - !type:HasMarkingCondition
+    checkInitiator: false
+    checkTarget: true
+    markingWhitelist:
+    - DemonHornsDeer
+    - DemonCowHorns
+    - DemonHornsSmall
+    - LizardHornsAngler
+    - LizardHornsCurled
+    - LizardHornsRam
+    - LizardHornsShort
+    - LizardHornsSimple
+    - LizardHornsDemonic
+    - LizardHornsBighorn
+    - LizardHornsMyrsore
+    - LizardHornsAyrshire
+    - LizardHornsArgali
+    - LizardHornsDouble
+  interactionMessages:
+  - "%user ритмично трахает анус %target, сжимая его рожки"
+  - "%user крепко держит рожки %target, и жестко трахает его анус"
+  - "%user стиснув рожки %target, страстно долбит его анус своим членом"
+  - "%user сжимая рожки %target, натягивает их и трахает членом его анус"
+  - "%user на всю длину входит членом в анус %target, прижимая его за рожки"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 10
+  loveTarget: 10
+  cooldown: 3
+#  targetVirginityLoss: anal
+#  userVirginityLoss: male

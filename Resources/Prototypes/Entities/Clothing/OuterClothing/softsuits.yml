@@ -13,7 +13,8 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - CorgiWearable
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
 
 #Syndicate EVA
@@ -31,7 +32,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
   - type: StaticPrice
     price: 1000 # Helmet is 500
@@ -62,6 +63,8 @@
       toggleable-clothing: !type:ContainerSlot {}
   - type: Tag
     tags:
+    - CorgiWearable
+    - ScurretWearable
     - MonkeyWearable
     - WhitelistChameleon
 
@@ -80,7 +83,7 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - FullBodyOuter # Lust-Edit
+    - FullBodyOuter # SUNRISE EDIT
     - WhitelistChameleon
 
 #NTSRA Voidsuit / Ancient Voidsuit
@@ -123,6 +126,8 @@
   - type: TemperatureProtection
     heatingCoefficient: 0.1
     coolingCoefficient: 0.1
+  - type: Pierceable
+    level: Metal
   - type: Armor
     modifiers:
       coefficients:
@@ -161,3 +166,7 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - WhitelistChameleon

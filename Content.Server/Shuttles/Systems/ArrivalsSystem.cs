@@ -12,7 +12,6 @@ using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
 using Content.Server.Spawners.Components;
 using Content.Server.Spawners.EntitySystems;
-using Content.Server.Station.Components;
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Shared._Sunrise.UnbuildableGrid;
@@ -229,7 +228,7 @@ public sealed class ArrivalsSystem : EntitySystem
 
             if (component.FirstRun)
             {
-                var station = _station.GetLargestGrid(Comp<StationDataComponent>(component.Station));
+                var station = _station.GetLargestGrid(component.Station);
                 sourceMap = station == null ? null : Transform(station.Value)?.MapUid;
                 arrivalsDelay += RoundStartFTLDuration;
                 component.FirstRun = false;
@@ -357,25 +356,7 @@ public sealed class ArrivalsSystem : EntitySystem
         if (!HasComp<StationArrivalsComponent>(ev.Station))
             return;
 
-        TryGetArrivals(out var arrivals);
-
-        if (!TryComp(arrivals, out TransformComponent? arrivalsXform))
-            return;
-
-        var mapId = arrivalsXform.MapID;
-
-        var points = EntityQueryEnumerator<SpawnPointComponent, TransformComponent>();
-        var possiblePositions = new List<EntityCoordinates>();
-        while (points.MoveNext(out var uid, out var spawnPoint, out var xform))
-        {
-            if (spawnPoint.SpawnType != SpawnPointType.LateJoin || xform.MapID != mapId)
-                continue;
-
-            possiblePositions.Add(xform.Coordinates);
-        }
-
-        if (possiblePositions.Count <= 0)
-            return;
+        var possiblePositions = GetArrivalsSpawnPoints();
 
         var spawnLoc = _random.Pick(possiblePositions);
         ev.SpawnResult = _stationSpawning.SpawnPlayerMob(
@@ -482,7 +463,7 @@ public sealed class ArrivalsSystem : EntitySystem
         {
             while (query.MoveNext(out var uid, out var comp, out var shuttle, out var xform))
             {
-                if (comp.NextTransfer > curTime || !TryComp<StationDataComponent>(comp.Station, out var data))
+                if (comp.NextTransfer > curTime)
                     continue;
 
                 var tripTime = _shuttles.DefaultTravelTime + _shuttles.DefaultStartupTime;
@@ -491,17 +472,17 @@ public sealed class ArrivalsSystem : EntitySystem
                 if (xform.MapUid != arrivalsXform.MapUid)
                 {
                     if (arrivals.IsValid())
-                        _shuttles.FTLToDock(uid, shuttle, arrivals, priorityTag: "DockArrivals", ignored: true); // Sunrise-Edit
+                        _shuttles.FTLToDock(uid, shuttle, arrivals, priorityTag: "DockArrivals", ignored: true, deletedTrash: true); // Sunrise-Edit
 
                     comp.NextArrivalsTime = _timing.CurTime + TimeSpan.FromSeconds(tripTime);
                 }
                 // Go to station
                 else
                 {
-                    var targetGrid = _station.GetLargestGrid(data);
+                    var targetGrid = _station.GetLargestGrid(comp.Station);
 
                     if (targetGrid != null)
-                        _shuttles.FTLToDock(uid, shuttle, targetGrid.Value, priorityTag: "DockArrivals", ignored: true); // Sunrise-Edit
+                        _shuttles.FTLToDock(uid, shuttle, targetGrid.Value, priorityTag: "DockArrivals", ignored: true, deletedTrash: true); // Sunrise-Edit
 
                     // The ArrivalsCooldown includes the trip there, so we only need to add the time taken for
                     // the trip back.
@@ -610,7 +591,7 @@ public sealed class ArrivalsSystem : EntitySystem
 
         if (possiblePositions.Count == 0)
         {
-            Logger.Error("No valid arrival points found!");
+            Log.Warning("No valid arrival points found!");
             return null;
         }
 
@@ -679,7 +660,7 @@ public sealed class ArrivalsSystem : EntitySystem
             EnsureComp<UnbuildableGridComponent>(shuttle.Value); // Sunrise-edit
             EnsureComp<ImmortalGridComponent>(shuttle.Value); // Sunrise-edit
             _shuttles.FTLToDock(component.Shuttle, shuttleComp, arrivals, hyperspaceTime: RoundStartFTLDuration,
-                priorityTag: "DockArrivals", ignored: true); // Sunrise-Edit
+                priorityTag: "DockArrivals", ignored: true, deletedTrash: true); // Sunrise-Edit
             arrivalsComp.NextTransfer = _timing.CurTime + TimeSpan.FromSeconds(_cfgManager.GetCVar(CCVars.ArrivalsCooldown));
         }
 

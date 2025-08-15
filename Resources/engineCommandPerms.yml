@@ -8,8 +8,6 @@
   - vvread
   - vvwrite
   - vvinvoke
-  - scale
-  - spin
 
 - Flags: DEBUG
   Commands:
@@ -40,6 +38,9 @@
   - hwid
   - showaudio
   - showpos
+  - showvel
+  - showrot
+  - showangvel
   - showray
   - showchunkbb
   - showgridnodes
@@ -60,7 +61,7 @@
   - watch
   - sendgarbage
   - setinputcontext
-  - showvelocities
+  - showplayervelocity
   - tilelookup
   - net_entityreport
   - scene
@@ -133,6 +134,7 @@
   - fuck
   - replay_recording_start
   - replay_recording_stop
+  - spin
 
 - Flags: QUERY
   Commands:

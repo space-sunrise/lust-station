@@ -64,7 +64,7 @@
     tags:
     - Vest
     - WhitelistChameleon
-    - NudeBottom # Lust-Edit
+    - NudeBottom # INTERACTIONS
   # Sunrise-End
 
 - type: entity
@@ -108,13 +108,13 @@
     - state: icon-open
       map: ["foldedLayer"]
       visible: true
-  # Sunrise-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - Vest
     - WhitelistChameleon
-    - NudeFull # Lust-Edit
-  # Sunrise-End
+    - NudeFull # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   abstract: true
@@ -151,6 +151,8 @@
   - type: HeldSpeedModifier
   - type: Item
     size: Ginormous
+  - type: Pierceable
+    level: Metal
   - type: Armor
     modifiers:
       coefficients:
@@ -178,6 +180,7 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+  - type: ArmorSparkEffect #starlight
 
 - type: entity
   abstract: true

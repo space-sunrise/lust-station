@@ -4,6 +4,8 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Pierceable
+    level: Metal
   - type: Transform
     anchored: true
   - type: Clickable
@@ -32,7 +34,7 @@
     damagePopupType: SmallFloating
     isStructure: true
   - type: TTS
-    voice: FactCore # Sunrise-TTS
+    voice: Portal2FactCore  # Sunrise-TTS
 
 - type: entity
   # This means that it's not anchored on spawn.

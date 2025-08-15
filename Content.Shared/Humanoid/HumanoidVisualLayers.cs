@@ -29,6 +29,8 @@ namespace Content.Shared.Humanoid
         StencilMask,
         Ensnare,
         Fire,
+        Back,  // SUNRISE
 
+        Other
     }
 }

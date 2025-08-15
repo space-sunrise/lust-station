@@ -1,2 +1,2 @@
-reagent-name-semen = семя
+reagent-name-semen = конча
 reagent-description-semen = Продукт чьего-то производства...

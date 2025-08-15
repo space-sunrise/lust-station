@@ -15,6 +15,7 @@
   - MineralScannerEmpty
   - OreProcessorIndustrialMachineCircuitboard
   - ClothingMaskWeldingGas
+  - ClothingShoesBootsJump
 
 - type: technology
   id: SpaceScanning
@@ -119,6 +120,8 @@
   - RipleyCentralElectronics
   - RipleyPeripheralsElectronics
   - MechEquipmentGrabber
+  - PowerCageSmall  # Sunrise-Add
+  - PowerCageRechargerCircuitboard  # Sunrise-Add
 
 # Tier 2
 

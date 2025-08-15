@@ -70,6 +70,7 @@ lobby-art-NukiesHere = Nukies Here
 lobby-art-RegularShift = Regular Shift
 lobby-art-Russellmart = Russellmart
 lobby-art-Sidor = Sidor
+lobby-art-StarBow14 = StarBow14
 lobby-art-Singulord = Singulord
 lobby-art-SpaceMudaki = Space Mudaki
 lobby-art-Traitor = Traitor
@@ -104,6 +105,9 @@ lobby-art-Behonker = Behonker
 lobby-art-TerminalStation = Terminal Station
 lobby-art-JustAWeekAway = Just A Week Away
 lobby-art-JaniShootout = Jani Shootout
+lobby-art-TeslaLoose = Tesla Loose
+lobby-art-GutsGuts = Guts Guts
+lobby-art-RedAlertMed = Red Alert in Med
 # Parallaxes
 lobby-parallax-Random = Случайный
 lobby-parallax-FastSpace = Fast Space

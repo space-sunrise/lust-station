@@ -63,3 +63,8 @@
     - RubberStampNtrep
     - CaneNT
     - HandheldFax #sunrise-edit
+    - RubberStampVeto #sunrise-edit
+
+- type: chameleonOutfit
+  id: NanoTrasenRepresentativeChameleonOutfit
+  job: NanoTrasenRepresentative

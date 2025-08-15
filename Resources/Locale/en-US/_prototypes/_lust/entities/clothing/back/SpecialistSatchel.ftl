@@ -1,2 +1,2 @@
-ent-ClothingBackpackSpecialistSatchelSafno_S = Specialist Satchel
+ent-ClothingBackpackSpecialistSatchel = Specialist Satchel
     .desc = Elite Forces member Satchel.

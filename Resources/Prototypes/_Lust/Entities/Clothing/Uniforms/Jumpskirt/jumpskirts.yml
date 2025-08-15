@@ -33,6 +33,17 @@
 
 - type: entity
   parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtElegantHos
+  name: elegant HOS uniform
+  description: A stylized Security Service uniform that mixes protocol compliance with questionable coquetry.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
+    - type: Clothing
+      sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCentcomFormalDressQillu
   name: qillu central command formal dress
   description: A dress for special occasions.

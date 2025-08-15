@@ -11,6 +11,8 @@
     - type: ClothingSpeedModifier
       walkModifier: 1
       sprintModifier: 1
+    - type: Pierceable
+      level: Metal
     - type: Armor
       modifiers:
         coefficients:
@@ -22,7 +24,7 @@
       damageCoefficient: 0.65
     - type: Tag
       tags:
-      - NudeBottom  # Lust-Edit
+      - NudeBottom
       - WhitelistChameleon
 
 - type: entity
@@ -35,39 +37,46 @@
     sprite: _Sunrise/Clothing/OuterClothing/Armor/blueshield.rsi
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Armor/blueshield.rsi
+  - type: Pierceable
+    level: Metal
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
+        Blunt: 0.5
+        Slash: 0.5
         Piercing: 0.6
-        Heat: 0.65
-        Caustic: 0.75
+        Heat: 0.5
+        Caustic: 0.7
   - type: ExplosionResistance
     damageCoefficient: 0.9
   - type: Item
     size: Huge
   - type: Tag
     tags:
-    - NudeBottom  # Lust-Edit 
+    - Vest
+    - NudeBottom
     - WhitelistChameleon
 
 - type: entity
   parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
   id: ClothingOuterArmorSWAT
   name: SWAT armor
-  description: NT's unsuccessful attempt to create universal and inexpensive protection. It provides excellent protection against many types of damage, but it also slows down extremely much.
+  description: NT's unsuccessful attempt to create universal and expensive protection. It provides excellent protection against many types of damage, but it also slows down extremely much.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Armor/heavy.rsi
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Pierceable
+    level: Rock
   - type: Armor
     modifiers:
       coefficients:
         Blunt: 0.55
         Slash: 0.55
-        Piercing: 0.55
+        Piercing: 0.3
         Heat: 0.6
         Radiation: 0.6
         Caustic: 0.6
@@ -80,14 +89,14 @@
     heatingCoefficient: 0.5
     coolingCoefficient: 0.5
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85
+    walkModifier: 0.8
+    sprintModifier: 0.8
   - type: GroupExamine
   - type: ProtectedFromStepTriggers
     slots: WITHOUT_POCKET
   - type: Tag
     tags:
-    - FullBodyOuter  # Lust-Edit
+    - FullBodyOuter
     - WhitelistChameleon
 
 - type: entity
@@ -105,6 +114,8 @@
       shader: unshaded
   - type: Clothing
     sprite: _Sunrise/Clothing/OuterClothing/Armor/amber_armor_com.rsi
+  - type: Pierceable
+    level: Metal
   - type: Armor
     modifiers:
       coefficients:
@@ -158,8 +169,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -217,8 +226,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -276,8 +283,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -335,8 +340,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -394,8 +397,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -453,8 +454,6 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600
@@ -462,3 +461,78 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2
+
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ClothingOuterArmorAbductor
+  name: agent vest
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Abductor/Clothing/OuterClothing/Armor/abductor.rsi
+  - type: Clothing
+    sprite: _Sunrise/Abductor/Clothing/OuterClothing/Armor/abductor.rsi
+    equippedPrefix: stealth
+  - type: Item
+    size: Normal
+  - type: AbductorVest
+  - type: ItemSwitch
+    state: Stealth
+    states:
+      Stealth: !type:ItemSwitchState
+        verb: abductor-armor-stealth
+        hiden: true
+        sprite:
+          sprite: _Sunrise/Abductor/Clothing/OuterClothing/Armor/abductor.rsi
+          state: icon
+        components:
+        - type: Pierceable
+          level: Metal
+        - type: Armor
+          modifiers:
+            coefficients:
+              Blunt: 0.85
+              Slash: 0.85
+              Heat: 0.85
+              Piercing: 0.85
+              Radiation: 0.85
+              Caustic: 0.25
+        - type: ExplosionResistance
+          damageCoefficient: 0.85
+        - type: ItemToggle
+          predictable: false
+          onUse: false
+          soundActivate:
+            path: /Audio/_Sunrise/Items/Goggles/activate.ogg # Брал с ПНВ компоненты, звук понравился, решил оставить :)
+          soundDeactivate:
+            path: /Audio/_Sunrise/Items/Goggles/deactivate.ogg
+          soundFailToActivate:
+            path: /Audio/Machines/button.ogg
+        - type: ToggleClothing
+          action: AbductorVestToggleStealth
+          mustEquip: true
+          disableOnUnequip: true
+        - type: ComponentToggler
+          parent: true
+          components:
+          - type: Stealth
+          - type: StealthOnMove
+      Combat: !type:ItemSwitchState
+        verb: abductor-armor-combat
+        hiden: true
+        sprite:
+          sprite: _Sunrise/Abductor/Clothing/OuterClothing/Armor/abductor.rsi
+          state: combat-icon
+        components:
+        - type: Pierceable
+          level: Metal
+        - type: Armor
+          modifiers:
+            coefficients:
+              Blunt: 0.5
+              Slash: 0.5
+              Heat: 0.5
+              Piercing: 0.5
+              Radiation: 0.5
+              Caustic: 0.1
+        - type: ExplosionResistance
+          damageCoefficient: 0.5

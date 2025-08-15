@@ -15,8 +15,8 @@ permanent-blindness-trait-examined = [color=lightblue]{CAPITALIZE(POSS-ADJ($targ
 trait-lightweight-name = Lightweight drunk
 trait-lightweight-desc = Alcohol has a stronger effect on you.
 
-trait-monochromancy-name = Monochromancy
-trait-monochromancy-desc = You are fully colorblind, everything you perceive ranges from blacks to whites.
+trait-monochromacy-name = Monochromacy
+trait-monochromacy-desc = You are fully colorblind, everything you perceive ranges from blacks to whites.
 
 trait-muted-name = Muted
 trait-muted-desc = You can't speak.
@@ -65,3 +65,6 @@ trait-spanish-desc = Hola señor, donde esta la biblioteca.
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.
+
+trait-moldovan-name = Moldovan dialect
+trait-moldovan-desc = Tigania dam in spatiu cosmic.

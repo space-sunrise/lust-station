@@ -1,0 +1,223 @@
+- type: interaction
+  id: FaceCheekKiss
+  name: "Чмокнуть в щёку"
+  icon: CheeksKissBothIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user чмокает в щёку %target"
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  cooldown: 3
+
+- type: interaction
+  id: FaceCheeksKiss
+  name: "Расцеловать щёки"
+  icon: CheeksKissBothIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user целует %target в обе щёки"
+    - "%user чмокает %target в обе щёки"
+    - "%user расцеловывает %target в обе щеки"
+  interactionSounds:
+    - Kiss1
+    - Kiss2
+    - Kiss3
+    - Kiss4
+    - Kiss5
+    - Kiss6
+  cooldown: 3
+
+- type: interaction
+  id: FacePress
+  name: "Прижаться щекой к лицу"
+  icon: CheeksPressIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "щёки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "рот" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно прижимается щекой к лицу %target"
+    - "%user слегка прижимается щекой к лицу %target, создавая близость"
+    - "%user с теплотой прижимается щекой к лицу %target"
+  cooldown: 3
+
+- type: interaction
+  id: FaceInBoobs
+  name: "Прижаться грудью к лицу"
+  icon: FaceInBoobsIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Female ]
+  interactionMessages:
+    - "%user прижимается грудью к лицу %target"
+    - "%user прижимает к своей груди лицо %target"
+    - "%user погружает в свою грудь лицо %target"
+  interactionSounds:
+    - FacePatsSound
+  loveUser: 4
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: FaceThighsCrush
+  name: "Стиснуть голову ляжками"
+  icon: FaceSittingIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "ляжки" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user с силой сжимает ляжками голову %target"
+    - "%user крепко стискивает ляжками голову %target"
+    - "%user полностью обхватывает ляжками голову %target"
+    - "%user плотно сжимает ляжками голову %target"
+  interactionSounds:
+    - FacePatsSound
+  loveUser: 2
+  loveTarget: 5
+  cooldown: 3
+
+- type: interaction
+  id: FaceSitting
+  name: "Сесть на лицо"
+  icon: FaceSittingIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "лицо" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "попа" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user нежно садится попкой на лицо %target"
+    - "%user медленно опускает попу на лицо %target"
+    - "%user крепко прижимается попкой к лицу %target"
+    - "%user садится своей попкой на лицо %target"
+    - "%user шлепается задницей на лицо %target"
+    - "%user опускает задницу на лицо %target"
+  loveUser: 6
+  loveTarget: 3
+  cooldown: 3
+
+- type: interaction
+  id: FaceDickSlap
+  name: "Дать пощечину членом"
+  icon: FaceDickSlapIcon
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Male, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "член" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "лицо" ]
+      requireExposed: true
+  interactionMessages:
+    - "%user отводит член в сторону, и шлепает им по лицу %target"
+    - "%user отведя вбок тазом, шлепает членом по лицу %target"
+    - "%user звонко шлепает членом по лицу %target"
+    - "%user сочно шлепает членом по щеке %target"
+  interactionSounds:
+    - Clap2
+  loveUser: 3
+  loveTarget: 6
+  cooldown: 3
+
+- type: interaction
+  id: FaceFeet
+  name: Поласкать лицо ступней
+  icon: FeetMouthIcon #возможно подкорректировать пикчу нужно
+  category: Face
+  appearConditions:
+    - !type:HasTargetCondition
+      allowSelfTargeting: false
+    - !type:SexCondition
+      checkInitiator: true
+      checkTarget: false
+      requiredSex: [ Male, Futanari ]
+    - !type:BodyAreaTagCondition
+      checkInitiator: true
+      checkTarget: false
+      categories: [ "носки" ]
+      requireExposed: true
+    - !type:BodyAreaTagCondition
+      checkInitiator: false
+      checkTarget: true
+      categories: [ "лицо" ]
+      requireExposed: true
+  interactionMessages:
+    - "user прижимается ступней к лицу %target"
+    - "user нежно гладит ступней лицо %target"
+    - "%user проводит ступней по лицу %target"
+  interactionSounds:
+    - FriendlyStroke
+  loveUser: 3
+  loveTarget: 3
+  cooldown: 3

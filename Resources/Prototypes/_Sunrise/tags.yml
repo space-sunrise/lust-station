@@ -43,10 +43,13 @@
 - type: Tag
   id: Flash
 
+- type: Tag
+  id: CreepyLaugh
+
 # Catridges:
 
 - type: Tag
-  id: CartridgeRifleMachine
+  id: CartridgeHeavyRifleR
 
 - type: Tag
   id: FireThrowerBall
@@ -55,10 +58,7 @@
   id: PowerpackMinigunMG100
 
 - type: Tag
-  id: CartridgeRail
-
-- type: Tag
-  id: CartridgeHeavyRifleNT
+  id: PowerpackDL6902
 
 - type: Tag
   id: MiniSyringe
@@ -66,12 +66,32 @@
 - type: Tag
   id: HandGrenadeAmmo
 
+- type: Tag
+  id: SpeedLoaderShotgun
+
+- type: Tag
+  id: ShellShotgunEmpty
+
+- type: Tag
+  id: Coin
 # Weapons
 - type: Tag
   id: WrappedWeapon
 
 - type: Tag
+  id: WeaponPistolG22
+
+- type: Tag
   id: UpgradeFlareGun
+
+- type: Tag
+  id: ModularReceiverAuto
+
+- type: Tag
+  id: UpgradeDrozd
+
+- type: Tag
+  id: UpgradeLecter
 
 # Magazines:
 - type: Tag
@@ -88,12 +108,6 @@
 
 - type: Tag
   id: MagazineAK
-
-- type: Tag
-  id: MagazineFamas
-
-- type: Tag
-  id: MagazineG36
 
 - type: Tag
   id: MagazineAR18
@@ -126,6 +140,9 @@
   id: MagazineLightMachineGunMG60
 
 - type: Tag
+  id: MagazineMachineGunHeavyRifle # .308 calibler
+
+- type: Tag
   id: MagazineVP70
 
 - type: Tag
@@ -145,9 +162,6 @@
 
 - type: Tag
   id: NoSpinOnThrow
-
-- type: Tag
-  id: MagazineM16A4
 
 - type: Tag
   id: MagazineSTG44
@@ -371,6 +385,9 @@
   id: CarpRiftHealTarget
 
 - type: Tag
+  id: SheetOfficePaper
+
+- type: Tag
   id: SheetPaper
 
 - type: Tag
@@ -384,3 +401,81 @@
 
 - type: Tag
   id: DockCentComm
+
+- type: Tag
+  id: Abductor
+
+- type: Tag
+  id: AbductorScientist
+
+- type: Tag
+  id: ShowWires
+
+- type: Tag
+  id: CantInteract
+
+- type: Tag
+  id: DockMining
+
+- type: Tag
+  id: Felinid
+
+- type: Tag
+  id: Resomi
+
+### INTERACTION TAGS ###
+# Как одежда закрывает/не закрывает ту или иную область тела
+
+- type: Tag
+  id: CommandSuit
+
+# face
+# Лицо закрыто
+- type: Tag
+  id: FaceCovered
+
+# head
+# Голова полностью закрыта (например шлемом скафандра, капюшоном)
+- type: Tag
+  id: FullCovered
+
+# jumpsuit
+# Открыто снизу (например юбки)
+- type: Tag
+  id: NudeBottom
+
+# jumpsuit
+# Всё открыто (например фартук)
+- type: Tag
+  id: NudeFull
+
+# jumpsuit
+# Открыто сверху (например боксёрские шорты)
+- type: Tag
+  id: NudeTop
+
+# neck
+# Открыта шея (например бейджики, пины)
+- type: Tag
+  id: OpenNeck
+
+# gloves
+# Гладкие перчатки (например медицинские)
+- type: Tag
+  id: SmoothGloves
+
+# head
+# Закрыто только сверху (шлюяпы, кепки)
+- type: Tag
+  id: TopCovered
+
+### INTERACTION TAGS ###
+# Fun
+- type: Tag
+  id: PlushieKalium
+
+- type: Tag
+  id: SnapPop
+
+- type: Tag
+  id: Table

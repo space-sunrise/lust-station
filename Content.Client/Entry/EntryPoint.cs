@@ -2,6 +2,7 @@ using Content.Client._RMC14.Explosion;
 using Content.Client._RMC14.Xenonids.Screech;
 using Content.Client._Sunrise.Contributors;
 using Content.Client._Sunrise.Entry;
+using Content.Client._Sunrise.PlayerCache;
 using Content.Client._Sunrise.ServersHub;
 using Content.Client.Administration.Managers;
 using Content.Client.Changelog;
@@ -19,6 +20,7 @@ using Content.Client.Lobby;
 using Content.Client.MainMenu;
 using Content.Client.Parallax.Managers;
 using Content.Client.Players.PlayTimeTracking;
+using Content.Client.Playtime;
 using Content.Client.Radiation.Overlays;
 using Content.Client.Replay;
 using Content.Client.Screenshot;
@@ -27,6 +29,7 @@ using Content.Client.Stylesheets;
 using Content.Client.UserInterface;
 using Content.Client.Viewport;
 using Content.Client.Voting;
+using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
 using Content.Shared.Ame.Components;
 using Content.Shared.Gravity;
 using Content.Shared.Localizations;
@@ -81,8 +84,10 @@ namespace Content.Client.Entry
         [Dependency] private readonly DebugMonitorManager _debugMonitorManager = default!;
         [Dependency] private readonly TitleWindowManager _titleWindowManager = default!;
         [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
+        [Dependency] private readonly ClientsidePlaytimeTrackingManager _clientsidePlaytimeManager = default!;
         [Dependency] private readonly ServersHubManager _serversHubManager = default!; // Sunrise-Hub
         [Dependency] private readonly ContributorsManager _contributorsManager = default!; // Sunrise-Edit
+        [Dependency] private readonly PlayerCacheManager _playerCacheManager = default!; // Sunrise-Edit
 
         public override void Init()
         {
@@ -132,12 +137,15 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("wireLayout");
             _prototypeManager.RegisterIgnore("alertLevels");
             _prototypeManager.RegisterIgnore("nukeopsRole");
-            _prototypeManager.RegisterIgnore("stationGoal"); // Sunrise-StationGoal
-            _prototypeManager.RegisterIgnore("sponsorLoadout"); // Sunrise-Sponsors
-            _prototypeManager.RegisterIgnore("holidayGiveawayItem"); // Sunrise-Edit
             _prototypeManager.RegisterIgnore("ghostRoleRaffleDecider");
             _prototypeManager.RegisterIgnore("codewordGenerator");
             _prototypeManager.RegisterIgnore("codewordFaction");
+            // Sunrise-Start
+            _prototypeManager.RegisterIgnore("stationGoal");
+            _prototypeManager.RegisterIgnore("sponsorLoadout");
+            _prototypeManager.RegisterIgnore("holidayGiveawayItem");
+            _prototypeManager.RegisterIgnore("gamePresetPool");
+            // Sunrise-End
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
@@ -149,9 +157,11 @@ namespace Content.Client.Entry
             _extendedDisconnectInformation.Initialize();
             _jobRequirements.Initialize();
             _playbackMan.Initialize();
+            _clientsidePlaytimeManager.Initialize();
 
             _serversHubManager.Initialize(); // Sunrise-Hub
-            _contributorsManager.Initialize(); // Sunrise-Hub
+            _contributorsManager.Initialize(); // Sunrise-Edit
+            _playerCacheManager.Initialize(); // Sunrise-Edit
 
             // Sunrise-Sponsors-Start
             SunriseClientEntry.Init();
@@ -163,6 +173,9 @@ namespace Content.Client.Entry
             _configManager.SetCVar("interface.resolutionAutoScaleLowerCutoffX", 520);
             _configManager.SetCVar("interface.resolutionAutoScaleLowerCutoffY", 240);
             _configManager.SetCVar("interface.resolutionAutoScaleMinimum", 0.5f);
+
+            _configManager.SetCVar("interactions.window_pos_x", 0); // Sunrise-Edit
+            _configManager.SetCVar("interactions.window_pos_y", 0); // Sunrise-Edit
         }
 
         public override void Shutdown()

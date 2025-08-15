@@ -80,6 +80,16 @@
   files:
   - /Audio/_Sunrise/Weapons/Guns/Gunshots/deagle-1.ogg
   - /Audio/_Sunrise/Weapons/Guns/Gunshots/deagle-2.ogg
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_DE50.ogg
+
+- type: soundCollection
+  id: m1984
+  files:
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m1984_1.ogg
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m1984_2.ogg
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m1984_3.ogg
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m1984_4.ogg
+  - /Audio/_RMC14/Weapons/Guns/Gunshots/gun_m1984_5.ogg
 
 - type: soundCollection
   id: plasma_pistol

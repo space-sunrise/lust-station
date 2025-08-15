@@ -50,6 +50,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         [Dependency] private readonly ContainerSystem _containerSystem = default!;
         [Dependency] private readonly CuffableSystem _cuffable = default!;
         [Dependency] private readonly DamageableSystem _damageableSystem = default!;
+        [Dependency] private readonly SharedMapSystem _map = default!;
         [Dependency] private readonly DoAfterSystem _doAfterSystem = default!;
         [Dependency] private readonly EmpSystem _empSystem = default!;
         [Dependency] private readonly EntityManager _entityManager = default!;
@@ -104,7 +105,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         private static EntProtoId TeleportInEffect = "CultTeleportInEffect";
         private static EntProtoId TeleportOutEffect = "CultTeleportOutEffect";
         private static EntProtoId HelmetPrototypeId = "ClothingHeadHelmetCult";
-        private static EntProtoId ArmorPrototypeId = "ClothingOuterArmorCult";
+        private static EntProtoId ArmorPrototypeId = "CultOuterArmor";
         private static EntProtoId ShoesPrototypeId = "ClothingShoesCult";
         private static EntProtoId BolaPrototypeId = "CultBola";
         private static EntProtoId CuffsPrototypeId = "CultistCuffs";
@@ -124,6 +125,8 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         private bool _doAfterAlreadyStarted;
 
         private EntityUid? _playingStream;
+
+        private HashSet<EntityUid> _intersectingEntities = new();
 
         private float _timeToDraw;
 

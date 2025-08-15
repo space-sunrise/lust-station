@@ -37,8 +37,9 @@
     tags:
     - HiViz
     - WhitelistChameleon
-    - Vest # Sunrise-Add
-    - NudeBottom # Lust-Edit
+    - Vest
+    - NudeBottom # INTERACTIONS
+    - WhitelistChameleon
 
 #(Bartender) vest
 - type: entity
@@ -51,13 +52,13 @@
     sprite: Clothing/OuterClothing/Vests/vest.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/vest.rsi
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
     - Vest
-    - NudeBottom
-  # Lust-End
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
 
 #Tank Harness
 - type: entity
@@ -74,9 +75,9 @@
     size: Normal # Make smaller than typical outer clothing
     shape:
     - 0, 0, 0, 1
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - NudeFull
-  # Lust-End
+    - NudeFull # INTERACTIONS
+  # SUNRISE EDIT

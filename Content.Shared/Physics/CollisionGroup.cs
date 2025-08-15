@@ -56,8 +56,8 @@ public enum CollisionGroup
     CrateMask = Impassable | HighImpassable | LowImpassable,
 
     // Tables that SmallMobs can go under
-    TableMask = Impassable | LowImpassable,
-    TableLayer = LowImpassable,
+    TableMask = Impassable | MidImpassable,
+    TableLayer = MidImpassable,
 
     // Tabletop machines, windoors, firelocks
     TabletopMachineMask = Impassable | HighImpassable,
@@ -78,6 +78,8 @@ public enum CollisionGroup
     WallLayer = Opaque | Impassable | HighImpassable | MidImpassable | LowImpassable | BulletImpassable | InteractImpassable,
     GlassLayer = Impassable | HighImpassable | MidImpassable | LowImpassable | BulletImpassable | InteractImpassable,
     HalfWallLayer = MidImpassable | LowImpassable,
+    FlimsyLayer = Opaque | HighImpassable | MidImpassable | LowImpassable | InteractImpassable,
+
     // Allows people to interact past and target players inside of this
     SpecialWallLayer = Opaque | HighImpassable | MidImpassable | LowImpassable | BulletImpassable,
 

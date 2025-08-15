@@ -41,10 +41,7 @@
     - id: ZombieOutbreak
     - id: LoneOpsSpawn
     - id: DerelictCyborgSpawn
-    - id: DiseaseSpawn
-    - id: FugitiveSpawn
-    - id: EvilTwinSpawn
-    - id: TerminatorSpawn
+    - id: AbductorsSpawn
     - id: WizardSpawn
 
 - type: entity

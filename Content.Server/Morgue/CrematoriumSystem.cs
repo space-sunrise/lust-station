@@ -26,7 +26,7 @@ public sealed class CrematoriumSystem : EntitySystem
     [Dependency] private readonly GhostSystem _ghostSystem = default!;
     [Dependency] private readonly EntityStorageSystem _entityStorage = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly SharedStandingStateSystem _standing = default!;
+    [Dependency] private readonly StandingStateSystem _standing = default!;
     [Dependency] private readonly SharedMindSystem _minds = default!;
     [Dependency] private readonly SharedContainerSystem _containers = default!;
 
@@ -134,7 +134,7 @@ public sealed class CrematoriumSystem : EntitySystem
             {
                 var item = storage.Contents.ContainedEntities[i];
                 _containers.Remove(item, storage.Contents);
-                EntityManager.DeleteEntity(item);
+                Del(item);
             }
             var ash = Spawn("Ash", Transform(uid).Coordinates);
             _containers.Insert(ash, storage.Contents);
@@ -172,7 +172,7 @@ public sealed class CrematoriumSystem : EntitySystem
         }
         else
         {
-            EntityManager.DeleteEntity(victim);
+            Del(victim);
         }
         _entityStorage.CloseStorage(uid);
         Cremate(uid, component);

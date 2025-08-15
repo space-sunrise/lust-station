@@ -5,11 +5,7 @@
   id: BaseMobDemon
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
-  - type: Absorbable
+  - type: Interactions
   - type: HumanoidAppearance
     species: Demon
   - type: Hunger
@@ -38,7 +34,6 @@
       Futanari: FemaleHuman # Lust-edit
   - type: Damageable
     damageContainer: Biological
-    damageModifierSet: Demon
   - type: MeleeWeapon
     hidden: true
     soundHit:

@@ -2,6 +2,7 @@ using Content.Shared.Actions;
 using Robust.Shared.Audio;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 using Component = Robust.Shared.GameObjects.Component;
@@ -24,6 +25,14 @@ namespace Content.Shared.VendingMachines
         /// </summary>
         [DataField]
         public TimeSpan DenyDelay = TimeSpan.FromSeconds(2);
+
+        //#region starlight
+        /// <summary>
+        /// forces to restock a specific item in VendingMachineSystem#RestockRandom
+        /// </summary>
+        [DataField("forceRandom")]
+        public ProtoId<EntityPrototype>? RandomRestockTarget = null;
+        //#endregion starlight
 
         /// <summary>
         /// Used by the server to determine how long the vending machine stays in the "Eject" state.
@@ -196,16 +205,16 @@ namespace Content.Shared.VendingMachines
         #endregion
     }
 
-    [Serializable, NetSerializable]
-    public sealed class VendingMachineInventoryEntry
+    [Serializable, NetSerializable, DataDefinition]
+    public sealed partial class VendingMachineInventoryEntry
     {
-        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public InventoryType Type;
 
-        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public string ID;
 
-        [ViewVariables(VVAccess.ReadWrite)]
+        [DataField]
         public uint Amount;
 
         public VendingMachineInventoryEntry(InventoryType type, string id, uint amount)

@@ -298,6 +298,36 @@
     sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
     state: scalpel
 
+# eye implants
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateImplant
+  name: Locate Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 2
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers:
+      - state: eye_implant_welding
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepRemoveEyeImplant
+  name: Remove Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: Scalpel
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: EyeImplant
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    state: scalpel
+
 # tongue
 - type: entity
   parent: SurgeryStepBase
@@ -574,7 +604,7 @@
     state: hemostat
 
 # kidneys
-    
+
 - type: entity
   parent: SurgeryStepBase
   id: SurgeryStepPrepareImplantSiteKidneys
@@ -619,7 +649,7 @@
     state: hemostat
 
 # stomach
-    
+
 - type: entity
   parent: SurgeryStepBase
   id: SurgeryStepPrepareImplantSiteStomach
@@ -662,7 +692,7 @@
     state: hemostat
 
 # lungs
-    
+
 - type: entity
   parent: SurgeryStepBase
   id: SurgeryStepPrepareImplantSiteLungs
@@ -705,7 +735,7 @@
     state: hemostat
 
 # heart
-    
+
 - type: entity
   parent: SurgeryStepBase
   id: SurgeryStepPrepareImplantSiteHeart
@@ -791,6 +821,24 @@
   - type: Sprite
     sprite: Objects/Specific/Medical/Surgery/scissors.rsi
     state: hemostat
+
+# eye implants
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertEyeImplant
+  name: Insert Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 2
+    tools:
+    - type: EyeImplant
+  - type: SurgeryStepOrganInsert
+    slot: eye_implant
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers:
+      - state: eye_implant_welding
 
 # tongue
 
@@ -984,4 +1032,79 @@
     state: cautery
   - type: SurgeryClearProgress
 
+# - type: entity
+#   parent: SurgeryStepBase
+#   id: SurgeryStepRemoveEgg
+#   name: Remove Egg
+#   components:
+#   - type: SurgeryStep
+#     duration: 5
+#     tools:
+#     - type: Scalpel
+#     bodyRemove:
+#     - type: HasEggHolder
+#     - type: EggHolder
+#   - type: Sprite
+#     sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+#     state: scalpel
+#   - type: SurgeryStepEmoteEffect
 
+# Cavity
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateItemCavity
+  name: Locate Item
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepRemoveItemCavity
+  name: Remove Item
+  components:
+  - type: SurgeryStep
+    duration: 6
+    tools:
+    - type: Scalpel
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: Item
+    slot: cavity
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepPrepareImplantSiteCavity
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+    tools:
+    - type: Scalpel
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    state: scalpel
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertItemCavity
+  name: Insert Item
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: Item
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+  - type: SurgeryItemSizeCondition
+  - type: SurgeryStepOrganInsert
+    slot: cavity

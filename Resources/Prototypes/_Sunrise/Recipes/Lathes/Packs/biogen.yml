@@ -1,5 +1,4 @@
 ## Static
-
 - type: latheRecipePack
   id: BioGenStaticSunrise
   recipes:
@@ -17,3 +16,4 @@
   - BioCockroachCube
   - BioPigCube
   - BioChikenCube
+  - BioSheetOfficePaper

@@ -3,7 +3,6 @@ using System.Numerics;
 using Content.Server.Announcements;
 using Content.Server.Discord;
 using Content.Server.GameTicking.Events;
-using Content.Server.Ghost;
 using Content.Server.Maps;
 using Content.Server.Roles;
 using Content.Server.Shuttles.Components;
@@ -13,6 +12,7 @@ using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
+using Content.Shared.Roles.Components;
 using JetBrains.Annotations;
 using Prometheus;
 using Robust.Shared.Asynchronous;
@@ -20,12 +20,12 @@ using Robust.Shared.Audio;
 using Robust.Shared.EntitySerialization;
 using Robust.Shared.EntitySerialization.Systems;
 using Robust.Shared.Map;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 using Content.Server.StatsBoard;
+using Content.Shared._Sunrise.SunriseCCVars;
 
 namespace Content.Server.GameTicking
 {
@@ -439,6 +439,11 @@ namespace Content.Server.GameTicking
                 _startingRound = false;
                 return;
             }
+
+            // Sunrise-Start
+            if (_cfg.GetCVar(SunriseCCVars.ExcludePresets) && CurrentPreset != null)
+                AddExcludedPreset(CurrentPreset.ID);
+            // Sunrise-End
 
             // MapInitialize *before* spawning players, our codebase is too shit to do it afterwards...
             _map.InitializeMap(DefaultMap);

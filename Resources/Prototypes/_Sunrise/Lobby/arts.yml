@@ -79,12 +79,20 @@
   background: /Textures/_Sunrise/Lobby/Arts/singulord.webp
 
 - type: lobbyBackground
+  id: StarBow14
+  background: /Textures/_Sunrise/Lobby/Arts/starbow14.webp
+
+- type: lobbyBackground
   id: SpaceMudaki
   background: /Textures/_Sunrise/Lobby/Arts/space-mudaki.webp
 
 - type: lobbyBackground
   id: Traitor
   background: /Textures/_Sunrise/Lobby/Arts/traitor.webp
+
+- type: lobbyBackground
+  id: TeslaLoose
+  background: /Textures/_Sunrise/Lobby/Arts/tesla-loose.webp
 
 - type: lobbyBackground
   id: NukieDudes
@@ -105,6 +113,10 @@
 - type: lobbyBackground
   id: Revenant
   background: /Textures/_Sunrise/Lobby/Arts/revenant.webp
+
+- type: lobbyBackground
+  id: RedAlertMed
+  background: /Textures/_Sunrise/Lobby/Arts/red-alert-med.webp
 
 - type: lobbyBackground
   id: DeathNettle
@@ -134,6 +146,10 @@
   id: GrayTide
   background: /Textures/_Sunrise/Lobby/Arts/gray-tide.webp
 
+- type: lobbyBackground
+  id: GutsGuts
+  background: /Textures/_Sunrise/Lobby/Arts/guts-guts.webp
+
 #- type: lobbyBackground
 #  id: NewYearBar
 #  background: /Textures/_Sunrise/Lobby/Arts/new-year-bar.webp
@@ -142,9 +158,9 @@
 #  id: NewYearSec
 #  background: /Textures/_Sunrise/Lobby/Arts/new-year-sec.webp
 
-#- type: lobbyBackground
-#  id: NewYearSave
-#  background: /Textures/_Sunrise/Lobby/Arts/new-year-save.webp
+- type: lobbyBackground
+  id: NewYearSave
+  background: /Textures/_Sunrise/Lobby/Arts/new-year-save.webp
 
 #- type: lobbyBackground
 #  id: NewYearComfort

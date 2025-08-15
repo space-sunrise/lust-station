@@ -23,7 +23,6 @@ loadout-group-survival-mime = Mime Survival Box
 loadout-group-captain-head = Captain head
 loadout-group-captain-jumpsuit = Captain jumpsuit
 loadout-group-captain-neck = Captain neck
-loadout-group-captain-gloves = Captain gloves
 loadout-group-captain-backpack = Captain backpack
 loadout-group-captain-outerclothing = Captain outer clothing
 
@@ -60,6 +59,7 @@ loadout-group-chaplain-mask = Chaplain mask
 loadout-group-chaplain-jumpsuit = Chaplain jumpsuit
 loadout-group-chaplain-outerclothing = Chaplain outer clothing
 loadout-group-chaplain-neck = Chaplain neck
+loadout-group-chaplain-bible = Holy Book
 
 loadout-group-janitor-head = Janitor head
 loadout-group-janitor-jumpsuit = Janitor jumpsuit
@@ -94,7 +94,6 @@ loadout-group-quartermaster-jumpsuit = Quartermaster jumpsuit
 loadout-group-quartermaster-neck = Quartermaster neck
 loadout-group-quartermaster-outerclothing = Quartermaster outer clothing
 loadout-group-quartermaster-shoes = Quartermaster shoes
-loadout-group-quartermaster-backpack = Quartermaster backpack
 
 loadout-group-cargo-technician-head = Cargo Technician head
 loadout-group-cargo-technician-jumpsuit = Cargo Technician jumpsuit
@@ -149,13 +148,11 @@ loadout-group-research-assistant-jumpsuit = Research Assistant jumpsuit
 loadout-group-head-of-security-head = Head of Security head
 loadout-group-head-of-security-jumpsuit = Head of Security jumpsuit
 loadout-group-head-of-security-neck = Head of Security neck
-loadout-group-head-of-security-back = Head of Security backpack
 loadout-group-head-of-security-outerclothing = Head of Security outer clothing
 
 loadout-group-warden-head = Warden head
 loadout-group-warden-jumpsuit = Warden jumpsuit
 loadout-group-warden-outerclothing = Warden outer clothing
-loadout-group-warden-backpack = Warden backpack
 
 loadout-group-security-head = Security head
 loadout-group-security-jumpsuit = Security jumpsuit
@@ -180,7 +177,6 @@ loadout-group-medical-mask = Medical mask
 loadout-group-chief-medical-officer-head = Chief Medical Officer head
 loadout-group-chief-medical-officer-jumpsuit = Chief Medical Officer jumpsuit
 loadout-group-chief-medical-officer-outerclothing = Chief Medical Officer outer clothing
-loadout-group-chief-medical-officer-back = Chief Medical officer backpack
 loadout-group-chief-medical-officer-shoes = Chief Medical Officer shoes
 loadout-group-chief-medical-officer-neck = Chief Medical Officer neck
 

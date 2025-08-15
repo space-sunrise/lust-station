@@ -11,7 +11,7 @@
   abstract: true
   components:
   - type: StationCentComm
-    station: LustCentComm # Lust-CentComm
+    station: SunriseCentComm
     shuttleWhitelist:
       components:
       - CentCommShuttle

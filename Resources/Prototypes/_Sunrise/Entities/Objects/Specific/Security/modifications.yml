@@ -1,7 +1,7 @@
 - type: entity
-  id: FlareGunSecurityUpgrade
-  name: upgrade kit (security flare gun)
+  id: BaseSecurityUpgrade
   parent: BaseItem
+  abstract: true
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Storage/procase_mini.rsi
@@ -11,6 +11,44 @@
     size: Large
     shape:
     - 0,0,2,1
+
+- type: entity
+  id: FlareGunSecurityUpgrade
+  name: upgrade kit (security flare gun)
+  parent: BaseSecurityUpgrade
+  components:
   - type: Tag
     tags:
     - UpgradeFlareGun
+
+- type: entity
+  parent: BaseItem
+  id: ModularReceiverAuto
+  name: modular Auto receiver
+  description: A vital part used in the creation of Auto firearms.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/modular_receiver.rsi
+    state: icon
+  - type: Tag
+    tags:
+    - ModularReceiverAuto
+    - Metal
+
+- type: entity
+  id: DrozdUpgrade
+  name: upgrade kit (Drozd)
+  parent: BaseSecurityUpgrade
+  components:
+  - type: Tag
+    tags:
+    - UpgradeDrozd
+
+- type: entity
+  id: LecterUpgrade
+  name: upgrade kit (Lecter)
+  parent: BaseSecurityUpgrade
+  components:
+  - type: Tag
+    tags:
+    - UpgradeLecter

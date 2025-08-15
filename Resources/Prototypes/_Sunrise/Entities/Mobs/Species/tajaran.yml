@@ -3,11 +3,7 @@
   id: BaseMobTajaran
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
-  - type: Absorbable
+  - type: Interactions
   - type: HumanoidAppearance
     species: Tajaran
     hideLayersOnEquip:
@@ -63,12 +59,14 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
+      100: Critical
       200: Dead
   - type: Inventory
     speciesId: human
   - type: FootprintEmitter
   - type: Carriable
+  - type: ToggleableNightVision
+    effect: EffectNightVisioSpecies
 
 - type: entity
   save: false

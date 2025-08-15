@@ -10,8 +10,8 @@
     brokenState: broken
     normalState: normal-unshaded
     denyState: deny-unshaded
-  - type: Advertise
-    pack: KinkMateAds
+  - type: DatasetVocalizer
+    dataset: KinkMateAds
   - type: Speech
   - type: Sprite
     sprite: _Lust/Structures/Machines/VendingMachines/kinkmate.rsi

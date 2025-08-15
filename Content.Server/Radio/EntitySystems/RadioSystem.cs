@@ -1,5 +1,6 @@
 using System.Globalization;
-using Content.Server._Sunrise.ChatSan; // sunrise-add
+using System.Linq;
+using Content.Server._Sunrise.Chat.Sanitization;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
 using Content.Server.Power.Components;
@@ -7,9 +8,9 @@ using Content.Server.Radio.Components;
 using Content.Server.VoiceMask;
 using Content.Shared._Sunrise.TTS;
 using Content.Shared.Access.Components;
+using Content.Shared.Access.Systems;
 using Content.Shared.Chat;
 using Content.Shared.Database;
-using Content.Shared.Inventory;
 using Content.Shared.PDA;
 using Content.Shared.Radio;
 using Content.Shared.Radio.Components;
@@ -37,7 +38,7 @@ public sealed class RadioSystem : EntitySystem
     [Dependency] private readonly IPrototypeManager _prototype = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
@@ -97,13 +98,16 @@ public sealed class RadioSystem : EntitySystem
     /// <param name="radioSource">Entity that picked up the message and will send it, e.g. headset</param>
     public void SendRadioMessage(EntityUid messageSource, string message, RadioChannelPrototype channel, EntityUid radioSource, bool escapeMarkup = true)
     {
-        // Sunrise-Start
-        var sanEvent = new ChatSanRequestEvent(message);
-        RaiseLocalEvent(ref sanEvent);
-        if (sanEvent.Cancelled)
+        // Sunrise added start - для санитизации чата
+        var trySendEvent = new TrySendChatMessageEvent(message, InGameICChatType.Speak);
+        RaiseLocalEvent(messageSource, trySendEvent);
+
+        if (trySendEvent.Cancelled)
             return;
-        message = sanEvent.Message;
-        // Sunrise-End
+
+        message = trySendEvent.Message;
+        // Sunrise added end
+
         // TODO if radios ever garble / modify messages, feedback-prevention needs to be handled better than this.
         if (!_messages.Add(message))
             return;
@@ -213,15 +217,20 @@ public sealed class RadioSystem : EntitySystem
     // Sunrise-Start
     private IdCardComponent? GetIdCard(EntityUid senderUid)
     {
-        if (!_inventorySystem.TryGetSlotEntity(senderUid, "id", out var idUid))
+        if (!_accessReader.FindAccessItemsInventory(senderUid, out var accessItems))
             return null;
 
-        if (EntityManager.TryGetComponent(idUid, out PdaComponent? pda) && pda.ContainedId is not null)
+        if (accessItems.Count == 0)
+            return null;
+
+        var idUid = accessItems.FirstOrDefault();
+
+        if (TryComp<PdaComponent>(idUid, out var pda) && pda.ContainedId.HasValue)
         {
             if (TryComp<IdCardComponent>(pda.ContainedId, out var idComp))
                 return idComp;
         }
-        else if (EntityManager.TryGetComponent(idUid, out IdCardComponent? id))
+        else if (TryComp<IdCardComponent>(idUid, out var id))
         {
             return id;
         }

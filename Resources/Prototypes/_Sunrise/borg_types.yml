@@ -26,7 +26,7 @@
   addComponents:
   - type: ShowCriminalRecordIcons
   - type: SiliconLawProvider
-    laws: RobocopLawset
+    laws: PeaceLawset
   - type: Pacified
   - type: FlashImmunity
   - type: FabricateCookie
@@ -40,6 +40,7 @@
   - type: InnateItem
     instantActions:
     - PortableSurveillanceCameraMonitor
+    - HandheldStationMapUnpowered
   - type: Access
     tags:
     - EmergencyShuttleRepealAll
@@ -167,6 +168,8 @@
     tags:
     - BorgModuleGeneric
     - BorgModuleSecurity
+    - BorgModuleSyndicate
+    - BorgModuleSyndicateAssault  
 
   defaultModules:
   - BorgModuleStandart
@@ -203,6 +206,7 @@
     instantActions:
     - PortableSurveillanceCameraMonitorUnpowered
     - HandheldCriminalRecordsMonitorUnpowered
+    - HandheldStationMapUnpowered
     worldTargetActions:
     - ForensicScanner
   - type: ShowCriminalRecordIcons
@@ -210,7 +214,7 @@
   - type: BorgCuffed
   - type: FlashImmunity
   - type: SiliconLawProvider
-    laws: RobocopLawset
+    laws: SecurityLawset
   - type: Access
     tags:
     - EmergencyShuttleRepealAll

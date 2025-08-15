@@ -1,5 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared._Sunrise.Antags.Abductor;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions.Components;
 using Content.Shared.Actions.Events;
@@ -110,7 +111,7 @@ public abstract class SharedActionsSystem : EntitySystem
     /// </summary>
     public Entity<ActionComponent>? GetAction(Entity<ActionComponent?>? action, bool logError = true)
     {
-        if (action is not {} ent || TerminatingOrDeleted(ent))
+        if (action is not {} ent || Deleted(ent))
             return null;
 
         if (!_actionQuery.Resolve(ent, ref ent.Comp, logError))
@@ -417,19 +418,28 @@ public abstract class SharedActionsSystem : EntitySystem
 
         if (user == target)
             return comp.CanTargetSelf;
-
+        // Sunrise-start
+        if (HasComp<AbductorComponent>(target))
+            return true;
+        // Sunrise-end
         var targetAction = Comp<TargetActionComponent>(uid);
+
         // not using the ValidateBaseTarget logic since its raycast fails if the target is e.g. a wall
         if (targetAction.CheckCanAccess)
-            return _interaction.InRangeAndAccessible(user, target, range: targetAction.Range);
+            return _interaction.InRangeAndAccessible(user, target, targetAction.Range, targetAction.AccessMask);
 
-        // if not just checking pure range, let stored entities be targeted by actions
-        // if it's out of range it probably isn't stored anyway...
+        // Just check normal in range, allowing <= 0 range to mean infinite range.
+        if (targetAction.Range > 0
+            && !_transform.InRange(user, target, targetAction.Range))
+            return false;
 
+        // Sunrise-Start
         if (targetAction.IgnoreContainer)
             return true;
+        // Sunrise-End
 
-        return _interaction.CanAccessViaStorage(user, target);
+        // If checkCanAccess isn't set, we allow targeting things in containers
+        return _interaction.IsAccessible(user, target);
     }
 
     public bool ValidateWorldTarget(EntityUid user, EntityCoordinates target, Entity<WorldTargetActionComponent> ent)
@@ -444,6 +454,10 @@ public abstract class SharedActionsSystem : EntitySystem
         if (comp.CheckCanAccess)
             return _interaction.InRangeUnobstructed(user, coords, range: comp.Range);
 
+        // Sunrise-start
+        if (HasComp<AbductorAgentComponent>(user) || HasComp<AbductorScientistComponent>(user))
+            return true;
+        // Sunrise-end
         // even if we don't check for obstructions, we may still need to check the range.
         var xform = Transform(user);
         if (xform.MapID != _transform.GetMapId(coords))
@@ -585,7 +599,7 @@ public abstract class SharedActionsSystem : EntitySystem
     #region AddRemoveActions
 
     public EntityUid? AddAction(EntityUid performer,
-        string? actionPrototypeId,
+        [ForbidLiteral] string? actionPrototypeId,
         EntityUid container = default,
         ActionsComponent? component = null)
     {
@@ -605,7 +619,7 @@ public abstract class SharedActionsSystem : EntitySystem
     /// <param name="container">The entity that contains/enables this action (e.g., flashlight).</param>
     public bool AddAction(EntityUid performer,
         [NotNullWhen(true)] ref EntityUid? actionId,
-        string? actionPrototypeId,
+        [ForbidLiteral] string? actionPrototypeId,
         EntityUid container = default,
         ActionsComponent? component = null)
     {
@@ -616,7 +630,7 @@ public abstract class SharedActionsSystem : EntitySystem
     public bool AddAction(EntityUid performer,
         [NotNullWhen(true)] ref EntityUid? actionId,
         [NotNullWhen(true)] out ActionComponent? action,
-        string? actionPrototypeId,
+        [ForbidLiteral] string? actionPrototypeId,
         EntityUid container = default,
         ActionsComponent? component = null)
     {
@@ -839,6 +853,28 @@ public abstract class SharedActionsSystem : EntitySystem
         if (ent.Comp.Temporary)
             QueueDel(ent);
     }
+
+    // Starlight-Abductor-start
+    public EntityUid[] HideActions(EntityUid performer, ActionsComponent? comp = null)
+    {
+        if (!Resolve(performer, ref comp, false))
+            return [];
+
+        var actions = comp.Actions.ToArray();
+        comp.Actions.Clear();
+        Dirty(performer, comp);
+        return actions;
+    }
+    public void UnHideActions(EntityUid performer, EntityUid[] actions, ActionsComponent? comp = null)
+    {
+        if (!Resolve(performer, ref comp, false))
+            return;
+
+        foreach (var action in actions)
+            comp.Actions.Add(action);
+        Dirty(performer, comp);
+    }
+    // Starlight-Abductor-end
 
     /// <summary>
     /// This method gets called after an action got removed.
@@ -1068,6 +1104,20 @@ public abstract class SharedActionsSystem : EntitySystem
     public bool IsCooldownActive(ActionComponent action, TimeSpan? curTime = null)
     {
         // TODO: Check for charge recovery timer
+        curTime ??= GameTiming.CurTime;
         return action.Cooldown.HasValue && action.Cooldown.Value.End > curTime;
+    }
+
+    /// <summary>
+    /// Marks the action as temporary.
+    /// Temporary actions get deleted upon being removed from an entity.
+    /// </summary>
+    public void SetTemporary(Entity<ActionComponent?> ent, bool temporary)
+    {
+        if (!Resolve(ent.Owner, ref ent.Comp, false))
+            return;
+
+        ent.Comp.Temporary = temporary;
+        Dirty(ent);
     }
 }

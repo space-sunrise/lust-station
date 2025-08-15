@@ -5,9 +5,7 @@ using Content.Shared.Examine;
 using Content.Shared.Item.ItemToggle.Components;
 using Content.Shared.Storage;
 using JetBrains.Annotations;
-using Robust.Shared.Collections;
 using Robust.Shared.Containers;
-using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
@@ -110,7 +108,7 @@ public abstract class SharedItemSystem : EntitySystem
         if (args.Handled)
             return;
 
-        args.Handled = _handsSystem.TryPickup(args.User, uid, animateUser: false);
+        args.Handled = _handsSystem.TryPickup(args.User, uid, null, animateUser: false);
     }
 
     private void AddPickupVerb(EntityUid uid, ItemComponent component, GetVerbsEvent<InteractionVerb> args)

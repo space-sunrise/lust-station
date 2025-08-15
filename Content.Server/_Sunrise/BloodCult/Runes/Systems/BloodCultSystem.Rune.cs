@@ -8,17 +8,23 @@ using Content.Server.Bible.Components;
 using Content.Server.Body.Components;
 using Content.Server.Chat.Systems;
 using Content.Server.Chemistry.Components;
+using Content.Server.Ghost.Roles.Components;
+using Content.Server.Ghost.Roles.Raffles;
+using Content.Server.Nutrition.Components;
 using Content.Shared._Sunrise.BloodCult;
 using Content.Shared._Sunrise.BloodCult.Components;
 using Content.Shared._Sunrise.BloodCult.Items;
 using Content.Shared._Sunrise.BloodCult.Runes;
 using Content.Shared._Sunrise.BloodCult.UI;
+using Content.Shared.Body.Components;
 using Content.Shared.Chemistry.Components.SolutionManager;
+using Content.Shared.Coordinates;
 using Content.Shared.Cuffs.Components;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
+using Content.Shared.Ghost.Roles.Raffles;
 using Content.Shared.Humanoid;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;
@@ -32,8 +38,10 @@ using Content.Shared.Popups;
 using Content.Shared.Projectiles;
 using Content.Shared.Rejuvenate;
 using Content.Shared.Verbs;
+using Microsoft.EntityFrameworkCore;
 using Robust.Shared.Audio;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
 using Robust.Shared.Random;
@@ -160,6 +168,9 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         {
             var runePrototype = args.SelectedItem;
 
+            if (!IsCorrectLocation(args.Actor, out var coords))
+                return;
+
             if (!TryComp<ActorComponent>(args.Actor, out var actorComponent))
                 return;
 
@@ -199,7 +210,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                     colorOverride: Color.Red);
             }
 
-            if (!IsAllowedToDraw(whoCalled))
+             if (!IsAllowedToDraw(whoCalled))
                 return false;
 
             var ev = new CultDrawEvent
@@ -235,10 +246,12 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             if (!TryComp<BloodstreamComponent>(user, out var bloodstreamComponent))
                 return;
 
-            _bloodstreamSystem.TryModifyBloodLevel(user, howMuchBloodTake, bloodstreamComponent);
-            _audio.PlayPvs("/Audio/_Sunrise/BloodCult/blood.ogg", user, AudioParams.Default.WithMaxDistance(2f));
+            _bloodstreamSystem.TryModifyBloodLevel((user, bloodstreamComponent), howMuchBloodTake);
 
             SpawnRune(user, rune);
+
+            _audio.PlayPvs("/Audio/_Sunrise/BloodCult/blood.ogg", user, AudioParams.Default.WithMaxDistance(2f));
+
         }
 
         private void OnChoose(EntityUid uid, CultRuneTeleportComponent component, NameSelectorMessage args)
@@ -438,9 +451,10 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             {
                 var hasMind = _mindSystem.TryGetMind(victim.Value, out var mindId, out var mind);
 
-                var jobAllowConvert = !HasComp<MindShieldComponent>(victim.Value);
+                var canConvert = !HasComp<MindShieldComponent>(victim.Value)
+                                      && !HasComp<BibleUserComponent>(victim.Value);
 
-                if (hasMind && jobAllowConvert)
+                if (hasMind && canConvert )
                 {
                     if (args.Cultists.Count < component.ConvertMinCount)
                     {
@@ -545,7 +559,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             }
 
             _bloodCultRuleSystem.MakeCultist(target, rule);
-            _stunSystem.TryStun(target, TimeSpan.FromSeconds(2f), false);
+            _stunSystem.TryAddParalyzeDuration(target, TimeSpan.FromSeconds(2f));
             HealCultist(target);
 
             if (TryComp<CuffableComponent>(target, out var cuffs) && cuffs.Container.ContainedEntities.Count >= 1)
@@ -630,26 +644,25 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
 
         private bool Teleport(EntityUid rune, EntityUid user)
         {
-            var runes = EntityQuery<CultRuneTeleportComponent>();
             var list = new List<int>();
             var labels = new List<string>();
+            var distance = new List<string>();
 
-            foreach (var teleportRune in runes)
+            var query = EntityQueryEnumerator<CultRuneTeleportComponent, TransformComponent>();
+            while (query.MoveNext(out var uid, out var comp, out var xform))
             {
-                if (!TryComp<CultRuneTeleportComponent>(teleportRune.Owner, out var teleportComponent))
+                if (comp.Label == null)
                     continue;
 
-                if (teleportComponent.Label == null)
+                if (uid == rune)
                     continue;
 
-                if (teleportRune.Owner == rune)
-                    continue;
-
-                if (!int.TryParse(teleportRune.Owner.ToString(), out var intValue))
+                if (!int.TryParse(uid.ToString(), out var intValue))
                     continue;
 
                 list.Add(intValue);
-                labels.Add(teleportComponent.Label);
+                labels.Add(comp.Label);
+                distance.Add(GetDistance(rune, xform));
             }
 
             if (!TryComp<ActorComponent>(user, out var actorComponent))
@@ -661,7 +674,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                 return false;
             }
 
-            _ui.SetUiState(rune, RuneTeleporterUiKey.Key, new TeleportRunesListWindowBUIState(list, labels));
+            _ui.SetUiState(rune, RuneTeleporterUiKey.Key, new TeleportRunesListWindowBUIState(list, labels, distance));
 
             if (_ui.IsUiOpen(rune, RuneTeleporterUiKey.Key))
                 return false;
@@ -868,6 +881,17 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             var result = Revive(victim.Value, args.User);
 
             args.Result = result;
+
+
+            if (!_mindSystem.TryGetMind(victim.Value, out var mindid, out var mind))
+            {
+                EnsureComp<GhostRoleComponent>(victim.Value, out var ghost);
+
+                EnsureComp<GhostTakeoverAvailableComponent>(victim.Value);
+
+                ghost.RoleName = Loc.GetString("revived-cultist-name");
+                ghost.RoleDescription = Loc.GetString("revived-cultist-desc");
+            }
         }
 
         private bool Revive(EntityUid target, EntityUid user)
@@ -937,9 +961,14 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             HashSet<EntityUid> cultistHashSet,
             CultRuneSummoningComponent component)
         {
-            var cultists = EntityQuery<BloodCultistComponent>();
+
+            if (!_entityManager.TryGetComponent<TransformComponent>(rune, out var runeTransform))
+                return false;
+
             var list = new List<int>();
             var labels = new List<string>();
+            var mobState = new List<string>();
+            var distance = new List<string>();
 
             if (cultistHashSet.Count < component.SummonMinCount)
             {
@@ -947,19 +976,19 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                 return false;
             }
 
-            foreach (var cultist in cultists)
+            var query = EntityQueryEnumerator<BloodCultistComponent, MetaDataComponent, MobStateComponent, TransformComponent>();
+            while (query.MoveNext(out var uid, out var cultist, out var meta, out var state, out var xform))
             {
-                if (!TryComp<MetaDataComponent>(cultist.Owner, out var meta))
+                if (cultistHashSet.Contains(uid))
                     continue;
 
-                if (cultistHashSet.Contains(cultist.Owner))
-                    continue;
-
-                if (!int.TryParse(cultist.Owner.ToString(), out var intValue))
+                if (!int.TryParse(uid.ToString(), out var intValue))
                     continue;
 
                 list.Add(intValue);
                 labels.Add(meta.EntityName);
+                mobState.Add(GetStatus(state.CurrentState));
+                distance.Add(GetDistance(rune, xform));
             }
 
             if (!TryComp<ActorComponent>(user, out var actorComponent))
@@ -974,7 +1003,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             _entityManager.EnsureComponent<CultRuneSummoningProviderComponent>(user, out var providerComponent);
             providerComponent.BaseRune = rune;
 
-            _ui.SetUiState(user, SummonCultistUiKey.Key, new SummonCultistListWindowBUIState(list, labels));
+            _ui.SetUiState(user, SummonCultistUiKey.Key, new SummonCultistListWindowBUIState(list, labels, mobState, distance));
 
             if (_ui.IsUiOpen(user, SummonCultistUiKey.Key))
                 return false;
@@ -1104,7 +1133,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
                 if (!TryComp<BloodstreamComponent>(cultist, out var bloodstreamComponent))
                     return false;
 
-                _bloodstreamSystem.TryModifyBloodLevel(cultist, -40, bloodstreamComponent);
+                _bloodstreamSystem.TryModifyBloodLevel((cultist, bloodstreamComponent), -40);
             }
 
             _random.Shuffle(list);
@@ -1216,9 +1245,8 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
 
         private void SpawnRune(EntityUid uid, string? rune)
         {
-            var transform = CompOrNull<TransformComponent>(uid)?.Coordinates;
 
-            if (transform == null)
+            if (!IsCorrectLocation(uid, out var coords))
                 return;
 
             if (rune == null)
@@ -1232,7 +1260,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             var damageSpecifier = new DamageSpecifier(_prototypeManager.Index<DamageTypePrototype>("Slash"), 10);
             _damageableSystem.TryChangeDamage(uid, damageSpecifier, true, false);
 
-            _entityManager.SpawnEntity(rune, transform.Value);
+            _entityManager.SpawnEntity(rune, coords);
         }
 
         private bool SpawnShard(EntityUid target)
@@ -1245,12 +1273,10 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
             if (transform == null)
                 return false;
 
-            if (!mindComponent.Mind.HasValue)
-                return false;
+            var shard = _entityManager.SpawnEntity("SoulShardGhost", transform.Value);
 
-            var shard = _entityManager.SpawnEntity("SoulShard", transform.Value);
-
-            _mindSystem.TransferTo(mindComponent.Mind.Value, shard);
+            if (mindComponent.Mind.HasValue)
+                _mindSystem.TransferTo(mindComponent.Mind.Value, shard);
 
             _bodySystem.GibBody(target);
 
@@ -1261,7 +1287,7 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
         {
             var transform = Transform(uid);
             var gridUid = transform.GridUid;
-            var tile = transform.Coordinates.GetTileRef();
+            var tile = _turf.GetTileRef(transform.Coordinates);
 
             if (!gridUid.HasValue)
             {
@@ -1285,6 +1311,62 @@ namespace Content.Server._Sunrise.BloodCult.Runes.Systems
 
             _damageableSystem.TryChangeDamage(player, new DamageSpecifier(damageSpecifier, -40));
             _damageableSystem.TryChangeDamage(player, new DamageSpecifier(damageSpecifier2, -40));
+        }
+
+        private string GetStatus(MobState mobState)
+        {
+            return mobState switch
+            {
+                MobState.Alive => Loc.GetString("health-analyzer-window-entity-alive-text"),
+                MobState.Critical => Loc.GetString("health-analyzer-window-entity-critical-text"),
+                MobState.Dead => Loc.GetString("health-analyzer-window-entity-dead-text"),
+                _ => Loc.GetString("health-analyzer-window-entity-unknown-text"),
+            };
+        }
+
+        public string GetDistance(EntityUid uid, TransformComponent xform)
+        {
+
+            if (!_entityManager.TryGetComponent<TransformComponent>(uid, out var transform))
+                return string.Empty;
+
+            if (!transform.Coordinates.TryDistance(_entityManager, xform.Coordinates, out var dist))
+                return string.Empty;
+
+            var metres = dist.ToString("0.0");
+
+            return metres;
+        }
+
+        public bool IsCorrectLocation(EntityUid uid, out EntityCoordinates coords)
+        {
+            coords = default;
+
+            var transform = CompOrNull<TransformComponent>(uid);
+
+            if (transform == null)
+                return false;
+
+            var gridUid = transform.GridUid;
+
+            if (!TryComp<MapGridComponent>(gridUid, out var mapGrid))
+                return false;
+
+            var position = _map.TileIndicesFor(gridUid.Value, mapGrid, transform.Coordinates);
+
+            _intersectingEntities.Clear();
+            _lookup.GetLocalEntitiesIntersecting(gridUid.Value, position, _intersectingEntities, -0.05f, LookupFlags.Uncontained);
+
+            foreach (var ent in _intersectingEntities)
+            {
+                if (HasComp<CultRuneBaseComponent>(ent))
+                {
+                    _popupSystem.PopupCursor(Loc.GetString("tile-has-rune"), uid, PopupType.MediumCaution);
+                    return false;
+                }
+            }
+            coords = _map.GridTileToLocal(gridUid.Value, mapGrid, position);
+            return true;
         }
 
         /*

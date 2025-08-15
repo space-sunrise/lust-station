@@ -18,6 +18,8 @@
   - CigPackBlack
   - CigarCase
   - CigarGold
+  - ClothingWraps # Sunrise
+  - ClothingWrapsHigh # Sunrise
   - ClothingNeckQilluPin  # Lust-edit
   - ClothingNeckNakamuraPin  # Sunrise
   - ClothingNeckLogistikaPin  # Sunrise
@@ -46,6 +48,12 @@
   - ClothingNeckTransPin
   - ClothingNeckAutismPin
   - ClothingNeckGoldAutismPin
+  - OffsetCane
+  - OffsetCaneWood
+  - OffsetCaneClown
+  - OffsetCaneMime
+  - OffsetCaneNT
+  - Cane
   - TowelColorBlack
   - TowelColorDarkBlue
   - TowelColorDarkGreen
@@ -426,6 +434,17 @@
   minLimit: 0
   loadouts:
   - ChaplainNeck
+
+- type: loadoutGroup
+  id: ChaplainBible
+  name: loadout-group-chaplain-bible
+  minLimit: 1
+  loadouts:
+  - Bible
+  - BibleDruid
+  - BibleNanoTrasen
+  - BibleSatanic
+  - BibleTanakh
 
 - type: loadoutGroup
   id: JanitorHead
@@ -1136,6 +1155,7 @@
   - HeadofSecurityFormalSkirt
   - HeadofSecurityJumpsuitHoSOld  #Sunrise-Edit
   - HeadofSecurityJumpsuitUSSPBlack #Sunrise-Edit
+  - HeadofSecurityJumpsuitElegant #Lust-Edit
 
 - type: loadoutGroup
   id: HeadofSecurityNeck
@@ -1165,6 +1185,7 @@
 #Lust-Start
   - HeadofSecurityWinterGorka
   - HeadofSecurityVest
+  - HeadofSecurityTrenchElegant
 #Lust-End
 
 - type: loadoutGroup
@@ -1259,6 +1280,7 @@
   minLimit: 0
   loadouts:
   - DetectiveTie
+  - DetectiveTieHorrific #Sunrise-add
   - SecurityCloak # Lust Station
 
 - type: loadoutGroup

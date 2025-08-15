@@ -8,6 +8,7 @@ using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Station.Components;
 using Content.Shared.Zombies;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
@@ -82,7 +83,7 @@ public sealed class CryoTeleportationSystem : EntitySystem
                 || HasComp<ZombieComponent>(uid))
                 continue;
 
-            var stationGrid = _stationSystem.GetLargestGrid(stationData);
+            var stationGrid = _stationSystem.GetLargestGrid((comp.Station.Value, stationData));
 
             if (stationGrid == null)
                 continue;
@@ -91,6 +92,9 @@ public sealed class CryoTeleportationSystem : EntitySystem
 
             if (cryoStorage == null)
                 continue;
+
+            var ev = new BeforeCryoTeleportEvent();
+            RaiseLocalEvent(uid, ev);
 
             var containedComp = AddComp<CryostorageContainedComponent>(uid);
 

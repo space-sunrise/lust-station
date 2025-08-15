@@ -3,10 +3,7 @@
   id: BaseFlag
   abstract: true
   components:
-  - type: WallMount
-    arc: 360
   - type: Sprite
-    drawdepth: WallMountedItems
     sprite: Structures/Wallmounts/flags.rsi
 
 - type: entity

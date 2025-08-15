@@ -43,7 +43,7 @@ public sealed partial class CCVars
     ///     Cooldown between arrivals departures. This should be longer than the FTL time or it will double cycle.
     /// </summary>
     public static readonly CVarDef<float> ArrivalsCooldown =
-        CVarDef.Create("shuttle.arrivals_cooldown", 100f, CVar.SERVERONLY); // Sunrise-Edit
+        CVarDef.Create("shuttle.arrivals_cooldown", 30f, CVar.SERVERONLY); // Sunrise-Edit
 
     /// <summary>
     ///     Are players allowed to return on the arrivals shuttle.
@@ -86,13 +86,13 @@ public sealed partial class CCVars
     ///     How long a shuttle spends in FTL.
     /// </summary>
     public static readonly CVarDef<float> FTLTravelTime =
-        CVarDef.Create("shuttle.travel_time", 60f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.travel_time", 30f, CVar.SERVERONLY); // Sunrise-Edit
 
     /// <summary>
     ///     How long the final stage of FTL before arrival should be.
     /// </summary>
     public static readonly CVarDef<float> FTLArrivalTime =
-        CVarDef.Create("shuttle.arrival_time", 20f, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.arrival_time", 2f, CVar.SERVERONLY); // Sunrise-Edit
 
     /// <summary>
     ///     How much time needs to pass before a shuttle can FTL again.

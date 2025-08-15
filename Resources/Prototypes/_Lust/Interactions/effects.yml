@@ -1,0 +1,4 @@
+- type: interactionEntityEffect
+  id: InteractionEffectHearts
+  name: "Сердечки"
+  entityEffect: EffectHearts

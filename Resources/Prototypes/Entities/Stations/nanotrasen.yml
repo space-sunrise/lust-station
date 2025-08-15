@@ -17,8 +17,7 @@
     - BaseStationRecords
     - BaseStationArrivals
     - BaseStationGateway
-    # Увы, но с онлайном в 130 слишком расточительно спавнить кучу говна
-    #- BaseStationShuttles
+    - BaseStationShuttles
     - BaseStationCentComm
     - BaseStationEvacuation
     - BaseStationAlertLevels

@@ -84,6 +84,7 @@
         amount: 2
       - id: FlashlightLantern
       - id: LightReplacer
+      - id: WireBrush
 
 - type: entity
   id: ClothingBeltMedicalFilled
@@ -191,10 +192,12 @@
   components:
   - type: StorageFill
     contents:
-        - id: WeaponRevolverInspector
-        - id: SpeedLoaderMagnum
-        - id: SpeedLoaderMagnum
+        #- id: WeaponRevolverInspector #Sunrise-edit #Moved to loadout
+        - id: SpeedLoaderMagnumSP
+        - id: SpeedLoaderMagnumSP
+        - id: MagazineBoxMagnumSP
         - id: Telebaton
+        - id: CigarGold
 
 - type: entity
   id: ClothingBeltChefFilled

@@ -1,0 +1,147 @@
+- type: interaction
+  id: EarsBite
+  name: "Кусь за ушко"
+  icon: BiteEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user делает кусь за ушко %target"
+  - "%user слегка прикусывает ушко %target"
+  - "%user нежно кусает ушко %target"
+  - "%user игриво кусает за ушко %target"
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsPat
+  name: "Погладить ушки"
+  icon: PatEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ладони" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно гладит пальчиками ушки %target"
+  - "%user трепетно касается ушек %target"
+  - "%user ласково поглаживает ушки %target"
+  - "%user бережно ласкает ушки %target"
+  - "%user нежно проводит пальцами по ушкам %target"
+  - "%user аккуратно гладит ушки %target"
+  interactionSounds:
+  - FriendlyStroke
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsScratch
+  name: "Почесать за ушком"
+  icon: PatEarsIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "ладони" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно чешет за ушком %target"
+  - "%user ласково почесывает %target за ушком"
+  - "%user нежно расчесывает пальчиками за ушком %target"
+  interactionSounds:
+  - FriendlyStroke
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsKiss
+  name: "Поцеловать ушки"
+  icon: EarsKissIcon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно целует ушко %target"
+  - "%user ласково целует ушки %target"
+  - "%user с теплотой целует ушки %target"
+  interactionSounds:
+  - Kiss1
+  - Kiss2
+  - Kiss3
+  - Kiss4
+  - Kiss5
+  - Kiss6
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3
+
+- type: interaction
+  id: EarsLick
+  name: "Облизать ушко"
+  icon: ERP2Icon
+  category: Ears
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "уши" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user нежно облизывает ушко %target, делая его мокреньким"
+  - "%user ласково лижет ушки %target"
+  - "%user проводит языком по ушкам %target"
+  interactionSounds:
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
+  loveUser: 2
+  loveTarget: 4
+  cooldown: 3

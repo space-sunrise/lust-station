@@ -11,12 +11,12 @@
     sprite: Clothing/Neck/Misc/pins.rsi
   - type: Clothing
     sprite: Clothing/Neck/Misc/pins.rsi
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase

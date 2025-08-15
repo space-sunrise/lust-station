@@ -18,3 +18,7 @@ ent-ClothingHeadEVAHelmetERTEngineer = Шлем EVA ОБР инженера
     .desc = Шлем EVA ОБР инженера. Может использоваться для короткий прогулок в космосе.
 ent-ClothingHeadEVAHelmetERTJanitor = Шлем EVA ОБР уборщика
     .desc = Шлем EVA ОБР уборщика. Может использоваться для короткий прогулок в космосе.
+ent-ClothingHeadHelmetAbductor = шлем
+    .desc = { ent-ClothingHeadHelmetBase.desc }
+ent-ClothingHeadHelmetDogi = кабуто самурая
+    .desc = Традиционный Японский шлем. Его козырёк защищает от ударов сверху, а гибкие пластины сикоро прикрывают шею.

@@ -4,9 +4,9 @@
   id: BaseMobSlimePerson
   abstract: true
   components:
-  - type: Absorbable
-  - type: Interaction
-    erp: true
+  # SUNRISE EDIT
+  - type: Interactions
+  # SUNRISE EDIT
   - type: Hunger
   - type: Thirst
     baseDecayRate: 0.3
@@ -42,7 +42,12 @@
         type: StrippableBoundUserInterface
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
-  # to prevent bag open/honk spam
+      # Sunrise-start
+      enum.SurgeryUIKey.Key:
+        type: SurgeryBui
+      enum.VampireMutationUiKey.Key:
+        type: VampireMutationBoundUserInterface
+      # Sunrise-end
   - type: UseDelay
     delay: 0.5
   - type: HumanoidAppearance
@@ -69,6 +74,7 @@
     damage:
       types:
         Heat: -0.14
+        Mangleness: -0.02 #Sunrise-Edit
       groups:
         Brute: -0.14
   - type: DamageVisuals

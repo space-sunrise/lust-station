@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading;
 using Content.Server.Construction;
 using Content.Server.Construction.Components;
+using Content.Server.Hands.Systems;
 using Content.Server.Power.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.GameTicking;
@@ -13,6 +14,7 @@ using Content.Shared.Power;
 using Content.Shared.Tools;
 using Content.Shared.Tools.Components;
 using Content.Shared.Wires;
+using Content.Shared.Tag;
 using Robust.Server.GameObjects;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -24,11 +26,13 @@ public sealed class WiresSystem : SharedWiresSystem
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
+    [Dependency] private readonly HandsSystem _hands = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly ConstructionSystem _construction = default!;
+    [Dependency] private readonly TagSystem _tags = default!; // Starlight-abductors edit
 
     private static readonly ProtoId<ToolQualityPrototype> CuttingQuality = "Cutting";
     private static readonly ProtoId<ToolQualityPrototype> PulsingQuality = "Pulsing";
@@ -393,7 +397,7 @@ public sealed class WiresSystem : SharedWiresSystem
     {
         var player = args.Actor;
 
-        if (!EntityManager.TryGetComponent(player, out HandsComponent? handsComponent))
+        if (!TryComp(player, out HandsComponent? handsComponent))
         {
             _popupSystem.PopupEntity(Loc.GetString("wires-component-ui-on-receive-message-no-hands"), uid, player);
             return;
@@ -405,19 +409,13 @@ public sealed class WiresSystem : SharedWiresSystem
             return;
         }
 
-        var activeHand = handsComponent.ActiveHand;
-
-        if (activeHand == null)
+        if (!_hands.TryGetActiveItem((player, handsComponent), out var heldEntity))
             return;
 
-        if (activeHand.HeldEntity == null)
+        if (!TryComp(heldEntity, out ToolComponent? tool))
             return;
 
-        var activeHandEntity = activeHand.HeldEntity.Value;
-        if (!EntityManager.TryGetComponent(activeHandEntity, out ToolComponent? tool))
-            return;
-
-        TryDoWireAction(uid, player, activeHandEntity, args.Id, args.Action, component, tool);
+        TryDoWireAction(uid, player, heldEntity.Value, args.Id, args.Action, component, tool);
     }
 
     private void OnDoAfter(EntityUid uid, WiresComponent component, WireDoAfterEvent args)
@@ -452,6 +450,14 @@ public sealed class WiresSystem : SharedWiresSystem
         {
             if (TryComp(args.User, out ActorComponent? actor))
             {
+                // Starlight-abductor start
+                if (_tags.HasTag(args.Used, "ShowWires"))
+                    component.viewWires = true;
+                else
+                    component.viewWires = false;
+
+                UpdateUserInterface(uid);
+                // Starlight-abductor end
                 _uiSystem.OpenUi(uid, WiresUiKey.Key, actor.PlayerSession);
                 args.Handled = true;
             }
@@ -546,8 +552,24 @@ public sealed class WiresSystem : SharedWiresSystem
         var statuses = new List<(int position, object key, object value)>();
         foreach (var (key, value) in wires.Statuses)
         {
-            var valueCast = ((int position, StatusLightData? value)) value;
-            statuses.Add((valueCast.position, key, valueCast.value!));
+            // Starlight-abductor start
+            var tempValue = value;
+            var lightData = (((int, StatusLightData?)) tempValue);
+            if (lightData.Item2 != null && lightData.Item2 is StatusLightData data)
+            {
+                var foundWires = wires.WiresList
+                    .Where(wire => wire.OriginalPosition == lightData.Item1)
+                    .ToList();
+
+                if (foundWires.Any() && wires.viewWires)
+                {
+                    var wireLetters = string.Join(", ", foundWires.Select(wire => wire.Letter.ToString()));
+                    data.Text = $"{data.Text}({wireLetters})";
+                }
+
+                statuses.Add((lightData.Item1, key, data));
+                // Starlight-abductor end
+            }
         }
 
         statuses.Sort((a, b) => a.position.CompareTo(b.position));

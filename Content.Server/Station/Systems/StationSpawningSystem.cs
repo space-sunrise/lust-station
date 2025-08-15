@@ -1,14 +1,14 @@
-﻿using Content.Server._Lust.ErpStatus;
+﻿using Content.Shared._Lust.ErpStatus;
 using Content.Server.Access.Systems;
 using Content.Server.Holiday;
 using Content.Server.Humanoid;
 using Content.Server.IdentityManagement;
-using Content.Server.Mind.Commands;
+using Content.Server.Mind;
 using Content.Server.PDA;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Components;
+using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.SunriseCCVars;
-using Content.Shared._Sunrise.ERP.Components;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
@@ -48,6 +48,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly MetaDataSystem _metaSystem = default!;
     [Dependency] private readonly PdaSystem _pdaSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly MindSystem _mindSystem = default!;
     private ISharedSponsorsManager? _sponsorsManager; // Sunrise-Sponsors
 
     private bool _randomizeCharacters;
@@ -140,8 +141,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         if (prototype?.JobEntity != null)
         {
             DebugTools.Assert(entity is null);
-            var jobEntity = EntityManager.SpawnEntity(prototype.JobEntity, coordinates);
-            MakeSentientCommand.MakeSentient(jobEntity, EntityManager);
+            var jobEntity = Spawn(prototype.JobEntity, coordinates);
+            _mindSystem.MakeSentient(jobEntity);
 
             // Make sure custom names get handled, what is gameticker control flow whoopy.
             if (loadout != null)
@@ -190,11 +191,11 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             // Sunrise-End
             // Lust-Station-Start
             EnsureComp<ErpStatusComponent>(entity.Value).Erp = profile.Erp;
-            if (profile.Erp == Erp.No) { EnsureComp<InteractionComponent>(entity.Value).Erp = false; }
-            EnsureComp<InteractionComponent>(entity.Value).Virginity = profile.Virginity;
-            EnsureComp<InteractionComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
-            if (EnsureComp<InteractionComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
-            // Lust-Station-End
+             if (profile.Erp == Erp.No) { EnsureComp<InteractionsComponent>(entity.Value).Erp = false; }
+             EnsureComp<InteractionsComponent>(entity.Value).Virginity = profile.Virginity;
+            EnsureComp<InteractionsComponent>(entity.Value).AnalVirginity = profile.AnalVirginity;
+             if (EnsureComp<InteractionsComponent>(entity.Value).Erp == false) { profile.Erp = Erp.No; }
+             // Lust-Station-End
         }
 
         if (loadout != null)

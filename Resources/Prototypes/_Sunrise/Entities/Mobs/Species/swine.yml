@@ -4,11 +4,7 @@
   id: BaseMobSwine
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
-  - type: Absorbable
+  - type: Interactions
   - type: HumanoidAppearance
     species: Swine
   - type: Hunger
@@ -31,20 +27,20 @@
   - type: SlowOnDamage
     speedModifierThresholds:
       80: 0.8
-      100: 0.9
+      90: 0.9
   - type: MobThresholds
     thresholds:
       0: Alive
-      120: Critical
-      220: Dead
+      100: Critical
+      200: Dead
   - type: Stamina
-    critThreshold: 150
+    critThreshold: 100
   - type: Fixtures
     fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.40
+          radius: 0.35
         density: 250
         restitution: 0.0
         mask:

@@ -2,12 +2,11 @@
   name: P-90
   parent: BaseWeaponSubMachineGun
   id: WeaponSubMachineGunP90
-  categories: [ HideSpawnMenu ]
   components:
   - type: Item
     size: Large
     shape:
-    - 0,0,3,1
+    - 0,0,3,2
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/p90.rsi
     layers:
@@ -15,15 +14,15 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
-    - type: Wieldable
-      unwieldOnUse: false
-    - type: GunWieldBonus
-      minAngle: -19
-      maxAngle: -16
-    - type: Gun
-      minAngle: 21
-      maxAngle: 32
-      fireRate: 4
+  - type: GunWieldBonus
+    minAngle: -2.9
+    maxAngle: -30
+  - type: Gun
+    minAngle: 6
+    maxAngle: 65
+    angleIncrease: 2.95
+    angleDecay: 24
+    fireRate: 8
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/p90_shot.ogg
       params:
@@ -41,7 +40,7 @@
           - MagazineP90
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolSP
         priority: 1
         whitelist:
           tags:
@@ -52,11 +51,19 @@
     zeroVisible: true
   - type: Appearance
   - type: Wieldable
+    unwieldOnUse: false
   - type: UseDelay
     delay: 0.5
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/p90_cocked.ogg
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.86
+    sprintModifier: 0.86
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
 
 - type: entity
   name: MP-38
@@ -75,22 +82,24 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,2,1
+    - 0,0,3,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/mp38/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -22
-    maxAngle: -40
+    minAngle: -3
+    maxAngle: -12
   - type: Gun
-    minAngle: 24
-    maxAngle: 45
     fireRate: 5
+    minAngle: 5
+    maxAngle: 20
+    angleIncrease: 1
+    angleDecay: 0.6
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/mp38/mp38_shot.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: MagazinePistolSubMachineGunSP
         insertSound: /Audio/_Sunrise/Weapons/Guns/SMGs/mp38/mp38_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/SMGs/mp38/mp38_unload.ogg
         priority: 2
@@ -99,7 +108,7 @@
           - MagazinePistolSubMachineGun
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolSP
         priority: 1
         whitelist:
           tags:
@@ -130,22 +139,24 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,2,1
+    - 0,0,2,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/mp7/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -22
-    maxAngle: -38
+    minAngle: -5
+    maxAngle: -17
   - type: Gun
-    minAngle: 25
-    maxAngle: 45
-    fireRate: 6
+    minAngle: 6.6
+    maxAngle: 30
+    angleIncrease: 1.2
+    angleDecay: 28
+    fireRate: 6.55
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Rifles/mp7/mp7_shot.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolHighCapacity
+        startingItem: MagazinePistolHighCapacityFMJ
         insertSound: /Audio/_Sunrise/Weapons/Guns/Rifles/mp7/mp7_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Rifles/mp7/mp7_unload.ogg
         priority: 2
@@ -156,7 +167,7 @@
           - MagazinePistolHighCapacity
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolFMJ
         priority: 1
         whitelist:
           tags:
@@ -187,15 +198,24 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,3,1
+    - 0,0,3,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/mp5/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -19
-    maxAngle: -16
+    minAngle: -5
+    maxAngle: -18
   - type: Gun
-    minAngle: 21
-    maxAngle: 32
+    minAngle: 7
+    maxAngle: 30
+    angleIncrease: 1.9
+    angleDecay: 18.5
     fireRate: 6
+    burstFireRate: 8
+    selectedMode: FullAuto
+    availableModes:
+    - Burst
+    - FullAuto
+    shotsPerBurst: 3
+    burstCooldown: 0.15
     soundGunshot:
       collection: mp5
       params:
@@ -204,7 +224,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: MagazinePistolSubMachineGunSP
         insertSound: /Audio/_Sunrise/Weapons/Guns/SMGs/mp5/mp5_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/SMGs/mp5/mp5_unload.ogg
         priority: 2
@@ -215,7 +235,7 @@
           - MagazinePistolHighCapacity
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolSP
         priority: 1
         whitelist:
           tags:
@@ -240,7 +260,7 @@
   - type: Item
     size: Normal
     shape:
-    - 0,0,1,1
+    - 0,0,2,1
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/skorpion.rsi
     layers:
@@ -248,20 +268,29 @@
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Sunrise/Objects/Weapons/Guns/SMGs/skorpion.rsi
+    quickEquip: False
+    slots:
+    - Back
+    - suitStorage
+    - Belt
+  - type: GunWieldBonus
+    minAngle: -6
+    maxAngle: -25
   - type: Gun
-    minAngle: 2
-    maxAngle: 55
-    fireRate: 7
+    minAngle: 9.5
+    maxAngle: 40
+    angleIncrease: 5.4
+    angleDecay: 25
+    fireRate: 6
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/scorpion/scorpion_shot.ogg
-  - type: Clothing
-    slots:
-    - Pocket
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: MagazineScorpion
         insertSound: /Audio/_Sunrise/Weapons/Guns/SMGs/scorpion/scorpion_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/SMGs/scorpion/scorpion_unload.ogg
         priority: 2
@@ -269,13 +298,15 @@
           tags:
           - MagazinePistolSubMachineGun
           - MagazinePistolHighCapacity
+          - MagazineScorpion
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol  # 57x28
+        startingItem: CartridgePistolSP  # 57x28
         priority: 1
         whitelist:
           tags:
           - CartridgePistol  # 57x28
+  - type: Wieldable
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -284,7 +315,7 @@
 
 - type: entity
   name: New Vector
-  parent: BaseWeaponSubMachineGun
+  parent: WeaponSubMachineGunDrozd
   id: WeaponSubMachineGunNewVector
   components:
   - type: Sprite
@@ -299,22 +330,17 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,2,1
+    - 0,0,3,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/vector/tiny.rsi
-  - type: GunWieldBonus
-    minAngle: -30
-    maxAngle: -40
   - type: Gun
-    minAngle: 35
-    maxAngle: 50
-    fireRate: 6.5
+    burstFireRate: 22
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/new_vector/vector_shot.ogg
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGun
+        startingItem: MagazinePistolSubMachineGunSP
         insertSound: /Audio/_Sunrise/Weapons/Guns/SMGs/new_vector/new_vector_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/SMGs/new_vector/new_vector_unload.ogg
         priority: 2
@@ -324,7 +350,7 @@
           - MagazinePistolHighCapacity
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol  # 57x28
+        startingItem: CartridgePistolSP  # 57x28
         priority: 1
         whitelist:
           tags:
@@ -355,15 +381,17 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,4,1
+    - 0,0,4,2
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/ppsh41/tiny.rsi
   - type: GunWieldBonus
-    minAngle: -22
-    maxAngle: -30
+    minAngle: -7
+    maxAngle: -95
   - type: Gun
-    minAngle: 24
-    maxAngle: 50
-    fireRate: 7
+    minAngle: 10
+    maxAngle: 120
+    angleIncrease: 5
+    angleDecay: 30
+    fireRate: 9
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/SMGs/ppsh41/ppsh_shot.ogg
       params:
@@ -384,7 +412,7 @@
           - MagazinePistolSubMachineGun
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolSP
         priority: 1
         whitelist:
           tags:
@@ -396,7 +424,10 @@
   - type: Appearance
   - type: Wieldable
   - type: UseDelay
-    delay: 0.5
+    delay: 1
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.85
+    sprintModifier: 0.85
 
 - type: entity
   name: MS-42
@@ -407,7 +438,7 @@
   - type: Item
     size: Huge
     shape:
-    - 0,0,3,2
+    - 0,0,4,2
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/MS-42.rsi
     layers:
@@ -419,8 +450,8 @@
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/MS-42.rsi
   - type: Gun
     minAngle: 10
-    maxAngle: 15
-    angleIncrease: 4
+    maxAngle: 35
+    angleIncrease: 3.2
     angleDecay: 16
     fireRate: 6
     selectedMode: FullAuto
@@ -430,13 +461,13 @@
     - FullAuto
   - type: Wieldable
   - type: GunWieldBonus
-    minAngle: -8
-    maxAngle: -13
+    minAngle: -7.2
+    maxAngle: -23
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazineRifle
+        startingItem: MagazineRifleFMJ
         insertSound: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
         priority: 2
@@ -445,7 +476,7 @@
           - MagazineRifle
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeRifle
+        startingItem: CartridgeRifleFMJ
         priority: 1
         whitelist:
           tags:
@@ -465,7 +496,7 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,2,1
+    - 0,0,3,2
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/AJ-100.rsi
     layers:
@@ -475,17 +506,24 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/AJ-100.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -2.5
+    maxAngle: -23
   - type: Gun
-    minAngle: 8
-    maxAngle: 8
-    angleIncrease: 4
-    angleDecay: 16
+    minAngle: 5.5
+    maxAngle: 45
+    angleIncrease: 2.5
+    angleDecay: 18
     fireRate: 7.5
     selectedMode: FullAuto
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
     availableModes:
     - FullAuto
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
   - type: ItemSlots
     slots:
       gun_magazine:
@@ -501,10 +539,9 @@
           - MagazinePistol
           - MagazinePistolHighCapacity
           - MagazinePistolCaselessRifle
-          - MagazineMagnumSubMachineGun
       gun_chamber:
         name: Chamber
-        startingItem: CartridgePistol
+        startingItem: CartridgePistolSP
         priority: 1
         whitelist:
           tags:
@@ -515,8 +552,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: StaticPrice
-    price: 5500
 
 - type: entity
   name: SIAR-52 SMG
@@ -527,7 +562,7 @@
   - type: Item
     size: Large
     shape:
-    - 0,0,3,1
+    - 0,0,4,2
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/IAR-52.rsi
     layers:
@@ -537,11 +572,16 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _Sunrise/Objects/Weapons/Guns/SMGs/IAR-52.rsi
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -4
+    maxAngle: -22
   - type: Gun
-    minAngle: 4
-    maxAngle: 4
-    angleIncrease: 4
-    angleDecay: 16
+    minAngle: 7
+    maxAngle: 66
+    angleIncrease: 2
+    angleDecay: 22
     fireRate: 7
     selectedMode: FullAuto
     soundGunshot:
@@ -573,55 +613,83 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: StaticPrice
-    price: 6500
 
 - type: entity
-  name: Uzi
-  parent: [BaseWeaponSubMachineGun, BaseRestrictedContraband]
-  id: UplinkSubMachineGunUzi
-  description: A compact and reliable submachine gun.
+  name: Drozd Mk2
+  parent: [WeaponSubMachineGunDrozd]
+  id: WeaponSubMachineGunDrozdMk2
+  description: An improved variant of the Drozd submachine gun developed by NanoTrasen’s Small Arms Division. It features an exceptional rate of fire in burst mode, making it effective for holding defensive positions or engaging targets at medium to long ranges. Equipped with an automatic magazine release for faster reloads. Uses .35 SMG magazines.
   components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/SMGs/uzi.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-0
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: Gun
-    minAngle: 2
-    maxAngle: 65
-    fireRate: 9
-    soundGunshot:
-      collection: famas # Sunrise-Edit
-      params:
-        volume: 10
-    availableModes:
-    - FullAuto
-    - SemiAuto
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazinePistolSubMachineGun
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-          - MagazinePistolSubMachineGun
-          - MagazinePistolHighCapacity
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistol
-        priority: 1
-        whitelist:
-          tags:
-          - CartridgePistol
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: Appearance
+    - type: Sprite
+      sprite: _Sunrise/Objects/Weapons/Guns/SMGs/drozd.rsi
+      layers:
+        - state: base
+          map: ["enum.GunVisualLayers.Base"]
+        - state: mag-0
+          map: ["enum.GunVisualLayers.Mag"]
+    - type: Clothing
+      sprite: _Sunrise/Objects/Weapons/Guns/SMGs/drozd.rsi
+    - type: Wieldable
+      unwieldOnUse: false
+    - type: GunWieldBonus
+      minAngle: -19
+      maxAngle: -20
+    - type: Gun
+      minAngle: 21
+      maxAngle: 32
+      fireRate: 6
+      burstFireRate: 20
+      soundGunshot:
+        collection: famas # Sunrise-Edit
+        params:
+          volume: 10
+      selectedMode: Burst
+      availableModes:
+      - Burst
+      - FullAuto
+      shotsPerBurst: 3
+      burstCooldown: 0.325
+    - type: MagazineVisuals
+      magState: mag
+      steps: 5
+      zeroVisible: true
+    - type: ChamberMagazineAmmoProvider
+      autoEject: true
+    - type: Appearance
+    - type: SpeedModifiedOnWield
+      walkModifier: 0.97
+      sprintModifier: 0.97
+    - type: ClothingSpeedModifier
+      walkModifier: 0.99
+      sprintModifier: 0.99
+    - type: EyeCursorOffset
+      maxOffset: 3.5
+      pvsIncrease: 0.45
+    - type: Contraband
+      allowedDepartments: [ CentralCommand, Security ]
+
+- type: entity
+  name: Drozd Mk2
+  parent: WeaponSubMachineGunDrozdMk2
+  id: WeaponSubMachineGunDrozdMk2Empty
+  categories: [HideSpawnMenu]
+  components:
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: null
+          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+            - MagazinePistolSubMachineGun
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: null
+          priority: 1
+          whitelist:
+            tags:
+            - CartridgePistol

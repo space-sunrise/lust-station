@@ -79,19 +79,19 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered # INTERACTIONS # INTERACTIONS
+  # SUNRISE EDIT
   - type: HideLayerClothing
     slots:
     - Hair
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -130,19 +130,19 @@
     sprite: Clothing/Head/Misc/richard.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered # INTERACTIONS
+  # SUNRISE EDIT
   - type: HideLayerClothing
     slots:
     - Hair
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -156,18 +156,18 @@
     sprite: Clothing/Head/Misc/skubhead.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered # INTERACTIONS
+  # SUNRISE EDIT
   - type: HideLayerClothing
     slots:
     - Hair
     - HeadTop
     - HeadSide
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -296,19 +296,19 @@
     sprite: Clothing/Head/Misc/squiddy.rsi
   - type: IngestionBlocker
   - type: IdentityBlocker
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered # INTERACTIONS
+  # SUNRISE EDIT
   - type: HideLayerClothing
     slots:
     - Hair
     - HeadTop
     - HeadSide
     - FacialHair
-  # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: ClothingHeadBase
@@ -320,19 +320,19 @@
     sprite: Clothing/Head/Misc/red_racoon.rsi
   - type: Clothing
     sprite: Clothing/Head/Misc/red_racoon.rsi
+    # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - FullCovered # INTERACTIONS
+  # SUNRISE EDIT
   - type: HideLayerClothing
     slots:
     - Hair
     - HeadTop
     - HeadSide
     - FacialHair
-    # Lust-Start
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - ClothMade
-    - FullCovered
-  # Lust-End
 
 - type: entity
   parent: Clothing
@@ -350,15 +350,16 @@
   - type: Clothing
     slots:
     - HEAD
-  - type: Food
+  - type: Edible
+    edible: Drink
     solution: drink
-    useSound: /Audio/Items/drink.ogg
-    eatMessage: drink-component-try-use-drink-success-slurp
     delay: 0.5
     forceFeedDelay: 1.5
   - type: FlavorProfile
     flavors:
       - water
+  - type: DrainableSolution
+    solution: drink
   - type: SolutionContainerManager
     solutions:
       drink:

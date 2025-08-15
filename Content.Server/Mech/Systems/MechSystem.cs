@@ -14,7 +14,6 @@ using Content.Shared.Mech.Components;
 using Content.Shared.Mech.EntitySystems;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.Mobs.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Popups;
 using Content.Shared.Tools;
@@ -23,25 +22,19 @@ using Content.Shared.Tools.Systems;
 using Content.Shared.Verbs;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
-using Content.Server.Body.Systems;
 using Content.Server.Chat.Systems;
-using Content.Shared.Tools.Systems;
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.NPC.Components;
 using Content.Shared.NPC.Systems;
 using Content.Shared.Tag;
-using Robust.Server.Audio;
-using Robust.Shared.Audio;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Content.Shared.Whitelist;
 using Content.Shared.Access.Components;
 using Content.Shared.Access.Systems;
-
 namespace Content.Server.Mech.Systems;
 
 /// <inheritdoc/>
@@ -81,7 +74,6 @@ public sealed partial class MechSystem : SharedMechSystem
         SubscribeLocalEvent<MechComponent, MechEntryEvent>(OnMechEntry);
         SubscribeLocalEvent<MechComponent, MechExitEvent>(OnMechExit);
         SubscribeLocalEvent<MechComponent, MechSayEvent>(OnMechSay);
-
         SubscribeLocalEvent<MechComponent, DamageChangedEvent>(OnDamageChanged);
         SubscribeLocalEvent<MechComponent, MechEquipmentRemoveMessage>(OnRemoveEquipmentMessage);
 
@@ -281,9 +273,10 @@ public sealed partial class MechSystem : SharedMechSystem
                 return;
             }
 
-        if (TryComp<HandsComponent>(args.Args.User, out var handsComponent))
-            foreach (var hand in _hands.EnumerateHands(args.Args.User, handsComponent))
-                _hands.DoDrop(args.Args.User, hand, true, handsComponent);
+        foreach (var hand in _hands.EnumerateHands(args.Args.User))
+        {
+            _hands.DoDrop(args.Args.User, hand);
+        }
 
         _factionSystem.Up(args.Args.User, uid);
         TryInsert(uid, args.Args.User, component);

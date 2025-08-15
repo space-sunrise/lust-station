@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterCoatHoSTrench
+  parent: [ClothingOuterCoatHoSTrench, AllowSuitStorageClothing]
   id: ClothingOuterWinterGorka
   name: HoS's gorka
   description: Dense gorka for lovers of order

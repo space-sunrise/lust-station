@@ -25,19 +25,6 @@
     - ClothMade
     - WhitelistChameleon
 
-# Lust-Start
-- type: entity
-  abstract: true
-  parent: ClothingHeadBase
-  id: ClothingHeadTopCovered
-  components:
-  - type: Tag
-    tags:
-      - ClothMade
-      - WhitelistChameleon
-      - FullCovered
-# Lust-End
-
 - type: entity
   abstract: true
   parent: ClothingHeadBase
@@ -104,8 +91,8 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
+        startValue: 0.1
+        endValue: 2.0
         isLooped: true
   - type: PowerCellSlot
     cellSlotId: cell_slot
@@ -117,11 +104,11 @@
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot {}
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - TopCovered
-  # Lust-Start
+    - TopCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   abstract: true
@@ -152,7 +139,7 @@
     tags:
     - WhitelistChameleon
     - HelmetEVA
-    - FullCovered # Lust-Edit
+    - FullCovered # INTERACTIONS
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -201,7 +188,7 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-    - FullCovered # Lust-Edit
+    - FullCovered # INTERACTIONS
   - type: IdentityBlocker
   - type: HideLayerClothing
     slots:
@@ -209,6 +196,8 @@
     - Snout
     - HeadTop
     - HeadSide
+  - type: Pierceable
+    level: Metal
 
 - type: entity
   abstract: true
@@ -258,8 +247,8 @@
         id: blinking
         interpolate: Nearest
         maxDuration: 1.0
-        minValue: 0.1
-        maxValue: 2.0
+        startValue: 0.1
+        endValue: 2.0
         isLooped: true
   - type: Battery
     maxCharge: 600 #lights drain 3/s but recharge of 2 makes this 1/s. Therefore 600 is 10 minutes of light.
@@ -267,11 +256,11 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2 #recharge of 2 makes total drain 1w / s so max charge is 1:1 with time. Time to fully charge should be 5 minutes. Having recharge gives light an extended flicker period which gives you some warning to return to light area.
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - FullCovered
-  # Lust-Start
+    - FullCovered # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   abstract: true
@@ -302,8 +291,8 @@
     - Hair
     - HeadTop
     - HeadSide
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
-    - TopCovered
-  # Lust-Start
+    - TopCovered # INTERACTIONS
+  # SUNRISE EDIT

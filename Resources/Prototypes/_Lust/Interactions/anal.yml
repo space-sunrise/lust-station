@@ -1,0 +1,234 @@
+﻿- type: interaction
+  id: AnalFingering
+  name: "Разработать анус пальцем"
+  icon: AnalFingeringIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user медленно вставляет пальчик в попку %target"
+  - "%user осторожно проникает пальчиком в попку %target"
+  - "%user нежно массирует пальчиками анус %target"
+  - "%user аккуратно разрабатывает пальчиком попку %target"
+  - "%user плавно вставляет пальчик в попку %target"
+  - "%user потихоньку засовывает пальчик в попку %target"
+  - "%user проскальзывает пальчиком в попку %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 2
+  loveTarget: 4
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: AnalLick
+  name: "Поласкать анус языком"
+  icon: AnalLickIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user чувственно вылизывает заднюю дырочку %target"
+  - "%user игриво извивает язычком в анусе %target"
+  - "%user медленно водит язычком вокруг ануса %target"
+  - "%user плавно вводит язычок в попку %target"
+  - "%user страстно вылизывает язычком анус %target"
+  - "%user глубоко проникает языком в анус %target"
+  - "%user нежно вылизывает анус %target"
+  interactionSounds:
+  - FaceLickDoggyStyleSound1
+  - FaceLickDoggyStyleSound2
+  loveUser: 3
+  loveTarget: 6
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: AnalFingering2
+  name: "Трахать анус пальцами"
+  icon: AnalFingeringIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "гладкие перчатки" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user активно трахает пальчиками анус %target"
+  - "%user интенсивно трахает пальчиками анус %target"
+  - "%user на всю длину входит пальчиками в анус %target"
+  - "%user увлеченно трахает пальчиками анус %target"
+  - "%user быстро долбит пальчиками анус %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  loveUser: 3
+  loveTarget: 7
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: AnalFuck
+  name: "Трахать анус членом"
+  icon: CockNearToAssIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user трахает в попку %target"
+  - "%user долбит попку %target своим членом"
+  - "%user на всю длину входит в попку %target"
+  - "%user резко проникает в задницу %target"
+  - "%user медленно входит в попку %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  targetVirginityLoss: anal
+  userVirginityLoss: male
+  loveUser: 8
+  loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: HoldTailAnusFuck
+  name: "Трахать в анус держа хвост"
+  icon: CockNearToAssTailIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: true
+    checkTarget: false
+    requiredSex: [ Male, Futanari ]
+  - !type:HasVisualLayerCondition
+    checkTarget: true
+    checkInitiator: false
+    layer: Tail
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "член" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал", "хвост" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user трахает в попку держа за хвост %target"
+  - "%user ухватившись за хвост - долбит попку %target"
+  - "%user на всю длину входит в попку %target, держа за хвост"
+  - "%user резко проникает в задницу %target, схватившись за хвост"
+  - "%user держа за хвост - медленно входит в попку %target"
+  interactionSounds:
+  - Hlup1
+  - Hlup2
+  - Hlup3
+  - Hlup4
+  targetVirginityLoss: anal
+  userVirginityLoss: male
+  loveUser: 8
+  loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3
+
+- type: interaction
+  id: TailAnalFuck
+  name: Проникнуть хвостом в анус
+  icon: ButtTailFuckIcon
+  category: Anal
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:HasVisualLayerCondition
+    checkTarget: false
+    checkInitiator: true
+    layer: Tail
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "анал" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "хвост" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user медленно вставляет свой хвост в попку %target"
+  - "%user осторожно проникает своим хвостом в попку %target"
+  - "%user нежно поглаживает своим хвостом анус %target"
+  - "%user аккуратно разрабатывает своим хвостом попку %target"
+  - "%user плавно вставляет свой хвост в попку %target"
+  - "%user потихоньку засовывает свой хвост в попку %target"
+  - "%user проникает своим хвостом в попку %target"
+  loveUser: 8
+  loveTarget: 8
+  spawnsEffect: true
+  effectChance: 1
+  entityEffect: InteractionEffectHearts
+  cooldown: 3

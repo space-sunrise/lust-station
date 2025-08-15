@@ -3,7 +3,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 20
+    minPlayers: 50 # НЕ ТРОГАТЬ БЕЗ МОЕГО РАЗРЕШЕНИЯ!!! SplikZerys
     minCommandStaff: 3
   - type: AssaultOpsRule
     faction: Syndicate
@@ -32,6 +32,11 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
+      - type: RandomMetadata
+        nameSegments:
+        - NamesFirst
+        - NamesLast
+        nameFormat: name-format-standard
       mindRoles:
       - MindRoleAssaultCommander
     - prefRoles: [ AssaultOperative ]
@@ -47,5 +52,10 @@
       - type: NpcFactionMember
         factions:
         - Syndicate
+      - type: RandomMetadata
+        nameSegments:
+        - NamesFirst
+        - NamesLast
+        nameFormat: name-format-standard
       mindRoles:
       - MindRoleAssaultOperative

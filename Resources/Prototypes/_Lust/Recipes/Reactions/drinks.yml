@@ -1,0 +1,9 @@
+- type: reaction
+  id: SexOnTheBeach
+  reactants:
+    Vodka:
+      amount: 1
+    SpaceUp:
+      amount: 2
+  products:
+    SexOnTheBeach: 3

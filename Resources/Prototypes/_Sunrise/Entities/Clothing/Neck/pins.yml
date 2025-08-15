@@ -13,12 +13,12 @@
     clothingVisuals:
       neck:
       - state: comm-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -35,12 +35,12 @@
     clothingVisuals:
       neck:
       - state: donk-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -57,12 +57,12 @@
     clothingVisuals:
       neck:
       - state: earth-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -79,12 +79,12 @@
     clothingVisuals:
       neck:
       - state: logistika-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -101,12 +101,12 @@
     clothingVisuals:
       neck:
       - state: med-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -123,12 +123,12 @@
     clothingVisuals:
       neck:
       - state: nakamura-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -145,12 +145,12 @@
     clothingVisuals:
       neck:
       - state: nano-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -167,12 +167,12 @@
     clothingVisuals:
       neck:
       - state: sind-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -189,12 +189,12 @@
     clothingVisuals:
       neck:
       - state: vit-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT
 
 - type: entity
   parent: ClothingNeckPinBase
@@ -211,9 +211,9 @@
     clothingVisuals:
       neck:
       - state: reedpin-equipped
-  # Lust-Start
+  # SUNRISE EDIT
   - type: Tag
     tags:
     - WhitelistChameleon
-    - OpenNeck
-  # Lust-End
+    - OpenNeck # INTERACTIONS
+  # SUNRISE EDIT

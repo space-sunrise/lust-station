@@ -5,11 +5,7 @@
   name: Urist McXeno
   abstract: true
   components:
-  # Sunrise-Lust edit start
-  - type: Interaction
-    erp: true
-  # Sunrise-Lust edit end
-  - type: Absorbable
+  - type: Interactions
   - type: Respirator
     damage:
       types:
@@ -67,7 +63,6 @@
         layer:
         - MobLayer
   - type: Sprite
-    scale: 1.1, 1.2
     layers:
     - map: [ "enum.HumanoidVisualLayers.Chest" ]
     - map: [ "enum.HumanoidVisualLayers.Snout" ]

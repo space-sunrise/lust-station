@@ -1,0 +1,29 @@
+- type: interaction
+  id: TraceLick
+  name: "Провести языком от живота до паха"
+  icon: ERP2Icon
+  category: Face
+  appearConditions:
+  - !type:HasTargetCondition
+    allowSelfTargeting: false
+  - !type:SexCondition
+    checkInitiator: false
+    checkTarget: true
+    requiredSex: [ Female, Futanari ]
+  - !type:BodyAreaTagCondition
+    checkInitiator: true
+    checkTarget: false
+    categories: [ "рот" ]
+    requireExposed: true
+  - !type:BodyAreaTagCondition
+    checkInitiator: false
+    checkTarget: true
+    categories: [ "вагина" ]
+    requireExposed: true
+  interactionMessages:
+  - "%user медленно проводит влажным языком по телу %target, оставляя мокрый след от живота до паха"
+  - "%user подносит голову к животику %target и, высунув свой язык, проводит им вплоть до паха"
+  - "%user посмотрев на %target игривым взглядом, проводит своим языком мокрую дорожку от животика до паха"
+  loveUser: 3
+  loveTarget: 4
+  cooldown: 5

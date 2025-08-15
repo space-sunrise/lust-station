@@ -1,7 +1,5 @@
 ent-BaseShellShotgun = shell (.50)
     .desc = { ent-BaseCartridge.desc }
-ent-BaseShellHitscanShotgun = shell (.50)
-    .desc = { ent-BaseCartridge.desc }
 ent-ShellShotgunBeanbag = shell (.50 beanbag)
     .desc = { ent-BaseShellHitscanShotgun.desc }
 ent-ShellShotgunSlug = shell (.50 slug)
@@ -19,4 +17,8 @@ ent-ShellTranquilizer = shell (.50 tranquilizer)
 ent-ShellShotgunImprovised = improvised shotgun shell
     .desc = A homemade shotgun shell that shoots painful glass shrapnel. The spread is so wide that it couldn't hit the broad side of a barn.
 ent-ShellShotgunUranium = uranium shotgun shell
+    .desc = { ent-BaseShellHitscanShotgun.desc }
+ent-BaseShellHitscanShotgun = shell (.50)
+    .desc = { ent-BaseCartridge.desc }
+ent-ShellShotgunUraniumSlug = shell (.50 uranium slug)
     .desc = { ent-BaseShellHitscanShotgun.desc }

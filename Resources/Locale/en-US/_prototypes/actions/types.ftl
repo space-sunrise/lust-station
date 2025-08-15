@@ -56,6 +56,8 @@ ent-ActionWake = Wake up
     .desc = Stop sleeping.
 ent-ActionActivateHonkImplant = Honk
     .desc = Activates your honking implant, which will produce the signature sound of the clown.
+ent-ActionActivateBorgLaughImplant = [color=red]Laugh[/color]
+    .desc = Activates your creepy laugh implant, which will produce the signature sound of the Syndicate cyborg.
 ent-ActionFireStarter = Ignite
     .desc = Ignites enemies in a radius around you.
 ent-ActionToggleEyes = Open/Close eyes
