@@ -23,6 +23,7 @@ toggle-light = Toggle light
 ai-device-not-responding = Device is not responding
 
 ai-consciousness-download-warning = Your consciousness is being downloaded.
+ai-shell-holopad-call = Attempting to connect to AI via holopad
 
 # UI
 station-ai-customization-menu = AI customization
