@@ -825,6 +825,8 @@ MagazineBoxMagnum: MagazineBoxMagnumSP
 SpeedLoaderMagnum: SpeedLoaderMagnumSP
 MagazineBoxRifle: MagazineBoxRifleSP
 # Sunrise-End
+PrinterDoc: CopyMachineFilled
+PrinterDocFlatpack: CopyMachineFlatpack
 
 # Lust-Start
 VendingMachineCoffeeMigrateUnderwear: VendingMachineUnderwear
