@@ -40,6 +40,9 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtElegantHos
     neck: ClothingNeckCloakBattleHoS
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h
 
 # OuterClothing
 - type: loadout
@@ -48,8 +51,5 @@
   equipment:
     outerClothing: ClothingOuterHoSTrenchElegant
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 360000 #100 hrs
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h
