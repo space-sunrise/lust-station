@@ -345,6 +345,55 @@ public sealed partial class ShuttleSystem
         }
     }
 
+    // Sunrise-Start
+    public void FTLToDockСonfig(
+        EntityUid shuttleUid,
+        ShuttleComponent component,
+        EntityUid target,
+        DockingConfig config,
+        float? startupTime = null,
+        float? hyperspaceTime = null,
+        string? priorityTag = null,
+        bool ignored = false,
+        bool deletedTrash = false)
+    {
+        if (!TrySetupFTL(shuttleUid, component, out var hyperspace))
+            return;
+
+        startupTime ??= DefaultStartupTime;
+        hyperspaceTime ??= DefaultTravelTime;
+
+        hyperspace.StartupTime = startupTime.Value;
+        hyperspace.TravelTime = hyperspaceTime.Value;
+        hyperspace.StateTime = StartEndTime.FromStartDuration(
+            _gameTiming.CurTime,
+            TimeSpan.FromSeconds(hyperspace.StartupTime));
+        hyperspace.PriorityTag = priorityTag;
+        hyperspace.Ignored = ignored; // Sunrise-Edit
+        hyperspace.DeleteTrash = deletedTrash; // Sunrise-Edit
+
+        _console.RefreshShuttleConsoles(shuttleUid);
+
+        // Valid dock for now time so just use that as the target.
+        if (config != null)
+        {
+            hyperspace.TargetCoordinates = config.Coordinates;
+            hyperspace.TargetAngle = config.Angle;
+        }
+        else if (TryGetFTLProximity(shuttleUid, new EntityCoordinates(target, Vector2.Zero), out var coords, out var targAngle))
+        {
+            hyperspace.TargetCoordinates = coords;
+            hyperspace.TargetAngle = targAngle;
+        }
+        else
+        {
+            // FTL back to its own position.
+            hyperspace.TargetCoordinates = Transform(shuttleUid).Coordinates;
+            Log.Error($"Unable to FTL grid {ToPrettyString(shuttleUid)} to target properly?");
+        }
+    }
+    // Sunrise-End
+
     private bool TrySetupFTL(EntityUid uid, ShuttleComponent shuttle, [NotNullWhen(true)] out FTLComponent? component)
     {
         component = null;

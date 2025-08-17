@@ -2,9 +2,9 @@ meta:
   format: 7
   category: Grid
   engineVersion: 266.0.0
-  forkId: sunrise_station
-  forkVersion: 83b3edfcb7c8626abb4f21a2cbec5109a3bf87ef
-  time: 08/16/2025 09:06:59
+  forkId: ""
+  forkVersion: ""
+  time: 08/17/2025 22:05:26
   entityCount: 3866
 maps: []
 grids:
@@ -4073,6 +4073,14 @@ entities:
     - type: Transform
       pos: 32.5,-12.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        165:
+        - - DockStatus
+          - Toggle
+        166:
+        - - DockStatus
+          - Toggle
   - uid: 56
     components:
     - type: Transform
@@ -20864,7 +20872,7 @@ entities:
       pos: 18.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -65560.984
+      secondsUntilStateChange: -65590.22
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
