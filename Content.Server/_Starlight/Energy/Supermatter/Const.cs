@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Content.Shared.Atmos;
+﻿using Content.Shared.Atmos;
 using Content.Shared.FixedPoint;
-using Robust.Shared.Physics;
 
 namespace Content.Server.Starlight.Energy.Supermatter;
 internal static class Const
@@ -31,13 +25,13 @@ internal static class Const
     ];
 
     public static float MinPressure = 33f;
-    public static float MaxPressure = 363.9f;
+    public static float MaxPressure = 303.9f;
 
-    public static float MaxTemperature = Atmospherics.T0C + 200;
+    public static float MaxTemperature = Atmospherics.T0C + 150;
 
     public static float EvaporationCompensation = 10;
 
-    public static FixedPoint2 MaxDamagePerSecond = (100f / 180f) + RegenerationPerSecond; // Ensures it takes at least 3 minutes to deplete
+    public static FixedPoint2 MaxDamagePerSecond = (100f / 120f) + RegenerationPerSecond; // Ensures it takes at least 2 minutes to deplete
     public static FixedPoint2 RegenerationPerSecond = 0.3f;
 
     public static string[] AudioCrack = ["/Audio/_Starlight/Effects/supermatter/crystal_crack_1.ogg", "/Audio/_Starlight/Effects/supermatter/crystal_crack_2.ogg"];

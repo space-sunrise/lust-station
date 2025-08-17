@@ -1,16 +1,12 @@
-using System;
 using System.Linq;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
-using Content.Server.Explosion.EntitySystems;
 using Content.Server.Lightning;
 using Content.Server.Radio.EntitySystems;
-using Content.Server.Starlight.Energy.Supermatter;
 using Content.Shared.Abilities.Goliath;
 using Content.Shared.Atmos;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Prototypes;
-using Content.Shared.FixedPoint;
 using Content.Shared.Ghost;
 using Content.Shared.Interaction;
 using Content.Shared.Projectiles;
@@ -18,13 +14,11 @@ using Content.Shared.Radiation.Components;
 using Content.Shared.Radio;
 using Content.Shared.Singularity.Components;
 using Content.Shared.Starlight.Energy.Supermatter;
-using Microsoft.CodeAnalysis;
 using Robust.Server.Audio;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Robust.Shared.Toolshed.TypeParsers;
 
 namespace Content.Server.Starlight.Energy.Supermatter;
 
@@ -39,7 +33,6 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ExplosionSystem _explosion = default!;
 
     private readonly Dictionary<EntityUid, Entity<SupermatterComponent>> _supermatters = [];
     private DamageGroupPrototype? _brute;
@@ -113,7 +106,7 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
     private void Cascad(Entity<SupermatterComponent> supermatter)
     {
         if (supermatter.Comp.Durability > 0.01) return;
-        _explosion.QueueExplosion(supermatter, ExplosionSystem.DefaultExplosionPrototypeId, 150, 3, 20);
+
         _cascade.StartCascade(Transform(supermatter.Owner).Coordinates);
         QueueDel(supermatter.Owner);
     }
@@ -184,7 +177,7 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
             radiationStability += prop.RadiationStability * percent;
         }
 
-        supermatter.Comp.RadiationStability = MathHelper.Clamp(radiationStability, 1.1, 10);
+        supermatter.Comp.RadiationStability = MathHelper.Clamp(radiationStability, 1, 10);
 
         ProcessHeat(supermatter, gas, heatTransfer, heatModifier);
         TryCompensateDamage(supermatter, gas);
@@ -239,6 +232,6 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
         supermatter.Comp.AccBreak = MathHelper.Clamp(supermatter.Comp.AccBreak + (trueDamage * Const.BreakPercent), 0, 9999);
         supermatter.Comp.AccHeat = MathHelper.Clamp(supermatter.Comp.AccHeat + (trueDamage * Const.HeatPercent), 0, 9999);
         supermatter.Comp.AccLighting = MathHelper.Clamp(supermatter.Comp.AccLighting + (trueDamage * Const.LightingPercent), 0, 25);
-        supermatter.Comp.AccRadiation = MathHelper.Clamp(supermatter.Comp.AccRadiation + (trueDamage * Const.RadiationPercent), 0, 50);
+        supermatter.Comp.AccRadiation = MathHelper.Clamp(supermatter.Comp.AccRadiation + (trueDamage * Const.RadiationPercent), 0, 100);
     }
 }
