@@ -38,6 +38,7 @@
 - type: loadout
   id: HeadofSecurityJumpsuitElegant
   equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantHos
     neck: ClothingNeckCloakBattleHoS
 
 # OuterClothing
@@ -46,7 +47,6 @@
   sponsorOnly: true
   equipment:
     outerClothing: ClothingOuterHoSTrenchElegant
-    jumpsuit: ClothingUniformJumpskirtElegantHos
   effects:
   - !type:JobRequirementLoadoutEffect
     requirement:
