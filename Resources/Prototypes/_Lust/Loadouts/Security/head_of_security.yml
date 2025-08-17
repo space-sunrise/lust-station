@@ -37,6 +37,7 @@
 # Suit
 - type: loadout
   id: HeadofSecurityJumpsuitElegant
+  sponsorOnly: true
   equipment:
     jumpsuit: ClothingUniformJumpskirtElegantHos
     neck: ClothingNeckCloakBattleHoS
