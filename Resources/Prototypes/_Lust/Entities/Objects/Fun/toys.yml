@@ -500,3 +500,19 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieGimliDurin
+  name: Plushie Gimli Durin
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: gimlidurin
+  - type: UseDelay
+    delay: 6
+  - type: TTS
+    voice: wraith_king_dota_2
+  - type: EmitSoundOnUse
+    sound:
+      collection: WraithKing
