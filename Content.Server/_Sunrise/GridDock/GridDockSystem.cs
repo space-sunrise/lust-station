@@ -6,6 +6,7 @@ using Content.Server.Shuttles.Systems;
 using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Shared.Station.Components;
+using Robust.Server.GameObjects;
 using Robust.Shared.EntitySerialization.Systems;
 
 namespace Content.Server._Sunrise.GridDock;
@@ -16,6 +17,7 @@ public sealed class GridDockSystem : EntitySystem
     [Dependency] private readonly ShuttleSystem _shuttles = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly DockingSystem _dockSystem = default!;
+    [Dependency] private readonly MapSystem _mapSystem = default!;
 
     public override void Initialize()
     {
@@ -41,8 +43,8 @@ public sealed class GridDockSystem : EntitySystem
             return;
         }
 
-        var baseOffset = new Vector2(500, 500);
-        var offsetStep = new Vector2(100, 100);
+        var baseOffset = new Vector2(0, 0);
+        var offsetStep = new Vector2(100, 0);
         var usedGridDocks = new HashSet<EntityUid>();
         var currentOffset = baseOffset;
         foreach (var entry in component.Grids)
@@ -51,16 +53,10 @@ public sealed class GridDockSystem : EntitySystem
                     entry.GridPath,
                     out var rootUid,
                     offset: currentOffset))
-            {
-                currentOffset += offsetStep;
                 continue;
-            }
 
             if (!TryComp<ShuttleComponent>(rootUid.Value.Owner, out var shuttleComp))
-            {
-                currentOffset += offsetStep;
                 continue;
-            }
 
             var gridDocks = _dockSystem.GetDocks(target.Value);
             var shuttleDocks = _dockSystem.GetDocks(rootUid.Value.Owner);
@@ -88,10 +84,9 @@ public sealed class GridDockSystem : EntitySystem
                 _shuttles.FTLToDockСonfig(
                     rootUid.Value.Owner,
                     shuttleComp,
-                    target.Value,
                     chosenConfig,
                     5f,
-                    5f,
+                    30f,
                     priorityTag: entry.PriorityTag,
                     ignored: false);
             }
@@ -102,7 +97,7 @@ public sealed class GridDockSystem : EntitySystem
                     shuttleComp,
                     target.Value,
                     5f,
-                    5f,
+                    30f,
                     priorityTag: entry.PriorityTag,
                     ignored: false);
             }
