@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "license": "Stalker14 license",
+  "copyright": "Made by Flaits for stalker14",
+  "states": [
+    {
+      "name": "full"
+    },
+    {
+      "name": "blood",
+      "delays": [
+        [
+          0.2, 0.2, 0.2, 0.2
+        ]
+      ]
+    }
+  ]
+}

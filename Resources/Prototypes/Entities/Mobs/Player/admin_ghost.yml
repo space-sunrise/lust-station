@@ -114,6 +114,9 @@
   - type: BypassInteractionChecks
   - type: ExplosionResistance
     damageCoefficient: 0
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 65
+    baseSprintSpeed: 20
 
 - type: entity
   abstract: true

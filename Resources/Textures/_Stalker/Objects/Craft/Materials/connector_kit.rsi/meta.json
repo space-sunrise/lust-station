@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "basic_thread_kit_t1"
+      },
+      {
+        "name": "tape_kit_t2"
+      },
+      {
+        "name": "glue_kit_t3"
+      },
+      {
+        "name": "industrial_staples_kit_t4"
+      },
+      {
+        "name": "high_strength_kit_t5"
+      }
+    ]
+  }

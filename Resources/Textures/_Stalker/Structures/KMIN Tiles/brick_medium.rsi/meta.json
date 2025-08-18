@@ -1,0 +1,107 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "black"
+        },
+        {
+            "name": "black_1"
+        },
+        {
+            "name": "black_2"
+        },
+        {
+            "name": "black_3"
+        },
+        {
+            "name": "black_4"
+        },
+        {
+            "name": "black_5"
+        },
+        {
+            "name": "black_6"
+        },
+        {
+            "name": "black_7"
+        },
+        {
+            "name": "brown"
+        },
+        {
+            "name": "brown_1"
+        },
+        {
+            "name": "brown_2"
+        },
+        {
+            "name": "brown_3"
+        },
+        {
+            "name": "brown_4"
+        },
+        {
+            "name": "brown_5"
+        },
+        {
+            "name": "brown_6"
+        },
+        {
+            "name": "brown_7"
+        },
+        {
+            "name": "grey"
+        },
+        {
+            "name": "grey_1"
+        },
+        {
+            "name": "grey_2"
+        },
+        {
+            "name": "grey_3"
+        },
+        {
+            "name": "grey_4"
+        },
+        {
+            "name": "grey_5"
+        },
+        {
+            "name": "grey_6"
+        },
+        {
+            "name": "grey_7"
+        },
+        {
+            "name": "navy"
+        },
+        {
+            "name": "navy_1"
+        },
+        {
+            "name": "navy_2"
+        },
+        {
+            "name": "navy_3"
+        },
+        {
+            "name": "navy_4"
+        },
+        {
+            "name": "navy_5"
+        },
+        {
+            "name": "navy_6"
+        },
+        {
+            "name": "navy_7"
+        }
+    ]
+}

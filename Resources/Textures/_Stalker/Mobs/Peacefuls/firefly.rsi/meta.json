@@ -1,0 +1,77 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by dreamlyjack for Stalker",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "fireflygreen1",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },      
+      {
+        "name": "fireflygreen2",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },      
+      {
+        "name": "fireflygreen3",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },
+      {
+        "name": "fireflyyellow1",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },
+      {
+        "name": "fireflyyellow2",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      },
+      {
+        "name": "fireflyyellow3",
+        "delays": [
+            [
+                0.25,
+                0.25,
+                0.25,
+                0.25
+            ]
+          ]
+      }
+    ]
+  }

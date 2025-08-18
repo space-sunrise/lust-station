@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "down1"
+    },
+    {
+      "name": "down2"
+    },
+    {
+      "name": "left1"
+    },
+    {
+      "name": "left2"
+    },
+    {
+      "name": "right1"
+    },
+    {
+      "name": "right2"
+    },
+    {
+      "name": "up1"
+    },
+    {
+      "name": "up2"
+    }
+  ]
+}

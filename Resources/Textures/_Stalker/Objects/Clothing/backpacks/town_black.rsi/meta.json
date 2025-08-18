@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "license": "",
+    "copyright": "Originally made by gr0x / neki5h and changed for SS14 - CORVAX S.T.A.L.K.E.R. style by belay5",
+    "states": [
+      {
+        "name": "icon"
+      },
+      {
+        "name": "equipped-BACKPACK",
+        "directions": 4
+      },
+      {
+        "name": "inhand-left",
+        "directions": 4
+
+      },
+      {
+        "name": "inhand-right",
+        "directions": 4
+      }
+    ]
+  }

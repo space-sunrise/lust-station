@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by ss14nekow (discord) for Corvax Stalker14",
+    "states": [
+        {
+            "name": "ctn"
+        },
+        {
+            "name": "cto"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Viis for Stalker14",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "silencer_T1_ru"
+        },
+        {
+            "name": "silencer_T2_ru"
+        },
+        {
+            "name": "silencer_T1_nato"
+        },
+        {
+            "name": "silencer_T2_nato"
+        }
+    ]
+}

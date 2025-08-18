@@ -21,6 +21,11 @@
   files:
   - /Audio/Effects/Gasp/deathgasp_1.ogg
   - /Audio/Effects/Gasp/deathgasp_2.ogg
+  - /Audio/Effects/Gasp/male_deathgasp_4.ogg
+  - /Audio/Effects/Gasp/male_deathgasp_5.ogg
+  - /Audio/Effects/Gasp/male_deathgasp_1.ogg
+  - /Audio/Effects/Gasp/deathgasp_1.ogg
+  - /Audio/Effects/Gasp/deathgasp_2.ogg
 
 - type: soundCollection
   id: MothDeathGasp

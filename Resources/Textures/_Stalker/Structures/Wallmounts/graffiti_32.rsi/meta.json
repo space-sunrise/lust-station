@@ -1,0 +1,44 @@
+{
+"version": 1, "license": "CC-BY-SA-3.0", "copyright": "CORVAX STALKER",
+"size":
+{  "x": 32, "y": 32  },
+"states":
+[
+{
+	"name": "g1"
+},
+{
+	"name": "g2"
+},
+{
+	"name": "g3"
+},
+{
+	"name": "g4"
+},
+{
+	"name": "g5"
+},
+{
+	"name": "g6"
+},
+{
+	"name": "g7"
+},
+{
+	"name": "g8"
+},
+{
+	"name": "g9"
+},
+{
+	"name": "g10"
+},
+{
+	"name": "g11"
+},
+{
+	"name": "g12"
+}
+]
+}

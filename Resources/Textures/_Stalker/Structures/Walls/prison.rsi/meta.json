@@ -1,0 +1,46 @@
+{
+    "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "prison0",
+            "directions": 4
+        },
+        {
+            "name": "prison1",
+            "directions": 4
+        },
+        {
+            "name": "prison2",
+            "directions": 4
+        },
+        {
+            "name": "prison3",
+            "directions": 4
+        },
+        {
+            "name": "prison4",
+            "directions": 4
+        },
+        {
+            "name": "prison5",
+            "directions": 4
+        },
+        {
+            "name": "prison6",
+            "directions": 4
+        },
+        {
+            "name": "prison7",
+            "directions": 4
+        }
+    ]
+}

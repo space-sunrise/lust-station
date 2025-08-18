@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "CORVAX STALKER",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {"name": "bullet_holes1"},
+        {"name": "bullet_holes2"},
+        {"name": "bullet_holes3"},
+        {"name": "bullet_holes4"}
+    ]
+}

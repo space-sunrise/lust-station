@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "lockerbigone_open"
+    },
+    {
+      "name": "lockerbigone"
+    },
+    {
+      "name": "lockerbigone_door"
+    },
+    {
+      "name": "lockerbig_open"
+    },
+    {
+      "name": "lockerbig"
+    },
+    {
+      "name": "lockerbig_door"
+    },
+    {
+      "name": "welded"
+    },
+	{
+      "name": "generic"
+    },
+	{
+      "name": "generic_door"
+    },
+	{
+      "name": "generic_open"
+    }
+  ]
+}

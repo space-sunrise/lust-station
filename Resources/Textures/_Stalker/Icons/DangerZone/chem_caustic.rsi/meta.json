@@ -1,0 +1,9 @@
+{
+    "version": 2,
+    "size": {"x": 32, "y": 32},
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by someone and finished by Psycrow",
+    "states": [
+        {"name": "icon"}
+    ]
+}

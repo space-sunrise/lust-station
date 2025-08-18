@@ -1,0 +1,27 @@
+highp float noise(in highp vec2 uv, inout highp float seed) {
+    return fract(sin(dot(uv, vec2(12.9898, 78.233))) * 43758.5453 + seed);
+}
+
+highp vec4 vignetteWithNoise(in highp vec2 uv, highp float strength, highp float time) {
+    highp vec2 center = vec2(0.5, 0.5);
+    highp float radius = 0.8; // Adjust/Decrease "0.8" to set radius(do the same in vignetteBase pls)
+    highp float noiseSeed = time * 0.1;
+
+    highp float d = length(uv - center) / radius;
+
+    highp float noiseValue = noise(uv * 10.0, noiseSeed);
+    highp float t = 1.0 - smoothstep(0.8, 1.0, 1.0 - d * strength + 0.2 * noiseValue);
+
+    return vec4(vec3(0.0), t);
+}
+
+void fragment() {
+    highp vec2 uv = FRAGCOORD.xy;
+    highp vec2 res_xy = vec2(1.0 / SCREEN_PIXEL_SIZE.x, 1.0 / SCREEN_PIXEL_SIZE.y);
+    highp float time = TIME;
+
+    highp vec4 layer1 = vec4(vec3(0.0), 0.0);
+    highp vec4 layer2 = vignetteWithNoise(uv / res_xy, 0.2, time); // Adjust/Decrease "0.2" to set strength(do the same in vignetteBase pls)
+
+    COLOR = mix(layer1, layer2, layer2.a);
+}

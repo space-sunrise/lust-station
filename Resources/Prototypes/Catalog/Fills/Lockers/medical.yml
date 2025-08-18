@@ -132,6 +132,8 @@
     - id: ClothingMaskSterile
     - id: HandheldGPSBasic
     - id: MedkitFilled
+    - id: ClothingBackpackParamedic
+    - id: HypoParamedic
       prob: 0.3
 
 - type: entity

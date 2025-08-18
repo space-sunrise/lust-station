@@ -1,0 +1,46 @@
+{
+    "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "sewer0",
+            "directions": 4
+        },
+        {
+            "name": "sewer1",
+            "directions": 4
+        },
+        {
+            "name": "sewer2",
+            "directions": 4
+        },
+        {
+            "name": "sewer3",
+            "directions": 4
+        },
+        {
+            "name": "sewer4",
+            "directions": 4
+        },
+        {
+            "name": "sewer5",
+            "directions": 4
+        },
+        {
+            "name": "sewer6",
+            "directions": 4
+        },
+        {
+            "name": "sewer7",
+            "directions": 4
+        }
+    ]
+}

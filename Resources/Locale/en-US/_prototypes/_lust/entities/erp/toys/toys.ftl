@@ -44,7 +44,5 @@ ent-ERPFoxTailPlug = fox tail plug
     .desc = Time to some roleplaying.
 ent-ERPCatTailPlug = cat tail plug
     .desc = Murr!
-ent-ToyHandcuffs = toy handcuffs
-    .desc = Soft toy handcuffs. Classic!
 ent-toyhandcuff = toy handcuffs
     .desc = Soft toy handcuffs. Classic!

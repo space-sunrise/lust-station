@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "states": [
+	  {
+      "name": "full"
+    }, 
+	  {
+      "name": "rock0",
+	    "directions": 4
+    },
+	  {
+      "name": "rock1",
+	    "directions": 4
+    },
+	  {
+      "name": "rock2",
+	    "directions": 4
+    },
+	  {
+      "name": "rock3",
+	    "directions": 4
+    },
+	  {
+      "name": "rock4",
+	    "directions": 4
+    },
+	  {
+      "name": "rock5",
+	    "directions": 4
+    },
+	  {
+      "name": "rock6",
+	    "directions": 4
+    },
+	  {
+      "name": "rock7",
+	    "directions": 4
+    }
+  ]
+}

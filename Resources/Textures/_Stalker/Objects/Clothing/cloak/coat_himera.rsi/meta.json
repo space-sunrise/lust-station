@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "license": "stalker14 license",
+    "copyright": "Made by Flaits",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "equipped-CLOAK",
+            "directions": 4
+        },
+        {
+            "name": "equipped-CLOAK-fat",
+            "directions": 4
+        },
+        {
+            "name": "icon"
+        }
+    ]
+}

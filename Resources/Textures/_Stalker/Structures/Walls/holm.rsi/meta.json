@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Holm By Zgal",
+    "states": [{
+        "name": "full"
+    }, {
+        "name": "holm0",
+        "directions": 4
+    }, {
+        "name": "holm1",
+        "directions": 4
+    }, {
+        "name": "holm2",
+        "directions": 4
+    }, {
+        "name": "holm3",
+        "directions": 4
+    }, {
+        "name": "holm4",
+        "directions": 4
+    }, {
+        "name": "holm5",
+        "directions": 4
+    }, {
+        "name": "holm6",
+        "directions": 4
+    }, {
+        "name": "holm7",
+        "directions": 4
+    }]
+}

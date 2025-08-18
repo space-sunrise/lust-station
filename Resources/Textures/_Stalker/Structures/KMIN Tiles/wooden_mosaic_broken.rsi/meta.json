@@ -1,0 +1,155 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_mosaic_broken0"
+        },
+        {
+            "name": "wood_mosaic_broken1"
+        },
+        {
+            "name": "wood_mosaic_broken10"
+        },
+        {
+            "name": "wood_mosaic_broken11"
+        },
+        {
+            "name": "wood_mosaic_broken12"
+        },
+        {
+            "name": "wood_mosaic_broken13"
+        },
+        {
+            "name": "wood_mosaic_broken14"
+        },
+        {
+            "name": "wood_mosaic_broken15"
+        },
+        {
+            "name": "wood_mosaic_broken16"
+        },
+        {
+            "name": "wood_mosaic_broken17"
+        },
+        {
+            "name": "wood_mosaic_broken18"
+        },
+        {
+            "name": "wood_mosaic_broken19"
+        },
+        {
+            "name": "wood_mosaic_broken2"
+        },
+        {
+            "name": "wood_mosaic_broken20"
+        },
+        {
+            "name": "wood_mosaic_broken21"
+        },
+        {
+            "name": "wood_mosaic_broken22"
+        },
+        {
+            "name": "wood_mosaic_broken23"
+        },
+        {
+            "name": "wood_mosaic_broken24"
+        },
+        {
+            "name": "wood_mosaic_broken25"
+        },
+        {
+            "name": "wood_mosaic_broken26"
+        },
+        {
+            "name": "wood_mosaic_broken27"
+        },
+        {
+            "name": "wood_mosaic_broken28"
+        },
+        {
+            "name": "wood_mosaic_broken29"
+        },
+        {
+            "name": "wood_mosaic_broken3"
+        },
+        {
+            "name": "wood_mosaic_broken30"
+        },
+        {
+            "name": "wood_mosaic_broken31"
+        },
+        {
+            "name": "wood_mosaic_broken32"
+        },
+        {
+            "name": "wood_mosaic_broken33"
+        },
+        {
+            "name": "wood_mosaic_broken34"
+        },
+        {
+            "name": "wood_mosaic_broken35"
+        },
+        {
+            "name": "wood_mosaic_broken36"
+        },
+        {
+            "name": "wood_mosaic_broken37"
+        },
+        {
+            "name": "wood_mosaic_broken38"
+        },
+        {
+            "name": "wood_mosaic_broken39"
+        },
+        {
+            "name": "wood_mosaic_broken4"
+        },
+        {
+            "name": "wood_mosaic_broken40"
+        },
+        {
+            "name": "wood_mosaic_broken41"
+        },
+        {
+            "name": "wood_mosaic_broken42"
+        },
+        {
+            "name": "wood_mosaic_broken43"
+        },
+        {
+            "name": "wood_mosaic_broken44"
+        },
+        {
+            "name": "wood_mosaic_broken45"
+        },
+        {
+            "name": "wood_mosaic_broken46"
+        },
+        {
+            "name": "wood_mosaic_broken47"
+        },
+        {
+            "name": "wood_mosaic_broken5"
+        },
+        {
+            "name": "wood_mosaic_broken6"
+        },
+        {
+            "name": "wood_mosaic_broken7"
+        },
+        {
+            "name": "wood_mosaic_broken8"
+        },
+        {
+            "name": "wood_mosaic_broken9"
+        }
+    ]
+}

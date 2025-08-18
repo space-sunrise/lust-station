@@ -1,0 +1,46 @@
+{
+    "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "rustmetal0",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal1",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal2",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal3",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal4",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal5",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal6",
+            "directions": 4
+        },
+        {
+            "name": "rustmetal7",
+            "directions": 4
+        }
+    ]
+}

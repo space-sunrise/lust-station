@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "sn1"
+    },
+    {
+      "name": "sn2"
+    },
+    {
+      "name": "sn3"
+    },
+    {
+      "name": "sn4"
+    },
+    {
+      "name": "sn5"
+    }
+  ]
+}

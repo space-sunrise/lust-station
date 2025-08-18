@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Created by TornadoTechnology (GitHub)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "aa"
+    },
+    {
+      "name": "aa-open-1"
+    },
+    {
+      "name": "pab9"
+    },
+    {
+      "name": "pab9-open-1"
+    },
+    {
+      "name": "pso"
+    },
+    {
+      "name": "pso-open-1"
+    },
+    {
+      "name": "sp5"
+    },
+    {
+      "name": "sp5-open-1"
+    },
+    {
+      "name": "sp6"
+    },
+    {
+      "name": "sp6-open-1"
+    },
+    {
+      "name": "sp6-uch"
+    },
+    {
+      "name": "sp6-uch-open-1"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "stalker-14 license",
+  "copyright": "made by XcenLegend",
+  "states": [
+    {
+      "name": "sabbat",
+      "directions": 4
+    }
+  ]
+}

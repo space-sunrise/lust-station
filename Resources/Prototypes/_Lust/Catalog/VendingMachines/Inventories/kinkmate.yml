@@ -1,19 +1,6 @@
 - type: vendingMachineInventory
   id: KinkMateInventory
   startingInventory:
-    # Dildos
-    ERPNormalDildo: 8
-    ERPDildoAvian: 8
-    ERPDildoDragon: 8
-    ERPDildoEquine: 8
-    ERPDildoKnot: 8
-    ERPDildoTentacle: 8
-    # Fleshlights
-    ERPGreenFleshlight: 8
-    ERPRedFleshlight: 8
-    ERPTealFleshlight: 8
-    ERPYellowFleshlight: 8
-    ERPNormalFleshlight: 8
     # Other stuff
     ERPShibariRope: 5
     # Uniforms
@@ -26,20 +13,6 @@
     ClothingUniformJumpsuitLoona: 3
     ClothingUniformJumpsuitEroform: 3
     ClothingUniformSuccubus: 2
-    # ERP toys
-    PlugBox: 3
-    ERPCatTailPlug: 3
-    ERPFoxTailPlug: 3
-    ERPVibroStick: 3
-    ERPVibroEgg: 3
-    ERPStrapOn: 3
-    ERPWhip: 3
-    ERPBeads: 3
-    RemoteSignaller: 5
-    ERPSexRackFlatpack: 3
-    ClothingMaskMuzzle: 3
-    ClothingEyesBlindfold: 3
-    ToyHandcuffs: 4
     # Glowsticks
     GlowstickBase: 3
     GlowstickRed: 3

@@ -1,3 +1,14 @@
+# SPDX-FileCopyrightText: 2023 Chronophylos <nikolai@chronophylos.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <39013340+deltanedas@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2023 deltanedas <@deltanedas:kde.org>
+# SPDX-FileCopyrightText: 2024 Aiden <aiden@djkraz.com>
+# SPDX-FileCopyrightText: 2024 Fishbait <Fishbait@git.ml>
+# SPDX-FileCopyrightText: 2024 Mr. 27 <45323883+Dutch-VanDerLinde@users.noreply.github.com>
+# SPDX-FileCopyrightText: 2024 fishbait <gnesse@gmail.com>
+# SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - files: ["ion_storm.ogg"]
   license: "CC-BY-SA-3.0"
   copyright: "Taken from tgstation"
@@ -17,6 +28,11 @@
   license: "CC-BY-SA-3.0"
   copyright: "Taken from tgstation"
   source: "https://github.com/tgstation/tgstation/blob/95731342b97167d7883ff091d389f79c36442ee6/sound/ai/default/meteors.ogg"
+
+- files: ["outbreak5.ogg"]  # Goobstation - Blob
+  license: "CC-BY-SA-3.0"
+  copyright: "Taken from tgstation"
+  source: "https://github.com/tgstation/tgstation/blob/40d89d11ea4a5cb81d61dc1018b46f4e7d32c62a/sound/ai/default/outbreak7.ogg"
 
 - files: ["outbreak7.ogg"]
   license: "CC-BY-SA-3.0"

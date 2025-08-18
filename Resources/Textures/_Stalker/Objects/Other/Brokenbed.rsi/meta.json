@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "CORVAX STALKER",
+  "states": [
+    {
+      "name": "Brokenbed1"
+    },
+    {
+      "name": "Brokenbed2"
+    },
+    {
+      "name": "Brokenbed3"
+    },
+    {
+      "name": "Brokenbed4"
+    },
+    {
+      "name": "Brokenbed5"
+    },
+    {
+      "name": "Brokenbed6"
+    },
+    {
+      "name": "Brokenbed7"
+    },
+    {
+      "name": "Brokenbed8"
+    },
+    {
+      "name": "Brokenbed9"
+    },
+    {
+      "name": "Brokenbed10"
+    }
+  ]
+}

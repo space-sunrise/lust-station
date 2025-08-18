@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "copyright": "Stalker14",
+  "size": {
+    "x": 256,
+    "y": 256
+  },
+  "states": [
+    {
+      "name": "brdm",
+	  "directions": 4
+    }
+  ]
+}

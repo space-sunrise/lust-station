@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "STALKER 14",
+  "license": "CC-BY-SA-3.0",
+  "copyright": "STALKER 14 License",
+  "size":{
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "equipped-OUTERCLOTHING",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-fat",
+            "directions": 4
+        },
+        {
+            "name": "inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "inhand-right",
+            "directions": 4
+        }
+  ]
+}

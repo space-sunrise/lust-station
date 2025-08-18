@@ -1,0 +1,10 @@
+ - type: marking
+   id: switzerlaandTail
+   bodyPart: Tail
+   markingCategory: Tail
+   sponsorOnly: true
+   sprites:
+   - sprite: _DeadSpace/Sponsor/switzerlaand/markings.rsi
+     state: kitsune_primary
+   - sprite: _DeadSpace/Sponsor/switzerlaand/markings.rsi
+     state: kitsune_secondary

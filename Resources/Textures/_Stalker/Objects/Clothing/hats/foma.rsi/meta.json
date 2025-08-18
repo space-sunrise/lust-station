@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "license": "Stalker14 license",
+  "copyright": "Fomaa for Stlaker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon-up"
+    },
+    {
+      "name": "equipped-HELMET",
+      "directions": 4
+    },
+    {
+      "name": "up-equipped-HELMET",
+      "directions": 4
+    }
+  ]
+}

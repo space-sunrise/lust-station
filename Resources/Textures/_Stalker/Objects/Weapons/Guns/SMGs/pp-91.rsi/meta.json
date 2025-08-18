@@ -1,0 +1,41 @@
+{
+	"version": 1,
+	"size": {
+		"x": 48,
+		"y": 48
+	},
+	"license": "CC-BY-SA-3.0",
+	"copyright": "Made by ShonSpider(Шон) and Viis",
+	"states": [
+		{
+			"name": "base"
+		},
+		{
+			"name": "muzzle"
+		},
+		{
+			"name": "grip"
+		},
+		{
+			"name": "icon"
+		},
+		{
+			"name": "equipped-BELT",
+			"directions": 4
+		},
+		{
+			"name": "inhand-left",
+			"directions": 4
+		},
+		{
+			"name": "inhand-right",
+			"directions": 4
+		},
+		{
+			"name": "mag-0"
+		},
+		{
+			"name": "bolt-open"
+		}
+	]
+}

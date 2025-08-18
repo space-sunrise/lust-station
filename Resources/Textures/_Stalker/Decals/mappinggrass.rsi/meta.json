@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Corvax Stalker",
+    "size": {
+        "x": 128,
+        "y": 128
+    },
+    "states": [
+        {
+            "name": "grass1"
+        },
+        {
+            "name": "grass10"
+        },
+        {
+            "name": "grass2"
+        },
+        {
+            "name": "grass3"
+        },
+        {
+            "name": "grass4"
+        },
+        {
+            "name": "grass5"
+        },
+        {
+            "name": "grass6"
+        },
+        {
+            "name": "grass7"
+        },
+        {
+            "name": "grass8"
+        },
+        {
+            "name": "grass9"
+        }
+    ]
+}

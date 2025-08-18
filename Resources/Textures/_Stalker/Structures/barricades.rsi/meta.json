@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "barricade",
+      "directions": 1
+    },
+	{
+	  "name": "barricade_full",
+	  "directions": 1
+	},
+	{
+	  "name": "barricade_directional",
+	  "directions": 4
+	}
+  ]
+}

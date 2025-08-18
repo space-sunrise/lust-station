@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Corvax Stalker",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "Star1"
+        },
+        {
+            "name": "Star2"
+        },
+        {
+            "name": "Star3"
+        },
+        {
+            "name": "Star4"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "blue_long"
+        },
+        {
+            "name": "blue_long_1"
+        },
+        {
+            "name": "blue_long_2"
+        },
+        {
+            "name": "blue_long_3"
+        },
+        {
+            "name": "blue_long_4"
+        },
+        {
+            "name": "blue_long_5"
+        },
+        {
+            "name": "blue_long_6"
+        },
+        {
+            "name": "blue_long_7"
+        },
+        {
+            "name": "grey_long"
+        },
+        {
+            "name": "grey_long_1"
+        },
+        {
+            "name": "grey_long_2"
+        },
+        {
+            "name": "grey_long_3"
+        },
+        {
+            "name": "grey_long_4"
+        },
+        {
+            "name": "grey_long_5"
+        },
+        {
+            "name": "grey_long_6"
+        },
+        {
+            "name": "grey_long_7"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Tornado-Technology (Github) for Stalker",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "contacts_gold"
+    },
+    {
+      "name": "label"
+    },
+    {
+      "name": "label_orange"
+    },
+    {
+      "name": "label_green"
+    }
+  ]
+}

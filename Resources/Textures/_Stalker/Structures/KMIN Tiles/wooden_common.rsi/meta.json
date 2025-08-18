@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_common"
+        },
+        {
+            "name": "wood_common1"
+        },
+        {
+            "name": "wood_common2"
+        },
+        {
+            "name": "wood_common3"
+        },
+        {
+            "name": "wood_common4"
+        },
+        {
+            "name": "wood_common5"
+        },
+        {
+            "name": "wood_common6"
+        },
+        {
+            "name": "wood_common7"
+        }
+    ]
+}

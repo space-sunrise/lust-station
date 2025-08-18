@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprite made for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+        "name": "crib"
+    },
+      {
+          "name": "piano",
+          "directions": 4
+      },
+      {
+          "name": "phone"
+      },
+      {
+          "name": "bench",
+          "directions": 4
+      },
+      {
+          "name": "tire"
+      },
+      {
+          "name": "books"
+      },
+      {
+          "name": "gen"
+      }
+  ]
+}

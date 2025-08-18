@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "size": {
+    "x": 128,
+    "y": 86
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "CORVAX STALKER",
+  "states": [
+    {
+      "name": "trash1"
+    },
+    {
+      "name": "trash2"
+    }
+  ]
+}

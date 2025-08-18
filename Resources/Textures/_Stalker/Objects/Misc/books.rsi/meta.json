@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/856e0a784abd19d20618aa36b26b73d471adf613",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "stalker_book"
+        },
+        {
+            "name": "book_seraphim"
+        },
+        {
+            "name": "pilgrim_bible"
+        },
+        {
+            "name": "docs1"
+        },
+        {
+            "name": "docs2"
+        },
+        {
+            "name": "docs3"
+        },
+        {
+            "name": "docs4"
+        },
+        {
+            "name": "book_hydroponics_pod_people"
+        }
+    ]
+}

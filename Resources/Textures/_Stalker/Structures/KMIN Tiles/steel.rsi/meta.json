@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "steel_grate"
+        },
+        {
+            "name": "steel_grate_1"
+        },
+        {
+            "name": "steel_grate_2"
+        },
+        {
+            "name": "steel_grate_3"
+        },
+        {
+            "name": "steel_grate_4"
+        },
+        {
+            "name": "steel_grate_5"
+        },
+        {
+            "name": "steel_grate_6"
+        },
+        {
+            "name": "steel_grate_7"
+        },
+        {
+            "name": "steel_industrial"
+        },
+        {
+            "name": "steel_industrial_1"
+        },
+        {
+            "name": "steel_industrial_2"
+        },
+        {
+            "name": "steel_industrial_3"
+        },
+        {
+            "name": "steel_industrial_4"
+        },
+        {
+            "name": "steel_industrial_5"
+        },
+        {
+            "name": "steel_industrial_6"
+        },
+        {
+            "name": "steel_industrial_7"
+        },
+        {
+            "name": "steel_solid"
+        },
+        {
+            "name": "steel_solid_1"
+        },
+        {
+            "name": "steel_solid_2"
+        },
+        {
+            "name": "steel_solid_3"
+        },
+        {
+            "name": "steel_tile"
+        },
+        {
+            "name": "steel_tile_1"
+        },
+        {
+            "name": "steel_tile_2"
+        },
+        {
+            "name": "steel_tile_3"
+        },
+        {
+            "name": "steel_tile_4"
+        },
+        {
+            "name": "steel_tile_5"
+        },
+        {
+            "name": "steel_tile_6"
+        },
+        {
+            "name": "steel_tile_7"
+        }
+    ]
+}

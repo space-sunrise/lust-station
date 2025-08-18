@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "isofiber"
+    },
+    {
+      "name": "workbench"
+    },
+    {
+      "name": "leatherbox"
+    },
+    {
+      "name": "chip"
+    },
+    {
+      "name": "alcohol"
+    },
+    {
+      "name": "electronic-board"
+    },
+    {
+      "name": "antenna"
+    },
+    {
+      "name": "awl"
+    },
+    {
+      "name": "bolt-cutter"
+    },
+    {
+      "name": "capsules"
+    },
+    {
+      "name": "c-welding"
+    },
+    {
+      "name": "heater1"
+    },
+    {
+      "name": "heater2"
+    },
+    {
+      "name": "hide"
+    },
+    {
+      "name": "leather"
+    },
+    {
+      "name": "leather-patch"
+    },
+    {
+      "name": "metal-parts"
+    },
+    {
+      "name": "monitor"
+    },
+    {
+      "name": "needle"
+    },
+    {
+      "name": "plastic-parts"
+    },
+    {
+      "name": "resistor"
+    },
+    {
+      "name": "scrap"
+    },
+    {
+      "name": "soldering-iron"
+    },
+    {
+      "name": "tools"
+    },
+    {
+      "name": "transformer-coil"
+    }
+  ]
+}

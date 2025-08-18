@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "By DS - malanisa",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "plant-01"
+        },
+        {
+            "name": "plant-02"
+        },
+        {
+            "name": "plant-03"
+        },
+        {
+            "name": "plant-04"
+        },
+        {
+            "name": "StalkerFoodAir"
+        },
+        {
+            "name": "StalkerFoodBarbaris"
+        },
+        {
+            "name": "StalkerFoodBrusnika"
+        },
+        {
+            "name": "StalkerFoodChereshna"
+        },
+        {
+            "name": "StalkerFoodEjevika"
+        },
+        {
+            "name": "StalkerFoodGoji"
+        },
+        {
+            "name": "StalkerFoodGolubika"
+        },
+        {
+            "name": "StalkerFoodIrga"
+        },
+        {
+            "name": "StalkerFoodKlubnika"
+        },
+        {
+            "name": "StalkerFoodKlukva"
+        },
+        {
+            "name": "StalkerFoodKrijovnik"
+        },
+        {
+            "name": "StalkerFoodLandish"
+        },
+        {
+            "name": "StalkerFoodlapchatka"
+        },
+        {
+            "name": "StalkerFoodLipa"
+        },
+        {
+            "name": "StalkerFoodMalina"
+        },
+        {
+            "name": "StalkerFoodMoroshka"
+        },
+        {
+            "name": "StalkerFoodOblepixa"
+        },
+        {
+            "name": "StalkerFoodOchanka"
+        },
+        {
+            "name": "StalkerFoodSmorodina"
+        },
+        {
+            "name": "StalkerFoodVinograd"
+        },
+        {
+            "name": "StalkerFoodVishna"
+        },
+        {
+            "name": "StalkerFoodVolk"
+        },
+        {
+            "name": "StalkerFoodVoronec"
+        },
+        {
+            "name": "StalkerFoodYatrishnik"
+        }
+    ]
+}

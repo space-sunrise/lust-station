@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Tornado-Technology (GitHub) for Stalker",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "unknown"
+    },
+    {
+      "name": "electric"
+    },
+    {
+      "name": "fiery"
+    },
+    {
+      "name": "gravity"
+    },
+    {
+      "name": "icy"
+    },
+    {
+      "name": "toxic"
+    }
+  ]
+}

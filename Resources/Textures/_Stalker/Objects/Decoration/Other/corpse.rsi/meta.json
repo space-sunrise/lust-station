@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Sprite made by shiniest_meat_bicycle (Discord) for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "corpse1"
+    },
+    {
+      "name": "corpse2"
+    },
+    {
+        "name": "corpse3"
+    },
+    {
+        "name": "corpse4"
+    },
+    {
+        "name": "corpse5"
+    },
+    {
+        "name": "corpse6"
+    },
+    {
+        "name": "corpse7"
+    },
+    {
+        "name": "corpse8"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+    "version": 1,
+    "license": "CC BY-SA 4.0",
+    "copyright": "2024, Psycrow",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "bloodpack-blue"
+      },
+      {
+        "name": "bloodpack-empty"
+      },
+      {
+        "name": "bloodpack-liquid-1"
+      },
+      {
+        "name": "bloodpack-liquid-2"
+      },
+      {
+        "name": "bloodpack-liquid-3"
+      },
+      {
+        "name": "bloodpack-liquid-4"
+      },
+      {
+        "name": "bloodpack-liquid-5"
+      },
+      {
+        "name": "bloodpack-white"
+      },
+      {
+        "name": "medicated-suture"
+      },
+      {
+        "name": "medicated-suture-inhand-left",
+        "directions": 4
+      },
+      {
+        "name": "medicated-suture-inhand-right",
+        "directions": 4
+      },
+      {
+        "name": "ointment"
+      },
+      {
+        "name": "regenerative-mesh"
+      }
+    ]
+  }

@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Python generated",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "head_1"
+        },
+        {
+            "name": "head_2"
+        },
+        {
+            "name": "head_3"
+        },
+        {
+            "name": "head_4"
+        }
+    ]
+}

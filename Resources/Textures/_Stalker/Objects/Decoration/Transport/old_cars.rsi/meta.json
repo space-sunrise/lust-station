@@ -1,0 +1,34 @@
+{
+    "version": 1,
+    "size": {
+        "x": 128,
+        "y": 128
+    },
+    "copyright": "CC-BY-SA-3.0 Made for Stalker 14 with love",
+    "states": [
+        {
+            "name": "old_car_red",
+            "directions": 4
+        },
+        {
+            "name": "old_car_green",
+            "directions": 4
+        },
+        {
+            "name": "car_red_us",
+            "directions": 4
+        },
+        {
+            "name": "car_green_us",
+            "directions": 4
+        },
+        {
+            "name": "niva_broken",
+            "directions": 4
+        },
+        {
+            "name": "linkoln_broken",
+            "directions": 4
+        }
+    ]
+}

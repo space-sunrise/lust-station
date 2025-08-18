@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "full"
+    },
+    {
+      "name": "wall_lava0",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava1",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava2",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava3",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava4",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava5",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava6",
+      "directions": 4
+    },
+    {
+      "name": "wall_lava7",
+      "directions": 4
+    }
+  ]
+}

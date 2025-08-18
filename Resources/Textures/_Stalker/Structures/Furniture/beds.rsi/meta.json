@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "matras"
+    },
+    {
+      "name": "matras1"
+    },
+    {
+      "name": "matras2"
+    },
+    {
+      "name": "matras3"
+    },
+    {
+      "name": "matras4"
+    },
+    {
+      "name": "matras5"
+    },
+    {
+      "name": "matras6"
+    },
+    {
+      "name": "bed1"
+    },
+    {
+      "name": "bed2"
+    },
+    {
+      "name": "bed3"
+    },
+    {
+      "name": "bed4"
+    },
+    {
+      "name": "bed5"
+    },
+    {
+      "name": "bed6"
+    }
+  ]
+}

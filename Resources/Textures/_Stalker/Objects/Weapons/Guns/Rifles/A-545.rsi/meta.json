@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 48,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "wielded-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "wielded-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "equipped-SUITSTORAGE",
+      "directions": 4
+    },
+    {
+      "name": "equipped-BACKPACК",
+      "directions": 4
+    },
+    {
+      "name": "base-scope"
+    },
+    {
+      "name": "muzzle"
+    },
+    {
+      "name": "mag-0"
+    },
+    {
+      "name": "icon"
+    },
+    {
+      "name": "bolt-open"
+    }
+  ]
+}

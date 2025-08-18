@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "copyright": "CC-BY-SA-3.0 Made for Stalker 14 with love",
+  "size": {
+    "x": 96,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "closed"
+    },
+	{
+      "name": "open"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Viis for Stalker14",
+  "size": {
+    "x": 48,
+    "y": 48
+  },
+  "states": [
+    {
+      "name": "sniper_sight_T1"
+    },
+    {
+      "name": "sniper_sight_T2"
+    }
+  ]
+}

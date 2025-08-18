@@ -1,0 +1,68 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "CORVAX STALKER",
+    "size": {
+        "x": 64,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "banner1"
+        },
+        {
+            "name": "banner2"
+        },
+        {
+            "name": "banner3"
+        },
+        {
+            "name": "banner4"
+        },
+        {
+            "name": "banner5"
+        },
+        {
+            "name": "banner6"
+        },
+        {
+            "name": "banner7"
+        },
+        {
+            "name": "banner8"
+        },
+        {
+            "name": "banner9"
+        },
+        {
+            "name": "banner10"
+        },
+        {
+            "name": "banner11"
+        },
+        {
+            "name": "banner12"
+        },
+        {
+            "name": "banner13"
+        },
+        {
+            "name": "banner14"
+        },
+        {
+            "name": "banner15"
+        },
+        {
+            "name": "banner16"
+        },
+        {
+            "name": "banner17"
+        },
+        {
+            "name": "banner18"
+        },
+        {
+            "name": "banner19"
+        }
+    ]
+}

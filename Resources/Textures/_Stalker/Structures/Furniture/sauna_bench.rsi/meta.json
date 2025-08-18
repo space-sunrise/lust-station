@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "copyright": "From Viis with love. Exclusevly for project stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "full",
+      "directions": 4
+    }
+  ]
+}

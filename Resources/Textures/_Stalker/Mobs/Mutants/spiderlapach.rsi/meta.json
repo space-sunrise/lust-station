@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Took from this batch of open assets https://drive.google.com/drive/folders/1lmGQ7e3gdYXspwusuqNHZN2HGHeu8ydS",
+  "states": [
+    {
+      "name": "dead"
+    },
+    {
+      "name": "lapach",
+      "directions": 4
+    }
+  ]
+}

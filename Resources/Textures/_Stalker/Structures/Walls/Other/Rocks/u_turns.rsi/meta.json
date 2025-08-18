@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "udl1"
+    },
+    {
+      "name": "udl2"
+    },
+    {
+      "name": "udr1"
+    },
+    {
+      "name": "udr2"
+    },
+    {
+      "name": "uul1"
+    },
+    {
+      "name": "uul2"
+    },
+    {
+      "name": "uur1"
+    },
+    {
+      "name": "uur2"
+    }
+  ]
+}

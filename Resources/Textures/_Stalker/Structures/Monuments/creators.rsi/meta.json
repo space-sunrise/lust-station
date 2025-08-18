@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Tornado-Technology (GitHub) for Stalker",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "tornado_tech"
+    },
+    {
+      "name": "jerryimmouse"
+    },
+    {
+      "name": "lordvladimer"
+    },
+    {
+      "name": "mappers"
+    }
+  ]
+}

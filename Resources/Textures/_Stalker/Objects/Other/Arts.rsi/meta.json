@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blood"
+    },
+    {
+      "name": "fireball"
+    },
+    {
+      "name": "glaz"
+    },
+    {
+      "name": "medusa"
+    },
+    {
+      "name": "moon"
+    },
+    {
+      "name": "soul"
+    },
+    {
+        "name": "art1"
+    },
+    {
+        "name": "art2"
+    },
+    {
+        "name": "art3"
+    },
+    {
+        "name": "battery"
+    },
+    {
+        "name": "sparkler"
+    },
+    {
+        "name": "flash"
+    },
+    {
+        "name": "vyvert"
+    },
+    {
+        "name": "gravi"
+    },
+    {
+        "name": "goldfish"
+    },
+    {
+        "name": "art10"
+    },
+    {
+        "name": "flower"
+    },
+    {
+        "name": "kolobok"
+    },
+    {
+        "name": "art13"
+    },
+    {
+        "name": "cristall"
+    },
+    {
+        "name": "meat"
+    },
+    {
+        "name": "lithosphere"
+    },
+    {
+        "name": "night_star"
+    },
+    {
+        "name": "flame"
+    },
+    {
+        "name": "pellicle"
+    },
+    {
+        "name": "baloon"
+    },
+    {
+        "name": "spring"
+    },
+    {
+        "name": "art22"
+    },
+    {
+        "name": "art23"
+    },
+    {
+        "name": "ice"
+    },
+    {
+        "name": "tesla"
+    },
+    {
+        "name": "amoeba"
+    },
+    {
+        "name": "focus"
+    },
+    {
+        "name": "stuntman"
+    },
+    {
+        "name": "distorter"
+    }
+  ]
+}

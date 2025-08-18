@@ -10,6 +10,7 @@
       - id: ClothingMaskGasBlueShield
       - id: ClothingHeadsetAltCommand
       - id: HandheldBSOCrewMonitor
+      - id: ADTCombatHypo
 
 - type: entity
   id: LockerBlueshieldFilledHardsuit

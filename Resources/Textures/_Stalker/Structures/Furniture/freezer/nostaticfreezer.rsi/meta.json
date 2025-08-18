@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "CORVAX STALKER",
+  "states": [
+    {
+      "name": "generic"
+    },
+    {
+      "name": "generic_door"
+    },
+    {
+      "name": "generic_icon"
+    },
+    {
+      "name": "generic_open"
+    },
+    {
+      "name": "locked"
+    },
+    {
+      "name": "welded"
+    }
+  ]
+}

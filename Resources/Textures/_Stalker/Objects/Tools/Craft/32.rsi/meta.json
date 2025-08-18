@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "armor_plate_black"
+    },
+    {
+      "name": "armor_plate_green"
+    },
+    {
+      "name": "armor_steel_sheet"
+    },
+    {
+      "name": "bag1"
+    },
+    {
+      "name": "bag2"
+    },
+    {
+      "name": "battery"
+    },
+    {
+      "name": "bloodsuckerhide"
+    },
+    {
+      "name": "bolt"
+    },
+    {
+      "name": "cardboard_tube"
+    },
+    {
+      "name": "cartridge"
+    },
+    {
+      "name": "chip"
+    },
+    {
+      "name": "coil"
+    },
+    {
+      "name": "display"
+    },
+    {
+      "name": "electronic_board"
+    },
+    {
+      "name": "fitil"
+    },
+    {
+      "name": "glue"
+    },
+    {
+      "name": "gunpowder_bank"
+    },
+    {
+      "name": "gunpowder_bank_null"
+    },
+    {
+      "name": "lcd_display"
+    },
+    {
+      "name": "leather"
+    },
+    {
+      "name": "lid"
+    },
+    {
+      "name": "nails"
+    },
+    {
+      "name": "protector_1"
+    },
+    {
+      "name": "protector_2"
+    },
+    {
+      "name": "resistor"
+    },
+    {
+      "name": "resistor_one"
+    },
+    {
+      "name": "rope"
+    },
+    {
+      "name": "rubber"
+    },
+    {
+      "name": "soldering_iron"
+    },
+    {
+      "name": "speaker1"
+    },
+    {
+      "name": "speaker2"
+    },
+    {
+      "name": "stick"
+    },
+    {
+      "name": "stick_dynamite"
+    },
+    {
+      "name": "tape1"
+    },
+    {
+      "name": "tape2"
+    },
+    {
+      "name": "tape-measure"
+    },
+    {
+      "name": "tools_1"
+    },
+    {
+      "name": "tools_2"
+    },
+    {
+      "name": "tools_3"
+    },
+    {
+      "name": "tools_4"
+    },
+    {
+      "name": "weapon_parts"
+    },
+    {
+      "name": "mortar_and_pestle"
+    },
+    {
+      "name": "cloth"
+    }
+  ]
+}

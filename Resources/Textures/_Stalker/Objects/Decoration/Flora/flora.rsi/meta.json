@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bush06"
+    },
+    {
+      "name": "bush01"
+    },
+    {
+      "name": "bush02"
+    },
+    {
+      "name": "bush03"
+    },
+    {
+      "name": "bush04"
+    },
+    {
+      "name": "bush05"
+    },
+    {
+      "name": "kuvshinki"
+    },
+    {
+      "name": "pen"
+    },
+    {
+      "name": "penm"
+    },
+    {
+      "name": "kamysh"
+    }
+  ]
+}

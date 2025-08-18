@@ -1,12 +1,38 @@
 - type: soundCollection
   id: LobbyMusic
   files:
-    - /Audio/Lobby/absconditus.ogg
-    - /Audio/Lobby/space_asshole.ogg
-    - /Audio/Lobby/endless_space.ogg
-    - /Audio/_Sunrise/Lobby/Chikoi_The_Maid_-_Scarlet⧸a#.ogg
-    - /Audio/_Sunrise/Lobby/Komak The Maid x Takai The Maid - They Know You're A Liar.ogg
-    - /Audio/_Sunrise/Lobby/Chikoi The Maid - Xample.ogg
-    - /Audio/_Sunrise/Lobby/Chikoi The Maid - Winterholic.ogg
-    - /Audio/_Sunrise/Lobby/Chikoi The Maid - parametric.ogg
-    - /Audio/_Sunrise/Lobby/Chikoi The Maid - Beholder.ogg
+  #  - /Audio/Lobby/thunderdome.ogg
+  #  - /Audio/Lobby/space_asshole.ogg
+  #  - /Audio/Lobby/endless_space.ogg
+  #  - /Audio/Lobby/title2.ogg
+  #  - /Audio/Lobby/mod.flip-flap.ogg
+  #  - /Audio/Lobby/Spac_Stac.ogg
+  #  - /Audio/Lobby/pwmur.ogg
+  #  - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+  #  # Goobstation - Custom lobby music
+  #  - /Audio/Lobby/skubstep.ogg
+  #  - /Audio/Lobby/sneedsfeedandseed.ogg
+  #  - /Audio/Lobby/clownwmv.ogg
+  #  - /Audio/Lobby/skubstub.ogg
+  #  - /Audio/Lobby/space_radiation.ogg
+  #  - /Audio/Lobby/redsun.ogg
+  #  - /Audio/Lobby/chollima.ogg
+  #  - /Audio/Lobby/horn.ogg
+    - /Audio/_Duty/SONGS/po prosbe/Celldweller - Good Luck You're Fucked.ogg
+    - /Audio/Jukebox/DebitoDeSonnoFORSAKEN.ogg
+    - /Audio/Jukebox/UnmistakableFORSAKEN.ogg
+    - /Audio/Jukebox/VanityFORSAKEN.ogg
+    - /Audio/Jukebox/GSN-Russian_Specnaz.ogg
+    - /Audio/Jukebox/ScavWarRemix.ogg
+    - /Audio/Jukebox/Search'nDestroyARID.ogg
+    - /Audio/Jukebox/BeforeEveryLoaded.ogg
+    - /Audio/Jukebox/MadeOfSteel.ogg
+    - /Audio/_Duty/NukeSounds/Zanick.ogg
+    - /Audio/_Duty/NukeSounds/WeCantStop.ogg
+    - /Audio/_Duty/NukeSounds/SCPSiteMusic.ogg
+    - /Audio/_Duty/NukeSounds/SCPRPold.ogg
+    - /Audio/_Duty/NukeSounds/QuestRaid.ogg
+    - /Audio/_Duty/NukeSounds/Liberation_rev.ogg
+    - /Audio/_Duty/NukeSounds/CURIOSITYGASHARPOON.ogg
+    - /Audio/_Duty/SONGS/po prosbe/Engineerz_-_Delam_Inc.ogg
+

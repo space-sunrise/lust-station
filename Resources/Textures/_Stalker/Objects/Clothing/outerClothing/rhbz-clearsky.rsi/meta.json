@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "copyright": "Made exclusively for STALKER SS14 project by Viis",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "equipped-OUTERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-fat",
+      "directions": 4
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

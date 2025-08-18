@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Corvax Stalker",
+    "size": {
+        "x": 210,
+        "y": 210
+    },
+    "states": [
+        {
+            "name": "icarus",
+            "directions": 4
+        }
+    ]
+}

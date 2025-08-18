@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "barrel1"
+    },
+    {
+      "name": "barrel2"
+    },
+    {
+      "name": "barrel3"
+    },
+    {
+      "name": "barrel4"
+    },
+    {
+      "name": "barrel5"
+    }
+  ]
+}

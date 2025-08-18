@@ -1,0 +1,56 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "",
+    "size": {
+        "x": 96,
+        "y": 96
+    },
+    "states": [
+        {
+           "name": "icon"
+        },
+        {
+          "name": "birch03"
+        },
+        {
+          "name": "birch04"
+        },
+        {
+          "name": "pine01"
+        },
+        {
+          "name": "pine02"
+        },
+        {
+          "name": "poplar01"
+        },
+        {
+          "name": "poplar02"
+        },
+        {
+          "name": "birch01"
+        },
+        {
+          "name": "birch02"
+        },
+        {
+            "name": "tree01"
+        },
+        {
+            "name": "tree02"
+        },
+        {
+            "name": "tree03"
+        },
+        {
+            "name": "tree04"
+        },
+        {
+            "name": "tree05"
+        },
+        {
+            "name": "tree06"
+        }
+    ]
+}

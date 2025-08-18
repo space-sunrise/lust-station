@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Make by ss14nekow for Stalker",
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "p1"
+    },
+    {
+      "name": "p2"
+    },
+    {
+      "name": "p3"
+    },
+    {
+      "name": "p4"
+    },
+    {
+      "name": "p5"
+    },
+    {
+      "name": "p6"
+    }
+  ]
+}

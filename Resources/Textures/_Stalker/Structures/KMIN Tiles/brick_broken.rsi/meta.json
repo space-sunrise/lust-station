@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "brick_broken"
+        },
+        {
+            "name": "brick_broken_1"
+        },
+        {
+            "name": "brick_broken_2"
+        },
+        {
+            "name": "brick_broken_3"
+        },
+        {
+            "name": "brick_broken_4"
+        },
+        {
+            "name": "brick_broken_6"
+        },
+        {
+            "name": "brick_broken_7"
+        }
+    ]
+}

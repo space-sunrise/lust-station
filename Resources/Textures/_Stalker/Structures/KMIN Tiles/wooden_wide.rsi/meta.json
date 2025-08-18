@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_wide"
+        },
+        {
+            "name": "wood_wide1"
+        },
+        {
+            "name": "wood_wide2"
+        },
+        {
+            "name": "wood_wide3"
+        },
+        {
+            "name": "wood_wide4"
+        },
+        {
+            "name": "wood_wide5"
+        },
+        {
+            "name": "wood_wide6"
+        },
+        {
+            "name": "wood_wide7"
+        }
+    ]
+}

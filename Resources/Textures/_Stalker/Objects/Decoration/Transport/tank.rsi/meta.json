@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "copyright": "CC-BY-SA-3.0 Made for Stalker 14 with love",
+  "size": {
+    "x": 256,
+    "y": 256
+  },
+  "states": [
+    {
+      "name": "tank_one",
+	  "directions": 4
+    }
+  ]
+}

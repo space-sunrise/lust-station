@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Denison",
+    "size": {
+        "x": 210,
+        "y": 210
+    },
+    "states": [
+        {
+            "name": "icarus-old",
+            "directions": 4
+        }
+    ]
+}

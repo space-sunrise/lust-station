@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "armed"
+    },
+    {
+      "name": "icon-default"
+    },
+    {
+      "name": "overlay"
+    },
+    {
+      "name": "base"
+    },
+    {
+      "name": "unarmed"
+    }
+  ]
+}

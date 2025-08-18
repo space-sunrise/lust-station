@@ -1,0 +1,38 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "brick"
+        },
+        {
+            "name": "brick_1"
+        },
+        {
+            "name": "brick_2"
+        },
+        {
+            "name": "brick_3"
+        },
+        {
+            "name": "brick_4"
+        },
+        {
+            "name": "brick_5"
+        },
+        {
+            "name": "brick_6"
+        },
+        {
+            "name": "brick_7"
+        },
+        {
+            "name": "brick_8"
+        }
+    ]
+}

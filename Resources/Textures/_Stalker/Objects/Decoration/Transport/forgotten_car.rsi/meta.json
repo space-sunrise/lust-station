@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "copyright": "CC-BY-SA-3.0",
+  "size": {
+    "x": 128,
+    "y": 78
+  },
+  "states": [
+    {
+      "name": "base"
+    }
+  ]
+}

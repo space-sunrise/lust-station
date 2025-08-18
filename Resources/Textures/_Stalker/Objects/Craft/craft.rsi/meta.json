@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Tornado-Technology (Github) for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bag1"
+    },
+    {
+      "name": "bag2"
+    },
+    {
+      "name": "battery"
+    },
+    {
+      "name": "bolt"
+    },
+    {
+      "name": "chip"
+    },
+    {
+      "name": "coil"
+    },
+    {
+      "name": "display"
+    },
+    {
+      "name": "electronic_board"
+    },
+    {
+      "name": "lamp"
+    },
+    {
+      "name": "lcd_display"
+    },
+    {
+      "name": "nails"
+    },
+    {
+      "name": "protector_1"
+    },
+    {
+      "name": "protector_2"
+    },
+    {
+      "name": "resistor"
+    },
+    {
+      "name": "resistor_one"
+    },
+    {
+      "name": "speaker1"
+    },
+    {
+      "name": "speaker2"
+    },
+    {
+      "name": "tape1"
+    },
+    {
+      "name": "tape2"
+    },
+    {
+      "name": "tape-measure"
+    },
+    {
+      "name": "razor_wire"
+    }
+  ]
+}

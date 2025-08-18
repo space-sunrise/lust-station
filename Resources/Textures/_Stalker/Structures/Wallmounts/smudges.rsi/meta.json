@@ -1,0 +1,20 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "CORVAX STALKER",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {"name": "smudges1"},
+        {"name": "smudges2"},
+        {"name": "smudges3"},
+        {"name": "smudges4"},
+        {"name": "smudges5"},
+        {"name": "smudges6"},
+        {"name": "smudges7"},
+        {"name": "smudges8"},
+        {"name": "smudges9"}
+    ]
+}

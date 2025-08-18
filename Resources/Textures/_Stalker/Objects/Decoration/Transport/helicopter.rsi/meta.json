@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Corvax Stalker by vladimir.s",
+    "size": {
+        "x": 220,
+        "y": 220
+    },
+    "states": [
+        {
+            "name": "h1",
+            "directions": 4
+        }
+    ]
+}

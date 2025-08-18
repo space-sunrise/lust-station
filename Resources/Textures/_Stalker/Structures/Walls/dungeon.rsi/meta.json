@@ -1,0 +1,46 @@
+{
+    "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+    },
+    "states": [
+        {
+            "name": "dungeon0",
+            "directions": 4
+        },
+        {
+            "name": "dungeon1",
+            "directions": 4
+        },
+        {
+            "name": "dungeon2",
+            "directions": 4
+        },
+        {
+            "name": "dungeon3",
+            "directions": 4
+        },
+        {
+            "name": "dungeon4",
+            "directions": 4
+        },
+        {
+            "name": "dungeon5",
+            "directions": 4
+        },
+        {
+            "name": "dungeon6",
+            "directions": 4
+        },
+        {
+            "name": "dungeon7",
+            "directions": 4
+        },
+        {
+            "name": "full"
+        }
+    ]
+}

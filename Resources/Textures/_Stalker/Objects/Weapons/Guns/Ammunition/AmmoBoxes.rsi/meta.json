@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "license": null,
+  "copyright": null,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "45ammo1-1"
+    },
+    {
+      "name": "45ammo2-1"
+    },
+    {
+      "name": "545"
+    },
+    {
+      "name": "545ammo-1"
+    },
+    {
+      "name": "556"
+    },
+    {
+      "name": "556ammo-1"
+    },
+    {
+      "name": "918"
+    },
+    {
+      "name": "919"
+    },
+    {
+      "name": "919ammo-1"
+    },
+    {
+      "name": "919ammo1-1"
+    },
+    {
+      "name": "919ammo2-1"
+    },
+    {
+      "name": "939"
+    },
+    {
+      "name": "939ammo-1"
+    },
+    {
+      "name": "939ammo1-1"
+    },
+    {
+      "name": "1270"
+    },
+    {
+      "name": "1270drot"
+    },
+    {
+      "name": "1270gray-1"
+    },
+    {
+      "name": "1270green-1"
+    },
+    {
+      "name": "1270red-1"
+    },
+    {
+      "name": "1270solid"
+    },
+    {
+      "name": "1270yellow-1"
+    },
+    {
+      "name": "76225"
+    },
+    {
+      "name": "76225ammo-1"
+    },
+    {
+      "name": "76239(2)"
+    },
+    {
+      "name": "76239"
+    },
+    {
+      "name": "76239ammo-1"
+    },
+    {
+      "name": "76251"
+    },
+    {
+      "name": "76254"
+    },
+    {
+      "name": "76254ammo-1"
+    },
+    {
+      "name": "antiarmor"
+    },
+    {
+      "name": "antiarmor_large"
+    },
+    {
+      "name": "exp"
+    },
+    {
+      "name": "exp_large"
+    },
+    {
+      "name": "t2"
+    },
+    {
+      "name": "t2_large"
+    },
+    {
+      "name": "t2_small"
+    },
+    {
+      "name": "t3"
+    },
+    {
+      "name": "t3_large"
+    },
+    {
+      "name": "t4"
+    },
+    {
+      "name": "t4_large"
+    },
+    {
+      "name": "45(1)"
+    },
+    {
+      "name": "45(2)"
+    },
+    {
+      "name": "45(3)"
+    },
+    {
+      "name": "45(4)"
+    },
+    {
+      "name": "45ammo-1"
+    },
+    {
+      "name": "cink"
+    },
+    {
+      "name": "cink-open"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "beton"
+    },
+    {
+      "name": "beton_2"
+    },
+    {
+      "name": "beton_3"
+    },
+    {
+      "name": "beton_4"
+    }
+  ]
+}

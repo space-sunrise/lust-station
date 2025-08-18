@@ -1,0 +1,29 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "by man914 for corvax stalker",
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "equipped-HELMET",
+        "directions": 4
+      },
+      {
+        "name": "equipped-CLOAK",
+        "directions": 4
+      },
+      {
+        "name": "equipped-CLOAK-fat",
+        "directions": 4
+      },
+      {
+        "name": "icon"
+      },
+      {
+        "name": "icon-HELM"
+      }
+    ]
+  }

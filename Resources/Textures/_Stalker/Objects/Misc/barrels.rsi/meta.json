@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "blue"
+    },
+    {
+      "name": "explosive"
+    },
+    {
+      "name": "fireplace"
+    },
+    {
+      "name": "rusted"
+    },
+    {
+      "name": "wooden"
+    },
+    {
+      "name": "wooden2"
+    },
+    {
+      "name": "wooden3"
+    },
+    {
+      "name": "wooden4"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon_straight"
+    },
+    {
+      "name": "straight",
+      "directions": 4
+    },
+    {
+      "name": "straight_rust",
+      "directions": 4
+    },
+    {
+      "name": "icon_straight_rust"
+    }
+  ]
+}

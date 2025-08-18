@@ -1,0 +1,232 @@
+{
+	"version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "'Taken from Occulus-Eris (https://github.com/Occulus-Server/Occulus-Eris)' and 'Taken from https://github.com/ParadiseSS13/Paradise edited by Floofers'",
+	"size": {"x": 32, "y": 32},
+	"states": [
+		{"name": "square", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "pawsocks", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "vulp_tail", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "vulp_ear", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "vulp_ear_inner", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "vulp_belly-torso", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "vulp_face", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "wolf_tail", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+		{"name": "wolf_tail_inner", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+        {"name": "vulp_tail_inner", "directions": 4, "delays": [[1.0], [1.0], [1.0], [1.0]]},
+        {
+            "name": "vulp",
+            "directions": 4
+        },
+        {
+            "name": "vulp-inner",
+            "directions": 4
+        },
+        {
+            "name": "points_fade",
+            "directions": 4
+        },
+        {
+            "name": "points_sharp",
+            "directions": 4
+        },
+        {
+            "name": "points_crest",
+            "directions": 4
+        },
+        {
+            "name": "belly_full",
+            "directions": 4
+        },
+        {
+            "name": "points_hands",
+            "directions": 4
+        },
+        {
+            "name": "points_feet",
+            "directions": 4
+        },
+        {
+            "name": "points_sharp-arms",
+            "directions": 4
+        },
+        {
+            "name": "points_sharp-legs",
+            "directions": 4
+        },
+        {
+            "name": "points_fade-arms",
+            "directions": 4
+        },
+        {
+            "name": "points_fade-legs",
+            "directions": 4
+        },
+        {
+            "name": "points_crest-arms",
+            "directions": 4
+        },
+        {
+            "name": "points_crest-legs",
+            "directions": 4
+        },
+        {
+            "name": "vulp-fade",
+            "directions": 4
+        },
+        {
+            "name": "vulp-sharp",
+            "directions": 4
+        },
+        {
+            "name": "jackal",
+            "directions": 4
+        },
+        {
+            "name": "jackal-inner",
+            "directions": 4
+        },
+        {
+            "name": "terrier",
+            "directions": 4
+        },
+        {
+            "name": "terrier-inner",
+            "directions": 4
+        },
+        {
+            "name": "wolf",
+            "directions": 4
+        },
+        {
+            "name": "wolf-inner",
+            "directions": 4
+        },
+        {
+            "name": "fennec",
+            "directions": 4
+        },
+        {
+            "name": "fennec-inner",
+            "directions": 4
+        },
+        {
+            "name": "fox",
+            "directions": 4
+        },
+        {
+            "name": "otie",
+            "directions": 4
+        },
+        {
+            "name": "otie-inner",
+            "directions": 4
+        },
+        {
+            "name": "msai",
+            "directions": 4
+        },
+        {
+            "name": "msai-inner",
+            "directions": 4
+        },
+        {
+            "name": "shock",
+            "directions": 4
+        },
+        {
+            "name": "coyote",
+            "directions": 4
+        },
+        {
+            "name": "dalmatian",
+            "directions": 4
+        },
+        {
+            "name": "jackal_alt",
+            "directions": 4
+        },
+        {
+            "name": "jackal_alt-inner",
+            "directions": 4
+        },
+        {
+            "name": "tail_fox_waggin",
+            "directions": 4,
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ],
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        }
+	]
+}

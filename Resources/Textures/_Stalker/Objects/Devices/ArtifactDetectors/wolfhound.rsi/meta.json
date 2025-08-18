@@ -1,0 +1,62 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by Tornado-Technology (Github) for Stalker 14",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "base"
+        },
+        {
+            "name": "icon"
+        },
+        {
+            "name": "screen_0"
+        },
+        {
+            "name": "screen_1"
+        },
+        {
+            "name": "screen_2"
+        },
+        {
+            "name": "screen_3"
+        },
+        {
+            "name": "screen_4"
+        },
+        {
+            "name": "screen_5"
+        },
+        {
+            "name": "screen_6"
+        },
+        {
+            "name": "screen_7"
+        },
+        {
+            "name": "screen_8"
+        },
+        {
+            "name": "screen_9",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1,
+                    0.1
+                ]
+            ]
+        },
+        {
+            "name": "screen_off"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon_straight"
+    },
+    {
+      "name": "corner",
+      "directions": 4
+    },
+    {
+      "name": "end",
+      "directions": 4
+    },
+    {
+      "name": "icon_end"
+    },
+    {
+      "name": "straight_broken",
+      "directions": 4
+    },
+    {
+      "name": "straight",
+      "directions": 4
+    }
+  ]
+}

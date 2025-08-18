@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "size": {
+    "x": 12,
+    "y": 12
+  },
+  "states": [
+    {
+      "name": "band"
+    },
+    {
+      "name": "police"
+    },
+    {
+      "name": "nato"
+    },
+    {
+      "name": "un"
+    },
+    {
+      "name": "seraph"
+    },
+    {
+      "name": "seraph_officer"
+    },
+    {
+      "name": "sci"
+    },
+    {
+      "name": "rene"
+    },
+    {
+      "name": "zavet"
+    },
+    {
+      "name": "journalist"
+    },
+    {
+      "name": "stalker"
+    },
+    {
+      "name": "army"
+    },
+    {
+      "name": "merc"
+    },
+    {
+      "name": "tec"
+    },
+    {
+        "name": "dolg"
+    },
+    {
+        "name": "cn"
+    },
+    {
+        "name": "monolith"
+    },
+    {
+        "name": "ecologist"
+    },
+    {
+        "name": "freedom"
+    },
+    {
+        "name": "sbu"
+    },
+    {
+        "name": "mechanic"
+    },
+    {
+        "name": "trader"
+    },
+    {
+        "name": "clowns"
+    },
+    {
+        "name": "greh"
+    },
+    {
+        "name": "project-1"
+    },
+    {
+        "name": "project-2"
+    },
+    {
+        "name": "project-3"
+    },
+    {
+        "name": "project-4"
+    },
+    {
+        "name": "deserter"
+    },
+    {
+        "name": "jaba"
+    },
+    {
+        "name": "voen"
+    },
+    {
+        "name": "zombie"
+    },
+    {
+        "name": "uk"
+    },
+    {
+        "name": "ne"
+    },
+    {
+        "name": "med"
+    },
+    {
+        "name": "poisk"
+    },
+    {
+        "name": "pilgrim"
+    },
+    {
+        "name": "pack"
+    },
+    {
+        "name": "symbiote"
+    },
+    {
+        "name": "evolver"
+    },
+    {
+        "name": "tulpari"
+    },
+    {
+      "name": "vagner"
+    },
+    {
+      "name": "dnr"
+    },
+    {
+      "name": "lnr"
+    },
+    {
+      "name": "rus"
+    },
+    {
+      "name": "ussr"
+    },
+    {
+      "name": "pl"
+    },
+    {
+      "name": "de"
+    },
+    {
+      "name": "jyd"
+    },
+    {
+      "name": "china"
+    },
+    {
+      "name": "militia"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Dreamly Jack",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "worktable_3"
+    },
+    {
+      "name": "worktable_2"
+    },
+    {
+      "name": "worktable_broken"
+    },
+    {
+      "name": "worktable_1"
+    }
+  ]
+}

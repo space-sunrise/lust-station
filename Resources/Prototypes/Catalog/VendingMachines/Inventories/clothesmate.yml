@@ -2,6 +2,54 @@
 - type: vendingMachineInventory
   id: ClothesMateInventory
   startingInventory:
+    ClothingJumpsuitDressBlack: 2
+    ClothingWhiteTangoDress: 2
+    ClothingTangpDress: 2
+    ClothingRedSexyDress: 2
+    ClothingSexyDressZOV: 2
+    ClothingRedVampireDress: 2
+    ClothingJumpsuitDressTutu: 2
+    ClothingJumpsuitCivilianJuteDress: 2
+    ClothingWeddingDress: 2
+    ClothingUniformJumpskirtPinkStripedDress: 2
+    ClothingUniformJumpskirtOrangeStripedDress: 2
+    ClothingUniformJumpskirtRedStripedDress: 2
+    ClothingUniformJumpskirtGreenStripedDress: 2
+    ClothingUniformJumpskirtCyanStripedDress: 2
+    ClothingUniformJumpskirtBlueTurtleneckDress: 2
+    ClothingUniformJumpskirtYellowOldDress: 2
+    ClothingUniformJumpsuitPants: 2
+    ClothingUniformJumpsuitEroform: 2
+    ClothingUniformJumpskirtInteQTacticalMaid: 2
+    ClothingUniformJumpsuitmaidblack: 2
+    ClothingUniformSpecialistBlackJumpSuit: 2
+    ClothingUniformJumpsuitinformationsecurityanalyst: 2
+    ClothingUniformJumpsuitSuitSssp: 2
+    ClothingUniformJumpsuitmaidblue: 2
+    ClothingUniformJumpsuitmaidpink: 2
+    ClothingUniformJumpsuitstutmanuniform: 2
+    ClothingUniformJumpsuitCamoB: 2
+    ClothingUniformJumpsuitGalaxyRed: 2
+    ClothingUniformJumpsuitEgovOfficerALT: 2
+    СlothingUniformJumpsuitGalaxyRed: 2
+    ClothingUniformJumpsuitExplorer: 2
+    ClothingUniformJumpsuitInteQFormal: 2
+    ClothingUniformJumpsuitGalaxyBlue: 2
+    ClothingUniformJumpsuitLoToK1: 2
+    ClothingUniformJumpskirtInteQFormalDress: 2
+    ClothingUniformJumpskirtElegantMaid: 2
+    ClothingUniformJumpskirtPrisonerGrey: 2
+    ClothingUniformJumpskirtReporter: 2
+    ClothingUniformJumpskirtTacticalMaid: 2
+    ClothingUniformJumpskirtSyndieFormalDress: 2
+    ClothingUniformJumpskirtGreenElegantDress: 2
+    ClothingUniformJumpskirtRedElegantDress: 2
+    ClothingUniformJumpskirtBlueElegantDress: 2
+    ClothingUniformJumpskirtPurpleElegantDress: 2
+    ClothingUniformJumpskirtBlackElegantDress: 2
+    ClothingUniformJumpskirtOfLife: 2
+    ClothingUniformSkirtLustMaid: 2
+    ClothingUniformJumpskirtPurpleTurtleneckDress: 2
     ClothingBackpack: 5
     ClothingBackpackDuffel: 5
     ClothingBackpackSatchel: 3
@@ -70,7 +118,6 @@
     ClothingUniformJumpskirtCasualRed: 2
     ClothingUniformJumpsuitCasualGreen: 2
     ClothingUniformJumpskirtCasualGreen: 2
-    ClothingUniformJumpsuitBlackturtleneck: 4 #sunrise
     # DO NOT ADD MORE, USE UNIFORM DYING
     ClothingShoesColorBlack: 8
     ClothingShoesColorBrown: 4

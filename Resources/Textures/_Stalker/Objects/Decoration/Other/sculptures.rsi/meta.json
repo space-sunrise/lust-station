@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA-3.0",
+  "copyright": "CORVAX STALKER",
+  "size": {
+      "x": 32,
+      "y": 32
+  },
+  "states": [
+    {
+      "name": "ws"
+    },
+    {
+      "name": "ws2"
+    },
+    {
+      "name": "ws3"
+    },
+    {
+      "name": "ws4"
+    },
+    {
+      "name": "ws5"
+    },
+    {
+      "name": "ws6"
+    }
+  ]
+}

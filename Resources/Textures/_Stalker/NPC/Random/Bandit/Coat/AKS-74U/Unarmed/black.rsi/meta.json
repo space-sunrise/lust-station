@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "Stalker 14 License",
+  "copyright": "Made by neki5h / gr0x and belay5. All rights belong to neki5h / gr0x.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bala",
+      "directions": 4
+    },
+    {
+      "name": "bala2",
+      "directions": 4
+    }
+  ]
+}

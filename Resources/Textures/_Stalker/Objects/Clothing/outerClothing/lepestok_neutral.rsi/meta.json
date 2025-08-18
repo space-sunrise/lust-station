@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by gogiko (Discord) for Corvax Stalker14",
+  "states": [
+    {
+      "name": "equipped-OUTERCLOTHING",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-fat",
+      "directions": 4
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

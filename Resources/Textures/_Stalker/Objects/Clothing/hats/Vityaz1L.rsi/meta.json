@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "license": "Stalker14 license",
+  "copyright": "Made by spriter for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-HELMET",
+      "directions": 4
+    }
+  ]
+}

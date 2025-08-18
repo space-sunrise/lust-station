@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": "CC-BY-NC-SA 3.0",
+  "copyright": "Made by John Doe modified by HalfElix for Corvax S.T.A.L.K.E.R.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "equipped-LEGS",
+      "directions": 4
+    },
+    {
+      "name": "equipped-LEGS-fat",
+      "directions": 4
+    }
+  ]
+}

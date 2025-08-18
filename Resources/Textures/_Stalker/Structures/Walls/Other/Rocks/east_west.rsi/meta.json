@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "rew1"
+    },
+    {
+      "name": "rew2"
+    },
+    {
+      "name": "rew3"
+    },
+    {
+      "name": "rew4"
+    },
+    {
+      "name": "rew5"
+    }
+  ]
+}

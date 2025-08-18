@@ -1,0 +1,170 @@
+{
+    "version": 1,
+    "license": "CC-BY-4.0",
+    "copyright": "Сreated by GribGear (discord) for Space station 14 server Dead Space (Мёртвый Космос)",
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "based"
+        },
+        {
+            "name": "clubs-2"
+        },
+        {
+            "name": "clubs-3"
+        },
+        {
+            "name": "clubs-4"
+        },
+        {
+            "name": "clubs-5"
+        },
+        {
+            "name": "clubs-6"
+        },
+        {
+            "name": "clubs-7"
+        },
+        {
+            "name": "clubs-8"
+        },
+        {
+            "name": "clubs-9"
+        },
+        {
+            "name": "clubs-10"
+        },
+        {
+            "name": "clubs-j"
+        },
+        {
+            "name": "clubs-q"
+        },
+        {
+            "name": "clubs-k"
+        },
+        {
+            "name": "clubs-a"
+        },
+        {
+            "name": "diamonds-2"
+        },
+        {
+            "name": "diamonds-3"
+        },
+        {
+            "name": "diamonds-4"
+        },
+        {
+            "name": "diamonds-5"
+        },
+        {
+            "name": "diamonds-6"
+        },
+        {
+            "name": "diamonds-7"
+        },
+        {
+            "name": "diamonds-8"
+        },
+        {
+            "name": "diamonds-9"
+        },
+        {
+            "name": "diamonds-10"
+        },
+        {
+            "name": "diamonds-j"
+        },
+        {
+            "name": "diamonds-q"
+        },
+        {
+            "name": "diamonds-k"
+        },
+        {
+            "name": "diamonds-a"
+        },
+        {
+            "name": "hearts-2"
+        },
+        {
+            "name": "hearts-3"
+        },
+        {
+            "name": "hearts-4"
+        },
+        {
+            "name": "hearts-5"
+        },
+        {
+            "name": "hearts-6"
+        },
+        {
+            "name": "hearts-7"
+        },
+        {
+            "name": "hearts-8"
+        },
+        {
+            "name": "hearts-9"
+        },
+        {
+            "name": "hearts-10"
+        },
+        {
+            "name": "hearts-j"
+        },
+        {
+            "name": "hearts-q"
+        },
+        {
+            "name": "hearts-k"
+        },
+        {
+            "name": "hearts-a"
+        },
+        {
+            "name": "spades-2"
+        },
+        {
+            "name": "spades-3"
+        },
+        {
+            "name": "spades-4"
+        },
+        {
+            "name": "spades-5"
+        },
+        {
+            "name": "spades-6"
+        },
+        {
+            "name": "spades-7"
+        },
+        {
+            "name": "spades-8"
+        },
+        {
+            "name": "spades-9"
+        },
+        {
+            "name": "spades-10"
+        },
+        {
+            "name": "spades-j"
+        },
+        {
+            "name": "spades-q"
+        },
+        {
+            "name": "spades-k"
+        },
+        {
+            "name": "spades-a"
+        }
+    ]
+}

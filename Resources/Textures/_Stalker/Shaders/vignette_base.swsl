@@ -1,0 +1,19 @@
+highp vec4 vignette(in highp vec2 uv, highp float strength) {
+    highp vec2 center = vec2(0.5, 0.5);
+    highp float radius = 0.8; // Adjust/Decrease "0.8" to set radius(do the same in vignetteNoised pls)
+
+    highp float d = length(uv - center) / radius;
+    highp float t = 1.0 - smoothstep(0.8, 1.0, 1.0 - d * strength);
+
+    return vec4(vec3(0.0), t);
+}
+
+void fragment() {
+    highp vec2 uv = FRAGCOORD.xy;
+    highp vec2 res_xy = vec2(1.0 / SCREEN_PIXEL_SIZE.x, 1.0 / SCREEN_PIXEL_SIZE.y);
+
+    highp vec4 layer1 = vec4(vec3(0.0), 0.0);
+    highp vec4 layer2 = vignette(uv / res_xy, 0.2); // Adjust/Decrease "0.2" to set strength(do the same in vignetteNoised pls)
+
+    COLOR = mix(layer1, layer2, layer2.a);
+}

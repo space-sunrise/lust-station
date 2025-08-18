@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "base"
+    },
+    {
+      "name": "equipped-BACKPACK",
+      "directions": 4
+    },
+	{
+	  "name": "equipped-SUITSTORAGE",
+	  "directions": 4
+	},
+    {
+      "name": "icon"
+    },
+    {
+      "name": "bolt-open"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "mag-0"
+    }
+  ]
+}

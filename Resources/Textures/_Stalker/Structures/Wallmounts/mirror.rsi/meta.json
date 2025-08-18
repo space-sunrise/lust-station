@@ -1,0 +1,9 @@
+{
+    "version":1,
+    "copyright":"CORVAX STALKER",
+    "license":"CC-BY-SA-3.0",
+    "size":{"x":32,"y":32},
+    "states": [
+        {"name":"zerkalo"}
+    ]
+}

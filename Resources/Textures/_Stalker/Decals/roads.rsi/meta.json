@@ -1,0 +1,60 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "tire1"
+        },
+        {
+            "name": "tire2"
+        },
+        {
+            "name": "tire3"
+        },
+        {
+            "name": "tire4"
+        },
+        {
+            "name": "tire5"
+        },
+        {
+            "name": "tire6"
+        },
+        {
+            "name": "tire7"
+        },
+        {
+            "name": "tire8"
+        },
+        {
+            "name": "tire9"
+        },
+        {
+            "name": "tire10"
+        },
+        {
+            "name": "tire11"
+        },
+        {
+            "name": "tire12"
+        },
+        {
+            "name": "tire13"
+        },
+        {
+            "name": "tire14"
+        },
+        {
+            "name": "tire15"
+        },
+        {
+            "name": "tire16"
+        },
+        {
+            "name": "tired1"
+        }
+    ]
+}

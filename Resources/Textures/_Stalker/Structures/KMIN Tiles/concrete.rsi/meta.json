@@ -1,0 +1,59 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "concrete_big"
+        },
+        {
+            "name": "concrete_bricks"
+        },
+        {
+            "name": "concrete_bricks_1"
+        },
+        {
+            "name": "concrete_bricks_2"
+        },
+        {
+            "name": "concrete_bricks_3"
+        },
+        {
+            "name": "concrete_bricks_4"
+        },
+        {
+            "name": "concrete_bricks_5"
+        },
+        {
+            "name": "concrete_bricks_6"
+        },
+        {
+            "name": "concrete_bricks_7"
+        },
+        {
+            "name": "concrete_bricks_8"
+        },
+        {
+            "name": "concrete_industrial"
+        },
+        {
+            "name": "concrete_industrial_alt"
+        },
+        {
+            "name": "concrete_industrial_split"
+        },
+        {
+            "name": "concrete_small"
+        },
+        {
+            "name": "concrete_small_1"
+        },
+        {
+            "name": "concrete_small_2"
+        }
+    ]
+}

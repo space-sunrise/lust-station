@@ -1,0 +1,143 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_common_broken1"
+        },
+        {
+            "name": "wood_common_broken10"
+        },
+        {
+            "name": "wood_common_broken11"
+        },
+        {
+            "name": "wood_common_broken12"
+        },
+        {
+            "name": "wood_common_broken13"
+        },
+        {
+            "name": "wood_common_broken14"
+        },
+        {
+            "name": "wood_common_broken15"
+        },
+        {
+            "name": "wood_common_broken16"
+        },
+        {
+            "name": "wood_common_broken17"
+        },
+        {
+            "name": "wood_common_broken18"
+        },
+        {
+            "name": "wood_common_broken19"
+        },
+        {
+            "name": "wood_common_broken2"
+        },
+        {
+            "name": "wood_common_broken20"
+        },
+        {
+            "name": "wood_common_broken21"
+        },
+        {
+            "name": "wood_common_broken22"
+        },
+        {
+            "name": "wood_common_broken23"
+        },
+        {
+            "name": "wood_common_broken24"
+        },
+        {
+            "name": "wood_common_broken25"
+        },
+        {
+            "name": "wood_common_broken26"
+        },
+        {
+            "name": "wood_common_broken27"
+        },
+        {
+            "name": "wood_common_broken28"
+        },
+        {
+            "name": "wood_common_broken29"
+        },
+        {
+            "name": "wood_common_broken3"
+        },
+        {
+            "name": "wood_common_broken30"
+        },
+        {
+            "name": "wood_common_broken31"
+        },
+        {
+            "name": "wood_common_broken32"
+        },
+        {
+            "name": "wood_common_broken33"
+        },
+        {
+            "name": "wood_common_broken34"
+        },
+        {
+            "name": "wood_common_broken35"
+        },
+        {
+            "name": "wood_common_broken36"
+        },
+        {
+            "name": "wood_common_broken37"
+        },
+        {
+            "name": "wood_common_broken38"
+        },
+        {
+            "name": "wood_common_broken39"
+        },
+        {
+            "name": "wood_common_broken4"
+        },
+        {
+            "name": "wood_common_broken40"
+        },
+        {
+            "name": "wood_common_broken41"
+        },
+        {
+            "name": "wood_common_broken42"
+        },
+        {
+            "name": "wood_common_broken43"
+        },
+        {
+            "name": "wood_common_broken44"
+        },
+        {
+            "name": "wood_common_broken5"
+        },
+        {
+            "name": "wood_common_broken6"
+        },
+        {
+            "name": "wood_common_broken7"
+        },
+        {
+            "name": "wood_common_broken8"
+        },
+        {
+            "name": "wood_common_broken9"
+        }
+    ]
+}

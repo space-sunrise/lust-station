@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "license": "Stalker14 license",
+  "size": {
+    "x": 32,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "windows"
+    },
+    {
+      "name": "icon"
+    }
+  ]
+}

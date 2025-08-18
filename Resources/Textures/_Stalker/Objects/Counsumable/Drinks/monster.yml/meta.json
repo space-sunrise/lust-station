@@ -1,0 +1,17 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "From https://discord.com/channels/1148992175347089468/1276112272690774017/1276112272690774017",
+    "states": [
+        {
+            "name": "icon"
+        },
+        {
+            "name": "icon_open"
+        }
+    ]
+}

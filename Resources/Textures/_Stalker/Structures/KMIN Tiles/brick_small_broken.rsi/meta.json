@@ -1,0 +1,131 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "brick_broken0"
+        },
+        {
+            "name": "brick_broken1"
+        },
+        {
+            "name": "brick_broken10"
+        },
+        {
+            "name": "brick_broken11"
+        },
+        {
+            "name": "brick_broken12"
+        },
+        {
+            "name": "brick_broken13"
+        },
+        {
+            "name": "brick_broken14"
+        },
+        {
+            "name": "brick_broken15"
+        },
+        {
+            "name": "brick_broken16"
+        },
+        {
+            "name": "brick_broken17"
+        },
+        {
+            "name": "brick_broken18"
+        },
+        {
+            "name": "brick_broken19"
+        },
+        {
+            "name": "brick_broken2"
+        },
+        {
+            "name": "brick_broken20"
+        },
+        {
+            "name": "brick_broken21"
+        },
+        {
+            "name": "brick_broken22"
+        },
+        {
+            "name": "brick_broken23"
+        },
+        {
+            "name": "brick_broken24"
+        },
+        {
+            "name": "brick_broken25"
+        },
+        {
+            "name": "brick_broken26"
+        },
+        {
+            "name": "brick_broken27"
+        },
+        {
+            "name": "brick_broken28"
+        },
+        {
+            "name": "brick_broken29"
+        },
+        {
+            "name": "brick_broken3"
+        },
+        {
+            "name": "brick_broken30"
+        },
+        {
+            "name": "brick_broken31"
+        },
+        {
+            "name": "brick_broken32"
+        },
+        {
+            "name": "brick_broken33"
+        },
+        {
+            "name": "brick_broken34"
+        },
+        {
+            "name": "brick_broken35"
+        },
+        {
+            "name": "brick_broken36"
+        },
+        {
+            "name": "brick_broken37"
+        },
+        {
+            "name": "brick_broken38"
+        },
+        {
+            "name": "brick_broken39"
+        },
+        {
+            "name": "brick_broken4"
+        },
+        {
+            "name": "brick_broken5"
+        },
+        {
+            "name": "brick_broken6"
+        },
+        {
+            "name": "brick_broken7"
+        },
+        {
+            "name": "brick_broken8"
+        },
+        {
+            "name": "brick_broken9"
+        }
+    ]
+}

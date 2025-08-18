@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "size": {
+    "x": 128,
+    "y": 128
+  },
+  "states": [
+    {
+      "name": "lep1"
+    },
+    {
+      "name": "lep2"
+    },
+    {
+      "name": "lep3"
+    },
+    {
+      "name": "lep4"
+    },
+    {
+      "name": "lep5"
+    },
+    {
+      "name": "lep6"
+    },
+    {
+      "name": "lep7"
+    },
+    {
+      "name": "lep8"
+    }
+  ]
+}

@@ -1,0 +1,188 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "black_large"
+        },
+        {
+            "name": "black_large_1"
+        },
+        {
+            "name": "black_large_2"
+        },
+        {
+            "name": "black_large_3"
+        },
+        {
+            "name": "black_large_4"
+        },
+        {
+            "name": "black_large_5"
+        },
+        {
+            "name": "black_large_6"
+        },
+        {
+            "name": "black_large_7"
+        },
+        {
+            "name": "cafe_large"
+        },
+        {
+            "name": "cafe_large_1"
+        },
+        {
+            "name": "cafe_large_2"
+        },
+        {
+            "name": "cafe_large_3"
+        },
+        {
+            "name": "cafe_large_4"
+        },
+        {
+            "name": "cafe_large_5"
+        },
+        {
+            "name": "cafe_large_6"
+        },
+        {
+            "name": "cafe_large_7"
+        },
+        {
+            "name": "ceramic"
+        },
+        {
+            "name": "ceramic_1"
+        },
+        {
+            "name": "ceramic_2"
+        },
+        {
+            "name": "ceramic_3"
+        },
+        {
+            "name": "checker_large"
+        },
+        {
+            "name": "checker_large_1"
+        },
+        {
+            "name": "checker_large_2"
+        },
+        {
+            "name": "checker_large_3"
+        },
+        {
+            "name": "checker_large_4"
+        },
+        {
+            "name": "checker_large_5"
+        },
+        {
+            "name": "checker_large_6"
+        },
+        {
+            "name": "checker_large_7"
+        },
+        {
+            "name": "green_large"
+        },
+        {
+            "name": "green_large_1"
+        },
+        {
+            "name": "green_large_2"
+        },
+        {
+            "name": "green_large_3"
+        },
+        {
+            "name": "green_large_4"
+        },
+        {
+            "name": "green_large_5"
+        },
+        {
+            "name": "green_large_6"
+        },
+        {
+            "name": "green_large_7"
+        },
+        {
+            "name": "grey_large"
+        },
+        {
+            "name": "grey_large_1"
+        },
+        {
+            "name": "grey_large_2"
+        },
+        {
+            "name": "grey_large_3"
+        },
+        {
+            "name": "grey_large_4"
+        },
+        {
+            "name": "grey_large_5"
+        },
+        {
+            "name": "grey_large_6"
+        },
+        {
+            "name": "grey_large_7"
+        },
+        {
+            "name": "navy_large"
+        },
+        {
+            "name": "navy_large_1"
+        },
+        {
+            "name": "navy_large_2"
+        },
+        {
+            "name": "navy_large_4"
+        },
+        {
+            "name": "navy_large_5"
+        },
+        {
+            "name": "navy_large_6"
+        },
+        {
+            "name": "navy_large_7"
+        },
+        {
+            "name": "white_large"
+        },
+        {
+            "name": "white_large_1"
+        },
+        {
+            "name": "white_large_2"
+        },
+        {
+            "name": "white_large_3"
+        },
+        {
+            "name": "white_large_4"
+        },
+        {
+            "name": "white_large_5"
+        },
+        {
+            "name": "white_large_6"
+        },
+        {
+            "name": "white_large_7"
+        }
+    ]
+}

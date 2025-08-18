@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Psycrow",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "drawing_old2"
+    },
+    {
+      "name": "drawing_new1"
+    },
+    {
+      "name": "drawing_new2"
+    },
+    {
+      "name": "drawing_old1"
+    }
+  ]
+}

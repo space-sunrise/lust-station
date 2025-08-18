@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Sprite made by shiniest_meat_bicycle (Discord) for Stalker14",
+    "states": [
+        {
+            "name": "vog25"
+        },
+        {
+            "name": "vog25p"
+        },
+        {
+            "name": "vog-gvozd"
+        },
+        {
+            "name": "vog-smoke"
+        }
+    ]
+}

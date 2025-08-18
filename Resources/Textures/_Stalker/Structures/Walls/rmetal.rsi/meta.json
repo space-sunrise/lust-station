@@ -1,0 +1,46 @@
+{
+    "version": 1,
+  "license": "stalker14 license",
+  "copyright": "by swecher exclusively for Stalker14",
+  "size": {
+    "x": 32,
+    "y": 64
+    },
+    "states": [
+        {
+            "name": "full"
+        },
+        {
+            "name": "rmetal0",
+            "directions": 4
+        },
+        {
+            "name": "rmetal1",
+            "directions": 4
+        },
+        {
+            "name": "rmetal2",
+            "directions": 4
+        },
+        {
+            "name": "rmetal3",
+            "directions": 4
+        },
+        {
+            "name": "rmetal4",
+            "directions": 4
+        },
+        {
+            "name": "rmetal5",
+            "directions": 4
+        },
+        {
+            "name": "rmetal6",
+            "directions": 4
+        },
+        {
+            "name": "rmetal7",
+            "directions": 4
+        }
+    ]
+}

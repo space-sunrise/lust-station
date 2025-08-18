@@ -1,0 +1,155 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_wide_broken0"
+        },
+        {
+            "name": "wood_wide_broken1"
+        },
+        {
+            "name": "wood_wide_broken10"
+        },
+        {
+            "name": "wood_wide_broken11"
+        },
+        {
+            "name": "wood_wide_broken12"
+        },
+        {
+            "name": "wood_wide_broken13"
+        },
+        {
+            "name": "wood_wide_broken14"
+        },
+        {
+            "name": "wood_wide_broken15"
+        },
+        {
+            "name": "wood_wide_broken16"
+        },
+        {
+            "name": "wood_wide_broken17"
+        },
+        {
+            "name": "wood_wide_broken18"
+        },
+        {
+            "name": "wood_wide_broken19"
+        },
+        {
+            "name": "wood_wide_broken2"
+        },
+        {
+            "name": "wood_wide_broken20"
+        },
+        {
+            "name": "wood_wide_broken21"
+        },
+        {
+            "name": "wood_wide_broken22"
+        },
+        {
+            "name": "wood_wide_broken23"
+        },
+        {
+            "name": "wood_wide_broken24"
+        },
+        {
+            "name": "wood_wide_broken25"
+        },
+        {
+            "name": "wood_wide_broken26"
+        },
+        {
+            "name": "wood_wide_broken27"
+        },
+        {
+            "name": "wood_wide_broken28"
+        },
+        {
+            "name": "wood_wide_broken29"
+        },
+        {
+            "name": "wood_wide_broken3"
+        },
+        {
+            "name": "wood_wide_broken30"
+        },
+        {
+            "name": "wood_wide_broken31"
+        },
+        {
+            "name": "wood_wide_broken32"
+        },
+        {
+            "name": "wood_wide_broken33"
+        },
+        {
+            "name": "wood_wide_broken34"
+        },
+        {
+            "name": "wood_wide_broken35"
+        },
+        {
+            "name": "wood_wide_broken36"
+        },
+        {
+            "name": "wood_wide_broken37"
+        },
+        {
+            "name": "wood_wide_broken38"
+        },
+        {
+            "name": "wood_wide_broken39"
+        },
+        {
+            "name": "wood_wide_broken4"
+        },
+        {
+            "name": "wood_wide_broken40"
+        },
+        {
+            "name": "wood_wide_broken41"
+        },
+        {
+            "name": "wood_wide_broken42"
+        },
+        {
+            "name": "wood_wide_broken43"
+        },
+        {
+            "name": "wood_wide_broken44"
+        },
+        {
+            "name": "wood_wide_broken45"
+        },
+        {
+            "name": "wood_wide_broken46"
+        },
+        {
+            "name": "wood_wide_broken47"
+        },
+        {
+            "name": "wood_wide_broken5"
+        },
+        {
+            "name": "wood_wide_broken6"
+        },
+        {
+            "name": "wood_wide_broken7"
+        },
+        {
+            "name": "wood_wide_broken8"
+        },
+        {
+            "name": "wood_wide_broken9"
+        }
+    ]
+}

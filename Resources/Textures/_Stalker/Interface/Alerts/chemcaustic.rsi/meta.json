@@ -1,0 +1,9 @@
+{
+    "version": 1,
+    "size": {"x": 32, "y": 32},
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Made by someone and finished by Psycrow",
+    "states": [
+        {"name": "too_much_tox", "delays": [[0.5, 0.5]]}
+    ]
+}

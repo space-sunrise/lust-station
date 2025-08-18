@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+
+      {
+          "name": "art1"
+      },
+      {
+          "name": "art2"
+      },
+      {
+          "name": "art3"
+      },
+      {
+          "name": "art4"
+      },
+      {
+          "name": "art5"
+      },
+      {
+          "name": "art6"
+      },
+      {
+          "name": "art7"
+      },
+      {
+          "name": "art8"
+      },
+      {
+          "name": "art9"
+      },
+      {
+          "name": "art10"
+      },
+      {
+          "name": "art11"
+      },
+      {
+          "name": "art12"
+      },
+      {
+          "name": "art13"
+      },
+      {
+          "name": "art14"
+      },
+      {
+          "name": "art15"
+      },
+      {
+          "name": "art16"
+      },
+      {
+          "name": "art17"
+      },
+      {
+          "name": "art18"
+      },
+      {
+          "name": "art19"
+      },
+      {
+          "name": "art20"
+      },
+      {
+          "name": "art21"
+      }
+
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "license": null,
+    "copyright": null,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "states": [
+      {
+        "name": "cotton_fabric_t1"
+      },
+      {
+        "name": "hide_t2"
+      },
+      {
+        "name": "sturdy_hide_t3"
+      },
+      {
+        "name": "polymer_fabric_t4"
+      },
+      {
+        "name": "composite_material_t5"
+      }
+    ]
+  }

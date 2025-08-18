@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bench-1"
+    },
+    {
+      "name": "bench-2"
+    },
+    {
+      "name": "bench-3"
+    }
+  ]
+}

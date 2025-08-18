@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "size": {
+    "x": 64,
+    "y": 64
+  },
+  "states": [
+    {
+      "name": "blinddog"
+    },
+    {
+      "name": "pseudo"
+    },
+    {
+      "name": "pseudodog"
+    },
+    {
+      "name": "sosich"
+    },
+    {
+      "name": "svinota"
+    },
+    {
+      "name": "snork"
+    }
+  ]
+}

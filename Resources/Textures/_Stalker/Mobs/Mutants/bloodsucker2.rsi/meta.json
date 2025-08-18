@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "size": {
+    "x": 44,
+    "y": 44
+  },
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by Belay",
+  "states": [
+	{
+      "name": "dead"
+    },
+	{
+      "name": "bloodsucker",
+      "directions": 4
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "bar1"
+    },
+    {
+      "name": "bar2"
+    },
+    {
+      "name": "bar3"
+    },
+    {
+      "name": "bar4"
+    }
+  ]
+}

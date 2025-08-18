@@ -1,0 +1,119 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "пусто",
+    "states": [
+        {
+            "name": "wood_foundation_broken0"
+        },
+        {
+            "name": "wood_foundation_broken1"
+        },
+        {
+            "name": "wood_foundation_broken10"
+        },
+        {
+            "name": "wood_foundation_broken11"
+        },
+        {
+            "name": "wood_foundation_broken12"
+        },
+        {
+            "name": "wood_foundation_broken13"
+        },
+        {
+            "name": "wood_foundation_broken14"
+        },
+        {
+            "name": "wood_foundation_broken15"
+        },
+        {
+            "name": "wood_foundation_broken16"
+        },
+        {
+            "name": "wood_foundation_broken17"
+        },
+        {
+            "name": "wood_foundation_broken18"
+        },
+        {
+            "name": "wood_foundation_broken19"
+        },
+        {
+            "name": "wood_foundation_broken2"
+        },
+        {
+            "name": "wood_foundation_broken20"
+        },
+        {
+            "name": "wood_foundation_broken21"
+        },
+        {
+            "name": "wood_foundation_broken22"
+        },
+        {
+            "name": "wood_foundation_broken23"
+        },
+        {
+            "name": "wood_foundation_broken24"
+        },
+        {
+            "name": "wood_foundation_broken25"
+        },
+        {
+            "name": "wood_foundation_broken26"
+        },
+        {
+            "name": "wood_foundation_broken27"
+        },
+        {
+            "name": "wood_foundation_broken28"
+        },
+        {
+            "name": "wood_foundation_broken29"
+        },
+        {
+            "name": "wood_foundation_broken3"
+        },
+        {
+            "name": "wood_foundation_broken30"
+        },
+        {
+            "name": "wood_foundation_broken31"
+        },
+        {
+            "name": "wood_foundation_broken32"
+        },
+        {
+            "name": "wood_foundation_broken33"
+        },
+        {
+            "name": "wood_foundation_broken34"
+        },
+        {
+            "name": "wood_foundation_broken35"
+        },
+        {
+            "name": "wood_foundation_broken4"
+        },
+        {
+            "name": "wood_foundation_broken5"
+        },
+        {
+            "name": "wood_foundation_broken6"
+        },
+        {
+            "name": "wood_foundation_broken7"
+        },
+        {
+            "name": "wood_foundation_broken8"
+        },
+        {
+            "name": "wood_foundation_broken9"
+        }
+    ]
+}

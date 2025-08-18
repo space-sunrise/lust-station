@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "size": {
+      "x": 32,
+      "y": 32
+    },
+    "license": "stalker14 license",
+    "copyright": "made by flaits",
+    "states": [
+      {
+        "name": "icon"
+      },
+      {
+        "name": "equipped-BACKPACK",
+        "directions": 4
+      },
+      {
+        "name": "inhand-left",
+        "directions": 4
+
+      },
+      {
+        "name": "inhand-right",
+        "directions": 4
+      }
+    ]
+  }
