@@ -1,0 +1,51 @@
+- type: entity
+  name: Македа
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseCargoContraband]
+  id: WeaponShotgunMakeda
+  description: Эффективное оружие на случаи, если вдруг нужно взорвать противника изнутри. Хорошо показывает себя в проламывании окон и черепов голиафов.
+  components:
+  - type: Sprite
+# вот этой хуйне снизу путь изменить надо
+    sprite: _Duty/Weapons/makeda/makeda.rsi
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,5,1
+# и вот этой хуйне
+    sprite: _Duty/Weapons/makeda/makeda_128x.rsi
+  - type: Clothing
+# этой тоже
+    sprite: _Duty/Weapons/makeda/makeda_64x.rsi
+
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 0.2
+    resetOnHandSelected: false
+    damage:
+      types:
+        Piercing: 15
+        Blunt: 215
+    angle: 20
+    animation: WeaponArcThrust
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+
+  - type: MeleeRequiresWield
+
+  - type: AltFireMelee
+    attackType: Heavy
+  - type: SolutionContainerManager
+    solutions:
+      melee:
+        maxVol: 2
+  - type: MeleeChemicalInjector
+    solution: melee
+  - type: RefillableSolution
+    solution: melee
+  - type: InjectableSolution
+    solution: melee
+  - type: SolutionTransfer
+    maxTransferAmount: 2
+  - type: Sharp
+    butcherDelayModifier: 2 #It's a bayonet
+  - type: GunRequiresWield
