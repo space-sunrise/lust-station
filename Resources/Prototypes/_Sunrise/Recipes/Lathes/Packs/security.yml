@@ -167,10 +167,12 @@
     - MagazinePistolSubMachineGunIncendiary
     - MagazinePistolSubMachineGunUranium
     - MagazinePistolSubMachineGunAP
+    - MagazinePistolSubMachineGunRubber
     # SMG Top Mounted
     - MagazinePistolSubMachineGunTopMountedAP
     - MagazinePistolSubMachineGunTopMountedIncendiary
     - MagazinePistolSubMachineGunTopMountedUranium
+    - MagazinePistolSubMachineGunTopMountedRubber
   # Rifle
     - MagazineRifleIncendiary
     - MagazineRifleUranium
