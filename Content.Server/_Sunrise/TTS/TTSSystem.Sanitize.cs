@@ -20,6 +20,7 @@ public sealed partial class TTSSystem
         text = Regex.Replace(text, "[їЇ]", "ё");
         text = Regex.Replace(text, "[єЄ]", "е");
         text = Regex.Replace(text, "[ґҐ]", "г");
+        text = Regex.Replace(text, "[еЕ]", "э");
         text = Regex.Replace(text, @"[^a-zA-Zа-яА-ЯёЁ0-9,\-+?!. ]", "");
         text = Regex.Replace(text, @"[a-zA-Z]", ReplaceLat2Cyr, RegexOptions.Multiline | RegexOptions.IgnoreCase);
         text = Regex.Replace(text, @"(?<![a-zA-Zа-яёА-ЯЁ])[a-zA-Zа-яёА-ЯЁ]+?(?![a-zA-Zа-яёА-ЯЁ])", ReplaceMatchedWord, RegexOptions.Multiline | RegexOptions.IgnoreCase);
