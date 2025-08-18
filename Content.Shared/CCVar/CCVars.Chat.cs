@@ -21,20 +21,20 @@ public sealed partial class CCVars
     /// </remarks>
     /// <seealso cref="ChatRateLimitPeriod"/>
     public static readonly CVarDef<int> ChatRateLimitCount =
-        CVarDef.Create("chat.rate_limit_count", 10, CVar.SERVERONLY);
+        CVarDef.Create("chat.rate_limit_count", 25, CVar.SERVERONLY);
 
     /// <summary>
     ///     Minimum delay (in seconds) between notifying admins about chat message rate limit violations.
     ///     A negative value disables admin announcements.
     /// </summary>
     public static readonly CVarDef<int> ChatRateLimitAnnounceAdminsDelay =
-        CVarDef.Create("chat.rate_limit_announce_admins_delay", 15, CVar.SERVERONLY);
+        CVarDef.Create("chat.rate_limit_announce_admins_delay", 30, CVar.SERVERONLY);
 
     public static readonly CVarDef<int> ChatMaxMessageLength =
-        CVarDef.Create("chat.max_message_length", 1000, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("chat.max_message_length", 3000, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<int> ChatMaxAnnouncementLength =
-        CVarDef.Create("chat.max_announcement_length", 512, CVar.SERVER | CVar.REPLICATED); // Sunrise-edit
+        CVarDef.Create("chat.max_announcement_length", 2500, CVar.SERVER | CVar.REPLICATED); // Sunrise-edit
 
     public static readonly CVarDef<bool> ChatSanitizerEnabled =
         CVarDef.Create("chat.chat_sanitizer_enabled", true, CVar.SERVERONLY);
