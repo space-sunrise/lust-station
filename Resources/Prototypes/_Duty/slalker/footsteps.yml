@@ -1,0 +1,56 @@
+- type: soundCollection
+  id: STFootstepSnow
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/snow1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/snow2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/snow3.ogg
+  - /Audio/_Stalker/Effects/Footsteps/snow4.ogg
+  - /Audio/_Stalker/Effects/Footsteps/snow5.ogg
+
+- type: soundCollection
+  id: STFootstepWood
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/wood1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/wood2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/wood3.ogg
+  - /Audio/_Stalker/Effects/Footsteps/wood4.ogg
+  - /Audio/_Stalker/Effects/Footsteps/wood5.ogg
+
+- type: soundCollection
+  id: STFootstepGrass
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/grass1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/grass2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/grass3.ogg
+  - /Audio/_Stalker/Effects/Footsteps/grass4.ogg
+  - /Audio/_Stalker/Effects/Footsteps/grass5.ogg
+  - /Audio/_Stalker/Effects/Footsteps/grass6.ogg
+
+- type: soundCollection
+  id: STFootstepDirt
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/dirt1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/dirt2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/dirt3.ogg
+
+- type: soundCollection
+  id: STFootstepMetal
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/metal1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/metal2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/metal3.ogg
+
+- type: soundCollection
+  id: STFootstepRock
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/rock1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/rock2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/rock3.ogg
+  - /Audio/_Stalker/Effects/Footsteps/rock4.ogg
+
+- type: soundCollection
+  id: STFootstepWater
+  files:
+  - /Audio/_Stalker/Effects/Footsteps/water1.ogg
+  - /Audio/_Stalker/Effects/Footsteps/water2.ogg
+  - /Audio/_Stalker/Effects/Footsteps/water3.ogg

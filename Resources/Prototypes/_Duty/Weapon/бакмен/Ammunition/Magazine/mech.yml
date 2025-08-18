@@ -1,0 +1,16 @@
+- type: entity
+  name: магазин Карабина FNX-99
+  parent: MagazineLightRifleBox
+  id: MagazineLightRifleBox9000
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 300
+
+- type: entity
+  name: магазин AC 2 «Ультра»
+  parent: MagazineLightRifleBox
+  id: MagazineLightRifleBoxAS29000
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 500
+

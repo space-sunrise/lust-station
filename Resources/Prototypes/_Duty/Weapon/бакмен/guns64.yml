@@ -1,0 +1,430 @@
+- type: entity
+  name: grenade box
+  parent: BoxCardboard
+  id: BoxGrenadeNonLetal
+  components:
+    - type: StorageFill
+      contents:
+        - id: GrenadeNonletal
+          amount: 4
+
+- type: entity
+  name: grenade box
+  parent: BoxCardboard
+  id: BoxGrenadeTearGas
+  components:
+    - type: StorageFill
+      contents:
+        - id: GrenadeTearGas
+          amount: 4
+
+- type: entity
+  name: Огнемет М6
+  parent: BaseItem
+  id: WeaponflamethrowerSG
+  suffix: Огнемёт
+  description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    state: base
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    size: Large
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+    slots:
+      - BACK
+      - SUITSTORAGE
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 10
+    cameraRecoilScalar: 0.2
+    maxAngle: 60
+    minAngle: 60
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Flamethrowers/flamethrower.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Flamethrowers/flamethrower_empty.ogg
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - PowerpackFlame
+  - type: Appearance
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.5
+  - type: GunRequiresWield
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 100
+        reagents:
+        - ReagentId: Water
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: spray
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 10
+  - type: RefillableSolution
+    solution: spray
+  - type: DrainableSolution
+    solution: spray
+  - type: SolutionTransfer
+  - type: Spray
+    transferAmount: 10
+    spraySound:
+      path: /Audio/Effects/extinguish.ogg
+    sprayedPrototype: ExtinguisherSpray
+    vaporAmount: 3
+    vaporSpread: 30
+    sprayVelocity: 2.0
+#  - type: FireExtinguisher
+#    hasSafety: true
+
+- type: entity
+  id: PowerpackFlame
+  name: "powerpack (flame)"
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - PowerpackFlame
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    slots: BACK
+    sprite: Backmen/Clothing/Back/Powerpacks/flamepack.rsi
+  - type: BallisticAmmoProvider
+    proto: FireThrowerBall
+    mayTransfer: true
+    whitelist:
+      tags:
+        - FireThrowerBall
+    capacity: 2000
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Backmen/Clothing/Back/Powerpacks/flamepack.rsi
+    layers:
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  name: ручной огнемет М6
+  parent: BaseWeaponRifle
+  id: FirethrowerGun
+  suffix: Огнемёт
+  description: Nomadov's jet flamethrower, an amazing thing, on the weapon there is an inscription "Death to the enemies of mankind!"
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/big.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/M6/tiny.rsi
+  - type: Gun
+    projectileSpeed: 5
+    fireRate: 10
+    cameraRecoilScalar: 0.2
+    maxAngle: 60
+    minAngle: 60
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Flamethrowers/flamethrower.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Flamethrowers/flamethrower_empty.ogg
+  - type: AmmoCounter
+  - type: Appearance
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: FuelTankFirethrower
+        insertSound: /Audio/Weapons/Guns64/Flamethrowers/flamethrower_reload.ogg
+        ejectSound: /Audio/Weapons/Guns64/Flamethrowers/flamethrower_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - TankFlamethrower
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.5
+  - type: GunRequiresWield
+  - type: SolutionContainerManager
+    solutions:
+      spray:
+        maxVol: 100
+        reagents:
+        - ReagentId: Water
+          Quantity: 100
+  - type: SolutionRegeneration
+    solution: spray
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 10
+  - type: RefillableSolution
+    solution: spray
+  - type: DrainableSolution
+    solution: spray
+  - type: SolutionTransfer
+  - type: Spray
+    transferAmount: 10
+    spraySound:
+      path: /Audio/Effects/extinguish.ogg
+    sprayedPrototype: ExtinguisherSpray
+    vaporAmount: 3
+    vaporSpread: 30
+    sprayVelocity: 2.0
+#  - type: FireExtinguisher
+#    hasSafety: true
+
+- type: entity
+  id: FuelTankFirethrower
+  name: топливный бак для огнемёта
+  description: Удивительная горючая реактивная смесь, которая вспыхивает ярко голубым пламенем.
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - TankFlamethrower
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    capacity: 100
+    proto: FireThrowerBall
+    whitelist:
+      tags:
+        - FireThrowerBall
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Item
+    size: Small
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/tank.rsi
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/tank.rsi
+    state: base
+    netsync: false
+  - type: Appearance
+
+- type: entity
+  id: FireThrowerBall
+  name: реактивная смесь
+  parent: FoodInjectableBase
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/magic.rsi
+    netsync: false
+    layers:
+    - state: blastwave
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 1
+  - type: Damageable
+    damageContainer: Biological
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ParticlesFireNRF:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 20
+        mask:
+        - Impassable
+        - HighImpassable
+        restitution: 0.3  # fite me
+        friction: 0.2
+      ignition:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+           bounds: "-0.4,-0.4,0.4,0.4"
+        mask:
+        - BlobImpassable
+        - BulletImpassable
+  - type: PointLight
+    enabled: true
+    color: "#FF8080"
+    radius: 5.0
+    energy: 4.0
+  - type: Tag
+    tags:
+    - NoSpinOnThrow
+    - FireThrowerBall
+  - type: TimedDespawn
+    lifetime: 5
+  - type: ThrowingAngle
+    angle: 0
+  - type: IgniteOnCollide
+    fireStacks: 1
+    count: 100
+  - type: IgnitionSource
+    temperature: 700
+    ignited: true
+
+- type: entity
+  name: струя реактивного пламени
+  description: Очень горячо!
+  id: ParticlesFireNRF
+  components:
+  - type: Physics
+  - type: Sprite
+    layers:
+    - sprite: Backmen/Objects/Weapons/Gunsx64/Flamethrowers/flame.rsi
+      state: fire
+      shader: unshaded
+      map: [ "unshaded" ]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        hard: false
+        density: 7
+        shape:
+          !type:PhysShapeAabb
+           bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+        - MidImpassable
+  - type: Respirator
+    saturation: 0.1
+    maxSaturation: 0.1
+    damage:
+      types:
+        Asphyxiation: 10
+    damageRecovery:
+      types:
+        Asphyxiation: 0
+  - type: Temperature
+    coldDamage:
+      types:
+        Cold: 5 #per second, scales with temperature & other constants
+  - type: AtmosExposed
+  - type: TimedDespawn
+    lifetime: 100
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Heat: 5
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/energy_meat1.ogg"
+  - type: AmbientSound
+    volume: 4
+    range: 7
+    sound:
+      path: /Audio/Effects/fire.ogg
+  - type: IgniteOnCollide
+    fireStacks: 0.8
+    count: 100
+    fixtureId: fix1
+  - type: Transform
+    anchored: true
+  - type: IgnitionSource
+    temperature: 700
+    ignited: true
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Reactive
+    groups:
+      Flammable: [Touch]
+      Extinguish: [Touch]
+    reactions:
+    - reagents: [Water]
+      methods: [Touch]
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Heat: 10
+  - type: DamageContacts
+    damage:
+      types:
+        Heat: 10
+    ignoreWhitelist:
+      tags:
+      - NoSpinOnThrow
+
+- type: entity
+  name: струя реактивного пламени
+  description: Очень горячо!
+  id: ParticlesFireNRFHELL
+  parent: ParticlesFireNRF
+  suffix: АДское пламе
+  components:
+  - type: EdgeSpreader
+    id: Kudzu
+  - type: ActiveEdgeSpreader
+  - type: Kudzu
+    growthTickChance: 0.3
+    spreadChance: 0.4
+  - type: GrowingKudzu
+  - type: TimedDespawn
+    lifetime: 40
+
+- type: Tag
+  id: UpgradeStation
+
+- type: entity
+  parent: BaseItem
+  id: UpgradeStation
+  name: upgrade pack
+  description: Pack of attechment for weapons.
+  components:
+  - type: Sprite
+    sprite: Objects/Tools/Toolboxes/toolbox_red.rsi
+    state: icon
+  - type: Tag
+    tags:
+    - UpgradeStation

@@ -1,0 +1,16 @@
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicate
+  id: ClothingBackpackTier2Sponsor
+  name: вещмешок
+  description: Вещмешок в необычной расцветке. Принадлежат члену экипажа, находящемуся под покровительством спонсорской организации.
+  suffix: Набор вещей спонсора, Еретик
+  components:
+  - type: StorageFill
+    contents:
+      - id: ClothingHandsWatchDivine
+      - id: ClothingMaskSkull
+      - id: ClothingOuterHoodiePink
+      - id: ClothingNeckWingsBlackVampire
+      - id: ClothingNeckWingsPegas
+      - id: ClothingNeckWingsSkeletonRed

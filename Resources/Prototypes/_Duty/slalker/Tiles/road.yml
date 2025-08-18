@@ -1,0 +1,18 @@
+- type: tile
+  id: StalkerFloorRoad
+  name: Stalker road
+  sprite: /Textures/_Stalker/Tiles/road_gray/gray.png
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  baseTurf: Plating
+  isSubfloor: false
+  footstepSounds:
+    collection: STFootstepRock
+  itemDrop: FloorTileItemConcrete
+  heatCapacity: 10000
+  weather: true
+  indestructible: true

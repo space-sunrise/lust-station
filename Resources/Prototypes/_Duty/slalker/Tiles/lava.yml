@@ -1,0 +1,11 @@
+- type: tile
+  id: StalkerMapLava
+  name: StalkerLava
+  sprite: /Textures/_Stalker/Tiles/lava.png
+  baseTurf: Plating
+  isSubfloor: false
+  heatCapacity: 10000
+  weather: false
+  indestructible: true
+  footstepSounds:
+    collection: STFootstepDirt

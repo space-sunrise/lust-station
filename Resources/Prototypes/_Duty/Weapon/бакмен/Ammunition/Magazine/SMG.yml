@@ -1,0 +1,228 @@
+- type: entity
+  id: MagazinePistolSubMachineGun9x17
+  name: SMG magazine (9x17 mm)
+  parent: BaseMagazinePistolSubMachineGun
+  components:
+  - type: Tag
+    tags:
+      - MagazineSMG9x17
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol9x17
+    capacity: 30
+    whitelist:
+      tags:
+        - CartridgePistol9x17
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: MagazinePistolSubMachineGun57x28
+  name: MP7 magazine (5,7x28)
+  parent: BaseMagazinePistolSubMachineGun
+  components:
+  - type: Tag
+    tags:
+      - MagazineSMG57x28
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol57x28
+    capacity: 30
+    whitelist:
+      tags:
+        - CartridgePistol57x28
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_mp7.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: MagazinePistolSubMachineGunVector45ACP
+  name: Vector magazine (.45 Auto)
+  parent: BaseMagazinePistolSubMachineGun
+  components:
+  - type: Tag
+    tags:
+      - MagazineSMGVector45ACP
+  - type: BallisticAmmoProvider
+    proto: CartridgePistolACP
+    capacity: 20
+    whitelist:
+      tags:
+        - CartridgePistol45ACP
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_vector.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: MagazinePistolSubMachineGunVector45ACPExt
+  name: Vector magazine Extended (.45 Auto)
+  parent: MagazinePistolSubMachineGunVector45ACP
+  components:
+  - type: BallisticAmmoProvider
+    capacity: 40
+  - type: Sprite
+    layers:
+    - state: base_extended
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag_extended-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag_extended
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: MagazinePistolSubMachineGunScorpion9x17
+  name: Scorpion magazine (9x17 mm)
+  parent: BaseMagazinePistolSubMachineGun
+  components:
+  - type: Tag
+    tags:
+      - MagazineSMGScorpion9x17
+  - type: BallisticAmmoProvider
+    proto: CartridgePistol9x17
+    capacity: 20
+    whitelist:
+      tags:
+        - CartridgePistol9x17
+    soundInsert:
+      path: /Audio/Weapons/Guns/MagIn/bullet_insert.ogg
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_scorpion.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+
+- type: entity
+  id: MagazinePistolBoxSubMachineGun
+  name: SMG box magazine (9x17 mm)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolBoxSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol9x17
+    whitelist:
+      tags:
+        - CartridgePistol9x17
+    capacity: 45
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_boxmag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazinePistolDrumSubMachineGun
+  name: SMG Drum magazine (9x17 mm)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolDrumSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol9x17
+    whitelist:
+      tags:
+        - CartridgePistol9x17
+    capacity: 71
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_drummag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: entity
+  id: MagazinePistolTopSubMachineGun
+  name: SMG top mounted magazine (9x17 mm)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolTopSubMachineGun
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgePistol9x17
+    whitelist:
+      tags:
+        - CartridgePistol9x17
+    capacity: 50
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Pistol/submachinegun_top_moumted_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Appearance

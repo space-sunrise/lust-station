@@ -1,0 +1,90 @@
+- type: entity
+  id: StalkerMapGrass1
+  suffix: Stalker, Mapping
+  name: Трава
+  components:
+    - type: Clickable
+    - type: Sprite
+      sprite: /Textures/_Stalker/Decals/mappinggrass.rsi
+      layers:
+        - state: grass1
+      drawdepth: LowFloors
+    - type: SyncSprite
+    - type: RequiresTile
+    - type: Transform
+    - type: Tag
+      tags:
+        - HideContextMenu
+
+- type: entity
+  id: StalkerMapGrass2
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass2
+
+- type: entity
+  id: StalkerMapGrass3
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass3
+
+- type: entity
+  id: StalkerMapGrass4
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass4
+
+
+- type: entity
+  id: StalkerMapGrass5
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass5
+
+- type: entity
+  id: StalkerMapGrass6
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass6
+
+- type: entity
+  id: StalkerMapGrass7
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass7
+
+- type: entity
+  id: StalkerMapGrass8
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass8
+
+- type: entity
+  id: StalkerMapGrass9
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass9
+
+- type: entity
+  id: StalkerMapGrass10
+  parent: StalkerMapGrass1
+  components:
+    - type: Sprite
+      layers:
+        - state: grass10

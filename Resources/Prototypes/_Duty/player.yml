@@ -1,0 +1,138 @@
+- type: entity
+  id: PocketPlayer
+  name: Pocket player
+  parent: BaseItem
+  description: some music!
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/PocketPlayer.rsi
+    layers:
+    - state: "off"
+      map: ["enum.JukeboxVisualLayers.Base"]
+  - type: Jukebox
+    onState: on
+    offState: off
+    selectState: select
+  - type: Appearance
+  - type: ActivatableUI
+    key: enum.JukeboxUiKey.Key
+  - type: UserInterface
+    interfaces:
+        enum.JukeboxUiKey.Key:
+          type: JukeboxBoundUserInterface
+  - type: Item
+    size: Small
+
+- type: jukebox
+  id: Du_hast
+  name: Du hash - Rammstein
+  path:
+    path: /Audio/Jukebox/RammsteinDuhast.ogg
+
+- type: jukebox
+  id: Sonne
+  name: Sonne - Rammstein
+  path:
+    path: /Audio/Jukebox/RammsteinSonne.ogg
+
+- type: jukebox
+  id: Hydrogen
+  name: Hydrogen - M.O.O.N
+  path:
+    path: /Audio/Jukebox/M.O.O.N_Hydrogen.ogg
+
+- type: jukebox
+  id: WSV
+  name: World`s smallest violin - AJR
+  path:
+    path: /Audio/Jukebox/AJR_WorldsSmallestViolin.ogg
+
+- type: jukebox
+  id: Breathe
+  name: Breathe - The Prodigy
+  path:
+    path: /Audio/Jukebox/TheProdigyBreathe.ogg
+
+- type: jukebox
+  id: RunningOutBolgarich
+  name: Running Out By Bolgarich
+  path:
+    path: /Audio/Jukebox/RunningOutBolgarich.ogg
+
+- type: jukebox
+  id: MarchGrenades
+  name: March Of Britain's grenaders
+  path:
+    path: /Audio/Jukebox/MarchBritGrenade.ogg
+
+- type: jukebox
+  id: BattleJuice
+  name: Made Of Steel Battle Juice
+  path:
+    path: /Audio/Jukebox/MadeOfSteel.ogg
+
+- type: jukebox
+  id: BeforeEveryLoaded
+  name: BeforeEveryLoaded bucksoht
+  path:
+    path: /Audio/Jukebox/BeforeEveryLoaded.ogg
+
+- type: jukebox
+  id: SearchnDestroyARID
+  name: Search'nDestroy Arid Unturned
+  path:
+    path: /Audio/Jukebox/Search'nDestroyARID.ogg
+
+- type: jukebox
+  id: ScavWarRemix
+  name: ScavWarRemix
+  path:
+    path: /Audio/Jukebox/ScavWarRemix.ogg
+
+- type: jukebox
+  id: Arktida
+  name: Artkida - My Empire
+  path:
+    path: /Audio/Jukebox/Arktida.ogg
+
+- type: jukebox
+  id: miami
+  name: Miami Disco
+  path:
+    path: /Audio/Jukebox/MiamiDisco.ogg
+
+- type: jukebox
+  id: miami2
+  name: deep core
+  path:
+    path: /Audio/Jukebox/DeepCore.ogg
+
+- type: jukebox
+  id: GSN
+  name: GSN-Russian_Specnaz.ogg
+  path:
+    path: /Audio/Jukebox/GSN-Russian_Specnaz.ogg
+
+- type: jukebox
+  id: VanityFORSAKEN
+  name: VanityFORSAKEN
+  path:
+    path: /Audio/Jukebox/VanityFORSAKEN.ogg
+
+- type: jukebox
+  id: UnmistakableFORSAKEN
+  name: UnmistakableFORSAKEN
+  path:
+    path: /Audio/Jukebox/UnmistakableFORSAKEN.ogg
+
+- type: jukebox
+  id: DebitoDeSonnoFORSAKEN
+  name: DebitoDeSonnoFORSAKEN
+  path:
+    path: /Audio/Jukebox/DebitoDeSonnoFORSAKEN.ogg
+
+- type: jukebox
+  id: ChanceXSledgeQueenCanon
+  name: Celldweller - Good Luck you're Fucked
+  path:
+    path: /Audio/_Duty/SONGS/po prosbe/Celldweller - Good Luck You're Fucked.ogg

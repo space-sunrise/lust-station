@@ -1,0 +1,199 @@
+- type: entity
+  name: Ma Deuce
+  parent: BaseWeaponRifle
+  id: WeaponRifleMaDeuce
+  suffix: Дебаг
+  description: The M-60 is a large man portable machine, allowing for sustained, accurate suppressive firepower at the cost of mobility and handling. Commonly seen where their preferred tactics of fast, mobile aggression is ill suited.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/madeuce/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/madeuce/tiny.rsi
+  - type: Gun
+    fireRate: 12
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/LMGs/m60.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyRifleMaDeuse
+        insertSound: /Audio/Weapons/Guns64/LMGs/m60_reload.ogg
+        ejectSound: /Audio/Weapons/Guns64/LMGs/m60_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeAntiMateriel
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeAntiMateriel
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: MultiHandedItem
+
+- type: entity
+  name: MG-42
+  parent: BaseWeaponLightMachineGun
+  id: WeaponLightMachineGunMG42
+  suffix: Пулемёт
+  description: Пулемёт ОПЗ периода Второй мировой войны. Разработан фирмой Metall-und Lackwarenfabrik Johannes Großfuß в 1942 году. После войны поставки данного пулемета возобновили в 2342 году.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/mg42/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/mg42/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/mg42/tiny.rsi
+
+    cameraRecoilScalar: -4
+  - type: GunWieldBonus
+    minAngle: -30
+    maxAngle: -50
+  - type: Gun
+    minAngle: 34
+    maxAngle: 55
+    cameraRecoilScalar: 5
+    fireRate: 12
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/LMGs/t27.ogg
+      params:
+        volume: -3
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineHeavyMachineGunDrum
+        insertSound: /Audio/Weapons/Guns64/LMGs/t42_reload.ogg
+        ejectSound: /Audio/Weapons/Guns64/LMGs/t42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineHeavyMachineGunDrum
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.9
+  - type: GunRequiresWield
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.5
+  - type: HeldSpeedModifier
+
+- type: entity
+  name: MG-100 Vindicator Minigun
+  parent: BaseItem
+  id: WeaponMinigun100
+  suffix: Пулемёт
+  description: A six barreled rotary machine gun, The ultimate in man-portable firepower, capable of laying down high velocity armor piercing rounds this thing will no doubt pack a punch.. If you don't kill all your friends with it, you can use the stablizing system of the Powerpack to fire aimed fire, but you'll move incredibly slowly.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/minigun/big.rsi
+    state: icon
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
+    size: Ginormous
+  - type: Gun
+    minAngle: 1
+    maxAngle: 30
+    angleDecay: 10
+    angleIncrease: 1.5
+    cameraRecoilScalar: 0.5
+    fireRate: 15
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/LMGs/minigunSG.ogg
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - PowerpackRifle
+  - type: Appearance
+  - type: Wieldable
+  - type: UseDelay
+    delay: 2.3
+  - type: GunRequiresWield
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+
+- type: entity
+  name: NT HEM "Devastator"
+  parent: BaseItem
+  id: WeaponMinigunPulse
+  suffix: Пулемёт
+  description: NanoTrasen Heavy Energy Minigun "Devastator", a machine gun manufactured by NanoTrasen (not for sale!), used by NanoTrasen security companies and defense services, mainly used as a heavy machine gun for defense against pirate ships and xenos invasion.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/minigun/big.rsi
+    state: icon
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
+    size: Ginormous
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/minigun/tiny.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Gun
+    minAngle: 1
+    maxAngle: 30
+    angleDecay: 20
+    angleIncrease: 1.5
+    cameraRecoilScalar: 0.5
+    fireRate: 7
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: ClothingSlotAmmoProvider
+    targetSlot: BACK
+    providerWhitelist:
+      tags:
+      - PowerpackEnergy
+  - type: Appearance
+  - type: Wieldable
+  - type: UseDelay
+    delay: 2.3
+  - type: GunRequiresWield
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier

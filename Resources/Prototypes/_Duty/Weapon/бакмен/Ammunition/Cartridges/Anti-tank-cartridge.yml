@@ -1,0 +1,20 @@
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeAntitank
+  name: Cartridge (14.5 Anti-Tank)
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeAntitank
+  - type: CartridgeAmmo
+    proto: BulletAntitank
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Guns/Ammunition/Casings/anti_tank_large_casing.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 20

@@ -1,0 +1,237 @@
+- type: entity
+  id: BaseCartridgeMagnum345
+  name: cartridge (.345 magnum)
+  parent: BaseCartridge
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeMagnum345
+  - type: CartridgeAmmo
+    proto: BulletMagnum
+  - type: Sprite
+    netsync: false
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    layers:
+    - state: 45combat
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+  - type: StaticPrice
+    price: 10
+
+- type: entity
+  id: CartridgeMagnum345
+  name: cartridge (.345 magnum)
+  parent: BaseCartridgeMagnum345
+  components:
+  - type: Sprite
+    layers:
+    - state: 45fast #corvax-resprite
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: SpentAmmoVisuals
+    state: 45fast
+  - type: CartridgeAmmo
+    proto: BulletMagnum345
+
+- type: entity
+  id: CartridgePistol9x17
+  name: cartridge (9x17 mm)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgePistol9x17
+  - type: CartridgeAmmo
+    proto: BulletPistol9x17
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: 35combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 35combat
+
+- type: entity
+  id: CartridgePistol9x17Incendiary
+  name: cartridge incendiary (9x17 mm)
+  parent: CartridgePistol9x17
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol9x17Incendiary
+
+- type: entity
+  id: CartridgePistolACP
+  name: cartridge (.45 Auto)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgePistol45ACP
+  - type: CartridgeAmmo
+    proto: BulletPistolACP
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    scale: 0.75, 0.75
+    layers:
+      - state: 45combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 45combat
+
+- type: entity
+  id: CartridgePistolACPIncendiary
+  name: cartridge incendiary (.45 Auto)
+  parent: CartridgePistolACP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistolACPIncendiary
+
+- type: entity
+  id: CartridgePistol57x28
+  name: cartridge (5,7x28)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgePistol57x28
+  - type: CartridgeAmmo
+    proto: BulletPistol57x28
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    scale: 0.6, 0.6
+    layers:
+      - state: 20combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 20combat
+
+- type: entity
+  id: CartridgePistol57x28Incendiary
+  name: cartridge incendiary (5,7x28)
+  parent: CartridgePistol57x28
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol57x28Incendiary
+
+- type: entity
+  id: CartridgePistol50AE
+  name: cartridge (.50 AE)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgePistol50AE
+  - type: CartridgeAmmo
+    proto: BulletPistol50AE
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: 45combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 45combat
+
+- type: entity
+  id: CartridgePistol50AEAP
+  name: cartridge (.50 AE AP)
+  parent: CartridgePistol50AE
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol50AEAP
+
+- type: entity
+  id: CartridgePistol50AEIncendiary
+  name: cartridge incendiary (.50 AE)
+  parent: CartridgePistol50AE
+  components:
+  - type: CartridgeAmmo
+    proto: BulletPistol50AEIncendiary
+
+- type: entity
+  id: CartridgeRevolver357Magnum
+  name: cartridge (.357 Magnum)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeMagnum
+  - type: CartridgeAmmo
+    proto: BulletRevolver357Magnum
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    layers:
+      - state: 45combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 45combat
+
+- type: entity
+  id: CartridgeRevolver357MagnumAP
+  name: cartridge (.357 Magnum AP)
+  parent: CartridgeRevolver357Magnum
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRevolver357MagnumAP
+
+- type: entity
+  id: CartridgeRevolver38Special
+  name: cartridge (.38 Special)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeRevolver38Special
+  - type: CartridgeAmmo
+    proto: BulletRevolver38Special
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    scale: 0.8, 0.8
+    layers:
+      - state: 45combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 45combat
+
+- type: entity
+  id: CartridgeRevolver38SpecialAP
+  name: cartridge (.38 Special AP)
+  parent: CartridgeRevolver38Special
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRevolver38SpecialAP
+
+- type: entity
+  id: CartridgeRevolver44Magnum
+  name: cartridge (.44 Magnum)
+  parent: BaseCartridgePistol
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - CartridgeRevolver44Magnum
+  - type: CartridgeAmmo
+    proto: BulletRevolver44Magnum
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/ammo_casing.rsi
+    scale: 1.2, 1.2
+    layers:
+      - state: 45combat
+        map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: SpentAmmoVisuals
+    state: 45combat
+
+- type: entity
+  id: CartridgeRevolver44MagnumAP
+  name: cartridge (.44 Magnum AP)
+  parent: CartridgeRevolver44Magnum
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRevolver44MagnumAP

@@ -1,0 +1,23 @@
+- type: entity
+  id: BulletFire
+  name: огненная пуля
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 8
+  - type: IgniteOnCollide
+    fireStacks: 0.3
+
+- type: entity
+  id: BulletHeavyMinigun
+  name: minigun bullet (.15 rifle)
+  parent: BulletHeavyRifle
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 11

@@ -1,0 +1,278 @@
+- type: entity
+  id: BulletPistol57x28
+  name: bullet (5,7x28)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 7
+        ArmorPiercing: 5
+
+- type: entity
+  id: BulletPistol57x28Uranium
+  parent: BaseBulletUranium
+  name: bullet (5,7x28 uranium)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 2
+        Piercing: 7
+        ArmorPiercing: 3
+
+- type: entity
+  id: BulletPistol57x28Practice
+  name: bullet (5,7x28 practice)
+  parent: BaseBulletPractice
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  id: BulletPistol57x28Incendiary
+  parent: BaseBulletIncendiary
+  name: bullet (5,7x28 incendiary)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        ArmorPiercing: 2
+        Heat: 8
+
+- type: entity
+  id: BulletPistol9x17
+  name: bullet (9x17 mm)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+
+- type: entity
+  id: BulletPistol9x17Uranium
+  parent: BaseBulletUranium
+  name: bullet (9x17 mm uranium)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 5
+        Piercing: 5
+
+- type: entity
+  id: BulletPistol9x17Practice
+  name: bullet (9x17 practice)
+  parent: BaseBulletPractice
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+
+- type: entity
+  id: BulletPistol9x17Incendiary
+  parent: BaseBulletIncendiary
+  name: bullet (9x17 incendiary)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 2
+        Heat: 7
+
+- type: entity
+  id: BulletPistolACP
+  name: bullet (.45 Auto)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+        Blunt: 5
+
+- type: entity
+  id: BulletPistolACPUranium
+  parent: BaseBulletUranium
+  name: bullet (.45 Auto uranium)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 5
+        Piercing: 2
+        Blunt: 5
+
+- type: entity
+  id: BulletPistolACPPractice
+  name: bullet (.45 Auto practice)
+  parent: BaseBulletPractice
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+
+- type: entity
+  id: BulletPistolACPIncendiary
+  parent: BaseBulletIncendiary
+  name: bullet (.45 Auto incendiary)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+        Heat: 7
+
+- type: entity
+  id: BulletPistol50AE
+  name: bullet (.50 AE)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+        Slash: 20
+
+- type: entity
+  id: BulletPistol50AEAP
+  name: bullet (.50 AE AP)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        ArmorPiercing: 15
+        Piercing: 20
+        Slash: 10
+
+- type: entity
+  id: BulletPistol50AEUranium
+  parent: BaseBulletUranium
+  name: bullet (.50 AE uranium)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 20
+        Piercing: 10
+        Blunt: 10
+
+- type: entity
+  id: BulletPistol50AEPractice
+  name: bullet (.50 AE practice)
+  parent: BaseBulletPractice
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 10
+
+- type: entity
+  id: BulletPistol50AEIncendiary
+  parent: BaseBulletIncendiary
+  name: bullet (.50 AE incendiary)
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Blunt: 10
+        Heat: 25
+
+- type: entity
+  id: BulletRevolver38Special
+  name: bullet (.38 Special)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+        ArmorPiercing: 15
+
+- type: entity
+  id: BulletRevolver357Magnum
+  name: bullet (.357 Magnum)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 20
+        Slash: 25
+
+- type: entity
+  id: BulletRevolver44Magnum
+  name: bullet (.44 Magnum)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+        Slash: 20
+        ArmorPiercing: 20
+
+- type: entity
+  id: BulletRevolver38SpecialAP
+  name: bullet (.38 Special AP)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        ArmorPiercing: 30
+
+- type: entity
+  id: BulletRevolver357MagnumAP
+  name: bullet (.357 Magnum AP)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Slash: 30
+        ArmorPiercing: 20
+
+- type: entity
+  id: BulletRevolver44MagnumAP
+  name: bullet (.44 Magnum AP)
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Slash: 20
+        ArmorPiercing: 40

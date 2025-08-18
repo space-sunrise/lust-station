@@ -1,0 +1,298 @@
+- type: entity
+  name: Dragunov
+  parent: BaseWeaponRifle
+  id: WeaponRifleDragunov
+  suffix: Винтовка
+  description: A semiautomatic sniper rifle, famed for it's marksmanship, and is built from the ground up for it.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/dragunov/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/dragunov/tiny.rsi
+
+    cameraRecoilScalar: -5
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -44
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    minAngle: 24
+    maxAngle: 45
+    cameraRecoilScalar: 10
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Snipers/svd.ogg
+      params:
+        volume: -5
+  - type: ChamberMagazineAmmoProvider
+  - type: BallisticAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns64/Snipers/svd_cocked.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineRifleLightSniper
+        insertSound: /Audio/Weapons/Guns64/Snipers/svd_reload.ogg
+        ejectSound: /Audio/Weapons/Guns64/Snipers/svd_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifleLightSniper
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifleLight762
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifleLight762
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.5
+
+
+- type: entity
+  name: SR-127 Bauer bolt action rifle
+  parent: BaseWeaponRifle
+  id: WeaponRifleSR127
+  suffix: Винтовка
+  description: The Bauer SR-127 is the standard issue bolt action rifle used by the United Earth Gov. Known for its long range accuracy and use by marksmen despite its age and lack of IFF. It has an irremoveable scope. Uses .60 anti-material magazines."
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/snl177/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/snl177/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/snl177/tiny.rsi
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: -43
+
+    cameraRecoilScalar: -1
+  - type: Gun
+    fireRate: 1
+    cameraRecoilScalar: 6
+    minAngle: 24
+    maxAngle: 45
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Snipers/tl127.ogg
+      params:
+        volume: -5
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Rifles/m41a_empty.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: BallisticAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns64/Snipers/tl-127_bolt.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAntiMaterielRifleSR
+        insertSound: /Audio/Weapons/Guns64/Rifles/m41a_reload.ogg
+        ejectSound: /Audio/Weapons/Guns64/Rifles/m41a_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineAntiMaterielRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: GunRequiresWield
+  - type: Wieldable
+  - type: UseDelay
+    delay: 1.3
+
+
+- type: entity
+  name: Kardashev-Mosin
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosinNew
+  suffix: Винтовка
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: CartridgeRifleLight762
+    cycleable: false
+    whitelist:
+      tags:
+      - CartridgeRifle762
+  - type: Gun
+    fireRate: 0.8
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.8
+  - type: GunRequiresWield
+
+
+- type: entity
+  name: M1 Garand
+  parent: BaseWeaponSniper
+  id: WeaponSniperGarand
+  suffix: Винтовка
+  description: The Carlford-1 is a remastered classic made by Carlford Armories, made to fit in the modern day. Most of the noticeable differences are minor rail modifications, other than that. It is a faithful recreation with the trademark ping sound and all.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/garand/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/garand/tiny.rsi
+  - type: BallisticAmmoProvider
+    capacity: 10
+    proto: CartridgeRifleLight762UEG
+    whitelist:
+      tags:
+      - CartridgeRifle762UEG
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Snipers/garand.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Snipers/sniper_empty.ogg
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.8
+  - type: GunRequiresWield
+
+
+- type: entity
+  name: Kardashev-Mosin AI
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosinAI
+  categories: [     ]
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Gun
+    minAngle: 24
+    maxAngle: 45
+    fireRate: 0.8
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.8
+
+- type: entity
+  name: Kardashev-Mosin AI Sniper
+  parent: BaseWeaponSniper
+  id: WeaponSniperMosinAISniper
+  categories: [     ]
+  description: A weapon for hunting, or endless trench warfare. Uses .30 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/mosin/tiny.rsi
+  - type: Gun
+    fireRate: 0.8
+  - type: Wieldable
+  - type: UseDelay
+    delay: 0.8
+
+- type: entity
+  name: PTRD-M
+  parent: BaseWeaponSniper
+  id: WeaponSniperPtrd-m
+  description: Dragunov portable anti-tank rifle. It fires analog armor-piercing projectiles of 14.5 mm caliber. Uses anti-tank ammunition
+  components:
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/ptrdm/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/ptrdm/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/ptrdm/tiny.rsi
+  - type: Gun
+    fireRate: 1
+    cameraRecoilScalar: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Snipers/tl122.ogg
+      params:
+        volume: -2
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Rifles/m41a_empty.ogg
+  - type: BallisticAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns64/Snipers/tl-127_bolt.ogg
+    whitelist:
+      tags:
+      - CartridgeAntitank
+    capacity: 1
+    proto: CartridgeAntitank
+
+- type: entity
+  name: Remington 700
+  parent: BaseWeaponSniper
+  id: WeaponSniperRemington700
+  suffix: Винтовка
+  description: Remington 700 охотничая винтовка под калибр 308 винчестер, был сделан по реплике чертежей Earth Armories сторонними компаниями, каркас винтовки исполнен из пластика.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/remington700/big.rsi
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/remington700/tiny.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Snipers/remington700/tiny.rsi
+  - type: Gun
+    fireRate: 0.8
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Snipers/dmr37.ogg
+    soundEmpty:
+      path: /Audio/Weapons/Guns64/Snipers/sniper_empty.ogg
+  - type: BallisticAmmoProvider
+    capacity: 3
+    proto: Cartridge308win
+    whitelist:
+      tags:
+      - CartridgeRifle300win
+  - type: Wieldable
+  - type: UseDelay
+    delay: 2.8
+  - type: UseDelayOnShoot
+  - type: GunRequiresWield

@@ -1,0 +1,158 @@
+- type: entity
+  id: STFloorWaterEntity
+  name: water
+  abstract: true
+  description: A real thirst quencher.
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: FloorOccluder
+  - type: Transform
+    anchored: true
+  - type: SyncSprite
+  - type: Clickable
+  - type: Sprite
+    sprite: Tiles/Planet/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: shoreline_water
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 200 #.inf seems to break the whole yaml file, but would definitely be preferable. 
+        reagents:
+        - ReagentId: STToxicWater
+          Quantity: 200
+  - type: DrainableSolution
+    solution: pool
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.8
+    sprintSpeedModifier: 0.8
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        layer:
+          - SlipLayer
+        mask:
+          - ItemMask
+        density: 1000
+        hard: false
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: STFootstepWater
+      params:
+        volume: 8
+  - type: StepTrigger
+    requiredTriggeredSpeed: 0
+    intersectRatio: 0.1
+    blacklist:
+      tags:
+        - Catwalk
+  - type: TileEntityEffect
+    effects:
+    - !type:ExtinguishReaction
+
+- type: entity
+  parent: STFloorWaterEntity
+  name: вода
+  description: Мутная вода Зоны.
+  id: FloorWaterEntityStalker1
+  suffix: Stalker
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Stalker/Tiles/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: water1
+- type: entity
+  parent: FloorWaterEntityStalker1
+  id: FloorWaterEntityStalker2
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Stalker/Tiles/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: water2
+- type: entity
+  parent: FloorWaterEntityStalker1
+  id: FloorWaterEntityStalker3
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Stalker/Tiles/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: water3
+- type: entity
+  parent: FloorWaterEntityStalker1
+  id: FloorWaterEntityStalker4
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Stalker/Tiles/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: water4
+  - type: RadiationSource
+    slope: 1
+    intensity: 0.5
+  - type: PointLight
+    radius: 2
+    energy: 1
+    color: "#c7e153"
+    castShadows: false
+- type: entity
+  parent: FloorWaterEntityStalker1
+  name: химические отходы
+  description: Яркие химические отходы Зоны.
+  id: FloorWaterEntityStalker5
+  placement:
+    mode: SnapgridCenter
+    snap:
+    - Wall
+  components:
+  - type: Sprite
+    sprite: _Stalker/Tiles/water.rsi
+    drawdepth: BelowFloor
+    layers:
+      - state: water5
+  - type: DamageContacts
+    damage:
+      types:
+        Caustic: 1
+  - type: PointLight
+    radius: 2
+    energy: 1
+    color: "#c0f133"
+    castShadows: false
+  - type: SpeedModifierContacts
+    walkSpeedModifier: 0.3
+    sprintSpeedModifier: 0.3
+  - type: SolutionContainerManager
+    solutions:
+      pool:
+        maxVol: 10000
+        reagents:
+        - ReagentId: Toxin
+          Quantity: 10000

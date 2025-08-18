@@ -1,0 +1,97 @@
+- type: entity
+  id: BulletMagnum345
+  name: 345 magnum bullet
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Sprite
+    sprite: Backmen/Effects/muzzle/divet.rsi
+    layers:
+    - state: projectiles_divet
+      shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 30
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: Tag
+    tags:
+      - BulletMagnum345
+
+- type: entity
+  categories: [     ]
+  parent: BaseBullet
+  id: BulletHeavy62
+  name: bullet (.62 rifle)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 39
+
+- type: entity
+  categories: [     ]
+  parent: BaseBulletTrigger
+  id: BulletRocket20
+  name: bullet (рельсотрон)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 4
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 3
+    intensitySlope: 1
+    totalIntensity: 1
+    maxTileBreak: 0
+    tileBreakScale: 0
+    canCreateVacuum: false
+
+- type: entity
+  id: BulletGrenadeTearGas
+  name: tear gas grenade
+  parent: BaseBulletTrigger
+  categories: [     ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: Projectile
+    deleteOnCollide: false
+    damage:
+      types:
+        Blunt: 1
+    soundHit:
+      path: /Audio/Effects/gen_hit.ogg
+  - type: SmokeOnTrigger
+    duration: 10
+    spreadAmount: 30
+    solution:
+      reagents:
+      - ReagentId: TearGas
+        Quantity: 50
+
+- type: entity
+  id: BulletGrenadeNonletal
+  name: non letal grenade
+  parent: BaseBulletTrigger
+  categories: [     ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+      - state: grenade
+  - type: FlashOnTrigger
+    range: 7
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: ActiveTimerTrigger
+    timeRemaining: 0.3
+  - type: DeleteOnTrigger
+  - type: StaminaDamageOnCollide
+    damage: 80

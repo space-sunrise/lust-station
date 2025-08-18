@@ -1,0 +1,227 @@
+- type: entity
+  name: 711-MarkCL Rivet Gun
+  parent: BaseWeaponPistol
+  id: WeaponPistolRivet
+  description: The 711-MarkCL Rivet Gun is the latest refinement from Timson Tools' long line of friendly tools. Useful for rapid repairs at a distance!
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Misc/rivet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Misc/rivet.rsi
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolNail
+        insertSound: /Audio/Weapons/Guns64/Pistols/divet_magin.ogg
+        ejectSound: /Audio/Weapons/Guns64/Pistols/divet_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazinePistolNail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeNail
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeNail
+  - type: ChamberMagazineAmmoProvider
+    boltClosed: null
+  - type: Gun
+    projectileSpeed: 8
+    clumsyProof: true
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/Backmen/Weapons/Misc/rivet_fire.ogg
+      params:
+        volume: -10
+
+- type: Tag
+  id: MagazinePistolNail
+
+- type: entity
+  id: MagazinePistolNail
+  name: nails magazine (.nail)
+  parent: BaseMagazinePistol
+  components:
+  - type: Tag
+    tags:
+      - MagazinePistolNail
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeNail
+    whitelist:
+      tags:
+        - CartridgeNail
+    capacity: 45
+  - type: Item
+    size: Small
+  - type: Sprite
+    netsync: false
+    sprite: Backmen/Objects/Weapons/Gunsx64/Magazines/Misc/rivet.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+
+- type: Tag
+  id: CartridgeNail
+
+- type: entity
+  id: CartridgeNail
+  name: nail
+  parent: BaseCartridge
+  components:
+  - type: Tag
+    tags:
+      - Cartridge
+      - CartridgeNail
+  - type: Sprite
+    netsync: false
+    sprite: Backmen/Objects/Weapons/Gunsx64/Ammunition/Casings/nail.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: CartridgeAmmo
+    deleteOnSpawn: true
+    proto: BulletNail
+  - type: Appearance
+  - type: StaticPrice
+    price: 10
+
+- type: Tag
+  id: BulletNail
+
+- type: entity
+  id: BulletNail
+  name: nail
+  parent: BaseBullet
+  categories: [     ]
+  components:
+  - type: Sprite
+    sprite: Backmen/test/base/rsi/Textures/Effects/muzzle/divet.rsi
+    layers:
+    - state: projectiles_divet
+      shader: unshaded
+  - type: Ammo
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 9
+        Structural: -20
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: Tag
+    tags:
+      - BulletNail
+
+- type: entity
+  id: TeslaAmmoEnergyBall
+  parent: TeslaMiniEnergyBall
+  name: mini ball lightning
+  description: The cub of a destructive energy cage. Not as dangerous, but still not worth touching with bare hands.
+  categories: [     ]
+  components:
+  - type: TimedDespawn
+    lifetime: 15
+  - type: Sprite
+    drawdepth: Effects
+    sprite: Structures/Power/Generation/Tesla/energy_miniball.rsi
+    shader: unshaded
+    layers:
+    - state: tesla_projectile
+  - type: Physics
+    bodyType: Dynamic
+    linearDamping: 0
+    angularDamping: 0
+  - type: FlyBySound
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+  - type: Projectile
+    impactEffect: BulletImpactEffect
+    damage:
+      groups:
+        Brute: 20
+        Burn: 20
+    soundHit:
+      path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
+  - type: LightningArcShooter
+    arcDepth: 2
+    maxLightningArc: 1
+    shootMinInterval: 0
+    shootMaxInterval: 1
+    shootRange: 3
+    lightningPrototype: Lightning
+
+- type: entity
+  name: BFG - 900
+  parent: BaseItem
+  id: WeaponBFG900
+  description: Экспериментальнре оружие правительства земли, BlueSpaceGun.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    size: HeavyMachineGun
+  - type: AmmoCounter
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon2.ogg
+    fireRate: 1
+    projectileSpeed: 2
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+  - type: BallisticAmmoProvider
+    proto: TeslaAmmoEnergyBall
+    capacity: 10
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot
+        showEnts: False
+        occludes: True
+        ent: null
+      storagebase: !type:Container
+        showEnts: False
+        occludes: True
+        ents: [ ]
+      ballistic-ammo: !type:Container
+        showEnts: False
+        occludes: True
+        ents: [ ]

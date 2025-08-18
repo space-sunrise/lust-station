@@ -1,0 +1,232 @@
+- type: entity
+  name: AKMS Tactical
+  parent: WeaponAKMSRifle
+  id: WeaponAKMSTacticalRifle
+  suffix: Автомат Tactical
+  description: An iconic weapon of war. Uses 7.62x39 ammo.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/akms/bigsuper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/akms/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/akms/tinysuper.rsi
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    angleIncrease: -3
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -2
+  - type: UseDelay
+    delay: 0.7
+
+- type: entity
+  name: M-28 Tactical
+  parent: WeaponRifleM28
+  id: WeaponRifleM28Tactical
+  suffix: Автомат Tactical
+  description: The M-28 assault rifle used to be the EarthGov army standard issue rifle.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/m28/bigsuper.rsi
+    layers:
+    - state: laser
+      shader: unshaded
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/m28/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/m28/tinysuper.rsi
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: 0
+    angleIncrease: -7
+  - type: UseDelay
+    delay: 0.3
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 8
+
+- type: entity
+  name: Vector Tactical
+  parent: WeaponSubMachineGunVectorSpecial
+  id: WeaponSubMachineGunVectorSpecialTactical
+  suffix: Пистолет-пулемёт Tactical
+  description: The Vector used by police special force.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/vector/bigsuper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/vector/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/vector/tinysuper.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -3
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: -28
+    angleIncrease: -7
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: MP5 Tactical
+  parent: WeaponSubMachineGunMP5
+  id: WeaponSubMachineGunMP5Tactical
+  suffix: Пистолет-пулемёт Tactical
+  description: The RivArms SMG-5 submachinegun, an update to a classic design. A light firearm capable of effective one-handed use that is ideal for close to medium range engagements.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/mp5/bigsuper.rsi
+    layers:
+    - state: laser
+      shader: unshaded
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/mp5/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/mp5/tinysuper.rsi
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: 0
+    angleIncrease: -5
+  - type: UnpoweredFlashlight
+  - type: PointLight
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 8
+  - type: UseDelay
+    delay: 0.2
+
+- type: entity
+  name: AK74-U Tactical
+  parent: WeaponRifleAKSU
+  id: WeaponRifleAKSUTactical
+  suffix: Автомат Tactical
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/aksu/bigsuper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/aksu/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/Rifles/aksu/tinysuper.rsi
+    size: NormalLarge
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -23
+    maxAngle: 0
+    angleIncrease: -4
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -3
+  - type: UseDelay
+    delay: 0.1
+
+- type: entity
+  name: P-90 Tactical
+  parent: WeaponSubMachineGunP90
+  id: WeaponSubMachineGunP90Tactical
+  suffix: Пистолет-пулемёт Tactical
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/p90/bigsuper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/p90/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/SMGs/p90/tinysuper.rsi
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -22
+    maxAngle: 0
+    angleIncrease: -5
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -3
+  - type: UseDelay
+    delay: 0.1
+
+- type: entity
+  name: RPD Tactical
+  parent: WeaponLightMachineGunRPD
+  id: WeaponLightMachineGunRPDTactical
+  suffix: Пулемёт Tactical
+  description: A cheap and robust machinegun, sometimes better known as an 'RPD'. Despite lacking attachment points beyond its underbarrel, remains a popular product on the black market with its cheap cost, high capacity and higher than usual caliber rounds.
+  components:
+  - type: Sprite
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/rpd/bigsuper.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/rpd/tinysuper.rsi
+  - type: Item
+    sprite: Backmen/Objects/Weapons/Gunsx64/LMGs/rpd/tinysuper.rsi
+
+    cameraRecoilScalar: -4.5
+  - type: GunWieldBonus
+    minAngle: -30
+    maxAngle: -50
+    angleIncrease: -3
+  - type: Gun
+    minAngle: 34
+    maxAngle: 55
+    cameraRecoilScalar: 5
+    fireRate: 5
+    soundGunshot:
+      path: /Audio/Weapons/Guns64/Rifles/ak47.ogg
+  - type: UseDelay
+    delay: 0.9
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+  - type: GunRequiresWield

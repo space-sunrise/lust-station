@@ -1,0 +1,47 @@
+- type: entity
+  parent: BaseItem
+  id: ADTCombatHypo
+  name: Гипоспрей Офицера синего Щита
+  description: Модель гипоспрея, разработанная NT для использования в боевых ситуациях - для глав и не только.
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/adt_combathypo.rsi
+    state: icon
+  - type: Item
+    sprite: _DeadSpace/adt_combathypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 20
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.6
+
+- type: entity
+  name: гипоспрей парамедика
+  parent: BaseItem
+  description: Черт возьми, это же гипоспрей парамедика!! что же он делает??
+  id: HypoParamedic
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/Sponsor/DragonFox/hypo.rsi
+    state: hypo
+  - type: Item
+    sprite: _DeadSpace/Sponsor/DragonFox/hypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 15
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
