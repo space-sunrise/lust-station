@@ -7,12 +7,25 @@ using Robust.Shared.Containers;
 using Content.Shared.Mind.Components;
 using Content.Server.Actions;
 using Content.Shared.Actions.Components;
+using Content.Shared.Mobs;
+using Content.Server.Explosion.EntitySystems;
+using Content.Shared.Chat.Prototypes;
+using Robust.Shared.Prototypes;
+using Content.Shared.Damage;
+using Content.Shared.Mobs.Components;
+using System.Linq;
 namespace Content.Server._Lust.Inowe;
 
 public sealed class AiShellSystem : EntitySystem
 {
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly ActionsSystem _actions = default!;
+
+    private readonly ProtoId<ChatNotificationPrototype> _aiShellDamaged = "AiShellDamaged";
+    private readonly ProtoId<ChatNotificationPrototype> _aiShellCritical = "AiShellCritical";
+    private readonly ProtoId<ChatNotificationPrototype> _aiShellNotResponse = "AiShellNotResponse";
+    private readonly ProtoId<ChatNotificationPrototype> _aiShellResponding = "AiShellResponding";
+
     private bool _transferInProgress;
 
     public override void Initialize()
@@ -21,6 +34,8 @@ public sealed class AiShellSystem : EntitySystem
         SubscribeLocalEvent<AiShellComponent, GetVerbsEvent<Verb>>(AddShellVerb);
         SubscribeLocalEvent<AiCoreActionsComponent, GoToShellActionEvent>(HandleGoToShell);
         SubscribeLocalEvent<AiShellComponent, ReturnToCoreActionEvent>(HandleReturnToCore);
+        SubscribeLocalEvent<AiShellComponent, MobStateChangedEvent>(OnShellStateChanged);
+        SubscribeLocalEvent<AiShellComponent, DamageChangedEvent>(OnDamageChanged);
     }
 
     private void AddCoreVerb(EntityUid uid, AiShellVerbComponent comp, GetVerbsEvent<Verb> args)
@@ -118,6 +133,17 @@ public sealed class AiShellSystem : EntitySystem
         if (!TryComp<AiShellComponent>(shell, out var shellComp) || shellComp.IsTaken)
             return false;
 
+        if (TryComp<MobStateComponent>(shell, out var mobState))
+        {
+            if (mobState.CurrentState == MobState.Critical || mobState.CurrentState == MobState.Dead)
+            {
+                var ev = new ChatNotificationEvent(_aiShellNotResponse, shell);
+                RaiseLocalEvent(shellComp.CoreEntity, ref ev);
+
+                return false;
+            }
+        }
+
         var core = shellComp.CoreEntity;
         if (TryComp<AiCoreActionsComponent>(core, out var coreActions) && coreActions.GoToShellActionId is { } goId &&
             TryComp<ActionsComponent>(core, out var coreActComp))
@@ -212,5 +238,31 @@ public sealed class AiShellSystem : EntitySystem
             return contained;
 
         return coreEntity;
+    }
+
+    private void OnDamageChanged(EntityUid uid, AiShellComponent comp, ref DamageChangedEvent args)
+    {
+        if (!args.DamageIncreased)
+            return;
+
+        var ev = new ChatNotificationEvent(_aiShellDamaged, uid);
+        RaiseLocalEvent(comp.CoreEntity, ref ev);
+    }
+
+    private void OnShellStateChanged(EntityUid uid, AiShellComponent comp, ref MobStateChangedEvent args)
+    {
+        if (args.NewMobState == MobState.Critical)
+        {
+            MoveMindToCore(uid, comp.CoreEntity);
+
+            var ev = new ChatNotificationEvent(_aiShellCritical, uid);
+            RaiseLocalEvent(comp.CoreEntity, ref ev);
+        }
+
+        if (args.NewMobState == MobState.Alive)
+        {
+            var ev = new ChatNotificationEvent(_aiShellResponding, uid);
+            RaiseLocalEvent(comp.CoreEntity, ref ev);
+        }
     }
 }

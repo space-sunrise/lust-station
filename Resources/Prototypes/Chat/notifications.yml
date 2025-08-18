@@ -25,4 +25,37 @@
   id: AiShellHolopadCall
   message: ai-shell-holopad-call
   color: Cyan
+  sound: /Audio/Misc/notice2.ogg
   nextDelay: 8
+
+# Sunrise-add
+- type: chatNotification
+  id: AiShellDamaged
+  message: ai-shell-damaged
+  color: Orange
+  sound: /Audio/Misc/notice2.ogg
+  nextDelay: 1
+
+# Sunrise-add
+- type: chatNotification
+  id: AiShellCritical
+  message: ai-shell-critical
+  color: Red
+  sound: /Audio/Misc/notice2.ogg
+  nextDelay: 1
+
+# Sunrise-add
+- type: chatNotification
+  id: AiShellNotResponse
+  message: ai-shell-not-response
+  color: Orange
+  sound: /Audio/Misc/notice2.ogg
+  nextDelay: 3
+
+# Sunrise-add
+- type: chatNotification
+  id: AiShellResponding
+  message: ai-shell-responding
+  color: Green
+  sound: /Audio/Misc/notice2.ogg
+  nextDelay: 1
