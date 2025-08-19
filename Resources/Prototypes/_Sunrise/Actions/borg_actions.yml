@@ -1,7 +1,6 @@
 ﻿- type: entity
   parent: BaseAction
   id: ActionToggleBorgMagboots
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: Clothing/Shoes/Boots/magboots-advanced.rsi, state: icon }
@@ -14,7 +13,6 @@
 - type: entity
   parent: BaseAction
   id: BorgCuffed
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: Objects/Misc/cablecuffs.rsi, state: cuff }
@@ -34,7 +32,6 @@
 - type: entity
   parent: BaseAction
   id: FabricateLollipop
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: _Sunrise/Objects/Consumable/Food/candy.rsi, state: lollipop }
@@ -46,7 +43,6 @@
 - type: entity
   parent: BaseAction
   id: FabricateGumball
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: _Sunrise/Objects/Consumable/Food/candy.rsi, state: gumball }
@@ -58,7 +54,6 @@
 - type: entity
   parent: BaseAction
   id: FabricateCookie
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: Objects/Consumable/Food/Baked/misc.rsi, state: COOKIE!!! }
@@ -70,7 +65,6 @@
 - type: entity
   parent: BaseAction
   id: FabricateSoap
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: { sprite: Objects/Specific/Janitorial/soap.rsi, state: soap-4 }
@@ -82,7 +76,6 @@
 - type: entity
   parent: BaseAction
   id: PieThrow
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     icon: _Sunrise/Interface/Actions/pie.png
@@ -99,7 +92,6 @@
   id: ActionViewCrewManifest
   name: View Crew Manifest
   description: View the View crew manifest station.
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     itemIconStyle: NoItem

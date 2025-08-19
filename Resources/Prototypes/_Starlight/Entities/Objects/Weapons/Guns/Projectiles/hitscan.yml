@@ -1,6 +1,5 @@
 - type: entity
   id: ImpactEffect
-  categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
     lifetime: 0.6
@@ -1058,7 +1057,6 @@
   parent: ProjectilePolyboltBase
   name: john toe polybolt
   description: Nooo, I don't wanna be john toe!
-  categories: [ HideSpawnMenu ]
   components:
   - type: PolymorphOnTrigger
     polymorph: AdmemeForcedJohnToe

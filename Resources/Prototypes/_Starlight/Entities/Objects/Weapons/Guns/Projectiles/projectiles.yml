@@ -50,7 +50,6 @@
   name: taser bolt
   id: BulletAdvTaser
   parent: BaseBulletStarlight
-  categories: [ HideSpawnMenu ]
   components:
   - type: FlyBySound
     sound:
@@ -94,7 +93,6 @@
 - type: entity
   id: BaseBulletRubber
   parent: BaseBulletStarlight
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
@@ -108,11 +106,10 @@
       path: /Audio/Weapons/Guns/Hits/snap.ogg
   - type: StaminaDamageOnCollide
     damage: 12 # 9 hits to stun sounds reasonable
-      
+
 - type: entity
   id: BulletEnergyCrossbow
   parent: BaseBullet
-  categories: [ HideSpawnMenu ]
   components:
   - type: Reflective
     reflective:
@@ -132,11 +129,10 @@
   - type: TimedDespawn
     lifetime: 0.4
   - type: GatheringProjectile
-  
+
 - type: entity
   id: BulletMiniEnergyCrossbow
   parent: BulletEnergyCrossbow
-  categories: [ HideSpawnMenu ]
   components:
   - type: StaminaDamageOnCollide
     damage: 40

@@ -1,7 +1,6 @@
 - type: entity
   # Just fades out with no movement animation
   id: CMEffectScreech
-  categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
     lifetime: 3.2
@@ -19,7 +18,6 @@
 - type: entity
   # Just fades out with no movement animation
   id: CMEffectScreechShort
-  categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
     lifetime: 1.4

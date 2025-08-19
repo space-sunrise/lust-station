@@ -1,7 +1,6 @@
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatHoodCoatNekoBase
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Head/Hoods/catHood.rsi
@@ -22,7 +21,6 @@
 - type: entity
   parent: ClothingHeadHatHoodCoatNekoBase
   id: ClothingHeadHatHoodCoatNeko
-  categories: [ HideSpawnMenu ]
   name: neko coat hood
   description: You look some cute. Nyaa..
   components:
@@ -34,7 +32,6 @@
 - type: entity
   parent: ClothingHeadHatHoodCoatNekoBase
   id: ClothingHeadHatHoodCoatNekoBlue
-  categories: [ HideSpawnMenu ]
   name: neko coat hood
   description: You look some cute. Nyaa..
   components:
@@ -46,7 +43,6 @@
 - type: entity
   parent: ClothingHeadHatHoodCoatNekoBase
   id: ClothingHeadHatHoodCoatNekoGreen
-  categories: [ HideSpawnMenu ]
   name: neko coat hood
   description: You look some cute. Nyaa..
   components:
@@ -58,7 +54,6 @@
 - type: entity
   parent: ClothingHeadHatHoodCoatNekoBase
   id: ClothingHeadHatHoodCoatNekoPurple
-  categories: [ HideSpawnMenu ]
   name: neko coat hood
   description: You look some cute. Nyaa..
   components:
