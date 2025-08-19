@@ -1,0 +1,42 @@
+#Tail
+- type: marking
+  id: 3eiladoTail
+  bodyPart: Tail
+  markingCategory: Tail
+  sprites:
+  - sprite: _DeadSpace/Sponsor/3eilado/tail.rsi
+    state: tail
+  - sprite: _DeadSpace/Sponsor/3eilado/tail.rsi
+    state: tail-tip
+  - sprite: _DeadSpace/Sponsor/3eilado/tail.rsi
+    state: stars
+
+- type: marking
+  id: 3eiladoMothWings
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [Moth]
+  sprites:
+  - sprite: _DeadSpace/Sponsor/3eilado/moth/wings.rsi
+    state: wings
+  - sprite: _DeadSpace/Sponsor/3eilado/moth/wings.rsi
+    state: gradient
+  - sprite: _DeadSpace/Sponsor/3eilado/moth/wings.rsi
+    state: stars
+
+- type: marking
+  id: 3eiladoWingsMothAntennas
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [Moth]
+  sprites:
+  - sprite: _DeadSpace/Sponsor/3eilado/moth/top.rsi
+    state: head
+
+- type: marking
+  id: DemonHorns3eilado
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  sprites:
+  - sprite: _DeadSpace/Sponsor/3eilado/horns.rsi
+    state: horns
