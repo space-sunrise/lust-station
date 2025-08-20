@@ -1,0 +1,101 @@
+# Hypospray
+
+- type: entity
+  name: гипоспрей медицинской службы
+  parent: BaseItem
+  description: Специально разработанный гипоспрей для полевых медиков.
+  id: Hypospraynikitafuji1515
+  components:
+  - type: Sprite
+    sprite: _DeadSpace/Sponsor/nikitafuji1515/hypo.rsi
+    state: hypo
+  - type: Item
+    sprite: _DeadSpace/Sponsor/nikitafuji1515/hypo.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 5
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: Hypospray
+    onlyAffectsMobs: false
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice
+    price: 750
+  - type: StealTarget
+    stealGroup: Hypospray
+
+#Рога-кастомизация
+- type: marking
+  id: Hornpvrsifvl
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  sponsorOnly: true
+  sprites:
+    - sprite: _DeadSpace/Sponsor/pvrsifvl/horns_marking.rsi
+      state: horn
+
+#Аугментация
+- type: marking
+  id: AugmentsAugArmLeftMaelstorm
+  bodyPart: LArm
+  markingCategory: Arms
+  sponsorOnly: true
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
+      state: l_augarm
+
+- type: marking
+  id: AugmentsAugHandLeftMaelstorm
+  bodyPart: LHand
+  markingCategory: Arms
+  sponsorOnly: true
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
+      state: l_aughand
+
+- type: marking
+  id: AugmentsAugLegLeftMaelstorm
+  bodyPart: LLeg
+  markingCategory: Legs
+  sponsorOnly: true
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
+      state: l_augleg
+
+- type: marking
+  id: AugmentsAugFootLeftMaelstorm
+  bodyPart: LFoot
+  markingCategory: Legs
+  sponsorOnly: true
+  speciesRestriction: [Human]
+  sprites:
+    - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
+      state: l_augfoot
+
+- type: marking
+  id: MaelstormTail
+  bodyPart: Tail
+  markingCategory: Tail
+  sponsorOnly: true
+  sprites:
+  - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm_tail.rsi
+    state: basic_tail_tip
+
+- type: marking
+  id: ScarChestMaelstorm
+  bodyPart: Chest
+  markingCategory: Chest
+  sponsorOnly: true
+  speciesRestriction: [Human, Dwarf]
+  followSkinColor: true
+  sprites:
+  - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
+    state: augtorso_m
+
