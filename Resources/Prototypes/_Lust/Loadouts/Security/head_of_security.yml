@@ -1,7 +1,6 @@
 ﻿# Neck
 - type: loadout
   id: HosSpecialCloak
-  sponsorOnly: true
   equipment:
     neck: ClothingNeckHosSpecialCloak
 
@@ -13,7 +12,6 @@
 # Belt
 - type: loadout
   id: SecuritySheathBelt
-  sponsorOnly: true
   equipment:
     belt: ClothingSheathBeltSecurityFilled
 
@@ -43,7 +41,6 @@
 # OuterClothing
 - type: loadout
   id: HeadofSecurityTrenchElegant
-  sponsorOnly: true
   equipment:
     outerClothing: ClothingOuterHoSTrenchElegant
     jumpsuit: ClothingUniformJumpskirtElegantHos

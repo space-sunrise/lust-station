@@ -3,7 +3,7 @@
   id: InflatableWall
   name: stack-inflatable-wall
   spawn: InflatableWallStack1
-  maxCount: 10
+  maxCount: 20
 
 - type: stack
   id: InflatableDoor

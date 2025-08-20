@@ -33,7 +33,6 @@
   id: Hornpvrsifvl
   bodyPart: HeadTop
   markingCategory: HeadTop
-  sponsorOnly: true
   sprites:
     - sprite: _DeadSpace/Sponsor/pvrsifvl/horns_marking.rsi
       state: horn
@@ -43,7 +42,6 @@
   id: AugmentsAugArmLeftMaelstorm
   bodyPart: LArm
   markingCategory: Arms
-  sponsorOnly: true
   speciesRestriction: [Human]
   sprites:
     - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
@@ -53,7 +51,6 @@
   id: AugmentsAugHandLeftMaelstorm
   bodyPart: LHand
   markingCategory: Arms
-  sponsorOnly: true
   speciesRestriction: [Human]
   sprites:
     - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
@@ -63,7 +60,6 @@
   id: AugmentsAugLegLeftMaelstorm
   bodyPart: LLeg
   markingCategory: Legs
-  sponsorOnly: true
   speciesRestriction: [Human]
   sprites:
     - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
@@ -73,7 +69,6 @@
   id: AugmentsAugFootLeftMaelstorm
   bodyPart: LFoot
   markingCategory: Legs
-  sponsorOnly: true
   speciesRestriction: [Human]
   sprites:
     - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm.rsi
@@ -83,7 +78,6 @@
   id: MaelstormTail
   bodyPart: Tail
   markingCategory: Tail
-  sponsorOnly: true
   sprites:
   - sprite: _DeadSpace/Sponsor/maelstorm/customization/maelstorm_tail.rsi
     state: basic_tail_tip
@@ -92,7 +86,6 @@
   id: ScarChestMaelstorm
   bodyPart: Chest
   markingCategory: Chest
-  sponsorOnly: true
   speciesRestriction: [Human, Dwarf]
   followSkinColor: true
   sprites:

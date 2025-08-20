@@ -7,7 +7,6 @@
   # Lust-end
   speaker: minkir
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Jirinovskiy
@@ -18,7 +17,6 @@
   # Lust-end
   speaker: jirinovskiy
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: MaksimPoltavskiy
@@ -29,7 +27,6 @@
   # Lust-end
   speaker: maksim_poltavskiy
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: PortalGlados
@@ -41,7 +38,6 @@
   speaker: portal_glados
   roundStart: false # for borgs
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: SBSquidward
@@ -52,7 +48,6 @@
   # Lust-end
   speaker: sb_squidward
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: TemplarAssasin
@@ -64,7 +59,6 @@
   # Lust-end
   speaker: templar_assasin
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Brejnev
@@ -75,7 +69,6 @@
   # Lust-end
   speaker: brejnev
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: HL2Kleiner
@@ -96,7 +89,6 @@
   # Lust-end
   speaker: tf2_medic
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: HL2Barni
@@ -127,7 +119,6 @@
   # Lust-end
   speaker: losyash
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: HL2FatherGrigori
@@ -148,7 +139,6 @@
   # Lust-end
   speaker: kopatich
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: StalkerSidorovich
@@ -159,7 +149,6 @@
   # Lust-end
   speaker: stalker_sidorovich
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Livsey2
@@ -170,7 +159,6 @@
   # Lust-end
   speaker: livsey
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: SCP049 # DON'T USE
@@ -182,7 +170,6 @@
   speaker: scp_049
   roundStart: false
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: SCP079 # DON'T USE
@@ -194,7 +181,6 @@
   speaker: scp_079
   roundStart: false
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: IcarusRevenge
@@ -215,7 +201,6 @@
   # Lust-end
   speaker: heartstone_thrud
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Kendrick
@@ -450,7 +435,6 @@
   # Lust-end
   speaker: pathologic2_georgiy_kain
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2ArtemiyBurach
@@ -461,7 +445,6 @@
   # Lust-end
   speaker: pathologic2_artemiy_burach
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2Grif
@@ -472,7 +455,6 @@
   # Lust-end
   speaker: pathologic2_grif
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2AnglayaLilich
@@ -484,7 +466,6 @@
   # Lust-end
   speaker: pathologic2_anglaya_lilich_tired
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2AlexanderSaburov
@@ -495,7 +476,6 @@
   # Lust-end
   speaker: pathologic2_alexander_saburov
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2Inkvizitor
@@ -507,7 +487,6 @@
   # Lust-end
   speaker: pathologic2_inkvizitor
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2AlexanderBlok
@@ -518,7 +497,6 @@
   # Lust-end
   speaker: pathologic2_alexander_blok
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Pathologic2MarkBessmertnik
@@ -529,7 +507,6 @@
   # Lust-end
   speaker: pathologic2_mark_bessmertnik
   provider: sunrise
-  sponsorOnly: true
 
 - type: ttsVoice
   id: Crysis2Operator3v1

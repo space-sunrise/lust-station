@@ -3,151 +3,151 @@
   name: pet-selection-rabbit-name
   description: pet-selection-rabbit-description
   petEntity: PetRabbit
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionAnteater
   name: pet-selection-anteater-name
   description: pet-selection-anteater-description
   petEntity: PetAnteater
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionOctopus
   name: pet-selection-octopus-name
   description: pet-selection-octopus-description
   petEntity: PetOctopus
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionOtter
   name: pet-selection-otter-name
   description: pet-selection-otter-description
   petEntity: PetOtter
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionNavySeal
   name: pet-selection-navy-seal-name
   description: pet-selection-navy-seal-description
   petEntity: PetNavySeal
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionAlexander
   name: pet-selection-alexander-name
   description: pet-selection-alexander-description
   petEntity: PetAlexander
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCorgiIan
   name: pet-selection-corgi-ian-name
   description: pet-selection-corgi-ian-description
   petEntity: PetMobCorgiIan
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionMcGriff
   name: pet-selection-mcgriff-name
   description: pet-selection-mcgriff-description
   petEntity: PetMcGriff
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionSlimesPet
   name: pet-selection-slimes-pet-name
   description: pet-selection-slimes-pet-description
   petEntity: PetMobSlimesPet
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCatRuntime
   name: pet-selection-cat-runtime-name
   description: pet-selection-cat-runtime-description
   petEntity: PetMobCatRuntime
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCorgiLisa
   name: pet-selection-corgi-lisa-name
   description: pet-selection-corgi-lisa-description
   petEntity: PetMobCorgiLisa
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCatFloppa
   name: pet-selection-cat-floppa-name
   description: pet-selection-cat-floppa-description
   petEntity: PetMobCatFloppa
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionWalter
   name: pet-selection-walter-name
   description: pet-selection-walter-description
   petEntity: PetMobWalter
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCrabAtmos
   name: pet-selection-crab-atmos-name
   description: pet-selection-crab-atmos-description
   petEntity: PetMobCrabAtmos
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionPossumMorty
   name: pet-selection-possum-morty-name
   description: pet-selection-possum-morty-description
   petEntity: PetMobPossumMorty
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionPossumPoppy
   name: pet-selection-possum-poppy-name
   description: pet-selection-possum-poppy-description
   petEntity: PetMobPossumPoppy
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionPaperwork
   name: pet-selection-paperwork-name
   description: pet-selection-paperwork-description
   petEntity: PetMobPaperwork
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCorgiIanOld
   name: pet-selection-corgi-ian-old-name
   description: pet-selection-corgi-ian-old-description
   petEntity: PetMobCorgiIanOld
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionGoose
   name: pet-selection-goose-name
   description: pet-selection-goose-description
   petEntity: PetMobGoose
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionClownGoblin
   name: pet-selection-clown-goblin-name
   description: pet-selection-clown-goblin-description
   petEntity: PetMobClownGoblin
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionCorgiIanPup
   name: pet-selection-corgi-ian-pup-name
   description: pet-selection-corgi-ian-pup-description
   petEntity: PetMobCorgiIanPup
-  sponsorOnly: true
+  sponsorOnly: false
 
 - type: petSelection
   id: PetSelectionParrot
   name: pet-selection-parrot-name
   description: pet-selection-parrot-description
   petEntity: PetMobParrot
-  sponsorOnly: true
+  sponsorOnly: false

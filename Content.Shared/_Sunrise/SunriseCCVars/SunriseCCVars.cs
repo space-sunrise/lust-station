@@ -130,7 +130,7 @@ public sealed partial class SunriseCCVars : CVars
         CVarDef.Create("greetings.enable", true);
 
     public static readonly CVarDef<string> GreetingsMessage =
-        CVarDef.Create("greetings.message", "Привет");
+        CVarDef.Create("greetings.message", "ваззааааап я не знаю как это отключить, так что терпи");
 
     public static readonly CVarDef<string> GreetingsAuthor =
         CVarDef.Create("greetings.author", "Сервер");
@@ -176,7 +176,7 @@ public sealed partial class SunriseCCVars : CVars
     /// Параметр отключения школьников с колонками у клиента.
     /// </summary>
     public static readonly CVarDef<bool> TapePlayerClientEnabled =
-        CVarDef.Create("tape_player.client_enabled", true, CVar.CLIENTONLY | CVar.ARCHIVE);
+        CVarDef.Create("tape_player.client_enabled", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /*
      * INFOLINKS
@@ -412,7 +412,7 @@ public sealed partial class SunriseCCVars : CVars
     ///     Flavor Profile
     /// </summary>
     public static readonly CVarDef<bool> FlavorTextSponsorOnly =
-        CVarDef.Create("flavor_text.sponsor_only", true, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("flavor_text.sponsor_only", false, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<int> FlavorTextBaseLength =
         CVarDef.Create("flavor_text.length", 512, CVar.SERVER | CVar.REPLICATED);

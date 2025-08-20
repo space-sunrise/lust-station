@@ -10,7 +10,6 @@
   id: Gold
   name: ghost-theme-gold
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/gold_ghost_human.rsi
     state: animated
@@ -19,7 +18,6 @@
   id: Silver
   name: ghost-theme-silver
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/silver_ghost_human.rsi
     state: animated
@@ -28,7 +26,6 @@
   id: White
   name: ghost-theme-white
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/white_ghost_human.rsi
     state: animated
@@ -37,7 +34,6 @@
   id: Platinum
   name: ghost-theme-platinum
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/platinum_ghost_human.rsi
     state: animated
@@ -46,7 +42,6 @@
   id: Narsie
   name: ghost-theme-narsie
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: Mobs/Demons/narsie.rsi
     state: narsie
@@ -55,7 +50,6 @@
   id: Kharin
   name: ghost-theme-kharin
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/gods.rsi
     state: kha'rin
@@ -64,7 +58,6 @@
   id: Legion
   name: ghost-theme-legion
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/gods.rsi
     state: legion
@@ -73,7 +66,6 @@
   id: Narbee
   name: ghost-theme-narbee
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/narbee.rsi
     state: narbee
@@ -82,7 +74,6 @@
   id: Reaper
   name: ghost-theme-reaper
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/reaper.rsi
     state: reaper
@@ -91,7 +82,6 @@
   id: Bubblegum
   name: ghost-theme-bubblegum
   scale: 0.8, 0.8
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/96x96megafauna.rsi
     state: bubblegum
@@ -100,7 +90,6 @@
   id: MegaLegion
   name: ghost-theme-mega-legion
   scale: 0.8, 0.8
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/96x96megafauna.rsi
     state: mega_legion
@@ -109,7 +98,6 @@
   id: HonkChampion
   name: ghost-theme-honk-champion
   scale: 0.8, 0.8
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/hulk.rsi
     state: Champion_of_Honk
@@ -117,7 +105,6 @@
 - type: ghostTheme
   id: Hulk
   name: ghost-theme-hulk
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Aliens/hulk.rsi
     state: Hulk
@@ -126,7 +113,6 @@
   id: Yellow
   name: ghost-theme-yellow
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/yellow_ghost_human.rsi
     state: animated
@@ -135,7 +121,6 @@
   id: Pink
   name: ghost-theme-pink
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/pink_ghost_human.rsi
     state: animated
@@ -145,7 +130,6 @@
   name: ghost-theme-cat
   color: "#fff8"
   scale: 0.5, 0.5
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/cat_ghost_human.rsi
     state: icon
@@ -154,7 +138,6 @@
   id: Purple
   name: ghost-theme-purple
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/purple_ghost_human.rsi
     state: animated
@@ -163,7 +146,6 @@
   id: Red
   name: ghost-theme-red
   color: "#fff8"
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/red_ghost_human.rsi
     state: animated
@@ -171,7 +153,6 @@
 - type: ghostTheme
   id: BlueArchiveHibiki
   name: ghost-theme-blue-archive-hibiki
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: hibiki
@@ -179,7 +160,6 @@
 - type: ghostTheme
   id: BlueArchiveRio
   name: ghost-theme-blue-archive-rio
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: rio
@@ -187,7 +167,6 @@
 - type: ghostTheme
   id: BlueArchiveYuuka
   name: ghost-theme-blue-archive-yuuka
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: yuuka
@@ -195,7 +174,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl1
   name: ghost-theme-blue-archive-girl1
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl1
@@ -203,7 +181,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl2
   name: ghost-theme-blue-archive-girl2
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl2
@@ -211,7 +188,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl3
   name: ghost-theme-blue-archive-girl3
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl3
@@ -219,7 +195,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl4
   name: ghost-theme-blue-archive-girl4
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl4
@@ -227,7 +202,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl5
   name: ghost-theme-blue-archive-girl5
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl5
@@ -235,7 +209,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl6
   name: ghost-theme-blue-archive-girl6
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl6
@@ -243,7 +216,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl7
   name: ghost-theme-blue-archive-girl7
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl7
@@ -251,7 +223,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl8
   name: ghost-theme-blue-archive-girl8
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl8
@@ -259,7 +230,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl9
   name: ghost-theme-blue-archive-girl9
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl9
@@ -267,7 +237,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl10
   name: ghost-theme-blue-archive-girl10
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl10
@@ -275,7 +244,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl11
   name: ghost-theme-blue-archive-girl11
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl11
@@ -283,7 +251,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl12
   name: ghost-theme-blue-archive-girl12
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl12
@@ -291,7 +258,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl13
   name: ghost-theme-blue-archive-girl13
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl13
@@ -299,7 +265,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl14
   name: ghost-theme-blue-archive-girl14
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl14
@@ -307,7 +272,6 @@
 - type: ghostTheme
   id: BlueArchiveGirl15
   name: ghost-theme-blue-archive-girl15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/blue_archive.rsi
     state: girl15
@@ -316,7 +280,6 @@
   id: Randy
   scale: 0.15, 0.15
   name: ghost-theme-randy
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/randy.rsi
     state: icon
@@ -325,7 +288,6 @@
   id: WizdenBlock
   scale: 0.4, 0.4
   name: ghost-theme-wizden-block
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/wizden_block.rsi
     state: icon
@@ -334,7 +296,6 @@
   id: Asuka
   scale: 0.6, 0.6
   name: ghost-theme-asuka
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/asuka.rsi
     state: icon
@@ -343,7 +304,6 @@
   id: VigersRay
   name: ghost-theme-vigers-ray
   scale: 0.15, 0.15
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/vigers_ray.rsi
     state: icon
@@ -351,7 +311,6 @@
 - type: ghostTheme
   id: RedGirl
   name: ghost-theme-red-girl
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/red_girl.rsi
     state: red_animated
@@ -359,7 +318,6 @@
 - type: ghostTheme
   id: PinkGirl
   name: ghost-theme-pink-girl
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/pink_girl.rsi
     state: pink_animated
@@ -367,7 +325,6 @@
 - type: ghostTheme
   id: PurpleGirl
   name: ghost-theme-purple-girl
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/purple_girl.rsi
     state: purple_animated
@@ -375,7 +332,6 @@
 - type: ghostTheme
   id: Revenant
   name: ghost-theme-revenant
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/revenant_ghost.rsi
     state: animated
@@ -383,7 +339,6 @@
 - type: ghostTheme
   id: HoloCarp
   name: ghost-theme-holo-carp
-  sponsorOnly: true
   sprite:
     sprite: Mobs/Aliens/Carps/holo.rsi
     state: alive
@@ -391,7 +346,6 @@
 - type: ghostTheme
   id: HoloGirl
   name: ghost-theme-holo-girl
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/holo_girl.rsi
     state: holo_animated
@@ -399,7 +353,6 @@
 - type: ghostTheme
   id: Pirate
   name: ghost-theme-pirate
-  sponsorOnly: true
   sprite:
     sprite: _Sunrise/Mobs/Ghosts/pirate_ghost.rsi
     state: pirate_icon
