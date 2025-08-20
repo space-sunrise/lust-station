@@ -1,7 +1,6 @@
 ﻿- type: entity
   parent: BaseAction
   id: ArtificerCreateSoulStone
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       icon:
@@ -15,7 +14,6 @@
 - type: entity
   parent: BaseAction
   id: ArtificerCreateConstructShell
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem
@@ -30,7 +28,6 @@
 - type: entity
   parent: BaseAction
   id: ArtificerConvertCultistFloor
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem
@@ -45,7 +42,6 @@
 - type: entity
   parent: BaseAction
   id: ArtificerCreateCultistWall
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem
@@ -60,7 +56,6 @@
 - type: entity
   parent: BaseAction
   id: ArtificerCreateCultistAirlock
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem
@@ -75,7 +70,6 @@
 - type: entity
   parent: BaseAction
   id: WraithPhase
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem
@@ -90,7 +84,6 @@
 - type: entity
   parent: BaseAction
   id: JuggernautCreateWall
-  categories: [ HideSpawnMenu ]
   components:
     - type: Action
       itemIconStyle: NoItem

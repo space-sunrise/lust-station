@@ -3,7 +3,6 @@
   id: NVDToggleAction
   name: Switching Night Vision Device
   description: Switching NVD
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     useDelay: 1
@@ -16,7 +15,6 @@
   id: ToggleableNightVision
   name: Switches Night Vision
   description: Switches Night Vision
-  categories: [ HideSpawnMenu ]
   components:
   - type: Action
     useDelay: 1

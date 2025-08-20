@@ -23,7 +23,6 @@
   id: OrganKoboldHeart
   parent: OrganAnimalHeart
   name: heart
-  categories: [ HideSpawnMenu ]
   components:
   - type: Metabolizer
     metabolizerTypes: [ Animal, Kobold ]

@@ -24,7 +24,6 @@
     price: 5000
 
 - type: entity
-  categories: [ HideSpawnMenu ]
   id: ChameleonDisguise
   name: Urist McKleiner
   components:

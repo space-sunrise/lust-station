@@ -710,7 +710,6 @@
   id: FoodMealHappyHonkClown
   parent: HappyHonk
   suffix: random food spawner meal
-  categories: [ HideSpawnMenu ]
   components:
   - type: StorageFill
     contents:

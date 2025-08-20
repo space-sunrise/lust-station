@@ -1,7 +1,6 @@
 - type: entity
   parent: BaseItem
   id: Suntick
-  categories: [ HideSpawnMenu ]
   suffix: 20 LC
   name: Lust Coin
   description: Incredibly attractive and beautiful coins that open the door to the world of a cute little shop.
@@ -27,7 +26,6 @@
   parent: Suntick
   id: Suntick1
   suffix: 1 LC
-  categories: [ HideSpawnMenu ]
   components:
   - type: Stack
     count: 1
@@ -36,7 +34,6 @@
   parent: Suntick
   id: Suntick5
   suffix: 5 LC
-  categories: [ HideSpawnMenu ]
   components:
   - type: Stack
     count: 5
@@ -44,7 +41,6 @@
 - type: entity
   parent: Suntick
   id: Suntick10
-  categories: [ HideSpawnMenu ]
   suffix: 10 LC
   components:
   - type: Stack
@@ -53,7 +49,6 @@
 - type: entity
   parent: Suntick
   id: Suntick40
-  categories: [ HideSpawnMenu ]
   suffix: 40 LC
   components:
   - type: Stack
@@ -62,7 +57,6 @@
 - type: entity
   parent: Suntick
   id: Suntick80
-  categories: [ HideSpawnMenu ]
   suffix: 80 LC
   components:
   - type: Stack
@@ -71,7 +65,6 @@
 - type: entity
   parent: Suntick
   id: Suntick100
-  categories: [ HideSpawnMenu ]
   suffix: 100 LC
   components:
   - type: Stack

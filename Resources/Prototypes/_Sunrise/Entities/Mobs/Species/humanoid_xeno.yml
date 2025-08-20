@@ -143,7 +143,6 @@
 - type: entity
   parent: BaseSpeciesDummy
   id: MobXenoDummy
-  categories: [ HideSpawnMenu ]
   components:
   - type: HumanoidAppearance
     species: HumanoidXeno

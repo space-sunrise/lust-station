@@ -5,7 +5,6 @@
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
   suffix: Empty
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Devices/nt_uplink.rsi
@@ -35,7 +34,6 @@
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
   suffix: 75BC, 75C, Amber
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Devices/nt_uplink.rsi
@@ -59,7 +57,6 @@
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
   suffix: 100BC, 100C, Red
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Devices/nt_uplink.rsi
@@ -83,7 +80,6 @@
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
   suffix: 200BC, 200C, Gamma
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Devices/nt_uplink.rsi
@@ -107,7 +103,6 @@
   name: Bluespace ERT visionary
   description: Ultra-innovative portable bluespace teleporter.
   suffix: 8BC, 10C, BlueShield
-  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Devices/nt_uplink.rsi
@@ -207,7 +202,6 @@
   parent: BaseClothingHandsPowerGlovesUplinkNTERT
   id: ClothingHandsPowerGlovesUplinkNTERTAmber
   suffix: Uplink, Amber
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -218,7 +212,6 @@
   parent: BaseClothingHandsPowerGlovesUplinkNTERT
   id: ClothingHandsPowerGlovesUplinkNTERTAmberLeader
   suffix: Uplink, Amber, Leader
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -229,7 +222,6 @@
   parent: ClothingHandsPowerGlovesUplinkNTERTAmber
   id: ClothingHandsPowerGlovesUplinkNTERTRed
   suffix: Uplink, Red
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -240,7 +232,6 @@
   parent: BaseClothingHandsPowerGlovesUplinkNTERT
   id: ClothingHandsPowerGlovesUplinkNTERTRedLeader
   suffix: Uplink, Red, Leader
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -251,7 +242,6 @@
   parent: ClothingHandsPowerGlovesUplinkNTERTAmber
   id: ClothingHandsPowerGlovesUplinkNTERTGamma
   suffix: Uplink, Gamma
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -262,7 +252,6 @@
   parent: BaseClothingHandsPowerGlovesUplinkNTERT
   id: ClothingHandsPowerGlovesUplinkNTERTGammaLeader
   suffix: Uplink, Gamma, Leader
-  categories: [ HideSpawnMenu ]
   components:
   - type: Store
     balance:
@@ -274,7 +263,6 @@
   id: ClothingHandsPowerGlovesUplinkNTERTCBURN
   suffix: Uplink, CBURN
   name: CBURN Power Gloves
-  categories: [ HideSpawnMenu ]
   components:
   - type: MeleeWeapon
     damage:

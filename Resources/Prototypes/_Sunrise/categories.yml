@@ -1,9 +1,9 @@
 - type: entityCategory
   id: Surgeries
   name: categories-surgeries
-  hideSpawnMenu: true
+  hideSpawnMenu: false
 
 - type: entityCategory
   id: SurgerySteps
   name: categories-surgery-steps
-  hideSpawnMenu: true
+  hideSpawnMenu: false

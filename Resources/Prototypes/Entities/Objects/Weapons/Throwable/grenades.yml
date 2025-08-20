@@ -128,7 +128,6 @@
 
 - type: entity
   id: GrenadeFlashEffect
-  categories: [ HideSpawnMenu ]
   components:
     - type: PointLight
       enabled: true
