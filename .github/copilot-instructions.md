@@ -92,6 +92,25 @@ Always reference these instructions first and fallback to search or bash command
 - Use DebugOpt configuration for development
 - Expect build warnings (hundreds are normal) - focus on errors
 
+### Changelog Documentation in Pull Requests
+- **REQUIRED**: Include changelog entries in PR descriptions for player-visible changes
+- **FORMAT**: Use the following template in PR descriptions:
+```
+:cl: YourUsername
+- add: Добавлено веселье.
+- remove: Удалено веселье.
+- tweak: Изменено веселье.
+- fix: Исправлено веселье.
+```
+- **CHANGE TYPES**:
+  - `add`: New features, content, or functionality
+  - `remove`: Removed features, content, or functionality  
+  - `tweak`: Modified existing features or balance changes
+  - `fix`: Bug fixes or corrections
+- **AUTOMATION**: Changelog entries are automatically processed and added to game changelogs after PR merge
+- **LANGUAGE**: Write changelog messages in Russian for consistency with existing entries
+- **GUIDELINES**: Keep messages brief, clear, and player-focused (what they will notice in-game)
+
 ### File Editing
 - **YAML files**: Found in `/Resources/Prototypes` and `/Resources/Maps`
 - **C# code**: Organized by component (Shared/Server/Client)
