@@ -152,7 +152,7 @@
       baseSprintSpeed : 4.5
     - type: InnateItem
       worldTargetActions:
-      - AccessBreaker
+      - AccessBreakerInnateItem
     # Sunrise-End
     # Lust-start
     - type: ActionGrant
@@ -208,8 +208,8 @@
       baseSprintSpeed: 5
     - type: InnateItem
       worldTargetActions:
-      - Emag
-      - HandheldHealthAnalyzerUnpowered
+      - EmagInnateItem
+      - HandheldHealthAnalyzerUnpoweredInnateItem
     # Sunrise-End
     # Lust-start
     - type: ActionGrant
