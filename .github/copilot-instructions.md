@@ -95,8 +95,9 @@ Always reference these instructions first and fallback to search or bash command
 ### Changelog Documentation in Pull Requests
 - **REQUIRED**: Include changelog entries in PR descriptions for player-visible changes
 - **FORMAT**: Use the following template in PR descriptions:
+- **AUTHOR**: Set author Copilot (AI)
 ```
-:cl: YourUsername
+:cl: Author
 - add: Добавлено веселье.
 - remove: Удалено веселье.
 - tweak: Изменено веселье.
