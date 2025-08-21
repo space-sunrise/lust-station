@@ -486,10 +486,10 @@
     delay: 6
   - type: EmitSoundOnActivate
     sound:
-      path: /Audio/_Lust/Misc/epsilon_cut.ogg
+      path: /Audio/Machines/scanning.ogg
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Lust/Misc/epsilon_cut.ogg
+      path: /Audio/Machines/scanning.ogg
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Items/Stamp/automatic_stamp.ogg

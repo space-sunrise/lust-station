@@ -95,8 +95,8 @@
     - Mech
   - type: InnateItem
     instantActions:
-    - HandheldStationMapUnpowered
-    - EngiAlertsMonitor
+    - HandheldStationMapUnpoweredInnateItem
+    - EngiAlertsMonitorInnateItem
   # Sunrise-End
   # Lust-start
   - type: ActionGrant
@@ -185,7 +185,7 @@
           False: {state: icon}
   - type: InnateItem
     instantActions:
-    - HandheldStationMapUnpowered
+    - HandheldStationMapUnpoweredInnateItem
   # Sunrise-End
   # Lust-start
   - type: ActionGrant
@@ -321,10 +321,10 @@
   - type: FabricateCandy
   - type: InnateItem
     instantActions:
-    - HandheldStationMapUnpowered
-    - HandheldCrewMonitorBorg
+    - HandheldStationMapUnpoweredInnateItem
+    - HandheldCrewMonitorBorgInnateItem
     worldTargetActions:
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzerUnpoweredInnateItem
   # Sunrise-End
   # Lust-start
   - type: ActionGrant
