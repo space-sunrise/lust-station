@@ -8,13 +8,13 @@
   },
   "states": [
     {
-      "name": "qb-inhand-left"
+      "name": "icon"
     },
     {
-      "name": "qb-inhand-right"
+      "name": "inhand-left"
     },
     {
-      "name": "qb"
+      "name": "inhand-right"
     }
   ]
 }

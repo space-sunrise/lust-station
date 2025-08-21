@@ -509,11 +509,10 @@
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
-    state: qb
+    state: icon
   - type: Item
     size: Small
     sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
-    heldPrefix: qb
   - type: Damageable
     damageContainer: Inorganic
   - type: Tag

@@ -513,11 +513,11 @@
   description: Specially designed to inflict maximum psychological damage to Syndicate operatives.
   components:
   - type: Sprite
-    sprite: Objects/Fun/Balloons/nanotrasen.rsi
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi # Lust-edit
     state: icon
   - type: Item
     size: Small
-    sprite: Objects/Fun/Balloons/nanotrasen.rsi
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi # Lust-edit
   - type: Damageable
     damageContainer: Inorganic
   - type: Tag
