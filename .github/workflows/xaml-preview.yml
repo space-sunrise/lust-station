@@ -26,6 +26,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install Pillow
+
       - name: Generate XAML previews
         id: preview
         run: |
@@ -44,11 +49,32 @@ jobs:
           fi
           
           echo "Processing XAML files: $xaml_files"
+          
+          # Create output directory for images
+          mkdir -p xaml-previews
+          
+          # Generate mockup images for existing XAML files
+          for file in ${{ steps.files.outputs.modified }} ${{ steps.files.outputs.added }}; do
+            if [[ "$file" == *.xaml ]] && [[ -f "$file" ]]; then
+              echo "Generating mockup for $file"
+              python3 ./.github/scripts/xaml_mockup_generator.py "$file" "xaml-previews/$(basename "$file" .xaml)_mockup.png" || echo "Failed to generate mockup for $file"
+            fi
+          done
+          
+          # Generate text preview
           python3 ./.github/scripts/xaml-preview.py \
             --modified "${{ steps.files.outputs.modified }}" \
             --added "${{ steps.files.outputs.added }}" \
             --removed "${{ steps.files.outputs.removed }}" \
             >> $GITHUB_OUTPUT
+
+      - name: Upload mockup images
+        if: steps.preview.outputs.skip_preview != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: xaml-previews
+          path: xaml-previews/
+          retention-days: 7
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v1
