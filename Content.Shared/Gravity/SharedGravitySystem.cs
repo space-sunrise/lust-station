@@ -70,14 +70,6 @@ public abstract partial class SharedGravitySystem : EntitySystem
         if (entity.Comp2.BodyType is BodyType.Static or BodyType.Kinematic)
             return false;
 
-
-        // Sunrise-Start
-        if (TryComp<BorgMagbootsComponent>(entity, out var borgMagbootsComponent) && borgMagbootsComponent.On)
-        {
-            return borgMagbootsComponent.RequiresGrid && !EntityOnGravitySupportingGridOrMap(entity);
-        }
-        // Sunrise-End
-
         // Check if something other than the grid or map is overriding our gravity
         var ev = new IsWeightlessEvent();
         RaiseLocalEvent(entity, ref ev);

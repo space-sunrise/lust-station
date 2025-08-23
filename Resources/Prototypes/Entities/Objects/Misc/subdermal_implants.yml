@@ -58,7 +58,7 @@
     tags:
     - SubdermalImplant
     - Flashlight
-    - type: UnpoweredFlashlight
+  - type: UnpoweredFlashlight
 
 - type: entity
   parent: BaseSubdermalImplant
