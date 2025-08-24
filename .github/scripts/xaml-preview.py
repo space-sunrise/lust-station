@@ -9,6 +9,7 @@ import os
 import sys
 import xml.etree.ElementTree as ET
 import argparse
+import json
 from pathlib import Path
 from typing import List, Dict, Optional, Any
 from dataclasses import dataclass
@@ -270,7 +271,7 @@ def get_control_icon(control_type: str) -> str:
     return icons.get(control_type, '▢')
 
 
-def format_file_info(file_path: str, info: Dict, change_type: str) -> str:
+def format_file_info(file_path: str, info: Dict, change_type: str, image_urls: Dict[str, str] = None) -> str:
     """Format file information for display with enhanced visual preview."""
     icon_map = {
         'added': '✨',
@@ -346,13 +347,29 @@ def format_file_info(file_path: str, info: Dict, change_type: str) -> str:
     
     summary = '\n'.join(f"- {part}" for part in summary_parts)
     
-    # Check if mockup image exists
+    # Check if mockup image exists and can be displayed directly
     mockup_section = ""
     if change_type in ['added', 'modified']:
         mockup_filename = os.path.basename(file_path).replace('.xaml', '_mockup.png')
-        mockup_path = f"xaml-previews/{mockup_filename}"
-        if os.path.exists(mockup_path):
-            # Get the workflow run URL for artifact download
+        
+        # Check if we have a direct URL for this image
+        image_url = None
+        if image_urls:
+            image_url = image_urls.get(mockup_filename)
+        
+        if image_url:
+            mockup_section = f"""
+### 🖼️ Visual Mockup
+
+> **Note:** This shows the UI layout structure as it would appear in-game. 
+> Generated automatically from the XAML structure.
+
+![{mockup_filename}]({image_url})
+
+*Visual preview showing the layout hierarchy and control arrangement*
+"""
+        elif os.path.exists(f"xaml-previews/{mockup_filename}"):
+            # Fallback to artifact download if direct display isn't available
             run_id = os.environ.get('GITHUB_RUN_ID', 'unknown')
             repo = os.environ.get('GITHUB_REPOSITORY', 'space-sunrise/sunrise-station')
             
@@ -406,7 +423,7 @@ def format_file_info(file_path: str, info: Dict, change_type: str) -> str:
 """
 
 
-def process_xaml_files(modified_files: List[str], added_files: List[str], removed_files: List[str]) -> str:
+def process_xaml_files(modified_files: List[str], added_files: List[str], removed_files: List[str], image_urls: Dict[str, str] = None) -> str:
     """Process all XAML files and generate enhanced preview content."""
     
     # Filter to only include XAML files
@@ -432,6 +449,12 @@ def process_xaml_files(modified_files: List[str], added_files: List[str], remove
     
     preview_content += f"Found **{total_files}** XAML file(s) changed: {', '.join(summary_parts)}\n\n"
     
+    # Add notice about visual previews
+    if image_urls and any(url for url in image_urls.values() if url):
+        preview_content += "### 🖼️ Visual Previews Available\n"
+        preview_content += "This PR includes **live visual previews** showing how the UI will look in-game. "
+        preview_content += "Images are displayed directly below each file analysis.\n\n"
+    
     # Add quick navigation if there are many files
     if total_files > 3:
         preview_content += "### Quick Navigation\n"
@@ -446,7 +469,7 @@ def process_xaml_files(modified_files: List[str], added_files: List[str], remove
     for file_path in added_xaml:
         if os.path.exists(file_path):
             info = parse_xaml_structure(file_path)
-            preview_content += format_file_info(file_path, info, 'added')
+            preview_content += format_file_info(file_path, info, 'added', image_urls)
         else:
             preview_content += f"## ✨ Added: `{file_path}`\n\n⚠️ **File not found in current checkout**\n\n"
     
@@ -454,7 +477,7 @@ def process_xaml_files(modified_files: List[str], added_files: List[str], remove
     for file_path in modified_xaml:
         if os.path.exists(file_path):
             info = parse_xaml_structure(file_path)
-            preview_content += format_file_info(file_path, info, 'modified')
+            preview_content += format_file_info(file_path, info, 'modified', image_urls)
         else:
             preview_content += f"## 📝 Modified: `{file_path}`\n\n⚠️ **File not found in current checkout**\n\n"
     
@@ -466,22 +489,23 @@ def process_xaml_files(modified_files: List[str], added_files: List[str], remove
     preview_content += "\n---\n\n"
     preview_content += "### 🤖 About This Preview\n\n"
     preview_content += "This enhanced preview shows the UI structure and layout analysis of your XAML changes. "
+    
+    if image_urls and any(url for url in image_urls.values() if url):
+        preview_content += "**Visual mockups** are displayed inline showing how your UI will appear in-game. "
+    
     preview_content += "The structure diagram uses icons to represent different control types and shows the hierarchy "
     preview_content += "to help you understand the layout without building locally.\n\n"
     
-    # Check if any mockups were generated
-    mockup_count = 0
-    if os.path.exists('xaml-previews'):
-        mockup_count = len([f for f in os.listdir('xaml-previews') if f.endswith('.png')])
+    # Check how many images were successfully embedded
+    embedded_count = 0
+    if image_urls:
+        embedded_count = len([url for url in image_urls.values() if url])
     
-    if mockup_count > 0:
-        run_id = os.environ.get('GITHUB_RUN_ID', 'unknown')
-        repo = os.environ.get('GITHUB_REPOSITORY', 'space-sunrise/sunrise-station')
-        preview_content += f"**📎 {mockup_count} visual mockup(s) generated** - "
-        preview_content += f"Download from [workflow artifacts](https://github.com/{repo}/actions/runs/{run_id}/artifacts) "
-        preview_content += "(look for 'xaml-previews' artifact)\n\n"
+    if embedded_count > 0:
+        preview_content += f"**🖼️ {embedded_count} visual preview(s) embedded** - "
+        preview_content += "Images show the actual UI layout as it will appear in-game.\n\n"
     
-    preview_content += "*Preview automatically generated by XAML Preview Bot*"
+    preview_content += "*Preview automatically generated by XAML Preview Bot with inline visual previews*"
     
     return preview_content
 
@@ -491,6 +515,7 @@ def main():
     parser.add_argument('--modified', default='', help='Space-separated list of modified files')
     parser.add_argument('--added', default='', help='Space-separated list of added files')
     parser.add_argument('--removed', default='', help='Space-separated list of removed files')
+    parser.add_argument('--image-urls', default='', help='Path to JSON file containing image URLs')
     
     args = parser.parse_args()
     
@@ -499,8 +524,17 @@ def main():
     added_files = [f.strip() for f in args.added.split() if f.strip()]
     removed_files = [f.strip() for f in args.removed.split() if f.strip()]
     
+    # Load image URLs if provided
+    image_urls = {}
+    if args.image_urls and os.path.exists(args.image_urls):
+        try:
+            with open(args.image_urls, 'r') as f:
+                image_urls = json.load(f)
+        except Exception as e:
+            print(f"Warning: Could not load image URLs from {args.image_urls}: {e}", file=sys.stderr)
+    
     # Generate preview content
-    preview_content = process_xaml_files(modified_files, added_files, removed_files)
+    preview_content = process_xaml_files(modified_files, added_files, removed_files, image_urls)
     
     # Output for GitHub Actions
     print("PREVIEW_CONTENT<<EOF")

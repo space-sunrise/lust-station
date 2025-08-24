@@ -1,4 +1,4 @@
-name: XAML Preview
+name: XAML Preview (C# Enhanced)
 
 on:
   pull_request_target:
@@ -7,11 +7,14 @@ on:
 
 jobs:
   preview:
-    name: Generate XAML Previews
+    name: Generate XAML Previews with C#
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout PR branch
         uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
 
       - name: Get changed files
         id: files
@@ -21,17 +24,37 @@ jobs:
           filter: |
             **.xaml
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install Pillow
 
-      - name: Generate XAML previews
+      - name: Initialize repository
+        run: |
+          python3 RUN_THIS.py
+          git submodule update --init --recursive
+
+      - name: Restore .NET dependencies
+        run: |
+          dotnet restore Content.Shared/Content.Shared.csproj
+          dotnet restore Content.Client/Content.Client.csproj
+          dotnet restore Content.XamlPreview/Content.XamlPreview.csproj
+
+      - name: Build core projects
+        run: |
+          dotnet build Content.Shared/Content.Shared.csproj --configuration Release --no-restore
+          dotnet build Content.Client/Content.Client.csproj --configuration Release --no-restore
+
+      - name: Generate XAML previews with C#
         id: preview
         run: |
           # Check if any XAML files were actually changed
@@ -50,31 +73,13 @@ jobs:
           
           echo "Processing XAML files: $xaml_files"
           
-          # Create output directory for images
-          mkdir -p xaml-previews
-          
-          # Generate mockup images for existing XAML files
-          for file in ${{ steps.files.outputs.modified }} ${{ steps.files.outputs.added }}; do
-            if [[ "$file" == *.xaml ]] && [[ -f "$file" ]]; then
-              echo "Generating mockup for $file"
-              python3 ./.github/scripts/xaml_mockup_generator.py "$file" "xaml-previews/$(basename "$file" .xaml)_mockup.png" || echo "Failed to generate mockup for $file"
-            fi
-          done
-          
-          # Generate text preview
-          python3 ./.github/scripts/xaml-preview.py \
+          # Generate previews using C# tool
+          python3 ./.github/scripts/csharp_xaml_preview.py \
             --modified "${{ steps.files.outputs.modified }}" \
             --added "${{ steps.files.outputs.added }}" \
             --removed "${{ steps.files.outputs.removed }}" \
+            --output-dir "xaml-previews" \
             >> $GITHUB_OUTPUT
-
-      - name: Upload mockup images
-        if: steps.preview.outputs.skip_preview != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: xaml-previews
-          path: xaml-previews/
-          retention-days: 7
 
       - name: Find existing comment
         uses: peter-evans/find-comment@v1
