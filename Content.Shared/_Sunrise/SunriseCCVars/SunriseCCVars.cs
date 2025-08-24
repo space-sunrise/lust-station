@@ -57,8 +57,11 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<float> TTSRadioVolume =
         CVarDef.Create("tts.radio_volume", 0.50f, CVar.CLIENTONLY | CVar.ARCHIVE);
 
-    public static readonly CVarDef<float> TTSAnnounceVolume =
-        CVarDef.Create("tts.announce_volume", 0.50f, CVar.CLIENTONLY | CVar.ARCHIVE);
+    public static readonly CVarDef<string> TTSRadioEffect =
+        CVarDef.Create("tts.radio_effect", "radio", CVar.SERVERONLY | CVar.ARCHIVE);
+
+    public static readonly CVarDef<string> TTSAnnounceEffect =
+        CVarDef.Create("tts.announce_effect", "tiny_room", CVar.SERVERONLY | CVar.ARCHIVE);
 
     /**
      * Ban Webhook
