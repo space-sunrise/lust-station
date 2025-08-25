@@ -49,9 +49,11 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly TTSSystem _ttsSystem = default!;
 
     private bool _isEnabled;
     private string _defaultAnnounceVoice = "Hanson";
+    private string _announceEffect = string.Empty;
 
     // Queue system for preventing overlapping announcements
     private readonly Queue<QueuedAnnouncement> _announcementQueue = new();
@@ -63,14 +65,18 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     {
         base.Initialize();
         _cfg.OnValueChanged(SunriseCCVars.TTSEnabled, v => _isEnabled = v, true);
-        SubscribeLocalEvent<AnnouncementSpeakerEvent>(OnAnnouncementSpeaker);
-        // Note: SpeakerPlayAnnouncementEvent is handled by TTSSystem for the component
+        _cfg.OnValueChanged(SunriseCCVars.TTSAnnounceEffect, OnAnnounceEffectChanged, true);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
         ProcessAnnouncementQueue();
+    }
+
+    private void OnAnnounceEffectChanged(string value)
+    {
+        _announceEffect = value;
     }
 
     /// <summary>
@@ -115,57 +121,9 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     }
 
     /// <summary>
-    /// Handles station-wide announcements by finding all speakers on the station and playing the announcement through them.
-    /// </summary>
-    private void OnAnnouncementSpeaker(ref AnnouncementSpeakerEvent ev)
-    {
-        // Find all speakers on the station
-        var speakers = GetStationSpeakers(ev.Station);
-
-        if (speakers.Count == 0)
-        {
-            // Fallback: If no speakers are found, log a warning
-            // In the future, this could send to a single communications console or similar
-            Logger.Warning($"No announcement speakers found on station {ToPrettyString(ev.Station)}. Announcement not played: {ev.Message}");
-            return;
-        }
-
-        // Play announcement sound via PVS for each speaker on server side
-        if (ev.AnnouncementSound != null)
-        {
-            foreach (var speaker in speakers)
-            {
-                if (!TryComp<AnnouncementSpeakerComponent>(speaker, out var speakerComp))
-                    continue;
-
-                // Check if speaker is enabled and has power
-                if (!speakerComp.Enabled)
-                    continue;
-
-                if (speakerComp.RequiresPower)
-                {
-                    if (!TryComp<ApcPowerReceiverComponent>(speaker, out var powerReceiver) || !powerReceiver.Powered)
-                        continue;
-                }
-
-                // Play announcement sound via PVS from this speaker
-                var audioParams = AudioParams.Default.WithVolume(-2f * speakerComp.VolumeModifier).WithMaxDistance(speakerComp.Range);
-                _audioSystem.PlayPvs(ev.AnnouncementSound, speaker, audioParams);
-            }
-        }
-
-        // Передаём TTS сразу всем динамикам
-        var speakerEvent = new SpeakerPlayAnnouncementEvent(ev.Message, ev.AnnouncementSound, ev.AnnounceVoice, ev.TtsData);
-        foreach (var speaker in speakers)
-        {
-            RaiseLocalEvent(speaker, ref speakerEvent);
-        }
-    }
-
-    /// <summary>
     /// Gets all functional announcement speakers on a station.
     /// </summary>
-    private List<EntityUid> GetStationSpeakers(EntityUid station)
+    public List<EntityUid> GetStationSpeakers(EntityUid station)
     {
         var speakers = new List<EntityUid>();
 
@@ -274,28 +232,13 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     {
         try
         {
-            var textSanitized = Sanitize(text);
-            if (textSanitized == "") return null;
-            if (char.IsLetter(textSanitized[^1]))
-                textSanitized += ".";
-
-            // Use TTS manager directly to generate with megaphone effect
-            var ttsManager = IoCManager.Resolve<TTSManager>();
-            return await ttsManager.ConvertTextToSpeechAnnounce(voicePrototype, textSanitized);
+            return await _ttsSystem.GenerateTTS(text, voicePrototype, _announceEffect);
         }
         catch (Exception e)
         {
             Logger.Error($"TTS System error in announcement generation: {e.Message}");
         }
         return null;
-    }
-
-    /// <summary>
-    /// Sanitizes text for TTS generation.
-    /// </summary>
-    private string Sanitize(string text)
-    {
-        return text.Trim();
     }
 
     /// <summary>

@@ -174,7 +174,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: ProjectileBatteryAmmoProvider
-    proto: CartridgePistol
+    proto: CartridgePistolSP
     fireCost: 100
   - type: Battery
     maxCharge: 3000
