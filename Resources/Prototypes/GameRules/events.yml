@@ -262,10 +262,10 @@
       - type: SpaceNinja
       - type: NpcFactionMember
         factions:
-        - Syndicate
+        - SpiderClan
       - type: AutoImplant
         implants:
-        - MacroBombImplant # Sunrise-Edit
+        - DeathAcidifierImplant
       - type: RandomMetadata
         nameSegments:
         - NamesNinjaTitle

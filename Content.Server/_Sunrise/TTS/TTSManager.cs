@@ -28,30 +28,18 @@ public sealed class TTSManager
         "tts_wanted_count",
         "Amount of wanted TTS audio.");
 
-    private static readonly Counter WantedRadioCount = Metrics.CreateCounter(
-        "tts_wanted_radio_count",
-        "Amount of wanted TTS radio audio.");
-
-    private static readonly Counter WantedAnnounceCount = Metrics.CreateCounter(
-        "tts_wanted_announce_count",
-        "Amount of wanted TTS Announce audio.");
-
     [Dependency] private readonly IConfigurationManager _cfg = default!;
 
     private readonly HttpClient _httpClient = new();
 
     private ISawmill _sawmill = default!;
     private string _apiUrl = string.Empty;
-    private string _radioEffect = string.Empty;
-    private string _announceEffect = string.Empty;
 
     public void Initialize()
     {
         _sawmill = Logger.GetSawmill("tts");
         _cfg.OnValueChanged(SunriseCCVars.TTSApiUrl, OnApiUrlChanged, true);
         _cfg.OnValueChanged(SunriseCCVars.TTSApiToken, OnApiTokenChanged, true);
-        _cfg.OnValueChanged(SunriseCCVars.TTSRadioEffect, OnRadioEffectChanged, true);
-        _cfg.OnValueChanged(SunriseCCVars.TTSAnnounceEffect, OnAnnounceEffectChanged, true);
     }
 
     private void OnApiUrlChanged(string value)
@@ -62,16 +50,6 @@ public sealed class TTSManager
     private void OnApiTokenChanged(string value)
     {
         _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", value);
-    }
-
-    private void OnRadioEffectChanged(string value)
-    {
-        _radioEffect = value;
-    }
-
-    private void OnAnnounceEffectChanged(string value)
-    {
-        _announceEffect = value;
     }
 
     public async Task<byte[]?> ConvertTextToSpeech(TTSVoicePrototype voicePrototype, string text, string? effect = null)
@@ -146,20 +124,6 @@ public sealed class TTSManager
 
         uriBuilder.Query = query.ToString();
         return uriBuilder.ToString();
-    }
-
-    public async Task<byte[]?> ConvertTextToSpeechRadio(TTSVoicePrototype voicePrototype, string text)
-    {
-        WantedRadioCount.Inc();
-        var soundData = await ConvertTextToSpeech(voicePrototype, text, _radioEffect);
-        return soundData;
-    }
-
-    public async Task<byte[]?> ConvertTextToSpeechAnnounce(TTSVoicePrototype voicePrototype, string text)
-    {
-        WantedAnnounceCount.Inc();
-        var soundData = await ConvertTextToSpeech(voicePrototype, text, _announceEffect);
-        return soundData;
     }
 
     private record GenerateVoiceRequest
