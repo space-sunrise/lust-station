@@ -8,7 +8,10 @@
     },
     "states": [
         {
-            "name": "Nanotrasen"
+            "name": "commaid"
+        },
+        {
+            "name": "Qillu"
         },
         {
 		    "name": "Arrows"

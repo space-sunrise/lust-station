@@ -17,10 +17,10 @@
   description: "Glory to NT! Wait, they really made a handheld flag for a corporation?"
   components:
   - type: Sprite
-    sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi
+    sprite: _Lust/Objects/Misc/Handy_Flags/qillu_handy_flag.rsi # Lust-edit
     state: icon
   - type: Item
-    sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi
+    sprite: _Lust/Objects/Misc/Handy_Flags/qillu_handy_flag.rsi # Lust-edit
 
 - type: entity
   parent: [BaseItem, BaseSyndicateContraband]

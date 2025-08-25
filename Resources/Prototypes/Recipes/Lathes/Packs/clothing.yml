@@ -207,8 +207,10 @@
   - ClothingHeadHatCentcomcap
   - ClothingHeadHatCentcom
   - ClothingUniformJumpsuitCentcomAgent
-  - ClothingUniformJumpsuitCentcomFormal
-  - ClothingUniformJumpskirtCentcomFormalDress
+  # Lust-start
+  - ClothingUniformJumpsuitCentcomFormalQillu
+  - ClothingUniformJumpskirtCentcomFormalDressQillu
+  # Lust-end
   - ClothingUniformJumpsuitCentcomOfficer
   - ClothingUniformJumpsuitCentcomOfficial
 

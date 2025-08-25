@@ -500,3 +500,21 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent: BaseItem
+  id: BalloonQillu
+  name: qillu balloon
+  description: Specially designed to inflict maximum psychological damage to Syndicate operatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
+    state: icon
+  - type: Item
+    size: Small
+    sprite: _Lust/Objects/Fun/Balloons/qillu.rsi
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - Balloon

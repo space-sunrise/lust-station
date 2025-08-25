@@ -147,7 +147,7 @@
   suffix: Empty
   components:
   - type: Sprite
-    sprite: Structures/Furniture/golden_toilet.rsi
+    sprite: _Lust/Structures/Furniture/golden_toilet.rsi # Lust-edit
   - type: StaticPrice
     price: 1500
   - type: Destructible
