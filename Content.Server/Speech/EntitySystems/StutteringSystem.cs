@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using Content.Server.Speech.Components;
 using Content.Shared.Speech;
 using Content.Shared.Speech.EntitySystems;
-using Content.Shared.StatusEffect;
+using Content.Shared.StatusEffectNew;
 using Robust.Shared.Random;
 using Content.Server._Lust.Toys.Components;
 
@@ -11,7 +11,6 @@ namespace Content.Server.Speech.EntitySystems
 {
     public sealed class StutteringSystem : SharedStutteringSystem
     {
-        [Dependency] private readonly StatusEffectsSystem _statusEffectsSystem = default!;
         [Dependency] private readonly IRobustRandom _random = default!;
 
         // Regex of characters to stutter.
@@ -21,28 +20,45 @@ namespace Content.Server.Speech.EntitySystems
         public override void Initialize()
         {
             SubscribeLocalEvent<StutteringAccentComponent, AccentGetEvent>(OnAccent);
+
+            SubscribeLocalEvent<StutteringAccentComponent, StatusEffectRelayedEvent<AccentGetEvent>>(OnAccent);
         }
 
-        public override void DoStutter(EntityUid uid, TimeSpan time, bool refresh, StatusEffectsComponent? status = null)
+        public override void DoStutter(EntityUid uid, TimeSpan time, bool refresh)
         {
-            if (!Resolve(uid, ref status, false))
-                return;
-
-            _statusEffectsSystem.TryAddStatusEffect<StutteringAccentComponent>(uid, StutterKey, time, refresh, status);
+            if (refresh)
+                Status.TryUpdateStatusEffectDuration(uid, Stuttering, time);
+            else
+                Status.TryAddStatusEffectDuration(uid, Stuttering, time);
         }
 
-        private void OnAccent(EntityUid uid, StutteringAccentComponent component, AccentGetEvent args)
+        public override void DoRemoveStutterTime(EntityUid uid, TimeSpan timeRemoved)
+        {
+            Status.TryAddTime(uid, Stuttering, -timeRemoved);
+        }
+
+        public override void DoRemoveStutter(EntityUid uid)
+        {
+            Status.TryRemoveStatusEffect(uid, Stuttering);
+        }
+
+        private void OnAccent(Entity<StutteringAccentComponent> entity, ref AccentGetEvent args)
         {
             // Lust-start
-            if (TryComp<VibratingComponent>(uid, out var pu))
+            if (TryComp<VibratingComponent>(entity, out var pu))
             {
-                component.MatchRandomProb = 0.3f;
-                component.FourRandomProb = 0;
-                component.ThreeRandomProb = 0;
-                component.CutRandomProb = 0;
+                entity.Comp.MatchRandomProb = 0.3f;
+                entity.Comp.FourRandomProb = 0;
+                entity.Comp.ThreeRandomProb = 0;
+                entity.Comp.CutRandomProb = 0;
             }
             // Lust-end
-            args.Message = Accentuate(args.Message, component);
+            args.Message = Accentuate(args.Message, entity.Comp);
+        }
+
+        private void OnAccent(Entity<StutteringAccentComponent> entity, ref StatusEffectRelayedEvent<AccentGetEvent> args)
+        {
+            args.Args.Message = Accentuate(args.Args.Message, entity.Comp);
         }
 
         public string Accentuate(string message, StutteringAccentComponent component)
