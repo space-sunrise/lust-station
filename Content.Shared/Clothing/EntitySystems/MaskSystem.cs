@@ -65,7 +65,7 @@ public sealed class MaskSystem : EntitySystem
         if (!mask.IsToggled || !mask.IsToggleable)
             return;
 
-        mask.IsToggled = false;
+        SetToggled((uid, mask), false, force: true);
         ToggleMaskComponents(uid, mask, args.Equipee, mask.EquippedPrefix, true);
     }
 
@@ -127,7 +127,7 @@ public sealed class MaskSystem : EntitySystem
         // Add an easier way to get the entity that is wearing clothing in a valid slot.
         EntityUid? wearer = null;
         if (TryComp(mask, out ClothingComponent? clothing)
-            && clothing.InSlotFlag is {} slotFlag
+            && clothing.InSlotFlag is { } slotFlag
             && clothing.Slots.HasFlag(slotFlag))
         {
             wearer = Transform(mask).ParentUid;
