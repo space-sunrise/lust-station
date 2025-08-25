@@ -1,0 +1,65 @@
+- type: entity
+  parent: PresentRandom
+  id: PlushiePresentLust
+  name: mystery plushie box lust
+  description: A box containing a mystery plushie.
+  components:
+  - type: Sprite
+    sprite: Objects/Fun/figurines.rsi
+    scale: 1.2, 1.2
+    layers:
+      - state: fig_box
+  - type: SpawnItemsOnUse
+    items:
+      - id: ERPNormalDildo
+        orGroup: Plushie
+      - id: PlushieAnameGermanikum
+        orGroup: Plushie
+      - id: PlushieAnnaLisechanskaya
+        orGroup: Plushie
+      - id: PlushieSashaChernyh
+        orGroup: Plushie
+      - id: PlushieKharsha
+        orGroup: Plushie
+      - id: PlushieVaxel
+        orGroup: Plushie
+      - id: PlushiePinkers
+        orGroup: Plushie
+      - id: PlushieAliceSimonova
+        orGroup: Plushie
+      - id: PlushieSaiHaks
+        orGroup: Plushie
+      - id: PlushieEuphaEverek
+        orGroup: Plushie
+      - id: PlushieAlexandrLimenski
+        orGroup: Plushie
+      - id: PlushieRandyCamble
+        orGroup: Plushie
+      - id: PlushieHimaAisetova
+        orGroup: Plushie
+      - id: PlushieMaksimDedov
+        orGroup: Plushie
+      - id: PlushieIvanBykov
+        orGroup: Plushie
+      - id: PlushieSvyashenLuna
+        orGroup: Plushie
+      - id: PlushieFranzEvans
+        orGroup: Plushie
+      - id: PlushieArelitt
+        orGroup: Plushie
+      - id: PlushieAsyaFartuna
+        orGroup: Plushie
+      - id: PlushieBlizzard
+        orGroup: Plushie
+      - id: PlushieRustemBrich
+        orGroup: Plushie
+      - id: PlushieShinyaKucenko
+        orGroup: Plushie
+      - id: PlushieUlavaBritz
+        orGroup: Plushie
+      - id: PlushieSophieKomissarova
+        orGroup: Plushie
+      - id: PlushieDrasusLeverian
+        orGroup: Plushie
+      - id: PlushieKalium
+        orGroup: Plushie
