@@ -7,6 +7,8 @@ REPLACEMENTS = {
     r"\bNT\b": "Qillu",
     r"\bНТ\b": "Qillu",
     r"\bНанотрейзен\b": "Qillu",
+    r"\bNanoTrasen\b": "Qillu",
+    r"\bНаноТрейзен\b": "Qillu",
 }
 
 def process_ftl_files(locale_dir: Path):
