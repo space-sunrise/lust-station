@@ -252,7 +252,7 @@
   - type: Pullable
   - type: Puller
     needsHands: false
-#  - type: StandingState # Lust-edit
+  - type: StandingState
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -272,7 +272,7 @@
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
   # Sunrise-start
   - type: TTS
-    voice: TemplarAssasin # Lust-edit
+    voice: Portal2FactCore
   - type: Climbing
   - type: BorgMagboots
     walkModifier: 0.8
