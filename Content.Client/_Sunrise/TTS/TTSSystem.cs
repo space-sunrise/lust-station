@@ -1,4 +1,5 @@
-﻿using Content.Shared._Sunrise.SunriseCCVars;
+﻿using Content.Shared._Sunrise.AnnouncementSpeaker.Events;
+using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared._Sunrise.TTS;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
@@ -64,6 +65,7 @@ public sealed class TTSSystem : EntitySystem
         _cfg.OnValueChanged(SunriseCCVars.TTSClientQueueEnabled, OnTTSQueueOptionChanged, true);
         _cfg.OnValueChanged(SunriseCCVars.TTSRadioGhostEnabled, OnTtsRadioGhostChanged, true);
         SubscribeNetworkEvent<PlayTTSEvent>(OnPlayTTS);
+        SubscribeNetworkEvent<PlayMultiSpeakerTTSEvent>(OnPlayMultiSpeakerTTS);
     }
 
     public override void Shutdown()
@@ -165,6 +167,21 @@ public sealed class TTSSystem : EntitySystem
 
         var entity = GetEntity(ev.SourceUid);
         PlayTTSBytes(ev.Data, entity, audioParams);
+    }
+
+    private void OnPlayMultiSpeakerTTS(PlayMultiSpeakerTTSEvent ev)
+    {
+        if (_volume == 0)
+            return;
+
+        var volume = SharedAudioSystem.GainToVolume(_volume);
+
+        var audioParams = AudioParams.Default.WithVolume(volume);
+
+        foreach (var uid in ev.Speakers)
+        {
+            PlayTTSBytes(ev.SoundData, GetEntity(uid), audioParams);
+        }
     }
 
     private (EntityUid Entity, AudioComponent Component)? PlayTTSBytes(byte[] data, EntityUid? sourceUid = null, AudioParams? audioParams = null, bool globally = false)

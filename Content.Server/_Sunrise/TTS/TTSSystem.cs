@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading.Tasks;
+using Content.Server._Sunrise.AnnouncementSpeaker;
 using Content.Server.Chat.Systems;
 using Content.Server.GameTicking;
 using Content.Server.Power.Components;
@@ -27,8 +28,7 @@ public sealed partial class TTSSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _xforms = default!;
     [Dependency] private readonly IRobustRandom _rng = default!;
     [Dependency] private readonly SharedAudioSystem _audioSystem = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!;
-
+    [Dependency] private readonly AnnouncementSpeakerSystem _announcementSpeakerSystem = default!;
 
     private readonly List<string> _sampleText =
         new()
@@ -62,8 +62,7 @@ public sealed partial class TTSSystem : EntitySystem
         SubscribeLocalEvent<TransformSpeechEvent>(OnTransformSpeech);
         SubscribeLocalEvent<TTSComponent, EntitySpokeEvent>(OnEntitySpoke);
         SubscribeLocalEvent<RadioSpokeEvent>(OnRadioReceiveEvent);
-        SubscribeLocalEvent<AnnouncementSpokeEvent>(OnAnnouncementSpoke);
-        SubscribeLocalEvent<AnnouncementSpeakerComponent, SpeakerPlayAnnouncementEvent>(OnSpeakerPlayAnnouncement);
+        SubscribeLocalEvent<AnnouncementSpeakerEvent>(OnAnnouncementSpeaker);
 
         SubscribeNetworkEvent<RequestPreviewTTSEvent>(OnRequestPreviewTTS);
         SubscribeNetworkEvent<ClientOptionTTSEvent>(OnClientOptionTTS);
@@ -129,76 +128,85 @@ public sealed partial class TTSSystem : EntitySystem
         return true;
     }
 
-    private async void OnAnnouncementSpoke(AnnouncementSpokeEvent args)
-    {
-        if (!_isEnabled && args.AnnouncementSound != null)
-        {
-            var allPlayersInGame = Filter.Empty().AddWhere(_gameTicker.UserHasJoinedGame);
-            _audioSystem.PlayGlobal(args.AnnouncementSound, allPlayersInGame, true);
-            return;
-        }
-
-        // Play announcement sound first if available (for global announcements)
-        if (args.AnnouncementSound != null)
-        {
-            _audioSystem.PlayGlobal(args.AnnouncementSound, args.Source, true);
-        }
-
-        if (!_isEnabled ||
-            args.Message.Length > MaxMessageChars * 2 ||
-            !GetVoicePrototype(args.AnnounceVoice ?? _defaultAnnounceVoice, out var protoVoice))
-            return;
-
-        var soundData = await GenerateTTS(args.Message, protoVoice, isAnnounce: true);
-        soundData ??= [];
-        RaiseNetworkEvent(new PlayTTSEvent(soundData, null, isRadio: false), args.Source.RemovePlayers(_ignoredRecipients));
-    }
-
     /// <summary>
-    /// Handles TTS generation for speaker-based announcements.
-    /// This is the new system that replaces global broadcast announcements.
+    /// Handles station-wide announcements by finding all speakers on the station and playing the announcement through them.
     /// </summary>
-    private void OnSpeakerPlayAnnouncement(EntityUid speakerUid, AnnouncementSpeakerComponent component, ref SpeakerPlayAnnouncementEvent args)
+    private void OnAnnouncementSpeaker(ref AnnouncementSpeakerEvent ev)
     {
-        // Check if speaker is enabled
-        if (!component.Enabled)
-            return;
+        // Find all speakers on the station
+        var speakers = _announcementSpeakerSystem.GetStationSpeakers(ev.Station);
 
-        // Check if speaker has power (if required)
-        if (component.RequiresPower)
+        if (speakers.Count == 0)
         {
-            if (!TryComp<ApcPowerReceiverComponent>(speakerUid, out var powerReceiver) || !powerReceiver.Powered)
-                return;
-        }
-
-        if (!_isEnabled)
-            return;
-
-        byte[]? soundData = args.GeneratedTts;
-        if (soundData == null || soundData.Length == 0)
-        {
+            // Fallback: If no speakers are found, log a warning
+            // In the future, this could send to a single communications console or similar
+            Logger.Warning($"No announcement speakers found on station {ToPrettyString(ev.Station)}. Announcement not played: {ev.Message}");
             return;
         }
 
-        var speakerPos = Transform(speakerUid).Coordinates;
-        var playersInRange = Filter.Empty();
-
-        var playerQuery = EntityQueryEnumerator<ActorComponent, TransformComponent>();
-        while (playerQuery.MoveNext(out var playerUid, out var actor, out var playerTransform))
+        // Play announcement sound via PVS for each speaker on server side
+        if (ev.AnnouncementSound != null)
         {
-            if (speakerPos.TryDistance(EntityManager, playerTransform.Coordinates, out var distance) &&
-                distance <= component.Range)
+            foreach (var speaker in speakers)
             {
-                playersInRange = playersInRange.AddPlayer(actor.PlayerSession);
+                if (!TryComp<AnnouncementSpeakerComponent>(speaker, out var speakerComp))
+                    continue;
+
+                // Check if speaker is enabled and has power
+                if (!speakerComp.Enabled)
+                    continue;
+
+                if (speakerComp.RequiresPower)
+                {
+                    if (!TryComp<ApcPowerReceiverComponent>(speaker, out var powerReceiver) || !powerReceiver.Powered)
+                        continue;
+                }
+
+                // Play announcement sound via PVS from this speaker
+                var audioParams = AudioParams.Default.WithVolume(-2f * speakerComp.VolumeModifier).WithMaxDistance(speakerComp.Range);
+                _audioSystem.PlayPvs(ev.AnnouncementSound, speaker, audioParams);
             }
         }
 
-        // Send TTS to players in range, excluding those who have disabled TTS
-        var filteredPlayers = playersInRange.RemovePlayers(_ignoredRecipients);
-        if (filteredPlayers.Recipients.Any())
+        if (ev.TtsData == null || ev.TtsData.Length <= 0)
+            return;
+
+        var speakerData = new List<(EntityUid Uid, AnnouncementSpeakerComponent Comp)>();
+        foreach (var speaker in speakers)
         {
-            var speakerNetEntity = GetNetEntity(speakerUid);
-            RaiseNetworkEvent(new PlayTTSEvent(soundData, speakerNetEntity, isRadio: false), filteredPlayers);
+            if (!TryComp<AnnouncementSpeakerComponent>(speaker, out var speakerComp))
+                continue;
+            if (!speakerComp.Enabled)
+                continue;
+            if (speakerComp.RequiresPower)
+            {
+                if (!TryComp<ApcPowerReceiverComponent>(speaker, out var powerReceiver) || !powerReceiver.Powered)
+                    continue;
+            }
+            speakerData.Add((speaker, speakerComp));
+        }
+
+        // Для каждого игрока на станции определяем, какие динамики он слышит
+        var playerQuery = EntityQueryEnumerator<ActorComponent, TransformComponent>();
+        while (playerQuery.MoveNext(out var playerUid, out var actor, out var playerXform))
+        {
+            if (_ignoredRecipients.Contains(actor.PlayerSession))
+                continue;
+
+            var heardSpeakers = new List<NetEntity>();
+            foreach (var (speakerUid, speakerComp) in speakerData)
+            {
+                if (Transform(speakerUid).Coordinates.TryDistance(EntityManager, playerXform.Coordinates, out var dist) &&
+                    dist <= speakerComp.Range)
+                {
+                    heardSpeakers.Add(GetNetEntity(speakerUid));
+                }
+            }
+            if (heardSpeakers.Count > 0)
+            {
+                var evMulti = new PlayMultiSpeakerTTSEvent(heardSpeakers, ev.TtsData);
+                RaiseNetworkEvent(evMulti, actor.PlayerSession);
+            }
         }
     }
 
@@ -295,7 +303,7 @@ public sealed partial class TTSSystem : EntitySystem
     }
 
     // ReSharper disable once InconsistentNaming
-    private async Task<byte[]?> GenerateTTS(string text, TTSVoicePrototype voicePrototype, bool isRadio = false, bool isAnnounce = false)
+    public async Task<byte[]?> GenerateTTS(string text, TTSVoicePrototype voicePrototype, bool isRadio = false, bool isAnnounce = false)
     {
         try
         {
