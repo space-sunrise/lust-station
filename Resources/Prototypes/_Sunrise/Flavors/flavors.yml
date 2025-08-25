@@ -25,5 +25,5 @@
 
 - type: flavor
   id: butterscotch
-  flavorType: Base
-  description: flavor-base-abductor-blood
+  flavorType: Complex
+  description: flavor-complex-butter-scotch

@@ -171,7 +171,6 @@ flavor-complex-spaceshroom-cooked = как космический умами
 flavor-complex-lost-friendship = как прошедшая дружба
 flavor-complex-light = как угасший свет
 flavor-complex-wall-of-bricks = как стена кирпичей
-flavor-complex-wall-of-bricks = сливочно и как волшебство
 
 ## Generic alcohol/soda taste. This should be replaced with an actual flavor profile.
 
