@@ -79,8 +79,6 @@
   spriteHasMindState: peace_e
   spriteNoMindState: peace_e_r
   spriteToggleLightState: peace_l
-  spriteRestingState: peace_rest # Lust-edit
-  spriteWreckState: peace_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-peace-cyborg
@@ -133,8 +131,6 @@
   spriteHasMindState: clown_e
   spriteNoMindState: clown_e_r
   spriteToggleLightState: clown_l
-  spriteRestingState: clown_rest # Lust-edit
-  spriteWreckState: clown_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-clown-cyborg
@@ -174,8 +170,6 @@
   spriteHasMindState: sec_e
   spriteNoMindState: sec_e_r
   spriteToggleLightState: sec_l
-  spriteRestingState: sec_rest # Lust-edit
-  spriteWreckState: sec_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-sec-cyborg
