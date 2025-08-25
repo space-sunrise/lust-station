@@ -16,15 +16,3 @@ public readonly record struct AnnouncementSpeakerEvent(
     byte[]? TtsData = null)
 {
 }
-
-/// <summary>
-/// Event raised on individual speakers to play an announcement.
-/// </summary>
-[ByRefEvent]
-public readonly record struct SpeakerPlayAnnouncementEvent(
-    string Message,
-    ResolvedSoundSpecifier? AnnouncementSound,
-    string? AnnounceVoice,
-    byte[]? GeneratedTts = null)
-{
-}

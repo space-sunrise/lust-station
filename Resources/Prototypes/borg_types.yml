@@ -38,20 +38,10 @@
   spriteHasMindState: robot_e
   spriteNoMindState: robot_e_r
   spriteToggleLightState: robot_l
-  spriteRestingState: robot_rest # Lust-edit
-  spriteWreckState: robot_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-generic-cyborg
   petFailureString: petting-failure-generic-cyborg
-
-  # Lust-start
-  addComponents:
-  - type: ActionGrant
-    actions:
-    - RestActionRobot
-    - ActionViewLaws
-  # Lust-end
 
 
 # Engineering borg
@@ -99,12 +89,6 @@
     - HandheldStationMapUnpowered
     - EngiAlertsMonitor
   # Sunrise-End
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionEngineer
-  # Lust-end
 
   # Visual
   inventoryTemplateId: borgShort
@@ -112,8 +96,6 @@
   spriteHasMindState: engineer_e
   spriteNoMindState: engineer_e_r
   spriteToggleLightState: engineer_l
-  spriteRestingState: engineer_rest # Lust-edit
-  spriteWreckState: engineer_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-engineer-cyborg
@@ -188,12 +170,6 @@
     instantActions:
     - HandheldStationMapUnpowered
   # Sunrise-End
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionMiner
-  # Lust-end
 
   # Visual
   inventoryTemplateId: borgTall
@@ -202,8 +178,6 @@
   spriteHasMindState: miner_e
   spriteNoMindState: miner_e_r
   spriteToggleLightState: miner_l
-  spriteRestingState: miner_rest #Lust-edit
-  spriteWreckState: miner_wreck #Lust-edit
 
   # Pet
   petSuccessString: petting-success-salvage-cyborg
@@ -251,8 +225,6 @@
   spriteHasMindState: janitor_e
   spriteNoMindState: janitor_e_r
   spriteToggleLightState: janitor_l
-  spriteRestingState: janitor_rest #Lust-edit
-  spriteWreckState: janitor_wreck #Lust-edit
 
   # Pet
   petSuccessString: petting-success-janitor-cyborg
@@ -269,12 +241,6 @@
     solution: absorbed
   - type: RefillableSolution
     solution: absorbed
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionJanitor
-  # Lust-end
 
 
 # Medical borg
@@ -327,12 +293,6 @@
     entityTargetActions:
     - HandheldHealthAnalyzerUnpowered
   # Sunrise-End
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionMedical
-  # Lust-end
 
   # Visual
   inventoryTemplateId: borgDutch
@@ -341,8 +301,6 @@
   spriteHasMindState: medical_e
   spriteNoMindState: medical_e_r
   spriteToggleLightState: medical_l
-  spriteRestingState: medical_rest # Lust-edit
-  spriteWreckState: medical_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-medical-cyborg
@@ -389,16 +347,7 @@
   spriteHasMindState: service_e
   spriteNoMindState: service_e_r
   spriteToggleLightState: service_l
-  spriteRestingState: service_rest # Lust-edit
-  spriteWreckState: service_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-service-cyborg
   petFailureString: petting-failure-service-cyborg
-  # Lust-start
-  addComponents:
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionService
-  # Lust-end

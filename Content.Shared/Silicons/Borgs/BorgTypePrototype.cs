@@ -125,12 +125,6 @@ public sealed partial class BorgTypePrototype : IPrototype
     /// </summary>
     [DataField]
     public string SpriteToggleLightState { get; set; } = "robot_l";
-// Lust-start
-    [DataField]
-    public string SpriteRestingState { get; set; } = "robot_rest";
-    [DataField]
-    public string SpriteWreckState { get; set; } = "robot_wreck";
-// Lust-end
 
     //
     // Minor information

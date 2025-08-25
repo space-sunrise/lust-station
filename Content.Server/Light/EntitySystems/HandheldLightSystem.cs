@@ -2,7 +2,6 @@ using Content.Server.Actions;
 using Content.Server.Popups;
 using Content.Server.Power.EntitySystems;
 using Content.Server.PowerCell;
-using Content.Shared._Lust.Rest;
 using Content.Shared.Actions;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
@@ -77,15 +76,6 @@ namespace Content.Server.Light.EntitySystems
         {
             if (args.Handled)
                 return;
-
-            // Lust edit start - Эта штука нужна, чтобы блокировать включение фонарика у боргов
-            var ev = new ActionLightToggledSunriseEvent();
-
-            RaiseLocalEvent(ent.Owner, ev);
-
-            if (ev.Cancelled)
-                return;
-            // Lust edit end
 
             if (ent.Comp.Activated)
                 TurnOff(ent);

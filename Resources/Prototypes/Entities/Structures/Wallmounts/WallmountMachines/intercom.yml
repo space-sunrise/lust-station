@@ -7,7 +7,7 @@
   components:
   - type: StationAiWhitelist
   - type: AnnouncementSpeaker  # Sunrise-Edit: Add announcement speaker capability
-    range: 15
+    range: 30
     enabled: true
     requiresPower: true
   - type: Electrified

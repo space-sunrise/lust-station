@@ -198,7 +198,7 @@ public sealed partial class LobbyUIController : UIController, IOnStateEntered<Lo
         var (characterGui, profileEditor) = EnsureGui();
         characterGui.ReloadCharacterPickers();
         profileEditor.SetProfile(
-            (HumanoidCharacterProfile?)_preferencesManager.Preferences?.SelectedCharacter,
+            (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter,
             _preferencesManager.Preferences?.SelectedCharacterIndex);
     }
 
