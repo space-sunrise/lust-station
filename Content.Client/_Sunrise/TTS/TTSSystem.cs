@@ -1,4 +1,5 @@
-﻿using Content.Shared._Sunrise.SunriseCCVars;
+﻿using Content.Shared._Sunrise.AnnouncementSpeaker.Events;
+using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared._Sunrise.TTS;
 using Content.Shared.CCVar;
 using Content.Shared.Ghost;
@@ -24,7 +25,6 @@ public sealed class TTSSystem : EntitySystem
     [Dependency] private readonly IConfigurationManager _cfg = default!;
     [Dependency] private readonly IResourceManager _res = default!;
     [Dependency] private readonly AudioSystem _audio = default!;
-    [Dependency] private readonly SharedAudioSystem _sharedAudio = default!;
     [Dependency] private readonly IResourceCache _resourceCache = default!;
     [Dependency] private readonly IDependencyCollection _dependencyCollection = default!;
     [Dependency] private readonly IPlayerManager _playerManager = default!;
@@ -64,6 +64,7 @@ public sealed class TTSSystem : EntitySystem
         _cfg.OnValueChanged(SunriseCCVars.TTSClientQueueEnabled, OnTTSQueueOptionChanged, true);
         _cfg.OnValueChanged(SunriseCCVars.TTSRadioGhostEnabled, OnTtsRadioGhostChanged, true);
         SubscribeNetworkEvent<PlayTTSEvent>(OnPlayTTS);
+        SubscribeNetworkEvent<PlayMultiSpeakerTTSEvent>(OnPlayMultiSpeakerTTS);
     }
 
     public override void Shutdown()
@@ -167,24 +168,12 @@ public sealed class TTSSystem : EntitySystem
         PlayTTSBytes(ev.Data, entity, audioParams);
     }
 
-    private (EntityUid Entity, AudioComponent Component)? PlayTTSBytes(byte[] data, EntityUid? sourceUid = null, AudioParams? audioParams = null, bool globally = false)
+    private (AudioResource Resource, ResPath FilePath)? AddTtsAudioResource(byte[] data)
     {
         if (data.Length == 0)
             return null;
 
-        // если sourceUid.Value.Id == 0 то значит эта сущность не прогружена на стороне клиента
-        if (sourceUid is { Id: 0 } && !globally)
-            return null;
-
-        _sawmill.Debug($"Play TTS audio {data.Length} bytes from {sourceUid} entity");
-
-        var finalParams = audioParams ?? AudioParams.Default;
-
         var filePath = new ResPath($"{_fileIdx}.ogg");
-        ContentRoot.AddOrUpdateFile(filePath, data);
-
-        var res = new AudioResource();
-        res.Load(_dependencyCollection, Prefix / filePath);
         try
         {
             ContentRoot.AddOrUpdateFile(filePath, data);
@@ -195,10 +184,16 @@ public sealed class TTSSystem : EntitySystem
             _fileIdx++;
             return null;
         }
+        var res = new AudioResource();
+        res.Load(_dependencyCollection, Prefix / filePath);
         _resourceCache.CacheResource(Prefix / filePath, res);
+        return (res, filePath);
+    }
 
+    private (EntityUid Entity, AudioComponent Component)? PlayTTSResource(AudioResource res, ResPath filePath, EntityUid? sourceUid = null, AudioParams? audioParams = null, bool globally = false)
+    {
+        var finalParams = audioParams ?? AudioParams.Default;
         (EntityUid Entity, AudioComponent Component)? playing;
-
         if (globally)
         {
             playing = _audio.PlayGlobal(res.AudioStream, null, finalParams);
@@ -214,11 +209,45 @@ public sealed class TTSSystem : EntitySystem
                 playing = _audio.PlayGlobal(res.AudioStream, null, finalParams);
             }
         }
-
         RemoveFileCursed(filePath);
-
         _fileIdx++;
         return playing;
+    }
+
+    private void OnPlayMultiSpeakerTTS(PlayMultiSpeakerTTSEvent ev)
+    {
+        if (_volume == 0)
+            return;
+
+        var volume = SharedAudioSystem.GainToVolume(_volume);
+        var audioParams = AudioParams.Default.WithVolume(volume).WithMaxDistance(30f);
+
+        var audioRes = AddTtsAudioResource(ev.SoundData);
+        if (audioRes == null)
+            return;
+
+        foreach (var uid in ev.Speakers)
+        {
+            PlayTTSResource(audioRes.Value.Resource, audioRes.Value.FilePath, GetEntity(uid), audioParams);
+        }
+    }
+
+    private (EntityUid Entity, AudioComponent Component)? PlayTTSBytes(byte[] data, EntityUid? sourceUid = null, AudioParams? audioParams = null, bool globally = false)
+    {
+        if (data.Length == 0)
+            return null;
+
+        // если sourceUid.Value.Id == 0 то значит эта сущность не прогружена на стороне клиента
+        if (sourceUid is { Id: 0 } && !globally)
+            return null;
+
+        _sawmill.Debug($"Play TTS audio {data.Length} bytes from {sourceUid} entity");
+
+        var audioRes = AddTtsAudioResource(data);
+        if (audioRes == null)
+            return null;
+
+        return PlayTTSResource(audioRes.Value.Resource, audioRes.Value.FilePath, sourceUid, audioParams, globally);
     }
 
     private void RemoveFileCursed(ResPath resPath)

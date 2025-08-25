@@ -1,8 +1,9 @@
 - type: entity
   id: BorgChassisSelectable
-  parent: BaseBorgChassisNTNextGen # Lust-edit
+  parent: BaseBorgChassisNT
   components:
   - type: Sprite
+    sprite: _Lust/Mobs/Silicon/chassis.rsi
     layers:
     - state: robot
       map: ["enum.BorgVisualLayers.Body", "movement"]
@@ -14,14 +15,6 @@
       shader: unshaded
       map: ["light","enum.BorgVisualLayers.LightStatus"]
       visible: false
-    # Lust-start
-    - state: robot_rest
-      map: [ "enum.RestVisuals.Resting" ]
-      visible: false
-    - state: robot_wreck
-      map: [ "enum.BorgVisualLayers.Wrecked" ]
-      visible: false
-    # Lust-end
   - type: BorgChassis
     # Default borg can take no modules until selected type.
     maxModules: 0
@@ -154,12 +147,6 @@
       entityTargetActions:
       - AccessBreaker
     # Sunrise-End
-    # Lust-start
-    - type: ActionGrant
-      actions:
-      - ActionViewLaws
-    - type: StandingState
-    # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateMedical
@@ -211,12 +198,6 @@
       - AccessBreaker
       - HandheldHealthAnalyzerUnpowered
     # Sunrise-End
-    # Lust-start
-    - type: ActionGrant
-      actions:
-      - ActionViewLaws
-    - type: StandingState
-    # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateSaboteur
@@ -255,12 +236,6 @@
       interactFailureString: petting-failure-syndicate-cyborg
       interactSuccessSound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
-    # Lust-start
-    - type: ActionGrant
-      actions:
-      - ActionViewLaws
-    - type: StandingState
-    # Lust-end
 
 - type: entity
   id: BorgChassisDerelict
@@ -293,12 +268,6 @@
     interactFailureString: petting-failure-derelict-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-  - type: StandingState
-  # Lust-end
 
 - type: entity
   parent: BaseBorgChassisDerelict

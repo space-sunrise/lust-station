@@ -192,6 +192,10 @@
     ClothingBackpackSatchelYellow: 2
     ClothingAlcoholichka: 4
     ClothingNeckAmethystHeart: 2
+    ClothingUniformTurleneckBlack: 2
+    ClothingUniformTurleneckBlackWomen: 2
+    ClothingUniformTurleneckBlackSleeveless: 2
+    ClothingUniformTurleneckBlackWomenSleeveless: 2
 #Sunrise-end
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
