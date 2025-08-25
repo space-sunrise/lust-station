@@ -11,6 +11,7 @@ using Content.Shared._Sunrise.AnnouncementSpeaker.Components;
 using Content.Shared._Sunrise.AnnouncementSpeaker.Events;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio;
+using Content.Shared.Silicons.Borgs.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.Player;
@@ -54,10 +55,12 @@ public sealed partial class TTSSystem : EntitySystem
     private List<ICommonSession> _ignoredRecipients = new();
     private const float WhisperVoiceVolumeModifier = 0.6f; // how far whisper goes in world units
     private const int WhisperVoiceRange = 3; // how far whisper goes in world units
+    private string _radioEffect = string.Empty;
 
     public override void Initialize()
     {
         _cfg.OnValueChanged(SunriseCCVars.TTSEnabled, v => _isEnabled = v, true);
+        _cfg.OnValueChanged(SunriseCCVars.TTSRadioEffect, OnRadioEffectChanged, true);
 
         SubscribeLocalEvent<TransformSpeechEvent>(OnTransformSpeech);
         SubscribeLocalEvent<TTSComponent, EntitySpokeEvent>(OnEntitySpoke);
@@ -66,6 +69,11 @@ public sealed partial class TTSSystem : EntitySystem
 
         SubscribeNetworkEvent<RequestPreviewTTSEvent>(OnRequestPreviewTTS);
         SubscribeNetworkEvent<ClientOptionTTSEvent>(OnClientOptionTTS);
+    }
+
+    private void OnRadioEffectChanged(string value)
+    {
+        _radioEffect = value;
     }
 
     private async void OnRequestPreviewTTS(RequestPreviewTTSEvent ev, EntitySessionEventArgs args)
@@ -115,7 +123,7 @@ public sealed partial class TTSSystem : EntitySystem
         RaiseLocalEvent(args.Source, accentEvent);
         var message = accentEvent.Text;
 
-        HandleRadio(args.Receivers, message, protoVoice);
+        HandleRadio(args.Receivers, message, protoVoice, voiceEv.Effect);
     }
 
     private bool GetVoicePrototype(string voiceId, [NotNullWhen(true)] out TTSVoicePrototype? voicePrototype)
@@ -237,10 +245,10 @@ public sealed partial class TTSSystem : EntitySystem
             return;
         }
 
-        HandleSay(uid, message, protoVoice);
+        HandleSay(uid, message, protoVoice, voiceEv.Effect);
     }
 
-    private async void HandleSay(EntityUid uid, string message, TTSVoicePrototype voicePrototype)
+    private async void HandleSay(EntityUid uid, string message, TTSVoicePrototype voicePrototype, string? effect)
     {
         var recipients = Filter.Pvs(uid, 1F).RemovePlayers(_ignoredRecipients);
 
@@ -248,7 +256,7 @@ public sealed partial class TTSSystem : EntitySystem
         if (!recipients.Recipients.Any())
             return;
 
-        var soundData = await GenerateTTS(message, voicePrototype);
+        var soundData = await GenerateTTS(message, voicePrototype, effect);
 
         if (soundData is null)
             return;
@@ -293,9 +301,9 @@ public sealed partial class TTSSystem : EntitySystem
         }
     }
 
-    private async void HandleRadio(EntityUid[] uids, string message, TTSVoicePrototype voicePrototype)
+    private async void HandleRadio(EntityUid[] uids, string message, TTSVoicePrototype voicePrototype, string? effect = null)
     {
-        var soundData = await GenerateTTS(message, voicePrototype, isRadio: true);
+        var soundData = await GenerateTTS(message, voicePrototype, _radioEffect);
         if (soundData is null)
             return;
 
@@ -303,7 +311,7 @@ public sealed partial class TTSSystem : EntitySystem
     }
 
     // ReSharper disable once InconsistentNaming
-    public async Task<byte[]?> GenerateTTS(string text, TTSVoicePrototype voicePrototype, bool isRadio = false, bool isAnnounce = false)
+    public async Task<byte[]?> GenerateTTS(string text, TTSVoicePrototype voicePrototype, string? effect = null)
     {
         try
         {
@@ -312,17 +320,7 @@ public sealed partial class TTSSystem : EntitySystem
             if (char.IsLetter(textSanitized[^1]))
                 textSanitized += ".";
 
-            if (isRadio)
-            {
-                return await _ttsManager.ConvertTextToSpeechRadio(voicePrototype, textSanitized);
-            }
-
-            if (isAnnounce)
-            {
-                return await _ttsManager.ConvertTextToSpeechAnnounce(voicePrototype, textSanitized);
-            }
-
-            return await _ttsManager.ConvertTextToSpeech(voicePrototype, textSanitized);
+            return await _ttsManager.ConvertTextToSpeech(voicePrototype, textSanitized, effect);
         }
         catch (Exception e)
         {
@@ -338,11 +336,13 @@ public sealed class TransformSpeakerVoiceEvent : EntityEventArgs
 {
     public EntityUid Sender;
     public string VoiceId;
+    public string? Effect;
 
-    public TransformSpeakerVoiceEvent(EntityUid sender, string voiceId)
+    public TransformSpeakerVoiceEvent(EntityUid sender, string voiceId, string? effect = null)
     {
         Sender = sender;
         VoiceId = voiceId;
+        Effect = effect;
     }
 }
 

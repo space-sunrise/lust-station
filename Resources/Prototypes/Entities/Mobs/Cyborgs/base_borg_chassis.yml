@@ -74,12 +74,15 @@
       # Only used for NT borgs that can switch type, defined here to avoid copy-pasting the rest of this component.
       enum.BorgSwitchableTypeUiKey.SelectBorgType:
         type: BorgSelectTypeUserInterface
+      enum.BorgVoiceUiKey.Key:
+        type: BorgVoiceBoundUserInterface
   - type: ActivatableUI
     key: enum.BorgUiKey.Key
   - type: SiliconLawBound
   - type: ActionGrant
     actions:
     - ActionViewLaws
+    - ActionChangeBorgVoice
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
@@ -117,6 +120,7 @@
     allowSelfRepair: false
   # Sunrise-End
   - type: BorgChassis
+  - type: BorgVoice # Sunrise-TTS: Allow cyborgs to change their voice
   - type: LockingWhitelist
     blacklist:
       components:

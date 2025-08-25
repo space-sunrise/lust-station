@@ -53,6 +53,7 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
 
     private bool _isEnabled;
     private string _defaultAnnounceVoice = "Hanson";
+    private string _announceEffect = string.Empty;
 
     // Queue system for preventing overlapping announcements
     private readonly Queue<QueuedAnnouncement> _announcementQueue = new();
@@ -64,12 +65,18 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     {
         base.Initialize();
         _cfg.OnValueChanged(SunriseCCVars.TTSEnabled, v => _isEnabled = v, true);
+        _cfg.OnValueChanged(SunriseCCVars.TTSAnnounceEffect, OnAnnounceEffectChanged, true);
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
         ProcessAnnouncementQueue();
+    }
+
+    private void OnAnnounceEffectChanged(string value)
+    {
+        _announceEffect = value;
     }
 
     /// <summary>
@@ -225,7 +232,7 @@ public sealed class AnnouncementSpeakerSystem : EntitySystem
     {
         try
         {
-            return await _ttsSystem.GenerateTTS(text, voicePrototype, isAnnounce: true);
+            return await _ttsSystem.GenerateTTS(text, voicePrototype, _announceEffect);
         }
         catch (Exception e)
         {
