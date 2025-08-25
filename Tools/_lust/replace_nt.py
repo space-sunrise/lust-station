@@ -10,6 +10,18 @@ REPLACEMENTS = {
     r"\bNanoTrasen\b": "Qillu",
 }
 
+PLACEHOLDER_SPLIT = re.compile(r'(\{[^{}]*\})')
+
+def replace_outside_placeholders(text: str) -> str:
+    parts = PLACEHOLDER_SPLIT.split(text)
+    for i, seg in enumerate(parts):
+        if seg.startswith('{') and seg.endswith('}'):
+            continue
+        for pattern, replacement in REPLACEMENTS.items():
+            seg = re.sub(pattern, replacement, seg, flags=re.IGNORECASE)
+        parts[i] = seg
+    return ''.join(parts)
+
 def process_ftl_files(locale_dir: Path):
     if not locale_dir.exists():
         print(f"Директория {locale_dir} не найдена, создаём её")
@@ -21,8 +33,7 @@ def process_ftl_files(locale_dir: Path):
         for line in content.splitlines(True):
             if "=" in line and not line.lstrip().startswith("#"):
                 left, right = line.split("=", 1)
-                for pattern, replacement in REPLACEMENTS.items():
-                    right = re.sub(pattern, replacement, right, flags=re.IGNORECASE)
+                right = replace_outside_placeholders(right)
                 line = left + "=" + right
             lines.append(line)
         content = "".join(lines)
