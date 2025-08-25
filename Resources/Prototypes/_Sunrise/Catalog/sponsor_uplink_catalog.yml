@@ -2886,7 +2886,7 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieAndrewNarvi
+  id: UplinkPlushieAndrewNarvi
   productEntity: PlushieAndrewNarvi
   cost:
     Suntick: 4
@@ -2897,7 +2897,7 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieTimofeyTatarchuk
+  id: UplinkPlushieTimofeyTatarchuk
   productEntity: PlushieTimofeyTatarchuk
   cost:
     Suntick: 4
@@ -2908,7 +2908,7 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustPlushieSansaMontanelli
+  id: UplinkPlushieSansaMontanelli
   productEntity: PlushieSansaMontanelli
   cost:
     Suntick: 4
