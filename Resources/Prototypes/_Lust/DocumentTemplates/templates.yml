@@ -1,0 +1,440 @@
+- type: docTemplate
+  id: Appeal_QL
+  parent: Appeal
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ApplicationAccess_QL
+  parent: ApplicationAccess
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ApplicationAppointmentInterim_QL
+  parent: ApplicationAppointmentInterim
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ApplicationEmployment_QL
+  parent: ApplicationEmployment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ApplicationEquipment_QL
+  parent: ApplicationEquipment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: Certificate_QL
+  parent: Certificate
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: CertificateAdvancedTraining_QL
+  parent: CertificateAdvancedTraining
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: CertificateOffense_QL
+  parent: CertificateOffense
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ClosingIndictment_QL
+  parent: ClosingIndictment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ComplaintOffense_QL
+  parent: ComplaintOffense
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ComplaintViolationLaborRules_QL
+  parent: ComplaintViolationLaborRules
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ConditionReport_QL
+  parent: ConditionReport
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ConstructionPermit_QL
+  parent: ConstructionPermit
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: DeathCertificate_QL
+  parent: DeathCertificate
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: DecisionToStartTrial_QL
+  parent: DecisionToStartTrial
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_court
+
+- type: docTemplate
+  id: DisposalReport_QL
+  parent: DisposalReport
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: DivorceCertificate_QL
+  parent: DivorceCertificate
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: EvacuationShuttleRequest_QL
+  parent: EvacuationShuttleRequest
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ExperimentReport_QL
+  parent: ExperimentReport
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: InternalAffairsAgentsReport_QL
+  parent: InternalAffairsAgentsReport
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: Judgment_QL
+  parent: Judgment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_court
+
+- type: docTemplate
+  id: LetterResignation_QL
+  parent: LetterResignation
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: MarriageCertificate_QL
+  parent: MarriageCertificate
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: OrderDeprivationAccess_QL
+  parent: OrderDeprivationAccess
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: OrderDismissal_QL
+  parent: OrderDismissal
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: OrderEncouragement_QL
+  parent: OrderEncouragement
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: OrderingSpecialEquipment_QL
+  parent: OrderingSpecialEquipment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_centcom
+
+- type: docTemplate
+  id: OrderMedicalIntervention_QL
+  parent: OrderMedicalIntervention
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: OrderParolePrisoner_QL
+  parent: OrderParolePrisoner
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: OrderPurchaseResourcesEquipment_QL
+  parent: OrderPurchaseResourcesEquipment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: OrderPurchaseWeapons_QL
+  parent: OrderPurchaseWeapons
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: OrderRecognizingSentienceCreature_QL
+  parent: OrderRecognizingSentienceCreature
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: PermissionDisposeBody_QL
+  parent: PermissionDisposeBody
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: PermissionEquipment_QL
+  parent: PermissionEquipment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: PermissionToCarryWeapons_QL
+  parent: PermissionToCarryWeapons
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: PermissionToExtendMarriage_QL
+  parent: PermissionToExtendMarriage
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: PermissionToTravelInCaseOfThreat_QL
+  parent: PermissionToTravelInCaseOfThreat
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: PrescriptionDrugAuthorization_QL
+  parent: PrescriptionDrugAuthorization
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ProductManufacturingOrder_QL
+  parent: ProductManufacturingOrder
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ReportDepartment_QL
+  parent: ReportDepartment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ReportEmployeePerformance_QL
+  parent: ReportEmployeePerformance
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ReportOnEliminationOfViolations_QL
+  parent: ReportOnEliminationOfViolations
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ReportOnTheChaptersMeeting_QL
+  parent: ReportOnTheChaptersMeeting
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ReportStation_QL
+  parent: ReportStation
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: ReportStudyObject_QL
+  parent: ReportStudyObject
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestCallMembersCentralCommitteeDSO_QL
+  parent: RequestCallMembersCentralCommitteeDSO
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_centcom
+
+- type: docTemplate
+  id: RequestChangeSalary_QL
+  parent: RequestChangeSalary
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestConstructionWork_QL
+  parent: RequestConstructionWork
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestDocuments_QL
+  parent: RequestDocuments
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestEuthanasia_QL
+  parent: RequestEuthanasia
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestForNonlistedEmployment_QL
+  parent: RequestForNonlistedEmployment
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: RequestForPromotion_QL
+  parent: RequestForPromotion
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: RequestModernization_QL
+  parent: RequestModernization
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: RequestRequestToEstablishThreatLevel_QL
+  parent: RequestRequestToEstablishThreatLevel
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: SearchPermission_QL
+  parent: SearchPermission
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: Sentence_QL
+  parent: Sentence
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: ShuttleRegistrationRequest_QL
+  parent: ShuttleRegistrationRequest
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: StatementHealth_QL
+  parent: StatementHealth
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header
+
+- type: docTemplate
+  id: BusinessDeal_QL
+  parent: BusinessDeal
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: syndicate_form_header
+
+- type: docTemplate
+  id: ErrorLoadingFormHeader_QL
+  parent: ErrorLoadingFormHeader
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: syndicate_form_header
+
+- type: docTemplate
+  id: NoticeOfLiquidation_QL
+  parent: NoticeOfLiquidation
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: syndicate_form_header
+
+- type: docTemplate
+  id: NoteBeginningMilitaryActions_QL
+  parent: NoteBeginningMilitaryActions
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: syndicate_form_header
+
+- type: docTemplate
+  id: ReportAccomplishmentGoals_QL
+  parent: ReportAccomplishmentGoals
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: syndicate_form_header
