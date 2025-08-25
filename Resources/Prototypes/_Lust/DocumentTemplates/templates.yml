@@ -52,49 +52,49 @@
   parent: CertificateOffense
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: ClosingIndictment_QL
   parent: ClosingIndictment
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: ComplaintOffense_QL
   parent: ComplaintOffense
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: ComplaintViolationLaborRules_QL
   parent: ComplaintViolationLaborRules
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_just
 
 - type: docTemplate
   id: ConditionReport_QL
   parent: ConditionReport
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_eng
 
 - type: docTemplate
   id: ConstructionPermit_QL
   parent: ConstructionPermit
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_eng
 
 - type: docTemplate
   id: DeathCertificate_QL
   parent: DeathCertificate
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: DecisionToStartTrial_QL
@@ -108,14 +108,14 @@
   parent: DisposalReport
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sup
 
 - type: docTemplate
   id: DivorceCertificate_QL
   parent: DivorceCertificate
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_serv
 
 - type: docTemplate
   id: EvacuationShuttleRequest_QL
@@ -129,14 +129,14 @@
   parent: ExperimentReport
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_rnd
 
 - type: docTemplate
   id: InternalAffairsAgentsReport_QL
   parent: InternalAffairsAgentsReport
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_just
 
 - type: docTemplate
   id: Judgment_QL
@@ -157,7 +157,7 @@
   parent: MarriageCertificate
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_serv
 
 - type: docTemplate
   id: OrderDeprivationAccess_QL
@@ -192,7 +192,7 @@
   parent: OrderMedicalIntervention
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: OrderParolePrisoner_QL
@@ -206,28 +206,28 @@
   parent: OrderPurchaseResourcesEquipment
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sup
 
 - type: docTemplate
   id: OrderPurchaseWeapons_QL
   parent: OrderPurchaseWeapons
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sup
 
 - type: docTemplate
   id: OrderRecognizingSentienceCreature_QL
   parent: OrderRecognizingSentienceCreature
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_rnd
 
 - type: docTemplate
   id: PermissionDisposeBody_QL
   parent: PermissionDisposeBody
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: PermissionEquipment_QL
@@ -262,7 +262,7 @@
   parent: PrescriptionDrugAuthorization
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: ProductManufacturingOrder_QL
@@ -311,7 +311,7 @@
   parent: ReportStudyObject
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_rnd
 
 - type: docTemplate
   id: RequestCallMembersCentralCommitteeDSO_QL
@@ -332,21 +332,21 @@
   parent: RequestConstructionWork
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_eng
 
 - type: docTemplate
   id: RequestDocuments_QL
   parent: RequestDocuments
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_just
 
 - type: docTemplate
   id: RequestEuthanasia_QL
   parent: RequestEuthanasia
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: RequestForNonlistedEmployment_QL
@@ -367,42 +367,42 @@
   parent: RequestModernization
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_rnd
 
 - type: docTemplate
   id: RequestRequestToEstablishThreatLevel_QL
   parent: RequestRequestToEstablishThreatLevel
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_rnd
 
 - type: docTemplate
   id: SearchPermission_QL
   parent: SearchPermission
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: Sentence_QL
   parent: Sentence
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: ShuttleRegistrationRequest_QL
   parent: ShuttleRegistrationRequest
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_sec
 
 - type: docTemplate
   id: StatementHealth_QL
   parent: StatementHealth
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
-    state: qillu_form_header
+    state: qillu_form_header_med
 
 - type: docTemplate
   id: BusinessDeal_QL
