@@ -39,8 +39,8 @@
   - type: BorgCuffed
   - type: InnateItem
     instantActions:
-    - PortableSurveillanceCameraMonitorUnpoweredInnateItem
-    - HandheldStationMapUnpoweredInnateItem
+    - PortableSurveillanceCameraMonitorUnpowered
+    - HandheldStationMapUnpowered
   - type: Access
     tags:
     - EmergencyShuttleRepealAll
@@ -66,12 +66,6 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionPeace
-  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -85,8 +79,6 @@
   spriteHasMindState: peace_e
   spriteNoMindState: peace_e_r
   spriteToggleLightState: peace_l
-  spriteRestingState: peace_rest # Lust-edit
-  spriteWreckState: peace_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-peace-cyborg
@@ -128,12 +120,6 @@
     pieProtoId: FoodPieBananaCream
   - type: TTS
     voice: NecoArcTwo
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionClown
-  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -145,8 +131,6 @@
   spriteHasMindState: clown_e
   spriteNoMindState: clown_e_r
   spriteToggleLightState: clown_l
-  spriteRestingState: clown_rest # Lust-edit
-  spriteWreckState: clown_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-clown-cyborg
@@ -186,8 +170,6 @@
   spriteHasMindState: sec_e
   spriteNoMindState: sec_e_r
   spriteToggleLightState: sec_l
-  spriteRestingState: sec_rest # Lust-edit
-  spriteWreckState: sec_wreck # Lust-edit
 
   # Pet
   petSuccessString: petting-success-sec-cyborg
@@ -204,11 +186,11 @@
     voice: Sentrybot
   - type: InnateItem
     instantActions:
-    - PortableSurveillanceCameraMonitorUnpoweredInnateItem
-    - HandheldCriminalRecordsMonitorUnpoweredInnateItem
-    - HandheldStationMapUnpoweredInnateItem
-    worldTargetActions:
-    - ForensicScannerInnateItem
+    - PortableSurveillanceCameraMonitorUnpowered
+    - HandheldCriminalRecordsMonitorUnpowered
+    - HandheldStationMapUnpowered
+    entityTargetActions:
+    - ForensicScanner
   - type: ShowCriminalRecordIcons
   - type: ShowMindShieldIcons
   - type: BorgCuffed
@@ -240,9 +222,3 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionSec
-  # Lust-end

@@ -105,8 +105,8 @@
   - type: RandomMetadata
     nameSegments: [NamesBorg]
   - type: InnateItem
-    worldTargetActions:
-    - EmagInnateItem
+    entityTargetActions:
+    - AccessBreaker
   # Lust-start
   - type: ActionGrant
     actions:
@@ -215,10 +215,10 @@
     - EmagImmune
   - type: InnateItem
     instantActions:
-    - PortableSurveillanceCameraMonitorUnpoweredInnateItem
-    - HandheldStationMapUnpoweredInnateItem
-    - HandheldCrewMonitorBorgInnateItem
-    - HandHeldMassScannerBorgInnateItem
+    - PortableSurveillanceCameraMonitorUnpowered
+    - HandheldStationMapUnpowered
+    - HandheldCrewMonitorBorg
+    - HandHeldMassScannerBorg
   - type: MobThresholds
     thresholds:
       0: Alive
@@ -341,8 +341,8 @@
     baseWalkSpeed : 2
     baseSprintSpeed : 3
   - type: InnateItem
-    worldTargetActions:
-    - EmagInnateItem
+    entityTargetActions:
+    - AccessBreaker
   # Lust-start
   - type: ActionGrant
     actions:
@@ -428,8 +428,8 @@
     baseWalkSpeed : 3
     baseSprintSpeed : 5
   - type: InnateItem
-    worldTargetActions:
-    - EmagInnateItem
+    entityTargetActions:
+    - AccessBreaker
   # Lust-start
   - type: ActionGrant
     actions:

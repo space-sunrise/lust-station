@@ -21,6 +21,7 @@
             Adjutant: [ 1, 1 ]
             NanoTrasenRepresentative: [ 1, 1 ]
             HeadOfPersonnel: [ 1, 1 ]
+            ComMaid: [ 1, 1 ]
             #service
             Bartender: [ 2, 2 ]
             Botanist: [ 3, 3 ]
@@ -87,9 +88,6 @@
             PeaceBorg: [ 2, 2 ]
             MedicalBorg: [ 4, 4 ]
             SecurityBorg: [ 4, 4 ]
-            # Lust-start
-            ComMaid: [ 1, 1 ]
-            # Lust-end
         - type: StationGoal
           goals:
           - Shuttle
