@@ -14,11 +14,11 @@
     jumpsuit: ClothingUniformJumpsuitNinja
     back: ClothingBackpackSatchel
     mask: ClothingMaskNinja
-    head: ClothingHeadHelmetSpaceNinja
+    head: ClothingHeadHelmetSpaceNinjaBiocode
     eyes: ClothingEyesVisorNinja
-    gloves: ClothingHandsGlovesSpaceNinja
-    outerClothing: ClothingOuterSuitSpaceNinja
-    shoes: ClothingShoesSpaceNinja
+    gloves: ClothingHandsGlovesSpaceNinjaBiocode
+    outerClothing: ClothingOuterSuitSpaceNinjaBiocode
+    shoes: ClothingShoesSpaceNinjaBiocode
     id: AgentIDCard
     ears: ClothingHeadsetGrey
     pocket1: SpiderCharge
