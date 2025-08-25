@@ -8,7 +8,6 @@ REPLACEMENTS = {
     r"\bНТ\b": "Qillu",
     r"\bНанотрейзен\b": "Qillu",
     r"\bNanoTrasen\b": "Qillu",
-    r"\bНаноТрейзен\b": "Qillu",
 }
 
 def process_ftl_files(locale_dir: Path):
@@ -18,8 +17,15 @@ def process_ftl_files(locale_dir: Path):
 
     for file_path in locale_dir.rglob("*.ftl"):
         content = file_path.read_text(encoding="utf-8")
-        for pattern, replacement in REPLACEMENTS.items():
-            content = re.sub(pattern, replacement, content)
+        lines = []
+        for line in content.splitlines(True):
+            if "=" in line and not line.lstrip().startswith("#"):
+                left, right = line.split("=", 1)
+                for pattern, replacement in REPLACEMENTS.items():
+                    right = re.sub(pattern, replacement, right, flags=re.IGNORECASE)
+                line = left + "=" + right
+            lines.append(line)
+        content = "".join(lines)
         file_path.write_text(content, encoding="utf-8")
     print(f"Обработка завершена для {locale_dir}")
 
