@@ -275,6 +275,17 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
+- type: listing
+  id: UplinkLustDurin
+  productEntity: PlushieGimliDurin
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
 # Erotic
 
 - type: listing
