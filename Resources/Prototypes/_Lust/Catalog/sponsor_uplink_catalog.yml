@@ -1,4 +1,4 @@
-﻿# Plushie
+# Plushie
 
 - type: listing
   id: UplinkLustPlushieAnameGermanikum
@@ -267,6 +267,17 @@
 - type: listing
   id: UplinkLustDrasusLeverian
   productEntity: PlushieDrasusLeverian
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkLustMoleronKucenko
+  productEntity: PlushieMoleronKucenko
   cost:
     Suntick: 4
   categories:
