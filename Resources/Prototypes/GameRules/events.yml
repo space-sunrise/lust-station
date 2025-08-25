@@ -265,7 +265,7 @@
         - SpiderClan
       - type: AutoImplant
         implants:
-        - MacroBombImplant # Sunrise-Edit
+        - DeathAcidifierImplant
       - type: RandomMetadata
         nameSegments:
         - NamesNinjaTitle

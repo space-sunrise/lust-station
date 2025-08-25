@@ -42,3 +42,12 @@
   - type: FactionClothingBlocker
   - type: Unremoveable
     deleteOnDrop: false
+
+- type: entity
+  parent: EnergyKatana
+  id: EnergyKatanaBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - SpiderClan
