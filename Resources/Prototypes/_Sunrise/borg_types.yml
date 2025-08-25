@@ -66,12 +66,6 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionPeace
-  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -128,12 +122,6 @@
     pieProtoId: FoodPieBananaCream
   - type: TTS
     voice: NecoArcTwo
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionClown
-  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -240,9 +228,3 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
-  # Lust-start
-  - type: ActionGrant
-    actions:
-    - ActionViewLaws
-    - RestActionSec
-  # Lust-end
