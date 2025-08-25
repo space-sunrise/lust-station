@@ -1,0 +1,52 @@
+- type: entity
+  name: Decimator
+  parent: BaseItem
+  id: Decimator
+  description: and Thy punisment, is dead.
+  components:
+  - type: Sprite
+    sprite: _Duty/Weapons/Decimator.rsi
+    state: icon
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.6
+    damage:
+      types:
+        Blunt: 6
+        Structural: 10
+    soundHit:
+      collection: MetalThud
+  - type: Wieldable
+  - type: IncreaseDamageOnWield
+    damage:
+      types:
+        Blunt: 4
+        Structural: 20
+  - type: Item
+    size: Large
+  - type: Gun
+    fireRate: 0.8
+    selectedMode: SemiAuto
+    angleDecay: 2
+    minAngle: 1
+    maxAngle: 3
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Duty/Deci_shoot.ogg
+    useKey: false
+  - type: AmmoCounter
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 5
+    rechargeSound:
+      path: /Audio/_Duty/Deci_reload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: DeciBullet
+    capacity: 1
+    count: 1
+  - type: GunRequiresWield
+  - type: Clothing
+    sprite: _Duty/Weapons/Decimator.rsi
+    quickEquip: false
+    slots:
+    - Back

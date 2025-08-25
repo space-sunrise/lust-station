@@ -25,11 +25,19 @@
     - yells
     - yelled
     - yelling
-    # Russian-Localization-Start
+    # Reserve-Localization-Start
     - кричит
-    - орёт
+    - кричит.
+    - кричит!
     - визжит
-    # Russian-Localization-End
+    - визжит.
+    - визжит!
+    - гойда
+    - ГОЙДА
+    - rhbxbn
+    - rhbxbn!
+    - rhbxbn/
+    # Reserve-Localization-End
 
 - type: emote
   id: Laugh
@@ -59,14 +67,15 @@
     - chortle
     - chortles
     - chortling
-  # Russian-Localization-Start
+    # Reserve-Localization-Start
     - смеется
     - смеётся
     - хохочет
     - хихикает
     - хихикнул
     - хихикнула
-  # Russian-Localization-End
+    - ржёт
+    # Reserve-Localization-End
 
 - type: emote
   id: Honk

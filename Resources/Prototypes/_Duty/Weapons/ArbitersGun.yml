@@ -1,0 +1,61 @@
+- type: entity
+  name: Storn Maker Revolver
+  parent: BaseItem
+  id: WeaponPistolStormMaker
+  description: Старое оружие с земли, убившее куча людей. Имеет бесконечный боезапас.
+  components:
+  - type: Sprite
+    sprite: _Duty/Weapons/StormMaker.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Duty/Weapons/StormMaker.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: Gun
+    minAngle: 1
+    maxAngle: 1
+    angleIncrease: 1
+    angleDecay: 1
+    fireRate: 1
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Duty/StormMakerShoot.ogg
+      useKey: false
+  - type: AmmoCounter
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 60
+    rechargeSound:
+      path: /Audio/_Duty/StormMakerReload.ogg
+  - type: BasicEntityAmmoProvider
+    proto: DMbullet
+    capacity: 1
+    count: 1
+  - type: GunRequiresWield
+
+
+
+
+- type: entity
+  id: DMbullet
+  parent: BaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TriggerOnCollide
+    fixtureID: projectile
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 25
+        Piercing: 90
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.15,-0.45,0.15,0.15"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
