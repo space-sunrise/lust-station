@@ -10,6 +10,7 @@ using Content.Shared.Medical.CrewMonitoring;
 using Content.Shared.Medical.SuitSensor;
 using Content.Shared.Morgue.Components;
 using Content.Shared.Pinpointer;
+using Content.Shared.Storage.Components;
 using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
@@ -145,7 +146,7 @@ public sealed class CrewMonitoringConsoleSystem : EntitySystem
     {
         // Check if the entity is contained within any morgue
         var morgueQuery = EntityQueryEnumerator<MorgueComponent, EntityStorageComponent>();
-        
+
         while (morgueQuery.MoveNext(out var morgueUid, out var morgue, out var storage))
         {
             // Check if the entity is contained in this morgue
