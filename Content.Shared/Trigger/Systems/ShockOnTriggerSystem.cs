@@ -21,7 +21,7 @@ public sealed class ShockOnTriggerSystem : EntitySystem
     private void OnTrigger(Entity<ShockOnTriggerComponent> ent, ref TriggerEvent args)
     {
         // Lust-start
-        if (ent.Comp.PreviousActivation + ent.Comp.Cooldown < _timing.CurTime)
+        if (ent.Comp.PreviousActivation + ent.Comp.Cooldown > _timing.CurTime)
             return;
         // Lust-end
 
@@ -44,8 +44,14 @@ public sealed class ShockOnTriggerSystem : EntitySystem
         if (target == null)
             return;
 
-        _electrocution.TryDoElectrocution(target.Value, null, ent.Comp.Damage, ent.Comp.Duration, true, ignoreInsulation: true);
-        args.Handled = true;
+        // Lust-edit-start
+        if (_electrocution.TryDoElectrocution(target.Value, ent.Owner, ent.Comp.Damage, ent.Comp.Duration, true, ignoreInsulation: true))
+        {
+            ent.Comp.PreviousActivation = _timing.CurTime;
+            Dirty(ent);
+            args.Handled = true;
+        }
+        // Lust-edit-end
     }
 
 }
