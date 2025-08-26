@@ -21710,3 +21710,17 @@
   id: 1418
   time: '2025-08-26T09:12:52.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3045
+- author: Copilot AI
+  changes:
+  - message: "\u041A\u043E\u043B\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0439 \u0440\
+      \u0430\u0437\u0443\u043C \u0442\u0435\u043F\u0435\u0440\u044C \u043F\u043E\u0434\
+      \u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u0442 \u0422\u0422\u0421."
+    type: Tweak
+  - message: "\u0410\u0431\u0434\u0443\u043A\u0442\u043E\u0440\u044B \u0442\u0435\u043F\
+      \u0435\u0440\u044C \u0432\u0438\u0434\u044F\u0442 \u043A\u0442\u043E \u0433\u043E\
+      \u0432\u043E\u0440\u0438\u0442 \u0432 \u043A\u043E\u043B\u0435\u043A\u0442\u0438\
+      \u0432\u043D\u044B\u0439 \u0440\u0430\u0437\u0443\u043C."
+    type: Tweak
+  id: 1419
+  time: '2025-08-26T10:45:17.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/2887
