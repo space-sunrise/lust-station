@@ -1112,3 +1112,11 @@
   id: 248
   time: '2025-08-15T15:17:48.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/351
+- author: daniil7383
+  changes:
+  - message: "\u0414\u043E\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043B\u043E\u043A\
+      \u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u041D\u0422 \u043D\u0430 Qillu"
+    type: Fix
+  id: 249
+  time: '2025-08-28T13:02:20.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/367
