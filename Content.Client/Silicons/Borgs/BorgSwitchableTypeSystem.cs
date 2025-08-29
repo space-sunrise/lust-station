@@ -2,7 +2,6 @@
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
-using Content.Shared._Lust.Rest; // Lust-edit
 
 namespace Content.Client.Silicons.Borgs;
 
@@ -43,8 +42,6 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
         {
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
-            _sprite.LayerSetRsiState((entity, sprite), RestVisuals.Resting, prototype.SpriteRestingState); // Lust-edit
-            _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Wrecked, prototype.SpriteWreckState); // Lust-edit
         }
 
         if (TryComp(entity, out BorgChassisComponent? chassis))

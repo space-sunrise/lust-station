@@ -37,19 +37,20 @@
 # Suit
 - type: loadout
   id: HeadofSecurityJumpsuitElegant
+  sponsorOnly: false
   equipment:
-    neck: ClothingNeckCloakBattleHoS
+    jumpsuit: ClothingUniformJumpskirtElegantHos
+#    neck: ClothingNeckCloakBattleHoS Кто это сюда добавил?!
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h
 
 # OuterClothing
 - type: loadout
   id: HeadofSecurityTrenchElegant
-  sponsorOnly: true
+  sponsorOnly: false
   equipment:
     outerClothing: ClothingOuterHoSTrenchElegant
-    jumpsuit: ClothingUniformJumpskirtElegantHos
   effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobHeadOfSecurity
-      time: 360000 #100 hrs
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h

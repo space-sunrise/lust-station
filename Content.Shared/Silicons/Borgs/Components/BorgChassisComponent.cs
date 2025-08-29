@@ -103,9 +103,4 @@ public enum BorgVisualLayers : byte
     /// Layer for the borg flashlight status.
     /// </summary>
     LightStatus,
-
-    /// <summary>
-    /// Layer for the borg dead state.
-    /// </summary>
-    Wrecked, // For Lust-Borgs
 }
