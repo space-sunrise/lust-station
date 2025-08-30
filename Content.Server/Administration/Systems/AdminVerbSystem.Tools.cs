@@ -377,7 +377,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = "Grant All Access",
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "centcom"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/_Lust/Objects/Misc/id_cards.rsi"), "centcom"), // Lust-edit
                 Act = () =>
                 {
                     GiveAllAccess(args.Target);
@@ -392,7 +392,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = "Revoke All Access",
                 Category = VerbCategory.Tricks,
-                Icon = new SpriteSpecifier.Rsi(new("/Textures/Objects/Misc/id_cards.rsi"), "default"),
+                Icon = new SpriteSpecifier.Rsi(new("/Textures/_Lust/Objects/Misc/id_cards.rsi"), "default"), // Lust-edit
                 Act = () =>
                 {
                     RevokeAllAccess(args.Target);
