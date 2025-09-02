@@ -66,6 +66,20 @@
     - SurgeryTech
 
 - type: technology
+  id: HandheldCrewMonitorTech
+  name: research-technology-hanheld-crew-monitor
+  icon:
+    sprite: Objects/Specific/Medical/handheldcrewmonitor.rsi
+    state: scanner
+  discipline: Biochemical
+  tier: 2
+  cost: 9000
+  recipeUnlocks:
+    - HandheldCrewMonitor
+  technologyPrerequisites:
+    - SurgeryTech
+
+- type: technology
   id: CyberImplantsTech
   name: research-technology-basic-eye-implants
   icon:

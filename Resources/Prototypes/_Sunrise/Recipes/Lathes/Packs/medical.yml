@@ -1,7 +1,6 @@
 - type: latheRecipePack
   id: MedicalStaticSunrise
   recipes:
-  - HandheldCrewMonitor
   # - ClothingHandsGlovesNitrileBlack # Sunrise-TODO: Не добавлять, пока не сделаете им уникальные для каждой волокна, ибо на момент комита тут все "нитриловые"
   # - ClothingHandsGlovesNitrileGreen
   # - ClothingHandsGlovesNitrileOrange
@@ -22,6 +21,7 @@
   - HyposprayMedical
   - AutoMenderBurn
   - AutoMenderBrute
+  - HandheldCrewMonitor
 
 - type: latheRecipePack
   id: SurgeryDynamicSunrise
