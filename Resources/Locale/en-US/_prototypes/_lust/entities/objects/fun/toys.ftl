@@ -52,4 +52,5 @@ ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
     .desc = Looks after your health better than you do yourself. Choking in the darkness of the techs, you will be glad to see her nearby. The smell of fresh beer hovers around her.
 ent-PlushieDrasusLeverian = Plushie Drasus Leverian
     .desc = The chief bureaucratic dushnila
-
+ent-PlushieMoleronKucenko = Plushie Moleron Kucenko
+    .desc = This moth definitely won't want to eat your underpants. Made with 0,7% pure beer, don't even think about drinking a kira rush in front of it. Viva la pivo!
