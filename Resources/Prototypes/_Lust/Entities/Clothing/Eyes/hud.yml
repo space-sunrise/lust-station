@@ -1,0 +1,25 @@
+- type: entity
+  parent: [ClothingEyesBase, ShowSecurityIcons, BaseSecurityContraband]
+  id: ClothingEyesHudSecurityAlt
+  name: security visor
+  description: The professional head-up display, designed for better detection of humanoids and their subsequent elimination.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Eyes/Hud/sec.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Eyes/Hud/sec.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+    protectionTime: 5
+  - type: Tag
+    tags:
+    - HamsterWearable
+    - PetWearable
+    - WhitelistChameleon
+  - type: GuideHelp
+    guides:
+    - Security
+    - Antagonists
+  - type: IdentityBlocker
+    coverage: EYES
+  - type: AddWantedStatus # Sunrise-edit

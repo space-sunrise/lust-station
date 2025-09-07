@@ -1252,6 +1252,17 @@
   - SecuritySheathBelt # Lust Station
   - SecurityWebbing
 
+# Lust-start
+- type: loadoutGroup
+  id: SecurityGlasses
+  name: loadout-group-security-glasses
+  loadouts:
+  - EyesHudSecurity
+  - EyesGlassesSecurity
+  - EyesHudSecurityAlt
+  - EyesEyepatchHudSecurity
+# Lust-end
+
 - type: loadoutGroup
   id: SecurityOuterClothing
   name: loadout-group-security-outerclothing
