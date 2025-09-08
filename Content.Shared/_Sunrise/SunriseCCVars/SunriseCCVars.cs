@@ -191,6 +191,12 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<string> InfoLinksDonate =
         CVarDef.Create("infolinks.donate", "", CVar.SERVER | CVar.REPLICATED);
 
+    /// <summary>
+    /// Link to replays to show in menus.
+    /// </summary>
+    public static readonly CVarDef<string> InfoLinksReplays =
+        CVarDef.Create("infolinks.replays", "", CVar.SERVER | CVar.REPLICATED);
+
     /**
      * Lobby
      */
