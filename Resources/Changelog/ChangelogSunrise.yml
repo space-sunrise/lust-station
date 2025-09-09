@@ -22007,3 +22007,12 @@
   id: 1438
   time: '2025-09-08T17:26:50.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3115
+- author: KaiserMaus
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B ERROR\u043A\
+      \u0438 \u043F\u0440\u0438 \u043F\u0438\u0441\u044C\u043C\u0435 \u0443 \u0434\
+      \u0438\u043E\u043D."
+    type: Fix
+  id: 1439
+  time: '2025-09-09T13:19:34.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3185
