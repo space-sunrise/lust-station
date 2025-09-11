@@ -1355,7 +1355,7 @@
   discountDownTo:
     Telecrystal: 15
   cost:
-    Telecrystal: 35
+    Telecrystal: 30
   categories:
   - UplinkMechs
   conditions:
@@ -1367,6 +1367,47 @@
     blacklist:
       components:
       - SurplusBundle
+
+- type: listing
+  id: UplinkMechMaxim
+  productEntity: WeaponMechCombatMaxim
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 14
+  cost:
+    Telecrystal: 18
+  categories:
+  - UplinkMechs
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - LoneOpsUplink
+    blacklist:
+      components:
+      - SurplusBundle
+
+- type: listing
+  id: UplinkMechHeavyRifle
+  productEntity: WeaponMechCombatHeavyRifle
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 20
+  cost:
+    Telecrystal: 22
+  categories:
+  - UplinkMechs
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - NukeOpsUplink
+      - LoneOpsUplink
+    blacklist:
+      components:
+      - SurplusBundle
+
 
 - type: listing
   id: UplinkMechUVM31
