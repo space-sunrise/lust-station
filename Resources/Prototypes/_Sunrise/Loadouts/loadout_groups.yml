@@ -327,12 +327,12 @@
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
   - Sunrise-BlueGloves
-  - Sunrise-GlovesNitrileBlack
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileOrange
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileBlack
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileOrange
+  # - Sunrise-GlovesNitrileGreen
   - NitrileGloves
-  - Sunrise-GlovesNitrileBlue
+  # - Sunrise-GlovesNitrileBlue
 
 - type: loadoutGroup
   id: SeniorPhysicianHead
@@ -447,12 +447,12 @@
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
   - Sunrise-BlueGloves
-  - Sunrise-GlovesNitrileBlack
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileOrange
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileBlack
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileOrange
+  # - Sunrise-GlovesNitrileGreen
   - NitrileGloves
-  - Sunrise-GlovesNitrileBlue
+  # - Sunrise-GlovesNitrileBlue
 
 - type: loadoutGroup
   id: SunriseChemistHead
@@ -511,9 +511,9 @@
   - Sunrise-RedGloves
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileOrange
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileOrange
+  # - Sunrise-GlovesNitrileGreen
   - NitrileGloves
 
 - type: loadoutGroup
@@ -638,10 +638,10 @@
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
   - Sunrise-BlueGloves
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileGreen
   - NitrileGloves
-  - Sunrise-GlovesNitrileBlue
+  # - Sunrise-GlovesNitrileBlue
 
 - type: loadoutGroup
   id: PathologistHead
@@ -728,9 +728,9 @@
   - Sunrise-RedGloves
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
-  - Sunrise-GlovesNitrileBlack
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileBlack
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileGreen
   - NitrileGloves
 
 - type: loadoutGroup

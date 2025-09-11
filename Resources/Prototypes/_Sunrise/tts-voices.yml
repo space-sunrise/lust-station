@@ -42,7 +42,7 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: Glados # borg
+  id: Glados
   name: tts-voice-name-glados
   # Lust-start
   sex:
@@ -50,18 +50,18 @@
   - Futanari
   # Lust-end
   speaker: glados
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: Sentrybot # borg
+  id: Sentrybot
   name: tts-voice-name-sentrybot
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: sentrybot
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -108,36 +108,36 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: AdventureCore # borg
+  id: AdventureCore
   name: tts-voice-name-adventure-core
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: adventure_core
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: SpaceCore # borg
+  id: SpaceCore
   name: tts-voice-name-space-core
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: space_core
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: FactCore # borg
+  id: FactCore
   name: tts-voice-name-fact-core
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: fact_core
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -325,7 +325,7 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: TurretFloor # borg
+  id: TurretFloor
   name: tts-voice-name-turret-floor
   # Lust-start
   sex:
@@ -333,7 +333,7 @@
   - Futanari
   # Lust-end
   speaker: turret_floor
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -642,14 +642,14 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: OfficerEnclave # borg
+  id: OfficerEnclave
   name: tts-voice-name-officer-enclave
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: officer_enclave
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -1030,7 +1030,7 @@
   - Male
   # Lust-end
   speaker: villager
-  roundStart: false # LRP
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -1502,25 +1502,25 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: MisterHandyFL3 # borg
+  id: MisterHandyFL3
   name: tts-voice-name-mister-handy-fl3
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: mister_handy_fl3
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: MisterGutsyFL3 # borg
+  id: MisterGutsyFL3
   name: tts-voice-name-mister-gutsy-fl3
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: mister_gutsy_fl3
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -1606,14 +1606,14 @@
   provider: ntts.fdev.team
 
 - type: ttsVoice
-  id: Brendan # borg
+  id: Brendan
   name: tts-voice-name-brendan
   # Lust-start
   sex:
   - Male
   # Lust-end
   speaker: brendan
-  roundStart: false
+  roundStart: true
   provider: ntts.fdev.team
 
 - type: ttsVoice
