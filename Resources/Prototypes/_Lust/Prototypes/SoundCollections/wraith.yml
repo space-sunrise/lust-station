@@ -1,0 +1,7 @@
+- type: soundCollection
+  id: WraithKing
+  files:
+    - /Audio/_Lust/WraithKing/wraith_1.ogg
+    - /Audio/_Lust/WraithKing/wraith_2.ogg
+    - /Audio/_Lust/WraithKing/wraith_3.ogg
+    - /Audio/_Lust/WraithKing/wraith_4.ogg
