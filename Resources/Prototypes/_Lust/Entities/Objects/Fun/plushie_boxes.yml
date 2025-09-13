@@ -41,8 +41,6 @@
         orGroup: Plushie
       - id: PlushieIvanBykov
         orGroup: Plushie
-      - id: PlushieSvyashenLuna
-        orGroup: Plushie
       - id: PlushieFranzEvans
         orGroup: Plushie
       - id: PlushieArelitt
