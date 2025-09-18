@@ -22292,3 +22292,12 @@
   id: 1458
   time: '2025-09-18T21:15:19.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3207
+- author: Sidzaru
+  changes:
+  - message: "\u0421\u041C \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\
+      \u0442\u044C \u043E\u0442\u043A\u0440\u0443\u0447\u0435\u043D \u0438 \u043F\u0435\
+      \u0440\u0435\u043C\u0435\u0449\u0451\u043D"
+    type: Tweak
+  id: 1459
+  time: '2025-09-18T21:16:33.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3111
