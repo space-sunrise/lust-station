@@ -22210,3 +22210,14 @@
   id: 1451
   time: '2025-09-18T20:43:09.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3234
+- author: worstplayerever
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u043E  \u0420\u0421\u0423\
+      \ \u0421\u0442\u0430\u0440\u0448\u0435\u0433\u043E \u0418\u043D\u0436\u0435\u043D\
+      \u0435\u0440\u0430. \u0412\u043E\u0441\u0441\u0442\u0430\u043D\u043E\u0432\u043B\
+      \u0435\u043D\u0438\u0435 \u043E\u0434\u043D\u043E\u0433\u043E \u0437\u0430\u0440\
+      \u044F\u0434\u0443 \u0420\u0421\u0423 30s -> 15s."
+    type: Tweak
+  id: 1452
+  time: '2025-09-18T20:45:11.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3223
