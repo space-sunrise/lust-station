@@ -1,9 +1,5 @@
 using System.Linq;
-using Content.Server.DeviceNetwork;
-using Content.Server.DeviceNetwork.Systems;
 using Content.Server.PowerCell;
-using Content.Server.Station.Systems;
-using Content.Server.Storage.Components;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.Medical.CrewMonitoring;
@@ -20,7 +16,8 @@ using Robust.Server.GameObjects;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;//Sunrise-Edit
+
+//Sunrise-Edit
 
 namespace Content.Server.Medical.CrewMonitoring;
 
@@ -37,6 +34,7 @@ public sealed class CrewMonitoringConsoleSystem : EntitySystem
         SubscribeLocalEvent<CrewMonitoringConsoleComponent, ComponentRemove>(OnRemove);
         SubscribeLocalEvent<CrewMonitoringConsoleComponent, DeviceNetworkPacketEvent>(OnPacketReceived);
         SubscribeLocalEvent<CrewMonitoringConsoleComponent, BoundUIOpenedEvent>(OnUIOpened);
+        SubscribeLocalEvent<CrewMonitoringConsoleComponent, CrewMonitoringToggleCorpseAlertMessage>(OnToggleCorpseAlert);//Sunrise-Edit
         SubscribeLocalEvent<CrewMonitoringConsoleComponent, GetVerbsEvent<InteractionVerb>>(AddToggleVerb);//Sunrise-Edit
     }
 
@@ -132,7 +130,7 @@ public sealed class CrewMonitoringConsoleSystem : EntitySystem
 
         // Update all sensors info
         var allSensors = component.ConnectedSensors.Values.ToList();
-        _uiSystem.SetUiState(uid, CrewMonitoringUIKey.Key, new CrewMonitoringState(allSensors));
+        _uiSystem.SetUiState(uid, CrewMonitoringUIKey.Key, new CrewMonitoringState(allSensors, component.DoCorpseAlert));
     }
 
     /// <summary>
@@ -178,7 +176,13 @@ public sealed class CrewMonitoringConsoleSystem : EntitySystem
 
         return false;
     }
+
     //Sunrise-Start
+    private void OnToggleCorpseAlert(EntityUid uid, CrewMonitoringConsoleComponent component, CrewMonitoringToggleCorpseAlertMessage args)
+    {
+        component.DoCorpseAlert = !component.DoCorpseAlert;
+        UpdateUserInterface(uid, component);
+    }
     private void AddToggleVerb(EntityUid uid, CrewMonitoringConsoleComponent component, GetVerbsEvent<InteractionVerb> args)
     {
         if (!args.CanInteract || !args.CanAccess)
