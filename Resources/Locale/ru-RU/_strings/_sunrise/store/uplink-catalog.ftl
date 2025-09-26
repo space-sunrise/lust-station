@@ -33,8 +33,10 @@ uplink-magazine-dragunov-desc = Магазин для Драгунова. Сод
 uplink-magazine-dragunov-extended-desc = Магазин для Драгунова. Содержит 20 патронов калибра 7,62х54R.
 uplink-magazine-bulldog-uraniumslug-desc = Барабанный магазин на 8 урановых пулевых патронов. Совместим с "Бульдогом".
 uplink-magazine-bulldog-uranium-desc = Барабанный магазин на 8 патронов урановой дроби. Совместим с "Бульдогом".
-uplink-pistol-magnum-magazine-name = Магазин для Deagle
+uplink-pistol-magnum-magazine-name = Магазин (.45 магнум SP)
 uplink-pistol-magnum-magazine-desc = 7-зарядный однорядный магазин для пистолета. Содержит патроны SP. Совместим с "Диглом".
+uplink-pistol-magnum-magazine-ap-name = Магазин (.45 магнум бронебойные)
+uplink-pistol-magnum-magazine-ap-desc = 7-зарядный однорядный магазин для пистолета. Содержит бронебойные патроны. Совместим с "Диглом".
 
 ## Misc
 
@@ -79,9 +81,7 @@ uplink-clothing-backpack-syndie-siar52-name = Набор SIAR-52
 uplink-clothing-backpack-syndie-siar52-desc = Включает в себя SIAR-52 что оборудован интегрированым глушителем. и два магазина безгильзовых патрон.
 uplink-weapon-syndie-laser-minigun-name = UVL-21 «Виверна»
 uplink-weapon-syndie-laser-gun-name = S-13 «Чёрная мамба»
-uplink-weapon-bauer-127-name = винтовка Bauer SR-127
-uplink-weapon-dragunov-name = Набор Драгунов
-uplink-weapon-dragunov-desc = Культовая снайперская винтовка и два магазина на 10 патронов, известная своей меткостью и стрельбой на дальние дистанции. Использует винтовочные патроны калибра 7.62x54R.
+uplink-weapon-ussp-dmr-name = Набор Драгунов
 uplink-deagle-name = пистолет «Desert Eagle»
 uplink-deagle-desc = Cерьёзный аргумент в споре. Выгравировано: Мир благодаря превосходящей огневой мощи".
 uplink-mini-energy-crossbow-name = Мини энерго-арбалет
