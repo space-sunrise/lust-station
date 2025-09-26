@@ -2159,8 +2159,6 @@ namespace Content.Client.Lobby.UI
                 {
                     AllMarkingsGradientDirectionSelector.SelectId(Profile.Appearance.AllMarkingsGradientDirection);
                 }
-
-                Logger.Debug($"Sunrise: Градиентные контролы обновлены - Hair: {Profile.Appearance.HairGradientEnabled}, FacialHair: {Profile.Appearance.FacialHairGradientEnabled}, AllMarkings: {Profile.Appearance.AllMarkingsGradientEnabled}");
             }
             catch (Exception ex)
             {

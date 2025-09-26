@@ -207,9 +207,6 @@ namespace Content.Server.Database
 
         private static HumanoidCharacterProfile ConvertProfiles(Profile profile)
         {
-            // Debug logging for gradient load
-            Console.WriteLine($"Sunrise: Loading gradient settings from DB - Hair: {profile.HairGradientEnabled}, FacialHair: {profile.FacialHairGradientEnabled}, AllMarkings: {profile.AllMarkingsGradientEnabled}");
-
             var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
             var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName));
@@ -316,6 +313,8 @@ namespace Content.Server.Database
         {
             profile ??= new Profile();
             var appearance = (HumanoidCharacterAppearance) humanoid.CharacterAppearance;
+
+            // Debug logging for incoming appearance values
             List<string> markingStrings = new();
             foreach (var marking in appearance.Markings)
             {
@@ -352,7 +351,6 @@ namespace Content.Server.Database
             profile.AllMarkingsGradientDirection = appearance.AllMarkingsGradientDirection;
 
             // Debug logging for gradient save
-            Console.WriteLine($"Sunrise: Saving gradient settings - Hair: {appearance.HairGradientEnabled}, FacialHair: {appearance.FacialHairGradientEnabled}, AllMarkings: {appearance.AllMarkingsGradientEnabled}");
             profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
             profile.Slot = slot;

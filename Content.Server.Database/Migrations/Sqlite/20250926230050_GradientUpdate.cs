@@ -5,11 +5,31 @@
 namespace Content.Server.Database.Migrations.Sqlite
 {
     /// <inheritdoc />
-    public partial class GradientFields : Migration
+    public partial class GradientUpdate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.RenameColumn(
+                name: "hair_extended_color",
+                table: "profile",
+                newName: "hair_gradient_secondary_color");
+
+            migrationBuilder.RenameColumn(
+                name: "hair_color_type",
+                table: "profile",
+                newName: "hair_gradient_enabled");
+
+            migrationBuilder.RenameColumn(
+                name: "facial_hair_extended_color",
+                table: "profile",
+                newName: "facial_hair_gradient_secondary_color");
+
+            migrationBuilder.RenameColumn(
+                name: "facial_hair_color_type",
+                table: "profile",
+                newName: "hair_gradient_direction");
+
             migrationBuilder.AddColumn<int>(
                 name: "all_markings_gradient_direction",
                 table: "profile",
@@ -29,7 +49,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                 table: "profile",
                 type: "TEXT",
                 nullable: false,
-                defaultValue: "#FFFFFF");
+                defaultValue: "");
 
             migrationBuilder.AddColumn<int>(
                 name: "facial_hair_gradient_direction",
@@ -44,34 +64,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                 type: "INTEGER",
                 nullable: false,
                 defaultValue: false);
-
-            migrationBuilder.AddColumn<string>(
-                name: "facial_hair_gradient_secondary_color",
-                table: "profile",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: "#FFFFFF");
-
-            migrationBuilder.AddColumn<int>(
-                name: "hair_gradient_direction",
-                table: "profile",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: 0);
-
-            migrationBuilder.AddColumn<bool>(
-                name: "hair_gradient_enabled",
-                table: "profile",
-                type: "INTEGER",
-                nullable: false,
-                defaultValue: false);
-
-            migrationBuilder.AddColumn<string>(
-                name: "hair_gradient_secondary_color",
-                table: "profile",
-                type: "TEXT",
-                nullable: false,
-                defaultValue: "#FFFFFF");
         }
 
         /// <inheritdoc />
@@ -97,21 +89,25 @@ namespace Content.Server.Database.Migrations.Sqlite
                 name: "facial_hair_gradient_enabled",
                 table: "profile");
 
-            migrationBuilder.DropColumn(
-                name: "facial_hair_gradient_secondary_color",
-                table: "profile");
-
-            migrationBuilder.DropColumn(
-                name: "hair_gradient_direction",
-                table: "profile");
-
-            migrationBuilder.DropColumn(
-                name: "hair_gradient_enabled",
-                table: "profile");
-
-            migrationBuilder.DropColumn(
+            migrationBuilder.RenameColumn(
                 name: "hair_gradient_secondary_color",
-                table: "profile");
+                table: "profile",
+                newName: "hair_extended_color");
+
+            migrationBuilder.RenameColumn(
+                name: "hair_gradient_enabled",
+                table: "profile",
+                newName: "hair_color_type");
+
+            migrationBuilder.RenameColumn(
+                name: "hair_gradient_direction",
+                table: "profile",
+                newName: "facial_hair_color_type");
+
+            migrationBuilder.RenameColumn(
+                name: "facial_hair_gradient_secondary_color",
+                table: "profile",
+                newName: "facial_hair_extended_color");
         }
     }
 }
