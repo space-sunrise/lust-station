@@ -1856,24 +1856,24 @@
   categories:
   - UplinkCybernetics
 
-# - type: listing
-#   id: UplinkMagillitisSerumImplant
-#   name: uplink-magillitis-serum-implanter-name
-#   description: uplink-magillitis-serum-implanter-desc
-#   icon: { sprite: _Starlight/Actions/implants.rsi, state: gorilla_rampage }
-#   productEntity: MagillitisSerumImplanter # Sunrise-TODO: FIX this Shit!
-#   discountDownTo:
-#     Telecrystal: 4
-#   cost:
-#     Telecrystal: 6
-#   categories:
-#   - UplinkJob
-#   conditions:
-#   - !type:BuyerJobCondition
-#     whitelist:
-#     - ResearchAssistant
-#     - Scientist
-#     - ResearchDirector
+- type: listing
+  id: UplinkMagillitisSerumImplant
+  name: uplink-magillitis-serum-implanter-name
+  description: uplink-magillitis-serum-implanter-desc
+  icon: { sprite: _Starlight/Actions/implants.rsi, state: gorilla_rampage }
+  productEntity: MagillitisSerumImplanter
+  discountDownTo:
+    Telecrystal: 4
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkJob
+  conditions:
+  - !type:BuyerJobCondition
+    whitelist:
+    - ResearchAssistant
+    - Scientist
+    - ResearchDirector
 
 - type: listing
   id: UplinkCaneShotgun

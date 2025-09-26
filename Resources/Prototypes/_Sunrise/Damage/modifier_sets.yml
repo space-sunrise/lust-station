@@ -69,6 +69,12 @@
     Heat: 1.15
 
 - type: damageModifierSet
+  id: GorillaRampaging
+  coefficients:
+    Blunt: 1.25
+    Cellular: 0
+
+- type: damageModifierSet
   id: Resomi
   coefficients:
     Cold: 0.75

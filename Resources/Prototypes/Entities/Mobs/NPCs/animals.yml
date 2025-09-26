@@ -4095,3 +4095,37 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
+
+# Starlight-start
+- type: entity
+  name: Rampaging Gorilla
+  parent: MobGorilla
+  id: MobGorillaRampaging
+  description: A gorilla that has gone wild. Run!
+  components:
+    - type: Sprite
+      drawdepth: Mobs
+      layers:
+        - map: ["enum.DamageStateVisualLayers.Base"]
+          state: crawling
+          sprite: Mobs/Animals/gorilla.rsi
+          color: "#FF0000"
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        350: Critical
+        400: Dead
+    - type: MeleeWeapon
+      soundHit:
+        collection: Punch
+      damage:
+        types:
+          Blunt: 35
+          Structural: 20
+    - type: MovementSpeedModifier
+      baseWalkSpeed: 2
+      baseSprintSpeed: 4
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: GorillaRampaging
+# Starlight-end
