@@ -22865,3 +22865,13 @@
   id: 1489
   time: '2025-09-26T21:55:06.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3228
+- author: daniil7383
+  changes:
+  - message: "\u041D\u0435\u043A\u0438\u0435 \u0432\u0435\u0449\u0438 \u0432 \u0430\
+      \u043F\u043B\u0438\u043D\u043A\u0435 \u0441\u0438\u043D\u0434\u0438\u043A\u0430\
+      \u0442\u0430 \u043F\u043E\u043B\u0443\u0447\u0438\u043B\u0438 \u0431\u0438\u043E\
+      \u043A\u043E\u0434"
+    type: Add
+  id: 1490
+  time: '2025-09-26T21:58:08.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3250
