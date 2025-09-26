@@ -394,7 +394,6 @@ public sealed class HypospraySystem : EntitySystem
                 }
 
         }
-
         return true;
     }
     // Sunrise-End
