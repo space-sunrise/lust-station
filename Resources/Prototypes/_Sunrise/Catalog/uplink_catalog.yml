@@ -1935,6 +1935,22 @@
       - Science
 
 - type: listing
+  id: UplinkDeathAcidifierImplanterAgent
+  name: uplink-death-acidifier-implant-name
+  description: uplink-death-acidifier-implant-desc
+  icon: { sprite: /Textures/Objects/Magic/magicactions.rsi, state: gib }
+  productEntity: DeathAcidifierImplanter
+  categories:
+    - UplinkImplants
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SyndieAgentUplink
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: UplinkXenoArtifactThrowingAutoInjector
   name: uplink-xeno-artifact-throwing-auto-injector-name
   description: uplink-xeno-artifact-throwing-auto-injector-desc
