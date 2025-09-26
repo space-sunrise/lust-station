@@ -242,6 +242,8 @@
         Blunt: 2
         Slash: 3
   - type: Carriable
+  - type: NightVision
+    effect: EffectNightVisioSpecies
 
 - type: entity
   save: false
