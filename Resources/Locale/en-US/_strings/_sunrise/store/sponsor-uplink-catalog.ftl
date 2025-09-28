@@ -189,6 +189,7 @@ uplink-sunrise-clothing-outer-armor-bulletproof-name = Bulletproof Vest
 uplink-sunrise-medkit-filled-name = First Aid Kit
 uplink-sunrise-magazine-box-pistol-name = Ammo Box (.35 auto)
 uplink-sunrise-box-body-bag-name = Box Of Body Bags
+uplink-sunrise-tactical-hos-uniform-name = Tactical HOS uniform
 
 ## Quartermaster
 

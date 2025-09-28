@@ -159,3 +159,14 @@
     - WhitelistChameleon
     - ClothMade
     - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformPunksuit
+  name: Punk Suit
+  description: test description
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/punksuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/punksuit.rsi
