@@ -842,6 +842,7 @@ PrinterDoc: CopyMachineFilled
 PrinterDocFlatpack: CopyMachineFlatpack
 MagazineP90Extended: null
 CrateArmoryWeaponXM1014: null
+WeaponEnergyGunMultiphase: WeaponMultiphaseGun
 # Sunrise-End
 
 # Lust-Start
