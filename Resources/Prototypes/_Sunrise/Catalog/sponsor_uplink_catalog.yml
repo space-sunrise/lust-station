@@ -1387,7 +1387,7 @@
     - Security
 
 - type: listing
-  id: UplinkSunriseTecticalHosUniform
+  id: UplinkSunriseTacticalHosUniform
   name: uplink-sunrise-tactical-hos-uniform-name
   productEntity: ClothingUniformJumpskirtTacticalHos
   cost:
