@@ -1465,3 +1465,6 @@
   - type: EmitSoundOnCollide
     sound:
       collection: FelinidMews
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidMews
