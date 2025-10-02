@@ -84,6 +84,7 @@
   - type: Tag
     tags:
       - SecBeltEquip
+      - FlashlightSeclite #Lust
   - type: ItemSlots
     slots:
       cell_slot:
