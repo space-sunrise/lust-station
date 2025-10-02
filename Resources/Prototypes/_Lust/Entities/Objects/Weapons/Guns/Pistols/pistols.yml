@@ -56,7 +56,6 @@
   parent: WeaponPistolG22Auto
   id: WeaponPistolG22AutoFlashlight
   suffix: Auto, Flashlight
-  description: Designed by Nanotrasen's Small Arms Division, the Glock-22 Auto is a premium full-automatic sidearm built for superior performance and reliability. This version features an integrated tactical flashlight for enhanced visibility in low-light operations. Uses .35 pistol magazines.
   components:
   - type: Sprite
     sprite: _Lust/Objects/Weapons/Guns/Pistols/glock22_flashlight/big.rsi
