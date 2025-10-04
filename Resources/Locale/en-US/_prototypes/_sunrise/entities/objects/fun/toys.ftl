@@ -180,3 +180,5 @@ ent-PlushieKaliumNukieCommander = Kalium Commander
     .desc = { ent-BasePlushie.desc }
 ent-PlushieKaliumNukeMed = Kalium Agent
     .desc = { ent-BasePlushie.desc }
+ent-PlushieLoona = Plushie Lu'Una
+    .desc = A plush toy in the image of a Hellhound, staring at you as if it knows all your sins. The tag has a note: 'Not guaranteed not to attempt to bite.'
