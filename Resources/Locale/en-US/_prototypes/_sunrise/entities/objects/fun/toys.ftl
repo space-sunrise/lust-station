@@ -182,3 +182,5 @@ ent-PlushieRaneliToll = Plushie Raneli Toll
     .desc = Pocket doctor and little sorcerer.
             This toy will be very happy if this toy ends up in the clawed paws of a tasty xenomorph...
             Viva la Pivo!
+ent-PlushieKaliumNukeMed = Kalium Agent
+    .desc = { ent-BasePlushie.desc }

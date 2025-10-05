@@ -1196,6 +1196,7 @@
   loadouts:
   - WardenHead
   - WardenBeret
+  - ClothingHeadHatCapWardenAlt # Sunrise-Edit
   - WardenFormalHat #Lust-Edit
 
 - type: loadoutGroup
@@ -1212,6 +1213,7 @@
   loadouts:
   - WardenCoat
   - WardenArmoredWinterCoat
+  - ClothingOuterCoatWardenAlt # Sunrise-Edit
   - WardenFormalCoat #Lust-Edit
 
 - type: loadoutGroup
@@ -1506,8 +1508,8 @@
   - Sunrise-RedGloves
   - Sunrise-GreenGloves
   - Sunrise-TealGloves
-  - Sunrise-GlovesNitrileRed
-  - Sunrise-GlovesNitrileGreen
+  # - Sunrise-GlovesNitrileRed
+  # - Sunrise-GlovesNitrileGreen
 # Sunrise-end
   - NitrileGloves
 
