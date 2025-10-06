@@ -1484,3 +1484,36 @@
       path: /Audio/Items/Defib/defib_zap.ogg
       params:
         volume: 100
+
+- type: entity
+  id: PlushieKira
+  parent: BasePlushie
+  name: Kira Killigrue-Fink
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/advanced_toys/plushie_kalium_nukieagent.rsi
+    layers:
+    - state: plushie-kalium
+    - state: potassium_nukemed_unshaded
+      visible: false
+      map: [ "light" ]
+  - type: EmitSoundOnUse
+    sound:
+      collection: SQUEE
+      params:
+        volume: 5
+  - type: MeleeWeapon
+    soundHit:
+      collection: SQUEE
+      params:
+        volume: 5
+  - type: EmitSoundOnActivate
+    sound:
+      collection: SQUEE
+      params:
+        volume: 5
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Sunrise/Voice/Vulpkanin/dog_growl1.ogg
+  - type: UseDelay
+    delay: 3

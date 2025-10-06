@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made by [enterspritername] for lust station",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "icon2"
+    },
+    {
+      "name": "equipped-HELMET"
+    },
+    {
+      "name": "inhand-LEFT"
+    },
+    {
+      "name": "inhand-RIGHT"
+    }
+  ]
+}
