@@ -500,3 +500,13 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  id: PlushieLoona
+  parent: [ EmitVulpGrowl, BasePlushie ]
+  name: Plush Lu'Una
+  description: A plush toy in the image of a Hellhound
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/toys.rsi
+    state: Loona
