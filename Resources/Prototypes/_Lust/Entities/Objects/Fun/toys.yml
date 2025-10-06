@@ -500,3 +500,71 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieKira
+  name: Kira Killigrue-Fink
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    layers:
+    - state: icon
+    - state: icon2
+      visible: false
+#      shader: unshaded
+      map: [ "default" ]
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    equippedPrefix: kira
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: kira
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_hide.ogg
+    soundDeactivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_equip.ogg
+      params:
+        volume: -2
+#  - type: ItemToggleActiveSound
+#    activeSound:
+#      path: /Audio/Machines/energyshield_ambient.ogg
+#      params:
+#        volume: -2
+
+#    heldPrefix: kalium
+#  - type: Tag
+#    tags:
+#    - PlushieKalium
+  - type: UseDelay
+    delay: 1.0
+#  - type: PointLight
+#    enabled: true
+#    radius: 2
+#    energy: 3
+#    color: "#ff0000"
+#    netsync: false
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: default
+#  - type: ItemTogglePointLight
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/sabre_drop.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      collection: VulpkaninBarks
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/empty_audio.ogg
+#  - type: EmitSoundOnUse
+#    sound:
+#      path: /Audio/Machines/beep.ogg
+#  - type: MeleeWeapon
+#    soundHit:
+#      collection: PlushieVulpkaninGrowls
+#      params:
+#        volume: 100

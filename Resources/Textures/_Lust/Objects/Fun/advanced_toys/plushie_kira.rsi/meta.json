@@ -14,13 +14,16 @@
       "name": "icon2"
     },
     {
-      "name": "equipped-HELMET"
+      "name": "kira-equipped-HELMET",
+      "directions": 4
     },
     {
-      "name": "inhand-LEFT"
+      "name": "kira-inhand-left",
+      "directions": 4
     },
     {
-      "name": "inhand-RIGHT"
+      "name": "kira-inhand-right",
+      "directions": 4
     }
   ]
 }

@@ -52,4 +52,5 @@ ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
     .desc = Looks after your health better than you do yourself. Choking in the darkness of the techs, you will be glad to see her nearby. The smell of fresh beer hovers around her.
 ent-PlushieDrasusLeverian = Plushie Drasus Leverian
     .desc = The chief bureaucratic dushnila
-
+ent-PlushieKira = Kira Killigrew-Fink
+    .desc = The saber in her hand is poetry, the rifle is a comedy of errors. But what secrets does her connection with her husband Elmer hold—the gateway to a lost world?
