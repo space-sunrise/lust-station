@@ -512,7 +512,6 @@
     - state: icon
     - state: icon2
       visible: false
-#      shader: unshaded
       map: [ "default" ]
   - type: Clothing
     quickEquip: false
@@ -529,28 +528,11 @@
       path: /Audio/_Sunrise/Items/Equip/sabre_equip.ogg
       params:
         volume: -2
-#  - type: ItemToggleActiveSound
-#    activeSound:
-#      path: /Audio/Machines/energyshield_ambient.ogg
-#      params:
-#        volume: -2
-
-#    heldPrefix: kalium
-#  - type: Tag
-#    tags:
-#    - PlushieKalium
   - type: UseDelay
     delay: 1.0
-#  - type: PointLight
-#    enabled: true
-#    radius: 2
-#    energy: 3
-#    color: "#ff0000"
-#    netsync: false
   - type: Appearance
   - type: ToggleableVisuals
     spriteLayer: default
-#  - type: ItemTogglePointLight
   - type: EmitSoundOnLand
     sound:
       path: /Audio/_Sunrise/Items/Handling/sabre_drop.ogg
@@ -560,11 +542,3 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/_Lust/empty_audio.ogg
-#  - type: EmitSoundOnUse
-#    sound:
-#      path: /Audio/Machines/beep.ogg
-#  - type: MeleeWeapon
-#    soundHit:
-#      collection: PlushieVulpkaninGrowls
-#      params:
-#        volume: 100
