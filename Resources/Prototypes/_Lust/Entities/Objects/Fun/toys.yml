@@ -504,7 +504,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieKira
-  name: Kira Killigrue-Fink
+  name: Kira Killigrue
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
