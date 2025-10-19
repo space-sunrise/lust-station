@@ -5,6 +5,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: security
+  - type: Interactions
 
 - type: entity
   id: BorgChassisPeace
@@ -13,6 +14,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: peace
+  - type: Interactions
 
 - type: entity
   id: BorgChassisClown
@@ -21,6 +23,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: clown
+  - type: Interactions
 
 - type: entity
   id: BorgChassisSyndicateReaper
@@ -113,6 +116,7 @@
     - ActionViewLaws
   - type: StandingState
   # Lust-end
+  - type: Interactions
 
 - type: startingGear
   id: SyndiReaperHardsuitGear
@@ -233,6 +237,7 @@
     - ActionViewLaws
   - type: StandingState
   # Lust-end
+  - type: Interactions
 
 - type: entity
   id: BorgChassisSyndicateHeavy
@@ -349,6 +354,7 @@
     - ActionViewLaws
   - type: StandingState
   # Lust-end
+  - type: Interactions
 
 - type: entity
   id: BorgChassisSyndicateSpider
@@ -436,3 +442,4 @@
     - ActionViewLaws
   - type: StandingState
   # Lust-end
+  - type: Interactions
