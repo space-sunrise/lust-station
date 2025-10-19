@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingPantsStorageBase
+  id: ClothingPantsSwimming
+  name: swimming pants
+  description: Comfortable swimming pants made of nylon.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Pants/swimming_pants.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Pants/swimming_pants.rsi
+  - type: Item
+    size: Tiny

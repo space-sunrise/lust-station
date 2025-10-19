@@ -38,6 +38,11 @@
     ClothingBraUk: 4
     ClothingBraStrapless: 4
     ClothingBraAssblastusa: 2
+    # Купальники
+    ClothingPantsSwimming: 4
+    ClothingBraSwimming: 4
+    ClothingUniformSwimsuit: 2
+    ClothingUniformSwimsuitSexy: 2
     # Носки и чулки
     ClothingFishnet: 4
     ClothingKneeWhite: 4
