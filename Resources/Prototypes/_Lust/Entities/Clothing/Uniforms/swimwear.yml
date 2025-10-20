@@ -5,9 +5,9 @@
   description: Practical and comfortable one-piece swimsuit made of nylon.
   components:
   - type: Sprite
-    sprite: _Lust\Clothing\Uniforms\Swimwear\swimsuit.rsi
+    sprite: _Lust/Clothing/Uniforms/Swimwear/swimsuit.rsi
   - type: Clothing
-    sprite: _Lust\Clothing\Uniforms\Swimwear\swimsuit.rsi
+    sprite: _Lust/Clothing/Uniforms/Swimwear/swimsuit.rsi
   - type: Item
     size: Tiny
 
@@ -18,7 +18,8 @@
   description: Extremely attractive one-piece swimsuit made of nylon.
   components:
   - type: Sprite
-    sprite: _Lust\Clothing\Uniforms\Swimwear\sexy_swimsuit.rsi
+    sprite: _Lust/Clothing/Uniforms/Swimwear/sexy_swimsuit.rsi
   - type: Clothing
-    sprite: _Lust\Clothing\Uniforms\Swimwear\sexy_swimsuit.rsi
+    sprite: _Lust/Clothing/Uniforms/Swimwear/sexy_swimsuit.rsi
   - type: Item
+    size: Tiny
