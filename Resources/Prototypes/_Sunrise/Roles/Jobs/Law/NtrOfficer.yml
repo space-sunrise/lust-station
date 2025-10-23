@@ -50,6 +50,7 @@
     shoes: ClothingShoesBootsCombatFilled
     head: ClothingHeadCapNTGR
     eyes: ClothingEyesGlassesSecurity
+    #belt: ClothingBeltSecurityFilled - Lust station Edit
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterArmorNTRGLead
     id: NtrGuardPDA
