@@ -54,7 +54,6 @@
     outerClothing: ClothingOuterArmorNTRGLead
     id: NtrGuardPDA
     ears: ClothingHeadsetMagistrate
-    belt: ClothingBeltSecurityFilled
   inhand:
   - WeaponEnergyGunPulseRevolver
   storage:
