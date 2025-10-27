@@ -20,14 +20,11 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
-using Robust.Shared.Utility;
 using System.Net.Http;
-using System.Net.Http.Json;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
-using System.Threading;
 using Content.Shared._Sunrise.SunriseCCVars;
 using JetBrains.Annotations;
 using Robust.Shared;
@@ -55,10 +52,10 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private IServerServiceAuthManager? _serviceAuth; // Sunrise-Edit
 
     private ISawmill _sawmill = default!;
+
     public const string SawmillId = "admin.bans";
     public const string PrefixAntag = "Antag:";
     public const string PrefixJob = "Job:";
-    public const string AntagPrefix = "Antag:";
     // Sunrise-start
     private readonly HttpClient _httpClient = new();
     private string _serverName = string.Empty;
@@ -186,10 +183,9 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         // Check for expired bans
         foreach (var roleBans in _cachedRoleBans.Values)
         {
-            roleBans.RemoveAll(ban => DateTimeOffset.UtcNow > ban.ExpirationTime);
+            roleBans.RemoveAll(ban => DateTimeOffset.UtcNow > ban.ExpirationTime); // Sunrise-Edit
         }
     }
-
 
     #region Server Bans
     public async void CreateServerBan(NetUserId? target, string? targetUsername, NetUserId? banningAdmin, (IPAddress, int)? addressRange, ImmutableTypedHwid? hwid, uint? minutes, NoteSeverity severity, string reason)
@@ -197,7 +193,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         DateTimeOffset? expires = null;
         if (minutes > 0)
         {
-            expires = DateTimeOffset.UtcNow + TimeSpan.FromMinutes(minutes.Value);
+            expires = DateTimeOffset.UtcNow + TimeSpan.FromMinutes(minutes.Value); // Sunrise-Edit
         }
 
         // Sunrise-start
@@ -219,7 +215,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             target,
             addressRange,
             hwid,
-            DateTimeOffset.UtcNow,
+            DateTimeOffset.UtcNow, // Sunrise-Edit
             expires,
             roundId,
             playtime,
@@ -359,7 +355,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         DateTimeOffset? expires = null;
 
         if (minutes > 0)
-            expires = DateTimeOffset.UtcNow + TimeSpan.FromMinutes(minutes.Value);
+            expires = DateTimeOffset.UtcNow + TimeSpan.FromMinutes(minutes.Value); // Sunrise-Edit
 
         _systems.TryGetEntitySystem(out GameTicker? ticker);
         int? roundId = ticker == null || ticker.RoundId == 0 ? null : ticker.RoundId;
@@ -472,7 +468,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             return response.ToString();
         }
 
-        await _db.AddServerRoleUnbanAsync(new ServerRoleUnbanDef(banId, unbanningAdmin, DateTimeOffset.UtcNow));
+        await _db.AddServerRoleUnbanAsync(new ServerRoleUnbanDef(banId, unbanningAdmin, DateTimeOffset.UtcNow)); // Sunrise-Edit
 
         // Sunrise-Start
         BanPardoned?.Invoke(this, new BanPardonedEventArgs
@@ -494,7 +490,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         return $"Pardoned ban with id {banId}";
     }
 
-    private HashSet<string> GetActiveRoleBans(NetUserId playerUserId, string banTypePrefix)
+    public HashSet<ProtoId<JobPrototype>>? GetJobBans(NetUserId playerUserId)
     {
         return GetRoleBans<JobPrototype>(playerUserId, PrefixJob);
     }
@@ -507,7 +503,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private HashSet<ProtoId<T>>? GetRoleBans<T>(NetUserId playerUserId, string prefix) where T : class, IPrototype
     {
         if (!_playerManager.TryGetSessionById(playerUserId, out var session))
-            return new HashSet<string>();
+            return null;
 
         return GetRoleBans<T>(session, prefix);
     }
@@ -515,9 +511,8 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private HashSet<ProtoId<T>>? GetRoleBans<T>(ICommonSession playerSession, string prefix) where T : class, IPrototype
     {
         if (!_cachedRoleBans.TryGetValue(playerSession, out var roleBans))
-            return new HashSet<string>();
+            return null;
 
-        var now = DateTime.UtcNow;
         return roleBans
             .Where(ban => ban.Role.StartsWith(prefix, StringComparison.Ordinal))
             .Select(ban => new ProtoId<T>(ban.Role[prefix.Length..]))
@@ -587,9 +582,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             }
         }
 
-        var bans = new MsgRoleBans();
-
-        foreach (var ban in roleBans)
+        var bans = new MsgRoleBans()
         {
             JobBans = jobBansList,
             AntagBans = antagBansList,

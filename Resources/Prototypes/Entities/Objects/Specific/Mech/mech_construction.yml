@@ -75,13 +75,17 @@
   - type: ContainerContainer
     containers:
       mech-assembly-container: !type:Container
-  - type: MechAssembly
-    finishedPrototype: ClarkeChassis
-    requiredParts:
-      ClarkeHead: false
-      ClarkeLArm: false
-      ClarkeRArm: false
-      ClarkeTreads: false
+  - type: PartAssembly
+    parts:
+      Clarke:
+      - ClarkeHead
+      - ClarkeLArm
+      - ClarkeRArm
+      - ClarkeTreads
+    containerId: mech-assembly-container
+  - type: Construction
+    graph: ClarkeChassis
+    node: start
   - type: Sprite
     state: clarke_harness+o
     noRot: true
