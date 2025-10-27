@@ -8,6 +8,7 @@ using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Afk;
+using Content.Server.Ani;
 using Content.Server.Chat.Managers;
 using Content.Server.Connection;
 using Content.Server.Database;
@@ -105,6 +106,8 @@ namespace Content.Server.Entry
             base.Init();
             Dependencies.BuildGraph();
             Dependencies.InjectDependencies(this);
+
+            PatchManager.Patch(_log);
 
             LoadConfigPresets(_cfg, _res, _log.GetSawmill("configpreset"));
 
