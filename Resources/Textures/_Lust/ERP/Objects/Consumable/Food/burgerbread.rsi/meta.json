@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from https://github.com/BlueMoon-Labs/BlueMoon-Station/commit/8badaaf8ec8f5fb503450877ca9e5d0bbffdf6c7",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "cumburger"
+    }
+  ]
+}

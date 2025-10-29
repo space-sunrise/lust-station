@@ -1,0 +1,30 @@
+- type: entity
+  parent: FoodBurgerBase
+  id: FoodBurgerCum
+  name: Cumburger
+  description: A sticky and salty burger.
+  components:
+  - type: Item
+    sprite: _Lust/ERP/Objects/Consumable/Food/burgerbread.rsi
+    shape:
+    - 0,0,1,0
+  - type: FlavorProfile
+    flavors:
+    - salty
+  - type: Sprite
+    sprite: _Lust/ERP/Objects/Consumable/Food/burgerbread.rsi
+    state: cumburger
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 3
+        - ReagentId: Aphrodisiac
+          Quantity: 4
+        - ReagentId: Semen
+          Quantity: 10
+  - type: Tag
+    tags:
+    - Meat

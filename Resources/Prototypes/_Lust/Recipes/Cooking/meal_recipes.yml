@@ -1,0 +1,10 @@
+- type: microwaveMealRecipe
+  id: RecipeBurgerCum
+  name: cum burger recipe
+  result: FoodBurgerCum
+  time: 15
+  group: Savory
+  solids:
+    FoodBreadBun: 1
+  reagents:
+    Semen: 15
