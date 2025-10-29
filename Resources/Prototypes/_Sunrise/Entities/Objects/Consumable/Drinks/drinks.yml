@@ -90,8 +90,6 @@
           reagents:
             - ReagentId: Kvass
               Quantity: 30
-    - type: Sprite
-      sprite: _Sunrise/Objects/Consumable/Drinks/kvass.rsi
 
 - type: entity
   parent: DrinkGlass
@@ -105,8 +103,6 @@
           reagents:
             - ReagentId: ChamomileTincture
               Quantity: 30
-    - type: Sprite
-      sprite: _Sunrise/Objects/Consumable/Drinks/chamomileTincture.rsi
 
 - type: entity
   parent: DrinkGlass

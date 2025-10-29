@@ -8,7 +8,10 @@
   color: "#381600"
   metamorphicSprite:
     sprite: _Sunrise/Objects/Consumable/Drinks/kvass.rsi
-    state: icon
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
 
 - type: reagent
   id: ChamomileTincture
@@ -19,7 +22,10 @@
   flavor: chamomile_tincture
   metamorphicSprite:
     sprite: _Sunrise/Objects/Consumable/Drinks/chamomileTincture.rsi
-    state: icon
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
   metabolisms:
     Drink:
       effects:
