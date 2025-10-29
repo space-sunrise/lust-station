@@ -1,0 +1,9 @@
+ai-shell-holopad-call = Попытка соединения с ИИ по голопаду.
+ai-consciousness-download-warning = Ваше сознание скачивается.
+ai-shell-damaged = Оболочка ИИ была повреждена!
+ai-shell-critical = Оболочка ИИ получила критические повреждения!
+ai-shell-not-response = Оболочка ИИ не отвечает.
+ai-shell-responding = Оболочка ИИ отвечает.
+activate-body = Активировать оболочку
+return-to-core = Вернуться в ядро
+go-to-shell = Перейти в оболочку
