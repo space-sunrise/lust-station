@@ -26,3 +26,5 @@ ent-ClothingUniformWhiteLawyerSuit = the lawyer white suit
     .desc = White Lawyer suit. Looks royal.
 ent-ClothingUniformSuccubus = succubus uniform
     .desc = { ent-ClothingUniformBase.desc }
+ent-ClothingUniformPunksuit = Punksuit
+    .desc = Challenge the dress code!

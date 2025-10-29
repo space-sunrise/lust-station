@@ -9,11 +9,25 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtMusician
 
+# Lust-start
+- type: loadout
+  id: MusicianPunkSuit
+  equipment:
+    jumpsuit: ClothingUniformPunksuit
+# Lust-end
+
 # Outerclothing
 - type: loadout
   id: MusicianWintercoat
   equipment:
     outerClothing: ClothingOuterWinterMusician
+
+# Lust-start
+- type: loadout
+  id: MusicianLeatherJacket
+  equipment:
+    outerClothing: ClothingOuterLeatherCoat
+# Lust-end
 
 # Sunrise-start
 # Instruments
