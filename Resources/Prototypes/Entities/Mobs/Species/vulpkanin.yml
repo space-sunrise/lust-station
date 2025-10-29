@@ -108,8 +108,10 @@
       visible: false
   - type: HumanoidAppearance
     species: Vulpkanin
-    undergarmentTop: UndergarmentTopTanktopVulpkanin
-    undergarmentBottom: UndergarmentBottomBoxersVulpkanin
+    # Sunrise-Start
+    #undergarmentTop: UndergarmentTopTanktopVulpkanin
+    #undergarmentBottom: UndergarmentBottomBoxersVulpkanin
+    # Sunrise-End
     hideLayersOnEquip:
     - Snout
     - SnoutCover

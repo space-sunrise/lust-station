@@ -84,7 +84,7 @@
       - ClarkeTreads
     containerId: mech-assembly-container
   - type: Construction
-    graph: ClarkeChassis
+    graph: Clarke
     node: start
   - type: Sprite
     state: clarke_harness+o

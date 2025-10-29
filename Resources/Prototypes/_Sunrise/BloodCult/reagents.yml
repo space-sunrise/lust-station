@@ -23,7 +23,7 @@
         conditions:
         - !type:TagCondition
           tag: "Cultist"
-          invert: true
+          inverted: true
         damage:
           groups:
             Burn: 2

@@ -448,7 +448,7 @@
         - norepinephricacid-effect-darkness
         - norepinephricacid-effect-blindness
       - !type:HealthChange
-        scaleByQuantity: false
+        scaling: false
         ignoreResistances: false
         damage:
           types:

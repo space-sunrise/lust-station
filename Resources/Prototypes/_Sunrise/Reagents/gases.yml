@@ -27,7 +27,7 @@
         - !type:MetabolizerTypeCondition
           type: [ Slime ]
           inverted: true
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: true
         damage:
           types:
@@ -45,7 +45,6 @@
         component: SeeingRainbows
         type: Add
         time: 10
-        refresh: false
       - !type:Emote
         conditions:
         - !type:ReagentCondition
@@ -113,7 +112,7 @@
         - !type:ReagentCondition
           reagent: Healium
           min: 0.5
-        scaleByQuantity: true
+        scaling: true
         ignoreResistances: true
         damage:
           groups:

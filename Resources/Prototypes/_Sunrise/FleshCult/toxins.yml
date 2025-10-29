@@ -16,8 +16,8 @@
           conditions:
           - !type:TagCondition
             tag: "Flesh"
-            invert: true
-          scaleByQuantity: false
+            inverted: true
+          scaling: false
           ignoreResistances: true
           damage:
             types:
@@ -26,14 +26,14 @@
           conditions:
           - !type:TagCondition
             tag: "Flesh"
-            invert: true
+            inverted: true
           emote: Scream
           probability: 0.9
         - !type:PopupMessage
           conditions:
           - !type:TagCondition
             tag: "Flesh"
-            invert: true
+            inverted: true
           type: Local
           visualType: Large
           messages: [ "generic-reagent-effect-burning-insides" ]
@@ -55,7 +55,7 @@
         conditions:
         - !type:TagCondition
           tag: "Flesh"
-          invert: true
+          inverted: true
         - !type:ReagentCondition
           reagent: Carol
           min: 5

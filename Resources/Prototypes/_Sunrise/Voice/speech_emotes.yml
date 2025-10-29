@@ -4,7 +4,7 @@
   name: chat-emote-name-mews
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/felionoid.rsi/cat_print.png
+  icon: { sprite: _Sunrise/Actions/felionoid.rsi, state: cat_print }
   whitelist:
     components:
     - Vocal
@@ -28,7 +28,7 @@
   name: chat-emote-name-meows
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/felionoid.rsi/cat_print.png
+  icon: { sprite: _Sunrise/Actions/felionoid.rsi, state: cat_print }
   whitelist:
     components:
     - Vocal
@@ -55,7 +55,7 @@
   name: chat-emote-name-hisses
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/felionoid.rsi/cat_print.png
+  icon: { sprite: _Sunrise/Actions/felionoid.rsi, state: cat_print }
   whitelist:
     components:
     - Vocal
@@ -79,7 +79,7 @@
   name: chat-emote-name-purrs
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/felionoid.rsi/cat_print.png
+  icon: { sprite: _Sunrise/Actions/felionoid.rsi, state: cat_print }
   whitelist:
     components:
     - Vocal
@@ -164,7 +164,7 @@
   name: chat-emote-name-scree
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/resomi.rsi/bird_call.png
+  icon: { sprite: _Sunrise/Actions/resomi.rsi, state: bird_call }
   whitelist:
     components:
     - Vocal
@@ -194,7 +194,7 @@
   name: chat-emote-name-call
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/resomi.rsi/bird_call.png
+  icon: { sprite: _Sunrise/Actions/resomi.rsi, state: bird_call }
   whitelist:
     components:
     - Vocal
@@ -224,7 +224,7 @@
   name: chat-emote-name-squawk
   category: Vocal
   available: false
-  icon: _Sunrise/Actions/resomi.rsi/bird_call.png
+  icon: { sprite: _Sunrise/Actions/resomi.rsi, state: bird_call }
   whitelist:
     components:
     - Vocal
