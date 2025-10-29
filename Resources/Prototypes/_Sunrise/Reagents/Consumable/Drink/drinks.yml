@@ -26,16 +26,17 @@
       - !type:SatiateThirst
         factor: 4
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Dwarf ]
+          inverted: true
     Medicine:
       effects:
       - !type:HealthChange
         damage:
           types:
             Poison: -2
-      - !type:ChemCleanBloodstream
+      - !type:CleanBloodstream
+        excluded: ChamomileTincture
         cleanseRate: 1
 
 - type: reagent
@@ -53,9 +54,9 @@
       - !type:SatiateThirst
         factor: 2
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Dwarf ]
+          inverted: true
       - !type:GenericStatusEffect
         key: Drowsiness
         time: 2.0
@@ -86,9 +87,9 @@
       - !type:SatiateThirst
         factor: 3
         conditions:
-        - !type:OrganType
-          type: Dwarf
-          shouldHave: false
+        - !type:MetabolizerTypeCondition
+          type: [ Dwarf ]
+          inverted: true
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.03

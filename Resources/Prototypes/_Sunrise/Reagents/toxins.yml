@@ -15,7 +15,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:HasTag
+        - !type:TagCondition
           tag: "HumanoidXeno"
           invert: true
         scaleByQuantity: true
@@ -25,7 +25,7 @@
             Caustic: 0.2
       - !type:Emote
         conditions:
-        - !type:HasTag
+        - !type:TagCondition
           tag: "HumanoidXeno"
           invert: true
         emote: Scream
@@ -36,7 +36,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:HasTag
+        - !type:TagCondition
           tag: "HumanoidXeno"
           invert: true
         damage:
@@ -44,7 +44,7 @@
             Caustic: 1
       - !type:PopupMessage
         conditions:
-        - !type:HasTag
+        - !type:TagCondition
           tag: "HumanoidXeno"
           invert: true
         type: Local
@@ -53,7 +53,7 @@
         probability: 0.33
       - !type:Emote
         conditions:
-        - !type:HasTag
+        - !type:TagCondition
           tag: "HumanoidXeno"
           invert: true
         emote: Scream
@@ -74,7 +74,7 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:HasTag
+          - !type:TagCondition
             tag: "Predator"
             invert: true
           scaleByQuantity: true
@@ -84,7 +84,7 @@
               Caustic: 1
         - !type:Emote
           conditions:
-          - !type:HasTag
+          - !type:TagCondition
             tag: "Predator"
             invert: true
           emote: Scream
@@ -94,7 +94,7 @@
       effects:
         - !type:HealthChange
           conditions:
-          - !type:HasTag
+          - !type:TagCondition
             tag: "Predator"
             invert: true
           damage:
@@ -102,7 +102,7 @@
               Caustic: 3
         - !type:PopupMessage
           conditions:
-          - !type:HasTag
+          - !type:TagCondition
             tag: "Predator"
             invert: true
           type: Local
@@ -178,7 +178,7 @@
       effects:
       - !type:ModifyStatusEffect
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           reagent: NocturineAbductor
           min: 8
         effectProto: StatusEffectForcedSleeping

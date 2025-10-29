@@ -139,7 +139,6 @@ namespace Content.Server.Entry
             _ghostKick.Initialize();
             _serverInfo.Initialize();
             _serverApi.Initialize();
-            IoCManager.Resolve<PlayerCacheManager>().Initialize(); // Sunrise-Edit
 
             // Sunrise-Sponsors-Start
             SunriseServerEntry.Init();
