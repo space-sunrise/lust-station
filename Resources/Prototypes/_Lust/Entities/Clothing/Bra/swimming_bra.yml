@@ -1,0 +1,12 @@
+- type: entity
+  parent: ClothingBraBase
+  id: ClothingBraSwimming
+  name: swimming bra
+  description: Nice nylon swimming bra.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Bra/swimming_bra.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Bra/swimming_bra.rsi
+  - type: Item
+    size: Tiny
