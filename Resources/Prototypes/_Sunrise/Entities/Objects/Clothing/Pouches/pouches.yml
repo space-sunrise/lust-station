@@ -1,6 +1,5 @@
-# TODO: разобратся куда пропал родитель BaseClothingBeltSounds
 - type: entity
-  parent: ClothingBeltStorageBase
+  parent: [BaseClothingBeltSounds, ClothingBeltStorageBase]
   id: Pouch
   categories: [ HideSpawnMenu ]
   components:
