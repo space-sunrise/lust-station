@@ -652,7 +652,7 @@
       color: "#0e4069"
     - sprite: *sunrise-icon-rsi
       offset: *icon-offset
-      state: ComMaid
+      state: CommandMaid
   - type: PresetIdCard
     job: ComMaid
 
