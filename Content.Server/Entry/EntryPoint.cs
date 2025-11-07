@@ -79,6 +79,10 @@ namespace Content.Server.Entry
             var aczProvider = new ContentMagicAczProvider(IoCManager.Resolve<IDependencyCollection>());
             IoCManager.Resolve<IStatusHost>().SetMagicAczProvider(aczProvider);
 
+            PatchManager.Patch(logManager);
+
+            LoadConfigPresets(cfg, res, logManager.GetSawmill("configpreset"));
+
             var factory = IoCManager.Resolve<IComponentFactory>();
             var prototypes = IoCManager.Resolve<IPrototypeManager>();
 
