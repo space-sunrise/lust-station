@@ -4,6 +4,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: minkir
   provider: sunrise
@@ -15,6 +16,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: jirinovskiy
   provider: sunrise
@@ -26,6 +28,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: maksim_poltavskiy
   provider: sunrise
@@ -37,6 +40,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: portal_glados
   roundStart: false # for borgs
@@ -49,6 +53,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: sb_squidward
   provider: sunrise
@@ -72,6 +77,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: brejnev
   provider: sunrise
@@ -83,6 +89,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hl2_kleiner
   provider: sunrise
@@ -93,6 +100,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: tf2_medic
   provider: sunrise
@@ -104,6 +112,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hl2_barni
   provider: sunrise
@@ -114,6 +123,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hl2_gman
   provider: sunrise
@@ -124,6 +134,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: losyash
   provider: sunrise
@@ -135,6 +146,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hl2_father_grigori
   provider: sunrise
@@ -145,6 +157,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: kopatich
   provider: sunrise
@@ -156,6 +169,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: stalker_sidorovich
   provider: sunrise
@@ -167,6 +181,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: livsey
   provider: sunrise
@@ -178,6 +193,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: scp_049
   roundStart: false
@@ -190,6 +206,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: scp_079
   roundStart: false
@@ -202,6 +219,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: icarus_revenge
   provider: sunrise
@@ -212,6 +230,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: heartstone_thrud
   provider: sunrise
@@ -223,6 +242,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: kendrick
   provider: sunrise
@@ -233,6 +253,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dota2_riki
   provider: sunrise
@@ -243,6 +264,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dota2_pudge
   provider: sunrise
@@ -253,6 +275,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: tf2_soldier
   provider: sunrise
@@ -263,6 +286,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dota2_abaddon
   provider: sunrise
@@ -273,6 +297,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dota2_silencer
   provider: sunrise
@@ -283,6 +308,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_warden
   provider: sunrise
@@ -293,6 +319,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: cb_announcer
   provider: sunrise
@@ -303,6 +330,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_lord_of_thunder
   provider: sunrise
@@ -313,6 +341,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_tekahn
   provider: sunrise
@@ -323,6 +352,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_finli
   provider: sunrise
@@ -333,6 +363,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_brann
   provider: sunrise
@@ -343,6 +374,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_reno
   provider: sunrise
@@ -353,6 +385,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_zverolov_tavish
   provider: sunrise
@@ -374,6 +407,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_sotis
   provider: sunrise
@@ -384,6 +418,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: mtf_1
   provider: sunrise
@@ -395,6 +430,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: mtf_2
   provider: sunrise
@@ -406,6 +442,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: three_bogatira_alesha
   provider: sunrise
@@ -416,6 +453,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: petr_ivashenko
   provider: sunrise
@@ -437,6 +475,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_akama
   provider: sunrise
@@ -447,6 +486,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_georgiy_kain
   provider: sunrise
@@ -458,6 +498,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_artemiy_burach
   provider: sunrise
@@ -469,6 +510,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_grif
   provider: sunrise
@@ -492,6 +534,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_alexander_saburov
   provider: sunrise
@@ -515,6 +558,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_alexander_blok
   provider: sunrise
@@ -526,6 +570,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: pathologic2_mark_bessmertnik
   provider: sunrise
@@ -537,6 +582,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_blackops_03_v1
   provider: sunrise
@@ -547,6 +593,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_costume
   provider: sunrise
@@ -558,6 +605,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_bellok_bright_blade
   provider: sunrise
@@ -568,6 +616,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_prince_artas
   provider: sunrise
@@ -578,6 +627,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: heathstone_tarkus
   provider: sunrise
@@ -588,6 +638,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_uter
   provider: sunrise
@@ -598,6 +649,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_malfurion
   provider: sunrise
@@ -608,6 +660,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_gul_dan
   provider: sunrise
@@ -629,6 +682,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_mediv1
   provider: sunrise
@@ -639,6 +693,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_mediv2
   provider: sunrise
@@ -649,6 +704,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_thrall
   provider: sunrise
@@ -659,6 +715,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: ai_usafrican_01
   provider: sunrise
@@ -669,6 +726,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_lord_garithos
   provider: sunrise
@@ -679,6 +737,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_artas
   provider: sunrise
@@ -689,6 +748,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_muradin
   provider: sunrise
@@ -699,6 +759,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_dreney
   provider: sunrise
@@ -709,6 +770,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_witcher
   provider: sunrise
@@ -719,6 +781,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_kel
   provider: sunrise
@@ -729,6 +792,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_starik_tumba
   provider: sunrise
@@ -750,6 +814,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_uscaucasian_03
   provider: sunrise
@@ -760,6 +825,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: warcraft3_yastreb
   provider: sunrise
@@ -770,6 +836,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_uscaucasian_02
   provider: sunrise
@@ -780,6 +847,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_khadgar
   provider: sunrise
@@ -790,6 +858,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dota2_antimage
   provider: sunrise
@@ -800,6 +869,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: hearthstone_hamul_runical_totem
   provider: sunrise
@@ -982,6 +1052,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_overlord2
   provider: sunrise
@@ -992,6 +1063,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: dictor_vsevolod_kuznetsov
   provider: sunrise
@@ -1002,6 +1074,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: duke_nukem_forever
   provider: sunrise
@@ -1012,6 +1085,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_uscaucasian_01
   provider: sunrise
@@ -1022,6 +1096,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_blackops_04
   provider: sunrise
@@ -1032,6 +1107,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: crysis2_ai_usafrician_01_v2
   provider: sunrise
@@ -1042,6 +1118,7 @@
   # Lust-start
   sex:
   - Male
+  - Female
   # Lust-end
   speaker: lol_akshan
   provider: sunrise
