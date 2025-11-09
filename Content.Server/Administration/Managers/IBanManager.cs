@@ -103,8 +103,7 @@ public interface IBanManager
     public void SendRoleBans(ICommonSession pSession);
     // Sunrise-Start
     public Task PardonBan(ICommonSession? admin, int banId, ServerBanDef ban);
-    event EventHandler<ServerBanIssuedEvent>? ServerBanIssued;
-    event EventHandler<ServerBanPardonedEvent>? ServerBanPardoned;
-    event EventHandler<PlayerKickingForBanEvent>? PlayerKickingForBan;
+    public event EventHandler<BanPardonedEventArgs>? BanPardoned;
+    public event EventHandler<BanIssuedEventArgs>? BanIssued;
     // Sunrise-End
 }
