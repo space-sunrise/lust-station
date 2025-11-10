@@ -28,7 +28,6 @@
     sprite: _Sunrise/Mobs/Species/Tajaran/parts.rsi
     state: head_f
 
-
 - type: humanoidBaseSprite
   id: MobTajaranTorsoFutanari
   baseSprite:
