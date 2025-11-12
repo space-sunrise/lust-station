@@ -500,3 +500,34 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieAshito
+  name: Plushie Ashito
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    layers:
+    - state: icon
+    - state: icon-light
+      shader: unshaded
+      map: [ "light" ]
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/clap1.ogg
+      params:
+        volume: -2
+#  - type: Item
+#    heldPrefix: blizz
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+#    equippedPrefix: ashito
+    slots:
+    - HEAD
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
