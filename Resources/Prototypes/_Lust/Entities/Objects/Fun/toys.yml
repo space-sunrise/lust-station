@@ -521,12 +521,9 @@
       path: /Audio/_Sunrise/Interactions/clap1.ogg
       params:
         volume: -2
-#  - type: Item
-#    heldPrefix: blizz
   - type: Clothing
     quickEquip: false
     sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
-#    equippedPrefix: ashito
     slots:
     - HEAD
   - type: Item
