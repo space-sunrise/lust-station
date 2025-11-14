@@ -31,8 +31,14 @@
     ClothingHeadWhiteVeil: 1
     ClothingHeadBlackVeil: 1
     RedFlowers: 3
-    BlueFlowers: 3 
+    BlueFlowers: 3
     # Sunrise-End
+    # Lust-Start
+    ClothingUniformWeddingDressMagnificent: 1
+    ClothingUniformWeddingDressBelt: 1
+    ClothingUniformWeddingDressSplit: 1
+    ClothingUniformWimple: 2
+    # Lust-End
   contrabandInventory:
     FoodBakedBunHotX: 2
     DrinkWineBottleFull: 1
