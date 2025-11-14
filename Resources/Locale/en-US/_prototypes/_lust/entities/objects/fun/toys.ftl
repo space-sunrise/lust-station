@@ -52,4 +52,5 @@ ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
     .desc = Looks after your health better than you do yourself. Choking in the darkness of the techs, you will be glad to see her nearby. The smell of fresh beer hovers around her.
 ent-PlushieDrasusLeverian = Plushie Drasus Leverian
     .desc = The chief bureaucratic dushnila
-
+ent-PlushieAshito = Plushie Ashito Levrin
+    .desc = An adorable and slightly unhinged Ashito cradling a pocket-sized doctor in his hands. Smells faintly of beer... and it looks like the plushie is grabbing someone's butt.
