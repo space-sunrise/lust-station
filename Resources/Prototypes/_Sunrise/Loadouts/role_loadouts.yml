@@ -32,6 +32,7 @@
   groups:
   - BackNTR
   - UniformNTR
+  - SecurityBelt # Lust Station Add
   - Trinkets
   - SecurityTrinkets
   - GroupSpeciesBreathTool
