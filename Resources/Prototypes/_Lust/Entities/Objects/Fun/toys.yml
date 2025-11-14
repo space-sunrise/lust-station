@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: PlushieAnameGermanikum
   parent: BasePlushie
   name: Plush Aname Germanikum
@@ -500,3 +500,38 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieMoleronKucenko
+  name: Plushie Moleron Kucenko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: moleron-kucenko
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/can_open1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+      params:
+        variation: 0.250
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: moleron
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: moleron
