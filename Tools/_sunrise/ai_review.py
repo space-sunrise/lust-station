@@ -1,46 +1,46 @@
 import os
 import sys
-import json
-import subprocess
-from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import SystemMessage, UserMessage
-from azure.core.credentials import AzureKeyCredential
+import google.generativeai as genai
 
-def get_diff():
-    """Reads DIFF from file passed by GitHub Actions."""
-    with open("diff.txt", "r", encoding="utf-8") as f:
+MODEL = os.environ.get("GEMINI_MODEL", "models/gemini-1.5-pro")
+API_KEY = os.environ.get("GOOGLE_API_KEY")
+if not API_KEY:
+    print("ERROR: set GOOGLE_API_KEY environment variable", file=sys.stderr)
+    sys.exit(1)
+
+TEMPERATURE = 0.2
+MAX_OUTPUT_TOKENS = int(os.environ.get("MAX_OUTPUT_TOKENS", "1200"))
+
+genai.configure(api_key=API_KEY)
+
+def read_file(path: str) -> str:
+    with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
-def get_gdd():
-    """Loads GDD file from repo."""
-    with open(".github/gdd.md", "r", encoding="utf-8") as f:
-        return f.read()
-
-def get_pr_title():
-    with open("pr_title.txt", "r", encoding="utf-8") as f:
-        return f.read().strip()
-
-def get_pr_body():
-    with open("pr_body.txt", "r", encoding="utf-8") as f:
-        return f.read().strip()
-
-def run_ai_review(gdd, diff):
-    endpoint = "https://models.github.ai/inference"
-    model_name = "openai/gpt-4.1"
-    token = os.environ["GITHUB_TOKEN"]
-    
-    client = ChatCompletionsClient(
-        endpoint=endpoint,
-        credential=AzureKeyCredential(token),
+def call_gemini(system_prompt: str, user_prompt: str, max_output_tokens: int = MAX_OUTPUT_TOKENS) -> str:
+    resp = genai.chat.create(
+        model=MODEL,
+        temperature=TEMPERATURE,
+        max_output_tokens=max_output_tokens,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
     )
+    # защитный доступ к результату
+    # в некоторых версиях ответа текст доступен как response.last["content"][0]["text"]
+    try:
+        return resp.last["content"][0]["text"]
+    except Exception:
+        # более универсальная попытка достать безопасный текст
+        try:
+            return resp.candidates[0].content[0].text
+        except Exception:
+            return str(resp)
 
-    title = get_pr_title()
-    body = get_pr_body()
-    
-    prompt = f"""
-    Ты — главный геймдизайнер проекта Sunrise Station.
-    
-    Проанализируй Pull Request.
+def run_ai_review(gdd: str, diff: str, title: str, body: str) -> str:
+    system_prompt = "Ты — главный геймдизайнер проекта Sunrise Station. Проанализируй Pull Request."
+    user_prompt = f"""
     
     === TITLE ===
     {title}
@@ -61,31 +61,25 @@ def run_ai_review(gdd, diff):
     4. Есть ли нарушения RP-принципов?
     5. Дай рекомендации.
     """
-
     
-    response = client.complete(
-        messages=[
-            SystemMessage(content="You are an expert senior game designer."),
-            UserMessage(content=prompt),
-        ],
-        temperature=0.3,
-        top_p=1.0,
-        max_tokens=5000,
-        model=model_name
-    )
-
-    return response.choices[0].message.content
+    return call_gemini(system_prompt, user_prompt)
 
 def main():
-    diff = get_diff()
-    gdd = get_gdd()
-    review = run_ai_review(gdd, diff)
+    try:
+        diff = read_file("diff.txt")
+        gdd = read_file(".github/gdd.md")
+        title = read_file("pr_title.txt").strip()
+        body = read_file("pr_body.txt").strip()
+    except FileNotFoundError as e:
+        print(f"Missing file: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    review = run_ai_review(gdd, diff, title, body)
 
     with open("ai_review.txt", "w", encoding="utf-8") as f:
         f.write(review)
 
     print("AI review complete.")
-
 
 if __name__ == "__main__":
     main()
