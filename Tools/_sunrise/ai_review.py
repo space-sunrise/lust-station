@@ -56,8 +56,8 @@ def run_ai_review(gdd, diff):
     5. Дай рекомендации.
     """
 
-    response = client.chat(
-        model="mistral-ai/Codestral-2501",
+    response = client.chat.complete(
+        model="mistral-ai/mistral-medium-2505",
         messages=[
             SystemMessage(content="You are an expert senior game designer."),
             UserMessage(content=prompt),
