@@ -14,7 +14,7 @@ if not API_KEY:
     print("ERROR: GEMINI_API_KEY not set", file=sys.stderr)
     sys.exit(1)
 
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 def read_file(path: str) -> str:
     try:
