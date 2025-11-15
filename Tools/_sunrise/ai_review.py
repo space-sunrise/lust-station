@@ -2,7 +2,10 @@ import os
 import sys
 import json
 import subprocess
-from mistralai import Mistral, UserMessage, SystemMessage
+from azure.ai.inference import ChatCompletionsClient
+from azure.ai.inference.models import SystemMessage
+from azure.ai.inference.models import UserMessage
+from azure.core.credentials import AzureKeyCredential
 
 def get_diff():
     """Reads DIFF from file passed by GitHub Actions."""
@@ -23,9 +26,9 @@ def get_pr_body():
         return f.read().strip()
 
 def run_ai_review(gdd, diff):
-    client = Mistral(
-        api_key=os.environ["GITHUB_TOKEN"],
-        server_url="https://models.github.ai/inference"
+    client = ChatCompletionsClient(
+        endpoint="https://models.github.ai/inference",
+        credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
     )
 
     title = get_pr_title()
@@ -56,14 +59,15 @@ def run_ai_review(gdd, diff):
     5. Дай рекомендации.
     """
 
-    response = client.chat.complete(
-        model="mistral-ai/mistral-medium-2505",
+    
+    response = client.complete(
         messages=[
             SystemMessage(content="You are an expert senior game designer."),
             UserMessage(content=prompt),
         ],
+        model="ai21-labs/AI21-Jamba-1.5-Large",
         temperature=0.3,
-        max_tokens=1500,
+        max_tokens=5000,
         top_p=1.0
     )
 
