@@ -3,8 +3,7 @@ import sys
 import json
 import subprocess
 from azure.ai.inference import ChatCompletionsClient
-from azure.ai.inference.models import SystemMessage
-from azure.ai.inference.models import UserMessage
+from azure.ai.inference.models import SystemMessage, UserMessage
 from azure.core.credentials import AzureKeyCredential
 
 def get_diff():
@@ -26,9 +25,13 @@ def get_pr_body():
         return f.read().strip()
 
 def run_ai_review(gdd, diff):
+    endpoint = "https://models.github.ai/inference"
+    model_name = "ai21-labs/AI21-Jamba-1.5-Large"
+    token = os.environ["GITHUB_TOKEN"]
+    
     client = ChatCompletionsClient(
-        endpoint="https://models.github.ai/inference",
-        credential=AzureKeyCredential(os.environ["GITHUB_TOKEN"]),
+        endpoint=endpoint,
+        credential=AzureKeyCredential(token),
     )
 
     title = get_pr_title()
@@ -65,10 +68,10 @@ def run_ai_review(gdd, diff):
             SystemMessage(content="You are an expert senior game designer."),
             UserMessage(content=prompt),
         ],
-        model="ai21-labs/AI21-Jamba-1.5-Large",
         temperature=0.3,
+        top_p=1.0,
         max_tokens=5000,
-        top_p=1.0
+        model=model_name
     )
 
     return response.choices[0].message.content
