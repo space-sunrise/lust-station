@@ -1,4 +1,4 @@
-name: AI Game Design Review (Mistral)
+name: AI Game Design Review
 
 on:
   pull_request:
@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install azure-ai-inference
+        run: pip install google-generative-ai
 
       - name: Run AI review
         env:
