@@ -11,7 +11,7 @@ def get_diff():
 
 def get_gdd():
     """Loads GDD file from repo."""
-    with open("docs/gdd.md", "r", encoding="utf-8") as f:
+    with open(".github/gdd.md", "r", encoding="utf-8") as f:
         return f.read()
 
 def run_ai_review(gdd, diff):
