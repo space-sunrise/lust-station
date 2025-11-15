@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install mistralai>=1.0.0
+        run: pip install azure-ai-inference
 
       - name: Run AI review
         env:
