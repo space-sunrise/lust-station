@@ -6,7 +6,7 @@ from google.genai import types
 # Настройки: переменные окружения в workflow должны быть установлены
 API_KEY = os.environ.get("GEMINI_API_KEY")  # в GitHub Secrets храните именно этот ключ
 MODEL = os.environ.get("GEMINI_MODEL", "models/gemini-1.5-pro")
-MAX_OUTPUT_TOKENS = int(os.environ.get("MAX_OUTPUT_TOKENS", "800"))
+MAX_OUTPUT_TOKENS = int(os.environ.get("MAX_OUTPUT_TOKENS", "1500"))
 TEMPERATURE = float(os.environ.get("TEMPERATURE", "0.2"))
 
 if not API_KEY:
