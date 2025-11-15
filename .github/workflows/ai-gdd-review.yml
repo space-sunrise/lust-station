@@ -30,7 +30,7 @@ jobs:
           python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install google-generative-ai
+        run: pip install google-genai
 
       - name: Run AI review
         env:
