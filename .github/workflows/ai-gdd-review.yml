@@ -34,7 +34,7 @@ jobs:
 
       - name: Run AI review
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
         run: |
           python3 Tools/_sunrise/ai_review.py
