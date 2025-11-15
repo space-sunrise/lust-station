@@ -19,6 +19,11 @@ jobs:
           git fetch origin ${{ github.base_ref }} --depth=1 || true
           git diff origin/${{ github.base_ref }}...HEAD > diff.txt
 
+      - name: Save PR metadata
+        run: |
+          echo "${{ github.event.pull_request.title }}" > pr_title.txt
+          echo "${{ github.event.pull_request.body }}" > pr_body.txt
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
