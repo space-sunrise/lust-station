@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
+
 import os
 import sys
 from google import genai
 from google.genai import types
 
-# Настройки: переменные окружения в workflow должны быть установлены
-API_KEY = os.environ.get("GEMINI_API_KEY")  # в GitHub Secrets храните именно этот ключ
+API_KEY = os.environ["GEMINI_API_KEY"]
 MODEL = os.environ.get("GEMINI_MODEL", "models/gemini-1.5-pro")
 MAX_OUTPUT_TOKENS = int(os.environ.get("MAX_OUTPUT_TOKENS", "1500"))
 TEMPERATURE = float(os.environ.get("TEMPERATURE", "0.2"))
@@ -23,7 +24,6 @@ def read_file(path: str) -> str:
         return ""
 
 def call_gemini_chat(system_prompt: str, user_prompt: str) -> str:
-    # Используем chat.create (поддерживается в google-genai)
     response = genai.chat.create(
         model=MODEL,
         messages=[
@@ -33,13 +33,10 @@ def call_gemini_chat(system_prompt: str, user_prompt: str) -> str:
         temperature=TEMPERATURE,
         max_output_tokens=MAX_OUTPUT_TOKENS,
     )
-    # Попробуем извлечь текст безопасно
     try:
-        # в новых SDK ответ часто доступен как response.last["content"][0]["text"]
         return response.last["content"][0]["text"]
     except Exception:
         try:
-            # fallback: candidates
             return response.candidates[0].messages[0].content[0].text
         except Exception:
             return str(response)
