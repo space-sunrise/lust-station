@@ -40,8 +40,8 @@ def run_ai_review(gdd, diff):
     response = client.chat(
         model="mistral-ai/Codestral-2501",
         messages=[
-            SystemMessage("You are an expert senior game designer."),
-            UserMessage(prompt),
+            SystemMessage(content="You are an expert senior game designer."),
+            UserMessage(content=prompt),
         ],
         temperature=0.3,
         max_tokens=1500,
@@ -49,7 +49,6 @@ def run_ai_review(gdd, diff):
     )
 
     return response.choices[0].message.content
-
 
 def main():
     diff = get_diff()
