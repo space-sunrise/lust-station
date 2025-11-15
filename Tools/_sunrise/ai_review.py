@@ -26,7 +26,7 @@ def get_pr_body():
 
 def run_ai_review(gdd, diff):
     endpoint = "https://models.github.ai/inference"
-    model_name = "ai21-labs/AI21-Jamba-1.5-Large"
+    model_name = "microsoft/Phi-4-reasoning"
     token = os.environ["GITHUB_TOKEN"]
     
     client = ChatCompletionsClient(
