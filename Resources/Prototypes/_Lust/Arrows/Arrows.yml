@@ -952,7 +952,7 @@
   icon:
     sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
     state: Arrows
-  jobName: job-name-MTO
+  jobName: job-name-soldierarrows
 
 #РАБОТА КОМАНДИР
 - type: job
