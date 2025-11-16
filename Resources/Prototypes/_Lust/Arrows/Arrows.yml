@@ -986,15 +986,18 @@
 - type: npcFaction
   id: Arrows
   hostile:
+  - BloodCult
   - NanoTrasen
   - Syndicate
-  - SimpleNeutral
-  - SimpleHostile
-  - Passive
+  - Thief
   - Zombie
+  - Revolutionary
+  - Vampire
   - Xeno
-  - Dragon
-  - Mouse
+  - Flesh
+  - FleshHuman
+  - Carps
+  - AllHostile
 
 #ДОСТУП
 - type: accessLevel
