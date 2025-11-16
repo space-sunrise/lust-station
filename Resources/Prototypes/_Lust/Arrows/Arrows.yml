@@ -192,7 +192,6 @@
         Dead: 0
       baseDecayRate: 0.0001
     - type: Hunger
-      startingHunger: 2500   # spawn with Okay hunger state
       thresholds:
         Overfed: 3500
         Okay: 2500
