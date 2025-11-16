@@ -229,7 +229,7 @@
 #СОЛДАТ
 - type: entity
   name: Soldier "PMC Arrows"
-  parent: RandomHumanoidSpawnerERTLeader
+  parent: RandomHumanoidSpawnerERTSecurity
   id: MobHumanArrowsOfficer
   suffix: Arrows
   components:
