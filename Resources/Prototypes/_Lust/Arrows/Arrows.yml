@@ -326,9 +326,9 @@
   suffix: Arrows
   components:
   - type: Sprite
-    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
   - type: Clothing
-    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -387,9 +387,9 @@
   suffix: Arrows
   components:
   - type: Sprite
-    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
   - type: Clothing
-    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -449,9 +449,9 @@
   components:
   - type: BreathMask
   - type: Sprite
-    sprite: _Sunrise/Clothing/Head/Hardsuits/arrowshelmet.rsi
+    sprite: _Lust/Clothing/Head/Hardsuits/arrowshelmet.rsi
   - type: Clothing
-    sprite: _Sunrise/Clothing/Head/Hardsuits/arrowshelmet.rsi
+    sprite: _Lust/Clothing/Head/Hardsuits/arrowshelmet.rsi
   - type: PointLight
     color: darkgreen
     radius: 8
@@ -550,10 +550,10 @@
   suffix: Arrows
   components:
   - type: Sprite
-    sprite: _Sunrise/Clothing/Shoes/Boots/arrowsmagboots.rsi
+    sprite: _Lust/Clothing/Shoes/Boots/arrowsmagboots.rsi
     state: icon
   - type: Clothing
-    sprite: _Sunrise/Clothing/Shoes/Boots/arrowsmagboots.rsi
+    sprite: _Lust/Clothing/Shoes/Boots/arrowsmagboots.rsi
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
@@ -682,26 +682,26 @@
   - type: EnergySword
   - type: ItemToggle
     soundActivate:
-      path: /Audio/_Sunrise/Weapons/start.ogg
+      path: /Audio/_Lust/Weapons/start.ogg
     soundDeactivate:
-      path: /Audio/_Sunrise/Weapons/start.ogg
+      path: /Audio/_Lust/Weapons/start.ogg
   - type: ItemToggleActiveSound
     activeSound:
-      path: /Audio/_Sunrise/Weapons/idle.ogg
+      path: /Audio/_Lust/Weapons/idle.ogg
   - type: ItemToggleSize
     activatedSize: Huge
   - type: ItemToggleMeleeWeapon
     activatedSoundOnHit:
-      path: /Audio/_Sunrise/Weapons/hit.ogg
+      path: /Audio/_Lust/Weapons/hit.ogg
       params:
         variation: 0.250
     activatedSoundOnHitNoDamage:
-      path: /Audio/_Sunrise/Weapons/hit.ogg
+      path: /Audio/_Lust/Weapons/hit.ogg
       params:
         variation: 0.250
         volume: -10
     activatedSoundOnSwing:
-      path: /Audio/_Sunrise/Weapons/miss.ogg
+      path: /Audio/_Lust/Weapons/miss.ogg
       params:
         variation: 0.125
     activatedDamage:
@@ -710,7 +710,7 @@
             Blunt: 20
             Structural: 50
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Melee/chainsword.rsi
+    sprite: _Lust/Objects/Weapons/Melee/chainsword.rsi
     layers:
       - state: chainsword
       - state: chainsword_blade
@@ -727,7 +727,7 @@
         Slash: 5
   - type: Item
     size: Small
-    sprite: _Sunrise/Objects/Weapons/Melee/chainsword.rsi
+    sprite: _Lust/Objects/Weapons/Melee/chainsword.rsi
   - type: UseDelay
     delay: 1.0
   - type: ToggleableLightVisuals
@@ -871,7 +871,7 @@
     - state: black
     - state: idcaptain
   - type: PresetIdCard
-    job: MTL
+    job: LeaderArrows
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -911,7 +911,7 @@
   suffix: Arrows
   components:
   - type: PresetIdCard
-    job: MTS
+    job: SoldierArrows
 
 #КПК СОЛДАТА
 - type: entity
@@ -951,15 +951,16 @@
   parent: JobIcon
   id: JobIconArrows
   icon:
-    sprite: /Textures/_Sunrise/Interface/Misc/job_icons.rsi
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
     state: Arrows
   jobName: job-name-MTO
 
 #РАБОТА КОМАНДИР
 - type: job
-  id: MTL
-  name: job-name-MTOL
-  playTimeTracker: MTL
+  id: LeaderArrows
+  name: job-name-leaderarrows
+  description: job-description-leaderarrows
+  playTimeTracker: JobLeaderArrows
   icon: "JobIconArrows"
   accessGroups:
   - AllAccess
@@ -970,9 +971,10 @@
 
 #РАБОТА СОЛДАТ
 - type: job
-  id: MTS
-  name: job-name-MTO
-  playTimeTracker: MTS
+  id: SoldierArrows
+  name: job-name-soldierarrows
+  description: job-description-soldierarrows
+  playTimeTracker: JobSoldierArrows
   icon: "JobIconArrows"
   accessGroups:
   - AllAccess
@@ -1448,7 +1450,7 @@
     soundEject:
       collection: ShellEject
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/carnage_shell.rsi
+    sprite: _Lust/Objects/Weapons/Guns/Ammunition/Casings/carnage_shell.rsi
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -1469,7 +1471,7 @@
     soundEject:
       collection: ShellEject
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/carnage_shell.rsi
+    sprite: _Lust/Objects/Weapons/Guns/Ammunition/Casings/carnage_shell.rsi
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
@@ -1507,7 +1509,7 @@
       - ShellShotgunCarnage
     capacity: 8
     soundRack:
-      path: /Audio/_Sunrise/Weapons/Guns/Cock/shotgun_cock.ogg
+      path: /Audio/_Lust/Weapons/Guns/Cock/shotgun_cock.ogg
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -1551,7 +1553,7 @@
   description: The specialized "Carnage" shotgun uses .60 caliber shotgun shells.
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Shotguns/carnage.rsi
+    sprite: _Lust/Objects/Weapons/Guns/Shotguns/carnage.rsi
     layers:
       - state: icon
         map: [ "enum.GunVisualLayers.Base" ]
