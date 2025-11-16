@@ -1146,3 +1146,11 @@
   id: 251
   time: '2025-11-16T11:54:55.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/384
+- author: darneya, Vitalitaalalita
+  changes:
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435 \u0427\
+      \u0412\u041A \"Arrows\"."
+    type: Add
+  id: 252
+  time: '2025-11-16T20:38:22.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/407
