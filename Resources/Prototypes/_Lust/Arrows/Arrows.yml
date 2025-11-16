@@ -638,7 +638,7 @@
       - state: generic
         shader: unshaded
   - type: CommunicationsConsole
-    title: PMC Arrows
+    title: comms-console-announcement-title-arrows
     global: true
     color: "DarkGreen"
     sound:

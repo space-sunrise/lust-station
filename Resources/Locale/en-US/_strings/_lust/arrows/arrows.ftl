@@ -154,3 +154,4 @@ ent-DeathRattleImplantMT = death rattle implant
 ent-WallForceArrowsUn = power barrier
     .desc = A barrier of hard light that blocks movement.
     .suffix = infinite
+comms-console-announcement-title-arrows = PMC Arrows

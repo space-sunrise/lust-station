@@ -153,3 +153,4 @@ ent-DeathRattleImplantMT = имплант предсмертный хрип
 ent-WallForceArrowsUn = силовой барьер
     .desc = Барьер из твёрдого света, блокирует движение, но довольно хрупкий.
     .suffix = бесконечный
+comms-console-announcement-title-arrows = ЧВК Arrows
