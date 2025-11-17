@@ -9,15 +9,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout PR code
+      - name: Checkout base branch
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.event.pull_request.base.sha }}
+          fetch-depth: 0
       
       - name: Get diff
         run: |
-          git fetch origin ${{ github.base_ref }} --depth=1 || true
-          git diff origin/${{ github.base_ref }}...HEAD > diff.txt
+          git fetch origin ${{ github.event.pull_request.head.ref }}:pr_branch
+          git diff ${{ github.event.pull_request.base.sha }} pr_branch > diff.txt
 
       - name: Save PR metadata
         run: |
