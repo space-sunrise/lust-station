@@ -17,7 +17,7 @@ jobs:
       
       - name: Get diff
         run: |
-          git fetch origin ${{ github.event.pull_request.head.ref }}:pr_branch
+          git fetch origin pull/${{ github.event.pull_request.number }}/head:pr_branch
           git diff ${{ github.event.pull_request.base.sha }} pr_branch > diff.txt
 
       - name: Save PR metadata
