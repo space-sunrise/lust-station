@@ -65,3 +65,5 @@
         orGroup: Plushie
       - id: PlushieKira
         orGroup: Plushie
+      - id: PlushieMoleronKucenko
+        orGroup: Plushie
