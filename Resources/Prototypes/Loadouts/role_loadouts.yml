@@ -566,6 +566,7 @@
   - HeadofSecurityBack #Lust-Edit
   - SecurityBelt
   - HeadofSecurityOuterClothing
+  - SecurityGlasses #Lust-Edit
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
@@ -586,6 +587,7 @@
   - WardenHead
   - WardenJumpsuit
   - WardenBackpack #Lust-Edit
+  - SecurityGlasses #Lust-Edit
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
@@ -608,6 +610,7 @@
   - SecurityHead
   - SecurityJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - SecurityOuterClothing
   - SecurityShoes
   #- SecurityPDA
@@ -632,6 +635,7 @@
   - DetectiveNeck
   - DetectiveJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - DetectiveOuterClothing
   - SecurityShoes
   - SurvivalSecurity
@@ -652,6 +656,7 @@
   groups:
   - SecurityCadetJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - SurvivalSecurity
   - Trinkets
   - GroupSpeciesBreathToolSecurity
