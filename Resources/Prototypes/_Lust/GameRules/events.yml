@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseGameRule
+  id: ERTShuttleEpsilonArrows
+  components:
+  - type: StationEvent
+    startAnnouncement: null
+    startAudio: /Audio/Announcements/bloblarm.ogg
+    duration: -0
+    endAudio: /Audio/Announcements/bloblarm.ogg
+  - type: LoadMapRule
+    preloadedGrid: MTShuttle
+  - type: RuleGrids
