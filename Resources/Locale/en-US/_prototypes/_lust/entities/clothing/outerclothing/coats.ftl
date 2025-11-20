@@ -1,3 +1,11 @@
+ent-ClothingOuterLeatherCoat = Leather jacket
+    .desc = Perfect for performances!
+ent-ClothingOuterLeatherCoatOpened = Leather jacket
+    .desc = Perfect for performances!
+ent-ClothingOuterHoSTrenchElegant = Elegant HOS trenchcoat
+    .desc = A simple and lightly armored HOS trenchcoat with gold stripes.
+ent-ClothingOuterHoSTrenchElegantOpened = Elegant HOS trenchcoat
+    .desc = A simple and lightly armored HOS trenchcoat with gold stripes.
 ent-ClothingOuterCoatIAAFormalCoat = formal IAA coat
     .desc = Business jacket of the IAA for a professional look.
 ent-ClothingOuterCoatCMOFormalCoat = formal CMO coat
