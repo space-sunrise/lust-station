@@ -290,13 +290,13 @@ namespace Content.Server.Database
                 {
                     // Sunrise: Load gradient settings from database
                     HairGradientEnabled = profile.HairGradientEnabled,
-                    HairGradientSecondaryColor = Color.FromHex(profile.HairGradientSecondaryColor ?? "#FFFFFF"),
+                    HairGradientSecondaryColor = Color.FromHex(string.IsNullOrEmpty(profile.HairGradientSecondaryColor) ? "#FFFFFF" : profile.HairGradientSecondaryColor),
                     HairGradientDirection = profile.HairGradientDirection,
                     FacialHairGradientEnabled = profile.FacialHairGradientEnabled,
-                    FacialHairGradientSecondaryColor = Color.FromHex(profile.FacialHairGradientSecondaryColor ?? "#FFFFFF"),
+                    FacialHairGradientSecondaryColor = Color.FromHex(string.IsNullOrEmpty(profile.FacialHairGradientSecondaryColor) ? "#FFFFFF" : profile.FacialHairGradientSecondaryColor),
                     FacialHairGradientDirection = profile.FacialHairGradientDirection,
                     AllMarkingsGradientEnabled = profile.AllMarkingsGradientEnabled,
-                    AllMarkingsGradientSecondaryColor = Color.FromHex(profile.AllMarkingsGradientSecondaryColor ?? "#FFFFFF"),
+                    AllMarkingsGradientSecondaryColor = Color.FromHex(string.IsNullOrEmpty(profile.AllMarkingsGradientSecondaryColor) ? "#FFFFFF" : profile.AllMarkingsGradientSecondaryColor),
                     AllMarkingsGradientDirection = profile.AllMarkingsGradientDirection
                 },
                 spawnPriority,
