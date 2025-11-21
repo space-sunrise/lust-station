@@ -9,13 +9,3 @@
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
 
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformElegantJumpsuitIAA
-  name: elegant IAA suit
-  description: A sharp suit for an IAA agent who turns paperwork into power.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaaelegantsuit.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaaelegantsuit.rsi

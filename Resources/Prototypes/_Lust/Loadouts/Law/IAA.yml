@@ -4,11 +4,26 @@
   equipment:
     jumpsuit: ClothingUniformFormalIAA
 
-#Outerclothing
 - type: loadout
-  id: IAAcoat
+  id: IAAuniformSkirt
   equipment:
-    outerClothing: ClothingOuterCoatIAAFormalCoat
+    jumpsuit: ClothingUniformJumpskirtFormalIAA
+
+- type: loadout
+  id: IAAuniformElegant
+  equipment:
+    jumpsuit: ClothingUniformElegantJumpsuitIAA
+
+- type: loadout
+  id: IAAuniformElegantSkirt
+  equipment:
+    jumpsuit: ClothingUniformElegantJumpskirtIAA
+
+#Outerclothing
+# - type: loadout
+#   id: IAAcoat
+#   equipment:
+#     outerClothing: ClothingOuterCoatIAAFormalCoat
 
 #Backpack
 - type: loadout

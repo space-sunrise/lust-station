@@ -24,6 +24,9 @@
   name: loadout-group-IAA-uniform
   loadouts:
   - IAAuniform
+  - IAAuniformSkirt
+  - IAAuniformElegant
+  - IAAuniformElegantSkirt
   - LawyerJumpsuit
   - LawyerJumpskirt
   - LawyerJumpsuitBlue
@@ -44,11 +47,11 @@
   - IAAcape
   - IAAformalmantle
 
-- type: loadoutGroup
-  id: IAAcoat
-  name: loadout-group-IAA-coat
-  loadouts:
-  - IAAcoat
+# - type: loadoutGroup
+#   id: IAAcoat
+#   name: loadout-group-IAA-coat
+#   loadouts:
+#   - IAAcoat
 
 - type: loadoutGroup
   id: IAAback
