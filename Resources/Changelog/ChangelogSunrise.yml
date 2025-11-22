@@ -23040,3 +23040,12 @@
   id: 1500
   time: '2025-11-21T04:58:01.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3384
+- author: Nrd-K
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u0431\u043E\u043B\
+      \u044C\u0448\u0435 \u0446\u0435\u043B\u0435\u0439 \u043D\u0430 \u0434\u0435\u043B\
+      \u044C\u0442\u0443"
+    type: Add
+  id: 1501
+  time: '2025-11-22T20:12:56.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3391
