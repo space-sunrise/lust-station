@@ -41,3 +41,25 @@
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
     - type: Clothing
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtFormalIAA
+  name: formal IAA skirt
+  description: IAA formal skirt. Looks royal.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaaskirt.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaaskirt.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformElegantJumpskirtIAA
+  name: elegant IAA skirt suit
+  description: A sharp skirt suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaaelegantskirt.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaaelegantskirt.rsi
