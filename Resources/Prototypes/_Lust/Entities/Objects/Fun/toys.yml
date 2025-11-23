@@ -503,6 +503,33 @@
 
 - type: entity
   parent: BasePlushie
+  id: PlushieAshito
+  name: Plushie Ashito
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    layers:
+    - state: icon
+    - state: icon-light
+      shader: unshaded
+      map: [ "light" ]
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/clap1.ogg
+      params:
+        volume: -2
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    slots:
+    - HEAD
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+- type: entity
+  parent: BasePlushie
   id: PlushieKira
   name: Kira Killigrue
   components:
@@ -542,7 +569,7 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/_Lust/empty_audio.ogg
-      
+
 - type: entity
   id: PlushieMoleronKucenko
   name: Plushie Moleron Kucenko
