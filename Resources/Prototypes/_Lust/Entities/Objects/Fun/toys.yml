@@ -530,6 +530,47 @@
     sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
 - type: entity
   parent: BasePlushie
+  id: PlushieKira
+  name: Kira Killigrue
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    layers:
+    - state: icon
+    - state: icon2
+      visible: false
+      map: [ "default" ]
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    equippedPrefix: kira
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: kira
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_hide.ogg
+    soundDeactivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_equip.ogg
+      params:
+        volume: -2
+  - type: UseDelay
+    delay: 1.0
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: default
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/sabre_drop.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      collection: VulpkaninBarks
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/empty_audio.ogg
+
+- type: entity
   id: PlushieMoleronKucenko
   name: Plushie Moleron Kucenko
   components:
