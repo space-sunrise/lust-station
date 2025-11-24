@@ -1,2 +1,2 @@
 emote-moan = стонет!
-chat-emote-name = Стонать
+chat-emote-name-moan = Стонать
