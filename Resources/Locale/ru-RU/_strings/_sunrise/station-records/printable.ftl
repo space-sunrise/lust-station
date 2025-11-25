@@ -1,7 +1,7 @@
 printed-station-records-content =
     ​
     ​
-    ​[head=1]NanoTrasen[/head]
+    ​[head=1]Qillu[/head]
     ​[bold]Распечатка из базы данных экипажа станции[/bold]
     ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 
