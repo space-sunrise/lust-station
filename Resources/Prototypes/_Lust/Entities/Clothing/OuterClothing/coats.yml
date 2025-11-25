@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageFoldableBase
+  parent: [ClothingOuterStorageFoldableBase, AllowSuitStorageClothing]
   id: ClothingOuterHoSTrenchElegant
   name: elegant HoS trench
   description:
