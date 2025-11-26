@@ -104,6 +104,28 @@
   equipment:
     back: ClothingBackpackDuffelSecurity
 
+# Glasses
+- type: loadout
+  id: EyesHudSecurity
+  equipment:
+    eyes: ClothingEyesHudSecurity # Lust Station
+
+- type: loadout
+  id: EyesGlassesSecurity
+  equipment:
+    eyes: ClothingEyesGlassesSecurity # Lust Station
+
+- type: loadout
+  id: EyesHudSecurityAlt
+  sponsorOnly: true
+  equipment:
+    eyes: ClothingEyesHudSecurityAlt  # Lust Station
+
+- type: loadout
+  id: EyesEyepatchHudSecurity  # Lust Station
+  equipment:
+    eyes: ClothingEyesEyepatchHudSecurity
+
 # Belt
 - type: loadout
   id: SecurityBelt
