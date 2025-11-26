@@ -56,5 +56,3 @@ ent-PlushieAshito = Plushie Ashito Levrin
     .desc = An adorable and slightly unhinged Ashito cradling a pocket-sized doctor in his hands. Smells faintly of beer... and it looks like the plushie is grabbing someone's butt.
 ent-PlushieKira = Kira Killigrew
     .desc = The saber in her hand is poetry, the rifle is a comedy of errors. But what secrets does her connection with her husband Elmer hold—the gateway to a lost world?
-ent-PlushieMoleronKucenko = Plushie Moleron Kucenko
-    .desc = This moth definitely won't want to eat your underpants. Made with 0,7% pure beer, don't even think about drinking a kira rush in front of it. Viva la pivo!
