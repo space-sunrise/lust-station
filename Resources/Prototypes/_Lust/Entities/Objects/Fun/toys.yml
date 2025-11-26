@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   id: PlushieAnameGermanikum
   parent: BasePlushie
   name: Plush Aname Germanikum
@@ -500,6 +500,7 @@
     - NECK
   - type: Item
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+<<<<<<< HEAD
 
 - type: entity
   parent: BasePlushie
@@ -603,3 +604,5 @@
     - HEAD
   - type: Item
     heldPrefix: moleron
+=======
+>>>>>>> parent of e45a56ea06 (Плюшка Молерон Плюш (#382))

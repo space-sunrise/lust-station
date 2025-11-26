@@ -63,9 +63,12 @@
         orGroup: Plushie
       - id: PlushieKalium
         orGroup: Plushie
+<<<<<<< HEAD
       - id: PlushieKira
         orGroup: Plushie
       - id: PlushieAshito
         orGroup: Plushie
       - id: PlushieMoleronKucenko
         orGroup: Plushie
+=======
+>>>>>>> parent of e45a56ea06 (Плюшка Молерон Плюш (#382))
