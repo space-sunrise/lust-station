@@ -31,7 +31,7 @@
 - type: startingGear
   id: WardenGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+#    eyes: ClothingEyesGlassesSecurity #Lust-Edit
     id: WardenPDA
     ears: ClothingHeadsetSecurity
   storage:

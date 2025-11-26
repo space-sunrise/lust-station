@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: PlushieAnameGermanikum
   parent: BasePlushie
   name: Plush Aname Germanikum
@@ -542,3 +542,104 @@
     sound:
       collection: FelinidMews
 
+  parent: BasePlushie
+  id: PlushieAshito
+  name: Plushie Ashito
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    layers:
+    - state: icon
+    - state: icon-light
+      shader: unshaded
+      map: [ "light" ]
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/clap1.ogg
+      params:
+        volume: -2
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    slots:
+    - HEAD
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+- type: entity
+  parent: BasePlushie
+  id: PlushieKira
+  name: Kira Killigrue
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    layers:
+    - state: icon
+    - state: icon2
+      visible: false
+      map: [ "default" ]
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    equippedPrefix: kira
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: kira
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_hide.ogg
+    soundDeactivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_equip.ogg
+      params:
+        volume: -2
+  - type: UseDelay
+    delay: 1.0
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: default
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/sabre_drop.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      collection: VulpkaninBarks
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/empty_audio.ogg
+
+- type: entity
+  id: PlushieMoleronKucenko
+  name: Plushie Moleron Kucenko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: moleron-kucenko
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/can_open1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Voice/Moth/moth_chitter.ogg
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/Voice/Moth/moth_squeak.ogg
+      params:
+        variation: 0.250
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: moleron
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: moleron

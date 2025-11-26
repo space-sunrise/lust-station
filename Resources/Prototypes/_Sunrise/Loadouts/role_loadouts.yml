@@ -114,6 +114,7 @@
   groups:
   - SeniorOfficerJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust Station
   - SecurityBelt
   - SecurityOuterClothing
   - SecurityShoes
@@ -288,6 +289,7 @@
   groups:
   - SecurityPilotJumpsuit
   - SecurityBackpack
+  - SecurityGlasses # Lust Station
   - SecurityShoes
   - SecurityBelt
   - SurvivalSecurity
