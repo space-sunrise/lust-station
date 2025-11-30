@@ -23120,3 +23120,17 @@
   id: 1506
   time: '2025-11-30T13:43:28.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3406
+- author: KaiserMaaus
+  changes:
+  - message: "\u041A\u043D\u0438\u0433\u0438 \u0438 \u0441\u0443\u043C\u043A\u0438\
+      \ \u043C\u043E\u0433\u0443\u0442 \u0431\u044B\u0442\u044C \u043F\u0435\u0440\
+      \u0435\u0440\u0430\u0431\u043E\u0442\u0430\u043D\u044B \u0432 \u0440\u0435\u0441\
+      \u0443\u0440\u0441\u044B, \u0431\u0443\u0434\u044C\u0442\u0435 \u0430\u043A\u043A\
+      \u0443\u0440\u0430\u0442\u043D\u0435\u0435 \u0435\u0441\u043B\u0438 \u0432\u044B\
+      \u043A\u0438\u043D\u0438\u0442\u0435 \u0447\u0442\u043E-\u0442\u043E \u0432\u0430\
+      \u0436\u043D\u043E\u0435, \u043F\u0435\u0440\u0435\u0440\u0430\u0431\u043E\u0442\
+      \u0447\u0438\u043A \u043D\u0435 \u0449\u0430\u0434\u0438\u0442."
+    type: Tweak
+  id: 1507
+  time: '2025-11-30T16:08:03.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3382
