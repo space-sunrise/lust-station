@@ -23174,3 +23174,11 @@
   id: 1510
   time: '2025-11-30T16:18:14.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3408
+- author: Orvex07, seraphimttt
+  changes:
+  - message: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0430 \u0442\u0435\u043A\u0441\
+      \u0442\u0443\u0440\u0430 \u0437\u043D\u0430\u043C\u0451\u043D\u0430\u043C"
+    type: Tweak
+  id: 1511
+  time: '2025-11-30T16:28:32.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3360
