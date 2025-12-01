@@ -17,6 +17,20 @@
         orGroup: Plushie
       - id: PlushieAnnaLisechanskaya
         orGroup: Plushie
+      - id: PlushieLu
+        orGroup: Plushie
+      - id: PlushieAndrewNarvi
+        orGroup: Plushie
+      - id: PlushiePrototupus
+        orGroup: Plushie
+      - id: PlushieSansaMontanelli
+        orGroup: Plushie
+      - id: PlushieEblan
+        orGroup: Plushie
+      - id: PlushieMilosTanka
+        orGroup: Plushie
+      - id: PlushieAlisaKrokozyabka
+        orGroup: Plushie
       - id: PlushieKharsha
         orGroup: Plushie
       - id: PlushiePinkers
