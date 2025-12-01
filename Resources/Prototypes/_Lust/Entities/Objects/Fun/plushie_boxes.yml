@@ -21,8 +21,6 @@
         orGroup: Plushie
       - id: PlushieKharsha
         orGroup: Plushie
-      - id: PlushieVaxel
-        orGroup: Plushie
       - id: PlushiePinkers
         orGroup: Plushie
       - id: PlushieAliceSimonova

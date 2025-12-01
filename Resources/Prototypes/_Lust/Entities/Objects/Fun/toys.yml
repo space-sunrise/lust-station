@@ -72,26 +72,6 @@
     delay: 3
 
 - type: localizedDataset
-  id: VaxelPhrases
-  values:
-    prefix: vaxel-
-    count: 5
-
-- type: entity
-  id: PlushieVaxel
-  parent: BasePlushie
-  name: Plush Vaxel
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: plushie_vaxel
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: VaxelPhrases
-  - type: UseDelay
-    delay: 3
-
-- type: localizedDataset
   id: PinkersPhrases
   values:
     prefix: pinkers-
