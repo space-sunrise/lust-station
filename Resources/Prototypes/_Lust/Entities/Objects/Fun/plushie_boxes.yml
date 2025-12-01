@@ -17,8 +17,6 @@
         orGroup: Plushie
       - id: PlushieAnnaLisechanskaya
         orGroup: Plushie
-      - id: PlushieSashaChernyh
-        orGroup: Plushie
       - id: PlushieKharsha
         orGroup: Plushie
       - id: PlushiePinkers
