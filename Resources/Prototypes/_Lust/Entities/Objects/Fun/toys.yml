@@ -105,28 +105,6 @@
     delay: 5
 
 - type: entity
-  id: PlushieDragonaft
-  parent: BasePlushie
-  name: Plushie Dragonaft
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: dragonaft
-  - type: TriggerOnActivate
-  - type: SpeakOnTrigger
-    pack: DragonaftPhrases
-  - type: TTS
-    voice: Crysis2Operator3v1
-  - type: UseDelay
-    delay: 5
-
-- type: localizedDataset
-  id: DragonaftPhrases
-  values:
-    prefix: dragonaft-
-    count: 2
-
-- type: entity
   id: PlushieEuphaEverek
   parent: BasePlushie
   name: Eupha Everek
