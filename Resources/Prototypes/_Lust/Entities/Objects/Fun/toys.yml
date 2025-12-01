@@ -193,21 +193,6 @@
     delay: 5
 
 - type: entity
-  id: PlushieHimaAisetova
-  parent: BasePlushie
-  name: Hima Aisetova
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: plushiechitas
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Lust/bonk.ogg
-  - type: TriggerOnActivate
-  - type: UseDelay
-    delay: 5
-
-- type: entity
   id: PlushieMaksimDedov
   parent: BasePlushie
   name: Maksim Dedov

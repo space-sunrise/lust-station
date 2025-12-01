@@ -31,8 +31,6 @@
         orGroup: Plushie
       - id: PlushieRandyCamble
         orGroup: Plushie
-      - id: PlushieHimaAisetova
-        orGroup: Plushie
       - id: PlushieMaksimDedov
         orGroup: Plushie
       - id: PlushieIvanBykov
