@@ -137,23 +137,6 @@
     delay: 4
 
 - type: entity
-  id: PlushieRandyCamble
-  parent: BasePlushie
-  name: Randy Camble
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: plushie_rend
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Lust/rendy_boom.ogg
-      params:
-        volume: -8
-  - type: TriggerOnActivate
-  - type: UseDelay
-    delay: 15
-
-- type: entity
   id: PlushieAlexandrLimenski
   parent: BasePlushie
   name: Alexandr Limenski
