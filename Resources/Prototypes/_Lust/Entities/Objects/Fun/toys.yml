@@ -41,15 +41,6 @@
     delay: 10
 
 - type: entity
-  id: PlushieMira
-  parent: BasePlushie
-  name: Plush mira
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: mira
-
-- type: entity
   id: PlushieSashaChernyh
   parent: BasePlushie
   name: Plush Sasha
