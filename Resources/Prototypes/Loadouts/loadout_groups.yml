@@ -172,11 +172,9 @@
 #Lust-Start
   - CaptainCloakBlack
   - CaptainMantleBlack
-  - CaptainCloakBlackCeremonial
   - CaptainMantleWhite
   - CaptainCloakWhite
   - CaptainCloakWhiteFormal
-  - CaptainCloakWhiteCeremonial
 # Lust-End
 
 - type: loadoutGroup
