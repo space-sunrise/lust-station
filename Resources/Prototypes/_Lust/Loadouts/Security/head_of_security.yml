@@ -23,7 +23,6 @@
   sponsorOnly: false
   equipment:
     jumpsuit: ClothingUniformJumpskirtElegantHos
-#    neck: ClothingNeckCloakBattleHoS Кто это сюда добавил?!
   effects:
   - !type:GroupLoadoutEffect
     proto: MasterHoS100h
