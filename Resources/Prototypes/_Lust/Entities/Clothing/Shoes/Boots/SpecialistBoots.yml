@@ -1,0 +1,15 @@
+﻿- type: entity
+  parent: ClothingShoesMilitaryBase
+  id: ClothingShoesSpecialistBoots
+  name: Specialist Boots
+  description: Heavy lined boots. Quality made and well cared for.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Shoes/Boots/SpecialistBoots.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Shoes/Boots/SpecialistBoots.rsi
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.5
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepBoots

@@ -17,23 +17,6 @@
   equipment:
     belt: ClothingSheathBeltSecurityFilled
 
-#Backpack
-- type: loadout
-  id: HeadofSecurityBackpack
-  equipment:
-    back: ClothingBackpackBattleHoSPack
-
-# Back
-- type: loadout
-  id: HeadofSecurityDuffel
-  equipment:
-    back: ClothingBackpackDuffelHoSDuf
-
-- type: loadout
-  id: HeadofSecuritySatchel
-  equipment:
-    back: ClothingBackpackSatchelBattleHoSSat
-
 # Suit
 - type: loadout
   id: HeadofSecurityJumpsuitElegant
