@@ -5,11 +5,6 @@
   equipment:
     neck: ClothingNeckHosSpecialCloak
 
-- type: loadout
-  id: HeadofSecurityCeremonialCloak
-  equipment:
-    neck: ClothingNeckCloakBattleHoS
-
 # Belt
 - type: loadout
   id: SecuritySheathBelt
