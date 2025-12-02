@@ -17,30 +17,12 @@
   equipment:
     belt: ClothingSheathBeltSecurityFilled
 
-#Backpack
-- type: loadout
-  id: HeadofSecurityBackpack
-  equipment:
-    back: ClothingBackpackBattleHoSPack
-
-# Back
-- type: loadout
-  id: HeadofSecurityDuffel
-  equipment:
-    back: ClothingBackpackDuffelHoSDuf
-
-- type: loadout
-  id: HeadofSecuritySatchel
-  equipment:
-    back: ClothingBackpackSatchelBattleHoSSat
-
 # Suit
 - type: loadout
   id: HeadofSecurityJumpsuitElegant
   sponsorOnly: false
   equipment:
     jumpsuit: ClothingUniformJumpskirtElegantHos
-#    neck: ClothingNeckCloakBattleHoS Кто это сюда добавил?!
   effects:
   - !type:GroupLoadoutEffect
     proto: MasterHoS100h

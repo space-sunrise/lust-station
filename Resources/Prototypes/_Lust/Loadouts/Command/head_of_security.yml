@@ -1,9 +1,0 @@
-﻿- type: loadout
-  id: HeadofSecurityWinterGorka
-  equipment:
-    outerClothing: ClothingOuterWinterGorka
-
-- type: loadout
-  id: HeadofSecurityVest
-  equipment:
-    outerClothing: ClothingOuterArmorHoSBattleVest
