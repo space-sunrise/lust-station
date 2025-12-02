@@ -11,12 +11,6 @@
   - Bra
   - Pants
   - Socks
-  #Lust-Start
-  - IAAneck
-  - IAAuniform
-  - IAAcoat
-  - IAAback
-  #Lust-End
 
 - type: roleLoadout
   id: JobMagistrat
