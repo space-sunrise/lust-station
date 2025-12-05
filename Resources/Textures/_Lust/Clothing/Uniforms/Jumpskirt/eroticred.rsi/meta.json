@@ -1,5 +1,7 @@
 {
   "version": 1,
+  "license": "CLA",
+  "copyright": "Brought for SUNRISE by github: @ProfCopperGear",
   "size": {
     "x": 32,
     "y": 32

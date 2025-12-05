@@ -55,11 +55,6 @@
     neck: ClothingNeckCloakBlackCapMantle
 
 - type: loadout
-  id: CaptainCloakBlackCeremonial
-  equipment:
-    neck: ClothingNeckCloakBlackCapCeremonial
-
-- type: loadout
   id: CaptainMantleWhite
   equipment:
     neck: ClothingNeckCloakWhiteCapMantle
@@ -73,11 +68,6 @@
   id: CaptainCloakWhiteFormal
   equipment:
     neck: ClothingNeckCloakWhiteCapFormalCloak
-
-- type: loadout
-  id: CaptainCloakWhiteCeremonial
-  equipment:
-    neck: ClothingNeckCloakWhiteCapQl
 
 - type: loadout
   id: CaptainBackpackBlack
