@@ -2,6 +2,7 @@
 
 import os
 import subprocess
+
 import requests
 
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
