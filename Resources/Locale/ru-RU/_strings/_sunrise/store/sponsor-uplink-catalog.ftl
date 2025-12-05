@@ -192,6 +192,7 @@ uplink-sunrise-clothing-outer-armor-bulletproof-name = Пуленепробив�
 uplink-sunrise-medkit-filled-name = Аптечка первой помощи
 uplink-sunrise-magazine-box-pistol-name = Коробка патронов (.35 авто)
 uplink-sunrise-box-body-bag-name = Коробка мешков для тел
+uplink-sunrise-tactical-hos-uniform-name = Тактическая форма ГСБ
 
 ## Quartermaster
 
