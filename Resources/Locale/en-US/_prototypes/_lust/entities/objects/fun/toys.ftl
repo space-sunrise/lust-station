@@ -40,3 +40,7 @@ ent-PlushieAshito = Plushie Ashito Levrin
     .desc = An adorable and slightly unhinged Ashito cradling a pocket-sized doctor in his hands. Smells faintly of beer... and it looks like the plushie is grabbing someone's butt.
 ent-PlushieKira = Kira Killigrew
     .desc = The saber in her hand is poetry, the rifle is a comedy of errors. But what secrets does her connection with her husband Elmer hold—the gateway to a lost world?
+ent-PlushieSilton = Plushie Silton Graсе
+    .desc = A menacing-looking toy that pierces you with a sharp and stern gaze. You suddenly felt compelled to comply with your department's KZ and SRP.
+ent-PlushieSiltonGun = { ent-PlushieSilton }
+    .desc = { desc-PlushieSilton }
