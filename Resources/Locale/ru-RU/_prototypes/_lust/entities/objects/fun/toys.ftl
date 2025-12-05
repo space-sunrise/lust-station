@@ -43,4 +43,4 @@ ent-PlushieKira = Кира Киллигрю
 ent-PlushieSilton = Плюшевый Сильтон Грейс
     .desc = Грозно выглядящая игрушка, пронзающая вас острым и суровым взглядом. Вам резко захотелось соблюдать КЗ и СРП своего отдела.
 ent-PlushieSiltonGun = { ent-PlushieSilton }
-    .desc = { desc-PlushieSilton }
+    .desc = { ent-PlushieSilton.desc }
