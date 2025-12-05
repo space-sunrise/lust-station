@@ -2034,13 +2034,15 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
-- type: listing
-  id: UplinkSunrisePlushiePresent
-  productEntity: PlushiePresent
-  cost:
-    Suntick: 4
-  categories:
-  - SpecialThings
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 3
+# LUST EDIT, нам не нужны санрайз плюшки
+#- type: listing
+#  id: UplinkSunrisePlushiePresent
+#  productEntity: PlushiePresent
+#  cost:
+#    Suntick: 4
+#  categories:
+#  - SpecialThings
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 3
+# LUST EDIT, нам не нужны санрайз плюшки
