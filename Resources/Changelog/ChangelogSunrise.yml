@@ -23258,3 +23258,11 @@
   id: 1517
   time: '2025-12-06T16:59:49.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3361
+- author: ghostea404, F1di
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0448\u0430\u043F\
+      \u043A\u0430 \u043A\u0440\u043E\u043B\u0438\u043A\u0430"
+    type: Add
+  id: 1518
+  time: '2025-12-06T20:07:04.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3305
