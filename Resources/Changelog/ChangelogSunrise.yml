@@ -23212,3 +23212,11 @@
   id: 1514
   time: '2025-12-06T14:55:25.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3325
+- author: gardsnake
+  changes:
+  - message: "\u0412\u0441\u0435 \u0440\u0443\u0447\u043A\u0438 \u0431\u044B\u043B\
+      \u0438 \u043F\u0435\u0440\u0435\u0440\u0438\u0441\u043E\u0432\u0430\u043D\u044B"
+    type: Tweak
+  id: 1515
+  time: '2025-12-06T15:08:22.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3442
