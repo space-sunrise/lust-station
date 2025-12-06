@@ -107,6 +107,14 @@
     probability: 0.5 # Sunrise-Edit
 
 - type: entity
+  id: ToySwordDoubledFake
+  parent: ToySwordDoubled
+  components:
+  - type: Construction
+    graph: EnergySwordDoubleGraph
+    node: doubletoy
+
+- type: entity
   name: packaged anomaly
   description: A universal assembly package used to create a fake anomaly. Specially from Hohohonkers!
   id: FaketAnomalyIceFlatpack
