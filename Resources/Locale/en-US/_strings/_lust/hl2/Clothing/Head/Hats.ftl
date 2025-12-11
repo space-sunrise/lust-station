@@ -1,0 +1,12 @@
+ent-ClothingHeadHatCPBioBoiler = helmet of a worker of the GSR plant
+    .desc = A basic hard plastic safety helmet designed to protect against falling objects, accidental impacts, and molten metal splashes. Its minimalist design and standard gray color emphasize the wearer's uniformity and complete interchangeability.
+    .suffix = HL2
+ent-ClothingHeadHatCPCleanup = helmet of the quarantine worker of the State Security Service
+    .desc = A simplified, hermetically sealed headgear with a basic filtration system and a wide visor, issued for short-term deployments in hazardous areas. Its design suggests more the Alliance skimps on the security of its lower echelons than it does any real protection.
+    .suffix = HL2
+ent-ClothingHeadHatCPCWUEngi = GSR engineer's helmet
+    .desc = A functional safety helmet with integrated lighting, eyeglass mounts, and reinforced shock absorption. Its practical design reflects the essence of the job keeping your head safe in areas where sparks fly, machinery rattles, and tools fall.
+    .suffix = HL2
+ent-ClothingHeadHatCPScientist = scientist's helmet
+    .desc = A sterile headgear with a transparent, sealed visor and air recirculation system, designed for work in clean areas or with volatile reagents. Its minimalist design emphasizes the priority protecting the experiment from the user, not the user from the world.
+    .suffix = HL2
