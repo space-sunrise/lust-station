@@ -4,7 +4,7 @@
   description: job-description-ntrep
   playTimeTracker: JobNanoTrasenRepresentative
   requirements:
-    - !type:DiscordRoleRequirement
+    - !type:DiscordRoleRequirement #Lust Edit
     - !type:DepartmentTimeRequirement
       department: Command
       time: 54000 # 15 hrs
