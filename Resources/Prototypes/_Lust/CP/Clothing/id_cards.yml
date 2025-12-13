@@ -1,0 +1,134 @@
+#РАБОТА сотрудника ГО
+- type: job
+  id: CCA
+  name: job-name-CCA
+  description: job-description-CCA
+  playTimeTracker: JobSoldierCCA
+  icon: "JobIconCCA"
+  overrideConsoleVisibility: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CCA
+
+#РАБОТА солдата ОТА
+- type: job
+  id: OTA
+  name: job-name-OTA
+  description: job-description-OTA
+  playTimeTracker: JobSoldierOTA
+  icon: "JobIconOTA"
+  overrideConsoleVisibility: false
+  accessGroups:
+  - AllAccess
+  access:
+  - OTA
+
+#РАБОТА DVL'a
+- type: job
+  id: DVL
+  name: job-name-CCAC
+  description: job-description-CCAC
+  playTimeTracker: JobSoldierCCAC
+  icon: "JobIconCCAC"
+  overrideConsoleVisibility: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CCAC
+
+#ИКОНКА сотрудника ГО
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCCA
+  icon:
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
+    state: go
+  jobName: job-name-CCA
+
+#ИКОНКА солдата ОТА
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconOTA
+  icon:
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
+    state: ota
+  jobName: job-name-OTA
+
+#ИКОНКА DVL'a
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCCAC
+  icon:
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
+    state: dvl
+  jobName: job-name-CCAC
+
+#ДОСТУП сотрудника ГО
+- type: accessLevel
+  id: CCA
+  name: id-card-access-level-CCA
+
+#ДОСТУП солдата ОТА
+- type: accessLevel
+  id: OTA
+  name: id-card-access-level-OTA
+
+#ДОСТУП DVL'a
+- type: accessLevel
+  id: CCAC
+  name: id-card-access-level-CCAC
+
+#ID карта сотрудника ГО
+- type: entity
+  parent: IDCardStandard
+  id: id_CCA
+  name: ID card GO
+  description: a plastic pass with a barcode and the Alliance logo, confirming the right to wear the uniform and access restricted areas of the Alliance. Its chip contains the owner's entire service history, loyalty rating, and current instructions.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/id_cards.rsi
+    layers:
+      - state: id_CCA
+  - type: PresetIdCard
+    job: CCA
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+#ID карта солдата ОТА
+- type: entity
+  parent: IDCardStandard
+  id: id_OTA
+  name: ID card OTA
+  description: a plastic chip without a photo, containing only a serial number, access level, and encrypted mission data. Its minimalist design reflects the essence of its owner he is not an individual, but a tactical unit within the Alliance system.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/id_cards.rsi
+    layers:
+      - state: id_OTA
+  - type: PresetIdCard
+    job: OTA
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+#ID карта DVL'a
+- type: entity
+  parent: IDCardStandard
+  id: id_CCAC
+  name: ID card DVL
+  description: an electronic chip with a hologram and biometric protection, containing full access to operational data, suppression protocols, and personal dossiers of subordinates. Its appearance and level of encryption emphasize the status of the high operational command within the Alliance hierarchy.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/id_cards.rsi
+    layers:
+      - state: id_CCAC
+  - type: PresetIdCard
+    job: DVL
+  - type: Tag
+    tags:
+    - DoorBumpOpener

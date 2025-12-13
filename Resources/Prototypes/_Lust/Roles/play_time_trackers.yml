@@ -3,3 +3,12 @@
 
 - type: playTimeTracker
   id: JobSoldierArrows
+
+- type: playTimeTracker
+  id: JobSoldierCCA
+
+- type: playTimeTracker
+  id: JobSoldierOTA
+
+- type: playTimeTracker
+  id: JobSoldierCCAC
