@@ -37,3 +37,24 @@
   id: IAACoat
   equipment:
     outerClothing: ClothingOuterCoatIAABlackCoat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterIAA
+
+# neck
+
+- type: loadout
+  id: IAACloak
+  sponsorOnly: true
+  equipment:
+    neck: ClothingNeckCloakFormalIAACloak
+
+
+- type: loadoutEffectGroup
+  id: MasterIAA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobIAA
+      time: 90000 #25 hrs

@@ -41,3 +41,10 @@
   name: loadout-group-IAA-outerClothing
   loadouts:
   - IAACoat
+
+- type: loadoutGroup
+  id: IAANeck
+  minLimit: 0
+  name: loadout-group-IAA-neck
+  loadouts:
+  - IAACloak

@@ -6,3 +6,4 @@ loadout-group-security-glasses = Офицер СБ, очки
 loadout-group-IAA-uniform = АВД, форма
 loadout-group-IAA-backpack = АВД, сумки
 loadout-group-IAA-outerClothing = АВД, верхняя одежда
+loadout-group-IAA-neck = АВД, шея
