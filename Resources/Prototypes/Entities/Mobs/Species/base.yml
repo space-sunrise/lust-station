@@ -326,6 +326,9 @@
     alternateState: Standing
   - type: StunVisuals
   - type: PetOnInteract
+  # Lust-Start
+  - type: DynamicDesc
+  # Lust-End
 
 - type: entity
   save: false
