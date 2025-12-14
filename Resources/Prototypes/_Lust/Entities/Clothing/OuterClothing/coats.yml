@@ -36,3 +36,27 @@
       - ClothMade
       - NudeFull
       - WhitelistChameleon
+
+# IAA
+
+- type: entity
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterCoatIAABlackCoat
+  name: black IAA coat
+  description: agent attire designed to blend professionalism with intimidation.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Coat/iaa_black_coat.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Coat/iaa_black_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+  - type: Tag
+    tags:
+    - ClothMade
+    - NudeBottom
+    - WhitelistChameleon
