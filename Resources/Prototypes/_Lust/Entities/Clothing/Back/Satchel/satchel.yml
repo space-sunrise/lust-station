@@ -1,6 +1,6 @@
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelIaaWhite
+  id: ClothingBackpackSatchelIAAWhite
   name: IAA white satchel
   description: hello i am satchel of iaa agent, please do not open me i have secret documents inside
   components:

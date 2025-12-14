@@ -111,7 +111,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckCloakFormalIAACloak
   name: IAA Cloak
-  description: mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
+  description: Mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/iaa_cloak.rsi
