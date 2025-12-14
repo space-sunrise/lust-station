@@ -9,7 +9,7 @@
 
 - type: entity
   parent: ClothingBackpackSatchel
-  id: ClothingBackpackSatchelIaaBlack
+  id: ClothingBackpackSatchelIAABlack
   name: IAA black satchel
   description: sir are you sure you want to open this satchel? it looks important.
   components:

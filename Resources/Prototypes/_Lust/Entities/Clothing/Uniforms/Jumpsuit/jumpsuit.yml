@@ -65,7 +65,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitIAAFormal
-  name: iaa formal suit
+  name: formal IAA suit
   description: paperwork is important, but so is looking good while doing it.
   components:
   - type: Sprite
@@ -73,3 +73,14 @@
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
 
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformElegantJumpsuitIAA
+  name: elegant IAA suit
+  description: A sharp suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
