@@ -6,3 +6,5 @@ ent-ClothingUniformJumpsuitEroform = Erotic business form
     .desc = A red office shirt, unbuttoned at the chest, and a black jacket, which are complemented by skinny shorts. It will suit you for a long and passionate work with documents.
 ent-ClothingUniformSuccubus = succubus uniform
     .desc = { ent-ClothingUniformBase.desc }
+ent-ClothingUniformJumpsuitIAAFormal = IAA formal suit
+    .desc = Paperwork is important, but so is looking good while doing it.

@@ -109,7 +109,7 @@
 # IAA
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckCloakIAACloak
+  id: ClothingNeckCloakFormalIAACloak
   name: IAA Cloak
   description: mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
   components:
