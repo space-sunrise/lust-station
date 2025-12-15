@@ -3,13 +3,3 @@
   sponsorOnly: true
   equipment:
     neck: ClothingNeckRdSpecialCloak
-
-- type: loadout
-  id: ResearchDirectorFormalCoat
-  equipment:
-    outerClothing: ClothingOuterCoatRDcostume
-
-- type: loadout
-  id: ResearchDirectorFormalSuit
-  equipment:
-    jumpsuit: ClothingUniformFormalRDsuit
