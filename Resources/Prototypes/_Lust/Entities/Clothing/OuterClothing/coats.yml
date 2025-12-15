@@ -179,7 +179,7 @@
   parent: ClothingOuterStorageFoldableBase
   id: ClothingOuterLeatherCoat
   name: leather coat
-  description: test description
+
   components:
   - type: Sprite
     sprite: _Lust/Clothing/OuterClothing/Coat/leathercoat.rsi

@@ -46,7 +46,6 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtTacticalHos
   name: Tactical HOS uniform
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/tacticalhos.rsi
@@ -57,7 +56,6 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformJumpskirtQipao
   name: qipao
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/qipao.rsi
@@ -68,7 +66,6 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformWeddingDressMagnificent
   name: Magnificent wedding dress
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/weddingdressmagnificent.rsi
@@ -79,7 +76,6 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformWeddingDressBelt
   name: Wedding dress with belt
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/weddingdressbelt.rsi
@@ -90,7 +86,6 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformWeddingDressSplit
   name: Split wedding dress
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/weddingdresssplit.rsi
@@ -101,7 +96,6 @@
   parent: ClothingUniformBase
   id: ClothingUniformWimple
   name: Wimple
-  description: test description
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/wimple.rsi
