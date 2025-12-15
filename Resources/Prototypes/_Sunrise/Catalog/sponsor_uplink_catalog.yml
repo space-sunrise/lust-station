@@ -1393,14 +1393,14 @@
   cost:
     Suntick: 40
   categories:
-  - SecurityThings
+  - HOSHeadOfDepartment
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-  - !type:BuyerDepartmentCondition
+  - !type:BuyerJobCondition
     whitelist:
     - HeadOfSecurity
-
+    
 # Quartermaster
 
 - type: listing
