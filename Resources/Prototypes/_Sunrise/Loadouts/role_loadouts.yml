@@ -1,6 +1,9 @@
 - type: roleLoadout
   id: JobIAA
   groups:
+  - LawyerNeck
+  - LawyerJumpsuit
+  - CommonBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
@@ -8,12 +11,6 @@
   - Bra
   - Pants
   - Socks
-  #Lust-Start
-  - IAAneck
-  - IAAuniform
-  - IAAcoat
-  - IAAback
-  #Lust-End
 
 - type: roleLoadout
   id: JobMagistrat
@@ -114,6 +111,7 @@
   groups:
   - SeniorOfficerJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust Station
   - SecurityBelt
   - SecurityOuterClothing
   - SecurityShoes
@@ -288,6 +286,7 @@
   groups:
   - SecurityPilotJumpsuit
   - SecurityBackpack
+  - SecurityGlasses # Lust Station
   - SecurityShoes
   - SecurityBelt
   - SurvivalSecurity
@@ -359,10 +358,7 @@
   groups:
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-#Lust-Start
-  - QilluRepresentativeBackpack
-  - QilluRepresentativeNeck
-#Lust-End
+  - CommonBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
