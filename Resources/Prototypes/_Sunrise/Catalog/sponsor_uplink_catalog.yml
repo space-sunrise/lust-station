@@ -1399,7 +1399,7 @@
     stock: 1
   - !type:BuyerDepartmentCondition
     whitelist:
-    - Security
+    - HeadOfPersonnel
 
 # Quartermaster
 
