@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingNavalBoots
+  name: Naval Boots
+  description: Black boots with deep blue suspenders. Practical and warm.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Shoes/navalboots.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Shoes/navalboots.rsi
