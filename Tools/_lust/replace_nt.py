@@ -58,7 +58,7 @@ def process_ftl_files(locale_dir: Path):
             stripped = line.lstrip()
             is_comment = stripped.startswith("#")
 
-            if "=" in line and not is_comment and not line.startswith((" ", "\t")):
+            if "=" in line and not is_comment and not line.startswith((" ", "\t")) and not line.lstrip().startswith("["):
                 left, right = line.split("=", 1)
                 right, ph_depth = replace_outside_placeholders(right, 0)
                 lines_out.append(left + "=" + right)
@@ -71,7 +71,7 @@ def process_ftl_files(locale_dir: Path):
                     r2, _ = replace_outside_placeholders(r2, 0)
                     lines_out.append(l2 + "=" + r2)
                     continue
-                if line.startswith((" ", "\t")):
+                if line and line[:1].isspace():
                     seg, ph_depth = replace_outside_placeholders(line, ph_depth)
                     lines_out.append(seg)
                     continue
