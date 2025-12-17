@@ -542,6 +542,7 @@
     sound:
       collection: FelinidMews
 
+- type: entity
   parent: BasePlushie
   id: PlushieAshito
   name: Plushie Ashito
