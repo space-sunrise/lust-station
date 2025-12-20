@@ -23517,3 +23517,11 @@
   id: 1537
   time: '2025-12-20T21:34:08.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3435
+- author: KaiserMaus
+  changes:
+  - message: "\u0420\u0435\u043C\u0430\u043F Flag Ship \u041D\u0430\u043D\u043E\u0422\
+      \u0440\u0435\u0439\u0437\u0435\u043D."
+    type: Tweak
+  id: 1538
+  time: '2025-12-20T22:24:21.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3491
