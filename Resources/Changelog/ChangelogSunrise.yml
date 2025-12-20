@@ -23491,3 +23491,14 @@
   id: 1535
   time: '2025-12-19T20:39:45.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3441
+- author: gardsnake
+  changes:
+  - message: "\u0411\u044B\u043B\u0438 \u043F\u0435\u0440\u0435\u0440\u0438\u0441\u043E\
+      \u0432\u0430\u043D\u044B \u0441\u043F\u0440\u0430\u0439\u0442\u044B \u041A\u041F\
+      \u041A, \u041F\u0438\u043D\u043F\u043E\u0438\u043D\u0442\u0435\u0440\u043E\u0432\
+      , ID-\u041A\u0430\u0440\u0442, \u0415\u043C\u0430\u0433\u0430 \u0438 \u0413\u0430\
+      \u0440\u043D\u0438\u0442\u0443\u0440"
+    type: Tweak
+  id: 1536
+  time: '2025-12-20T21:32:31.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3485
