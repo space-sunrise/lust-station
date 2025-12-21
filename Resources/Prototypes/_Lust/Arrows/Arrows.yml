@@ -719,7 +719,7 @@
         map: [ "blade" ]
   - type: MeleeWeapon
     wideAnimationRotation: -135
-    attackRate: 1
+    attackRate: 1.2
     damage:
       types:
         Blunt: 10
