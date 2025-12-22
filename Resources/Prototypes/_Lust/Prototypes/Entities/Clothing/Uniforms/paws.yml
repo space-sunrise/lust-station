@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHandsGlovesSyntheticBase
   id: ClothingHandsCatPawsWhite
-  name: белые кошачьи лапки
-  description: Супер мягкие белые кошачьи лапки, специально для самых брутальных работников станции.
+  name: white cat paws
+  description: Super soft white cat paws, especially for the most brutal station workers.
   components:
   - type: Sprite
     sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/white.rsi
@@ -20,8 +20,8 @@
 - type: entity
   parent: ClothingHandsGlovesSyntheticBase
   id: ClothingHandsCatPawsBrown
-  name: коричневые кошачьи лапки
-  description: Супер мягкие коричневые кошачьи лапки, специально для самых брутальных работников станции.
+  name: brown cat paws
+  description: Super soft brown cat paws, especially for the most brutal station workers.
   components:
   - type: Sprite
     sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/brown.rsi
@@ -39,8 +39,8 @@
 - type: entity
   parent: ClothingHandsGlovesSyntheticBase
   id: ClothingHandsCatPawsBlack
-  name: чёрные кошачьи лапки
-  description: Супер мягкие чёрные кошачьи лапки, специально для самых брутальных работников станции.
+  name: black cat paws
+  description: Super soft black cat paws, especially for the most brutal station workers.
   components:
   - type: Sprite
     sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black.rsi
@@ -58,8 +58,8 @@
 - type: entity
   parent: ClothingHandsGlovesSyntheticBase
   id: ClothingHandsCatPawsBlackWhite
-  name: чёрно-белые кошачьи лапки
-  description: Супер мягкие чёрно-белые кошачьи лапки, специально для самых брутальных работников станции.
+  name: black-and-white cat paws
+  description: Super soft black-and-white cat paws, especially for the most brutal station workers.
   components:
   - type: Sprite
     sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black_white.rsi

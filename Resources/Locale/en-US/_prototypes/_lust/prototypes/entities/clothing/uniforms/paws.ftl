@@ -1,8 +1,8 @@
-ent-ClothingHandsCatPawsWhite = белые кошачьи лапки
-    .desc = Супер мягкие белые кошачьи лапки, специально для самых брутальных работников станции.
-ent-ClothingHandsCatPawsBrown = коричневые кошачьи лапки
-    .desc = Супер мягкие коричневые кошачьи лапки, специально для самых брутальных работников станции.
-ent-ClothingHandsCatPawsBlack = чёрные кошачьи лапки
-    .desc = Супер мягкие чёрные кошачьи лапки, специально для самых брутальных работников станции.
-ent-ClothingHandsCatPawsBlackWhite = чёрно-белые кошачьи лапки
-    .desc = Супер мягкие чёрно-белые кошачьи лапки, специально для самых брутальных работников станции.
+ent-ClothingHandsCatPawsWhite = white cat paws
+    .desc = Super soft white cat paws, especially for the most brutal station workers.
+ent-ClothingHandsCatPawsBrown = brown cat paws
+    .desc = Super soft brown cat paws, especially for the most brutal station workers.
+ent-ClothingHandsCatPawsBlack = black cat paws
+    .desc = Super soft black cat paws, especially for the most brutal station workers.
+ent-ClothingHandsCatPawsBlackWhite = black-and-white cat paws
+    .desc = Super soft black-and-white cat paws, especially for the most brutal station workers.

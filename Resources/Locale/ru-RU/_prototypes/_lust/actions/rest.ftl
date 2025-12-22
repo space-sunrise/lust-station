@@ -1,5 +1,5 @@
-ent-BaseRestAction = RestActionName
-    .desc = RestActionDesc
+ent-BaseRestAction = { RestActionName }
+    .desc = { RestActionDesc }
 ent-RestActionRobot = { ent-BaseRestAction }
     .desc = { ent-BaseRestAction.desc }
 ent-RestActionMiner = { ent-BaseRestAction }
