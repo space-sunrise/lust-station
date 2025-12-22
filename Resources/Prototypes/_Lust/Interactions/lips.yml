@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: GentleKiss
-  name: "Нежный поцелуй"
+  name: lust-interaction-GentleKiss
   icon: GentleKissIcon
   category: Lips
   appearConditions:
@@ -33,7 +33,7 @@
 
 - type: interaction
   id: QuickPeck
-  name: "Чмокнуть в губы"
+  name: lust-interaction-QuickPeck
   icon: GentleKissIcon
   category: Lips
   appearConditions:
@@ -65,7 +65,7 @@
 
 - type: interaction
   id: DeepKiss
-  name: "Глубокий поцелуй"
+  name: lust-interaction-DeepKiss
   icon: GentleKissIcon
   category: Lips
   appearConditions:
@@ -97,7 +97,7 @@
 
 - type: interaction
   id: PlayfulNibble
-  name: "Куснуть за губки"
+  name: lust-interaction-PlayfulNibble
   icon: PlayfulNibbleIcon
   category: Lips
   appearConditions:
@@ -129,7 +129,7 @@
 
 - type: interaction
   id: FrenchKiss
-  name: "Французский поцелуй"
+  name: lust-interaction-FrenchKiss
   icon: GentleKissIcon
   category: Lips
   appearConditions:
@@ -163,7 +163,7 @@
 
 - type: interaction
   id: KissLips
-  name: "Поцеловать в губы"
+  name: lust-interaction-KissLips
   icon: KissLipsIcon
   category: Lips
   appearConditions:
@@ -204,7 +204,7 @@
 
 - type: interaction
   id: ALotOfKisses
-  name: "Одарить шквалом поцелуев"
+  name: lust-interaction-ALotOfKisses
   icon: FriendlyIcon
   category: Lips
   appearConditions:

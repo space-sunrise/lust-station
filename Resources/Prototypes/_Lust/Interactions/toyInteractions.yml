@@ -1,6 +1,6 @@
 - type: interaction
   id: ERPtoyPlaceholderDildo
-  name: "Вставить дилдо в анал"
+  name: lust-interaction-ERPtoyPlaceholderDildo
   icon: ToyButtIcon
   category: Dildos
   appearConditions:
@@ -44,7 +44,7 @@
 
 - type: interaction
   id: ERPtoyPlaceholderDildo2
-  name: "Вставить дилдо в вагину"
+  name: lust-interaction-ERPtoyPlaceholderDildo2
   icon: ToyPussyIcon
   category: Dildos
   appearConditions:
@@ -92,7 +92,7 @@
 
 - type: interaction
   id: ERPtoyPlaceholderFleshflight1
-  name: "Вставить член в киску"
+  name: lust-interaction-ERPtoyPlaceholderFleshflight1
   icon: ToyPussyIcon
   category: Fleshlights
   appearConditions:
@@ -138,7 +138,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderFleshflight1
-  name: "Вставить член в киску"
+  name: lust-interaction-ERPSelftoyPlaceholderFleshflight1
   icon: ToyPussyIcon
   category: Fleshlights
   appearConditions:
@@ -184,7 +184,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo
-  name: "Вставить дилдо в анал"
+  name: lust-interaction-ERPSelftoyPlaceholderDildo
   icon: ToyButtIcon
   category: Dildos
   appearConditions:
@@ -227,7 +227,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo2
-  name: "Вставить дилдо в вагину"
+  name: lust-interaction-ERPSelftoyPlaceholderDildo2
   icon: ToyPussyIcon
   category: Dildos
   appearConditions:

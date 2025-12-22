@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: ButtPaw
-  name: "Лапать попку"
+  name: lust-interaction-ButtPaw
   icon: HandsOnButtIcon
   category: Butt
   appearConditions:
@@ -30,7 +30,7 @@
 
 - type: interaction
   id: ButtManyKisses
-  name: "Расцеловать попку"
+  name: lust-interaction-ButtManyKisses
   icon: KissButtIcon
   category: Butt
   appearConditions:
@@ -60,7 +60,7 @@
 
 - type: interaction
   id: ButtSlap
-  name: "Шлёпнуть по жопе"
+  name: lust-interaction-ButtSlap
   icon: SlapButtIcon
   category: Butt
   appearConditions:
@@ -80,7 +80,7 @@
 
 - type: interaction
   id: ButtMassage
-  name: "Помассировать попку"
+  name: lust-interaction-ButtMassage
   icon: ButtMassageIcon
   category: Butt
   appearConditions:
@@ -111,7 +111,7 @@
 
 - type: interaction
   id: ButtFuck
-  name: "Трахать между ягодиц"
+  name: lust-interaction-ButtFuck
   icon: CockNearToAssIcon
   category: Butt
   appearConditions:
@@ -146,7 +146,7 @@
 
 - type: interaction
   id: Whip
-  name: "Выпороть"
+  name: lust-interaction-Whip
   icon: ERP2Icon
   category: Butt
   appearConditions:
@@ -182,7 +182,7 @@
 
 - type: interaction
   id: ButtBite
-  name: "Кусь за попу"
+  name: lust-interaction-ButtBite
   icon: ERP2Icon
   category: Butt
   appearConditions:
@@ -209,7 +209,7 @@
 
 - type: interaction
   id: ButtTailPaw
-  name: "Погладить хвостом попку"
+  name: lust-interaction-ButtTailPaw
   icon: ButtTailIcon
   category: Tail
   appearConditions:
