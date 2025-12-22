@@ -855,6 +855,9 @@ GrenadeFlash: GrenadeFlashTimer
 GrenadeFrag: GrenadeFragTimer
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
+AphrodisiacChemistryBottle: null
+PatchViagra: null
+
 MagazinePPSH41: MagazinePistolSubMachineGunPPSHExtended
 MagazinePPSH41Extended: null
 WeaponSTG44: null
