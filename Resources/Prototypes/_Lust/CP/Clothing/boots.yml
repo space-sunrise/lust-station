@@ -7,9 +7,10 @@
   description: Robust combat boots for combat scenarios or combat situations. All combat, all the time.
   suffix: HL2
   components:
-  - type: StorageFill
-    contents:
-      - id: CombatKnife
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife
   - type: Sprite
     sprite: _Lust/CP/Clothing/Shoes/Boots/civilprotectionboots.rsi
   - type: Clothing
@@ -23,9 +24,10 @@
   description: Durable leather boots with steel toes and oil-resistant soles, designed for long shifts in workshops, construction sites, and the field. Their practical and rugged design says one thing reliability is more important than beauty when your stability and safety are at stake.
   suffix: HL2
   components:
-  - type: StorageFill
-    contents:
-      - id: CombatKnife
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife
   - type: Sprite
     sprite: _Lust/CP/Clothing/Shoes/Boots/workboots.rsi
   - type: Clothing
