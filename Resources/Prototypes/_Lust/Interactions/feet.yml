@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: FeetFaceLickDoggyStyleSound1
-  name: "Вылизать ножки"
+  name: lust-interaction-FeetFaceLickDoggyStyleSound1
   icon: LegsLickIcon
   category: Feet
   appearConditions:
@@ -30,7 +30,7 @@
 
 - type: interaction
   id: FeetMouth
-  name: "Прислонить ножку ко рту"
+  name: lust-interaction-FeetMouth
   icon: FeetMouthIcon
   category: Feet
   appearConditions:
@@ -60,7 +60,7 @@
 
 - type: interaction
   id: FeetLick2
-  name: "Лизать ступни"
+  name: lust-interaction-FeetLick2
   icon: LegsLickIcon
   category: Feet
   appearConditions:
@@ -88,7 +88,7 @@
 
 - type: interaction
   id: FeetJob
-  name: "Погладить член ступней"
+  name: lust-interaction-FeetJob
   icon: CockFootjobIcon
   category: Feet
   appearConditions:
@@ -119,7 +119,7 @@
 
 - type: interaction
   id: FeetShoesLick
-  name: "Лизать обувь"
+  name: lust-interaction-FeetShoesLick
   icon: FeetShoesLickIcon
   category: Feet
   appearConditions:

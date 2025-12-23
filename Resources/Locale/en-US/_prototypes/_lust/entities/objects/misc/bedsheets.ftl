@@ -1,4 +1,4 @@
-ent-BedsheetBaseQillu = BedsheetBaseQillu
+ent-BedsheetBaseQillu = linen bedsheet
     .desc = A surprisingly soft linen bedsheet.
 ent-BedsheetCaptainQillu = captain's bedsheet
     .desc = It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.

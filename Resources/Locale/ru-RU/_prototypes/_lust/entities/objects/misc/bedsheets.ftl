@@ -1,8 +1,8 @@
-ent-BedsheetBaseQillu = BedsheetBaseQillu
-    .desc = A surprisingly soft linen bedsheet.
-ent-BedsheetCaptainQillu = captain's bedsheet
-    .desc = It has a Nanotrasen symbol on it, and was woven with a revolutionary new kind of thread guaranteed to have 0.01% permeability for most non-chemical substances, popular among most modern captains.
-ent-BedsheetCentcomQillu = CentComm bedsheet
-    .desc = Woven with advanced nanothread for warmth as well as being very decorated, essential for all officials.
-ent-BedsheetNTQillu = Qillu bedsheet
-    .desc = It has the Qillu logo on it and an aura of lust.
+ent-BedsheetBaseQillu = льняная простыня
+    .desc = На удивление мягкая льняная простыня.
+ent-BedsheetCaptainQillu = простыня капитана
+    .desc = На ней изображён символ Nanotrasen. Она соткана из революционной нити, которая гарантирует 0,01% проницаемости для большинства нехимических веществ, и популярна у современных капитанов.
+ent-BedsheetCentcomQillu = простыня ЦентКома
+    .desc = Соткана из продвинутой нанонити для тепла и богато украшена — незаменима для всех чиновников.
+ent-BedsheetNTQillu = простыня Qillu
+    .desc = На ней логотип Qillu и аура похоти.

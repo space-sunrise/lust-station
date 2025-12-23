@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: BoobsCuddle
-  name: "Прижаться к груди"
+  name: lust-interaction-BoobsCuddle
   icon: FaceInBoobsIcon
   category: Boobs
   appearConditions:
@@ -19,7 +19,7 @@
 
 - type: interaction
   id: BoobsPaw
-  name: "Полапать грудь"
+  name: lust-interaction-BoobsPaw
   icon: BoobsPawIcon
   category: Boobs
   appearConditions:
@@ -43,7 +43,7 @@
 
 - type: interaction
   id: BoobsMassage
-  name: "Массировать грудь"
+  name: lust-interaction-BoobsMassage
   icon: BoobsMassageIcon
   category: Boobs
   appearConditions:
@@ -78,7 +78,7 @@
 
 - type: interaction
   id: BoobsManyKisses
-  name: "Расцеловать грудь"
+  name: lust-interaction-BoobsManyKisses
   icon: BoobsManyKissesIcon
   category: Boobs
   appearConditions:
@@ -112,7 +112,7 @@
 
 - type: interaction
   id: BoobsSlap
-  name: "Шлепнуть по груди"
+  name: lust-interaction-BoobsSlap
   icon: BoobsSlapIcon
   category: Boobs
   appearConditions:
@@ -145,7 +145,7 @@
 
 - type: interaction
   id: BoobsSqueeze
-  name: "Поласкать грудь руками"
+  name: lust-interaction-BoobsSqueeze
   icon: BoobsSqueezeIcon
   category: Boobs
   appearConditions:
@@ -179,7 +179,7 @@
 
 - type: interaction
   id: BoobsBite
-  name: "Кусьнуть соски зубами"
+  name: lust-interaction-BoobsBite
   icon: BoobsSuckIcon
   category: Boobs
   appearConditions:
@@ -207,7 +207,7 @@
 
 - type: interaction
   id: BoobsSuck
-  name: "Поласкать соски ртом"
+  name: lust-interaction-BoobsSuck
   icon: BoobsSuckIcon
   category: Boobs
   appearConditions:
@@ -240,7 +240,7 @@
 
 - type: interaction
   id: BoobsSuckLactation
-  name: "Пососать соски"
+  name: lust-interaction-BoobsSuckLactation
   icon: BoobsSuckIcon
   category: Boobs
   appearConditions:
@@ -274,7 +274,7 @@
 
 - type: interaction
   id: BoobsFuck
-  name: "Трахать грудь"
+  name: lust-interaction-BoobsFuck
   icon: ERP2Icon
   category: Boobs
   appearConditions:
@@ -318,7 +318,7 @@
 
 - type: interaction
   id: TailBoobsPlay
-  name: "Ласкать грудь хвостом"
+  name: lust-interaction-TailBoobsPlay
   icon: BoobsTailIcon
   category: Tail
   appearConditions:
@@ -347,7 +347,7 @@
 
 - type: interaction
   id: BoobsSnuggle
-  name: "Прижаться грудью"
+  name: lust-interaction-BoobsSnuggle
   icon: ERP2Icon
   category: Boobs
   appearConditions:

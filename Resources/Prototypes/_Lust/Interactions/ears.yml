@@ -1,6 +1,6 @@
 - type: interaction
   id: EarsBite
-  name: "Кусь за ушко"
+  name: lust-interaction-EarsBite
   icon: BiteEarsIcon
   category: Ears
   appearConditions:
@@ -27,7 +27,7 @@
 
 - type: interaction
   id: EarsPat
-  name: "Погладить ушки"
+  name: lust-interaction-EarsPat
   icon: PatEarsIcon
   category: Ears
   appearConditions:
@@ -58,7 +58,7 @@
 
 - type: interaction
   id: EarsScratch
-  name: "Почесать за ушком"
+  name: lust-interaction-EarsScratch
   icon: PatEarsIcon
   category: Ears
   appearConditions:
@@ -86,7 +86,7 @@
 
 - type: interaction
   id: EarsKiss
-  name: "Поцеловать ушки"
+  name: lust-interaction-EarsKiss
   icon: EarsKissIcon
   category: Ears
   appearConditions:
@@ -119,7 +119,7 @@
 
 - type: interaction
   id: EarsLick
-  name: "Облизать ушко"
+  name: lust-interaction-EarsLick
   icon: ERP2Icon
   category: Ears
   appearConditions:

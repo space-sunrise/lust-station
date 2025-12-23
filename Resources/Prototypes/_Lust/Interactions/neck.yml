@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: NeckKiss
-  name: "Поцеловать в шею"
+  name: lust-interaction-NeckKiss
   icon: KissNeckIcon
   category: Neck
   appearConditions:
@@ -34,7 +34,7 @@
 
 - type: interaction
   id: NeckLick
-  name: "Полизать шею"
+  name: lust-interaction-NeckLick
   icon: LickNeckIcon
   category: Neck
   appearConditions:
@@ -66,7 +66,7 @@
 
 - type: interaction
   id: NeckBite
-  name: "Укусить за шею"
+  name: lust-interaction-NeckBite
   icon: BiteNeckIcon
   category: Neck
   appearConditions:
@@ -92,7 +92,7 @@
 
 - type: interaction
   id: SoftNeckChoke
-  name: "Слабо душить [ERP]"
+  name: lust-interaction-SoftNeckChoke
   icon: ERP2Icon
   category: Neck
   appearConditions:
