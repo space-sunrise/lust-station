@@ -1085,7 +1085,7 @@
       sprite: Effects/emp.rsi
       state: emp_pulse
   emp:
-    range: 2
+    range: 0.75
     energyConsumption: 30000
     disableDuration: 10
   damage:
