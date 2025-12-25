@@ -2492,3 +2492,4 @@
   - !type:BuyerJobCondition
     whitelist:
     - MedicalDoctor
+
