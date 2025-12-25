@@ -1447,3 +1447,9 @@
   - PrisonWorker-ClothingHeadCapPrisonWorkerMetus
   - PrisonWorker-ClothingHeadHatBeretPrisonWorkerMetus
   - PrisonWorker-ClothingHeadHatCapPrisonWorkerMetus
+- type: loadoutGroup
+  id: Contributors
+  name: loadout-group-contributors
+  minLimit: 0
+  loadouts:
+  - ContributorLoadout
