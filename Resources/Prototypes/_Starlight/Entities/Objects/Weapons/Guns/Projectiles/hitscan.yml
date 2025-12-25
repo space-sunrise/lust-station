@@ -215,6 +215,7 @@
 
 - type: hitscan
   id: BulletPistolTraceSP
+  name: ".35 SP"
   parent: BulletTrace
   damage:
     types:
@@ -248,6 +249,7 @@
 
 - type: hitscan
   id: BulletPistolTraceHP
+  name: ".35 HP"
   parent: BulletTrace
   damage:
     types:
@@ -261,6 +263,7 @@
 
 - type: hitscan
   id: BulletPistolTraceFMJ
+  name: ".35 FMJ"
   parent: BulletTrace
   damage:
     types:
@@ -570,6 +573,7 @@
 
 - type: hitscan
   id: BulletRifleTraceSP
+  name: "5.56 SP"
   parent: BulletTrace
   damage:
     types:
@@ -586,6 +590,7 @@
 
 - type: hitscan
   id: BulletRifleTraceHP
+  name: "5.56 HP"
   parent: BulletTrace
   damage:
     types:
@@ -598,6 +603,7 @@
 
 - type: hitscan
   id: BulletRifleTraceFMJ
+  name: "5.56 FMJ"
   parent: BulletTrace
   damage:
     types:
@@ -1280,6 +1286,7 @@
 
 - type: hitscan
   id: BulletPistolTraceRubber
+  name: ".35 Rubber"
   parent: BulletTrace
   damage:
     types:

@@ -227,6 +227,12 @@
       - !type:AlertLevelCondition
         alertLevels:
         - blue
+        - violet
+        - yellow
+        - red
+        - gamma
+        - delta
+        - epsilon
   - type: MagazineVisuals
     magState: mag
     steps: 4
