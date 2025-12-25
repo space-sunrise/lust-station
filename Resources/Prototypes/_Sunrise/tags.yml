@@ -562,6 +562,9 @@
 - type: Tag
   id: Table
 
+- type: Tag
+  id: BolaSecurity
+
 # Clothing
 - type: Tag
   id: HardsuitMining

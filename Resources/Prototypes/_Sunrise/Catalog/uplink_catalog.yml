@@ -2412,6 +2412,21 @@
       - SurplusBundle
 
 - type: listing
+  id: UplinkBolaSyndicate
+  name: uplink-bola-syn-name
+  description: uplink-bola-syn-desc
+  productEntity: BolaSyndicateBiocode
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkDisruption
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - NukeOpsUplink
+
+- type: listing
   id: UplinkHeadsetEncryptionKeyMaster
   icon: { sprite: /Textures/Objects/Devices/encryption_keys.rsi, state: crypt_red2 }
   productEntity: EncryptionKeySyndieMaster
