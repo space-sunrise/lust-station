@@ -382,7 +382,7 @@
   groups:
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-  - CommonBackpack
+  - NanoTrasenRepresentativeBackpack
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
