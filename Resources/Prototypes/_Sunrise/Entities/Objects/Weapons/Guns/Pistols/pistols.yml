@@ -452,8 +452,8 @@
     sprintModifier: 0.97
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 2.75
-    pvsIncrease: 1
+    maxOffset: 2.5
+    pvsIncrease: 0.25
   # - type: MeleeWeapon
   #   angle: 60
   #   range: 0.9
@@ -508,7 +508,7 @@
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
     maxOffset: 2
-    pvsIncrease: 0.25
+    pvsIncrease: 0.2
   - type: SpeedModifiedOnWield
     walkModifier: 0.99
     sprintModifier: 0.99

@@ -1740,10 +1740,17 @@
        pda-pirate
   # Sunrise-Start
   - type: PdaBorderColor
-    borderColor: "#616266"
+    borderColor: "#333333"
   # Sunrise-End
   - type: Icon
     state: pda-pirate
+  - type: CartridgeLoader
+    preinstalled:
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NavigatorCartridge
+    - AstroNavCartridge
+  # Sunrise-end
 
 - type: entity
   parent: [BasePDA, SelectableLock]

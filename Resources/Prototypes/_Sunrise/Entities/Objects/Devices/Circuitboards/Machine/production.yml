@@ -101,6 +101,22 @@
         Cable: 4
 
 - type: entity
+  id: PirateTechFabCircuitboard
+  parent: BaseMachineCircuitboard
+  name: pirate techfab machine board
+  description: A machine printed circuit board for an pirate techfab.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Objects/Misc/module.rsi
+      state: pirate_stitcher
+    - type: Item
+      storedRotation: -90
+    - type: MachineBoard
+      prototype: PirateTechFab
+      stackRequirements:
+        Manipulator: 2
+
+- type: entity
   id: ThrusterSyndicateMachineCircuitboard
   parent: BaseMachineCircuitboard
   name: thruster syndie machine board

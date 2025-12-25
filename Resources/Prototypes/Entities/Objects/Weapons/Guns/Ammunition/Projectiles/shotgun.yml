@@ -240,8 +240,11 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 25
-        Structural: 5
+        Piercing: 20 # Sunrise-edit
+        Blunt: 5 # Sunrise-edit
+        Structural: 15 # Sunrise-edit
+  - type: StaminaDamageOnCollide # Sunrise-add
+    damage: 15 # Sunrise-add
 
 - type: entity
   id: PelletGrapeshotSpread
