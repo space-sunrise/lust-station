@@ -150,6 +150,9 @@
     ClothingUniformTurleneckBlackSleeveless: 2
     ClothingUniformTurleneckBlackWomenSleeveless: 2
 #Sunrise-end
+#Lust-Start
+    ClothingOuterLeatherCoat: 2
+#Lust-End
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
