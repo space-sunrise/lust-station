@@ -1,6 +1,6 @@
 - type: interaction
   id: FaceCheekKiss
-  name: "Чмокнуть в щёку"
+  name: lust-interaction-FaceCheekKiss
   icon: CheeksKissBothIcon
   category: Face
   appearConditions:
@@ -29,7 +29,7 @@
 
 - type: interaction
   id: FaceCheeksKiss
-  name: "Расцеловать щёки"
+  name: lust-interaction-FaceCheeksKiss
   icon: CheeksKissBothIcon
   category: Face
   appearConditions:
@@ -60,7 +60,7 @@
 
 - type: interaction
   id: FacePress
-  name: "Прижаться щекой к лицу"
+  name: lust-interaction-FacePress
   icon: CheeksPressIcon
   category: Face
   appearConditions:
@@ -84,7 +84,7 @@
 
 - type: interaction
   id: FaceInBoobs
-  name: "Прижаться грудью к лицу"
+  name: lust-interaction-FaceInBoobs
   icon: FaceInBoobsIcon
   category: Face
   appearConditions:
@@ -106,7 +106,7 @@
 
 - type: interaction
   id: FaceThighsCrush
-  name: "Стиснуть голову ляжками"
+  name: lust-interaction-FaceThighsCrush
   icon: FaceSittingIcon
   category: Face
   appearConditions:
@@ -130,7 +130,7 @@
 
 - type: interaction
   id: FaceSitting
-  name: "Сесть на лицо"
+  name: lust-interaction-FaceSitting
   icon: FaceSittingIcon
   category: Face
   appearConditions:
@@ -159,7 +159,7 @@
 
 - type: interaction
   id: FaceDickSlap
-  name: "Дать пощечину членом"
+  name: lust-interaction-FaceDickSlap
   icon: FaceDickSlapIcon
   category: Face
   appearConditions:
@@ -192,7 +192,7 @@
 
 - type: interaction
   id: FaceFeet
-  name: Поласкать лицо ступней
+  name: lust-interaction-FaceFeet
   icon: FeetMouthIcon #возможно подкорректировать пикчу нужно
   category: Face
   appearConditions:

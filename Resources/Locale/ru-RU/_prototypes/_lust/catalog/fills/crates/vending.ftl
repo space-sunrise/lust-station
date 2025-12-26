@@ -1,4 +1,4 @@
-ent-CrateVendingMachineRestockUnderwearFilled = ящик пополнения БельеМат
-    .desc = Содержит набор пополнения торгомата БельеМат.
-ent-CrateVendingMachineRestockKinkMateFilled = Kink mate restock crate
-    .desc = Contains a restock box for a Monkin' Donuts dispenser.
+ent-CrateVendingMachineRestockUnderwearFilled = ящик пополнения UnderwearMate
+    .desc = Содержит коробки пополнения для автомата UnderwearMate.
+ent-CrateVendingMachineRestockKinkMateFilled = ящик пополнения KinkMate
+    .desc = Содержит коробки пополнения для автомата KinkMate.

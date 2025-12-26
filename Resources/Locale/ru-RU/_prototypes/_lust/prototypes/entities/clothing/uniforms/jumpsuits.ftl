@@ -1,2 +1,2 @@
-ent-ClothingUniformJumpsuitCentcomFormalQillu = central command formal suit
-    .desc = A suit for special occasions.
+ent-ClothingUniformJumpsuitCentcomFormalQillu = парадный костюм Центрального Командования
+    .desc = Костюм для особых случаев.

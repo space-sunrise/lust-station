@@ -1,0 +1,16 @@
+lust-interaction-category-Anal = Анал
+lust-interaction-category-Balls = Яйца
+lust-interaction-category-Boobs = Грудь
+lust-interaction-category-Butt = Попа
+lust-interaction-category-Cheeks = Щёки
+lust-interaction-category-Cock = Член
+lust-interaction-category-Ears = Уши
+lust-interaction-category-Feet = Ступни
+lust-interaction-category-Lips = Губы
+lust-interaction-category-Mouth = Рот
+lust-interaction-category-Pussy = Вагина
+lust-interaction-category-Thighs = Ляжки
+lust-interaction-category-Wings = Крылья
+lust-interaction-category-Dildos = Дилдо
+lust-interaction-category-Fleshlights = Искусственная вагина
+lust-interaction-category-Legs = Ножки

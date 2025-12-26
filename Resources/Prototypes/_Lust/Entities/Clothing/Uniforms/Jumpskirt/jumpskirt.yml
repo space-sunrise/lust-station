@@ -8,3 +8,39 @@
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
     - type: Clothing
       sprite: _Lust/Clothing/Uniforms/Jumpskirt/eleganthos.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtCentcomFormalDressQillu
+  name: central command formal dress
+  description: A dress for special occasions.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcomformaldress.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcomformaldress.rsi
+
+
+# IAA
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtIAAFormalDress
+  name: iaa formal dress
+  description: special dress for special agents.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_formal_dress.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_formal_dress.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformElegantJumpskirtIAA
+  name: elegant IAA skirt suit
+  description: A sharp skirt suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi

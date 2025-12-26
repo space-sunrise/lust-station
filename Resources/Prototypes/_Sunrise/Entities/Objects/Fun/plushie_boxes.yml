@@ -192,3 +192,7 @@
         orGroup: Plushie
       - id: PlushieKalium
         orGroup: Plushie
+      - id: PlushieSilton
+        orGroup: Plushie
+      - id: PlushieSiltonGun
+        orGroup: Plushie

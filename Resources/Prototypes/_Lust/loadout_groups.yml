@@ -17,3 +17,34 @@
   minLimit: 0
   loadouts:
   - MedicalCloak
+
+# IAA
+- type: loadoutGroup
+  id: IAAuniformFormalSuit
+  name: loadout-group-IAA-uniform
+  loadouts:
+  - IAAuniformFormalSuit
+  - IAAuniformFormalSkirt
+  - IAAuniformElegantSuit
+  - IAAuniformElegantSkirt
+
+- type: loadoutGroup
+  id: IAASatchel
+  name: loadout-group-IAA-backpack
+  loadouts:
+  - IAASatchel
+  - IAAWhiteSatchel
+
+- type: loadoutGroup
+  id: IAAOuterClothing
+  minLimit: 0
+  name: loadout-group-IAA-outerClothing
+  loadouts:
+  - IAACoat
+
+- type: loadoutGroup
+  id: IAANeck
+  minLimit: 0
+  name: loadout-group-IAA-neck
+  loadouts:
+  - IAACloak
