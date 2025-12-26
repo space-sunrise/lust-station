@@ -1,16 +1,5 @@
 ﻿- type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformSpecialistBlackJumpSuit
-  name: Speicalist Uniform
-  description: Central Command Elite Force Uniform. Looks intimidating.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
-
-- type: entity
-  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitLoona
   name: moon top with black shorts
   description: These clothes seem to have been worn before you without being removed, torn and worn in places, the urge to howl at the top of your lungs comes over you.
