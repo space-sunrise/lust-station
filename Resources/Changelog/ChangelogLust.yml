@@ -1243,3 +1243,25 @@
   id: 262
   time: '2025-12-26T12:25:08.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/437
+- author: kanopus7
+  changes:
+  - message: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u043B\u044E\
+      \u0448\u0438 \u0431\u044B\u043B\u0438 \u0443\u0434\u0430\u043B\u0435\u043D\u044B\
+      ."
+    type: Remove
+  - message: "\u0423\u0434\u0430\u043B\u0435\u043D \u043B\u0430\u043A\u0438 \u0431\
+      \u043E\u043A\u0441 \u0441\u0430\u043D\u0440\u0430\u0439\u0437 \u043F\u043B\u044E\
+      \u0448\u0435\u043A \u0441 LUST \u0430\u043F\u043B\u0438\u043D\u043A\u0430."
+    type: Remove
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0421\u0438\u043B\u044C\u0442\u043E\u043D\u0430 \u0413\u0440\
+      \u0435\u0439\u0441\u0430."
+    type: Add
+  - message: "\u041F\u043B\u044E\u0448\u043A\u0438 \u043A\u043E\u0442\u043E\u0440\u044B\
+      \u0435 \u0434\u043E\u043B\u0436\u043D\u044B \u0431\u044B\u043B\u0438 \u0433\u043E\
+      \u0432\u043E\u0440\u0438\u0442\u044C - \u0442\u0435\u043F\u0435\u0440\u044C\
+      \ \u0433\u043E\u0432\u043E\u0440\u044F\u0442."
+    type: Fix
+  id: 263
+  time: '2025-12-26T16:01:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/421
