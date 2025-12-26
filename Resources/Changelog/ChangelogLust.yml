@@ -1209,3 +1209,21 @@
   id: 258
   time: '2025-12-05T18:44:41.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/422
+- author: kinar_7
+  changes:
+  - message: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u043F\u0440\
+      \u0430\u0439\u0442\u044B \u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E \u0443\
+      \u0431\u0440\u0430\u043D\u044B"
+    type: Remove
+  id: 259
+  time: '2025-12-13T16:39:54.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/424
+- author: JunterFox
+  changes:
+  - message: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043B\
+      \u044C Qillu \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0451\u043D \u043F\u043E\
+      \u0434 Whitelist."
+    type: Tweak
+  id: 260
+  time: '2025-12-26T11:30:49.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/427
