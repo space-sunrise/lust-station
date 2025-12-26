@@ -30,7 +30,7 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformJumpsuitCPCitizenBlue
   name: citizen suit
-  description: простая, функциональная и неброская повседневная форма, предписанная для жизни в пределах Сити. Её скромные фасоны и приглушённые цвета сливают личность с серой массой, делая каждого частью безликого социального фона.
+  description: Standard gray uniform of everyday life, erasing individuality in favor of the homogeneity of the City. Its modest cut and muted tones make you an invisible element of a system whose main goal is not to attract attention.
   suffix: HL2
   components:
   - type: Sprite
@@ -186,7 +186,7 @@
   parent: UnsensoredClothingUniformBase
   id: ClothingUniformJumpsuitCPOverwatchWhite
   name: CP elite soldier suit
-  description: бесшовный комбинезон из высокотехнологичной ткани бело-красного цвета, подчёркивающий анатомическую эффективность и статус вершины пехотной иерархии. Его обтекаемый дизайн и скрытые интерфейсы говорят о совершенстве, достигнутом через генную оптимизацию и абсолютную преданность Альянсу.
+  description: A seamless jumpsuit made of high-tech white and red fabric, emphasizing anatomical efficiency and the status of the top of the infantry hierarchy. Its streamlined design and hidden interfaces speak of the perfection achieved through genetic optimization and absolute loyalty to the Alliance.
   suffix: HL2
   components:
   - type: Sprite
