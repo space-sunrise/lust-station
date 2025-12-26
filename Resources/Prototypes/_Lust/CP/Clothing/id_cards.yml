@@ -128,7 +128,7 @@
     layers:
       - state: id_CCAC
   - type: PresetIdCard
-    job: DVL
+    job: CCAC
   - type: Tag
     tags:
     - DoorBumpOpener
