@@ -105,3 +105,13 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/Miner.rsi
+
+# IAA
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakFormalIAACloak
+  name: IAA Cloak
+  description: Mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/iaa_cloak.rsi

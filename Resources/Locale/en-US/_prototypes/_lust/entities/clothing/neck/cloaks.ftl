@@ -21,4 +21,6 @@ ent-ClothingNeckRdSpecialCloak = special RD cloak
 ent-ClothingNeckMantleBlackSpeicalist = Specialist Mantle
     .desc = Cloak which used by Centcomm Elite Forces. Maybe you see that one in last time of your life.
 ent-ClothingNeckMantleMiner = Miner`s Mantle
-    .desc = This cloak has seen a lot, just like its owner, having been through ruthless trials in the face of Lavaland's fauna. ‘Remember the first lesson - if my legs get chopped off, run and don't look back!’
+    .desc = This cloak has seen a lot, just like its owner, having been through ruthless trials in the face of Lavaland's fauna. 'Remember the first lesson - if my legs get chopped off, run and don't look back!'
+ent-ClothingNeckCloakFormalIAACloak = IAA cloak
+    .desc = A mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.

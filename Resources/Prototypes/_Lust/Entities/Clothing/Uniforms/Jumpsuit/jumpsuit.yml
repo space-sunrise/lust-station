@@ -48,3 +48,39 @@
     - WhitelistChameleon
     - ClothMade
     - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomFormalQillu
+  name: central command formal suit
+  description: A suit for special occasions.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+
+# IAA
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitIAAFormal
+  name: formal IAA suit
+  description: paperwork is important, but so is looking good while doing it.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformElegantJumpsuitIAA
+  name: elegant IAA suit
+  description: A sharp suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
