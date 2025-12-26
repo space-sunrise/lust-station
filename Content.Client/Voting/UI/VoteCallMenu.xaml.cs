@@ -64,7 +64,7 @@ namespace Content.Client.Voting.UI
             RobustXamlLoader.Load(this);
             _votingSystem = _entityManager.System<VotingSystem>();
 
-            Stylesheet = IoCManager.Resolve<IStylesheetManager>().SheetSpace;
+            Stylesheet = IoCManager.Resolve<IStylesheetManager>().SheetSystem;
             CloseButton.OnPressed += _ => Close();
             // Sunrise-Start
             var deathTimeReq = _cfg.GetCVar(CCVars.VotekickEligibleVoterDeathtime);

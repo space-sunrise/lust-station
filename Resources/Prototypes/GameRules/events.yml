@@ -550,6 +550,7 @@
     minimumPlayers: 40
     weight: 0 # Sunrise-edit: Нахуя оно блядь вообще надо
     duration: 1
+    occursDuringRoundEnd: false
   - type: ZombieRule
   - type: AntagSelection
     definitions:
