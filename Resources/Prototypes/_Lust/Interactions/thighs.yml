@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: LegsKiss
-  name: "Целовать ножки"
+  name: lust-interaction-LegsKiss
   icon: ERP2Icon
   category: Legs
   appearConditions:
@@ -35,7 +35,7 @@
 
 - type: interaction
   id: LegsLick
-  name: "Полизать ножки"
+  name: lust-interaction-LegsLick
   icon: LegsLickIcon
   category: Legs
   appearConditions:
@@ -65,7 +65,7 @@
 
 - type: interaction
   id: LegsFeetKiss
-  name: "Целовать ступни"
+  name: lust-interaction-LegsFeetKiss
   icon: ERP2Icon
   category: Legs
   appearConditions:
@@ -93,7 +93,7 @@
 
 - type: interaction
   id: LegsFeetLick
-  name: "Полизать ступни"
+  name: lust-interaction-LegsFeetLick
   icon: LegsLickIcon
   category: Legs
   appearConditions:
@@ -122,7 +122,7 @@
 
 - type: interaction
   id: LegsStrokeBetween
-  name: "Погладить промежность"
+  name: lust-interaction-LegsStrokeBetween
   icon: LegsStrokeBetweenIcon
   category: Legs
   appearConditions:
@@ -143,7 +143,7 @@
 
 - type: interaction
   id: LegsBite
-  name: "Кусь за ляжку"
+  name: lust-interaction-LegsBite
   icon: ERP2Icon
   category: Legs
   appearConditions:
@@ -170,7 +170,7 @@
 
 - type: interaction
   id: LegsCockFuck
-  name: "Трахать между бедер"
+  name: lust-interaction-LegsCockFuck
   icon: LegsCockFuckIcon
   category: Legs
   appearConditions:

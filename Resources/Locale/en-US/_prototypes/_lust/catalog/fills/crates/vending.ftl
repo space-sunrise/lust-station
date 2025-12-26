@@ -1,4 +1,4 @@
 ent-CrateVendingMachineRestockUnderwearFilled = Underwear restock crate
-    .desc = Contains a restock box for a Monkin' Donuts dispenser.
-ent-CrateVendingMachineRestockKinkMateFilled = Kink mate restock crate
-    .desc = Contains a restock box for a Monkin' Donuts dispenser.
+    .desc = Contains restock boxes for an UnderwearMate dispenser.
+ent-CrateVendingMachineRestockKinkMateFilled = KinkMate restock crate
+    .desc = Contains restock boxes for a KinkMate dispenser.

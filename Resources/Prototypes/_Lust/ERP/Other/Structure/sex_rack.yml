@@ -1,8 +1,8 @@
 - type: entity
   id: ERPSexRack
   parent: ChairBase
-  name: бдсм стойка
-  description: Мягкая стойка с ремнями, но для чего она?...
+  name: BDSM rack
+  description: A padded rack with straps, but what is it for?...
   components:
   - type: Sprite
     sprite: _Lust/ERP/Furniture/sexrack.rsi
@@ -17,8 +17,8 @@
 - type: entity
   id: ERPSexRackFlatpack
   parent: BaseFlatpack
-  name: упакованная бдсм стойка
-  description: Упаковка, при помощи которой можно создать бдсм стойку.
+  name: boxed BDSM rack
+  description: A flatpack used to assemble a BDSM rack.
   components:
   - type: Flatpack
     entity: ERPSexRack

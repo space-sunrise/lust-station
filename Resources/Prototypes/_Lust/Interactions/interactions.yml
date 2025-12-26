@@ -1,6 +1,6 @@
 - type: interaction
   id: TraceLick
-  name: "Провести языком от живота до паха"
+  name: lust-interaction-TraceLick
   icon: ERP2Icon
   category: Face
   appearConditions:

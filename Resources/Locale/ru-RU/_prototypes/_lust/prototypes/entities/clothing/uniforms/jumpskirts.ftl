@@ -1,2 +1,2 @@
-ent-ClothingUniformJumpskirtCentcomFormalDressQillu = central command formal dress
-    .desc = A dress for special occasions.
+ent-ClothingUniformJumpskirtCentcomFormalDressQillu = парадное платье Центрального Командования
+    .desc = Платье для особых случаев.

@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: MouthQuickPeck
-  name: "Чмокнуть в губы"
+  name: lust-interaction-MouthQuickPeck
   icon: GentleKissIcon
   category: Mouth
   appearConditions:
@@ -33,7 +33,7 @@
 
 - type: interaction
   id: MouthKissLips
-  name: "Поцеловать в губы"
+  name: lust-interaction-MouthKissLips
   icon: GentleKissIcon
   category: Mouth
   appearConditions:
@@ -74,7 +74,7 @@
 
 - type: interaction
   id: MouthBlowjob
-  name: "Заставить отсосать"
+  name: lust-interaction-MouthBlowjob
   icon: CockBlowjobIcon
   category: Mouth
   appearConditions:
@@ -108,7 +108,7 @@
 
 - type: interaction
   id: MouthFingering
-  name: "Сунуть большой палец в рот"
+  name: lust-interaction-MouthFingering
   icon: ERP2Icon
   category: Mouth
   appearConditions:
@@ -135,7 +135,7 @@
 
 - type: interaction
   id: MouthHairFaceFuckMale
-  name: "Трахнуть в рот схватив волосы"
+  name: lust-interaction-MouthHairFaceFuckMale
   icon: HairFaceFuckIcon
   category: Mouth
   appearConditions:
@@ -170,7 +170,7 @@
 
 - type: interaction
   id: MouthHairFaceFuckFemale
-  name: "Трахнуть в рот схватив волосы"
+  name: lust-interaction-MouthHairFaceFuckFemale
   icon: HairFaceFuckIcon
   category: Mouth
   appearConditions:

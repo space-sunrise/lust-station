@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: FriendlyKissHand
-  name: "Поцеловать руку"
+  name: lust-interaction-FriendlyKissHand
   icon: KissHandIcon
   category: Friendly
   appearConditions:
@@ -29,7 +29,7 @@
 
 - type: interaction
   id: FriendlyFlyingKiss
-  name: "Воздушный поцелуй"
+  name: lust-interaction-FriendlyFlyingKiss
   icon: FriendlyFlyingKissIcon
   category: Friendly
   appearConditions:
@@ -48,7 +48,7 @@
 
 - type: interaction
   id: FriendlyButtSlap
-  name: "Шлёпнуть себя по жопе"
+  name: lust-interaction-FriendlyButtSlap
   icon: SlapButtIcon
   category: Friendly
   appearConditions:
@@ -75,7 +75,7 @@
 
 - type: interaction
   id: FriendlyButtTwerk
-  name: "Тверкать задницей"
+  name: lust-interaction-FriendlyButtTwerk
   icon: SlapButtIcon
   category: Friendly
   appearConditions:
