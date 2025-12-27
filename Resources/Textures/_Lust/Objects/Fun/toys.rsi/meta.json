@@ -87,6 +87,14 @@
         },
         {
             "name": "sophiekomissarova"
+        },
+        {
+            "name": "sophiekomissarova-inhand-left",
+            "directions": 4
+        },
+        {
+            "name": "sophiekomissarova-inhand-right",
+            "directions": 4
         }
     ]
 }

@@ -356,6 +356,8 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Defib/defib_charge.ogg
+  - type: Item
+    heldPrefix: sophiekomissarova
 
 - type: entity
   parent: BasePlushie
