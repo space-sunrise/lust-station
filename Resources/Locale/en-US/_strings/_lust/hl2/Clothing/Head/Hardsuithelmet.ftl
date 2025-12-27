@@ -1,0 +1,15 @@
+ent-ClothingHeadHelmetHardsuitCPGrunt = OTA quarantine unit helmet
+    .desc = A sealed tactical helmet with enhanced facial protection, a filtration system, and an integrated augmented reality display. Designed for operations in biologically or chemically contaminated areas, where the threat is invisible but deadly.
+    .suffix = HL2
+ent-ClothingHeadHelmetHardsuitCPHEV = H.E.V. spacesuit helmet
+    .desc = An intelligent protective module with a composite visor, life support system, and tactical display that projects data directly onto the retina. Its sealed design and filters allow for survival in a vacuum, underwater, or toxic atmospheres.
+    .suffix = HL2
+ent-ClothingHeadHelmetHardsuitCPOverwatch = OTA soldier helmet
+    .desc = A tactical helmet with an integrated communicator, night vision system, and armored visors, devoid of any identifying features. Its streamlined design and neutral gray color transform the soldier's face into an impersonal symbol of the Alliance's might.
+    .suffix = HL2
+ent-ClothingHeadHelmetHardsuitCPOverWatchred = OTA squire's helm
+    .desc = A specialized tactical module for close-quarters combat, with enhanced face protection and a stabilization system that dampens shotgun recoil. Its aggressive color scheme and narrow visor slits transform the wearer into a merciless symbol of close-up and shock.
+    .suffix = HL2
+ent-ClothingHeadHelmetHardsuitCPOverWatchWhite = OTA elite soldier helmet
+    .desc = A high-tech combat interface with a direct neural connection, a reinforced composite visor, and a real-time tactical analysis system. Its dark red color and aggressive lines emphasize its status as the pinnacle of Alliance infantry evolution, transforming the soldier's head into a battlefield command center.
+    .suffix = HL2

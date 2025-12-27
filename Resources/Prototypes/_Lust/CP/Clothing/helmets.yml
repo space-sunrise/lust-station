@@ -1,0 +1,522 @@
+#Шлемы
+##hev
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitCPHEV
+  name: H.E.V. spacesuit helmet
+  description: An intelligent protective module with a composite visor, life support system, and tactical display that projects data directly onto the retina. Its sealed design and filters allow for survival in a vacuum, underwater, or toxic atmospheres.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/hev.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/hev.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.9
+        Radiation: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: FireProtection
+    reduction: 0.15
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+
+##grunt
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHelmetHardsuitCPGrunt
+  name: OTA quarantine unit helmet
+  description: A sealed tactical helmet with enhanced facial protection, a filtration system, and an integrated augmented reality display. Designed for operations in biologically or chemically contaminated areas, where the threat is invisible but deadly.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/grunt.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/grunt.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.9
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.85
+        Radiation: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: FireProtection
+    reduction: 0.15
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##overwatch
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHelmetHardsuitCPOverwatch
+  name: OTA soldier helmet
+  description: A tactical helmet with an integrated communicator, night vision system, and armored visors, devoid of any identifying features. Its streamlined design and neutral gray color transform the soldier's face into an impersonal symbol of the Alliance's might.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatch.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatch.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.9
+        Radiation: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: FireProtection
+    reduction: 0.15
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##overwatchred
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHelmetHardsuitCPOverWatchred
+  name: OTA squire's helm
+  description: A specialized tactical module for close-quarters combat, with enhanced face protection and a stabilization system that dampens shotgun recoil. Its aggressive color scheme and narrow visor slits transform the wearer into a merciless symbol of close-up and shock.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatchred.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatchred.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.85
+        Heat: 0.85
+        Caustic: 0.9
+        Radiation: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: FireProtection
+    reduction: 0.15
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##overwatchwhite
+- type: entity
+  parent: ClothingHeadHardsuitBase
+  id: ClothingHeadHelmetHardsuitCPOverWatchWhite
+  name: OTA elite soldier helmet
+  description: A high-tech combat interface with a direct neural connection, a reinforced composite visor, and a real-time tactical analysis system. Its dark red color and aggressive lines emphasize its status as the pinnacle of Alliance infantry evolution, transforming the soldier's head into a battlefield command center.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatchwhite.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hardsuithelmet/overwatchwhite.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.1
+        Caustic: 0.7
+        Radiation: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: FireProtection
+    reduction: 0.95
+  - type: StaminaResistance
+    damageCoefficient: 0.05
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.05
+  - type: EyeProtection
+  - type: FlashImmunity
+
+##bio_boiler
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHatCPBioBoiler
+  name: helmet of a worker of the GSR plant
+  description: A basic hard plastic safety helmet designed to protect against falling objects, accidental impacts, and molten metal splashes. Its minimalist design and standard gray color emphasize the wearer's uniformity and complete interchangeability.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hats/bio_boiler.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hats/bio_boiler.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.9
+        Piercing: 0.95
+        Heat: 0.75
+        Caustic: 0.85
+        Radiation: 0.15
+  - type: FireProtection
+    reduction: 0.25
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##cleanup
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHatCPCleanup
+  name: helmet of the quarantine worker of the State Security Service
+  description: A simplified, hermetically sealed headgear with a basic filtration system and a wide visor, issued for short-term deployments in hazardous areas. Its design suggests more the Alliance skimps on the security of its lower echelons than it does any real protection.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hats/cleanup.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hats/cleanup.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.9
+        Piercing: 0.95
+        Heat: 0.75
+        Caustic: 0.65
+        Radiation: 0.15
+  - type: FireProtection
+    reduction: 0.25
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##cwuengi
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHatCPCWUEngi
+  name: GSR engineer's helmet
+  description: A functional safety helmet with integrated lighting, eyeglass mounts, and reinforced shock absorption. Its practical design reflects the essence of the job keeping your head safe in areas where sparks fly, machinery rattles, and tools fall.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hats/cwuengi.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hats/cwuengi.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.75
+  - type: FireProtection
+    reduction: 0.45
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##scientist
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingHeadHatCPScientist
+  name: scientist's helmet
+  description: A sterile headgear with a transparent, sealed visor and air recirculation system, designed for work in clean areas or with volatile reagents. Its minimalist design emphasizes the priority protecting the experiment from the user, not the user from the world.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Head/Hats/scientist.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Head/Hats/scientist.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.9
+        Piercing: 0.95
+        Heat: 0.75
+        Caustic: 0.65
+        Radiation: 0.15
+  - type: FireProtection
+    reduction: 0.25
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+#Противогазы-шлемы
+##civilprotectionmask
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingMaskGasCPCivilProtectionMask
+  name: civil defense unit helmet
+  description: A standard blue tactical helmet with an armored visor and a built-in audio channel for receiving orders. Its austere design transforms the face of a law enforcement officer into a faceless mask of Alliance law.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmask.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmask.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.75
+        Heat: 0.95
+        Radiation: 0.9
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##civilprotectionmaskmed
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingMaskGasCPCivilProtectionMaskMed
+  name: civil defense medic's helmet
+  description: A blue tactical helmet with a red cross identification mark and enhanced facial protection. Its design combines functionality for work under fire with clear identification of medical status—but only within the limits permitted by the Alliance.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskmed.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskmed.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.85
+        Slash: 0.85
+        Piercing: 0.75
+        Heat: 0.85
+        Radiation: 0.9
+        Caustic: 0.9
+  - type: FireProtection
+    reduction: 0.15
+  - type: StaminaResistance
+    damageCoefficient: 0.85
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.85
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##civilprotectionmaskcommissar
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingMaskGasCPCivilProtectionMaskCommissar
+  name: helmet of the civil defense commissioner
+  description: A distinctive white helmet with enhanced protection and an integrated communications system, symbolizing the highest administrative and punitive rank in the Civil Defense. Its color and impeccable appearance visually distinguish the wearer from ordinary units, emphasizing the right not only to enforce but also to administer the law.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskcommissar.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskcommissar.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.65
+        Heat: 0.85
+        Radiation: 0.8
+        Caustic: 0.9
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+##civilprotectionmaskdl
+- type: entity
+  parent: ClothingHeadEVAHelmetBase
+  id: ClothingMaskGasCPCivilProtectionMaskDL
+  name: civil defense division leader's helmet
+  description: An elite command helmet with silver accents, an integrated tactical display, and a cryptographic communications system. Its design emphasizes the status of the highest operational commander, whose orders coordinate entire suppression zones.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskdl.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/civilprotectionmaskdl.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.55
+        Heat: 0.75
+        Radiation: 0.75
+  - type: StaminaResistance
+    damageCoefficient: 0.65
+  - type: EyeProtection
+  - type: FlashImmunity
+  - type: Tag
+    tags:
+    - HelmetEVA
+    - FullCovered # INTERACTIONS
+
+#Противогазы
+##moderngasmask
+- type: entity
+  parent: ClothingMaskGasSwat
+  id: ClothingMaskGasCPModerngasMask
+  name: modern gas mask
+  description: A tactical filtration system with a sealed mask, wide viewing window, and replaceable filters for protection against chemical, biological, and radiation threats. Its ergonomic design and low breathing resistance allow for effective operation even in highly contaminated environments.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/moderngasmask.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/moderngasmask.rsi
+
+##russiamask
+- type: entity
+  parent: ClothingMaskGasSwat
+  id: ClothingMaskGasCPRussiaMask
+  name: soviet gas mask
+  description: A reliable and simple Cold War-era defense system, constructed of durable rubber and metal with a distinctive round filter box. Its simple design and proven construction have saved thousands of lives in real and simulated chemical warfare situations.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/russiamask.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/russiamask.rsi
+
+##swatmask
+- type: entity
+  parent: ClothingMaskGasSwat
+  id: ClothingMaskGasCPSwatMask
+  name: SWAT gas mask
+  description: A tactical protective mask with enhanced visibility, a communication system, and firearms compatibility. Designed for assault operations involving tear gas, smoke screens, or chemical threats.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Mask/swatmask.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Mask/swatmask.rsi

@@ -961,6 +961,7 @@
   description: job-description-leaderarrows
   playTimeTracker: JobLeaderArrows
   icon: "JobIconArrows"
+  overrideConsoleVisibility: false
   accessGroups:
   - AllAccess
   access:
@@ -975,6 +976,7 @@
   description: job-description-soldierarrows
   playTimeTracker: JobSoldierArrows
   icon: "JobIconArrows"
+  overrideConsoleVisibility: false
   accessGroups:
   - AllAccess
   access:
