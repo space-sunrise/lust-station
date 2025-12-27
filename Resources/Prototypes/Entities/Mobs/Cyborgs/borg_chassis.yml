@@ -35,7 +35,8 @@
     notifyChannels:
     - Binary
     - Science
-
+  - type: Interactions 
+  
 - type: entity
   id: BorgChassisGeneric
   parent: BorgChassisSelectable
@@ -44,6 +45,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: generic
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisMining
@@ -52,6 +54,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: mining
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisEngineer
@@ -60,6 +63,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: engineering
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisJanitor
@@ -68,6 +72,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: janitor
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisMedical
@@ -76,6 +81,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: medical
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisService
@@ -84,6 +90,7 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: service
+  - type: Interactions 
 
 - type: entity
   id: BorgChassisSyndicateAssault
@@ -147,7 +154,8 @@
       entityTargetActions:
       - AccessBreaker
     # Sunrise-End
-
+    - type: Interactions
+  
 - type: entity
   id: BorgChassisSyndicateMedical
   parent: [BaseBorgChassisSyndicate, ShowMedicalIcons]
@@ -198,6 +206,7 @@
       - AccessBreaker
       - HandheldHealthAnalyzerUnpowered
     # Sunrise-End
+    - type: Interactions
 
 - type: entity
   id: BorgChassisSyndicateSaboteur
@@ -236,6 +245,7 @@
       interactFailureString: petting-failure-syndicate-cyborg
       interactSuccessSound:
         path: /Audio/Ambience/Objects/periodic_beep.ogg
+    - type: Interactions
 
 - type: entity
   id: BorgChassisDerelict
@@ -268,6 +278,7 @@
     interactFailureString: petting-failure-derelict-cyborg
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
+  - type: Interactions
 
 - type: entity
   parent: BaseBorgChassisDerelict
@@ -298,6 +309,7 @@
       - BorgModuleEngineering
     hasMindState: engineer_e
     noMindState: engineer_e_r
+  - type: Interactions
 
 - type: entity
   parent: BaseBorgChassisDerelict
@@ -332,6 +344,7 @@
       - BorgModuleJanitor
     hasMindState: janitor_e
     noMindState: janitor_e_r
+  - type: Interactions
 
 - type: entity
   parent: BaseBorgChassisDerelict
@@ -366,6 +379,7 @@
       - BorgModuleMedical
     hasMindState: medical_e
     noMindState: medical_e_r
+  - type: Interactions
 
 - type: entity
   parent: BaseBorgChassisDerelict
@@ -400,6 +414,7 @@
       - BorgModuleCargo
     hasMindState: miner_e
     noMindState: miner_e_r
+  - type: Interactions
 
 - type: entity
   parent: BaseBorgChassisSyndicateDerelict
@@ -429,3 +444,4 @@
     noMindState: synd_sec_derelict
   - type: Construction
     node: derelictcyborg
+  - type: Interactions
