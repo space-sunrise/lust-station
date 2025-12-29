@@ -65,6 +65,8 @@
         orGroup: Plushie
       - id: PlushieKalium
         orGroup: Plushie
+      - id: PlushieRaneliToll
+        orGroup: Plushie
       - id: PlushieKira
         orGroup: Plushie
       - id: PlushieAshito

@@ -87,6 +87,24 @@
         },
         {
             "name": "sophiekomissarova"
+        },
+        {
+          "name": "plushie-raneli-toll"
+        },
+        {
+          "name": "plushie-raneli-toll-equipped-HELMET",
+          "directions": 4
+        },
+        {
+          "name": "plushie-raneli-toll-inhand-left",
+          "directions": 4
+        },
+        {
+          "name": "plushie-raneli-toll-inhand-right",
+          "directions": 4
+        },
+        {
+          "name": "plushie-raneli-toll-eyes"
         }
     ]
 }
