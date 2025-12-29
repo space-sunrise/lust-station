@@ -14,3 +14,7 @@ ent-ClothingOuterCoatWhiteCap = белая капитанская куртка
     .desc = Парадный капитанский китель с золотой отделкой.
 ent-ClothingOuterCoatBlackCap = чёрная капитанская куртка
     .desc = Капитанский китель в тёмном стиле.
+ent-ClothingOuterLeatherCoat = Кожаная куртка
+    .desc = Прекрасно подходит для выступлений!
+ent-ClothingOuterLeatherCoatOpened = Кожаная куртка
+    .desc = Прекрасно подходит для выступлений!

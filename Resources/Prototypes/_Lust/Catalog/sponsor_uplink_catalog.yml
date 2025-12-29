@@ -1,4 +1,21 @@
-﻿# Erotic
+﻿# Security
+
+- type: listing
+  id: UplinkSunriseTacticalHosUniform
+  name: uplink-sunrise-tactical-hos-uniform-name
+  productEntity: ClothingUniformJumpskirtTacticalHos
+  cost:
+    Suntick: 40
+  categories:
+  - HOSHeadOfDepartment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyerJobCondition
+    whitelist:
+    - HeadOfSecurity
+
+# Erotic
 
 - type: listing
   id: UplinkLustEroticERPNormalDildo
