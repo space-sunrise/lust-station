@@ -4,6 +4,7 @@ using Content.Server.Power.EntitySystems;
 using Content.Server.Telephone;
 using Content.Shared.Access.Systems;
 using Content.Shared.Audio;
+using Content.Shared.Chat.Prototypes;
 using Content.Shared.Chat.TypingIndicator;
 using Content.Shared.Holopad;
 using Content.Shared.IdentityManagement;
@@ -18,6 +19,7 @@ using Content.Shared.Verbs;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
 using Robust.Shared.Containers;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Linq;
@@ -38,6 +40,8 @@ public sealed class HolopadSystem : SharedHolopadSystem
     [Dependency] private readonly PopupSystem _popupSystem = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly PvsOverrideSystem _pvs = default!;
+    // Sunrise-add
+    private readonly ProtoId<ChatNotificationPrototype> _aiShellHolopadCallChatNotificationPrototype = "AiShellHolopadCall";
 
     private float _updateTimer = 1.0f;
     private const float UpdateTime = 1.0f;
@@ -222,6 +226,15 @@ public sealed class HolopadSystem : SharedHolopadSystem
                 continue;
 
             reachableAiCores.Add((receiverUid, receiverTelephone));
+
+            // Sunrise-start
+            var shells = EntityQueryEnumerator<StationAiMobileComponent>();
+            while (shells.MoveNext(out var shell, out _))
+            {
+                var ev = new ChatNotificationEvent(_aiShellHolopadCallChatNotificationPrototype, entity);
+                RaiseLocalEvent(shell, ref ev);
+            }
+            // Sunrise-end
 
             if (!_stationAiSystem.TryGetHeld((receiver, receiverStationAiCore), out var insertedAi))
                 continue;

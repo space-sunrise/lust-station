@@ -101,6 +101,11 @@ public abstract partial class SharedStationAiSystem
 
     private void OnHeldRelay(Entity<StationAiHeldComponent> ent, ref AttemptRelayActionComponentChangeEvent args)
     {
+        // Sunrise-start
+        if (HasComp<StationAiMobileComponent>(ent.Owner))
+            return;
+        // Sunrise-end
+
         if (!TryGetCore(ent.Owner, out var core))
             return;
 
@@ -121,9 +126,17 @@ public abstract partial class SharedStationAiSystem
         if (ev.Actor == ev.Target)
             return;
 
-        if (TryComp(ev.Actor, out StationAiHeldComponent? aiComp) &&
-           (!TryComp(ev.Target, out StationAiWhitelistComponent? whitelistComponent) ||
-            !ValidateAi((ev.Actor, aiComp))))
+
+        // Sunrise-start edit
+
+        //if (TryComp(ev.Actor, out StationAiHeldComponent? aiComp) &&
+        //   (!TryComp(ev.Target, out StationAiWhitelistComponent? whitelistComponent) ||
+        //    !ValidateAi((ev.Actor, aiComp))))
+        if (TryComp(ev.Actor, out StationAiHeldComponent? aiComp)
+            && !HasComp<StationAiMobileComponent>(ev.Actor)
+            && (!TryComp(ev.Target, out StationAiWhitelistComponent? whitelistComponent)
+            || !ValidateAi((ev.Actor, aiComp))))
+        // Sunrise-end edit
         {
             // Don't allow the AI to interact with anything that isn't powered.
             if (!PowerReceiver.IsPowered(ev.Target))
@@ -144,6 +157,11 @@ public abstract partial class SharedStationAiSystem
 
     private void OnHeldInteraction(Entity<StationAiHeldComponent> ent, ref InteractionAttemptEvent args)
     {
+        // Sunrise-start
+        if (HasComp<StationAiMobileComponent>(ent.Owner))
+            return;
+        // Sunrise-end
+
         // Cancel if it's not us or something with a whitelist, or whitelist is disabled.
         args.Cancelled = (!TryComp(args.Target, out StationAiWhitelistComponent? whitelistComponent)
                           || !whitelistComponent.Enabled)
@@ -160,12 +178,21 @@ public abstract partial class SharedStationAiSystem
         if (!_uiSystem.HasUi(args.Target, AiUi.Key))
             return;
 
+        // Sunrise-start edit
         if (!args.CanComplexInteract
-            || !HasComp<StationAiHeldComponent>(args.User)
+            || (!HasComp<StationAiHeldComponent>(args.User) && !HasComp<StationAiMobileComponent>(args.User))
             || !args.CanInteract)
         {
             return;
         }
+
+        //if (!args.CanComplexInteract
+        //    || !HasComp<StationAiHeldComponent>(args.User)
+        //    || !args.CanInteract)
+        //{
+        //    return;
+        //}
+        // Sunrise-end edit
 
         var user = args.User;
 

@@ -14,4 +14,3 @@ electrify-door-on = Включить перегрузку
 electrify-door-off = Выключить перегрузку
 toggle-light = Переключить свет
 ai-device-not-responding = Устройство не отвечает
-ai-consciousness-download-warning = Your consciousness is being downloaded.
