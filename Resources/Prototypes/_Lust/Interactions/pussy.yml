@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: PussyTouch
-  name: "Поласкать вагину пальцами"
+  name: lust-interaction-PussyTouch
   icon: PussyTouchIcon
   category: Pussy
   appearConditions:
@@ -44,7 +44,7 @@
 
 - type: interaction
   id: PussyLick
-  name: "Полизать вагину"
+  name: lust-interaction-PussyLick
   icon: PussyLickIcon
   category: Pussy
   appearConditions:
@@ -89,7 +89,7 @@
 
 - type: interaction
   id: PussyFingering
-  name: "Трахать вагину пальцами"
+  name: lust-interaction-PussyFingering
   icon: PussyFingeringIcon
   category: Pussy
   appearConditions:
@@ -129,7 +129,7 @@
 
 - type: interaction
   id: PussyScissors
-  name: "Потереться вагинами"
+  name: lust-interaction-PussyScissors
   icon: PussyScissorsIcon
   category: Pussy
   appearConditions:
@@ -172,7 +172,7 @@
 
 - type: interaction
   id: PussyFuck
-  name: "Трахать вагину членом"
+  name: lust-interaction-PussyFuck
   icon: LegsCockFuckIcon
   category: Pussy
   appearConditions:
@@ -222,7 +222,7 @@
 
 - type: interaction
   id: PussySelfTouch
-  name: "Поласкать свою вагину"
+  name: lust-interaction-PussySelfTouch
   icon: PussyTouchIcon
   category: Pussy
   appearConditions:
@@ -256,7 +256,7 @@
 
 - type: interaction
   id: PussySelfFingering
-  name: "Трахать свою вагину пальцами"
+  name: lust-interaction-PussySelfFingering
   icon: PussyFingeringIcon
   category: Pussy
   appearConditions:
@@ -289,7 +289,7 @@
 
 - type: interaction
   id: PussyFriction
-  name: "Тереться членом о киску"
+  name: lust-interaction-PussyFriction
   icon: ERP2Icon
   category: Pussy
   appearConditions:
@@ -331,7 +331,7 @@
 
 - type: interaction
   id: ClitorBite
-  name: "Прикусить клитор зубами"
+  name: lust-interaction-ClitorBite
   icon: ERP2Icon
   category: Pussy
   appearConditions:
@@ -365,7 +365,7 @@
 
 - type: interaction
   id: ClitorLick
-  name: "Играть с клитором язычком"
+  name: lust-interaction-ClitorLick
   icon: ERP2Icon
   category: Pussy
   appearConditions:
@@ -401,7 +401,7 @@
 
 - type: interaction
   id: HoldTailPussyFuck
-  name: "Трахать в вагину держа хвост"
+  name: lust-interaction-HoldTailPussyFuck
   icon: LegsCockFuckTailIcon
   category: Pussy
   appearConditions:
@@ -450,7 +450,7 @@
 
 - type: interaction
   id: TailPussyFuck
-  name: "Проникнуть хвостом в вагину"
+  name: lust-interaction-TailPussyFuck
   icon: PussyTailFuckIcon
   category: Pussy
   appearConditions:

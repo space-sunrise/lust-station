@@ -1,16 +1,5 @@
 ﻿- type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformSpecialistBlackJumpSuit
-  name: Speicalist Uniform
-  description: Central Command Elite Force Uniform. Looks intimidating.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/SpecialistJumpSuit.rsi
-
-- type: entity
-  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitLoona
   name: moon top with black shorts
   description: These clothes seem to have been worn before you without being removed, torn and worn in places, the urge to howl at the top of your lungs comes over you.
@@ -38,117 +27,6 @@
 
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformBlackCap
-  name: black captain uniform
-  description: Captain black uniform. Looks stylish.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/blackcap.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/blackcap.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalAdj
-  name: formal adjutant unifrom
-  description: Adjutant formal unifrom. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formaladj.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formaladj.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalIAA
-  name: formal IAA suit
-  description: IAA formal suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/IAAsuit.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/IAAsuit.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalCE
-  name: formal CE suit
-  description: CE formal suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalCE.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalCE.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalCMOSuit
-  name: formal CMO suit
-  description: CMO formal suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalCMO.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalCMO.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalRDsuit
-  name: formal RD suit
-  description: RD formal suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalRD.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalRD.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalWardensuit
-  name: formal warden suit
-  description: Warden formal suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalwarden.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/formalwarden.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformFormalWhiteCap
-  name: formal white captain uniform
-  description: Captain white formal uniform. Looks stylish.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitecapformal.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitecapformal.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformWhiteCap
-  name: white captain uniform
-  description: Captain white uniform. Looks stylish.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitecap.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitecap.rsi
-
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformWhiteLawyerSuit
-  name: the lawyer white suit
-  description: White Lawyer suit. Looks royal.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/whitelawyersuit.rsi
-
-- type: entity
-  parent: ClothingUniformBase
   id: ClothingUniformSuccubus
   name: succubus uniform
   components:
@@ -159,6 +37,42 @@
     - WhitelistChameleon
     - ClothMade
     - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomFormalQillu
+  name: central command formal suit
+  description: A suit for special occasions.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+
+# IAA
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitIAAFormal
+  name: formal IAA suit
+  description: paperwork is important, but so is looking good while doing it.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformElegantJumpsuitIAA
+  name: elegant IAA suit
+  description: A sharp suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
 
 - type: entity
   parent: ClothingUniformBase

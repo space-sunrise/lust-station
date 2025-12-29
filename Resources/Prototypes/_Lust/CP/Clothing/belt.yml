@@ -1,0 +1,13 @@
+#Пояс
+##civilprotectionbelt
+- type: entity
+  id: ClothingBeltCPCivilProtectionBelt
+  parent: ClothingBeltSecurity
+  name: civil defense unit belt
+  description: A standard gray tactical belt for attaching holsters, pouches, and duty equipment. Its robust construction and standard design emphasize its affiliation with the Alliance's enforcement apparatus, organizing the instruments of order on the guard's body.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Belt/civilprotectionbelt.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Belt/civilprotectionbelt.rsi

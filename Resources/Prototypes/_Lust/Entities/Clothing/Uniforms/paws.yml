@@ -1,0 +1,75 @@
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsCatPawsWhite
+  name: white cat paws
+  description: Super soft white cat paws, especially for the most brutal station workers.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/white.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/white.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: Fiber
+    fiberColor: fibers-white
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsCatPawsBrown
+  name: brown cat paws
+  description: Super soft brown cat paws, especially for the most brutal station workers.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/brown.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/brown.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: Fiber
+    fiberColor: fibers-brown
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsCatPawsBlack
+  name: black cat paws
+  description: Super soft black cat paws, especially for the most brutal station workers.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: Fiber
+    fiberColor: fibers-black
+
+- type: entity
+  parent: ClothingHandsGlovesSyntheticBase
+  id: ClothingHandsCatPawsBlackWhite
+  name: black-and-white cat paws
+  description: Super soft black-and-white cat paws, especially for the most brutal station workers.
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black_white.rsi
+    layers:
+    - state: icon
+  - type: Item
+  - type: Clothing
+    sprite: /Textures/_Lust/Clothing/Paws/cat_paws_gloves/black_white.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: Fiber
+    fiberColor: fibers-grey

@@ -1,0 +1,717 @@
+#TrenchCoat
+##Обычный
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPTrenchcoat
+  name: civil defense officer's cloak-armor
+  description: A distinctive element of the Civil Defense senior personnel uniform, combining the regulation cloak with built-in light body armor. Its elegant cut and signature blue color emphasize its administrative status without detracting from its readiness for operational intervention.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.60
+        Piercing: 0.55
+        Heat: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: FireProtection
+    reduction: 0.35
+  - type: StaminaResistance
+    damageCoefficient: 0.65
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.75
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoat.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoat.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+#№Комиссарский
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPTrenchcoatCommissar
+  name: civil defense commissioner's cloak-armor
+  description: An elite version of the officer's uniform, the regulation cloak is combined with reinforced armor plates and green accents, symbolizing the highest administrative rank. Its appearance simultaneously demonstrates the inviolability of authority and a willingness to exercise personal "educational influence."
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.45
+        Slash: 0.50
+        Piercing: 0.45
+        Heat: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: FireProtection
+    reduction: 0.45
+  - type: StaminaResistance
+    damageCoefficient: 0.65
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.75
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoatcommissar.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoatcommissar.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##Дивизионный Лидер
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPTrenchcoatDL
+  name: divisional civil defense leader's cloak-armor
+  description: The highest form of tactical and administrative gear, where the cloak is combined with a command-level flak jacket and red rank accents. This outfit symbolizes absolute authority over the assigned territory and the readiness to personally lead the suppression of any incidents.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.40
+        Piercing: 0.55
+        Heat: 0.65
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: FireProtection
+    reduction: 0.55
+  - type: StaminaResistance
+    damageCoefficient: 0.65
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoatdl.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/cptrenchcoatdl.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+#Бронежилеты
+##civilprotectionvest
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPCivilProtectionVest
+  name: civil defense unit armor
+  description: Standard Alliance protective gear. Combines a lightweight Kevlar base with tactical attachments for duty gear, providing a balance between protection and mobility.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.60
+        Piercing: 0.50
+        Heat: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvest.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvest.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##civilprotectionvestmed
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPCivilProtectionVestMed
+  name: civil defense medic armor
+  description: A tactical uniform for civil defense medical personnel, combining light body armor, sterile pockets for medications, and patches with a cross on a red background. Its design balances rescue duties with the need to work in "administrative regulation" zones.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.60
+        Piercing: 0.50
+        Heat: 0.95
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestmed.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestmed.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##civilprotectionvestcommissar
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPCivilProtectionVestCommissar
+  name: armor of the civil defense commissioner
+  description: Enhanced protective gear for senior Civil Defense command personnel, featuring extended armor plates and distinctive green elements. It symbolizes not only increased survivability but also the Alliance's absolute authority on the streets.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.5
+        Piercing: 0.45
+        Heat: 0.9
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestcommissar.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestcommissar.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##civilprotectionvestdl
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPCivilProtectionVestDL
+  name: civil defense division leader armor
+  description: Elite protective gear for senior Civil Defense officers, featuring enhanced ballistic protection and expanded system interfaces. Its distinctive silver color and tactical vest emphasize the Alliance's status as a divisional commander, making key operational decisions.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.50
+        Slash: 0.45
+        Piercing: 0.40
+        Heat: 0.85
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestdl.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/civilprotectionvestdl.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##ArmorMolle
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPArmorMolle
+  name: MOLLE body armor
+  description: A tactical vest with a modular attachment system that allows you to customize the harness for any mission. It combines basic ballistic protection with the ability to hang bags, pouches, and gear exactly where you need them.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Wood 
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.70
+        Piercing: 0.65
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/armormolle.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/armormolle.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##Kevlarheavy
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPKevlarHeavy
+  name: kevlar body armor
+  description: Lightweight and flexible armor made of multilayer aramid fibers, capable of stopping fragments and pistol bullets. It's the perfect balance between stealth and reliability for situations where tension plates would be useless.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.65
+        Piercing: 0.55
+  - type: ExplosionResistance
+    damageCoefficient: 0.75
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.65
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/kevlarheavy.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/kevlarheavy.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##plateArmor
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPPlateArmor
+  name: tiled homemade vest
+  description: A makeshift protection system assembled from scrap materials. Steel sheets, ceramic tiles, and thick fabric. It's crude, heavy, and unreliable, but sometimes capable of stopping a bullet where expensive armor is inaccessible.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.75
+        Piercing: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.85
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.65
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/platearmor.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/platearmor.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##rebelarmorheavy
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPRebelArmorHeavy
+  name: rebel heavy body armor
+  description: A set assembled from captured parts, decommissioned army armor, and homemade plates that speaks more of a will to resist than of actual protection. Worn with the knowledge that even symbolic armor is better than no armor at all in the face of the Alliance.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.70
+        Piercing: 0.45
+  - type: ExplosionResistance
+    damageCoefficient: 0.55
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/rebelarmorheavy.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/rebelarmorheavy.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##rebelarmorlight
+- type: entity
+  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterArmorCPRebelArmorLight
+  name: rebel body armor
+  description: A homemade, reinforced suit of armor made from captured armor plates, steel, and ballistic fabric, assembled for those planning to survive the thick of conflict with the Alliance. Its weight is the price to pay for the chance to survive a direct hit from a standard Civil Defense weapon.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Wood
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.80
+        Piercing: 0.55
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/rebelarmorlight.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Armor/rebelarmorlight.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+#Suits
+##bioboiler
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterSuitCPBioBoiler
+  name: overalls for a worker at the GSR plant
+  description: The standard gray uniform for assembly line personnel, made of rough, flame-resistant fabric and devoid of any hint of individuality. Its sole purpose is to protect against dirt, sparks, and accidental chemical splashes just enough to keep the worker from interrupting the cycle.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Flesh
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.80
+        Piercing: 0.95
+        Heat: 0.65
+        Caustic: 0.55
+        Radiation: 0.15
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/bioboiler.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/bioboiler.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##cleanup
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterSuitCPCleanup
+  name: quarantine overalls for workers GSR
+  description: A standard protective suit for work in contaminated or technologically hazardous areas under Alliance control. Its dense synthetic fabric and minimal filtration are designed for short-term exposure, not real safety.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Flesh
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.80
+        Piercing: 0.95
+        Heat: 0.65
+        Caustic: 0.45
+        Radiation: 0.15
+  - type: FireProtection
+    reduction: 0.45
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/cleanup.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/cleanup.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##cwuengi
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterSuitCPCWUEngi
+  name: engineer's overalls for the Civil Defense and Rescue Service
+  description: A functional work uniform for Alliance infrastructure maintenance, featuring reinforced pockets, a fire-resistant finish, and a technical personnel insignia. Its practical cut is designed for long shifts in stuffy tunnels and around hot machinery.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Flesh
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.85
+        Piercing: 0.95
+        Heat: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.65
+  - type: FireProtection
+    reduction: 0.45
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/cwuengi.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/cwuengi.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+##foreman
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterSuitCPForeman
+  name: overalls for the technical assistant of the State Road Safety Service
+  description: A simplified version of the engineering uniform for junior support personnel, stripped of many protective features but retaining the appearance of belonging to an Alliance techno-unit. Its modest cut and limited functionality clearly mark the wearer's place at the very bottom of the technological hierarchy.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Flesh
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.85
+        Piercing: 0.95
+        Heat: 0.55
+  - type: FireProtection
+    reduction: 0.45
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/foreman.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/foreman.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT
+
+#Скафандры
+##hev
+- type: entity
+  parent: [ClothingOuterHardsuitBase]
+  id: ClothingOuterSuitCPHEV
+  name: hazardous environment suit
+  description: A highly protective suit designed for survival in extreme conditions, from radiation zones to alien environments. Autonomous life support systems, integrated armor, and a smart interface make it an extension of those operating on the edge of the unknown.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/hev.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/hev.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.25
+        Caustic: 0.1
+        Radiation: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  - type: FireProtection
+    reduction: 0.35
+  - type: StaminaResistance
+    damageCoefficient: 0.25
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.15
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCPHEV
+  - type: Tag
+    tags:
+    - Hardsuit
+
+##overwatchredsuit
+- type: entity
+  parent: [ClothingOuterEVASuitBase]
+  id: ClothingOuterSuitCPOverwatchRedSuit
+  name: OTA soldier's jumpsuit in blood-red tones
+  description: A modified assault uniform for elite units specializing in close combat and room clearing. The color not only highlights the wearer's heightened danger but also exerts psychological pressure on the enemy, while the weighted shoulder straps are designed to withstand the recoil of a shotgun.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchredsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchredsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.45
+        Piercing: 0.35
+        Heat: 0.55
+        Caustic: 0.3
+        Radiation: 0.4
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  - type: FireProtection
+    reduction: 0.35
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Hardsuit
+
+##overwatchsuit
+- type: entity
+  parent: [ClothingOuterEVASuitBase]
+  id: ClothingOuterSuitCPOverwatchSuit
+  name: OTA soldier's overalls
+  description: The standard combat uniform of the Alliance's elite troops, distinguished by its streamlined design, enhanced protection, and system integration with its equipment. Its black and gray camouflage and lack of insignia emphasize the soldier's role as a faceless yet deadly instrument of the Alliance's will.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchsuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.55
+        Piercing: 0.45
+        Heat: 0.55
+        Caustic: 0.4
+        Radiation: 0.5
+  - type: ExplosionResistance
+    damageCoefficient: 0.45
+  - type: FireProtection
+    reduction: 0.25
+  - type: StaminaResistance
+    damageCoefficient: 0.65
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: Tag
+    tags:
+    - Hardsuit
+
+##overwatchwhitesuit
+- type: entity
+  parent: [ClothingOuterHardsuitBase]
+  id: ClothingOuterSuitCPOverwatchWhiteSuit
+  name: OTA elite soldier jumpsuit
+  description: An advanced combat exosuit with an integrated reinforcement system, reactive armor, and a direct neural-link tactical interface. Its white and red color scheme and aggressive design visually separate the elite from the rank and file, emphasizing its status as the absolute arbiter of the battlefield.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchwhitesuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/overwatchwhitesuit.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: Pierceable
+    level: HardenedMetal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.1
+        Slash: 0.1
+        Piercing: 0.1
+        Heat: 0.1
+        Caustic: 0.1
+        Radiation: 0.1
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: FireProtection
+    reduction: 0.95
+  - type: StaminaResistance
+    damageCoefficient: 0.05
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.05
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCPOverWatchWhite
+  - type: Tag
+    tags:
+    - Hardsuit
+
+##scientist
+- type: entity
+  parent: [AllowSuitStorageClothing, ClothingOuterArmorBase]
+  id: ClothingOuterSuitCPScientist
+  name: sterile scientist's suit
+  description: A crisp, white laminated uniform for work in clean labs and high-risk areas, where even a dust molecule can disrupt an experiment. Its sealed seams, integrated ventilation system, and antistatic coating create a barrier between the researcher's curiosity and the unpredictability of the subject.
+  suffix: HL2
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.8
+        Piercing: 0.95
+        Heat: 0.55
+        Caustic: 0.55
+        Radiation: 0.15
+  - type: ExplosionResistance
+    damageCoefficient: 0.05
+  - type: FireProtection
+    reduction: 0.35
+  - type: StaminaResistance
+    damageCoefficient: 0.55
+  - type: ZombificationResistance
+    zombificationResistanceCoefficient: 0.25
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/scientist.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/OuterClothing/Suits/scientist.rsi
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - NudeBottom # INTERACTIONS
+  # SUNRISE EDIT

@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: CheeksKiss
-  name: "Чмокнуть в щёчку"
+  name: lust-interaction-CheeksKiss
   icon: CheeksKissIcon
   category: Cheeks
   appearConditions:
@@ -33,7 +33,7 @@
 
 - type: interaction
   id: CheeksKissBoth
-  name: "Расцеловать в обе щёки"
+  name: lust-interaction-CheeksKissBoth
   icon: CheeksKissBothIcon
   category: Cheeks
   appearConditions:
@@ -66,7 +66,7 @@
 
 - type: interaction
   id: CheeksPat
-  name: "Потискать за щёки"
+  name: lust-interaction-CheeksPat
   icon: CheeksPressIcon
   category: Cheeks
   appearConditions:
@@ -92,7 +92,7 @@
 
 - type: interaction
   id: CheeksLick
-  name: "Облизнуть щёку"
+  name: lust-interaction-CheeksLick
   icon: ERP2Icon
   category: Cheeks
   appearConditions:

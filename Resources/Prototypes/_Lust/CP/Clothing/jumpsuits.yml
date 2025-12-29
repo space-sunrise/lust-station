@@ -1,0 +1,208 @@
+#Комбинезоны
+##blacksuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPBlackSuit
+  name: black formal suit
+  description: A tailored jacket and trousers ensemble made of high-quality wool or its synthetic equivalents. Its simple cut and deep color symbolize professional status, authority, and a willingness to handle any administrative decision.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/blacksuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/blacksuit.rsi
+
+##brownsuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPBrownSuit
+  name: brown formal suit
+  description: A brown business suit is an elegant ensemble in warm shades of wool or tweed, combining formality with a touch of informal confidence. Its color suggests stability, practicality, and a willingness to embrace long-term solutions that transcend black-and-white bureaucracy.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/brownsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/brownsuit.rsi
+
+##citizenblue
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPCitizenBlue
+  name: citizen suit
+  description: Standard gray uniform of everyday life, erasing individuality in favor of the homogeneity of the City. Its modest cut and muted tones make you an invisible element of a system whose main goal is not to attract attention.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/citizenblue.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/citizenblue.rsi
+
+##citizenbluecut
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPCitizenBlueCut
+  name: citizen suit
+  description: A shortened, standard gray uniform of everyday life, erasing individuality in favor of the homogeneity of the City. Its modest cut and muted tones make you an invisible element of a system whose main goal is not to attract attention.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/citizenbluecut.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/citizenbluecut.rsi
+
+##civilprotectionsuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPCivilProtectionSuit
+  name: civil protection suit
+  description: A standard blue service uniform without armor, consisting of trousers and a jacket with civil defense patches. Its strict cut and statutory color visually separate the official from the citizenry, emphasizing their role in maintaining the prescribed order.
+  suffix: HL2
+  components: 
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/civilprotectionsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/civilprotectionsuit.rsi
+
+##civilprotectionsuitdl
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPCivilProtectionSuitDL
+  name: civil divisional leader suit
+  description: A dress uniform with silver accents and insignia of the highest operational rank. Its impeccable cut and distinctive elements emphasize the status of the Civil Defense Forces Commander in the assigned territory, even without tactical armor.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/civilprotectionsuitdl.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/civilprotectionsuitdl.rsi
+
+##classysuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPClassySuit
+  name: classy suit
+  description: A timeless style built on elegant simplicity, high-quality fabrics, and impeccable tailoring. It speaks of taste, stability, and respect for tradition, eschewing momentary trends.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/classysuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/classysuit.rsi
+
+##formal
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPFormal
+  name: formal suit
+  description: A strict ensemble, consistent with protocol and a high social context, where every element, from tie to shoes, is subject to unspoken rules. Its purpose is not self-expression, but a demonstration of belonging to a circle where status, discipline, and respect for hierarchy are important.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/formal.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/formal.rsi
+
+##green_refugee
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPGreenRefugee
+  name: refugee suit
+  description: Faded, patched, or frayed items bearing the marks of hard work, a long journey, or simply a lack of choice. Every worn elbow and faded seam tells a story of survival in a world that spares no one.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/green_refugee.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/green_refugee.rsi
+
+##grunt
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPGrunt
+  name: CP quarantine soldier suit
+  description: A sterile protective suit without armor, made in gray and white tones and marked with biohazard markings. Its hermetic design and synthetic fabric are designed to completely isolate the soldier from the contaminated environment, turning him into a faceless disinfectant.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/grunt.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/grunt.rsi
+
+##gsuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPGSuit
+  name: magical formal suit
+  description: A flawless ensemble crafted from ethereal fabric, capable of altering worlds and time at the wearer's will and repelling dust and stains with a charm. Its seamless cut emphasizes authority, while hidden runic embroideries on the lining enhance the persuasiveness of speeches and protect against the evil eye in conference rooms.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/gsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/gsuit.rsi
+
+##heeledsuit
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPHeeledSuit
+  name: brown formal coat
+  description: An elegant overcoat made of high-quality wool or cashmere in a warm, earthy hue, the perfect complement to a classic suit. Its clean cut and practical length combine elegance with functionality, protecting from the elements and emphasizing the wearer's presence.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/heeledsuit.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/heeledsuit.rsi
+
+##overwatch
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPOverwatch
+  name: CP soldier suit
+  description: A basic gray and black jumpsuit made of durable synthetic fabric, devoid of any individual details or insignia. Its minimalist, form-fitting cut emphasizes functionality and the body's complete subordination to the system, erasing any hint of individuality.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch.rsi
+
+##overwatch_red
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPOverwatchRed
+  name: CP squire suit
+  description: A simplified assistant's overalls made of red-brown fabric, designed for servicing equipment, carrying gear and performing support functions on the battlefield.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch_red.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch_red.rsi
+
+##overwatch_white
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPOverwatchWhite
+  name: CP elite soldier suit
+  description: A seamless jumpsuit made of high-tech white and red fabric, emphasizing anatomical efficiency and the status of the top of the infantry hierarchy. Its streamlined design and hidden interfaces speak of the perfection achieved through genetic optimization and absolute loyalty to the Alliance.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch_white.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/overwatch_white.rsi
+
+##refugee
+- type: entity
+  parent: UnsensoredClothingUniformBase
+  id: ClothingUniformJumpsuitCPRefugee
+  name: refugee suit
+  description: A simplified assistant's overalls made of red-brown fabric, designed for servicing equipment, carrying gear and performing support functions on the battlefield.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/refugee.rsi
+  - type: Clothing
+    sprite: _Lust/CP/Clothing/Uniforms/Jumpsuit/refugee.rsi

@@ -12,6 +12,15 @@
         },
         {
 		    "name": "Arrows"
+        },
+        {
+		    "name": "go"
+        },
+        {
+		    "name": "ota"
+        },
+        {
+		    "name": "dvl"
         }
     ]
 }
