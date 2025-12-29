@@ -387,6 +387,47 @@
     sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
 
 - type: entity
+  parent:
+  - BasePlushie
+  id: PlushieRaneliToll
+  name: Plushie Raneli Toll
+  description: |
+    Pocket doctor and little sorcerer. I'll be very happy if this toy ends up in the clawed paws of a tasty xenomorph...
+    Viva la Pivo!
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    layers:
+    - state: plushie-raneli-toll
+    - state: plushie-raneli-toll-eyes
+      visible: true
+      shader: unshaded
+      map: [ "light" ]
+  - type: Item
+    heldPrefix: plushie-raneli-toll
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: plushie-raneli-toll
+    slots:
+    - HEAD
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      collection: FelinidMews
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FelinidMews
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidMews
+
+- type: entity
   parent: BasePlushie
   id: PlushieAshito
   name: Plushie Ashito
