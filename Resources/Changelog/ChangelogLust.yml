@@ -1265,3 +1265,13 @@
   id: 263
   time: '2025-12-26T16:01:03.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/421
+- author: iDesmond
+  changes:
+  - message: "\u041F\u043B\u044E\u0448\u043A\u0430 \u0421\u043E\u0444\u044C\u044F\
+      \ \u041A\u043E\u043C\u0438\u0441\u0441\u0430\u0440\u043E\u0432\u0430 \u043F\u043E\
+      \u043B\u0443\u0447\u0438\u043B\u0430 inhand \u0441\u043F\u0440\u0430\u0439\u0442\
+      \u044B"
+    type: Add
+  id: 264
+  time: '2025-12-29T09:27:55.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/439
