@@ -2,6 +2,7 @@
   name: AR2
   parent: [BaseItem, BaseGunWieldable, BaseSecurityContraband]
   id: WeaponRifleAR2
+  suffix: HL2
   description: A pulse rifle originating from old Earth. Uses battery-based cartridges.
   components:
   - type: Sprite
@@ -57,6 +58,7 @@
   name: MP7
   parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
   id: WeaponSubMachineGunMP7HL2
+  suffix: HL2
   description: A compact submachine gun originating from old Earth.
   components:
   - type: Sprite
