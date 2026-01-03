@@ -9,7 +9,7 @@
     time: 10800 # 3 hrs
   - !type:OverallPlaytimeRequirement
     time: 36000 #10 hrs
-  icon: "JobIconShaftMiner"
+  icon: "JobIconMiner"
   startingGear: MiningSpecialistGear
   supervisors: job-supervisors-qm
   canBeAntag: false #Работать а не антажить!
@@ -26,9 +26,10 @@
     jumpsuit: ClothingUniformJumpsuitMiningSpecialist
     id: MiningPDA
     ears: ClothingHeadsetMining
-  storage:
-    back:
-    - EnergyPickaxe # Временно.
+    belt: OreBag
+    head: ClothingHeadHatHardhatYellowDark
+    pocket1: MineralScannerUnpowered
+    pocket2: EnergyPickaxe
 
 - type: chameleonOutfit
   id: MiningSpecialistChameleonOutfit

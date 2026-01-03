@@ -46,6 +46,42 @@
 - type: Tag
   id: CreepyLaugh
 
+- type: Tag
+  id: TrayScanner
+
+- type: Tag
+  id: NVDHandcrafted
+
+- type: Tag
+  id: PlantAnalyzer
+
+# Uplinks
+- type: Tag
+  id: NTUplink
+
+- type: Tag
+  id: ERTRed
+
+- type: Tag
+  id: ERTGamma
+
+- type: Tag
+  id: ERTEpsilon
+
+- type: Tag
+  id: CBURN
+
+- type: Tag
+  id: BlueShield
+
+- type: Tag
+  id: PirateUplink
+
+- type: Tag
+  id: Commission
+
+- type: Tag
+  id: NoCommission
 # Catridges:
 
 - type: Tag
@@ -78,6 +114,9 @@
 - type: Tag
   id: ImprovisedAmmoBox
 
+- type: Tag
+  id: CannonBallMini
+
 # Weapons
 - type: Tag
   id: WrappedWeapon
@@ -98,12 +137,66 @@
   id: UpgradeLecter
 
 - type: Tag
-  id: UpgradeVestSec
+  id: UpgradeWebVest
+
+- type: Tag
+  id: UpgradeKitPlate
+
+- type: Tag
+  id: UpgradeKitBullet
+
+- type: Tag
+  id: UpgradeKitBulletHeavy
+
+- type: Tag
+  id: UpgradeKitStab
+
+- type: Tag
+  id: UpgradeKitRiot
+
+- type: Tag
+  id: UpgradeKitHeat
+
+- type: Tag
+  id: UpgradeKitReflective
+
+- type: Tag
+  id: ArmorBasic
 
 - type: Tag
   id: GorillaUpgradeKit
 
+- type: Tag
+  id: WeaponPistolTec9
+
 # Magazines:
+- type: Tag
+  id: MagazineCaselessRifle
+
+- type: Tag
+  id: MagazineHeavyRifle
+
+- type: Tag
+  id: SpeedLoaderRifle
+
+- type: Tag
+  id: MagazineLightRiflePan
+
+- type: Tag
+  id: MagazineCannonBallMini
+
+- type: Tag
+  id: MagazineBoxL6Cap
+
+- type: Tag
+  id: MagazinePistolSubMachineGunCap
+
+- type: Tag
+  id: MagazinePistolDPSubMachineGun
+
+- type: Tag
+  id: MagazinePistolCaselessRifleTec9
+
 - type: Tag
   id: MagazineM28
 
@@ -117,16 +210,10 @@
   id: MagazineBauer127
 
 - type: Tag
-  id: MagazineAK
-
-- type: Tag
   id: MagazineAR18
 
 - type: Tag
   id: MagazineP90
-
-- type: Tag
-  id: MagazineMP38
 
 - type: Tag
   id: MagazineMP7
@@ -153,7 +240,7 @@
   id: MagazineMachineGunHeavyRifle # .308 calibler
 
 - type: Tag
-  id: MagazineVP70
+  id: MagazineVP78
 
 - type: Tag
   id: MagazineDeagle
@@ -174,16 +261,7 @@
   id: NoSpinOnThrow
 
 - type: Tag
-  id: MagazineSTG44
-
-- type: Tag
-  id: MagazineV31
-
-- type: Tag
   id: PowerpackFlame
-
-- type: Tag
-  id: MagazinePPSH41
 
 - type: Tag
   id: MagazineDl6902
@@ -193,6 +271,12 @@
 
 - type: Tag
   id: SyndicateRapier
+
+- type: Tag
+  id: ShotgunSlug
+
+- type: Tag
+  id: MagazineAsh12
 
 # Material bag:
 
@@ -223,10 +307,16 @@
   id: Mauler
 
 - type: Tag
+  id: DollHouse
+
+- type: Tag
   id: Durand
 
 - type: Tag
   id: Phazon
+
+- type: Tag
+  id: PaddyMech
 
 - type: Tag
   id: ClarkeCentralControlModule
@@ -495,3 +585,25 @@
 
 - type: Tag
   id: Table
+
+- type: Tag
+  id: BolaSecurity
+
+# Clothing
+- type: Tag
+  id: HardsuitMining
+
+- type: Tag
+  id: NightVisionDevice
+
+# Modsuit
+- type: Tag
+  id: ModsuitCore
+
+# Milira Race
+- type: Tag
+  id: WingToggleAllowed
+
+# Dungeon
+- type: Tag
+  id: SalvageSyndicateBase

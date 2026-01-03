@@ -19,10 +19,10 @@
   youngAge: 18
   oldAge: 30
   maxAge: 60
-  defaultHeight: 1
-  defaultWidth: 1
-  maxHeight: 1.2
-  maxWidth: 1.2
+  defaultHeight: 0.80
+  defaultWidth: 0.80
+  maxHeight: 1
+  maxWidth: 1
   minHeight: 0.8
   minWidth: 0.8
   minHeightCm: 130

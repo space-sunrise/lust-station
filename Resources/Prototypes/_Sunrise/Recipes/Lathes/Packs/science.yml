@@ -17,8 +17,9 @@
   - DurandTargetingElectronics
   - ClarkeCentralElectronics
   - ClarkePeripheralsElectronics
-  - ImplantExtractorMachineCircuitboard
+  - InterrogatorMachineCircuitboard
   - ExosuitFabricatorHyperConvectionMachineCircuitboard
+  - MedicalAssemblerMachineCircuitboard
 
 - type: latheRecipePack
   id: PowerCages

@@ -18,10 +18,12 @@ store-category-science = Научный отдел
 store-category-engineering = Инженерный отдел
 store-category-cargo = Отдел снабжения
 store-category-security = Служба Безопасности
+store-category-paint = Краска
 # disease
 shop-disease-category-infect = Передача
 shop-disease-category-symptoms = Симптомы
 shop-disease-category-evolution = Улучшение
+shop-disease-category-infection = Заражение
 # Uplink
 store-category-objectives = Цели
 store-category-mechs = Мехи
@@ -38,3 +40,5 @@ store-category-ntmechs = Мехи
 store-category-ntexplosive = Взрывчатка
 store-category-ntammo = Боеприпасы
 store-category-ntequipment = Экипировка
+# PirateUplink
+store-category-exchanger = Обмен

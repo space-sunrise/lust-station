@@ -15,7 +15,7 @@ namespace Content.Server.Database.Migrations.Sqlite
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.0");
 
             modelBuilder.Entity("Content.Server.Database.AHelpMessage", b =>
                 {
@@ -132,10 +132,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<int>("Id")
                         .HasColumnType("INTEGER")
                         .HasColumnName("admin_log_id");
-
-                    b.Property<long>("CurTime")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("cur_time");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT")

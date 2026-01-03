@@ -93,16 +93,32 @@
     - state: centcom
 
 - type: entity
+  id: SpawnPointPrisonInspector
+  parent: SpawnPointJobBase
+  name: prison inspector
+  components:
+  - type: SpawnPoint
+    spawn_type: Job
+    job_id: PrisonInspector
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisoninspector
+
+- type: entity
   id: SpawnPointHeadOfPrison
   parent: SpawnPointJobBase
   name: head of prison
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: HeadOfPrison
   - type: Sprite
     layers:
-    - state: green
-    - state: hos
+      - state: green
+      - sprite: _Sunrise/Markers/jobs.rsi
+        state: headofprison
 
 - type: entity
   id: SpawnPointPrisonChef
@@ -110,11 +126,13 @@
   name: prison's chef
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonChef
   - type: Sprite
     layers:
     - state: green
-    - state: chef
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisonchef
 
 - type: entity
   id: SpawnPointPrisonDoctor
@@ -122,11 +140,13 @@
   name: prison's doctor
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonDoctor
   - type: Sprite
     layers:
     - state: green
-    - state: doctor
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisondoctor
 
 - type: entity
   id: SpawnPointPrisonEngineer
@@ -134,11 +154,27 @@
   name: prison's engineer
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonEngineer
   - type: Sprite
     layers:
     - state: green
-    - state: engineer
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisonengineer
+
+- type: entity
+  id: SpawnPointPrisonScientist
+  parent: SpawnPointJobBase
+  name: prison's scientist
+  components:
+  - type: SpawnPoint
+    spawn_type: Job
+    job_id: PrisonScientist
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisonscientist
 
 - type: entity
   id: SpawnPointPrisonGuard
@@ -146,10 +182,12 @@
   name: prison's guard
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonGuard
   - type: Sprite
     layers:
     - state: green
+    - state: security_officer
 
 - type: entity
   id: SpawnPointPrisonPilot
@@ -157,6 +195,7 @@
   name: prison's pilot
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonPilot
   - type: Sprite
     layers:
@@ -169,11 +208,13 @@
   name: prisoner
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PlanetPrisoner
   - type: Sprite
     layers:
     - state: green
-    - state: prisoner
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: planetprisoner
 
 - type: entity
   id: SpawnPointPrisonWorker
@@ -181,11 +222,13 @@
   name: prison's worker
   components:
   - type: SpawnPoint
+    spawn_type: Job
     job_id: PrisonWorker
   - type: Sprite
     layers:
     - state: green
-    - state: serviceworker
+    - sprite: _Sunrise/Markers/jobs.rsi
+      state: prisonworker
 
 - type: entity
   id: SpawnPointSeniorEngineer

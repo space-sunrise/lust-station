@@ -44,7 +44,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     [Dependency] private readonly ISerializationManager _serManager = default!;
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly GrammarSystem _grammarSystem = default!;
-    [Dependency] private readonly SharedIdentitySystem _identity = default!;
+    [Dependency] private readonly IdentitySystem _identity = default!;
     private ISharedSponsorsManager? _sponsors;
 
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
@@ -131,7 +131,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         }
 
         if (string.IsNullOrEmpty(humanoid.Initial)
-            || !_proto.TryIndex(humanoid.Initial, out HumanoidProfilePrototype? startingSet))
+            || !_proto.Resolve(humanoid.Initial, out HumanoidProfilePrototype? startingSet))
         {
             LoadProfile(uid, HumanoidCharacterProfile.DefaultWithSpecies(humanoid.Species), humanoid);
             return;
@@ -336,14 +336,15 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         if (!Resolve(uid, ref humanoid))
             return;
 
-        if (!_proto.TryIndex<SpeciesPrototype>(humanoid.Species, out var species))
+        if (!_proto.Resolve<SpeciesPrototype>(humanoid.Species, out var species))
         {
             return;
         }
 
-        if (verify && !SkinColor.VerifySkinColor(species.SkinColoration, skinColor))
+        if (verify && _proto.Resolve(species.SkinColoration, out var index))
         {
-            skinColor = SkinColor.ValidSkinTone(species.SkinColoration, skinColor);
+            var strategy = index.Strategy;
+            skinColor = strategy.EnsureVerified(skinColor);
         }
 
         humanoid.SkinColor = skinColor;
@@ -586,7 +587,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
     // Sunrise-TTS-Start
     // ReSharper disable once InconsistentNaming
-    public void SetTTSVoice(EntityUid uid, string voiceId, HumanoidAppearanceComponent humanoid)
+    public void SetTTSVoice(EntityUid uid, ProtoId<TTSVoicePrototype> voiceId, HumanoidAppearanceComponent humanoid)
     {
         if (!TryComp<TTSComponent>(uid, out var comp))
             return;

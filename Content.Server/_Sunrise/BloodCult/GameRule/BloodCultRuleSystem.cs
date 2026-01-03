@@ -142,6 +142,45 @@ public sealed class BloodCultRuleSystem : GameRuleSystem<BloodCultRuleComponent>
         }
     }
 
+    /// <summary>
+    /// Manually add a specific entity as a cult target.
+    /// </summary>
+    public bool AddSpecificCultTarget(EntityUid target, BloodCultRuleComponent rule)
+    {
+        if (!Exists(target) || rule.CultTargets.ContainsKey(target))
+            return false;
+
+        rule.CultTargets.Add(target, false);
+        EnsureComp<BloodCultTargetComponent>(target);
+
+        var query = EntityQueryEnumerator<KillCultistTargetsConditionComponent>();
+        while (query.MoveNext(out var uid, out var killCultistTargetsComponent))
+        {
+            _cultistTargetsConditionSystem.RefresTitle(uid, rule.CultTargets, killCultistTargetsComponent);
+        }
+        return true;
+    }
+
+    /// <summary>
+    /// Manually remove a specific entity as a cult target.
+    /// </summary>
+    public bool RemoveSpecificCultTarget(EntityUid target, BloodCultRuleComponent rule)
+    {
+        if (!rule.CultTargets.ContainsKey(target))
+            return false;
+
+        rule.CultTargets.Remove(target);
+        if (Exists(target))
+            RemComp<BloodCultTargetComponent>(target);
+
+        var query = EntityQueryEnumerator<KillCultistTargetsConditionComponent>();
+        while (query.MoveNext(out var uid, out var killCultistTargetsComponent))
+        {
+            _cultistTargetsConditionSystem.RefresTitle(uid, rule.CultTargets, killCultistTargetsComponent);
+        }
+        return true;
+    }
+
     protected override void Added(EntityUid uid,
         BloodCultRuleComponent component,
         GameRuleComponent gameRule,
@@ -358,6 +397,9 @@ public sealed class BloodCultRuleSystem : GameRuleSystem<BloodCultRuleComponent>
         {
             foreach (var userAction in actionsComponent.Actions)
             {
+                if (TerminatingOrDeleted(userAction))
+                    continue;
+
                 var entityPrototypeId = MetaData(userAction).EntityPrototype?.ID;
                 if (entityPrototypeId != null && BloodCultistComponent.CultistActions.Contains(entityPrototypeId))
                     _actionsSystem.RemoveAction(uid, userAction);
