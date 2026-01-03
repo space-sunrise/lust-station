@@ -48,7 +48,8 @@
     raffle:
       settings: short
   - type: GhostRoleMobSpawner
-    prototype: ScoonerReinforcementSpawner
+    prototype: MobHumanPirateScoonerReinforcement
+    selectablePrototypes: ["PirateScoonerHuman", "PirateScoonerReptilian", "PirateScoonerDwarf", "PirateScoonerVox", "PirateScoonerVulpkanin"]
 
 - type: entity
   parent: ReinforcementPirateScooner
@@ -58,4 +59,5 @@
   suffix: Pirate, EVA
   components:
   - type: GhostRoleMobSpawner
-    prototype: OldScoonerReinforcementSpawner
+    prototype: MobHumanPirateScoonerOldReinforcement
+    selectablePrototypes: ["PirateScoonerHumanOld", "PirateScoonerReptilianOld", "PirateScoonerDwarfOld", "PirateScoonerVoxOld", "PirateScoonerVulpkaninOld"]

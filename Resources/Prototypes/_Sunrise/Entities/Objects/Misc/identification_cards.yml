@@ -608,7 +608,7 @@
       color: *color-supply
     - sprite: *icon-rsi
       offset: *icon-offset
-      state: ShaftMiner
+      state: Miner
   - type: Item
     heldPrefix: default
   - type: PresetIdCard

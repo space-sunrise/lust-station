@@ -1,13 +1,18 @@
 #region BASE
-## BACK - for gear and cash
+
 - type: entity
-  parent: BaseItem
-  id: MercenaryDuffelGiftBox
-  name: mercenary gear bundle
+  id: NpcLootBase
   description: Loot boxes? Here?
-  abstract: true
   categories: [ HideSpawnMenu ]
   suffix: NPC Loot
+
+## BACK - for gear and cash
+- type: entity
+  parent: [NpcLootBase, BaseItem]
+  id: MercenaryDuffelGiftBox
+  name: mercenary gear bundle
+  abstract: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: Clothing/Back/Backpacks/merc.rsi
@@ -33,10 +38,8 @@
   parent: MercenaryDuffelGiftBox
   id: PirateMessengerGiftBox
   name: pirate gear bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: _Sunrise/Clothing/Back/Messenger/color.rsi
@@ -76,7 +79,6 @@
   name: satchel's bundle
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/leather.rsi
@@ -88,7 +90,6 @@
   name: syndicate's bundle
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
@@ -100,7 +101,6 @@
   name: Scrapper's bundle
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Back/Duffels/salvage.rsi
@@ -108,13 +108,11 @@
 
 ## BELT - for ammo and mags
 - type: entity
-  parent: BaseItem
+  parent: [NpcLootBase, BaseItem]
   id: MercenaryWebbingBox
   name: mercanary ammo bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Belt/mercwebbing.rsi
@@ -130,10 +128,8 @@
   parent: MercenaryWebbingBox
   id: MilitaryWebbingBox
   name: military ammo bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
@@ -143,23 +139,19 @@
   parent: MercenaryWebbingBox
   id: BeltAssaultBox
   name: assault ammo bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Belt/assault.rsi
     state: icon
 
 - type: entity
-  parent: ClothingBeltSyndieWebbing
+  parent: [NpcLootBase, ClothingBeltSyndieWebbing]
   id: SyndieWebbingBox
   name: military ammo bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: _Sunrise/Clothing/Belt/syndieRPS.rsi
@@ -169,10 +161,8 @@
   parent: MercenaryWebbingBox
   id: SalvageWebbingBox
   name: salvage bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Belt/salvagewebbing.rsi
@@ -182,23 +172,19 @@
   parent: MercenaryWebbingBox
   id: BandolierBox
   name: bandolier bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: Clothing/Belt/bandolier.rsi
     state: icon
 
 - type: entity
-  parent: BaseItem
+  parent: [NpcLootBase, BaseItem]
   id: PiratePouchGiftBox
   name: pirate pouch bundle
-  description: Loot boxes? Here?
   abstract: true
   categories: [ HideSpawnMenu ]
-  suffix: NPC Loot
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Clothing/Pouches/large_explosive.rsi

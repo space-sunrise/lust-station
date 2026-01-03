@@ -8,6 +8,18 @@
   - type: Loadout
     prototypes:
     - SyndicateCorpseGear
+    - SyndicateCorpseGearAlt
+    - SyndicateCorpseGearAlt2
+    - SyndicateCorpseGearSec1
+    - SyndicateCorpseGearSec2
+    - SyndicateCorpseGearSec3
+    - SyndicateCorpseGearSec4
+    - SyndicateCorpseGearLead
+    - SyndicateCorpseGearEngi
+    - SyndicateCorpseGearEngiAlt
+    - SyndicateCorpseGearMedicAlt
+    - SyndicateCorpseGearMedic
+    - SyndicateCorpseGearMedicAlt2
 
 - type: entity
   parent: SalvageHumanCorpse

@@ -3,8 +3,134 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitOperative
     shoes: ClothingShoesBootsCombat
-    pocket1: SyndicateBusinessCard
     pocket2: Telecrystal1
+
+- type: startingGear
+  id: SyndicateCorpseGearAlt
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsCombat
+    mask: ClothingMaskGasSyndicate
+    pocket2: DrinkNukieCan
+
+- type: startingGear
+  id: SyndicateCorpseGearAlt2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsWinterSyndicate
+    mask: ClothingMaskGasSyndicate
+    pocket1: SyndicateBusinessCard
+    outerClothing: ClothingOuterWinterSyndie
+
+- type: startingGear
+  id: SyndicateCorpseGearMime
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMime
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHatOutlawHat
+    gloves: ClothingHandsGlovesCombatCQC
+    mask: ClothingMaskMimeSecurity
+
+- type: startingGear
+  id: SyndicateCorpseGearMedic
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitParamedicSyndie
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHatSyndie
+    mask: ClothingMaskGasSyndicate
+    outerClothing: ClothingOuterCoatAMG
+    gloves: ClothingHandsGlovesLatex
+    pocket1: ScalpelLaser
+
+- type: startingGear
+  id: SyndicateCorpseGearMedicAlt
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitParamedicSyndie
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHatSyndie
+    mask: ClothingMaskGasSyndicate
+    gloves: ClothingHandsGlovesNitrile
+    belt: ClothingBeltMedicalFilled
+
+- type: startingGear
+  id: SyndicateCorpseGearMedicAlt2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitParamedicSyndie
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHatSyndie
+    mask: ClothingMaskGasSyndicate
+    gloves: ClothingHandsGlovesNitrileRed
+    outerClothing: ClothingOuterVestArmorMedSec
+    belt: ClothingBeltMedicalEMTFilled
+
+- type: startingGear
+  id: SyndicateCorpseGearSec1
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHelmetRaid
+    mask: ClothingMaskGasSyndicate
+    outerClothing: ClothingOuterArmorBulletproofHeavy
+    gloves: ClothingHandsGlovesMercFingerless
+
+- type: startingGear
+  id: SyndicateCorpseGearSec2
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHatOutlawHat
+    eyes: ClothingEyesGlassesOutlawGlasses
+    outerClothing: ClothingOuterArmorBasicSlim
+
+- type: startingGear
+  id: SyndicateCorpseGearSec3
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHelmetSwatSyndicate
+    mask: ClothingMaskGasSyndicate
+    outerClothing: ClothingOuterArmorBasic
+
+- type: startingGear
+  id: SyndicateCorpseGearSec4
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsWinterSyndicate
+    head: ClothingHeadHelmetSwatSyndicate
+    mask: ClothingMaskGasSyndicate
+    outerClothing: ClothingOuterWinterSyndie
+
+- type: startingGear
+  id: SyndicateCorpseGearLead
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOperative
+    shoes: ClothingShoesBootsCowboyBlackFilled
+    mask: ClothingMaskGasSyndicate
+    head: ClothingHeadHatSyndieMAA
+    pocket1: WeaponRevolverPython
+    outerClothing: ClothingOuterCoatSyndieCapArmored
+    belt: ClothingBeltSyndieHolster
+
+- type: startingGear
+  id: SyndicateCorpseGearEngi
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRepairmanSyndie
+    shoes: ClothingShoesBootsWork
+    mask: ClothingMaskGasSyndicate
+    head: ClothingHeadHatHardhatYellowDark
+    pocket1: StimpackMini
+    belt: ClothingBeltUtilityEngineering
+
+- type: startingGear
+  id: SyndicateCorpseGearEngiAlt
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitRepairmanSyndie
+    shoes: ClothingShoesBootsWork
+    mask: ClothingMaskNeckGaiter
+    head: ClothingHeadHatHardhatArmored
+    gloves: ClothingHandsGlovesColorYellow
+    pocket1: PowerDrill
+    belt: SyndicateJawsOfLife
 
 - type: startingGear
   id: NukieCorpseGear

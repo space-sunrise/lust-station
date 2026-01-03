@@ -4,8 +4,8 @@ meta:
   engineVersion: 270.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/28/2025 23:16:36
-  entityCount: 635
+  time: 01/02/2026 04:07:02
+  entityCount: 640
 maps: []
 grids:
 - 1
@@ -736,6 +736,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 0.5,-17.5
       parent: 1
+- proto: APCElectronics
+  entities:
+  - uid: 359
+    components:
+    - type: Transform
+      parent: 7
+    - type: Physics
+      canCollide: False
 - proto: APCHighCapacitySyndicate
   entities:
   - uid: 2
@@ -770,14 +778,6 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: APCElectronics
-  entities:
-  - uid: 359
-    components:
-    - type: Transform
-      parent: 7
-    - type: Physics
-      canCollide: False
 - proto: Ashtray
   entities:
   - uid: 145
@@ -2111,6 +2111,14 @@ entities:
         enum.StorageUiKey.Key:
         - invalid
     - type: ActiveUserInterface
+- proto: ComputerIdUSSP
+  entities:
+  - uid: 636
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 0.5,-3.5
+      parent: 1
 - proto: ComputerIFFSyndicate
   entities:
   - uid: 253
@@ -2168,6 +2176,11 @@ entities:
     - type: Transform
       pos: 1.5,-11.5
       parent: 1
+  - uid: 640
+    components:
+    - type: Transform
+      pos: 3.5,-12.5
+      parent: 1
 - proto: CratePirateChestCannonBall
   entities:
   - uid: 191
@@ -2181,6 +2194,23 @@ entities:
     components:
     - type: Transform
       pos: 1.5,-12.5
+      parent: 1
+- proto: CrowbarRed
+  entities:
+  - uid: 637
+    components:
+    - type: Transform
+      pos: 2.4649987,-12.404221
+      parent: 1
+  - uid: 638
+    components:
+    - type: Transform
+      pos: 2.6212487,-12.490158
+      parent: 1
+  - uid: 639
+    components:
+    - type: Transform
+      pos: 2.5978112,-12.380783
       parent: 1
 - proto: CurtainsBlackOpen
   entities:

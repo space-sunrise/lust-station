@@ -1,4 +1,4 @@
-ent-VendingMachine = торговый автомат
+﻿ent-VendingMachine = торговый автомат
     .desc = Просто добавь капитализма!
 ent-VendingMachineWallmount = торговый автомат
     .desc = { ent-VendingMachine.desc }
@@ -52,6 +52,8 @@ ent-VendingMachineDiscount = Дискаунт Дэн
     .desc = Торговый автомат с закусками из печально известной франшизы "Дискаунт Дэн".
 ent-VendingMachineEngivend = ИнжеМат
     .desc = Запасные инструменты. А что? Вы ожидали чего-то остроумного?
+ent-VendingMachineMedicalBase = НаноМед Гражданский
+    .desc = { ent-VendingMachineMedical.desc }
 ent-VendingMachineMedical = НаноМед Плюс
     .desc = Это медицинский раздатчик препаратов. Только натуральные химикаты!
 ent-VendingMachineNutri = БотаМакс
@@ -152,8 +154,11 @@ ent-VendingMachineChemicals = ХимкоМат
     .desc = Вероятно, не кофемашина.
 ent-VendingMachineChemicalsSyndicate = СиндиСоки
     .desc = Надеюсь, не из свежевыжатых синдикатовцев?
+ent-VendingMachineWallMedicalCivilian = НаноМед Пластырь
+    .desc = { ent-VendingMachineWallMedical.desc }
 ent-VendingMachineWallMedical = НаноМед
     .desc = Это настенный раздатчик медицинского оборудования. Только натуральные химикаты!
 ent-VendingMachineChemicalsNanotrasen = ХимкоМат
     .suffix = ОБР
     .desc = { desc-VendingMachineChemicals.desc }
+

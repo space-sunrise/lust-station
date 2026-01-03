@@ -33,7 +33,7 @@
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 500
+    damageCap: 125
     damage:
       groups:
         Brute: -0.5
@@ -48,7 +48,7 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 500
+    damageCap: 125
     damage:
       groups:
         Brute: -0.5
@@ -63,7 +63,7 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 500
+    damageCap: 125
     damage:
       groups:
         Brute: -1

@@ -603,3 +603,7 @@
 # Milira Race
 - type: Tag
   id: WingToggleAllowed
+
+# Dungeon
+- type: Tag
+  id: SalvageSyndicateBase

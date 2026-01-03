@@ -62,8 +62,13 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
+      85: Critical
       100: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 90
   - type: Stamina
     baseCritThreshold: 100
   - type: Butcherable
@@ -1143,6 +1148,11 @@
       0: Alive
       490: Critical
       500: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 490
   - type: SlowOnDamage
     speedModifierThresholds:
       75: 1.05
@@ -1224,6 +1234,11 @@
       0: Alive
       250: Critical
       275: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 270
   - type: SlowOnDamage
     speedModifierThresholds:
       25: 1.1
@@ -2520,6 +2535,11 @@
       0: Alive
       649: Critical
       650: Dead
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    - Critical
+    damageCap: 600
   - type: SlowOnDamage
     speedModifierThresholds:
       100: 0.9

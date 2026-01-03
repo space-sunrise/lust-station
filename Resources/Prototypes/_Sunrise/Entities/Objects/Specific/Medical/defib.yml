@@ -118,7 +118,7 @@
     - type: Clothing
       sprite: _Sunrise/Entities/Objects/Specific/Medical/adbuctor_defib.rsi
     - type: Defibrillator
-      doAfterDuration: 0.2
+      doAfterDuration: 0.25
       zapHeal:
         types:
           Asphyxiation: -75
@@ -126,12 +126,16 @@
       allowUseOnAlive: true
       reagents:
         Omnizine: 10
-        Rororium: 10
-        Necrosol: 10
-        Stimulants: 10
-        Doxarubixadone: 10
         Epinephrine: 10
-        BarozinePlus: 10
+        BarozinePlus: 5
+        Inaprovaline: 5
+        DexalinPlus: 5
+        Saline: 5
+        Dermaline: 5
+        Rororium: 5
+        Necrosol: 5
+        Opporozidone: 5
+        Doxarubixadone: 5
         JuiceThatMakesYouWeh: 1
         Laughter: 1
         Tazinide: 3
@@ -144,27 +148,6 @@
           locked: true
     - type: PowerCellDraw
       useCharge: 200
-    - type: PowerDrainOnMeleeHit
-      chargePerHit: 100
-    - type: MeleeWeapon
-      attackRate: 1.25
-      damage:
-        types:
-          Blunt: 5
-    - type: ItemToggleMeleeWeapon
-      activatedSoundOnHit:
-        path: /Audio/Items/Defib/defib_zap.ogg
-        params:
-          variation: 0.250
-      activatedSoundOnHitNoDamage:
-        path: /Audio/Items/Defib/defib_zap.ogg
-        params:
-          variation: 0.250
-          volume: -10
-      activatedDamage:
-        types:
-          Blunt: 5
-          Shock: 10
     - type: Item
       size: Ginormous
     - type: ToggleCellDraw

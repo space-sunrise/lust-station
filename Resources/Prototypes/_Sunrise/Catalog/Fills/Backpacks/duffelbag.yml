@@ -566,12 +566,28 @@
         - !type:GroupSelector
           children:
           - id: MagazineBoxImprovisedRifle
-            prob: 0.5
+            weight: 0.5
           - id: MagazineLightRifleFMJ
-            prob: 0.25
+            weight: 0.25
           - id: MagazineLightRifleAP
-            prob: 0.01
+            weight: 0.01
           - id: MagazineLightRifleHP
-            prob: 0.4
+            weight: 0.4
           - id: MagazineLightRifleSP
-            prob: 0.4
+            weight: 0.4
+
+- type: entity
+  id: ClothingBackpackMessengerMercenaryBundleARG
+  parent: ClothingBackpackMessengerMercenary
+  name: ARG bundle
+  description: "Contains the normal assault rifle."
+  components:
+    - type: StorageFill
+      contents:
+        - id: WeaponRifleARG
+        - id: MagazineLightRifleFMJ
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleSP
+        - id: MagazineLightRifleHP
+        - id: CigPackSyndicate
+        - id: CheapLighter
