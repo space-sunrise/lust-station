@@ -7,6 +7,6 @@ namespace Content.Shared._Sunrise.Pirate;
 [RegisterComponent, NetworkedComponent]
 public sealed partial class PirateIconComponent : Component
 {
-    [DataField("statusIcon")]
+    [DataField]
     public ProtoId<FactionIconPrototype> StatusIcon { get; set; } = "PirateFaction";
 }

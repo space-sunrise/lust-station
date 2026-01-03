@@ -2065,6 +2065,11 @@
     Doubloon: 5
   categories:
   - UplinkPirateWearables
+  conditions:
+  - !type:BuyerWhitelistCondition
+    blacklist:
+      components:
+      - SurplusBundle
 
 - type: listing
   id: UplinkPiratePirateEVA
