@@ -1,6 +1,6 @@
 - type: interaction
   id: BallsSqueeze
-  name: "Пожмакать яички"
+  name: lust-interaction-BallsSqueeze
   icon: ERP2Icon
   category: Balls
   appearConditions:
@@ -34,7 +34,7 @@
 
 - type: interaction
   id: BallsLick
-  name: "Поласкать яички языком"
+  name: lust-interaction-BallsLick
   icon: ERP2Icon
   category: Balls
   appearConditions:
@@ -71,7 +71,7 @@
 
 - type: interaction
   id: BallsBite
-  name: Нежно укусить яичко
+  name: lust-interaction-BallsBite
   icon: ERP2Icon
   category: Balls
   appearConditions:

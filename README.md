@@ -67,5 +67,5 @@ Space Station 14 — это ролевая игра, вдохновлённая 
 <details>
 <summary><a href="#"><img src="https://img.shields.io/badge/licence-CLA-orange?style=for-the-badge" alt="CLA"></a></summary>
 
->Весь код, а так-же ассеты Sunrise, защищены лицензией [CLA](https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt).
+>Весь код, а так-же ассеты SUNRISE, защищены лицензией [CLA](https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt).
 </details>

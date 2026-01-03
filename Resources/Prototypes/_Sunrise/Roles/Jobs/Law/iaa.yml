@@ -29,14 +29,14 @@
 - type: startingGear
   id: IAAGear
   equipment:
-    shoes: ClothingShoesColorBlack
+    shoes: ClothingShoesBootsLaceup # Lust - edit
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA
     pocket2: HyperLinkBookCorporateLaw
   inhand:
     - BriefcaseIAAFilled
-  
+
 - type: chameleonOutfit
   id: IAAChameleonOutfit
   job: IAA

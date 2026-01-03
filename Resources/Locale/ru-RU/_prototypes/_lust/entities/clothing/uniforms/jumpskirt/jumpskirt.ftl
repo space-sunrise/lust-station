@@ -1,6 +1,4 @@
-ent-ClothingUniformBlackCapSkirt = чёрная юбка-комбинезон капитана
-    .desc = Элегантная чёрная форма с намёком на авторитет. Стиль, достойный командования.
-ent-ClothingUniformWhiteCapSkirt = белая юбка-комбинезон капитана
-    .desc = Белоснежный парадный вариант - для капитанов, предпочитающих безупречный имидж.
-ent-ClothingUniformWhiteLawyerSkirt = белая юбка-комбинезон юриста
-    .desc = Идеально отглаженная форма для убедительных аргументов на допросах и не только.
+ent-ClothingUniformJumpskirtIAAFormalDress = формальная юбка-костюм АВД
+    .desc = Особое платье для особых агентов.
+ent-ClothingUniformElegantJumpskirtIAA = элегантная юбка-костюм АВД
+    .desc = Строгий костюм для АВД, превращающего бумажную рутину в силу. Papers, Please time.

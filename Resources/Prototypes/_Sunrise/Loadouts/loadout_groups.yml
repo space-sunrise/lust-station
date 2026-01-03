@@ -116,7 +116,6 @@
   loadouts:
   - NanoTrasenRepresentativeCoat
   - NanoTrasenRepresentativeCoatOpen
-  - QilluRepresentativeCoat #Lust-Edit
 
 - type: loadoutGroup
   id: NanoTrasenRepresentativeBackpack
@@ -220,11 +219,6 @@
   - ChiefEngineerBackpack
   - ChiefEngineerSatchel
   - ChiefEngineerDuffel
-#Lust-Start
-  - ChiefEngineerFormalBackpack
-  - ChiefEngineerFormalDuffel
-  - ChiefEngineerFormalSatchel
-#Lust-End
 
 - type: loadoutGroup
   id: SeniorOfficerJumpsuit
@@ -869,7 +863,6 @@
   loadouts:
   - AdjutantJumpsuit
   - AdjutantJumpskirt
-  - AdjutantFormalJumpsuit #Lust-Edit
 
 - type: loadoutGroup
   id: AdjutantBackpack
@@ -878,10 +871,6 @@
   - AdjutantBackpack
   - AdjutantSatchel
   - AdjutantDuffel
-#Lust-Start
-  - AdjutantFormalBackpack
-  - AdjutantFormalDuffel
-#Lust-End
 
 - type: loadoutGroup
   id: AdjutantHead
@@ -896,7 +885,6 @@
   name: loadout-group-adj-outerClothing
   loadouts:
   - AdjutantCoat
-  - AdjutantFormalCoat #Lust-Edit
 
 #Engineer
 

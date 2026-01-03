@@ -4,7 +4,6 @@
   groups:
   - CaptainHead
   - CaptainNeck
-  - CaptainHands #Lust-Edit
   - CaptainJumpsuit
   - CaptainBackpack
   - CaptainGloves # Sunrise - Added
@@ -328,7 +327,7 @@
   # Sunrise-start
   - SunriseQuartermasterGloves
   # Sunrise-end
-  - CargoQuartermasterBackpack #Lust-Edit
+  - CargoTechnicianBackpack
   - QuartermasterOuterClothing
   # Sunrise-start
   - QuartermasterNeck
@@ -607,9 +606,10 @@
   - HeadofSecurityHead
   - HeadofSecurityNeck
   - HeadofSecurityJumpsuit
-  - HeadofSecurityBack #Lust-Edit
+  - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
+  - SecurityGlasses #Lust-Edit
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
@@ -629,7 +629,8 @@
   groups:
   - WardenHead
   - WardenJumpsuit
-  - WardenBackpack #Lust-Edit
+  - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
@@ -652,6 +653,7 @@
   - SecurityHead
   - SecurityJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - SecurityOuterClothing
   - SecurityShoes
   - SecurityPDA
@@ -676,6 +678,7 @@
   - DetectiveNeck
   - DetectiveJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - DetectiveOuterClothing
   - SecurityShoes
   - SurvivalSecurity
@@ -697,6 +700,7 @@
   groups:
   - SecurityCadetJumpsuit
   - SecurityBackpack
+  - SecurityGlasses #Lust-Edit
   - SurvivalSecurity
   - Trinkets
   - SecurityCadetJobTrinkets
@@ -726,7 +730,7 @@
   - SunriseChiefMedicalOfficerGloves
 # Sunrise-end
 #  - MedicalGloves  #Sunrise-edit
-  - ChiefMedicalOfficerBack #Lust-Edit
+  - MedicalBackpack
   - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes

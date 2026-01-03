@@ -6,8 +6,8 @@
   startingGear: PassengerGear
   icon: "JobIconPassenger"
   supervisors: job-supervisors-everyone
-  access:
-  - Maintenance
+  #lust-edit access:
+  #lust-edit - Maintenance
 
 - type: startingGear
   id: PassengerGear

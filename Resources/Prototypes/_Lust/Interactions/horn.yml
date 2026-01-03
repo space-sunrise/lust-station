@@ -1,6 +1,6 @@
 - type: interaction
   id: HornsBlowjobFemale
-  name: "Трахать в рот схватив рожки"
+  name: lust-interaction-HornsBlowjobFemale
   icon: HornsAssFemaleIcon
   category: Face
   appearConditions:
@@ -61,7 +61,7 @@
 
 - type: interaction
   id: HornsBlowjobMale
-  name: "Трахать в рот схватив рожки"
+  name: lust-interaction-HornsBlowjobMale
   icon: HornsAssFemaleIcon
   category: Face
   appearConditions:
@@ -118,7 +118,7 @@
 
 - type: interaction
   id: HornsCunnilingusMale
-  name: "Делать куни держа за рожки"
+  name: lust-interaction-HornsCunnilingusMale
   icon: HornsAssFemaleIcon
   category: Pussy
   appearConditions:
@@ -173,7 +173,7 @@
 
 - type: interaction
   id: HornsPussyFuck
-  name: "Трахать вагину держа за рожки"
+  name: lust-interaction-HornsPussyFuck
   icon: HornsAssFemaleIcon
   category: Pussy
   appearConditions:
@@ -234,7 +234,7 @@
 
 - type: interaction
   id: HornsAssFuckFemale
-  name: "Трахать анус держа за рожки"
+  name: lust-interaction-HornsAssFuckFemale
   icon: HornsAssFemaleIcon
   category: Butt
   appearConditions:
@@ -294,7 +294,7 @@
 
 - type: interaction
   id: HornsAssFuckMale
-  name: "Трахать анус держа за рожки"
+  name: lust-interaction-HornsAssFuckMale
   icon: HornsAssFemaleIcon
   category: Butt
   appearConditions:
