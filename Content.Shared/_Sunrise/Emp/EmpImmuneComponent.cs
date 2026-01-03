@@ -1,6 +1,6 @@
-using Content.Server._Sunrise.Emp;
+using Content.Shared._Sunrise.Emp;
 
-namespace Content.Server.Emp;
+namespace Content.Shared._Sunrise.Emp;
 
 /// <summary>
 /// Upon being triggered will EMP area around it.
@@ -9,5 +9,4 @@ namespace Content.Server.Emp;
 [Access(typeof(EmpImmuneSystem))]
 public sealed partial class EmpImmuneComponent : Component
 {
-
 }

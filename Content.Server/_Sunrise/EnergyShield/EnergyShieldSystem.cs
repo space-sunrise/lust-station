@@ -44,7 +44,7 @@ public sealed class EnergyShieldSystem : EntitySystem
         _battery.UseCharge(ent.Owner, cost);
         _audio.PlayPvs(ent.Comp.AbsorbSound, ent);
 
-        if (battery.ChargeRate <= 0)
+        if (battery.LastCharge <= 0)
         {
             _itemToggle.Toggle(ent.Owner);
             _audio.PlayPvs(ent.Comp.ShutdownSound, ent);
@@ -54,7 +54,7 @@ public sealed class EnergyShieldSystem : EntitySystem
     private void OnToggleAttempt(Entity<EnergyShieldComponent> ent, ref ItemToggleActivateAttemptEvent args)
     {
         if (TryComp<BatteryComponent>(ent, out var battery) &&
-            battery.ChargeRate >= battery.MaxCharge * ent.Comp.MinChargeFractionForActivation)
+            battery.LastCharge >= battery.MaxCharge * ent.Comp.MinChargeFractionForActivation)
         {
             return;
         }

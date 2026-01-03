@@ -65,6 +65,7 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/_Sunrise/Items/Handling/paper_use.ogg
+    handle: false
   - type: EmitSoundOnCollide
     sound:
       path: /Audio/_Sunrise/Items/Handling/paper_drop.ogg

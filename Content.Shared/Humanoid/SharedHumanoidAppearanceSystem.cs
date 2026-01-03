@@ -586,7 +586,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
     // Sunrise-TTS-Start
     // ReSharper disable once InconsistentNaming
-    public void SetTTSVoice(EntityUid uid, string voiceId, HumanoidAppearanceComponent humanoid)
+    public void SetTTSVoice(EntityUid uid, ProtoId<TTSVoicePrototype> voiceId, HumanoidAppearanceComponent humanoid)
     {
         if (!TryComp<TTSComponent>(uid, out var comp))
             return;

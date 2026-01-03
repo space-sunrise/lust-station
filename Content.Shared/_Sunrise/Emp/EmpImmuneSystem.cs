@@ -1,7 +1,6 @@
-using Content.Server.Emp;
 using Content.Shared.Emp;
 
-namespace Content.Server._Sunrise.Emp;
+namespace Content.Shared._Sunrise.Emp;
 
 public sealed class EmpImmuneSystem : EntitySystem
 {
@@ -13,7 +12,7 @@ public sealed class EmpImmuneSystem : EntitySystem
         SubscribeLocalEvent<EmpImmuneComponent, EmpAttemptEvent>(OnEmpAttempt);
     }
 
-    private void OnEmpAttempt(EntityUid uid, EmpImmuneComponent comp, EmpAttemptEvent args)
+    private void OnEmpAttempt(Entity<EmpImmuneComponent> ent, ref EmpAttemptEvent args)
     {
         args.Cancelled = true;
     }
