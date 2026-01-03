@@ -19,10 +19,13 @@ public static class ServerPackaging
         new PlatformReg("osx-x64", "MacOS", true),
         new PlatformReg("osx-arm64", "MacOS", true),
         // Non-default platforms (i.e. for Watchdog Git)
-        new PlatformReg("win-x86", "Windows", false),
-        new PlatformReg("linux-x86", "Linux", false),
-        new PlatformReg("linux-arm", "Linux", false),
         new PlatformReg("freebsd-x64", "FreeBSD", false),
+    };
+
+    private static IReadOnlySet<string> ServerContentIgnoresResources { get; } = new HashSet<string>
+    {
+        "ServerInfo",
+        "Changelog",
     };
 
     private static List<string> PlatformRids => Platforms
@@ -34,30 +37,9 @@ public static class ServerPackaging
         .Select(o => o.Rid)
         .ToList();
 
-    private static readonly List<string> ServerContentAssemblies = new()
-    {
-        // Sunrise-Start
-        "Content.Sunrise.Interfaces.Shared",
-        "Content.Sunrise.Interfaces.Server",
-        // Sunrise-End
-        "Content.Server.Database",
-        "Content.Server",
-        "Content.Shared",
-        "Content.Shared.Database",
-    };
-
-    private static readonly List<string> ServerExtraAssemblies = new()
-    {
-        // Python script had Npgsql. though we want Npgsql.dll as well soooo
-        "Npgsql",
-        "Microsoft",
-        "NetCord",
-        "0Harmony",
-    };
-
     private static readonly List<string> ServerNotExtraAssemblies = new()
     {
-        "Microsoft.CodeAnalysis",
+        "JetBrains.Annotations",
     };
 
     private static readonly HashSet<string> BinSkipFolders = new()

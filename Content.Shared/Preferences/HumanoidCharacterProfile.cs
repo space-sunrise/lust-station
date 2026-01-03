@@ -83,12 +83,14 @@ namespace Content.Shared.Preferences
         [DataField]
         public int Age { get; set; } = 18;
 
+        // Lust-Start
         [DataField]
         public Erp Erp { get; set; } = Erp.Ask;
         [DataField]
         public Virginity Virginity { get; set; } = Virginity.No;
         [DataField]
         public Virginity AnalVirginity { get; set; } = Virginity.Yes;
+        // Lust-End
 
         [DataField]
         public Sex Sex { get; private set; } = Sex.Male;
@@ -146,9 +148,9 @@ namespace Content.Shared.Preferences
             string bodyType,
             int age,
             Sex sex,
-            Erp erp,
-            Virginity virginity,
-            Virginity analVirginity,
+            Erp erp, // Lust-Edit
+            Virginity virginity, // Lust-Edit
+            Virginity analVirginity, // Lust-Edit
             Gender gender,
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
@@ -165,9 +167,9 @@ namespace Content.Shared.Preferences
             BodyType = bodyType;
             Age = age;
             Sex = sex;
-            Erp = erp;
-            Virginity = virginity;
-            AnalVirginity = analVirginity;
+            Erp = erp; // Lust-Edit
+            Virginity = virginity; // Lust-Edit
+            AnalVirginity = analVirginity; // Lust-Edit
             Gender = gender;
             Appearance = appearance;
             SpawnPriority = spawnPriority;
@@ -201,9 +203,9 @@ namespace Content.Shared.Preferences
                 other.BodyType,
                 other.Age,
                 other.Sex,
-                other.Erp,
-                other.Virginity,
-                other.AnalVirginity,
+                other.Erp, // Lust-Edit
+                other.Virginity, // Lust-Edit
+                other.AnalVirginity, // Lust-Edit
                 other.Gender,
                 other.Appearance.Clone(),
                 other.SpawnPriority,
@@ -291,11 +293,11 @@ namespace Content.Shared.Preferences
                 case Sex.Female:
                     gender = Gender.Female;
                     break;
-                // Lust-start
+                // Lust-Start
                 case Sex.Futanari:
                     gender = Gender.Female;
                     break;
-                // Lust-end
+                // Lust-End
             }
 
             var name = GetName(species, gender);
@@ -333,6 +335,7 @@ namespace Content.Shared.Preferences
             return new(this) { Sex = sex };
         }
 
+        // Lust-Start
         public HumanoidCharacterProfile WithErp(Erp erp)
         {
             return new(this) { Erp = erp };
@@ -346,6 +349,7 @@ namespace Content.Shared.Preferences
         {
             return new(this) { AnalVirginity = analVirginity };
         }
+        // Lust-End
 
         public HumanoidCharacterProfile WithGender(Gender gender)
         {
@@ -441,7 +445,7 @@ namespace Content.Shared.Preferences
         {
             return new(this)
             {
-                _antagPreferences = new(antagPreferences),
+                _antagPreferences = new (antagPreferences),
             };
         }
 
@@ -536,9 +540,9 @@ namespace Content.Shared.Preferences
             if (Name != other.Name) return false;
             if (Age != other.Age) return false;
             if (Sex != other.Sex) return false;
-            if (Erp != other.Erp) return false;
-            if (Virginity != other.Virginity) return false;
-            if (AnalVirginity != other.AnalVirginity) return false;
+            if (Erp != other.Erp) return false; // Lust-Edit
+            if (Virginity != other.Virginity) return false; // Lust-Edit
+            if (AnalVirginity != other.AnalVirginity) return false; // Lust-Edit
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (BodyType != other.BodyType) return false;
@@ -575,7 +579,7 @@ namespace Content.Shared.Preferences
             {
                 Sex.Male => Sex.Male,
                 Sex.Female => Sex.Female,
-                Sex.Futanari => Sex.Futanari, // Lust-edit
+                Sex.Futanari => Sex.Futanari, // Lust-Edit
                 Sex.Unsexed => Sex.Unsexed,
                 _ => Sex.Male // Invalid enum values.
             };
@@ -795,7 +799,7 @@ namespace Content.Shared.Preferences
         // Sunrise-TTS-Start
         public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
         {
-            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex.Contains(sex) || voice.Sex.Contains(Sex.Unsexed)); // Lust-edit
+            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
         }
         // Sunrise-TTS-End
 
@@ -873,7 +877,7 @@ namespace Content.Shared.Preferences
             return profile;
         }
 
-        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string[] sponsorPrototypes)
+        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, string [] sponsorPrototypes)
         {
             if (!_loadouts.TryGetValue(id, out var loadout))
             {
