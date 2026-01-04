@@ -736,6 +736,40 @@ namespace Content.Server.Database
             return record == null ? null : MakePlayerRecord(record);
         }
 
+        public async Task<Dictionary<Guid, string>> GetPlayerNamesBatchAsync(IEnumerable<Guid> userIds, CancellationToken cancel)
+        {
+            await using var db = await GetDb();
+
+            var userIdList = userIds.ToList();
+            if (userIdList.Count == 0)
+                return new Dictionary<Guid, string>();
+
+            var records = await db.DbContext.Player
+                .Where(p => userIdList.Contains(p.UserId))
+                .Select(p => new { p.UserId, p.LastSeenUserName })
+                .ToListAsync(cancel);
+
+            var result = new Dictionary<Guid, string>();
+            foreach (var record in records)
+            {
+                if (!string.IsNullOrWhiteSpace(record.LastSeenUserName))
+                {
+                    result[record.UserId] = record.LastSeenUserName;
+                }
+            }
+
+            // Fill missing names with "Unknown"
+            foreach (var userId in userIdList)
+            {
+                if (!result.ContainsKey(userId))
+                {
+                    result[userId] = "Unknown";
+                }
+            }
+
+            return result;
+        }
+
         protected async Task<bool> PlayerRecordExists(DbGuard db, NetUserId userId)
         {
             return await db.DbContext.Player.AnyAsync(p => p.UserId == userId);
@@ -1934,41 +1968,37 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async Task<List<MentorHelpTicket>> GetMentorHelpTicketsByPlayerAsync(Guid playerId)
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.PlayerId == playerId)
-                .ToListAsync())
                 .OrderByDescending(t => t.CreatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetOpenMentorHelpTicketsAsync()
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.Status != MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetAssignedMentorHelpTicketsAsync(Guid mentorId)
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.AssignedToUserId == mentorId && t.Status != MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetClosedMentorHelpTicketsAsync()
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.Status == MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task AddMentorHelpMessageAsync(MentorHelpMessage message)

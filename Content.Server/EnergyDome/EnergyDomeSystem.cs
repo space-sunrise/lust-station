@@ -217,7 +217,7 @@ public sealed partial class EnergyDomeSystem : EntitySystem
             {
                 _battery.UseCharge(cell.Value.Owner, energyLeak);
 
-                if (cell.Value.Comp.LastCharge == 0)
+                if (cell.Value.Comp.State == BatteryState.Empty)
                     TurnOff((generatorUid, generatorComp), true);
             }
         }
@@ -226,7 +226,7 @@ public sealed partial class EnergyDomeSystem : EntitySystem
         if (TryComp<BatteryComponent>(generatorUid, out var battery)) {
             _battery.UseCharge(generatorUid, energyLeak);
 
-            if (battery.LastCharge == 0)
+            if (battery.State == BatteryState.Empty)
                 TurnOff((generatorUid, generatorComp), true);
         }
     }
@@ -278,7 +278,7 @@ public sealed partial class EnergyDomeSystem : EntitySystem
         }
         else if (TryComp<BatteryComponent>(generator, out var battery))
         {
-            if (battery.LastCharge <= 0)
+            if (_battery.GetCharge((generator, battery)) <= 0)
             {
                 Fail(generator, "energy-dome-no-power");
                 return false;

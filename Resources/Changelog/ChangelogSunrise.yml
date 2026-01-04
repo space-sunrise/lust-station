@@ -24375,3 +24375,12 @@
   id: 1586
   time: '2026-01-03T18:26:08.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3580
+- author: Kinar_7
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0438\u043B \u0440\u0430\u0431\u043E\u0442\
+      \u0443 \u043E\u0433\u043D\u0435\u0441\u0442\u0440\u0435\u043B\u0430 \u0431\u043E\
+      \u0440\u0433\u043E\u0432 \u0421\u0411"
+    type: Tweak
+  id: 1587
+  time: '2026-01-04T09:19:43.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3584
