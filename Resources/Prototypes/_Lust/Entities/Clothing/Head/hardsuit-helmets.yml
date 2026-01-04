@@ -1,0 +1,46 @@
+- type: entity
+  parent: [BaseCentcommContraband, ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase]
+  id: ClothingHeadHelmetHardsuitCentcomQillu
+  name: Central Command hardsuit helmet
+  description: A Central Command hardsuit helmet manufactured under Qillu contract. Comes with an integrated headlamp.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hardsuits/centcom_hardsuit_qillu.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: ["light"]
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hardsuits/centcom_hardsuit_qillu.rsi
+    equippedPrefix: null
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+  - type: PointLight
+    color: "#adffe6"
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: on-equipped-HELMET
+        shader: unshaded
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.85
+        Heat: 0.75
+        Radiation: 0.5
+        Caustic: 0.9
+  - type: EyeProtection
+  - type: FlashImmunity

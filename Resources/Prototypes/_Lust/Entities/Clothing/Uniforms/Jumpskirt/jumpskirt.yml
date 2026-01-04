@@ -44,3 +44,14 @@
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformJumpskirtCentcomSkirtSuitQillu
+  name: Central Command skirt suit
+  description: A Central Command dress uniform produced under Qillu contract. Formal, elegant, and strictly regulated.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcom_skirtsuit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcom_skirtsuit_qillu.rsi

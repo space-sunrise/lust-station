@@ -73,3 +73,25 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitQilluDirector
+  name: Qillu Corporation Director Suit
+  description: A formal suit reserved for the Director of Qillu Corporation. A symbol of supreme authority and highest rank.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomSuitQillu
+  name: Central Command suit
+  description: A Central Command dress uniform produced under Qillu contract. Crisp, formal, and unmistakably official.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi

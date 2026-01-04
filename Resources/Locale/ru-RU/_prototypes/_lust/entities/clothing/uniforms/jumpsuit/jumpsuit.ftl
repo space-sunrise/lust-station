@@ -8,3 +8,5 @@ ent-ClothingUniformJumpsuitIAAFormal = формальный костюм АВД
     .desc = Бумажная работа важна, но выглядеть хорошо при этом — тоже.
 ent-ClothingUniformElegantJumpsuitIAA = элегантный костюм АВД
     .desc = Строгий костюм для АВД, превращающего бумажную рутину в силу.
+ent-ClothingUniformJumpsuitQilluDirector = костюм директора корпорации Qillu
+    .desc = Официальный костюм, предназначенный для директора корпорации Qillu. Символ высшей власти и наивысшего ранга.
