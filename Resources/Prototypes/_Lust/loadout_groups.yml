@@ -16,10 +16,10 @@
   id: IAAuniformFormalSuit
   name: loadout-group-IAA-uniform
   loadouts:
-  - IAAuniformFormalSuit
-  - IAAuniformFormalSkirt
   - IAAuniformElegantSuit
   - IAAuniformElegantSkirt
+  - IAAuniformFormalSuit
+  - IAAuniformFormalSkirt
 
 - type: loadoutGroup
   id: IAASatchel
