@@ -1,0 +1,46 @@
+- type: entity
+  id: CartridgeAR2
+  name: cartridge (AR2)
+  parent: [BaseCartridge, BaseSecurityContraband]
+  categories: [HideSpawnMenu]
+  components:
+  - type: Tag
+    tags:
+    - CartridgeAR2
+  - type: CartridgeAmmo
+    proto: RedLaserBeam
+  - type: Sprite
+    sprite: _Lust/CP/Guns/Ammunition/Casings/ar2.rsi
+    scale: 0.80, 0.80
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: MagazineAR2
+  name: AR2 magazine
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+    - MagazineAR2
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    proto: CartridgeAR2
+    whitelist:
+      tags:
+      - CartridgeAR2
+    capacity: 30
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _Lust/CP/Guns/Ammunition/Magazines/ar2.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
