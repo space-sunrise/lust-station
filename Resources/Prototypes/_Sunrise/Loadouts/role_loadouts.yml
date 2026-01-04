@@ -2,8 +2,14 @@
   id: JobIAA
   groups:
   - LawyerNeck
-  - LawyerJumpsuit
-  - CommonBackpack
+  # Lust - Start
+  # - LawyerJumpsuit  # Lust Commented
+  # - CommonBackpack  # Lust Commented
+  - IAAuniformFormalSuit
+  - IAASatchel
+  - IAAOuterClothing
+  - IAANeck
+  # Lust - End
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool

@@ -1,5 +1,8 @@
 - type: docTemplatePool
   id: Lust
+  stationGoalHeader:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_centcom
   templates:
     - Appeal_QL
     - ApplicationAccess_QL
@@ -36,7 +39,6 @@
     - PermissionDisposeBody_QL
     - PermissionEquipment_QL
     - PermissionToCarryWeapons_QL
-    - PermissionToExtendMarriage_QL
     - PermissionToTravelInCaseOfThreat_QL
     - PrescriptionDrugAuthorization_QL
     - ProductManufacturingOrder_QL
@@ -64,3 +66,66 @@
     - NoticeOfLiquidation_QL
     - NoteBeginningMilitaryActions_QL
     - ReportAccomplishmentGoals_QL
+    - OrderAppointmentInterim_QL
+    - OrderAnnulmentOfRight_QL
+    - ApplicationChangePosition_QL
+    - ApplicationPetRegistration_QL
+    - ReportQilluRepresentative_QL
+    - ExplanatoryNote_QL
+    - ReportCrewAccessChange_QL
+    - RequestLegalProtection_QL
+    - RequestDeprivationLegalProtection_QL
+    - RequestDeprivationVetoRight_QL
+    - RequestImmediateIntervention_QL
+    - OrderSynthesizeEssentialDrugs_QL
+    - MedicalDutyRoster_QL
+    - ReportUsedMedications_QL
+    - ReportExtractionSec_QL
+    - ReportMedicalIntervention_QL
+    - PermissionPrescriptionDrug_QL
+    - DirectiveMedicalIntervention_QL
+    - PsychologicalHealthReport_QL
+    - ConsentMedicalIntervention_QL
+    - InfectionCertificate_QL
+    - OrderQuarantine_QL
+    - EpidemiologicalConclusion_QL
+    - ConsentVivisection_QL
+    - ContractLegalAid_QL
+    - ReportServiceInvestigation_QL
+    - RequestCaseReview_QL
+    - OrderGrantLegalProtection_QL
+    - OrderDeprivationLegalProtection_QL
+    - ReportPowerSources_QL
+    - DutyRosterEngineering_QL
+    - AdministrativeBanOrder_QL
+    - OrderDismissalSecurity_QL
+    - OrderParolePrisonerSecurity_QL
+    - PermissionExosuitCreation_QL
+    - PermissionExosuitUsage_QL
+    - DirectiveSecurityDuty_QL
+    - InventoryWeapons_QL
+    - ReportInvestigation_QL
+    - ReportExtractionMed_QL
+    - DirectiveMedicalInterventionSecurity_QL
+    - ReportSecurityStaffCheck_QL
+    - ReportLawAndConductViolations_QL
+    - ReportDetainedCrew_QL
+    - ReportArtifactResearch_QL
+    - ListScienceDepartmentDuty_QL
+    - OrderSupplyResourcesEquipment_QL
+    - PermissionExpeditionSend_QL
+    - PermissionToExtendMarriage_QL
+    - KitchenMenu_QL
+    - BarMenu_QL
+    - RequestPrisonerTransport_QL
+    - ReportPrisonerCount_QL
+    - ReportPrisonerRelease_QL
+    - RequestEvacuationPrisoners_QL
+    - ApplicationAppointmentInterimWarden_QL
+    - AppealToWarden_QL
+    - OrderEvacuation_QL
+    - OrderProvideCCReport_QL
+    - DecreeHeadsPresence_QL
+    - OrderCentcom_QL
+    - OrderReport_QL
+    - OrderCentcomTransferStationStaff_QL
