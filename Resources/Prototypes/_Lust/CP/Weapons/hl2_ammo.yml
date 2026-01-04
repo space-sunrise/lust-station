@@ -7,8 +7,8 @@
   - type: Tag
     tags:
     - CartridgeAR2
-  - type: HitScanCartridgeAmmo
-    hitscan: RedLaserBeam
+  - type: CartridgeAmmo
+    proto: RedLaserBeam
   - type: Sprite
     sprite: _Lust/CP/Guns/Ammunition/Casings/ar2.rsi
     scale: 0.80, 0.80
