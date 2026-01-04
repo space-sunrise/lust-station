@@ -48,8 +48,8 @@
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtCentcomSkirtSuitQillu
-  name: Central Command skirt suit
-  description: A Central Command dress uniform produced under Qillu contract. Formal, elegant, and strictly regulated.
+  name: ent-ClothingUniformJumpskirtCentcomSkirtSuitQillu
+  description: ent-ClothingUniformJumpskirtCentcomSkirtSuitQillu-desc
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcom_skirtsuit_qillu.rsi

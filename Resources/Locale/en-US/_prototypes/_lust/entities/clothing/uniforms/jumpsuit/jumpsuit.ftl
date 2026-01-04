@@ -10,5 +10,6 @@ ent-ClothingUniformElegantJumpsuitIAA =  elegant IAA suit
     .desc = A strict suit for an IAA agent, turning paperwork drudgery into power.
 ent-ClothingUniformJumpsuitQilluDirector = Qillu Corporation Director Suit
     .desc = A formal suit reserved for the Director of Qillu Corporation. A symbol of supreme authority and highest rank.
-ent-ClothingUniformJumpsuitCentcomSuitQillu = Central Command suit (Qillu)
+ent-ClothingUniformJumpsuitCentcomSuitQillu = Central Command suit
+    .suffix = Qillu
     .desc = A Central Command dress uniform produced under Qillu contract. Crisp, formal, and unmistakably official.
