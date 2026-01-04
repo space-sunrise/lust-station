@@ -379,8 +379,6 @@
     sprite: _Lust/Objects/Misc/id_cards_qillu.rsi #Lust-edit
     layers:
     - state: silver
-    - state: department-side
-      color: "#1b67a5"
     - sprite: *icon-rsi
       offset: *icon-offset
       state: Adjutant

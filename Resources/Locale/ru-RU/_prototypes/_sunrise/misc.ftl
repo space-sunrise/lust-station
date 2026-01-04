@@ -1,10 +1,6 @@
 ent-MobGorillaRampaging = буйная горилла
     .desc = Горилла, вышедшая из-под контроля. Беги!
 
-ent-BeakerSmallArith = { ent-Beaker }
-    .desc = { ent-Beaker.desc }
-    .suffix = аритразин
-
 ent-MachineArtifactCrusherXenoborg = дробилка тел
     .desc = Лучше не засовывать туда голову...
 

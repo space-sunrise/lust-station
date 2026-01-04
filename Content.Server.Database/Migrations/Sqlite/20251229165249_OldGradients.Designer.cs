@@ -1034,10 +1034,29 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
+                    // Lust-Start
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("virginity");
+
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("anal_virginity");
+
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("erp");
+                    // Lust-End
+
+                    // Sunrise-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("voice");
+                    // Sunrise-End
 
                     b.Property<float>("Width")
                         .HasColumnType("REAL")

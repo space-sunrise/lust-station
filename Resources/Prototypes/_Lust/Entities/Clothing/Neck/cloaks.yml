@@ -1,14 +1,5 @@
 - type: entity
   parent: ClothingNeckBase
-  id: ClothingNeckMedCloak
-  name: medical cloak
-  description: Cool medical cloak.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Neck/Cloaks/medical_cloak.rsi
-
-- type: entity
-  parent: ClothingNeckBase
   id: ClothingNeckEngCloak
   name: Engineer cloak
   description: Cool engineer cloak.

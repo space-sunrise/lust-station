@@ -414,9 +414,6 @@ namespace Content.Server.Database
 
         public string BodyType { get; set; } = null!;
 
-        public string Erp { get; set; } = null!; // Lust-ERP
-        public string Virginity { get; set; } = null!; // Lust-ERP
-        public string AnalVirginity { get; set; } = null!; // Lust-ERP
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
         public string Voice { get; set; } = null!; // Sunrise-TTS
@@ -444,6 +441,19 @@ namespace Content.Server.Database
 
         public int PreferenceId { get; set; }
         public Preference Preference { get; set; } = null!;
+
+        public ProfileErp? ErpData { get; set; }
+    }
+
+    public class ProfileErp
+    {
+        public int Id { get; set; }
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; } = null!;
+
+        public string Erp { get; set; } = null!; // Lust-ERP
+        public string Virginity { get; set; } = null!; // Lust-ERP
+        public string AnalVirginity { get; set; } = null!; // Lust-ERP
     }
 
     public class Job

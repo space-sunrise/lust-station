@@ -50,6 +50,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
+                .Include(p => p.Profiles).ThenInclude(h => h.ErpData)
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -109,6 +110,7 @@ namespace Content.Server.Database
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
+                .Include(p => p.ErpData)
                 .AsSplitQuery()
                 .SingleOrDefault(h => h.Slot == slot);
 
@@ -218,16 +220,20 @@ namespace Content.Server.Database
 
             // Sunrise-Lust Start
             var erp = Erp.Ask;
-            if (Enum.TryParse<Erp>(profile.Erp, true, out var erpVal))
-                erp = erpVal;
-
             var virginity = Virginity.No;
-            if (Enum.TryParse<Virginity>(profile.Virginity, true, out var virginityVal))
-                virginity = virginityVal;
-
             var analVirginity = Virginity.Yes;
-            if (Enum.TryParse<Virginity>(profile.AnalVirginity, true, out var analVirginityVal))
-                analVirginity = analVirginityVal;
+
+            if (profile.ErpData != null)
+            {
+                if (Enum.TryParse<Erp>(profile.ErpData.Erp, true, out var erpVal))
+                    erp = erpVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.Virginity, true, out var virginityVal))
+                    virginity = virginityVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.AnalVirginity, true, out var analVirginityVal))
+                    analVirginity = analVirginityVal;
+            }
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
@@ -341,10 +347,20 @@ namespace Content.Server.Database
             profile.Width = appearance.Width; //Sunrise
             profile.Height = appearance.Height; //Sunrise
             profile.Sex = humanoid.Sex.ToString();
-            profile.Erp = humanoid.Erp.ToString(); // Sunrise-Lust Edit
-            profile.Virginity = humanoid.Virginity.ToString(); // Sunrise-Lust Edit
-            profile.AnalVirginity = humanoid.AnalVirginity.ToString(); // Sunrise-Lust Edit
             profile.Gender = humanoid.Gender.ToString();
+
+            // Sunrise-Lust Edit - Update or create ErpData
+            if (profile.ErpData == null)
+            {
+                profile.ErpData = new ProfileErp
+                {
+                    ProfileId = profile.Id,
+                    Profile = profile
+                };
+            }
+            profile.ErpData.Erp = humanoid.Erp.ToString();
+            profile.ErpData.Virginity = humanoid.Virginity.ToString();
+            profile.ErpData.AnalVirginity = humanoid.AnalVirginity.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();
             profile.FacialHairName = appearance.FacialHairStyleId;
