@@ -1557,6 +1557,7 @@ namespace Content.Client.Lobby.UI
         {
             if (Profile == null)
                 return;
+
             SexButton.Clear();
 
             var sexes = new List<Sex>();
