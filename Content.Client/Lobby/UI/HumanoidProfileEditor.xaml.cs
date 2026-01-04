@@ -1584,7 +1584,10 @@ namespace Content.Client.Lobby.UI
             if (sexes.Contains(Profile.Sex))
                 SexButton.SelectId((int) Profile.Sex);
             else
+            {
                 SexButton.SelectId((int) sexes[0]);
+                SetSex(sexes[0]); // Lust-edit
+            }
         }
 
         //Sunrise start
