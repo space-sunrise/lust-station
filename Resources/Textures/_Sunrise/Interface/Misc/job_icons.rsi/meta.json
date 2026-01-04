@@ -65,6 +65,12 @@
             "name": "PrisonEngineer"
         },
         {
+            "name": "PrisonScientist"
+        },
+        {
+            "name": "PrisonInspector"
+        },
+        {
             "name": "Barber"
         },
         {
@@ -72,6 +78,9 @@
         },
         {
             "name": "NanotrasenLeader"
+        },
+        {
+            "name": "Nanotrasen"
         },
         {
             "name": "Pathologist"
@@ -101,10 +110,19 @@
             "name": "Borg"
         },
         {
-            "name": "commaid"
+            "name": "CommandMaid"
         },
         {
             "name": "Brigmedic"
+        },
+        {
+            "name": "Adjutant"
+        },
+        {
+            "name": "Pirate"
+        },
+        {
+            "name": "Miner"
         }
     ]
 }

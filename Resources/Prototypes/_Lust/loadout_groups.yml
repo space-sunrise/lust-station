@@ -11,13 +11,6 @@
   loadouts:
   - SecurityCloak
 
-- type: loadoutGroup # Lust Station
-  id: MedicalNeck
-  name: loadout-group-medical-neck
-  minLimit: 0
-  loadouts:
-  - MedicalCloak
-
 # IAA
 - type: loadoutGroup
   id: IAAuniformFormalSuit

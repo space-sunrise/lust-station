@@ -1160,21 +1160,6 @@
     - ChiefMedicalOfficer
 
 - type: listing
-  id: UplinkSunriseClothingNeckCMOCloak
-  name: uplink-sunrise-clothing-neck-cmo-cloak-name
-  productEntity: ClothingNeckCMOCloak
-  cost:
-    Suntick: 15
-  categories:
-  - CMOHeadOfDepartment
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
-  - !type:BuyerJobCondition
-    whitelist:
-    - ChiefMedicalOfficer
-
-- type: listing
   id: UplinkSunriseClothingSpecialHeadHatHardhatCMO
   name: uplink-sunrise-clothing-special-head-hat-hardhat-name
   productEntity: ClothingSpecialHeadHatHardhatCMO
@@ -1660,6 +1645,21 @@
     whitelist:
     - Medical
 
+- type: listing
+  id: UplinkSunriseClothingNeckMedCloak
+  name: uplink-sunrise-clothing-neck-med-cloak-name
+  productEntity: ClothingNeckMedCloak
+  cost:
+    Suntick: 20
+  categories:
+  - MedicalThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyerDepartmentCondition
+    whitelist:
+    - Medical
+
 # Research
 
 - type: listing
@@ -1810,6 +1810,20 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 3
+  - !type:BuyerDepartmentCondition
+    whitelist:
+    - Civilian
+
+- type: listing
+  id: UplinkSunriseProtoAdvMop
+  productEntity: ProtoAdvMop
+  cost:
+    Suntick: 40
+  categories:
+  - ServiceThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
   - !type:BuyerDepartmentCondition
     whitelist:
     - Civilian
@@ -2034,15 +2048,103 @@
   - !type:ListingLimitedStockCondition
     stock: 1
 
-# LUST EDIT, нам не нужны санрайз плюшки
-#- type: listing
-#  id: UplinkSunrisePlushiePresent
-#  productEntity: PlushiePresent
-#  cost:
-#    Suntick: 4
-#  categories:
-#  - SpecialThings
-#  conditions:
-#  - !type:ListingLimitedStockCondition
-#    stock: 3
-# LUST EDIT, нам не нужны санрайз плюшки
+- type: listing
+  id: UplinkSunrisePlushiePresent
+  productEntity: PlushiePresent
+  cost:
+    Suntick: 4
+  categories:
+  - SpecialThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+# region Paint
+
+- type: listing
+  id: UplinkSunriseRestockPaintVend
+  productEntity: VendingMachineRestockPaintVend
+  cost:
+    Suntick: 50
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkSunriseSprayPaint
+  productEntity: SprayPaintBlue
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintBlack
+  productEntity: SprayPaintBlack
+  cost:
+    Suntick: 20
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintRed
+  productEntity: SprayPaintRed
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintGreen
+  productEntity: SprayPaintGreen
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintOrange
+  productEntity: SprayPaintOrange
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintPurple
+  productEntity: SprayPaintPurple
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: UplinkSunriseSprayPaintWhite
+  productEntity: SprayPaintWhite
+  cost:
+    Suntick: 10
+  categories:
+  - PaintThings
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2

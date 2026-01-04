@@ -1,8 +1,6 @@
 ﻿using Content.Shared._Lust.ErpStatus;
 using Content.Server.Access.Systems;
-using Content.Server.Holiday;
 using Content.Server.Humanoid;
-using Content.Server.IdentityManagement;
 using Content.Server.Mind;
 using Content.Server.PDA;
 using Content.Server.Spawners.Components;
@@ -14,9 +12,9 @@ using Content.Shared.Access.Systems;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
 using Content.Shared.DetailExaminable;
-using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.IdentityManagement;
 using Content.Shared.PDA;
 using Content.Shared.Preferences;
 using Content.Shared.Preferences.Loadouts;
@@ -106,7 +104,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         EntityUid? station,
         EntityUid? entity = null)
     {
-        _prototypeManager.TryIndex(job ?? string.Empty, out var prototype);
+        _prototypeManager.Resolve(job, out var prototype);
         RoleLoadout? loadout = null;
 
         // Need to get the loadout up-front to handle names if we use an entity spawn override.
@@ -224,32 +222,13 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
     private void DoJobSpecials(ProtoId<JobPrototype>? job, EntityUid entity)
     {
-        if (!_prototypeManager.TryIndex(job ?? string.Empty, out JobPrototype? prototype))
+        if (!_prototypeManager.Resolve(job, out JobPrototype? prototype))
             return;
 
         foreach (var jobSpecial in prototype.Special)
         {
             jobSpecial.AfterEquip(entity);
         }
-
-        // Sunrise-Start
-        foreach (var giveaway in _prototypeManager.EnumeratePrototypes<HolidayGiveawayItemPrototype>())
-        {
-            if (string.IsNullOrEmpty(giveaway.Holiday) || string.IsNullOrEmpty(giveaway.Prototype))
-                continue;
-
-            var sysMan = IoCManager.Resolve<IEntitySystemManager>();
-
-            if (!sysMan.GetEntitySystem<HolidaySystem>().IsCurrentlyHoliday(giveaway.Holiday))
-                continue;
-
-            var entMan = IoCManager.Resolve<IEntityManager>();
-
-            var ent = entMan.SpawnEntity(giveaway.Prototype, entMan.GetComponent<TransformComponent>(entity).Coordinates);
-
-            sysMan.GetEntitySystem<SharedHandsSystem>().PickupOrDrop(entity, ent);
-        }
-        // Sunrise-End
     }
 
     /// <summary>
@@ -274,7 +253,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
 
-        if (_prototypeManager.TryIndex(jobPrototype.Icon, out var jobIcon))
+        if (_prototypeManager.Resolve(jobPrototype.Icon, out var jobIcon))
             _cardSystem.TryChangeJobIcon(cardId, jobIcon, card);
 
         var extendedAccess = false;

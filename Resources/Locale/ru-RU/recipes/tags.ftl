@@ -97,7 +97,7 @@ construction-graph-tag-blue-crystal-shard = осколок синего крис
 construction-graph-tag-yellow-crystal-shard = осколок желтого кристалла
 construction-graph-tag-pink-crystal-shard = осколок розового кристалла
 construction-graph-tag-orange-crystal-shard = осколок оранжевого кристалла
-construction-graph-tag-black-crystal-shard = осколок черного кристалла
+construction-graph-tag-black-crystal-shard = осколок чёрного кристалла
 # Боты и компоненты
 construction-graph-tag-bucket = ведро
 construction-graph-tag-proximity-sensor = датчик приближения
@@ -111,6 +111,7 @@ construction-graph-tag-power-cell-small = малая батарея
 construction-graph-tag-power-cell = батарея
 construction-graph-tag-potato-battery = картофельная батарея
 construction-graph-tag-super-compact-ai-chip = суперкомпактный чип ИИ
+construction-graph-tag-station-ai-core-electronics = электроника ядра станционного ИИ
 # Импровизированное оружие
 construction-graph-tag-empty-can = любая банка
 construction-graph-tag-igniter = воспламенитель
@@ -126,7 +127,14 @@ construction-graph-tag-upgradedrozd = улучшение Дрозда
 construction-graph-tag-upgradelecter = улучшение Лектера
 construction-graph-tag-ModularReceiverAuto = автоматический модульный ресивер
 construction-graph-tag-coin = монета
-construction-graph-tag-upgradevestsec = улучшение бронежилета СБ
+construction-graph-tag-webvest = улучшение бронежилета СБ
+construction-graph-tag-stbvest = улучшение бронежилета СБ
+construction-graph-tag-pltvest = улучшение бронежилета СБ
+construction-graph-tag-absrbvest = улучшение бронежилета СБ
+construction-graph-tag-blltvest = улучшение бронежилета СБ
+construction-graph-tag-hblltvest = улучшение бронежилета СБ
+construction-graph-tag-rflctvest = улучшение бронежилета СБ
+construction-graph-tag-riotvest = улучшение бронежилета СБ
 construction-graph-tag-gorilla-upgrade-kit = чип улучшения перчатки Г.О.Р.И.Л.Л.А.
 # Щиты и защита
 construction-graph-tag-strobe-shield = стробоскопический щит
@@ -137,6 +145,9 @@ construction-graph-tag-sun-glasses = солнцезащитные очки
 construction-graph-tag-flash = флешер
 # Скафандры
 construction-graph-tag-spationaut-hardsuit = скафандр космонавта
+construction-graph-tag-mining-hardsuit = шахтёрский скафандр
+construction-graph-tag-nvd = ПНВ
+construction-graph-tag-mining-goliath-hardsuit = шахтёрский скафандр голиафа
 # Электроника
 construction-graph-tag-freezer-electronics = электроника морозильника
 construction-graph-tag-door-electronics-circuit-board = плата электроники двери
@@ -171,6 +182,13 @@ step-manipulator-name = манипулятор
 # Мехи
 construction-graph-tag-lockermech-name = мех-шкафчик
 construction-graph-tag-lockermech-desc = описание мех-шкафчика
+step-lockermech-toolbox1 = любой тулбокс
+step-lockermech-toolbox2 = второй тулбокс
+step-lockermech-toolbox3 = третий тулбокс
+step-lockermech-flashlight = фонарик
+step-lockermech-oxygentank = любой баллон
+step-lockermech-treads = 5 стальных листов
+step-lockermech-powercell = энергоячейку
 step-lockermech-door-electronics = электроника двери
 # Ядерное оружие
 construction-graph-tag-plutonium-core = плутониевое ядро
@@ -191,6 +209,8 @@ construction-graph-tag-dried-cannabis-vita = сушеная каннабис в�
 construction-graph-tag-nanopaste = нанопаста
 construction-graph-tag-blue-crystal = синий кристалл
 construction-graph-tag-crystallite = кристаллит
+construction-graph-tag-doubloon = дублон
+construction-graph-tag-credit = кредит
 construction-graph-tag-suntick = сантики
 construction-graph-tag-runic-metal = рунический металл
 # Мебель
@@ -202,10 +222,10 @@ construction-graph-tag-sofa-left = левая часть дивана
 construction-graph-tag-sofa-right = правая часть дивана
 construction-graph-tag-sofa-corner = угловая часть дивана
 construction-graph-tag-black-sofa = черный диван
-construction-graph-tag-black-sofa-desc = описание черного дивана
-construction-graph-tag-black-sofa-left = левая часть черного дивана
-construction-graph-tag-black-sofa-right = правая часть черного дивана
-construction-graph-tag-black-sofa-corner = угловая часть черного дивана
+construction-graph-tag-black-sofa-desc = описание чёрного дивана
+construction-graph-tag-black-sofa-left = левая часть чёрного дивана
+construction-graph-tag-black-sofa-right = правая часть чёрного дивана
+construction-graph-tag-black-sofa-corner = угловая часть чёрного дивана
 construction-graph-tag-red-sofa = красный диван
 construction-graph-tag-red-sofa-desc = описание красного дивана
 construction-graph-tag-red-sofa-left = левая часть красного дивана

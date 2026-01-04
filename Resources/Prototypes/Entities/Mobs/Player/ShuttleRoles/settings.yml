@@ -290,6 +290,7 @@
   id: VisitorPsychologist
   parent: VisitorMedical
   components:
+    - type: PsychologistBlockAlcohol
     - type: GhostRole
       name: job-name-psychologist
     - type: Loadout
@@ -808,6 +809,7 @@
     - type: NpcFactionMember
       factions:
       - Syndicate
+    - type: PirateIcon
     - type: GhostRole
       name: ghost-role-information-pirate-name
       description: ghost-role-information-pirate-description
@@ -827,6 +829,7 @@
     - type: NpcFactionMember
       factions:
       - Syndicate
+    - type: PirateIcon
     - type: GhostRole
       name: ghost-role-information-pirate-captain-name
       description: ghost-role-information-pirate-captain-description

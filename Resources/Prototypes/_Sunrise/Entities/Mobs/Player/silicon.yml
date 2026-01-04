@@ -308,16 +308,18 @@
     sprite: _Sunrise/Objects/Devices/ai_card.rsi
     layers:
     - state: base
-    - state: full
+    - state: empty
       map: ["unshaded"]
       shader: unshaded
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.StationAiVisualState.Key:
+      enum.StationAiVisualLayers.Icon:
         unshaded:
           Empty: { state: empty }
           Occupied: { state: full }
+          Rebooting: { state: dead }
+          Dead: { state: dead }
   - type: Intellicard
   - type: StaticPrice
     price: 500
