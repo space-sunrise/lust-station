@@ -23,6 +23,7 @@ loadout-group-cargo-technician-neck = Грузчик, шея
 loadout-group-cargo-trinkets = Безделушки СНБ
 loadout-group-centcomm-operator-head-hat = Головой убор ОЦК
 loadout-group-centcomm-operator-jumpsuit = Униформа ОЦК
+loadout-group-centcomm-operator-neck = ОЦК шея
 loadout-group-chemist-gloves = Химик, перчатки
 loadout-group-chemist-head = Химик, голова
 loadout-group-chemist-mask = Химик, маска

@@ -72,6 +72,7 @@
   groups:
   - CentCommOperatorJumpsuit
   - CentCommOperatorHats
+  - CentCommOperatorNeck # Lust - Added
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
@@ -88,6 +89,7 @@
   groups:
   - CentCommOperatorJumpsuit
   - CentCommOperatorHats
+  - CentCommOperatorNeck # Lust - Added
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
