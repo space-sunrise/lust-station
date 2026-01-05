@@ -1,0 +1,10 @@
+# Канал связи
+
+- type: radioChannel
+  id: MT
+  name: chat-radio-PMC
+  keycode: 'ь'
+  frequency: 2218
+  color: "DarkGreen"
+  longRange: true
+

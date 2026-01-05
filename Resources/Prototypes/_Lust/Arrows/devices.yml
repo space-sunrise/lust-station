@@ -1,0 +1,211 @@
+# Устройства
+
+# Ключ шифрования
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyMT
+  name: Encryption key "PMC Arrows"
+  description: You'd better not hear what they're saying on this frequency...
+  suffix: Arrows
+  components:
+  - type: EncryptionKey
+    channels:
+    - MT
+    - CentCom
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    defaultChannel: MT
+  - type: Sprite
+    layers:
+    - state: crypt_red
+    - state: cap_label
+
+# Портативная консоль связи
+
+- type: entity
+  id: CommunicationsConsolePortativeMT
+  parent: BaseItem
+  name: portable communication console "PMC Arrows"
+  description: Portable console used to broadcast announcements to the entire station, change the alert level, call an evacuation shuttle, and monitor the crew. It has direct communication with the dispatcher.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Objects/Devices/tablets.rsi
+    scale: 0.65, 0.65
+    color: "DarkGreen"
+    layers:
+      - state: tablet
+      - state: generic
+        shader: unshaded
+  - type: CommunicationsConsole
+    title: comms-console-announcement-title-arrows
+    global: true
+    color: "DarkGreen"
+    sound:
+      path: /Audio/Announcements/bloblarm.ogg
+      params:
+        volume: -4
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    key: enum.CommunicationsConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.CommunicationsConsoleUiKey.Key:
+        type: CommunicationsConsoleBoundUserInterface
+  - type: Prayable
+    sentMessage: prayer-chat-announcement-title-arrows
+    notificationPrefix: prayer-chat-announcement-notification-prefix-arrows
+    verb: prayer-verbs-arrows
+    verbImage: null
+  - type: CrewMonitoringServer
+  - type: SingletonDeviceNetServer
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: CrewMonitor
+    receiveFrequencyId: SuitSensor
+    autoConnect: true
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: StationLimitedNetwork
+
+# Карта командира
+
+- type: entity
+  parent: IDCardStandard
+  id: MTIDCard
+  name: ID card commander
+  description: netrunner's ID card with full access.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    layers:
+    - state: black
+    - state: idcaptain
+  - type: PresetIdCard
+    job: LeaderArrows
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+
+# КПК командира
+
+- type: entity
+  parent: ERTLeaderPDA
+  id: MTLeaderPDA
+  name: PDA netrunner "PMC Arrows"
+  description: You can see dried blood droplets on it... It has a built-in health analyzer.
+  suffix: Arrows
+  components:
+  - type: Pda
+    id: MTIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-roboticist
+  - type: PdaBorderColor
+    borderColor: "#333333"
+    accentVColor: "#800000"
+    accentHColor: "#00CED1"
+  - type: Icon
+    state: pda-roboticist
+  - type: HealthAnalyzer
+    scanDelay: 0.5
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+
+# Карта солдата
+
+- type: entity
+  parent: MTIDCard
+  id: MTIDCardSold
+  name: ID card PMC soldier
+  description: A soldier's card with full access.
+  suffix: Arrows
+  components:
+  - type: PresetIdCard
+    job: SoldierArrows
+
+# КПК солдата
+
+- type: entity
+  parent: MTLeaderPDA
+  id: MTSoldPDA
+  name: Soldier PDA
+  suffix: Arrows
+  components:
+  - type: Pda
+    id: MTIDCardSold
+
+# Пульт командира
+
+- type: entity
+  parent: DoorRemoteOmni
+  id: DoorRemoteAllMTl
+  name: commander's remoute
+  description: commander's remoute with full access. Has "PMC Arrows" shuttle access
+  suffix: Arrows
+  components:
+  - type: Sprite
+    layers:
+    - state: door_remotebase
+    - state: door_remotelightscolour
+      color: "#800000"
+    - state: door_remotescreencolour
+      color: "#9400D3"
+  - type: Access
+    tags:
+    - MTO
+    - MTOL
+    - CentralCommand
+    groups:
+    - AllAccess
+
+# Консоль управления турелями
+
+- type: entity
+  parent: WeaponEnergyTurretStationControlPanelBase
+  id: WeaponEnergyTurretMTControlPanel
+  suffix: Arrows
+  components:
+  - type: AccessReader
+    access: [["StationAi"], ["MTO"]]
+  - type: TurretTargetSettings
+    exemptAccessLevels:
+    - MTO
+    - BasicSilicon
+    - Borg
+
+# Консоль управления шаттлом
+
+- type: entity
+  parent: ComputerShuttle
+  id: MTComputerShuttle
+  name: shuttle console
+  description: Used to pilot a shuttle.
+  suffix: Arrows
+  components:
+  - type: StationAiWhitelist
+  - type: Wires
+    boardName: wires-board-name-computer
+    layoutId: ComputerAi
+
+# Корабельные орудия
+
+- type: entity
+  id: PowerCageArrowShuttle
+  parent: PowerCageERT
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 30
+

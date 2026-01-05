@@ -1,0 +1,32 @@
+# Сущности - мобы и спавнеры
+
+- type: entity
+  name: Commander "PMC Arrows"
+  parent: RandomHumanoidSpawnerERTLeader
+  id: MobHumanArrowsLeader
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: brigmedic
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+  - type: RandomHumanoidSpawner
+    settings: ArrowsLeaderRandom
+
+- type: entity
+  name: Soldier "PMC Arrows"
+  parent: RandomHumanoidSpawnerERTSecurity
+  id: MobHumanArrowsOfficer
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: brigmedic
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+  - type: RandomHumanoidSpawner
+    settings: ArrowsSoldRandom
+

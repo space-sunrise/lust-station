@@ -1,0 +1,357 @@
+# Одежда и экипировка
+
+- type: entity
+  name: Arrows power cell
+  description: A rechargeable military-grade power cell. It has built-in EMP protection.
+  id: PowerCellArrows
+  parent: BasePowerCell
+  suffix: Arrows
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.PowerCellVisualLayers.Base" ]
+      state: syndicate
+    - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+      state: o2
+      shader: unshaded
+  - type: Battery
+    maxCharge: 1800
+    startingCharge: 1800
+  - type: EmpImmune
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 40
+
+- type: entity
+  id: EnergyDomeSmallGreen
+  categories: [ HideSpawnMenu ]
+  parent: EnergyDomeBase
+  components:
+  - type: Sprite
+    sprite: Effects/EnergyDome/energydome_small.rsi
+    layers:
+    - state: small
+      color: "#006400"
+  - type: PointLight
+    enabled: true
+    radius: 5
+    power: 2
+    color: "#006400"
+
+# Скафандры
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitArrowsNetrunner
+  name: Netrunner's Hardsuit "PMC Arrows"
+  description: Squad Commander's Hardsuit.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsnetrunner.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0
+        Caustic: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 1.1
+    sprintModifier: 1.1
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,3
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitArrows
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+      toggleable-clothing: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellArrows
+        whitelist:
+          tags:
+            - PowerCell
+  - type: EnergyDomeGenerator
+    damageEnergyDraw: 2
+    domePrototype: EnergyDomeSmallGreen
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 0
+  - type: UseDelay
+    delay: 10.0
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitArrowsHeavy
+  name: Heavy armored Hardsuit "PMC Arrows"
+  description: The heavy version of the "PMC Arrows" armored suit provides excellent protection for its wearer.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrowsgear.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.02
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.001
+    coolingCoefficient: 0.001
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0
+        Caustic: 0
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,3,3
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitArrows
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+      toggleable-clothing: !type:ContainerSlot
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellArrows
+        whitelist:
+          tags:
+            - PowerCell
+  - type: EnergyDomeGenerator
+    damageEnergyDraw: 6
+    domePrototype: EnergyDomeSmallGreen
+  - type: PowerCellDraw
+    drawRate: 0
+    useRate: 0
+  - type: UseDelay
+    delay: 10.0
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitArrows
+  name: Hardsuit armored helmet "PMC Arrows"
+  description: Special Forces Helmet "PMC Arrows"
+  suffix: Arrows
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hardsuits/arrowshelmet.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hardsuits/arrowshelmet.rsi
+  - type: PointLight
+    color: darkgreen
+    radius: 8
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.80
+        Slash: 0.80
+        Piercing: 0.80
+        Heat: 0.80
+        Radiation: 0.80
+        Caustic: 0.95
+
+# Магнитки
+
+- type: entity
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, BaseSyndicateContraband]
+  id: ClothingShoesBootsMagArrows
+  name: Military magnetic-shock boots
+  description: The miracle of reverse engineering.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Shoes/Boots/arrowsmagboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Shoes/Boots/arrowsmagboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: GasTank
+    outputPressure: 42.6
+    air:
+      # 13 minutes of thrust
+      volume: 5
+      temperature: 293.15
+      moles:
+        - 1.025689525 # oxygen
+        - 1.025689525 # nitrogen
+  - type: Item
+    sprite: null
+    size: Normal
+
+# Гарнитура
+
+- type: entity
+  parent: ClothingHeadset
+  id: ClothingHeadsetMT
+  name: PMC Arrows headset
+  description: The Mercenaries' special headset.
+  suffix: Arrows
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyMT
+  - type: Sprite
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+  - type: Clothing
+    sprite: Clothing/Ears/Headsets/centcom.rsi
+
+# Пояс
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltAssaultMT
+  name: combat belt
+  description: A belt filled with useful items for combat.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/assault.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/assault.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,9,1
+  - type: StorageFill
+    contents:
+    - id: SyndicateJawsOfLife
+    - id: PowerDrill
+    - id: C4
+      amount: 2
+    - id: ChainswordArrowsBiocode
+    - id: CombatMedipenArrows
+      amount: 2
+    - id: CombatMedipen
+      amount: 3
+    - id: AntiPoisonMedipen
+    - id: BruteAutoInjector
+    - id: BurnAutoInjector
+  - type: Appearance
+
+# Рюкзаки
+
+- type: entity
+  parent: ClothingBackpackERTClown
+  categories: [ HideSpawnMenu ]
+  id: ClothingBackpackArrowsFilled
+  name: Netrunner's backpack
+  description: Holds the kit of CentComm's most feared agents.
+  suffix: Arrows
+  components:
+    - type: Storage
+      grid:
+      - 0,0,8,5
+    - type: StorageFill
+      contents:
+        - id: BoxArrowsKit
+        #- id: SmiteImplanter
+        - id: WallImplanter
+        - id: DoorRemoteAllMTl
+        - id: CommunicationsConsolePortativeMT
+        - id: MedkitCombatFilled
+        - id: WeaponRevolverMatebaAPBiocode
+        - id: SpeedLoaderMagnumAP
+          amount: 2
+        - id: EnergyShieldArrowsBiocode
+        #- id: BaseUplinkNTERT200BC
+        - id: WeaponShotgunCarnageBiocode
+        - id: BoxCarnage
+          amount: 2
+        - id: MagazineShotgunCarnage
+          amount: 2
+
+- type: entity
+  parent: ClothingBackpackERTClown
+  categories: [ HideSpawnMenu ]
+  id: ClothingBackpackArrowsSoldFilled
+  name: PMC "Arrows" soldier's backpack
+  description: Holds the kit of CentComm's most feared agents.
+  suffix: Arrows
+  components:
+    - type: Storage
+      grid:
+      - 0,0,7,5
+    - type: StorageFill
+      contents:
+        - id: BoxArrowsKit
+        - id: MedkitCombatFilled
+        - id: WeaponRevolverMatebaAPBiocode
+        - id: SpeedLoaderMagnumAP
+          amount: 2
+        - id: EnergyShieldArrowsBiocode
+        #- id: BaseUplinkNTERT200BC
+
+# Аварийный набор общий
+
+- type: entity
+  name: Box survival "PMC Arrows"
+  parent: [BoxCardboard, BaseCentcommContraband]
+  id: BoxArrowsKit
+  description: Base Leader Kit created for centcomm squad members.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: id
+  - type: Storage
+    grid:
+    - 0,0,4,3
+  - type: StorageFill
+    contents:
+    - id: PortableSurveillanceCameraMonitorUnpowered
+    - id: HandheldCriminalRecordsMonitorUnpowered
+    - id: PinpointerUniversal
+    - id: PinpointerNuclear
+    - id: MedipenCombatInjector
+      amount: 2
+    - id: HandheldCrewMonitor
+    - id: PowerCellMicroreactor
+    - id: FoodSnackMaysonEnergy
+    - id: FoodTinMRE
+    - id: DrinkMREFlask
+
