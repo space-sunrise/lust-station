@@ -210,4 +210,3 @@
   components:
   - type: BatterySelfRecharger
     autoRechargeRate: 30
-
