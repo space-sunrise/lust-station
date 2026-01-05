@@ -1,0 +1,90 @@
+# Варианты с биокодом
+
+- type: entity
+  parent: ClothingOuterHardsuitArrowsNetrunner
+  id: ClothingOuterHardsuitArrowsNetrunnerBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Arrows
+  - type: FactionClothingBlocker
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  parent: ClothingOuterHardsuitArrowsHeavy
+  id: ClothingOuterHardsuitArrowsHeavyBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Arrows
+  - type: FactionClothingBlocker
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  parent: ChainswordArrows
+  id: ChainswordArrowsBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Arrows
+  - type: Biocode
+    factions:
+    - Arrows
+
+- type: entity
+  parent: WeaponPulseRifle
+  id: WeaponPulseRifleBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Arrows
+    alertText: alertText-biocode-message
+  - type: Biocode
+    factions:
+    - Arrows
+
+- type: entity
+  parent: WeaponRevolverMatebaAP
+  id: WeaponRevolverMatebaAPBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Arrows
+    alertText: alertText-biocode-message
+  - type: Biocode
+    factions:
+    - Arrows
+
+- type: entity
+  parent: EnergyShield
+  id: EnergyShieldArrowsBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Arrows
+    alertText: alertText-biocode-message
+  - type: Biocode
+    factions:
+    - Arrows
+
+- type: entity
+  parent: WeaponShotgunCarnage
+  id: WeaponShotgunCarnageBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Arrows
+    alertText: alertText-biocode-message
+  - type: Biocode
+    factions:
+    - Arrows
+

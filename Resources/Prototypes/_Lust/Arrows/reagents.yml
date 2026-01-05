@@ -1,0 +1,77 @@
+# Реагенты
+
+# Реагент стимпак
+
+- type: reagent
+  id: StimulantsArrows
+  name: reagent-name-militarystimulant
+  group: Narcotics
+  desc: reagent-desc-militaryStimulant
+  physicalDesc: reagent-physical-desc-thick
+  flavor: bitter
+  color: "#CD5C5C"
+  boilingPoint: 255.0
+  meltingPoint: 36.0
+  metabolisms:
+    Narcotic:
+      effects:
+      - !type:MovementSpeedModifier
+        walkSpeedModifier: 1.4
+        sprintSpeedModifier: 1.4
+      - !type:SatiateHunger
+        factor: 2
+      - !type:SatiateThirst
+        factor: 2
+
+# Реагент в крови
+
+- type: reagent
+  id: ReagentArrows
+  name: reagent-name-arrow
+  group: Medicine
+  desc: reagent-desc-addictive
+  physicalDesc: reagent-physical-desc-addictive
+  flavor: medicine
+  color: "#32127a"
+  metabolisms:
+    Medicine:
+      effects:
+      - !type:AdjustReagent
+        reagent: Pax
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Haloperidol
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: Nocturine
+        amount: -3.0
+      - !type:AdjustReagent
+        reagent: ChloralHydrate
+        amount: -3.0
+      - !type:GenericStatusEffect
+        key: Jitter
+        time: 3.0
+        type: Remove
+      - !type:GenericStatusEffect
+        key: Drowsiness
+        component: Drowsiness
+        time: 1.5
+        type: Remove
+
+# Стимпак
+
+- type: entity
+  name: military stimulant
+  parent: SpaceMedipen
+  id: CombatMedipenArrows
+  description: A powerful military stimulant that turns you into a rocket.
+  suffix: Arrows
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: StimulantsArrows
+          Quantity: 20
+

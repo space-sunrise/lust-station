@@ -1,0 +1,10 @@
+# Уровни доступа
+
+- type: accessLevel
+  id: MTO
+  name: id-card-access-level-MTO
+
+- type: accessLevel
+  id: MTOL
+  name: id-card-access-level-MTOL
+

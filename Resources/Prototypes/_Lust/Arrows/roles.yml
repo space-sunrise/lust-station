@@ -1,0 +1,246 @@
+# Роли и настройки персонажей
+
+- type: randomHumanoidSettings
+  id: ArrowsLeaderRandom
+  speciesBlacklist:
+    - Diona
+    - Vox
+    - Felinid
+    - Moth
+    - Arachnid
+    - Reptilian
+    - Vulpkanin
+    - Swine
+    - Tajaran
+    - Demon
+    - SlimePerson
+    - Dwarf
+    - HumanoidXeno
+    - Predator
+  parent: ERTLeader
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 72000
+        - !type:DepartmentTimeRequirement
+          department: Command
+          time: 36000
+      name: ghost-role-information-arrow-leader-name
+      description: ghost-role-information-arrow-leader-description
+      raffle:
+        settings: short
+    - type: GhostTakeoverAvailable
+    - type: ZombieImmune
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        120: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 400
+      decay: 6
+      cooldown: 1
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        70: 0.9
+        120: 0.7
+        140: 0.5
+    - type: Loadout
+      prototypes: [ MTLeader ]
+      roleLoadout:
+    - type: AutoImplant
+      implants:
+      - FreedomImplant
+      - DeathAcidifierImplant
+      - BlinkImplant
+      - MindShieldImplant
+      - DeathRattleImplantMT
+    - type: NpcFactionMember
+      factions:
+      - Arrows
+    - type: StatusEffects
+      allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - StaminaModifier
+    - type: SolutionRegeneration
+      solution: chemicals
+      generated:
+        reagents:
+        - ReagentId: ReagentArrows
+          Quantity: 0.25
+    - type: Thirst
+      startingThirst: 2500  # spawn with Okay thirst state
+      thresholds:
+        OverHydrated: 3500
+        Okay: 2500
+        Thirsty: 1500
+        Parched: 1000
+        Dead: 0
+      baseDecayRate: 0.0001
+    - type: Hunger
+      thresholds:
+        Overfed: 3500
+        Okay: 2500
+        Peckish: 1500
+        Starving: 1000
+        Dead: 0
+      baseDecayRate: 0.0001
+    - type: PassiveDamage
+      allowedStates:
+      - Alive
+      damageCap: 150
+      damage:
+        groups:
+          Brute: -0.2
+          Burn: -0.2
+          Toxin: -0.5
+
+- type: randomHumanoidSettings
+  id: ArrowsSoldRandom
+  speciesBlacklist:
+    - Diona
+    - Vox
+    - Felinid
+    - Moth
+    - Arachnid
+    - Reptilian
+    - Vulpkanin
+    - Swine
+    - Tajaran
+    - Demon
+    - SlimePerson
+    - Dwarf
+    - HumanoidXeno
+    - Predator
+  parent: ERTSecurity
+  components:
+    - type: GhostRole
+      allowMovement: true
+      allowSpeech: true
+      makeSentient: true
+      requirements:
+        - !type:DepartmentTimeRequirement
+          department: Security
+          time: 54000
+      name: ghost-role-information-arrow-soldier-name
+      description: ghost-role-information-arrow-soldier-description
+    - type: GhostTakeoverAvailable
+    - type: ZombieImmune
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        120: Critical
+        200: Dead
+    - type: Stamina
+      critThreshold: 400
+      decay: 6
+      cooldown: 1
+    - type: SlowOnDamage
+      speedModifierThresholds:
+        70: 0.9
+        120: 0.7
+        140: 0.5
+    - type: Loadout
+      prototypes: [ MTSold ]
+      roleLoadout:
+    - type: AutoImplant
+      implants:
+      - FreedomImplant
+      - DeathAcidifierImplant
+      - BlinkImplant
+      - MindShieldImplant
+      - DeathRattleImplantMT
+    - type: NpcFactionMember
+      factions:
+      - Arrows
+    - type: StatusEffects
+      allowed:
+      - Stun
+      - KnockedDown
+      - SlowedDown
+      - Stutter
+      - Electrocution
+      - SlurredSpeech
+      - RatvarianLanguage
+      - PressureImmunity
+      - StaminaModifier
+    - type: SolutionRegeneration
+      solution: chemicals
+      generated:
+        reagents:
+        - ReagentId: ReagentArrows
+          Quantity: 0.25
+    - type: Thirst
+      startingThirst: 2500  # spawn with Okay thirst state
+      thresholds:
+        OverHydrated: 3500
+        Okay: 2500
+        Thirsty: 1500
+        Parched: 1000
+        Dead: 0
+      baseDecayRate: 0.0001
+    - type: Hunger
+      thresholds:
+        Overfed: 3500
+        Okay: 2500
+        Peckish: 1500
+        Starving: 1000
+        Dead: 0
+      baseDecayRate: 0.0001
+    - type: PassiveDamage
+      allowedStates:
+      - Alive
+      damageCap: 150
+      damage:
+        groups:
+          Brute: -0.2
+          Burn: -0.2
+          Toxin: -0.2
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconArrows
+  icon:
+    sprite: /Textures/_Lust/Interface/Misc/job_icons.rsi
+    state: Arrows
+  jobName: job-name-soldierarrows
+
+- type: job
+  id: LeaderArrows
+  name: job-name-leaderarrows
+  description: job-description-leaderarrows
+  playTimeTracker: JobLeaderArrows
+  icon: "JobIconArrows"
+  overrideConsoleVisibility: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - MTO
+  - MTOL
+
+- type: job
+  id: SoldierArrows
+  name: job-name-soldierarrows
+  description: job-description-soldierarrows
+  playTimeTracker: JobSoldierArrows
+  icon: "JobIconArrows"
+  overrideConsoleVisibility: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - MTO
+

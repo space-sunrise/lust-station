@@ -1,6 +1,6 @@
-###ИМПЛАНТЫ
+# Импланты и их действия
 
-#ИМПЛАНТ ТЕЛЕПОРТА
+# Имплант телепорта
 
 - type: entity
   parent: BaseAction
@@ -44,7 +44,7 @@
     - type: Implanter
       implant: BlinkImplant
 
-#ИМПЛАНТ "СИЛОВОЙ БАРЬЕР"
+# Имплант "Силовой барьер"
 
 - type: entity
   id: WallForceArrows
@@ -116,7 +116,7 @@
     - type: Implanter
       implant: WallImplant
 
-#ИМПЛАНТ ПЕРЕГРУЗКИ
+# Имплант перегрузки
 
 - type: entity
   parent: BaseSmiteAction
@@ -156,7 +156,8 @@
     - type: Implanter
       implant: SmiteImplant
 
-#ИМПЛАНТ ХРИП
+# Имплант хрип
+
 - type: entity
   parent: DeathRattleImplant
   id: DeathRattleImplantMT
@@ -167,7 +168,8 @@
   - type: RattleOnTrigger
     radioChannel: MT
 
-#БЕСКОНЕЧНЫЙ СИЛОВОЙ БАРЬЕР
+# Бесконечный силовой барьер
+
 - type: entity
   id: WallForceArrowsUn
   name: power barrier
@@ -199,3 +201,4 @@
     - type: Icon
       sprite: Structures/Holo/security.rsi
       state: icon
+
