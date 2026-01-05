@@ -61,7 +61,6 @@
 
 - type: loadout
   id: BlueshieldAsh12
-  sponsorOnly: true
   inhand:
   - ClothingBackpackDuffelWeaponRifleAsh12
   effects:
