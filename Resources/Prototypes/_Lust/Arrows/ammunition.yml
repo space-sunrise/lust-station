@@ -108,7 +108,7 @@
     tags:
     - Cartridge
     - ShellShotgunCarnage
-  - type: HitScanCartridgeAmmo
+  - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
   - type: Sprite
