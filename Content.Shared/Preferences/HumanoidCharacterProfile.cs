@@ -799,7 +799,15 @@ namespace Content.Shared.Preferences
         // Sunrise-TTS-Start
         public static bool CanHaveVoice(TTSVoicePrototype voice, Sex sex)
         {
-            return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
+            if (!voice.RoundStart)
+                return false;
+            
+            // Если голос доступен для всех полов (Unsexed), то его можно использовать
+            if (voice.Sex.Contains(Sex.Unsexed))
+                return true;
+            
+            // Проверяем, доступен ли голос для конкретного пола персонажа
+            return voice.Sex.Contains(sex);
         }
         // Sunrise-TTS-End
 
