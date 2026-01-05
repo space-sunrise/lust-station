@@ -19,7 +19,6 @@
     startingCharge: 1800
   - type: EmpImmune
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 40
 
 - type: entity
@@ -97,7 +96,6 @@
     domePrototype: EnergyDomeSmallGreen
   - type: PowerCellDraw
     drawRate: 0
-    useRate: 0
   - type: UseDelay
     delay: 10.0
 
@@ -158,7 +156,6 @@
     domePrototype: EnergyDomeSmallGreen
   - type: PowerCellDraw
     drawRate: 0
-    useRate: 0
   - type: UseDelay
     delay: 10.0
 

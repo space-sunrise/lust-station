@@ -23,13 +23,6 @@
       allowMovement: true
       allowSpeech: true
       makeSentient: true
-      requirements:
-        - !type:DepartmentTimeRequirement
-          department: Security
-          time: 72000
-        - !type:DepartmentTimeRequirement
-          department: Command
-          time: 36000
       name: ghost-role-information-arrow-leader-name
       description: ghost-role-information-arrow-leader-description
       raffle:
@@ -42,7 +35,7 @@
         120: Critical
         200: Dead
     - type: Stamina
-      critThreshold: 400
+      baseCritThreshold: 400
       decay: 6
       cooldown: 1
     - type: SlowOnDamage
@@ -130,10 +123,6 @@
       allowMovement: true
       allowSpeech: true
       makeSentient: true
-      requirements:
-        - !type:DepartmentTimeRequirement
-          department: Security
-          time: 54000
       name: ghost-role-information-arrow-soldier-name
       description: ghost-role-information-arrow-soldier-description
     - type: GhostTakeoverAvailable
@@ -144,7 +133,7 @@
         120: Critical
         200: Dead
     - type: Stamina
-      critThreshold: 400
+      baseCritThreshold: 400
       decay: 6
       cooldown: 1
     - type: SlowOnDamage

@@ -3,7 +3,7 @@
   id: Predator
   name: species-name-predator
   roundStart: true
-  sponsorOnly: false # Sunrise-edit
+  sponsorOnly: false # Lust-edit
   prototype: MobPredator
   bodyTypes:
   - PredatorNormal
