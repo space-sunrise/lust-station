@@ -204,12 +204,6 @@
   - CentCommOfficerJumpskirt
   - CentCommOfficialJumpsuit
   - CentCommOfficialJumpskirt
-  # Lust-Start
-  - CentCommQilluFormalJumpsuit
-  - CentCommQilluFormalJumpskirt
-  - CentCommQilluSuitJumpsuit
-  - CentCommQilluSkirtSuitJumpskirt
-  # Lust-End
 
 - type: loadoutGroup
   id: CentCommOperatorHats
@@ -217,21 +211,6 @@
   loadouts:
   - HeadHatBeretCentcomNaval
   - HeadHatCentcomcap
-  - HeadHatCentcomElegantCap # Lust - Added
-
-# TODO: Сделать на санрайзе лоадаут группу а потом добавить туда Qillu вещи
-# Lust-Start
-- type: loadoutGroup
-  id: CentCommOperatorNeck
-  name: loadout-group-centcomm-operator-neck
-  minLimit: 0
-  maxLimit: 1
-  loadouts:
-  - CentCommNeckCloak
-  - CentCommNeckScarfStriped
-  - CentCommNeckScarfElegant
-  - CentCommExpensiveCoat
-# Lust-End
 
 - type: loadoutGroup
   id: ChiefEngineerBackpack

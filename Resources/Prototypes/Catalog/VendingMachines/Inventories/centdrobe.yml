@@ -10,26 +10,14 @@
     ClothingUniformJumpsuitCentcomAgent: 3
     ClothingUniformJumpsuitCentcomFormal: 3
     ClothingUniformJumpskirtCentcomFormalDress: 3
-    # Lust-Start
-    ClothingUniformJumpsuitCentcomFormalQillu: 3
-    ClothingUniformJumpsuitCentcomSuitQillu: 3
-    ClothingUniformJumpskirtCentcomFormalDressQillu: 3
-    ClothingUniformJumpskirtCentcomSkirtSuitQillu: 3
-    # Lust-End
     ClothingHeadHatCentcom: 3
     ClothingHeadHatCentcomcap: 3
-    # Lust-Start
-    ClothingHeadHatCentcomElegantCap: 3
-    # Lust-End
     ClothingMaskGasCentcom: 3
     ClothingHeadsetCentCom: 3
     ClothingOuterWinterCentcom: 3
     ClothingOuterCoatExpensive: 1
     ClothingNeckScarfStripedCentcom: 3
     ClothingNeckCloakCentcom: 3
-    # Lust-Start
-    ClothingNeckScarfCentcomElegant: 3
-    # Lust-End
   contrabandInventory:
     ToyFigurineCaptain: 1
     ToyFigurineHeadOfPersonnel: 1

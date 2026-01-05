@@ -44,14 +44,3 @@
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpskirt/iaa_elegant_skirt.rsi
-
-- type: entity
-  parent: ClothingUniformSkirtBase
-  id: ClothingUniformJumpskirtCentcomSkirtSuitQillu
-  name: ent-ClothingUniformJumpskirtCentcomSkirtSuitQillu
-  description: ent-ClothingUniformJumpskirtCentcomSkirtSuitQillu-desc
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcom_skirtsuit_qillu.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpskirt/centcom_skirtsuit_qillu.rsi
