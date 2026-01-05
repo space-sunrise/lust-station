@@ -15,7 +15,6 @@
   access:
   - Security
   - Brig
-  - Service
   - External
   - Cryogenics
   special:
@@ -26,7 +25,7 @@
   id: SecurityPilotGear
   equipment:
     mask: ClothingMaskGasPilot
-    eyes: ClothingEyesGlassesSunglasses
+#    eyes: ClothingEyesGlassesSunglasses #Lust-Edit
     gloves: ClothingHandsGlovesColorGray
     head: ClothingHeadHelmetPilot
     outerClothing: ClothingOuterCoatPilot
@@ -40,3 +39,8 @@
 - type: chameleonOutfit
   id: SecurityPilotChameleonOutfit
   job: SecurityPilot
+  hasMindShield: true
+  equipment:
+    gloves: ClothingHandsGlovesColorGray
+    mask: ClothingMaskGasPilot
+    eyes: ClothingEyesGlassesSunglasses

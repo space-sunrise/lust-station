@@ -21,7 +21,7 @@ namespace Content.Server.Database.Migrations.Postgres
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.1")
+                .HasAnnotation("ProductVersion", "10.0.0")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -145,10 +145,6 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Property<int>("Id")
                         .HasColumnType("integer")
                         .HasColumnName("admin_log_id");
-
-                    b.Property<long>("CurTime")
-                        .HasColumnType("bigint")
-                        .HasColumnName("cur_time");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("timestamp with time zone")
@@ -993,20 +989,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("body_type");
 
-                    b.Property<string>("AnalVirginity")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("anal_virginity");
-
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("char_name");
-
-                    b.Property<string>("Erp")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("erp");
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
@@ -1100,19 +1086,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("species");
 
-                    // LUST START
-                    b.Property<string>("Virginity")
-                        .IsRequired()
-                        .HasColumnType("text")
-                        .HasColumnName("virginity");
-                    // LUST END
-
-                    // Sunrise-TTS-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("text")
                         .HasColumnName("voice");
-                    // Sunrise-TTS-End
 
                     b.Property<float>("Width")
                         .HasColumnType("real")
@@ -1128,6 +1105,43 @@ namespace Content.Server.Database.Migrations.Postgres
                         .IsUnique();
 
                     b.ToTable("profile", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasColumnName("profile_erp_id");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("anal_virginity");
+
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("erp");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("integer")
+                        .HasColumnName("profile_id");
+
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("virginity");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_erp");
+
+                    b.HasIndex("ProfileId")
+                        .IsUnique();
+
+                    b.ToTable("profile_erp", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
@@ -1979,6 +1993,18 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.Navigation("Preference");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithOne("ErpData")
+                        .HasForeignKey("Content.Server.Database.ProfileErp", "ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_erp_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
                 {
                     b.HasOne("Content.Server.Database.ProfileLoadoutGroup", "ProfileLoadoutGroup")
@@ -2295,6 +2321,8 @@ namespace Content.Server.Database.Migrations.Postgres
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
                 {
                     b.Navigation("Antags");
+
+                    b.Navigation("ErpData");
 
                     b.Navigation("Jobs");
 

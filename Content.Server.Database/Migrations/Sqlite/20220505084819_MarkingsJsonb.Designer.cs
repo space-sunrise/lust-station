@@ -573,11 +573,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("sex");
 
-                    b.Property<string>("Erp")
-                                            .IsRequired()
-                                            .HasColumnType("TEXT")
-                                            .HasColumnName("erp");
-
                     b.Property<string>("SkinColor")
                         .IsRequired()
                         .HasColumnType("TEXT")

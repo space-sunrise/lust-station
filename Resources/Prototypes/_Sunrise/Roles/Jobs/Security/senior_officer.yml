@@ -24,7 +24,6 @@
   access:
   - Security
   - Brig
-  - Service
   - External
   - Cryogenics
   special:
@@ -34,13 +33,10 @@
 - type: startingGear
   id: SeniorOfficerGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+#    eyes: ClothingEyesGlassesSecurity #Lust-Edit
     head: ClothingHeadHatBeretSecurity
     id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
-  storage:
-    back:
-    - WeaponDisablerSMG
 
 - type: chameleonOutfit
   id: SeniorOfficerChameleonOutfit

@@ -11,48 +11,33 @@
   loadouts:
   - SecurityCloak
 
-- type: loadoutGroup # Lust Station
-  id: MedicalNeck
-  name: loadout-group-medical-neck
-  minLimit: 0
-  loadouts:
-  - MedicalCloak
-
-#IAA
+# IAA
 - type: loadoutGroup
-  id: IAAuniform
+  id: IAAuniformFormalSuit
   name: loadout-group-IAA-uniform
   loadouts:
-  - IAAuniform
-  - LawyerJumpsuit
-  - LawyerJumpskirt
-  - LawyerJumpsuitBlue
-  - LawyerJumpskirtBlue
-  - LawyerJumpsuitPurple
-  - LawyerJumpskirtPurple
-  - LawyerJumpsuitRed
-  - LawyerJumpskirtRed
-  - LawyerJumpsuitGood
-  - LawyerJumpskirtGood
-  - LawyerJumpskirtWhite
-  - LawyerJumpsuitWhite
+  - IAAuniformElegantSuit
+  - IAAuniformElegantSkirt
+  - IAAuniformFormalSuit
+  - IAAuniformFormalSkirt
 
 - type: loadoutGroup
-  id: IAAneck
-  name: loadout-group-IAA-neck
-  loadouts:
-  - IAAcape
-  - IAAformalmantle
-
-- type: loadoutGroup
-  id: IAAcoat
-  name: loadout-group-IAA-coat
-  loadouts:
-  - IAAcoat
-
-- type: loadoutGroup
-  id: IAAback
+  id: IAASatchel
   name: loadout-group-IAA-backpack
   loadouts:
-  - IAAduffel
-  - IAAsatchel
+  - IAASatchel
+  - IAAWhiteSatchel
+
+- type: loadoutGroup
+  id: IAAOuterClothing
+  minLimit: 0
+  name: loadout-group-IAA-outerClothing
+  loadouts:
+  - IAACoat
+
+- type: loadoutGroup
+  id: IAANeck
+  minLimit: 0
+  name: loadout-group-IAA-neck
+  loadouts:
+  - IAACloak

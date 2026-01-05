@@ -1,0 +1,15 @@
+lust-interaction-sound-Kiss1 = Kiss 1
+lust-interaction-sound-Kiss2 = Kiss 2
+lust-interaction-sound-Kiss3 = Kiss 3
+lust-interaction-sound-Kiss4 = Kiss 4
+lust-interaction-sound-Kiss5 = Kiss 5
+lust-interaction-sound-Kiss6 = Kiss 6
+lust-interaction-sound-Hlup1 = Squelch 1
+lust-interaction-sound-Hlup2 = Squelch 2
+lust-interaction-sound-Hlup3 = Squelch 3
+lust-interaction-sound-Hlup4 = Squelch 4
+lust-interaction-sound-ALotOfKisses = Lots of kisses
+lust-interaction-sound-Whip1 = Whip 1
+lust-interaction-sound-Whip2 = Whip 2
+lust-interaction-sound-Whip3 = Whip 3
+lust-interaction-sound-FinterLick = Finger lick

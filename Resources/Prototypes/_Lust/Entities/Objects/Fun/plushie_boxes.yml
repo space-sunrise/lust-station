@@ -17,11 +17,21 @@
         orGroup: Plushie
       - id: PlushieAnnaLisechanskaya
         orGroup: Plushie
-      - id: PlushieSashaChernyh
+      - id: PlushieLu
+        orGroup: Plushie
+      - id: PlushieAndrewNarvi
+        orGroup: Plushie
+      - id: PlushiePrototupus
+        orGroup: Plushie
+      - id: PlushieSansaMontanelli
+        orGroup: Plushie
+      - id: PlushieEblan
+        orGroup: Plushie
+      - id: PlushieMilosTanka
+        orGroup: Plushie
+      - id: PlushieAlisaKrokozyabka
         orGroup: Plushie
       - id: PlushieKharsha
-        orGroup: Plushie
-      - id: PlushieVaxel
         orGroup: Plushie
       - id: PlushiePinkers
         orGroup: Plushie
@@ -29,19 +39,11 @@
         orGroup: Plushie
       - id: PlushieSaiHaks
         orGroup: Plushie
-      - id: PlushieEuphaEverek
-        orGroup: Plushie
       - id: PlushieAlexandrLimenski
-        orGroup: Plushie
-      - id: PlushieRandyCamble
-        orGroup: Plushie
-      - id: PlushieHimaAisetova
         orGroup: Plushie
       - id: PlushieMaksimDedov
         orGroup: Plushie
       - id: PlushieIvanBykov
-        orGroup: Plushie
-      - id: PlushieSvyashenLuna
         orGroup: Plushie
       - id: PlushieFranzEvans
         orGroup: Plushie
@@ -62,4 +64,10 @@
       - id: PlushieDrasusLeverian
         orGroup: Plushie
       - id: PlushieKalium
+        orGroup: Plushie
+      - id: PlushieRaneliToll
+        orGroup: Plushie
+      - id: PlushieKira
+        orGroup: Plushie
+      - id: PlushieAshito
         orGroup: Plushie

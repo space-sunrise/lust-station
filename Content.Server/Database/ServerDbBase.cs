@@ -30,7 +30,6 @@ namespace Content.Server.Database
     public abstract class ServerDbBase
     {
         private readonly ISawmill _opsLog;
-
         public event Action<DatabaseNotification>? OnNotificationReceived;
 
         /// <param name="opsLog">Sawmill to trace log database operations to.</param>
@@ -51,6 +50,7 @@ namespace Content.Server.Database
                 .Include(p => p.Profiles).ThenInclude(h => h.Jobs)
                 .Include(p => p.Profiles).ThenInclude(h => h.Antags)
                 .Include(p => p.Profiles).ThenInclude(h => h.Traits)
+                .Include(p => p.Profiles).ThenInclude(h => h.ErpData)
                 .Include(p => p.Profiles)
                     .ThenInclude(h => h.Loadouts)
                     .ThenInclude(l => l.Groups)
@@ -110,6 +110,7 @@ namespace Content.Server.Database
                 .Include(p => p.Loadouts)
                     .ThenInclude(l => l.Groups)
                     .ThenInclude(group => group.Loadouts)
+                .Include(p => p.ErpData)
                 .AsSplitQuery()
                 .SingleOrDefault(h => h.Slot == slot);
 
@@ -145,7 +146,7 @@ namespace Content.Server.Database
         {
             await using var db = await GetDb();
 
-            var profile = ConvertProfiles((HumanoidCharacterProfile)defaultProfile, 0);
+            var profile = ConvertProfiles((HumanoidCharacterProfile) defaultProfile, 0);
             var prefs = new Preference
             {
                 UserId = userId.UserId,
@@ -207,7 +208,7 @@ namespace Content.Server.Database
 
         private static HumanoidCharacterProfile ConvertProfiles(Profile profile)
         {
-            var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority)j.Priority);
+            var jobs = profile.Jobs.ToDictionary(j => new ProtoId<JobPrototype>(j.JobName), j => (JobPriority) j.Priority);
             var antags = profile.Antags.Select(a => new ProtoId<AntagPrototype>(a.AntagName));
             var traits = profile.Traits.Select(t => new ProtoId<TraitPrototype>(t.TraitName));
 
@@ -215,23 +216,29 @@ namespace Content.Server.Database
             if (Enum.TryParse<Sex>(profile.Sex, true, out var sexVal))
                 sex = sexVal;
 
+            var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
+
+            // Sunrise-Lust Start
             var erp = Erp.Ask;
-            if (Enum.TryParse<Erp>(profile.Erp, true, out var erpVal))
-                erp = erpVal;
-
             var virginity = Virginity.No;
-            if (Enum.TryParse<Virginity>(profile.Virginity, true, out var virginityVal))
-                virginity = virginityVal;
-
             var analVirginity = Virginity.Yes;
-            if (Enum.TryParse<Virginity>(profile.AnalVirginity, true, out var analVirginityVal))
-                analVirginity = analVirginityVal;
 
-            var spawnPriority = (SpawnPriorityPreference)profile.SpawnPriority;
+            if (profile.ErpData != null)
+            {
+                if (Enum.TryParse<Erp>(profile.ErpData.Erp, true, out var erpVal))
+                    erp = erpVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.Virginity, true, out var virginityVal))
+                    virginity = virginityVal;
+
+                if (Enum.TryParse<Virginity>(profile.ErpData.AnalVirginity, true, out var analVirginityVal))
+                    analVirginity = analVirginityVal;
+            }
 
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
+            // Sunrise-Lust End
 
             // Sunrise-TTS-Start
             var voice = profile.Voice;
@@ -287,18 +294,18 @@ namespace Content.Server.Database
                 profile.BodyType,
                 profile.Age,
                 sex,
-                erp,
-                virginity,
-                analVirginity,
+                erp, // Sunrise-Lust Edit
+                virginity, // Sunrise-Lust Edit
+                analVirginity, // Sunrise-Lust Edit
                 gender,
                 new HumanoidCharacterAppearance
                 (
                     profile.HairName,
-                    Color.FromHex(profile.HairColor),
+                    Color.FromHex(string.IsNullOrEmpty(profile.HairColor) ? "#000000FF" : profile.HairColor),
                     profile.FacialHairName,
-                    Color.FromHex(profile.FacialHairColor),
-                    Color.FromHex(profile.EyeColor),
-                    Color.FromHex(profile.SkinColor),
+                    Color.FromHex(string.IsNullOrEmpty(profile.FacialHairColor) ? "#000000FF" : profile.FacialHairColor),
+                    Color.FromHex(string.IsNullOrEmpty(profile.EyeColor) ? "#000000FF" : profile.EyeColor),
+                    Color.FromHex(string.IsNullOrEmpty(profile.SkinColor) ? "#C0967FFF" : profile.SkinColor),
                     markings,
                     //sunrise gradient start
                     (MarkingEffectType)profile.HairColorType,
@@ -311,7 +318,7 @@ namespace Content.Server.Database
                 ),
                 spawnPriority,
                 jobs,
-                (PreferenceUnavailableMode)profile.PreferenceUnavailable,
+                (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts
@@ -321,7 +328,9 @@ namespace Content.Server.Database
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
         {
             profile ??= new Profile();
-            var appearance = (HumanoidCharacterAppearance)humanoid.CharacterAppearance;
+            var appearance = (HumanoidCharacterAppearance) humanoid.CharacterAppearance;
+
+            // Debug logging for incoming appearance values
             List<string> markingStrings = new();
             foreach (var marking in appearance.Markings)
             {
@@ -338,10 +347,20 @@ namespace Content.Server.Database
             profile.Width = appearance.Width; //Sunrise
             profile.Height = appearance.Height; //Sunrise
             profile.Sex = humanoid.Sex.ToString();
-            profile.Erp = humanoid.Erp.ToString(); // Lust-ERP
-            profile.Virginity = humanoid.Virginity.ToString(); // Lust-ERP
-            profile.AnalVirginity = humanoid.AnalVirginity.ToString(); // Lust-ERP
             profile.Gender = humanoid.Gender.ToString();
+
+            // Sunrise-Lust Edit - Update or create ErpData
+            if (profile.ErpData == null)
+            {
+                profile.ErpData = new ProfileErp
+                {
+                    ProfileId = profile.Id,
+                    Profile = profile
+                };
+            }
+            profile.ErpData.Erp = humanoid.Erp.ToString();
+            profile.ErpData.Virginity = humanoid.Virginity.ToString();
+            profile.ErpData.AnalVirginity = humanoid.AnalVirginity.ToString();
             profile.HairName = appearance.HairStyleId;
             profile.HairColor = appearance.HairColor.ToHex();
             profile.FacialHairName = appearance.FacialHairStyleId;
@@ -354,28 +373,28 @@ namespace Content.Server.Database
             // sunrise gradient end
             profile.EyeColor = appearance.EyeColor.ToHex();
             profile.SkinColor = appearance.SkinColor.ToHex();
-            profile.SpawnPriority = (int)humanoid.SpawnPriority;
+            profile.SpawnPriority = (int) humanoid.SpawnPriority;
             profile.Markings = markings;
             profile.Slot = slot;
-            profile.PreferenceUnavailable = (DbPreferenceUnavailableMode)humanoid.PreferenceUnavailable;
+            profile.PreferenceUnavailable = (DbPreferenceUnavailableMode) humanoid.PreferenceUnavailable;
 
             profile.Jobs.Clear();
             profile.Jobs.AddRange(
                 humanoid.JobPriorities
                     .Where(j => j.Value != JobPriority.Never)
-                    .Select(j => new Job { JobName = j.Key, Priority = (DbJobPriority)j.Value })
+                    .Select(j => new Job {JobName = j.Key, Priority = (DbJobPriority) j.Value})
             );
 
             profile.Antags.Clear();
             profile.Antags.AddRange(
                 humanoid.AntagPreferences
-                    .Select(a => new Antag { AntagName = a })
+                    .Select(a => new Antag {AntagName = a})
             );
 
             profile.Traits.Clear();
             profile.Traits.AddRange(
                 humanoid.TraitPreferences
-                        .Select(t => new Trait { TraitName = t })
+                        .Select(t => new Trait {TraitName = t})
             );
 
             profile.Loadouts.Clear();
@@ -717,6 +736,40 @@ namespace Content.Server.Database
             return record == null ? null : MakePlayerRecord(record);
         }
 
+        public async Task<Dictionary<Guid, string>> GetPlayerNamesBatchAsync(IEnumerable<Guid> userIds, CancellationToken cancel)
+        {
+            await using var db = await GetDb();
+
+            var userIdList = userIds.ToList();
+            if (userIdList.Count == 0)
+                return new Dictionary<Guid, string>();
+
+            var records = await db.DbContext.Player
+                .Where(p => userIdList.Contains(p.UserId))
+                .Select(p => new { p.UserId, p.LastSeenUserName })
+                .ToListAsync(cancel);
+
+            var result = new Dictionary<Guid, string>();
+            foreach (var record in records)
+            {
+                if (!string.IsNullOrWhiteSpace(record.LastSeenUserName))
+                {
+                    result[record.UserId] = record.LastSeenUserName;
+                }
+            }
+
+            // Fill missing names with "Unknown"
+            foreach (var userId in userIdList)
+            {
+                if (!result.ContainsKey(userId))
+                {
+                    result[userId] = "Unknown";
+                }
+            }
+
+            return result;
+        }
+
         protected async Task<bool> PlayerRecordExists(DbGuard db, NetUserId userId)
         {
             return await db.DbContext.Player.AnyAsync(p => p.UserId == userId);
@@ -759,8 +812,7 @@ namespace Content.Server.Database
             {
                 db.DbContext.ServerBanHit.Add(new ServerBanHit
                 {
-                    ConnectionId = connection,
-                    BanId = ban.Id!.Value
+                    ConnectionId = connection, BanId = ban.Id!.Value
                 });
             }
 
@@ -1127,7 +1179,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     players[i] = log.Players[i].PlayerUserId;
                 }
 
-                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.CurTime, log.Message, players);
+                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players);
             }
         }
 
@@ -1438,7 +1490,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 NormalizeDatabaseTime(ban.LastEditedAt),
                 NormalizeDatabaseTime(ban.ExpirationTime),
                 ban.Hidden,
-                new[] { ban.RoleId.Replace(BanManager.JobPrefix, null) },
+                new [] { ban.RoleId.Replace(BanManager.PrefixJob, null).Replace(BanManager.PrefixAntag, null) },
                 MakePlayerRecord(unbanningAdmin),
                 ban.Unban?.UnbanTime);
         }
@@ -1602,10 +1654,10 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         protected async Task<List<AdminWatchlistRecord>> GetActiveWatchlistsImpl(DbGuard db, Guid player)
         {
             var entities = await (from watchlist in db.DbContext.AdminWatchlists
-                                  where watchlist.PlayerUserId == player &&
-                                        !watchlist.Deleted &&
-                                        (watchlist.ExpirationTime == null || DateTime.UtcNow < watchlist.ExpirationTime)
-                                  select watchlist)
+                          where watchlist.PlayerUserId == player &&
+                                !watchlist.Deleted &&
+                                (watchlist.ExpirationTime == null || DateTime.UtcNow < watchlist.ExpirationTime)
+                          select watchlist)
                 .Include(note => note.Round)
                 .ThenInclude(r => r!.Server)
                 .Include(note => note.CreatedBy)
@@ -1630,9 +1682,9 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         protected async Task<List<AdminMessageRecord>> GetMessagesImpl(DbGuard db, Guid player)
         {
             var entities = await (from message in db.DbContext.AdminMessages
-                                  where message.PlayerUserId == player && !message.Deleted &&
-                                        (message.ExpirationTime == null || DateTime.UtcNow < message.ExpirationTime)
-                                  select message).Include(note => note.Round)
+                        where message.PlayerUserId == player && !message.Deleted &&
+                              (message.ExpirationTime == null || DateTime.UtcNow < message.ExpirationTime)
+                        select message).Include(note => note.Round)
                     .ThenInclude(r => r!.Server)
                     .Include(note => note.CreatedBy)
                     .Include(note => note.LastEditedBy)
@@ -1738,7 +1790,7 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     NormalizeDatabaseTime(firstBan.LastEditedAt),
                     NormalizeDatabaseTime(firstBan.ExpirationTime),
                     firstBan.Hidden,
-                    banGroup.Select(ban => ban.RoleId.Replace(BanManager.JobPrefix, null)).ToArray(),
+                    banGroup.Select(ban => ban.RoleId.Replace(BanManager.PrefixJob, null).Replace(BanManager.PrefixAntag, null)).ToArray(),
                     MakePlayerRecord(unbanningAdmin),
                     NormalizeDatabaseTime(firstBan.Unban?.UnbanTime)));
             }
@@ -1916,41 +1968,37 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
         public async Task<List<MentorHelpTicket>> GetMentorHelpTicketsByPlayerAsync(Guid playerId)
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.PlayerId == playerId)
-                .ToListAsync())
                 .OrderByDescending(t => t.CreatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetOpenMentorHelpTicketsAsync()
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.Status != MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetAssignedMentorHelpTicketsAsync(Guid mentorId)
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.AssignedToUserId == mentorId && t.Status != MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task<List<MentorHelpTicket>> GetClosedMentorHelpTicketsAsync()
         {
             await using var db = await GetDb();
-            return (await db.DbContext.MentorHelpTickets
+            return await db.DbContext.MentorHelpTickets
                 .Where(t => t.Status == MentorHelpTicketStatus.Closed)
-                .ToListAsync())
                 .OrderByDescending(t => t.UpdatedAt)
-                .ToList();
+                .ToListAsync();
         }
 
         public async Task AddMentorHelpMessageAsync(MentorHelpMessage message)

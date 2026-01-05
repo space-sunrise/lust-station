@@ -1,6 +1,6 @@
 - type: interaction
   id: ERPtoyPlaceholderDildo
-  name: "Вставить дилдо в анал"
+  name: lust-interaction-ERPtoyPlaceholderDildo
   icon: ToyButtIcon
   category: Dildos
   appearConditions:
@@ -16,6 +16,7 @@
     - ERPDildoEquine
     - ERPDildoKnot
     - ERPDildoTentacle
+    - PlushieAshito
   - !type:BodyAreaTagCondition
     checkInitiator: false
     checkTarget: true
@@ -43,7 +44,7 @@
 
 - type: interaction
   id: ERPtoyPlaceholderDildo2
-  name: "Вставить дилдо в вагину"
+  name: lust-interaction-ERPtoyPlaceholderDildo2
   icon: ToyPussyIcon
   category: Dildos
   appearConditions:
@@ -63,6 +64,7 @@
     - ERPDildoEquine
     - ERPDildoKnot
     - ERPDildoTentacle
+    - PlushieAshito
   - !type:BodyAreaTagCondition
     checkInitiator: false
     checkTarget: true
@@ -90,7 +92,7 @@
 
 - type: interaction
   id: ERPtoyPlaceholderFleshflight1
-  name: "Вставить член в киску"
+  name: lust-interaction-ERPtoyPlaceholderFleshflight1
   icon: ToyPussyIcon
   category: Fleshlights
   appearConditions:
@@ -136,7 +138,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderFleshflight1
-  name: "Вставить член в киску"
+  name: lust-interaction-ERPSelftoyPlaceholderFleshflight1
   icon: ToyPussyIcon
   category: Fleshlights
   appearConditions:
@@ -182,7 +184,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo
-  name: "Вставить дилдо в анал"
+  name: lust-interaction-ERPSelftoyPlaceholderDildo
   icon: ToyButtIcon
   category: Dildos
   appearConditions:
@@ -202,6 +204,7 @@
     - ERPDildoEquine
     - ERPDildoKnot
     - ERPDildoTentacle
+    - PlushieAshito
   interactionMessages:
   - "%user вставляет дилдо себе в анал"
   - "%user вводит дилдо в свой анал"
@@ -224,7 +227,7 @@
 
 - type: interaction
   id: ERPSelftoyPlaceholderDildo2
-  name: "Вставить дилдо в вагину"
+  name: lust-interaction-ERPSelftoyPlaceholderDildo2
   icon: ToyPussyIcon
   category: Dildos
   appearConditions:
@@ -248,6 +251,7 @@
     - ERPDildoEquine
     - ERPDildoKnot
     - ERPDildoTentacle
+    - PlushieAshito
   interactionMessages:
   - "%user вставляет дилдо в вагину"
   - "%user вводит дилдо в вагину"

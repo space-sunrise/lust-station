@@ -22,14 +22,14 @@
         shape:
           !type:PhysShapeAabb
           bounds: "-0.45,-0.45,0.45,0.05"
-        density: 190
+        density: 1900 #SUNRISE-EDIT
         mask:
         - TableMask
   - type: Sprite
     sprite: Structures/Furniture/furniture.rsi
     state: bed
     noRot: true
-    drawdepth: Puddles #Sunrise-add
+    drawdepth: HighFloorObjects #Sunrise-add
   - type: Strap
     position: Down
     rotation: -90
@@ -69,6 +69,7 @@
     anchored: true
     noRot: true
   - type: Anchorable
+    delay: 5 #SUNRISE-EDIT
   - type: Pullable
   - type: CanSleepOnBuckle # Sunrise-Edit
 

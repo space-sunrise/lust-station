@@ -110,6 +110,12 @@ public sealed partial class CCVars
         GameRoleTimers = CVarDef.Create("game.role_timers", false, CVar.SERVER | CVar.REPLICATED); // Sunrise-Edit
 
     /// <summary>
+    /// If role loadout items should be restricted based on time.
+    /// </summary>
+    public static readonly CVarDef<bool>
+        GameRoleLoadoutTimers = CVarDef.Create("game.role_loadout_timers", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
     ///     Override default role requirements using a <see cref="JobRequirementOverridePrototype"/>
     /// </summary>
     public static readonly CVarDef<string>
@@ -285,10 +291,10 @@ public sealed partial class CCVars
 
     /// <summary>
     /// Amount of playtime in minutes to be exempt from an IP check. 0 to search everyone. 5 hours by default.
+    /// </summary>
     /// <remarks>
     /// Trust me you want one.
-    /// </remarks>>
-    /// </summary>
+    /// </remarks>
     public static readonly CVarDef<TimeSpan> GameIPIntelExemptPlaytime =
         CVarDef.Create("game.ipintel_exempt_playtime", TimeSpan.FromMinutes(300), CVar.SERVERONLY);
 
@@ -303,6 +309,24 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<float> GameIPIntelAlertAdminWarnRating =
         CVarDef.Create("game.ipintel_alert_admin_warn_rating", 0f, CVar.SERVERONLY);
+
+    /// <summary>
+    /// Включить систему блокировки IP-адресов для защиты от перегрузки памяти.
+    /// </summary>
+    public static readonly CVarDef<bool> GameIPBlockingEnabled =
+        CVarDef.Create("game.ipblocking_enabled", true, CVar.SERVERONLY);
+
+    /// <summary>
+    /// Время блокировки IP-адреса в секундах при обнаружении подозрительного запроса.
+    /// </summary>
+    public static readonly CVarDef<int> GameIPBlockingDuration =
+        CVarDef.Create("game.ipblocking_duration", 900, CVar.SERVERONLY); // 15 минут по умолчанию
+
+    /// <summary>
+    /// Максимальная допустимая длина ответа в байтах. Запросы с большей длиной будут блокироваться.
+    /// </summary>
+    public static readonly CVarDef<int> GameIPBlockingMaxResponseLength =
+        CVarDef.Create("game.ipblocking_max_response_length", 10485760, CVar.SERVERONLY); // 10MB по умолчанию
 
     /// <summary>
     ///     Make people bonk when trying to climb certain objects like tables.

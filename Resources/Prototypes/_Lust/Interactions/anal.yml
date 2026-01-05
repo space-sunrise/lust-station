@@ -1,6 +1,6 @@
 ﻿- type: interaction
   id: AnalFingering
-  name: "Разработать анус пальцем"
+  name: lust-interaction-AnalFingering
   icon: AnalFingeringIcon
   category: Anal
   appearConditions:
@@ -38,7 +38,7 @@
 
 - type: interaction
   id: AnalLick
-  name: "Поласкать анус языком"
+  name: lust-interaction-AnalLick
   icon: AnalLickIcon
   category: Anal
   appearConditions:
@@ -74,7 +74,7 @@
 
 - type: interaction
   id: AnalFingering2
-  name: "Трахать анус пальцами"
+  name: lust-interaction-AnalFingering2
   icon: AnalFingeringIcon
   category: Anal
   appearConditions:
@@ -110,7 +110,7 @@
 
 - type: interaction
   id: AnalFuck
-  name: "Трахать анус членом"
+  name: lust-interaction-AnalFuck
   icon: CockNearToAssIcon
   category: Anal
   appearConditions:
@@ -152,7 +152,7 @@
 
 - type: interaction
   id: HoldTailAnusFuck
-  name: "Трахать в анус держа хвост"
+  name: lust-interaction-HoldTailAnusFuck
   icon: CockNearToAssTailIcon
   category: Anal
   appearConditions:
@@ -198,7 +198,7 @@
 
 - type: interaction
   id: TailAnalFuck
-  name: Проникнуть хвостом в анус
+  name: lust-interaction-TailAnalFuck
   icon: ButtTailFuckIcon
   category: Anal
   appearConditions:

@@ -1,2 +1,2 @@
-ent-EnvelopeQillu = envelopeqi
-    .desc = A small envelope for keeping prying eyes off of your sensitive documents.
+ent-EnvelopeQillu = конверт
+    .desc = Небольшой конверт, чтобы скрыть ваши конфиденциальные документы от любопытных глаз.

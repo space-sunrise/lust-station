@@ -1,0 +1,29 @@
+- type: dungeonRoomPack
+  id: SyndicateBase21x19
+  size: 21,19
+  rooms:
+    - 0,0,21,19
+
+- type: dungeonRoomPack
+  id: SyndicateBase19x11
+  size: 19,11
+  rooms:
+    - 0,0,19,11
+
+- type: dungeonRoomPack
+  id: SyndicateBase11x7
+  size: 11,7
+  rooms:
+    - 0,0,11,7
+
+- type: dungeonRoomPack
+  id: SyndicateBase18x5
+  size: 18,5
+  rooms:
+    - 0,0,18,5
+
+- type: dungeonRoomPack
+  id: SyndicateBase11x3
+  size: 11,3
+  rooms:
+    - 0,0,11,3

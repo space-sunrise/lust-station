@@ -15,7 +15,7 @@ namespace Content.Server.Database.Migrations.Sqlite
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.1");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.0");
 
             modelBuilder.Entity("Content.Server.Database.AHelpMessage", b =>
                 {
@@ -132,10 +132,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Property<int>("Id")
                         .HasColumnType("INTEGER")
                         .HasColumnName("admin_log_id");
-
-                    b.Property<long>("CurTime")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("cur_time");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("TEXT")
@@ -938,20 +934,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("body_type");
 
-                    b.Property<string>("AnalVirginity")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("anal_virginity");
-
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("char_name");
-
-                    b.Property<string>("Erp")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("erp");
 
                     b.Property<string>("EyeColor")
                         .IsRequired()
@@ -1044,18 +1030,11 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
-                    // LUST START
-                    b.Property<string>("Virginity")
-                        .IsRequired()
-                        .HasColumnType("TEXT")
-                        .HasColumnName("virginity");
-                    // LUST END
-                    // Sunrise-TTS-Start
+
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("voice");
-                    // Sunrise-TTS-End
 
                     b.Property<float>("Width")
                         .HasColumnType("REAL")
@@ -1071,6 +1050,41 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsUnique();
 
                     b.ToTable("profile", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_erp_id");
+
+                    b.Property<string>("AnalVirginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("anal_virginity");
+
+                    b.Property<string>("Erp")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("erp");
+
+                    b.Property<int>("ProfileId")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("profile_id");
+
+                    b.Property<string>("Virginity")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("virginity");
+
+                    b.HasKey("Id")
+                        .HasName("PK_profile_erp");
+
+                    b.HasIndex("ProfileId")
+                        .IsUnique();
+
+                    b.ToTable("profile_erp", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
@@ -1894,6 +1908,18 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Preference");
                 });
 
+            modelBuilder.Entity("Content.Server.Database.ProfileErp", b =>
+                {
+                    b.HasOne("Content.Server.Database.Profile", "Profile")
+                        .WithOne("ErpData")
+                        .HasForeignKey("Content.Server.Database.ProfileErp", "ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_profile_erp_profile_profile_id");
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("Content.Server.Database.ProfileLoadout", b =>
                 {
                     b.HasOne("Content.Server.Database.ProfileLoadoutGroup", "ProfileLoadoutGroup")
@@ -2210,6 +2236,8 @@ namespace Content.Server.Database.Migrations.Sqlite
             modelBuilder.Entity("Content.Server.Database.Profile", b =>
                 {
                     b.Navigation("Antags");
+
+                    b.Navigation("ErpData");
 
                     b.Navigation("Jobs");
 

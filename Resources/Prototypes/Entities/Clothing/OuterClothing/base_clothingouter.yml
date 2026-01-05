@@ -47,7 +47,7 @@
   parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
   id: ClothingOuterStorageBase
   components:
-  - type: ContainerInteractionAnimation # Sunrise added
+  - type: ContainerInteractionAnimationVisuals # Sunrise added
   - type: Storage
     grid:
     - 0,0,2,1
@@ -168,6 +168,17 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
+      beakerSlot: !type:ContainerSlot # Sunrise-Start
+  - type: Inject
+    openCloseDelay: 1.5
+    autoClose: true
+    autoCloseDelay: 6
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          tags:
+          - FitsHardsuit # Sunrise-End
   - type: GroupExamine
   - type: Tag
     tags:
@@ -184,6 +195,9 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
   - type: ArmorSparkEffect #starlight
 
 - type: entity
@@ -214,6 +228,9 @@
       flatReductions:
         Heat: 10 # the average lightbulb only does around four damage!
     slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
   # Sunrise-Start
   - type: Tag
     tags:
