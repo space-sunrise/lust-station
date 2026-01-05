@@ -107,7 +107,7 @@
     tags:
     - Cartridge
     - ShellShotgunCarnage
-  - type: HitScanCartridgeAmmo
+  - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -128,10 +128,10 @@
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: HitScanCartridgeAmmo
+  - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
-    hitscan: PelletShotgunCarnage
+    proto: PelletShotgunCarnage
 
 - type: entity
   id: BaseMagazineShotgunCarnage
