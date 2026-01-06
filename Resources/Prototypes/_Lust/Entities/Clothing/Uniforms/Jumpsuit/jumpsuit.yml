@@ -73,3 +73,25 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitQilluDirector
+  name: ent-ClothingUniformJumpsuitQilluDirector
+  description: ent-ClothingUniformJumpsuitQilluDirector-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomSuitQillu
+  name: ent-ClothingUniformJumpsuitCentcomSuitQillu
+  description: ent-ClothingUniformJumpsuitCentcomSuitQillu-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi

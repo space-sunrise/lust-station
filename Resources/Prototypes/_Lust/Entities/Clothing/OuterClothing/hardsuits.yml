@@ -1,0 +1,41 @@
+- type: entity
+  parent: [BaseCentcommContraband, ClothingOuterHardsuitBase]
+  id: ClothingOuterHardsuitCentcomQillu
+  name: ent-ClothingOuterHardsuitCentcomQillu
+  description: ent-ClothingOuterHardsuitCentcomQillu-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/centcom_hardsuit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/centcom_hardsuit_qillu.rsi
+  - type: Item
+    size: Huge
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.0008
+    coolingCoefficient: 0.0008
+  - type: ExplosionResistance
+    damageCoefficient: 0.60
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.40
+        Slash: 0.45
+        Piercing: 0.40
+        Heat: 0.35
+        Radiation: 0.30
+        Caustic: 0.55
+  - type: ClothingSpeedModifier
+    walkModifier: 0.90
+    sprintModifier: 0.90
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCentcomQillu
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - Hardsuit

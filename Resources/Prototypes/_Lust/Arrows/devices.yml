@@ -88,7 +88,6 @@
   - type: Sprite
     layers:
     - state: black
-    - state: idcaptain
   - type: PresetIdCard
     job: LeaderArrows
   - type: Tag
@@ -183,6 +182,10 @@
     - MTO
     - BasicSilicon
     - Borg
+  - type: ContainerFill
+    containers:
+      board:
+      - WeaponEnergyTurretAIControlPanelElectronics
 
 # Консоль управления шаттлом
 
@@ -206,6 +209,4 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 30
-
