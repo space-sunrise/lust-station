@@ -806,6 +806,9 @@ namespace Content.Shared.Preferences
             if (voice.Sex.Contains(Sex.Unsexed))
                 return true;
 
+            if (sex == Sex.Unsexed)
+                return true;
+
             // Проверяем, доступен ли голос для конкретного пола персонажа
             return voice.Sex.Contains(sex);
         }
