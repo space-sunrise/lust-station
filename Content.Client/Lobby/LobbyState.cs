@@ -61,7 +61,7 @@ namespace Content.Client.Lobby
         private ClientGameTicker _gameTicker = default!;
         private ContentAudioSystem _contentAudioSystem = default!;
         private ISawmill _sawmill = default!;
-        
+
         // Track loaded resources for unloading
         private ResPath? _currentAnimationPath;
         private ResPath? _currentArtPath;
@@ -72,7 +72,7 @@ namespace Content.Client.Lobby
         protected override void Startup()
         {
             _sawmill = _logManager.GetSawmill("lobby");
-            
+
             if (_userInterfaceManager.ActiveScreen == null)
             {
                 return;
@@ -276,12 +276,12 @@ namespace Content.Client.Lobby
             {
                 backgroundType = _gameTicker.LobbyType;
             }
-            
+
             if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType))
             {
                 lobbyBackgroundType = LobbyBackgroundType.Parallax; // Default
             }
-            
+
             switch (lobbyBackgroundType)
             {
                 case LobbyBackgroundType.Parallax:
@@ -410,16 +410,22 @@ namespace Content.Client.Lobby
                     Lobby!.LobbyAnimation.Visible = false;
                     Lobby!.LobbyArt.Visible = false;
                     Lobby!.ShowParallax = true;
+                    // Load parallax background
+                    UpdateLobbyParallax();
                     break;
                 case LobbyBackgroundType.Art:
                     Lobby!.LobbyAnimation.Visible = false;
                     Lobby!.LobbyArt.Visible = true;
                     Lobby!.ShowParallax = false;
+                    // Load art background
+                    UpdateLobbyArt();
                     break;
                 case LobbyBackgroundType.Animation:
                     Lobby!.LobbyAnimation.Visible = true;
                     Lobby!.LobbyArt.Visible = false;
                     Lobby!.ShowParallax = false;
+                    // Load animation background
+                    UpdateLobbyAnimation();
                     break;
             }
         }
@@ -462,14 +468,14 @@ namespace Content.Client.Lobby
             {
                 backgroundType = _gameTicker.LobbyType;
             }
-            
-            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) || 
+
+            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) ||
                 lobbyBackgroundType != LobbyBackgroundType.Animation)
             {
                 // Animation is not the selected background type, don't load it
                 return;
             }
-            
+
             if (!_protoMan.TryIndex<LobbyAnimationPrototype>(lobbyAnimation, out var lobbyAnimationPrototype))
                 return;
 
@@ -478,7 +484,7 @@ namespace Content.Client.Lobby
                 _sawmill.Error("Error in SetLobbyAnimation. Lobby is null");
                 return;
             }
-            
+
             // Unload previous animation if CVar is enabled
             if (_cfg.GetCVar(SunriseCCVars.LobbyUnloadResources) && _currentAnimationPath.HasValue)
             {
@@ -527,7 +533,7 @@ namespace Content.Client.Lobby
                         return;
                     }
                 }
-                
+
                 // Try to get the resource - this will load it if not cached
                 if (_resourceCache.TryGetResource<RSIResource>(targetPath, out var rsiResource))
                 {
@@ -554,15 +560,15 @@ namespace Content.Client.Lobby
             {
                 backgroundType = _gameTicker.LobbyType;
             }
-            
-            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) || 
+
+            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) ||
                 lobbyBackgroundType != LobbyBackgroundType.Art)
             {
                 // Art is not the selected background type, don't load it
                 return;
             }
-            
-            if (!_protoMan.TryIndex<LobbyBackgroundPrototype>(lobbyArt, out var lobbyArtPrototype))
+
+            if (!_protoMan.TryIndex<LobbyArtPrototype>(lobbyArt, out var lobbyArtPrototype))
                 return;
 
             if (Lobby == null)
@@ -570,14 +576,14 @@ namespace Content.Client.Lobby
                 _sawmill.Error("Error in SetLobbyArt. Lobby is null");
                 return;
             }
-            
+
             // Unload previous art if CVar is enabled
             if (_cfg.GetCVar(SunriseCCVars.LobbyUnloadResources) && _currentArtPath.HasValue)
             {
                 UnloadResource(_currentArtPath.Value);
             }
 
-            var imagePath = lobbyArtPrototype.Background.ToString();
+            var imagePath = lobbyArtPrototype.Background;
 
             // Check if resource is available, request if not
             var isAvailable = _netTexturesManager.EnsureResource(imagePath);
@@ -633,14 +639,14 @@ namespace Content.Client.Lobby
             {
                 backgroundType = _gameTicker.LobbyType;
             }
-            
-            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) || 
+
+            if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType) ||
                 lobbyBackgroundType != LobbyBackgroundType.Parallax)
             {
                 // Parallax is not the selected background type, don't load it
                 return;
             }
-            
+
             if (!_protoMan.TryIndex<LobbyParallaxPrototype>(lobbyParallax, out var lobbyParallaxPrototype))
                 return;
 
@@ -664,26 +670,56 @@ namespace Content.Client.Lobby
 
         private void UpdateLobbyAnimation()
         {
-            if (_cfg.GetCVar(SunriseCCVars.LobbyAnimation) != "Random")
-                return;
-
-            SetLobbyAnimation(_gameTicker.LobbyAnimation!);
+            var animationSetting = _cfg.GetCVar(SunriseCCVars.LobbyAnimation);
+            if (animationSetting == "Random")
+            {
+                // For Random, use the game ticker's selected animation
+                if (_gameTicker.LobbyAnimation != null)
+                {
+                    SetLobbyAnimation(_gameTicker.LobbyAnimation);
+                }
+            }
+            else
+            {
+                // For specific animation, use the setting
+                SetLobbyAnimation(animationSetting);
+            }
         }
 
         private void UpdateLobbyArt()
         {
-            if (_cfg.GetCVar(SunriseCCVars.LobbyArt) != "Random")
-                return;
-
-            SetLobbyArt(_gameTicker.LobbyArt!);
+            var artSetting = _cfg.GetCVar(SunriseCCVars.LobbyArt);
+            if (artSetting == "Random")
+            {
+                // For Random, use the game ticker's selected art
+                if (_gameTicker.LobbyArt != null)
+                {
+                    SetLobbyArt(_gameTicker.LobbyArt);
+                }
+            }
+            else
+            {
+                // For specific art, use the setting
+                SetLobbyArt(artSetting);
+            }
         }
 
         private void UpdateLobbyParallax()
         {
-            if (_cfg.GetCVar(SunriseCCVars.LobbyParallax) != "Random")
-                return;
-
-            SetLobbyParallax(_gameTicker.LobbyParallax!);
+            var parallaxSetting = _cfg.GetCVar(SunriseCCVars.LobbyParallax);
+            if (parallaxSetting == "Random")
+            {
+                // For Random, use the game ticker's selected parallax
+                if (_gameTicker.LobbyParallax != null)
+                {
+                    SetLobbyParallax(_gameTicker.LobbyParallax);
+                }
+            }
+            else
+            {
+                // For specific parallax, use the setting
+                SetLobbyParallax(parallaxSetting);
+            }
         }
 
         private void OnNetworkResourceLoaded(string resourcePath)
@@ -694,12 +730,12 @@ namespace Content.Client.Lobby
             {
                 backgroundType = _gameTicker.LobbyType;
             }
-            
+
             if (!Enum.TryParse(backgroundType, out LobbyBackgroundType lobbyBackgroundType))
             {
                 lobbyBackgroundType = LobbyBackgroundType.Parallax; // Default
             }
-            
+
             // Only load the resource for the currently selected background type
             switch (lobbyBackgroundType)
             {
@@ -722,7 +758,7 @@ namespace Content.Client.Lobby
                         }
                     }
                     break;
-                    
+
                 case LobbyBackgroundType.Art:
                     var currentArt = _cfg.GetCVar(SunriseCCVars.LobbyArt);
                     if (currentArt != null)
@@ -734,7 +770,7 @@ namespace Content.Client.Lobby
                         }
                     }
                     break;
-                    
+
                 case LobbyBackgroundType.Parallax:
                     // Parallax doesn't need network resources, it uses local resources
                     // But we can update it if needed
@@ -764,7 +800,7 @@ namespace Content.Client.Lobby
             try
             {
                 bool unloaded = false;
-                
+
                 // Try to unload RSI resource
                 if (_resourceCache.TryGetResource<RSIResource>(resourcePath, out var rsiResource))
                 {
@@ -779,7 +815,7 @@ namespace Content.Client.Lobby
                     unloaded = true;
                     _sawmill.Debug($"Disposed texture resource: {resourcePath} (still in cache due to sandbox limitations)");
                 }
-                
+
                 if (!unloaded)
                 {
                     _sawmill.Debug($"Resource not found in cache: {resourcePath}");

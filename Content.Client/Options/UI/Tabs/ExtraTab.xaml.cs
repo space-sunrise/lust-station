@@ -72,7 +72,7 @@ public sealed partial class ExtraTab : Control
             var layoutLoc = Loc.GetString($"lobby-parallax-{lobbyParallax.ID}");
             lobbyParallaxes.Add(new OptionDropDownCVar<string>.ValueOption(lobbyParallax.ID, layoutLoc));
         }
-        var lobbyArtsPrototypes = _prototypeManager.EnumeratePrototypes<LobbyBackgroundPrototype>();
+        var lobbyArtsPrototypes = _prototypeManager.EnumeratePrototypes<LobbyArtPrototype>();
         foreach (var lobbyArt in lobbyArtsPrototypes)
         {
             var layoutLoc = Loc.GetString($"lobby-art-{lobbyArt.ID}");
