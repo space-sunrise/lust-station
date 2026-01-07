@@ -86,15 +86,15 @@
             "name": "ulava-britz"
         },
         {
-            "name": "ulava-inhand-RIGHT",
+            "name": "ulava-inhand-right",
             "directions": 4
         },
         {
-            "name": "ulava-inhand-LEFT",
+            "name": "ulava-inhand-left",
             "directions": 4
         },
         {
-            "name": "ulava-equipped-NECK",
+            "name": "ulava-equipped-neck",
             "directions": 4
         },
         {
