@@ -274,6 +274,8 @@
     interfaces:
       enum.StorageUiKey.Key:
         type: StorageBoundUserInterface
+      enum.MechUiKey.Key:
+        type: MechBoundUserInterface
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
