@@ -39,6 +39,19 @@
             Name="DefaultState"
             VerticalExpand="True">
             <BoxContainer
+                Access="Public"
+                HorizontalAlignment="Center"
+                Name="LoadingAnimationContainer"
+                Orientation="Vertical"
+                VerticalAlignment="Center"
+                Visible="False">
+                <AnimatedTextureRect
+                    Access="Public"
+                    HorizontalAlignment="Center"
+                    Name="LoadingAnimation"
+                    VerticalAlignment="Center" />
+            </BoxContainer>
+            <BoxContainer
                 HorizontalAlignment="Left"
                 HorizontalExpand="True"
                 Orientation="Vertical">
@@ -361,34 +374,34 @@
                             SizeFlagsStretchRatio="1">
                             <Button
                                 Access="Public"
-                                MinWidth="40"
                                 HorizontalExpand="True"
+                                MinWidth="40"
                                 Name="AHelpButton"
                                 StyleClasses="ButtonBig"
                                 Text="{Loc 'ui-lobby-ahelp-button'}" />
                             <Button
                                 Access="Public"
-                                MinWidth="40"
                                 HorizontalExpand="True"
+                                MinWidth="40"
                                 Name="MHelpButton"
                                 StyleClasses="ButtonBig"
                                 Text="{Loc 'ui-lobby-mhelp-button'}" />
                             <vote:VoteCallMenuButton
-                                MinWidth="40"
                                 HorizontalExpand="True"
+                                MinWidth="40"
                                 Name="CallVoteButton"
                                 StyleClasses="ButtonBig" />
                             <Button
                                 Access="Public"
-                                MinWidth="40"
                                 HorizontalExpand="True"
+                                MinWidth="40"
                                 Name="OptionsButton"
                                 StyleClasses="ButtonBig"
                                 Text="{Loc 'ui-lobby-options-button'}" />
                             <Button
                                 Access="Public"
-                                MinWidth="40"
                                 HorizontalExpand="True"
+                                MinWidth="40"
                                 Name="LeaveButton"
                                 StyleClasses="ButtonBig"
                                 Text="{Loc 'ui-lobby-leave-button'}" />
