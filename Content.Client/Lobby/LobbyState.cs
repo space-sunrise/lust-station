@@ -1,3 +1,4 @@
+using System.IO;
 using System.Linq;
 using Content.Client._Sunrise;
 using Content.Client._Sunrise.Contributors;
@@ -509,6 +510,13 @@ namespace Content.Client.Lobby
 
             var rsiPath = lobbyAnimationPrototype.Animation;
 
+            // Ensure the path ends with .rsi for RSI resources
+            if (!rsiPath.EndsWith(".rsi") && !rsiPath.EndsWith(".rsi/"))
+            {
+                _sawmill.Warning($"Invalid RSI path format: {rsiPath}. Expected path ending with .rsi");
+                return;
+            }
+
             // Check if resource is available, request if not
             var isAvailable = _netTexturesManager.EnsureResource(rsiPath);
 
@@ -541,17 +549,45 @@ namespace Content.Client.Lobby
             try
             {
                 // Check if the file actually exists before trying to load it
-                if (!_resource.ContentFileExists(targetPath))
+                var metaPath = (targetPath / "meta.json").ToRootedPath();
+                if (!_resource.ContentFileExists(targetPath) && !_resource.ContentFileExists(metaPath))
                 {
-                    var metaPath = (targetPath / "meta.json").ToRootedPath();
-                    if (!_resource.ContentFileExists(metaPath))
-                    {
-                        return;
-                    }
+                    _sawmill.Debug($"RSI resource path doesn't exist yet: {targetPath} (meta: {metaPath}), waiting for network load");
+                    return;
                 }
 
                 // Try to get the resource - this will load it if not cached
-                if (_resourceCache.TryGetResource<RSIResource>(targetPath, out var rsiResource))
+                RSIResource? rsiResource = null;
+                try
+                {
+                    // First try to get from cache
+                    if (!_resourceCache.TryGetResource<RSIResource>(targetPath, out rsiResource))
+                    {
+                        _sawmill.Debug($"RSI resource not in cache, attempting to load: {targetPath}");
+                        // If not in cache, try to load it explicitly
+                        // This handles cases where TryGetResource fails silently
+                        rsiResource = _resourceCache.GetResource<RSIResource>(targetPath);
+                        _sawmill.Debug($"Successfully loaded RSI resource: {targetPath}");
+                    }
+                    else
+                    {
+                        _sawmill.Debug($"RSI resource found in cache: {targetPath}");
+                    }
+                }
+                catch (FileNotFoundException)
+                {
+                    // Resource file doesn't exist, wait for it to be loaded
+                    _sawmill.Debug($"RSI resource not found yet: {targetPath}, waiting for network load");
+                    return;
+                }
+                catch (Exception loadEx)
+                {
+                    _sawmill.Warning($"Failed to load lobby animation RSI: {targetPath}. Error: {loadEx.Message}\nStack trace: {loadEx.StackTrace}");
+                    ShowLoadingAnimation();
+                    return;
+                }
+
+                if (rsiResource != null)
                 {
                     Lobby!.LobbyAnimation.SetFromSpriteSpecifier(new SpriteSpecifier.Rsi(targetPath, lobbyAnimationPrototype.State));
                     Lobby!.LobbyAnimation.DisplayRect.TextureScale = lobbyAnimationPrototype.Scale;
