@@ -936,12 +936,12 @@ namespace Content.Client.Lobby
                     // Read JSON text
                     using var reader = new StreamReader(metaStream);
                     var jsonText = reader.ReadToEnd();
-                    
+
                     // Simple regex to extract state names from JSON
                     // Matches "name": "statename" patterns
                     var namePattern = new Regex(@"""name""\s*:\s*""([^""]+)""", RegexOptions.Compiled);
                     var matches = namePattern.Matches(jsonText);
-                    
+
                     if (matches.Count == 0)
                     {
                         // No states found, might be invalid JSON or empty states array
@@ -953,7 +953,7 @@ namespace Content.Client.Lobby
                     {
                         if (match.Groups.Count < 2)
                             continue;
-                            
+
                         var stateName = match.Groups[1].Value;
                         if (string.IsNullOrEmpty(stateName))
                         {
