@@ -549,7 +549,7 @@ namespace Content.Client.Lobby
             // Try to set the animation, handle errors gracefully
             try
             {
-                // Check if meta.json exists
+                // Check if meta.json exists (basic check)
                 var metaPath = (targetPath / "meta.json").ToRootedPath();
                 if (!_resource.ContentFileExists(metaPath))
                 {
@@ -557,14 +557,10 @@ namespace Content.Client.Lobby
                     return;
                 }
 
-                // Check if all RSI files are present by reading meta.json and verifying all PNG files exist
-                if (!CheckRsiFilesComplete(targetPath, metaPath))
-                {
-                    _sawmill.Debug($"RSI files not complete yet: {targetPath}, waiting for network load");
-                    return;
-                }
+                var requiredState = lobbyAnimationPrototype.State;
 
                 // Try to get the resource - this will load it if not cached
+                // We don't check for individual files, just try to load and see if it works
                 RSIResource? rsiResource = null;
                 try
                 {
@@ -585,13 +581,22 @@ namespace Content.Client.Lobby
                 catch (FileNotFoundException)
                 {
                     // Resource file doesn't exist, wait for it to be loaded
+                    // This can happen if meta.json exists but PNG files are still loading
                     _sawmill.Debug($"RSI resource not found yet: {targetPath}, waiting for network load");
                     return;
                 }
                 catch (Exception loadEx)
                 {
                     // If loading failed, wait for resource to be fully loaded
+                    // This can happen if files are partially loaded
                     _sawmill.Debug($"Failed to load lobby animation RSI: {targetPath}. Error: {loadEx.Message}. Waiting for complete resource.");
+                    return;
+                }
+
+                // Verify that the resource actually loaded correctly by checking if the state exists
+                if (rsiResource == null || !rsiResource.RSI.TryGetState(requiredState, out _))
+                {
+                    _sawmill.Debug($"RSI state '{requiredState}' not found in loaded resource: {targetPath}, waiting for complete resource");
                     return;
                 }
 
