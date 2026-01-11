@@ -1,5 +1,6 @@
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Content.Client._Sunrise;
 using Content.Client._Sunrise.Contributors;
 using Content.Client._Sunrise.Latejoin;
@@ -548,11 +549,18 @@ namespace Content.Client.Lobby
             // Try to set the animation, handle errors gracefully
             try
             {
-                // Check if the file actually exists before trying to load it
+                // Check if meta.json exists
                 var metaPath = (targetPath / "meta.json").ToRootedPath();
-                if (!_resource.ContentFileExists(targetPath) && !_resource.ContentFileExists(metaPath))
+                if (!_resource.ContentFileExists(metaPath))
                 {
-                    _sawmill.Debug($"RSI resource path doesn't exist yet: {targetPath} (meta: {metaPath}), waiting for network load");
+                    _sawmill.Debug($"RSI meta.json doesn't exist yet: {metaPath}, waiting for network load");
+                    return;
+                }
+
+                // Check if all RSI files are present by reading meta.json and verifying all PNG files exist
+                if (!CheckRsiFilesComplete(targetPath, metaPath))
+                {
+                    _sawmill.Debug($"RSI files not complete yet: {targetPath}, waiting for network load");
                     return;
                 }
 
@@ -564,9 +572,9 @@ namespace Content.Client.Lobby
                     if (!_resourceCache.TryGetResource<RSIResource>(targetPath, out rsiResource))
                     {
                         _sawmill.Debug($"RSI resource not in cache, attempting to load: {targetPath}");
-                        // If not in cache, try to load it explicitly
-                        // This handles cases where TryGetResource fails silently
-                        rsiResource = _resourceCache.GetResource<RSIResource>(targetPath);
+                        // Use useFallback: false to detect if resource actually loaded or fallback was used
+                        // This prevents us from thinking the resource loaded when it actually failed
+                        rsiResource = _resourceCache.GetResource<RSIResource>(targetPath, useFallback: false);
                         _sawmill.Debug($"Successfully loaded RSI resource: {targetPath}");
                     }
                     else
@@ -582,8 +590,8 @@ namespace Content.Client.Lobby
                 }
                 catch (Exception loadEx)
                 {
-                    _sawmill.Warning($"Failed to load lobby animation RSI: {targetPath}. Error: {loadEx.Message}\nStack trace: {loadEx.StackTrace}");
-                    ShowLoadingAnimation();
+                    // If loading failed, wait for resource to be fully loaded
+                    _sawmill.Debug($"Failed to load lobby animation RSI: {targetPath}. Error: {loadEx.Message}. Waiting for complete resource.");
                     return;
                 }
 
@@ -901,6 +909,68 @@ namespace Content.Client.Lobby
             if (Lobby != null)
             {
                 Lobby.LoadingAnimationContainer.Visible = false;
+            }
+        }
+
+        /// <summary>
+        /// Checks if all RSI files are present by reading meta.json and verifying all PNG files exist.
+        /// Uses simple string parsing instead of JsonDocument to avoid sandbox restrictions.
+        /// </summary>
+        private bool CheckRsiFilesComplete(ResPath rsiPath, ResPath metaPath)
+        {
+            try
+            {
+                // Read meta.json
+                if (!_resource.TryContentFileRead(metaPath, out var metaStream))
+                {
+                    return false;
+                }
+
+                using (metaStream)
+                {
+                    // Read JSON text
+                    using var reader = new StreamReader(metaStream);
+                    var jsonText = reader.ReadToEnd();
+                    
+                    // Simple regex to extract state names from JSON
+                    // Matches "name": "statename" patterns
+                    var namePattern = new Regex(@"""name""\s*:\s*""([^""]+)""", RegexOptions.Compiled);
+                    var matches = namePattern.Matches(jsonText);
+                    
+                    if (matches.Count == 0)
+                    {
+                        // No states found, might be invalid JSON or empty states array
+                        return false;
+                    }
+
+                    // Check if all PNG files for each state exist
+                    foreach (Match match in matches)
+                    {
+                        if (match.Groups.Count < 2)
+                            continue;
+                            
+                        var stateName = match.Groups[1].Value;
+                        if (string.IsNullOrEmpty(stateName))
+                        {
+                            continue;
+                        }
+
+                        // Check if PNG file exists for this state
+                        var pngPath = (rsiPath / $"{stateName}.png").ToRootedPath();
+                        if (!_resource.ContentFileExists(pngPath))
+                        {
+                            _sawmill.Debug($"RSI file missing: {pngPath}");
+                            return false;
+                        }
+                    }
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _sawmill.Debug($"Error checking RSI files completeness: {ex.Message}");
+                return false;
             }
         }
 
