@@ -1,0 +1,69 @@
+- type: entity
+  id: CPForcefieldDoor
+  parent: BaseStructure
+  name: forcefield door
+  description: A holographic hard-light door. Blocks movement only, not air.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Anchorable
+    flags:
+    - Anchorable
+  - type: Rotatable
+  - type: InteractionOutline
+  - type: Sprite
+    sprite: _Lust/CP/Structures/Doors/forcefield_door.rsi
+    drawdepth: Doors
+    layers:
+    - state: closed
+      shader: unshaded
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: closed
+      shader: unshaded
+      visible: false
+      map: ["enum.DoorVisualLayers.BaseUnlit"]
+    - state: closed
+      shader: unshaded
+      visible: false
+      map: ["enum.DoorVisualLayers.BaseBolted"]
+  - type: AnimationPlayer
+  - type: Appearance
+  - type: ApcPowerReceiver
+    powerLoad: 5
+    needsPower: false
+  - type: ExtensionCableReceiver
+  - type: Physics
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.46,-0.46,0.46,0.46"
+        density: 100
+        mask:
+        - FullTileMask
+        layer:
+        - AirlockLayer
+  - type: AccessReader
+    access: [["CCA"], ["OTA"], ["CCAC"]]
+  - type: Door
+    canCrush: false
+    canPry: false
+    occludes: false
+    changeAirtight: false
+    denySound:
+      path: /Audio/Machines/airlock_deny.ogg
+  - type: Airlock
+    openUnlitVisible: false
+    emergencyAccessLayer: false
+    animatePanel: false
+    denyAnimationTime: 0.45
+    openingSpriteState: opening
+    closingSpriteState: closing
+    openSpriteState: open
+    closedSpriteState: closed
+    denySpriteState: deny
+  - type: DoorBolt
+    boltLightsEnabled: false
+  - type: StaticPrice
+    price: 250
