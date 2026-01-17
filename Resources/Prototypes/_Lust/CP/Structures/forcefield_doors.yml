@@ -3,6 +3,7 @@
   parent: BaseStructure
   name: forcefield door
   description: A holographic hard-light door. Blocks movement only, not air.
+  suffix: HL2
   placement:
     mode: SnapgridCenter
   components:
@@ -38,7 +39,7 @@
       fix1:
         shape:
           !type:PhysShapeAabb
-            bounds: "-0.46,-0.46,0.46,0.46"
+          bounds: "-0.46,-0.46,0.46,0.46"
         density: 100
         mask:
         - FullTileMask
@@ -51,8 +52,26 @@
     canPry: false
     occludes: false
     changeAirtight: false
+    openSound:
+      path: /Audio/_Sunrise/Machines/energyshield_up.ogg
+    closeSound:
+      path: /Audio/_Sunrise/Machines/energyshield_down.ogg
     denySound:
       path: /Audio/Machines/airlock_deny.ogg
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
   - type: Airlock
     openUnlitVisible: false
     emergencyAccessLayer: false
@@ -65,5 +84,3 @@
     denySpriteState: deny
   - type: DoorBolt
     boltLightsEnabled: false
-  - type: StaticPrice
-    price: 250
