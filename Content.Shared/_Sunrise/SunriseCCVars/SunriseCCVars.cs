@@ -562,4 +562,16 @@ public sealed partial class SunriseCCVars : CVars
     /// </summary>
     public static readonly CVarDef<bool> MentorHelpAutoOpenOnNewMessage =
         CVarDef.Create("mentor_help.auto_open_on_new_message", false, CVar.ARCHIVE | CVar.CLIENTONLY);
+
+    public static readonly CVarDef<bool> GameIPBlockingEnabled =
+        CVarDef.Create("game.ipblocking_enabled", true, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingDuration =
+        CVarDef.Create("game.ipblocking_duration", 900, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingMaxResponseLength =
+        CVarDef.Create("game.ipblocking_max_response_length", 10485760, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingUnhandledMessageRateLimit =
+        CVarDef.Create("game.ipblocking_unhandled_message_rate_limit", 10, CVar.SERVERONLY);
 }
