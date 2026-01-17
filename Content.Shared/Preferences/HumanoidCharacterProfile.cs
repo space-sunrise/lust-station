@@ -801,11 +801,14 @@ namespace Content.Shared.Preferences
         {
             if (!voice.RoundStart)
                 return false;
-            
+
             // Если голос доступен для всех полов (Unsexed), то его можно использовать
             if (voice.Sex.Contains(Sex.Unsexed))
                 return true;
-            
+
+            if (sex == Sex.Unsexed)
+                return true;
+
             // Проверяем, доступен ли голос для конкретного пола персонажа
             return voice.Sex.Contains(sex);
         }

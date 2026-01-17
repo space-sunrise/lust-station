@@ -19,6 +19,7 @@
         Structural: 14
   - type: HitscanPierce
     chance: 0.45
+    deviation: 0.05
     pierceLevel: HardenedMetal
   - type: HitscanRicochet
     chance: 0.55
@@ -107,7 +108,7 @@
     tags:
     - Cartridge
     - ShellShotgunCarnage
-  - type: HitScanCartridgeAmmo
+  - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
   - type: Sprite
@@ -121,17 +122,17 @@
 - type: entity
   id: ShellShotgunCarnage
   name: shell (.60 AP)
-  parent: BaseShellHitscanShotgunCarnage
+  parent: [ BaseShellShotgun, BaseSecurityContraband ]
   suffix: Arrows
   components:
   - type: Sprite
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
-  - type: HitScanCartridgeAmmo
+  - type: CartridgeAmmo
     soundEject:
       collection: ShellEject
-    hitscan: PelletShotgunCarnage
+    proto: PelletShotgunCarnageSpread
 
 - type: entity
   id: BaseMagazineShotgunCarnage

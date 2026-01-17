@@ -342,6 +342,15 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/weh.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: ulava
+    slots:
+    - NECK
+  - type: Item
+    heldPrefix: ulava
+
 
 - type: entity
   parent: BasePlushie
