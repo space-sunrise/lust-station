@@ -718,6 +718,7 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
+  - MusicianPunkSuit # Sunrise - Edit
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -725,6 +726,7 @@
   minLimit: 0
   loadouts:
   - MusicianWintercoat
+  - MusicianLeatherJacket # Sunrise - Edit
 
 - type: loadoutGroup
   id: Instruments
@@ -2001,5 +2003,5 @@
   name: loadout-group-medical-doctor-id
   loadouts:
   - MedicalPDA
-  - SeniorOfficerPDA
+  - SeniorPhysicianPDA
 # Sunrise-edn
