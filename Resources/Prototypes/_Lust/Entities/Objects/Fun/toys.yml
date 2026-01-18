@@ -656,9 +656,9 @@
   - type: EmitSoundOnTrigger
     sound: null
   - type: TTS
-    voice: mitakind
+    voice: MitaKind
   - type: BorgVoice
-    selectedVoiceId: mitakind
+    selectedVoiceId: MitaKind
     voiceEffect: robot
 
 - type: localizedDataset
