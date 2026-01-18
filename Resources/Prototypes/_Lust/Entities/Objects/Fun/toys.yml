@@ -598,8 +598,8 @@
 - type: entity
   parent: [BasePlushie, BaseFoldable]
   id: PlushieLilith
-  name: Plushie L.I.L.I.T.H.
-  description: A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H. - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
+  name: Plushie L.I.L.I.T.H
+  description: A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/Plushies/lilith.rsi

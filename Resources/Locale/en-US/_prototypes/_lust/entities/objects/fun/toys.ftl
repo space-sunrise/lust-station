@@ -48,5 +48,5 @@ ent-PlushieSilton = Plushie Silton Grace
     .desc = A menacing-looking toy that pierces you with a sharp and stern gaze. You suddenly felt compelled to comply with your department's KZ and SRP.
 ent-PlushieSiltonGun = { ent-PlushieSilton }
     .desc = { ent-PlushieSilton.desc }
-ent-PlushieLilith = Plushie L.I.L.I.T.H.
-    .desc = A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H. - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
+ent-PlushieLilith = Plushie L.I.L.I.T.H
+    .desc = A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
