@@ -24899,3 +24899,13 @@
   id: 1619
   time: '2026-01-19T08:04:41.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3746
+- author: ThereDrD
+  changes:
+  - message: "\u0426\u0432\u0435\u0442 \u0441\u043B\u0435\u0434\u043E\u0432 \u043F\
+      \u0435\u0440\u0435\u0441\u0442\u0430\u043B \u0431\u044B\u0442\u044C \u0442\u0435\
+      \u043C\u043D\u0435\u0435, \u0447\u0435\u043C \u0434\u043E\u043B\u0436\u0435\u043D\
+      \ \u0431\u044B\u0442\u044C."
+    type: Fix
+  id: 1620
+  time: '2026-01-19T08:05:59.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3744
