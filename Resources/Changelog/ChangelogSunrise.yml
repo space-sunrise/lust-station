@@ -24935,3 +24935,11 @@
   id: 1621
   time: '2026-01-19T08:07:59.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3727
+- author: Fooksy2304, vispick
+  changes:
+  - message: "\u0420\u0435\u0441\u043F\u0440\u0430\u0439\u0442 \u0420\u0421\u0423\
+      \ \u0421\u0418."
+    type: Fix
+  id: 1622
+  time: '2026-01-19T08:14:42.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3728
