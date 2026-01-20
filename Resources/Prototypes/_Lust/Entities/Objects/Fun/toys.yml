@@ -624,7 +624,7 @@
     sound:
       path: /Audio/Machines/buzz-two.ogg
       params:
-        volume: 3
+        volume: 2
   - type: Foldable
     canFoldInsideContainer: true
   - type: FoldableClothing
@@ -644,12 +644,12 @@
     sound:
       path: /Audio/Items/Toys/rawr.ogg
       params:
-        volume: 20
+        volume: 9
   - type: EmitSoundOnCollide
     sound:
       path: /Audio/Effects/Cargo/ping.ogg
       params:
-        volume: 3
+        volume: 2
   - type: EmitSoundOnUse
     sound: null
     handle: false
