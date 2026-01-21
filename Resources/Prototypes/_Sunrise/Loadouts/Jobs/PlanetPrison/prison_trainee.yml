@@ -32,7 +32,7 @@
 - type: loadout
   id: PrisonTraineePDAPartial
   equipment:
-    id: PrisonTraineePDAPartial
+    pda: PrisonTraineePDAPartial
 
 - type: loadout
   id: PrisonTraineePDAAdvanced
@@ -43,7 +43,7 @@
       role: JobPrisonTrainee
       time: 25200 # 7 часов
   equipment:
-    id: PrisonTraineePDAAdvanced
+    pda: PrisonTraineePDAAdvanced
 
 - type: loadout
   id: PrisonTraineePDAComplete
@@ -54,24 +54,24 @@
       role: JobPrisonTrainee
       time: 54000 # 15 часов
   equipment:
-    id: PrisonTraineePDAComplete
+    pda: PrisonTraineePDAComplete
 
 # Рабочая униформа
 
 - type: loadout
-  id: PrisonTrainee-ClothingUniformJumpsuitPrisonTrainee
+  id: PrisonTraineeJumpsuit
   groupBy: "prison_regular"
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrisonTrainee
 
 - type: loadout
-  id: PrisonTrainee-ClothingUniformJumpskirtPrisonTrainee
+  id: PrisonTraineeJumpskirt
   groupBy: "prison_regular"
   equipment:
     jumpsuit: ClothingUniformJumpskirtPrisonTrainee
 
 - type: loadout
-  id: PrisonTrainee-ClothingUniformJumpsuitPrisonTraineeVeteran
+  id: PrisonTraineeJumpsuitVeteran
   groupBy: "prison_veteran"
   effects:
   - !type:JobRequirementLoadoutEffect
@@ -83,7 +83,7 @@
     jumpsuit: ClothingUniformJumpsuitPrisonTraineeVeteran
 
 - type: loadout
-  id: PrisonTrainee-ClothingUniformJumpskirtPrisonTraineeVeteran
+  id: PrisonTraineeJumpskirtVeteran
   groupBy: "prison_veteran"
   effects:
   - !type:JobRequirementLoadoutEffect

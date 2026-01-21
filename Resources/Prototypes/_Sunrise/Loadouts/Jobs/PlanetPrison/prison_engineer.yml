@@ -32,7 +32,7 @@
 - type: loadout
   id: PrisonEngineerPDAScreenZap
   equipment:
-    id: PrisonEngineerPDAScreenZap
+    pda: PrisonEngineerPDAScreenZap
 
 - type: loadout
   id: PrisonEngineerPDAScreenPoint
@@ -43,24 +43,24 @@
       role: JobPrisonEngineer
       time: 36000 # 10 часов
   equipment:
-    id: PrisonEngineerPDAScreenPoint
+    pda: PrisonEngineerPDAScreenPoint
 
 # Рабочая униформа
 
 - type: loadout
-  id: PrisonEngineer-ClothingUniformJumpsuitPrisonEngineer
+  id: PrisonEngineerJumpsuit
   groupBy: "prison_regular"
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrisonEngineer
 
 - type: loadout
-  id: PrisonEngineer-ClothingUniformJumpskirtPrisonEngineer
+  id: PrisonEngineerJumpskirt
   groupBy: "prison_regular"
   equipment:
     jumpsuit: ClothingUniformJumpskirtPrisonEngineer
 
 - type: loadout
-  id: PrisonEngineer-ClothingUniformJumpsuitPrisonEngineerVeteran
+  id: PrisonEngineerJumpsuitVeteran
   groupBy: "prison_veteran"
   effects:
   - !type:JobRequirementLoadoutEffect
@@ -72,7 +72,7 @@
     jumpsuit: ClothingUniformJumpsuitPrisonEngineerVeteran
 
 - type: loadout
-  id: PrisonEngineer-ClothingUniformJumpskirtPrisonEngineerVeteran
+  id: PrisonEngineerJumpskirtVeteran
   groupBy: "prison_veteran"
   effects:
   - !type:JobRequirementLoadoutEffect
