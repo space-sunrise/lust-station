@@ -24967,3 +24967,13 @@
   id: 1624
   time: '2026-01-20T10:31:58.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3759
+- author: Orvex07, proximitymines
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0427\u0435\u0440\
+      \u043D\u044B\u0435/\u0411\u0435\u043B\u044B\u0435 \u0421\u0443\u043C\u043A\u0438\
+      /\u0420\u044E\u043A\u0437\u0430\u043A\u0438/\u0412\u0435\u0449\u043C\u0435\u0448\
+      \u043A\u0438 \u043A\u0430\u043F\u0438\u0442\u0430\u043D\u0443"
+    type: Add
+  id: 1625
+  time: '2026-01-21T20:54:17.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3745
