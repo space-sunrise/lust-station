@@ -39,7 +39,7 @@
   job: PrisonTrainee
   equipment:
     jumpsuit: ClothingUniformJumpsuitPrisonTrainee
-    head: ClothingHeadHatBeretPrisonTraineeMetus
+    head: ClothingHeadHatBeretPrisonTrainee
     ears: ClothingHeadsetSecurity
     eyes: ClothingEyesGlassesSunglasses
     gloves: ClothingHandsGlovesCombat
