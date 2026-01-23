@@ -514,11 +514,6 @@ namespace Content.Client.Lobby
 
         private void SetLobbyAnimation(string lobbyAnimation)
         {
-            _ = SetLobbyAnimationAsync(lobbyAnimation);
-        }
-
-        private async Task SetLobbyAnimationAsync(string lobbyAnimation)
-        {
             var loadVersion = _backgroundLoadVersion;
 
             // Check if animation background type is currently selected
@@ -552,6 +547,7 @@ namespace Content.Client.Lobby
                 return;
             }
 
+            // Hide old animation and show loading animation immediately (before any resource checks)
             Lobby!.LobbyAnimation.Visible = false;
             ShowLoadingAnimation();
 
@@ -585,8 +581,8 @@ namespace Content.Client.Lobby
                 var uploadedPath = _netTexturesManager.GetUploadedPath(rsiPath);
                 var metaPath = (uploadedPath / "meta.json").ToRootedPath();
 
-                var fileExists = await Task.Run(() => _resource.ContentFileExists(metaPath));
-                if (fileExists)
+                // Check if uploaded resource exists
+                if (_resource.ContentFileExists(metaPath))
                 {
                     targetPath = uploadedPath;
                 }
@@ -601,23 +597,21 @@ namespace Content.Client.Lobby
             // Try to set the animation, handle errors gracefully
             try
             {
-                var requiredState = lobbyAnimationPrototype.State;
-
+                // Check if meta.json exists (basic check)
                 var metaPath = (targetPath / "meta.json").ToRootedPath();
-                var metaExists = await Task.Run(() => _resource.ContentFileExists(metaPath));
-                if (!metaExists)
+                if (!_resource.ContentFileExists(metaPath))
                 {
                     _sawmill.Debug($"RSI meta.json doesn't exist yet: {metaPath}, waiting for network load");
                     return;
                 }
 
+                var requiredState = lobbyAnimationPrototype.State;
+
                 // Before attempting to load, verify all required PNG files exist in VFS
                 // This prevents FileNotFoundException when RSI tries to load animation.png
                 try
                 {
-                    Stream? metaStream = null;
-                    var canRead = await Task.Run(() => _resource.TryContentFileRead(metaPath, out metaStream));
-                    if (!canRead || metaStream == null)
+                    if (!_resource.TryContentFileRead(metaPath, out var metaStream))
                     {
                         _sawmill.Debug($"Cannot read meta.json: {metaPath}, waiting for network load");
                         return;
@@ -626,7 +620,7 @@ namespace Content.Client.Lobby
                     using (metaStream)
                     {
                         using var reader = new StreamReader(metaStream);
-                        var jsonText = await reader.ReadToEndAsync();
+                        var jsonText = reader.ReadToEnd();
 
                         // Extract state names from JSON to verify PNG files exist
                         var namePattern = new Regex(@"""name""\s*:\s*""([^""]+)""", RegexOptions.Compiled);
@@ -643,8 +637,7 @@ namespace Content.Client.Lobby
 
                             // Verify PNG file exists in VFS before attempting to load RSI
                             var pngPath = (targetPath / $"{stateName}.png").ToRootedPath();
-                            var pngExists = await Task.Run(() => _resource.ContentFileExists(pngPath));
-                            if (!pngExists)
+                            if (!_resource.ContentFileExists(pngPath))
                             {
                                 _sawmill.Debug($"RSI PNG file not yet available in VFS: {pngPath}, waiting for network load");
                                 return;
@@ -658,18 +651,8 @@ namespace Content.Client.Lobby
                     return;
                 }
 
-                if (loadVersion != _backgroundLoadVersion)
-                {
-                    _sawmill.Debug("SetLobbyAnimation aborted due to background load version change before resource load");
-                    return;
-                }
-
-                // Small delay to allow other operations to proceed before loading resource
-                // This prevents blocking the main thread while keeping resource operations on main thread
-                await Task.Delay(0);
-
                 // Try to get the resource - this will load it if not cached
-                // ResourceCache operations must be on main thread, so we don't use Task.Run here
+                // We don't check for individual files, just try to load and see if it works
                 RSIResource? rsiResource = null;
                 try
                 {
@@ -750,11 +733,6 @@ namespace Content.Client.Lobby
 
         private void SetLobbyArt(string lobbyArt)
         {
-            _ = SetLobbyArtAsync(lobbyArt);
-        }
-
-        private async Task SetLobbyArtAsync(string lobbyArt)
-        {
             var loadVersion = _backgroundLoadVersion;
             // Check if art background type is currently selected
             var backgroundType = _cfg.GetCVar(SunriseCCVars.LobbyBackgroundType);
@@ -787,6 +765,7 @@ namespace Content.Client.Lobby
                 return;
             }
 
+            // Hide old art and show loading animation immediately
             Lobby!.LobbyArt.Visible = false;
             ShowLoadingAnimation();
 
@@ -812,8 +791,8 @@ namespace Content.Client.Lobby
                 // Resource is being requested, try to use uploaded path first
                 var uploadedPath = _netTexturesManager.GetUploadedPath(imagePath);
 
-                var fileExists = await Task.Run(() => _resource.ContentFileExists(uploadedPath));
-                if (fileExists)
+                // Check if uploaded resource exists
+                if (_resource.ContentFileExists(uploadedPath))
                 {
                     targetPath = uploadedPath;
                 }
@@ -834,13 +813,7 @@ namespace Content.Client.Lobby
                     return;
                 }
 
-                await Task.Delay(0);
-
-               TextureResource? textureResource = null;
-                if (_resourceCache.TryGetResource<TextureResource>(targetPath, out var resource))
-                    textureResource = resource;
-
-                if (textureResource != null)
+                if (_resourceCache.TryGetResource<TextureResource>(targetPath, out var textureResource))
                 {
                     Lobby!.LobbyArt.Texture = textureResource.Texture;
                     Lobby!.LobbyArt.Visible = true;
