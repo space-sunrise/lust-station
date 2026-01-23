@@ -72,6 +72,9 @@ public sealed class StationDontSellingSystems : EntitySystem
 
     private void DepreciatePrice(EntityUid uid)
     {
+        if (!uid.IsValid())
+            return;
+
         EnsureComp<DontSellComponent>(uid);
 
         if (!_containerQuery.TryComp(uid, out var containers))
@@ -81,7 +84,8 @@ public sealed class StationDontSellingSystems : EntitySystem
         {
             foreach (var ent in container.ContainedEntities)
             {
-                DepreciatePrice(ent);
+                if (ent.IsValid())
+                    DepreciatePrice(ent);
             }
         }
     }
