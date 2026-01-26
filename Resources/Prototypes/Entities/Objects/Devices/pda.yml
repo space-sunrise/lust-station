@@ -1719,7 +1719,7 @@
   description: Smells like postage stamps and shuttle fuel.
   components:
   - type: Pda
-    id: CargoIDCard
+    id: SeniorCourierIDCard   # Sunrise-edit
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:
