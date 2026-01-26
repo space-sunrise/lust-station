@@ -2,6 +2,7 @@
   id: CartridgeAR2
   name: cartridge (AR2)
   parent: [BaseCartridge, BaseSecurityContraband]
+  suffix: HL2
   categories: [HideSpawnMenu]
   components:
   - type: Tag
@@ -22,6 +23,7 @@
   id: MagazineAR2
   name: AR2 magazine
   parent: BaseItem
+  suffix: HL2
   components:
   - type: Tag
     tags:
