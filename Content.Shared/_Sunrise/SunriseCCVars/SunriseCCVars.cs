@@ -1,4 +1,4 @@
-﻿using Robust.Shared;
+using Robust.Shared;
 using Robust.Shared.Configuration;
 
 namespace Content.Shared._Sunrise.SunriseCCVars;
@@ -200,25 +200,6 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<string> InfoLinksReplays =
         CVarDef.Create("infolinks.replays", "https://t.me/ss14_replays", CVar.SERVER | CVar.REPLICATED);
 
-    /**
-     * Lobby
-     */
-
-    public static readonly CVarDef<string> LobbyBackgroundType =
-        CVarDef.Create("lobby.background", "Random", CVar.CLIENTONLY | CVar.ARCHIVE);
-
-    public static readonly CVarDef<string> LobbyArt =
-        CVarDef.Create("lobby.art", "Random", CVar.CLIENTONLY | CVar.ARCHIVE);
-
-    public static readonly CVarDef<string> LobbyAnimation =
-        CVarDef.Create("lobby.animation", "Random", CVar.CLIENTONLY | CVar.ARCHIVE);
-
-    public static readonly CVarDef<string> LobbyParallax =
-        CVarDef.Create("lobby.parallax", "Random", CVar.CLIENTONLY | CVar.ARCHIVE);
-
-    public static readonly CVarDef<float> LobbyOpacity =
-        CVarDef.Create("lobby.lobby_opacity", 0.90f, CVar.CLIENTONLY | CVar.ARCHIVE);
-
     public static readonly CVarDef<string> ServerName =
         CVarDef.Create("lobby.server_name", "Sunrise Station", CVar.SERVER | CVar.REPLICATED);
 
@@ -286,9 +267,11 @@ public sealed partial class SunriseCCVars : CVars
      * NPCs
      */
 
-    public static readonly CVarDef<bool> NPCDisableWithoutPlayers = CVarDef.Create("npc.disable_without_players", true);
+    public static readonly CVarDef<bool> NpcDisableWithoutPlayers =
+        CVarDef.Create("npc.disable_without_players", true, CVar.SERVERONLY | CVar.ARCHIVE);
 
-    public static readonly CVarDef<float> NPCDisableDistance = CVarDef.Create("npc.disable_distance", 20f);
+    public static readonly CVarDef<float> NpcDisableDistance =
+        CVarDef.Create("npc.disable_distance", 20f, CVar.SERVERONLY | CVar.ARCHIVE);
 
     /*
      * Vote
@@ -579,4 +562,32 @@ public sealed partial class SunriseCCVars : CVars
     /// </summary>
     public static readonly CVarDef<bool> MentorHelpAutoOpenOnNewMessage =
         CVarDef.Create("mentor_help.auto_open_on_new_message", false, CVar.ARCHIVE | CVar.CLIENTONLY);
+
+    public static readonly CVarDef<bool> GameIPBlockingEnabled =
+        CVarDef.Create("game.ipblocking_enabled", true, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingDuration =
+        CVarDef.Create("game.ipblocking_duration", 900, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingMaxResponseLength =
+        CVarDef.Create("game.ipblocking_max_response_length", 10485760, CVar.SERVERONLY);
+
+    public static readonly CVarDef<int> GameIPBlockingUnhandledMessageRateLimit =
+        CVarDef.Create("game.ipblocking_unhandled_message_rate_limit", 10, CVar.SERVERONLY);
+
+    /*
+     * Messenger Emoji
+     */
+
+    /// <summary>
+    /// Недавно использованные смайлики в мессенджере (разделены запятыми, максимум 5).
+    /// </summary>
+    public static readonly CVarDef<string> MessengerRecentEmojis =
+        CVarDef.Create("messenger.recent_emojis", "", CVar.ARCHIVE | CVar.CLIENTONLY);
+
+    /// <summary>
+    /// Избранные смайлики в мессенджере (разделены запятыми).
+    /// </summary>
+    public static readonly CVarDef<string> MessengerFavoriteEmojis =
+        CVarDef.Create("messenger.favorite_emojis", "", CVar.ARCHIVE | CVar.CLIENTONLY);
 }

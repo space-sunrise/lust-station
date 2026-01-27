@@ -572,9 +572,10 @@
       hadOutline: true
       examineThreshold: 0.9 # Sunrise-Edit
     - type: StealthOnMove
-      passiveVisibilityRate: -0.15 # Sunrise-Edit
+      passiveVisibilityRate: -1
+      movementVisibilityRate: 0.3
   - type: PowerCellDraw
-    drawRate: 1.8 # 200 seconds on the default cell
+    drawRate: 2 # 900 seconds on the default cell
   - type: ToggleCellDraw
   - type: PowerCellSlot
     cellSlotId: cell_slot
@@ -642,6 +643,43 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+
+# Milira
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitMilira
+  name: milira hardsuit
+  description: Hardsuit for Milir, extending flight and provides weak protection.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/milira_hardsuit.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/OuterClothing/Hardsuits/milira_hardsuit.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.7
+  - type: StaminaResistance
+    damageCoefficient: 0.7
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.7
+        Heat: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilira
+  - type: ClothingWhitelist
+    whitelist:
+      tags:
+      - Milira
+  - type: Tag
+    tags:
+    - WingToggleAllowed
 
 #Modsuits
 #Modsuit parent

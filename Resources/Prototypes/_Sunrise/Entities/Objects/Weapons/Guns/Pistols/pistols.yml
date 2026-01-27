@@ -155,16 +155,15 @@
       path: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_cocked.ogg
 
 - type: entity
-  name: Glock-22 Metus
-  description: Made to order for the security of the Metus planetary prison. Semi-automatic design. Uses .35 Auto caliber ammunition.
+  name: Glock-22 Prison
+  description: Manufactured by special order for prison complex security. Semi-automatic firearm chambered in .35 Auto.
   parent: WeaponPistolG22
-  id: WeaponPistolG22Metus
+  id: WeaponPistolG22Prison
   suffix: Sunrise
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22_metus/big.rsi
   - type: Gun
-    fireRate: 3.4
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Pistols/vp70_shot.ogg
     soundEmpty:
@@ -172,7 +171,29 @@
   - type: ItemSlots
     slots:
       gun_magazine:
-        startingItem: MagazinePistolHighCapacityRubber
+        name: Magazine
+        startingItem: MagazineGlock22Metus
+        insertSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_reload.ogg
+        ejectSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazinePistolHighCapacityRubber
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistolRubber
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
 
 - type: entity
   name: Glock-22 Auto
