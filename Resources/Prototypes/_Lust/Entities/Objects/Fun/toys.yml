@@ -603,6 +603,13 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushiediegovulpa
+  - type: Item
+    heldPrefix: diego-vulpa
+    inhandVisuals:
+      left:
+      - state: diego-vulpa-inhand-left
+      right:
+      - state: diego-vulpa-inhand-right
 
 - type: entity
   parent: [BasePlushie, BaseFoldable]

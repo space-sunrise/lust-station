@@ -128,12 +128,14 @@
         },
         {
           "name": "plushiediegovulpa"
-        },
-        {
-          "name": "diego-vulpa-inhand-left"
-        },
-        {
-          "name": "diego-vulpa-inhand-right"
+    },
+    {
+        "name": "diego-vulpa-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "diego-vulpa-inhand-right",
+        "directions": 4
         }
     ]
 }
