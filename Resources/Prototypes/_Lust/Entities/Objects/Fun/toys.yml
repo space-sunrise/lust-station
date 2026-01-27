@@ -607,7 +607,7 @@
     delay: 4
   - type: EmitSoundOnUse
     sound:
-      path: Resources/Audio/Sunrise/Voice/Vulpkanin/bark.ogg
+      path: /Audio/Sunrise/Voice/Vulpkanin/bark.ogg
 
 - type: entity
   parent: [BasePlushie, BaseFoldable]
