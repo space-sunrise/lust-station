@@ -449,19 +449,6 @@ public sealed partial class MessengerServerSystem
             {
                 group.Members.Add(userId);
 
-                var timestamp = GetStationTime();
-                var messageText = Loc.GetString("messenger-system-user-added", ("userName", userName));
-                var messageId = GetNextMessageId(uid, component);
-                var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, autoGroupProto.GroupId, null, false, messageId);
-
-                if (!component.MessageHistory.TryGetValue(autoGroupProto.GroupId, out var history))
-                {
-                    history = new List<MessengerMessage>();
-                    component.MessageHistory[autoGroupProto.GroupId] = history;
-                }
-                history.Add(systemMessage);
-                TrimMessageHistory(history, component.MaxMessageHistory);
-
                 if (!TryComp<DeviceNetworkComponent>(uid, out var serverDevice))
                     continue;
 
@@ -471,41 +458,67 @@ public sealed partial class MessengerServerSystem
                     pdaFrequency = pdaFreq.Frequency;
                 }
 
-                var messagePayload = new NetworkPayload
-                {
-                    [DeviceNetworkConstants.Command] = MessengerCommands.CmdMessageReceived,
-                    ["sender_id"] = "system",
-                    ["sender_name"] = Loc.GetString("messenger-system-name"),
-                    ["content"] = messageText,
-                    ["timestamp"] = timestamp.TotalSeconds,
-                    ["group_id"] = autoGroupProto.GroupId,
-                    ["recipient_id"] = string.Empty,
-                    ["is_read"] = false,
-                    ["message_id"] = systemMessage.MessageId
-                };
+                var isDepartmentChat = group.Type == MessengerGroupType.Automatic && group.AutoGroupPrototypeId != null;
 
-                foreach (var memberId in group.Members)
+                if (!isDepartmentChat)
                 {
-                    var isMemberChatOpen = component.OpenChats.TryGetValue(memberId, out var memberOpenChatId) && memberOpenChatId == autoGroupProto.GroupId;
+                    var timestamp = GetStationTime();
+                    var messageText = Loc.GetString("messenger-system-user-added", ("userName", userName));
+                    var messageId = GetNextMessageId(uid, component);
+                    var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, autoGroupProto.GroupId, null, false, messageId);
 
-                    if (!isMemberChatOpen)
+                    if (!component.MessageHistory.TryGetValue(autoGroupProto.GroupId, out var history))
                     {
-                        if (!component.UnreadCounts.TryGetValue(memberId, out var memberUnreads))
+                        history = new List<MessengerMessage>();
+                        component.MessageHistory[autoGroupProto.GroupId] = history;
+                    }
+                    history.Add(systemMessage);
+                    TrimMessageHistory(history, component.MaxMessageHistory);
+                }
+
+                if (!isDepartmentChat)
+                {
+                    var timestamp = GetStationTime();
+                    var messageText = Loc.GetString("messenger-system-user-added", ("userName", userName));
+                    var messageId = GetNextMessageId(uid, component);
+                    var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, autoGroupProto.GroupId, null, false, messageId);
+
+                    var messagePayload = new NetworkPayload
+                    {
+                        [DeviceNetworkConstants.Command] = MessengerCommands.CmdMessageReceived,
+                        ["sender_id"] = "system",
+                        ["sender_name"] = Loc.GetString("messenger-system-name"),
+                        ["content"] = messageText,
+                        ["timestamp"] = timestamp.TotalSeconds,
+                        ["group_id"] = autoGroupProto.GroupId,
+                        ["recipient_id"] = string.Empty,
+                        ["is_read"] = false,
+                        ["message_id"] = systemMessage.MessageId
+                    };
+
+                    foreach (var memberId in group.Members)
+                    {
+                        var isMemberChatOpen = component.OpenChats.TryGetValue(memberId, out var memberOpenChatId) && memberOpenChatId == autoGroupProto.GroupId;
+
+                        if (!isMemberChatOpen)
                         {
-                            memberUnreads = new Dictionary<string, int>();
-                            component.UnreadCounts[memberId] = memberUnreads;
+                            if (!component.UnreadCounts.TryGetValue(memberId, out var memberUnreads))
+                            {
+                                memberUnreads = new Dictionary<string, int>();
+                                component.UnreadCounts[memberId] = memberUnreads;
+                            }
+                            memberUnreads.TryGetValue(autoGroupProto.GroupId, out var currentCount);
+                            memberUnreads[autoGroupProto.GroupId] = currentCount + 1;
                         }
-                        memberUnreads.TryGetValue(autoGroupProto.GroupId, out var currentCount);
-                        memberUnreads[autoGroupProto.GroupId] = currentCount + 1;
-                    }
 
-                    if (pdaFrequency.HasValue)
-                    {
-                        _deviceNetwork.QueuePacket(uid, memberId, messagePayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
-                    }
-                    else
-                    {
-                        _deviceNetwork.QueuePacket(uid, memberId, messagePayload);
+                        if (pdaFrequency.HasValue)
+                        {
+                            _deviceNetwork.QueuePacket(uid, memberId, messagePayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+                        }
+                        else
+                        {
+                            _deviceNetwork.QueuePacket(uid, memberId, messagePayload);
+                        }
                     }
                 }
 

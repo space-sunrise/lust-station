@@ -596,6 +596,22 @@
         maxDistance: 3
 
 - type: entity
+  parent: [ EmitVulpGrowl, BasePlushie ]
+  id: PlushieDiegoVulpa
+  name: plushie diego
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushiediegovulpa
+  - type: Item
+    heldPrefix: diego-vulpa
+    inhandVisuals:
+      left:
+      - state: diego-vulpa-inhand-left
+      right:
+      - state: diego-vulpa-inhand-right
+
+- type: entity
   parent: [BasePlushie, BaseFoldable]
   id: PlushieLilith
   name: Plushie L.I.L.I.T.H

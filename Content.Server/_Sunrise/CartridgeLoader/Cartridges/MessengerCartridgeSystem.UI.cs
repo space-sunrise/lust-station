@@ -55,7 +55,8 @@ public sealed partial class MessengerCartridgeSystem
             component.MessageHistory,
             component.MutedPersonalChats,
             component.MutedGroupChats,
-            unreadCounts
+            unreadCounts,
+            component.ActiveInvites
         );
 
         _cartridgeLoader.UpdateCartridgeUiState(loaderUid, state);

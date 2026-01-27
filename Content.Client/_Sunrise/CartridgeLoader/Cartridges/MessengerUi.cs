@@ -29,6 +29,14 @@ public sealed partial class MessengerUi : UIFragment
             SendMessengerMessage(MessengerUiAction.RequestMessages, userInterface, chatId: chatId);
         _fragment.OnToggleMute += (chatId, isMuted) =>
             SendMessengerMessage(MessengerUiAction.ToggleMute, userInterface, chatId: chatId, isMuted: isMuted);
+        _fragment.OnAcceptInvite += (groupId) =>
+            SendMessengerMessage(MessengerUiAction.AcceptInvite, userInterface, groupId: groupId);
+        _fragment.OnDeclineInvite += (groupId) =>
+            SendMessengerMessage(MessengerUiAction.DeclineInvite, userInterface, groupId: groupId);
+        _fragment.OnLeaveGroup += (groupId) =>
+            SendMessengerMessage(MessengerUiAction.LeaveGroup, userInterface, groupId: groupId);
+        _fragment.OnDeleteMessage += (chatId, messageId) =>
+            SendMessengerMessage(MessengerUiAction.DeleteMessage, userInterface, chatId: chatId, messageId: messageId);
     }
 
     public override void UpdateState(BoundUserInterfaceState state)
@@ -48,9 +56,10 @@ public sealed partial class MessengerUi : UIFragment
         string? groupName = null,
         string? userId = null,
         string? chatId = null,
-        bool? isMuted = null)
+        bool? isMuted = null,
+        long? messageId = null)
     {
-        var messengerMessage = new MessengerUiMessageEvent(action, recipientId, groupId, content, groupName, userId, chatId, isMuted);
+        var messengerMessage = new MessengerUiMessageEvent(action, recipientId, groupId, content, groupName, userId, chatId, isMuted, messageId);
         var message = new CartridgeUiMessage(messengerMessage);
         userInterface.SendMessage(message);
     }
