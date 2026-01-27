@@ -24,6 +24,7 @@
       - NanoTaskCartridge
       - NewsReaderCartridge
       - MedTekCartridge
+      - NavigatorCartridge
       - MessengerCartridge
   - type: PdaAnimationVisuals
     animatedState: pda-space-prison-doctor

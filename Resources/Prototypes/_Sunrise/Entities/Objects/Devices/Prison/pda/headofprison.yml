@@ -25,6 +25,7 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
+      - NavigatorCartridge
       - MessengerCartridge
 
 - type: entity
