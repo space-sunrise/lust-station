@@ -183,9 +183,9 @@
       - NotekeeperCartridge
       - NanoTaskCartridge
       - NewsReaderCartridge
-      - NavigatorCartridge
       - WantedListCartridge
       - AstroNavCartridge
+      - NavigatorCartridge
       - MessengerCartridge
 
 - type: entity
@@ -423,6 +423,7 @@
     - NotekeeperCartridge
     - NewsReaderCartridge
     - AstroNavCartridge
+    - NavigatorCartridge
     - MessengerCartridge
 
 - type: entity
