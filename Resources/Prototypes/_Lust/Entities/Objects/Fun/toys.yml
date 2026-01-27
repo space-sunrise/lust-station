@@ -598,7 +598,7 @@
 - type: entity
   parent: BasePlushie
   id: PlushieDiegoVulpa
-  name: Plushie Diego
+  name: plushie diego
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
