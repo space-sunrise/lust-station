@@ -52,6 +52,22 @@ public sealed partial class MessengerCartridgeSystem
                 if (message.ChatId != null && message.IsMuted.HasValue)
                     ToggleMute(uid, component, message.ChatId, message.IsMuted.Value);
                 break;
+            case MessengerUiAction.AcceptInvite:
+                if (message.GroupId != null)
+                    AcceptInvite(uid, component, loaderUid, deviceNetwork, message.GroupId);
+                break;
+            case MessengerUiAction.DeclineInvite:
+                if (message.GroupId != null)
+                    DeclineInvite(uid, component, loaderUid, deviceNetwork, message.GroupId);
+                break;
+            case MessengerUiAction.LeaveGroup:
+                if (message.GroupId != null)
+                    LeaveGroup(uid, component, loaderUid, deviceNetwork, message.GroupId);
+                break;
+            case MessengerUiAction.DeleteMessage:
+                if (message.ChatId != null && message.MessageId.HasValue)
+                    DeleteMessage(uid, component, loaderUid, deviceNetwork, message.ChatId, message.MessageId.Value);
+                break;
         }
     }
 
@@ -300,6 +316,151 @@ public sealed partial class MessengerCartridgeSystem
             [DeviceNetworkConstants.Command] = MessengerCommands.CmdGetMessages,
             [MessengerCommands.CmdGetMessages] = new NetworkPayload
             {
+                ["chat_id"] = chatId
+            }
+        };
+
+        _deviceNetwork.QueuePacket(loaderUid, component.ServerAddress, payload, frequency: messengerFreq, network: pdaDevice.DeviceNetId);
+        RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+    }
+
+    private void AcceptInvite(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string groupId)
+    {
+        if (component.ServerAddress == null || !component.IsRegistered)
+            return;
+
+        var messengerFreq = GetMessengerFrequency();
+        if (!messengerFreq.HasValue)
+            return;
+
+        SetMessengerFrequency(loaderUid, deviceNetwork, out var originalFreq);
+
+        if (!TryComp<DeviceNetworkComponent>(loaderUid, out var pdaDevice))
+        {
+            RestoreFrequency(loaderUid, deviceNetwork, originalFreq);
+            return;
+        }
+
+        if (!_deviceNetwork.IsAddressPresent(pdaDevice.DeviceNetId, component.ServerAddress))
+        {
+            RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+            return;
+        }
+
+        var payload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdAcceptInvite,
+            [MessengerCommands.CmdAcceptInvite] = new NetworkPayload
+            {
+                ["group_id"] = groupId
+            }
+        };
+
+        _deviceNetwork.QueuePacket(loaderUid, component.ServerAddress, payload, frequency: messengerFreq, network: pdaDevice.DeviceNetId);
+        RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+    }
+
+    private void DeclineInvite(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string groupId)
+    {
+        if (component.ServerAddress == null || !component.IsRegistered)
+            return;
+
+        var messengerFreq = GetMessengerFrequency();
+        if (!messengerFreq.HasValue)
+            return;
+
+        SetMessengerFrequency(loaderUid, deviceNetwork, out var originalFreq);
+
+        if (!TryComp<DeviceNetworkComponent>(loaderUid, out var pdaDevice))
+        {
+            RestoreFrequency(loaderUid, deviceNetwork, originalFreq);
+            return;
+        }
+
+        if (!_deviceNetwork.IsAddressPresent(pdaDevice.DeviceNetId, component.ServerAddress))
+        {
+            RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+            return;
+        }
+
+        var payload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdDeclineInvite,
+            [MessengerCommands.CmdDeclineInvite] = new NetworkPayload
+            {
+                ["group_id"] = groupId
+            }
+        };
+
+        _deviceNetwork.QueuePacket(loaderUid, component.ServerAddress, payload, frequency: messengerFreq, network: pdaDevice.DeviceNetId);
+        RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+    }
+
+    private void LeaveGroup(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string groupId)
+    {
+        if (component.ServerAddress == null || !component.IsRegistered)
+            return;
+
+        var messengerFreq = GetMessengerFrequency();
+        if (!messengerFreq.HasValue)
+            return;
+
+        SetMessengerFrequency(loaderUid, deviceNetwork, out var originalFreq);
+
+        if (!TryComp<DeviceNetworkComponent>(loaderUid, out var pdaDevice))
+        {
+            RestoreFrequency(loaderUid, deviceNetwork, originalFreq);
+            return;
+        }
+
+        if (!_deviceNetwork.IsAddressPresent(pdaDevice.DeviceNetId, component.ServerAddress))
+        {
+            RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+            return;
+        }
+
+        var payload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdLeaveGroup,
+            [MessengerCommands.CmdLeaveGroup] = new NetworkPayload
+            {
+                ["group_id"] = groupId
+            }
+        };
+
+        _deviceNetwork.QueuePacket(loaderUid, component.ServerAddress, payload, frequency: messengerFreq, network: pdaDevice.DeviceNetId);
+        RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+    }
+
+    private void DeleteMessage(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string chatId, long messageId)
+    {
+        if (component.ServerAddress == null || !component.IsRegistered)
+            return;
+
+        var messengerFreq = GetMessengerFrequency();
+        if (!messengerFreq.HasValue)
+            return;
+
+        SetMessengerFrequency(loaderUid, deviceNetwork, out var originalFreq);
+
+        if (!TryComp<DeviceNetworkComponent>(loaderUid, out var pdaDevice))
+        {
+            RestoreFrequency(loaderUid, deviceNetwork, originalFreq);
+            return;
+        }
+
+        if (!_deviceNetwork.IsAddressPresent(pdaDevice.DeviceNetId, component.ServerAddress))
+        {
+            RestoreFrequency(loaderUid, pdaDevice, originalFreq);
+            return;
+        }
+
+        var payload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdDeleteMessage,
+            [MessengerCommands.CmdDeleteMessage] = new NetworkPayload
+            {
+                ["message_id"] = messageId,
                 ["chat_id"] = chatId
             }
         };
