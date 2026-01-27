@@ -19,6 +19,7 @@
       - NewsReaderCartridge
       - AstroNavCartridge
       - NetProbeCartridge
+      - NavigatorCartridge
       - MessengerCartridge
 
 - type: entity
