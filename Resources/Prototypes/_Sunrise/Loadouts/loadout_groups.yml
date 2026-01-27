@@ -1384,10 +1384,10 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PlanetPrisoner-PlanetPrisonerPDAScreenH
-  - PlanetPrisoner-PlanetPrisonerPDAScreenHCracked
-  - PlanetPrisoner-PlanetPrisonerPDAScreenX
-  - PlanetPrisoner-PlanetPrisonerPDAScreenXCracked
+  - PlanetPrisonerPDAScreenH
+  - PlanetPrisonerPDAScreenHCracked
+  - PlanetPrisonerPDAScreenX
+  - PlanetPrisonerPDAScreenXCracked
 
 # Planet Prison - General Security
 
@@ -1397,7 +1397,8 @@
   minLimit: 0
   maxLimit: 1
   loadouts:
-  - PlanetPrisonSecurity-MasterHandheldCamera
+  - PlanetPrisonSecurityMasterHandheldCamera
+  - PlanetPrisonSecurityMasterHandheldCamera
 
 # Planet Prison - Inspector
 
@@ -1407,9 +1408,9 @@
   minLimit: 0
   maxLimit: 1
   loadouts:
-  - PrisonInspector-ClothingHeadHatBowlerHat
-  - PrisonInspector-ClothingHeadHatIAA
-  - PrisonInspector-ClothingHeadHatDetGadget
+  - PrisonInspectorBowlerHat
+  - PrisonInspectorIAAHat
+  - PrisonInspectorDetGadget
 
 
 - type: loadoutGroup
@@ -1418,8 +1419,8 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonInspector-ClothingEyesGlassesSunglasses
-  - PrisonInspector-ClothingEyesGlassesNoir
+  - PrisonInspectorSunglasses
+  - PrisonInspectorNoirGlasses
 
 # Planet Prison - Head Security
 - type: loadoutGroup
@@ -1428,9 +1429,9 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonDoctor-ClothingHeadCapPrisonDoctorMetus
-  - PrisonDoctor-ClothingHeadHatBeretPrisonDoctorMetus
-  - PrisonDoctor-ClothingHeadHatCapPrisonDoctorMetus
+  - PrisonDoctorCap
+  - PrisonDoctorBeret
+  - PrisonDoctorHat
 
 - type: loadoutGroup
   id: PrisonChefHead
@@ -1438,11 +1439,11 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonChef-ClothingHeadHatChef
-  - PrisonChef-ClothingHeadCapPrisonChefMetus
-  - PrisonChef-ClothingHeadHatBeretPrisonChefMetus
-  - PrisonChef-ClothingHeadHatCapPrisonChefMetus
-  - PrisonChef-ClothingHeadHatChefBlackToque
+  - PrisonChefChefHat
+  - PrisonChefCap
+  - PrisonChefBeret
+  - PrisonChefHat
+  - PrisonChefBlackToque
 
 - type: loadoutGroup
   id: PrisonEngineerHead
@@ -1450,9 +1451,9 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonEngineer-ClothingHeadCapPrisonEngineerMetus
-  - PrisonEngineer-ClothingHeadHatBeretPrisonEngineerMetus
-  - PrisonEngineer-ClothingHeadHatCapPrisonEngineerMetus
+  - PrisonEngineerCap
+  - PrisonEngineerBeret
+  - PrisonEngineerHat
 
 - type: loadoutGroup
   id: PrisonEngineerPDA
@@ -1460,8 +1461,8 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonEngineer-PrisonEngineerPDAScreenZap
-  - PrisonEngineer-PrisonEngineerPDAScreenPoint
+  - PrisonEngineerPDAScreenZap
+  - PrisonEngineerPDAScreenPoint
 
 - type: loadoutGroup
   id: PrisonScientistHead
@@ -1469,9 +1470,9 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonScientist-ClothingHeadCapPrisonScientistMetus
-  - PrisonScientist-ClothingHeadHatBeretPrisonScientistMetus
-  - PrisonScientist-ClothingHeadHatCapPrisonScientistMetus
+  - PrisonScientistCap
+  - PrisonScientistBeret
+  - PrisonScientistHat
 
 - type: loadoutGroup
   id: PrisonWorkerHead
@@ -1479,9 +1480,9 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonWorker-ClothingHeadCapPrisonWorkerMetus
-  - PrisonWorker-ClothingHeadHatBeretPrisonWorkerMetus
-  - PrisonWorker-ClothingHeadHatCapPrisonWorkerMetus
+  - PrisonWorkerCap
+  - PrisonWorkerBeret
+  - PrisonWorkerHat
 
 - type: loadoutGroup
   id: PrisonTraineeHead
@@ -1489,9 +1490,9 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonTrainee-ClothingHeadCapPrisonTraineeMetus
-  - PrisonTrainee-ClothingHeadHatBeretPrisonTraineeMetus
-  - PrisonTrainee-ClothingHeadHatCapPrisonTraineeMetus
+  - PrisonTraineeCap
+  - PrisonTraineeBeret
+  - PrisonTraineeHat
 
 - type: loadoutGroup
   id: PrisonTraineePDA
@@ -1499,9 +1500,86 @@
   minLimit: 1
   maxLimit: 1
   loadouts:
-  - PrisonTrainee-PrisonTraineePDAPartial
-  - PrisonTrainee-PrisonTraineePDAAdvanced
-  - PrisonTrainee-PrisonTraineePDAComplete
+  - PrisonTraineePDAPartial
+  - PrisonTraineePDAAdvanced
+  - PrisonTraineePDAComplete
+
+# Prison Uniform Groups
+
+- type: loadoutGroup
+  id: PrisonDoctorJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonDoctorJumpsuit
+  - PrisonDoctorJumpskirt
+  - PrisonDoctorJumpsuitVeteran
+  - PrisonDoctorJumpskirtVeteran
+
+- type: loadoutGroup
+  id: PrisonChefJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonChefJumpsuit
+  - PrisonChefJumpskirt
+  - PrisonChefJumpsuitVeteran
+  - PrisonChefJumpskirtVeteran
+
+- type: loadoutGroup
+  id: PrisonEngineerJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonEngineerJumpsuit
+  - PrisonEngineerJumpskirt
+  - PrisonEngineerJumpsuitVeteran
+  - PrisonEngineerJumpskirtVeteran
+
+- type: loadoutGroup
+  id: PrisonScientistJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonScientistJumpsuit
+  - PrisonScientistJumpskirt
+  - PrisonScientistJumpsuitVeteran
+  - PrisonScientistJumpskirtVeteran
+
+- type: loadoutGroup
+  id: PrisonWorkerJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonWorkerJumpsuit
+  - PrisonWorkerJumpskirt
+  - PrisonWorkerJumpsuitVeteran
+  - PrisonWorkerJumpskirtVeteran
+
+- type: loadoutGroup
+  id: PrisonTraineeJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - PrisonTraineeJumpsuit
+  - PrisonTraineeJumpskirt
+  - PrisonTraineeJumpsuitVeteran
+  - PrisonTraineeJumpskirtVeteran
+
+- type: loadoutGroup
+  id: HeadOfPrisonJumpsuit
+  name: loadout-group-prison-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - HeadOfPrisonJumpsuitAlt
+  - HeadOfPrisonJumpsuitOld
 
 - type: loadoutGroup
   id: Contributors
