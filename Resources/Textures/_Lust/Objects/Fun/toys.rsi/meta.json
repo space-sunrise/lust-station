@@ -125,6 +125,17 @@
         },
         {
           "name": "plushie-raneli-toll-eyes"
+        },
+        {
+          "name": "plushiediegovulpa"
+    },
+    {
+        "name": "diego-vulpa-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "diego-vulpa-inhand-right",
+        "directions": 4
         }
     ]
 }
