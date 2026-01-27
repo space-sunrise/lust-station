@@ -38,7 +38,8 @@ public sealed partial class MessengerServerSystem
         if (!component.Users.ContainsKey(recipientId))
             return;
 
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false);
+        var messageId = GetNextMessageId(uid, component);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false, messageId);
         var chatId = GetPersonalChatId(sender.UserId, recipientId);
 
         if (!component.MessageHistory.TryGetValue(chatId, out var history))
@@ -85,7 +86,8 @@ public sealed partial class MessengerServerSystem
             ["timestamp"] = message.Timestamp.TotalSeconds,
             ["group_id"] = message.GroupId ?? string.Empty,
             ["recipient_id"] = message.RecipientId ?? string.Empty,
-            ["is_read"] = message.IsRead
+            ["is_read"] = message.IsRead,
+            ["message_id"] = message.MessageId
         };
 
         if (pdaFrequency.HasValue)
@@ -114,7 +116,8 @@ public sealed partial class MessengerServerSystem
                         ["timestamp"] = message.Timestamp.TotalSeconds,
                         ["group_id"] = message.GroupId ?? string.Empty,
                         ["recipient_id"] = message.RecipientId ?? string.Empty,
-                        ["is_read"] = message.IsRead
+                        ["is_read"] = message.IsRead,
+                        ["message_id"] = message.MessageId
                     }
                 },
                 ["chat_id"] = chatId
@@ -131,7 +134,8 @@ public sealed partial class MessengerServerSystem
         if (!group.Members.Contains(sender.UserId))
             return;
 
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId);
+        var messageId = GetNextMessageId(uid, component);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId, null, false, messageId);
 
         if (!component.MessageHistory.TryGetValue(groupId, out var history))
         {
@@ -179,7 +183,8 @@ public sealed partial class MessengerServerSystem
             ["timestamp"] = message.Timestamp.TotalSeconds,
             ["group_id"] = message.GroupId ?? string.Empty,
             ["recipient_id"] = message.RecipientId ?? string.Empty,
-            ["is_read"] = message.IsRead
+            ["is_read"] = message.IsRead,
+            ["message_id"] = message.MessageId
         };
 
         foreach (var memberId in group.Members)

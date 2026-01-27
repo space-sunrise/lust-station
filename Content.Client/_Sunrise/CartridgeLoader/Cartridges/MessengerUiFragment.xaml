@@ -103,16 +103,28 @@
                         Orientation="Vertical" />
                 </ScrollContainer>
                 <PanelContainer StyleClasses="LowDivider" SetWidth="2" VerticalExpand="True" />
-                <ScrollContainer
+                <BoxContainer
                     HorizontalExpand="True"
                     Name="MembersContainer"
+                    Orientation="Vertical"
                     VerticalExpand="True"
                     Visible="False">
-                    <BoxContainer
+                    <ScrollContainer
                         HorizontalExpand="True"
-                        Name="MembersList"
-                        Orientation="Vertical" />
-                </ScrollContainer>
+                        VerticalExpand="True">
+                        <BoxContainer
+                            HorizontalExpand="True"
+                            Name="MembersList"
+                            Orientation="Vertical" />
+                    </ScrollContainer>
+                    <Button
+                        Disabled="True"
+                        HorizontalExpand="True"
+                        Margin="2,4,2,2"
+                        Name="AddMemberButton"
+                        Text="{Loc 'messenger-add-member-button'}"
+                        Visible="False" />
+                </BoxContainer>
             </BoxContainer>
             <PanelContainer StyleClasses="LowDivider" Margin="4 2" />
             <BoxContainer

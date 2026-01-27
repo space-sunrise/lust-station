@@ -43,6 +43,12 @@ public sealed partial class MessengerServerComponent : Component
     public int GroupIdCounter = 0;
 
     /// <summary>
+    /// Счетчик для генерации уникальных ID сообщений
+    /// </summary>
+    [ViewVariables]
+    public long MessageIdCounter = 0;
+
+    /// <summary>
     /// Количество непрочитанных сообщений по пользователям и чатам.
     /// Ключ - userId, значение - словарь (chatId -> количество непрочитанных)
     /// </summary>

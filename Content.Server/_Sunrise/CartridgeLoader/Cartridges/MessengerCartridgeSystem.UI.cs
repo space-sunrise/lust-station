@@ -18,7 +18,7 @@ public sealed partial class MessengerCartridgeSystem
         {
             foreach (var (chatId, messages) in component.MessageHistory)
             {
-                if (messages == null || messages.Count == 0)
+                if (messages.Count == 0)
                     continue;
 
                 if (chatId.StartsWith("personal_"))

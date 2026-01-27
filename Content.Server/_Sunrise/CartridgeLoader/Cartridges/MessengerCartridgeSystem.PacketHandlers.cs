@@ -1,8 +1,6 @@
 using System.Linq;
 using Content.Server._Sunrise.Messenger;
 using Content.Server.CartridgeLoader;
-using Content.Server.PDA.Ringer;
-using Content.Shared._Sunrise.CartridgeLoader.Cartridges;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared._Sunrise.Messenger;
@@ -248,6 +246,7 @@ public sealed partial class MessengerCartridgeSystem
             messageData.TryGetValue("group_id", out object? groupIdObj);
             messageData.TryGetValue("recipient_id", out object? recipientIdObj);
             messageData.TryGetValue("is_read", out object? isReadObj);
+            messageData.TryGetValue("message_id", out object? messageIdObj);
 
             var groupId = groupIdObj?.ToString();
             var recipientId = recipientIdObj?.ToString();
@@ -258,57 +257,91 @@ public sealed partial class MessengerCartridgeSystem
                 isRead = isReadValue;
             }
 
+            var messageId = 0L;
+            if (messageIdObj != null && long.TryParse(messageIdObj.ToString(), out var messageIdValue))
+            {
+                messageId = messageIdValue;
+            }
+
             var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead));
+            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId));
         }
 
         if (!string.IsNullOrEmpty(chatId) && messages.Count >= 0)
         {
             if (component.MessageHistory.TryGetValue(chatId, out var existingMessages))
             {
-                var existingDict = new Dictionary<string, MessengerMessage>();
-                for (int i = 0; i < existingMessages.Count; i++)
-                {
-                    var msg = existingMessages[i];
-                    var key = $"{msg.SenderId}_{msg.Timestamp.TotalSeconds}_{msg.Content}_{i}";
+                var existingDict = existingMessages
+                    .GroupBy(m => m.MessageId)
+                    .ToDictionary(g => g.Key, g => g.ToList());
 
-                    if (existingDict.ContainsKey(key))
-                    {
-                        key = $"{msg.SenderId}_{msg.Timestamp.TotalSeconds}_{msg.Content.GetHashCode()}_{i}";
-                    }
-                    existingDict[key] = msg;
-                }
-
-                var hasStatusUpdate = false;
                 foreach (var newMessage in messages)
                 {
-                    var matchingMessage = existingMessages.FirstOrDefault(m =>
-                        m.SenderId == newMessage.SenderId &&
-                        Math.Abs(m.Timestamp.TotalSeconds - newMessage.Timestamp.TotalSeconds) < 0.001 &&
-                        m.Content == newMessage.Content);
-
-                    if (matchingMessage != null)
+                    if (newMessage.MessageId > 0 && existingDict.TryGetValue(newMessage.MessageId, out var matchingList))
                     {
-                        if (matchingMessage.IsRead != newMessage.IsRead)
+                        var matchingMessage = matchingList.FirstOrDefault();
+                        if (matchingMessage != null)
                         {
-                            matchingMessage.IsRead = newMessage.IsRead;
-                            hasStatusUpdate = true;
+                            if (matchingMessage.IsRead != newMessage.IsRead)
+                            {
+                                matchingMessage.IsRead = newMessage.IsRead;
+                            }
+                        }
+                    }
+                    else if (newMessage.MessageId == 0)
+                    {
+                        var matchingMessage = existingMessages.FirstOrDefault(m =>
+                            m.MessageId == 0 &&
+                            Math.Abs(m.Timestamp.TotalSeconds - newMessage.Timestamp.TotalSeconds) < 0.001 &&
+                            m.SenderId == newMessage.SenderId &&
+                            m.Content == newMessage.Content &&
+                            m.GroupId == newMessage.GroupId &&
+                            m.RecipientId == newMessage.RecipientId);
+
+                        if (matchingMessage != null)
+                        {
+                            if (matchingMessage.IsRead != newMessage.IsRead)
+                            {
+                                matchingMessage.IsRead = newMessage.IsRead;
+                            }
                         }
                     }
                 }
 
-                var newMessages = messages.Where(newMsg =>
+                var newMessages = new List<MessengerMessage>();
+                foreach (var newMsg in messages)
                 {
-                    return !existingMessages.Any(existingMsg =>
-                        existingMsg.SenderId == newMsg.SenderId &&
-                        Math.Abs(existingMsg.Timestamp.TotalSeconds - newMsg.Timestamp.TotalSeconds) < 0.001 &&
-                        existingMsg.Content == newMsg.Content);
-                }).ToList();
+                    bool isDuplicate = false;
+
+                    if (newMsg.MessageId > 0)
+                    {
+                        if (existingDict.TryGetValue(newMsg.MessageId, out var msgList) && msgList.Count > 0)
+                        {
+                            isDuplicate = true;
+                        }
+                    }
+                    else
+                    {
+                        isDuplicate = existingMessages.Any(m =>
+                            m.MessageId == 0 &&
+                            Math.Abs(m.Timestamp.TotalSeconds - newMsg.Timestamp.TotalSeconds) < 0.001 &&
+                            m.SenderId == newMsg.SenderId &&
+                            m.Content == newMsg.Content &&
+                            m.GroupId == newMsg.GroupId &&
+                            m.RecipientId == newMsg.RecipientId);
+                    }
+
+                    if (!isDuplicate)
+                    {
+                        newMessages.Add(newMsg);
+                    }
+                }
 
                 if (newMessages.Count > 0)
                 {
                     existingMessages.AddRange(newMessages);
                     existingMessages = existingMessages.OrderBy(m => m.Timestamp)
+                        .ThenBy(m => m.MessageId)
                         .ThenBy(m => m.SenderId)
                         .ThenBy(m => m.Content)
                         .ToList();
@@ -316,7 +349,7 @@ public sealed partial class MessengerCartridgeSystem
                 component.MessageHistory[chatId] = existingMessages;
             }
             else
-                component.MessageHistory[chatId] = messages.OrderBy(m => m.Timestamp).ToList();
+                component.MessageHistory[chatId] = messages.OrderBy(m => m.Timestamp).ThenBy(m => m.MessageId).ThenBy(m => m.SenderId).ThenBy(m => m.Content).ToList();
         }
 
         UpdateUiState(uid, loaderUid, component);
@@ -343,6 +376,7 @@ public sealed partial class MessengerCartridgeSystem
         packet.Data.TryGetValue("group_id", out object? groupIdObj);
         packet.Data.TryGetValue("recipient_id", out object? recipientIdObj);
         packet.Data.TryGetValue("is_read", out object? isReadObj);
+        packet.Data.TryGetValue("message_id", out object? messageIdObj);
 
         var groupId = groupIdObj?.ToString();
         var recipientId = recipientIdObj?.ToString();
@@ -353,8 +387,14 @@ public sealed partial class MessengerCartridgeSystem
             isRead = isReadValue;
         }
 
+        var messageId = 0L;
+        if (messageIdObj != null && long.TryParse(messageIdObj.ToString(), out var messageIdValue))
+        {
+            messageId = messageIdValue;
+        }
+
         var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead);
+        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId);
 
         string chatId;
         if (!string.IsNullOrEmpty(groupId))
@@ -394,15 +434,28 @@ public sealed partial class MessengerCartridgeSystem
             component.MessageHistory[chatId] = history;
         }
 
-        var messageExists = history.Any(m =>
-            m.SenderId == message.SenderId &&
-            Math.Abs(m.Timestamp.TotalSeconds - message.Timestamp.TotalSeconds) < 0.001 &&
-            m.Content == message.Content);
+        MessengerMessage? existingMessage = null;
 
-        if (!messageExists)
+        if (message.MessageId > 0)
+        {
+            existingMessage = history.FirstOrDefault(m => m.MessageId == message.MessageId);
+        }
+        else
+        {
+            existingMessage = history.FirstOrDefault(m =>
+                m.MessageId == 0 &&
+                Math.Abs(m.Timestamp.TotalSeconds - message.Timestamp.TotalSeconds) < 0.001 &&
+                m.SenderId == message.SenderId &&
+                m.Content == message.Content &&
+                m.GroupId == message.GroupId &&
+                m.RecipientId == message.RecipientId);
+        }
+
+        if (existingMessage == null)
         {
             history.Add(message);
             history = history.OrderBy(m => m.Timestamp)
+                .ThenBy(m => m.MessageId)
                 .ThenBy(m => m.SenderId)
                 .ThenBy(m => m.Content)
                 .ToList();
@@ -410,15 +463,7 @@ public sealed partial class MessengerCartridgeSystem
         }
         else
         {
-            var existingMessage = history.FirstOrDefault(m =>
-                m.SenderId == message.SenderId &&
-                Math.Abs(m.Timestamp.TotalSeconds - message.Timestamp.TotalSeconds) < 0.001 &&
-                m.Content == message.Content);
-
-            if (existingMessage != null)
-            {
-                existingMessage.IsRead = message.IsRead;
-            }
+            existingMessage.IsRead = message.IsRead;
         }
 
         var isGroupChat = chatId == "common" || chatId.StartsWith("dept_") || chatId.StartsWith("group_");

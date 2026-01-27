@@ -217,6 +217,27 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
             var needsUpdate = MessagesList.ChildCount == 0 || messages.Count != _lastMessageCount;
 
+            if (!needsUpdate && _currentChatId != null && !_currentChatId.StartsWith("personal_"))
+            {
+                if (state.MessageHistory.TryGetValue(_currentChatId, out var newMessages))
+                {
+                    if (_previousState?.MessageHistory.TryGetValue(_currentChatId, out var oldMessages) == true)
+                    {
+                        var oldMessageIds = new HashSet<long>(oldMessages.Select(m => m.MessageId));
+                        var hasNewMessages = newMessages.Any(m => !oldMessageIds.Contains(m.MessageId));
+
+                        if (hasNewMessages)
+                        {
+                            needsUpdate = true;
+                        }
+                    }
+                    else if (newMessages.Count > 0)
+                    {
+                        needsUpdate = true;
+                    }
+                }
+            }
+
             if (!needsUpdate && _currentChatId != null && _currentChatId.StartsWith("personal_") && _currentState?.CurrentUserId != null)
             {
                 var hasStatusChange = false;
@@ -724,12 +745,20 @@ public sealed partial class MessengerUiFragment : BoxContainer
                     HorizontalExpand = true
                 };
 
+                var displayText = isMemberOwner
+                    ? $"★ {userName}"
+                    : userName;
+
+                var tooltipText = isMemberOwner
+                    ? Loc.GetString("messenger-member-owner", ("name", userName))
+                    : userName;
+
                 var memberLabel = new Label
                 {
-                    Text = isMemberOwner
-                        ? Loc.GetString("messenger-member-owner", ("name", userName))
-                        : userName,
-                    HorizontalExpand = true
+                    Text = displayText,
+                    HorizontalExpand = true,
+                    ClipText = true,
+                    ToolTip = tooltipText
                 };
                 memberContainer.AddChild(memberLabel);
 
@@ -762,14 +791,15 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
         if (isUserGroup && isOwner && _currentState != null && _currentState.ServerAvailable && _currentState.IsRegistered)
         {
-            var addButton = new Button
-            {
-                Text = Loc.GetString("messenger-add-member-button"),
-                HorizontalExpand = true,
-                Margin = new Thickness(2, 4)
-            };
-            addButton.OnPressed += _ => ShowAddUserToGroupDialog(_currentGroupId, group.Name);
-            MembersList.AddChild(addButton);
+            AddMemberButton.Disabled = false;
+            AddMemberButton.Visible = true;
+            AddMemberButton.OnPressed -= OnAddMemberButtonPressed;
+            AddMemberButton.OnPressed += OnAddMemberButtonPressed;
+        }
+        else
+        {
+            AddMemberButton.Disabled = true;
+            AddMemberButton.Visible = false;
         }
     }
 
@@ -932,6 +962,18 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
         dialog.OnClose += () => _createGroupDialog = null;
         dialog.OpenCentered();
+    }
+
+    private void OnAddMemberButtonPressed(BaseButton.ButtonEventArgs args)
+    {
+        if (_currentGroupId != null && _currentState != null)
+        {
+            var group = _currentState.Groups.FirstOrDefault(g => g.GroupId == _currentGroupId);
+            if (group != null)
+            {
+                ShowAddUserToGroupDialog(_currentGroupId, group.Name);
+            }
+        }
     }
 
     private void ShowAddUserToGroupDialog(string groupId, string groupName)

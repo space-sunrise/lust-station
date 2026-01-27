@@ -11,7 +11,6 @@ namespace Content.Client._Sunrise.CartridgeLoader.Cartridges;
 public sealed partial class AddUserDialog : DefaultWindow
 {
     public event Action<string>? OnUserSelected;
-    public event Action? OnClose;
 
     private List<MessengerUser> _availableUsers = new();
 
@@ -21,11 +20,6 @@ public sealed partial class AddUserDialog : DefaultWindow
         Title = Loc.GetString("messenger-add-user-title");
 
         SearchInput.OnTextChanged += _ => UpdateUsersList();
-        CloseButton.OnPressed += _ =>
-        {
-            OnClose?.Invoke();
-            Close();
-        };
     }
 
     public void SetTitle(string title)

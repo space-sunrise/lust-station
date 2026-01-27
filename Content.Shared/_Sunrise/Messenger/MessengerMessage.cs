@@ -43,7 +43,12 @@ public sealed class MessengerMessage
     /// </summary>
     public bool IsRead { get; set; }
 
-    public MessengerMessage(string senderId, string senderName, string content, TimeSpan timestamp, string? groupId = null, string? recipientId = null, bool isRead = false)
+    /// <summary>
+    /// Уникальный идентификатор сообщения
+    /// </summary>
+    public long MessageId { get; set; }
+
+    public MessengerMessage(string senderId, string senderName, string content, TimeSpan timestamp, string? groupId = null, string? recipientId = null, bool isRead = false, long messageId = 0)
     {
         SenderId = senderId;
         SenderName = senderName;
@@ -52,5 +57,6 @@ public sealed class MessengerMessage
         GroupId = groupId;
         RecipientId = recipientId;
         IsRead = isRead;
+        MessageId = messageId;
     }
 }

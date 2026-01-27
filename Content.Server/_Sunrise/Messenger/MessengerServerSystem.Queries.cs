@@ -190,8 +190,8 @@ public sealed partial class MessengerServerSystem
                 foreach (var senderId in updatedSenders)
                 {
                     var sortedChatMessages = chatMessages.OrderBy(m => m.Timestamp)
+                        .ThenBy(m => m.MessageId)
                         .ThenBy(m => m.SenderId)
-                        .ThenBy(m => m.Content)
                         .ToList();
 
                     var senderMessagesData = new List<Dictionary<string, object>>();
@@ -207,7 +207,8 @@ public sealed partial class MessengerServerSystem
                                 ["timestamp"] = msg.Timestamp.TotalSeconds,
                                 ["group_id"] = msg.GroupId ?? string.Empty,
                                 ["recipient_id"] = msg.RecipientId ?? string.Empty,
-                                ["is_read"] = msg.IsRead
+                                ["is_read"] = msg.IsRead,
+                                ["message_id"] = msg.MessageId
                             });
                         }
                     }
@@ -233,8 +234,8 @@ public sealed partial class MessengerServerSystem
             if (hasUpdates)
             {
                 var sortedChatMessages = chatMessages.OrderBy(m => m.Timestamp)
+                    .ThenBy(m => m.MessageId)
                     .ThenBy(m => m.SenderId)
-                    .ThenBy(m => m.Content)
                     .ToList();
 
                 var recipientMessagesData = new List<Dictionary<string, object>>();
@@ -248,7 +249,8 @@ public sealed partial class MessengerServerSystem
                         ["timestamp"] = msg.Timestamp.TotalSeconds,
                         ["group_id"] = msg.GroupId ?? string.Empty,
                         ["recipient_id"] = msg.RecipientId ?? string.Empty,
-                        ["is_read"] = msg.IsRead
+                        ["is_read"] = msg.IsRead,
+                        ["message_id"] = msg.MessageId
                     });
                 }
 
@@ -280,8 +282,8 @@ public sealed partial class MessengerServerSystem
             messages = new List<MessengerMessage>();
 
         var sortedMessages = messages.OrderBy(m => m.Timestamp)
+            .ThenBy(m => m.MessageId)
             .ThenBy(m => m.SenderId)
-            .ThenBy(m => m.Content)
             .ToList();
 
         var messagesData = new List<Dictionary<string, object>>();
@@ -295,7 +297,8 @@ public sealed partial class MessengerServerSystem
                 ["timestamp"] = message.Timestamp.TotalSeconds,
                 ["group_id"] = message.GroupId ?? string.Empty,
                 ["recipient_id"] = message.RecipientId ?? string.Empty,
-                ["is_read"] = message.IsRead
+                ["is_read"] = message.IsRead,
+                ["message_id"] = message.MessageId
             });
         }
 

@@ -1,3 +1,5 @@
+using System.Linq;
+using Content.Server._Sunrise.CartridgeLoader.Cartridges;
 using Content.Server.DeviceNetwork.Components;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
@@ -6,6 +8,7 @@ using Content.Shared.PDA;
 using Content.Shared.Access.Components;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.GameTicking;
+using Content.Shared.CartridgeLoader;
 
 namespace Content.Server._Sunrise.Messenger;
 
@@ -44,6 +47,12 @@ public sealed partial class MessengerServerSystem
         if (pdaUid == null)
         {
             Sawmill.Warning($"No PDA found for player: {ToPrettyString(args.Mob)}");
+            return;
+        }
+
+        if (!TryComp<PdaComponent>(pdaUid.Value, out var pdaComp) || pdaComp.PdaOwner == null)
+        {
+            Sawmill.Debug($"PDA {ToPrettyString(pdaUid.Value)} has no owner, skipping automatic registration");
             return;
         }
 
@@ -138,6 +147,133 @@ public sealed partial class MessengerServerSystem
         component.Users[userId] = user;
 
         AddUserToAutoGroups(uid, component, userId, userName, departmentId);
+
+        if (!TryComp<DeviceNetworkComponent>(uid, out var serverDevice))
+        {
+            Sawmill.Warning($"Server does not have DeviceNetworkComponent: {ToPrettyString(uid)}");
+            return;
+        }
+
+        uint? pdaFrequency;
+        if (_prototypeManager.TryIndex(component.PdaFrequencyId, out var pdaFreq))
+        {
+            pdaFrequency = pdaFreq.Frequency;
+        }
+        else
+        {
+            Sawmill.Error($"PDA frequency prototype not found");
+            return;
+        }
+
+        var response = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdUserRegistered,
+            ["user_id"] = userId,
+            ["user_name"] = userName,
+            ["job_title"] = jobTitle ?? string.Empty,
+            ["department_id"] = departmentId ?? string.Empty
+        };
+
+        if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, userId))
+        {
+            _deviceNetwork.QueuePacket(uid, userId, response, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+        }
+
+        // Отправляем список пользователей новому пользователю
+        var usersPayload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdUsersList,
+            ["users"] = component.Users.Values.Select(u => new Dictionary<string, object>
+            {
+                ["user_id"] = u.UserId,
+                ["user_name"] = u.Name,
+                ["job_title"] = u.JobTitle ?? string.Empty,
+                ["department_id"] = u.DepartmentId ?? string.Empty
+            }).ToList()
+        };
+
+        if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, userId))
+        {
+            _deviceNetwork.QueuePacket(uid, userId, usersPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+        }
+
+        // Отправляем список групп новому пользователю
+        var groupsList = component.Groups.Values.ToList();
+        var groupsData = new List<Dictionary<string, object>>();
+
+        foreach (var group in groupsList)
+        {
+            if (group.GroupId == "common")
+            {
+                if (!group.Members.Contains(userId))
+                    continue;
+            }
+            else if (group.GroupId.StartsWith("dept_"))
+            {
+                if (!group.Members.Contains(userId))
+                    continue;
+            }
+            else if (group.GroupId.StartsWith("group_"))
+            {
+                if (!group.Members.Contains(userId))
+                    continue;
+            }
+
+            var membersList = new List<object>();
+            foreach (var memberId in group.Members)
+            {
+                membersList.Add(memberId);
+            }
+
+            var unreadCount = 0;
+            if (component.UnreadCounts.TryGetValue(userId, out var userUnreads))
+            {
+                userUnreads.TryGetValue(group.GroupId, out unreadCount);
+            }
+
+            groupsData.Add(new Dictionary<string, object>
+            {
+                ["group_id"] = group.GroupId,
+                ["group_name"] = group.Name,
+                ["group_type"] = (int)group.Type,
+                ["auto_group_prototype_id"] = group.AutoGroupPrototypeId ?? string.Empty,
+                ["owner_id"] = group.OwnerId ?? string.Empty,
+                ["members"] = membersList,
+                ["unread_count"] = unreadCount
+            });
+        }
+
+        var unreadCountsData = new Dictionary<string, int>();
+        if (component.UnreadCounts.TryGetValue(userId, out var senderUnreads))
+        {
+            foreach (var (chatId, count) in senderUnreads)
+            {
+                unreadCountsData[chatId] = count;
+            }
+        }
+
+        var groupsPayload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdGroupsList,
+            ["groups"] = groupsData,
+            ["unread_counts"] = unreadCountsData
+        };
+
+        if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, userId))
+        {
+            _deviceNetwork.QueuePacket(uid, userId, groupsPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+        }
+
+        // Регистрируем картридж мессенджера как фоновую программу, если он еще не зарегистрирован
+        if (_cartridgeLoader.TryGetProgram<MessengerCartridgeComponent>(pdaUid, out var cartridgeUid, out _))
+        {
+            if (TryComp<CartridgeLoaderComponent>(pdaUid, out var loader) &&
+                !loader.BackgroundPrograms.Contains(cartridgeUid.Value))
+            {
+                _cartridgeLoader.RegisterBackgroundProgram(pdaUid, cartridgeUid.Value);
+                Sawmill.Debug($"Registered messenger cartridge {ToPrettyString(cartridgeUid.Value)} as background program for PDA {ToPrettyString(pdaUid)}");
+            }
+        }
     }
 
     private void HandleRegisterUser(EntityUid uid, MessengerServerComponent component, DeviceNetworkPacketEvent args)
@@ -161,13 +297,14 @@ public sealed partial class MessengerServerSystem
         }
 
         var userId = args.SenderAddress;
-        var userName = pda.OwnerName ?? Loc.GetString("messenger-user-unknown");
 
+        string? userName = null;
         string? jobTitle = null;
         string? departmentId = null;
 
         if (pda.ContainedId != null && TryComp<IdCardComponent>(pda.ContainedId.Value, out var idCard))
         {
+            userName = idCard.FullName;
             jobTitle = idCard.LocalizedJobTitle;
             if (idCard.JobDepartments.Count > 0)
             {
@@ -175,19 +312,15 @@ public sealed partial class MessengerServerSystem
             }
         }
 
+        if (string.IsNullOrWhiteSpace(userName))
+        {
+            userName = pda.OwnerName ?? Loc.GetString("messenger-user-unknown");
+        }
+
         var user = new MessengerUser(userId, userName, jobTitle, departmentId);
         component.Users[userId] = user;
 
         AddUserToAutoGroups(uid, component, userId, userName, departmentId);
-
-        var response = new NetworkPayload
-        {
-            [DeviceNetworkConstants.Command] = MessengerCommands.CmdUserRegistered,
-            ["user_id"] = userId,
-            ["user_name"] = userName,
-            ["job_title"] = jobTitle ?? string.Empty,
-            ["department_id"] = departmentId ?? string.Empty
-        };
 
         if (!TryComp<DeviceNetworkComponent>(uid, out var serverDevice))
         {
@@ -206,12 +339,52 @@ public sealed partial class MessengerServerSystem
             return;
         }
 
-        if (!_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, args.SenderAddress))
+        var response = new NetworkPayload
         {
-            return;
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdUserRegistered,
+            ["user_id"] = userId,
+            ["user_name"] = userName,
+            ["job_title"] = jobTitle ?? string.Empty,
+            ["department_id"] = departmentId ?? string.Empty
+        };
+
+        if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, args.SenderAddress))
+        {
+            _deviceNetwork.QueuePacket(uid, args.SenderAddress, response, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
         }
 
-        _deviceNetwork.QueuePacket(uid, args.SenderAddress, response, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+        var notifyPayload = new NetworkPayload
+        {
+            [DeviceNetworkConstants.Command] = MessengerCommands.CmdUsersList,
+            ["users"] = component.Users.Values.Select(u => new Dictionary<string, object>
+            {
+                ["user_id"] = u.UserId,
+                ["user_name"] = u.Name,
+                ["job_title"] = u.JobTitle ?? string.Empty,
+                ["department_id"] = u.DepartmentId ?? string.Empty
+            }).ToList()
+        };
+
+        foreach (var existingUserId in component.Users.Keys)
+        {
+            if (existingUserId == userId)
+                continue;
+
+            if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, existingUserId))
+            {
+                _deviceNetwork.QueuePacket(uid, existingUserId, notifyPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+            }
+        }
+
+        if (_cartridgeLoader.TryGetProgram<MessengerCartridgeComponent>(pdaUid, out var cartridgeUid, out _))
+        {
+            if (TryComp<CartridgeLoaderComponent>(pdaUid, out var loader) &&
+                !loader.BackgroundPrograms.Contains(cartridgeUid.Value))
+            {
+                _cartridgeLoader.RegisterBackgroundProgram(pdaUid, cartridgeUid.Value);
+                Sawmill.Debug($"Registered messenger cartridge {ToPrettyString(cartridgeUid.Value)} as background program for PDA {ToPrettyString(pdaUid)}");
+            }
+        }
     }
 
     /// <summary>
@@ -278,7 +451,8 @@ public sealed partial class MessengerServerSystem
 
                 var timestamp = GetStationTime();
                 var messageText = Loc.GetString("messenger-system-user-added", ("userName", userName));
-                var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, autoGroupProto.GroupId);
+                var messageId = GetNextMessageId(uid, component);
+                var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, autoGroupProto.GroupId, null, false, messageId);
 
                 if (!component.MessageHistory.TryGetValue(autoGroupProto.GroupId, out var history))
                 {
@@ -306,14 +480,12 @@ public sealed partial class MessengerServerSystem
                     ["timestamp"] = timestamp.TotalSeconds,
                     ["group_id"] = autoGroupProto.GroupId,
                     ["recipient_id"] = string.Empty,
-                    ["is_read"] = false
+                    ["is_read"] = false,
+                    ["message_id"] = systemMessage.MessageId
                 };
 
                 foreach (var memberId in group.Members)
                 {
-                    if (memberId == userId)
-                        continue;
-
                     var isMemberChatOpen = component.OpenChats.TryGetValue(memberId, out var memberOpenChatId) && memberOpenChatId == autoGroupProto.GroupId;
 
                     if (!isMemberChatOpen)
@@ -334,6 +506,46 @@ public sealed partial class MessengerServerSystem
                     else
                     {
                         _deviceNetwork.QueuePacket(uid, memberId, messagePayload);
+                    }
+                }
+
+                if (component.MessageHistory.TryGetValue(autoGroupProto.GroupId, out var groupHistory) && groupHistory.Count > 0)
+                {
+                    var sortedMessages = groupHistory.OrderBy(m => m.Timestamp)
+                        .ThenBy(m => m.MessageId)
+                        .ThenBy(m => m.SenderId)
+                        .ToList();
+
+                    var messagesData = new List<Dictionary<string, object>>();
+                    foreach (var msg in sortedMessages)
+                    {
+                        messagesData.Add(new Dictionary<string, object>
+                        {
+                            ["sender_id"] = msg.SenderId,
+                            ["sender_name"] = msg.SenderName,
+                            ["content"] = msg.Content,
+                            ["timestamp"] = msg.Timestamp.TotalSeconds,
+                            ["group_id"] = msg.GroupId ?? string.Empty,
+                            ["recipient_id"] = msg.RecipientId ?? string.Empty,
+                            ["is_read"] = msg.IsRead,
+                            ["message_id"] = msg.MessageId
+                        });
+                    }
+
+                    var historyPayload = new NetworkPayload
+                    {
+                        [DeviceNetworkConstants.Command] = MessengerCommands.CmdMessagesList,
+                        ["messages"] = messagesData,
+                        ["chat_id"] = autoGroupProto.GroupId
+                    };
+
+                    if (pdaFrequency.HasValue)
+                    {
+                        _deviceNetwork.QueuePacket(uid, userId, historyPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+                    }
+                    else
+                    {
+                        _deviceNetwork.QueuePacket(uid, userId, historyPayload);
                     }
                 }
 

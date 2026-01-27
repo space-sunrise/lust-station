@@ -53,6 +53,15 @@ public sealed partial class MessengerCartridgeSystem : EntitySystem
             if (component.LoaderUid == null)
                 continue;
 
+            if (!TryComp<CartridgeLoaderComponent>(component.LoaderUid.Value, out var loader))
+                continue;
+
+            var isActive = loader.ActiveProgram == uid;
+            var isBackground = loader.BackgroundPrograms.Contains(uid);
+
+            if (!isActive && !isBackground)
+                continue;
+
             if (component.LastStatusCheck.HasValue)
             {
                 var timeSinceLastCheck = currentTime - component.LastStatusCheck.Value;

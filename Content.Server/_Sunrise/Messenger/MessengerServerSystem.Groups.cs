@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.DeviceNetwork.Events;
@@ -116,7 +117,8 @@ public sealed partial class MessengerServerSystem
 
         var timestamp = GetStationTime();
         var messageText = Loc.GetString("messenger-system-user-added-by", ("adderName", adder.Name), ("userName", addedUser.Name));
-        var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, groupId);
+        var messageId = GetNextMessageId(uid, component);
+        var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, groupId, null, false, messageId);
 
         if (!component.MessageHistory.TryGetValue(groupId, out var history))
         {
@@ -144,11 +146,25 @@ public sealed partial class MessengerServerSystem
             ["timestamp"] = timestamp.TotalSeconds,
             ["group_id"] = groupId,
             ["recipient_id"] = string.Empty,
-            ["is_read"] = false
+            ["is_read"] = false,
+            ["message_id"] = systemMessage.MessageId
         };
 
         foreach (var memberId in group.Members)
         {
+            var isMemberChatOpen = component.OpenChats.TryGetValue(memberId, out var memberOpenChatId) && memberOpenChatId == groupId;
+
+            if (!isMemberChatOpen)
+            {
+                if (!component.UnreadCounts.TryGetValue(memberId, out var memberUnreads))
+                {
+                    memberUnreads = new Dictionary<string, int>();
+                    component.UnreadCounts[memberId] = memberUnreads;
+                }
+                memberUnreads.TryGetValue(groupId, out var currentCount);
+                memberUnreads[groupId] = currentCount + 1;
+            }
+
             if (pdaFrequency.HasValue)
             {
                 _deviceNetwork.QueuePacket(uid, memberId, messagePayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
@@ -175,6 +191,46 @@ public sealed partial class MessengerServerSystem
             else
             {
                 _deviceNetwork.QueuePacket(uid, memberId, payload);
+            }
+        }
+
+        if (component.MessageHistory.TryGetValue(groupId, out var groupHistory) && groupHistory.Count > 0)
+        {
+            var sortedMessages = groupHistory.OrderBy(m => m.Timestamp)
+                .ThenBy(m => m.MessageId)
+                .ThenBy(m => m.SenderId)
+                .ToList();
+
+            var messagesData = new List<Dictionary<string, object>>();
+            foreach (var msg in sortedMessages)
+            {
+                messagesData.Add(new Dictionary<string, object>
+                {
+                    ["sender_id"] = msg.SenderId,
+                    ["sender_name"] = msg.SenderName,
+                    ["content"] = msg.Content,
+                    ["timestamp"] = msg.Timestamp.TotalSeconds,
+                    ["group_id"] = msg.GroupId ?? string.Empty,
+                    ["recipient_id"] = msg.RecipientId ?? string.Empty,
+                    ["is_read"] = msg.IsRead,
+                    ["message_id"] = msg.MessageId
+                });
+            }
+
+            var historyPayload = new NetworkPayload
+            {
+                [DeviceNetworkConstants.Command] = MessengerCommands.CmdMessagesList,
+                ["messages"] = messagesData,
+                ["chat_id"] = groupId
+            };
+
+            if (pdaFrequency.HasValue)
+            {
+                _deviceNetwork.QueuePacket(uid, userId, historyPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+            }
+            else
+            {
+                _deviceNetwork.QueuePacket(uid, userId, historyPayload);
             }
         }
     }
@@ -232,7 +288,8 @@ public sealed partial class MessengerServerSystem
 
         var timestamp = GetStationTime();
         var messageText = Loc.GetString("messenger-system-user-removed-by", ("removerName", remover.Name), ("userName", removedUser.Name));
-        var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, groupId);
+        var messageId = GetNextMessageId(uid, component);
+        var systemMessage = new MessengerMessage("system", Loc.GetString("messenger-system-name"), messageText, timestamp, groupId, null, false, messageId);
 
         if (!component.MessageHistory.TryGetValue(groupId, out var history))
         {
