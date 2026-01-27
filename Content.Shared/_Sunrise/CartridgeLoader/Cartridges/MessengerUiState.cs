@@ -54,6 +54,11 @@ public sealed class MessengerUiState : BoundUserInterfaceState
     /// </summary>
     public Dictionary<string, int> UnreadCounts { get; }
 
+    /// <summary>
+    /// Активные приглашения в группы
+    /// </summary>
+    public List<MessengerGroupInvite> ActiveInvites { get; }
+
     public MessengerUiState(
         bool isRegistered,
         bool serverAvailable,
@@ -63,7 +68,8 @@ public sealed class MessengerUiState : BoundUserInterfaceState
         Dictionary<string, List<MessengerMessage>> messageHistory,
         HashSet<string> mutedPersonalChats,
         HashSet<string> mutedGroupChats,
-        Dictionary<string, int> unreadCounts)
+        Dictionary<string, int> unreadCounts,
+        List<MessengerGroupInvite> activeInvites)
     {
         IsRegistered = isRegistered;
         ServerAvailable = serverAvailable;
@@ -74,5 +80,6 @@ public sealed class MessengerUiState : BoundUserInterfaceState
         MutedPersonalChats = mutedPersonalChats;
         MutedGroupChats = mutedGroupChats;
         UnreadCounts = unreadCounts;
+        ActiveInvites = activeInvites;
     }
 }

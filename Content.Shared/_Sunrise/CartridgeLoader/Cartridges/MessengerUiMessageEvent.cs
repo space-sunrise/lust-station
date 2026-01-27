@@ -17,6 +17,7 @@ public sealed class MessengerUiMessageEvent : CartridgeMessageEvent
     public readonly string? UserId;
     public readonly string? ChatId;
     public readonly bool? IsMuted;
+    public readonly long? MessageId;
 
     public MessengerUiMessageEvent(
         MessengerUiAction action,
@@ -26,7 +27,8 @@ public sealed class MessengerUiMessageEvent : CartridgeMessageEvent
         string? groupName = null,
         string? userId = null,
         string? chatId = null,
-        bool? isMuted = null)
+        bool? isMuted = null,
+        long? messageId = null)
     {
         Action = action;
         RecipientId = recipientId;
@@ -36,6 +38,7 @@ public sealed class MessengerUiMessageEvent : CartridgeMessageEvent
         UserId = userId;
         ChatId = chatId;
         IsMuted = isMuted;
+        MessageId = messageId;
     }
 }
 
@@ -52,5 +55,9 @@ public enum MessengerUiAction
     RequestUsers,
     RequestGroups,
     RequestMessages,
-    ToggleMute
+    ToggleMute,
+    AcceptInvite,
+    DeclineInvite,
+    LeaveGroup,
+    DeleteMessage
 }
