@@ -48,3 +48,5 @@ ent-PlushieSilton = Plushie Silton Grace
     .desc = A menacing-looking toy that pierces you with a sharp and stern gaze. You suddenly felt compelled to comply with your department's KZ and SRP.
 ent-PlushieSiltonGun = { ent-PlushieSilton }
     .desc = { ent-PlushieSilton.desc }
+ent-PlushieDiegoVulpa = Plushie Diego
+    .desc = A green-haired beastman of German descent, who loves agitational speeches, paperwork, and directives. He has devoted himself to serving the corporation and attempts to build his own "Eden" on the station — a place where progress, control, and order reign.
