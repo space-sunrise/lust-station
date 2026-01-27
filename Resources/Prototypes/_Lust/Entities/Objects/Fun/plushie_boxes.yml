@@ -73,3 +73,5 @@
         orGroup: Plushie
       - id: PlushieDiegoVulpa
         orGroup: Plushie
+      - id: PlushieLilith
+        orGroup: Plushie

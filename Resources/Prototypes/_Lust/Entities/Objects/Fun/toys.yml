@@ -342,6 +342,15 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/weh.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: ulava
+    slots:
+    - NECK
+  - type: Item
+    heldPrefix: ulava
+
 
 - type: entity
   parent: BasePlushie
@@ -599,3 +608,75 @@
   - type: EmitSoundOnUse
     sound:
       path: Resources/Audio/Sunrise/Voice/Vulpkanin/bark.ogg
+
+- type: entity
+  parent: [BasePlushie, BaseFoldable]
+  id: PlushieLilith
+  name: Plushie L.I.L.I.T.H
+  description: A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/lilith.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon2
+      map: ["foldedLayer"]
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-LEFT
+      right:
+      - state: inhand-RIGHT
+    heldPrefix: icon
+    size: Large
+  - type: UseDelay
+    delay: 2.0
+  - type: Appearance
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Machines/buzz-two.ogg
+      params:
+        volume: 2
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+  - type: SpeakOnTrigger
+    pack: lilithPhrases
+    keysIn:
+    - lilith
+  - type: TriggerOnUse
+    keyOut: lilith
+  - type: UseDelayOnTrigger
+    keysIn:
+    - lilith
+  - type: UseDelayTriggerCondition
+    keys:
+    - lilith
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+      params:
+        volume: 9
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound: null
+    handle: false
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: TTS
+    voice: MitaKind
+  - type: BorgVoice
+    selectedVoiceId: MitaKind
+    voiceEffect: robot
+
+- type: localizedDataset
+  id: lilithPhrases
+  values:
+    prefix: lilith-
+    count: 2

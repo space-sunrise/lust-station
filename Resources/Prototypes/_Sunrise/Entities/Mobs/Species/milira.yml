@@ -65,6 +65,13 @@
     damageModifierSet: Milira
   - type: FootprintEmitter
   - type: Carriable
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+    - Milira
 
 - type: entity
   save: false
@@ -75,4 +82,8 @@
   components:
   - type: HumanoidAppearance
     species: Milira
+  - type: MoodVisuals
+    sprite:
+      sprite: _Sunrise/Mobs/Effects/Milira/mood.rsi
+      state: mood_neutral
 

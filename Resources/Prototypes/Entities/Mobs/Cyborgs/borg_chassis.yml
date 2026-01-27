@@ -123,7 +123,7 @@
     - type: TriggerOnMobstateChange
       preventSuicide: true
       mobState:
-      - Critical
+      - Dead
     - type: TimerTrigger
       delay: 3
       initialBeepDelay: 0

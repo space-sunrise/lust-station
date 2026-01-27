@@ -185,6 +185,14 @@
   - CaptainBackpack
   - CaptainSatchel
   - CaptainDuffel
+  # Sunrise - Start
+  - CaptainBackpackWhite
+  - CaptainBackpackBlack
+  - CaptainSatchelWhite
+  - CaptainSatchelBlack
+  - CaptainDuffelWhite
+  - CaptainDuffelBlack
+  # Sunrise - End
 
 # Sunrise - Start
 - type: loadoutGroup
@@ -206,6 +214,8 @@
   - CaptainOuterCoat # Sunrise-Edit
   - CaptainOuterOverCoat  # Sunrise-Edit
   - CaptainWintercoat
+  - CaptainCarapaceWhite # Sunrise-Edit
+  - CaptainCarapaceBlack # Sunrise-Edit
 
 - type: loadoutGroup
   id: CaptainJobTrinkets
@@ -718,6 +728,7 @@
   loadouts:
   - MusicianJumpsuit
   - MusicianJumpskirt
+  - MusicianPunkSuit # Sunrise - Edit
 
 - type: loadoutGroup
   id: MusicianOuterClothing
@@ -725,6 +736,7 @@
   minLimit: 0
   loadouts:
   - MusicianWintercoat
+  - MusicianLeatherJacket # Sunrise - Edit
 
 - type: loadoutGroup
   id: Instruments
@@ -2001,5 +2013,5 @@
   name: loadout-group-medical-doctor-id
   loadouts:
   - MedicalPDA
-  - SeniorOfficerPDA
+  - SeniorPhysicianPDA
 # Sunrise-edn
