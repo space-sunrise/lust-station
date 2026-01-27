@@ -596,18 +596,13 @@
         maxDistance: 3
 
 - type: entity
-  parent: BasePlushie
+  parent: [ EmitVulpGrowl, BasePlushie ]
   id: PlushieDiegoVulpa
   name: plushie diego
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: plushiediegovulpa
-  - type: UseDelay
-    delay: 4
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Sunrise/Voice/Vulpkanin/bark.ogg
 
 - type: entity
   parent: [BasePlushie, BaseFoldable]
