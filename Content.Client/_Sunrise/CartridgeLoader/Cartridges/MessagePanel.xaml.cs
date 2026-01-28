@@ -56,24 +56,7 @@ public sealed partial class MessagePanel : PanelContainer
         SenderLabel.Text = message.SenderName;
         TimeLabel.Text = message.Timestamp.ToString(@"hh\:mm");
 
-        if (message.SenderJobIconId != null && _prototypeManager.TryIndex(message.SenderJobIconId.Value, out JobIconPrototype? jobIcon))
-        {
-            JobIconRect.Texture = GetSpriteSystem().Frame0(jobIcon.Icon);
-            JobIconRect.Visible = true;
-        }
-        else
-        {
-            var unknownIconId = new ProtoId<JobIconPrototype>("JobIconUnknown");
-            if (_prototypeManager.TryIndex(unknownIconId, out JobIconPrototype? unknownIcon))
-            {
-                JobIconRect.Texture = GetSpriteSystem().Frame0(unknownIcon.Icon);
-                JobIconRect.Visible = true;
-            }
-            else
-            {
-                JobIconRect.Visible = false;
-            }
-        }
+        UpdateJobIcon(message.SenderJobIconId);
 
         var parsedContent = EmojiSystem?.ParseEmojis(message.Content) ?? message.Content;
         ContentLabel.SetMessage(FormattedMessage.FromMarkupPermissive(parsedContent), MessageTagsAllowed);
@@ -132,6 +115,31 @@ public sealed partial class MessagePanel : PanelContainer
         else
         {
             ReadStatusIcon.Visible = false;
+        }
+    }
+
+    /// <summary>
+    /// Обновляет иконку работы в панели сообщения
+    /// </summary>
+    private void UpdateJobIcon(ProtoId<JobIconPrototype>? jobIconId)
+    {
+        if (jobIconId != null && _prototypeManager.TryIndex(jobIconId.Value, out JobIconPrototype? jobIcon))
+        {
+            JobIconRect.Texture = GetSpriteSystem().Frame0(jobIcon.Icon);
+            JobIconRect.Visible = true;
+        }
+        else
+        {
+            var unknownIconId = new ProtoId<JobIconPrototype>("JobIconUnknown");
+            if (_prototypeManager.TryIndex(unknownIconId, out JobIconPrototype? unknownIcon))
+            {
+                JobIconRect.Texture = GetSpriteSystem().Frame0(unknownIcon.Icon);
+                JobIconRect.Visible = true;
+            }
+            else
+            {
+                JobIconRect.Visible = false;
+            }
         }
     }
 }
