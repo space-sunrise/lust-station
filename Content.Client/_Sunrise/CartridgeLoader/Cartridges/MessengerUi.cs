@@ -37,6 +37,8 @@ public sealed partial class MessengerUi : UIFragment
             SendMessengerMessage(MessengerUiAction.LeaveGroup, userInterface, groupId: groupId);
         _fragment.OnDeleteMessage += (chatId, messageId) =>
             SendMessengerMessage(MessengerUiAction.DeleteMessage, userInterface, chatId: chatId, messageId: messageId);
+        _fragment.OnTogglePin += (chatId) =>
+            SendMessengerMessage(MessengerUiAction.TogglePin, userInterface, chatId: chatId);
     }
 
     public override void UpdateState(BoundUserInterfaceState state)
