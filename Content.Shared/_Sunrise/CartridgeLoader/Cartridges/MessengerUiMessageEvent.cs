@@ -59,5 +59,6 @@ public enum MessengerUiAction
     AcceptInvite,
     DeclineInvite,
     LeaveGroup,
-    DeleteMessage
+    DeleteMessage,
+    TogglePin
 }

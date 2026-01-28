@@ -68,6 +68,10 @@ public sealed partial class MessengerCartridgeSystem
                 if (message.ChatId != null && message.MessageId.HasValue)
                     DeleteMessage(uid, component, loaderUid, deviceNetwork, message.ChatId, message.MessageId.Value);
                 break;
+            case MessengerUiAction.TogglePin:
+                if (message.ChatId != null)
+                    TogglePin(uid, component, message.ChatId);
+                break;
         }
     }
 

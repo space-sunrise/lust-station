@@ -22,6 +22,8 @@ public sealed partial class MessengerServerSystem
         if (!component.Users.TryGetValue(args.SenderAddress, out var sender))
             return;
 
+        UpdateUserInfoFromPda(uid, component, args.SenderAddress, sender);
+
         var timestamp = GetStationTime();
 
         if (messageData.TryGetValue("group_id", out string? groupId) && !string.IsNullOrWhiteSpace(groupId))
@@ -40,7 +42,7 @@ public sealed partial class MessengerServerSystem
             return;
 
         var messageId = GetNextMessageId(uid, component);
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false, messageId);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false, messageId, sender.JobIconId);
         var chatId = GetPersonalChatId(sender.UserId, recipientId);
 
         if (!component.MessageHistory.TryGetValue(chatId, out var history))
@@ -88,7 +90,8 @@ public sealed partial class MessengerServerSystem
             ["group_id"] = message.GroupId ?? string.Empty,
             ["recipient_id"] = message.RecipientId ?? string.Empty,
             ["is_read"] = message.IsRead,
-            ["message_id"] = message.MessageId
+            ["message_id"] = message.MessageId,
+            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
         };
 
         if (pdaFrequency.HasValue)
@@ -136,7 +139,7 @@ public sealed partial class MessengerServerSystem
             return;
 
         var messageId = GetNextMessageId(uid, component);
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId, null, false, messageId);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId, null, false, messageId, sender.JobIconId);
 
         if (!component.MessageHistory.TryGetValue(groupId, out var history))
         {
@@ -185,7 +188,8 @@ public sealed partial class MessengerServerSystem
             ["group_id"] = message.GroupId ?? string.Empty,
             ["recipient_id"] = message.RecipientId ?? string.Empty,
             ["is_read"] = message.IsRead,
-            ["message_id"] = message.MessageId
+            ["message_id"] = message.MessageId,
+            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
         };
 
         foreach (var memberId in group.Members)

@@ -16,7 +16,9 @@ using Robust.Client.UserInterface.RichText;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Configuration;
 using Robust.Shared.Input;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared.StatusIcon;
 
 namespace Content.Client._Sunrise.CartridgeLoader.Cartridges;
 
@@ -33,6 +35,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
     public event Action<string>? OnDeclineInvite;
     public event Action<string>? OnLeaveGroup;
     public event Action<string, long>? OnDeleteMessage;
+    public event Action<string>? OnTogglePin;
 
     private string? _currentChatId;
     private MessengerUiState? _currentState;
@@ -52,11 +55,13 @@ public sealed partial class MessengerUiFragment : BoxContainer
     private Dictionary<string, int>? _lastUnreadCounts;
     private HashSet<string>? _lastUserIds;
     private HashSet<string>? _lastGroupIds;
+    private HashSet<string>? _lastPinnedChats;
     private int _lastActiveTab = -1;
     [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
     [Dependency] private readonly IResourceCache _resourceCache = default!;
     [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
     private CreateGroupDialog? _createGroupDialog;
     private AddUserDialog? _addUserDialog;
@@ -413,9 +418,6 @@ public sealed partial class MessengerUiFragment : BoxContainer
             }
         }
 
-        if (textContainer == null || nameLabel == null)
-            return;
-
         var existingCounter = textContainer.Children.OfType<Label>()
             .FirstOrDefault(l => l != nameLabel && l.StyleClasses.Contains("Bold"));
 
@@ -492,15 +494,18 @@ public sealed partial class MessengerUiFragment : BoxContainer
     {
         var currentUserIds = new HashSet<string>(state.Users.Select(u => u.UserId));
         var currentGroupIds = new HashSet<string>(state.Groups.Select(g => g.GroupId));
+        var currentPinnedChats = new HashSet<string>(state.PinnedChats);
 
         var tabChanged = _lastActiveTab != _activeTab;
 
         var needsUpdate = _lastUserIds == null ||
                          _lastGroupIds == null ||
                          _lastUnreadCounts == null ||
+                         _lastPinnedChats == null ||
                          tabChanged ||
                          !currentUserIds.SetEquals(_lastUserIds) ||
                          !currentGroupIds.SetEquals(_lastGroupIds) ||
+                         !currentPinnedChats.SetEquals(_lastPinnedChats) ||
                          !AreUnreadCountsEqual(_lastUnreadCounts, state.UnreadCounts) ||
                          _searchFilter != string.Empty;
 
@@ -513,6 +518,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
         _lastUserIds = currentUserIds;
         _lastGroupIds = currentGroupIds;
         _lastUnreadCounts = new Dictionary<string, int>(state.UnreadCounts);
+        _lastPinnedChats = new HashSet<string>(currentPinnedChats);
         _lastActiveTab = _activeTab;
 
         ChatsContainer.RemoveAllChildren();
@@ -536,13 +542,18 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
         if (_activeTab == 0)
         {
-            foreach (var user in state.Users)
-            {
-                if (user.UserId == state.CurrentUserId)
-                    continue;
+            var usersList = state.Users.Where(u => u.UserId != state.CurrentUserId).ToList();
+            var pinnedChats = state.PinnedChats;
 
+            var sortedUsers = usersList.OrderByDescending(u => pinnedChats.Contains(GetPersonalChatId(u.UserId)))
+                .ThenBy(u => u.Name)
+                .ToList();
+
+            foreach (var user in sortedUsers)
+            {
                 var userName = user.Name;
                 var chatId = GetPersonalChatId(user.UserId);
+                var isPinned = pinnedChats.Contains(chatId);
 
                 if (!string.IsNullOrEmpty(searchLower) && !userName.ToLowerInvariant().Contains(searchLower))
                     continue;
@@ -571,9 +582,52 @@ public sealed partial class MessengerUiFragment : BoxContainer
                     HorizontalExpand = true
                 };
 
+                if (isPinned)
+                {
+                    var starLabel = new Label
+                    {
+                        Text = "★",
+                        HorizontalExpand = false,
+                        Margin = new Thickness(0, 0, 4, 0),
+                        VerticalAlignment = VAlignment.Center
+                    };
+                    textContainer.AddChild(starLabel);
+                }
+
+                if (user.JobIconId != null && _prototypeManager.TryIndex(user.JobIconId.Value, out JobIconPrototype? jobIcon))
+                {
+                    var iconRect = new TextureRect
+                    {
+                        Texture = GetSpriteSystem().Frame0(jobIcon.Icon),
+                        SetWidth = 20,
+                        SetHeight = 20,
+                        Stretch = TextureRect.StretchMode.Scale,
+                        Margin = new Thickness(0, 0, 4, 0)
+                    };
+                    textContainer.AddChild(iconRect);
+                }
+                else
+                {
+                    var unknownIconId = new ProtoId<JobIconPrototype>("JobIconUnknown");
+                    if (_prototypeManager.TryIndex(unknownIconId, out JobIconPrototype? unknownIcon))
+                    {
+                        var iconRect = new TextureRect
+                        {
+                            Texture = GetSpriteSystem().Frame0(unknownIcon.Icon),
+                            SetWidth = 20,
+                            SetHeight = 20,
+                            Stretch = TextureRect.StretchMode.Scale,
+                            Margin = new Thickness(0, 0, 4, 0)
+                        };
+                        textContainer.AddChild(iconRect);
+                    }
+                }
+
+                var displayName = userName;
+
                 var nameLabel = new Label
                 {
-                    Text = userName,
+                    Text = displayName,
                     HorizontalExpand = true,
                     ClipText = true,
                     Align = Label.AlignMode.Left
@@ -598,6 +652,29 @@ public sealed partial class MessengerUiFragment : BoxContainer
                 button.AddChild(textContainer);
 
                 button.OnPressed += _ => SelectChat(chatId, userName);
+
+                button.OnKeyBindDown += args =>
+                {
+                    if (args.Function == EngineKeyFunctions.UIRightClick)
+                    {
+                        args.Handle();
+
+                        if (_currentState != null)
+                        {
+                            if (_currentState.PinnedChats.Contains(chatId))
+                                _currentState.PinnedChats.Remove(chatId);
+                            else
+                                _currentState.PinnedChats.Add(chatId);
+
+                            _lastPinnedChats = null;
+
+                            UpdateChatsList(_currentState);
+                        }
+
+                        OnTogglePin?.Invoke(chatId);
+                    }
+                };
+
                 buttonContainer.AddChild(button);
 
                 ChatsContainer.AddChild(buttonContainer);
@@ -605,7 +682,13 @@ public sealed partial class MessengerUiFragment : BoxContainer
         }
         else if (_activeTab == 1)
         {
-            foreach (var group in state.Groups)
+            var pinnedChats = state.PinnedChats;
+
+            var sortedGroups = state.Groups.OrderByDescending(g => pinnedChats.Contains(g.GroupId))
+                .ThenBy(g => g.Name)
+                .ToList();
+
+            foreach (var group in sortedGroups)
             {
                 var groupContainer = new BoxContainer
                 {
@@ -616,6 +699,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
                 var groupId = group.GroupId;
                 var groupName = group.Name;
+                var isPinned = pinnedChats.Contains(groupId);
 
                 if (!string.IsNullOrEmpty(searchLower) && !groupName.ToLowerInvariant().Contains(searchLower))
                     continue;
@@ -637,9 +721,23 @@ public sealed partial class MessengerUiFragment : BoxContainer
                     HorizontalExpand = true
                 };
 
+                if (isPinned)
+                {
+                    var starLabel = new Label
+                    {
+                        Text = "★",
+                        HorizontalExpand = false,
+                        Margin = new Thickness(0, 0, 4, 0),
+                        VerticalAlignment = VAlignment.Center
+                    };
+                    textContainer.AddChild(starLabel);
+                }
+
+                var displayName = groupName;
+
                 var nameLabel = new Label
                 {
-                    Text = groupName,
+                    Text = displayName,
                     HorizontalExpand = true,
                     ClipText = true,
                     Align = Label.AlignMode.Left
@@ -664,6 +762,29 @@ public sealed partial class MessengerUiFragment : BoxContainer
                 button.AddChild(textContainer);
 
                 button.OnPressed += _ => SelectChat(groupId, groupName);
+
+                button.OnKeyBindDown += args =>
+                {
+                    if (args.Function == EngineKeyFunctions.UIRightClick)
+                    {
+                        args.Handle();
+
+                        if (_currentState != null)
+                        {
+                            if (_currentState.PinnedChats.Contains(groupId))
+                                _currentState.PinnedChats.Remove(groupId);
+                            else
+                                _currentState.PinnedChats.Add(groupId);
+
+                            _lastPinnedChats = null;
+
+                            UpdateChatsList(_currentState);
+                        }
+
+                        OnTogglePin?.Invoke(groupId);
+                    }
+                };
+
                 groupContainer.AddChild(button);
 
                 ChatsContainer.AddChild(groupContainer);
@@ -992,9 +1113,49 @@ public sealed partial class MessengerUiFragment : BoxContainer
                     HorizontalExpand = true
                 };
 
-                var displayText = isMemberOwner
-                    ? $"★ {userName}"
-                    : userName;
+                if (isMemberOwner)
+                {
+                    var ownerStarLabel = new Label
+                    {
+                        Text = "★",
+                        HorizontalExpand = false,
+                        Margin = new Thickness(0, 0, 4, 0),
+                        VerticalAlignment = VAlignment.Center
+                    };
+                    memberContainer.AddChild(ownerStarLabel);
+                }
+
+                if (user != null)
+                {
+                    if (user.JobIconId != null && _prototypeManager.TryIndex(user.JobIconId.Value, out JobIconPrototype? jobIcon))
+                    {
+                        var iconRect = new TextureRect
+                        {
+                            Texture = GetSpriteSystem().Frame0(jobIcon.Icon),
+                            SetWidth = 20,
+                            SetHeight = 20,
+                            Stretch = TextureRect.StretchMode.Scale,
+                            Margin = new Thickness(0, 0, 4, 0)
+                        };
+                        memberContainer.AddChild(iconRect);
+                    }
+                    else
+                    {
+                        var unknownIconId = new ProtoId<JobIconPrototype>("JobIconUnknown");
+                        if (_prototypeManager.TryIndex(unknownIconId, out JobIconPrototype? unknownIcon))
+                        {
+                            var iconRect = new TextureRect
+                            {
+                                Texture = GetSpriteSystem().Frame0(unknownIcon.Icon),
+                                SetWidth = 20,
+                                SetHeight = 20,
+                                Stretch = TextureRect.StretchMode.Scale,
+                                Margin = new Thickness(0, 0, 4, 0)
+                            };
+                            memberContainer.AddChild(iconRect);
+                        }
+                    }
+                }
 
                 var tooltipText = isMemberOwner
                     ? Loc.GetString("messenger-member-owner", ("name", userName))
@@ -1002,7 +1163,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
 
                 var memberLabel = new Label
                 {
-                    Text = displayText,
+                    Text = userName,
                     HorizontalExpand = true,
                     ClipText = true,
                     ToolTip = tooltipText
