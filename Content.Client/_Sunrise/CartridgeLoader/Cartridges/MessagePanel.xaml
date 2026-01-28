@@ -12,6 +12,13 @@
             Orientation="Horizontal"
             Margin="0,0,0,4"
             Name="Header">
+            <TextureRect
+                Name="JobIconRect"
+                SetWidth="20"
+                SetHeight="20"
+                Stretch="Scale"
+                Margin="0,0,4,0"
+                Visible="False" />
             <Label
                 Name="SenderLabel"
                 Text=""

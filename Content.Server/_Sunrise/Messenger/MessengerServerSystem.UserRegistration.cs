@@ -9,6 +9,8 @@ using Content.Shared.Access.Components;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.GameTicking;
 using Content.Shared.CartridgeLoader;
+using Content.Shared.StatusIcon;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Sunrise.Messenger;
 
@@ -133,6 +135,7 @@ public sealed partial class MessengerServerSystem
 
         string? jobTitle = null;
         string? departmentId = null;
+        ProtoId<JobIconPrototype>? jobIconId = null;
 
         if (pda.ContainedId != null && TryComp<IdCardComponent>(pda.ContainedId.Value, out var idCard))
         {
@@ -141,9 +144,10 @@ public sealed partial class MessengerServerSystem
             {
                 departmentId = idCard.JobDepartments[0];
             }
+            jobIconId = idCard.JobIcon;
         }
 
-        var user = new MessengerUser(userId, userName, jobTitle, departmentId);
+        var user = new MessengerUser(userId, userName, jobTitle, departmentId, jobIconId);
         component.Users[userId] = user;
 
         AddUserToAutoGroups(uid, component, userId, userName, departmentId);
@@ -171,7 +175,8 @@ public sealed partial class MessengerServerSystem
             ["user_id"] = userId,
             ["user_name"] = userName,
             ["job_title"] = jobTitle ?? string.Empty,
-            ["department_id"] = departmentId ?? string.Empty
+            ["department_id"] = departmentId ?? string.Empty,
+            ["job_icon_id"] = jobIconId?.Id ?? string.Empty
         };
 
         if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, userId))
@@ -188,7 +193,8 @@ public sealed partial class MessengerServerSystem
                 ["user_id"] = u.UserId,
                 ["user_name"] = u.Name,
                 ["job_title"] = u.JobTitle ?? string.Empty,
-                ["department_id"] = u.DepartmentId ?? string.Empty
+                ["department_id"] = u.DepartmentId ?? string.Empty,
+                ["job_icon_id"] = u.JobIconId?.Id ?? string.Empty
             }).ToList()
         };
 
@@ -301,6 +307,7 @@ public sealed partial class MessengerServerSystem
         string? userName = null;
         string? jobTitle = null;
         string? departmentId = null;
+        ProtoId<JobIconPrototype>? jobIconId = null;
 
         if (pda.ContainedId != null && TryComp<IdCardComponent>(pda.ContainedId.Value, out var idCard))
         {
@@ -310,6 +317,7 @@ public sealed partial class MessengerServerSystem
             {
                 departmentId = idCard.JobDepartments[0];
             }
+            jobIconId = idCard.JobIcon;
         }
 
         if (string.IsNullOrWhiteSpace(userName))
@@ -317,7 +325,7 @@ public sealed partial class MessengerServerSystem
             userName = pda.OwnerName ?? Loc.GetString("messenger-user-unknown");
         }
 
-        var user = new MessengerUser(userId, userName, jobTitle, departmentId);
+        var user = new MessengerUser(userId, userName, jobTitle, departmentId, jobIconId);
         component.Users[userId] = user;
 
         AddUserToAutoGroups(uid, component, userId, userName, departmentId);
@@ -345,7 +353,8 @@ public sealed partial class MessengerServerSystem
             ["user_id"] = userId,
             ["user_name"] = userName,
             ["job_title"] = jobTitle ?? string.Empty,
-            ["department_id"] = departmentId ?? string.Empty
+            ["department_id"] = departmentId ?? string.Empty,
+            ["job_icon_id"] = jobIconId?.Id ?? string.Empty
         };
 
         if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, args.SenderAddress))
@@ -361,7 +370,8 @@ public sealed partial class MessengerServerSystem
                 ["user_id"] = u.UserId,
                 ["user_name"] = u.Name,
                 ["job_title"] = u.JobTitle ?? string.Empty,
-                ["department_id"] = u.DepartmentId ?? string.Empty
+                ["department_id"] = u.DepartmentId ?? string.Empty,
+                ["job_icon_id"] = u.JobIconId?.Id ?? string.Empty
             }).ToList()
         };
 
@@ -581,6 +591,91 @@ public sealed partial class MessengerServerSystem
                     else
                     {
                         _deviceNetwork.QueuePacket(uid, memberId, payload);
+                    }
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// Обновляет информацию о пользователе из его PDA по адресу DeviceNetwork
+    /// </summary>
+    private void UpdateUserInfoFromPda(EntityUid uid, MessengerServerComponent component, string userId, MessengerUser user)
+    {
+        var pdaQuery = EntityQueryEnumerator<PdaComponent, DeviceNetworkComponent>();
+        EntityUid? foundPda = null;
+
+        while (pdaQuery.MoveNext(out var pdaUid, out var pda, out var deviceNetwork))
+        {
+            if (deviceNetwork.Address == userId)
+            {
+                foundPda = pdaUid;
+                break;
+            }
+        }
+
+        if (foundPda == null)
+            return;
+
+        if (!TryComp<PdaComponent>(foundPda.Value, out var pdaComp))
+            return;
+
+        string? jobTitle = null;
+        string? departmentId = null;
+        ProtoId<JobIconPrototype>? jobIconId = null;
+
+        if (pdaComp.ContainedId != null && TryComp<IdCardComponent>(pdaComp.ContainedId.Value, out var idCard))
+        {
+            jobTitle = idCard.LocalizedJobTitle;
+            if (idCard.JobDepartments.Count > 0)
+            {
+                departmentId = idCard.JobDepartments[0];
+            }
+            jobIconId = idCard.JobIcon;
+        }
+
+        var needsUpdate = user.JobTitle != jobTitle || user.DepartmentId != departmentId || user.JobIconId != jobIconId;
+
+        if (needsUpdate)
+        {
+            user.JobTitle = jobTitle;
+            user.DepartmentId = departmentId;
+            user.JobIconId = jobIconId;
+
+            // Отправляем обновленный список пользователей всем клиентам
+            if (!TryComp<DeviceNetworkComponent>(uid, out var serverDevice))
+                return;
+
+            uint? pdaFrequency = null;
+            if (_prototypeManager.TryIndex(component.PdaFrequencyId, out var pdaFreq))
+            {
+                pdaFrequency = pdaFreq.Frequency;
+            }
+
+            var notifyPayload = new NetworkPayload
+            {
+                [DeviceNetworkConstants.Command] = MessengerCommands.CmdUsersList,
+                ["users"] = component.Users.Values.Select(u => new Dictionary<string, object>
+                {
+                    ["user_id"] = u.UserId,
+                    ["user_name"] = u.Name,
+                    ["job_title"] = u.JobTitle ?? string.Empty,
+                    ["department_id"] = u.DepartmentId ?? string.Empty,
+                    ["job_icon_id"] = u.JobIconId?.Id ?? string.Empty
+                }).ToList()
+            };
+
+            foreach (var existingUserId in component.Users.Keys)
+            {
+                if (_deviceNetwork.IsAddressPresent(serverDevice.DeviceNetId, existingUserId))
+                {
+                    if (pdaFrequency.HasValue)
+                    {
+                        _deviceNetwork.QueuePacket(uid, existingUserId, notifyPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
+                    }
+                    else
+                    {
+                        _deviceNetwork.QueuePacket(uid, existingUserId, notifyPayload);
                     }
                 }
             }

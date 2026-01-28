@@ -6,6 +6,8 @@ using Content.Shared.DeviceNetwork.Events;
 using Content.Shared._Sunrise.Messenger;
 using Content.Shared.DeviceNetwork.Components;
 using Content.Shared.PDA.Ringer;
+using Content.Shared.StatusIcon;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server._Sunrise.CartridgeLoader.Cartridges;
 
@@ -116,11 +118,17 @@ public sealed partial class MessengerCartridgeSystem
 
             userData.TryGetValue("job_title", out object? jobTitleObj);
             userData.TryGetValue("department_id", out object? departmentIdObj);
+            userData.TryGetValue("job_icon_id", out object? jobIconIdObj);
 
             var jobTitle = jobTitleObj?.ToString();
             var departmentId = departmentIdObj?.ToString();
+            ProtoId<JobIconPrototype>? jobIconId = null;
+            if (jobIconIdObj != null && !string.IsNullOrEmpty(jobIconIdObj.ToString()))
+            {
+                jobIconId = new ProtoId<JobIconPrototype>(jobIconIdObj.ToString()!);
+            }
 
-            users.Add(new MessengerUser(userId, userName, jobTitle, departmentId));
+            users.Add(new MessengerUser(userId, userName, jobTitle, departmentId, jobIconId));
         }
 
         component.Users = users;
@@ -273,6 +281,7 @@ public sealed partial class MessengerCartridgeSystem
             messageData.TryGetValue("recipient_id", out object? recipientIdObj);
             messageData.TryGetValue("is_read", out object? isReadObj);
             messageData.TryGetValue("message_id", out object? messageIdObj);
+            messageData.TryGetValue("sender_job_icon_id", out object? senderJobIconIdObj);
 
             var groupId = groupIdObj?.ToString();
             var recipientId = recipientIdObj?.ToString();
@@ -289,8 +298,14 @@ public sealed partial class MessengerCartridgeSystem
                 messageId = messageIdValue;
             }
 
+            ProtoId<JobIconPrototype>? senderJobIconId = null;
+            if (senderJobIconIdObj != null && !string.IsNullOrEmpty(senderJobIconIdObj.ToString()))
+            {
+                senderJobIconId = new ProtoId<JobIconPrototype>(senderJobIconIdObj.ToString()!);
+            }
+
             var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId));
+            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId));
         }
 
         if (!string.IsNullOrEmpty(chatId) && messages.Count >= 0)
@@ -403,6 +418,7 @@ public sealed partial class MessengerCartridgeSystem
         packet.Data.TryGetValue("recipient_id", out object? recipientIdObj);
         packet.Data.TryGetValue("is_read", out object? isReadObj);
         packet.Data.TryGetValue("message_id", out object? messageIdObj);
+        packet.Data.TryGetValue("sender_job_icon_id", out object? senderJobIconIdObj);
 
         var groupId = groupIdObj?.ToString();
         var recipientId = recipientIdObj?.ToString();
@@ -419,8 +435,14 @@ public sealed partial class MessengerCartridgeSystem
             messageId = messageIdValue;
         }
 
+        ProtoId<JobIconPrototype>? senderJobIconId = null;
+        if (senderJobIconIdObj != null && !string.IsNullOrEmpty(senderJobIconIdObj.ToString()))
+        {
+            senderJobIconId = new ProtoId<JobIconPrototype>(senderJobIconIdObj.ToString()!);
+        }
+
         var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId);
+        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId);
 
         string chatId;
         if (!string.IsNullOrEmpty(groupId))

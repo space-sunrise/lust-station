@@ -26,7 +26,8 @@ public sealed partial class MessengerServerSystem
                 ["user_id"] = user.UserId,
                 ["user_name"] = user.Name,
                 ["job_title"] = user.JobTitle ?? string.Empty,
-                ["department_id"] = user.DepartmentId ?? string.Empty
+                ["department_id"] = user.DepartmentId ?? string.Empty,
+                ["job_icon_id"] = user.JobIconId?.Id ?? string.Empty
             });
         }
 
@@ -208,7 +209,8 @@ public sealed partial class MessengerServerSystem
                                 ["group_id"] = msg.GroupId ?? string.Empty,
                                 ["recipient_id"] = msg.RecipientId ?? string.Empty,
                                 ["is_read"] = msg.IsRead,
-                                ["message_id"] = msg.MessageId
+                                ["message_id"] = msg.MessageId,
+                                ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty
                             });
                         }
                     }
@@ -250,7 +252,8 @@ public sealed partial class MessengerServerSystem
                         ["group_id"] = msg.GroupId ?? string.Empty,
                         ["recipient_id"] = msg.RecipientId ?? string.Empty,
                         ["is_read"] = msg.IsRead,
-                        ["message_id"] = msg.MessageId
+                        ["message_id"] = msg.MessageId,
+                        ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty
                     });
                 }
 
@@ -298,7 +301,8 @@ public sealed partial class MessengerServerSystem
                 ["group_id"] = message.GroupId ?? string.Empty,
                 ["recipient_id"] = message.RecipientId ?? string.Empty,
                 ["is_read"] = message.IsRead,
-                ["message_id"] = message.MessageId
+                ["message_id"] = message.MessageId,
+                ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
             });
         }
 
