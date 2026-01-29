@@ -210,7 +210,8 @@ public sealed partial class MessengerServerSystem
                                 ["recipient_id"] = msg.RecipientId ?? string.Empty,
                                 ["is_read"] = msg.IsRead,
                                 ["message_id"] = msg.MessageId,
-                                ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty
+                                ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty,
+                                ["image_path"] = msg.ImagePath ?? string.Empty
                             });
                         }
                     }
@@ -253,7 +254,8 @@ public sealed partial class MessengerServerSystem
                         ["recipient_id"] = msg.RecipientId ?? string.Empty,
                         ["is_read"] = msg.IsRead,
                         ["message_id"] = msg.MessageId,
-                        ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty
+                        ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty,
+                        ["image_path"] = msg.ImagePath ?? string.Empty
                     });
                 }
 
@@ -302,7 +304,8 @@ public sealed partial class MessengerServerSystem
                 ["recipient_id"] = message.RecipientId ?? string.Empty,
                 ["is_read"] = message.IsRead,
                 ["message_id"] = message.MessageId,
-                ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
+                ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty,
+                ["image_path"] = message.ImagePath ?? string.Empty
             });
         }
 
