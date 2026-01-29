@@ -16,7 +16,16 @@ public sealed partial class MessengerServerSystem
         if (!args.Data.TryGetValue(MessengerCommands.CmdSendMessage, out NetworkPayload? messageData))
             return;
 
-        if (!messageData.TryGetValue("content", out string? content) || string.IsNullOrWhiteSpace(content))
+        if (!messageData.TryGetValue("content", out string? content))
+            return;
+
+        string? imagePath = null;
+        if (messageData.TryGetValue("image_path", out string? imgPath) && !string.IsNullOrWhiteSpace(imgPath))
+        {
+            imagePath = imgPath;
+        }
+
+        if (string.IsNullOrWhiteSpace(content) && string.IsNullOrWhiteSpace(imagePath))
             return;
 
         if (!component.Users.TryGetValue(args.SenderAddress, out var sender))
@@ -28,21 +37,21 @@ public sealed partial class MessengerServerSystem
 
         if (messageData.TryGetValue("group_id", out string? groupId) && !string.IsNullOrWhiteSpace(groupId))
         {
-            SendGroupMessage(uid, component, sender, groupId, content, timestamp);
+            SendGroupMessage(uid, component, sender, groupId, content, timestamp, imagePath);
         }
         else if (messageData.TryGetValue("recipient_id", out string? recipientId) && !string.IsNullOrWhiteSpace(recipientId))
         {
-            SendPersonalMessage(uid, component, sender, recipientId, content, timestamp);
+            SendPersonalMessage(uid, component, sender, recipientId, content, timestamp, imagePath);
         }
     }
 
-    private void SendPersonalMessage(EntityUid uid, MessengerServerComponent component, MessengerUser sender, string recipientId, string content, TimeSpan timestamp)
+    private void SendPersonalMessage(EntityUid uid, MessengerServerComponent component, MessengerUser sender, string recipientId, string content, TimeSpan timestamp, string? imagePath = null)
     {
         if (!component.Users.ContainsKey(recipientId))
             return;
 
         var messageId = GetNextMessageId(uid, component);
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false, messageId, sender.JobIconId);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, null, recipientId, isRead: false, messageId, sender.JobIconId, imagePath);
         var chatId = GetPersonalChatId(sender.UserId, recipientId);
 
         if (!component.MessageHistory.TryGetValue(chatId, out var history))
@@ -91,7 +100,8 @@ public sealed partial class MessengerServerSystem
             ["recipient_id"] = message.RecipientId ?? string.Empty,
             ["is_read"] = message.IsRead,
             ["message_id"] = message.MessageId,
-            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
+            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty,
+            ["image_path"] = message.ImagePath ?? string.Empty
         };
 
         if (pdaFrequency.HasValue)
@@ -121,7 +131,9 @@ public sealed partial class MessengerServerSystem
                         ["group_id"] = message.GroupId ?? string.Empty,
                         ["recipient_id"] = message.RecipientId ?? string.Empty,
                         ["is_read"] = message.IsRead,
-                        ["message_id"] = message.MessageId
+                        ["message_id"] = message.MessageId,
+                        ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty,
+                        ["image_path"] = message.ImagePath ?? string.Empty
                     }
                 },
                 ["chat_id"] = chatId
@@ -130,7 +142,7 @@ public sealed partial class MessengerServerSystem
         }
     }
 
-    private void SendGroupMessage(EntityUid uid, MessengerServerComponent component, MessengerUser sender, string groupId, string content, TimeSpan timestamp)
+    private void SendGroupMessage(EntityUid uid, MessengerServerComponent component, MessengerUser sender, string groupId, string content, TimeSpan timestamp, string? imagePath = null)
     {
         if (!component.Groups.TryGetValue(groupId, out var group))
             return;
@@ -139,7 +151,7 @@ public sealed partial class MessengerServerSystem
             return;
 
         var messageId = GetNextMessageId(uid, component);
-        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId, null, false, messageId, sender.JobIconId);
+        var message = new MessengerMessage(sender.UserId, sender.Name, content, timestamp, groupId, null, false, messageId, sender.JobIconId, imagePath);
 
         if (!component.MessageHistory.TryGetValue(groupId, out var history))
         {
@@ -189,7 +201,8 @@ public sealed partial class MessengerServerSystem
             ["recipient_id"] = message.RecipientId ?? string.Empty,
             ["is_read"] = message.IsRead,
             ["message_id"] = message.MessageId,
-            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty
+            ["sender_job_icon_id"] = message.SenderJobIconId?.Id ?? string.Empty,
+            ["image_path"] = message.ImagePath ?? string.Empty
         };
 
         foreach (var memberId in group.Members)
@@ -203,6 +216,34 @@ public sealed partial class MessengerServerSystem
                 _deviceNetwork.QueuePacket(uid, memberId, payload);
             }
         }
+    }
+
+    /// <summary>
+    /// Отправляет личное сообщение с изображением (используется PhotoCartridgeSystem)
+    /// </summary>
+    public void SendPersonalMessageWithImage(EntityUid uid, string senderUserId, string recipientId, string content, string imagePath, TimeSpan timestamp)
+    {
+        if (!TryComp<MessengerServerComponent>(uid, out var component))
+            return;
+
+        if (!component.Users.TryGetValue(senderUserId, out var sender))
+            return;
+
+        SendPersonalMessage(uid, component, sender, recipientId, content, timestamp, imagePath);
+    }
+
+    /// <summary>
+    /// Отправляет групповое сообщение с изображением (используется PhotoCartridgeSystem)
+    /// </summary>
+    public void SendGroupMessageWithImage(EntityUid uid, string senderUserId, string groupId, string content, string imagePath, TimeSpan timestamp)
+    {
+        if (!TryComp<MessengerServerComponent>(uid, out var component))
+            return;
+
+        if (!component.Users.TryGetValue(senderUserId, out var sender))
+            return;
+
+        SendGroupMessage(uid, component, sender, groupId, content, timestamp, imagePath);
     }
 
     /// <summary>

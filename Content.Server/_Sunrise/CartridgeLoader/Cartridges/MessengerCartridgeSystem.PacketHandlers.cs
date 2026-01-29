@@ -282,6 +282,7 @@ public sealed partial class MessengerCartridgeSystem
             messageData.TryGetValue("is_read", out object? isReadObj);
             messageData.TryGetValue("message_id", out object? messageIdObj);
             messageData.TryGetValue("sender_job_icon_id", out object? senderJobIconIdObj);
+            messageData.TryGetValue("image_path", out object? imagePathObj);
 
             var groupId = groupIdObj?.ToString();
             var recipientId = recipientIdObj?.ToString();
@@ -304,8 +305,12 @@ public sealed partial class MessengerCartridgeSystem
                 senderJobIconId = new ProtoId<JobIconPrototype>(senderJobIconIdObj.ToString()!);
             }
 
+            var imagePath = imagePathObj?.ToString();
+            if (string.IsNullOrWhiteSpace(imagePath))
+                imagePath = null;
+
             var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId));
+            messages.Add(new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId, imagePath));
         }
 
         if (!string.IsNullOrEmpty(chatId) && messages.Count >= 0)
@@ -419,6 +424,7 @@ public sealed partial class MessengerCartridgeSystem
         packet.Data.TryGetValue("is_read", out object? isReadObj);
         packet.Data.TryGetValue("message_id", out object? messageIdObj);
         packet.Data.TryGetValue("sender_job_icon_id", out object? senderJobIconIdObj);
+        packet.Data.TryGetValue("image_path", out object? imagePathObj);
 
         var groupId = groupIdObj?.ToString();
         var recipientId = recipientIdObj?.ToString();
@@ -441,8 +447,12 @@ public sealed partial class MessengerCartridgeSystem
             senderJobIconId = new ProtoId<JobIconPrototype>(senderJobIconIdObj.ToString()!);
         }
 
+        var imagePath = imagePathObj?.ToString();
+        if (string.IsNullOrWhiteSpace(imagePath))
+            imagePath = null;
+
         var timestamp = TimeSpan.FromSeconds(timestampSeconds);
-        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId);
+        var message = new MessengerMessage(senderId, senderName, content, timestamp, groupId, recipientId, isRead, messageId, senderJobIconId, imagePath);
 
         string chatId;
         if (!string.IsNullOrEmpty(groupId))
@@ -572,7 +582,6 @@ public sealed partial class MessengerCartridgeSystem
         {
             component.ActiveInvites.Add(invite);
 
-            // Воспроизводим рингтон при получении нового инвайта
             if (TryComp<RingerComponent>(loaderUid, out var ringer))
             {
                 _ringer.RingerPlayRingtone(loaderUid);
