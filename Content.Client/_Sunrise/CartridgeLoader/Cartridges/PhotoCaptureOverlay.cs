@@ -10,21 +10,19 @@ namespace Content.Client._Sunrise.CartridgeLoader.Cartridges;
 
 public sealed class PhotoCaptureOverlay : Overlay
 {
-    private readonly IPlayerManager _playerManager;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private readonly IStateManager _stateManager = default!;
+    [Dependency] private readonly IEyeManager _eyeManager = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!;
+
     private readonly SharedTransformSystem _transformSystem;
-    private readonly IStateManager _stateManager;
-    private readonly IEyeManager _eyeManager;
-    private readonly IEntityManager _entityManager;
 
     public override OverlaySpace Space => OverlaySpace.ScreenSpace;
 
-    public PhotoCaptureOverlay(IPlayerManager playerManager, SharedTransformSystem transformSystem, IStateManager stateManager, IEyeManager eyeManager, IEntityManager entityManager)
+    public PhotoCaptureOverlay()
     {
-        _playerManager = playerManager;
-        _transformSystem = transformSystem;
-        _stateManager = stateManager;
-        _eyeManager = eyeManager;
-        _entityManager = entityManager;
+        IoCManager.InjectDependencies(this);
+        _transformSystem = _entityManager.System<SharedTransformSystem>();
     }
 
     protected override void Draw(in OverlayDrawArgs args)
@@ -38,17 +36,24 @@ public sealed class PhotoCaptureOverlay : Overlay
         var screenHandle = args.ScreenHandle;
         var viewportControl = (Control)viewportState.Viewport;
 
-        if (_playerManager.LocalPlayer?.ControlledEntity is not { } player)
-            return;
+        var overlaySystem = _entityManager.System<PhotoOverlaySystem>();
+        var photoSystem = _entityManager.System<PhotoCartridgeClientSystem>();
 
-        var playerPos = _transformSystem.GetWorldPosition(player);
+        var source = overlaySystem.ActiveCameraEntity;
 
-        var system = _entityManager.System<PhotoCartridgeClientSystem>();
-        var targetPos = system.GetCameraPosition(player, system.CaptureDistance);
+        if (source == null || !_entityManager.EntityExists(source.Value))
+        {
+             if (_playerManager.LocalSession?.AttachedEntity is not { } player)
+                return;
+             source = player;
+        }
+
+        var sourcePos = _transformSystem.GetWorldPosition(source.Value);
+        var targetPos = photoSystem.GetCameraPosition(source.Value, photoSystem.CaptureDistance);
 
         var targetScreen = _eyeManager.WorldToScreen(targetPos);
-        var playerScreen = _eyeManager.WorldToScreen(playerPos);
-        var offsetScreen = _eyeManager.WorldToScreen(playerPos + new Vector2(1, 0));
+        var playerScreen = _eyeManager.WorldToScreen(sourcePos);
+        var offsetScreen = _eyeManager.WorldToScreen(sourcePos + new Vector2(1, 0));
         var pixelsPerMeter = (offsetScreen - playerScreen).Length();
 
         if (pixelsPerMeter < 1) return;

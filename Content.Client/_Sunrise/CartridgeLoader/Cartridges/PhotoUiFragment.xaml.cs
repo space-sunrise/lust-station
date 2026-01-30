@@ -60,7 +60,7 @@ public sealed partial class PhotoUiFragment : BoxContainer
         FlashCheckBox.OnToggled += args => OnToggleFlash?.Invoke(args.Pressed);
 
         ToggleOverlayButton.OnPressed += _ => ToggleCaptureAreaOverlay();
-        ToggleOverlayButton.Pressed = _entityManager.System<PhotoCartridgeClientSystem>().OverlayEnabled;
+        ToggleOverlayButton.Pressed = _entityManager.System<PhotoOverlaySystem>().OverlayEnabled;
 
         CameraTabBtn.OnPressed += _ => SwitchTab(true);
         GalleryTabBtn.OnPressed += _ => SwitchTab(false);
@@ -86,7 +86,7 @@ public sealed partial class PhotoUiFragment : BoxContainer
         base.Dispose(disposing);
         if (disposing)
         {
-            _entityManager.System<PhotoCartridgeClientSystem>().SetOverlayEnabled(false);
+            _entityManager.System<PhotoOverlaySystem>().SetOverlayEnabled(false);
         }
     }
 
@@ -153,8 +153,8 @@ public sealed partial class PhotoUiFragment : BoxContainer
     /// </summary>
     private void ToggleCaptureAreaOverlay()
     {
-        var system = _entityManager.System<PhotoCartridgeClientSystem>();
-        system.SetOverlayEnabled(!system.OverlayEnabled);
+        var system = _entityManager.System<PhotoOverlaySystem>();
+        system.SetOverlayEnabled(!system.OverlayEnabled, _ownerEntity);
         ToggleOverlayButton.Pressed = system.OverlayEnabled;
     }
 

@@ -1,4 +1,3 @@
-using System;
 using System.IO;
 using System.Linq;
 using System.Numerics;
@@ -12,12 +11,9 @@ using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.PixelFormats;
 using SixLabors.ImageSharp.Processing;
 using Robust.Client.Player;
-using Robust.Shared.Maths;
-using Robust.Shared.GameObjects;
 using Robust.Client.UserInterface;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Systems;
-using Content.Shared.Physics;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Timing;
 
@@ -25,7 +21,6 @@ namespace Content.Client._Sunrise.CartridgeLoader.Cartridges;
 
 public sealed class PhotoCartridgeClientSystem : EntitySystem
 {
-    [Dependency] private readonly IClyde _clyde = default!;
     [Dependency] private readonly IClientNetManager _netManager = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
     [Dependency] private readonly IStateManager _stateManager = default!;
@@ -33,15 +28,11 @@ public sealed class PhotoCartridgeClientSystem : EntitySystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly SharedPhysicsSystem _physics = default!;
-    [Dependency] private readonly IOverlayManager _overlayManager = default!;
     [Dependency] private readonly IEyeManager _eyeManager = default!;
     [Dependency] private readonly IGameTiming _timing = default!;
 
     private TimeSpan _nextCaptureTime = TimeSpan.Zero;
     public bool CameraReady => _timing.CurTime >= _nextCaptureTime;
-
-    private PhotoCaptureOverlay? _overlay;
-    public bool OverlayEnabled { get; private set; }
     public float CaptureDistance { get; set; } = 2.0f;
 
     private ISawmill _sawmill = default!;
@@ -53,26 +44,10 @@ public sealed class PhotoCartridgeClientSystem : EntitySystem
     {
         _sawmill = _logManager.GetSawmill("photo.cartridge.client");
         _netManager.RegisterNetMessage<PdaPhotoCaptureMessage>(accept: NetMessageAccept.Server);
-        _overlay = new PhotoCaptureOverlay(_playerManager, _transformSystem, _stateManager, _eyeManager, _entityManager);
     }
 
     public void Shutdown()
     {
-        _overlayManager.RemoveOverlay<PhotoCaptureOverlay>();
-    }
-
-    public void SetOverlayEnabled(bool enabled)
-    {
-        OverlayEnabled = enabled;
-        if (enabled)
-        {
-            if (!_overlayManager.HasOverlay<PhotoCaptureOverlay>())
-                _overlayManager.AddOverlay(_overlay!);
-        }
-        else
-        {
-            _overlayManager.RemoveOverlay<PhotoCaptureOverlay>();
-        }
     }
 
     public Vector2 GetCameraPosition(EntityUid source, float distance)
