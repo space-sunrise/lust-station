@@ -40,13 +40,13 @@ public sealed class PhotoCartridgeClientSystem : EntitySystem
     private const int TargetPhotoWidth = 256;
     private const int TargetPhotoHeight = 256;
 
-    public void Initialize()
+    public override void Initialize()
     {
         _sawmill = _logManager.GetSawmill("photo.cartridge.client");
         _netManager.RegisterNetMessage<PdaPhotoCaptureMessage>(accept: NetMessageAccept.Server);
     }
 
-    public void Shutdown()
+    public override void Shutdown()
     {
     }
 
