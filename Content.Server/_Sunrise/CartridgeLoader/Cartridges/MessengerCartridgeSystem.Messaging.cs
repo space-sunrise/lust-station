@@ -24,7 +24,7 @@ public sealed partial class MessengerCartridgeSystem
         {
             case MessengerUiAction.SendMessage:
                 if (message.Content != null)
-                    SendMessage(uid, component, loaderUid, deviceNetwork, message.RecipientId, message.GroupId, message.Content, message.ImagePath);
+                    SendMessage(uid, component, loaderUid, deviceNetwork, message.RecipientId, message.GroupId, message.Content);
                 break;
             case MessengerUiAction.CreateGroup:
                 if (message.GroupName != null)
@@ -72,29 +72,10 @@ public sealed partial class MessengerCartridgeSystem
                 if (message.ChatId != null)
                     TogglePin(uid, component, message.ChatId);
                 break;
-            case MessengerUiAction.RequestPhotos:
-                RequestPhotos(uid, component, loaderUid);
-                break;
         }
     }
 
-    private void RequestPhotos(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid)
-    {
-        var photoGallery = new Dictionary<string, PhotoMetadata>();
-
-        foreach (var cartridgeUid in _cartridgeLoader.GetInstalled(loaderUid))
-        {
-            if (TryComp<PhotoCartridgeComponent>(cartridgeUid, out var photoComp))
-            {
-                photoGallery = photoComp.PhotoGallery;
-                break;
-            }
-        }
-
-        UpdateUiState(uid, loaderUid, component, photoGallery);
-    }
-
-    private void SendMessage(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string? recipientId, string? groupId, string content, string? imagePath = null)
+    private void SendMessage(EntityUid uid, MessengerCartridgeComponent component, EntityUid loaderUid, DeviceNetworkComponent deviceNetwork, string? recipientId, string? groupId, string content)
     {
         if (component.ServerAddress == null || !component.IsRegistered)
             return;
@@ -117,22 +98,15 @@ public sealed partial class MessengerCartridgeSystem
             return;
         }
 
-        var messagePayload = new NetworkPayload
-        {
-            ["content"] = content,
-            ["recipient_id"] = recipientId ?? string.Empty,
-            ["group_id"] = groupId ?? string.Empty
-        };
-
-        if (!string.IsNullOrEmpty(imagePath))
-        {
-            messagePayload["image_path"] = imagePath;
-        }
-
         var payload = new NetworkPayload
         {
             [DeviceNetworkConstants.Command] = MessengerCommands.CmdSendMessage,
-            [MessengerCommands.CmdSendMessage] = messagePayload
+            [MessengerCommands.CmdSendMessage] = new NetworkPayload
+            {
+                ["content"] = content,
+                ["recipient_id"] = recipientId ?? string.Empty,
+                ["group_id"] = groupId ?? string.Empty
+            }
         };
 
         _deviceNetwork.QueuePacket(loaderUid, component.ServerAddress, payload, frequency: messengerFreq, network: pdaDevice.DeviceNetId);

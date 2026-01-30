@@ -1,4 +1,3 @@
-using System.Numerics;
 using Content.Client._Sunrise.Messenger;
 using Content.Client.Resources;
 using Content.Client.Stylesheets;
@@ -9,7 +8,6 @@ using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface.Controls;
-using Robust.Client.UserInterface.CustomControls;
 using Robust.Client.UserInterface.RichText;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Prototypes;
@@ -23,7 +21,6 @@ public sealed partial class MessagePanel : PanelContainer
     [Dependency] private readonly IResourceCache _resourceCache = default!;
     [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly NetTexturesManager _netTexturesManager = default!;
 
     private ClientEmojiSystem? EmojiSystem => _entitySystemManager.GetEntitySystemOrNull<ClientEmojiSystem>();
     private SpriteSystem GetSpriteSystem() => _entitySystemManager.GetEntitySystem<SpriteSystem>();
@@ -48,36 +45,10 @@ public sealed partial class MessagePanel : PanelContainer
     {
         IoCManager.InjectDependencies(this);
         RobustXamlLoader.Load(this);
-        _netTexturesManager.ResourceLoaded += OnResourceLoaded;
-        ImageButton.OnPressed += _ => ShowFullImage();
-
-        ImageBorder.PanelOverride = new StyleBoxFlat
-        {
-            BackgroundColor = Color.Transparent,
-            BorderColor = Color.Transparent,
-            BorderThickness = new Thickness(2)
-        };
-
-        ImageButton.OnMouseEntered += _ =>
-        {
-            if (ImageBorder.PanelOverride is StyleBoxFlat style)
-            {
-                style.BorderColor = Color.White.WithAlpha(0.6f);
-            }
-        };
-
-        ImageButton.OnMouseExited += _ =>
-        {
-            if (ImageBorder.PanelOverride is StyleBoxFlat style)
-            {
-                style.BorderColor = Color.Transparent;
-            }
-        };
     }
 
     public event Action<long>? OnDeleteMessage;
     private Button? _deleteButton;
-    private string? _currentImagePath;
 
     public void UpdateMessage(MessengerMessage message, bool isOwnMessage, bool isPersonalChat, string? currentUserId)
     {
@@ -89,7 +60,6 @@ public sealed partial class MessagePanel : PanelContainer
 
         var parsedContent = EmojiSystem?.ParseEmojis(message.Content) ?? message.Content;
         ContentLabel.SetMessage(FormattedMessage.FromMarkupPermissive(parsedContent), MessageTagsAllowed);
-        ContentLabel.Visible = !string.IsNullOrWhiteSpace(message.Content);
 
         if (isOwnMessage && _deleteButton == null)
         {
@@ -145,83 +115,6 @@ public sealed partial class MessagePanel : PanelContainer
         else
         {
             ReadStatusIcon.Visible = false;
-        }
-
-        UpdateImagePreview(message.ImagePath);
-    }
-
-    private void UpdateImagePreview(string? imagePath)
-    {
-        if (string.IsNullOrWhiteSpace(imagePath))
-        {
-            ImageButton.Visible = false;
-            _currentImagePath = null;
-            return;
-        }
-
-        _currentImagePath = imagePath;
-
-        var isAvailable = _netTexturesManager.EnsureResource(imagePath);
-
-        if (isAvailable)
-        {
-            LoadImageTexture(imagePath);
-        }
-        else
-        {
-            ImageButton.Visible = false;
-        }
-    }
-
-    private void ShowFullImage()
-    {
-        if (ImagePreview.Texture == null)
-            return;
-
-        var window = new DefaultWindow
-        {
-            Title = Loc.GetString("messenger-image-preview-title"),
-            MinSize = new Vector2(600, 600)
-        };
-
-        var textureRect = new TextureRect
-        {
-            Texture = ImagePreview.Texture,
-            Stretch = TextureRect.StretchMode.KeepAspect,
-            HorizontalExpand = true,
-            VerticalExpand = true
-        };
-
-        window.Contents.AddChild(textureRect);
-        window.OpenCentered();
-    }
-
-    private void OnResourceLoaded(string resourcePath)
-    {
-        if (_currentImagePath == resourcePath)
-        {
-            LoadImageTexture(resourcePath);
-        }
-    }
-
-    private void LoadImageTexture(string imagePath)
-    {
-        try
-        {
-            var uploadedPath = _netTexturesManager.GetUploadedPath(imagePath);
-            if (_resourceCache.TryGetResource<TextureResource>(uploadedPath, out var textureResource))
-            {
-                ImagePreview.Texture = textureResource.Texture;
-                ImageButton.Visible = true;
-            }
-            else
-            {
-                ImageButton.Visible = false;
-            }
-        }
-        catch
-        {
-            ImageButton.Visible = false;
         }
     }
 

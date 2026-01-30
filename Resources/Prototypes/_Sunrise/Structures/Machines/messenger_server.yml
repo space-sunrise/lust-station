@@ -36,7 +36,9 @@
       receiveFrequencyId: Messenger
       autoConnect: false
     - type: WirelessNetworkConnection
-      range: 2000
+      range: 500
+    - type: StationLimitedNetwork
+      allowNonStationPackets: true
     - type: ApcPowerReceiver
       powerLoad: 200
     - type: DeviceNetworkRequiresPower

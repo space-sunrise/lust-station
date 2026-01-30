@@ -101,12 +101,14 @@ public sealed partial class MessengerServerSystem
             if (group.Members.Contains(userId))
                 return;
 
+            // Проверяем, нет ли уже активного инвайта
             if (component.ActiveInvites.TryGetValue(userId, out var existingInvites))
             {
                 if (existingInvites.Any(inv => inv.GroupId == groupId))
                     return;
             }
 
+            // Создаем инвайт
             var invite = new MessengerGroupInvite(
                 groupId,
                 group.Name,
@@ -142,10 +144,12 @@ public sealed partial class MessengerServerSystem
                 _deviceNetwork.QueuePacket(uid, userId, invitePayload);
             }
 
+            // Отправляем обновленный список инвайтов
             SendInvitesList(uid, component, userId, serverDevice, pdaFrequency);
             return;
         }
 
+        // Для автоматических групп сохраняем старую логику (если разрешено)
         if (group.AutoGroupPrototypeId != null)
         {
             if (_prototypeManager.TryIndex<MessengerAutoGroupPrototype>(group.AutoGroupPrototypeId, out var autoGroupProto))
@@ -203,8 +207,7 @@ public sealed partial class MessengerServerSystem
             ["group_id"] = groupId,
             ["recipient_id"] = string.Empty,
             ["is_read"] = false,
-            ["message_id"] = systemMessage.MessageId,
-            ["image_path"] = systemMessage.ImagePath ?? string.Empty
+            ["message_id"] = systemMessage.MessageId
         };
 
         foreach (var memberId in group.Members)
@@ -270,9 +273,7 @@ public sealed partial class MessengerServerSystem
                     ["group_id"] = msg.GroupId ?? string.Empty,
                     ["recipient_id"] = msg.RecipientId ?? string.Empty,
                     ["is_read"] = msg.IsRead,
-                    ["message_id"] = msg.MessageId,
-                    ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty,
-                    ["image_path"] = msg.ImagePath ?? string.Empty
+                    ["message_id"] = msg.MessageId
                 });
             }
 
@@ -376,9 +377,7 @@ public sealed partial class MessengerServerSystem
             ["timestamp"] = timestamp.TotalSeconds,
             ["group_id"] = groupId,
             ["recipient_id"] = string.Empty,
-            ["is_read"] = false,
-            ["message_id"] = systemMessage.MessageId,
-            ["image_path"] = systemMessage.ImagePath ?? string.Empty
+            ["is_read"] = false
         };
 
         foreach (var memberId in group.Members)
@@ -464,8 +463,7 @@ public sealed partial class MessengerServerSystem
             ["group_id"] = groupId,
             ["recipient_id"] = string.Empty,
             ["is_read"] = false,
-            ["message_id"] = systemMessage.MessageId,
-            ["image_path"] = systemMessage.ImagePath ?? string.Empty
+            ["message_id"] = systemMessage.MessageId
         };
 
         foreach (var memberId in group.Members)
@@ -531,9 +529,7 @@ public sealed partial class MessengerServerSystem
                     ["group_id"] = msg.GroupId ?? string.Empty,
                     ["recipient_id"] = msg.RecipientId ?? string.Empty,
                     ["is_read"] = msg.IsRead,
-                    ["message_id"] = msg.MessageId,
-                    ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty,
-                    ["image_path"] = msg.ImagePath ?? string.Empty
+                    ["message_id"] = msg.MessageId
                 });
             }
 
@@ -726,8 +722,7 @@ public sealed partial class MessengerServerSystem
                     ["group_id"] = groupId,
                     ["recipient_id"] = string.Empty,
                     ["is_read"] = false,
-                    ["message_id"] = systemMessage.MessageId,
-                    ["image_path"] = systemMessage.ImagePath ?? string.Empty
+                    ["message_id"] = systemMessage.MessageId
                 };
 
                 foreach (var memberId in group.Members)

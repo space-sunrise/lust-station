@@ -8,7 +8,7 @@ namespace Content.Server._Sunrise.CartridgeLoader.Cartridges;
 /// </summary>
 public sealed partial class MessengerCartridgeSystem
 {
-    private void UpdateUiState(EntityUid uid, EntityUid loaderUid, MessengerCartridgeComponent? component, Dictionary<string, PhotoMetadata>? photoGallery = null)
+    private void UpdateUiState(EntityUid uid, EntityUid loaderUid, MessengerCartridgeComponent? component)
     {
         if (!Resolve(uid, ref component))
             return;
@@ -57,8 +57,7 @@ public sealed partial class MessengerCartridgeSystem
             component.MutedGroupChats,
             unreadCounts,
             component.ActiveInvites,
-            component.PinnedChats,
-            photoGallery
+            component.PinnedChats
         );
 
         _cartridgeLoader.UpdateCartridgeUiState(loaderUid, state);

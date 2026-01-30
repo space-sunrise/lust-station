@@ -61,15 +61,6 @@ public sealed partial class MessengerServerSystem
         var station = _stationSystem.GetOwningStation(args.Mob);
         if (station == null)
         {
-            var mobXform = Transform(args.Mob);
-            station = _stationSystem.GetStations().FirstOrDefault(s => Transform(s).MapID == mobXform.MapID);
-        }
-
-        if (station == null)
-            station = _stationSystem.GetStations().FirstOrDefault();
-
-        if (station == null)
-        {
             Sawmill.Warning($"No station found for player: {ToPrettyString(args.Mob)}");
             return;
         }
@@ -193,6 +184,7 @@ public sealed partial class MessengerServerSystem
             _deviceNetwork.QueuePacket(uid, userId, response, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
         }
 
+        // Отправляем список пользователей новому пользователю
         var usersPayload = new NetworkPayload
         {
             [DeviceNetworkConstants.Command] = MessengerCommands.CmdUsersList,
@@ -211,6 +203,7 @@ public sealed partial class MessengerServerSystem
             _deviceNetwork.QueuePacket(uid, userId, usersPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
         }
 
+        // Отправляем список групп новому пользователю
         var groupsList = component.Groups.Values.ToList();
         var groupsData = new List<Dictionary<string, object>>();
 
@@ -277,6 +270,7 @@ public sealed partial class MessengerServerSystem
             _deviceNetwork.QueuePacket(uid, userId, groupsPayload, frequency: pdaFrequency, network: serverDevice.DeviceNetId);
         }
 
+        // Регистрируем картридж мессенджера как фоновую программу, если он еще не зарегистрирован
         if (_cartridgeLoader.TryGetProgram<MessengerCartridgeComponent>(pdaUid, out var cartridgeUid, out _))
         {
             if (TryComp<CartridgeLoaderComponent>(pdaUid, out var loader) &&
@@ -509,8 +503,7 @@ public sealed partial class MessengerServerSystem
                         ["group_id"] = autoGroupProto.GroupId,
                         ["recipient_id"] = string.Empty,
                         ["is_read"] = false,
-                        ["message_id"] = systemMessage.MessageId,
-                        ["image_path"] = systemMessage.ImagePath ?? string.Empty
+                        ["message_id"] = systemMessage.MessageId
                     };
 
                     foreach (var memberId in group.Members)
@@ -558,9 +551,7 @@ public sealed partial class MessengerServerSystem
                             ["group_id"] = msg.GroupId ?? string.Empty,
                             ["recipient_id"] = msg.RecipientId ?? string.Empty,
                             ["is_read"] = msg.IsRead,
-                            ["message_id"] = msg.MessageId,
-                            ["sender_job_icon_id"] = msg.SenderJobIconId?.Id ?? string.Empty,
-                            ["image_path"] = msg.ImagePath ?? string.Empty
+                            ["message_id"] = msg.MessageId
                         });
                     }
 
@@ -651,6 +642,7 @@ public sealed partial class MessengerServerSystem
             user.DepartmentId = departmentId;
             user.JobIconId = jobIconId;
 
+            // Отправляем обновленный список пользователей всем клиентам
             if (!TryComp<DeviceNetworkComponent>(uid, out var serverDevice))
                 return;
 

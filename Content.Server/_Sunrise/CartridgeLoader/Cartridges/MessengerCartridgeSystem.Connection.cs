@@ -20,7 +20,7 @@ public sealed partial class MessengerCartridgeSystem
             return;
         }
 
-        var station = GetBestStation(pdaUid);
+        var station = _stationSystem.GetOwningStation(pdaUid);
         if (station == null)
         {
             component.ServerAddress = null;
@@ -175,7 +175,7 @@ public sealed partial class MessengerCartridgeSystem
 
         component.LoaderUid = loaderUid;
 
-        var station = GetBestStation(pdaUid);
+        var station = _stationSystem.GetOwningStation(pdaUid);
         if (station == null)
         {
             Sawmill.Warning($"No station found for PDA: {ToPrettyString(pdaUid)}");
