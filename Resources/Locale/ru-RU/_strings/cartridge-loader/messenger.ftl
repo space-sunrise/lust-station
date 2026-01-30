@@ -59,3 +59,7 @@ messenger-invite-user-to-group-title = Пригласить в { $groupName }
 messenger-delete-message = Удалить сообщение
 messenger-system-user-joined = { $userName } присоединился(ась) к группе
 messenger-system-user-left = { $userName } покинул(а) группу
+messenger-photo-button-tooltip = Отправить фотографию
+messenger-photo-picker-title = Выберите фотографию
+messenger-image-preview-title = Просмотр изображения
+messenger-photo-flash-label = Вспышка
