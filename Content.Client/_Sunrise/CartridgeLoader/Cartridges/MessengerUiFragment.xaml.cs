@@ -19,13 +19,14 @@ using Robust.Shared.Input;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Shared.StatusIcon;
+using Robust.Shared.Timing;
 
 namespace Content.Client._Sunrise.CartridgeLoader.Cartridges;
 
 [GenerateTypedNameReferences]
 public sealed partial class MessengerUiFragment : BoxContainer
 {
-    public event Action<string?, string?, string>? OnSendMessage;
+    public event Action<string?, string?, string, string?>? OnSendMessage;
     public event Action<string>? OnCreateGroup;
     public event Action<string, string>? OnAddToGroup;
     public event Action<string, string>? OnRemoveFromGroup;
@@ -36,6 +37,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
     public event Action<string>? OnLeaveGroup;
     public event Action<string, long>? OnDeleteMessage;
     public event Action<string>? OnTogglePin;
+    public event Action? OnRequestPhotos;
 
     private string? _currentChatId;
     private MessengerUiState? _currentState;
@@ -62,6 +64,8 @@ public sealed partial class MessengerUiFragment : BoxContainer
     [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
     [Dependency] private readonly IConfigurationManager _configurationManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly NetTexturesManager _netTexturesManager = default!;
 
     private CreateGroupDialog? _createGroupDialog;
     private AddUserDialog? _addUserDialog;
@@ -99,6 +103,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
         CreateGroupButton.OnPressed += _ => ShowCreateGroupDialog();
         ToggleMembersButton.OnPressed += _ => ToggleMembersList();
         EmojiButton.OnPressed += _ => ShowEmojiPicker();
+        PhotoButton.OnPressed += _ => RequestPhotos();
         SearchInput.OnTextChanged += OnSearchTextChanged;
         PersonalChatsTab.OnPressed += _ => SwitchTab(0);
         GroupChatsTab.OnPressed += _ => SwitchTab(1);
@@ -168,6 +173,12 @@ public sealed partial class MessengerUiFragment : BoxContainer
         MessageInput.Editable = canInteract && hasChatSelected;
         SendButton.Disabled = !canInteract || !hasChatSelected;
         EmojiButton.Disabled = !canInteract || !hasChatSelected;
+        PhotoButton.Disabled = !canInteract || !hasChatSelected;
+
+        if (state.PhotoGallery != null && state.PhotoGallery.Count > 0)
+        {
+            ShowPhotoPicker(state.PhotoGallery);
+        }
 
         var savedChatId = _currentChatId;
         var savedGroupId = _currentGroupId;
@@ -1143,8 +1154,90 @@ public sealed partial class MessengerUiFragment : BoxContainer
         }
 
         MessageInput.Clear();
-        OnSendMessage?.Invoke(recipientId, groupId, messageText);
+        OnSendMessage?.Invoke(recipientId, groupId, messageText, null);
         ScrollToBottom();
+    }
+
+    private void SendPhoto(string imagePath)
+    {
+        if (_currentChatId == null)
+            return;
+
+        string? recipientId = null;
+        string? groupId = null;
+
+        if (_currentChatId.StartsWith("personal_"))
+        {
+            var parts = _currentChatId.Split('_');
+            if (parts.Length >= 3 && _currentState?.CurrentUserId != null)
+            {
+                var userId1 = parts[1];
+                var userId2 = parts[2];
+                recipientId = userId1 == _currentState.CurrentUserId ? userId2 : userId1;
+            }
+        }
+        else if (_currentState?.Groups.Any(g => g.GroupId == _currentChatId) ?? false)
+        {
+            groupId = _currentChatId;
+        }
+
+        OnSendMessage?.Invoke(recipientId, groupId, string.Empty, imagePath);
+    }
+
+    private void RequestPhotos()
+    {
+        if (_currentChatId == null)
+            return;
+
+        OnRequestPhotos?.Invoke();
+    }
+
+    private DefaultWindow? _photoPickerDialog;
+
+    private void ShowPhotoPicker(Dictionary<string, PhotoMetadata> photos)
+    {
+        if (_photoPickerDialog != null && _photoPickerDialog.IsOpen)
+            return;
+
+        var dialog = new DefaultWindow
+        {
+            Title = Loc.GetString("messenger-photo-picker-title"),
+            MinSize = new Vector2(560, 620),
+        };
+        _photoPickerDialog = dialog;
+
+        var scroll = new ScrollContainer
+        {
+            HorizontalExpand = true,
+            VerticalExpand = true
+        };
+
+        var grid = new GridContainer
+        {
+            Columns = 2,
+            HorizontalExpand = true
+        };
+
+        foreach (var (id, metadata) in photos)
+        {
+            var photoControl = new PhotoItemControl(id, metadata,
+                _netTexturesManager,
+                _resourceCache,
+                _gameTiming);
+
+            photoControl.MinSize = new Vector2(120, 120);
+            photoControl.OnPressed += _ =>
+            {
+                SendPhoto(metadata.ImagePath);
+                dialog.Close();
+            };
+            grid.AddChild(photoControl);
+        }
+
+        scroll.AddChild(grid);
+        dialog.Contents.AddChild(scroll);
+        dialog.OnClose += () => _photoPickerDialog = null;
+        dialog.OpenCentered();
     }
 
     private string GetPersonalChatId(string userId)
@@ -1699,7 +1792,7 @@ public sealed partial class MessengerUiFragment : BoxContainer
     /// <summary>
     /// Создает кнопку чата с общими элементами
     /// </summary>
-    private Button CreateChatButton(string chatId, string chatName, bool isPinned, int unreadCount, 
+    private Button CreateChatButton(string chatId, string chatName, bool isPinned, int unreadCount,
         ProtoId<JobIconPrototype>? jobIconId, Action<string, string> onSelect, Action<string>? onTogglePin)
     {
         var button = new Button
