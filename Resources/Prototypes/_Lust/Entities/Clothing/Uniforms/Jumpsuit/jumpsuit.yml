@@ -41,7 +41,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCentcomFormalQillu
-  name: central command formal suit
+  name: Central Command formal suit
   description: A suit for special occasions.
   components:
   - type: Sprite
@@ -88,10 +88,23 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCentcomSuitQillu
-  name: ent-ClothingUniformJumpsuitCentcomSuitQillu
-  description: ent-ClothingUniformJumpsuitCentcomSuitQillu-desc
+  name: Central Command suit
+  description: A Central Command dress uniform produced under Qillu contract. Crisp, formal, and unmistakably official.
+  suffix: Qillu
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomUniformQillu
+  name: Central Command uniform
+  description: A Central Command uniform produced under Qillu contract. Formal, durable, and unmistakably official.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi

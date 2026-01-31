@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "license": "CLA",
+  "copyright": "Made for Lust Station by seraphimttt (discord); based on Space Sunrise assets by gardsnake (Github) (CLA.txt).",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "blue"
+    },
+    {
+      "name": "blue-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "blue-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "department-side"
+    },
+    {
+      "name": "department-side-extra-gold"
+    }
+  ]
+}
+

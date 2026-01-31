@@ -1,0 +1,78 @@
+- type: entity
+  parent: CentcomPDA
+  id: CentcomPDAQillu
+  name: CentComm PDA
+  description: Purple-and-gold symbol of walking bureaucracy. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Pda
+    id: CentcomIDCard
+    penSlot:
+      startingItem: PenCentcomQillu
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda
+  - type: Sprite
+    sprite: _Lust/Objects/Devices/centcom_pda_qillu.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Lust/Objects/Devices/centcom_pda_qillu.rsi
+    state: pda
+
+- type: entity
+  parent: CentcomOperatorPDA
+  id: CentcomOperatorPDAQillu
+  name: CentComm Operator PDA
+  description: Purple-and-gold symbol of walking bureaucracy. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Pda
+    id: CentcomOperatorIDCardQillu
+    penSlot:
+      startingItem: PenCentcomQillu
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+
+  - type: PdaBorderColor
+    borderColor: "#6A2CA0"
+    accentVColor: "#e6bd45"
+    accentHColor: "#e6bd45"
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda
+  - type: Sprite
+    sprite: _Lust/Objects/Devices/centcom_operator_pda_qillu.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _Lust/Objects/Devices/centcom_operator_pda_qillu.rsi
+    state: pda

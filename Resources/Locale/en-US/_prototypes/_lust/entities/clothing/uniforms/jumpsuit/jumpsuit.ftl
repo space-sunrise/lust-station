@@ -13,3 +13,6 @@ ent-ClothingUniformJumpsuitQilluDirector = Qillu Corporation Director Suit
 ent-ClothingUniformJumpsuitCentcomSuitQillu = Central Command suit
     .suffix = Qillu
     .desc = A Central Command dress uniform produced under Qillu contract. Crisp, formal, and unmistakably official.
+ent-ClothingUniformJumpsuitCentcomUniformQillu = Central Command uniform
+    .suffix = Qillu
+    .desc = A Central Command uniform produced under Qillu contract. Formal, durable, and unmistakably official.

@@ -73,3 +73,19 @@
       - state: equipped-HAND
   - type: Fiber
     fiberColor: fibers-grey
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCentcomQillu
+  name: Central Command gloves
+  description: Gloves worn by Central Command personnel. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: /Textures/_Lust/Clothing/Paws/centcom_gloves_qillu.rsi
+  - type: Clothing
+    sprite: /Textures/_Lust/Clothing/Paws/centcom_gloves_qillu.rsi
+    clothingVisuals:
+      gloves:
+      - state: equipped-HAND
+  - type: Insulated
