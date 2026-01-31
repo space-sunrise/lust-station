@@ -257,7 +257,7 @@
     selectionTime: IntraPlayerSpawn
     definitions:
     - prefRoles: [ Traitor ]
-      max: 8
+      max: 13 # Sunrise-Edit
       playerRatio: 10
       pickCommandStaff: true # Sunrise-Edit
       maxCommandStaff: 1 # Sunrise-Edit

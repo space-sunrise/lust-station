@@ -331,6 +331,9 @@
     containers:
       mech-battery-slot:
       - PowerCageMedium
+  - type: Tag
+    tags:
+    - DoorBumpOpener # No paint unique ripley
 
 # Ripley MK-II "Death"
 - type: entity
