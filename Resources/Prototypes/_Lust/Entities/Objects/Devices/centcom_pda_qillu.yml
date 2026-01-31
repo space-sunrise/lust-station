@@ -6,7 +6,7 @@
   suffix: Qillu
   components:
   - type: Pda
-    id: CentcomIDCard
+    id: CentcomIDCardQillu
     penSlot:
       startingItem: PenCentcomQillu
       priority: -1

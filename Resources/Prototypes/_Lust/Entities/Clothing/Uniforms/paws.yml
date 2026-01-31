@@ -75,7 +75,7 @@
     fiberColor: fibers-grey
 
 - type: entity
-  parent: ClothingHandsBase
+  parent: ClothingHandsGlovesSyntheticBase
   id: ClothingHandsGlovesCentcomQillu
   name: Central Command gloves
   description: Gloves worn by Central Command personnel. Produced under Qillu contract.
