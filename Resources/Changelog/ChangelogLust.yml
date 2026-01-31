@@ -1334,3 +1334,39 @@
   id: 269
   time: '2026-01-09T22:14:45.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/458
+- author: iDesmond & bulbo44kkey
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F L.I.L.I.T.H"
+    type: Add
+  id: 270
+  time: '2026-01-20T19:59:34.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/461
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0441\u0438\u043B\u043E\u0432\
+      \u0443\u044E \u0434\u0432\u0435\u0440\u044C \u0434\u043B\u044F \u0438\u0432\u0435\
+      \u043D\u0442\u043E\u0432 HL2"
+    type: Add
+  id: 271
+  time: '2026-01-20T19:59:47.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/460
+- author: Fooksy2304
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0414\u0438\u0435\u0433\
+      \u043E \u0424\u043E\u043D \u044D\u044D\u044D \u0437\u0430\u0431\u044B\u043B\
+      , \u043A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E \u043D\u0435\
+      \ \u0432\u0443\u043B\u044C\u043F\u0430"
+    type: Add
+  id: 272
+  time: '2026-01-27T20:20:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/465
+- author: Orvex07
+  changes:
+  - message: "\u041F\u0430\u0440\u0430\u0434\u043E\u043A\u0441\u0430\u043B\u044C\u043D\
+      \u044B\u0439 \u043A\u043B\u043E\u043D \u043F\u043E\u043B\u0443\u0447\u0438\u043B\
+      \ \u0441\u0442\u0430\u0442\u0443\u0441 \u0415\u0420\u041F"
+    type: Add
+  id: 273
+  time: '2026-01-31T20:59:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/467
