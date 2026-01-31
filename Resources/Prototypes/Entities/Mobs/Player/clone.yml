@@ -10,6 +10,7 @@
   components:
   # general
   - DetailExaminable
+  - ErpStatus # Lust-Station
   - Dna
   - Fingerprint
   - NpcFactionMember
