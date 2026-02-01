@@ -959,6 +959,9 @@ ImplantExtractorMachineCircuitboard: InterrogatorMachineCircuitboard
 EnergyDomeWiredTest: null
 # Sunrise-End
 
+# 2026-01-30
+MagazineDragunov: MagazineDragunovSP
+
 # Lust-Start
 VendingMachineCoffeeMigrateUnderwear: VendingMachineUnderwear
 VendingMachineDonutMigrateKinko: VendingMachineKink
