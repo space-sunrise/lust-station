@@ -5,7 +5,6 @@
   name: Urist McXeno
   abstract: true
   components:
-  - type: Interactions
   - type: Respirator
     damage:
       types:
@@ -26,7 +25,7 @@
   - type: Temperature
     currentTemperature: 310.15
   - type: TemperatureDamage
-    heatDamageThreshold: 360
+    heatDamageThreshold: 340
     coldDamageThreshold: -150
   - type: Speech
     speechVerb: LargeMob
@@ -39,10 +38,11 @@
     attackRate: 1
     damage:
       types:
-        Blunt: 3
-        Slash: 2
+        Blunt: 5
+        Slash: 10
         Caustic: 1
   - type: LizardAccent
+  - type: VulpaAccent
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
@@ -120,18 +120,18 @@
     requiredLegs: 2
   - type: Inventory
     speciesId: reptilian
-    templateId: humanoidxeno
+    templateId: diona
     femaleDisplacements:
       jumpsuit:
         sizeMaps:
           32:
             sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
             state: jumpsuit-female
-      head:
-        sizeMaps:
-          32:
-            sprite: Mobs/Species/Reptilian/displacement.rsi
-            state: head
+      #head:
+        #sizeMaps:
+          #32:
+            #sprite: Mobs/Species/Reptilian/displacement.rsi
+            #state: head
       mask:
         sizeMaps:
           32:
@@ -148,16 +148,16 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
-      shoes:
-        sizeMaps:
-          32:
-            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
-            state: shoes
-      socks:
-        sizeMaps:
-          32:
-            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
-            state: socks
+      #shoes:
+        #sizeMaps:
+          #32:
+            #sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            #state: shoes
+      #socks:
+        #sizeMaps:
+          #32:
+            #sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            #state: socks
       outerClothing:
         sizeMaps:
           32:
@@ -174,16 +174,16 @@
           32:
             sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
             state: jumpsuit
-      shoes:
-        sizeMaps:
-          32:
-            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
-            state: shoes
-      socks:
-        sizeMaps:
-          32:
-            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
-            state: socks
+      #shoes:
+        #sizeMaps:
+          #32:
+            #sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            #state: shoes
+      #socks:
+        #sizeMaps:
+          #32:
+            #sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            #state: socks
       outerClothing:
         sizeMaps:
           32:
