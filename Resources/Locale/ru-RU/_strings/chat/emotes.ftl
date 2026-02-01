@@ -37,6 +37,9 @@ chat-emote-name-snarl = Оскалиться
 chat-emote-name-whine = Скулить
 chat-emote-name-howl = Выть
 chat-emote-name-growl = Рычать
+chat-emote-name-roar = Реветь
+chat-emote-name-rumble = Рокотать
+chat-emote-name-xenohisses = Шипение ксеноморфа
 # Сообщение
 chat-emote-msg-scream = кричит!
 chat-emote-msg-laugh = смеётся
@@ -77,3 +80,6 @@ chat-emote-msg-snarl = оскаливается.
 chat-emote-msg-whine = скулит!
 chat-emote-msg-howl = воет.
 chat-emote-msg-growl = рычит.
+chat-emote-msg-roar = ревёт!
+chat-emote-msg-rumble = рокочет.
+chat-emote-msg-xenohisses = шипит!

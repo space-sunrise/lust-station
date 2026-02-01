@@ -14,6 +14,16 @@
         Asphyxiation: -1.0
     maxSaturation: 50
     minSaturation: 40
+  - type: JumpAbility
+    action: ActionVulpkaninGravityJump
+    CanCollide: true
+    jumpDistance: 3
+    jumpSound:
+      path: /Audio/Weapons/punchmiss.ogg
+      params:
+        pitch: 1.33
+        volume: -5
+        variation: 0.05
   - type: Vocal
     sounds:
       Male: XenoHumanoid
@@ -25,10 +35,14 @@
   - type: Temperature
     currentTemperature: 310.15
   - type: TemperatureDamage
-    heatDamageThreshold: 340
+    heatDamageThreshold: 320
     coldDamageThreshold: -150
+    heatDamage:
+      types:
+        Heat : 3 #per second, scales with temperature & other constants
   - type: Speech
     speechVerb: LargeMob
+    allowedEmotes: [ 'HissesXeno', 'Roars', 'Rumbles', 'Growls' ]
   - type: MeleeWeapon
     hidden: true
     soundHit:
