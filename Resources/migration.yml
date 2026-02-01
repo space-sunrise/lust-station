@@ -971,4 +971,7 @@ SignNanotrasen3: SignQillu2
 SignNanotrasen4: SignQillu3
 SignNanotrasen5: null
 toyhandcuff: ToyHandcuffs
+VendingMachineCentDrobe: VendingMachineCentDrobeQillu
+PenCentcom: PenCentcomQillu
+BoxFolderCentCom: BoxFolderCentComQillu
 # Lust-End

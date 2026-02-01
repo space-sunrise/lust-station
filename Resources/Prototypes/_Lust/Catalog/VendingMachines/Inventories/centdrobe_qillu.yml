@@ -1,0 +1,16 @@
+- type: vendingMachineInventory
+  id: CentDrobeQilluInventory
+  startingInventory:
+    ClothingShoesBootsLaceup: 3
+    ClothingShoesBootsCombatFilled: 3
+    ClothingHandsGlovesCentcomQillu: 3
+    ClothingEyesGlassesCommand: 3
+    ClothingUniformJumpsuitCentcomSuitQillu: 3
+    ClothingUniformJumpskirtCentcomSkirtSuitQillu: 3
+    ClothingUniformJumpsuitCentcomUniformQillu: 3
+    ClothingUniformJumpskirtCentcomUniformQillu: 3
+    ClothingOuterArmorCentcomChestplateQillu: 2
+    ClothingHeadHatCentcomElegantCap: 3
+    ClothingNeckScarfCentcomElegant: 3
+    ClothingBackpackSatchelIAABlack: 2
+    ClothingHeadsetAltCentCom: 3

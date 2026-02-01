@@ -1,4 +1,4 @@
-ent-ClothingBackpackSatchelIAAWhite = белая сумка АВД
-    .desc = Здравствуйте, я сумка агента внутренних дел. Пожалуйста, не открывайте меня, внутри секретные документы.
-ent-ClothingBackpackSatchelIAABlack = чёрная сумка АВД
-    .desc = Сэр, вы уверены, что хотите открыть эту сумку? Она выглядит важной.
+ent-ClothingBackpackSatchelIAAWhite = белая деловая сумка
+    .desc = Аккуратная сумка для дел и личных мелочей.
+ent-ClothingBackpackSatchelIAABlack = чёрная деловая сумка
+    .desc = Аккуратная сумка для дел и личных мелочей.
