@@ -17,3 +17,45 @@
     - ClothMade
     - Recyclable
     - HamsterWearable
+
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatCentcomBeretQillu
+  name: CentCom beret
+  description: 'A regulation beret for Central Command personnel. Smells faintly of stamped forms, marginalia, and "as per section 4.2".'
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hats/centcom_beret_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hats/centcom_beret_qillu.rsi
+  - type: Item
+    sprite: _Lust/Clothing/Head/Hats/centcom_beret_qillu.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+
+- type: entity
+  parent: [ ClothingHeadBase, BaseCentcommContraband ]
+  id: ClothingHeadHatCentcomFormalHatQillu
+  name: CentCom formal hat
+  description: So official it feels like it came with a footnote and a signature block.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hats/centcom_formal_hat_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hats/centcom_formal_hat_qillu.rsi
+  - type: Item
+    sprite: _Lust/Clothing/Head/Hats/centcom_formal_hat_qillu.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
