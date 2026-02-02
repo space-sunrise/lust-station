@@ -97,3 +97,39 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Neck/Cloaks/iaa_cloak.rsi
+
+- type: entity
+  parent: [ ClothingNeckBase, BaseCentcommContraband ]
+  id: ClothingNeckCloakCentcomQillu
+  name: CentCom cloak
+  description: Ideal for looking dramatic while filing a complaint in triplicate.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_cloak_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_cloak_qillu.rsi
+  - type: Item
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_cloak_qillu.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+
+- type: entity
+  parent: [ ClothingNeckBase, BaseCentcommContraband ]
+  id: ClothingNeckMantleCentcomQillu
+  name: CentCom mantle
+  description: Warm, regal, and perfectly suited for late-night reading of classified memos.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_mantle_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_mantle_qillu.rsi
+  - type: Item
+    sprite: _Lust/Clothing/Neck/Cloaks/centcom_mantle_qillu.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
