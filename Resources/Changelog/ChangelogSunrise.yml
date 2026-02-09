@@ -25738,3 +25738,13 @@
   id: 1658
   time: '2026-02-09T05:20:44.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3842
+- author: ReWAFFlution
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u043E \u043D\u0430\u0437\u0432\
+      \u0430\u043D\u0438\u0435 \u0433\u043B\u0430\u0437\u043D\u044B\u0445 \u0438\u043C\
+      \u043F\u043B\u0430\u043D\u0442\u043E\u0432 \u043D\u0430 \"\u041E\u0440\u0433\
+      \u0430\u043D-\u0438\u043C\u043F\u043B\u0430\u043D\u0442\""
+    type: Tweak
+  id: 1659
+  time: '2026-02-09T20:43:32.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3891
