@@ -166,7 +166,7 @@
     breakoutTime: 6 # Keep in mind that's a toy
     uncuffTime: 6 # /\
   - type: Sprite
-    cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
+    sprite: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
     state: handcuff
   - type: Tag
     tags:
