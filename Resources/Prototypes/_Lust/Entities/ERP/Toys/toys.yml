@@ -153,7 +153,8 @@
 
 - type: entity
   id: ERPShibariRope
-  name: gray shibari rope
+  abstract: true
+  name: shibari rope
   description: This rope is designed for shibari, the art of Japanese rope bondage. Ready to tie up some pleasure?
   components:
   - type: Item
@@ -165,7 +166,7 @@
     breakoutTime: 6 # Keep in mind that's a toy
     uncuffTime: 6 # /\
   - type: Sprite
-    sprite: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
+    cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
     state: handcuff
   - type: Tag
     tags:
@@ -181,9 +182,17 @@
   - type: Clickable
 
 - type: entity
+  id: ERPShibariRopeGray
+  parent: ERPShibariRope
+  components:
+  - type: Handcuff
+    cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
+
+- type: entity
   id: ERPShibariRopeRed
   parent: ERPShibariRope
-  name: red shibari rope
   components:
   - type: Handcuff
     cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_red.rsi
@@ -193,7 +202,6 @@
 - type: entity
   id: ERPShibariRopeWhite
   parent: ERPShibariRope
-  name: white shibari rope
   components:
   - type: Handcuff
     cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_white.rsi
