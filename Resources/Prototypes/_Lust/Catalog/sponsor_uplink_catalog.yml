@@ -224,7 +224,7 @@
   id: UplinkLustEroticArrowRouletteErot
   productEntity: ArrowRouletteErot
   cost:
-   Suntick: 25
+    Suntick: 25
   categories:
   - Erotic
   conditions:
@@ -235,7 +235,7 @@
   id: UplinkLustEroticArrowRouletteEros
   productEntity: ArrowRouletteEros
   cost:
-   Suntick: 25
+    Suntick: 25
   categories:
   - Erotic
   conditions:
