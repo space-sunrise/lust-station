@@ -40,6 +40,8 @@
     ClothingMaskMuzzle: 3
     ClothingEyesBlindfold: 3
     ToyHandcuffs: 4
+    ArrowRouletteErot: 2
+    ArrowRouletteEros: 2
     # Glowsticks
     GlowstickBase: 3
     GlowstickRed: 3
@@ -70,3 +72,5 @@
     ClothingHandsCatPawsBrown: 3
     ClothingHandsCatPawsBlack: 3
     ClothingHandsCatPawsBlackWhite: 3
+  contrabandInventory:
+    ClothingHeadHatDeerHorns: 2
