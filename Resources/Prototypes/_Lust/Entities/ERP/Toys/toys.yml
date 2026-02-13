@@ -182,15 +182,6 @@
   - type: Clickable
 
 - type: entity
-  id: ERPShibariRopeGray
-  parent: ERPShibariRope
-  components:
-  - type: Handcuff
-    cuffedRSI: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
-  - type: Sprite
-    sprite: _Lust/ERP/Stuff/Shibari/shibari_gray.rsi
-
-- type: entity
   id: ERPShibariRopeRed
   parent: ERPShibariRope
   components:
