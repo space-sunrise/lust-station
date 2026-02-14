@@ -182,7 +182,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: LeftArmCyberHack
+    - id: LeftArmCyberAtmos
 
 - type: entity
   parent: BaseImplantCase
