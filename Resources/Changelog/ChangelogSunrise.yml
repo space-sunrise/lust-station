@@ -25842,3 +25842,29 @@
   id: 1665
   time: '2026-02-15T13:26:58.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3907
+- author: KaiserMaus
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043B\u043E\u0434\u0430\
+      \u0443\u0442 \u0431\u0440\u0438\u0433\u043C\u0435\u0434\u0438\u043A\u0430 \u0441\
+      \ \u0438\u043D\u044A\u0435\u043A\u0442\u043E\u0440\u0430\u043C\u0438."
+    type: Add
+  id: 1666
+  time: '2026-02-16T05:06:14.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3868
+- author: KaiserMaus
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0431\u0438\u0442\
+      \u0430 \xAB\u0445\u043E\u0443\u043C-\u0440\u0430\u043D\xBB \u0438 \u043D\u0430\
+      \u0431\u043E\u0440 \u0434\u043B\u044F \u0447\u0438\u0441\u0442\u043A\u0438 \u0443\
+      \u043B\u0438\u043A \u0432 \u0430\u043F\u043B\u0438\u043D\u043A \u043F\u0440\u0435\
+      \u0434\u0430\u0442\u0435\u043B\u044F."
+    type: Add
+  - message: "\u041E\u0434\u0438\u043D\u043E\u043A\u0438\u0439 \u041E\u043F\u0435\u0440\
+      \u0430\u0442\u0438\u0432\u043D\u0438\u043A \u0442\u0435\u043F\u0435\u0440\u044C\
+      \ \u0438\u043C\u0435\u0435\u0442 \u043E\u0434\u0438\u043D\u043E\u043A\u0438\u0439\
+      \ \u042D\u043D\u0435\u0440\u0433\u043E-\u043C\u0435\u0447, \u043D\u043E \u0437\
+      \u0430 8\u0442\u043A \u0432\u043C\u0435\u0441\u0442\u043E 12\u0442\u043A."
+    type: Tweak
+  id: 1667
+  time: '2026-02-16T05:05:32.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/3866
