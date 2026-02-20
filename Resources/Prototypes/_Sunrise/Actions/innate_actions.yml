@@ -22,3 +22,30 @@
     checkCanInteract: false
   - type: InstantAction
     event: !type:InnateInstantActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ModuleInnateUseItemAction
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: BigAction
+    checkCanInteract: false
+    temporary: true
+  - type: InstantAction
+    event: !type:ModuleInnateUseItem
+
+- type: entity
+  parent: BaseAction
+  id: ModuleInnateInteractionItemAction
+  components:
+  - type: Action
+    useDelay: 1
+    itemIconStyle: BigAction
+    checkCanInteract: false
+    temporary: true
+  - type: TargetAction
+    range: 3
+    ignoreContainer: true
+  - type: EntityTargetAction
+    event: !type:ModuleInnateInteractionItem

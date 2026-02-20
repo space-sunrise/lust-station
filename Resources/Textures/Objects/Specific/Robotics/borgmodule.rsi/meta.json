@@ -161,6 +161,9 @@
             "name": "icon-syndicate"
         },
         {
+            "name": "icon-lewd"
+        },
+        {
             "name": "janitor"
         },
         {
@@ -248,6 +251,9 @@
         },
         {
             "name": "NT"
+        },
+        {
+            "name": "lewd"
         }
     ]
 

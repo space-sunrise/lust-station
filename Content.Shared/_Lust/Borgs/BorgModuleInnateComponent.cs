@@ -1,8 +1,7 @@
-using Robust.Shared.Prototypes;
-using Content.Shared.Actions.Components;
 using Robust.Shared.GameStates;
+using Robust.Shared.Prototypes;
 
-namespace Content.Server._Sunrise.Silicons.Borgs.Components;
+namespace Content.Shared._Sunrise.Silicons.Borgs;
 
 /// <summary>
 /// Компонент, позволяющий давать боргам действия (экшены) и компоненты через модуль
@@ -16,7 +15,6 @@ public sealed partial class BorgModuleInnateComponent : Component
     [DataField, AutoNetworkedField]
     public List<EntProtoId?> UseItems = new();
 
-    /// TODO: implement adding those
     /// <summary>
     /// Предметы, с помощью которых можно взаимодействовать с сущностями
     /// </summary>

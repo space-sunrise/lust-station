@@ -1,0 +1,58 @@
+- type: entity
+  id: BorgModuleLewd
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: generic cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: lewd
+    - state: icon-lewd
+  - type: ItemBorgModule
+    hands:
+    - item: ERPDildoDragon
+      hand:
+        emptyLabel: borg-slot-small-containers-empty # TODO
+        emptyRepresentative: ERPDildoDragon
+        whitelist:
+          components:
+          - Clothing
+    - item: ERPRedFleshlight
+      hand:
+        emptyLabel: borg-slot-small-containers-empty # TODO
+        emptyRepresentative: ERPRedFleshlight
+        whitelist:
+          components:
+          - Clothing
+    - item: ERPVibroStick
+      hand:
+        emptyLabel: borg-slot-small-containers-empty # TODO
+        emptyRepresentative: ERPVibroStick
+        whitelist:
+          components:
+          - Clothing
+    - item: ERPShibariRope
+      hand:
+        emptyLabel: borg-slot-small-containers-empty # TODO
+        emptyRepresentative: ERPShibariRope
+        whitelist:
+          components:
+          - Clothing
+    - item: null
+      hand:
+        emptyLabel: borg-slot-small-containers-empty # TODO
+        emptyRepresentative: ClothingUniformJumpsuitColorGrey
+        whitelist:
+          components:
+          - Clothing
+  - type: BorgModuleInnate
+    innateComponents:
+    - type: Interactions
+    - type: ErpStatus
+      erp: Yes
+    useItems:
+    - HandheldStationMapUnpowered
+    - HandheldEmergencyCrewMonitor
+    interactionItems:
+    - HandheldHealthAnalyzerUnpowered
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: lewd-module }
