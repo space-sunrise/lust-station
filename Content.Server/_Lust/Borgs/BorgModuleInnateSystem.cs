@@ -10,6 +10,9 @@ using Robust.Shared.Utility;
 
 namespace Content.Server._Sunrise.Silicons.Borgs.Components;
 
+/// <summary>
+/// Система выдачи встраиваемых предметов и космпонентов через модуль.
+/// </summary>
 public sealed class BorgModuleInnateSystem : EntitySystem
 {
     [Dependency] private readonly SharedActionsSystem _actions = default!;
@@ -18,8 +21,10 @@ public sealed class BorgModuleInnateSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedInteractionSystem _interactions = default!;
 
+    // Название контейнера-хранилища встроенных предметов
     private const string InnateItemsContainerId = "module_innate_items";
 
+    // Прототипы действий над предметами
     private static readonly EntProtoId InnateUseItemAction = "ModuleInnateUseItemAction";
     private static readonly EntProtoId InnateInteractionItemAction = "ModuleInnateInteractionItemAction";
 
@@ -34,15 +39,25 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         SubscribeLocalEvent<BorgModuleInnateComponent, ModuleInnateInteractionItem>(OnInnateInteractionItem);
     }
 
+    /// <summary>
+    /// Добавляет нужные компоненты и предметы при "установке" модуля
+    /// </summary>
     private void OnInstalled(Entity<BorgModuleInnateComponent> module, ref BorgModuleInstalledEvent args)
     {
         var containerManager = EnsureComp<ContainerManagerComponent>(args.ChassisEnt);
         _containers.EnsureContainer<Container>(args.ChassisEnt, InnateItemsContainerId, containerManager);
 
         EntityManager.AddComponents(args.ChassisEnt, module.Comp.InnateComponents);
-        AddInnateItems(args.ChassisEnt, module);
+
+        if (!_containers.TryGetContainer(args.ChassisEnt, InnateItemsContainerId, out var container))
+            return;
+
+        AddItems(args.ChassisEnt, module, container);
     }
 
+    /// <summary>
+    /// Удаляет нужные компоненты и предметы при "удалении" модуля
+    /// </summary>
     private void OnUninstalled(Entity<BorgModuleInnateComponent> module, ref BorgModuleUninstalledEvent args)
     {
         foreach (var action in module.Comp.Actions)
@@ -56,14 +71,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         EntityManager.RemoveComponents(args.ChassisEnt, module.Comp.InnateComponents);
     }
 
-    private void AddInnateItems(EntityUid chassis, Entity<BorgModuleInnateComponent> module)
-    {
-        if (!_containers.TryGetContainer(chassis, InnateItemsContainerId, out var container))
-            return;
-
-        AddItems(chassis, module, container);
-    }
-
+    /// <summary>
+    /// Добавляет предметы в контейнер, а также создаёт экшены их активации в модуле для тела киборга
+    /// </summary>
     private void AddItems(EntityUid chassis, Entity<BorgModuleInnateComponent> module, BaseContainer container)
     {
         foreach (var itemProto in module.Comp.UseItems)
@@ -83,6 +93,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         }
     }
 
+    /// <summary>
+    /// Добавляет предмет, который активируется в руке, вместе с экшеном для его активации
+    /// </summary>
     private void AddUseItem(
         EntProtoId itemProto,
         EntityUid chassis,
@@ -96,6 +109,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         AssignAction(chassis, module, action);
     }
 
+    /// <summary>
+    /// Добавляет предмет, который активируется выбором цели, вместе с экшеном для его активации
+    /// </summary>
     private void AddInteractionItem(
         EntProtoId itemProto,
         EntityUid chassis,
@@ -109,6 +125,10 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         AssignAction(chassis, module, action);
     }
 
+    /// <summary>
+    /// Создает предмет для использования через экшены согласно прототипу в заданном контейнере
+    /// </summary>
+    /// <returns>Сущность предмета</returns>
     private EntityUid CreateInnateItem(BaseContainer container, EntProtoId itemProto)
     {
         var item = Spawn(itemProto);
@@ -128,6 +148,10 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         return item;
     }
 
+    /// <summary>
+    /// Согласно прототипу и событию создает экшен для активации данной сущности-предмета
+    /// </summary>
+    /// <returns>Сущность экшена</returns>
     private EntityUid CreateAction(EntityUid item, BaseActionEvent assignedEvent, EntProtoId actionProto)
     {
         var actionEnt = Spawn(actionProto);
@@ -142,6 +166,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         return actionEnt;
     }
 
+    /// <summary>
+    /// Добавляет экшен в шасси и сохраняет его в контейнере модуля
+    /// </summary>
     private void AssignAction(EntityUid chassis, Entity<BorgModuleInnateComponent> module, EntityUid action)
     {
         // Добавляем экшн в список экшенов и в список компача
@@ -150,6 +177,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         module.Comp.Actions.Add(action);
     }
 
+    /// <summary>
+    /// Обработчик события использования предмета как будто он в руке
+    /// </summary>
     private void OnInnateUseItem(Entity<BorgModuleInnateComponent> ent, ref ModuleInnateUseItem args)
     {
         var ev = new UseInHandEvent(args.Performer);
@@ -157,6 +187,9 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         args.Handled = true;
     }
 
+    /// <summary>
+    /// Обработчик события использования предмета на заданной цели
+    /// </summary>
     private void OnInnateInteractionItem(Entity<BorgModuleInnateComponent> ent, ref ModuleInnateInteractionItem args)
     {
         _interactions.InteractUsing(
