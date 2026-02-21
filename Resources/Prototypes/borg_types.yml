@@ -319,7 +319,7 @@
   - BorgModuleClowning
   - BorgModuleGardening
   - BorgModuleHarvesting
-  # - BorgModuleLewd # Lust-edit
+  - BorgModuleLustful # Lust-edit
 
   radioChannels:
   - Science
