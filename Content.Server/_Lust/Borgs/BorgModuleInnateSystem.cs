@@ -11,7 +11,7 @@ using Robust.Shared.Utility;
 namespace Content.Server._Sunrise.Silicons.Borgs.Components;
 
 /// <summary>
-/// Система выдачи встраиваемых предметов и космпонентов через модуль.
+/// Система выдачи встраиваемых предметов и компонентов через модуль.
 /// </summary>
 public sealed class BorgModuleInnateSystem : EntitySystem
 {
@@ -199,7 +199,8 @@ public sealed class BorgModuleInnateSystem : EntitySystem
             Transform(args.Target).Coordinates,
             false,
             false,
-            false);
+            false
+        );
         args.Handled = true;
     }
 }

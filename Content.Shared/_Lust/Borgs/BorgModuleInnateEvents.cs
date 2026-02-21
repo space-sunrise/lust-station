@@ -17,7 +17,7 @@ public sealed partial class ModuleInnateUseItem : InstantActionEvent
 }
 
 /// <summary>
-/// Ивент на активацию встроенного предмета с взаимдоействием с целью
+/// Ивент на активацию встроенного предмета с взаимодействием с целью
 /// </summary>
 public sealed partial class ModuleInnateInteractionItem : EntityTargetActionEvent
 {

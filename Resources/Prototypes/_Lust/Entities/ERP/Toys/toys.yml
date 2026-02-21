@@ -434,6 +434,7 @@
   - type: Tag
     tags:
     - Handcuffs
+    - ERPToy
   - type: MeleeWeapon
     wideAnimationRotation: 90
     animation: WeaponArcDisarm
