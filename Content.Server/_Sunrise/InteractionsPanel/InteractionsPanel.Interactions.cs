@@ -43,6 +43,7 @@ public partial class InteractionsPanel
 
         SubscribeLocalEvent<InteractionsComponent, GetVerbsEvent<AlternativeVerb>>(AddInteractionsVerb);
         SubscribeLocalEvent<InteractionsComponent, ComponentInit>(OnInteractionsComponentInit);
+        SubscribeLocalEvent<InteractionsComponent, ComponentRemove>(OnInteractionsComponentRemove);
 
         SubscribeLocalEvent<InteractionsComponent, ClothingDidEquippedEvent>(ClothingDidEquipped);
         SubscribeLocalEvent<InteractionsComponent, ClothingDidUnequippedEvent>(ClothingDidUnequipped);
@@ -172,6 +173,11 @@ public partial class InteractionsPanel
         );
 
         _ui.SetUi(uid, InteractionWindowUiKey.Key, interfaceData);
+    }
+
+    private void OnInteractionsComponentRemove(Entity<InteractionsComponent> ent, ref ComponentRemove args)
+    {
+        _ui.CloseUi(ent.Owner, InteractionWindowUiKey.Key);
     }
 
     private void OnInteractionMessageReceived(Entity<InteractionsComponent> ent, ref InteractionMessage args)
