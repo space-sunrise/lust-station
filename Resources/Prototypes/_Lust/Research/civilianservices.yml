@@ -1,0 +1,11 @@
+- type: technology
+  id: LustfulCyborgModules
+  name: research-technology-lustful-modules
+  icon:
+    sprite: Objects/Specific/Robotics/borgmodule.rsi
+    state: lustful
+  discipline: CivilianServices
+  tier: 2
+  cost: 3000
+  recipeUnlocks:
+  - BorgModuleLustful
