@@ -31,7 +31,6 @@
     - ClothMade
     - Recyclable
     - WhitelistChameleon
-    - ActualClothing # Lust-edit
 
 - type: entity
   abstract: true

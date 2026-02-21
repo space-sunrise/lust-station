@@ -33,12 +33,6 @@
         whitelist:
           tags:
           - ERPToy
-    - item: null
-      hand:
-        emptyRepresentative: ClothingUniformJumpsuitColorGrey
-        whitelist:
-          tags:
-          - ActualClothing
   - type: BorgModuleInnate
     innateComponents:
     - type: Interactions
