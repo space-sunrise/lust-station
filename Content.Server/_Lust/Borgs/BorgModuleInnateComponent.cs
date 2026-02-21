@@ -12,20 +12,20 @@ public sealed partial class BorgModuleInnateComponent : Component
     /// <summary>
     /// Предметы, которые активируются прямо в руке
     /// </summary>
-    [ViewVariables]
+    [DataField]
     public List<EntProtoId?> UseItems = new();
 
     /// <summary>
     /// Предметы, с помощью которых можно взаимодействовать с сущностями
     /// </summary>
-    [ViewVariables]
+    [DataField]
     public List<EntProtoId?> InteractionItems = new();
 
     /// <summary>
     /// Компоненты, которые будут добавлены боргу при установке модуля
     /// Будут удалены после его изъятия!
     /// </summary>
-    [ViewVariables]
+    [DataField]
     public ComponentRegistry InnateComponents = new();
 
     /// <summary>
@@ -34,7 +34,6 @@ public sealed partial class BorgModuleInnateComponent : Component
     /// </summary>
     [ViewVariables, Access(typeof(BorgModuleInnateSystem))]
     public List<EntityUid> InnateItems = new();
-
 
     /// <summary>
     /// Экшены для борга, созданные данным модулем
