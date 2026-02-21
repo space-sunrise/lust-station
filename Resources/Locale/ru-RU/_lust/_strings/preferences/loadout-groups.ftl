@@ -7,3 +7,4 @@ loadout-group-IAA-uniform = АВД, форма
 loadout-group-IAA-backpack = Деловые сумки
 loadout-group-IAA-outerClothing = АВД, верхняя одежда
 loadout-group-IAA-neck = АВД, шея
+loadout-group-borg-modules = Дополнительные модули
