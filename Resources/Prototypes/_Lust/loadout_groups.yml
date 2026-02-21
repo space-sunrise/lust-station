@@ -43,7 +43,7 @@
   - IAACloak
 
 - type: loadoutGroup
-  id: BorgModules
+  id: BorgAdditionalModules
   maxLimit: 4
   minLimit: 0
   name: loadout-group-borg-modules

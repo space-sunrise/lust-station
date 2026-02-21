@@ -44,6 +44,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: generic
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisMining
@@ -52,6 +57,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: mining
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobMiningBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisEngineer
@@ -60,6 +70,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: engineering
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobEngineerBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisJanitor
@@ -68,6 +83,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: janitor
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobJanitorBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisMedical
@@ -76,6 +96,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: medical
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobMedicalBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisService
@@ -84,6 +109,11 @@
   components:
   - type: BorgSwitchableType
     selectedBorgType: service
+  # Lust-start
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
+    roleLoadout: [ JobServiceBorg ]
+  # Lust-end
 
 - type: entity
   id: BorgChassisSyndicateAssault

@@ -548,7 +548,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -557,7 +557,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -566,7 +566,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -575,7 +575,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -584,7 +584,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -593,7 +593,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -602,7 +602,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
@@ -611,7 +611,7 @@
   canCustomizeName: true
   # Lust-start
   groups:
-  - BorgModules
+  - BorgAdditionalModules
   # Lust-end
 
 - type: roleLoadout
