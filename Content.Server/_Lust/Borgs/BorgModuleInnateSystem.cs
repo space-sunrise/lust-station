@@ -61,7 +61,10 @@ public sealed class BorgModuleInnateSystem : EntitySystem
     private void OnUninstalled(Entity<BorgModuleInnateComponent> module, ref BorgModuleUninstalledEvent args)
     {
         foreach (var action in module.Comp.Actions)
+        {
             _actions.RemoveAction(args.ChassisEnt, action);
+            QueueDel(action);
+        }
         foreach (var item in module.Comp.InnateItems)
             QueueDel(item);
 
