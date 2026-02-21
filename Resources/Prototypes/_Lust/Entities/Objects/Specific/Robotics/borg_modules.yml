@@ -33,6 +33,7 @@
         whitelist:
           tags:
           - ERPToy
+    - item: HypoBorgLustful
   - type: BorgModuleInnate
     innateComponents:
     - type: Interactions
