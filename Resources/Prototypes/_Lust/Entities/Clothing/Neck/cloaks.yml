@@ -26,7 +26,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/qillu_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCloakCap
   id: ClothingNeckCapSpecialCloak
   name: special captain cloak
   description: Special cloak for special Captain. Looks so rich.
@@ -35,7 +35,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/cap_special_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingCloakCmo
   id: ClothingNeckCmoSpecialCloak
   name: special CMO cloak
   description: Special cloak for special CMO. Looks so rich.
@@ -44,7 +44,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/cmo_special_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCloakHop
   id: ClothingNeckHopSpecialCloak
   name: special HOP cloak
   description: Special cloak for special HOP. Looks so rich.
@@ -53,7 +53,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/hop_special_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCloakHos
   id: ClothingNeckHosSpecialCloak
   name: special HOS cloak
   description: Special cloak for special HOS. Looks so rich.
@@ -62,7 +62,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/hos_special_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCloakQm
   id: ClothingNeckQmSpecialCloak
   name: special QM cloak
   description: Special cloak for special QM. Looks so rich.
@@ -71,7 +71,7 @@
     sprite: _Lust/Clothing/Neck/Cloaks/qm_special_cloak.rsi
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: ClothingNeckCloakRd
   id: ClothingNeckRdSpecialCloak
   name: special RD cloak
   description: Special cloak for special RD. Looks so rich.
