@@ -11,39 +11,34 @@
     hands:
     - item: ERPDildoDragon
       hand:
-        emptyLabel: borg-slot-small-containers-empty # TODO
         emptyRepresentative: ERPDildoDragon
         whitelist:
-          components:
-          - Clothing
+          tags:
+          - ERPToy
     - item: ERPRedFleshlight
       hand:
-        emptyLabel: borg-slot-small-containers-empty # TODO
         emptyRepresentative: ERPRedFleshlight
         whitelist:
-          components:
-          - Clothing
+          tags:
+          - ERPToy
     - item: ERPVibroStick
       hand:
-        emptyLabel: borg-slot-small-containers-empty # TODO
         emptyRepresentative: ERPVibroStick
         whitelist:
-          components:
-          - Clothing
+          tags:
+          - ERPToy
     - item: ERPShibariRope
       hand:
-        emptyLabel: borg-slot-small-containers-empty # TODO
         emptyRepresentative: ERPShibariRope
         whitelist:
-          components:
-          - Clothing
+          tags:
+          - ERPToy
     - item: null
       hand:
-        emptyLabel: borg-slot-small-containers-empty # TODO
         emptyRepresentative: ClothingUniformJumpsuitColorGrey
         whitelist:
-          components:
-          - Clothing
+          tags:
+          - ActualClothing
   - type: BorgModuleInnate
     innateComponents:
     - type: Interactions
