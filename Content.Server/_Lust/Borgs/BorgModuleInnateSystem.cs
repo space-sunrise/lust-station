@@ -62,11 +62,11 @@ public sealed class BorgModuleInnateSystem : EntitySystem
     {
         foreach (var action in module.Comp.Actions)
             _actions.RemoveAction(args.ChassisEnt, action);
-
-        if (_containers.TryGetContainer(args.ChassisEnt, InnateItemsContainerId, out var container))
-            _containers.CleanContainer(container);
+        foreach (var item in module.Comp.InnateItems)
+            QueueDel(item);
 
         module.Comp.Actions.Clear();
+        module.Comp.InnateItems.Clear();
 
         EntityManager.RemoveComponents(args.ChassisEnt, module.Comp.InnateComponents);
     }
@@ -103,7 +103,7 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         BaseContainer container
     )
     {
-        var item = CreateInnateItem(container, itemProto);
+        var item = CreateInnateItem(itemProto, module, container);
         var ev = new ModuleInnateUseItem(item);
         var action = CreateAction(item, ev, InnateUseItemAction);
         AssignAction(chassis, module, action);
@@ -119,7 +119,7 @@ public sealed class BorgModuleInnateSystem : EntitySystem
         BaseContainer container
     )
     {
-        var item = CreateInnateItem(container, itemProto);
+        var item = CreateInnateItem(itemProto, module, container);
         var ev = new ModuleInnateInteractionItem(item);
         var action = CreateAction(item, ev, InnateInteractionItemAction);
         AssignAction(chassis, module, action);
@@ -129,9 +129,14 @@ public sealed class BorgModuleInnateSystem : EntitySystem
     /// Создает предмет для использования через экшены согласно прототипу в заданном контейнере
     /// </summary>
     /// <returns>Сущность предмета</returns>
-    private EntityUid CreateInnateItem(BaseContainer container, EntProtoId itemProto)
+    private EntityUid CreateInnateItem(
+        EntProtoId itemProto,
+        Entity<BorgModuleInnateComponent> module,
+        BaseContainer container
+    )
     {
         var item = Spawn(itemProto);
+        module.Comp.InnateItems.Add(item);
 
         // Модифицируем компач юай, чтобы борг наверняка мог его использовать
         if (TryComp<ActivatableUIComponent>(item, out var activatableUIComponent))

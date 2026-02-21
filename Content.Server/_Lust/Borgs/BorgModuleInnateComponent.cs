@@ -6,28 +6,40 @@ namespace Content.Shared._Sunrise.Silicons.Borgs;
 /// <summary>
 /// Компонент, позволяющий давать боргам действия (экшены) и компоненты через модуль
 /// </summary>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
+[RegisterComponent]
 public sealed partial class BorgModuleInnateComponent : Component
 {
     /// <summary>
     /// Предметы, которые активируются прямо в руке
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [ViewVariables]
     public List<EntProtoId?> UseItems = new();
 
     /// <summary>
     /// Предметы, с помощью которых можно взаимодействовать с сущностями
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [ViewVariables]
     public List<EntProtoId?> InteractionItems = new();
 
     /// <summary>
     /// Компоненты, которые будут добавлены боргу при установке модуля
     /// Будут удалены после его изъятия!
     /// </summary>
-    [DataField]
+    [ViewVariables]
     public ComponentRegistry InnateComponents = new();
 
-    [DataField, AutoNetworkedField]
+    /// <summary>
+    /// Айди добавленных предметов этим модулем
+    /// Данный список нужен сугубо для корректной очистки
+    /// </summary>
+    [ViewVariables]
+    public List<EntityUid> InnateItems = new();
+
+
+    /// <summary>
+    /// Экшены для борга, созданные данным модулем
+    /// Данный список нужен сугубо для корректной очистки
+    /// </summary>
+    [ViewVariables]
     public List<EntityUid> Actions = new();
 }
