@@ -8,7 +8,7 @@ using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 
-namespace Content.Server._Sunrise.Silicons.Borgs.Components;
+namespace Content.Server._Lust.Silicons.Borgs;
 
 /// <summary>
 /// Система выдачи встраиваемых предметов и компонентов через модуль.

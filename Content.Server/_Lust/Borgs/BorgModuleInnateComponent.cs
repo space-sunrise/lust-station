@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
-namespace Content.Shared._Sunrise.Silicons.Borgs;
+namespace Content.Server._Lust.Silicons.Borgs;
 
 /// <summary>
 /// Компонент, позволяющий давать боргам действия (экшены) и компоненты через модуль
@@ -32,7 +32,7 @@ public sealed partial class BorgModuleInnateComponent : Component
     /// Айди добавленных предметов этим модулем
     /// Данный список нужен сугубо для корректной очистки
     /// </summary>
-    [ViewVariables]
+    [ViewVariables, Access(typeof(BorgModuleInnateSystem))]
     public List<EntityUid> InnateItems = new();
 
 
@@ -40,6 +40,6 @@ public sealed partial class BorgModuleInnateComponent : Component
     /// Экшены для борга, созданные данным модулем
     /// Данный список нужен сугубо для корректной очистки
     /// </summary>
-    [ViewVariables]
+    [ViewVariables, Access(typeof(BorgModuleInnateSystem))]
     public List<EntityUid> Actions = new();
 }
