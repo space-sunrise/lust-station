@@ -27,6 +27,8 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Content.Sunrise.Interfaces.Shared;
+using Content.Shared.Clothing.Components;
+using Content.Server._Lust.Silicons.Borgs;
 
 namespace Content.Server.Station.Systems;
 
@@ -145,6 +147,14 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             // Make sure custom names get handled, what is gameticker control flow whoopy.
             if (loadout != null)
             {
+                // Lust-start
+                EquipRoleLoadout(jobEntity, loadout, roleProto!);
+                if (prototype.StartingGear is not null)
+                {
+                    var startingGear = _prototypeManager.Index<StartingGearPrototype>(prototype.StartingGear);
+                    EquipStartingGear(jobEntity, startingGear, raiseEvent: false);
+                }
+                // Lust-end
                 EquipRoleName(jobEntity, loadout, roleProto!);
             }
 

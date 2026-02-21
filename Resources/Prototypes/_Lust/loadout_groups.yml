@@ -48,4 +48,4 @@
   minLimit: 0
   name: loadout-group-borg-modules
   loadouts:
-  - BorgModuleLustful
+  - BorgAdditionalModuleLustful

@@ -1,6 +1,5 @@
 - type: loadout
-  id: BorgModuleLustful
-  sponsorOnly: false # а если только спонсорам? бугага
-  storage:
+  id: BorgAdditionalModuleLustful
+  container:
     borg_module:
     - BorgModuleLustful

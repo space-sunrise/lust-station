@@ -9,6 +9,7 @@ using Content.Shared.Roles;
 using Content.Shared.Storage;
 using Content.Shared.Storage.EntitySystems;
 using Robust.Shared.Collections;
+using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
@@ -24,6 +25,7 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly MetaDataSystem _metadata = default!;
     [Dependency] private readonly SharedStorageSystem _storage = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
 
     private EntityQuery<HandsComponent> _handsQuery;
     private EntityQuery<InventoryComponent> _inventoryQuery;
@@ -174,6 +176,24 @@ public abstract class SharedStationSpawningSystem : EntitySystem
 
                         _storage.Insert(slotEnt.Value, spawnedEntity, out _, storageComp: storage, playSound: false);
                     }
+                }
+            }
+        }
+
+        if (startingGear.Container.Count > 0)
+        {
+            var coords = _xformSystem.GetMapCoordinates(entity);
+            var contManager = EnsureComp<ContainerManagerComponent>(entity);
+            foreach (var (containerKey, entProtos) in startingGear.Container)
+            {
+                if (entProtos == null || entProtos.Count == 0)
+                    continue;
+
+                var cont = _container.EnsureContainer<Container>(entity, containerKey, contManager);
+                foreach (var entProto in entProtos)
+                {
+                    var spawnedEntity = Spawn(entProto, coords);
+                    _container.Insert(spawnedEntity, cont);
                 }
             }
         }
