@@ -41,3 +41,11 @@
   name: loadout-group-IAA-neck
   loadouts:
   - IAACloak
+
+- type: loadoutGroup
+  id: BorgAdditionalModules
+  maxLimit: 4
+  minLimit: 0
+  name: loadout-group-borg-modules
+  loadouts:
+  - BorgAdditionalModuleLustful

@@ -9,7 +9,16 @@
     unequipDelay: 4
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  abstract: true
+  id: ERPToy
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+    - ERPToy
+
+- type: entity
+  parent: [ERPToy, BaseERPPlug]
   id: ERPNormalDildo
   name: normal dildo
   description: Just a based dildo, nothing else. Should I tell you where you can put it?
@@ -22,7 +31,7 @@
     sprite: _Lust/ERP/Toys/dildo.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPNormalFleshlight
   name: human fleshlight
   description: Just a based fleshlight, nothing else. Should I tell you what you can put inside?
@@ -35,7 +44,7 @@
     sprite: _Lust/ERP/Toys/fleshlight.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPDildoAvian
   name: avian dildo
   description: This dildo is modeled after avian anatomy. Ready to soar to new heights of pleasure?
@@ -48,7 +57,7 @@
     sprite: _Lust/ERP/Toys/d_avian.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPDildoDragon
   name: dragon dildo
   description: This dildo has a dragon-inspired design. Are you ready to feel hot adventure?
@@ -61,7 +70,7 @@
     sprite: _Lust/ERP/Toys/d_dragon.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPDildoEquine
   name: equine dildo
   description: Designed to resemble equine anatomy, this dildo offers a wild ride!
@@ -74,7 +83,7 @@
     sprite: _Lust/ERP/Toys/d_equine.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPDildoKnot
   name: knot dildo
   description: This knot dildo is perfect for those looking for a snug fit. Get ready for a tight experience!
@@ -87,7 +96,7 @@
     sprite: _Lust/ERP/Toys/d_knot.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPDildoTentacle
   name: tentacle dildo
   description: With a tentacle design, this dildo is for those adventurous enough to embrace the unknown!
@@ -100,7 +109,7 @@
     sprite: _Lust/ERP/Toys/d_tentacle.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPGreenFleshlight
   name: green slime fleshlight
   description: Just a green fleshlight, nothing else. Ready to explore the green zone?
@@ -113,7 +122,7 @@
     sprite: _Lust/ERP/Toys/fl_green.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPRedFleshlight
   name: red demon fleshlight
   description: Just a red fleshlight, nothing else. Are you ready for a hot experience?
@@ -126,7 +135,7 @@
     sprite: _Lust/ERP/Toys/fl_red.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPTealFleshlight
   name: teal vulpkanin fleshlight
   description: Just a teal fleshlight, nothing else. Dive into the depths of pleasure.
@@ -139,7 +148,7 @@
     sprite: _Lust/ERP/Toys/fl_teal.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPYellowFleshlight
   name: yellow felinid fleshlight
   description: Just a yellow fleshlight, nothing else. Brighten up your intimate moments.
@@ -153,7 +162,6 @@
 
 - type: entity
   id: ERPShibariRope
-  abstract: true
   name: shibari rope
   description: This rope is designed for shibari, the art of Japanese rope bondage. Ready to tie up some pleasure?
   components:
@@ -171,6 +179,7 @@
   - type: Tag
     tags:
     - Handcuffs
+    - ERPToy
   - type: MeleeWeapon
     wideAnimationRotation: 90
     animation: WeaponArcDisarm
@@ -200,7 +209,7 @@
     sprite: _Lust/ERP/Stuff/Shibari/shibari_white.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPBeads
   name: beads
   description: Several anal balls of different sizes, tied on a strong thread.
@@ -214,7 +223,7 @@
     sprite: _Lust/ERP/Toys/beads.rsi
 
 - type: entity
-  parent: [BaseItem]
+  parent: [ERPToy]
   id: ERPWhip
   name: whip
   description: A black whip designed for passionate bed games.
@@ -244,7 +253,7 @@
         Blunt: 0
 
 - type: entity
-  parent: [BaseItem]
+  parent: [ERPToy]
   id: ERPStrapOn
   name: strap on
   description: A belted dildo designed for couples who want to switch roles.
@@ -262,7 +271,7 @@
     - belt
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPVibroEgg
   name: vibro egg
   description: A small pink egg-like device connected to the remote.
@@ -291,7 +300,7 @@
     - Off
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPVibroStick
   name: vibro stick
   description: A standard vibrator that can deliver a sea of pleasurable sensations.
@@ -315,7 +324,7 @@
 
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPPlug1
   name: plug
   description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
@@ -329,7 +338,7 @@
     sprite: _Lust/ERP/Toys/plug.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPPlug2
   name: plug
   description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
@@ -343,7 +352,7 @@
     sprite: _Lust/ERP/Toys/plug.rsi
 
 - type: entity
-  parent: [BaseItem, BaseERPPlug]
+  parent: [ERPToy, BaseERPPlug]
   id: ERPPlug3
   name: plug
   description: Pink anal plug, which can deliver unusual sensations in the corresponding orifice.
@@ -357,7 +366,7 @@
     sprite: _Lust/ERP/Toys/plug.rsi
 
 - type: entity
-  parent: [BaseItem]
+  parent: [ERPToy]
   id: ERPFoxTailPlug
   name: fox tail plug
   description: Time to some roleplaying.
@@ -377,7 +386,7 @@
     unequipDelay: 4
 
 - type: entity
-  parent: [BaseItem]
+  parent: [ERPToy]
   id: ERPCatTailPlug
   name: cat tail plug
   description: Murr!
@@ -405,7 +414,7 @@
   - /Audio/_Lust/Interactions/whip/whip_3.ogg
 
 - type: entity
-  parent: BaseItem
+  parent: ERPToy
   id: ToyHandcuffs
   name: toy handcuffs
   description: Soft toy handcuffs. Classic!
@@ -425,6 +434,7 @@
   - type: Tag
     tags:
     - Handcuffs
+    - ERPToy
   - type: MeleeWeapon
     wideAnimationRotation: 90
     animation: WeaponArcDisarm

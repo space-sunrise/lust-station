@@ -1,0 +1,9 @@
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleLustful
+  result: BorgModuleLustful
+  materials:
+    Steel: 500
+    Glass: 500
+    Plastic: 250
+    Plasma: 250

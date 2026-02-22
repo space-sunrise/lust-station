@@ -1,0 +1,50 @@
+# Либо новый файл для этого, либо прописать здесь
+# угадайте что я выбрал
+- type: injectorMode
+  abstract: true
+  id: MicroHyposprayMode
+  parent: BaseHyposprayMode
+  transferAmounts:
+  - 1
+
+- type: injectorMode
+  parent: [ BaseHyposprayMode, BaseInjectMode ]
+  id: MicroHyposprayInjectMode
+
+- type: entity
+  parent: HypoBorgStandard
+  id: HypoBorgLustful
+  name: lustful borg hypospray
+  description: A cyborg hypospray that produces various excitatory chemicals to inject into people.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    state: borghypolustful
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: Injector
+    solutionName: hypospray
+    activeModeProtoId: MicroHyposprayInjectMode
+    allowedModes:
+    - MicroHyposprayInjectMode
+    currentTransferAmount: 1
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 1
+  - type: SolutionRegeneration
+    solution: hypospray
+    generated:
+      reagents:
+      - ReagentId: Aphrodisiac
+        Quantity: 1
+  - type: SolutionRegenerationSwitcher
+    options:
+    - ReagentId: Aphrodisiac
+      Quantity: 1
+    - ReagentId: Stonium
+      Quantity: 1
+    - ReagentId: Laughter
+      Quantity: 1
+    keepSolution: false

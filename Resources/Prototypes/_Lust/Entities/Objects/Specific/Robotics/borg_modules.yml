@@ -1,0 +1,43 @@
+- type: entity
+  id: BorgModuleLustful
+  parent: [ BaseBorgModule, BaseProviderBorgModule ]
+  name: lustful cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: lustful
+    - state: icon-lustful
+  - type: ItemBorgModule
+    hands:
+    - item: ERPDildoDragon
+      hand:
+        emptyRepresentative: ERPDildoDragon
+        whitelist:
+          tags:
+          - ERPToy
+    - item: ERPRedFleshlight
+      hand:
+        emptyRepresentative: ERPRedFleshlight
+        whitelist:
+          tags:
+          - ERPToy
+    - item: ERPVibroStick
+      hand:
+        emptyRepresentative: ERPVibroStick
+        whitelist:
+          tags:
+          - ERPToy
+    - item: ERPShibariRope
+      hand:
+        emptyRepresentative: ERPShibariRope
+        whitelist:
+          tags:
+          - ERPToy
+    - item: HypoBorgLustful
+  - type: BorgModuleInnate
+    innateComponents:
+    - type: Interactions
+    - type: ErpStatus
+      erp: Yes
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: lustful-module }

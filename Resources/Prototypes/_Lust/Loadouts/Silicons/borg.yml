@@ -1,0 +1,5 @@
+- type: loadout
+  id: BorgAdditionalModuleLustful
+  container:
+    borg_module:
+    - BorgModuleLustful

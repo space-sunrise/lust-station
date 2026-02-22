@@ -546,41 +546,73 @@
   id: JobPeaceBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobJanitorBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobMiningBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobClownBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobEngineerBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobServiceBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobMedicalBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobSecurityBorg
   nameDataset: NamesBorg
   canCustomizeName: true
+  # Lust-start
+  groups:
+  - BorgAdditionalModules
+  # Lust-end
 
 - type: roleLoadout
   id: JobComMaid

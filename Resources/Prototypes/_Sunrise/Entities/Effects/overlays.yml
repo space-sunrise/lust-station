@@ -20,6 +20,18 @@
     radius: 20
     softness: 20
 
+# for borgs
+- type: entity
+  id: EffectNightVisionBlue
+  categories: [ HideSpawnMenu ]
+  name: night vision
+  components:
+  - type: PointLight
+    color: "#3cb6b0"
+    energy: 0.5
+    radius: 20
+    softness: 20
+
 - type: entity
   id: EffectNightVisioSpecies
   categories: [ HideSpawnMenu ]
