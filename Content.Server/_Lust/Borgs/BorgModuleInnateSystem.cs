@@ -1,4 +1,4 @@
-using Content.Shared._Sunrise.Silicons.Borgs;
+using Content.Shared._Lust.Silicons.Borgs;
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Events;

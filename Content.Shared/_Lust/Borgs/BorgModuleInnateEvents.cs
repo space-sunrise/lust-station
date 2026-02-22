@@ -1,6 +1,6 @@
 using Content.Shared.Actions;
 
-namespace Content.Shared._Sunrise.Silicons.Borgs;
+namespace Content.Shared._Lust.Silicons.Borgs;
 
 /// <summary>
 /// Ивент на активацию встроенного предмета
