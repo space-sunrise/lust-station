@@ -437,8 +437,8 @@
 - type: entity
   parent: [BaseItem, BaseERPPlug]
   id: ERPDildoDouble
-  name: dragon dildo
-  description: This dildo has a dragon-inspired design. Are you ready to feel hot adventure?
+  name: double dildo
+  description: I mean it's just a club
   components:
   - type: Sprite
     sprite: _Lust/ERP/Toys/d_double.rsi
