@@ -265,3 +265,14 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 3
+
+- type: listing
+  id: UplinkLustEroticERPDildoDouble
+  productEntity: ERPDildoDouble
+  cost:
+    Suntick: 4
+  categories:
+  - Erotic
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
