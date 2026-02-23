@@ -52,3 +52,5 @@ ent-ToyHandcuffs = toy handcuffs
     .desc = Soft toy handcuffs. Classic!
 ent-toyhandcuff = toy handcuffs
     .desc = Soft toy handcuffs. Classic!
+ent-ERPDildoDouble = double dildo
+    .desc = I mean it's just a club
