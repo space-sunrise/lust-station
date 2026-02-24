@@ -227,20 +227,6 @@
 
 - type: entity
   parent: BasePlushie
-  id: PlushieAsyaFartuna
-  name: Plushie Asya Fartuna
-  components:
-  - type: UseDelay
-    delay: 4
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: asya_fartuna
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
-
-- type: entity
-  parent: BasePlushie
   id: PlushieRustemBrich
   name: Plushie Rustem Brich
   components:
