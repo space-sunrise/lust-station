@@ -233,6 +233,7 @@
   id: BaseTraitorRule
   components:
   - type: TraitorRule
+    objectiveIssuers: LustTraitorCorporations # Lust Edit
   # TODO: codewords in yml
   # TODO: uplink in yml
   - type: AntagRandomObjectives
