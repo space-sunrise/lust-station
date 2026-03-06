@@ -642,7 +642,6 @@ public sealed partial class AdminVerbSystem
                 Act = () =>
                 {
                     EnsureComp<KillSignComponent>(args.Target, out var comp);
-                    comp.Sprite = new SpriteSpecifier.Rsi(new ResPath("_Lust/Objects/Misc/fucksign.rsi"), "sign"); // Lust-edit
                     comp.HideFromOwner = false; // We set it to false anyway, in case the hidden smite was used beforehand.
                     Dirty(args.Target, comp);
                 },
