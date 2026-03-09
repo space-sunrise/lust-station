@@ -3158,3 +3158,12 @@
   id: 1690
   time: '2026-03-09T07:43:15.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3881
+- author: seemah
+  changes:
+  - message: "HUD'\u0443 \u0421\u0411 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\
+      \u0430 \u0437\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0432\u0441\u043F\u044B\
+      \u0448\u0435\u043A."
+    type: Add
+  id: 1691
+  time: '2026-03-09T13:10:09.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4007
