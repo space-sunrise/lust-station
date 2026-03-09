@@ -3167,3 +3167,12 @@
   id: 1691
   time: '2026-03-09T13:10:09.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4007
+- author: seemah
+  changes:
+  - message: "\"\u041D\u0430\u0431\u043E\u0440\" \u0432 \u0438\u043C\u0435\u043D\u0430\
+      \u0445 \u0440\u0435\u0437\u043E\u043C\u0438 \u0438\u0441\u043F\u0440\u0430\u0432\
+      \u043B\u0435\u043D \u043D\u0430 \"\u0421\u0442\u0430\u044F\"."
+    type: Fix
+  id: 1692
+  time: '2026-03-09T14:41:24.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4009
