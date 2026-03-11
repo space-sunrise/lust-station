@@ -1,4 +1,9 @@
 - type: interactionSound
+  id: Porn1
+  name: interaction-sound-name-porn-video-sound
+  sound: /Audio/_Sunrise/Interactions/porn_1.ogg
+
+- type: interactionSound
   id: FacePatsSound
   name: interaction-sound-name-face-pats-sound
   sound: /Audio/_Sunrise/Interactions/clothes_rub.ogg
