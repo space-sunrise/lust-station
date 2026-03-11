@@ -50,8 +50,8 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
     private readonly Dictionary<int, string> _soundIds = new();
 
     private const int MaxNameLength = 64;
-    private const int MaxDescriptionLength = 256;
-    private const int MaxMessageLength = 128;
+    private const int MaxDescriptionLength = 2048;
+    private const int MaxMessageLength = 1024;
 
     #endregion
 
@@ -304,12 +304,6 @@ public sealed partial class CustomInteractionEditor : DefaultWindow
         var message = NewMessageInput.Text.Trim();
         if (string.IsNullOrEmpty(message))
             return;
-
-        if (message.Length > MaxMessageLength)
-        {
-            ShowError($"Сообщение слишком длинное (макс. {MaxMessageLength} символов)");
-            return;
-        }
 
         _interaction.InteractionMessages.Add(message);
         AddMessageToList(message);
