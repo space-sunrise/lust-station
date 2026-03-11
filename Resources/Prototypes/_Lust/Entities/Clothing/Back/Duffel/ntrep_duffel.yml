@@ -1,0 +1,18 @@
+# NTRep Duffel Bags
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelNtrepWhite
+  name: white NT representative duffel bag
+  description: A stylish white duffel bag issued to Nanotrasen representatives.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffels/ntrep_white_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelNtrepBlack
+  name: black NT representative duffel bag
+  description: A stylish black duffel bag issued to Nanotrasen representatives.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Duffels/ntrep_black_duffel.rsi

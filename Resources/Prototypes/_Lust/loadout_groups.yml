@@ -41,3 +41,14 @@
   name: loadout-group-IAA-neck
   loadouts:
   - IAACloak
+
+# NTRep
+- type: loadoutGroup
+  id: NanoTrasenRepresentativeNeck
+  name: loadout-group-nanotrasenrepresentative-neck
+  minLimit: 0
+  loadouts:
+  - NanoTrasenRepresentativeJacketWhite
+  - NanoTrasenRepresentativeJacketBlack
+  - NanoTrasenRepresentativeMantleWhite
+  - NanoTrasenRepresentativeMantleBlack

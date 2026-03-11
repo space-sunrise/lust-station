@@ -1,0 +1,62 @@
+# NTRep Uniforms (Lust)
+- type: loadout
+  id: NanoTrasenRepresentativeFormalWhite
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNtrepFormalWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeFormalBlack
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNtrepFormalBlack
+
+- type: loadout
+  id: NanoTrasenRepresentativeGreatcoatWhite
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNtrepGreatcoatWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeGreatcoatBlack
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitNtrepGreatcoatBlack
+
+# NTRep Neck
+- type: loadout
+  id: NanoTrasenRepresentativeJacketWhite
+  equipment:
+    neck: ClothingNeckJacketNtrepWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeJacketBlack
+  equipment:
+    neck: ClothingNeckJacketNtrepBlack
+
+- type: loadout
+  id: NanoTrasenRepresentativeMantleWhite
+  equipment:
+    neck: ClothingNeckMantleNtrepWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeMantleBlack
+  equipment:
+    neck: ClothingNeckMantleNtrepBlack
+
+# NTRep Backpacks
+- type: loadout
+  id: NanoTrasenRepresentativeDuffelWhite
+  equipment:
+    back: ClothingBackpackDuffelNtrepWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeDuffelBlack
+  equipment:
+    back: ClothingBackpackDuffelNtrepBlack
+
+- type: loadout
+  id: NanoTrasenRepresentativeSatchelWhite
+  equipment:
+    back: ClothingBackpackSatchelNtrepWhite
+
+- type: loadout
+  id: NanoTrasenRepresentativeSatchelBlack
+  equipment:
+    back: ClothingBackpackSatchelNtrepBlack

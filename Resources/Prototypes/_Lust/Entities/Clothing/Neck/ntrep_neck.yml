@@ -1,0 +1,45 @@
+# NTRep Jackets (Neck slot)
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckJacketNtrepWhite
+  name: white NT representative jacket
+  description: A formal white jacket worn by Nanotrasen representatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_white_jacket.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_white_jacket.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckJacketNtrepBlack
+  name: black NT representative jacket
+  description: A formal black jacket worn by Nanotrasen representatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_black_jacket.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_black_jacket.rsi
+
+# NTRep Mantles (Neck slot)
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleNtrepWhite
+  name: white NT representative mantle
+  description: An elegant white mantle worn by Nanotrasen representatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_white_mantle.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_white_mantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleNtrepBlack
+  name: black NT representative mantle
+  description: An elegant black mantle worn by Nanotrasen representatives.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_black_mantle.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Neck/Cloaks/ntrep_black_mantle.rsi
