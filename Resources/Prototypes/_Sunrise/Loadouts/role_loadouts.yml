@@ -449,11 +449,11 @@
 - type: roleLoadout
   id: JobNanoTrasenRepresentative
   groups:
-  - NanoTrasenRepresentativeJumpsuit
+  # - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeUniform #Lust-Edit
   - NanoTrasenRepresentativeOuterClothing
   - NanoTrasenRepresentativeNeck #Lust-Edit
-  - NanoTrasenRepresentativeBackpack
+  # - NanoTrasenRepresentativeBackpack
   - NanoTrasenRepresentativeBack #Lust-Edit
   - Trinkets
   - Survival
