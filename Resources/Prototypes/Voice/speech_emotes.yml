@@ -532,7 +532,7 @@
   blacklist:
     tags:
     - SiliconEmotes
-  chatMessages: ["chat-emote-msg-purr"]
+  chatMessages: ["урчит"]
   chatTriggers:
     - purr
     - purrs
