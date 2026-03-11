@@ -542,7 +542,7 @@
     # Sunrise-end
 
 - type: emote
-  id: Purr
+  id: Purrr
   name: урчать
   category: Vocal
   available: false

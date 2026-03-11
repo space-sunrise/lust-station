@@ -104,9 +104,9 @@
   - /Audio/Items/Toys/hew.ogg
 
 - type: soundCollection
-  id: Purr
+  id: Purrr
   files:
-  - /Audio/Animals/lizard_purr.ogg
+  - /Audio/Animals/lizard_purrr.ogg
 
 - type: soundCollection
   id: Hiss

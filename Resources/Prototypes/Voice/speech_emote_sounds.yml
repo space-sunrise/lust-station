@@ -109,8 +109,8 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
-    Purr:
-      path: /Audio/Animals/lizard_purr.ogg
+    Purrr:
+      path: /Audio/Animals/lizard_purrr.ogg
     Hiss:
       path: /Audio/Animals/lizard_hiss_2.ogg
     Honk:
@@ -144,8 +144,8 @@
       path: /Audio/Voice/Reptilian/reptilian_scream.ogg
     Laugh:
       path: /Audio/Animals/lizard_happy.ogg
-    Purr:
-      path: /Audio/Animals/lizard_purr.ogg
+    Purrr:
+      path: /Audio/Animals/lizard_purrr.ogg
     Hiss:
       path: /Audio/Animals/lizard_hiss_2.ogg
     Honk:
