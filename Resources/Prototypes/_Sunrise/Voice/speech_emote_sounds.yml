@@ -30,6 +30,10 @@
       collection: FelinidGrowls
     SevereCough:
       collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
 
 - type: emoteSounds
   id: FemaleFelinid
@@ -63,6 +67,10 @@
       collection: FelinidGrowls
     SevereCough:
       collection: FemaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End
 
 - type: emoteSounds
   id: MaleTajaran
@@ -96,6 +104,10 @@
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
     SevereCough:
       collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
 
 - type: emoteSounds
   id: FemaleTajaran
@@ -129,6 +141,10 @@
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
     SevereCough:
       collection: FemaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End
 
 
 - type: emoteSounds
@@ -163,6 +179,10 @@
       collection: SwineOinks
     SevereCough:
       collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
   params:
     variation: 0.125
 
@@ -204,6 +224,10 @@
       collection: PredatorSigh
     Laugh:
       collection: PredatorLaugh
+    # Lust-Start
+    Moan:
+      collection: PredatorScreams
+    # Lust-End
     Flip:
       path: /Audio/Effects/thudswoosh.ogg
     Dance:
@@ -275,3 +299,7 @@
       collection: FelinidGrowls
     Hisses:
       collection: FelinidHisses
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End
