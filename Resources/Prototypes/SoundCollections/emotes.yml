@@ -10,6 +10,41 @@
     - /Audio/Voice/Human/womanlaugh.ogg
 
 - type: soundCollection
+  id: TajaranScream
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/scream.ogg
+
+- type: soundCollection
+  id: TajaranLaugh
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/laugh.ogg
+
+- type: soundCollection
+  id: TajaranSneeze
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/sneeze.ogg
+
+- type: soundCollection
+  id: TajaranSigh
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/sigh.ogg
+
+- type: soundCollection
+  id: TajaranCry
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/cry.ogg
+
+- type: soundCollection
+  id: TajaranHiss
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/tajaran_hisses.ogg
+
+- type: soundCollection
+  id: TajaranPurr
+  files:
+    - /Audio/_Sunrise/Voice/Tajaran/purr.ogg
+
+- type: soundCollection
   id: MaleCough
   files:
     - /Audio/Voice/Human/male_cough_1.ogg

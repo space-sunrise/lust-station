@@ -71,17 +71,17 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: FelinidScreams
+      path: /Audio/_Sunrise/Voice/Tajaran/scream.ogg
     Laugh:
-      collection: MaleLaugh
+      path: /Audio/_Sunrise/Voice/Tajaran/laugh.ogg
     Sneeze:
-      collection: MaleSneezes
+      path: /Audio/_Sunrise/Voice/Tajaran/sneeze.ogg
     Cough:
       collection: MaleCoughs
     Sigh:
-      collection: MaleSigh
+      path: /Audio/_Sunrise/Voice/Tajaran/sigh.ogg
     Crying:
-      collection: MaleCry
+      path: /Audio/_Sunrise/Voice/Tajaran/cry.ogg
     Whistle:
       collection: Whistles
     Mew:
@@ -91,7 +91,7 @@
     Hisses:
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_hisses.ogg
     Purr:
-      collection: FelinidPurrs
+      path: /Audio/_Sunrise/Voice/Tajaran/purr.ogg
     Growl:
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
     SevereCough:
@@ -104,17 +104,17 @@
     variation: 0.125
   sounds:
     Scream:
-      collection: FelinidScreams
+      path: /Audio/_Sunrise/Voice/Tajaran/scream.ogg
     Laugh:
-      collection: FemaleLaugh
+      path: /Audio/_Sunrise/Voice/Tajaran/laugh.ogg
     Sneeze:
-      collection: FemaleSneezes
+      path: /Audio/_Sunrise/Voice/Tajaran/sneeze.ogg
     Cough:
       collection: FemaleCoughs
     Sigh:
-      collection: FemaleSigh
+      path: /Audio/_Sunrise/Voice/Tajaran/sigh.ogg
     Crying:
-      collection: FemaleCry
+      path: /Audio/_Sunrise/Voice/Tajaran/cry.ogg
     Whistle:
       collection: Whistles
     Mew:
@@ -124,7 +124,7 @@
     Hisses:
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_hisses.ogg
     Purr:
-      collection: FelinidPurrs
+      path: /Audio/_Sunrise/Voice/Tajaran/purr.ogg
     Growl:
       path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
     SevereCough:

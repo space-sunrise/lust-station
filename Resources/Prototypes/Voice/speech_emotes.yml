@@ -37,7 +37,7 @@
     # Sunrise-end
 
 - type: emote
-  id: Laugh
+  id: TajaranLaugh
   name: chat-emote-name-laugh
   category: Vocal
   icon: Interface/Emotes/laugh.png
