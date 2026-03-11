@@ -1,5 +1,6 @@
 - type: emoteSounds
   id: MaleFelinid
+  parent: MaleHuman
   params:
     variation: 0.125
   sounds:
@@ -36,6 +37,7 @@
 
 - type: emoteSounds
   id: FemaleFelinid
+  parent: FemaleHuman
   params:
     variation: 0.125
   sounds:
@@ -72,6 +74,7 @@
 
 - type: emoteSounds
   id: MaleTajaran
+  parent: MaleHuman
   params:
     variation: 0.125
   sounds:
@@ -108,6 +111,7 @@
 
 - type: emoteSounds
   id: FemaleTajaran
+  parent: FemaleHuman
   params:
     variation: 0.125
   sounds:
@@ -145,6 +149,7 @@
 
 - type: emoteSounds
   id: UnisexSwine
+  parent: MaleHuman
   sounds:
     Scream:
       collection: SwineScreams
@@ -170,6 +175,8 @@
       collection: MaleCry
     Whistle:
       collection: Whistles
+    Oink:
+      collection: SwineOinks
     SevereCough:
       collection: MaleSevereCough
     # Lust-Start
@@ -181,13 +188,33 @@
 
 - type: emoteSounds
   id: XenoHumanoid
-  sound:
-    collection: HumanoidXenoScreams
+  sounds:
+    Scream:
+      collection: HumanoidXenoSqeals
+    Laugh:
+      collection: HumanoidXenoScreams
+    Cough:
+      collection: HumanoidXenoScreams
+    SevereCough:
+      collection: HumanoidXenoScreams
+    Hisses:
+      collection: HumanoidXenoHisses
+    Roars:
+      collection: HumanoidXenoRoars
+    Growl:
+      collection: HumanoidXenoGrowls
+    Rumbles:
+      collection: HumanoidXenoRumbles
+    Crying:
+      collection: HumanoidXenoCry
+    DefaultDeathgasp:
+      collection: HumanoidXenoDeathgasp
   params:
     variation: 0.125
 
 - type: emoteSounds
   id: Predator
+  parent: MaleHuman
   params:
     variation: 0.125
   sounds:
@@ -201,6 +228,14 @@
     Moan:
       collection: PredatorScreams
     # Lust-End
+    Flip:
+      path: /Audio/Effects/thudswoosh.ogg
+    Dance:
+      path: /Audio/Effects/thudswoosh.ogg
+    Lay:
+      collection: BodyFall
+    FallOnNeck:
+      collection: BodyFall
 
 - type: emoteSounds
   id: Reaper
@@ -211,6 +246,7 @@
 
 - type: emoteSounds
   id: ClownGoblin
+  parent: MaleHuman
   params:
     variation: 0.125
   sounds:
@@ -219,6 +255,7 @@
 
 - type: emoteSounds
   id: UnisexResomi
+  parent: FemaleHuman
   params:
     variation: 0.125
   sounds:
