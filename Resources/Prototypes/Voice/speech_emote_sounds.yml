@@ -111,6 +111,8 @@
       path: /Audio/Animals/lizard_happy.ogg
     Purr:
       path: /Audio/Animals/lizard_purr.ogg
+    Hiss:
+      collection: ReptilianHisses
     Honk:
       collection: BikeHorn
     Whistle:
