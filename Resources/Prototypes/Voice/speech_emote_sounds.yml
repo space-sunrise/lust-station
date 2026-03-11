@@ -115,6 +115,8 @@
       path: /Audio/Animals/lizard_hiss_2.ogg
     Giggle:
       path: /Audio/Animals/lizard_giggle.ogg
+    Growl:
+      path: /Audio/Animals/lizard_growl_1.ogg
     Honk:
       collection: BikeHorn
     Whistle:
@@ -152,6 +154,8 @@
       path: /Audio/Animals/lizard_hiss_2.ogg
     Giggle:
       path: /Audio/Animals/lizard_giggle.ogg
+    Growl:
+      path: /Audio/Animals/lizard_growl_1.ogg
     Honk:
       collection: BikeHorn
     Whistle:

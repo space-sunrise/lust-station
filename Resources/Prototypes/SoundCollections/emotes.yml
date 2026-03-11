@@ -114,6 +114,11 @@
   - /Audio/Animals/lizard_giggle.ogg
 
 - type: soundCollection
+  id: Growl
+  files:
+  - /Audio/Animals/lizard_growl_1.ogg
+
+- type: soundCollection
   id: Hiss
   files:
   - /Audio/Animals/lizard_hiss_2.ogg
