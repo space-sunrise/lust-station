@@ -638,7 +638,7 @@ public sealed partial class AdminVerbSystem
             {
                 Text = killSignName,
                 Category = VerbCategory.Smite,
-                Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "icon"), // Lust-edit
+                Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fuck_sign.rsi"), "icon"), // Lust-edit
                 Act = () =>
                 {
                     EnsureComp<KillSignComponent>(args.Target, out var comp);
