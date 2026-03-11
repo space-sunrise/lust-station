@@ -38,7 +38,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Thump', 'Purr']
+    allowedEmotes: ['Thump', 'Purr', 'Hiss']
   - type: TypingIndicator
     proto: lizard
   - type: Vocal

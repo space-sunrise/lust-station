@@ -109,6 +109,13 @@
   - /Audio/Animals/lizard_purr.ogg
 
 - type: soundCollection
+  id: Hiss
+  files:
+  - /Audio/Animals/lizard_hiss_1.ogg
+  - /Audio/Animals/lizard_hiss_2.ogg
+  - /Audio/Animals/lizard_hiss_3.ogg
+
+- type: soundCollection
   id: XenoborgScream
   files:
   - /Audio/Voice/Xenoborg/xenoborg_scream.ogg

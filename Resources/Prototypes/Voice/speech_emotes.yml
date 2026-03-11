@@ -521,6 +521,27 @@
     # Sunrise-end
 
 - type: emote
+  id: Hiss
+  name: шипеть
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/squeak.png
+  whitelist:
+    components:
+    - Hands
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["шипит"]
+  chatTriggers:
+    - hiss
+    - hisses
+    # Sunrise-start
+    - шипит
+    - зашипела
+    # Sunrise-end
+
+- type: emote
   id: Purr
   name: урчать
   category: Vocal
