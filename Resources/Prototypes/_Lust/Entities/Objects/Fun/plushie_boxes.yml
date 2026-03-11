@@ -49,8 +49,6 @@
         orGroup: Plushie
       - id: PlushieArelitt
         orGroup: Plushie
-      - id: PlushieAsyaFartuna
-        orGroup: Plushie
       - id: PlushieBlizzard
         orGroup: Plushie
       - id: PlushieRustemBrich

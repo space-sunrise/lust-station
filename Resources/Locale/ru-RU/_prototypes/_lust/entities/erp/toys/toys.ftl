@@ -52,3 +52,5 @@ ent-ToyHandcuffs = Игрушечные наручники
     .desc = Мягкие игрушечные наручники. Классика!
 ent-ERPPlug4 = { ent-ERPPlug1 }
     .desc = { ent-ERPPlug1.desc }
+ent-ERPDildoDouble = двойной дилдо
+    .desc = Я надеюсь что это просто дубинка... так ведь?
