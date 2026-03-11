@@ -522,10 +522,10 @@
 
 - type: emote
   id: Purr
-  name: chat-emote-name-purr
+  name: урчать
   category: Vocal
   available: false
-  icon: Interface/Emotes/tailslap.png
+  icon: Interface/Emotes/squeak.png
   whitelist:
     components:
     - Hands
