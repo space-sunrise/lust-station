@@ -521,6 +521,26 @@
     # Sunrise-end
 
 - type: emote
+  id: Purr
+  name: chat-emote-name-purr
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/tailslap.png
+  whitelist:
+    components:
+    - Hands
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-purr"]
+  chatTriggers:
+    - purr
+    - purrs
+    # Sunrise-start
+    - урчит
+    # Sunrise-end
+
+- type: emote
   id: Salute
   name: chat-emote-name-salute
   category: Hands
