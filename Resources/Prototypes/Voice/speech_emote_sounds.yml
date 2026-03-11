@@ -113,6 +113,8 @@
       path: /Audio/Animals/lizard_purrr.ogg
     Hiss:
       path: /Audio/Animals/lizard_hiss_2.ogg
+    Giggle:
+      path: /Audio/Animals/lizard_giggle.ogg
     Honk:
       collection: BikeHorn
     Whistle:
@@ -148,6 +150,8 @@
       path: /Audio/Animals/lizard_purrr.ogg
     Hiss:
       path: /Audio/Animals/lizard_hiss_2.ogg
+    Giggle:
+      path: /Audio/Animals/lizard_giggle.ogg
     Honk:
       collection: BikeHorn
     Whistle:

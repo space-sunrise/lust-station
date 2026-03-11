@@ -542,6 +542,26 @@
     # Sunrise-end
 
 - type: emote
+  id: Giggle
+  name: хихикает
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/squeak.png
+  whitelist:
+    components:
+    - Hands
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["хихикает"]
+  chatTriggers:
+    - gigle
+    - giggles
+    # Sunrise-start
+    - хихикает
+    # Sunrise-end
+
+- type: emote
   id: Purrr
   name: урчать
   category: Vocal
