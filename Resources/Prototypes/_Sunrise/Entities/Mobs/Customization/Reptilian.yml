@@ -1,5 +1,23 @@
 #Horns
 - type: marking
+  id: LizardRLegClaws
+  bodyPart: RFoot
+  markingCategory: Foots
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: lust-station\Resources\Textures\Mobs\Customization\reptilian_parts.rsi
+    state: r_leg_claws
+
+- type: marking
+  id: LizardLLegClaws
+  bodyPart: LFoot
+  markingCategory: Foots
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: lust-station\Resources\Textures\Mobs\Customization\reptilian_parts.rsi
+    state: l_leg_claws
+
+- type: marking
   id: ReptilianHornsArgali2
   bodyPart: HeadTop
   markingCategory: HeadTop
