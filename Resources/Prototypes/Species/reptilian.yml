@@ -81,10 +81,10 @@
       required: true
       defaultMarkings: [ LizardSnoutRound ]
     HeadTop:
-      points: 2
+      points: 3
       required: false
     HeadSide:
-      points: 1
+      points: 3
       required: false
     Chest:
       points: 7
