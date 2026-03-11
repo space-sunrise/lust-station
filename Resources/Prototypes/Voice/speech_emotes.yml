@@ -525,7 +525,7 @@
   name: шипеть
   category: Vocal
   available: false
-  icon: Interface/Emotes/squeak.png
+  icon: Interface/Emotes/honk.png
   whitelist:
     components:
     - Hands
