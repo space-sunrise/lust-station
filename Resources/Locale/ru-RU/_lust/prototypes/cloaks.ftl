@@ -1,8 +1,8 @@
-ent-ClothingNeckJacketNtrepWhite = белая куртка представителя Qillu
-    .desc = Формальная белая куртка представителя Qillu.
-ent-ClothingNeckJacketNtrepBlack = чёрная куртка представителя Qillu
-    .desc = Формальная чёрная куртка представителя Qillu.
-ent-ClothingNeckMantleNtrepWhite = белая мантия представителя Qillu
-    .desc = Элегантная белая мантия представителя Qillu.
-ent-ClothingNeckMantleNtrepBlack = чёрная мантия представителя Qillu
-    .desc = Элегантная чёрная мантия представителя Qillu.
+ent-ClothingNeckJacketNtrepWhite = белая куртка  Qillu
+    .desc = Формальная белая куртка  Qillu.
+ent-ClothingNeckJacketNtrepBlack = чёрная куртка  Qillu
+    .desc = Формальная чёрная куртка  Qillu.
+ent-ClothingNeckMantleNtrepWhite = белая мантия  Qillu
+    .desc = Элегантная белая мантия  Qillu.
+ent-ClothingNeckMantleNtrepBlack = чёрная мантия  Qillu
+    .desc = Элегантная чёрная мантия  Qillu.

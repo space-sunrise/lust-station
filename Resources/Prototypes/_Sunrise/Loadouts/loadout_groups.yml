@@ -107,10 +107,6 @@
   - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeJumpskirt
   - NanoTrasenRepresentativeJumpsuitFormal
-  - NanoTrasenRepresentativeFormalWhite #Lust-Edit
-  - NanoTrasenRepresentativeFormalBlack #Lust-Edit
-  - NanoTrasenRepresentativeGreatcoatWhite #Lust-Edit
-  - NanoTrasenRepresentativeGreatcoatBlack #Lust-Edit
 
 - type: loadoutGroup
   id: NanoTrasenRepresentativeOuterClothing
@@ -131,10 +127,6 @@
   - CommonSatchel
   - CommonDuffel
   - NanoTrasenRepresentativeModsuit
-  - NanoTrasenRepresentativeDuffelWhite #Lust-Edit
-  - NanoTrasenRepresentativeDuffelBlack #Lust-Edit
-  - NanoTrasenRepresentativeSatchelWhite #Lust-Edit
-  - NanoTrasenRepresentativeSatchelBlack #Lust-Edit
 
 - type: loadoutGroup
   id: BlueShieldBackpack

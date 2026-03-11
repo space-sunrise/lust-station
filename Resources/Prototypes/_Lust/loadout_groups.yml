@@ -44,6 +44,31 @@
 
 # NTRep
 - type: loadoutGroup
+  id: NanoTrasenRepresentativeUniform
+  name: loadout-group-nanotrasenrepresentative-uniform
+  minLimit: 1
+  loadouts:
+  - NanoTrasenRepresentativeFormalBlack
+  - NanoTrasenRepresentativeFormalWhite
+  - NanoTrasenRepresentativeGreatcoatWhite
+  - NanoTrasenRepresentativeGreatcoatBlack
+  - NanoTrasenRepresentativeJumpsuit
+  - NanoTrasenRepresentativeJumpskirt
+  - NanoTrasenRepresentativeJumpsuitFormal
+
+- type: loadoutGroup
+  id: NanoTrasenRepresentativeBack
+  name: loadout-group-nanotrasenrepresentative-back
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NanoTrasenRepresentativeSatchelBlack
+  - NanoTrasenRepresentativeSatchelWhite
+  - NanoTrasenRepresentativeDuffelWhite
+  - NanoTrasenRepresentativeDuffelBlack
+  - NanoTrasenRepresentativeModsuit
+
+- type: loadoutGroup
   id: NanoTrasenRepresentativeNeck
   name: loadout-group-nanotrasenrepresentative-neck
   minLimit: 0

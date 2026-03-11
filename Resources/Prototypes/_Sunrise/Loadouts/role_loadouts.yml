@@ -450,9 +450,11 @@
   id: JobNanoTrasenRepresentative
   groups:
   - NanoTrasenRepresentativeJumpsuit
+  - NanoTrasenRepresentativeUniform #Lust-Edit
   - NanoTrasenRepresentativeOuterClothing
   - NanoTrasenRepresentativeNeck #Lust-Edit
   - NanoTrasenRepresentativeBackpack
+  - NanoTrasenRepresentativeBack #Lust-Edit
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool

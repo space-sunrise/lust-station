@@ -1,8 +1,8 @@
-ent-ClothingUniformJumpsuitNtrepFormalWhite = белая парадная форма представителя Qillu
-    .desc = Белая парадная форма представителя Qillu.
-ent-ClothingUniformJumpsuitNtrepFormalBlack = чёрная парадная форма представителя Qillu
-    .desc = Чёрная парадная форма представителя Qillu.
-ent-ClothingUniformJumpsuitNtrepGreatcoatWhite = белая шинель представителя Qillu
-    .desc = Стильная белая шинель представителя Qillu.
-ent-ClothingUniformJumpsuitNtrepGreatcoatBlack = чёрная шинель представителя Qillu
-    .desc = Стильная чёрная шинель представителя Qillu.
+ent-ClothingUniformJumpsuitNtrepFormalWhite = белая парадная форма  Qillu
+    .desc = Белая парадная форма  Qillu.
+ent-ClothingUniformJumpsuitNtrepFormalBlack = чёрная парадная форма  Qillu
+    .desc = Чёрная парадная форма  Qillu.
+ent-ClothingUniformJumpsuitNtrepGreatcoatWhite = белая шинель  Qillu
+    .desc = Стильная белая шинель  Qillu.
+ent-ClothingUniformJumpsuitNtrepGreatcoatBlack = чёрная шинель  Qillu
+    .desc = Стильная чёрная шинель  Qillu.
