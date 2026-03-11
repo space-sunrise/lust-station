@@ -1,7 +1,7 @@
 - type: marking
   id: LizardRLegClaws
   bodyPart: RFoot
-  markingCategory: Legs
+  markingCategory: Foots
   speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Sunrise\Mobs\Species\Reptilian\reptilian_parts.rsi
@@ -10,7 +10,7 @@
 - type: marking
   id: LizardLLegClaws
   bodyPart: LFoot
-  markingCategory: Legs
+  markingCategory: Foots
   speciesRestriction: [Reptilian]
   sprites:
   - sprite: _Sunrise\Mobs\Species\Reptilian\reptilian_parts.rsi

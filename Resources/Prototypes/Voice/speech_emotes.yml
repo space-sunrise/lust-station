@@ -545,7 +545,7 @@
   name: шипеть
   category: Vocal
   available: false
-  icon: Interface/Emotes/honk.png
+  icon: Interface/Emotes/hew.png
   whitelist:
     components:
     - Hands
@@ -566,7 +566,7 @@
   name: хихикает
   category: Vocal
   available: false
-  icon: Interface/Emotes/squeak.png
+  icon: Interface/Emotes/hew.png
   whitelist:
     components:
     - Hands
@@ -586,7 +586,7 @@
   name: урчать
   category: Vocal
   available: false
-  icon: Interface/Emotes/squeak.png
+  icon: Interface/Emotes/hew.png
   whitelist:
     components:
     - Hands
