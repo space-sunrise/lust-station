@@ -8,14 +8,6 @@
   },
   "states": [
     {
-      "name": "l_leg_claws",
-      "directions": 4
-    },
-    {
-      "name": "r_leg_claws",
-      "directions": 4
-    },
-    {
       "name": "tail_smooth_front",
       "directions": 4
     },
