@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitLoona
   name: moon top with black shorts
@@ -45,9 +45,9 @@
   description: A suit for special occasions.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_formal.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcomformal.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_formal.rsi
 
 # IAA
 
