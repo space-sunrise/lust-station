@@ -36,22 +36,46 @@ public sealed partial class AdminVerbSystem : EntitySystem
         if (HasComp<MapComponent>(args.Target) || HasComp<MapGridComponent>(args.Target))
             return;
 
-        var fSignName = Loc.GetString("admin-smite-fuck-sign-name").ToLowerInvariant();
-        Verb fSign = new()
+        AddSmiteSign(
+            "admin-smite-fuck-sign-name",
+            "admin-smite-fuck-sign-description",
+            new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "icon"),
+            new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "sign"),
+            args
+        );
+
+        string[] defaultSmiteNames = ["bald", "cat", "dog", "furry", "nerd", "peak", "raider", "stinky"];
+        foreach (var name in defaultSmiteNames)
         {
-            Text = fSignName,
+            AddSmiteSign(
+                $"admin-smite-{name}-sign-name",
+                $"admin-smite-{name}-sign-description",
+                new SpriteSpecifier.Rsi(new($"/Textures/Objects/Misc/killsign.rsi"), name),
+                new SpriteSpecifier.Rsi(new($"/Textures/Objects/Misc/killsign.rsi"), name),
+                args
+            );
+        }
+    }
+
+    private void AddSmiteSign(string nameLoc, string descLoc, SpriteSpecifier icon, SpriteSpecifier sign, GetVerbsEvent<Verb> args)
+    {
+        var name = Loc.GetString(nameLoc).ToLowerInvariant();
+        var description = Loc.GetString(descLoc);
+        Verb signVerb = new()
+        {
+            Text = name,
             Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "icon"),
+            Icon = icon,
             Act = () =>
             {
                 EnsureComp<KillSignComponent>(args.Target, out var comp);
-                comp.Sprite = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fucksign.rsi"), "sign");
+                comp.Sprite = sign;
                 comp.HideFromOwner = false; // We set it to false anyway, in case the hidden smite was used beforehand.
                 Dirty(args.Target, comp);
             },
             Impact = LogImpact.Extreme,
-            Message = string.Join(": ", fSignName, Loc.GetString("admin-smite-fuck-sign-description"))
+            Message = string.Join(": ", name, description)
         };
-        args.Verbs.Add(fSign);
+        args.Verbs.Add(signVerb);
     }
 }
