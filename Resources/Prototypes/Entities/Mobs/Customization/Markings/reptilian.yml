@@ -1,4 +1,13 @@
 - type: marking
+  id: LizardChestPiercing
+  bodyPart: Chest
+  markingCategory: Chest
+  speciesRestriction: [Reptilian]
+  sprites:
+  - sprite: _Sunrise/Mobs/Species/Reptilian/reptilian_parts.rsi # SUNRISE EDIT
+    state: body_piercing
+
+- type: marking
   id: LizardRLegClaws
   bodyPart: RFoot
   markingCategory: Legs

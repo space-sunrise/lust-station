@@ -8,6 +8,10 @@
   },
   "states": [
     {
+      "name": "body_piercing",
+      "directions": 4
+    },
+    {
       "name": "l_leg_claws",
       "directions": 4
     },
