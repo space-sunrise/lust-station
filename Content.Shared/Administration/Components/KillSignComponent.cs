@@ -15,7 +15,7 @@ public sealed partial class KillSignComponent : Component
     /// The sprite show above the entity.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public SpriteSpecifier? Sprite = new SpriteSpecifier.Rsi(new ResPath("_Lust/Objects/Misc/fuck_sign.rsi"), "sign"); // Lust-edit
+    public SpriteSpecifier? Sprite = new SpriteSpecifier.Rsi(new ResPath("Objects/Misc/killsign.rsi"), "kill");
 
     /// <summary>
     /// Whether the granted layer should always be forced to be unshaded.
