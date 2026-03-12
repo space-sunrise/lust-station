@@ -3,6 +3,7 @@
   id: ClothingHeadHelmetHardsuitCentcomQillu
   name: Central Command hardsuit helmet
   description: A Central Command hardsuit helmet manufactured under Qillu contract. Comes with an integrated headlamp.
+  suffix: Qillu
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Head/Hardsuits/centcom_hardsuit_qillu.rsi

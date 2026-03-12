@@ -5,3 +5,6 @@ ent-ClothingUniformElegantJumpskirtIAA = elegant IAA skirt suit
 ent-ClothingUniformJumpskirtCentcomSkirtSuitQillu = Central Command skirt suit
     .suffix = Qillu
     .desc = A Central Command dress uniform produced under Qillu contract. Formal, elegant, and strictly regulated.
+ent-ClothingUniformJumpskirtCentcomUniformQillu = Central Command uniform skirt
+    .suffix = Qillu
+    .desc = A Central Command uniform skirt produced under Qillu contract. Formal, elegant, and strictly regulated.

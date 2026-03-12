@@ -8,6 +8,7 @@
     ERPDildoEquine: 8
     ERPDildoKnot: 8
     ERPDildoTentacle: 8
+    ERPDildoDouble : 3
     # Fleshlights
     ERPGreenFleshlight: 8
     ERPRedFleshlight: 8
@@ -15,7 +16,8 @@
     ERPYellowFleshlight: 8
     ERPNormalFleshlight: 8
     # Other stuff
-    ERPShibariRope: 5
+    ERPShibariRopeRed: 2
+    ERPShibariRopeWhite: 2
     # Uniforms
     ClothingUniformSkirtSunriseMaid: 4
     ClothingUniformEroticRedUnderwear: 4
@@ -40,6 +42,8 @@
     ClothingMaskMuzzle: 3
     ClothingEyesBlindfold: 3
     ToyHandcuffs: 4
+    ArrowRouletteErot: 2
+    ArrowRouletteEros: 2
     # Glowsticks
     GlowstickBase: 3
     GlowstickRed: 3
@@ -70,3 +74,5 @@
     ClothingHandsCatPawsBrown: 3
     ClothingHandsCatPawsBlack: 3
     ClothingHandsCatPawsBlackWhite: 3
+  contrabandInventory:
+    ClothingHeadHatDeerHorns: 2

@@ -22,3 +22,11 @@ ent-ClothingNeckMantleMiner = Miner`s Mantle
     .desc = This cloak has seen a lot, just like its owner, having been through ruthless trials in the face of Lavaland's fauna. 'Remember the first lesson - if my legs get chopped off, run and don't look back!'
 ent-ClothingNeckCloakFormalIAACloak = IAA cloak
     .desc = A mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
+
+ent-ClothingNeckCloakCentcomQillu = CentCom cloak
+    .suffix = Qillu
+    .desc = A cloak for Central Command personnel. Ideal for looking dramatic while filing a complaint in triplicate.
+
+ent-ClothingNeckMantleCentcomQillu = CentCom mantle
+    .suffix = Qillu
+    .desc = A mantle for Central Command personnel. Warm, regal, and perfectly suited for late-night reading of classified memos.
