@@ -18,7 +18,6 @@
   youngAge: 23
   oldAge: 46
   maxAge: 49
-  # Sunrise-Edit
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human # SUNRISE-TODO: Спрайт жопы таяров
@@ -76,7 +75,6 @@
   sprites:
     Head: MobTajaranSlimHead
     Hair: MobHumanoidAnyMarking
-    FacialHair: MobHumanoidAnyMarking
     Chest: MobTajaranSlimTorso
     Eyes: MobTajaranEyes
     LArm: MobTajaranSlimLArm
@@ -98,6 +96,9 @@
   points:
     Hair:
       points: 1
+      required: false
+    FacialHair:
+      points: 0
       required: false
     Chest:
       points: 1
