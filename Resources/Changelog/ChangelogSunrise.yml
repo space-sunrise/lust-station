@@ -3318,3 +3318,13 @@
   id: 1703
   time: '2026-03-12T12:45:58.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/3898
+- author: seemah
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u043E \u0432\u0440\u0435\u043C\
+      \u044F \u043E\u0442\u043F\u0440\u0430\u0432\u043A\u0438 \u0421\u0421\u0414-\u0438\
+      \u0433\u0440\u043E\u043A\u0430 \u0432 \u043A\u0440\u0438\u043E\u0433\u0435\u043D\
+      \u043D\u043E\u0435 \u0445\u0440\u0430\u043D\u0438\u043B\u0438\u0449\u0435."
+    type: Tweak
+  id: 1704
+  time: '2026-03-13T01:05:08.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4034
