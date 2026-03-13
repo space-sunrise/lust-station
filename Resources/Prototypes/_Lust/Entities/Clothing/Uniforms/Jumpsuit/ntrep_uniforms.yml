@@ -2,8 +2,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNtrepFormalWhite
-  name: white NT representative formal uniform
-  description: A formal white uniform of the Nanotrasen representative.
+  name: white Qillu representative formal uniform
+  description: A formal white uniform of the Qillu representative.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/ntrep_white_formal.rsi
@@ -13,8 +13,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNtrepFormalBlack
-  name: black NT representative formal uniform
-  description: A formal black uniform of the Nanotrasen representative.
+  name: black Qillu representative formal uniform
+  description: A formal black uniform of the Qillu representative.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/ntrep_black_formal.rsi
@@ -25,8 +25,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNtrepGreatcoatWhite
-  name: white NT representative greatcoat
-  description: A stylish white greatcoat of the Nanotrasen representative.
+  name: white Qillu representative greatcoat
+  description: A stylish white greatcoat of the Qillu representative.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/ntrep_white_greatcoat.rsi
@@ -36,8 +36,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitNtrepGreatcoatBlack
-  name: black NT representative greatcoat
-  description: A stylish black greatcoat of the Nanotrasen representative.
+  name: black Qillu representative greatcoat
+  description: A stylish black greatcoat of the Qillu representative.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/ntrep_black_greatcoat.rsi
