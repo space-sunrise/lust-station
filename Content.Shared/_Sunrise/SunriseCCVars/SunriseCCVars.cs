@@ -216,13 +216,6 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<bool> PlanetPrisonModern =
         CVarDef.Create("planet_prison.modern", true, CVar.SERVERONLY);
 
-    /*
-     * MaxLoadedChunks
-     */
-
-    public static readonly CVarDef<int> MaxLoadedChunks =
-        CVarDef.Create("chunk.max", 100, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
-
     /**
      * Roadmap
      */
