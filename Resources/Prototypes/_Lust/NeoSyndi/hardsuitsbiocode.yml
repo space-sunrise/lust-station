@@ -1,0 +1,43 @@
+#NeoSyndi Stalker Hardsuit
+- type: entity
+  parent: [ClothingOuterHardsuitStalker]
+  id: ClothingOuterHardsuitStalkerBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+  - type: FactionClothingBlocker
+
+#Gorelex Phanthom Suit
+- type: entity
+  parent: [ClothingOuterHardsuitGorelexPhantom]
+  id: ClothingOuterHardsuitGorelexPhantomBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+  - type: FactionClothingBlocker
+
+  #Gorelex Reclaimer Suit
+- type: entity
+  parent: [ClothingOuterHardsuitGorelexReclaimer]
+  id: ClothingOuterHardsuitGorelexReclaimerBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+  - type: FactionClothingBlocker
+
+  #Gorelex Medic Suit
+- type: entity
+  parent: [ClothingOuterHardsuitGorelexMedic]
+  id: ClothingOuterHardsuitGorelexMedicBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+  - type: FactionClothingBlocker
