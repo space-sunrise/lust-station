@@ -32,7 +32,7 @@ public sealed partial class ShockOnTriggerComponent : BaseXOnTriggerComponent
     [DataField, AutoNetworkedField]
     public TimeSpan Duration = TimeSpan.FromSeconds(2);
 
-    // Lust-start
+    // Lust-Start
     /// <summary>
     /// Как часто можно шокировать цель.
     /// </summary>
@@ -44,5 +44,5 @@ public sealed partial class ShockOnTriggerComponent : BaseXOnTriggerComponent
     /// </summary>
     [DataField(readOnly: true), AutoNetworkedField]
     public TimeSpan PreviousActivation = TimeSpan.Zero;
-    // Lust-end
+    // Lust-End
 }

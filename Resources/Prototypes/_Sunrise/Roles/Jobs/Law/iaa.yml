@@ -29,7 +29,7 @@
 - type: startingGear
   id: IAAGear
   equipment:
-    shoes: ClothingShoesBootsLaceup # Lust - edit
+    shoes: ClothingShoesBootsLaceup # Lust-Edit
     id: IAAPDA
     eyes: ClothingEyesGlassesSunglasses
     ears: ClothingHeadsetIAA

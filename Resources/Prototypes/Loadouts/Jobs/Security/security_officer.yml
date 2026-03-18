@@ -96,21 +96,21 @@
 - type: loadout
   id: EyesHudSecurity
   equipment:
-    eyes: ClothingEyesHudSecurity # Lust Station
+    eyes: ClothingEyesHudSecurity # Lust-Edit
 
 - type: loadout
   id: EyesGlassesSecurity
   equipment:
-    eyes: ClothingEyesGlassesSecurity # Lust Station
+    eyes: ClothingEyesGlassesSecurity # Lust-Edit
 
 - type: loadout
   id: EyesHudSecurityAlt
   sponsorOnly: true
   equipment:
-    eyes: ClothingEyesHudSecurityAlt  # Lust Station
+    eyes: ClothingEyesHudSecurityAlt  # Lust-Edit
 
 - type: loadout
-  id: EyesEyepatchHudSecurity  # Lust Station
+  id: EyesEyepatchHudSecurity  # Lust-Edit
   equipment:
     eyes: ClothingEyesEyepatchHudSecurity
 

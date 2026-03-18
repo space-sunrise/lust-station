@@ -1,4 +1,4 @@
-﻿- type: loadout # Lust Station
+﻿- type: loadout
   id: RdSpecialCloak
   sponsorOnly: true
   equipment:

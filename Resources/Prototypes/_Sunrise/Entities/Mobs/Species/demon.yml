@@ -36,7 +36,7 @@
       Male: MaleHuman
       Female: FemaleHuman
       Unsexed: FemaleHuman
-      Futanari: FemaleHuman # Lust-edit
+      Futanari: FemaleHuman # Lust-Edit
   - type: Damageable
     damageContainer: Biological
   - type: MeleeWeapon

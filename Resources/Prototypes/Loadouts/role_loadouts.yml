@@ -13,7 +13,7 @@
   - CaptainJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -35,7 +35,7 @@
   - HoPJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -71,7 +71,7 @@
   - PassengerJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -92,7 +92,7 @@
   - BartenderJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -111,7 +111,7 @@
   - ServiceWorkerJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -133,7 +133,7 @@
   - ChefJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -152,7 +152,7 @@
   - LibrarianJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -172,7 +172,7 @@
   - LawyerJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -196,7 +196,7 @@
   - ChaplainJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -218,7 +218,7 @@
   - JanitorJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -239,7 +239,7 @@
   - BotanistJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -261,7 +261,7 @@
   - Trinkets
   - ClownJobTrinkets
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -284,7 +284,7 @@
   - Trinkets
   - MimeJobTrinkets
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -306,7 +306,7 @@
   - Instruments
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -333,7 +333,7 @@
   - QuartermasterJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - TrinketsCargo
   - Bra
   - Pants
@@ -512,7 +512,7 @@
   - ResearchDirectorJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -537,7 +537,7 @@
   - ScientistJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -556,7 +556,7 @@
   - ResearchAssistantJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -573,7 +573,7 @@
   - SecurityBackpack
   - SecurityBelt
   - HeadofSecurityOuterClothing
-  - SecurityGlasses #Lust-Edit
+  - SecurityGlasses # Lust-Edit
   - SecurityShoes
   - SurvivalSecurity
   - Trinkets
@@ -594,7 +594,7 @@
   - WardenHead
   - WardenJumpsuit
   - SecurityBackpack
-  - SecurityGlasses #Lust-Edit
+  - SecurityGlasses # Lust-Edit
   - SecurityBelt
   - WardenOuterClothing
   - SecurityShoes
@@ -642,7 +642,7 @@
   - DetectiveNeck
   - DetectiveJumpsuit
   - SecurityBackpack
-  - SecurityGlasses #Lust-Edit
+  - SecurityGlasses # Lust-Edit
   - DetectiveOuterClothing
   - SecurityShoes
   - SurvivalSecurity
@@ -652,7 +652,7 @@
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
   - SunriseWeaponDetective
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -664,7 +664,7 @@
   groups:
   - SecurityCadetJumpsuit
   - SecurityBackpack
-  - SecurityGlasses #Lust-Edit
+  - SecurityGlasses # Lust-Edit
   - SurvivalSecurity
   - Trinkets
   - SecurityCadetJobTrinkets
@@ -672,7 +672,7 @@
   - SecurityTrinkets  # Sunrise
   # Sunrise-start
   - SunriseWeaponCadet
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
@@ -830,7 +830,7 @@
   - ReporterJobTrinkets
   - GroupSpeciesBreathTool
   # Sunrise-start
-  - SpecialLoadout # Lust Station
+  - SpecialLoadout # Lust-Edit
   - Bra
   - Pants
   - Socks
