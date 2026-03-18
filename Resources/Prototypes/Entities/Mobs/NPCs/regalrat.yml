@@ -142,10 +142,10 @@
   - type: VentCrawler
   - type: NightVision
   # Sunrise-end
-  # Sunrise-Lust start
+  # Lust-Start
   - type: TTS
     voice: Planya
-  # Sunrise-Lust end
+  # Lust-End
 
 - type: entity
   id: MobRatKingBuff

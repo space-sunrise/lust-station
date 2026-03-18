@@ -180,10 +180,10 @@ namespace Content.Shared.Roles
         public SpriteSpecifier PreviewIcon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunrise/Interface/Misc/job_preview.rsi"), "test");
         // Sunrise-End
 
-        // Sunrise-Lust start
+        // Lust-Start
         [DataField("sexBlacklist")]
         public List<Sex> SexBlacklist = new();
-        // Sunrise-Lust end
+        // Lust-End
     }
 
     /// <summary>
