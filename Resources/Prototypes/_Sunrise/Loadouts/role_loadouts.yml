@@ -451,11 +451,11 @@
   id: JobNanoTrasenRepresentative
   groups:
   # - NanoTrasenRepresentativeJumpsuit
-  - NanoTrasenRepresentativeUniform #Lust-Edit
+  - QilluRepresentativeJumpsuit #Lust-Edit
   - NanoTrasenRepresentativeOuterClothing
-  - NanoTrasenRepresentativeNeck #Lust-Edit
+  - QilluRepresentativeNeck #Lust-Edit
   # - NanoTrasenRepresentativeBackpack
-  - NanoTrasenRepresentativeBack #Lust-Edit
+  - QilluRepresentativeBack #Lust-Edit
   - Trinkets
   - Survival
   - Trinkets

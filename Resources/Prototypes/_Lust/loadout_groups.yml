@@ -44,8 +44,8 @@
 
 # NTRep
 - type: loadoutGroup
-  id: NanoTrasenRepresentativeUniform
-  name: loadout-group-nanotrasenrepresentative-uniform
+  id: QilluRepresentativeJumpsuit
+  name: loadout-group-qillurepresentative-jumpsuit
   minLimit: 1
   loadouts:
   - NanoTrasenRepresentativeFormalBlack
@@ -57,8 +57,8 @@
   - NanoTrasenRepresentativeJumpsuitFormal
 
 - type: loadoutGroup
-  id: NanoTrasenRepresentativeBack
-  name: loadout-group-nanotrasenrepresentative-back
+  id: QilluRepresentativeBack
+  name: loadout-group-qillurepresentative-back
   minLimit: 1
   maxLimit: 1
   loadouts:
@@ -69,8 +69,8 @@
   - NanoTrasenRepresentativeModsuit
 
 - type: loadoutGroup
-  id: NanoTrasenRepresentativeNeck
-  name: loadout-group-nanotrasenrepresentative-neck
+  id: QilluRepresentativeNeck
+  name: loadout-group-qillurepresentative-neck
   minLimit: 0
   loadouts:
   - NanoTrasenRepresentativeJacketWhite
