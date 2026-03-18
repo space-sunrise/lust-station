@@ -7,12 +7,12 @@
   description: Новейший бронескафандр отдела передовых исследоаний и разработок Cybersun. Ещё не пущен в массовое производство, возможно, ещё даже незапотентован.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
   - type: Item
-    size: Huge
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
+    size: huge
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/stalker_cybersun.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.02
     lowPressureMultiplier: 1000
@@ -50,14 +50,15 @@
   parent: [ClothingOuterHardsuitBase, AllowSuitStorageClothing, BaseToggleClothing]
   id: ClothingOuterHardsuitGorlexPhantom
   name: скафандр фантома Gorlex
-  description: Скафандр инфильтратора Gorlex. "Впервые слышишь? Ожидаемо..."
+  description: Скафандр инфильтратора Gorlex. "Впервые видишь? Ожидаемо..."
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_phanthom.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_phanthom.rsi
   - type: Clothing
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_phanthom.rsi
   - type: Item
     size: Huge
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_phanthom.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_phanthom.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 10000
@@ -131,18 +132,18 @@
 
 #Gorlex Reclaimer Suit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
+  parent: [ClothingOuterHardsuitBase]
   id: ClothingOuterHardsuitGorlexReclaimer
   name: скафандр перехватчика Gorlex
   description: Предназначен для быстрого штурма и захвата территории или уничтожения неподготовленного врага. Конструкция проверена не одной сотней сражений.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
   - type: Item
     size: huge
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_reclaimer.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
@@ -175,20 +176,20 @@
     - Hardsuit
     - WhitelistChameleon
 
-#Gorelex Medic Suit
+#Gorlex Medic Suit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
+  parent: [ClothingOuterHardsuitBase]
   id: ClothingOuterHardsuitGorlexMedic
   name: скафандр медика Gorlex
   description: Тактический скафандр медика Gorlex. Хорошо изолирован от внешней среды.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
   - type: Item
     size: huge
-    sprite: _Lust/NeoSyndi/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
+    sprite: _Lust/NeoSyndie/Clothing/OuterClothing/Hardsuits/gorlex_medic.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000

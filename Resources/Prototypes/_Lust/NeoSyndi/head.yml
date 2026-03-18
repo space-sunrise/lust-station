@@ -19,18 +19,16 @@
 
 #NeoSyndi Stalker Hardsuit
 - type: entity
-  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, InHelmetNightVisionDevice]
+  parent: [ ClothingHeadHardsuitBase, InHelmetNightVisionDevice]
   id: ClothingHeadHelmetHardsuitStalker
   categories: [ HideSpawnMenu ]
   name: шлем сталкера Cybersun
   description: Напичкан передовой военной электроникой. Самое то для поиска и устрашения.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/stalker_cybersun.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/stalker_cybersun.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/stalker_cybersun.rsi
-  - type: PointLight
-    color: black
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/stalker_cybersun.rsi
   - type: ItemToggle
     predictable: false # issues between ToggleCellDraw and ItemToggleActiveSound
     onUse: false
@@ -51,6 +49,7 @@
         Piercing: 0.9
         Heat: 0.7
   - type: FlashImmunity
+  - type: EyeProtection
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -63,9 +62,9 @@
   name: шлем фантома Gorlex
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorlex_phanthom.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_phanthom.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorlex_phanthom.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_phanthom.rsi
   #- type: PointLight
     #color: "#880808"
   - type: PressureProtection
@@ -105,9 +104,9 @@
   description: Надёжный и хорошо оснащён. Обладает встроенной системой опознавания.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorelex_reclaimer.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_reclaimer.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorelex_reclaimer.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_reclaimer.rsi
   - type: PointLight
     color: green
   - type: PressureProtection
@@ -120,6 +119,8 @@
         Slash: 0.9
         Piercing: 0.9
         Heat: 0.9
+  - type: FlashImmunity
+  - type: EyeProtection
   - type: Tag
     tags:
     - WhitelistChameleon
@@ -128,15 +129,15 @@
 #Gorlex Medic Suit
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase, ShowSecurityIcons ]
-  id: ClothingHeadHelmetHardsuitGorelexMedic
+  id: ClothingHeadHelmetHardsuitGorlexMedic
   categories: [ HideSpawnMenu ]
   name: шлем перехватчика Gorlex
   description: Надёжный и хорошо оснащён. Обладает встроенной системой опознавания.
   components:
   - type: Sprite
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorelex_medic.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_medic.rsi
   - type: Clothing
-    sprite: _Lust/NeoSyndi/Clothing/Head/Hardsuits/gorelex_medic.rsi
+    sprite: _Lust/NeoSyndie/Clothing/Head/Hardsuits/gorlex_medic.rsi
   - type: PointLight
     color: green
   - type: PressureProtection
@@ -149,6 +150,8 @@
         Slash: 0.8
         Piercing: 0.9
         Heat: 0.9
+  - type: FlashImmunity
+  - type: EyeProtection
   - type: ShowSyndicateIcons
   - type: ShowHealthBars
   - type: Tag
