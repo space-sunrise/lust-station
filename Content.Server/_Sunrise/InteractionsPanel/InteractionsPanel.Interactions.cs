@@ -8,9 +8,11 @@ using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
 using Content.Shared.Chat;
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Clothing;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Forensics.Components;
 using Content.Shared.Hands;
 using Content.Shared.Humanoid;
 using Content.Shared.Input;
@@ -358,13 +360,23 @@ public partial class InteractionsPanel
         }
     }
 
-    private void SpawnSemen(string prototype, EntityCoordinates coordinates)
+    private void SpawnSemen(EntityUid source, string prototype, EntityCoordinates coordinates)
     {
-        _puddle.TrySpillAt(
-            coordinates,
-            new Solution(prototype, 4f),
-            out _,
-            false);
+        var solution = new Solution();
+        solution.AddReagent(new ReagentId(prototype, GetSemenDnaData(source)), 4f);
+        _puddle.TrySpillAt(coordinates, solution, out _, false);
+    }
+
+    private List<ReagentData> GetSemenDnaData(EntityUid source)
+    {
+        var dnaData = new DnaData();
+
+        if (TryComp<DnaComponent>(source, out var dnaComp) && dnaComp.DNA != null)
+            dnaData.DNA = dnaComp.DNA;
+        else
+            dnaData.DNA = Loc.GetString("forensics-dna-unknown");
+
+        return [dnaData];
     }
 
     private void HandleCustomInteraction(
@@ -488,7 +500,7 @@ public partial class InteractionsPanel
         _chatSystem.TryEmoteWithChat(uid, "Moan");
 
         if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearanceComponent) && humanoidAppearanceComponent.Sex == Sex.Male)
-            SpawnSemen("Semen", Transform(uid).Coordinates);
+            SpawnSemen(uid, "Semen", Transform(uid).Coordinates);
 
         SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
         Dirty(uid, comp);
