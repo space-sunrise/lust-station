@@ -6,6 +6,7 @@ using System.Text.Json;
 using Content.Server.Database;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using NpgsqlTypes;
@@ -15,9 +16,11 @@ using NpgsqlTypes;
 namespace Content.Server.Database.Migrations.Postgres
 {
     [DbContext(typeof(PostgresServerDbContext))]
-    partial class PostgresServerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260311200440_AddJobAlternativeTitles")]
+    partial class AddJobAlternativeTitles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -815,9 +818,6 @@ namespace Content.Server.Database.Migrations.Postgres
                     b.HasIndex("TicketId")
                         .HasDatabaseName("IX_mentor_help_messages_ticket_id");
 
-                    b.HasIndex("SentAt", "SenderUserId")
-                        .HasDatabaseName("IX_mentor_help_messages_sent_at_sender_user_id");
-
                     b.ToTable("mentor_help_messages", (string)null);
                 });
 
@@ -883,9 +883,6 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.HasIndex("Status")
                         .HasDatabaseName("IX_mentor_help_tickets_status");
-
-                    b.HasIndex("ClosedAt", "AssignedToUserId")
-                        .HasDatabaseName("IX_mentor_help_tickets_closed_at_assigned_to_user_id");
 
                     b.ToTable("mentor_help_tickets", (string)null);
                 });
