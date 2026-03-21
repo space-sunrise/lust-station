@@ -117,12 +117,12 @@
   - type: InnateItem
     entityTargetActions:
     - AccessBreaker
-  # Lust-start
+  # Lust-Start
   - type: ActionGrant
     actions:
     - ActionViewLaws
   - type: StandingState
-  # Lust-end
+  # Lust-End
 
 - type: startingGear
   id: SyndiReaperHardsuitGear
@@ -237,12 +237,12 @@
   - type: PowerCellDraw # Use it to increase battery life further
     drawRate: 0.5
   - type: ToggleableNightVision
-  # Lust-start
+  # Lust-Start
   - type: ActionGrant
     actions:
     - ActionViewLaws
   - type: StandingState
-  # Lust-end
+  # Lust-End
 
 - type: entity
   id: BorgChassisSyndicateHeavy
@@ -353,12 +353,12 @@
   - type: InnateItem
     entityTargetActions:
     - AccessBreaker
-  # Lust-start
+  # Lust-Start
   - type: ActionGrant
     actions:
     - ActionViewLaws
   - type: StandingState
-  # Lust-end
+  # Lust-End
 
 - type: entity
   id: BorgChassisSyndicateSpider
@@ -440,12 +440,12 @@
   - type: InnateItem
     entityTargetActions:
     - AccessBreaker
-  # Lust-start
+  # Lust-Start
   - type: ActionGrant
     actions:
     - ActionViewLaws
   - type: StandingState
-  # Lust-end
+  # Lust-End
 
 - type: entity
   parent: BaseBorgChassisSyndicateDerelict

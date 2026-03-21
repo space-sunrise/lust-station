@@ -218,7 +218,7 @@ namespace Content.Server.Database
 
             var spawnPriority = (SpawnPriorityPreference) profile.SpawnPriority;
 
-            // Sunrise-Lust Start
+            // Lust-Start
             var erp = Erp.Ask;
             var virginity = Virginity.No;
             var analVirginity = Virginity.Yes;
@@ -238,7 +238,7 @@ namespace Content.Server.Database
             var gender = sex == Sex.Male ? Gender.Male : Gender.Female;
             if (Enum.TryParse<Gender>(profile.Gender, true, out var genderVal))
                 gender = genderVal;
-            // Sunrise-Lust End
+            // Lust-End
 
             // Sunrise-TTS-Start
             var voice = profile.Voice;
@@ -294,9 +294,9 @@ namespace Content.Server.Database
                 profile.BodyType,
                 profile.Age,
                 sex,
-                erp, // Sunrise-Lust Edit
-                virginity, // Sunrise-Lust Edit
-                analVirginity, // Sunrise-Lust Edit
+                erp, // Lust-Edit
+                virginity, // Lust-Edit
+                analVirginity, // Lust-Edit
                 gender,
                 new HumanoidCharacterAppearance
                 (
@@ -349,7 +349,7 @@ namespace Content.Server.Database
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();
 
-            // Sunrise-Lust Edit - Update or create ErpData
+            // Lust-Edit - Update or create ErpData
             if (profile.ErpData == null)
             {
                 profile.ErpData = new ProfileErp

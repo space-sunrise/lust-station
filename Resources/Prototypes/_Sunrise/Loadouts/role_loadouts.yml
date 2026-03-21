@@ -2,14 +2,14 @@
   id: JobIAA
   groups:
   - LawyerNeck
-  # Lust - Start
-  # - LawyerJumpsuit  # Lust Commented
-  # - CommonBackpack  # Lust Commented
+  # Lust-Start
+  # - LawyerJumpsuit  # Lust-Edit
+  # - CommonBackpack  # Lust-Edit
   - IAAuniformFormalSuit
   - IAASatchel
   - IAAOuterClothing
   - IAANeck
-  # Lust - End
+  # Lust-End
   - Trinkets
   - Survival
   - GroupSpeciesBreathTool
@@ -17,9 +17,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobMagistrat
@@ -32,9 +32,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobNtrOfficer
@@ -64,9 +64,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobCentCommOfficial
@@ -80,9 +80,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobCentCommOperator
@@ -96,9 +96,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobBlueShieldEnsign
@@ -130,9 +130,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobSeniorOfficer
@@ -151,9 +151,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobSeniorResearcher
@@ -170,9 +170,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobSeniorPhysician
@@ -195,9 +195,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobMedicalPathologist
@@ -240,9 +240,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobRoboticist
@@ -260,9 +260,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobSecurityPilot
@@ -280,9 +280,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 #- type: roleLoadout
 #  id: JobPrisonGuard
@@ -372,9 +372,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobPrisonDoctor
@@ -388,9 +388,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobPrisonTrainee
@@ -460,9 +460,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobBarber
@@ -476,9 +476,9 @@
   - Pants
   - Socks
   - Contributors
-  #Lust-Start
+  # Lust-Start
   - SpecialLoadout
-  #Lust-End
+  # Lust-End
 
 - type: roleLoadout
   id: JobAdjutant

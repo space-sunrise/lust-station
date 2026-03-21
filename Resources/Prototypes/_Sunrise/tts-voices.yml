@@ -1,21 +1,21 @@
 - type: ttsVoice
   id: Charlotte
   name: tts-voice-name-charlotte
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: charlotte
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Bebey
   name: tts-voice-name-bebey
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: bebey
   provider: ntts.fdev.team
 
@@ -30,10 +30,10 @@
 - type: ttsVoice
   id: Biden
   name: tts-voice-name-biden
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: biden
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -41,10 +41,10 @@
 - type: ttsVoice
   id: Papa
   name: tts-voice-name-papa
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: papa
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -52,11 +52,11 @@
 - type: ttsVoice
   id: Glados
   name: tts-voice-name-glados
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: glados
   roundStart: true
   provider: ntts.fdev.team
@@ -64,10 +64,10 @@
 - type: ttsVoice
   id: Sentrybot
   name: tts-voice-name-sentrybot
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: sentrybot
   roundStart: true
   provider: ntts.fdev.team
@@ -75,53 +75,53 @@
 - type: ttsVoice
   id: Mana
   name: tts-voice-name-mana
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: mana
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Soldier
   name: tts-voice-name-soldier
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: soldier
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Planya
   name: tts-voice-name-planya
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: planya
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Amina
   name: tts-voice-name-amina
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: amina
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: AdventureCore
   name: tts-voice-name-adventure-core
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: adventure_core
   roundStart: true
   provider: ntts.fdev.team
@@ -129,10 +129,10 @@
 - type: ttsVoice
   id: SpaceCore
   name: tts-voice-name-space-core
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: space_core
   roundStart: true
   provider: ntts.fdev.team
@@ -140,10 +140,10 @@
 - type: ttsVoice
   id: FactCore
   name: tts-voice-name-fact-core
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: fact_core
   roundStart: true
   provider: ntts.fdev.team
@@ -151,195 +151,195 @@
 - type: ttsVoice
   id: Kleiner
   name: tts-voice-name-kleiner
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: kleiner
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Dbkn
   name: tts-voice-name-dbkn
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: dbkn
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Neco
   name: tts-voice-name-neco
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: neco
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Gman
   name: tts-voice-name-gman
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: gman
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Obama
   name: tts-voice-name-obama
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: obama
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Trump
   name: tts-voice-name-trump
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: trump
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Briman
   name: tts-voice-name-briman
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: briman
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: FatherGrigori
   name: tts-voice-name-father-grigori
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: father_grigori
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Vance
   name: tts-voice-name-vance
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: vance
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Barni
   name: tts-voice-name-barni
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: barni
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Alyx
   name: tts-voice-name-alyx
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: alyx
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Mossman
   name: tts-voice-name-mossman
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: mossman
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Bandit
   name: tts-voice-name-bandit
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: bandit
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Geralt
   name: tts-voice-name-geralt
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: geralt
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Triss
   name: tts-voice-name-triss
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: triss
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: KodlakWhiteMane
   name: tts-voice-name-kodlak-white-mane
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: kodlakwhitemane
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Cicero
   name: tts-voice-name-cicero
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: cicero
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Sheogorath
   name: tts-voice-name-sheogorath
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: sheogorath
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: TurretFloor
   name: tts-voice-name-turret-floor
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: turret_floor
   roundStart: true
   provider: ntts.fdev.team
@@ -347,11 +347,11 @@
 - type: ttsVoice
   id: Cirilla
   name: tts-voice-name-cirilla
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: cirilla
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -359,163 +359,163 @@
 - type: ttsVoice
   id: Lambert
   name: tts-voice-name-lambert
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: lambert
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Polina
   name: tts-voice-name-polina
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: polina
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Arthas
   name: tts-voice-name-arthas
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: arthas
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Xrenoid
   name: tts-voice-name-xrenoid
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: xrenoid
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Azir
   name: tts-voice-name-azir
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: azir
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Caitlyn
   name: tts-voice-name-caitlyn
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: caitlyn
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Ekko
   name: tts-voice-name-ekko
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ekko
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Twitch
   name: tts-voice-name-twitch
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: twitch
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Strelok
   name: tts-voice-name-strelok
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: strelok
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Ziggs
   name: tts-voice-name-ziggs
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ziggs
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Tracer
   name: tts-voice-name-tracer
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: tracer
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Illidan
   name: tts-voice-name-illidan
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: illidan
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Rexxar
   name: tts-voice-name-rexxar
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: rexxar
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Voljin
   name: tts-voice-name-voljin
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: voljin
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Forester
   name: tts-voice-name-forester
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: forester
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Sidorovich
   name: tts-voice-name-sidorovich
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: sidorovich
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -523,10 +523,10 @@
 - type: ttsVoice
   id: TfEngineer
   name: tts-voice-name-tf-engineer
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: engineer
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -534,10 +534,10 @@
 - type: ttsVoice
   id: TfHeavy
   name: tts-voice-name-tf-heavy
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: heavy
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -545,10 +545,10 @@
 - type: ttsVoice
   id: TfMedic
   name: tts-voice-name-tf-medic
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: medic
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -556,10 +556,10 @@
 - type: ttsVoice
   id: TfSniper
   name: tts-voice-name-tf-sniper
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: sniper
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -567,10 +567,10 @@
 - type: ttsVoice
   id: TfSpy
   name: tts-voice-name-tf-spy
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: spy
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -578,10 +578,10 @@
 - type: ttsVoice
   id: TfDemoman
   name: tts-voice-name-tf-demoman
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: demoman
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -589,30 +589,30 @@
 - type: ttsVoice
   id: Khajiit
   name: tts-voice-name-khajiit
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: khajiit
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Punisher
   name: tts-voice-name-punisher
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: punisher
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Johnny
   name: tts-voice-name-johnny
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: johnny
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -620,42 +620,42 @@
 - type: ttsVoice
   id: Panam
   name: tts-voice-name-panam
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: panam
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Dornan
   name: tts-voice-name-dornan
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: dornan
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: VFemale
   name: tts-voice-name-v-female
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: v_female
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: OfficerEnclave
   name: tts-voice-name-officer-enclave
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: officer_enclave
   roundStart: true
   provider: ntts.fdev.team
@@ -663,31 +663,31 @@
 - type: ttsVoice
   id: Richardson
   name: tts-voice-name-richardson
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: richardson
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Elenwen
   name: tts-voice-name-elenwen
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: elenwen
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: EmperorTit
   name: tts-voice-name-emperor-tit
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: emperor
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -695,10 +695,10 @@
 - type: ttsVoice
   id: GuardSkyrim
   name: tts-voice-name-guard-skyrim
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: guard
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -706,20 +706,20 @@
 - type: ttsVoice
   id: Hagraven
   name: tts-voice-name-hagraven
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: hagraven
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: HermaeusMora
   name: tts-voice-name-hermaeus-mora
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: hermaeus_mora
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -727,10 +727,10 @@
 - type: ttsVoice
   id: Nord
   name: tts-voice-name-nord
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: nord
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -738,10 +738,10 @@
 - type: ttsVoice
   id: Ulfric
   name: tts-voice-name-ulfric
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ulfric
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -749,11 +749,11 @@
 - type: ttsVoice
   id: GoodThalya
   name: tts-voice-name-good-thalya
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: good_thalya
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -761,22 +761,22 @@
 - type: ttsVoice
   id: Cerys
   name: tts-voice-name-cerys
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: cerys
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Judy
   name: tts-voice-name-judy
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: judy
   sponsorOnly: true
   provider: ntts.fdev.team
@@ -784,185 +784,185 @@
 - type: ttsVoice
   id: Mitch
   name: tts-voice-name-mitch
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: mitch
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Skippy
   name: tts-voice-name-skippy
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: skippy
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Butch
   name: tts-voice-name-butch
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: butch
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Marcus
   name: tts-voice-name-marcus
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: marcus
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Sulik
   name: tts-voice-name-sulik
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: sulik
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Astrid
   name: tts-voice-name-astrid
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: astrid
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Maven
   name: tts-voice-name-maven
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: maven
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Nazir
   name: tts-voice-name-nazir
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: nazir
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Jackie
   name: tts-voice-name-jackie
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: jackie
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: EvilThalya
   name: tts-voice-name-evil-thalya
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: evil_thalya
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: PostalDude
   name: tts-voice-name-dude
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: dude
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Anduin
   name: tts-voice-name-anduin
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: anduin
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Brukan
   name: tts-voice-name-brukan
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: brukan
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Puchkow
   name: tts-voice-name-puchkow
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: puchkow
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Moriarti
   name: tts-voice-name-moriarti
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: moriarti
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: NecoArcTwo
   name: tts-voice-name-neco-arc-two
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: neco_arc_2
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: AngryNecoArc
   name: tts-voice-name-angry-neco-arc
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: angry_neco_arc
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Squidward
   name: tts-voice-name-squidward
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: squidward
   provider: ntts.fdev.team
   sponsorOnly: true
@@ -970,73 +970,73 @@
 - type: ttsVoice
   id: Garrosh
   name: tts-voice-name-garrosh
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: garrosh
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Jaina
   name: tts-voice-name-jaina
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: jaina
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Adjutant
   name: tts-voice-name-adjutant
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: adjutant
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Hanson
   name: tts-voice-name-hanson
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: hanson
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Bralik
   name: tts-voice-name-bralik
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: bralik
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Horner
   name: tts-voice-name-horner
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: horner
   provider: ntts.fdev.team
 
 - type: ttsVoice
   id: Villager
   name: tts-voice-name-villager
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: villager
   roundStart: true
   provider: ntts.fdev.team
@@ -1044,10 +1044,10 @@
 - type: ttsVoice
   id: Dobakin
   name: tts-voice-name-dbkn2
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: dbkn2
   roundStart: true
   provider: ntts.fdev.team
@@ -1055,11 +1055,11 @@
 - type: ttsVoice
   id: MoiraBrown
   name: tts-voice-name-moira-brown
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: moira_brown
   roundStart: true
   sponsorOnly: true
@@ -1068,10 +1068,10 @@
 - type: ttsVoice
   id: RobertMaccready
   name: tts-voice-name-robert-maccready
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: robert_maccready
   roundStart: true
   sponsorOnly: true
@@ -1080,10 +1080,10 @@
 - type: ttsVoice
   id: Threedog
   name: tts-voice-name-threedog
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: threedog
   roundStart: true
   sponsorOnly: true
@@ -1092,10 +1092,10 @@
 - type: ttsVoice
   id: ThreedogRadio
   name: tts-voice-name-threedog-radio
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: threedog_radio
   roundStart: true
   sponsorOnly: true
@@ -1104,10 +1104,10 @@
 - type: ttsVoice
   id: Romka
   name: tts-voice-name-romka
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: romka
   roundStart: true
   sponsorOnly: true
@@ -1116,10 +1116,10 @@
 - type: ttsVoice
   id: BorisPetrovFatherTB
   name: tts-voice-name-boris-petrov-father-tb
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: boris_petrov_father_tb
   roundStart: true
   provider: ntts.fdev.team
@@ -1127,11 +1127,11 @@
 - type: ttsVoice
   id: KarinaPetrovaTB
   name: tts-voice-name-karina-petrova-tb
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: karina_petrova_tb
   roundStart: true
   provider: ntts.fdev.team
@@ -1139,11 +1139,11 @@
 - type: ttsVoice
   id: KateSmirnovaTB
   name: tts-voice-name-kate-smirnovatb
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: kate_smirnova_tb
   roundStart: true
   sponsorOnly: true
@@ -1152,10 +1152,10 @@
 - type: ttsVoice
   id: SemenBaburinTB
   name: tts-voice-name-semen-baburin-tb
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: semen_baburin_tb
   roundStart: true
   sponsorOnly: true
@@ -1164,10 +1164,10 @@
 - type: ttsVoice
   id: TihonovTB
   name: tts-voice-name-tihonov-tb
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: tihonov_tb
   roundStart: true
   sponsorOnly: true
@@ -1176,11 +1176,11 @@
 - type: ttsVoice
   id: FemaleCommander
   name: tts-voice-name-female-commander
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: female_commander
   roundStart: true
   provider: ntts.fdev.team
@@ -1188,10 +1188,10 @@
 - type: ttsVoice
   id: LordHarkon
   name: tts-voice-name-lord-harkon
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: lord_harkon
   roundStart: true
   sponsorOnly: true
@@ -1200,11 +1200,11 @@
 - type: ttsVoice
   id: Serana
   name: tts-voice-name-serana
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: serana
   roundStart: true
   sponsorOnly: true
@@ -1213,10 +1213,10 @@
 - type: ttsVoice
   id: Myron
   name: tts-voice-name-myron
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: myron
   roundStart: true
   sponsorOnly: true
@@ -1225,10 +1225,10 @@
 - type: ttsVoice
   id: MarratorD3
   name: tts-voice-name-narrator-d3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: narrator_d3
   roundStart: true
   sponsorOnly: true
@@ -1237,10 +1237,10 @@
 - type: ttsVoice
   id: UtherHS
   name: tts-voice-name-uther-hs
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: uther_hs
   roundStart: true
   provider: ntts.fdev.team
@@ -1248,10 +1248,10 @@
 - type: ttsVoice
   id: Tosh
   name: tts-voice-name-tosh
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: tosh
   roundStart: true
   provider: ntts.fdev.team
@@ -1259,10 +1259,10 @@
 - type: ttsVoice
   id: Tychus
   name: tts-voice-name-tychus
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: tychus
   roundStart: true
   provider: ntts.fdev.team
@@ -1270,10 +1270,10 @@
 - type: ttsVoice
   id: AmitTakkar
   name: tts-voice-name-amitkakkar
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: amitkakkar
   roundStart: true
   provider: ntts.fdev.team
@@ -1281,10 +1281,10 @@
 - type: ttsVoice
   id: EleazarFig
   name: tts-voice-name-eleazarfig
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: eleazarfig
   roundStart: true
   provider: ntts.fdev.team
@@ -1292,10 +1292,10 @@
 - type: ttsVoice
   id: ErnieLark
   name: tts-voice-name-ernielark
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ernielark
   roundStart: true
   provider: ntts.fdev.team
@@ -1303,11 +1303,11 @@
 - type: ttsVoice
   id: IgnatiaFlootravel
   name: tts-voice-name-ignatiaflootravel
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: ignatiaflootravel
   roundStart: true
   provider: ntts.fdev.team
@@ -1315,10 +1315,10 @@
 - type: ttsVoice
   id: Lodgok
   name: tts-voice-name-lodgok
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: lodgok
   roundStart: true
   provider: ntts.fdev.team
@@ -1326,10 +1326,10 @@
 - type: ttsVoice
   id: PhineasBlack
   name: tts-voice-name-phineasblack
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: phineasblack
   roundStart: true
   provider: ntts.fdev.team
@@ -1337,10 +1337,10 @@
 - type: ttsVoice
   id: Ranrak
   name: tts-voice-name-ranrak
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ranrak
   roundStart: true
   provider: ntts.fdev.team
@@ -1348,10 +1348,10 @@
 - type: ttsVoice
   id: VictorRookwood
   name: tts-voice-name-victorrookwood
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: victorrookwood
   roundStart: true
   provider: ntts.fdev.team
@@ -1359,11 +1359,11 @@
 - type: ttsVoice
   id: ZenobiaNoke
   name: tts-voice-name-zenobianoke
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: zenobianoke
   roundStart: true
   sponsorOnly: true
@@ -1372,10 +1372,10 @@
 - type: ttsVoice
   id: GladwinMoon
   name: tts-voice-name-gladwinmoon
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: gladwinmoon
   roundStart: true
   provider: ntts.fdev.team
@@ -1383,11 +1383,11 @@
 - type: ttsVoice
   id: MatildaWeasley
   name: tts-voice-name-matildaweasley
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: matildaweasley
   roundStart: true
   provider: ntts.fdev.team
@@ -1395,11 +1395,11 @@
 - type: ttsVoice
   id: NatsaiOnai
   name: tts-voice-name-natsaionai
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: natsaionai
   roundStart: true
   provider: ntts.fdev.team
@@ -1407,10 +1407,10 @@
 - type: ttsVoice
   id: OminisGaunt
   name: tts-voice-name-ominisgaunt
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: ominisgaunt
   roundStart: true
   provider: ntts.fdev.team
@@ -1418,11 +1418,11 @@
 - type: ttsVoice
   id: PoppySweeting
   name: tts-voice-name-poppysweeting
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: poppysweeting
   roundStart: true
   provider: ntts.fdev.team
@@ -1430,11 +1430,11 @@
 - type: ttsVoice
   id: SophroniaFranklin
   name: tts-voice-name-sophronia-franklin
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: sophronia_franklin
   roundStart: true
   provider: ntts.fdev.team
@@ -1443,11 +1443,11 @@
 - type: ttsVoice
   id: SironaRyan
   name: tts-voice-name-sirona-ryan
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: sirona_ryan
   roundStart: true
   provider: ntts.fdev.team
@@ -1455,11 +1455,11 @@
 - type: ttsVoice
   id: SamanthaDale
   name: tts-voice-name-samantha-dale
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: samantha_dale
   roundStart: true
   provider: ntts.fdev.team
@@ -1467,10 +1467,10 @@
 - type: ttsVoice
   id: AbrahamRonen
   name: tts-voice-name-abraham-ronen
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: abraham_ronen
   roundStart: true
   provider: ntts.fdev.team
@@ -1478,10 +1478,10 @@
 - type: ttsVoice
   id: AesopSharp
   name: tts-voice-name-aesop-sharp
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: aesop_sharp
   roundStart: true
   provider: ntts.fdev.team
@@ -1489,11 +1489,11 @@
 - type: ttsVoice
   id: DinahHecat
   name: tts-voice-name-dinah-hecat
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: dinah_hecat
   roundStart: true
   provider: ntts.fdev.team
@@ -1501,10 +1501,10 @@
 - type: ttsVoice
   id: GenericGoblinC
   name: tts-voice-name-generic-goblin-c
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: generic_goblin_c
   roundStart: true
   provider: ntts.fdev.team
@@ -1539,10 +1539,10 @@
 - type: ttsVoice
   id: MisterHandyFL3
   name: tts-voice-name-mister-handy-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: mister_handy_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1550,10 +1550,10 @@
 - type: ttsVoice
   id: MisterGutsyFL3
   name: tts-voice-name-mister-gutsy-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: mister_gutsy_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1561,10 +1561,10 @@
 - type: ttsVoice
   id: JerichoFL3
   name: tts-voice-name-jericho-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: jericho_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1573,10 +1573,10 @@
 - type: ttsVoice
   id: ElderLyonsFL3
   name: tts-voice-name-elder-lyons-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: elder_lyons_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1585,11 +1585,11 @@
 - type: ttsVoice
   id: SarahLyonsFL3
   name: tts-voice-name-sarah-lyons-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: sarah_lyons_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1597,10 +1597,10 @@
 - type: ttsVoice
   id: ColinMoriartyFL1
   name: tts-voice-name-colin-moriarty-fl3
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: colin_moriarty_fl3
   roundStart: true
   provider: ntts.fdev.team
@@ -1627,10 +1627,10 @@
 - type: ttsVoice
   id: KovirNobleman
   name: tts-voice-name-kovir-nobleman
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: kovir_nobleman
   roundStart: true
   provider: ntts.fdev.team
@@ -1638,10 +1638,10 @@
 - type: ttsVoice
   id: ZoltanChivay
   name: tts-voice-name-zoltan-chivay
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: zoltan_chivay
   roundStart: true
   provider: ntts.fdev.team
@@ -1703,11 +1703,11 @@
 - type: ttsVoice
   id: Maiko
   name: tts-voice-name-maiko
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: maiko
   roundStart: true
   provider: ntts.fdev.team
@@ -1715,10 +1715,10 @@
 - type: ttsVoice
   id: Brendan
   name: tts-voice-name-brendan
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: brendan
   roundStart: true
   provider: ntts.fdev.team
@@ -1726,11 +1726,11 @@
 - type: ttsVoice
   id: NancyHartley
   name: tts-voice-name-nancy-hartley
-  # Lust-start
+  # Lust-Start
   sex:
   - Female
   - Futanari
-  # Lust-end
+  # Lust-End
   speaker: nancy_hartley
   roundStart: true
   provider: ntts.fdev.team
@@ -1738,10 +1738,10 @@
 - type: ttsVoice
   id: OswaldForrest
   name: tts-voice-name-oswald-forrest
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: oswald_forrest
   roundStart: true
   provider: ntts.fdev.team
@@ -1750,10 +1750,10 @@
 - type: ttsVoice
   id: Steve
   name: tts-voice-name-steve
-  # Lust-start
+  # Lust-Start
   sex:
   - Male
-  # Lust-end
+  # Lust-End
   speaker: steve
   roundStart: true
   provider: ntts.fdev.team

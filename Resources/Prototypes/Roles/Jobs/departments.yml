@@ -32,7 +32,7 @@
   - Visitor
   - ServiceWorker
   - Barber # Sunrise-Roles
-  - ComMaid  # Sunrise-Lust edit
+  - ComMaid  # Lust-Edit
 
 # Вынесено в _Sunrise
 #- type: department
@@ -76,7 +76,7 @@
   - CentCommOfficial
   - NanoTrasenRepresentative  #Sunrise-Edit
   - Adjutant  #Sunrise-edit
-  - ComMaid  # Sunrise-Lust edit
+  - ComMaid  # Lust-Edit
   primary: false
   weight: 100
 

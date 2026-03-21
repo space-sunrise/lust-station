@@ -28,7 +28,7 @@
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human # SUNRISE-TODO: Спрайт жопы вульп
-  sexes: [Male, Female, Futanari] # Lust-edit
+  sexes: [Male, Female, Futanari] # Lust-Edit
 
 - type: bodyType
   id: VulpkaninNormal # VulpkaninCurvedSmallMuzzle

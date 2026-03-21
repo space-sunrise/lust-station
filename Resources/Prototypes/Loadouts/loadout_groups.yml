@@ -173,7 +173,7 @@
   - CaptainCloak
   - CaptainCloakFormal
   - CaptainMantle
-  - CaptainSpecialCloak # Lust Station
+  - CaptainSpecialCloak # Lust-Edit
   # Sunrise - Start
   - CaptainEliteCloak
   - CaptainScarf
@@ -251,7 +251,7 @@
   - HoPCloak
   - HoPMantle
   - HoPScarf # Sunrise-Edit
-  - HopSpecialCloak # Lust Station
+  - HopSpecialCloak # Lust-Edit
 
 - type: loadoutGroup
   id: HoPBackpack
@@ -830,7 +830,7 @@
   - QuartermasterCloak
   - QuartermasterMantle
   - QuartermasterScarf # Sunrise-Edit
-  - QuartermasterSpecialCloak # Lust Station
+  - QuartermasterSpecialCloak # Lust-Edit
 #Sunrise-start
   - SunriseScarfOrange
   - SunriseScarfYellow
@@ -1214,7 +1214,7 @@
   - ResearchDirectorMantle
   - ResearchDirectorCloak
   - ResearchDirectorScarf # Sunrise-Edit
-  - RdSpecialCloak # Lust Station
+  - RdSpecialCloak # Lust-Edit
   - ResearchDirectorCloakLegacy # Sunrise-edit
 
 - type: loadoutGroup
@@ -1349,7 +1349,7 @@
   - HeadofSecurityFormalSkirt
   - HeadofSecurityJumpsuitHoSOld  #Sunrise-Edit
   - HeadofSecurityJumpsuitUSSPBlack #Sunrise-Edit
-  - HeadofSecurityJumpsuitElegant #Lust-Edit
+  - HeadofSecurityJumpsuitElegant # Lust-Edit
 
 - type: loadoutGroup
   id: HeadofSecurityNeck
@@ -1361,7 +1361,7 @@
   - HeadofSecurityDarthHOSCloak #Sunrise-Edit
   - HeadofSecurityCloakHOSCloak #Sunrise-Edit
   - HeadofSecurityScarf #Sunrise-Edit
-  - HosSpecialCloak # Lust Station
+  - HosSpecialCloak # Lust-Edit
 
 - type: loadoutGroup
   id: HeadofSecurityOuterClothing
@@ -1451,7 +1451,7 @@
   name: loadout-group-security-belt
   loadouts:
   - SecurityBelt
-  - SecuritySheathBelt # Lust Station
+  - SecuritySheathBelt # Lust-Edit
   - SecurityWebbing
 
 - type: loadoutGroup
@@ -1499,7 +1499,7 @@
   loadouts:
   - DetectiveTie
   - DetectiveTieHorrific #Sunrise-add
-  - SecurityCloak # Lust Station
+  - SecurityCloak # Lust-Edit
 
 - type: loadoutGroup
   id: DetectiveJumpsuit
@@ -1627,7 +1627,7 @@
   - ChiefMedicalOfficerCloak
   - ChiefMedicalOfficerMantle
   - ChiefMedicalOfficerScarf # Sunrise-Edit
-  - CmoSpecialCloak # Lust Station
+  - CmoSpecialCloak # Lust-Edit
 # Sunrise-start
   - SunriseScarfRed
   - SunriseScarfOrange
