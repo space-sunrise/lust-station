@@ -1446,3 +1446,13 @@
   id: 281
   time: '2026-03-18T19:48:32.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/503
+- author: Soragy
+  changes:
+  - message: "\u041F\u0440\u0438\u0432\u0435\u0434\u0435\u043D\u044B \u043C\u0430\u0440\
+      \u043A\u0435\u0440\u044B \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\
+      \u0438\u0435\u0432 Lust \u043A \u0435\u0434\u0438\u043D\u043E\u043C\u0443 \u0444\
+      \u043E\u0440\u043C\u0430\u0442\u0443."
+    type: Fix
+  id: 282
+  time: '2026-03-21T21:40:32.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/502
