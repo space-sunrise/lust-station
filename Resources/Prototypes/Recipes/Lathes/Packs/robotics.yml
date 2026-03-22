@@ -44,6 +44,7 @@
   - BorgModuleAdvancedClowning
   - BorgModuleAdvancedChemical
   - BorgModuleAdvancedMining
+  - BorgModuleLustful # Lust-edit
 
 - type: latheRecipePack
   id: MechParts

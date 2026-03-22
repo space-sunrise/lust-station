@@ -50,6 +50,10 @@ public sealed partial class LoadoutPrototype : IPrototype, IEquipmentLoadout
     [DataField]
     public Dictionary<string, List<EntProtoId>> Storage { get; set; } = new();
 
+    /// <inheritdoc />
+    [DataField]
+    public Dictionary<string, List<EntProtoId>> Container { get; set; } = new();
+
     // Sunrise-Sponsors-Start
     [DataField]
     public bool SponsorOnly;
