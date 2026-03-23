@@ -3941,3 +3941,15 @@
   id: 1733
   time: '2026-03-23T07:12:26.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4045
+- author: KiaserMaus
+  changes:
+  - message: "\u041C\u0443\u043B\u044C\u0442\u0438\u0444\u0430\u0437\u043D\u044B\u0439\
+      \ \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442 \u0431\u043E\u043B\u0435\u0435\
+      \ \u043D\u0435 \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u043D\u0430\u043B\
+      \u0438\u0447\u0438\u0435 \u043A\u043E\u0434\u0430 \u043D\u0430 \u0441\u0442\u0430\
+      \u043D\u0446\u0438\u0438 \u0434\u043B\u044F \u0441\u043C\u0435\u043D\u044B \u0440\
+      \u0435\u0436\u0438\u043C\u0430."
+    type: Tweak
+  id: 1734
+  time: '2026-03-23T13:44:48.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4082
