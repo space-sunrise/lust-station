@@ -887,8 +887,8 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
-#AphrodisiacChemistryBottle: null # Lust-edit
-#PatchViagra: null # Lust-edit
+#AphrodisiacChemistryBottle: null # Lust-Edit
+#PatchViagra: null # Lust-Edit
 ClothingHandsGlovesBoxingRigged: GlovesBoxingRiggedRandomSpawner
 MagazinePPSH41: MagazinePistolSubMachineGunPPSHExtended
 MagazinePPSH41Extended: null

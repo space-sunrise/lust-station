@@ -157,7 +157,7 @@
   # Visual
   inventoryTemplateId: borgTall
   spriteBodyState: miner
-#  spriteBodyMovementState: miner_moving # Lust-edit
+#  spriteBodyMovementState: miner_moving # Lust-Edit
   spriteHasMindState: miner_e
   spriteNoMindState: miner_e_r
   spriteToggleLightState: miner_l
@@ -196,7 +196,7 @@
 
   # Sunrise-Start
   footstepCollection:
-    collection: FootstepCyborgSpider # Lust-edit
+    collection: FootstepCyborgSpider # Lust-Edit
     params:
       volume: -5
   # Sunrise-Start
@@ -204,7 +204,7 @@
   # Visual
   inventoryTemplateId: borgShort
   spriteBodyState: janitor
-#  spriteBodyMovementState: janitor_moving # Lust-edit
+#  spriteBodyMovementState: janitor_moving # Lust-Edit
   spriteHasMindState: janitor_e
   spriteNoMindState: janitor_e_r
   spriteToggleLightState: janitor_l
@@ -280,7 +280,7 @@
   # Visual
   inventoryTemplateId: borgDutch
   spriteBodyState: medical
-#  spriteBodyMovementState: medical_moving # Lust-edit
+#  spriteBodyMovementState: medical_moving # Lust-Edit
   spriteHasMindState: medical_e
   spriteNoMindState: medical_e_r
   spriteToggleLightState: medical_l

@@ -365,9 +365,9 @@
   name: command crate
   components:
   - type: Icon
-    sprite: _Lust/Structures/Storage/Crates/command.rsi #Lust-edit
+    sprite: _Lust/Structures/Storage/Crates/command.rsi # Lust-Edit
   - type: Sprite
-    sprite: _Lust/Structures/Storage/Crates/command.rsi #Lust-edit
+    sprite: _Lust/Structures/Storage/Crates/command.rsi # Lust-Edit
   - type: AccessReader
     access: [["Command"]]
     # Sunrise-start

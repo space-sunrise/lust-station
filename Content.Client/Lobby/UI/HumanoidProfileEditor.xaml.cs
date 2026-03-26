@@ -1366,11 +1366,11 @@ namespace Content.Client.Lobby.UI
                 case Sex.Female:
                     Profile = Profile?.WithGender(Gender.Female);
                     break;
-                // Lust-start
+                // Lust-Start
                 case Sex.Futanari:
                     Profile = Profile?.WithGender(Gender.Female);
                     break;
-                // Lust-end
+                // Lust-End
                 default:
                     Profile = Profile?.WithGender(Gender.Epicene);
                     break;
@@ -1586,7 +1586,7 @@ namespace Content.Client.Lobby.UI
             else
             {
                 SexButton.SelectId((int) sexes[0]);
-                SetSex(sexes[0]); // Lust-edit
+                SetSex(sexes[0]); // Lust-Edit
             }
         }
 

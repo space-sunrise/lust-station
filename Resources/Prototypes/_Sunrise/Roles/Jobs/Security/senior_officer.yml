@@ -33,7 +33,7 @@
 - type: startingGear
   id: SeniorOfficerGear
   equipment:
-#    eyes: ClothingEyesGlassesSecurity #Lust-Edit
+    # eyes: ClothingEyesGlassesSecurity # Lust-Edit
     head: ClothingHeadHatBeretSecurity
     id: SeniorOfficerPDA
     ears: ClothingHeadsetSecurity
