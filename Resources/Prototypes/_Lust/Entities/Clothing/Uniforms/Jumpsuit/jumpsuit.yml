@@ -112,7 +112,7 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitMilirUniform
-  name: Millir Bodysuit
+  name: millir Bodysuit
   description: A simple, form-fitting bodysuit tailored for Millir anatomy.
   components:
   - type: Sprite
