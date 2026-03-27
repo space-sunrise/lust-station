@@ -116,6 +116,6 @@
   description: A simple, form-fitting bodysuit tailored for Millir anatomy.
   components:
   - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_unifrom.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_uniform.rsi
   - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_unifrom.rsi
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_uniform.rsi
