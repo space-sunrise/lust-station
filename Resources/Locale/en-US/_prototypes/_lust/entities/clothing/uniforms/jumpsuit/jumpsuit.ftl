@@ -16,5 +16,5 @@ ent-ClothingUniformJumpsuitCentcomSuitQillu = Central Command suit
 ent-ClothingUniformJumpsuitCentcomUniformQillu = Central Command uniform
     .suffix = Qillu
     .desc = A Central Command uniform produced under Qillu contract. Formal, durable, and unmistakably official.
-ent-ClothingUniformJumpsuitMilirUniform = Millir Bodysuit
+ent-ClothingUniformJumpsuitMilirUniform = millir Bodysuit
     .desc = A simple, form-fitting bodysuit tailored for Millir anatomy.
