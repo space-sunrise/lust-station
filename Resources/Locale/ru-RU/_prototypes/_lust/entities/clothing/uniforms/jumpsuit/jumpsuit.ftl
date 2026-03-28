@@ -17,5 +17,3 @@ ent-ClothingUniformJumpsuitCentcomSuitQillu = костюм Центкома
 ent-ClothingUniformJumpsuitCentcomUniformQillu = форма Центкома
     .suffix = Qillu
     .desc = Регламентная форма Центкома, изготовленная по контракту Qillu.
-ent-ClothingUniformJumpsuitMilirUniform = бодисьют Миллир
-    .desc = Простой облегающий бодик, адаптированный под анатомию миллиров.

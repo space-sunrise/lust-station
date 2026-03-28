@@ -108,14 +108,3 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
-
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitMilirUniform
-  name: millir Bodysuit
-  description: A simple, form-fitting bodysuit tailored for Millir anatomy.
-  components:
-  - type: Sprite
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_uniform.rsi
-  - type: Clothing
-    sprite: _Lust/Clothing/Uniforms/Jumpsuit/milirs_uniform.rsi
