@@ -4075,3 +4075,11 @@
   id: 1744
   time: '2026-03-27T23:10:37.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4108
+- author: ThereDrD
+  changes:
+  - message: "\u0425\u043E\u0442\u043A\u0435\u0438 \u0432 \u0447\u0430\u0442\u0435\
+      \ \u0441\u043D\u043E\u0432\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442"
+    type: Fix
+  id: 1745
+  time: '2026-03-28T17:03:11.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4113
