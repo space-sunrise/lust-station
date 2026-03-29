@@ -42,3 +42,53 @@
   id: CentCommExpensiveCoat
   equipment:
     outerClothing: ClothingOuterCoatExpensive
+
+- type: loadout
+  id: CentCommQilluUniformJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomUniformQillu
+
+- type: loadout
+  id: CentCommQilluUniformJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtCentcomUniformQillu
+
+- type: loadout
+  id: HeadHatCentcomBeretQillu
+  equipment:
+    head: ClothingHeadHatCentcomBeretQillu
+
+- type: loadout
+  id: HeadHatCentcomFormalHatQillu
+  equipment:
+    head: ClothingHeadHatCentcomFormalHatQillu
+
+- type: loadout
+  id: CentCommGlassesCommand
+  equipment:
+    eyes: ClothingEyesGlassesCommand
+
+- type: loadout
+  id: CentCommGlovesQillu
+  equipment:
+    gloves: ClothingHandsGlovesCentcomQillu
+
+- type: loadout
+  id: CentCommNeckCloakQillu
+  equipment:
+    neck: ClothingNeckCloakCentcomQillu
+
+- type: loadout
+  id: CentCommNeckMantleQillu
+  equipment:
+    neck: ClothingNeckMantleCentcomQillu
+
+- type: loadout
+  id: CentCommQilluChestplate
+  equipment:
+    outerClothing: ClothingOuterArmorCentcomChestplateQillu
+
+- type: loadout
+  id: CentCommQilluBackpack
+  equipment:
+    back: ClothingBackpackSatchelIAABlack
