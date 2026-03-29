@@ -4101,3 +4101,12 @@
   id: 1747
   time: '2026-03-28T20:39:43.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4059
+- author: matavsn
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0440\u0430\
+      \u0439\u0442 \u0431\u043E\u0434\u0438\u0441\u044C\u044E\u0442\u0430 \u0434\u043B\
+      \u044F \u041C\u0438\u043B\u0438\u0440."
+    type: Add
+  id: 1748
+  time: '2026-03-29T10:03:29.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4112
