@@ -1,0 +1,7 @@
+- type: loadoutPool
+  id: BaseLoadoutPoolLustScience
+  abstract: true
+  roleLoadouts:
+    JobResearchDirector: LustSunriseJobResearchDirector
+    JobSeniorResearcher: LustJobSeniorResearcher
+    JobRoboticist: LustJobRoboticist

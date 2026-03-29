@@ -1,0 +1,53 @@
+- type: roleLoadout
+  id: LustSunriseJobPsychologist
+  groups:
+  - SunrisePsychologistHead
+  - SunriseGlasses
+  - SunrisePsychologistMask
+  - SunrisePsychologistNeck
+  - PsychologistJumpsuit
+  - SunrisePsychologistOuterClothing
+  - SunrisePsychologistGloves
+  - SunrisePsychologistShoes
+  - GroupTankHarness
+  - SunriseCommonBackpack
+  - MedicalBackpack
+  - SunriseSurvival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - PsychologistJobTrinkets
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobCentCommOfficial
+  groups:
+  - CentCommOperatorHats
+  - CentCommOperatorJumpsuit
+  - SunriseTrinkets
+  - SunriseSurvival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobCentCommOperator
+  groups:
+  - LustCentCommOperatorHats
+  - LustCentCommOperatorNeck
+  - LustCentCommOperatorJumpsuit
+  - SunriseTrinkets
+  - SunriseSurvival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+

@@ -1,0 +1,14 @@
+- type: roleLoadout
+  id: LustJobBarber
+  groups:
+  - BarberJumpsuit
+  - CommonBackpack
+  - SunriseSurvival
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - SpecialLoadout
+  - Contributors
+

@@ -1,0 +1,157 @@
+- type: roleLoadout
+  id: LustSunriseJobHeadOfSecurity
+  groups:
+  - SunriseHeadofSecurityHead
+  - LustHeadofSecurityNeck
+  - SunriseHeadofSecurityJumpsuit
+  - SunriseHeadofSecurityOuterClothing
+  - SecurityBelt
+  - SunriseSecurityGunHos
+  - SecurityShoes
+  - SecurityBackpack
+  - SunriseSurvivalSecurity
+  - SunriseGroupSpeciesBreathToolSecurity
+  - SunriseHeadofSecurityBra
+  - SunriseHeadofSecurityPants
+  - Socks
+  - SunriseTrinkets
+  - HeadofSecurityJobTrinkets
+  - SecurityTrinkets
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustSunriseJobWarden
+  groups:
+  - SunriseWardenHead
+  - WardenJumpsuit
+  - SunriseWardenOuterClothing
+  - SecurityBelt
+  - SunriseWardenGun
+  - SecurityShoes
+  - SecurityBackpack
+  - SunriseSurvivalSecurity
+  - SunriseGroupSpeciesBreathToolSecurity
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - WardenJobTrinkets
+  - SecurityTrinkets
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustSunriseJobSecurityOfficer
+  groups:
+  - SecurityHead
+  - LustSecurityGlasses
+  - SecurityNeck
+  - SecurityJumpsuit
+  - SecurityOuterClothing
+  - SecurityBelt
+  - SunriseSecurityGun
+  - SecurityShoes
+  - SecurityBackpack
+  - SecurityPDA
+  - SunriseSurvivalSecurity
+  - SunriseGroupSpeciesBreathToolSecurity
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - SecurityJobTrinkets
+  - SecurityTrinkets
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobBrigmedic
+  groups:
+  - SecurityNeck
+  - BrigmedicJumpsuit
+  - BrigmedicBackpack
+  - BrigmedicInjectors
+  - SurvivalSecurity
+  - SunriseTrinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SunriseSecurityGun
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobBlueShieldOfficer
+  groups:
+  - BlueShieldNeck
+  - BlueShieldJumpsuit
+  - BlueShieldBackpack
+  - BlueShieldBelt
+  - BlueshieldGun
+  - BlueShieldBra
+  - BlueShieldPants
+  - SunriseTrinkets
+  - SurvivalSecurity
+  - GroupSpeciesBreathTool
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobBlueShieldEnsign
+  groups:
+  - BlueShieldNeck
+  - BlueShieldJumpsuit
+  - BlueShieldBackpack
+  - BlueShieldBelt
+  - BlueShieldBra
+  - BlueShieldPants
+  - SunriseTrinkets
+  - SurvivalSecurity
+  - GroupSpeciesBreathTool
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobSeniorOfficer
+  groups:
+  - SecurityNeck
+  - SeniorOfficerJumpsuit
+  - SecurityOuterClothing
+  - SecurityBackpack
+  - SecurityBelt
+  - SecurityShoes
+  - SurvivalSecurity
+  - SunriseTrinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SunriseSecurityGun
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobSecurityPilot
+  groups:
+  - SecurityNeck
+  - SecurityPilotJumpsuit
+  - SecurityBackpack
+  - SecurityBelt
+  - SecurityShoes
+  - SurvivalSecurity
+  - SunriseTrinkets
+  - SecurityTrinkets
+  - GroupSpeciesBreathTool
+  - SunriseSecurityGun
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+

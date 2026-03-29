@@ -1,0 +1,8 @@
+- type: loadoutPool
+  id: BaseLoadoutPoolLustEngineering
+  abstract: true
+  roleLoadouts:
+    JobStationEngineer: LustSunriseJobStationEngineer
+    JobTechnicalAssistant: LustSunriseJobTechnicalAssistant
+    JobAtmosphericTechnician: LustSunriseJobAtmosphericTechnician
+    JobSeniorEngineer: LustJobSeniorEngineer

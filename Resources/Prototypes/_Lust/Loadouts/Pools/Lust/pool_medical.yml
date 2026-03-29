@@ -1,0 +1,11 @@
+- type: loadoutPool
+  id: BaseLoadoutPoolLustMedical
+  abstract: true
+  roleLoadouts:
+    JobChiefMedicalOfficer: LustSunriseJobChiefMedicalOfficer
+    JobMedicalDoctor: LustSunriseJobMedicalDoctor
+    JobMedicalIntern: LustSunriseJobMedicalIntern
+    JobChemist: LustSunriseJobChemist
+    JobParamedic: LustSunriseJobParamedic
+    JobSeniorPhysician: LustJobSeniorPhysician
+    JobMedicalPathologist: LustJobMedicalPathologist

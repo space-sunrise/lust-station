@@ -1,0 +1,35 @@
+- type: roleLoadout
+  id: LustJobSeniorResearcher
+  groups:
+  - SunriseGlasses
+  - SeniorResearcherJumpsuit
+  - ScientistGloves
+  - ScientistBackpack
+  - ScientistShoes
+  - SunriseSurvival
+  - SunriseTrinkets
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobRoboticist
+  groups:
+  - RoboticistHead
+  - ScientistNeck
+  - RoboticistJumpsuit
+  - RoboticistOuterClothing
+  - ScientistBackpack
+  - ScientistShoes
+  - SunriseSurvival
+  - SunriseTrinkets
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+

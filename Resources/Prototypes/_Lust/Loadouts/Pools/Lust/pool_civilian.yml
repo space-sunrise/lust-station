@@ -1,0 +1,5 @@
+- type: loadoutPool
+  id: BaseLoadoutPoolLustCivilian
+  abstract: true
+  roleLoadouts:
+    JobBarber: LustJobBarber

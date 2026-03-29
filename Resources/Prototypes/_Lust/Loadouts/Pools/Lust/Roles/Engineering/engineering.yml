@@ -1,0 +1,91 @@
+- type: roleLoadout
+  id: LustSunriseJobStationEngineer
+  groups:
+  - SunriseStationEngineerHead
+  - StationSunriseEngineerMask
+  - LustStationEngineerNeck
+  - StationEngineerJumpsuit
+  - SunriseStationEngineerOuterClothing
+  - StationSunriseEngineerGloves
+  - SunriseStationEngineerShoes
+  - GroupTankHarness
+  - StationEngineerBackpack
+  - SunriseStationEngineerID
+  - SunriseSurvivalExtended
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - StationEngineerJobTrinkets
+  - TrinketsEngineering
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustSunriseJobTechnicalAssistant
+  groups:
+  - SunriseStationEngineerHead
+  - StationSunriseEngineerMask
+  - LustStationEngineerNeck
+  - TechnicalAssistantJumpsuit
+  - SunriseStationEngineerOuterClothing
+  - StationSunriseEngineerGloves
+  - SunriseStationEngineerShoes
+  - GroupTankHarness
+  - StationEngineerBackpack
+  - SunriseSurvivalExtended
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - TechnicalAssistantJobTrinkets
+  - TrinketsEngineering
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustSunriseJobAtmosphericTechnician
+  groups:
+  - SunriseAtmosHead
+  - SunriseAtmosMask
+  - LustAtmosNeck
+  - AtmosphericTechnicianJumpsuit
+  - SunriseAtmosphericTechnicianOuterClothing
+  - SunriseAtmosGloves
+  - SunriseAtmosphericTechnicianShoes
+  - GroupTankHarness
+  - AtmosphericTechnicianBackpack
+  - SunriseSurvivalExtended
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SunriseTrinkets
+  - AtmosphericTechnicianJobTrinkets
+  - TrinketsEngineering
+  - SpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobSeniorEngineer
+  groups:
+  - SeniorEngineerHead
+  - SeniorEngineerMask
+  - LustSeniorEngineerNeck
+  - SeniorEngineerJumpsuit
+  - SeniorEngineerOuterClothing
+  - SeniorEngineerGloves
+  - SeniorEngineerShoes
+  - StationSeniorEngineerBackpack
+  - SunriseSurvivalExtended
+  - SunriseTrinkets
+  - TrinketsEngineering
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - SpecialLoadout
+  - Contributors
+

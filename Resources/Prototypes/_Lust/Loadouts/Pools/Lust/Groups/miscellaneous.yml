@@ -1,0 +1,69 @@
+- type: loadoutGroup
+  id: NanoTrasenRepresentativeSpecialLoadout
+  name: loadout-group-special-items
+  minLimit: 0
+  loadouts:
+  - QilluCloak
+  - Boombox
+
+- type: loadoutGroup
+  id: LustCentCommOperatorHats
+  name: loadout-group-centcomm-operator-head-hat
+  minLimit: 1
+  loadouts:
+  - HeadHatCentcomBeretQillu
+  - HeadHatCentcomFormalHatQillu
+  - HeadHatCentcomElegantCap
+
+- type: loadoutGroup
+  id: LustCentCommOperatorGlasses
+  name: loadout-group-glasses
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommGlassesCommand
+
+- type: loadoutGroup
+  id: LustCentCommOperatorJumpsuit
+  name: loadout-group-centcomm-operator-jumpsuit
+  minLimit: 1
+  loadouts:
+  - CentCommQilluUniformJumpsuit
+  - CentCommQilluSuitJumpsuit
+  - CentCommQilluUniformJumpskirt
+  - CentCommQilluSkirtSuitJumpskirt
+
+- type: loadoutGroup
+  id: LustCentCommOperatorOuterClothing
+  name: loadout-group-outer-clothing
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommQilluChestplate
+
+- type: loadoutGroup
+  id: LustCentCommOperatorGloves
+  name: loadout-group-gloves
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommGlovesQillu
+
+- type: loadoutGroup
+  id: LustCentCommOperatorNeck
+  name: loadout-group-neck
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommNeckScarfElegant
+  - CentCommNeckMantleQillu
+  - CentCommNeckCloakQillu
+
+- type: loadoutGroup
+  id: LustCentCommOperatorBackpack
+  name: loadout-group-back
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommQilluBackpack
+

@@ -1,0 +1,24 @@
+- type: roleLoadout
+  id: LustSunriseJobChiefMedicalOfficer
+  groups:
+  - SunriseChiefMedicalOfficerHead
+  - MedicalEyewear
+  - SunriseChiefMedicalOfficerMask
+  - LustChiefMedicalOfficerNeck
+  - ChiefMedicalOfficerJumpsuit
+  - SunriseChiefMedicalOfficerOuterClothing
+  - SunriseChiefMedicalOfficerGloves
+  - SunriseChiefMedicalOfficerShoes
+  - GroupTankHarness
+  - MedicalBackpack
+  - SunriseSurvivalMedical
+  - GroupSpeciesBreathToolMedical
+  - SunriseChiefMedicalOfficerBra
+  - SunriseChiefMedicalOfficerPants
+  - Socks
+  - SunriseTrinkets
+  - ChiefMedicalOfficerJobTrinkets
+  - MedicalTrinkets
+  - SpecialLoadout
+  - Contributors
+

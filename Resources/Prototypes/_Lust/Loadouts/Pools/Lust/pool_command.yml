@@ -1,0 +1,12 @@
+- type: loadoutPool
+  id: BaseLoadoutPoolLustCommand
+  abstract: true
+  roleLoadouts:
+    JobCaptain: LustSunriseJobCaptain
+    JobHeadOfPersonnel: LustSunriseJobHeadOfPersonnel
+    JobIAA: LustJobIAA
+    JobMagistrat: LustJobMagistrat
+    JobNtrOfficer: LustJobNtrOfficer
+    JobNanoTrasenRepresentative: LustJobNanoTrasenRepresentative
+    JobAdjutant: LustJobAdjutant
+    JobComMaid: LustJobComMaid
