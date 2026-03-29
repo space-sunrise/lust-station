@@ -390,6 +390,13 @@ public sealed partial class SunriseCCVars : CVars
         CVarDef.Create("vigers_ray.victims", "", CVar.SERVERONLY);
 
     /// <summary>
+    /// List of usernames that cannot be kicked by kick or ghostkick commands.
+    /// Usernames are comma-separated.
+    /// </summary>
+    public static readonly CVarDef<string> ProtectedKickUsernames =
+        CVarDef.Create("admin.protected_kick_usernames", "", CVar.SERVERONLY | CVar.ARCHIVE);
+
+    /// <summary>
     ///     Flavor Profile
     /// </summary>
     public static readonly CVarDef<bool> FlavorTextSponsorOnly =
