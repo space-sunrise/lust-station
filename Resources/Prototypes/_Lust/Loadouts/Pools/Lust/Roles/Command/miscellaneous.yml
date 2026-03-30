@@ -1,7 +1,6 @@
 - type: roleLoadout
   id: LustJobIAA
   groups:
-  - LawyerNeck
   - IAANeck
   - IAAuniformFormalSuit
   - IAAOuterClothing
