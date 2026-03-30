@@ -1,0 +1,64 @@
+using System.Linq;
+using System.Threading.Tasks;
+using Content.Shared.Administration;
+using Robust.Shared.Console;
+
+namespace Content.Server._Sunrise.MapperSync.Commands;
+
+[AnyCommand]
+public sealed class PullMapCommand : IConsoleCommand
+{
+    public string Command => "pullmap";
+    public string Description => "Downloads a map from the configured remote mapper server.";
+    public string Help => "Usage: pullmap <map_path> (e.g., pullmap Maps/my_map.yml)\nYou must include the 'Maps/' prefix if it's required.";
+
+    public void Execute(IConsoleShell shell, string argStr, string[] args)
+    {
+        if (args.Length != 1)
+        {
+            shell.WriteLine(Help);
+            return;
+        }
+
+        var mapPath = args[0];
+        shell.WriteLine($"Starting download of {mapPath} from remote server... Please wait.");
+
+        // Start async task so we don't block the main thread.
+        Task.Run(async () =>
+        {
+            try
+            {
+                var sys = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<MapperSyncSystem>();
+                var (success, error) = await sys.DownloadMapAsync(mapPath);
+
+                if (success)
+                    shell.WriteLine($"[color=green]Successfully downloaded map: {mapPath}[/color]");
+                else
+                    shell.WriteError($"[color=red]Failed to download map {mapPath}. Error: {error}[/color]");
+            }
+            catch (Exception ex)
+            {
+                shell.WriteError($"[color=red]Exception during map pull: {ex.Message}[/color]");
+            }
+        });
+    }
+
+    public CompletionResult GetCompletion(IConsoleShell shell, string[] args)
+    {
+        if (args.Length == 1)
+        {
+            var sys = IoCManager.Resolve<IEntitySystemManager>().GetEntitySystem<MapperSyncSystem>();
+            var maps = sys.GetRemoteMaps();
+            if (maps.Count == 0)
+            {
+                return CompletionResult.FromHint("Requesting remote cache... Type the path manually or try again in a moment.");
+            }
+
+            var opts = maps.Where(m => m.StartsWith(args[0], StringComparison.OrdinalIgnoreCase))
+                           .Select(m => new CompletionOption(m));
+            return CompletionResult.FromHintOptions(opts, "Path to map (e.g., Maps/test_map.yml)");
+        }
+
+        return CompletionResult.Empty;
+    }
+}
