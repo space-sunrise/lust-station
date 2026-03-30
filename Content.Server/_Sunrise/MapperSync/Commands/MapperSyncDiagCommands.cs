@@ -45,9 +45,9 @@ public sealed class MapperSyncFetchCommand : IConsoleCommand
         {
             var success = await sys.FetchMapsAsync();
             if (success)
-                shell.WriteLine($"[color=green]Fetch successful! Found {sys.CachedRemoteMaps.Count} maps.[/color]");
+                shell.WriteLine($"Fetch successful! Found {sys.CachedRemoteMaps.Count} maps.");
             else
-                shell.WriteError("[color=red]Fetch failed. Check server logs for details.[/color]");
+                shell.WriteError("Fetch failed. Check server logs for details.");
         });
     }
 }

@@ -34,13 +34,13 @@ public sealed class PullMapCommand : IConsoleCommand
                 var (success, error) = await sys.DownloadMapAsync(mapPath);
 
                 if (success)
-                    shell.WriteLine($"[color=green]Successfully downloaded map: {mapPath}[/color]");
+                    shell.WriteLine($"Successfully downloaded map: {mapPath}");
                 else
-                    shell.WriteError($"[color=red]Failed to download map {mapPath}. Error: {error}[/color]");
+                    shell.WriteError($"Failed to download map {mapPath}. Error: {error}");
             }
             catch (Exception ex)
             {
-                shell.WriteError($"[color=red]Exception during map pull: {ex.Message}[/color]");
+                shell.WriteError($"Exception during map pull: {ex.Message}");
             }
         });
     }
