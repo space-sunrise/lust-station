@@ -10,6 +10,7 @@
   id: LustCentCommOperatorHats
   name: loadout-group-centcomm-operator-head-hat
   minLimit: 1
+  maxLimit: 1
   loadouts:
   - HeadHatCentcomBeretQillu
   - HeadHatCentcomFormalHatQillu
@@ -27,6 +28,7 @@
   id: LustCentCommOperatorJumpsuit
   name: loadout-group-centcomm-operator-jumpsuit
   minLimit: 1
+  maxLimit: 1
   loadouts:
   - CentCommQilluUniformJumpsuit
   - CentCommQilluSuitJumpsuit
