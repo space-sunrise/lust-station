@@ -1580,12 +1580,12 @@ entities:
   - uid: 464
     components:
     - type: MetaData
-      name: NT-Griffin fax machine
+      name: QL-Griffin fax machine
     - type: Transform
       pos: -2.5,3.5
       parent: 1
     - type: FaxMachine
-      name: NT-Griffin
+      name: QL-Griffin
 - proto: FireAlarm
   entities:
   - uid: 351

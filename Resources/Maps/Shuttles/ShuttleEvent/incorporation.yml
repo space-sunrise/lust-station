@@ -2616,12 +2616,12 @@ entities:
   - uid: 743
     components:
     - type: MetaData
-      name: NT-Incorporation fax machine
+      name: QL-Incorporation fax machine
     - type: Transform
       pos: 7.5,1.5
       parent: 1
     - type: FaxMachine
-      name: NT-Incorporation
+      name: QL-Incorporation
 - proto: FluteInstrument
   entities:
   - uid: 741

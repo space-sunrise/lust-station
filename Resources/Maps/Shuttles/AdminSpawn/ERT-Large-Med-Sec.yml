@@ -3187,7 +3187,7 @@ entities:
       pos: -5.5,13.5
       parent: 1
     - type: FaxMachine
-      name: NT-Hygieia
+      name: QL-Hygieia
 - proto: FirelockEdge
   entities:
   - uid: 402

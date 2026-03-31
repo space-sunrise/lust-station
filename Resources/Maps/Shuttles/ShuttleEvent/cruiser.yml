@@ -1627,12 +1627,12 @@ entities:
   - uid: 518
     components:
     - type: MetaData
-      name: NT-Cruiser fax machine
+      name: QL-Cruiser fax machine
     - type: Transform
       pos: -0.5,9.5
       parent: 1
     - type: FaxMachine
-      name: NT-Cruiser
+      name: QL-Cruiser
 - proto: FolderSpawner
   entities:
   - uid: 530

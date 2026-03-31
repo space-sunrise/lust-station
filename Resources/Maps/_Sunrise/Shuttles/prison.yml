@@ -3010,7 +3010,7 @@ entities:
       pos: 3.5,3.5
       parent: 1
     - type: WarpPoint
-      location: NTSP-322 "Круизёр"
+      location: QLSP-322 "Круизёр"
 - proto: WeaponCapacitorRecharger
   entities:
   - uid: 453

@@ -923,7 +923,7 @@ entities:
       pos: -3.5,5.5
       parent: 1
     - type: FaxMachine
-      name: NTMS-632 "Рудокоп"
+      name: QLMS-632 "Рудокоп"
 - proto: Floodlight
   entities:
   - uid: 119
@@ -1796,7 +1796,7 @@ entities:
       pos: -2.5,-1.5
       parent: 1
     - type: WarpPoint
-      location: NTMS-632 "Рудокоп"
+      location: QLMS-632 "Рудокоп"
 - proto: WaterCooler
   entities:
   - uid: 246

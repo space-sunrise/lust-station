@@ -1321,7 +1321,7 @@ entities:
       pos: 0.5,-2.5
       parent: 1
     - type: FaxMachine
-      name: NTMS-754 "Горняк"
+      name: QLMS-754 "Горняк"
 - proto: Firelock
   entities:
   - uid: 332

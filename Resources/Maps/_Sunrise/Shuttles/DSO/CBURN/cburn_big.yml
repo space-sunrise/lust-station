@@ -2693,7 +2693,7 @@ entities:
       pos: 0.5,14.5
       parent: 1
     - type: FaxMachine
-      name: NTS-0415
+      name: QLS-0415
 - proto: Firelock
   entities:
   - uid: 364
