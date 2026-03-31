@@ -17,14 +17,6 @@
   - HeadHatCentcomElegantCap
 
 - type: loadoutGroup
-  id: LustCentCommOperatorGlasses
-  name: loadout-group-glasses
-  minLimit: 1
-  maxLimit: 1
-  loadouts:
-  - CentCommGlassesCommand
-
-- type: loadoutGroup
   id: LustCentCommOperatorJumpsuit
   name: loadout-group-centcomm-operator-jumpsuit
   minLimit: 1
@@ -34,22 +26,6 @@
   - CentCommQilluSuitJumpsuit
   - CentCommQilluUniformJumpskirt
   - CentCommQilluSkirtSuitJumpskirt
-
-- type: loadoutGroup
-  id: LustCentCommOperatorOuterClothing
-  name: loadout-group-outer-clothing
-  minLimit: 1
-  maxLimit: 1
-  loadouts:
-  - CentCommQilluChestplate
-
-- type: loadoutGroup
-  id: LustCentCommOperatorGloves
-  name: loadout-group-gloves
-  minLimit: 1
-  maxLimit: 1
-  loadouts:
-  - CentCommGlovesQillu
 
 - type: loadoutGroup
   id: LustCentCommOperatorNeck
