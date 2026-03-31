@@ -4184,3 +4184,14 @@
   id: 1754
   time: '2026-03-30T22:54:53.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4120
+- author: seemah and Bulbo44key
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u0430\u0442\
+      \u044C\u0435\u0448\u043A\u0430\u0444."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u043F\u043B\u0430\u0442\u044C\u044F."
+    type: Add
+  id: 1755
+  time: '2026-03-31T15:18:51.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4050
