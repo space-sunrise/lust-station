@@ -2,8 +2,8 @@
   id: BaseLoadoutPoolLustCargo
   abstract: true
   roleLoadouts:
-    JobQuartermaster: LustSunriseJobQuartermaster
-    JobCargoTechnician: LustSunriseJobCargoTechnician
-    JobSalvageSpecialist: LustSunriseJobSalvageSpecialist
+    JobQuartermaster: LustJobQuartermaster
+    JobCargoTechnician: LustJobCargoTechnician
+    JobSalvageSpecialist: LustJobSalvageSpecialist
     JobMailCarrier: LustJobMailCarrier
     JobMiningSpecialist: LustJobMiningSpecialist

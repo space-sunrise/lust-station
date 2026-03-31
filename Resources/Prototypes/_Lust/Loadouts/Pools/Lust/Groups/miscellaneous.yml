@@ -1,10 +1,10 @@
 - type: loadoutGroup
-  id: NanoTrasenRepresentativeSpecialLoadout
+  id: LustSpecialLoadout
   name: loadout-group-special-items
   minLimit: 0
   loadouts:
-  - QilluCloak
-  - Boombox
+  - LustQilluCloak
+  - LustBoombox
 
 - type: loadoutGroup
   id: LustCentCommOperatorHats

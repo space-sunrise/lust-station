@@ -2,8 +2,8 @@
   id: BaseLoadoutPoolLustCommand
   abstract: true
   roleLoadouts:
-    JobCaptain: LustSunriseJobCaptain
-    JobHeadOfPersonnel: LustSunriseJobHeadOfPersonnel
+    JobCaptain: LustJobCaptain
+    JobHeadOfPersonnel: LustJobHeadOfPersonnel
     JobIAA: LustJobIAA
     JobMagistrat: LustJobMagistrat
     JobNtrOfficer: LustJobNtrOfficer

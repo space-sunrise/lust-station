@@ -11,7 +11,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -24,7 +24,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -39,7 +39,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -54,7 +54,7 @@
   - Pants
   - Socks
   - SunriseTrinkets
-  - NanoTrasenRepresentativeSpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -70,7 +70,7 @@
   - AdjutantPants
   - Socks
   - SunriseTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -88,6 +88,6 @@
   - Pants
   - Socks
   - SunriseTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

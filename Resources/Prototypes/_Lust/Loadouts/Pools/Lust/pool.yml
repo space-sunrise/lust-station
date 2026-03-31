@@ -6,7 +6,6 @@
 - type: loadoutPool
   id: LustLoadout
   parent:
-  - SunriseLoadout
   - BaseLoadoutPoolLust
   - BaseLoadoutPoolLustCommand
   - BaseLoadoutPoolLustCargo
@@ -16,3 +15,4 @@
   - BaseLoadoutPoolLustScience
   - BaseLoadoutPoolLustSecurity
   - BaseLoadoutPoolLustWildcards
+  - SunriseLoadout  # Всегда должен быть последним!

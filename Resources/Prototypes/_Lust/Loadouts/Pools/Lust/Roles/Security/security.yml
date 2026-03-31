@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobHeadOfSecurity
+  id: LustJobHeadOfSecurity
   groups:
   - SunriseHeadofSecurityHead
   - LustHeadofSecurityNeck
@@ -17,11 +17,11 @@
   - SunriseTrinkets
   - HeadofSecurityJobTrinkets
   - SecurityTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobWarden
+  id: LustJobWarden
   groups:
   - SunriseWardenHead
   - WardenJumpsuit
@@ -38,11 +38,11 @@
   - SunriseTrinkets
   - WardenJobTrinkets
   - SecurityTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobSecurityOfficer
+  id: LustJobSecurityOfficer
   groups:
   - SecurityHead
   - LustSecurityGlasses
@@ -62,7 +62,45 @@
   - SunriseTrinkets
   - SecurityJobTrinkets
   - SecurityTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobDetective
+  groups:
+  - DetectiveHead
+  - SunriseDetectiveNeck
+  - DetectiveJumpsuit
+  - SecurityBackpack
+  - SunriseDetectiveOuterClothing
+  - SecurityShoes
+  - SunriseSurvivalSecurity
+  - SunriseTrinkets
+  - DetectiveJobTrinkets
+  - SunriseGroupSpeciesBreathToolSecurity
+  - SecurityTrinkets
+  - SunriseWeaponDetective
+  - Bra
+  - Pants
+  - Socks
+  - LustSpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobSecurityCadet
+  groups:
+  - SecurityCadetJumpsuit
+  - SecurityBackpack
+  - SunriseSurvivalSecurity
+  - SunriseTrinkets
+  - SecurityCadetJobTrinkets
+  - SunriseGroupSpeciesBreathToolSecurity
+  - SecurityTrinkets
+  - SunriseWeaponCadet
+  - Bra
+  - Pants
+  - Socks
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -80,7 +118,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -97,7 +135,7 @@
   - SurvivalSecurity
   - GroupSpeciesBreathTool
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -113,7 +151,7 @@
   - SurvivalSecurity
   - GroupSpeciesBreathTool
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -133,7 +171,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -152,6 +190,6 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

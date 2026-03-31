@@ -2,6 +2,7 @@
   id: BaseLoadoutPoolLustWildcards
   abstract: true
   roleLoadouts:
-    JobPsychologist: LustSunriseJobPsychologist
+    JobReporter: LustJobReporter
+    JobPsychologist: LustJobPsychologist
     JobCentCommOfficial: LustJobCentCommOfficial
     JobCentCommOperator: LustJobCentCommOperator

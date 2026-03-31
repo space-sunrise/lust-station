@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobChiefMedicalOfficer
+  id: LustJobChiefMedicalOfficer
   groups:
   - SunriseChiefMedicalOfficerHead
   - MedicalEyewear
@@ -19,6 +19,6 @@
   - SunriseTrinkets
   - ChiefMedicalOfficerJobTrinkets
   - MedicalTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

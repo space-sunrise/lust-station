@@ -2,6 +2,8 @@
   id: BaseLoadoutPoolLustScience
   abstract: true
   roleLoadouts:
-    JobResearchDirector: LustSunriseJobResearchDirector
+    JobResearchDirector: LustJobResearchDirector
+    JobScientist: LustJobScientist
+    JobResearchAssistant: LustJobResearchAssistant
     JobSeniorResearcher: LustJobSeniorResearcher
     JobRoboticist: LustJobRoboticist

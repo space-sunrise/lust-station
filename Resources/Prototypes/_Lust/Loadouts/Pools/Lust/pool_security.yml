@@ -2,9 +2,11 @@
   id: BaseLoadoutPoolLustSecurity
   abstract: true
   roleLoadouts:
-    JobHeadOfSecurity: LustSunriseJobHeadOfSecurity
-    JobWarden: LustSunriseJobWarden
-    JobSecurityOfficer: LustSunriseJobSecurityOfficer
+    JobHeadOfSecurity: LustJobHeadOfSecurity
+    JobWarden: LustJobWarden
+    JobSecurityOfficer: LustJobSecurityOfficer
+    JobDetective: LustJobDetective
+    JobSecurityCadet: LustJobSecurityCadet
     JobBrigmedic: LustJobBrigmedic
     JobBlueShieldOfficer: LustJobBlueShieldOfficer
     JobBlueShieldEnsign: LustJobBlueShieldEnsign

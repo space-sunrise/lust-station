@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobCargoTechnician
+  id: LustJobCargoTechnician
   groups:
   - SunriseCargoTechnicianHead
   - SunriseGlasses
@@ -20,11 +20,11 @@
   - SunriseTrinkets
   - CargoTechnicianJobTrinkets
   - TrinketsCargo
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobSalvageSpecialist
+  id: LustJobSalvageSpecialist
   groups:
   - SunriseSalvageHead
   - SunriseGlasses
@@ -43,7 +43,7 @@
   - SunriseTrinkets
   - SalvageSpecialistJobTrinkets
   - TrinketsCargo
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -61,7 +61,7 @@
   - Socks
   - SunriseTrinkets
   - TrinketsCargo
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -83,6 +83,6 @@
   - Socks
   - SunriseTrinkets
   - TrinketsCargo
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

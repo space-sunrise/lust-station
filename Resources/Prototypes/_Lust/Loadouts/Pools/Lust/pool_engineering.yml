@@ -2,7 +2,8 @@
   id: BaseLoadoutPoolLustEngineering
   abstract: true
   roleLoadouts:
-    JobStationEngineer: LustSunriseJobStationEngineer
-    JobTechnicalAssistant: LustSunriseJobTechnicalAssistant
-    JobAtmosphericTechnician: LustSunriseJobAtmosphericTechnician
+    JobChiefEngineer: LustJobChiefEngineer
+    JobStationEngineer: LustJobStationEngineer
+    JobTechnicalAssistant: LustJobTechnicalAssistant
+    JobAtmosphericTechnician: LustJobAtmosphericTechnician
     JobSeniorEngineer: LustJobSeniorEngineer

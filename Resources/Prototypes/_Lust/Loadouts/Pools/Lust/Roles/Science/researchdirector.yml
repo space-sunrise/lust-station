@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobResearchDirector
+  id: LustJobResearchDirector
   groups:
   - SunriseGlasses
   - LustResearchDirectorNeck
@@ -16,6 +16,6 @@
   - Socks
   - SunriseTrinkets
   - ResearchDirectorJobTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

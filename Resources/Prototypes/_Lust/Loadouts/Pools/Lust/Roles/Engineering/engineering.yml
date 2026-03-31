@@ -1,5 +1,28 @@
 - type: roleLoadout
-  id: LustSunriseJobStationEngineer
+  id: LustJobChiefEngineer
+  groups:
+  - ChiefEngineerHead
+  - SunriseCEMask
+  - SunriseChiefEngineerNeck
+  - ChiefEngineerJumpsuit
+  - SunriseChiefEngineerOuterClothing
+  - SunriseCEGloves
+  - SunriseChiefEngineerShoes
+  - GroupTankHarness
+  - ChiefEngineerBackpack
+  - SunriseSurvivalExtended
+  - GroupSpeciesBreathTool
+  - SunriseChiefEngineerBra
+  - SunriseChiefEngineerPants
+  - Socks
+  - SunriseTrinkets
+  - ChiefEngineerJobTrinkets
+  - TrinketsEngineering
+  - LustSpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobStationEngineer
   groups:
   - SunriseStationEngineerHead
   - StationSunriseEngineerMask
@@ -19,11 +42,11 @@
   - SunriseTrinkets
   - StationEngineerJobTrinkets
   - TrinketsEngineering
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobTechnicalAssistant
+  id: LustJobTechnicalAssistant
   groups:
   - SunriseStationEngineerHead
   - StationSunriseEngineerMask
@@ -42,11 +65,11 @@
   - SunriseTrinkets
   - TechnicalAssistantJobTrinkets
   - TrinketsEngineering
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobAtmosphericTechnician
+  id: LustJobAtmosphericTechnician
   groups:
   - SunriseAtmosHead
   - SunriseAtmosMask
@@ -65,7 +88,7 @@
   - SunriseTrinkets
   - AtmosphericTechnicianJobTrinkets
   - TrinketsEngineering
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -86,6 +109,6 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

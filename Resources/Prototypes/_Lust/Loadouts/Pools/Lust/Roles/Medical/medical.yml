@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobMedicalDoctor
+  id: LustJobMedicalDoctor
   groups:
   - SunriseMedicalDoctorHead
   - MedicalEyewear
@@ -20,11 +20,11 @@
   - SunriseTrinkets
   - MedicalDoctorJobTrinkets
   - MedicalTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobMedicalIntern
+  id: LustJobMedicalIntern
   groups:
   - SunriseMedicalDoctorHead
   - MedicalEyewear
@@ -44,11 +44,11 @@
   - SunriseTrinkets
   - MedicalInternJobTrinkets
   - MedicalTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobChemist
+  id: LustJobChemist
   groups:
   - SunriseChemistHead
   - SunriseChemistMask
@@ -68,11 +68,11 @@
   - SunriseTrinkets
   - ChemistJobTrinkets
   - MedicalTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
-  id: LustSunriseJobParamedic
+  id: LustJobParamedic
   groups:
   - SunriseParamedicHead
   - MedicalEyewear
@@ -92,7 +92,7 @@
   - SunriseTrinkets
   - ParamedicJobTrinkets
   - MedicalTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -115,7 +115,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -138,6 +138,6 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

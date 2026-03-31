@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobHeadOfPersonnel
+  id: LustJobHeadOfPersonnel
   groups:
   - HoPHead
   - SunriseGlasses
@@ -15,6 +15,6 @@
   - Socks
   - SunriseTrinkets
   - HoPJobTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

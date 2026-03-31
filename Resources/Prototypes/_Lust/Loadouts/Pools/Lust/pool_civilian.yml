@@ -2,4 +2,16 @@
   id: BaseLoadoutPoolLustCivilian
   abstract: true
   roleLoadouts:
+    JobPassenger: LustJobPassenger
+    JobBartender: LustJobBartender
+    JobServiceWorker: LustJobServiceWorker
+    JobChef: LustJobChef
+    JobLibrarian: LustJobLibrarian
+    JobLawyer: LustJobLawyer
+    JobChaplain: LustJobChaplain
+    JobJanitor: LustJobJanitor
+    JobBotanist: LustJobBotanist
+    JobClown: LustJobClown
+    JobMime: LustJobMime
+    JobMusician: LustJobMusician
     JobBarber: LustJobBarber

@@ -1,5 +1,22 @@
 - type: roleLoadout
-  id: LustSunriseJobPsychologist
+  id: LustJobReporter
+  groups:
+  - GroupTankHarness
+  - ReporterJumpsuit
+  - SunriseCommonBackpack
+  - SunriseGlasses
+  - SunriseSurvival
+  - SunriseTrinkets
+  - ReporterJobTrinkets
+  - GroupSpeciesBreathTool
+  - Bra
+  - Pants
+  - Socks
+  - LustSpecialLoadout
+  - Contributors
+
+- type: roleLoadout
+  id: LustJobPsychologist
   groups:
   - SunrisePsychologistHead
   - SunriseGlasses
@@ -19,7 +36,7 @@
   - Socks
   - SunriseTrinkets
   - PsychologistJobTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -33,7 +50,7 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
 - type: roleLoadout
@@ -48,6 +65,6 @@
   - Bra
   - Pants
   - Socks
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

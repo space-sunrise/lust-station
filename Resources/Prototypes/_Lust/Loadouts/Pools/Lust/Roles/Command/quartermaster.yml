@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobQuartermaster
+  id: LustJobQuartermaster
   groups:
   - SunriseQuartermasterHead
   - SunriseGlasses
@@ -19,6 +19,6 @@
   - SunriseTrinkets
   - QuartermasterJobTrinkets
   - TrinketsCargo
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 

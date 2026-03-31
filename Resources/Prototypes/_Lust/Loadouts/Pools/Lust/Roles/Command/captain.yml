@@ -1,5 +1,5 @@
 - type: roleLoadout
-  id: LustSunriseJobCaptain
+  id: LustJobCaptain
   groups:
   - SunriseCaptainHead
   - LustCaptainNeck
@@ -14,6 +14,6 @@
   - Socks
   - SunriseTrinkets
   - SunriseCaptainJobTrinkets
-  - SpecialLoadout
+  - LustSpecialLoadout
   - Contributors
 
