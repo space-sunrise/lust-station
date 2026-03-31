@@ -1,0 +1,21 @@
+- type: roleLoadout
+  id: LustJobResearchDirector
+  groups:
+  - SunriseGlasses
+  - LustResearchDirectorNeck
+  - ResearchDirectorJumpsuit
+  - ResearchDirectorOuterClothing
+  - ScientistGloves
+  - ResearchDirectorShoes
+  - GroupTankHarness
+  - ScientistBackpack
+  - SunriseSurvival
+  - GroupSpeciesBreathTool
+  - SunriseResearchDirectorBra
+  - SunriseResearchDirectorPants
+  - Socks
+  - SunriseTrinkets
+  - ResearchDirectorJobTrinkets
+  - LustSpecialLoadout
+  - Contributors
+

@@ -532,7 +532,7 @@ public sealed partial class SunriseCCVars : CVars
     /// <summary>
     /// Имя кастомного пула loadout
     /// Используется только если custom_loadout.enabled = true
-    /// Варианты: "SunriseLoadout"
+    /// Варианты: "SunriseLoadout", "LustLoadout"
     /// </summary>
     public static readonly CVarDef<string> LoadoutPool =
         CVarDef.Create("custom_loadout.pool", "SunriseLoadout", CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
