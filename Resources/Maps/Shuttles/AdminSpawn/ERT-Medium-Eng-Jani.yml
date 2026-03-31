@@ -32,7 +32,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Hephaestus
+      name: QL-Hephaestus
     - type: Transform
       parent: invalid
     - type: MapGrid

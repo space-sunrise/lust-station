@@ -31,7 +31,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
-      name: NT Evac Plasma
+      name: QL Evac Plasma
     - type: Transform
       pos: -4.652828,1.09375
       parent: invalid

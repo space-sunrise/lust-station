@@ -28,7 +28,7 @@ entities:
   - uid: 656
     components:
     - type: MetaData
-      name: NT Evac Courser
+      name: QL Evac Courser
     - type: Transform
       pos: 0.52083397,0.5416665
       parent: invalid

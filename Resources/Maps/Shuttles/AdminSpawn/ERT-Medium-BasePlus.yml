@@ -27,7 +27,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Griffin
+      name: QL-Griffin
     - type: Transform
       parent: invalid
     - type: MapGrid

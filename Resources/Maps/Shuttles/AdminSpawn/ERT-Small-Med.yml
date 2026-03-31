@@ -30,7 +30,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Denobula
+      name: QL-Denobula
     - type: Transform
       parent: invalid
     - type: MapGrid

@@ -16,7 +16,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Briggle
+      name: QL-Briggle
     - type: Transform
       pos: -0.5104167,-0.625
       parent: invalid

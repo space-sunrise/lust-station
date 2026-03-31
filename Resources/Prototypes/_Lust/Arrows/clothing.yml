@@ -27,7 +27,7 @@
   parent: EnergyDomeBase
   components:
   - type: Sprite
-    sprite: Effects/EnergyDome/energydome_small.rsi
+    sprite: _Sunrise/Effects/EnergyDome/energydome_small.rsi
     layers:
     - state: small
       color: "#006400"

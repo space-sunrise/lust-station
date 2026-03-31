@@ -14,7 +14,7 @@ entities:
   - uid: 7656
     components:
     - type: MetaData
-      name: NT-ПЦК
+      name: QL-ПЦК
     - type: Transform
       parent: invalid
     - type: MapGrid

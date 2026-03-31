@@ -14,7 +14,7 @@ entities:
   - uid: 181
     components:
     - type: MetaData
-      name: NT-Reclaimer
+      name: QL-Reclaimer
     - type: Transform
       pos: 2.2710133,-2.4148211
       parent: invalid

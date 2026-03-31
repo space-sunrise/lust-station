@@ -35,7 +35,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Incorporation
+      name: QL-Incorporation
     - type: Transform
       pos: -0.5208333,-0.5104167
       parent: invalid

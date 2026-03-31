@@ -15,7 +15,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Route Alpha 8b
+      name: QL-Route Alpha 8b
     - type: Transform
       pos: -0.5104167,-0.47916666
       parent: invalid

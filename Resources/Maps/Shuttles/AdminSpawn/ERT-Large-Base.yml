@@ -25,7 +25,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Chimaera
+      name: QL-Chimaera
     - type: Transform
       parent: invalid
     - type: MapGrid

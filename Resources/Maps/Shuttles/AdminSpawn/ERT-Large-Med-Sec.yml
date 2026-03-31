@@ -33,7 +33,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT-Hygieia
+      name: QL-Hygieia
     - type: Transform
       parent: invalid
     - type: MapGrid

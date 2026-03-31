@@ -30,7 +30,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NT Evac Accordia
+      name: QL Evac Accordia
     - type: Transform
       pos: -0.5104167,-0.5
       parent: invalid

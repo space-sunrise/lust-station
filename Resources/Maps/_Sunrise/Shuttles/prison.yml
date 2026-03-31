@@ -25,7 +25,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NTSP-322 "Круизёр"
+      name: QLSP-322 "Круизёр"
     - type: Transform
       pos: 200,0
       parent: invalid

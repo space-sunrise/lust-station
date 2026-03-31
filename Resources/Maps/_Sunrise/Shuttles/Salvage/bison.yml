@@ -51,7 +51,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NTSLV "Bison"
+      name: QLSLV "Bison"
     - type: Transform
       pos: -0.46876526,-1.84375
       parent: invalid

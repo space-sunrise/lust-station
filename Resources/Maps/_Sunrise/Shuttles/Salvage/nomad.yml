@@ -51,7 +51,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NTMS-220 "Кочевник"
+      name: QLMS-220 "Кочевник"
     - type: Transform
       pos: -2.7605057,11.507959
       parent: invalid

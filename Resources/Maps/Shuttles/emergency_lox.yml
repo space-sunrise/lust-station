@@ -35,7 +35,7 @@ entities:
   - uid: 670
     components:
     - type: MetaData
-      name: NT Evac Lox
+      name: QL Evac Lox
     - type: Transform
       pos: 2.2710133,-2.4148211
       parent: invalid

@@ -39,7 +39,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NTS-412 «RED»
+      name: QLS-412 «RED»
     - type: Transform
       pos: -51.0625,-0.28928185
       parent: invalid

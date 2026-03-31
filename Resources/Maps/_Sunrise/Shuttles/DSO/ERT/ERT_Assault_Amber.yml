@@ -39,7 +39,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: NTS-411 «AMBER»
+      name: QLS-411 «AMBER»
     - type: Transform
       pos: -51.0625,-0.28928185
       parent: invalid
