@@ -27,6 +27,7 @@ public sealed partial class StationJobsSystem : EntitySystem
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!;
+    [Dependency] private readonly IPrototypeManager _prototypeManager = default!; // Lust-Edit
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -419,7 +420,7 @@ public sealed partial class StationJobsSystem : EntitySystem
     /// <param name="pickOverflows">Whether or not to pick from the overflow list.</param>
     /// <param name="disallowedJobs">A set of disallowed jobs, if any.</param>
     /// <returns>The selected job, if any.</returns>
-    public ProtoId<JobPrototype>? PickBestAvailableJobWithPriority(EntityUid station, IReadOnlyDictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities, bool pickOverflows, IReadOnlySet<ProtoId<JobPrototype>>? disallowedJobs = null)
+    public ProtoId<JobPrototype>? PickBestAvailableJobWithPriority(EntityUid station, IReadOnlyDictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities, bool pickOverflows, IReadOnlySet<ProtoId<JobPrototype>>? disallowedJobs = null, HumanoidCharacterProfile? profile = null)
     {
         Logger.Info("PickBestAvailableJobWithPriority");
         if (station == EntityUid.Invalid)
@@ -435,6 +436,20 @@ public sealed partial class StationJobsSystem : EntitySystem
                             && !disallowedJobs.Contains(p.Key)
                             && available.Contains(p.Key))
                 .Select(p => p.Key)
+                // Lust-Start: фильтрация по speciesWhitelist при late-join
+                .Where(id =>
+                {
+                    if (!_prototypeManager.TryIndex<JobPrototype>(id, out var job))
+                        return true;
+                    if (profile != null && job.SpeciesBlacklist.Contains(profile.Species))
+                        return false;
+                    if (job.SpeciesWhitelist.Count > 0 && (profile == null || !job.SpeciesWhitelist.Contains(profile.Species)))
+                        return false;
+                    if (profile != null && job.SexBlacklist.Contains(profile.Sex))
+                        return false;
+                    return true;
+                })
+                // Lust-End
                 .ToList();
 
             if (filtered.Count != 0)

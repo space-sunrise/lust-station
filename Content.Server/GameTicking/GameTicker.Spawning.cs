@@ -262,7 +262,8 @@ namespace Content.Server.GameTicking
             jobId ??= _stationJobs.PickBestAvailableJobWithPriority(station,
                 character.JobPriorities,
                 true,
-                restrictedRoles);
+                restrictedRoles,
+                character); // Lust-Edit: передаём профиль для проверки speciesWhitelist
             // If no job available, stay in lobby, or if no lobby spawn as observer
             if (jobId is null)
             {

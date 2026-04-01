@@ -172,7 +172,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         // Sunrise-End
 
         // Lust-Start
-        if (profile != null && job.SpeciesWhitelist.Count > 0 && !job.SpeciesWhitelist.Contains(profile.Species))
+        if (job.SpeciesWhitelist.Count > 0 && (profile == null || !job.SpeciesWhitelist.Contains(profile.Species)))
         {
             var allowed = string.Join(", ", job.SpeciesWhitelist.Select(s => Loc.GetString($"species-name-{s.ToLower()}")));
             reason = FormattedMessage.FromUnformatted(Loc.GetString("species-job-whitelist-fail", ("allowed", allowed)));
