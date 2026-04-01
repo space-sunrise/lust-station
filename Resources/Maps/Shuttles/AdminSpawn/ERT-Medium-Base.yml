@@ -27,7 +27,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Phoenix
+      name: NT-Phoenix
     - type: Transform
       parent: invalid
     - type: MapGrid

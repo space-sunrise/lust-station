@@ -43,7 +43,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QLMS-755 "Долото"
+      name: NTMS-755 "Долото"
     - type: Transform
       pos: 1,1
       parent: invalid
@@ -1566,7 +1566,7 @@ entities:
       pos: 0.5,-2.5
       parent: 1
     - type: FaxMachine
-      name: QLMS-754 "Горняк"
+      name: NTMS-754 "Горняк"
 - proto: Firelock
   entities:
   - uid: 332
@@ -3729,7 +3729,7 @@ entities:
   - uid: 377
     components:
     - type: MetaData
-      name: QLMS-754 "Горняк"
+      name: NTMS-754 "Горняк"
     - type: Transform
       pos: 0.5,0.5
       parent: 1

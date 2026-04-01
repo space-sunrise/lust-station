@@ -30,7 +30,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL Evac Crimson
+      name: NT Evac Crimson
     - type: Transform
       pos: 0.5,0.5
       parent: invalid

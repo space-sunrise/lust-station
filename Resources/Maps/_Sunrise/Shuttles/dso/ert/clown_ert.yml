@@ -28,7 +28,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QLS-415 «Хонк»
+      name: NTS-415 «Хонк»
     - type: Transform
       pos: 49.619335,49.67493
       parent: invalid

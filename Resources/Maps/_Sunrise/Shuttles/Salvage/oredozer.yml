@@ -49,7 +49,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QLMS-440 "Руддозер"
+      name: NTMS-440 "Руддозер"
     - type: Transform
       pos: 2.2710133,-2.4148211
       parent: invalid

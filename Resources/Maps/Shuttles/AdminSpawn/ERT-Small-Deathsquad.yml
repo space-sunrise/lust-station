@@ -28,7 +28,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Ares
+      name: NT-Ares
     - type: Transform
       parent: invalid
     - type: MapGrid

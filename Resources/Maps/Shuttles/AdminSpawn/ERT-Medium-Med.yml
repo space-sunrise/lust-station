@@ -34,7 +34,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Asclepius
+      name: NT-Asclepius
     - type: Transform
       parent: invalid
     - type: MapGrid

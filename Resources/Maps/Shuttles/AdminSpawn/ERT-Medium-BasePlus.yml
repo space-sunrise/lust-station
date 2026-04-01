@@ -27,7 +27,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Griffin
+      name: NT-Griffin
     - type: Transform
       parent: invalid
     - type: MapGrid
@@ -1580,12 +1580,12 @@ entities:
   - uid: 464
     components:
     - type: MetaData
-      name: QL-Griffin fax machine
+      name: NT-Griffin fax machine
     - type: Transform
       pos: -2.5,3.5
       parent: 1
     - type: FaxMachine
-      name: QL-Griffin
+      name: NT-Griffin
 - proto: FireAlarm
   entities:
   - uid: 351

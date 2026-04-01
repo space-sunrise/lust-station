@@ -34,7 +34,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL Evac Centipede
+      name: NT Evac Centipede
     - type: Transform
       pos: 0.39469033,0.22088978
       parent: invalid

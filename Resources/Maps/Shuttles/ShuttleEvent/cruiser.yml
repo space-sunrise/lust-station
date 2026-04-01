@@ -29,7 +29,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Cruiser
+      name: NT-Cruiser
     - type: Transform
       pos: 0.052083373,-0.6041667
       parent: invalid
@@ -1627,12 +1627,12 @@ entities:
   - uid: 518
     components:
     - type: MetaData
-      name: QL-Cruiser fax machine
+      name: NT-Cruiser fax machine
     - type: Transform
       pos: -0.5,9.5
       parent: 1
     - type: FaxMachine
-      name: QL-Cruiser
+      name: NT-Cruiser
 - proto: FolderSpawner
   entities:
   - uid: 530

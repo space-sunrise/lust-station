@@ -28,7 +28,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL Evac Brick
+      name: NT Evac Brick
     - type: Transform
       parent: invalid
     - type: MapGrid

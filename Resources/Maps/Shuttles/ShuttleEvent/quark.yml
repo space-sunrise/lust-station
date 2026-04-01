@@ -19,7 +19,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Quark
+      name: NT-Quark
     - type: Transform
       parent: invalid
     - type: MapGrid
@@ -947,12 +947,12 @@ entities:
   - uid: 245
     components:
     - type: MetaData
-      name: QL-Quark fax machine
+      name: NT-Quark fax machine
     - type: Transform
       pos: -3.5,3.5
       parent: 1
     - type: FaxMachine
-      name: QL-Quark
+      name: NT-Quark
 - proto: GasPassiveVent
   entities:
   - uid: 189
@@ -1479,7 +1479,7 @@ entities:
 
         [bold]_________________________________________________________________________[/bold]
 
-                                           [bold]Crew of the QL-Quark[/bold]
+                                           [bold]Crew of the NT-Quark[/bold]
 
              [bold]Nuclear containment breach detected on long range
                  halcyon scanners. Seek immediate shelter. Avoid

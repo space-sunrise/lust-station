@@ -39,7 +39,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QLS-413 «Gamma»
+      name: NTS-413 «Gamma»
     - type: Transform
       pos: -51.0625,-0.28928185
       parent: invalid

@@ -22,7 +22,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
-      name: QL Evac Cluster
+      name: NT Evac Cluster
     - type: Transform
       pos: -4.3957214,6.3308363
       parent: invalid

@@ -30,7 +30,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL-Penance
+      name: NT-Penance
     - type: Transform
       parent: invalid
     - type: MapGrid

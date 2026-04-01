@@ -33,7 +33,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL Evac Meta
+      name: NT Evac Meta
     - type: Transform
       pos: -2.4375,0.859375
       parent: invalid

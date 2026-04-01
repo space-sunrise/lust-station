@@ -32,7 +32,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
-      name: QL Evac Rod
+      name: NT Evac Rod
     - type: Transform
       pos: -0.70836353,-1.958334
       parent: invalid

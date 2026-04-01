@@ -22,7 +22,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: QL Evac Reliquary
+      name: NT Evac Reliquary
     - type: Transform
       pos: -7.265625,2.28125
       parent: invalid
