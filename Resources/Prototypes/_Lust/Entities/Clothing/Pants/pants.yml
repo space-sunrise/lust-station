@@ -1,0 +1,57 @@
+- type: entity
+  parent: ClothingPantsStorageBase
+  id: ClothingPantsWomanCentComm
+  name: ent-ClothingPantsWomanCentComm
+  description: ent-ClothingPantsWomanCentComm-desc
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Pants/Woman/centcomm.rsi
+    state: female_thong_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Pants/Woman/centcomm.rsi
+    equippedState: female_thong
+  - type: StaticPrice
+    price: 12000
+
+- type: entity
+  parent: ClothingPantsStorageBase
+  id: ClothingPantsManCentComm
+  name: ent-ClothingPantsManCentComm
+  description: ent-ClothingPantsManCentComm-desc
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Pants/Man/centcomm.rsi
+    state: male_boxers_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Pants/Man/centcomm.rsi
+    equippedState: male_boxers
+  - type: StaticPrice
+    price: 14000
+
+- type: entity
+  parent: ClothingPantsStorageBase
+  id: ClothingPantsWomanNanoTrasenRepresentative
+  name: ent-ClothingPantsWomanNanoTrasenRepresentative
+  description: ent-ClothingPantsWomanNanoTrasenRepresentative-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Pants/Woman/ntrep.rsi
+    state: female_thong_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Pants/Woman/ntrep.rsi
+    equippedState: female_thong
+
+- type: entity
+  parent: ClothingPantsStorageBase
+  id: ClothingPantsManNanoTrasenRepresentative
+  name: ent-ClothingPantsManNanoTrasenRepresentative
+  description: ent-ClothingPantsManNanoTrasenRepresentative-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Pants/Man/ntrep.rsi
+    state: male_boxers_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Pants/Man/ntrep.rsi
+    equippedState: male_boxers

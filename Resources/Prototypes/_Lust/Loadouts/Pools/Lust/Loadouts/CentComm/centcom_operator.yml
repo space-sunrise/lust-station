@@ -92,3 +92,24 @@
   id: CentCommQilluBackpack
   equipment:
     back: ClothingBackpackSatchelIAABlack
+
+- type: loadout
+  id: CentCommOperatorBra
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: WomanMoment
+  equipment:
+    bra: ClothingBraCentComm
+
+- type: loadout
+  id: CentCommOperatorThong
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: WomanMoment
+  equipment:
+    pants: ClothingPantsWomanCentComm
+
+- type: loadout
+  id: CentCommOperatorBoxers
+  equipment:
+    pants: ClothingPantsManCentComm

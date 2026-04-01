@@ -1,0 +1,28 @@
+- type: entity
+  parent: ClothingBraStorageBase
+  id: ClothingBraCentComm
+  name: ent-ClothingBraCentComm
+  description: ent-ClothingBraCentComm-desc
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Bra/centcomm.rsi
+    state: female_bralette_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Bra/centcomm.rsi
+    equippedState: female_bralette
+  - type: StaticPrice
+    price: 12000
+
+- type: entity
+  parent: ClothingBraStorageBase
+  id: ClothingBraNanoTrasenRepresentative
+  name: ent-ClothingBraNanoTrasenRepresentative
+  description: ent-ClothingBraNanoTrasenRepresentative-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Bra/ntrep.rsi
+    state: female_bralette_icon
+  - type: Clothing
+    sprite: _Lust/Clothing/Bra/ntrep.rsi
+    equippedState: female_bralette
