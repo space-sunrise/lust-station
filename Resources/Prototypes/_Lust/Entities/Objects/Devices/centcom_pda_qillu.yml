@@ -85,7 +85,7 @@
   - type: Pda
     id: IAAIDCard
     penSlot:
-      startingItem: PenCentcomQillu
+      startingItem: Pen
       priority: -1
       whitelist:
         tags:
