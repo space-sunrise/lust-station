@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingPantsStorageBase
   id: ClothingPantsWomanCentComm
-  name: ent-ClothingPantsWomanCentComm
-  description: ent-ClothingPantsWomanCentComm-desc
+  name: women's thong "CentComm underwear"
+  description: Expensive lingerie in the formal colors of Qillu's highest corporate figures.
   suffix: Qillu
   components:
   - type: Sprite
@@ -17,8 +17,8 @@
 - type: entity
   parent: ClothingPantsStorageBase
   id: ClothingPantsManCentComm
-  name: ent-ClothingPantsManCentComm
-  description: ent-ClothingPantsManCentComm-desc
+  name: boxers "CentComm underwear"
+  description: Expensive lingerie in the formal colors of Qillu's highest corporate figures.
   suffix: Qillu
   components:
   - type: Sprite
@@ -33,8 +33,8 @@
 - type: entity
   parent: ClothingPantsStorageBase
   id: ClothingPantsWomanNanoTrasenRepresentative
-  name: ent-ClothingPantsWomanNanoTrasenRepresentative
-  description: ent-ClothingPantsWomanNanoTrasenRepresentative-desc
+  name: women's thong "Qillu Representative"
+  description: A formal thong in Qillu representative colors.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Pants/Woman/ntrep.rsi
@@ -46,8 +46,8 @@
 - type: entity
   parent: ClothingPantsStorageBase
   id: ClothingPantsManNanoTrasenRepresentative
-  name: ent-ClothingPantsManNanoTrasenRepresentative
-  description: ent-ClothingPantsManNanoTrasenRepresentative-desc
+  name: boxers "Qillu Representative"
+  description: Formal boxers in Qillu representative colors.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Pants/Man/ntrep.rsi
