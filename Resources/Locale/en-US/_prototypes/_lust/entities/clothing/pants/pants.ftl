@@ -1,6 +1,6 @@
-ent-ClothingPantsWomanCentComm = women's thong "CentComm underwear"
+ent-ClothingPantsWomanCentComm = women's thong "CentComm"
     .desc = Expensive lingerie in the formal colors of Qillu's highest corporate figures.
-ent-ClothingPantsManCentComm = boxers "CentComm underwear"
+ent-ClothingPantsManCentComm = boxers "CentComm"
     .desc = Expensive lingerie in the formal colors of Qillu's highest corporate figures.
 ent-ClothingPantsWomanNanoTrasenRepresentative = women's thong "Qillu Representative"
     .desc = A formal thong in Qillu representative colors.
