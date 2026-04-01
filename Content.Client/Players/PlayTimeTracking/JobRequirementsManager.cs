@@ -1,4 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
+using System.Linq;
 using Content.Client.Lobby;
 using Content.Shared.CCVar;
 using Content.Shared.Players;
@@ -169,6 +170,15 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
             }
         }
         // Sunrise-End
+
+        // Lust-Start
+        if (profile != null && job.SpeciesWhitelist.Count > 0 && !job.SpeciesWhitelist.Contains(profile.Species))
+        {
+            var allowed = string.Join(", ", job.SpeciesWhitelist.Select(s => Loc.GetString($"species-name-{s.ToLower()}")));
+            reason = FormattedMessage.FromUnformatted(Loc.GetString("species-job-whitelist-fail", ("allowed", allowed)));
+            return false;
+        }
+        // Lust-End
 
         return true;
     }

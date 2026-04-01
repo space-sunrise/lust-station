@@ -1,0 +1,46 @@
+# Лодауты форм горничных для офицеров СБ (неснимаемые)
+
+- type: loadout
+  id: SecurityMaidJanimaid
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaidUnremoveable
+
+- type: loadout
+  id: SecurityMaidJanimaidMini
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtJanimaidminiUnremoveable
+
+- type: loadout
+  id: SecurityMaidTactical
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtTacticalMaidUnremoveable
+
+- type: loadout
+  id: SecurityMaidElegant
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantMaidUnremoveable
+
+- type: loadout
+  id: SecurityMaidSunrise
+  equipment:
+    jumpsuit: ClothingUniformSkirtSunriseMaidUnremoveable
+
+- type: loadout
+  id: SecurityMaidBlue
+  equipment:
+    jumpsuit: UniformDressMaidBlueUnremoveable
+
+- type: loadout
+  id: SecurityMaidLong
+  equipment:
+    jumpsuit: UniformDressMaidLongUnremoveable
+
+- type: loadout
+  id: SecurityMaidPink
+  equipment:
+    jumpsuit: UniformDressMaidPinkUnremoveable
+
+- type: loadout
+  id: SecurityMaidCostume
+  equipment:
+    jumpsuit: UniformMaidUnremoveable

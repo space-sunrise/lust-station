@@ -1,4 +1,5 @@
 loadout-group-security-neck = Офицер СБ, шея
+loadout-group-security-maid-jumpsuit = Форма горничной (только фелиниды)
 loadout-group-engineer-neck = Инженер, шея
 loadout-group-medical-neck = Медик, шея
 loadout-group-special-items = Спонсор

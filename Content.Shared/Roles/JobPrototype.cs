@@ -183,6 +183,12 @@ namespace Content.Shared.Roles
         // Lust-Start
         [DataField("sexBlacklist")]
         public List<Sex> SexBlacklist = new();
+
+        /// <summary>
+        /// Если задан, работа доступна только перечисленным видам (вайтлист по видам).
+        /// </summary>
+        [DataField("speciesWhitelist", customTypeSerializer: typeof(PrototypeIdListSerializer<SpeciesPrototype>))]
+        public List<string> SpeciesWhitelist = new();
         // Lust-End
     }
 

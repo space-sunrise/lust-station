@@ -10,6 +10,22 @@
   - EyesHudSecurityAlt
 
 - type: loadoutGroup
+  id: LustSecurityMaidJumpsuit
+  name: loadout-group-security-maid-jumpsuit
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SecurityMaidJanimaid
+  - SecurityMaidJanimaidMini
+  - SecurityMaidTactical
+  - SecurityMaidElegant
+  - SecurityMaidSunrise
+  - SecurityMaidBlue
+  - SecurityMaidLong
+  - SecurityMaidPink
+  - SecurityMaidCostume
+
+- type: loadoutGroup
   id: LustHeadofSecurityNeck
   name: loadout-group-head-of-security-neck
   minLimit: 0

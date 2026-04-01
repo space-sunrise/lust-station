@@ -1,0 +1,73 @@
+# Неснимаемые варианты форм горничных для лодаута СБ-фелинидов
+
+- type: entity
+  parent: ClothingUniformJumpskirtJanimaid
+  id: ClothingUniformJumpskirtJanimaidUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: ClothingUniformJumpskirtJanimaidmini
+  id: ClothingUniformJumpskirtJanimaidminiUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: ClothingUniformJumpskirtTacticalMaid
+  id: ClothingUniformJumpskirtTacticalMaidUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: ClothingUniformJumpskirtElegantMaid
+  id: ClothingUniformJumpskirtElegantMaidUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: ClothingUniformSkirtSunriseMaid
+  id: ClothingUniformSkirtSunriseMaidUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: UniformDressMaidBlue
+  id: UniformDressMaidBlueUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: UniformDressMaidLong
+  id: UniformDressMaidLongUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: UniformDressMaidPink
+  id: UniformDressMaidPinkUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false
+
+- type: entity
+  parent: UniformMaid
+  id: UniformMaidUnremoveable
+  suffix: Unremoveable
+  components:
+  - type: Unremoveable
+    deleteOnDrop: false

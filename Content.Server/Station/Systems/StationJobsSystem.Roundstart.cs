@@ -392,6 +392,9 @@ public sealed partial class StationJobsSystem
                 // Lust-Start
                 if (job.SexBlacklist.Contains(profile.Sex))
                     continue;
+
+                if (job.SpeciesWhitelist.Count > 0 && !job.SpeciesWhitelist.Contains(profile.Species))
+                    continue;
                 // Lust-End
 
                 availableJobs ??= new List<string>(profile.JobPriorities.Count);
