@@ -24,7 +24,7 @@
   id: LustJobWarden
   groups:
   - SunriseWardenHead
-  - WardenJumpsuit
+  - LustSecurityMaidJumpsuit
   - SunriseWardenOuterClothing
   - SecurityBelt
   - SunriseWardenGun
@@ -47,7 +47,7 @@
   - SecurityHead
   - LustSecurityGlasses
   - SecurityNeck
-  - SecurityJumpsuit
+  - LustSecurityMaidJumpsuit
   - SecurityOuterClothing
   - SecurityBelt
   - SunriseSecurityGun
@@ -89,7 +89,7 @@
 - type: roleLoadout
   id: LustJobSecurityCadet
   groups:
-  - SecurityCadetJumpsuit
+  - LustSecurityMaidJumpsuit
   - SecurityBackpack
   - SunriseSurvivalSecurity
   - SunriseTrinkets
@@ -107,7 +107,7 @@
   id: LustJobBrigmedic
   groups:
   - SecurityNeck
-  - BrigmedicJumpsuit
+  - LustSecurityMaidJumpsuit
   - BrigmedicBackpack
   - BrigmedicInjectors
   - SurvivalSecurity
@@ -158,7 +158,7 @@
   id: LustJobSeniorOfficer
   groups:
   - SecurityNeck
-  - SeniorOfficerJumpsuit
+  - LustSecurityMaidJumpsuit
   - SecurityOuterClothing
   - SecurityBackpack
   - SecurityBelt
@@ -178,7 +178,7 @@
   id: LustJobSecurityPilot
   groups:
   - SecurityNeck
-  - SecurityPilotJumpsuit
+  - LustSecurityMaidJumpsuit
   - SecurityBackpack
   - SecurityBelt
   - SecurityShoes
