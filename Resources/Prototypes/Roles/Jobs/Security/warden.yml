@@ -26,8 +26,6 @@
   - Cryogenics
   - GenpopEnter
   - GenpopLeave
-  speciesWhitelist: # Lust-Edit
-  - Felinid # Lust-Edit
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

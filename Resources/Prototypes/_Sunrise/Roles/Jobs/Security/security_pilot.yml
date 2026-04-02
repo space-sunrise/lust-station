@@ -17,8 +17,6 @@
   - Brig
   - External
   - Cryogenics
-  speciesWhitelist: # Lust-Edit
-  - Felinid # Lust-Edit
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]
