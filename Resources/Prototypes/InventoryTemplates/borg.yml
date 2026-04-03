@@ -47,7 +47,7 @@
     uiWindowPos: 1,0
     strippingWindowPos: 0,0
     displayName: Head
-    offset: 0.015625, 0
+    offset: 0.015625, -0.07 #Lust Edit
   # Sunrise-Edit
   - name: armor
     slotTexture: outerclothing

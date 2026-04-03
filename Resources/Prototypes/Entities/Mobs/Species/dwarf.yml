@@ -51,7 +51,7 @@
       Male: UnisexDwarf
       Female: FemaleDwarf
       Unsexed: UnisexDwarf
-      Futanari: FemaleDwarf # Lust-edit
+      Futanari: FemaleDwarf # Lust-Edit
   - type: ReplacementAccent
     accent: dwarf
   - type: Speech

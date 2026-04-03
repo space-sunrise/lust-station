@@ -19,13 +19,13 @@
     state: rpg
   - type: StaticPrice
     price: 20
-  # LUST STATION START
+  # Lust-Start
   - type: Clothing
     slots:
     - PLUG
     equipDelay: 5
     unequipDelay: 5
-  # LUST STATION END
+  # Lust-End
 
 - type: entity
   id: CartridgeRocketSlow
@@ -46,13 +46,13 @@
       state: frag
     - type: StaticPrice
       price: 20
-  # LUST STATION START
+  # Lust-Start
     - type: Clothing
       slots:
       - PLUG
       equipDelay: 5
       unequipDelay: 5
-  # LUST STATION END
+  # Lust-End
 
 # Grenades
 
@@ -68,13 +68,13 @@
   - type: Item
     size: Small
   - type: Sprite
-# LUST STATION START
+  # Lust-Start
   - type: Clothing
     slots:
     - PLUG
     equipDelay: 3
     unequipDelay: 3
-# LUST STATION END
+  # Lust-End
 
 - type: entity
   id: GrenadeBaton
@@ -192,13 +192,13 @@
   - type: Item
     size: Small
   - type: Sprite
-  # LUST STATION START
+  # Lust-Start
   - type: Clothing
     slots:
     - PLUG
     equipDelay: 6
     unequipDelay: 6
-  # LUST STATION END
+  # Lust-End
 
 - type: entity
   id: CannonBall
@@ -207,7 +207,7 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: BulletCannonBall
+    proto: BulletCannonBallTracked
     deleteOnSpawn: true
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi # Sunrise-Edit
@@ -220,7 +220,7 @@
   parent: BaseCannonBall
   components:
   - type: CartridgeAmmo
-    proto: PelletGrapeshotSpread
+    proto: PelletGrapeshotSpreadTracked
     deleteOnSpawn: true
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Explosives/explosives.rsi

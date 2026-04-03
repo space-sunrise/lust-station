@@ -58,7 +58,7 @@
     id: NanoTrasenRepresentativePDA
     ears: ClothingHeadsetAltCommand
     pocket1: FlippoEngravedLighter
-    pocket2: PenCentcom
+    pocket2: PenCentcomQillu # Lust-Edit
   storage:
     back:
     - RubberStampNtrep

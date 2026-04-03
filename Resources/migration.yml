@@ -303,7 +303,7 @@ CartridgeRifleRubber: CartridgeRifleSP # Sunrise-Edit
 CartridgeCaselessRifleRubber: CartridgeCaselessRifle
 # Sunrise-Edit
 # MagazinePistolRubber: MagazinePistol
-MagazinePistolSubMachineGunRubber: MagazinePistolSubMachineGunSP # Sunrise-Edit
+#MagazinePistolSubMachineGunRubber: MagazinePistolSubMachineGunSP # Sunrise-Edit
 MagazinePistolCaselessRifleRubber: MagazinePistolCaselessRifle
 # Sunrise-Edit
 # MagazineMagnumRubber: MagazineMagnum
@@ -868,6 +868,7 @@ SupermatterSliver: null
 CartridgePistol: null
 AtmosDeviceFanTinyDev: AtmosDeviceFanTiny
 AtmosDeviceFanDirectionalDev: AtmosDeviceFanDirectional
+GasMinerPlasma: null # Temporary Sunrise migration entry until GasMinerPlasma is removed from all maps.
 MagazineBR64Extended: null
 MagazineBR64: null
 MagazineAR18Extended: null
@@ -887,8 +888,8 @@ GrenadeBlast: GrenadeBlastTimer
 GrenadeEMP: GrenadeEMPTimer
 WeaponEnergyGunMini: WeaponMiniEnergyGun
 GunSafeCombineSmallArms: SpawnerSafeSmallArms
-#AphrodisiacChemistryBottle: null # Lust-edit
-#PatchViagra: null # Lust-edit
+#AphrodisiacChemistryBottle: null # Lust-Edit
+#PatchViagra: null # Lust-Edit
 ClothingHandsGlovesBoxingRigged: GlovesBoxingRiggedRandomSpawner
 MagazinePPSH41: MagazinePistolSubMachineGunPPSHExtended
 MagazinePPSH41Extended: null
@@ -987,10 +988,12 @@ ClothingOuterSuitAreopagite: null
 SuitStorageBlueshield: SuitStorageBlueShield
 GunSafeIonRifle: GunSafeSuperIonRifle
 GunSafeSMRTGun: GunSafeSuperweaponSmartGun
-
+ComfyBrownChair: ComfyChairBrown
 #2026-02-28
 CartridgeRifle: CartridgeRifleSP
 MagazinePistolHighCapacity: MagazinePistolHighCapacitySP
+StorageCanisterBase: StorageCanister
+BulletAK570_90mmHE: BulletAK57090mmHE
 # region Sunrise-End
 
 # Lust-Start

@@ -3,7 +3,7 @@
   id: HumanoidXeno
   name: species-name-xeno
   roundStart: true
-  sponsorOnly: false # Lust-edit
+  sponsorOnly: false # Lust-Edit
   prototype: MobHumanoidXeno
   bodyTypes:
   - HumanoidXenoNormal
@@ -25,6 +25,8 @@
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human
+  sexes:
+  - Unsexed
 
 - type: bodyType
   id: HumanoidXenoNormal
