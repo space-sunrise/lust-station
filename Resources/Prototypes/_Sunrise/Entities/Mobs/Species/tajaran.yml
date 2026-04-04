@@ -58,6 +58,7 @@
       Male: MaleTajaran
       Female: FemaleTajaran
       Unsexed: MaleTajaran
+      Futanari: FemaleTajaran # Lust-Edit
   - type: Temperature
     currentTemperature: 310.15
     specificHeat: 46

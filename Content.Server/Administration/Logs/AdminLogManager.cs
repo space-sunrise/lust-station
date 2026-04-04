@@ -677,7 +677,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
 
                 // Fast manual serialization of the AdminLog POCO to avoid IoC/reflection overhead
                 // We send both 'message' (clean for search) and 'message_fmt' (colored for display)
-                var jsonLine = $"{{\"id\":{log.Id},\"roundId\":{log.RoundId},\"type\":{(int)log.Type},\"impact\":{(int)log.Impact},\"date\":\"{log.Date:O}\",\"message\":{JsonSerializer.Serialize(log.Message)},\"message_fmt\":{JsonSerializer.Serialize(formattedMessage)},\"json\":{log.Json.RootElement.GetRawText()}}}";
+                var playerIds = log.Players.Select(p => p.PlayerUserId.ToString()).ToArray();
+                var playerIdsJson = JsonSerializer.Serialize(playerIds);
+                var jsonLine = $"{{\"id\":{log.Id},\"roundId\":{log.RoundId},\"type\":{(int)log.Type},\"impact\":{(int)log.Impact},\"date\":\"{log.Date:O}\",\"message\":{JsonSerializer.Serialize(log.Message)},\"message_fmt\":{JsonSerializer.Serialize(formattedMessage)},\"json\":{log.Json.RootElement.GetRawText()},\"playerIds\":{playerIdsJson}}}";
 
                 stream.Values.Add(new[] { nanoTime.ToString(), jsonLine });
             }
@@ -708,16 +710,16 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         if (filter != null)
         {
             var filters = new List<string>();
-            if (filter.Round != null) filters.Add($"RoundId={filter.Round.Value}");
+            if (filter.Round != null) filters.Add($"roundId={filter.Round.Value}");
             if (filter.Types != null && filter.Types.Count > 0)
             {
                 var types = string.Join("|", filter.Types.Select(t => (int)t));
-                filters.Add($"Type=~\"{types}\"");
+                filters.Add($"type=~\"{types}\"");
             }
             if (filter.Impacts != null && filter.Impacts.Count > 0)
             {
                 var impacts = string.Join("|", filter.Impacts.Select(i => (int)i));
-                filters.Add($"Impact=~\"{impacts}\"");
+                filters.Add($"impact=~\"{impacts}\"");
             }
             if (filters.Count > 0)
                 query += " | " + string.Join(" and ", filters);
@@ -765,16 +767,27 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
                 foreach (var val in allValues)
                 {
                     var token = JsonDocument.Parse(val[1]).RootElement;
-                    var id = token.GetProperty("Id").GetInt32();
-                    var type = (LogType)token.GetProperty("Type").GetInt32();
-                    var impact = (LogImpact)token.GetProperty("Impact").GetInt32();
-                    var date = token.GetProperty("Date").GetDateTime();
-                    var message = token.GetProperty("Message").GetString() ?? "";
+                    var id = token.GetProperty("id").GetInt32();
+                    var type = (LogType)token.GetProperty("type").GetInt32();
+                    var impact = (LogImpact)token.GetProperty("impact").GetInt32();
+                    var date = token.GetProperty("date").GetDateTime();
+                    var message = token.GetProperty("message").GetString() ?? "";
 
                     var playersList = new List<Guid>();
-                    if (token.TryGetProperty("Players", out var playersProp) && playersProp.ValueKind == JsonValueKind.Array)
+                    if (token.TryGetProperty("playerIds", out var playersProp) && playersProp.ValueKind == JsonValueKind.Array)
                     {
                         foreach (var p in playersProp.EnumerateArray())
+                        {
+                            if (Guid.TryParse(p.GetString(), out var guid))
+                            {
+                                playersList.Add(guid);
+                            }
+                        }
+                    }
+                    else if (token.TryGetProperty("Players", out var oldPlayersProp) && oldPlayersProp.ValueKind == JsonValueKind.Array)
+                    {
+                        // Fallback for older logs if they existed
+                        foreach (var p in oldPlayersProp.EnumerateArray())
                         {
                             if (p.TryGetProperty("PlayerUserId", out var puid) && Guid.TryParse(puid.GetString(), out var guid))
                             {

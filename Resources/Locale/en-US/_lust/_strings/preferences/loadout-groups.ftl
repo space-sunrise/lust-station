@@ -1,4 +1,8 @@
 # Lust Station additional loadout group names
+loadout-group-security-neck = { loadout-group-neck }
+loadout-group-security-officer-neck = { loadout-group-neck }
+loadout-group-engineer-neck = { loadout-group-neck }
+loadout-group-medical-neck = { loadout-group-neck }
 loadout-group-IAA-uniform = { loadout-group-jumpsuit }
 loadout-group-IAA-backpack = { loadout-group-back }
 loadout-group-IAA-outerClothing = { loadout-group-outer-clothing }

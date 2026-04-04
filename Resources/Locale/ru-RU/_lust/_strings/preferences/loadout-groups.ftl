@@ -1,6 +1,7 @@
-loadout-group-security-neck = Офицер СБ, шея
-loadout-group-engineer-neck = Инженер, шея
-loadout-group-medical-neck = Медик, шея
+loadout-group-security-neck = { loadout-group-neck }
+loadout-group-security-officer-neck = { loadout-group-neck }
+loadout-group-engineer-neck = { loadout-group-neck }
+loadout-group-medical-neck = { loadout-group-neck }
 loadout-group-special-items = Спонсор
 loadout-group-IAA-uniform = { loadout-group-jumpsuit }
 loadout-group-IAA-backpack = { loadout-group-back }

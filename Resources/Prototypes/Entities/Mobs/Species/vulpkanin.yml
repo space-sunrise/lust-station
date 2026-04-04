@@ -33,6 +33,7 @@
       Male: MaleVulpkanin
       Female: FemaleVulpkanin
       Unsexed: MaleVulpkanin
+      Futanari: FemaleVulpkanin # Lust-Edit
   - type: Damageable
     damageModifierSet: Vulpkanin
   - type: MeleeWeapon
