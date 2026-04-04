@@ -710,7 +710,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         if (filter != null)
         {
             var filters = new List<string>();
-            if (filter.Round != null) filters.Add($"roundId={filter.Round.Value}");
+            if (filter.Round != null) filters.Add($"roundId=\"{filter.Round.Value}\"");
             if (filter.Types != null && filter.Types.Count > 0)
             {
                 var types = string.Join("|", filter.Types.Select(t => (int)t));
@@ -722,16 +722,37 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
                 filters.Add($"impact=~\"{impacts}\"");
             }
             if (filters.Count > 0)
-                query += " | " + string.Join(" and ", filters);
+                query += " | " + string.Join(" | ", filters);
 
             if (!string.IsNullOrEmpty(filter.Search))
             {
-                query += $" |~ \"(?i){System.Text.RegularExpressions.Regex.Escape(filter.Search)}\"";
+                query += $" |~ \"(?i){Regex.Escape(filter.Search)}\"";
             }
         }
 
         var start = filter?.After != null ? new DateTimeOffset(filter.After.Value).ToUnixTimeMilliseconds() * 1000000 : DateTimeOffset.UtcNow.AddDays(-30).ToUnixTimeMilliseconds() * 1000000;
         var end = filter?.Before != null ? new DateTimeOffset(filter.Before.Value).ToUnixTimeMilliseconds() * 1000000 : DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1000000;
+
+        if (filter?.Round != null && filter.After == null && filter.Before == null)
+        {
+            try
+            {
+                var round = await _db.GetRound(filter.Round.Value);
+                if (round.StartDate != null)
+                {
+                    // Precise 49-hour window around the start of the round
+                    start = new DateTimeOffset(round.StartDate.Value).AddHours(-1).ToUnixTimeMilliseconds() * 1000000;
+                    end = new DateTimeOffset(round.StartDate.Value).AddHours(48).ToUnixTimeMilliseconds() * 1000000;
+
+                    var now = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1000000;
+                    if (end > now) end = now;
+                }
+            }
+            catch
+            {
+                // Round metadata might be missing in DB, fallback to default range
+            }
+        }
 
         var dir = (filter?.DateOrder ?? DateOrder.Descending) == DateOrder.Ascending ? "FORWARD" : "BACKWARD";
         var url = $"{_lokiUrl}/loki/api/v1/query_range?query={Uri.EscapeDataString(query)}&limit={limit}&start={start}&end={end}&direction={dir}";
@@ -887,8 +908,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
     // Sunrise-Start
     public async Task<int> CountLogs(int round)
     {
-        if (_lokiEnabled) return 0;
-        return await _db.CountAdminLogs(round);
+        var count = await _db.CountAdminLogs(round);
+        if (_lokiEnabled && count == 0) return 1000;
+        return count;
     }
     // Sunrise-End
 }
