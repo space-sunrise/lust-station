@@ -7,3 +7,5 @@ sunrise-arrivals-forced-evac = Вы были принудительно выса
 
 sunrise-arrivals-shuttle-docking-blocked = Внимание! Стыковка прибытия заблокирована посторонним объектом. Просьба немедленно освободить док для прибывающего шаттла.
 sunrise-arrivals-shuttle-cc-sender = Центральное Командование
+
+sunrise-arrivals-failsafe-teleport = Шаттл прибытия застрял в пути. Вы были телепортированы на станцию. Гад блесс щиткод вигерса.
