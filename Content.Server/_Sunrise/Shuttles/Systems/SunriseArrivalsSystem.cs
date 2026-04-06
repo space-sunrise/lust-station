@@ -21,6 +21,8 @@ using Content.Server.Spawners.Components;
 using Content.Shared.Chat;
 using Content.Shared.Bed.Cryostorage;
 using Content.Server.Chat.Managers;
+using Content.Server.Spawners.EntitySystems;
+using Content.Shared.Roles;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Tiles;
 using Robust.Shared.EntitySerialization.Systems;
@@ -102,11 +104,21 @@ public sealed class SunriseArrivalsSystem : EntitySystem
     /// </summary>
     private static readonly TimeSpan WarnDelay = TimeSpan.FromSeconds(8);
 
+    /// <summary>
+    /// Wait time before warning the player that station docks are blocked.
+    /// </summary>
+    private static readonly TimeSpan BlockedWarnDelay = TimeSpan.FromSeconds(20);
+
+    /// <summary>
+    /// Interval between CC station announcements about blocked arrivals.
+    /// </summary>
+    private static readonly TimeSpan StationWarnInterval = TimeSpan.FromMinutes(1);
+
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<PlayerSpawningEvent>(OnPlayerSpawning, before: new[] { typeof(ArrivalsSystem) });
+        SubscribeLocalEvent<PlayerSpawningEvent>(OnPlayerSpawning, after: new []{ typeof(ContainerSpawnPointSystem) }, before: new []{ typeof(SpawnPointSystem) });
         SubscribeLocalEvent<SunriseArrivalsShuttleComponent, FTLCompletedEvent>(OnFTLCompleted);
         SubscribeLocalEvent<SunriseArrivalsShuttleComponent, ComponentShutdown>(OnShuttleShutdown);
 
@@ -280,6 +292,42 @@ public sealed class SunriseArrivalsSystem : EntitySystem
                     ProcessLeaving(uid, arrivals, curTime);
                     break;
             }
+
+            if (arrivals.State == SunriseArrivalsShuttleState.Queued)
+                ProcessBlockedDock(uid, arrivals, curTime);
+        }
+    }
+
+    /// <summary>
+    /// Warns the player if their shuttle is stuck in orbit due to blocked docks.
+    /// </summary>
+    private void ProcessBlockedDock(EntityUid uid, SunriseArrivalsShuttleComponent arrivals, TimeSpan curTime)
+    {
+        if (arrivals.DockBlockedWarned || arrivals.Attendant == null)
+            return;
+
+        // Start counting from SpawnTime or first attempt
+        if (curTime < arrivals.SpawnTime + BlockedWarnDelay)
+            return;
+
+        // Only warn if they aren't even travelling yet
+        var msg = Loc.GetString("sunrise-arrivals-attendant-blocked", ("station", Name(arrivals.Station)));
+        _chat.TrySendInGameICMessage(arrivals.Attendant.Value, msg, InGameICChatType.Speak, hideChat: false);
+        arrivals.DockBlockedWarned = true;
+
+        Log.Warning($"Arrivals shuttle {ToPrettyString(uid)} is stuck in queue - docks blocked at {ToPrettyString(arrivals.Station)}");
+
+        // Station-wide CC announcement (throttled per station/globally)
+        var poolQuery = EntityQueryEnumerator<SunriseArrivalsPoolComponent>();
+        while (poolQuery.MoveNext(out _, out var pool))
+        {
+            if (curTime < pool.LastAlertTime + StationWarnInterval)
+                continue;
+
+            var stationMsg = Loc.GetString("sunrise-arrivals-shuttle-docking-blocked");
+            var sender = Loc.GetString("sunrise-arrivals-shuttle-cc-sender");
+            _chat.DispatchStationAnnouncement(arrivals.Station, stationMsg, sender, colorOverride: Color.Gold);
+            pool.LastAlertTime = curTime;
         }
     }
 

@@ -9,3 +9,5 @@ sunrise-arrivals-shuttle-docking-blocked = Внимание! Стыковка п
 sunrise-arrivals-shuttle-cc-sender = Центральное Командование
 
 sunrise-arrivals-failsafe-teleport = Шаттл прибытия застрял в пути. Вы были телепортированы на станцию. Гад блесс щиткод вигерса.
+
+sunrise-arrivals-attendant-blocked = Извините, стыковочные порты на станции "{ $station }" заблокированы или заняты. Нам придется немного подождать в режиме ожидания.

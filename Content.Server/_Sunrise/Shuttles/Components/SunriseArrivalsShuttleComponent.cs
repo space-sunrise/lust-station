@@ -64,6 +64,11 @@ public sealed partial class SunriseArrivalsShuttleComponent : Component
     public bool Warned;
 
     /// <summary>
+    /// Whether the steward has warned the player about blocked docks.
+    /// </summary>
+    public bool DockBlockedWarned;
+
+    /// <summary>
     /// Time when the shuttle started leaving (for delayed delete).
     /// </summary>
     [AutoPausedField]

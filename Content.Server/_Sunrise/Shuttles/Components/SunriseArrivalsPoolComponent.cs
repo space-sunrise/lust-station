@@ -17,4 +17,9 @@ public sealed partial class SunriseArrivalsPoolComponent : Component
     /// Ordered queue of shuttle EntityUids waiting to be dispatched to a station.
     /// </summary>
     public List<EntityUid> Queue = new();
+
+    /// <summary>
+    /// Last time a station was alerted about blocked arrivals docks.
+    /// </summary>
+    public TimeSpan LastAlertTime;
 }
