@@ -50,7 +50,6 @@ public sealed class SunriseArrivalsSystem : EntitySystem
     private bool _enabled;
     private bool _arrivalsEnabled;
     private string _shuttlePath = string.Empty;
-    private float _ftlTime = 15f;
 
     /// <summary>
     /// Time the shuttle waits at the station dock before forced departure.
@@ -61,6 +60,16 @@ public sealed class SunriseArrivalsSystem : EntitySystem
     /// FTL travel time for leaving departure (short, shuttle gets deleted after).
     /// </summary>
     private const float DepartFtlTime = 5f;
+
+    /// <summary>
+    /// FTL travel time when dispatching from queue to dock.
+    /// </summary>
+    private const float DispatchFtlTime = 5f;
+
+    /// <summary>
+    /// Initial FTL travel time for the first arrival flight.
+    /// </summary>
+    private const float InitialFtlTime = 15f;
 
     /// <summary>
     /// Delay after FTL completion before deleting the leaving shuttle.
@@ -103,7 +112,6 @@ public sealed class SunriseArrivalsSystem : EntitySystem
 
         _cfg.OnValueChanged(SunriseCCVars.ArrivalsSingleShuttle, b => _enabled = b, true);
         _cfg.OnValueChanged(SunriseCCVars.ArrivalsSingleShuttlePath, s => _shuttlePath = s, true);
-        _cfg.OnValueChanged(SunriseCCVars.ArrivalsShuttleFTLTime, f => _ftlTime = f, true);
         _cfg.OnValueChanged(CCVars.ArrivalsShuttles, b => _arrivalsEnabled = b, true);
     }
 
@@ -113,7 +121,6 @@ public sealed class SunriseArrivalsSystem : EntitySystem
 
         _cfg.UnsubValueChanged(SunriseCCVars.ArrivalsSingleShuttle, b => _enabled = b);
         _cfg.UnsubValueChanged(SunriseCCVars.ArrivalsSingleShuttlePath, s => _shuttlePath = s);
-        _cfg.UnsubValueChanged(SunriseCCVars.ArrivalsShuttleFTLTime, f => _ftlTime = f);
         _cfg.UnsubValueChanged(CCVars.ArrivalsShuttles, b => _arrivalsEnabled = b);
     }
 
@@ -336,8 +343,8 @@ public sealed class SunriseArrivalsSystem : EntitySystem
         ftl.TargetCoordinates = config.Coordinates;
         ftl.TargetAngle = config.Angle;
         ftl.PriorityTag = new ProtoId<TagPrototype>("DockArrivals");
-        ftl.TravelTime = _ftlTime;
-        ftl.StateTime = StartEndTime.FromCurTime(_timing, _ftlTime);
+        ftl.TravelTime = DispatchFtlTime;
+        ftl.StateTime = StartEndTime.FromCurTime(_timing, DispatchFtlTime);
 
         // Reserve the docks
         foreach (var docks in config.Docks)
@@ -377,7 +384,7 @@ public sealed class SunriseArrivalsSystem : EntitySystem
             ("name", arrivals.PlayerName),
             ("job", arrivals.PlayerJob),
             ("station", Name(arrivals.Station)),
-            ("eta", (int)_ftlTime));
+            ("eta", (int)InitialFtlTime));
         _chat.TrySendInGameICMessage(arrivals.Attendant.Value, msg, InGameICChatType.Speak, hideChat: false);
         arrivals.Greeted = true;
     }

@@ -576,9 +576,9 @@ public sealed partial class SunriseCCVars : CVars
         CVarDef.Create("shuttle.arrivals_single_shuttle_path", "/Maps/_Sunrise/Shuttles/depart.yml", CVar.SERVERONLY);
 
     /// <summary>
-    ///     The time it takes for the single-person arrivals shuttle to arrive at the station.
+    ///     The visual speed of all shuttles when in FTL map.
     /// </summary>
-    public static readonly CVarDef<float> ArrivalsShuttleFTLTime =
-        CVarDef.Create("shuttle.arrivals_ftl_time", 15.0f, CVar.SERVERONLY);
+    public static readonly CVarDef<float> FTLSpeed =
+        CVarDef.Create("shuttle.ftl_speed", 300.0f, CVar.SERVERONLY);
 
 }
