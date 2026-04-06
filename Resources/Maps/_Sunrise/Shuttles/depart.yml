@@ -4,8 +4,8 @@ meta:
   engineVersion: 271.1.0
   forkId: ""
   forkVersion: ""
-  time: 04/05/2026 23:35:33
-  entityCount: 52
+  time: 04/06/2026 04:32:52
+  entityCount: 56
 maps: []
 grids:
 - 1
@@ -288,6 +288,28 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       needsPower: False
+- proto: PlushieLizardJobMultiweh
+  entities:
+  - uid: 7
+    components:
+    - type: Transform
+      pos: 0.7983742,-2.3238206
+      parent: 1
+  - uid: 49
+    components:
+    - type: Transform
+      pos: 0.21765232,-2.4114761
+      parent: 1
+  - uid: 50
+    components:
+    - type: Transform
+      pos: 0.84220266,-2.553916
+      parent: 1
+  - uid: 51
+    components:
+    - type: Transform
+      pos: 0.3710518,-2.1156397
+      parent: 1
 - proto: PoweredFloorlightAlwaysPowered
   entities:
   - uid: 3
@@ -319,11 +341,11 @@ entities:
       fixtures: {}
 - proto: SunriseArrivalsAttendant
   entities:
-  - uid: 7
+  - uid: 48
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 1.5,1.5
+      rot: 3.141592653589793 rad
+      pos: -0.5,-1.5
       parent: 1
     - type: Intercom
       supportedChannels: []
