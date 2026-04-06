@@ -581,4 +581,19 @@ public sealed partial class SunriseCCVars : CVars
     public static readonly CVarDef<float> FTLSpeed =
         CVarDef.Create("shuttle.ftl_speed", 300.0f, CVar.SERVERONLY);
 
+    /**
+     * Photo Uploads
+     */
+
+    /// <summary>
+    /// Whether image loading/uploading in PDA messenger and news console is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> PhotoUploadEnabled =
+        CVarDef.Create("photo.upload_enabled", false, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
+
+    /// <summary>
+    /// Whether taking photos with the PDA camera is enabled.
+    /// </summary>
+    public static readonly CVarDef<bool> PhotoCaptureEnabled =
+        CVarDef.Create("photo.capture_enabled", true, CVar.SERVER | CVar.REPLICATED | CVar.ARCHIVE);
 }
