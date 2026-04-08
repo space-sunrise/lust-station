@@ -4536,3 +4536,14 @@
   id: 1774
   time: '2026-04-08T02:28:57.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4175
+- author: Flaxor13
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u043E\u0431\u044A\
+      \u0451\u043C \u0431\u043E\u0447\u043E\u043D\u043A\u0430 \u043F\u0438\u0432\u0430\
+      . \u0422\u0435\u043F\u0435\u0440\u044C \u043F\u0438\u0432\u043E \u043D\u0435\
+      \ \u0432\u044B\u043B\u0438\u0432\u0430\u0435\u0442\u0441\u044F \u043F\u0440\u0438\
+      \ \u0441\u0442\u0430\u0440\u0442\u0435."
+    type: Fix
+  id: 1775
+  time: '2026-04-08T13:09:23.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4181
