@@ -1552,9 +1552,9 @@
   productEntity: FireAxeFlaming
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 5
+    Telecrystal: 6
   cost:
-    Telecrystal: 9
+    Telecrystal: 8
   categories:
   - UplinkWeaponry
 
@@ -2909,26 +2909,6 @@
       - AssaultOpsUplink
 
 - type: listing
-  id: UplinkClothingHeadHelmetSwatSyndicate
-  name: uplink-swat-helmet-syndicate-name
-  description: uplink-swat-helmet-syndicate-desc
-  icon: { sprite: Clothing/Head/Helmets/swat_syndicate.rsi, state: icon }
-  productEntity: ClothingHeadHelmetSwatSyndicate
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 1
-  cost:
-    Telecrystal: 2
-  categories:
-    - UplinkWearables
-  conditions:
-    - !type:StoreWhitelistCondition
-      blacklist:
-        tags:
-          - LoneOpsUplink
-          - NukeOpsUplink
-
-- type: listing
   id: UplinkWeaponPistolDeagleGolden
   name: uplink-goldendeagle-name
   description: uplink-goldendeagle-desc
@@ -2958,7 +2938,7 @@
   - UplinkPointless
 
 - type: listing
-  id: uplinkWeaponPistolTec9
+  id: UplinkWeaponPistolTec9
   name: uplink-pistoltec9-name
   description: uplink-pistoltec9-desc
   productEntity: WeaponPistolTec9
@@ -3020,6 +3000,71 @@
   - UplinkWeaponry
 
 - type: listing
+  id: UplinkWeaponUzi
+  name: uplink-uzi-name
+  description: uplink-uzi-desc
+  productEntity: SunriseWeaponSubMachineGunUzi
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 12
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkWeaponStechkinAPS
+  name: uplink-stechkin-aps-name
+  description: uplink-stechkin-aps-desc
+  productEntity: SunriseWeaponPistolAPS
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkWeaponBreachingHammer
+  name: uplink-SyndieBreachingHammer-name
+  description: uplink-SyndieBreachingHammer-desc
+  productEntity: SyndieBreachingHammer
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 5
+  cost:
+    Telecrystal: 7
+  categories:
+  - UplinkWeaponry
+
+- type: listing
+  id: UplinkClothingMurderShocks
+  name: uplink-clothing-murder-socks-name
+  description: uplink-clothing-murder-socks-desc
+  productEntity: ClothingUnderSocksMurder
+  cost:
+    Telecrystal: 1
+  categories:
+    - UplinkWearables
+
+- type: listing
+  id: UplinkClothingOuterElegantArmorRaid
+  name: uplink-syndie-maid-raid-name
+  description: uplink-syndie-maid-raid-desc
+  icon: { sprite: _Starlight/Clothing/OuterClothing/Armor/elegant-raid-suit.rsi, state: icon }
+  productEntity: ClothingBackpackSyndicateElegantRaidBundle
+  cost:
+    Telecrystal: 8
+  categories:
+  - UplinkWearables #Sunrise-edit
+  conditions:
+  - !type:StoreWhitelistCondition
+    blacklist:
+      tags:
+      - AssaultOpsUplink #Sunrise-edit
+
+- type: listing
   id: UplinkReinforcementRadioSyndicateCyborgChassisSpider
   name: uplink-reinforcement-radio-syndicate-cyborg-infiltrator-name
   description: uplink-reinforcement-radio-syndicate-cyborg-infiltrator-desc
@@ -3043,3 +3088,4 @@
     blacklist:
       components:
       - SurplusBundle
+
