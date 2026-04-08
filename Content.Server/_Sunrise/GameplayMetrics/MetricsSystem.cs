@@ -156,6 +156,7 @@ public sealed class MetricsSystem : EntitySystem
         _player.PlayerStatusChanged += OnPlayerStatusChanged;
 
         SubscribeLocalEvent<RoundStartingEvent>(OnRoundStarting);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
         SubscribeLocalEvent<RoundEndMessageEvent>(OnRoundEnd);
 
         // Damage / healing — MindContainerComponent is on every player body and is free
@@ -200,6 +201,8 @@ public sealed class MetricsSystem : EntitySystem
 
     private void OnRoundStarting(RoundStartingEvent ev)
     {
+        ResetRoundSessionData();
+
         // Count job priority votes from all ready players' preferences.
         foreach (var session in _player.Sessions)
         {
@@ -223,6 +226,25 @@ public sealed class MetricsSystem : EntitySystem
         }
     }
 
+    private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
+    {
+        ResetRoundSessionData();
+    }
+
+    private void ResetRoundSessionData()
+    {
+        _sessions.Clear();
+
+        var now = _gameTiming.CurTime;
+        foreach (var session in _player.Sessions)
+        {
+            _sessions[session.UserId] = new PlayerSessionData
+            {
+                SessionStart = now
+            };
+        }
+    }
+
     private void OnRoundEnd(RoundEndMessageEvent ev)
     {
         var gamemode = _gameTicker.CurrentPreset?.ID ?? "unknown";
@@ -231,6 +253,8 @@ public sealed class MetricsSystem : EntitySystem
 
         // Survival / connection rate
         var nonObservers = ev.AllPlayersEndInfo.Where(p => !p.Observer).ToArray();
+        double survivalRate = 0;
+        double connectedRate = 0;
 
         if (nonObservers.Length > 0)
         {
@@ -252,9 +276,12 @@ public sealed class MetricsSystem : EntitySystem
                 }
             }
 
-            RoundEndSurvivalRateGauge.Set((double)alivePlayers / nonObservers.Length);
-            RoundEndConnectedRateGauge.Set((double)connectedPlayers / nonObservers.Length);
+            survivalRate = (double)alivePlayers / nonObservers.Length;
+            connectedRate = (double)connectedPlayers / nonObservers.Length;
         }
+
+        RoundEndSurvivalRateGauge.Set(survivalRate);
+        RoundEndConnectedRateGauge.Set(connectedRate);
 
         // Job assignment counts
         foreach (var info in ev.AllPlayersEndInfo)
