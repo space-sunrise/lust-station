@@ -243,9 +243,9 @@
   - type: Gun
     minAngle: 1
     maxAngle: 20
-    angleIncrease: 100
-    angleDecay: 109
-    fireRate: 1
+    angleIncrease: 8
+    angleDecay: 9
+    fireRate: 4
     availableModes:
     - SemiAuto
     soundGunshot:
