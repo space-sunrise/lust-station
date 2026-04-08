@@ -89,8 +89,8 @@ doc-template-error-loading-form-header-name = ОШИБКА загрузки за
 doc-template-note-beginning-military-actions-name = ЗАМЕТКА о начале военных действий
 doc-template-notice-of-liquidation-name = УВЕДОМЛЕНИЕ о начале военных действий
 doc-template-report-accomplishment-goals-name = ОТЧЕТ о достижении целей
-doc-template-report-decree-heads-presence-name = Отчёт о наличии глав
-doc-template-death-certificate-centcom-name = Сообщение о гибели доверенного персонала
+doc-template-sunrise-report-decree-heads-presence-name = Отчёт о наличии глав
+doc-template-sunrise-death-certificate-centcom-name = Сообщение о гибели доверенного персонала
 
 doc-template-order-appointment-interim-name = Приказ о назначении на ВРИО
 doc-template-order-annulment-of-right-name = Приказ об аннулировании действия права

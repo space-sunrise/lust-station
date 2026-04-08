@@ -874,15 +874,15 @@
     state: qillu_form_header_centcom
 
 - type: docTemplate
-  id: ReportDecreeHeadsPresence_QL
-  parent: ReportDecreeHeadsPresence
+  id: SunriseReportDecreeHeadsPresence_QL
+  parent: SunriseReportDecreeHeadsPresence
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
     state: qillu_form_header_cmd
 
 - type: docTemplate
-  id: DeathCertificateCentcom_QL
-  parent: DeathCertificateCentcom
+  id: SunriseDeathCertificateCentcom_QL
+  parent: SunriseDeathCertificateCentcom
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
     state: qillu_form_header_centcom

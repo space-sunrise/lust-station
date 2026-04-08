@@ -130,5 +130,5 @@
     - OrderCentcom
     - OrderReport
     - OrderCentcomTransferStationStaff
-    - ReportDecreeHeadsPresence
-    - DeathCertificateCentcom
+    - SunriseReportDecreeHeadsPresence
+    - SunriseDeathCertificateCentcom

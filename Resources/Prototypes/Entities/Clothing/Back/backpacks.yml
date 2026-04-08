@@ -74,8 +74,6 @@
     storageOpenSound:
       collection: IanBark
 
-
-
 - type: entity
   parent: [ClothingBackpack, BaseSecurityContraband]
   id: ClothingBackpackSecurity
