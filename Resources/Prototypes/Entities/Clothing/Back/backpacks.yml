@@ -73,6 +73,10 @@
   - type: Storage
     storageOpenSound:
       collection: IanBark
+  - type: SingularityDistortion
+    intensity: 1500
+    falloffPower: 1.7
+
 
 - type: entity
   parent: [ClothingBackpack, BaseSecurityContraband]
