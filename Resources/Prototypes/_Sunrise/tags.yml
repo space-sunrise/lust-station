@@ -372,6 +372,12 @@
   id: WeaponPistolTec9
 
 - type: Tag
+  id: SunriseWeaponSubMachineGunUzi
+
+- type: Tag
+  id: SunriseWeaponPistolAPS
+
+- type: Tag
   id: WrappedWeapon
 
 # Clothing / gear
@@ -690,3 +696,7 @@
 # Medicine
 - type: Tag
   id: AutoMender  # Используется для whitelist у ClothingBeltMedical =3
+
+# shuttles
+- type: Tag
+  id: 120mmRocket

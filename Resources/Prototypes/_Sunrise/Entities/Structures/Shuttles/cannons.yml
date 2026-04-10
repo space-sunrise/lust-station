@@ -34,6 +34,15 @@
     - type: AutoLinkTransmitter
       channel: Squall
 
+- type: entity
+  id: SignalButtonUlan
+  parent: SignalButton
+  name: Ulan Fire Button
+  suffix: Autolink
+  components:
+    - type: AutoLinkTransmitter
+      channel: Ulan
+
 # region ---- Autocannon ----
 # naming: BAL (Ballistic) + calliber + Name
 # example: BAL-152 "Molot"
@@ -48,7 +57,6 @@
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Shuttles/bal_127.rsi
     granularLayersRendering: true
-    #scale: 1.1, 1.1
     layers:
     - sprite: Objects/Weapons/Guns/Turrets/sentry_turret.rsi
       state: support
@@ -219,6 +227,11 @@
         layer:
         - MidImpassable
         - LowImpassable
+  - type: AutoLoader
+    container: gun_magazine
+    whitelist:
+      tags:
+      - HeavyAmmoBelt127
   - type: AutoLinkReceiver
     channel: Vympel
 
@@ -404,6 +417,11 @@
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
   - type: AutoLinkReceiver
     channel: Squall
+  - type: AutoLoader
+    container: gun_magazine
+    whitelist:
+      tags:
+      - MagazineMachineGunHeavyRifle
 
 # region ---- Lasers ----
 - type: entity
@@ -451,6 +469,15 @@
     board: ShuttleGunBeamstormMachineGunCircuitboard
   - type: PowerCellSlot
     cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: Magazine
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - PowerCage
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
@@ -624,3 +651,148 @@
       path: /Audio/Effects/tesla.ogg
     range: 5
     volume: -8
+
+# Scylla Laser Railgun - Grid-powered, cyan beam, extreme 1.2km range
+- type: entity
+  id: ShuttleGunUlan
+  parent: ShuttleGunScylla
+  name: LSE-13000e "Ulan"
+  description: An experimental grid-powered laser railgun that focuses ship power into a devastating 2-width electromagnetic melting beam. Draws directly from the ship's APC grid — no power cages required, but it will tax your reactor. Range exceeds 1 kilometer. The long recharge cycle after each shot is the only thing preventing total battlefield dominance.
+  components:
+  - type: Sprite
+    scale: 1.15,1.15
+    sprite: _Starlight/Objects/Weapons/Guns/Shuttleguns/Scylla.rsi
+    granularLayersRendering: true
+    layers:
+    - sprite: Objects/Weapons/Guns/Turrets/sentry_turret.rsi
+      state: support
+      renderingStrategy: NoRotation
+    - sprite: Objects/Weapons/Guns/Turrets/sentry_turret.rsi
+      state: cover_open
+      renderingStrategy: NoRotation
+    - state: space_artillery
+  - type: Gun
+    fireRate: 100
+    burstFireRate: 100
+    shotsPerBurst: 5
+    burstCooldown: 60     # 60-second recharge after each shot
+    minAngle: 1
+    maxAngle: 1
+    angleIncrease: 0
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+      params:
+        variation: 0.03
+        volume: 15
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: Battery
+    maxCharge: 10000
+    startingCharge: 10000
+    netsync: false
+  - type: ApcPowerReceiverBattery
+    idleLoad: 2000
+    batteryRechargeRate: 167     # recharge full in ~60s at full draw
+    batteryRechargeEfficiency: 1.0
+  - type: ApcPowerReceiver
+    powerLoad: 7500
+  - type: BatteryAmmoProvider
+    proto: ScyllaWideLaser
+    fireCost: 2000
+  - type: AutoLinkReceiver
+    channel: Ulan
+
+# region Rockets
+# Vanyk-MK2 60mm Rocket Launcher - Multi-rocket burst fire system
+- type: entity
+  id: ShuttleGunRocketMetla120mm
+  parent: ShuttleGunBase
+  name: RCT-120 "Metla"
+  description: A 120mm rocket launcher system with two rails for rockets. Accurate and reliable, well suited for precision strikes against individual targets. Rockets must be loaded manually.
+  components:
+  - type: Sprite
+    scale: 1.1,1.1
+    sprite: _Sunrise/Objects/Weapons/Guns/Shuttles/Metla.rsi
+    granularLayersRendering: true
+    layers:
+    - sprite: _Starlight/Objects/Weapons/Guns/Turrets/pointdefense.rsi
+      state: support
+      renderingStrategy: NoRotation
+    - state: space_artillery
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-2
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 500
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Anchorable
+    delay: 90
+  - type: Pullable
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 700
+      behaviors:
+        - !type:ChangeConstructionNodeBehavior
+          node: machineFrame
+        - !type:DoActsBehavior
+          acts: ["Destruction"]
+  - type: Gun
+    projectileSpeed: 80
+    selectedMode: Burst
+    burstCooldown: 25
+    shotsPerBurst: 1
+    burstFireRate: 0.3
+    angleDecay: 20
+    minAngle: 0
+    maxAngle: 1
+    availableModes:
+    - Burst
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+      params:
+        variation: 0.08
+        volume: 6
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - 120mmRocket
+    capacity: 2
+    proto: Rocket120mmMetla
+    soundInsert:
+      path: /Audio/Weapons/Guns/Bolt/lmg_bolt_closed.ogg
+      params:
+        pitch: 1.2
+        variation: 0.08
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+  - type: RadarBlip
+    color: "#44FF88"
+    scale: 1.5
+    shape: Circle
+    requireInSpace: true
+  - type: GunneryTrackable
+  - type: StaticPrice
+    price: 9000
