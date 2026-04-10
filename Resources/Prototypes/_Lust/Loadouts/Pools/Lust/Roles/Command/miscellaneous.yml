@@ -45,9 +45,10 @@
 - type: roleLoadout
   id: LustJobNanoTrasenRepresentative
   groups:
-  - NanoTrasenRepresentativeJumpsuit
+  - QilluRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
-  - NanoTrasenRepresentativeBackpack
+  - QilluRepresentativeBack
+  - QilluRepresentativeNeck
   - SunriseSurvival
   - GroupSpeciesBreathTool
   - Bra

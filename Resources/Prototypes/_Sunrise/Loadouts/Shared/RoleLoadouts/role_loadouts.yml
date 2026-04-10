@@ -402,8 +402,7 @@
 - type: roleLoadout
   id: JobNanoTrasenRepresentative
   groups:
-  # - NanoTrasenRepresentativeJumpsuit
-  - QilluRepresentativeJumpsuit #Lust-Edit
+  - NanoTrasenRepresentativeJumpsuit
   - NanoTrasenRepresentativeOuterClothing
   - NanoTrasenRepresentativeBackpack
   - SunriseSurvival

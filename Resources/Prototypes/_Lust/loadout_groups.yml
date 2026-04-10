@@ -47,6 +47,7 @@
   id: QilluRepresentativeJumpsuit
   name: loadout-group-qillurepresentative-jumpsuit
   minLimit: 1
+  maxLimit: 1
   loadouts:
   - NanoTrasenRepresentativeFormalBlack
   - NanoTrasenRepresentativeFormalWhite
@@ -72,6 +73,7 @@
   id: QilluRepresentativeNeck
   name: loadout-group-qillurepresentative-neck
   minLimit: 0
+  maxLimit: 1
   loadouts:
   - NanoTrasenRepresentativeJacketWhite
   - NanoTrasenRepresentativeJacketBlack
