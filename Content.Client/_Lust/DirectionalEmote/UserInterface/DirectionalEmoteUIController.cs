@@ -22,7 +22,7 @@ public sealed class DirectionalEmoteUIController : UIController
         _emoteWindow.Text = string.Empty;
 
         _entityManager.TryGetComponent<MetaDataComponent>(_entityManager.GetEntity(target), out var targetMeta);
-        var targetName = targetMeta != null ? targetMeta.EntityName : "Unknown Entity";
+        var targetName = targetMeta != null ? targetMeta.EntityName : Loc.GetString("directional-emote-unknown-target");
 
         _emoteWindow.Title = Loc.GetString("directional-emote-title",
                                           ("target", targetName));

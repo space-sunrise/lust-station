@@ -3,6 +3,8 @@ directional-emote-button = Send
 directional-last-emote-button = Last Emote
 directional-emote-hide-name = Hide name
 
+directional-emote-unknown-target = Unknown Person
+
 directional-emote-verb-get-data-text = Directional emote
 
 directional-emote-too-long-popup = You must be within { $range } meters of the target!

@@ -3,6 +3,8 @@ directional-emote-button = Отправить
 directional-last-emote-button = Прошлый Эмоут
 directional-emote-hide-name = Скрыть имя
 
+directional-emote-unknown-target = Неизвестная Сущность
+
 directional-emote-verb-get-data-text = Направленный эмоут
 
 directional-emote-too-long-popup = Вы должны находиться в { $range } метрах от цели!
