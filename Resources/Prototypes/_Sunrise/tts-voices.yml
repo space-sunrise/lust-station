@@ -45,7 +45,7 @@
   sex:
   - Male
   # Lust-End
-  speaker: papa
+  speaker: papich
   sponsorOnly: true
   provider: ntts.fdev.team
 
@@ -165,7 +165,7 @@
   sex:
   - Male
   # Lust-End
-  speaker: dbkn
+  speaker: dbkn2
   provider: ntts.fdev.team
 
 - type: ttsVoice
@@ -2515,5 +2515,446 @@
   sex:
   - Female
   speaker: mitashorthairs
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: ChaosMarinesCultistsDow
+  name: tts-voice-name-chaos-marines-cultists-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: chaos_marines_cultists_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: ChaosMarinesDow
+  name: tts-voice-name-chaos-marines-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: chaos_marines_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: ChaosMarinesLordDow
+  name: tts-voice-name-chaos-marines-lord-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: chaos_marines_lord_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: ChaosMarinesSorcerorDow
+  name: tts-voice-name-chaos-marines-sorceror-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: chaos_marines_sorceror_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: DarkEldarArchonDow
+  name: tts-voice-name-dark-eldar-archon-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: dark_eldar_archon_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: DarkEldarMandrakeDow
+  name: tts-voice-name-dark-eldar-mandrake-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: dark_eldar_mandrake_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: DarkEldarWarriorDow
+  name: tts-voice-name-dark-eldar-warrior-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: dark_eldar_warrior_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: DarkEldarWychDow
+  name: tts-voice-name-dark-eldar-wych-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: dark_eldar_wych_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: EldarDow
+  name: tts-voice-name-eldar-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: eldar_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: EldarFarseerDow
+  name: tts-voice-name-eldar-farseer-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: eldar_farseer_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: EldarFireDragonDow
+  name: tts-voice-name-eldar-fire-dragon-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: eldar_fire_dragon_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: EldarWarlockDow
+  name: tts-voice-name-eldar-warlock-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: eldar_warlock_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardAssassinDow
+  name: tts-voice-name-guard-assassin-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_assassin_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardCaptainDow
+  name: tts-voice-name-guard-captain-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_captain_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardCommissarDow
+  name: tts-voice-name-guard-commissar-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_commissar_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardEnginseerDow
+  name: tts-voice-name-guard-enginseer-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_enginseer_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardGuardsmanSergeantDow
+  name: tts-voice-name-guard-guardsman-sergeant-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_guardsman_sergeant_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardHeavyWeaponsPlatoonDow
+  name: tts-voice-name-guard-heavy-weapons-platoon-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_heavy_weapons_platoon_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardKarskinDow
+  name: tts-voice-name-guard-karskin-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_karskin_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardOgrynDow
+  name: tts-voice-name-guard-ogryn-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_ogryn_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardPriestDow
+  name: tts-voice-name-guard-priest-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_priest_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: GuardPsykerDow
+  name: tts-voice-name-guard-psyker-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: guard_psyker_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: Kingpin
+  name: tts-voice-name-kingpin
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: kingpin
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: OrksDow
+  name: tts-voice-name-orks-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: orks_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: OrksFlashgitznobsDow
+  name: tts-voice-name-orks-flashgitznobs-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: orks_flashgitznobs_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: OrksGrotsDow
+  name: tts-voice-name-orks-grots-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: orks_grots_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: OrksWarbossDow
+  name: tts-voice-name-orks-warboss-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: orks_warboss_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SistersBattleSisterDow
+  name: tts-voice-name-sisters-battle-sister-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: sisters_battle_sister_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SistersMissionaryDow
+  name: tts-voice-name-sisters-missionary-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: sisters_missionary_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SpaceMarines2Dow
+  name: tts-voice-name-space-marines-2-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: space_marines_2_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SpaceMarinesChaplainDow
+  name: tts-voice-name-space-marines-chaplain-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: space_marines_chaplain_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SpaceMarinesDow
+  name: tts-voice-name-space-marines-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: space_marines_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SpaceMarinesForceCommanderDow
+  name: tts-voice-name-space-marines-force-commander-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: space_marines_force_commander_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: SpaceMarinesLibrarianDow
+  name: tts-voice-name-space-marines-librarian-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: space_marines_librarian_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: TauEtherealDow
+  name: tts-voice-name-tau-ethereal-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: tau_ethereal_dow
+  roundStart: true
+  sponsorOnly: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: TauKrootDow
+  name: tts-voice-name-tau-kroot-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: tau_kroot_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: TutorialFDow
+  name: tts-voice-name-tutorial-f-dow
+  # Lust-Start
+  sex:
+  - Female
+  - Futanari
+  # Lust-End
+  speaker: tutorial_f_dow
+  roundStart: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: TutorialMDow
+  name: tts-voice-name-tutorial-m-dow
+  # Lust-Start
+  sex:
+  - Male
+  # Lust-End
+  speaker: tutorial_m_dow
   roundStart: true
   provider: ntts.fdev.team

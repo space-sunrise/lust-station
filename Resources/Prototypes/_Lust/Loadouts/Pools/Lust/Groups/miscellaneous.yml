@@ -45,3 +45,114 @@
   loadouts:
   - CentCommQilluBackpack
 
+- type: loadoutGroup
+  id: LustCentCommOperatorBra
+  name: loadout-group-bra
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommOperatorBra
+  - StraplessBra
+  - WhiteNekoBra
+  - BlackNekoBra
+  - AssblastusaBra
+  - BikiniBra
+  - BraletteBra
+  - CommieBra
+  - KinkyBra
+  - LaceBra
+  - SportBra
+  - ThongBra
+  - PinkBra
+  - PurpleBra
+  - BlackBra
+
+- type: loadoutGroup
+  id: LustCentCommOperatorPants
+  name: loadout-group-pants
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CentCommOperatorBoxers
+  - CentCommOperatorThong
+  - StraplessWomanPants
+  - BoxersManPants
+  - AssblastusaManPants
+  - BriefsManPants
+  - CommieManPants
+  - HeartsManPants
+  - KinkyManPants
+  - LongjohnsManPants
+  - MankiniManPants
+  - StripeManPants
+  - UkManPants
+  - NekoWhiteWomanPants
+  - NekoBlackWomanPants
+  - AssblastusaWomanPants
+  - BikiniWomanPants
+  - BraletteWomanPants
+  - CommieWomanPants
+  - KinkyWomanPants
+  - LaceWomanPants
+  - SportWomanPants
+  - ThongWomanPants
+  - UkWomanPants
+  - PinkWomanPants
+  - PurpleWomanPants
+  - BlackWomanPants
+
+- type: loadoutGroup
+  id: LustNanoTrasenRepresentativeBra
+  name: loadout-group-bra
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NanoTrasenRepresentativeBra
+  - StraplessBra
+  - WhiteNekoBra
+  - BlackNekoBra
+  - AssblastusaBra
+  - BikiniBra
+  - BraletteBra
+  - CommieBra
+  - KinkyBra
+  - LaceBra
+  - SportBra
+  - ThongBra
+  - PinkBra
+  - PurpleBra
+  - BlackBra
+
+- type: loadoutGroup
+  id: LustNanoTrasenRepresentativePants
+  name: loadout-group-pants
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NanoTrasenRepresentativeBoxers
+  - NanoTrasenRepresentativeThong
+  - StraplessWomanPants
+  - BoxersManPants
+  - AssblastusaManPants
+  - BriefsManPants
+  - CommieManPants
+  - HeartsManPants
+  - KinkyManPants
+  - LongjohnsManPants
+  - MankiniManPants
+  - StripeManPants
+  - UkManPants
+  - NekoWhiteWomanPants
+  - NekoBlackWomanPants
+  - AssblastusaWomanPants
+  - BikiniWomanPants
+  - BraletteWomanPants
+  - CommieWomanPants
+  - KinkyWomanPants
+  - LaceWomanPants
+  - SportWomanPants
+  - ThongWomanPants
+  - UkWomanPants
+  - PinkWomanPants
+  - PurpleWomanPants
+  - BlackWomanPants
