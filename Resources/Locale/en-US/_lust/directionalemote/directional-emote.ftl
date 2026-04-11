@@ -1,4 +1,4 @@
-directional-emote-title = Directional Emote
+directional-emote-title = Directional Emote -> { $target }
 directional-emote-button = Send
 directional-last-emote-button = Last Emote
 directional-emote-hide-name = Hide name

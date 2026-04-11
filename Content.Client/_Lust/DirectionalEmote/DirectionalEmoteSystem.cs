@@ -48,7 +48,7 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
 
         if (!_examineSystem.InRangeUnOccluded(GetEntity(source), GetEntity(target), _maxEmoteDistance))
         {
-            _popupSystem.PopupCursor(Loc.GetString("directional-emote-too-long-popup", ("range", _maxEmoteDistance)), PopupType.MediumCaution);
+            _popupSystem.PopupCursor(Loc.GetString("directional-emote-too-long-popup", ("range", Math.Round(_maxEmoteDistance, 1))), PopupType.MediumCaution);
             return;
         }
 

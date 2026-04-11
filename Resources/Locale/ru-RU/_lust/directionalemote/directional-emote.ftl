@@ -1,4 +1,4 @@
-directional-emote-title = Направленный Эмоут
+directional-emote-title = Направленный Эмоут -> { $target }
 directional-emote-button = Отправить
 directional-last-emote-button = Прошлый Эмоут
 directional-emote-hide-name = Скрыть имя

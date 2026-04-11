@@ -21,6 +21,9 @@ public sealed class DirectionalEmoteUIController : UIController
         _emoteWindow.Target = target;
         _emoteWindow.Text = string.Empty;
 
+        _emoteWindow.Title = Loc.GetString("directional-emote-title",
+                                          ("target", _entityManager.GetComponent<MetaDataComponent>(_entityManager.GetEntity(target)).EntityName));
+
         _emoteWindow.OpenCentered();
         _emoteWindow.MoveToFront();
 
