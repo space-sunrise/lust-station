@@ -1,0 +1,52 @@
+<ui:FancyWindow xmlns="https://spacestation14.io"
+                xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls"
+                xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
+                VerticalExpand="True"
+                HorizontalExpand="True"
+                Title="{Loc directional-emote-title}"
+                MinSize="600 300">
+    <PanelContainer Margin="10">
+        <PanelContainer.PanelOverride>
+            <gfx:StyleBoxFlat BackgroundColor="#1A1A24" />
+        </PanelContainer.PanelOverride>
+        <PanelContainer Margin="5">
+            <PanelContainer.PanelOverride>
+                <gfx:StyleBoxFlat BackgroundColor="#2b2b3b" />
+            </PanelContainer.PanelOverride>
+
+            <BoxContainer Orientation="Vertical">
+                <TextEdit Name="MessageInput"
+                    Margin="10"
+                    VerticalExpand="True"
+                    HorizontalExpand="True"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"/>
+                <PanelContainer MaxHeight="50" VerticalAlignment="Bottom">
+                    <PanelContainer.PanelOverride>
+                        <gfx:StyleBoxFlat BackgroundColor="#1A1A24" />
+                    </PanelContainer.PanelOverride>
+                    <PanelContainer Margin="0 5 0 0">
+                        <PanelContainer.PanelOverride>
+                            <gfx:StyleBoxFlat BackgroundColor="#21212E" />
+                        </PanelContainer.PanelOverride>
+                        <CheckBox Name="HideNameCheckBox" Margin="10"
+                                  Text="{Loc directional-emote-hide-name}"
+                                  HorizontalAlignment="Left"
+                                  Visible="False" />
+                        <BoxContainer Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                            <Button Name="LastEmoteButton"
+                                    Text="{Loc 'directional-last-emote-button'}"
+                                    ModulateSelfOverride="#3D3D4A"
+                                    HorizontalAlignment="Center"
+                                    Margin="0 0 5 0"/>
+                            <Button Name="AcceptButton"
+                                    Text="{Loc 'directional-emote-button'}"
+                                    ModulateSelfOverride="#3D3D4A"
+                                    HorizontalAlignment="Center"/>
+                        </BoxContainer>
+                    </PanelContainer>
+                </PanelContainer>
+            </BoxContainer>
+        </PanelContainer>
+    </PanelContainer>
+</ui:FancyWindow>

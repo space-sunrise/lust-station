@@ -253,6 +253,7 @@
     isOnlyEmotion: false
   - type: CanFall
   # Sunrise-End
+  - type: DirectionalEmote # Lust
 
 - type: entity
   save: false

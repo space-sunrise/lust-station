@@ -118,6 +118,10 @@
   - type: BypassInteractionChecks
   - type: ExplosionResistance
     damageCoefficient: 0
+  # Lust-start
+  - type: DirectionalEmote
+    canHideName: true
+  # Lust-end
 
 - type: entity
   abstract: true
