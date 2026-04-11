@@ -76,7 +76,13 @@ public sealed class GameMapManager : IGameMapManager
 
             _log.Error($"Unknown map prototype {value} was selected!");
         }, true);
-        _configurationManager.OnValueChanged(CCVars.GameMapRotation, value => _mapRotationEnabled = value, true);
+        _configurationManager.OnValueChanged(CCVars.GameMapRotation, value =>
+        {
+            if (_mapRotationEnabled && !value)
+                _excludedMaps.Clear();
+
+            _mapRotationEnabled = value;
+        }, true);
         _configurationManager.OnValueChanged(CCVars.GameMapMemoryDepth, value =>
         {
             _mapQueueDepth = value;
@@ -111,6 +117,9 @@ public sealed class GameMapManager : IGameMapManager
 
     public void AddExcludedMap(string mapId)
     {
+        if (!_mapRotationEnabled)
+            return;
+
         if (!_configurationManager.GetCVar(SunriseCCVars.ExcludeMaps))
             return;
 
