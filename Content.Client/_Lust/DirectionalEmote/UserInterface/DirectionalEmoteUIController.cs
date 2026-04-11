@@ -38,6 +38,9 @@ public sealed class DirectionalEmoteUIController : UIController
 
         _emoteWindow.UpdateHideNameVisibility(emoteComp.CanHideName);
 
+        _emoteWindow.AcceptPressed = null;
+        _emoteWindow.LastEmotePressed = null;
+
         _emoteWindow.AcceptPressed += () =>
         {
             _directionalEmoteSystem.TrySendEmote(_emoteWindow.Source, _emoteWindow.Target, _emoteWindow.Text, _emoteWindow.HideName);

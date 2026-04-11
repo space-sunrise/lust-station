@@ -63,7 +63,11 @@ public sealed partial class DirectionalEmoteSystem : EntitySystem
 
     private bool IsValid(DirectionalEmoteAttemptEvent args, EntityUid source, EntityUid target)
     {
-        if (!TryComp<DirectionalEmoteComponent>(source, out var sourceEmote))
+        if (!TryComp<DirectionalEmoteComponent>(source, out var sourceEmote) ||
+            !TryComp<DirectionalEmoteComponent>(target, out var targetEmote))
+            return false;
+
+        if (!sourceEmote.CanSendEmotes || !targetEmote.CanReceiveEmotes)
             return false;
 
         if (args.HideName && !sourceEmote.CanHideName)
