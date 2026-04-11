@@ -113,9 +113,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             value => _queueMax = value, true);
         _configuration.OnValueChanged(CCVars.AdminLogsPreRoundQueueMax,
             value => _preRoundQueueMax = value, true);
-        // Sunrise edit start - keep Loki configuration in fork partial
+        // Sunrise added start - keep Loki configuration in fork partial
         InitializeLokiConfiguration();
-        // Sunrise edit end
+        // Sunrise added end
         _configuration.OnValueChanged(CCVars.AdminLogsDropThreshold,
             value => _dropThreshold = value, true);
         _configuration.OnValueChanged(CCVars.AdminLogsHighLogPlaytime,
@@ -146,9 +146,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         }
         finally
         {
-            // Sunrise edit start - release fork Loki resources during admin log shutdown
+            // Sunrise added start - release fork Loki resources during admin log shutdown
             ShutdownLoki();
-            // Sunrise edit end
+            // Sunrise added end
         }
     }
 
@@ -261,7 +261,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         _preRoundLogQueue.Clear();
         PreRoundQueue.Set(0);
 
-        // Sunrise edit start - choose Loki or database admin log persistence
+        // Sunrise added start - choose Loki or database admin log persistence
         Task task;
         if (_lokiEnabled)
         {
@@ -273,7 +273,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             task = _db.AddAdminLogs(copy);
             _sawmill.Debug($"Saving {copy.Count} admin logs.");
         }
-        // Sunrise edit end
+        // Sunrise added end
 
         if (_metricsEnabled)
         {
@@ -588,13 +588,13 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             list = new List<SharedAdminLog>(initialSize);
         }
 
-        // Sunrise edit start - read admin logs from Loki when enabled
+        // Sunrise added start - read admin logs from Loki when enabled
         if (_lokiEnabled)
         {
             await GetAdminLogsFromLoki(filter, list);
             return list;
         }
-        // Sunrise edit end
+        // Sunrise added end
 
         await foreach (var log in _db.GetAdminLogs(filter).WithCancellation(filter?.CancellationToken ?? default))
         {
@@ -604,7 +604,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         return list;
     }
 
-    // Sunrise edit start - route log message reads through Loki-aware query paths
+    // Sunrise added start - route log message reads through Loki-aware query paths
     public async IAsyncEnumerable<string> AllMessages(LogFilter? filter = null)
     {
         if (_lokiEnabled)
@@ -630,7 +630,7 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             await foreach (var json in _db.GetAdminLogsJson(filter)) yield return json;
         }
     }
-    // Sunrise edit end
+    // Sunrise added end
 
     public Task<Round> Round(int roundId)
     {
@@ -663,9 +663,12 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         return Round(_currentRoundId);
     }
 
-    // Sunrise edit start - prefer Loki count and report zero if Loki is unavailable
+    // Sunrise added start - prefer Loki count and report zero if Loki is unavailable
     public async Task<int> CountLogs(int round)
     {
+        if (round <= 0)
+            return 0;
+
         if (_lokiEnabled)
         {
             try
@@ -688,50 +691,23 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             return 0;
 
         var filter = new LogFilter { Round = round };
-        var ascending = true;
         var timeRange = await ResolveLokiTimeRange(filter);
-        var batchLimit = 5000;
-        LokiCursor? cursor = null;
-        var count = 0;
-        var requiresMore = true;
+        if (timeRange.End <= timeRange.Start)
+            return 0;
 
-        while (requiresMore)
+        var total = 0;
+        var chunkStart = timeRange.Start;
+        while (chunkStart < timeRange.End)
         {
-            var query = BuildLokiQuery(filter, ascending, cursor);
-            var url = BuildLokiQueryUrl(query, batchLimit, timeRange, ascending);
-            var response = await _httpClient.GetAsync(url);
-            if (!response.IsSuccessStatusCode)
-            {
-                var body = await response.Content.ReadAsStringAsync();
-                throw new Exception($"Loki count query failed: {response.StatusCode} {body}");
-            }
+            var chunkEnd = chunkStart + LokiCountQueryWindow;
+            if (chunkEnd > timeRange.End)
+                chunkEnd = timeRange.End;
 
-            var content = await response.Content.ReadAsStringAsync();
-            var lokiResponse = JsonSerializer.Deserialize<LokiQueryResponse>(content);
-            var rawValueCount = CountLokiValues(lokiResponse);
-            var rawValues = FlattenLokiValues(lokiResponse, ascending, batchLimit);
-            if (rawValues.Count == 0)
-                return count;
-
-            var nextCursor = cursor;
-            foreach (var parsed in rawValues)
-            {
-                if (cursor != null && !IsCursorBefore(parsed, cursor.Value))
-                    continue;
-
-                count++;
-                nextCursor = ToLokiCursor(parsed);
-            }
-
-            if (nextCursor == null || nextCursor == cursor)
-                return count;
-
-            cursor = nextCursor;
-            timeRange = MoveTimeRangeCursorForward(timeRange, cursor.Value, ascending);
-            requiresMore = rawValueCount >= batchLimit;
+            total += await QueryLokiCountForWindow(round, chunkStart, chunkEnd);
+            chunkStart = chunkEnd;
         }
 
-        return count;
+        return total;
     }
-    // Sunrise edit end
+    // Sunrise added end
 }

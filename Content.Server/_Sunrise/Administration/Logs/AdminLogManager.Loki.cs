@@ -3,6 +3,7 @@
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Linq;
+using System.Globalization;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -25,6 +26,8 @@ public sealed partial class AdminLogManager
     private const string Cyan = "\u001b[36m";
     private const string Reset = "\u001b[0m";
     private const string White = "\u001b[37m";
+    private static readonly TimeSpan LokiDefaultQueryWindow = TimeSpan.FromDays(30);
+    private static readonly TimeSpan LokiCountQueryWindow = TimeSpan.FromDays(30);
 
     private bool _lokiEnabled;
     private string _lokiUrl = string.Empty;
@@ -233,11 +236,12 @@ public sealed partial class AdminLogManager
     private async Task<LokiTimeRange> ResolveLokiTimeRange(LogFilter? filter)
     {
         var now = DateTimeOffset.UtcNow;
+        var defaultStart = now - LokiDefaultQueryWindow;
         if (filter?.After != null || filter?.Before != null)
         {
             var explicitStart = filter?.After != null
                 ? new DateTimeOffset(filter.After.Value)
-                : now.AddDays(-30);
+                : defaultStart;
             var explicitEnd = filter?.Before != null
                 ? new DateTimeOffset(filter.Before.Value)
                 : now;
@@ -245,8 +249,8 @@ public sealed partial class AdminLogManager
             return new LokiTimeRange(explicitStart, explicitEnd, false);
         }
 
-        if (filter?.Round == null)
-            return new LokiTimeRange(now.AddDays(-30), now, false);
+        if (filter?.Round is not > 0)
+            return new LokiTimeRange(defaultStart, now, false);
 
         try
         {
@@ -262,7 +266,63 @@ public sealed partial class AdminLogManager
             _sawmill.Warning($"Failed loading round metadata for Loki query window for round {filter.Round.Value}: {ex}");
         }
 
-        return new LokiTimeRange(DateTimeOffset.UnixEpoch, now, false);
+        return new LokiTimeRange(defaultStart, now, false);
+    }
+
+    private async Task<int> QueryLokiCountForWindow(int round, DateTimeOffset windowStart, DateTimeOffset windowEnd)
+    {
+        if (windowEnd <= windowStart)
+            return 0;
+
+        var startMilliseconds = windowStart.ToUnixTimeMilliseconds();
+        var endMilliseconds = windowEnd.ToUnixTimeMilliseconds();
+        var windowMilliseconds = Math.Max(1L, endMilliseconds - startMilliseconds);
+
+        var streamSelector = $"{{app=\"{_lokiName}\", category=\"admin_log\"}} | json | roundId=\"{round}\"";
+        var query = $"sum(count_over_time({streamSelector}[{windowMilliseconds}ms]))";
+        var queryTime = endMilliseconds * 1_000_000;
+        var url = $"{_lokiUrl}/loki/api/v1/query?query={Uri.EscapeDataString(query)}&time={queryTime}";
+
+        var response = await _httpClient.GetAsync(url);
+        if (!response.IsSuccessStatusCode)
+        {
+            var body = await response.Content.ReadAsStringAsync();
+            throw new Exception($"Loki count query failed: {response.StatusCode} {body}");
+        }
+
+        var content = await response.Content.ReadAsStringAsync();
+        return ParseLokiCountResponse(content);
+    }
+
+    private static int ParseLokiCountResponse(string content)
+    {
+        using var document = JsonDocument.Parse(content);
+        if (!document.RootElement.TryGetProperty("data", out var data) ||
+            !data.TryGetProperty("result", out var result) ||
+            result.ValueKind != JsonValueKind.Array)
+        {
+            return 0;
+        }
+
+        double total = 0;
+        foreach (var sample in result.EnumerateArray())
+        {
+            if (!sample.TryGetProperty("value", out var value) ||
+                value.ValueKind != JsonValueKind.Array ||
+                value.GetArrayLength() < 2)
+            {
+                continue;
+            }
+
+            var countText = value[1].GetString();
+            if (string.IsNullOrEmpty(countText))
+                continue;
+
+            if (double.TryParse(countText, NumberStyles.Float, CultureInfo.InvariantCulture, out var parsed))
+                total += parsed;
+        }
+
+        return (int) Math.Round(total, MidpointRounding.AwayFromZero);
     }
 
     private string BuildLokiQuery(LogFilter? filter, bool ascending, LokiCursor? cursor = null)

@@ -1,2 +1,4 @@
 - name: Example-article
   href: example-article.md
+- name: Local Loki for Admin Logs
+  href: loki-local-adminlogs.md

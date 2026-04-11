@@ -33,6 +33,9 @@ public sealed class AdminLogsEui : BaseEui
     private int _roundLogs;
     private CancellationTokenSource _logSendCancellation = new();
     private LogFilter _filter;
+    // Sunrise added start - guard metadata loading from stale async responses
+    private int _loadFromDbRequestId;
+    // Sunrise added end
 
     private readonly DefaultObjectPool<List<SharedAdminLog>> _adminLogListPool =
         new(new ListPolicy<SharedAdminLog>());
@@ -48,23 +51,28 @@ public sealed class AdminLogsEui : BaseEui
         _filter = new LogFilter
         {
             CancellationToken = _logSendCancellation.Token,
-            // Sunrise edit start - request one extra record and keep cursor on visible page edge
+            // Sunrise added start - request one extra record and keep cursor on visible page edge
             LokiCursorOverfetch = 1,
             Limit = _clientBatchSize + 1
-            // Sunrise edit end
+            // Sunrise added end
         };
     }
 
     private int CurrentRoundId => _e.System<GameTicker>().RoundId;
 
-    public override async void Opened()
+    // Sunrise added start - remove blocking metadata await from EUI open flow
+    public override void Opened()
+    // Sunrise added end
     {
         base.Opened();
 
         _adminManager.OnPermsChanged += OnPermsChanged;
 
-        var roundId = _filter.Round ?? CurrentRoundId;
-        await LoadFromDb(roundId);
+        // Sunrise added start - normalize round selection and load metadata asynchronously
+        var roundId = NormalizeRoundId(_filter.Round);
+        _filter.Round = roundId;
+        QueueLoadFromDb(roundId);
+        // Sunrise added end
     }
 
     private void ClientBatchSizeChanged(int value)
@@ -95,7 +103,9 @@ public sealed class AdminLogsEui : BaseEui
         return state;
     }
 
-    public override async void HandleMessage(EuiMessageBase msg)
+    // Sunrise added start - keep message handler non-blocking for first log page delivery
+    public override void HandleMessage(EuiMessageBase msg)
+    // Sunrise added end
     {
         base.HandleMessage(msg);
 
@@ -112,10 +122,12 @@ public sealed class AdminLogsEui : BaseEui
 
                 _logSendCancellation.Cancel();
                 _logSendCancellation = new CancellationTokenSource();
+                // Sunrise added start - normalize requested round before querying round metadata/count
+                var roundId = NormalizeRoundId(request.RoundId);
                 _filter = new LogFilter
                 {
                     CancellationToken = _logSendCancellation.Token,
-                    Round = request.RoundId,
+                    Round = roundId,
                     Search = request.Search,
                     Types = request.Types,
                     Impacts = request.Impacts,
@@ -127,16 +139,17 @@ public sealed class AdminLogsEui : BaseEui
                     IncludeNonPlayers = request.IncludeNonPlayers,
                     LastLogId = null,
                     LastLogCursor = null,
-                    // Sunrise edit start - request one extra record and keep cursor on visible page edge
+                    // Sunrise added start - request one extra record and keep cursor on visible page edge
                     LokiCursorOverfetch = 1,
                     Limit = _clientBatchSize + 1
-                    // Sunrise edit end
+                    // Sunrise added end
                 };
+                // Sunrise added end
 
-                var roundId = _filter.Round ??= CurrentRoundId;
-                await LoadFromDb(roundId);
-
+                // Sunrise added start - send visible logs immediately, update metadata/count in parallel
                 SendLogs(true);
+                QueueLoadFromDb(roundId);
+                // Sunrise added end
                 break;
             }
             case NextLogsRequest:
@@ -193,32 +206,95 @@ public sealed class AdminLogsEui : BaseEui
         _configuration.UnsubValueChanged(CCVars.AdminLogsClientBatchSize, ClientBatchSizeChanged);
         _adminManager.OnPermsChanged -= OnPermsChanged;
 
+        // Sunrise added start - invalidate pending metadata loads for closed EUI instances
+        Interlocked.Increment(ref _loadFromDbRequestId);
+        // Sunrise added end
         _logSendCancellation.Cancel();
         _logSendCancellation.Dispose();
     }
 
-    private async Task LoadFromDb(int roundId)
+    // Sunrise added start - normalize invalid round ids and keep metadata loads race-safe
+    private int NormalizeRoundId(int? roundId)
     {
+        if (roundId is > 0)
+            return roundId.Value;
+
+        var currentRoundId = CurrentRoundId;
+        return currentRoundId > 0 ? currentRoundId : 0;
+    }
+
+    private void QueueLoadFromDb(int roundId)
+    {
+        var requestId = Interlocked.Increment(ref _loadFromDbRequestId);
+        _ = LoadFromDb(roundId, requestId);
+    }
+
+    private void ResetRoundMetadata()
+    {
+        _players.Clear();
+        _roundLogs = 0;
+    }
+
+    private bool IsCurrentLoadRequest(int requestId)
+    {
+        return !IsShutDown && requestId == Volatile.Read(ref _loadFromDbRequestId);
+    }
+
+    private async Task LoadFromDb(int roundId, int requestId)
+    {
+        if (!IsCurrentLoadRequest(requestId))
+            return;
+
         _isLoading = true;
         StateDirty();
 
-        var round = _adminLogs.Round(roundId);
-        var count = _adminLogs.CountLogs(roundId);
-        await Task.WhenAll(round, count);
-
-        var players = (await round).Players
-            .ToDictionary(player => player.UserId, player => player.LastSeenUserName);
-
-        _players.Clear();
-
-        foreach (var (id, name) in players)
+        try
         {
-            _players.Add(id, name);
+            if (roundId <= 0)
+            {
+                ResetRoundMetadata();
+                return;
+            }
+
+            var round = _adminLogs.Round(roundId);
+            var count = _adminLogs.CountLogs(roundId);
+            await Task.WhenAll(round, count);
+
+            if (!IsCurrentLoadRequest(requestId))
+                return;
+
+            var players = (await round).Players
+                .ToDictionary(player => player.UserId, player => player.LastSeenUserName);
+            var roundLogs = await count;
+
+            if (!IsCurrentLoadRequest(requestId))
+                return;
+
+            _players.Clear();
+
+            foreach (var (id, name) in players)
+            {
+                _players.Add(id, name);
+            }
+
+            _roundLogs = roundLogs;
         }
+        catch (Exception ex)
+        {
+            if (!IsCurrentLoadRequest(requestId))
+                return;
 
-        _roundLogs = await count;
-
-        _isLoading = false;
-        StateDirty();
+            ResetRoundMetadata();
+            _sawmill.Warning($"Failed loading admin log metadata for round {roundId}: {ex}");
+        }
+        finally
+        {
+            if (IsCurrentLoadRequest(requestId))
+            {
+                _isLoading = false;
+                StateDirty();
+            }
+        }
     }
+    // Sunrise added end
 }
