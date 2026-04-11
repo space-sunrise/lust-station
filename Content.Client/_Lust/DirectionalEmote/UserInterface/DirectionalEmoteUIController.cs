@@ -21,17 +21,20 @@ public sealed class DirectionalEmoteUIController : UIController
         _emoteWindow.Target = target;
         _emoteWindow.Text = string.Empty;
 
-        _emoteWindow.Title = Loc.GetString("directional-emote-title",
-                                          ("target", _entityManager.GetComponent<MetaDataComponent>(_entityManager.GetEntity(target)).EntityName));
+        _entityManager.TryGetComponent<MetaDataComponent>(_entityManager.GetEntity(target), out var targetMeta);
+        var targetName = targetMeta != null ? targetMeta.EntityName : "Unknown Entity";
 
-        _emoteWindow.OpenCentered();
-        _emoteWindow.MoveToFront();
+        _emoteWindow.Title = Loc.GetString("directional-emote-title",
+                                          ("target", targetName));
 
         if (!_entityManager.TryGetEntity(_emoteWindow.Source, out var sourceEntity))
             return;
 
         if (!_entityManager.TryGetComponent<DirectionalEmoteComponent>(sourceEntity, out var emoteComp))
             return;
+
+        _emoteWindow.OpenCentered();
+        _emoteWindow.MoveToFront();
 
         _emoteWindow.UpdateHideNameVisibility(emoteComp.CanHideName);
 

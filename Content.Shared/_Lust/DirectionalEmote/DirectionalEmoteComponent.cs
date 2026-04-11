@@ -8,12 +8,21 @@ namespace Content.Shared._Lust.DirectionalEmote;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class DirectionalEmoteComponent : Component
 {
+    // <summary>
+    /// Whether the entity can send directional emotes.
+    /// </summary>
     [DataField, AutoNetworkedField]
     public bool CanSendEmotes = true;
 
+    /// <summary>
+    /// Whether the entity can receive directional emotes.
+    /// </summary>
     [DataField, AutoNetworkedField]
     public bool CanReceiveEmotes = true;
 
+    /// <summary>
+    /// Whether the entity can hide their name in directional emotes.
+    /// </summary>
     [DataField, AutoNetworkedField]
     public bool CanHideName = false;
 
