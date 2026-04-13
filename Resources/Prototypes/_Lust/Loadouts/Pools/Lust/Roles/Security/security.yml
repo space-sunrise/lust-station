@@ -6,10 +6,10 @@
   - LustHeadofSecurityNeck
   - SunriseHeadofSecurityJumpsuit
   - SunriseHeadofSecurityOuterClothing
+  - SecurityBackpack
   - SecurityBelt
   - SunriseSecurityGunHos
   - SecurityShoes
-  - SecurityBackpack
   - SunriseSurvivalSecurity
   - SunriseGroupSpeciesBreathToolSecurity
   - SunriseHeadofSecurityBra
@@ -28,10 +28,10 @@
   - LustSecurityGlasses
   - WardenJumpsuit
   - SunriseWardenOuterClothing
+  - SecurityBackpack
   - SecurityBelt
   - SunriseWardenGun
   - SecurityShoes
-  - SecurityBackpack
   - SunriseSurvivalSecurity
   - SunriseGroupSpeciesBreathToolSecurity
   - Bra
@@ -197,4 +197,3 @@
   - Socks
   - LustSpecialLoadout
   - Contributors
-
