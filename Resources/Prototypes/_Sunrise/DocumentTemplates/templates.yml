@@ -1138,18 +1138,18 @@
     state: nanotrasen_form_header_centcom
 
 - type: docTemplate
-  id: SunriseReportDecreeHeadsPresence
-  name: doc-template-sunrise-report-decree-heads-presence-name
-  content: /Documents/_Sunrise/Command/SunriseReportDecreeHeadsPresence.xml
+  id: ReportDecreeHeadsPresence
+  name: doc-template-report-decree-heads-presence-name
+  content: /Documents/_Sunrise/Command/ReportDecreeHeadsPresence.xml
   component: Command
   header:
     sprite: /Textures/_Sunrise/CopyMachine/paper_headers.rsi
     state: nanotrasen_form_header_cmd
 
 - type: docTemplate
-  id: SunriseDeathCertificateCentcom
-  name: doc-template-sunrise-death-certificate-centcom-name
-  content: /Documents/_Sunrise/Centcom/SunriseDeathCertificateCentcom.xml
+  id: DeathCertificateCentcom
+  name: doc-template-death-certificate-centcom-name
+  content: /Documents/_Sunrise/Centcom/DeathCertificateCentcom.xml
   component: Centcom
   header:
     sprite: /Textures/_Sunrise/CopyMachine/paper_headers.rsi
