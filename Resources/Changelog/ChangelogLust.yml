@@ -1514,3 +1514,23 @@
   id: 286
   time: '2026-04-01T13:53:10.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/513
+- author: Noychik
+  changes:
+  - message: "\u0416\u0438\u0432\u0430\u044F \u043C\u0430\u043D\u0442\u0438\u044F\
+      \ \u0441\u043D\u043E\u0432\u0430 \u0432 \u043B\u043E\u0434\u0430\u0443\u0442\
+      \u0435 \u0443\u0442\u0438\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u043E\u0432\
+      ."
+    type: Fix
+  id: 287
+  time: '2026-04-14T18:47:16.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/519
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0436\u0434\u0430\u043B\u0438\u0441\u044C... \u0421\u043C\
+      \u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044E \u043D\u0430\u043A\u043E\u043D\
+      \u0435\u0446-\u0442\u043E \u0432\u044B\u0434\u0430\u043B\u0438 \u0442\u0430\u0431\
+      \u0435\u043B\u044C\u043D\u043E\u0435 \u043E\u0440\u0443\u0436\u0438\u0435"
+    type: Fix
+  id: 288
+  time: '2026-04-13T04:29:50.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/518
