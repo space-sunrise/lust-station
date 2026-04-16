@@ -41,7 +41,7 @@
 
 
 - type: entity
-  name: long ranged gas analyzer
+  name: Imrpoved GasAnalyzer
   parent: [BaseItem, MultitoolSounds]
   id: LongRangeGasAnalyzer
   description: Expensive equipment capable of analyzing gases outside the required atmosphere.
