@@ -16,6 +16,15 @@ public sealed partial class GasAnalyzerComponent : Component
     [DataField("enabled"), ViewVariables(VVAccess.ReadWrite)]
     public bool Enabled;
 
+    [DataField("LongRanged"), ViewVariables(VVAccess.ReadWrite)]
+    public bool IsLongRanged = false;
+
+    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    public float RadiusOfScan = 6f;
+
+    [ViewVariables]
+    public EntityCoordinates ClickLocation;
+
     [Serializable, NetSerializable]
     public enum GasAnalyzerUiKey
     {

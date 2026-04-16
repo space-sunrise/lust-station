@@ -11,6 +11,8 @@ using Content.Shared.NodeContainer;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using static Content.Shared.Atmos.Components.GasAnalyzerComponent;
+using Robust.Shared.Map;
+using Robust.Shared.Map.Components;
 
 namespace Content.Server.Atmos.EntitySystems;
 
@@ -22,6 +24,7 @@ public sealed class GasAnalyzerSystem : EntitySystem
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
+    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
 
     /// <summary>
     /// Minimum moles of a gas to be sent to the client.
@@ -64,13 +67,24 @@ public sealed class GasAnalyzerSystem : EntitySystem
     /// </summary>
     private void OnAfterInteract(Entity<GasAnalyzerComponent> entity, ref AfterInteractEvent args)
     {
+        /// Check for long range bool(by default is false). If true uses range in gas analyzer component, if false it uses range of interaction system
         var target = args.Target;
-        if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null)))
+        if (entity.Comp.IsLongRanged)
         {
-            target = null; // if the target is out of reach, invalidate it
+            if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null), range: entity.Comp.RadiusOfScan))
+            {
+                target = null;
+            }
         }
-        // always run the analyzer, regardless of weather or not there is a target
-        // since we can always show the local environment.
+        else
+        {
+            if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null)))
+            {
+                target = null;
+            }
+        }
+        entity.Comp.ClickLocation = args.ClickLocation;
+
         ActivateAnalyzer(entity, args.User, target);
         args.Handled = true;
     }
@@ -146,19 +160,55 @@ public sealed class GasAnalyzerSystem : EntitySystem
             // Listen! Even if you don't want the Gas Analyzer to work on moving targets, you should use
             // this code to determine if the object is still generally in range so that the check is consistent with the code
             // in OnAfterInteract() and also consistent with interaction code in general.
-            if (!_interactionSystem.InRangeUnobstructed((component.User, null), (component.Target.Value, null)))
+            // Also checks for long ranged in component and applies range that was set in component
+            if (component.IsLongRanged)
             {
-                if (component.User is { } userId && component.Enabled)
-                    _popup.PopupEntity(Loc.GetString("gas-analyzer-object-out-of-range"), userId, userId);
+                if (!_interactionSystem.InRangeUnobstructed((component.User, null), (component.Target.Value, null), range: component.RadiusOfScan))
+                {
+                    if (component.User is { } userId && component.Enabled)
+                        _popup.PopupEntity(Loc.GetString("gas-analyzer-object-out-of-range"), userId, userId);
 
-                component.Target = null;
+                    component.Target = null;
+                }
+            }
+            else
+            {
+                if (!_interactionSystem.InRangeUnobstructed((component.User, null), (component.Target.Value, null)))
+                {
+                    if (component.User is { } userId && component.Enabled)
+                        _popup.PopupEntity(Loc.GetString("gas-analyzer-object-out-of-range"), userId, userId);
+
+                    component.Target = null;
+                }
             }
         }
 
         var gasMixList = new List<GasMixEntry>();
+        GasMixture? tileMixture = null;
 
-        // Fetch the environmental atmosphere around the scanner. This must be the first entry
-        var tileMixture = _atmo.GetContainingMixture(uid, true);
+        /// Used for long ranged scanner work on remote tiles, if doesnt, just get atmos around player
+        if (component.IsLongRanged)
+        {
+            if (component.Target.HasValue)
+            {
+                tileMixture = _atmo.GetContainingMixture(component.Target.Value, true);
+            }
+            else if (component.ClickLocation is { } clickLoc)
+            {
+                var gridUid = clickLoc.EntityId;
+                if (TryComp<MapGridComponent>(gridUid, out var grid) &&
+                    TryComp<TransformComponent>(gridUid, out var gridXform))
+                {
+                    var tile = _mapSystem.CoordinatesToTile(gridUid, grid, clickLoc);
+                    tileMixture = _atmo.GetTileMixture(gridUid, gridXform.MapUid, tile, true);
+                }
+            }
+        }
+        else
+        {
+            tileMixture = _atmo.GetContainingMixture(uid, true);
+        }
+
         if (tileMixture != null)
         {
             gasMixList.Add(new GasMixEntry(Loc.GetString("gas-analyzer-window-environment-tab-label"), tileMixture.Volume, tileMixture.Pressure, tileMixture.Temperature,

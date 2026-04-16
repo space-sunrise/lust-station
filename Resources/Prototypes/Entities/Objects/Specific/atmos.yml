@@ -38,3 +38,46 @@
     - PipeNetworks
     - Pipes
     - GasCanisters
+
+
+- type: entity
+  name: long ranged gas analyzer
+  parent: [BaseItem, MultitoolSounds]
+  id: LongRangeGasAnalyzer
+  description: Expensive equipment capable of analyzing gases outside the required atmosphere.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Specific/Atmos/lrgasanalyzer.rsi
+    layers:
+      - state: icon
+        map: ["analyzer"]
+  - type: GasAnalyzer
+    LongRanged: true
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    requireActiveHand: false
+    key: enum.GasAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.GasAnalyzerUiKey.Key:
+        type: GasAnalyzerBoundUserInterface
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+        enum.GasAnalyzerVisuals.Enabled:
+          enabled:
+            True: { state: working }
+            False: { state: icon }
+  - type: StaticPrice
+    price: 80
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 400
+      Glass: 100
+  - type: GuideHelp
+    guides:
+    - AtmosTools
+    - PipeNetworks
+    - Pipes
+    - GasCanisters
