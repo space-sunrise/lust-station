@@ -89,7 +89,10 @@ public sealed class GasAnalyzerSystem : EntitySystem
                 Dirty(entity);
             }
             else
+            {
                 entity.Comp.ClickLocation = null;
+                Dirty(entity);
+            }
         }
         ActivateAnalyzer(entity, args.User, target);
         // Lust edit

@@ -1,8 +1,8 @@
 - type: entity
   name: improved gas analyzer
-  parent: [GasAnalyzer]
+  parent: GasAnalyzer
   id: LustLongRangeGasAnalyzer
-  description: Expensive equipment capable of analyzing gases outside the required atmosphere.
+  description: Expensive equipment capable of analyzing atmospheric gases at a distance.
   components:
   - type: Sprite
     sprite: _Lust/Objects/Specific/Atmos/lrgasanalyzer.rsi
