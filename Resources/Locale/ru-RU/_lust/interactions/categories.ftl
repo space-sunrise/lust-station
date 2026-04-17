@@ -14,3 +14,5 @@ lust-interaction-category-Wings = Крылья
 lust-interaction-category-Dildos = Дилдо
 lust-interaction-category-Fleshlights = Искусственная вагина
 lust-interaction-category-Legs = Ножки
+lust-interaction-category-Cage = Клетка
+lust-interaction-category-Belt = Пояс верности

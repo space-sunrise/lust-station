@@ -1,0 +1,133 @@
+
+- type: entity
+  id: BaseLustCage
+  abstract: true
+  parent: BaseLockableEquipment
+  components:
+  - type: Tag
+    tags:
+    - ChastityBelt
+
+# Male cages (Male, Futanari)
+- type: entity
+  id: CageMaleNormal
+  parent: BaseLustCage
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_normal.rsi
+    layers:
+    - map: ["base"]
+      state: icon
+  - type: LockableEquipment
+    rsiPath: _Lust/Clothing/Cages/cage_normal.rsi
+    spriteState: equipped-PANTS
+  - type: SexEquipRestriction
+    allowedSex:
+    - Male
+  - type: Tag
+    tags:
+    - ChastityBelt
+    - ChastityMale
+
+- type: entity
+  id: CageMaleIron
+  parent: BaseLustCage
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_iron.rsi
+    layers:
+    - map: ["base"]
+      state: icon
+  - type: LockableEquipment
+    rsiPath: _Lust/Clothing/Cages/cage_iron.rsi
+    spriteState: equipped-PANTS
+    breakDoAfter: 4.0
+    repairAmount: 2
+  - type: SexEquipRestriction
+    allowedSex:
+    - Male
+  - type: Tag
+    tags:
+    - ChastityBelt
+    - ChastityMale
+
+- type: entity
+  id: CageMaleFlat
+  parent: BaseLustCage
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_flat.rsi
+    layers:
+    - map: ["base"]
+      state: icon
+  - type: LockableEquipment
+    rsiPath: _Lust/Clothing/Cages/cage_flat.rsi
+    spriteState: equipped-PANTS
+  - type: SexEquipRestriction
+    allowedSex:
+    - Male
+  - type: Tag
+    tags:
+    - ChastityBelt
+    - ChastityMale
+
+# Female cage (Female, Futanari)
+- type: entity
+  id: CageFemaleBelt
+  parent: BaseLustCage
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_female.rsi
+    layers:
+    - map: ["base"]
+      state: icon
+  - type: LockableEquipment
+    rsiPath: _Lust/Clothing/Cages/cage_female.rsi
+    spriteState: equipped-PANTS
+  - type: SexEquipRestriction
+    allowedSex:
+    - Female
+  - type: Tag
+    tags:
+    - ChastityBelt
+    - ChastityFemale
+
+#  Electric cage (Male, Futanari)
+- type: entity
+  id: CageMaleElectric
+  parent: BaseLustCage
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_electric.rsi
+    layers:
+    - map: ["base"]
+      state: icon
+  - type: LockableEquipment
+    rsiPath: _Lust/Clothing/Cages/cage_electric.rsi
+    spriteState: equipped-PANTS
+  - type: ElectricLockableEquipment
+  - type: ShockOnTrigger
+    targetContainer: true
+    damage: 1
+    duration: 3
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+    - Trigger
+  - type: SexEquipRestriction
+    allowedSex:
+    - Male
+  - type: Tag
+    tags:
+    - ChastityBelt
+    - ChastityMale
+
+#  Key
+
+- type: entity
+  id: CageLustKey
+  parent: BaseKey
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Cages/cage_key.rsi
+    state: icon
