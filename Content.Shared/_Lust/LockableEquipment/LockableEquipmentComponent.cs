@@ -26,7 +26,7 @@ public sealed partial class LockableEquipmentComponent : Component
     /// <summary>
     /// Shared identifier paired with a matching key.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public string? LockId;
 
     /// <summary>
