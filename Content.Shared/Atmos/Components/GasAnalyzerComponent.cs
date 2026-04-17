@@ -4,7 +4,7 @@ using Robust.Shared.Serialization;
 
 namespace Content.Shared.Atmos.Components;
 
-[RegisterComponent, NetworkedComponent]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class GasAnalyzerComponent : Component
 {
     [ViewVariables]
@@ -16,14 +16,24 @@ public sealed partial class GasAnalyzerComponent : Component
     [DataField("enabled"), ViewVariables(VVAccess.ReadWrite)]
     public bool Enabled;
 
-    [DataField("LongRanged"), ViewVariables(VVAccess.ReadWrite)]
-    public bool IsLongRanged = false;
+    /// <summary>
+    /// Если true, анализатор может сканировать цели/плитки на расстоянии, ограниченном <see cref="RadiusOfScan"/>.
+    /// </summary>
+    [DataField("longranged")]
+    public bool IsLongRanged;
 
-    [DataField, ViewVariables(VVAccess.ReadWrite)]
+    /// <summary>
+    /// Максимальный радиус сканирования для дальнобойного анализатора, в плитках.
+    /// </summary>
+
+    [DataField, AutoNetworkedField]
     public float RadiusOfScan = 6f;
 
-    [ViewVariables]
-    public EntityCoordinates ClickLocation;
+    /// <summary>
+    /// Координаты последнего клика, используются для разрешения удалённого анализа смеси газов.
+    /// </summary>
+    [ViewVariables, AutoNetworkedField]
+    public EntityCoordinates? ClickLocation;
 
     [Serializable, NetSerializable]
     public enum GasAnalyzerUiKey

@@ -67,24 +67,19 @@ public sealed class GasAnalyzerSystem : EntitySystem
     /// </summary>
     private void OnAfterInteract(Entity<GasAnalyzerComponent> entity, ref AfterInteractEvent args)
     {
-        /// Check for long range bool(by default is false). If true uses range in gas analyzer component, if false it uses range of interaction system
+        // Check for long range bool(by default is false). If true uses range in gas analyzer component, if false it uses range of interaction system
         var target = args.Target;
+        var range = entity.Comp.IsLongRanged
+            ? entity.Comp.RadiusOfScan
+            : SharedInteractionSystem.InteractionRange;
+        if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null), range: range))
+        {
+            target = null;
+        }
         if (entity.Comp.IsLongRanged)
         {
-            if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null), range: entity.Comp.RadiusOfScan))
-            {
-                target = null;
-            }
+            entity.Comp.ClickLocation = args.ClickLocation;
         }
-        else
-        {
-            if (target != null && !_interactionSystem.InRangeUnobstructed((args.User, null), (target.Value, null)))
-            {
-                target = null;
-            }
-        }
-        entity.Comp.ClickLocation = args.ClickLocation;
-
         ActivateAnalyzer(entity, args.User, target);
         args.Handled = true;
     }
@@ -186,22 +181,21 @@ public sealed class GasAnalyzerSystem : EntitySystem
         var gasMixList = new List<GasMixEntry>();
         GasMixture? tileMixture = null;
 
-        /// Used for long ranged scanner work on remote tiles, if doesnt, just get atmos around player
-        if (component.IsLongRanged)
+        // For long-ranged scanners resolve a remote tile; otherwise fall back to the analyzer's own tile.
+        if (component.IsLongRanged && component.Target.HasValue)
         {
-            if (component.Target.HasValue)
+            tileMixture = _atmo.GetContainingMixture(component.Target.Value, true);
+        }
+        else if (component.IsLongRanged
+            && component.ClickLocation is { } clickLoc
+            && clickLoc.IsValid(EntityManager))
+        {
+            var gridUid = clickLoc.EntityId;
+            if (TryComp<MapGridComponent>(gridUid, out var grid) &&
+                TryComp<TransformComponent>(gridUid, out var gridXform))
             {
-                tileMixture = _atmo.GetContainingMixture(component.Target.Value, true);
-            }
-            else if (component.ClickLocation is { } clickLoc)
-            {
-                var gridUid = clickLoc.EntityId;
-                if (TryComp<MapGridComponent>(gridUid, out var grid) &&
-                    TryComp<TransformComponent>(gridUid, out var gridXform))
-                {
-                    var tile = _mapSystem.CoordinatesToTile(gridUid, grid, clickLoc);
-                    tileMixture = _atmo.GetTileMixture(gridUid, gridXform.MapUid, tile, true);
-                }
+                var tile = _mapSystem.CoordinatesToTile(gridUid, grid, clickLoc);
+                tileMixture = _atmo.GetTileMixture(gridUid, gridXform.MapUid, tile, true);
             }
         }
         else

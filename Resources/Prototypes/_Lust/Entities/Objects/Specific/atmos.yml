@@ -1,0 +1,13 @@
+- type: entity
+  name: Improved gas analyzer
+  parent: [BaseItem, MultitoolSounds, GasAnalyzer]
+  id: LongRangeGasAnalyzer
+  description: Expensive equipment capable of analyzing gases outside the required atmosphere.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Specific/Atmos/lrgasanalyzer.rsi
+    layers:
+      - state: icon
+        map: ["analyzer"]
+  - type: GasAnalyzer
+    longranged: true
