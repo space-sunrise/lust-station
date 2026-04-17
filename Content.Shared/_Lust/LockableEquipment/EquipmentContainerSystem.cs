@@ -187,7 +187,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
                     break;
                 }
 
-                if (!CanRemove(container, args.User, quiet: true))
+                if (!CanRemove(container, args.User))
                     return;
 
                 if (!_container.Remove(device.Value, container))

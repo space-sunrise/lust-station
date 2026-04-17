@@ -11,6 +11,8 @@
 # Male cages (Male only — Futanari excluded intentionally)
 - type: entity
   id: CageMaleNormal
+  name: chastity cage
+  description: A simple chastity cage. Locks with a key.
   parent: BaseLustCage
   components:
   - type: Sprite
@@ -31,6 +33,8 @@
 
 - type: entity
   id: CageMaleIron
+  name: iron chastity cage
+  description: A heavy iron chastity cage. Harder to break open.
   parent: BaseLustCage
   components:
   - type: Sprite
@@ -53,6 +57,8 @@
 
 - type: entity
   id: CageMaleFlat
+  name: flat chastity cage
+  description: A chastity cage with a flat profile — discreet under clothing.
   parent: BaseLustCage
   components:
   - type: Sprite
@@ -74,6 +80,8 @@
 # Female cage (Female only — Futanari excluded intentionally)
 - type: entity
   id: CageFemaleBelt
+  name: chastity belt
+  description: A chastity belt for women. Locks with a key.
   parent: BaseLustCage
   components:
   - type: Sprite
@@ -95,6 +103,8 @@
 # Electric cage (Male only — Futanari excluded intentionally)
 - type: entity
   id: CageMaleElectric
+  name: electric chastity cage
+  description: A chastity cage with an electric shock module. Triggered by a linked remote signal.
   parent: BaseLustCage
   components:
   - type: Sprite
@@ -113,7 +123,7 @@
   - type: TriggerOnSignal
   - type: DeviceLinkSink
     ports:
-    - Trigger
+    - Pressed
   - type: SexEquipRestriction
     allowedSexes:
     - Male
@@ -126,6 +136,8 @@
 
 - type: entity
   id: CageLustKey
+  name: chastity cage key
+  description: A small key for locking and unlocking chastity cages.
   parent: BaseKey
   components:
   - type: Sprite

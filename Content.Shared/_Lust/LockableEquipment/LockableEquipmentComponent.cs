@@ -33,7 +33,7 @@ public sealed partial class LockableEquipmentComponent : Component
     /// <summary>
     /// Body layer occupied by the installed device.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public string Layer = "lockable_under";
 
     /// <summary>

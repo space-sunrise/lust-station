@@ -106,10 +106,10 @@
     categories: [ "рот" ]
     requireExposed: true
   interactionMessages:
-  - "%user медленно проводит языком по металлическим прутьям клетки %target"
-  - "%user дразняще облизывает клетку %target"
-  - "%user прижимается губами к прутьям клетки %target и проводит по ним языком"
-  - "%user смачно лижет клетку %target, глядя в глаза"
+  - "%user медленно проводит языком по поясу верности %target"
+  - "%user дразняще облизывает пояс верности %target"
+  - "%user прижимается губами к поясу верности %target и проводит по нему языком"
+  - "%user смачно лижет пояс верности %target, глядя в глаза"
   interactionSounds:
   - FaceLickDoggyStyleSound1
   - FaceLickDoggyStyleSound2
@@ -141,10 +141,10 @@
     categories: [ "рот" ]
     requireExposed: true
   interactionMessages:
-  - "%user нежно целует прутья клетки %target"
-  - "%user прижимается губами к клетке %target"
-  - "%user чмокает металл клетки %target"
-  - "%user страстно целует клетку %target, оставляя след помады"
+  - "%user нежно целует замок на поясе верности %target"
+  - "%user прижимается губами к поясу верности %target"
+  - "%user чмокает пояс верности %target"
+  - "%user страстно целует пояс верности %target, оставляя след помады"
   interactionSounds:
   - Kiss1
   - Kiss2

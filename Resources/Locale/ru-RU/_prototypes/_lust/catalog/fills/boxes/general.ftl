@@ -1,7 +1,7 @@
 ent-PlugBox = коробка с анальными пробками
     .desc = { ent-BoxCardboard.desc }
 
-ent-BoxCageMaleNormal = коробка с поясом верности
+ent-BoxCageMaleNormal = коробка с обычным поясом верности
     .desc = { ent-BoxCardboard.desc }
 
 ent-BoxCageMaleIron = коробка с железным поясом верности
