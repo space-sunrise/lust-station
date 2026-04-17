@@ -19,7 +19,7 @@ public sealed partial class GasAnalyzerComponent : Component
     /// <summary>
     /// Если true, анализатор может сканировать цели/плитки на расстоянии, ограниченном <see cref="RadiusOfScan"/>.
     /// </summary>
-    [DataField("longranged")]
+    [DataField]
     public bool IsLongRanged;
 
     /// <summary>

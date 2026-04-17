@@ -10,4 +10,4 @@
       - state: icon
         map: ["analyzer"]
   - type: GasAnalyzer
-    longranged: true
+    isLongRanged: true
