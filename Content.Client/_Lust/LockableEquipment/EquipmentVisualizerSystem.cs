@@ -6,15 +6,6 @@ namespace Content.Client._Lust.LockableEquipment;
 
 public sealed class EquipmentVisualizerSystem : VisualizerSystem<EquipmentContainerComponent>
 {
-    private static readonly string[] LockableLayers =
-    {
-        "lockable_under",
-        "lockable_normal",
-        "lockable_over",
-        "lockable_chest",
-        "lockable_underpants",
-    };
-
     protected override void OnAppearanceChange(EntityUid uid, EquipmentContainerComponent comp, ref AppearanceChangeEvent args)
     {
         if (args.Sprite == null)
@@ -22,11 +13,13 @@ public sealed class EquipmentVisualizerSystem : VisualizerSystem<EquipmentContai
 
         var sprite = args.Sprite;
 
-        // Always clear all lockable layers first to prevent stale overlaps.
-        foreach (var key in LockableLayers)
+        // Hide the previously active layer (tracked in visual data) to avoid stale overlays
+        // when the device is removed or swapped.
+        if (AppearanceSystem.TryGetData<EquipmentVisualData>(uid, EquipmentVisuals.PreviousLayer, out var prev, args.Component) &&
+            prev?.Layer != null &&
+            SpriteSystem.LayerMapTryGet((uid, sprite), prev.Layer, out var prevIdx, false))
         {
-            if (SpriteSystem.LayerMapTryGet((uid, sprite), key, out var idx, false))
-                SpriteSystem.LayerSetVisible((uid, sprite), idx, false);
+            SpriteSystem.LayerSetVisible((uid, sprite), prevIdx, false);
         }
 
         if (!AppearanceSystem.TryGetData<EquipmentVisualData>(uid, EquipmentVisuals.VisualData, out var visualData, args.Component) ||

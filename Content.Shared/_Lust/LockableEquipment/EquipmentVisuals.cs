@@ -7,5 +7,6 @@ namespace Content.Shared._Lust.LockableEquipment;
 public enum EquipmentVisuals
 {
     VisualData,
+    PreviousLayer,
     IconState
 }

@@ -281,7 +281,7 @@
   - type: Mood
   - type: CritHeartbeat
   # Sunrise-End
-  - type: EquipmentContainer   # Lust-Station--edit
+  - type: EquipmentContainer # Lust-Edit
   - type: Barotrauma
     damage:
       types:

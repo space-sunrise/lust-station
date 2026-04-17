@@ -1,4 +1,5 @@
 using Content.Shared.Stacks;
+using Content.Shared.Tag;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 
@@ -63,7 +64,7 @@ public sealed partial class LockableEquipmentComponent : Component
     /// Tag required on a tool to force the device open.
     /// </summary>
     [DataField]
-    public string RequiredToolTag = "Wirecutter";
+    public ProtoId<TagPrototype> RequiredToolTag = "Wirecutter";
 
     /// <summary>
     /// Delay before a forced-open attempt completes.

@@ -4,7 +4,7 @@ lockable-equipment-unlocked = { $name } is unlocked
 lockable-equipment-paired = { $key } is paired with { $device }
 lockable-equipment-wrong-key = { $key } does not fit { $device }
 
-lockable-equipment-blocked = The lower body is covered by clothing
+lockable-equipment-blocked = This area is covered by clothing
 lockable-equipment-already = A device is already installed
 lockable-equipment-removed = { $name } has been removed
 lockable-equipment-equipped = { $name } has been attached

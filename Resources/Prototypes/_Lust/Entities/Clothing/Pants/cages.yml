@@ -8,7 +8,7 @@
     tags:
     - ChastityBelt
 
-# Male cages (Male, Futanari)
+# Male cages (Male only — Futanari excluded intentionally)
 - type: entity
   id: CageMaleNormal
   parent: BaseLustCage
@@ -71,7 +71,7 @@
     - ChastityBelt
     - ChastityMale
 
-# Female cage (Female, Futanari)
+# Female cage (Female only — Futanari excluded intentionally)
 - type: entity
   id: CageFemaleBelt
   parent: BaseLustCage
@@ -92,7 +92,7 @@
     - ChastityBelt
     - ChastityFemale
 
-#  Electric cage (Male, Futanari)
+# Electric cage (Male only — Futanari excluded intentionally)
 - type: entity
   id: CageMaleElectric
   parent: BaseLustCage

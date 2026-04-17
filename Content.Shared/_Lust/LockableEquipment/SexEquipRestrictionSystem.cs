@@ -19,6 +19,9 @@ public sealed class SexEquipRestrictionSystem : EntitySystem
 
     private void OnAttachAttempt(Entity<SexEquipRestrictionComponent> ent, ref EquipmentContainerAttachAttemptEvent args)
     {
+        if (args.Cancelled)
+            return;
+
         if (!TryComp<HumanoidAppearanceComponent>(args.Target, out var humanoid))
             return;
 

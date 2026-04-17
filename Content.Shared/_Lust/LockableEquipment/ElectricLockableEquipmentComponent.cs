@@ -1,4 +1,5 @@
 using Robust.Shared.GameStates;
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 
 namespace Content.Shared._Lust.LockableEquipment;
 
@@ -25,6 +26,7 @@ public sealed partial class ElectricLockableEquipmentComponent : Component
     /// <summary>
     /// Internal timer used to restore the default lockable icon state.
     /// </summary>
+    [DataField(customTypeSerializer: typeof(TimeOffsetSerializer))]
     [AutoNetworkedField, AutoPausedField]
     public TimeSpan ActivatedUntil = TimeSpan.Zero;
 }

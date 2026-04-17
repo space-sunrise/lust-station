@@ -66,7 +66,6 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!TryComp(args.Used, out LockableEquipmentComponent? device))
             return;
 
-        container ??= _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
         args.Handled = TryAttachDevice(ent, args.User, args.Used, device, container);
     }
 
@@ -137,7 +136,8 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (args.Cancelled || args.Handled)
             return;
 
-        var container = _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
+        if (!_container.TryGetContainer(ent.Owner, ent.Comp.ContainerId, out var container))
+            return;
 
         switch (args.Action)
         {
@@ -154,6 +154,15 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
                 if (IsCoveredByClothing(ent.Owner))
                     return;
+
+                var attempt = new EquipmentContainerAttachAttemptEvent(ent.Owner, args.User);
+                RaiseLocalEvent(used, attempt);
+                if (attempt.Cancelled)
+                {
+                    if (attempt.Reason != null)
+                        _popup.PopupClient(Loc.GetString(attempt.Reason), args.User);
+                    return;
+                }
 
                 if (!_container.Insert(used, container))
                     return;
@@ -236,8 +245,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             return false;
         }
 
-        var container = _container.EnsureContainer<ContainerSlot>(target, comp.ContainerId);
-        if (!CanRemove(container, user.Value))
+        if (!_container.TryGetContainer(target, comp.ContainerId, out var container) || !CanRemove(container, user.Value))
             return false;
 
         var installedDevice = FindDevice(container)!.Value;
@@ -275,7 +283,12 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (user == null || Deleted(user.Value))
             return false;
 
-        container ??= _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
+        if (container == null)
+        {
+            if (!_container.TryGetContainer(ent.Owner, ent.Comp.ContainerId, out var got))
+                return false;
+            container = got;
+        }
 
         if (IsCoveredByClothing(ent.Owner))
         {
@@ -326,6 +339,10 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!TryComp(uid, out AppearanceComponent? appearance))
             return;
 
+        _appearance.TryGetData(uid, EquipmentVisuals.VisualData, out EquipmentVisualData? prev, appearance);
+        if (prev != null)
+            _appearance.SetData(uid, EquipmentVisuals.PreviousLayer, prev, appearance);
+
         var visualData = CreateVisualData(device, true);
         _appearance.SetData(uid, EquipmentVisuals.VisualData, visualData, appearance);
     }
@@ -350,7 +367,13 @@ public sealed class EquipmentContainerSystem : EntitySystem
         }
 
         if (visualData != null)
+        {
+            _appearance.TryGetData(uid, EquipmentVisuals.VisualData, out EquipmentVisualData? prev, appearance);
+            if (prev != null)
+                _appearance.SetData(uid, EquipmentVisuals.PreviousLayer, prev, appearance);
+
             _appearance.SetData(uid, EquipmentVisuals.VisualData, visualData, appearance);
+        }
     }
 
     private EntityUid? FindDevice(BaseContainer container)
