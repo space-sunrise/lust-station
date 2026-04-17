@@ -200,7 +200,8 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (TryComp(args.Entity, out LockableEquipmentComponent? device))
             UpdateAppearance(ent.Owner, device);
 
-        RaiseLocalEvent(ent.Owner, new EquipmentContainerChangedEvent());
+        var insertedEv = new EquipmentContainerChangedEvent();
+        RaiseLocalEvent(ent.Owner, ref insertedEv);
     }
 
     private void OnContainerRemoved(Entity<EquipmentContainerComponent> ent, ref EntRemovedFromContainerMessage args)
@@ -214,15 +215,16 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (TryComp(args.Entity, out LockableEquipmentComponent? device))
             ResetAppearance(ent.Owner, device);
 
-        RaiseLocalEvent(ent.Owner, new EquipmentContainerChangedEvent());
+        var removedEv = new EquipmentContainerChangedEvent();
+        RaiseLocalEvent(ent.Owner, ref removedEv);
     }
 
     /// <summary>
     /// Attempts to remove the currently installed device from the target.
     /// </summary>
-    public bool TryRemove(EntityUid target, EntityUid user, EquipmentContainerComponent? comp = null)
+    public bool TryRemove(EntityUid target, EntityUid? user, EquipmentContainerComponent? comp = null)
     {
-        if (!user.IsValid() || Deleted(user))
+        if (user == null || Deleted(user.Value))
             return false;
 
         if (!Resolve(target, ref comp))
@@ -230,18 +232,22 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
         if (IsCoveredByClothing(target))
         {
-            _popup.PopupClient(Loc.GetString("lockable-equipment-blocked"), user);
+            _popup.PopupClient(Loc.GetString("lockable-equipment-blocked"), user.Value);
             return false;
         }
 
         var container = _container.EnsureContainer<ContainerSlot>(target, comp.ContainerId);
-        if (!CanRemove(container, user))
+        if (!CanRemove(container, user.Value))
+            return false;
+
+        var installedDevice = FindDevice(container)!.Value;
+        if (!TryComp(installedDevice, out LockableEquipmentComponent? installedComp))
             return false;
 
         var doAfter = new DoAfterArgs(
             EntityManager,
-            user,
-            comp.DetachDoAfter,
+            user.Value,
+            installedComp.DetachDoAfter,
             new EquipmentDoAfterEvent(EquipmentActionType.Detach),
             target,
             target: target)
@@ -261,12 +267,12 @@ public sealed class EquipmentContainerSystem : EntitySystem
     /// </summary>
     public bool TryAttachDevice(
         Entity<EquipmentContainerComponent> ent,
-        EntityUid user,
+        EntityUid? user,
         EntityUid deviceUid,
         LockableEquipmentComponent device,
         BaseContainer? container = null)
     {
-        if (!user.IsValid() || Deleted(user))
+        if (user == null || Deleted(user.Value))
             return false;
 
         container ??= _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
@@ -275,7 +281,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         {
             _popup.PopupClient(
                 Loc.GetString("lockable-equipment-blocked"),
-                user);
+                user.Value);
             return false;
         }
 
@@ -283,23 +289,23 @@ public sealed class EquipmentContainerSystem : EntitySystem
         {
             _popup.PopupClient(
                 Loc.GetString("lockable-equipment-already"),
-                user);
+                user.Value);
             return false;
         }
 
-        var attempt = new EquipmentContainerAttachAttemptEvent(ent.Owner, user);
+        var attempt = new EquipmentContainerAttachAttemptEvent(ent.Owner, user.Value);
         RaiseLocalEvent(deviceUid, attempt);
         if (attempt.Cancelled)
         {
             if (attempt.Reason != null)
-                _popup.PopupClient(Loc.GetString(attempt.Reason), user);
+                _popup.PopupClient(Loc.GetString(attempt.Reason), user.Value);
             return false;
         }
 
         var doAfter = new DoAfterArgs(
             EntityManager,
-            user,
-            ent.Comp.AttachDoAfter,
+            user.Value,
+            device.AttachDoAfter,
             new EquipmentDoAfterEvent(EquipmentActionType.Attach),
             ent.Owner,
             target: ent.Owner,

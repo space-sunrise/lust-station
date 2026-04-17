@@ -22,7 +22,7 @@
     rsiPath: _Lust/Clothing/Cages/cage_normal.rsi
     spriteState: equipped-PANTS
   - type: SexEquipRestriction
-    allowedSex:
+    allowedSexes:
     - Male
   - type: Tag
     tags:
@@ -44,7 +44,7 @@
     breakDoAfter: 4.0
     repairAmount: 2
   - type: SexEquipRestriction
-    allowedSex:
+    allowedSexes:
     - Male
   - type: Tag
     tags:
@@ -64,7 +64,7 @@
     rsiPath: _Lust/Clothing/Cages/cage_flat.rsi
     spriteState: equipped-PANTS
   - type: SexEquipRestriction
-    allowedSex:
+    allowedSexes:
     - Male
   - type: Tag
     tags:
@@ -85,7 +85,7 @@
     rsiPath: _Lust/Clothing/Cages/cage_female.rsi
     spriteState: equipped-PANTS
   - type: SexEquipRestriction
-    allowedSex:
+    allowedSexes:
     - Female
   - type: Tag
     tags:
@@ -115,7 +115,7 @@
     ports:
     - Trigger
   - type: SexEquipRestriction
-    allowedSex:
+    allowedSexes:
     - Male
   - type: Tag
     tags:

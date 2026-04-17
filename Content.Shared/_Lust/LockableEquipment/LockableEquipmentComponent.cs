@@ -26,7 +26,7 @@ public sealed partial class LockableEquipmentComponent : Component
     /// <summary>
     /// Shared identifier paired with a matching key.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [DataField]
     public string? LockId;
 
     /// <summary>
@@ -40,6 +40,18 @@ public sealed partial class LockableEquipmentComponent : Component
     /// </summary>
     [DataField]
     public string? RsiPath;
+
+    /// <summary>
+    /// Delay before attaching this device completes.
+    /// </summary>
+    [DataField]
+    public TimeSpan AttachDoAfter = TimeSpan.FromSeconds(1.5);
+
+    /// <summary>
+    /// Delay before removing this device completes.
+    /// </summary>
+    [DataField]
+    public TimeSpan DetachDoAfter = TimeSpan.FromSeconds(1.5);
 
     /// <summary>
     /// Forced-open behavior used when the device is broken open.

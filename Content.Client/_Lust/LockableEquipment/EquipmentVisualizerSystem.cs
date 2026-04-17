@@ -4,11 +4,8 @@ using Robust.Shared.Utility;
 
 namespace Content.Client._Lust.LockableEquipment;
 
-public sealed class EquipmentVisualizerSystem : EntitySystem
+public sealed class EquipmentVisualizerSystem : VisualizerSystem<EquipmentContainerComponent>
 {
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
-
     private static readonly string[] LockableLayers =
     {
         "lockable_under",
@@ -18,48 +15,36 @@ public sealed class EquipmentVisualizerSystem : EntitySystem
         "lockable_underpants",
     };
 
-    public override void Initialize()
-    {
-        SubscribeLocalEvent<EquipmentContainerComponent, AppearanceChangeEvent>(OnAppearanceChange);
-    }
-
-    private void OnAppearanceChange(EntityUid uid, EquipmentContainerComponent comp, ref AppearanceChangeEvent args)
+    protected override void OnAppearanceChange(EntityUid uid, EquipmentContainerComponent comp, ref AppearanceChangeEvent args)
     {
         if (args.Sprite == null)
             return;
 
         var sprite = args.Sprite;
 
-        if (!_appearance.TryGetData<EquipmentVisualData>(uid, EquipmentVisuals.VisualData, out var visualData, args.Component) ||
-            visualData == null ||
-            string.IsNullOrEmpty(visualData.Layer))
+        // Always clear all lockable layers first to prevent stale overlaps.
+        foreach (var key in LockableLayers)
         {
-            foreach (var key in LockableLayers)
-            {
-                if (!_sprite.LayerMapTryGet((uid, sprite), key, out var idx, false))
-                    continue;
-
-                _sprite.LayerSetVisible((uid, sprite), idx, false);
-            }
-
-            return;
+            if (SpriteSystem.LayerMapTryGet((uid, sprite), key, out var idx, false))
+                SpriteSystem.LayerSetVisible((uid, sprite), idx, false);
         }
 
-        if (!visualData.Visible ||
+        if (!AppearanceSystem.TryGetData<EquipmentVisualData>(uid, EquipmentVisuals.VisualData, out var visualData, args.Component) ||
+            visualData == null ||
+            !visualData.Visible ||
+            string.IsNullOrEmpty(visualData.Layer) ||
             string.IsNullOrEmpty(visualData.RsiPath) ||
             string.IsNullOrEmpty(visualData.State))
         {
-            if (_sprite.LayerMapTryGet((uid, sprite), visualData.Layer, out var hiddenIdx, false))
-                _sprite.LayerSetVisible((uid, sprite), hiddenIdx, false);
             return;
         }
 
-        var layerIdx = _sprite.LayerMapTryGet((uid, sprite), visualData.Layer, out var existingIdx, false)
+        var layerIdx = SpriteSystem.LayerMapTryGet((uid, sprite), visualData.Layer, out var existingIdx, false)
             ? existingIdx
-            : _sprite.LayerMapReserve((uid, sprite), visualData.Layer);
+            : SpriteSystem.LayerMapReserve((uid, sprite), visualData.Layer);
 
-        _sprite.LayerSetRsi((uid, sprite), layerIdx, new ResPath(visualData.RsiPath));
-        _sprite.LayerSetRsiState((uid, sprite), layerIdx, visualData.State);
-        _sprite.LayerSetVisible((uid, sprite), layerIdx, true);
+        SpriteSystem.LayerSetRsi((uid, sprite), layerIdx, new ResPath(visualData.RsiPath));
+        SpriteSystem.LayerSetRsiState((uid, sprite), layerIdx, visualData.State);
+        SpriteSystem.LayerSetVisible((uid, sprite), layerIdx, true);
     }
 }
