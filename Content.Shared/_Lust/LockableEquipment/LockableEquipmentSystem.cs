@@ -133,7 +133,7 @@ public sealed class LockableEquipmentSystem : EntitySystem
     /// </summary>
     public bool TryStartBreakDoAfter(Entity<LockableEquipmentComponent> ent, EntityUid tool, EntityUid user, EntityUid? interactionTarget = null)
     {
-        return TryStartBreakDoAfter(ent, tool, user, interactionTarget);
+        return TryStartBreakDoAfter((EntityUid) ent, tool, user, interactionTarget);
     }
 
     /// <summary>
@@ -307,6 +307,15 @@ public sealed class LockableEquipmentSystem : EntitySystem
         return stack.StackTypeId == comp.RepairMaterial && stack.Count >= comp.RepairAmount;
     }
 
+    public void RefreshIconState(Entity<LockableEquipmentComponent> ent)
+    {
+        if (!TryComp(ent, out AppearanceComponent? appearance))
+            return;
+
+        var state = ent.Comp.Locked && !ent.Comp.Broken ? "icon_locked" : "icon";
+        _appearance.SetData(ent, EquipmentVisuals.IconState, state, appearance);
+    }
+
     /// <summary>
     /// Walks the transform parent chain to check if <paramref name="device"/> is contained inside
     /// <paramref name="user"/>. The depth limit guards against cycles or abnormally deep nesting
@@ -333,15 +342,6 @@ public sealed class LockableEquipmentSystem : EntitySystem
         }
 
         return false;
-    }
-
-    public void RefreshIconState(Entity<LockableEquipmentComponent> ent)
-    {
-        if (!TryComp(ent, out AppearanceComponent? appearance))
-            return;
-
-        var state = ent.Comp.Locked && !ent.Comp.Broken ? "icon_locked" : "icon";
-        _appearance.SetData(ent, EquipmentVisuals.IconState, state, appearance);
     }
 
 }
