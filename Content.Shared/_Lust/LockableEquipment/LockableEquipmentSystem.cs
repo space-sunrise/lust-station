@@ -45,9 +45,9 @@ public sealed class LockableEquipmentSystem : EntitySystem
         if (args.Handled || !args.Used.IsValid())
             return;
 
-        if (TryRepair(ent.Owner, args.Used, args.User) ||
+        if (TryRepair(ent, args.Used, args.User) ||
             TryStartBreakDoAfter(ent, args.Used, args.User) ||
-            HasComp<KeyComponent>(args.Used) && TryUseKey(ent.Owner, args.Used, args.User))
+            HasComp<KeyComponent>(args.Used) && TryUseKey(ent, args.Used, args.User))
         {
             args.Handled = true;
         }
@@ -58,7 +58,7 @@ public sealed class LockableEquipmentSystem : EntitySystem
         if (args.Cancelled || args.Handled || args.Used is not { } tool)
             return;
 
-        args.Handled = TryBreak(ent.Owner, tool, args.User);
+        args.Handled = TryBreak(ent, tool, args.User);
     }
 
     /// <summary>
@@ -133,7 +133,7 @@ public sealed class LockableEquipmentSystem : EntitySystem
     /// </summary>
     public bool TryStartBreakDoAfter(Entity<LockableEquipmentComponent> ent, EntityUid tool, EntityUid user, EntityUid? interactionTarget = null)
     {
-        return TryStartBreakDoAfter(ent.Owner, tool, user, interactionTarget);
+        return TryStartBreakDoAfter(ent, tool, user, interactionTarget);
     }
 
     /// <summary>
@@ -337,11 +337,11 @@ public sealed class LockableEquipmentSystem : EntitySystem
 
     public void RefreshIconState(Entity<LockableEquipmentComponent> ent)
     {
-        if (!TryComp(ent.Owner, out AppearanceComponent? appearance))
+        if (!TryComp(ent, out AppearanceComponent? appearance))
             return;
 
         var state = ent.Comp.Locked && !ent.Comp.Broken ? "icon_locked" : "icon";
-        _appearance.SetData(ent.Owner, EquipmentVisuals.IconState, state, appearance);
+        _appearance.SetData(ent, EquipmentVisuals.IconState, state, appearance);
     }
 
 }

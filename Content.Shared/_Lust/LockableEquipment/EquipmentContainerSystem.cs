@@ -39,7 +39,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private void OnInit(Entity<EquipmentContainerComponent> ent, ref ComponentInit args)
     {
-        _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
+        _container.EnsureContainer<ContainerSlot>(ent, ent.Comp.ContainerId);
     }
 
     private void OnInteractUsing(Entity<EquipmentContainerComponent> ent, ref InteractUsingEvent args)
@@ -50,7 +50,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         BaseContainer? container = null;
         EntityUid? installedDevice = null;
 
-        if (_container.TryGetContainer(ent.Owner, ent.Comp.ContainerId, out var existingContainer))
+        if (_container.TryGetContainer(ent, ent.Comp.ContainerId, out var existingContainer))
         {
             container = existingContainer;
             installedDevice = FindDevice(existingContainer);
@@ -61,7 +61,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             if (!TryComp(installedDevice.Value, out LockableEquipmentComponent? installedComp))
                 return;
 
-            if (!IsCoveredByClothing(ent.Owner) &&
+            if (!IsCoveredByClothing(ent) &&
                 TryInteractWithInstalledDevice(ent, installedDevice.Value, installedComp, args.User, args.Used, out var handled))
             {
                 args.Handled = handled;
@@ -80,10 +80,10 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!args.CanInteract || !args.CanAccess)
             return;
 
-        if (TryGetEquipment(ent.Owner, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent, ent.Comp) is not {} device)
             return;
 
-        if (IsCoveredByClothing(ent.Owner))
+        if (IsCoveredByClothing(ent))
             return;
 
         if (!TryComp(device, out LockableEquipmentComponent? comp))
@@ -132,7 +132,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             args.Verbs.Add(new InteractionVerb
             {
                 Text = Loc.GetString("lockable-equipment-verb-remove", ("name", name)),
-                Act = () => TryRemove(ent.Owner, user, ent.Comp)
+                Act = () => TryRemove(ent, user, ent.Comp)
             });
         }
     }
@@ -142,7 +142,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (args.Cancelled || args.Handled)
             return;
 
-        if (!_container.TryGetContainer(ent.Owner, ent.Comp.ContainerId, out var container))
+        if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var container))
             return;
 
         switch (args.Action)
@@ -158,10 +158,10 @@ public sealed class EquipmentContainerSystem : EntitySystem
                 if (FindDevice(container) != null)
                     return;
 
-                if (IsCoveredByClothing(ent.Owner))
+                if (IsCoveredByClothing(ent))
                     return;
 
-                var attempt = new EquipmentContainerAttachAttemptEvent(ent.Owner, args.User);
+                var attempt = new EquipmentContainerAttachAttemptEvent(ent, args.User);
                 RaiseLocalEvent(used, attempt);
                 if (attempt.Cancelled)
                 {
@@ -183,7 +183,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
                 if (device == null)
                 {
-                    ResetAppearance(ent.Owner);
+                    ResetAppearance(ent);
                     break;
                 }
 
@@ -213,10 +213,10 @@ public sealed class EquipmentContainerSystem : EntitySystem
             return;
 
         if (TryComp(args.Entity, out LockableEquipmentComponent? device))
-            UpdateAppearance(ent.Owner, device);
+            UpdateAppearance(ent, device);
 
         var insertedEv = new EquipmentContainerChangedEvent();
-        RaiseLocalEvent(ent.Owner, ref insertedEv);
+        RaiseLocalEvent(ent, ref insertedEv);
     }
 
     private void OnContainerRemoved(Entity<EquipmentContainerComponent> ent, ref EntRemovedFromContainerMessage args)
@@ -228,10 +228,10 @@ public sealed class EquipmentContainerSystem : EntitySystem
             return;
 
         if (TryComp(args.Entity, out LockableEquipmentComponent? device))
-            ResetAppearance(ent.Owner, device);
+            ResetAppearance(ent, device);
 
         var removedEv = new EquipmentContainerChangedEvent();
-        RaiseLocalEvent(ent.Owner, ref removedEv);
+        RaiseLocalEvent(ent, ref removedEv);
     }
 
     /// <summary>
@@ -291,12 +291,12 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
         if (container == null)
         {
-            if (!_container.TryGetContainer(ent.Owner, ent.Comp.ContainerId, out var got))
+            if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var got))
                 return false;
             container = got;
         }
 
-        if (IsCoveredByClothing(ent.Owner))
+        if (IsCoveredByClothing(ent))
         {
             _popup.PopupClient(
                 Loc.GetString("lockable-equipment-blocked"),
@@ -312,7 +312,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             return false;
         }
 
-        var attempt = new EquipmentContainerAttachAttemptEvent(ent.Owner, user.Value);
+        var attempt = new EquipmentContainerAttachAttemptEvent(ent, user.Value);
         RaiseLocalEvent(deviceUid, attempt);
         if (attempt.Cancelled)
         {
@@ -326,8 +326,8 @@ public sealed class EquipmentContainerSystem : EntitySystem
             user.Value,
             device.AttachDoAfter,
             new EquipmentDoAfterEvent(EquipmentActionType.Attach),
-            ent.Owner,
-            target: ent.Owner,
+            ent,
+            target: ent,
             used: deviceUid)
         {
             BreakOnMove = true,
@@ -423,7 +423,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private bool TryUseHeldKey(Entity<EquipmentContainerComponent> ent, EntityUid user)
     {
-        if (TryGetEquipment(ent.Owner, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent, ent.Comp) is not {} device)
             return false;
 
         foreach (var hand in _hands.EnumerateHands(user))
@@ -442,7 +442,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private bool TryBreakWithHeldTool(Entity<EquipmentContainerComponent> ent, EntityUid user)
     {
-        if (TryGetEquipment(ent.Owner, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent, ent.Comp) is not {} device)
             return false;
 
         if (!TryComp(device, out LockableEquipmentComponent? comp))

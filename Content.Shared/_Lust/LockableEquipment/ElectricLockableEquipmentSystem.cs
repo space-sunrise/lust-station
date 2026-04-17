@@ -37,10 +37,10 @@ public sealed class ElectricLockableEquipmentSystem : EntitySystem
 
     private void OnTrigger(Entity<ElectricLockableEquipmentComponent> ent, ref TriggerEvent args)
     {
-        if (!TryComp(ent.Owner, out AppearanceComponent? appearance))
+        if (!TryComp(ent, out AppearanceComponent? appearance))
             return;
 
         ent.Comp.ActivatedUntil = _timing.CurTime + ent.Comp.ActivationDuration;
-        _appearance.SetData(ent.Owner, EquipmentVisuals.IconState, ent.Comp.ActivatedIconState, appearance);
+        _appearance.SetData(ent, EquipmentVisuals.IconState, ent.Comp.ActivatedIconState, appearance);
     }
 }
