@@ -15,7 +15,7 @@ public sealed partial class GasAnalyzerComponent : Component
 
     [DataField("enabled"), ViewVariables(VVAccess.ReadWrite)]
     public bool Enabled;
-    // Lust edit
+    // Sunrise edit start
     /// <summary>
     /// If true, the analyzer can scan targets/tiles at a distance bounded by <see cref="RadiusOfScan"/>.
     /// </summary>
@@ -33,7 +33,7 @@ public sealed partial class GasAnalyzerComponent : Component
     /// </summary>
     [ViewVariables, AutoNetworkedField]
     public EntityCoordinates? ClickLocation;
-    // Lust edit
+    // Sunrise edit end
 
     [Serializable, NetSerializable]
     public enum GasAnalyzerUiKey
