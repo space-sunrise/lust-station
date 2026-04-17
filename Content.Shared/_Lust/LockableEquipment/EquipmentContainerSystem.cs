@@ -29,11 +29,17 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     public override void Initialize()
     {
+        SubscribeLocalEvent<EquipmentContainerComponent, ComponentInit>(OnInit);
         SubscribeLocalEvent<EquipmentContainerComponent, InteractUsingEvent>(OnInteractUsing);
         SubscribeLocalEvent<EquipmentContainerComponent, GetVerbsEvent<InteractionVerb>>(OnGetVerbs);
         SubscribeLocalEvent<EquipmentContainerComponent, EquipmentDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<EquipmentContainerComponent, EntInsertedIntoContainerMessage>(OnContainerInserted);
         SubscribeLocalEvent<EquipmentContainerComponent, EntRemovedFromContainerMessage>(OnContainerRemoved);
+    }
+
+    private void OnInit(Entity<EquipmentContainerComponent> ent, ref ComponentInit args)
+    {
+        _container.EnsureContainer<ContainerSlot>(ent.Owner, ent.Comp.ContainerId);
     }
 
     private void OnInteractUsing(Entity<EquipmentContainerComponent> ent, ref InteractUsingEvent args)
