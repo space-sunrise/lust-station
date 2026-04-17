@@ -62,7 +62,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
                 return;
 
             if (!IsCoveredByClothing(ent) &&
-                TryInteractWithInstalledDevice(ent, installedDevice.Value, installedComp, args.User, args.Used, out var handled))
+                TryInteractWithInstalledDevice(ent, (installedDevice.Value, installedComp), args.User, args.Used, out var handled))
             {
                 args.Handled = handled;
                 return;
@@ -72,7 +72,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!TryComp(args.Used, out LockableEquipmentComponent? device))
             return;
 
-        args.Handled = TryAttachDevice(ent, args.User, args.Used, device, container);
+        args.Handled = TryAttachDevice(ent, args.User, (args.Used, device), container);
     }
 
     private void OnGetVerbs(Entity<EquipmentContainerComponent> ent, ref GetVerbsEvent<InteractionVerb> args)
@@ -80,7 +80,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!args.CanInteract || !args.CanAccess)
             return;
 
-        if (TryGetEquipment(ent, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent) is not {} device)
             return;
 
         if (IsCoveredByClothing(ent))
@@ -282,8 +282,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
     public bool TryAttachDevice(
         Entity<EquipmentContainerComponent> ent,
         EntityUid? user,
-        EntityUid deviceUid,
-        LockableEquipmentComponent device,
+        Entity<LockableEquipmentComponent> device,
         BaseContainer? container = null)
     {
         if (user == null || Deleted(user.Value))
@@ -313,7 +312,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
         }
 
         var attempt = new EquipmentContainerAttachAttemptEvent(ent, user.Value);
-        RaiseLocalEvent(deviceUid, attempt);
+        RaiseLocalEvent(device, attempt);
         if (attempt.Cancelled)
         {
             if (attempt.Reason != null)
@@ -324,11 +323,11 @@ public sealed class EquipmentContainerSystem : EntitySystem
         var doAfter = new DoAfterArgs(
             EntityManager,
             user.Value,
-            device.AttachDoAfter,
+            device.Comp.AttachDoAfter,
             new EquipmentDoAfterEvent(EquipmentActionType.Attach),
             ent,
             target: ent,
-            used: deviceUid)
+            used: device)
         {
             BreakOnMove = true,
             BreakOnDamage = true,
@@ -393,9 +392,9 @@ public sealed class EquipmentContainerSystem : EntitySystem
         return null;
     }
 
-    private EntityUid? TryGetEquipment(EntityUid uid, EquipmentContainerComponent comp)
+    private EntityUid? TryGetEquipment(Entity<EquipmentContainerComponent> ent)
     {
-        if (!_container.TryGetContainer(uid, comp.ContainerId, out var container))
+        if (!_container.TryGetContainer(ent, ent.Comp.ContainerId, out var container))
             return null;
 
         return FindDevice(container);
@@ -423,7 +422,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private bool TryUseHeldKey(Entity<EquipmentContainerComponent> ent, EntityUid user)
     {
-        if (TryGetEquipment(ent, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent) is not {} device)
             return false;
 
         foreach (var hand in _hands.EnumerateHands(user))
@@ -442,7 +441,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private bool TryBreakWithHeldTool(Entity<EquipmentContainerComponent> ent, EntityUid user)
     {
-        if (TryGetEquipment(ent, ent.Comp) is not {} device)
+        if (TryGetEquipment(ent) is not {} device)
             return false;
 
         if (!TryComp(device, out LockableEquipmentComponent? comp))
@@ -464,15 +463,14 @@ public sealed class EquipmentContainerSystem : EntitySystem
 
     private bool TryInteractWithInstalledDevice(
         Entity<EquipmentContainerComponent> ent,
-        EntityUid device,
-        LockableEquipmentComponent comp,
+        Entity<LockableEquipmentComponent> device,
         EntityUid user,
         EntityUid used,
         out bool handled)
     {
         handled = false;
 
-        if (_lockable.CanRepairWithMaterial(device, used, comp))
+        if (_lockable.CanRepairWithMaterial(device, used, device.Comp))
         {
             handled = _lockable.TryRepair(device, used, user);
             return true;
@@ -484,7 +482,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             return true;
         }
 
-        if (_lockable.CanBreakWithTool(device, used, comp))
+        if (_lockable.CanBreakWithTool(device, used, device.Comp))
         {
             handled = _lockable.TryStartBreakDoAfter(device, used, user, ent);
             return true;
@@ -498,7 +496,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
             if (held.Value == used)
                 continue;
 
-            if (_lockable.CanRepairWithMaterial(device, held.Value, comp))
+            if (_lockable.CanRepairWithMaterial(device, held.Value, device.Comp))
             {
                 handled = _lockable.TryRepair(device, held.Value, user);
                 return true;
@@ -510,7 +508,7 @@ public sealed class EquipmentContainerSystem : EntitySystem
                 return true;
             }
 
-            if (_lockable.CanBreakWithTool(device, held.Value, comp))
+            if (_lockable.CanBreakWithTool(device, held.Value, device.Comp))
             {
                 handled = _lockable.TryStartBreakDoAfter(device, held.Value, user, ent);
                 return true;

@@ -32,11 +32,8 @@ public sealed class LockableEquipmentSystem : EntitySystem
         _xformQuery = GetEntityQuery<TransformComponent>();
     }
 
-    private void OnStartup(Entity<LockableEquipmentComponent> ent, ref ComponentStartup args)
+    private void OnStartup(Entity<LockableEquipmentComponent> ent, ref ComponentStartup _)
     {
-        if (_net.IsServer && ent.Comp.RepairMaterial == null && ent.Comp.RepairAmount > 0)
-            Log.Warning($"{ToPrettyString(ent)} has RepairAmount={ent.Comp.RepairAmount} but no RepairMaterial — repair will never trigger.");
-
         RefreshIconState(ent);
     }
 
