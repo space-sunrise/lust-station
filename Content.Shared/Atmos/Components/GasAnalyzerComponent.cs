@@ -25,7 +25,6 @@ public sealed partial class GasAnalyzerComponent : Component
     /// <summary>
     /// Максимальный радиус сканирования для дальнобойного анализатора, в плитках.
     /// </summary>
-
     [DataField, AutoNetworkedField]
     public float RadiusOfScan = 6f;
 

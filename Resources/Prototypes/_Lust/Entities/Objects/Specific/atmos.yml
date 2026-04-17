@@ -1,6 +1,6 @@
 - type: entity
-  name: Improved gas analyzer
-  parent: [BaseItem, MultitoolSounds, GasAnalyzer]
+  name: improved gas analyzer
+  parent: [GasAnalyzer]
   id: LongRangeGasAnalyzer
   description: Expensive equipment capable of analyzing gases outside the required atmosphere.
   components:

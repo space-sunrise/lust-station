@@ -78,7 +78,8 @@ public sealed class GasAnalyzerSystem : EntitySystem
         }
         if (entity.Comp.IsLongRanged)
         {
-            entity.Comp.ClickLocation = args.ClickLocation;
+            if (_interactionSystem.InRangeUnobstructed(args.User, args.ClickLocation, range: range))
+                entity.Comp.ClickLocation = args.ClickLocation;
         }
         ActivateAnalyzer(entity, args.User, target);
         args.Handled = true;
