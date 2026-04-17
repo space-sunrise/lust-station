@@ -27,7 +27,7 @@ public sealed class GasAnalyzerSystem : EntitySystem
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
     // Lust edit
-    [Dependency] private readonly SharedMapSystem _mapSystem = default!;
+    [Dependency] private readonly SharedMapSystem _map = default!;
     // Lust edit
 
     /// <summary>
@@ -201,10 +201,14 @@ public sealed class GasAnalyzerSystem : EntitySystem
                 if (TryComp<MapGridComponent>(gridUid, out var grid) &&
                     TryComp<TransformComponent>(gridUid, out var gridXform))
                 {
-                    var tile = _mapSystem.CoordinatesToTile(gridUid, grid, clickLoc);
+                    var tile = _map.CoordinatesToTile(gridUid, grid, clickLoc);
                     tileMixture = _atmo.GetTileMixture(gridUid, gridXform.MapUid, tile, true);
                 }
             }
+        }
+        else
+        {
+            tileMixture = _atmo.GetContainingMixture(uid, true);
         }
         // Lust edit
         if (tileMixture != null)

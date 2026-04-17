@@ -45,7 +45,7 @@
         - id: Multitool
         - id: HolofanProjector
         # Lust edit
-        - id: LongRangeGasAnalyzer
+        - id: LustLongRangeGasAnalyzer
         - id: trayScanner
 
 - type: entityTable

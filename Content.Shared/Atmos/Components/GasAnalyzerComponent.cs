@@ -17,19 +17,19 @@ public sealed partial class GasAnalyzerComponent : Component
     public bool Enabled;
 
     /// <summary>
-    /// Если true, анализатор может сканировать цели/плитки на расстоянии, ограниченном <see cref="RadiusOfScan"/>.
+    /// If true, the analyzer can scan targets/tiles at a distance bounded by <see cref="RadiusOfScan"/>.
     /// </summary>
     [DataField]
     public bool IsLongRanged;
 
     /// <summary>
-    /// Максимальный радиус сканирования для дальнобойного анализатора, в плитках.
+    /// Maximum scan radius for a long-ranged analyzer, in tiles.
     /// </summary>
     [DataField, AutoNetworkedField]
     public float RadiusOfScan = 6f;
 
     /// <summary>
-    /// Координаты последнего клика, используются для разрешения удалённого анализа смеси газов.
+    /// Coordinates of the last click; used to resolve the target tile for remote gas mix analysis.
     /// </summary>
     [ViewVariables, AutoNetworkedField]
     public EntityCoordinates? ClickLocation;
