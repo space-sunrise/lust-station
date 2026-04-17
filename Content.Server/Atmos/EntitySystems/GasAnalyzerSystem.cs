@@ -84,7 +84,12 @@ public sealed class GasAnalyzerSystem : EntitySystem
         if (entity.Comp.IsLongRanged)
         {
             if (_interactionSystem.InRangeUnobstructed(args.User, args.ClickLocation, range: range))
+            {
                 entity.Comp.ClickLocation = args.ClickLocation;
+                Dirty(entity);
+            }
+            else
+                entity.Comp.ClickLocation = null;
         }
         ActivateAnalyzer(entity, args.User, target);
         // Lust edit
@@ -194,6 +199,7 @@ public sealed class GasAnalyzerSystem : EntitySystem
                 if (component.Enabled)
                     _popup.PopupEntity(Loc.GetString("gas-analyzer-object-out-of-range"), component.User, component.User);
                 component.ClickLocation = null;
+                Dirty(uid, component);
             }
             else
             {

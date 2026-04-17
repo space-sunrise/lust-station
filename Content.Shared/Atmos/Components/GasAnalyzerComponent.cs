@@ -19,7 +19,7 @@ public sealed partial class GasAnalyzerComponent : Component
     /// <summary>
     /// If true, the analyzer can scan targets/tiles at a distance bounded by <see cref="RadiusOfScan"/>.
     /// </summary>
-    [DataField]
+    [DataField, AutoNetworkedField]
     public bool IsLongRanged;
 
     /// <summary>
