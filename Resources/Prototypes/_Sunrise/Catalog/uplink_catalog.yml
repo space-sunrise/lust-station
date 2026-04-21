@@ -1997,7 +1997,7 @@
       - SurplusBundle
 
 - type: listing
-  id: uplinkWeaponMechCombatKord
+  id: UplinkWeaponMechCombatKord
   name: uplink-mech-equipment-kord-name
   description: uplink-mech-equipment-kord-desc
   productEntity: WeaponMechCombatKord
@@ -2441,7 +2441,7 @@
       - SurplusBundle
 
 - type: listing
-  id: uplinkWeaponMechCombatKordJob
+  id: UplinkWeaponMechCombatKordJob
   name: uplink-mech-equipment-kord-name
   description: uplink-mech-equipment-kord-desc
   productEntity: WeaponMechCombatKord
