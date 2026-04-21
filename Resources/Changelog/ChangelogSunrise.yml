@@ -5182,3 +5182,13 @@
   id: 1811
   time: '2026-04-21T19:19:52.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4279
+- author: banumbas
+  changes:
+  - message: "\u041B\u043E\u043C \u043C\u0433\u043D\u043E\u0432\u0435\u043D\u043D\u043E\
+      \ \u043E\u0442\u043A\u0440\u044B\u0432\u0430\u0435\u0442 \u043D\u0435 \u0437\
+      \u0430\u043F\u0438\u0442\u0430\u043D\u043D\u044B\u0435 \u0448\u043B\u044E\u0437\
+      \u044B."
+    type: Tweak
+  id: 1812
+  time: '2026-04-21T20:54:44.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4263
