@@ -117,6 +117,21 @@
         color: "#B68F0E"
 
 - type: entity
+  id: CartridgeRifleHeavyB30
+  name: cartridge (12,7 x 108mm)
+  parent: BaseCartridgeRifleHeavy
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRifleTraceHeavyB30
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#977917"
+
+- type: entity
   id: CartridgeRifleHeavyAP
   name: cartridge (.308 AP)
   parent: BaseCartridgeRifleHeavy

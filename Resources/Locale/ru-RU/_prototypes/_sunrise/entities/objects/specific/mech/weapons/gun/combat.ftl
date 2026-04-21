@@ -31,4 +31,7 @@ ent-WeaponMechCombatDuster = навесной EXP-220 "Дастер"
 ent-WeaponMechCombatMissileRack8Frag = пусковая ракетная установка BRM-8
     .desc = Трубки должны загружаться снаружи.
     .suffix = Оружие мехов, Стрелковое, Боевое, Ракетница
+ent-WeaponMechCombatKord = пулемёт "КОРД"
+    .desc = Скорострельный пулемет под патрон 12,7 x 108 мм.
+    .suffix = Оружие мехов, Стрелковое, Боевое, Корд
 

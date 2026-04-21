@@ -300,3 +300,34 @@
     fireCost: 250
   - type: Appearance
   - type: AmmoCounter
+
+- type: entity
+  id: WeaponMechCombatKord
+  name: Mounted "Kord"
+  description: Rapid-fire machine gun chambered for 12.7 x 108 mm
+  suffix: Mech Weapon, Combat, Kord
+  parent: [ BaseMechWeaponRange, CombatMechEquipment ]
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Specific/Mech/mecha_kord.rsi
+    state: mecha_kord
+  - type: Gun
+    minAngle: 24
+    maxAngle: 35
+    angleIncrease: 2
+    angleDecay: 18
+    fireRate: 3
+    selectedMode: FullAuto
+    availableModes:
+      - FullAuto
+    soundGunshot:
+      path: /Audio/_Sunrise/Weapons/Guns/LMGs/shot.ogg
+      params:
+        volume: -3
+  - type: BatteryAmmoProvider
+    proto: CartridgeRifleHeavyB30
+    fireCost: 9
+  - type: Appearance
+  - type: AmmoCounter
+  - type: StaticPrice
+    price: 5000
