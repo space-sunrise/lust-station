@@ -1,4 +1,16 @@
 - type: ttsVoice
+  id: BaseSunriseTtsVoiceNtts
+  abstract: true
+  provider: ntts.fdev.team
+
+- type: ttsVoice
+  id: BaseSunriseTtsVoiceNttsSponsor
+  abstract: true
+  parent: BaseSunriseTtsVoiceNtts
+  sponsorOnly: true
+
+- type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Charlotte
   name: tts-voice-name-charlotte
   # Lust-Start
@@ -7,9 +19,9 @@
   - Futanari
   # Lust-End
   speaker: charlotte
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Bebey
   name: tts-voice-name-bebey
   # Lust-Start
@@ -17,17 +29,17 @@
   - Male
   # Lust-End
   speaker: bebey
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: PlayBoyzTV
   name: tts-voice-name-playboyztv
   sex:
   - Male
   speaker: playboyztv
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Biden
   name: tts-voice-name-biden
   # Lust-Start
@@ -35,10 +47,9 @@
   - Male
   # Lust-End
   speaker: biden
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Papa
   name: tts-voice-name-papa
   # Lust-Start
@@ -46,10 +57,9 @@
   - Male
   # Lust-End
   speaker: papich
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Glados
   name: tts-voice-name-glados
   # Lust-Start
@@ -59,9 +69,9 @@
   # Lust-End
   speaker: glados
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Sentrybot
   name: tts-voice-name-sentrybot
   # Lust-Start
@@ -70,9 +80,9 @@
   # Lust-End
   speaker: sentrybot
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Mana
   name: tts-voice-name-mana
   # Lust-Start
@@ -81,9 +91,9 @@
   - Futanari
   # Lust-End
   speaker: mana
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Soldier
   name: tts-voice-name-soldier
   # Lust-Start
@@ -91,9 +101,9 @@
   - Male
   # Lust-End
   speaker: soldier
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Planya
   name: tts-voice-name-planya
   # Lust-Start
@@ -102,9 +112,9 @@
   - Futanari
   # Lust-End
   speaker: planya
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Amina
   name: tts-voice-name-amina
   # Lust-Start
@@ -113,9 +123,9 @@
   - Futanari
   # Lust-End
   speaker: amina
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: AdventureCore
   name: tts-voice-name-adventure-core
   # Lust-Start
@@ -124,9 +134,9 @@
   # Lust-End
   speaker: adventure_core
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SpaceCore
   name: tts-voice-name-space-core
   # Lust-Start
@@ -135,9 +145,9 @@
   # Lust-End
   speaker: space_core
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: FactCore
   name: tts-voice-name-fact-core
   # Lust-Start
@@ -146,9 +156,9 @@
   # Lust-End
   speaker: fact_core
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Kleiner
   name: tts-voice-name-kleiner
   # Lust-Start
@@ -156,9 +166,9 @@
   - Male
   # Lust-End
   speaker: kleiner
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Dbkn
   name: tts-voice-name-dbkn
   # Lust-Start
@@ -166,9 +176,9 @@
   - Male
   # Lust-End
   speaker: dbkn2
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Neco
   name: tts-voice-name-neco
   # Lust-Start
@@ -177,9 +187,9 @@
   - Futanari
   # Lust-End
   speaker: neco
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Gman
   name: tts-voice-name-gman
   # Lust-Start
@@ -187,9 +197,9 @@
   - Male
   # Lust-End
   speaker: gman
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Obama
   name: tts-voice-name-obama
   # Lust-Start
@@ -197,9 +207,9 @@
   - Male
   # Lust-End
   speaker: obama
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Trump
   name: tts-voice-name-trump
   # Lust-Start
@@ -207,9 +217,9 @@
   - Male
   # Lust-End
   speaker: trump
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Briman
   name: tts-voice-name-briman
   # Lust-Start
@@ -217,9 +227,9 @@
   - Male
   # Lust-End
   speaker: briman
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: FatherGrigori
   name: tts-voice-name-father-grigori
   # Lust-Start
@@ -227,9 +237,9 @@
   - Male
   # Lust-End
   speaker: father_grigori
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Vance
   name: tts-voice-name-vance
   # Lust-Start
@@ -237,9 +247,9 @@
   - Male
   # Lust-End
   speaker: vance
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Barni
   name: tts-voice-name-barni
   # Lust-Start
@@ -247,9 +257,9 @@
   - Male
   # Lust-End
   speaker: barni
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Alyx
   name: tts-voice-name-alyx
   # Lust-Start
@@ -258,9 +268,9 @@
   - Futanari
   # Lust-End
   speaker: alyx
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Mossman
   name: tts-voice-name-mossman
   # Lust-Start
@@ -269,9 +279,9 @@
   - Futanari
   # Lust-End
   speaker: mossman
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Bandit
   name: tts-voice-name-bandit
   # Lust-Start
@@ -279,9 +289,9 @@
   - Male
   # Lust-End
   speaker: bandit
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Geralt
   name: tts-voice-name-geralt
   # Lust-Start
@@ -289,9 +299,9 @@
   - Male
   # Lust-End
   speaker: geralt
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Triss
   name: tts-voice-name-triss
   # Lust-Start
@@ -300,9 +310,9 @@
   - Futanari
   # Lust-End
   speaker: triss
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: KodlakWhiteMane
   name: tts-voice-name-kodlak-white-mane
   # Lust-Start
@@ -310,9 +320,9 @@
   - Male
   # Lust-End
   speaker: kodlakwhitemane
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Cicero
   name: tts-voice-name-cicero
   # Lust-Start
@@ -320,9 +330,9 @@
   - Male
   # Lust-End
   speaker: cicero
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Sheogorath
   name: tts-voice-name-sheogorath
   # Lust-Start
@@ -330,9 +340,9 @@
   - Male
   # Lust-End
   speaker: sheogorath
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: TurretFloor
   name: tts-voice-name-turret-floor
   # Lust-Start
@@ -342,9 +352,9 @@
   # Lust-End
   speaker: turret_floor
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Cirilla
   name: tts-voice-name-cirilla
   # Lust-Start
@@ -353,10 +363,9 @@
   - Futanari
   # Lust-End
   speaker: cirilla
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Lambert
   name: tts-voice-name-lambert
   # Lust-Start
@@ -364,9 +373,9 @@
   - Male
   # Lust-End
   speaker: lambert
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Polina
   name: tts-voice-name-polina
   # Lust-Start
@@ -375,9 +384,9 @@
   - Futanari
   # Lust-End
   speaker: polina
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Arthas
   name: tts-voice-name-arthas
   # Lust-Start
@@ -385,9 +394,9 @@
   - Male
   # Lust-End
   speaker: arthas
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Xrenoid
   name: tts-voice-name-xrenoid
   # Lust-Start
@@ -395,9 +404,9 @@
   - Male
   # Lust-End
   speaker: xrenoid
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Azir
   name: tts-voice-name-azir
   # Lust-Start
@@ -405,9 +414,9 @@
   - Male
   # Lust-End
   speaker: azir
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Caitlyn
   name: tts-voice-name-caitlyn
   # Lust-Start
@@ -416,9 +425,9 @@
   - Futanari
   # Lust-End
   speaker: caitlyn
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Ekko
   name: tts-voice-name-ekko
   # Lust-Start
@@ -426,9 +435,9 @@
   - Male
   # Lust-End
   speaker: ekko
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Twitch
   name: tts-voice-name-twitch
   # Lust-Start
@@ -436,9 +445,9 @@
   - Male
   # Lust-End
   speaker: twitch
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Strelok
   name: tts-voice-name-strelok
   # Lust-Start
@@ -446,9 +455,9 @@
   - Male
   # Lust-End
   speaker: strelok
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Ziggs
   name: tts-voice-name-ziggs
   # Lust-Start
@@ -456,9 +465,9 @@
   - Male
   # Lust-End
   speaker: ziggs
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Tracer
   name: tts-voice-name-tracer
   # Lust-Start
@@ -467,9 +476,9 @@
   - Futanari
   # Lust-End
   speaker: tracer
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Illidan
   name: tts-voice-name-illidan
   # Lust-Start
@@ -477,9 +486,9 @@
   - Male
   # Lust-End
   speaker: illidan
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Rexxar
   name: tts-voice-name-rexxar
   # Lust-Start
@@ -487,9 +496,9 @@
   - Male
   # Lust-End
   speaker: rexxar
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Voljin
   name: tts-voice-name-voljin
   # Lust-Start
@@ -497,9 +506,9 @@
   - Male
   # Lust-End
   speaker: voljin
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Forester
   name: tts-voice-name-forester
   # Lust-Start
@@ -507,9 +516,9 @@
   - Male
   # Lust-End
   speaker: forester
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Sidorovich
   name: tts-voice-name-sidorovich
   # Lust-Start
@@ -517,10 +526,9 @@
   - Male
   # Lust-End
   speaker: sidorovich
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfEngineer
   name: tts-voice-name-tf-engineer
   # Lust-Start
@@ -528,10 +536,9 @@
   - Male
   # Lust-End
   speaker: engineer
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfHeavy
   name: tts-voice-name-tf-heavy
   # Lust-Start
@@ -539,10 +546,9 @@
   - Male
   # Lust-End
   speaker: heavy
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfMedic
   name: tts-voice-name-tf-medic
   # Lust-Start
@@ -550,10 +556,9 @@
   - Male
   # Lust-End
   speaker: medic
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfSniper
   name: tts-voice-name-tf-sniper
   # Lust-Start
@@ -561,10 +566,9 @@
   - Male
   # Lust-End
   speaker: sniper
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfSpy
   name: tts-voice-name-tf-spy
   # Lust-Start
@@ -572,10 +576,9 @@
   - Male
   # Lust-End
   speaker: spy
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TfDemoman
   name: tts-voice-name-tf-demoman
   # Lust-Start
@@ -583,10 +586,9 @@
   - Male
   # Lust-End
   speaker: demoman
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Khajiit
   name: tts-voice-name-khajiit
   # Lust-Start
@@ -594,9 +596,9 @@
   - Male
   # Lust-End
   speaker: khajiit
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Punisher
   name: tts-voice-name-punisher
   # Lust-Start
@@ -604,9 +606,9 @@
   - Male
   # Lust-End
   speaker: punisher
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Johnny
   name: tts-voice-name-johnny
   # Lust-Start
@@ -614,10 +616,9 @@
   - Male
   # Lust-End
   speaker: johnny
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Panam
   name: tts-voice-name-panam
   # Lust-Start
@@ -626,9 +627,9 @@
   - Futanari
   # Lust-End
   speaker: panam
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Dornan
   name: tts-voice-name-dornan
   # Lust-Start
@@ -636,9 +637,9 @@
   - Male
   # Lust-End
   speaker: dornan
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: VFemale
   name: tts-voice-name-v-female
   # Lust-Start
@@ -647,9 +648,9 @@
   - Futanari
   # Lust-End
   speaker: v_female
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: OfficerEnclave
   name: tts-voice-name-officer-enclave
   # Lust-Start
@@ -658,9 +659,9 @@
   # Lust-End
   speaker: officer_enclave
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Richardson
   name: tts-voice-name-richardson
   # Lust-Start
@@ -668,9 +669,9 @@
   - Male
   # Lust-End
   speaker: richardson
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Elenwen
   name: tts-voice-name-elenwen
   # Lust-Start
@@ -679,9 +680,9 @@
   - Futanari
   # Lust-End
   speaker: elenwen
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: EmperorTit
   name: tts-voice-name-emperor-tit
   # Lust-Start
@@ -689,10 +690,9 @@
   - Male
   # Lust-End
   speaker: emperor
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: GuardSkyrim
   name: tts-voice-name-guard-skyrim
   # Lust-Start
@@ -700,10 +700,9 @@
   - Male
   # Lust-End
   speaker: guard
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Hagraven
   name: tts-voice-name-hagraven
   # Lust-Start
@@ -711,9 +710,9 @@
   - Male
   # Lust-End
   speaker: hagraven
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: HermaeusMora
   name: tts-voice-name-hermaeus-mora
   # Lust-Start
@@ -721,10 +720,9 @@
   - Male
   # Lust-End
   speaker: hermaeus_mora
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Nord
   name: tts-voice-name-nord
   # Lust-Start
@@ -732,10 +730,9 @@
   - Male
   # Lust-End
   speaker: nord
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Ulfric
   name: tts-voice-name-ulfric
   # Lust-Start
@@ -743,10 +740,9 @@
   - Male
   # Lust-End
   speaker: ulfric
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: GoodThalya
   name: tts-voice-name-good-thalya
   # Lust-Start
@@ -755,10 +751,9 @@
   - Futanari
   # Lust-End
   speaker: good_thalya
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Cerys
   name: tts-voice-name-cerys
   # Lust-Start
@@ -767,9 +762,9 @@
   - Futanari
   # Lust-End
   speaker: cerys
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Judy
   name: tts-voice-name-judy
   # Lust-Start
@@ -778,10 +773,9 @@
   - Futanari
   # Lust-End
   speaker: judy
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Mitch
   name: tts-voice-name-mitch
   # Lust-Start
@@ -789,9 +783,9 @@
   - Male
   # Lust-End
   speaker: mitch
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Skippy
   name: tts-voice-name-skippy
   # Lust-Start
@@ -799,9 +793,9 @@
   - Male
   # Lust-End
   speaker: skippy
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Butch
   name: tts-voice-name-butch
   # Lust-Start
@@ -809,9 +803,9 @@
   - Male
   # Lust-End
   speaker: butch
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Marcus
   name: tts-voice-name-marcus
   # Lust-Start
@@ -819,9 +813,9 @@
   - Male
   # Lust-End
   speaker: marcus
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Sulik
   name: tts-voice-name-sulik
   # Lust-Start
@@ -829,9 +823,9 @@
   - Male
   # Lust-End
   speaker: sulik
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Astrid
   name: tts-voice-name-astrid
   # Lust-Start
@@ -840,9 +834,9 @@
   - Futanari
   # Lust-End
   speaker: astrid
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Maven
   name: tts-voice-name-maven
   # Lust-Start
@@ -851,9 +845,9 @@
   - Futanari
   # Lust-End
   speaker: maven
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Nazir
   name: tts-voice-name-nazir
   # Lust-Start
@@ -861,9 +855,9 @@
   - Male
   # Lust-End
   speaker: nazir
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Jackie
   name: tts-voice-name-jackie
   # Lust-Start
@@ -871,9 +865,9 @@
   - Male
   # Lust-End
   speaker: jackie
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EvilThalya
   name: tts-voice-name-evil-thalya
   # Lust-Start
@@ -882,9 +876,9 @@
   - Futanari
   # Lust-End
   speaker: evil_thalya
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: PostalDude
   name: tts-voice-name-dude
   # Lust-Start
@@ -892,9 +886,9 @@
   - Male
   # Lust-End
   speaker: dude
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Anduin
   name: tts-voice-name-anduin
   # Lust-Start
@@ -902,9 +896,9 @@
   - Male
   # Lust-End
   speaker: anduin
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Brukan
   name: tts-voice-name-brukan
   # Lust-Start
@@ -912,9 +906,9 @@
   - Male
   # Lust-End
   speaker: brukan
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Puchkow
   name: tts-voice-name-puchkow
   # Lust-Start
@@ -922,9 +916,9 @@
   - Male
   # Lust-End
   speaker: puchkow
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Moriarti
   name: tts-voice-name-moriarti
   # Lust-Start
@@ -932,9 +926,9 @@
   - Male
   # Lust-End
   speaker: moriarti
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: NecoArcTwo
   name: tts-voice-name-neco-arc-two
   # Lust-Start
@@ -943,9 +937,9 @@
   - Futanari
   # Lust-End
   speaker: neco_arc_2
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: AngryNecoArc
   name: tts-voice-name-angry-neco-arc
   # Lust-Start
@@ -954,9 +948,9 @@
   - Futanari
   # Lust-End
   speaker: angry_neco_arc
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Squidward
   name: tts-voice-name-squidward
   # Lust-Start
@@ -964,10 +958,9 @@
   - Male
   # Lust-End
   speaker: squidward
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Garrosh
   name: tts-voice-name-garrosh
   # Lust-Start
@@ -975,9 +968,9 @@
   - Male
   # Lust-End
   speaker: garrosh
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Jaina
   name: tts-voice-name-jaina
   # Lust-Start
@@ -986,9 +979,9 @@
   - Futanari
   # Lust-End
   speaker: jaina
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Adjutant
   name: tts-voice-name-adjutant
   # Lust-Start
@@ -997,9 +990,9 @@
   - Futanari
   # Lust-End
   speaker: adjutant
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Hanson
   name: tts-voice-name-hanson
   # Lust-Start
@@ -1008,9 +1001,9 @@
   - Futanari
   # Lust-End
   speaker: hanson
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Bralik
   name: tts-voice-name-bralik
   # Lust-Start
@@ -1018,9 +1011,9 @@
   - Male
   # Lust-End
   speaker: bralik
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Horner
   name: tts-voice-name-horner
   # Lust-Start
@@ -1028,9 +1021,9 @@
   - Male
   # Lust-End
   speaker: horner
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Villager
   name: tts-voice-name-villager
   # Lust-Start
@@ -1039,9 +1032,9 @@
   # Lust-End
   speaker: villager
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Dobakin
   name: tts-voice-name-dbkn2
   # Lust-Start
@@ -1050,9 +1043,9 @@
   # Lust-End
   speaker: dbkn2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: MoiraBrown
   name: tts-voice-name-moira-brown
   # Lust-Start
@@ -1062,10 +1055,9 @@
   # Lust-End
   speaker: moira_brown
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: RobertMaccready
   name: tts-voice-name-robert-maccready
   # Lust-Start
@@ -1074,10 +1066,9 @@
   # Lust-End
   speaker: robert_maccready
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Threedog
   name: tts-voice-name-threedog
   # Lust-Start
@@ -1086,10 +1077,9 @@
   # Lust-End
   speaker: threedog
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ThreedogRadio
   name: tts-voice-name-threedog-radio
   # Lust-Start
@@ -1098,10 +1088,9 @@
   # Lust-End
   speaker: threedog_radio
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Romka
   name: tts-voice-name-romka
   # Lust-Start
@@ -1110,10 +1099,9 @@
   # Lust-End
   speaker: romka
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: BorisPetrovFatherTB
   name: tts-voice-name-boris-petrov-father-tb
   # Lust-Start
@@ -1122,9 +1110,9 @@
   # Lust-End
   speaker: boris_petrov_father_tb
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: KarinaPetrovaTB
   name: tts-voice-name-karina-petrova-tb
   # Lust-Start
@@ -1134,9 +1122,9 @@
   # Lust-End
   speaker: karina_petrova_tb
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: KateSmirnovaTB
   name: tts-voice-name-kate-smirnovatb
   # Lust-Start
@@ -1146,10 +1134,9 @@
   # Lust-End
   speaker: kate_smirnova_tb
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SemenBaburinTB
   name: tts-voice-name-semen-baburin-tb
   # Lust-Start
@@ -1158,10 +1145,9 @@
   # Lust-End
   speaker: semen_baburin_tb
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TihonovTB
   name: tts-voice-name-tihonov-tb
   # Lust-Start
@@ -1170,10 +1156,9 @@
   # Lust-End
   speaker: tihonov_tb
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: FemaleCommander
   name: tts-voice-name-female-commander
   # Lust-Start
@@ -1183,9 +1168,9 @@
   # Lust-End
   speaker: female_commander
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: LordHarkon
   name: tts-voice-name-lord-harkon
   # Lust-Start
@@ -1194,10 +1179,9 @@
   # Lust-End
   speaker: lord_harkon
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Serana
   name: tts-voice-name-serana
   # Lust-Start
@@ -1207,10 +1191,9 @@
   # Lust-End
   speaker: serana
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: Myron
   name: tts-voice-name-myron
   # Lust-Start
@@ -1219,10 +1202,9 @@
   # Lust-End
   speaker: myron
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: MarratorD3
   name: tts-voice-name-narrator-d3
   # Lust-Start
@@ -1231,10 +1213,9 @@
   # Lust-End
   speaker: narrator_d3
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: UtherHS
   name: tts-voice-name-uther-hs
   # Lust-Start
@@ -1243,9 +1224,9 @@
   # Lust-End
   speaker: uther_hs
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Tosh
   name: tts-voice-name-tosh
   # Lust-Start
@@ -1254,9 +1235,9 @@
   # Lust-End
   speaker: tosh
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Tychus
   name: tts-voice-name-tychus
   # Lust-Start
@@ -1265,9 +1246,9 @@
   # Lust-End
   speaker: tychus
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: AmitTakkar
   name: tts-voice-name-amitkakkar
   # Lust-Start
@@ -1276,9 +1257,9 @@
   # Lust-End
   speaker: amitkakkar
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EleazarFig
   name: tts-voice-name-eleazarfig
   # Lust-Start
@@ -1287,9 +1268,9 @@
   # Lust-End
   speaker: eleazarfig
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: ErnieLark
   name: tts-voice-name-ernielark
   # Lust-Start
@@ -1298,9 +1279,9 @@
   # Lust-End
   speaker: ernielark
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: IgnatiaFlootravel
   name: tts-voice-name-ignatiaflootravel
   # Lust-Start
@@ -1310,9 +1291,9 @@
   # Lust-End
   speaker: ignatiaflootravel
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Lodgok
   name: tts-voice-name-lodgok
   # Lust-Start
@@ -1321,9 +1302,9 @@
   # Lust-End
   speaker: lodgok
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: PhineasBlack
   name: tts-voice-name-phineasblack
   # Lust-Start
@@ -1332,9 +1313,9 @@
   # Lust-End
   speaker: phineasblack
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Ranrak
   name: tts-voice-name-ranrak
   # Lust-Start
@@ -1343,9 +1324,9 @@
   # Lust-End
   speaker: ranrak
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: VictorRookwood
   name: tts-voice-name-victorrookwood
   # Lust-Start
@@ -1354,9 +1335,9 @@
   # Lust-End
   speaker: victorrookwood
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ZenobiaNoke
   name: tts-voice-name-zenobianoke
   # Lust-Start
@@ -1366,10 +1347,9 @@
   # Lust-End
   speaker: zenobianoke
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GladwinMoon
   name: tts-voice-name-gladwinmoon
   # Lust-Start
@@ -1378,9 +1358,9 @@
   # Lust-End
   speaker: gladwinmoon
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MatildaWeasley
   name: tts-voice-name-matildaweasley
   # Lust-Start
@@ -1390,9 +1370,9 @@
   # Lust-End
   speaker: matildaweasley
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: NatsaiOnai
   name: tts-voice-name-natsaionai
   # Lust-Start
@@ -1402,9 +1382,9 @@
   # Lust-End
   speaker: natsaionai
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: OminisGaunt
   name: tts-voice-name-ominisgaunt
   # Lust-Start
@@ -1413,9 +1393,9 @@
   # Lust-End
   speaker: ominisgaunt
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: PoppySweeting
   name: tts-voice-name-poppysweeting
   # Lust-Start
@@ -1425,9 +1405,9 @@
   # Lust-End
   speaker: poppysweeting
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SophroniaFranklin
   name: tts-voice-name-sophronia-franklin
   # Lust-Start
@@ -1437,10 +1417,9 @@
   # Lust-End
   speaker: sophronia_franklin
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SironaRyan
   name: tts-voice-name-sirona-ryan
   # Lust-Start
@@ -1450,9 +1429,9 @@
   # Lust-End
   speaker: sirona_ryan
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SamanthaDale
   name: tts-voice-name-samantha-dale
   # Lust-Start
@@ -1462,9 +1441,9 @@
   # Lust-End
   speaker: samantha_dale
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: AbrahamRonen
   name: tts-voice-name-abraham-ronen
   # Lust-Start
@@ -1473,9 +1452,9 @@
   # Lust-End
   speaker: abraham_ronen
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: AesopSharp
   name: tts-voice-name-aesop-sharp
   # Lust-Start
@@ -1484,9 +1463,9 @@
   # Lust-End
   speaker: aesop_sharp
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: DinahHecat
   name: tts-voice-name-dinah-hecat
   # Lust-Start
@@ -1496,9 +1475,9 @@
   # Lust-End
   speaker: dinah_hecat
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GenericGoblinC
   name: tts-voice-name-generic-goblin-c
   # Lust-Start
@@ -1507,36 +1486,36 @@
   # Lust-End
   speaker: generic_goblin_c
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GenericGoblinB
   name: tts-voice-name-generic-goblin-b
   sex:
   - Male
   speaker: generic_goblin_b
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SanctuaryHouseElf
   name: tts-voice-name-sanctuary-house-elf
   sex:
   - Male
   speaker: sanctuary_house_elf
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EverettClopton
   name: tts-voice-name-everett-clopton
   sex:
   - Male
   speaker: everett_clopton
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MisterHandyFL3
   name: tts-voice-name-mister-handy-fl3
   # Lust-Start
@@ -1545,9 +1524,9 @@
   # Lust-End
   speaker: mister_handy_fl3
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MisterGutsyFL3
   name: tts-voice-name-mister-gutsy-fl3
   # Lust-Start
@@ -1556,9 +1535,9 @@
   # Lust-End
   speaker: mister_gutsy_fl3
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: JerichoFL3
   name: tts-voice-name-jericho-fl3
   # Lust-Start
@@ -1567,10 +1546,9 @@
   # Lust-End
   speaker: jericho_fl3
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ElderLyonsFL3
   name: tts-voice-name-elder-lyons-fl3
   # Lust-Start
@@ -1579,10 +1557,9 @@
   # Lust-End
   speaker: elder_lyons_fl3
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SarahLyonsFL3
   name: tts-voice-name-sarah-lyons-fl3
   # Lust-Start
@@ -1592,9 +1569,9 @@
   # Lust-End
   speaker: sarah_lyons_fl3
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ColinMoriartyFL1
   name: tts-voice-name-colin-moriarty-fl3
   # Lust-Start
@@ -1603,28 +1580,27 @@
   # Lust-End
   speaker: colin_moriarty_fl3
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: JohnHenryEdenFL3
   name: tts-voice-name-john-henry-eden-fl3
   sex:
   - Male
   speaker: john_henry_eden_fl3
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SuperMutantFL3
   name: tts-voice-name-super-mutant-fl3
   sex:
   - Male
   speaker: super_mutant_fl3
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: KovirNobleman
   name: tts-voice-name-kovir-nobleman
   # Lust-Start
@@ -1633,9 +1609,9 @@
   # Lust-End
   speaker: kovir_nobleman
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: ZoltanChivay
   name: tts-voice-name-zoltan-chivay
   # Lust-Start
@@ -1644,63 +1620,63 @@
   # Lust-End
   speaker: zoltan_chivay
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Vesemir
   name: tts-voice-name-vesemir
   sex:
   - Male
   speaker: vesemir
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuillaumeDeLaunfal
   name: tts-voice-name-guillaume-de-launfal
   sex:
   - Male
   speaker: guillaume_de_launfal
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: PhilippaEilhart
   name: tts-voice-name-philippa-eilhart
   sex:
   - Female
   speaker: philippa_eilhart
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EwaldBorsodi
   name: tts-voice-name-ewald-borsodi
   sex:
   - Male
   speaker: ewald_borsodi
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Dandelion
   name: tts-voice-name-dandelion
   sex:
   - Male
   speaker: dandelion
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Shani
   name: tts-voice-name-shani
   sex:
   - Female
   speaker: shani
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Maiko
   name: tts-voice-name-maiko
   # Lust-Start
@@ -1710,9 +1686,9 @@
   # Lust-End
   speaker: maiko
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Brendan
   name: tts-voice-name-brendan
   # Lust-Start
@@ -1721,9 +1697,9 @@
   # Lust-End
   speaker: brendan
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: NancyHartley
   name: tts-voice-name-nancy-hartley
   # Lust-Start
@@ -1733,9 +1709,9 @@
   # Lust-End
   speaker: nancy_hartley
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: OswaldForrest
   name: tts-voice-name-oswald-forrest
   # Lust-Start
@@ -1744,10 +1720,9 @@
   # Lust-End
   speaker: oswald_forrest
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Steve
   name: tts-voice-name-steve
   # Lust-Start
@@ -1756,9 +1731,9 @@
   # Lust-End
   speaker: steve
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Abaddon
   #description: Голос персонажа Abaddon из игры Dota 2
   sex:
@@ -1766,9 +1741,9 @@
   speaker: abaddon_dota_2
   id: abaddon_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Achemist
   #description: Голос персонажа Achemist из игры Dota 2
   sex:
@@ -1776,9 +1751,9 @@
   speaker: alchemist_dota_2
   id: alchemist_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Anti-Mage
   #description: Голос персонажа Anti-Mage из игры Dota 2
   sex:
@@ -1786,9 +1761,9 @@
   speaker: anti-mage_dota_2
   id: anti-mage_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Arc Warden
   #description: Голос персонажа Arc Warden из игры Dota 2
   sex:
@@ -1796,9 +1771,9 @@
   speaker: arc_warden_dota_2
   id: arc_warden_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Batrider
   #description: Голос персонажа Batrider из игры Dota 2
   sex:
@@ -1806,9 +1781,9 @@
   speaker: batrider_dota_2
   id: batrider_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Bloodseeker
   #description: Голос персонажа Bloodseeker из игры Dota 2
   sex:
@@ -1816,9 +1791,9 @@
   speaker: bloodseeker_dota_2
   id: bloodseeker_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Bounty Hunter
   #description: Голос персонажа Bounty Hunter из игры Dota 2
   sex:
@@ -1826,9 +1801,9 @@
   speaker: bounty_hunter_dota_2
   id: bounty_hunter_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Bristleback
   #description: Голос персонажа Bristleback из игры Dota 2
   sex:
@@ -1836,9 +1811,9 @@
   speaker: bristleback_dota_2
   id: bristleback_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Broodmother
   #description: Голос персонажа Broodmother из игры Dota 2
   sex:
@@ -1847,9 +1822,9 @@
   speaker: broodmother_dota_2
   id: broodmother_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Centaur Warrunner
   #description: Голос персонажа Centaur Warrunner из игры Dota 2
   sex:
@@ -1857,9 +1832,9 @@
   speaker: centaur_warrunner_dota_2
   id: centaur_warrunner_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Clinkz
   #description: Голос персонажа Clinkz из игры Dota 2
   sex:
@@ -1867,9 +1842,9 @@
   speaker: clinkz_dota_2
   id: clinkz_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Clockwerk
   #description: Голос персонажа Clockwerk из игры Dota 2
   sex:
@@ -1877,9 +1852,9 @@
   speaker: clockwerk_dota_2
   id: clockwerk_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Crystal Maiden
   #description: Голос персонажа Crystal Maiden из игры Dota 2
   sex:
@@ -1888,9 +1863,9 @@
   speaker: crystal_maiden_dota_2
   id: crystal_maiden_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Dazzle
   #description: Голос персонажа Dazzle из игры Dota 2
   sex:
@@ -1898,9 +1873,9 @@
   speaker: dazzle_dota_2
   id: dazzle_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Disruptor
   #description: Голос персонажа Disruptor из игры Dota 2
   sex:
@@ -1908,9 +1883,9 @@
   speaker: disruptor_dota_2
   id: disruptor_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Doom
   #description: Голос персонажа Doom из игры Dota 2
   sex:
@@ -1918,9 +1893,9 @@
   speaker: doom_dota_2
   id: doom_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Dragon Knight
   #description: Голос персонажа Dragon Knight из игры Dota 2
   sex:
@@ -1928,9 +1903,9 @@
   speaker: dragon_knight_dota_2
   id: dragon_knight_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Dragon Knight Dragon
   #description: Голос персонажа Dragon Knight Dragon из игры Dota 2
   sex:
@@ -1938,9 +1913,9 @@
   speaker: dragon_knight_dragon_dota_2
   id: dragon_knight_dragon_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Drow Ranger
   #description: Голос персонажа Drow Ranger из игры Dota 2
   sex:
@@ -1949,9 +1924,9 @@
   speaker: drow_ranger_dota_2
   id: drow_ranger_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Earthshaker
   #description: Голос персонажа Earthshaker из игры Dota 2
   sex:
@@ -1959,9 +1934,9 @@
   speaker: earthshaker_dota_2
   id: earthshaker_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Ember Spirit
   #description: Голос персонажа Ember Spirit из игры Dota 2
   sex:
@@ -1969,9 +1944,9 @@
   speaker: ember_spirit_dota_2
   id: ember_spirit_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Enigma
   #description: Голос персонажа Enigma из игры Dota 2
   sex:
@@ -1979,9 +1954,9 @@
   speaker: enigma_dota_2
   id: enigma_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Gyrocopter
   #description: Голос персонажа Gyrocopter из игры Dota 2
   sex:
@@ -1989,9 +1964,9 @@
   speaker: gyrocopter_dota_2
   id: gyrocopter_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Huskar
   #description: Голос персонажа Huskar из игры Dota 2
   sex:
@@ -1999,9 +1974,9 @@
   speaker: huskar_dota_2
   id: huskar_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Invoker
   #description: Голос персонажа Invoker из игры Dota 2
   sex:
@@ -2009,9 +1984,9 @@
   speaker: invoker_dota_2
   id: invoker_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Juggernaut
   #description: Голос персонажа Juggernaut из игры Dota 2
   sex:
@@ -2019,9 +1994,9 @@
   speaker: juggernaut_dota_2
   id: juggernaut_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Keeper Of The Light
   #description: Голос персонажа Keeper Of The Light из игры Dota 2
   sex:
@@ -2029,9 +2004,9 @@
   speaker: keeper_of_the_light_dota_2
   id: keeper_of_the_light_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Kunkka
   #description: Голос персонажа Kunkka из игры Dota 2
   sex:
@@ -2039,9 +2014,9 @@
   speaker: kunkka_dota_2
   id: kunkka_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Legion Commander Demon
   #description: Голос персонажа Legion Commander Demon из игры Dota 2
   sex:
@@ -2050,9 +2025,9 @@
   speaker: legion_commander_demon_dota_2
   id: legion_commander_demon_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Legion Commander
   #description: Голос персонажа Legion Commander из игры Dota 2
   sex:
@@ -2061,9 +2036,9 @@
   speaker: legion_commander_dota_2
   id: legion_commander_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Lich
   #description: Голос персонажа Lich из игры Dota 2
   sex:
@@ -2071,9 +2046,9 @@
   speaker: lich_dota_2
   id: lich_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Lina
   #description: Голос персонажа Lina из игры Dota 2
   sex:
@@ -2082,9 +2057,9 @@
   speaker: lina_dota_2
   id: lina_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Luna
   #description: Голос персонажа Luna из игры Dota 2
   sex:
@@ -2093,9 +2068,9 @@
   speaker: luna_dota_2
   id: luna_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Lycan
   #description: Голос персонажа Lycan из игры Dota 2
   sex:
@@ -2103,9 +2078,9 @@
   speaker: lycan_dota_2
   id: lycan_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Lycan Wolf
   #description: Голос персонажа Lycan Wolf из игры Dota 2
   sex:
@@ -2113,9 +2088,9 @@
   speaker: lycan_wolf_dota_2
   id: lycan_wolf_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Meepo
   #description: Голос персонажа Meepo из игры Dota 2
   sex:
@@ -2123,9 +2098,9 @@
   speaker: meepo_dota_2
   id: meepo_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Mirana
   #description: Голос персонажа Mirana из игры Dota 2
   sex:
@@ -2134,9 +2109,9 @@
   speaker: mirana_dota_2
   id: mirana_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Monkey King Crown
   #description: Голос персонажа Monkey King Crown из игры Dota 2
   sex:
@@ -2144,9 +2119,9 @@
   speaker: monkey_king_crown_dota_2
   id: monkey_king_crown_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Monkey King
   #description: Голос персонажа Monkey King из игры Dota 2
   sex:
@@ -2154,9 +2129,9 @@
   speaker: monkey_king_dota_2
   id: monkey_king_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Necrophos
   #description: Голос персонажа Necrophos из игры Dota 2
   sex:
@@ -2164,9 +2139,9 @@
   speaker: necrophos_dota_2
   id: necrophos_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Nyx Assassin
   #description: Голос персонажа Nyx Assassin из игры Dota 2
   sex:
@@ -2174,9 +2149,9 @@
   speaker: nyx_assassin_dota_2
   id: nyx_assassin_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Omniknight
   #description: Голос персонажа Omniknight из игры Dota 2
   sex:
@@ -2184,9 +2159,9 @@
   speaker: omniknight_dota_2
   id: omniknight_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Outworld Destroyer
   #description: Голос персонажа Outworld Destroyer из игры Dota 2
   sex:
@@ -2194,9 +2169,9 @@
   speaker: outworld_destroyer_dota_2
   id: outworld_destroyer_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Phantom Assassin Arcana
   #description: Голос персонажа Phantom Assassin Arcana из игры Dota 2
   sex:
@@ -2205,9 +2180,9 @@
   speaker: phantom_assassin_arcana_dota_2
   id: phantom_assassin_arcana_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Phantom Assassin
   #description: Голос персонажа Phantom Assassin из игры Dota 2
   sex:
@@ -2216,9 +2191,9 @@
   speaker: phantom_assassin_dota_2
   id: phantom_assassin_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Phantom Lancer
   #description: Голос персонажа Phantom Lancer из игры Dota 2
   sex:
@@ -2226,9 +2201,9 @@
   speaker: phantom_lancer_dota_2
   id: phantom_lancer_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Pudge
   #description: Голос персонажа Pudge из игры Dota 2
   sex:
@@ -2236,9 +2211,9 @@
   speaker: pudge_dota_2
   id: pudge_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Queen Of Pain
   #description: Голос персонажа Queen Of Pain из игры Dota 2
   sex:
@@ -2247,9 +2222,9 @@
   speaker: queen_of_pain_dota_2
   id: queen_of_pain_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Razor
   #description: Голос персонажа Razor из игры Dota 2
   sex:
@@ -2257,9 +2232,9 @@
   speaker: razor_dota_2
   id: razor_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Riki
   #description: Голос персонажа Riki из игры Dota 2
   sex:
@@ -2267,9 +2242,9 @@
   speaker: riki_dota_2
   id: riki_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Rubick
   #description: Голос персонажа Rubick из игры Dota 2
   sex:
@@ -2277,9 +2252,9 @@
   speaker: rubick_dota_2
   id: rubick_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Sand King
   #description: Голос персонажа Sand King из игры Dota 2
   sex:
@@ -2287,9 +2262,9 @@
   speaker: sand_king_dota_2
   id: sand_king_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Shadow Fiend
   #description: Голос персонажа Shadow Fiend из игры Dota 2
   sex:
@@ -2297,9 +2272,9 @@
   speaker: shadow_fiend_dota_2
   id: shadow_fiend_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Shadow Shaman
   #description: Голос персонажа Shadow Shaman из игры Dota 2
   sex:
@@ -2307,9 +2282,9 @@
   speaker: shadow_shaman_dota_2
   id: shadow_shaman_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Skywrath Mage
   #description: Голос персонажа Skywrath Mage из игры Dota 2
   sex:
@@ -2317,9 +2292,9 @@
   speaker: skywrath_mage_dota_2
   id: skywrath_mage_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Slardar
   #description: Голос персонажа Slardar из игры Dota 2
   sex:
@@ -2327,9 +2302,9 @@
   speaker: slardar_dota_2
   id: slardar_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Slark
   #description: Голос персонажа Slark из игры Dota 2
   sex:
@@ -2337,9 +2312,9 @@
   speaker: slark_dota_2
   id: slark_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Spirit Breaker
   #description: Голос персонажа Spirit Breaker из игры Dota 2
   sex:
@@ -2347,9 +2322,9 @@
   speaker: spirit_breaker_dota_2
   id: spirit_breaker_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Storm Spirit
   #description: Голос персонажа Storm Spirit из игры Dota 2
   sex:
@@ -2357,9 +2332,9 @@
   speaker: storm_spirit_dota_2
   id: storm_spirit_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Sven
   #description: Голос персонажа Sven из игры Dota 2
   sex:
@@ -2367,9 +2342,9 @@
   speaker: sven_dota_2
   id: sven_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   name: Templar Assassin
   #description: Голос персонажа Templar Assassin из игры Dota 2
   sex:
@@ -2378,10 +2353,9 @@
   speaker: templar_assassin_dota_2
   id: templar_assassin_dota_2
   roundStart: true
-  provider: ntts.fdev.team
-  sponsorOnly: true
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Tidehunter
   #description: Голос персонажа Tidehunter из игры Dota 2
   sex:
@@ -2389,9 +2363,9 @@
   speaker: tidehunter_dota_2
   id: tidehunter_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Treant Protector
   #description: Голос персонажа Treant Protector из игры Dota 2
   sex:
@@ -2399,9 +2373,9 @@
   speaker: treant_protector_dota_2
   id: treant_protector_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Underlord
   #description: Голос персонажа Underlord из игры Dota 2
   sex:
@@ -2409,9 +2383,9 @@
   speaker: underlord_dota_2
   id: underlord_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Ursa
   #description: Голос персонажа Ursa из игры Dota 2
   sex:
@@ -2419,9 +2393,9 @@
   speaker: ursa_dota_2
   id: ursa_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Windranger
   #description: Голос персонажа Windranger из игры Dota 2
   sex:
@@ -2430,9 +2404,9 @@
   speaker: windranger_dota_2
   id: windranger_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Winter Wyvern
   #description: Голос персонажа Winter Wyvern из игры Dota 2
   sex:
@@ -2441,9 +2415,9 @@
   speaker: winter_wyvern_dota_2
   id: winter_wyvern_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Witch Doctor
   #description: Голос персонажа Witch Doctor из игры Dota 2
   sex:
@@ -2451,9 +2425,9 @@
   speaker: witch_doctor_dota_2
   id: witch_doctor_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Wraith King
   #description: Голос персонажа Wraith King из игры Dota 2
   sex:
@@ -2461,9 +2435,9 @@
   speaker: wraith_king_dota_2
   id: wraith_king_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   name: Zeus
   #description: Голос персонажа Zeus из игры Dota 2
   sex:
@@ -2471,54 +2445,54 @@
   speaker: zeus_dota_2
   id: zeus_dota_2
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Mita
   name: tts-voice-name-mita
   sex:
   - Female
   speaker: mita
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MitaDream
   name: tts-voice-name-mitadream
   sex:
   - Female
   speaker: mitadream
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MitaGhost
   name: tts-voice-name-mitaghost
   sex:
   - Female
   speaker: mitaghost
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MitaKind
   name: tts-voice-name-mitakind
   sex:
   - Female
   speaker: mitakind
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: MitaShortHairs
   name: tts-voice-name-mitashorthairs
   sex:
   - Female
   speaker: mitashorthairs
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: ChaosMarinesCultistsDow
   name: tts-voice-name-chaos-marines-cultists-dow
   # Lust-Start
@@ -2527,9 +2501,9 @@
   # Lust-End
   speaker: chaos_marines_cultists_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ChaosMarinesDow
   name: tts-voice-name-chaos-marines-dow
   # Lust-Start
@@ -2538,10 +2512,9 @@
   # Lust-End
   speaker: chaos_marines_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ChaosMarinesLordDow
   name: tts-voice-name-chaos-marines-lord-dow
   # Lust-Start
@@ -2550,10 +2523,9 @@
   # Lust-End
   speaker: chaos_marines_lord_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: ChaosMarinesSorcerorDow
   name: tts-voice-name-chaos-marines-sorceror-dow
   # Lust-Start
@@ -2562,10 +2534,9 @@
   # Lust-End
   speaker: chaos_marines_sorceror_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: DarkEldarArchonDow
   name: tts-voice-name-dark-eldar-archon-dow
   # Lust-Start
@@ -2574,10 +2545,9 @@
   # Lust-End
   speaker: dark_eldar_archon_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: DarkEldarMandrakeDow
   name: tts-voice-name-dark-eldar-mandrake-dow
   # Lust-Start
@@ -2586,9 +2556,9 @@
   # Lust-End
   speaker: dark_eldar_mandrake_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: DarkEldarWarriorDow
   name: tts-voice-name-dark-eldar-warrior-dow
   # Lust-Start
@@ -2597,9 +2567,9 @@
   # Lust-End
   speaker: dark_eldar_warrior_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: DarkEldarWychDow
   name: tts-voice-name-dark-eldar-wych-dow
   # Lust-Start
@@ -2609,10 +2579,9 @@
   # Lust-End
   speaker: dark_eldar_wych_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EldarDow
   name: tts-voice-name-eldar-dow
   # Lust-Start
@@ -2622,9 +2591,9 @@
   # Lust-End
   speaker: eldar_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: EldarFarseerDow
   name: tts-voice-name-eldar-farseer-dow
   # Lust-Start
@@ -2634,10 +2603,9 @@
   # Lust-End
   speaker: eldar_farseer_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EldarFireDragonDow
   name: tts-voice-name-eldar-fire-dragon-dow
   # Lust-Start
@@ -2647,9 +2615,9 @@
   # Lust-End
   speaker: eldar_fire_dragon_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: EldarWarlockDow
   name: tts-voice-name-eldar-warlock-dow
   # Lust-Start
@@ -2659,9 +2627,9 @@
   # Lust-End
   speaker: eldar_warlock_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardAssassinDow
   name: tts-voice-name-guard-assassin-dow
   # Lust-Start
@@ -2670,9 +2638,9 @@
   # Lust-End
   speaker: guard_assassin_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardCaptainDow
   name: tts-voice-name-guard-captain-dow
   # Lust-Start
@@ -2681,9 +2649,9 @@
   # Lust-End
   speaker: guard_captain_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: GuardCommissarDow
   name: tts-voice-name-guard-commissar-dow
   # Lust-Start
@@ -2692,10 +2660,9 @@
   # Lust-End
   speaker: guard_commissar_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardEnginseerDow
   name: tts-voice-name-guard-enginseer-dow
   # Lust-Start
@@ -2704,9 +2671,9 @@
   # Lust-End
   speaker: guard_enginseer_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardGuardsmanSergeantDow
   name: tts-voice-name-guard-guardsman-sergeant-dow
   # Lust-Start
@@ -2715,9 +2682,9 @@
   # Lust-End
   speaker: guard_guardsman_sergeant_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardHeavyWeaponsPlatoonDow
   name: tts-voice-name-guard-heavy-weapons-platoon-dow
   # Lust-Start
@@ -2726,9 +2693,9 @@
   # Lust-End
   speaker: guard_heavy_weapons_platoon_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardKarskinDow
   name: tts-voice-name-guard-karskin-dow
   # Lust-Start
@@ -2737,9 +2704,9 @@
   # Lust-End
   speaker: guard_karskin_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: GuardOgrynDow
   name: tts-voice-name-guard-ogryn-dow
   # Lust-Start
@@ -2748,10 +2715,9 @@
   # Lust-End
   speaker: guard_ogryn_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardPriestDow
   name: tts-voice-name-guard-priest-dow
   # Lust-Start
@@ -2760,9 +2726,9 @@
   # Lust-End
   speaker: guard_priest_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: GuardPsykerDow
   name: tts-voice-name-guard-psyker-dow
   # Lust-Start
@@ -2771,9 +2737,9 @@
   # Lust-End
   speaker: guard_psyker_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: Kingpin
   name: tts-voice-name-kingpin
   # Lust-Start
@@ -2782,9 +2748,9 @@
   # Lust-End
   speaker: kingpin
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: OrksDow
   name: tts-voice-name-orks-dow
   # Lust-Start
@@ -2793,10 +2759,9 @@
   # Lust-End
   speaker: orks_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: OrksFlashgitznobsDow
   name: tts-voice-name-orks-flashgitznobs-dow
   # Lust-Start
@@ -2805,9 +2770,9 @@
   # Lust-End
   speaker: orks_flashgitznobs_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: OrksGrotsDow
   name: tts-voice-name-orks-grots-dow
   # Lust-Start
@@ -2816,9 +2781,9 @@
   # Lust-End
   speaker: orks_grots_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: OrksWarbossDow
   name: tts-voice-name-orks-warboss-dow
   # Lust-Start
@@ -2827,10 +2792,9 @@
   # Lust-End
   speaker: orks_warboss_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SistersBattleSisterDow
   name: tts-voice-name-sisters-battle-sister-dow
   # Lust-Start
@@ -2840,10 +2804,9 @@
   # Lust-End
   speaker: sisters_battle_sister_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SistersMissionaryDow
   name: tts-voice-name-sisters-missionary-dow
   # Lust-Start
@@ -2852,9 +2815,9 @@
   # Lust-End
   speaker: sisters_missionary_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: SpaceMarines2Dow
   name: tts-voice-name-space-marines-2-dow
   # Lust-Start
@@ -2863,9 +2826,9 @@
   # Lust-End
   speaker: space_marines_2_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SpaceMarinesChaplainDow
   name: tts-voice-name-space-marines-chaplain-dow
   # Lust-Start
@@ -2874,10 +2837,9 @@
   # Lust-End
   speaker: space_marines_chaplain_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SpaceMarinesDow
   name: tts-voice-name-space-marines-dow
   # Lust-Start
@@ -2886,10 +2848,9 @@
   # Lust-End
   speaker: space_marines_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SpaceMarinesForceCommanderDow
   name: tts-voice-name-space-marines-force-commander-dow
   # Lust-Start
@@ -2898,10 +2859,9 @@
   # Lust-End
   speaker: space_marines_force_commander_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: SpaceMarinesLibrarianDow
   name: tts-voice-name-space-marines-librarian-dow
   # Lust-Start
@@ -2910,10 +2870,9 @@
   # Lust-End
   speaker: space_marines_librarian_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNttsSponsor
   id: TauEtherealDow
   name: tts-voice-name-tau-ethereal-dow
   # Lust-Start
@@ -2922,10 +2881,9 @@
   # Lust-End
   speaker: tau_ethereal_dow
   roundStart: true
-  sponsorOnly: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: TauKrootDow
   name: tts-voice-name-tau-kroot-dow
   # Lust-Start
@@ -2934,9 +2892,9 @@
   # Lust-End
   speaker: tau_kroot_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: TutorialFDow
   name: tts-voice-name-tutorial-f-dow
   # Lust-Start
@@ -2946,9 +2904,9 @@
   # Lust-End
   speaker: tutorial_f_dow
   roundStart: true
-  provider: ntts.fdev.team
 
 - type: ttsVoice
+  parent: BaseSunriseTtsVoiceNtts
   id: TutorialMDow
   name: tts-voice-name-tutorial-m-dow
   # Lust-Start
@@ -2957,4 +2915,3 @@
   # Lust-End
   speaker: tutorial_m_dow
   roundStart: true
-  provider: ntts.fdev.team
