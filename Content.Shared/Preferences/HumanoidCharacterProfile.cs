@@ -860,14 +860,20 @@ namespace Content.Shared.Preferences
                 return false;
 
             // Если голос доступен для всех полов (Unsexed), то его можно использовать
-            if (voice.Sex.Contains(Sex.Unsexed))
+            if (voice.Sex == Sex.Unsexed)
                 return true;
 
             if (sex == Sex.Unsexed)
                 return true;
 
+            // Lust-Start
+            // Персонажи-футанары могут использовать любые женские голоса
+            if (sex == Sex.Futanari && voice.Sex == Sex.Female)
+                return true;
+            // Lust-End
+
             // Проверяем, доступен ли голос для конкретного пола персонажа
-            return voice.Sex.Contains(sex);
+            return voice.Sex == sex;
         }
         // Sunrise-TTS-End
 

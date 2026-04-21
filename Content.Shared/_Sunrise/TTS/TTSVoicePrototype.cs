@@ -22,7 +22,7 @@ public sealed partial class TTSVoicePrototype : IPrototype, IInheritingPrototype
     public string Name = string.Empty;
 
     [DataField(required: true)]
-    public List<Sex> Sex = new();
+    public Sex Sex { get; private set; } = Sex.Unsexed;
 
     [DataField(required: true)]
     public string Speaker = string.Empty;
