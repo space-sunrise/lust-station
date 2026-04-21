@@ -129,3 +129,5 @@
     - OrderCentcom_QL
     - OrderReport_QL
     - OrderCentcomTransferStationStaff_QL
+    - ReportDecreeHeadsPresence_QL
+    - DeathCertificateCentcom_QL

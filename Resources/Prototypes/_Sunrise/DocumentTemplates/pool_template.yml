@@ -130,3 +130,5 @@
     - OrderCentcom
     - OrderReport
     - OrderCentcomTransferStationStaff
+    - ReportDecreeHeadsPresence
+    - DeathCertificateCentcom

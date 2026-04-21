@@ -1136,3 +1136,21 @@
   header:
     sprite: /Textures/_Sunrise/CopyMachine/paper_headers.rsi
     state: nanotrasen_form_header_centcom
+
+- type: docTemplate
+  id: ReportDecreeHeadsPresence
+  name: doc-template-report-decree-heads-presence-name
+  content: /Documents/_Sunrise/Command/ReportDecreeHeadsPresence.xml
+  component: Command
+  header:
+    sprite: /Textures/_Sunrise/CopyMachine/paper_headers.rsi
+    state: nanotrasen_form_header_cmd
+
+- type: docTemplate
+  id: DeathCertificateCentcom
+  name: doc-template-death-certificate-centcom-name
+  content: /Documents/_Sunrise/Centcom/DeathCertificateCentcom.xml
+  component: Centcom
+  header:
+    sprite: /Textures/_Sunrise/CopyMachine/paper_headers.rsi
+    state: nanotrasen_form_header_centcom

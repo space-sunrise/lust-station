@@ -872,3 +872,17 @@
   header:
     sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
     state: qillu_form_header_centcom
+
+- type: docTemplate
+  id: ReportDecreeHeadsPresence_QL
+  parent: ReportDecreeHeadsPresence
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_cmd
+
+- type: docTemplate
+  id: DeathCertificateCentcom_QL
+  parent: DeathCertificateCentcom
+  header:
+    sprite: /Textures/_Lust/CopyMachine/paper_headers.rsi
+    state: qillu_form_header_centcom
