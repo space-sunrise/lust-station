@@ -303,7 +303,7 @@
 
 - type: entity
   id: WeaponMechCombatKord
-  name: Mounted "Kord"
+  name: mounted "Kord"
   description: Rapid-fire machine gun chambered for 12.7 x 108 mm
   suffix: Mech Weapon, Combat, Kord
   parent: [ BaseMechWeaponRange, CombatMechEquipment ]
@@ -314,11 +314,6 @@
   - type: Item
     sprite: _Sunrise/Objects/Specific/Mech/mecha_kord_inhands.rsi
     size: Ginormous
-    inhandVisuals:
-      left:
-      - state: inhand-left
-      right:
-      - state: inhand-right
   - type: Gun
     minAngle: 24
     maxAngle: 60
