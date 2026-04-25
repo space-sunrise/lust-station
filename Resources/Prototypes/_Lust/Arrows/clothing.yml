@@ -188,6 +188,87 @@
         Radiation: 0.80
         Caustic: 0.95
 
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMedicalArrow
+  name: Шлем медика ЧВК «Arrows»
+  description: Тактический герметичный модуль с панорамным визором, встроенной системой диагностики (тепловизор, сканер жизненных показателей) и стерильным голосовым фильтром. Его корпус белого цвета с эмблемой «Жезл и Стрела» на лбу обеспечивает мгновенную идентификацию в любых условиях.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/Hardsuits/arrows_trauma_helmet.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Head/Hardsuits/arrows_helmet.rsi
+  - type: PointLight
+    color: "#90EE90"
+    radius: 8
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.08
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.005
+    coolingCoefficient: 0.005
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.76
+        Piercing: 0.75
+        Heat: 0.55
+        Radiation: 0.4
+        Caustic: 0.7
+  - type: EyeProtection
+  - type: FlashImmunity
+
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitMedArrows
+  name: Скафандр медика ЧВК «Arrows»
+  description: Специализированный боевой медико-эвакуационный комплект. Зелёный эластичный герметичный подкостюм обеспечивает базовую защиту и стерильность, а съёмная тяжёлая бронепластина с красно-белой эмблемой «Жезл и Стрела» гарантирует живучесть в зоне прямого огня. Жёлтая сигнальная лента на конечностях позволяет идентифицировать санитара в дыму и хаосе боя.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrows_trauma_gear.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrows_trauma_gear.rsi
+    layers:
+    - state: equipped-OUTERCLOTHING
+  - type: Item
+    size: Huge
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.0008
+    coolingCoefficient: 0.0008
+  - type: ExplosionResistance
+    damageCoefficient: 0.60
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.30
+        Radiation: 0.35
+        Caustic: 0.65
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1.2
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMedicalArrow
+  - type: Tag
+    tags:
+    - Hardsuit
+
 # Магнитки
 
 - type: entity
