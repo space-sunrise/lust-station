@@ -190,7 +190,7 @@
 
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
-  id: ClothingHeadHelmetHardsuitMedicalArrow
+  id: ClothingHeadHelmetHardsuitMedicalArrows
   name: PMC "Arrows" Medic Helmet
   description: A tactical sealed module with a panoramic visor, built-in diagnostic system (thermal imager, vital signs scanner) and a sterile voice filter. Its white body with the "Rod and Arrow" emblem on the forehead provides instant identification in any conditions.
   components:
@@ -232,10 +232,8 @@
   components:
   - type: Sprite
     sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrows_trauma_gear.rsi
-    layers:
   - type: Clothing
     sprite: _Lust/Clothing/OuterClothing/Hardsuits/arrows_trauma_gear.rsi
-    layers:
   - type: Item
     size: Huge
   - type: PressureProtection
@@ -262,7 +260,7 @@
     sprintModifier: 1.2
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMedicalArrow
+    clothingPrototype: ClothingHeadHelmetHardsuitMedicalArrows
   - type: Tag
     tags:
     - Hardsuit
