@@ -60,6 +60,9 @@
     hideLayersOnEquip:
     - Hair
     - Snout
+    - HeadTop # Sunrise-Edit
+    - Special # Sunrise-Edit
+    - Tail # Sunrise-Edit
   # Sunrise edit ;3
   - type: FootprintEmitter
     leftBareFootState:
