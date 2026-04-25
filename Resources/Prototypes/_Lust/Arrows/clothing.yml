@@ -191,8 +191,8 @@
 - type: entity
   parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
   id: ClothingHeadHelmetHardsuitMedicalArrow
-  name: Шлем медика ЧВК «Arrows»
-  description: Тактический герметичный модуль с панорамным визором, встроенной системой диагностики (тепловизор, сканер жизненных показателей) и стерильным голосовым фильтром. Его корпус белого цвета с эмблемой «Жезл и Стрела» на лбу обеспечивает мгновенную идентификацию в любых условиях.
+  name: PMC "Arrows" Medic Helmet
+  description: A tactical sealed module with a panoramic visor, built-in diagnostic system (thermal imager, vital signs scanner) and a sterile voice filter. Its white body with the "Rod and Arrow" emblem on the forehead provides instant identification in any conditions.
   components:
   - type: BreathMask
   - type: Sprite
@@ -226,7 +226,7 @@
 - type: entity
   parent: ClothingOuterHardsuitBase
   id: ClothingOuterHardsuitMedArrows
-  name: Скафандр медика ЧВК «Arrows»
+  name: PMC "Arrows" Medic Hardsuit
   description: Специализированный боевой медико-эвакуационный комплект. Зелёный эластичный герметичный подкостюм обеспечивает базовую защиту и стерильность, а съёмная тяжёлая бронепластина с красно-белой эмблемой «Жезл и Стрела» гарантирует живучесть в зоне прямого огня. Жёлтая сигнальная лента на конечностях позволяет идентифицировать санитара в дыму и хаосе боя.
   suffix: Arrows
   components:
@@ -330,6 +330,37 @@
     sprite: Clothing/Belt/assault.rsi
   - type: Clothing
     sprite: Clothing/Belt/assault.rsi
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,9,1
+  - type: StorageFill
+    contents:
+    - id: SyndicateJawsOfLife
+    - id: PowerDrill
+    - id: C4
+      amount: 2
+    - id: ChainswordArrowsBiocode
+    - id: CombatMedipenArrows
+      amount: 2
+    - id: CombatMedipen
+      amount: 3
+    - id: AntiPoisonMedipen
+    - id: BruteAutoInjector
+    - id: BurnAutoInjector
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltMedicalMT
+  name: trauma team combat belt
+  description: A tactical modular load-bearing belt made of durable green-black nylon with contrasting yellow inserts. Equipped with quick-release pouches for essential medications (hemostatics, adrenaline, antidotes), tools (tourniquets, scissors, forceps), and primary stabilization supplies.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Clothing/Belt/arrowspmctrauma.rsi
+  - type: Clothing
+    sprite: Clothing/Belt/arrowspmctrauma.rsi
   - type: Storage
     maxItemSize: Normal
     grid:
