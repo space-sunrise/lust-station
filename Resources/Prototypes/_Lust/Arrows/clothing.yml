@@ -414,6 +414,44 @@
           amount: 2
 
 - type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackDuffelMedArrows
+  name: Arrows medic backpack
+  description:  A tactical modular medical complex in the style of a PMC. Made of durable green-black camouflage fabric with the "Rod and Arrow" emblem. Equipped with a quick-access compartment system, a built-in refrigeration module for medications, and a deployable sterile field for emergency interventions.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Back/Backpack/pmcarrowsmed.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Back/Backpack/pmcarrowsmed.rsi
+  - type: Storage
+    maxItemSize: Huge
+    grid:
+    - 0,0,7,7
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: StorageFill
+    contents:
+      - id: BoxArrowsKit
+      - id: MedkitCombatFilled
+        amount: 2
+      - id: EnergyShieldArrowsBiocode
+      - id: AdvancedDefibrillatorCompact
+      - id: ChemistryBottleOmnizine
+        amount: 7
+      - id: HyposprayERT
+      - id: Bloodpack
+        amount: 4
+      - id: ChemistryBottleEpinephrine
+        amount: 4
+      - id: PowerCellArrows
+        amount: 3
+
+- type: entity
   parent: ClothingBackpackERTClown
   categories: [ HideSpawnMenu ]
   id: ClothingBackpackArrowsSoldFilled
