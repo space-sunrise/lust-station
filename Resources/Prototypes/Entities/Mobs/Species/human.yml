@@ -549,7 +549,6 @@
 
   # Sunrise-Start
   - type: FootprintEmitter
-  - type: Carriable
   # Sunrise-End
 
 
