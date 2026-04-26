@@ -69,7 +69,6 @@
     - "footprint-left-bare-dwarf"
     rightBareFootState:
     - "footprint-right-bare-dwarf"
-  - type: Carriable
   # Sunrise Start
   - type: Inventory
     ### Female
