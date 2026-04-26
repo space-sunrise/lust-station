@@ -18,7 +18,6 @@
   - BedsheetIan
   - BedsheetMedical
   - BedsheetMime
-  - BedsheetNTQillu # Lust-Edit
   - BedsheetRainbow
   - BedsheetBrigmedic
 #Sunrise-start
@@ -37,6 +36,7 @@
   - DoubleBedsheetIan
   - DoubleBedsheetMedical
   - DoubleBedsheetMime
-  - DoubleBedsheetQillu # Lust-Edit
   - DoubleBedsheetRainbow
 #sunrise-end
+  - DoubleBedsheetQillu # Lust-Edit
+  - BedsheetNTQillu # Lust-Edit

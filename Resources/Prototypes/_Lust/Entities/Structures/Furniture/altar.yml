@@ -1,7 +1,7 @@
 - type: entity
   id: AltarQillu
   parent: AltarNanotrasen
-  name: qillu altar
+  name: Qillu altar
   components:
   - type: Sprite
     sprite: _Lust/Structures/Furniture/Altars/Gods/qillu.rsi

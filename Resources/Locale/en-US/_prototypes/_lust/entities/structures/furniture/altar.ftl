@@ -1,2 +1,2 @@
-ent-AltarQillu = qillu altar
+ent-AltarQillu = Qillu altar
     .desc = { ent-AltarNanotrasen.desc }

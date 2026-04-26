@@ -13,7 +13,3 @@
     clothingVisuals:
       neck:
       - state: qillu-equipped
-  - type: Tag
-    tags:
-    - WhitelistChameleon
-    - OpenNeck

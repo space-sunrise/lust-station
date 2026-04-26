@@ -1,6 +1,6 @@
-ent-PosterLegitQilluLogo = Логотип Qillu
+ent-PosterLegitQilluLogo = логотип Qillu
     .desc = Плакат с изображением логотипа Qillu.
-ent-PosterLegitQilluTGC = Тактическая карточная игра Qillu
+ent-PosterLegitQilluTGC = тактическая карточная игра Qillu
     .desc = Реклама новой ТКИ от Qillu: ПОКУПАЙТЕ БОЛЬШЕ КАРТОЧЕК.
-ent-PosterLegitQilluVacation = Корпоративные привилегии Qillu: Отпуск
+ent-PosterLegitQilluVacation = корпоративные привилегии Qillu: Отпуск
     .desc = На этом информационном плакате представлена информация о некоторых призах, которые можно получить в рамках программы 'Корпоративные привилегии Qillu', включая двухнедельный отпуск на двоих на планете-курорте Идиллус.
