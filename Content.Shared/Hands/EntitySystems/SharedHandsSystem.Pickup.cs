@@ -98,15 +98,39 @@ public abstract partial class SharedHandsSystem
         // Sunrise-start - pickup delay
         if (!ignoreDelay && checkActionBlocker && IsOnFloor(entity))
         {
-            var args = new DoAfterArgs(EntityManager, uid, 1.0f, new PickupDoAfterEvent(GetNetEntity(entity), handId), uid, target: entity)
+            var itemNet = GetNetEntity(entity);
+
+            if (TryComp<DoAfterComponent>(uid, out var doAfterComp))
+            {
+                foreach (var doAfter in doAfterComp.DoAfters.Values)
+                {
+                    if (doAfter.Args.Event is PickupDoAfterEvent pickupEvent && pickupEvent.Item == itemNet)
+                    {
+                        // Already picking up. Do nothing and return true to stop further logic.
+                        return true;
+                    }
+                }
+            }
+
+            var delay = 1.0f;
+            if (Resolve(entity, ref item))
+            {
+                if (_prototype.TryIndex(item.Size, out var size))
+                {
+                    delay = Math.Max(0.1f, size.Weight / 16.0f);
+                }
+            }
+
+            var args = new DoAfterArgs(EntityManager, uid, delay, new PickupDoAfterEvent(itemNet, handId), uid, target: entity)
             {
                 BreakOnMove = true,
-                BreakOnDamage = true,
+                BreakOnDamage = false,
+                BreakOnHandChange = false,
                 NeedHand = true
             };
 
-            if (DoAfter.TryStartDoAfter(args))
-                return true;
+            DoAfter.TryStartDoAfter(args);
+            return true;
         }
         // Sunrise-end
 
