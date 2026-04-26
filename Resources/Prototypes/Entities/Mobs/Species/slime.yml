@@ -141,7 +141,6 @@
       - "footprint-left-bare-slime"
     rightBareFootState:
       - "footprint-right-bare-slime"
-  - type: Carriable
   # Sunrise edit end.
 
 - type: entity
