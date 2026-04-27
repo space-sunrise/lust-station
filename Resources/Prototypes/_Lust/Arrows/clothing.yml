@@ -260,7 +260,7 @@
 
 - type: entity
   parent: ClothingOuterHardsuitBase
-  id: ClothingOuterHardsuitMedArrows
+  id: ClothingOuterHardsuitArrowsMedicLeader
   name: PMC "Arrows" medic squad commander hardsuit
   description: A specialized combat medical-evacuation commander's kit. The green elastic sealed undersuit provides basic protection and sterility, while the detachable heavy armor plate with the red-and-white "Rod and Arrow" emblem ensures survivability in the direct fire zone. Yellow signal strips on the limbs allow identification of the medic in the smoke and chaos of battle.
   components:
@@ -297,8 +297,11 @@
      walkModifier: 1
      sprintModifier: 1.2
    - type: HeldSpeedModifier
+   - type: ContainerContainer
+  containers:
+  toggleable-clothing: !type:ContainerSlot
    - type: ToggleableClothing
-     clothingPrototype: ClothingHeadHelmetHardsuitMedicalArrowLeader
+     clothingPrototype: ClothingHeadHelmetHardsuitMedicalLeaderArrows
    - type: Tag
      tags:
      - Hardsuit
@@ -339,6 +342,9 @@
     walkModifier: 1
     sprintModifier: 1.2
   - type: HeldSpeedModifier
+     - type: ContainerContainer
+  containers:
+ toggleable-clothing: !type:ContainerSlot
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMedicalArrows
   - type: Tag

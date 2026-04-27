@@ -30,3 +30,32 @@
   - type: RandomHumanoidSpawner
     settings: ArrowsSoldRandom
 
+- type: entity
+  name: Medic PMC "Arrows"
+  parent: RandomHumanoidSpawnerERTMedical
+  id: MobHumanArrowsMedic
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: brigmedic
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+  - type: RandomHumanoidSpawner
+    settings: ArrowsMedicRandom
+
+- type: entity
+  name: Medic Leader PMC "Arrows"
+  parent: RandomHumanoidSpawnerERTLeader
+  id: MobHumanArrowsMedicLeader
+  suffix: Arrows
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    state: brigmedic
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: RandomMetadata
+  - type: RandomHumanoidSpawner
+    settings: ArrowsMedicLeaderRandom
