@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: LustTraitorCorporations
+  values:
+    prefix: lust-traitor-corporations-dataset-
+    count: 5

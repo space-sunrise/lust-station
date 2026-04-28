@@ -1,0 +1,5 @@
+lust-traitor-corporations-dataset-1 = "КиберСан Индастриз"
+lust-traitor-corporations-dataset-2 = "Мародёры Горлекса"
+lust-traitor-corporations-dataset-3 = "МИ13"
+lust-traitor-corporations-dataset-4 = "С.Э.Л.Ф."
+lust-traitor-corporations-dataset-5 = "Интердайн Фармасьютикс"
