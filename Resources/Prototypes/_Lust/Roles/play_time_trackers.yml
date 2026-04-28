@@ -12,3 +12,9 @@
 
 - type: playTimeTracker
   id: JobSoldierCCAC
+
+- type: playTimeTracker
+  id: JobMedicArrows
+
+- type: playTimeTracker
+  id: JobMedicLeaderArrows

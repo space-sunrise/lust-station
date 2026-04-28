@@ -25,6 +25,18 @@
     price: 10000
 
 - type: entity
+  parent: ClothingOuterHardsuitMedArrows
+  id: ClothingOuterHardsuitMedArrowsBiocode
+  suffix: Arrows, BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Arrows
+  - type: FactionClothingBlocker
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
   parent: ChainswordArrows
   id: ChainswordArrowsBiocode
   suffix: Arrows, BIOCODE

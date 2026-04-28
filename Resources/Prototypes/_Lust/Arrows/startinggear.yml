@@ -32,3 +32,32 @@
     pocket2: DoubleEmergencyOxygenTankFilled
     belt: ClothingBeltAssaultMT
 
+- type: startingGear
+  id: MTMedic
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
+    back: ClothingBackpackDuffelMedArrows
+    mask: ClothingMaskGaiter
+    eyes: ClothingEyesNVDMedSec
+    ears: ClothingHeadsetMT
+    gloves: ClothingHandsPowerGlovesUplinkNTERTGammaLeader
+    outerClothing: ClothingOuterHardsuitMedArrowsBiocode
+    shoes: ClothingShoesBootsMagArrows
+    id: MTSoldPDA
+    pocket2: DoubleEmergencyOxygenTankFilled
+    belt: ClothingBeltMedicalMT
+
+- type: startingGear
+  id: MTMedicLeader
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCentcomOfficerBlack
+    back: ClothingBackpackDuffelMedArrows
+    mask: ClothingMaskGaiter
+    eyes: ClothingEyesNVDMedSec
+    ears: ClothingHeadsetMT
+    gloves: ClothingHandsPowerGlovesUplinkNTERTGammaLeader
+    outerClothing: ClothingOuterHardsuitArrowsMedicLeader
+    shoes: ClothingShoesBootsMagArrows
+    id: MTLeaderPDA
+    pocket2: DoubleEmergencyOxygenTankFilled
+    belt: ClothingBeltMedicalMT
