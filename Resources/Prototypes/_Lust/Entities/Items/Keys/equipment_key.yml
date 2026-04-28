@@ -1,0 +1,8 @@
+- type: entity
+  id: BaseEquipmentKey
+  abstract: true
+  name: equipment key
+  parent: BaseKey
+  components:
+  - type: Item
+    size: Tiny
