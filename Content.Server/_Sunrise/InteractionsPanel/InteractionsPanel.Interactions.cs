@@ -1,18 +1,26 @@
 using System.Numerics;
 using Content.Server._Sunrise.PlayerCache;
 using Content.Server.Chat.Systems;
-using Content.Server.Fluids.EntitySystems;
+// Lust-Start
+using Content.Server.Fluids.EntitySystems; 
 using Content.Shared._Sunrise.Aphrodisiac;
+// Lust-End
 using Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 using Content.Shared._Sunrise.InteractionsPanel.Data.Prototypes;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
 using Content.Shared.Chat;
+// Lust-Start
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Chemistry.Reagent;
+// Lust-End
 using Content.Shared.Clothing;
 using Content.Shared.Database;
+// Lust-Start
 using Content.Shared.FixedPoint;
+using Content.Shared.Forensics.Components;
+// Lust-End
 using Content.Shared.Hands;
-using Content.Shared.Humanoid;
+using Content.Shared.Humanoid; // Lust-Edit
 using Content.Shared.Input;
 using Content.Shared.Verbs;
 using Robust.Shared.Audio;
@@ -27,10 +35,12 @@ namespace Content.Server._Sunrise.InteractionsPanel;
 public partial class InteractionsPanel
 {
     [Dependency] private readonly PlayerCacheManager _playerCacheManager = default!;
+    // Lust-Start
     [Dependency] private readonly PuddleSystem _puddle = default!;
 
     private const float LoveDecayRate = 0.5f;
     private const float OrgasmCooldownSeconds = 15f;
+    // Lust-End
 
     private void InitializeInteractions()
     {
@@ -38,7 +48,7 @@ public partial class InteractionsPanel
             subs =>
             {
                 subs.Event<InteractionMessage>(OnInteractionMessageReceived);
-                subs.Event<RequestUndressMessage>(OnUndressMessageReceived);
+                subs.Event<RequestUndressMessage>(OnUndressMessageReceived); // Lust-Edit
             });
 
         SubscribeLocalEvent<InteractionsComponent, GetVerbsEvent<AlternativeVerb>>(AddInteractionsVerb);
@@ -55,6 +65,7 @@ public partial class InteractionsPanel
             .Register<InteractionsPanel>();
     }
 
+    // Lust-Start
     private void OnUndressMessageReceived(Entity<InteractionsComponent> ent, ref RequestUndressMessage args)
     {
         if (_inventory.TryGetSlots(ent, out var slots))
@@ -65,6 +76,7 @@ public partial class InteractionsPanel
             }
         }
     }
+    // Lust-End
 
     private void TryAutoInteraction(ICommonSession? session)
     {
@@ -254,6 +266,7 @@ public partial class InteractionsPanel
             SetCooldown(ent.Owner, args.InteractionId, interactionPrototype.Cooldown);
         }
 
+        // Lust-Start
         if (interactionPrototype.LoveUser > 0)
             ModifyLove(ent.Owner, interactionPrototype.LoveUser);
 
@@ -264,11 +277,13 @@ public partial class InteractionsPanel
 
         TryEmitMoan(ent.Owner, interactionPrototype.LoveUser, interactionPrototype.UserMoanChance);
         TryEmitMoan(target.Value, interactionPrototype.LoveTarget, interactionPrototype.TargetMoanChance);
+        // Lust-End
 
         _log.Add(LogType.Interactions, LogImpact.Medium,
             $"[InteractionsPanel] {ToPretty(ent.Owner)} использует \"{interactionPrototype.ID}\" на {ToPretty(target.Value)}");
     }
 
+    // Lust-Start
     private void TryEmitMoan(EntityUid uid, FixedPoint2 loveGain, float chance)
     {
         if (!_gameTiming.IsFirstTimePredicted)
@@ -358,14 +373,25 @@ public partial class InteractionsPanel
         }
     }
 
-    private void SpawnSemen(string prototype, EntityCoordinates coordinates)
+    private void SpawnSemen(EntityUid source, string prototype, EntityCoordinates coordinates)
     {
-        _puddle.TrySpillAt(
-            coordinates,
-            new Solution(prototype, 4f),
-            out _,
-            false);
+        var solution = new Solution();
+        solution.AddReagent(new ReagentId(prototype, GetSemenDnaData(source)), 4f);
+        _puddle.TrySpillAt(coordinates, solution, out _, false);
     }
+
+    private List<ReagentData> GetSemenDnaData(EntityUid source)
+    {
+        var dnaData = new DnaData();
+
+        if (TryComp<DnaComponent>(source, out var dnaComp) && dnaComp.DNA != null)
+            dnaData.DNA = dnaComp.DNA;
+        else
+            dnaData.DNA = Loc.GetString("forensics-dna-unknown");
+
+        return [dnaData];
+    }
+    // Lust-End
 
     private void HandleCustomInteraction(
         EntityUid user,
@@ -435,13 +461,14 @@ public partial class InteractionsPanel
         base.Update(frameTime);
 
         var query = EntityQueryEnumerator<InteractionsComponent>();
-        while (query.MoveNext(out var uid, out var comp))
+        while (query.MoveNext(out var uid, out var comp)) // Lust-Edit
         {
             UpdateCooldowns(uid);
-            UpdateLove(uid, comp, frameTime);
+            UpdateLove(uid, comp, frameTime); // Lust-Edit
         }
     }
 
+    // Lust-Start
     private void UpdateLove(EntityUid uid, InteractionsComponent comp, float frameTime)
     {
         if (comp.LoveAmount <= 0)
@@ -488,7 +515,7 @@ public partial class InteractionsPanel
         _chatSystem.TryEmoteWithChat(uid, "Moan");
 
         if (TryComp<HumanoidAppearanceComponent>(uid, out var humanoidAppearanceComponent) && humanoidAppearanceComponent.Sex == Sex.Male)
-            SpawnSemen("Semen", Transform(uid).Coordinates);
+            SpawnSemen(uid, "Semen", Transform(uid).Coordinates);
 
         SetCooldown(uid, "orgasm", TimeSpan.FromSeconds(OrgasmCooldownSeconds));
         Dirty(uid, comp);
@@ -528,6 +555,7 @@ public partial class InteractionsPanel
             RemComp<LoveVisionComponent>(uid);
         }
     }
+    // Lust-End
 
     private bool IsOnCooldown(EntityUid user, string interactionId)
     {

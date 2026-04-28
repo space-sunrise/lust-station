@@ -21,3 +21,4 @@
         reagents:
         - ReagentId: Semen
           Quantity: 2
+  - type: DnaSubstanceTrace
