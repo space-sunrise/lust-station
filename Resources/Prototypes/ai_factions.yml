@@ -1,0 +1,261 @@
+- type: npcFaction
+  id: Dragon
+  friendly:
+  - Carps # Sunrise Edit
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Xeno
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  # Sunrise Edit
+  - Thief
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: NanoTrasen
+  hostile:
+  - SimpleHostile
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  - Dragon
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: Mouse
+  hostile:
+  - PetsNT
+  - AllHostile
+  - Wizard
+
+- type: npcFaction
+  id: Passive
+
+- type: npcFaction
+  id: PetsNT
+  friendly:
+  - NanoTrasen
+  hostile:
+  - Mouse
+  - SimpleHostile
+  - Zombie
+  - Xeno
+  - AllHostile
+  - Dragon
+  # Sunrise Edit
+  - Pirate
+  - Soviet
+  - Carps
+  - Flesh
+  - Xenoborg
+
+- type: npcFaction
+  id: SimpleHostile
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - Dragon
+  - Xeno
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+
+- type: npcFaction
+  id: SimpleNeutral
+
+- type: npcFaction
+  id: Syndicate
+  hostile:
+  - NanoTrasen
+  - SimpleHostile
+  - Xeno
+  - PetsNT
+  - Zombie
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  - Dragon
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: Xeno
+  hostile:
+  - NanoTrasen
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Dragon
+  - Xenoborg
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: Zombie
+  hostile:
+  - NanoTrasen
+  - SimpleNeutral
+  - SimpleHostile
+  - Syndicate
+  - Passive
+  - PetsNT
+  - Revolutionary
+  - AllHostile
+  - Wizard
+  - Dragon
+  - Xenoborg
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: Revolutionary
+  hostile:
+  - NanoTrasen
+  - Zombie
+  - SimpleHostile
+  - AllHostile
+  - Wizard
+  - Xenoborg
+  - Dragon
+  # Sunrise Edit
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: AllHostile
+  hostile:
+  - NanoTrasen
+  - Mouse
+  - Passive
+  - PetsNT
+  - SimpleHostile
+  - SimpleNeutral
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+  - Wizard
+  - Xenoborg
+  - Dragon
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - BloodCult
+  - Pirate
+  - Soviet
+- type: npcFaction
+  id: Wizard
+  hostile:
+  - NanoTrasen
+  - Mouse
+  - Passive
+  - PetsNT
+  - SimpleHostile
+  - SimpleNeutral
+  - Syndicate
+  - Xeno
+  - Zombie
+  - Revolutionary
+  - AllHostile
+  - Xenoborg
+  - Dragon
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - Xeno
+  - BloodCult
+  - Pirate
+  - Soviet
+
+- type: npcFaction
+  id: Xenoborg
+  hostile:
+  # they have brains
+  - NanoTrasen
+  - Syndicate
+  - Zombie
+  - Revolutionary
+  - Wizard
+
+  - Xeno # rivalry
+
+  # cause they are hostile to them
+  - SimpleHostile
+  - AllHostile
+
+  # Sunrise Edit
+  - Thief
+  - Carps
+  - Dragon
+  - Vampire
+  - FleshHuman
+  - Flesh
+  - Xeno
+  - BloodCult
+  - Pirate
+  - Soviet
+

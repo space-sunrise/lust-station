@@ -1,0 +1,70 @@
+- type: job
+  id: HeadOfSecurity
+  name: job-name-hos
+  description: job-description-hos
+  playTimeTracker: JobHeadOfSecurity
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 1h
+    - !type:RoleTimeRequirement
+      role: JobDetective
+      time: 1h # knowing how to use the tools is important
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10h
+  weight: 10
+  startingGear: HoSGear
+  icon: "JobIconHeadOfSecurity"
+  supervisors: job-supervisors-captain
+  canBeAntag: false
+  radioBold: true # Sunrise-Edit
+  displayWeight: 80 # Sunrise-Edit
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-security-chief
+  - job-alt-title-law-enforcement-chief
+  - job-alt-title-station-sheriff
+  # Sunrise-End
+  access:
+  - HeadOfSecurity
+  - Command
+  - Brig
+  - Security
+  - Armory
+  # - Maintenance # Sunrise-Edit
+  - External
+  - Detective
+  - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantBlueShield ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  speciesBlacklist:
+  - Vox # Sunrise-Edit
+
+- type: startingGear
+  id: HoSGear
+  equipment:
+    # eyes: ClothingEyesGlassesSecurity # Lust-Edit
+    id: HoSPDA
+    gloves: ClothingHandsGlovesCombat
+    ears: ClothingHeadsetAltSecurity
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: HeadOfSecurityChameleonOutfit
+  job: HeadOfSecurity
+  hasMindShield: true
+  equipment:
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckCloakHos

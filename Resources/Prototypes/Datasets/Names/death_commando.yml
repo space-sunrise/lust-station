@@ -1,0 +1,5 @@
+﻿- type: localizedDataset
+  id: NamesDeathCommando
+  values:
+    prefix: names-death-commando-dataset-
+    count: 158 # Sunrise edit

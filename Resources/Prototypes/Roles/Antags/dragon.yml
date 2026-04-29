@@ -1,0 +1,6 @@
+- type: antag
+  id: Dragon
+  name: roles-antag-dragon-name
+  antagonist: true
+  playTimeTracker: AntagDragon # Sunrise-Edit
+  objective: roles-antag-dragon-objective

@@ -1,0 +1,903 @@
+- type: entity
+  abstract: true
+  parent: SurgeryStepBase
+  id: BaseSunriseSurgeryStepScalpel
+  components:
+  - type: SurgeryStep
+    tools:
+    - type: Scalpel
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+    state: scalpel
+
+- type: entity
+  abstract: true
+  parent: SurgeryStepBase
+  id: BaseSunriseSurgeryStepHemostat
+  components:
+  - type: SurgeryStep
+    tools:
+    - type: Hemostat
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scissors.rsi
+    state: hemostat
+
+- type: entity
+  abstract: true
+  parent: SurgeryStepBase
+  id: BaseSunriseSurgeryStepCautery
+  components:
+  - type: SurgeryStep
+    tools:
+    - type: Cautery
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/cautery.rsi
+    state: cautery
+
+- type: entity
+  abstract: true
+  parent: SurgeryStepBase
+  id: BaseSunriseSurgeryStepRetractor
+  components:
+  - type: SurgeryStep
+    tools:
+    - type: Retractor
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scissors.rsi
+    state: retractor
+
+#liver
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateLiver
+  name: Locate Liver
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: liver
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampLiverVessels
+  name: Clamp Liver Vessels
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveLiver
+  name: Remove Liver
+  components:
+  - type: SurgeryStep
+    duration: 4
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganLiver
+
+#appendix
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateAppendix
+  name: Locate Appendix
+  components:
+  - type: SurgeryStep
+    duration: 2
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: appendix
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampAppendix
+  name: Clamp Appendix
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveAppendix
+  name: Remove Appendix
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganAppendix
+
+# kidneys
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateKidneys
+  name: Locate Kidneys
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampKidneysVessels
+  name: Clamp Kidneys Vessels
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveKidneys
+  name: Remove Kidneys
+  components:
+  - type: SurgeryStep
+    duration: 5
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganKidneys
+
+# stomach
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateStomach
+  name: Locate Stomach
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: stomach
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampStomachVessels
+  name: Clamp Stomach Vessels
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveStomach
+  name: Remove Stomach
+  components:
+  - type: SurgeryStep
+    duration: 5
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganStomach
+
+# Lungs
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateLungs
+  name: Locate Lungs
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: lung-l
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampLungVessels
+  name: Clamp Lung Vessels
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveLungs
+  name: Remove Lungs
+  components:
+  - type: SurgeryStep
+    duration: 5
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganLungs
+
+# heart
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateHeart
+  name: Locate Heart
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: heart-on
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampHeartVessels
+  name: Clamp Heart Vessels
+  components:
+  - type: SurgeryStep
+    duration: 5
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveHeart
+  name: Remove Heart
+  components:
+  - type: SurgeryStep
+    duration: 6
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganHeart
+# eyes
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateEyes
+  name: Locate Eye
+  components:
+  - type: SurgeryStep
+    duration: 2
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampOpticNerve
+  name: Clamp Optic Nerve
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveEyes
+  name: Remove Eye
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganEyes
+
+# eye implants
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateImplant
+  name: Locate Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 2
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers:
+      - state: eye_implant_welding
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepRemoveEyeImplant
+  name: Remove Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: EyeImplant
+
+# tongue
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepGrabTongue
+  name: Grab Tongue
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepCutTongue
+  name: Cut Tongue
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganTongue
+
+# brain
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepPreparePatient
+  name: Prepare Patient
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepShaveHead
+  name: Shave Head
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepDisinfectScalp
+  name: Disinfect Scalp
+  components:
+  - type: SurgeryStep
+    duration: 2
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepMakeIncisionScalp
+  name: Make Scalp Incision
+  components:
+  - type: SurgeryStep
+    duration: 4
+  - type: SurgeryStepBleedEffect
+    damage:
+      types:
+        Slash: 10
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepRetractScalp
+  name: Retract Scalp Flap
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepDrillBurrHoles
+  name: Drill Burr Holes
+  components:
+  - type: SurgeryStep
+    duration: 6
+    tools:
+    - type: SurgicalDrill
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/drill.rsi
+    state: drill
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepCutSkull
+  name: Cut Skull with Bone Saw
+  components:
+  - type: SurgeryStep
+    duration: 7
+    tools:
+    - type: BoneSaw
+  - type: SurgeryStepBleedEffect
+    damage:
+      types:
+        Slash: 10
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/saw.rsi
+    state: saw
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepRemoveBoneFlap
+  name: Remove Bone Flap
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepClampDuraMater
+  name: Clamp Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 4
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepInciseDuraMater
+  name: Incise Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 5
+  - type: SurgeryStepBleedEffect
+    damage:
+      types:
+        Slash: 10
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepRetractDuraMater
+  name: Retract Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepSeverCranialNerves
+  name: Sever Cranial Nerves
+  components:
+  - type: SurgeryStep
+    duration: 6
+  - type: SurgeryStepBleedEffect
+    damage:
+      types:
+        Slash: 10
+  - type: SurgeryStepEmoteEffect
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepExtractBrain
+  name: Extract Brain
+  components:
+  - type: SurgeryStep
+    duration: 5
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: OrganBrain
+  - type: SurgeryStepEmoteEffect
+
+# Implant
+# liver
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteLiver
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertLiver
+  name: Insert Liver
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: OrganLiver
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: liver
+  - type: SurgeryStepOrganInsert
+    slot: liver
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectLiverVessels
+  name: Connect Liver Vessels
+  components:
+  - type: SurgeryStep
+    duration: 5
+
+# kidneys
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteKidneys
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertKidneys
+  name: Insert Kidneys
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: OrganKidneys
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    layers:
+      - state: kidney-l
+      - state: kidney-r
+  - type: SurgeryStepOrganInsert
+    slot: kidneys
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectKidneysVessels
+  name: Connect Kidneys Vessels
+  components:
+  - type: SurgeryStep
+    duration: 5
+
+# stomach
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteStomach
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertStomach
+  name: Insert Stomach
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: OrganStomach
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: stomach
+  - type: SurgeryStepOrganInsert
+    slot: stomach
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectStomachVessels
+  name: Connect Stomach Vessels
+  components:
+  - type: SurgeryStep
+    duration: 5
+
+# lungs
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteLungs
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertLungs
+  name: Insert Lungs
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: OrganLungs
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: lung-l
+  - type: SurgeryStepOrganInsert
+    slot: lungs
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectLungVessels
+  name: Connect Lung Vessels
+  components:
+  - type: SurgeryStep
+    duration: 5
+
+# heart
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteHeart
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertHeart
+  name: Insert Heart
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: OrganHeart
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: heart-on
+  - type: SurgeryStepOrganInsert
+    slot: heart
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectHeartVessels
+  name: Connect Heart Vessels
+  components:
+  - type: SurgeryStep
+    duration: 10
+
+# eyes
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteEyes
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertEyes
+  name: Insert Eye
+  components:
+  - type: SurgeryStep
+    duration: 2
+    tools:
+    - type: OrganEyes
+  - type: SurgeryStepOrganInsert
+    slot: eyes
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    layers:
+      - state: eyeball-l
+      - state: eyeball-r
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepConnectOpticNerve
+  name: Connect Optic Nerve
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+# eye implants
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertEyeImplant
+  name: Insert Eye Implant
+  components:
+  - type: SurgeryStep
+    duration: 2
+    tools:
+    - type: EyeImplant
+  - type: SurgeryStepOrganInsert
+    slot: eye_implant
+  - type: Sprite
+    sprite: _Starlight/Objects/Specific/Medical/implants.rsi
+    layers:
+      - state: eye_implant_welding
+
+# tongue
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteTongue
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepPositionTongue
+  name: Position Tongue
+  components:
+  - type: SurgeryStep
+    duration: 2
+    tools:
+    - type: OrganTongue
+  - type: SurgeryStepOrganInsert
+    slot: tongue
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: tongue
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepAttachTongue
+  name: Attach Tongue
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: SurgeryStepEmoteEffect
+
+# brain
+
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepCleanImplantSite
+  name: Clean Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareScalp
+  name: Prepare Scalp
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepPrepareDuraMater
+  name: Prepare Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 2
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertBrain
+  name: Insert Brain
+  components:
+  - type: SurgeryStep
+    duration: 5
+    tools:
+    - type: OrganBrain
+  - type: SurgeryStepOrganInsert
+    slot: brain
+  - type: Sprite
+    sprite: Mobs/Species/Human/organs.rsi
+    state: brain
+
+- type: entity
+  parent: BaseSunriseSurgeryStepHemostat
+  id: SurgeryStepReconnectCranialNerves
+  name: Reconnect Cranial Nerves
+  components:
+  - type: SurgeryStep
+    duration: 6
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepReplaceDuraMater
+  name: Replace Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepSealDuraMater
+  name: Seal Dura Mater
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepReplaceBoneFlap
+  name: Replace Bone Flap
+  components:
+  - type: SurgeryStep
+    duration: 4
+    tools:
+    - type: BoneSetter
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/scissors.rsi
+    state: setter
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepSecureBoneFlap
+  name: Secure Bone Flap with Bone Gel
+  components:
+  - type: SurgeryStep
+    duration: 5
+    tools:
+    - type: BoneGel
+  - type: Sprite
+    sprite: Objects/Specific/Medical/Surgery/bone_gel.rsi
+    state: bone-gel
+
+- type: entity
+  parent: BaseSunriseSurgeryStepRetractor
+  id: SurgeryStepReplaceScalp
+  name: Replace Scalp
+  components:
+  - type: SurgeryStep
+    duration: 3
+
+- type: entity
+  parent: BaseSunriseSurgeryStepCautery
+  id: SurgeryStepSutureScalp
+  name: Suture Scalp Incision
+  components:
+  - type: SurgeryStep
+    duration: 4
+  - type: SurgeryClearProgress
+
+# - type: entity
+#   parent: SurgeryStepBase
+#   id: SurgeryStepRemoveEgg
+#   name: Remove Egg
+#   components:
+#   - type: SurgeryStep
+#     duration: 5
+#     tools:
+#     - type: Scalpel
+#     bodyRemove:
+#     - type: HasEggHolder
+#     - type: EggHolder
+#   - type: Sprite
+#     sprite: Objects/Specific/Medical/Surgery/scalpel.rsi
+#     state: scalpel
+#   - type: SurgeryStepEmoteEffect
+
+# Cavity
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepLocateItemCavity
+  name: Locate Item
+  components:
+  - type: SurgeryStep
+    duration: 3
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepRemoveItemCavity
+  name: Remove Item
+  components:
+  - type: SurgeryStep
+    duration: 6
+    tools:
+    - type: Scalpel
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+  - type: SurgeryStepEmoteEffect
+  - type: SurgeryStepOrganExtract
+    organ:
+    - type: Item
+    slot: cavity
+
+- type: entity
+  parent: BaseSunriseSurgeryStepScalpel
+  id: SurgeryStepPrepareImplantSiteCavity
+  name: Prepare Implant Site
+  components:
+  - type: SurgeryStep
+    duration: 4
+
+- type: entity
+  parent: SurgeryStepBase
+  id: SurgeryStepInsertItemCavity
+  name: Insert Item
+  components:
+  - type: SurgeryStep
+    duration: 3
+    tools:
+    - type: Item
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+    state: torso_m
+  - type: SurgeryItemSizeCondition
+  - type: SurgeryStepOrganInsert
+    slot: cavity

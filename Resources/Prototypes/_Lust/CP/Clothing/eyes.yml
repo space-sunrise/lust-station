@@ -1,0 +1,28 @@
+- type: entity
+  parent: [ClothingEyesNVD, ShowSecurityIcons]
+  id: ClothingEyesNVDGrunt
+  name: OTA soldier's night vision goggles
+  description: A tactical monocular with digital enhancement and helmet integration, turning the night battlefield into a green-and-black map of targets and threats. Its standalone power supply and glare protection give the Alliance an undeniable advantage at any time of day.
+  suffix: HL2
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Eyes/Glasses/syndie_nvd.rsi
+    layers:
+      - state: icon
+      - state: icon-unshaded
+        shader: unshaded
+      - state: icon-flash
+        visible: false
+        shader: unshaded
+        map: [ "light" ]
+  - type: ShowSyndicateIcons
+  - type: ComponentToggler
+    parent: true
+    components:
+      - type: NightVision
+        effect: EffectNightVisionSyndie
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMicroreactor

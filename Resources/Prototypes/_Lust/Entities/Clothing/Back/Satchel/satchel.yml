@@ -1,0 +1,17 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelIAAWhite
+  name: white business satchel
+  description: A neat satchel for everyday work and small personal items.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchels/iaa_white_satchel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelIAABlack
+  name: black business satchel
+  description: A neat satchel for everyday work and small personal items.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchels/iaa_black_satchel.rsi

@@ -1,0 +1,326 @@
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesAerostatic
+  name: aerostatic gloves
+  description: Breathable red gloves for expert handling of a pen and notebook.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Hands/Gloves/kim.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Hands/Gloves/kim.rsi
+    - type: Insulated
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCentcomNaval
+  name: nanotrasen naval gloves
+  description: A high quality pair of thick gloves covered in gold stitching, given to Nanotrasen's Naval Commanders.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Hands/Gloves/centcom_naval.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Hands/Gloves/centcom_naval.rsi
+    - type: Insulated
+
+- type: entity
+  parent: [ ClothingHandsGlovesCombat, BaseSecurityContraband ]
+  id: ClothingHandsGlovesLeatherHoS
+  name: leather gloves
+  description: Stylish black leather gloves.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/hos.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/hos.rsi
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileBlack
+  name: black nitrile gloves
+  description: High-quality black nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_black.rsi
+  - type: DiseaseImmuneClothing
+    prob: 0.4
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_black.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile-black
+  - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves # INTERACTIONS
+    - ClothMade
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileGreen
+  name: green nitrile gloves
+  description: High-quality green nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_green.rsi
+  - type: DiseaseImmuneClothing
+    prob: 0.4
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_green.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile-green
+  - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves # INTERACTIONS
+    - ClothMade
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileOrange
+  name: orange nitrile gloves
+  description: High-quality orange nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_orange.rsi
+  - type: DiseaseImmuneClothing
+    prob: 0.4
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_orange.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile-orange
+  - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves # INTERACTIONS
+    - ClothMade
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileRed
+  name: red nitrile gloves
+  description: High-quality red nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_red.rsi
+  - type: DiseaseImmuneClothing
+    prob: 0.4
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_red.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile-red
+  - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves # INTERACTIONS
+    - ClothMade
+    - WhitelistChameleon
+
+
+- type: entity
+  parent: ClothingHandsButcherable
+  id: ClothingHandsGlovesNitrileBlue
+  name: blue nitrile gloves
+  description: High-quality blue nitrile gloves. Expensive medical PPE.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_blue.rsi
+  - type: DiseaseImmuneClothing
+    prob: 0.4
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/nitrile_blue.rsi
+  - type: Fiber
+    fiberMaterial: fibers-nitrile-blue
+  - type: FingerprintMask
+  - type: Tag
+    tags:
+    - SmoothGloves # INTERACTIONS
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesChristmas
+  name: christmas gloves
+  description: Stylish Christmas leather gloves.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/christmas_gloves.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/christmas_gloves.rsi
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesChristmasLong
+  name: christmas gloves long
+  description: Stylish Christmas long leather gloves.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/christmas_gloves_long.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/christmas_gloves_long.rsi
+
+- type: entity
+  parent: [ ClothingHandsBase, BaseEngineeringContraband ]
+  id: InsulatedGlovesAtmos
+  name: insulated gloves atmos
+  description: Insulated gloves made especially for atmospheric technicians.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/insulated_gloves.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/insulated_gloves.rsi
+  - type: Insulated
+    preventOpperatinGuns: true
+  - type: TemperatureProtection
+    heatingCoefficient: 1.050
+    coolingCoefficient: 0.2
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: ClothingHandsGlovesFingerlessInsulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-blue
+  - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCombatCQC
+  name: combat gloves
+  description: These high-grade tactical gloves are fireproof and shock resistant.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/klawsbattle.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/klawsbattle.rsi
+  - type: Insulated
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 1.7
+    damage:
+      types:
+        Blunt: 6
+        Slash: 4
+    bluntStaminaDamageFactor: 4
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCaptainCapWhite
+  name: white captain's gloves
+  description: A pristine pair of officer gloves for the captain. Perfect for pointing at problems and calling them “tasks”.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Hands/Gloves/white_cap_gloves.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Hands/Gloves/white_cap_gloves.rsi
+    - type: Insulated
+
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsGlovesCaptainCapBlack
+  name: black captain's gloves
+  description: The captain's gloves, but in black. Adds +5 intimidation and +100% dramatic hand gestures.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Hands/Gloves/black_cap_gloves.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Hands/Gloves/black_cap_gloves.rsi
+    - type: Insulated
+
+- type: entity
+  parent: ClothingHandsSmooth
+  id: ClothingHandsGlovesCombatFingerless
+  name: combat fingerless gloves
+  description: Tactical Gloves that may not protect you from finger burns, but will make you cooler.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/combatfingerless.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/combatfingerless.rsi
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-black
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 0 # no protection
+  - type: MeleeWeapon
+    attackRate: 2
+    damage:
+      types:
+        Blunt: 6
+    bluntStaminaDamageFactor: 1.3
+
+    soundHit:
+      collection: Punch
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+
+- type: entity
+  parent: ClothingHandsGlovesNorthStar
+  id: CornivoreGloves
+  name: gloves of cornivore
+  description: We don't know if you're thirsty for blood... but... these gloves definitely are!!! They're saturated with a special toxin.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Hands/Gloves/cornivoregloves.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Hands/Gloves/cornivoregloves.rsi
+  - type: MeleeWeapon
+    autoAttack: true
+    attackRate: 4
+    damage:
+      types:
+        Slash: 8
+  - type: InjectOnHit
+    limit: 20
+    reagents:
+      - ReagentId: Hemorrhinol
+        Quantity: 5
+      - ReagentId: Warfarin
+        Quantity: 5
+      - ReagentId: Lexorin
+        Quantity: 0.2
+  - type: Fiber
+    fiberMaterial: fibers-leather
+    fiberColor: fibers-blue
+  - type: FingerprintMask
+  - type: MeleeSpeech
+  - type: ActivatableUI
+    key: enum.MeleeSpeechUiKey.Key
+    verbOnly: true
+  - type: Actions
+  - type: UserInterface
+    interfaces:
+      enum.MeleeSpeechUiKey.Key:
+        type: MeleeSpeechBoundUserInterface
+  - type: Insulated
+  - type: StaticPrice
+    price: 2500
+  - type: Tag
+    tags:
+    - Kangaroo
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlack
+  id: ClothingHandsTacticalMaidGlovesFake
+  name: tactical maid gloves
+  description: Tactical maid gloves, every self-respecting maid should be able to discreetly eliminate her goals.
+  suffix: Fake
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/tacticalmaidgloves.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/tacticalmaidgloves.rsi

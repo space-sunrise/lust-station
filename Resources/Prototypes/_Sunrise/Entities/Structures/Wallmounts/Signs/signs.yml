@@ -1,0 +1,84 @@
+- type: entity
+  parent: BaseSign
+  id: SignSec
+  name: security sign
+  description: A sign indicating the Security department.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/signs.rsi
+    state: sec
+
+- type: entity
+  parent: BaseSign
+  id: SignLastIdiot
+  name: Zero Days Since Last Idiot
+  description: Must be an Engineering joke.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/last_idiot.rsi
+    state: icon
+    offset: "0.5,0"
+
+- type: entity
+  parent: BaseSign
+  id: SignConspiracyBoard
+  name: conspiracy board
+  description: Perfect for tracking the multiple layers of criminal activities.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/conspiracy_board.rsi
+    state: icon
+    offset: "0.5,0"
+
+- type: entity
+  parent: BaseSign
+  id: SignDojo
+  name: dojo sign
+  description: A sign indicating a place with discipline and tatami mats.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Wallmounts/doujou.rsi
+    state: doujousign
+
+# region Xenoborg
+
+- type: entity
+  parent: BaseSign
+  id: SignCoreXeno
+  name: core sign
+  description: A sign indicating the xenoborg core. Nice of them to mark this for you.
+  components:
+    - type: Sprite
+      sprite: _Starlight/Structures/Wallmounts/xeno_signs.rsi
+      state: core
+
+- type: entity
+  parent: BaseSign
+  id: SignDoorsXeno
+  name: doors sign
+  description: A sign warning of doors. Don't stand in them when closing, you wouldn't want to be gibbed would you?
+  components:
+    - type: Sprite
+      sprite: _Starlight/Structures/Wallmounts/xeno_signs.rsi
+      state: doors
+
+- type: entity
+  parent: BaseSign
+  id: SignPowerXeno
+  name: power sign
+  description: A sign indicating the xenoborg power systems. Electrical hazards ahead.
+  components:
+    - type: Sprite
+      sprite: _Starlight/Structures/Wallmounts/xeno_signs.rsi
+      state: power
+
+- type: entity
+  parent: BaseSign
+  id: SignSpaceXeno
+  name: space sign
+  description: A sign indicating these doors leads to space. That heavy xenoborg might be lost forever! Don't end up like them.
+  components:
+    - type: Sprite
+      sprite: _Starlight/Structures/Wallmounts/xeno_signs.rsi
+      state: space
+# region end

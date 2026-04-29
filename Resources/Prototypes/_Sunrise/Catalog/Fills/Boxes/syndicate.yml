@@ -1,0 +1,452 @@
+﻿- type: entity
+  parent: [BoxCardboard, BaseSyndicateContraband]
+  id: ExpCollarsKit
+  name: explosive collars kit
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ExplosiveCollarRed
+        - id: ExplosiveCollarWhite
+        - id: Bouquet
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: implant
+
+- type: entity
+  name: cardboard box
+  parent: BoxDarts
+  id: CaneShotgunBox
+  description: A cardboard box for storing things.
+  components:
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,2,2
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CaneShotgun
+        - id: ShellShotgunBooze
+          amount: 4
+
+- type: entity
+  parent: [BoxCardboard, BaseSyndicateContraband]
+  id: BaseSyndicateAmmoKit
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
+    layers:
+    - state: box_of_doom_big
+    - state: smg_base
+  - type: Item
+    sprite: _Sunrise/Objects/Storage/boxes_sunrise.rsi
+    size: Large
+    shape:
+    - 0,0,2,1
+  - type: Storage
+    grid:
+    - 0,0,3,3
+
+- type: entity
+  parent: BaseSyndicateAmmoKit
+  id: BaseSyndicateAmmoKitSmall
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,1,1
+  - type: Storage
+    grid:
+    - 0,0,2,3
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: SMGAmmoKit
+  name: C20r ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazinePistolSubMachineGunSP
+          amount: 3
+        - id: MagazinePistolSubMachineGunFMJ
+          amount: 2
+        - id: MagazinePistolSubMachineGunHP
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: smg_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: RifleAmmoKit
+  name: Estoc ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineRifleSP
+          amount: 3
+        - id: MagazineRifleFMJ
+          amount: 2
+        - id: MagazineRifleAP
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: magazine
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: CaselessAmmoKit
+  name: Siar52 ammo kit
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,3
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazinePistolSubMachineGunCaselessExtended
+          amount: 4
+  - type: Sprite
+    layers:
+    - state: box_of_doom
+    - state: smg_red
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: DragunovAmmoKit
+  name: Dragunov ammo kit
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,3
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineDragunovSP
+          amount: 2
+        - id: MagazineDragunovExtended
+          amount: 2
+  - type: Sprite
+    layers:
+    - state: box_of_doom
+    - state: dragunov
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: AntimaterialAmmoKit
+  name: Antimaterial magazine kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineBauer127
+          amount: 2
+        - id: MagazineBauer127Penetrator
+        - id: MagazineBauer127Frag
+        - id: MagazineBauer127Blast
+        - id: MagazineBauer127Emp
+  - type: Sprite
+    layers:
+    - state: box_of_doom
+    - state: smg_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: SMGIncendiaryAmmoKit
+  name: C20r Incendiary ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazinePistolSubMachineGunIncendiary
+          amount: 6
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: smg_red
+
+- type: entity
+  parent: BaseSyndicateAmmoKit
+  id: ShotGunKit
+  name: Bulldog ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineShotgun
+          amount: 5
+        - id: MagazineShotgunSlug
+          amount: 3
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: shotgun_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: ShotGunKitSmall
+  name: ammo drum kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineShotgun
+          amount: 2
+        - id: MagazineShotgunSlug
+          amount: 2
+        - id: MagazineShotgunIncendiary
+        - id: MagazineShotgunFlechette
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: shotgun_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKit
+  id: ShotGunKitLarge
+  name: XL ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineShotgunXL
+        - id: MagazineShotgunFlechetteXL
+        - id: MagazineShotgunSlugXL
+        - id: MagazineShotgunIncendiaryXL
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: shotgun_xl_big
+
+- type: entity
+  parent: BaseSyndicateAmmoKit
+  id: MMGKit
+  name: DL6902 ammo kit
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,1,1
+  - type: Storage
+    grid:
+    - 0,0,2,1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineDl6902
+          amount: 3
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: dl6902
+
+- type: entity
+  parent: MMGKit
+  id: LMGKit
+  name: L6 Saw ammo kit
+  components:
+  - type: Storage
+    grid:
+    - 0,0,3,1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineRifleBoxSP
+          amount: 3
+        - id: MagazineRifleBoxFMJ
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: l6_base
+
+- type: entity
+  parent: LMGKit
+  id: LMGIncendiaryKit
+  name: L6 Saw Incendiary ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineRifleBoxIncendiary
+          amount: 4
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: l6_red
+
+- type: entity
+  parent: LMGKit
+  id: LMGUraniumKit
+  name: L6 Saw Uranium ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineRifleBoxUranium
+          amount: 4
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: l6_uranium
+
+
+###### Implants ######
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: CyberEyeThermalBox
+  name: Cyber-Eye "Thermal" box
+  description: A small box safety containing a pare of Cyber Eye. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Sprite
+    sprite: Objects/Storage/boxes.rsi
+    layers:
+    - state: box_of_doom
+    - state: writing_of_doom
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+    - id: CyberEyeThermal
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cardboardbox_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cardboardbox_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cardboardbox_drop.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cardboardbox_drop.ogg
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: CyberEyeNightVisionBox
+  name: Cyber-Eye "Night Vision" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: CyberEyeNightVision
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: CyberArmMantisBox
+  name: Cyber-Arm "Mantis" box
+  description: A small box safety containing one Cyber Arm. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberMantisBlade
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmHackBox
+  name: Cyber-Arm "Hack" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberHack
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmRipperBox
+  name: Cyber-Arm "Ripper" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberRipper
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmAtmosBox
+  name: Cyber-Arm "Atmos" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberAtmos
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmMechwrightBox
+  name: Cyber-Arm "Mechwright" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: LeftArmCyberMechwright
+
+- type: entity
+  parent: CyberArmMantisBox
+  id: CyberArmThrowerBox
+  name: Cyber-Arm "Thrower" box
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: RightArmCyberGrenadeThrower
+
+- type: entity
+  parent: [BoxCardboard, BaseSyndicateContraband]
+  id: MantisBladeArmsKit
+  name: suspicious box #Mantis-Blade kit #No meta(
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,1
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: RightArmCyberMantisBlade
+        - id: LeftArmCyberMantisBlade
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: implant
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: SyndicateRapierToxinBox
+  name: syndicate rapier kit
+  description: Contains a wrapped syndicate rapier and a random toxin bottle. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: BeltSheathSyndieFilledBox
+    - id: ChemistryBottleToxin
+      orGroup: RapierToxin
+    - id: ChemistryBottleMuteToxin
+      orGroup: RapierToxin
+    - id: ChemistryBottleUnstableMutagen
+      orGroup: RapierToxin
+    - id: ChemistryBottlePolytrinicAcid
+      orGroup: RapierToxin
+    - id: ChemistryBottleLead
+      orGroup: RapierToxin
+

@@ -1,0 +1,660 @@
+﻿- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapCentcomBlack
+  name: special operations officer cap
+  description: The NanoTrasen gold-engraved special cap of the higher ranks, which has long gone through more than one blitzkrieg...
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_officer_black.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_officer_black.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapNTGR
+  name: NTRG officer cap
+  description: The NanoTrasen Silver-engraved special cap
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/ntrg_hat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/ntrg_hat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapCentcomNaval
+  name: naval cap
+  description: A cap worn by those in the Nanotrasen Navy.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_cap.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_cap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretCentcomNaval
+  name: naval beret
+  description: A beret worn by those in the Nanotrasen Navy.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_beret.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/centcom_naval_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatERTLeaderBeret
+  name: leader beret
+  description: A blue beret made of durathread with a genuine golden badge, denoting its owner as a Leader of ERT.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/ert_leader_beret.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/ert_leader_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapHoS
+  name: head of security cap
+  description: The robust standard-issue cap of the Head of Security. For showing the officers who's in charge.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/hoshat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/hoshat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatWarden
+  id: ClothingHeadHatCapWardenAlt
+  name: warden's police hat
+  description: It's a special blue hat issued to the Warden of a security force.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/warden_alt.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/warden_alt.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretSecurityMedic
+  name: security medic beret
+  description: A robust beret with the medical insignia emblazoned on it. Uses reinforced fabric to offer sufficient protection.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/beret_security_medic.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/beret_security_medic.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCaptainHat
+  name: captain's hat
+  description: A special hat made to order for the captain.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/caphat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/caphat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretBlueShield
+  name: blueshield's beret
+  description: Blue.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/blueshield.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/blueshield.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadPrisonGuard
+  name: prison guard's hat
+  description: Grants complete immunity when depriving others of OPDP, dignity, or respect.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/prisonguard.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/prisonguard.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretPrisonGuard
+  name: prison guard's beret
+  description: Why isn't it red?
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/prisonguard_beret.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/prisonguard_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCapPrisonGuard
+  name: prison guard's cap
+  description: Why isn't it red?
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/cap.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/cap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatChefBlackToque
+  name: chef's black toque
+  description: Worn at the edges but proudly holds its shape, a symbol of skill and many hours spent in the kitchen.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/chefhat_black.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/chefhat_black.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatIAA
+  name: mystery hat
+  description: Black and white style hat. Reminiscent of secret agents from movies and TV shows.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/iaahat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/iaahat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatDetGadget
+  id: SunriseClothingHeadHatDetGadget
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapUSSPBlack
+  name: old leather USSP cap.
+  description: Black cap with gray visor.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/ussp.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/ussp.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapLeatherHoS
+  name: head of security's leather cap
+  description: Pretty old stuff for these times, bringing back old memories...
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/hoscap.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/hoscap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatMagicRD
+  name: research director's cap
+  description: No plasma rain or acid dripping from the ventilation system. Your hairstyle will be protected by science.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/rdhat.rsi
+    layers:
+    - state: icon
+    - state: icon-unshaded
+      shader: unshaded
+  - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        shader: unshaded
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapQM
+  name: captain duck's hat
+  description: "The hat is depicted in the classic pirate style and appears in the standard color for the cargo department. The hat reads, AR! Three Kinetic Accelerators in my mouth and-- *the rest of the lettering is blacked out."
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/qmhat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/qmhat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatHOP
+  name: head of personality's cap
+  description: A navy blue cap with a gilded brim. The visor gives a glimpse of the wearer's literacy and attentiveness.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/hophat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/hophat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadEliteCaptainCap
+  name: captain's fedora
+  description: blue fedora with a gold ribbon.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/cptcap.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/cptcap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadHatHardhatBase
+  id: ClothingSpecialHeadHatHardhatCMO
+  name: CMO's medical cap
+  description: Sterile cap with a flashlight.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/cmospecialhat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/cmospecialhat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapCMO
+  name: medical beret
+  description: White beret with a red cross on the center section.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/cmohat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/cmohat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapNtrep
+  name: nt representive cap
+  description: The cap of justice over command!
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/ntrep.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/ntrep.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatPatologonatHat
+  name: patologoanatom's hat
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/pathologist_helmet.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/pathologist_helmet.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretAdjutant
+  name: adjutant beret
+  description: Awarded by passing difficult qualification tests and is a matter of extreme pride.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/adjutant_beret.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/adjutant_beret.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatGarrisonCapAdjutant
+  name: adjutant garrisoncap
+  description: A little cotton cap that's just about to fall off his head.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/garrisoncap_adj.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/garrisoncap_adj.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCapAdjutant
+  name: adjutant cap
+  description: Blue and white, suspiciously reminiscent of the captain's.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/adjcap.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/adjcap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatWithPaces
+  name: Hat with paces
+  description: A black hat with paces, usually worn by Jews.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/hat_with_paces.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/hat_with_paces.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatSingulo
+  name: Singulo Crown
+  description: The greatest achievement of engineers and scientists - a compact singularity installation that allows the owner to demonstrate their status and uniqueness on the station.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/crown_singulo_icon.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/crown_singulo.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatDeerHorns
+  name: Deer Horns
+  description: a Horns, usually worn deer.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/deer_horns.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/deer_horns.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadMailCarrier
+  name: mail carrier's hat
+  description: Smells like a good pension.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/mailman.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/mailman.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+#чёрная свадебная фата SUNRISE
+- type: entity
+  parent: [ClothingHeadBase, BaseFoldable]
+  id: ClothingHeadBlackVeil
+  name: Black veil
+  description: Elegant veil.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/blackveil.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-up
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/blackveil.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+    foldedEquippedPrefix: up
+    foldedHeldPrefix: up
+
+#белая свадебная фата SUNRISE
+- type: entity
+  parent: [ClothingHeadBase, BaseFoldable]
+  id: ClothingHeadWhiteVeil
+  name: White veil
+  description: Elegant veil.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/whiteveil.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-up
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/whiteveil.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+    foldedEquippedPrefix: up
+    foldedHeldPrefix: up
+
+#маски животных
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatTony
+  name: Tony
+  description: 'Man, this party sucks, I fucking hate these people'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/tonytiger.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/tonytiger.rsi
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatBear
+  name: Mark
+  description: 'Say your prayers, son. You are already dead in this world.'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/markbear.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/markbear.rsi
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatBiker
+  name: Biker
+  description: 'I WAS BORN IN USA.'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/biker.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/biker.rsi
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatZebra
+  name: Corey
+  description: 'Fuck You!'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/zebra.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/zebra.rsi
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatSwanTwo
+  name: Esh
+  description: 'We are all going to die here.'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/swantwo.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/swantwo.rsi
+
+- type: entity
+  parent: SunriseClothingHeadHatBattleMasksBase
+  id: ClothingHeadHatSwanOne
+  name: Alex
+  description: 'Ha-ha-ha...We had a nice walk.'
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Mask/swanone.rsi
+    scale: 0.63, 0.63
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Mask/swanone.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCaptainCapWhite
+  name: captain's cap
+  description: A white officer cap made for the captain.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/white_cap_hat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/white_cap_hat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadCaptainCapBlack
+  name: captain's cap (black)
+  description: A black officer cap made for the captain.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/black_cap_hat.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/black_cap_hat.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - TopCovered # INTERACTIONS
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingHeadBase, BaseTSFContraband]
+  id: ClothingHeadHatBeretTSF
+  name: TSF beret
+  description: A dark beret worn by marines of the Trans-Solar Federation.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/beret_tsf.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/beret_tsf.rsi
+
+- type: entity
+  parent: [ClothingHeadBase, BaseTSFContraband]
+  id: ClothingHeadHatBeretTSFElite
+  name: MARSOC beret
+  description: A beret worn by marines of the Trans-Solar Federation's Marine Special Operations Command.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/beret_tsfelite.rsi
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/beret_tsfelite.rsi
+
+- type: entity
+  parent: ClothingHeadHatUshanka
+  id: ClothingHeadHatUshankaAlt
+  components:
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Head/Hats/ushanka.rsi
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Head/Hats/ushanka.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-up
+      map: ["foldedLayer"]
+      visible: false

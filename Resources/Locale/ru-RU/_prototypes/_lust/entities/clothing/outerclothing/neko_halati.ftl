@@ -1,0 +1,16 @@
+ent-ClothingOuterCoatMedNeko = халат неко
+    .desc = В этом костюме вы выглядите невероятно мило! Ня~
+ent-ClothingOuterCoatMedNekoOpened = раскрытый халат неко
+    .desc = { ent-ClothingOuterCoatMedNeko.desc }
+ent-ClothingOuterCoatMedNekoBlue = синий халат неко
+    .desc = Синий цвет придаёт вам особое очарование! Ня~
+ent-ClothingOuterCoatMedNekoBlueOpened = раскрытый синий халат неко
+    .desc = { ent-ClothingOuterCoatMedNekoBlue.desc }
+ent-ClothingOuterCoatMedNekoGreen = зелёный халат неко
+    .desc = Зелёный цвет придаёт вам особое очарование! Ня~
+ent-ClothingOuterCoatMedNekoGreenOpened = раскрытый зелёный халат неко
+    .desc = { ent-ClothingOuterCoatMedNekoGreen.desc }
+ent-ClothingOuterCoatMedNekoPurple = фиолетовый халат неко
+    .desc = Фиолетовый цвет придаёт вам особое очарование! Ня~
+ent-ClothingOuterCoatMedNekoPurpleOpened = раскрытый фиолетовый халат неко
+    .desc = { ent-ClothingOuterCoatMedNekoPurple.desc }

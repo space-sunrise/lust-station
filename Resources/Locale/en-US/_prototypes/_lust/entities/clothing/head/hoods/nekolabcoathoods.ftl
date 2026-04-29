@@ -1,0 +1,10 @@
+ent-ClothingHeadHatHoodCoatNekoBase = { ent-ClothingHeadBase }
+    .desc = { ent-ClothingHeadBase.desc }
+ent-ClothingHeadHatHoodCoatNeko = neko coat hood
+    .desc = You look some cute. Nyaa..
+ent-ClothingHeadHatHoodCoatNekoBlue = neko coat hood
+    .desc = You look some cute. Nyaa..
+ent-ClothingHeadHatHoodCoatNekoGreen = neko coat hood
+    .desc = You look some cute. Nyaa..
+ent-ClothingHeadHatHoodCoatNekoPurple = neko coat hood
+    .desc = You look some cute. Nyaa..

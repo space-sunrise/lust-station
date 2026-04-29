@@ -1,0 +1,5 @@
+department-Law-description = Защищяйте, судите или накажите преступников.
+department-PlanetPrison-description = В этом месте границы между контролем и свободой размыты, а выживание зависит от способности сохранять равновесие.
+department-PlanetPrisonSecurity-description = Предотвращайте побеги и реагируете на любые угрозы безопасности тюрьмы.
+department-Blueshield-description = Ваша задача дефать самоубийц на главах. Довольно бесполезно...
+department-TSF-description = Serve the interests of the Trans-Solar Federation and follow command orders.

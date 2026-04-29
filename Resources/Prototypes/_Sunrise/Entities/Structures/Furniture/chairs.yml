@@ -1,0 +1,70 @@
+- type: entity
+  name: carp chair
+  id: ChairCarp
+  parent: SeatBase
+  description: A luxurious chair, the many purple scales reflect the light in a most pleasing manner.
+  placement:
+    mode: SnapgridCenter
+  components:
+    - type: Transform
+      anchored: true
+    - type: Physics
+      bodyType: Static
+    - type: Anchorable
+    - type: Rotatable
+    - type: Sprite
+      sprite: _Sunrise/Structures/Furniture/chairs.rsi
+      state: carp
+
+- type: entity
+  name: comfy brown chair
+  id: ComfyChairBrown
+  parent: ChairBase
+  description: It looks comfy.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Furniture/chairs.rsi
+    state: comfy-brown
+  - type: Construction
+    graph: Seat
+    node: chairComfy
+
+- type: entity
+  name: grey office chair
+  id: ChairOfficeGrey
+  parent: ChairOfficeLight
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Furniture/chairs.rsi
+    state: office-grey
+  - type: Construction
+    graph: Seat
+    node: chairOfficeDark
+
+- type: entity
+  name: barber's chair
+  parent: StoolBase
+  id: ChairBarber
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Furniture/chairs.rsi
+    state: barber
+
+- type: entity
+  id: ChairFoldingArtifact
+  parent: ChairFolding
+  suffix: artifact
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Construction
+    deconstructionTarget: null
+
+- type: entity
+  id: ChairAbductor
+  parent: ChairBase
+  name: chair abductor
+  description: cool chair for cool vulp
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Furniture/abductor_chair.rsi
+    state: abductor_chair

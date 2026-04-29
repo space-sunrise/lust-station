@@ -1,0 +1,20 @@
+- type: vendingMachineInventory
+  id: ChangInventory
+  startingInventory:
+    FoodCondimentPacketSoy: 5
+    FoodSnackCookieFortune: 5
+    DrinkRamen: 3
+    DrinkHellRamen: 3
+    FoodSnackChowMein: 3
+    FoodSnackDanDanNoodles: 3
+    PairedChopsticks: 3
+  contrabandInventory:
+    FoodBakedDumplings: 2
+    FoodSoupMiso: 2
+# Sunrise start
+    FoodRiceBoiled: 2
+    FoodRiceEgg: 2
+    FoodRicePork: 2
+# Sunrise end
+# rice?
+# Yes for rice

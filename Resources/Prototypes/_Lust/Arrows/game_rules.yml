@@ -1,0 +1,31 @@
+# События
+
+- type: entity
+  id: NetrunnerCheck
+  parent: BaseGameRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    weight: 8
+    startAnnouncement:  station-event-netrunner-start-announcement
+    endAnnouncement: station-event-netrunner-end-announcement
+    startAudio:
+      path: /Audio/Effects/PowerSink/electric.ogg
+    duration: 300
+    maxDuration: 360
+  - type: SolarFlareRule
+    onlyJamHeadsets: true
+    affectedChannels:
+    - Common
+    extraChannels:
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Service
+    - Supply
+    extraCount: 8
+    lightBreakChancePerSecond: 0.0003
+    doorToggleChancePerSecond: 0.001
+

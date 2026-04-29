@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingStripperSlimSuit
+  name: stripper slim suit
+  description: Stripper suit. Leaves nothing to the imagination.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/stripper_slimsuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/stripper_slimsuit.rsi

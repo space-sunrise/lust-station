@@ -1,0 +1,114 @@
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomServiceCorpse
+  suffix: Dead, Service
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+      - HoPCorpseGear
+      - ClownCorpseGear
+      - MimeCorpseGear
+      - JanitorCorpseGear
+      - ServiceWorkerCorpseGear
+      - MusicianCorpseGear
+      - BotanistCorpseGear
+      - ChefCorpseGear
+      - ChaplainCorpseGear
+      - AssistantCorpseGear
+      - TiderCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomEngineerCorpse
+  suffix: Dead, Engineer
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - TechnicalAssistantCorpseGear
+    - AtmosphericTechnicianCorpseGear
+    - StationEngineerCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomCargoCorpse
+  suffix: Dead, Cargo
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - CargoTechCorpseGear
+    - MailTechCorpseGear
+    - MinerCorpseGear
+    - SalvageSpecialistCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomMedicCorpse
+  suffix: Dead, Medic
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - MedicalInternCorpseGear
+    - PsychologistCorpseGear
+    - ChemistCorpseGear
+    - DoctorCorpseGear
+    - VirologistCorpseGear
+    - GeneticsCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomScienceCorpse
+  suffix: Dead, Science
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - ResearchAssistantCorpseGear
+    - ScientistCorpseGear
+    - RoboticistCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSecurityCorpse
+  suffix: Dead, Security
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - SecurityCadetCorpseGear
+    - SecurityOfficerCorpseGear
+    - DetectiveCorpseGear
+    - BrigMedicCorpseGear
+    - WardenCorpseGear
+    - PrisonerCorpseGear
+    # Sunrise-end
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomCommandCorpse
+  suffix: Dead, Command
+  components:
+  - type: Loadout
+    prototypes:
+    # Sunrise-start
+    - HoPCorpseGear
+    - CentcomCorpseGear
+    - CaptainCorpseGear
+    - HoSCorpseGear
+    - ResearchDirectorCorpseGear
+    - CMOCorpseGear
+    - ChiefEngineerCorpseGear
+    - QuartermasterCorpseGear
+    - IAACorpseGear
+    - MagistrateCorpseGear
+    - NTRCorpseGear
+    - BSOCorpseGear
+    # Sunrise-end

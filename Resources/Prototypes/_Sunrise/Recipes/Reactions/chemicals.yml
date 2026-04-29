@@ -1,0 +1,49 @@
+- type: reaction
+  id: LanternFlash
+  impact: High
+  priority: 20
+  reactants:
+    PulverizedLantern:
+      amount: 0.5
+    Water:
+      amount: 0.5
+  effects:
+  - !type:Flash
+
+- type: reaction
+  id: UniversalSolvent # Chemists are already war criminals, they can have the mustard gas chemical.
+  reactants:
+    FluorosulfuricAcid:
+      amount: 1
+    Bleach:
+      amount: 1
+    Vestine:
+      amount: 4
+  products:
+    UniversalSolvent: 6
+
+- type: reaction
+  id: ChargedElectrovaeEmpExplosion
+  impact: High
+  reactants:
+    ChargedElectrovae:
+      amount: 5
+    Oxygen:
+      amount: 1
+  effects:
+  - !type:Emp
+    rangeModifier: 0.2
+    maxRange: 10
+    energyConsumption: 10000
+    duration: 12
+
+- type: reaction
+  id: ChargedElectrovaeRelease
+  reactants:
+    ChargedElectrovae:
+      amount: 5
+    Water:
+      amount: 1
+  effects:
+  - !type:CreateGas
+    gas: ChargedElectrovae

@@ -1,0 +1,28 @@
+- type: damageContainer
+  id: Synth
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Caustic
+  - Structural
+  - Mangleness
+
+- type: damageContainer
+  id: Mech
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat
+  - Shock
+  - Caustic
+  - Structural
+  - Mangleness
+
+- type: damageContainer
+  id: Rift
+  supportedGroups:
+  - Brute
+  supportedTypes:
+  - Heat

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "copyright": "Taken from original game, made by gardsnake",
+  "license": "CC-BY-SA-3.0",
+  "states": [
+    {
+        "name": "representative_doorqillu"
+    },
+    {
+        "name": "hop"
+    },
+    {
+        "name": "hop_open"
+    },
+    {
+        "name": "sparking",
+        "delays": [
+          [
+            0.1,
+            0.1,
+            0.1,
+            0.1
+          ]
+        ]
+      },
+      {
+        "name": "locked"
+      },
+      {
+        "name": "unlocked"
+      },
+      {
+        "name": "welded"
+      },
+      {
+        "name": "generic"
+      },
+    {
+        "name": "generic_door"
+    },
+    {
+        "name": "generic_icon"
+    },
+    {
+        "name": "generic_open"
+    }
+  ]
+}

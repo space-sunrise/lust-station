@@ -1,0 +1,377 @@
+﻿# Базовые эффекты
+
+- type: entity
+  id: SunriseEffectHeal
+  parent: BaseXenoArtifactEffect
+  description: Heals nearby living beings
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEDamageInArea
+    damageChance: 1
+    radius: 8
+    whitelist:
+      components:
+      - MobState
+    damage:
+      groups:
+        Brute: -300
+        Burn: -300
+
+- type: entity
+  id: SunriseArtifactGenerateEnergy
+  parent: BaseOneTimeXenoArtifactEffect
+  description: Generates electrical power
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    components:
+    - type: PowerSupplier
+      supplyRate: 20000
+    - type: NodeContainer
+      examinable: true
+      nodes:
+        output_hv:
+          !type:CableDeviceNode
+          nodeGroupID: HVPower
+
+- type: entity
+  id: SunriseArtifactWandering
+  parent: BaseOneTimeXenoArtifactEffect
+  description: Causes the artifact to move randomly around the area
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    components:
+    - type: RandomWalk
+      minSpeed: 12
+      maxSpeed: 20
+      minStepCooldown: 5
+      maxStepCooldown: 5
+
+- type: entity
+  id: SunriseArtifactThrowThingsAround
+  parent: BaseXenoArtifactEffect
+  description: Throws nearby objects around violently
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEThrowThingsAround
+
+- type: entity
+  id: SunriseArtifactKnock
+  parent: BaseXenoArtifactEffect
+  description: Knocks down nearby entities
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEKnock
+  - type: XAELightFlicker
+
+- type: entity
+  id: SunriseArtifactEffectJunkSpawn
+  parent: BaseXenoArtifactEffect
+  description: Spawns random junk items
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    applyIfAlreadyHave: true
+    refreshOnReactivate: true
+    components:
+    - type: EntityTableSpawner
+      deleteSpawnerAfterSpawn: false
+      offset: 5
+      table: !type:GroupSelector
+        rolls: !type:RangeNumberSelector
+          range: 10, 40
+        children:
+        - !type:NestedSelector
+          tableId: GenericTrashItems
+          weight: 35
+
+- type: entity
+  id: SunriseArtifactShatterWindows
+  parent: BaseXenoArtifactEffect
+  description: Shatters nearby windows
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XenoArtifactNode
+    maxDurability: 3
+    maxDurabilityCanDecreaseBy:
+      min: 0
+      max: 2
+  - type: XAEDamageInArea
+    damageChance: 0.75
+    whitelist:
+      tags:
+      - Window
+    damage:
+      types:
+        Structural: 200
+
+- type: entity
+  id: SunriseEffectBoltAirlocks
+  parent: BaseXenoArtifactEffect
+  description: Bolts nearby airlocks
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ArtifactBoltAirlocks
+
+- type: entity
+  id: SunriseArtifactHunger
+  parent: BaseXenoArtifactEffect
+  description: Increases hunger in nearby beings
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ArtifactModifyHunger
+
+- type: entity
+  id: SunriseEffectThirst
+  parent: BaseXenoArtifactEffect
+  description: Increases thirst in nearby beings
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ArtifactModifyThirst
+
+- type: entity
+  id: SunriseEffectTeslaDischarge
+  parent: BaseXenoArtifactEffect
+  description: Creates tesla discharges
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    components:
+    - type: LightningArcShooter
+      maxLightningArc: 4
+      shootMaxInterval: 4
+      shootRange: 6
+    - type: TimedRemoveComponents
+      removeAfter: 10
+      components:
+      - type: LightningArcShooter
+
+- type: entity
+  id: SunriseEffectSpawnEvilTwin
+  parent: BaseXenoArtifactEffect
+  description: Spawns an evil twin
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XenoArtifactNode
+    maxDurability: 1
+    maxDurabilityCanDecreaseBy:
+      min: 0
+      max: 0
+    triggerDecreasesDurability: true
+  - type: ArtifactStartGameRule
+    rules:
+      ParadoxCloneSpawn: 2
+
+- type: entity
+  id: SunriseArtifactTeleport
+  parent: BaseXenoArtifactEffect
+  description: Teleports nearby entities
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    components:
+    - type: XAERandomTeleportInvoker
+
+- type: entity
+  id: SunriseArtifactEmp
+  parent: BaseXenoArtifactEffect
+  description: Creates electromagnetic pulses
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XenoArtifactNode
+    maxDurability: 5
+    maxDurabilityCanDecreaseBy:
+      min: 0
+      max: 3
+  - type: XAEEmpInArea
+
+- type: entity
+  id: SunriseEffectIgnite
+  parent: BaseXenoArtifactEffect
+  description: Sets nearby objects on fire
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEIgnite
+    range: 7
+    fireStack:
+      min: 3
+      max: 6
+
+- type: entity
+  id: SunriseEffectShuffleUltra
+  parent: BaseXenoArtifactEffect
+  description: Shuffles positions of nearby entities
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEShuffle
+    radius: 30
+
+- type: entity
+  id: SunriseEffectPolyChair
+  parent: BaseXenoArtifactEffect
+  description: Transforms nearby objects into chairs
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEPolymorph
+    polymorphPrototypeName: SunriseEffectChair
+
+- type: entity
+  id: SunriseEffectPolyWatermelon
+  parent: BaseXenoArtifactEffect
+  description: Transforms nearby objects into watermelons
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEPolymorph
+    polymorphPrototypeName: SunriseEffectWatermelon
+
+- type: entity
+  id: SunriseEffectPolyAppendix
+  parent: BaseXenoArtifactEffect
+  description: Transforms nearby objects into appendices
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEPolymorph
+    polymorphPrototypeName: SunriseEffectAppendix
+
+- type: entity
+  id: SunriseEffectPolyDisposal
+  parent: BaseXenoArtifactEffect
+  description: Transforms nearby objects into disposal units
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEPolymorph
+    polymorphPrototypeName: SunriseEffectDisposal
+
+- type: entity
+  id: SunriseEffectPolyTable
+  parent: BaseXenoArtifactEffect
+  description: Transforms nearby objects into tables
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEPolymorph
+    polymorphPrototypeName: SunriseEffectTable
+
+- type: entity
+  id: SunriseEffectSwap
+  parent: BaseXenoArtifactEffect
+  description: Swaps nearby entities
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ArtifactWhitelistSwap
+    targetWhitelist:
+      components:
+      - ArtifactFunnyTarget
+
+- type: entity
+  id: SunriseEffectRandomTransformation
+  parent: BaseXenoArtifactEffect
+  description: Randomly transforms nearby objects
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ArtifactRandomTransformation
+    prototypeBlacklist:
+    - BaseBloodCultGod
+    - BaseCentcommContraband
+    - BaseGameRule
+    - BaseGrandTheftContraband
+    - BaseMagicalContraband
+    - BaseMajorContraband
+    - BaseMobFleshCult
+    - BaseSyndicateContraband
+    - BaseXenoborgContraband
+    - ContainmentField
+    - FleshHeart
+    - GasMinerBase
+    - ImmovableRod
+    - Incorporeal
+    - MobNarsieBase
+    - MobObserverBase
+    - MobRatvarBase
+    - MobTerminatorBase
+    - MobXenoRounyGhostRole
+    - NuclearGrenade
+    - Singularity
+    - SupermatterCrystal
+    - TeslaEnergyBall
+    - TeslaMiniEnergyBall
+    prototypeIdBlacklistSubstrings:
+    - Debug
+    - Admin
+    - Admeme
+    prototypeSuffixBlacklistSubstrings:
+    - Debug
+    - Admin
+    - Admeme
+    componentBlacklist:
+    - MapGrid
+    - SurgeryStep
+    - SpawnPoint
+    - Contraband
+    - Meteor
+    categoryBlacklist:
+    - HideSpawnMenu
+    - Debug
+    - Spawner
+
+- type: entity
+  id: SunriseEffectMagnetUltra
+  parent: BaseXenoArtifactEffect
+  description: Creates powerful magnetic fields
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAEApplyComponents
+    components:
+    - type: GravityWell
+      maxRange: 10
+      baseRadialAcceleration: 90
+    - type: TimedRemoveComponents
+      components:
+      - type: GravityWell
+
+- type: entity
+  id: SunriseEffectShiftedAsciiTableAccent
+  parent: BaseXenoArtifactEffect
+  description: Makes speech completely incoherent and incomprehensible
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: AddComponentsInRadius
+    whitelist:
+      components:
+      - HumanoidAppearance
+    components:
+    - type: AnomalyAccent
+    - type: TimedRemoveComponents
+      removeAfter: 600
+      components:
+      - type: AnomalyAccent
+
+- type: entity
+  id: XenoArtifactEffectCreationGasBZ
+  parent: BaseXenoArtifactEffect
+  description: Expels BZ
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAECreateGas
+    gases:
+      BZ: 300
+
+- type: entity
+  id: XenoArtifactEffectCreationGasHealium
+  parent: BaseXenoArtifactEffect
+  description: Expels healium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAECreateGas
+    gases:
+      Healium: 300
+
+- type: entity
+  id: XenoArtifactEffectCreationGasNitrium
+  parent: BaseXenoArtifactEffect
+  description: Expels nitrium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: XAECreateGas
+    gases:
+      Nitrium: 300

@@ -1,0 +1,31 @@
+﻿- type: entity
+  parent: BaseSyringe
+  id: SyringeRomerolNT
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 10
+        reagents:
+        - ReagentId: Romerol
+          Quantity: 10
+  - type: Injector
+    activeModeProtoId: SyringeInjectMode
+    allowedModes:
+    - SyringeInjectMode
+
+- type: entity
+  parent: BaseSyringe
+  id: SyringeCarolNT
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      injector:
+        maxVol: 10
+        reagents:
+        - ReagentId: Carol
+          Quantity: 10
+  - type: Injector
+    activeModeProtoId: SyringeInjectMode
+    allowedModes:
+    - SyringeInjectMode

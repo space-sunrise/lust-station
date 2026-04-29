@@ -1,0 +1,62 @@
+- type: guideEntry
+  id: Antagonists
+  name: guide-entry-antagonists
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Antagonists.xml"  # Sunrise-Edit
+  children:
+  - Traitors
+  - Thieves
+  - Revolutionaries
+  - NuclearOperatives
+  - SpaceNinja
+  - Wizard
+  - Zombies
+  - Xenoborgs
+  - MinorAntagonists
+  - Changelings # Sunrise-Edit
+  - Disease # Sunrise-Edit
+  - FleshCult # Sunrise-Edit
+
+- type: guideEntry
+  id: Traitors
+  name: guide-entry-traitors
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Traitors.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: NuclearOperatives
+  name: guide-entry-nuclear-operatives
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Nuclear Operatives.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: Zombies
+  name: guide-entry-zombies
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Zombies.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: Revolutionaries
+  name: guide-entry-revolutionaries
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Revolutionaries.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: MinorAntagonists
+  name: guide-entry-minor-antagonists
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/MinorAntagonists.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: SpaceNinja
+  name: guide-entry-space-ninja
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/SpaceNinja.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: Thieves
+  name: guide-entry-thieves
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Thieves.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: Wizard
+  name: guide-entry-wizard
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Wizard.xml"  # Sunrise-Edit
+
+- type: guideEntry
+  id: Xenoborgs
+  name: guide-entry-xenoborgs
+  text: "/ServerInfo/Guidebook/_Sunrise/Antagonist/Xenoborgs.xml"  # Sunrise-Edit

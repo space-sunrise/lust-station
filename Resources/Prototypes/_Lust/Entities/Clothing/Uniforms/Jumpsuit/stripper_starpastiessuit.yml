@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingStripperStarPastiesSuit
+  name: stripper star pasties suit
+  description: Stripper suit. Nanofibers ensure these won't fall off.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/stripper_starpastiessuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/stripper_starpastiessuit.rsi

@@ -1,0 +1,46 @@
+- type: job
+  id: MedicalDoctor
+  name: job-name-doctor
+  description: job-description-doctor
+  playTimeTracker: JobMedicalDoctor
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 2.5h
+  startingGear: DoctorGear
+  icon: "JobIconMedicalDoctor"
+  supervisors: job-supervisors-cmo
+  displayWeight: 20  # Sunrise
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-surgeon
+  # Sunrise-End
+  access:
+  - Medical
+  - Maintenance
+  extendedAccess:
+  - Chemistry
+  special:
+  - !type:GiveItemOnHolidaySpecial
+    holiday: DoctorDay
+    prototype: WehMedipen
+
+- type: startingGear
+  id: DoctorGear
+  equipment:
+    ears: ClothingHeadsetMedical
+    belt: ClothingBeltMedicalFilled
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: MedicalDoctorChameleonOutfit
+  job: MedicalDoctor
+  equipment:
+    head: ClothingHeadNurseHat
+    eyes: ClothingEyesHudMedical
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

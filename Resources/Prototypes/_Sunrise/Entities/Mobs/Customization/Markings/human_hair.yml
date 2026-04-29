@@ -1,0 +1,780 @@
+- type: marking
+  id: BaseSunriseMarkingHumanHair
+  abstract: true
+  bodyPart: Hair
+  markingCategory: Hair
+
+- type: marking
+  id: HumanHairAfricanPigtails
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: africanpigtails
+
+- type: marking
+  id: HumanHairAfropuffdouble
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: afropuffdouble
+
+- type: marking
+  id: HumanHairAfropuffleft
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: afropuffleft
+
+- type: marking
+  id: HumanHairAfropuffright
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: afropuffright
+
+- type: marking
+  id: HumanHairAmazon
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: amazon
+
+- type: marking
+  id: HumanHairAstolfo
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: astolfo
+
+- type: marking
+  id: HumanHairBaum
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: baum
+
+- type: marking
+  id: HumanHairBeachwave
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: beachwave
+
+- type: marking
+  id: HumanHairBluntbangs
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: bluntbangs
+
+- type: marking
+  id: HumanHairBluntbangsAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: bluntbangs_alt
+
+- type: marking
+  id: HumanHairBobcutAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: bobcutalt
+
+- type: marking
+  id: HumanHairBunhead4
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: bunhead4
+
+- type: marking
+  id: HumanHairCombed
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: combed
+
+- type: marking
+  id: HumanHairCombedbob
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: combedbob
+
+- type: marking
+  id: HumanHairCotton
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: cotton
+
+- type: marking
+  id: HumanHairCurly
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: curly
+
+- type: marking
+  id: HumanHairDave
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: dave
+
+- type: marking
+  id: HumanHairDiagonalBangs
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: diagonal_bangs
+
+- type: marking
+  id: HumanHairEmoshort
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: emoshort
+
+- type: marking
+  id: HumanHairFingerwave
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: fingerwave
+
+- type: marking
+  id: HumanHairFluffyShort
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: fluffy_short
+
+- type: marking
+  id: HumanHairFortuneteller
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: fortuneteller
+
+- type: marking
+  id: HumanHairFortunetellerAlt
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: fortuneteller_alt
+
+- type: marking
+  id: HumanHairFroofylong
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: froofylong
+
+- type: marking
+  id: HumanHairGeisha
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: geisha
+
+- type: marking
+  id: HumanHairGentle21
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: gentle21
+
+- type: marking
+  id: HumanHairGlammetal
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: glammetal
+
+- type: marking
+  id: HumanHairGloomyLong
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: gloomy_long
+
+- type: marking
+  id: HumanHairGloomyMedium
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: gloomy_medium
+
+- type: marking
+  id: HumanHairGrande
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: grande
+
+- type: marking
+  id: HumanHairHalfshave
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave
+
+- type: marking
+  id: HumanHairHalfshaveglamorous
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave_glamorous
+
+- type: marking
+  id: HumanHairHalfshaveLong
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave_long
+
+- type: marking
+  id: HumanHairHalfshaveMessy
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave_messy
+
+- type: marking
+  id: HumanHairHalfshaveMessyLong
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave_messylong
+
+- type: marking
+  id: HumanHairHalfshaveSnout
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: halfshave_snout
+
+- type: marking
+  id: HumanHairHightight
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: hightight
+
+- type: marking
+  id: HumanHairHyenamane
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: hyenamane
+
+- type: marking
+  id: HumanHairJessica
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: jessica
+
+- type: marking
+  id: HumanHairLong4
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: long4
+
+- type: marking
+  id: HumanHairLongdtails
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: longdtails
+
+- type: marking
+  id: HumanHairLongerAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: longeralt
+
+- type: marking
+  id: HumanHairLongovereyeAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: longovereye_alt
+
+- type: marking
+  id: HumanHairLongsidepartstraight
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: longsidepartstraight
+
+- type: marking
+  id: HumanHairLooseSlicked
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: loose_slicked
+
+- type: marking
+  id: HumanHairMediumbraid
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: mediumbraid
+
+- type: marking
+  id: HumanHairNewyou
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: newyou
+
+- type: marking
+  id: HumanHairPonytailAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: ponytailalt
+
+- type: marking
+  id: HumanHairPonytailF
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: ponytailf
+
+- type: marking
+  id: HumanHairPoofy2
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: poofy2
+
+- type: marking
+  id: HumanHairQuadcurls
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: quadcurls
+
+- type: marking
+  id: HumanHairSabitsuki
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: sabitsuki
+
+- type: marking
+  id: HumanHairScully
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: scully
+
+- type: marking
+  id: HumanHairShorthair4
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: shorthair4
+
+- type: marking
+  id: HumanHairShy
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: shy
+
+- type: marking
+  id: HumanHairSimplePonytail
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: simple_ponytail
+
+- type: marking
+  id: HumanHairSleaze
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: sleaze
+
+- type: marking
+  id: HumanHairSlightlyMessy
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slightlymessy
+
+- type: marking
+  id: HumanHairSlimedroplet
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slimedroplet
+
+- type: marking
+  id: HumanHairSlimedropletAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slimedroplet_alt
+
+- type: marking
+  id: HumanHairSlimespikes
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slimespikes
+
+- type: marking
+  id: HumanHairSlimetendrils
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slimetendrils
+
+- type: marking
+  id: HumanHairSlimetendrilsAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: slimetendrils_alt
+
+- type: marking
+  id: HumanHairSpicy
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: spicy
+
+- type: marking
+  id: HumanHairTwintailFloor
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: twintail_floor
+
+- type: marking
+  id: HumanHairVeryshortovereye
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: veryshortovereye
+
+- type: marking
+  id: HumanHairVictory
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: victory
+
+- type: marking
+  id: HumanHairViper
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: viper
+
+- type: marking
+  id: HumanHairWife
+  parent: BaseSunriseMarkingHumanHair
+  sponsorOnly: false
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: wife
+
+- type: marking
+  id: HumanHairZiegler
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: ziegler
+
+### NEW SUNRISE SPRITES LICENSED UNDER CLA:
+
+- type: marking
+  id: HairBasarab
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: basarab
+
+- type: marking
+  id: HairCrayfish
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: crayfish
+
+- type: marking
+  id: HairHank
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hank
+
+- type: marking
+  id: HairHonor
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: honor
+
+- type: marking
+  id: HairMadScientist
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: madscientist
+
+- type: marking
+  id: HairMonday
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: monday
+
+- type: marking
+  id: HairNemesida
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: nemesida
+
+- type: marking
+  id: HairPunk
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: punk
+
+- type: marking
+  id: HairTuranga
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: turanga
+
+- type: marking
+  id: HairAyanami
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: ayanami
+
+- type: marking
+  id: HairBubbleGum
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: bubble_gum
+
+- type: marking
+  id: HairMavis
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: mavis
+
+- type: marking
+  id: HairCloud
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: cloud
+
+- type: marking
+  id: HairMorningHairstyle
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: morning_hairstyle
+
+- type: marking
+  id: HairMorningHairstyle2
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: morning_hairstyle_2
+
+- type: marking
+  id: HairPonytail8
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: ponytail8
+
+- type: marking
+  id: HairPrinceCharming
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: prince_charming
+
+- type: marking
+  id: HairShavedFemale
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: shaved_female
+
+- type: marking
+  id: HairShavedFemaleUnisex
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: shaved_unisex
+
+- type: marking
+  id: HairMoon
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: moon
+
+- type: marking
+  id: HairMalet
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: malet
+
+- type: marking
+  id: HairLongDisheveled
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_long_disheveled
+
+- type: marking
+  id: HairQuickInstalation
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_quick_instalation
+
+- type: marking
+  id: HairProtrudingStrand
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_protruding_strand
+
+- type: marking
+  id: HairWindy
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_windy
+
+- type: marking
+  id: HairNeatFeminineStyling
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_neat_feminine
+
+- type: marking
+  id: HairNeatManBun
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_neat_man_bun
+
+- type: marking
+  id: HairLongComb
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_long_comb
+
+- type: marking
+  id: HairMediumDisheveled
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_medium_disheveled
+
+- type: marking
+  id: HairBunWithTail
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_bun-with-tail
+
+- type: marking
+  id: HairBunWithTailAlt
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_bun-with-tail2
+
+- type: marking
+  id: HairGluckosa
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_gluckosa
+
+- type: marking
+  id: HairAppleJack
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_applejack
+
+- type: marking
+  id: HairPinkiePie
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_pinkie-pie
+
+- type: marking
+  id: HairRarity
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_rarity
+
+- type: marking
+  id: HairAqua
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_aqua
+
+- type: marking
+  id: HairBairdAndBangs
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: hair_baird-and-bangs
+
+- type: marking
+  id: Hairmalet-alternative
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+  - sprite: _Sunrise/Mobs/Customization/sunrise_human_hair.rsi
+    state: maletalternative
+
+- type: marking
+  id: HumanHairCatTail
+  parent: BaseSunriseMarkingHumanHair
+  sprites:
+    - sprite: _Sunrise/Mobs/Customization/human_hair.rsi
+      state: cattail

@@ -1,0 +1,14 @@
+names-resomi-packs-dataset-1 = Стая Авиатор
+names-resomi-packs-dataset-2 = Стая Экранные дятлы
+names-resomi-packs-dataset-3 = Стая Защитник корпуса
+names-resomi-packs-dataset-4 = Стая Железный коготь
+names-resomi-packs-dataset-5 = Стая Страж люка
+names-resomi-packs-dataset-6 = Стая Спринтер
+names-resomi-packs-dataset-7 = Стая Плазменный коготь
+names-resomi-packs-dataset-8 = Стая Железная лапа
+names-resomi-packs-dataset-9 = Стая Стальное гнездо
+names-resomi-packs-dataset-10 = Стая Серебряное перо
+names-resomi-packs-dataset-11 = Стая Шахтерский коготь
+names-resomi-packs-dataset-12 = Стая Охотник
+names-resomi-packs-dataset-13 = Стая Темные перья
+names-resomi-packs-dataset-14 = Стая Гнездо техобслуживания

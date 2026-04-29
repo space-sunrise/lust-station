@@ -1,0 +1,47 @@
+- type: entity
+  parent: ClothingBackpackSyndie
+  id: ClothingBackpackSyndicateBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: [] # ignore "WhitelistChameleon" tag
+
+- type: entity
+  parent: ClothingBackpackSyndicateBundle
+  id: ClothingBackpackSyndicateRaidBundle
+  name: syndicate raid suit bundle
+  description: "Contains the Syndicate's durable raid armor suit."
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingOuterArmorRaidBiocode # Sunrise-Edit
+        - id: ClothingHeadHelmetRaid
+        - id: ClothingMaskGasSyndicate
+        - id: ClothingHandsGlovesCombat
+        - id: AmpulaBica
+        - id: AmpulaDerm
+
+#sunrise-start
+- type: entity
+  parent: ClothingBackpackSyndicateBundle
+  id: ClothingBackpackSyndicateElegantRaidBundle
+  name: syndicate elegant raid suit bundle
+  description: "Contains the Syndicate's durable raid armor suit, now more elegant."
+  components:
+    - type: EntityTableContainerFill
+      containers:
+        storagebase: !type:AllSelector
+          children:
+            - id: ClothingOuterMaidArmorRaidBiocode
+            - id: ClothingHeadHelmetRaid
+            - id: ClothingHandsTacticalMaidGloves
+            - id: ClothingMaskGasSyndicate
+            - id: ClothingUnderSocksMurder
+            - id: ClothingUniformJumpskirtTacticalMaid
+            - id: AmpulaBica
+            - id: AmpulaDerm
+            - id: MopItem # He he Ha ha!
+            - id: MopBucketCubeWrapped # He he Ha ha!
+#sunrise-end

@@ -1,0 +1,16 @@
+lust-interaction-category-Anal = Anal
+lust-interaction-category-Balls = Balls
+lust-interaction-category-Boobs = Breasts
+lust-interaction-category-Butt = Butt
+lust-interaction-category-Cheeks = Cheeks
+lust-interaction-category-Cock = Cock
+lust-interaction-category-Ears = Ears
+lust-interaction-category-Feet = Feet
+lust-interaction-category-Lips = Lips
+lust-interaction-category-Mouth = Mouth
+lust-interaction-category-Pussy = Pussy
+lust-interaction-category-Thighs = Thighs
+lust-interaction-category-Wings = Wings
+lust-interaction-category-Dildos = Dildos
+lust-interaction-category-Fleshlights = Fleshlights
+lust-interaction-category-Legs = Legs

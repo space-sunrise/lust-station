@@ -1,0 +1,47 @@
+- type: job
+  id: IAA
+  name: job-name-iaa
+  description: job-description-iaa
+  playTimeTracker: JobIAA
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Command
+    time: 36000 # 10h Sunrise-RoleTime
+  - !type:DepartmentTimeRequirement
+    department: Security
+    time: 18000 # 5h Sunrise-RoleTime
+  startingGear: IAAGear
+  icon: "JobIconIAA"
+  supervisors: job-supervisors-magistrate
+  canBeAntag: false
+  displayWeight: 40
+  alternativeTitles:
+  - job-alt-title-inspector
+  access:
+  - Command
+  - Service
+  - Brig
+  - Maintenance
+  - External
+  - Lawyer
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: IAAGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup # Lust-Edit
+    id: IAAPDAQillu # Lust-Edit
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetIAA
+    pocket2: HyperLinkBookCorporateLaw
+  inhand:
+    - BriefcaseIAAFilled
+
+- type: chameleonOutfit
+  id: IAAChameleonOutfit
+  job: IAA
+  equipment:
+    neck: ClothingNeckCloakIAACloak
+    outerClothing: ClothingOuterCoatIAA

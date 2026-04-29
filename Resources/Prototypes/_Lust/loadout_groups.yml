@@ -1,0 +1,43 @@
+﻿- type: loadoutGroup
+  id: EngineerNeck
+  name: loadout-group-engineer-neck
+  minLimit: 0
+  loadouts:
+  - EngineerCloak
+
+- type: loadoutGroup
+  id: SecurityNeck
+  name: loadout-group-security-neck
+  loadouts:
+  - SecurityCloak
+
+# IAA
+- type: loadoutGroup
+  id: IAAuniformFormalSuit
+  name: loadout-group-IAA-uniform
+  loadouts:
+  - IAAuniformElegantSuit
+  - IAAuniformElegantSkirt
+  - IAAuniformFormalSuit
+  - IAAuniformFormalSkirt
+
+- type: loadoutGroup
+  id: IAASatchel
+  name: loadout-group-IAA-backpack
+  loadouts:
+  - IAASatchel
+  - IAAWhiteSatchel
+
+- type: loadoutGroup
+  id: IAAOuterClothing
+  minLimit: 0
+  name: loadout-group-IAA-outerClothing
+  loadouts:
+  - IAACoat
+
+- type: loadoutGroup
+  id: IAANeck
+  minLimit: 0
+  name: loadout-group-IAA-neck
+  loadouts:
+  - IAACloak

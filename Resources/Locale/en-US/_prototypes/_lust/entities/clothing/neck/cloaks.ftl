@@ -1,0 +1,32 @@
+ent-ClothingNeckMedCloak = medical cloak
+    .desc = Cool medical cloak.
+ent-ClothingNeckEngCloak = Engineer cloak
+    .desc = Cool engineer cloak.
+ent-ClothingNeckSecCloak = Security cloak
+    .desc = Bloody cloak, it seems the blood of the corporation enemies is still fresh... Not bad.
+ent-ClothingNeckQilluCloak = special Qillu cloak
+    .desc = A purple cloak given to the most loyal employees of the corporation.
+ent-ClothingNeckCapSpecialCloak = special captain cloak
+    .desc = Special cloak for special Captain. Looks so rich.
+ent-ClothingNeckCmoSpecialCloak = special CMO cloak
+    .desc = Special cloak for special CMO. Looks so rich.
+ent-ClothingNeckHopSpecialCloak = special HOP cloak
+    .desc = Special cloak for special HOP. Looks so rich.
+ent-ClothingNeckHosSpecialCloak = special HOS cloak
+    .desc = Special cloak for special HOS. Looks so rich.
+ent-ClothingNeckQmSpecialCloak = special QM cloak
+    .desc = Special cloak for special QM. Looks so rich.
+ent-ClothingNeckRdSpecialCloak = special RD cloak
+    .desc = Special cloak for special RD. Looks so rich.
+ent-ClothingNeckMantleMiner = Miner`s Mantle
+    .desc = This cloak has seen a lot, just like its owner, having been through ruthless trials in the face of Lavaland's fauna. 'Remember the first lesson - if my legs get chopped off, run and don't look back!'
+ent-ClothingNeckCloakFormalIAACloak = IAA cloak
+    .desc = A mysterious cloak worn by IAA agents to conceal their identities and intimidate their targets.
+
+ent-ClothingNeckCloakCentcomQillu = CentCom cloak
+    .suffix = Qillu
+    .desc = A cloak for Central Command personnel. Ideal for looking dramatic while filing a complaint in triplicate.
+
+ent-ClothingNeckMantleCentcomQillu = CentCom mantle
+    .suffix = Qillu
+    .desc = A mantle for Central Command personnel. Warm, regal, and perfectly suited for late-night reading of classified memos.

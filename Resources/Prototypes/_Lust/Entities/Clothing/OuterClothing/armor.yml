@@ -1,0 +1,12 @@
+- type: entity
+  parent: [ClothingOuterArmorBaseCarapace, BaseCentcommContraband]
+  id: ClothingOuterArmorCentcomChestplateQillu
+  name: Central Command chestplate
+  description: A protective chestplate worn by Central Command personnel. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Armor/centcom_chestplate_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Armor/centcom_chestplate_qillu.rsi
+

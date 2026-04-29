@@ -1,0 +1,122 @@
+- type: entity
+  id: BaseCartridgeLightRifleSP
+  name: cartridge (.30 rifle SP)
+  parent: [ BaseCartridge, BaseSecurityContraband ]
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Tag
+    tags:
+    - CartridgeLightRifle
+  - type: Sprite
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Casings/7.62x39.rsi # Sunrise-Edit
+    scale: 0.60, 0.60 # Sunrise-Added
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
+
+- type: entity
+  id: CartridgeLightRifleSP
+  name: cartridge (.30 rifle SP)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTraceSP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#3F47DB"
+
+- type: entity
+  id: CartridgeLightRifleHP
+  name: cartridge (.30 rifle HP)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTraceHP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#F5514C"
+
+- type: entity
+  id: CartridgeLightRifleFMJ
+  name: cartridge (.30 rifle FMJ)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTraceFMJ
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#B68F0E"
+
+- type: entity
+  id: CartridgeLightRifleAP
+  name: cartridge (.30 rifle AP)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTraceAP
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#540000"
+
+- type: entity
+  id: CartridgeLightRiflePractice
+  name: cartridge (.30 rifle practice)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTracePractice
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#dbdbdb"
+
+- type: entity
+  id: CartridgeLightRifleIncendiary
+  name: cartridge (.30 rifle incendiary)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleIncendiary
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#ff6e52"
+
+- type: entity
+  id: CartridgeLightRifleUranium
+  name: cartridge (.30 rifle uranium)
+  parent: BaseCartridgeLightRifleSP
+  components:
+  - type: CartridgeAmmo
+    proto: BulletLightRifleTraceUranium
+  - type: Sprite
+    layers:
+      - state: base
+        map: [ "enum.AmmoVisualLayers.Base" ]
+      - state: tip
+        map: [ "enum.AmmoVisualLayers.Tip" ]
+        color: "#65fe08"

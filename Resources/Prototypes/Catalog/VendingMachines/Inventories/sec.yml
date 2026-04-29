@@ -1,0 +1,34 @@
+- type: vendingMachineInventory
+  id: SecTechInventory
+  startingInventory:
+    SecurityWhistle: 5
+    Handcuffs: 8
+    GrenadeFlashBang: 4
+    TearGasGrenade: 4
+    ClusterBangFull: 2
+    GrenadeStinger: 4
+    Flash: 5
+    Tourniquet: 12 # Sunrise-Edit
+    FlashlightSeclite: 5
+    ClothingEyesGlassesSunglasses: 2
+    ClothingEyesHudSecurity: 2
+    ClothingEyesEyepatchHudSecurity: 2
+    ClothingBeltSecurityWebbing: 5
+    CombatKnife: 3
+    Zipties: 12
+    RiotShield: 2
+    RiotLaserShield: 2
+    RiotBulletShield: 2
+    RadioHandheldSecurity: 5
+    BolaSecurity: 5 # Sunrise-Edit
+    HandheldCamera: 3  # Sunrise-Edit
+  # security officers need to follow a diet regimen!
+  contrabandInventory:
+    WeaponMeleeNeedle: 2
+    FoodDonutHomer: 12
+    FoodBoxDonut: 2
+    ModularReceiverAuto: 1 #Sunrise-Edit
+    #box evidence
+  emaggedInventory:
+    ClothingEyesGlassesNVG: 1 # Sunrise Edit
+    SmokeGrenade: 1 # Sunrise Edit

@@ -1,0 +1,33 @@
+﻿# Neck
+- type: loadout
+  id: HosSpecialCloak
+  sponsorOnly: true
+  equipment:
+    neck: ClothingNeckHosSpecialCloak
+
+# Belt
+- type: loadout
+  id: SecuritySheathBelt
+  sponsorOnly: true
+  equipment:
+    belt: ClothingSheathBeltSecurityFilled
+
+# Suit
+- type: loadout
+  id: HeadofSecurityJumpsuitElegant
+  sponsorOnly: false
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtElegantHos
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h
+
+# OuterClothing
+- type: loadout
+  id: HeadofSecurityTrenchElegant
+  sponsorOnly: false
+  equipment:
+    outerClothing: ClothingOuterHoSTrenchElegant
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterHoS100h

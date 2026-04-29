@@ -1,0 +1,37 @@
+# Inspired by Nyanotrasen
+
+- type: entity
+  parent: BaseItem
+  id: BaseHyperLinkBook
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+  - type: Tag
+    tags:
+    - Book
+  - type: StaticPrice
+    price: 35
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+
+- type: entity
+  parent: BaseHyperLinkBook
+  id: HyperLinkBookCorporateLaw
+  name: corporate law
+  description: Shieldcourt's favourite read.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/books.rsi
+    layers:
+    - state: paper
+    - state: cover_base
+      color: "#ab1515"
+    - state: icon_law
+      color: "#fff300"
+  - type: HyperLink
+    url: https://lust.station.wiki.shizainc.com/corplaw # Lust-Edit
+  - type: Tag
+    tags:
+    - Book

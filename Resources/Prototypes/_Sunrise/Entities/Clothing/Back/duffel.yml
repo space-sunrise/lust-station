@@ -1,0 +1,188 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelMilitary
+  name: army duffel bag
+  description: A large duffel bag for holding any army goods.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Back/Duffels/military.rsi
+    - type: Storage
+      grid:
+        - 0,0,6,3 # TODO: Change this
+      maxItemSize: Huge
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelCE
+  name: chief engineer duffel bag
+  description: A large duffel bag for all instruments you need to create singularity.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Back/Duffels/ce.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBlueShield
+  name: blueshield's lightweight duffel bag
+  description: On style.
+  components:
+    - type: ClothingSpeedModifier
+      walkModifier: 0.95
+      sprintModifier: 0.95
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Back/Duffels/blueshield.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelPrisonGuard
+  name: prison guard's duffel bag
+  description: On style.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/guard.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelAdjutant
+  name: adjutant duffel
+  description: It looks redundantly empty, with only a crumpled piece of paper lying lonely at the bottom.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Back/Duffels/adjutant.rsi
+
+- type: entity
+  parent: [ ClothingBackpackDuffel, BaseCentcommContraband ]
+  id: ClothingBackpackDuffelNanotrasenMedical
+  name: nanotrasen duffel bag
+  categories: [ HideSpawnMenu ]
+  description: A duffel bag containing a variety of biological containment equipment.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/nanotrasen.rsi
+  - type: Storage
+    maxItemSize: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: HeldSpeedModifier
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelAbductor
+  name: abductor's surgery duffel bag
+  description: A large duffel bag for holding various surgery goods.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Abductor/Clothing/Back/Duffels/abductor.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+  - type: Storage
+    grid:
+    - 0,0,8,4
+
+- type: entity
+  parent: ClothingBackpackDuffelAbductor
+  id: ClothingBackpackDuffelAbductorBundle
+  abstract: true
+  components:
+  - type: Tag
+    tags: []
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBlack
+  name: black duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/black_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelBlue
+  name: blue duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/blue_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelCian
+  name: cian duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/cian_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelGreen
+  name: green duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/green_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelOrange
+  name: orange duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/orange_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelPurple
+  name: purple duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/purple_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelRed
+  name: red duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/red_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelWhite
+  name: white duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/white_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelYellow
+  name: yellow duffel
+  description: This duffel bag looks great.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/yellow_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffelCaptain
+  id: ClothingBackpackDuffelCaptainWhite
+  name: white captain's duffel bag
+  description: A white duffel bag with a wide opening and reinforced bottom. Hauls a uniform, a kit, and \"just in case\" gear.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/white_cap_duffel.rsi
+
+- type: entity
+  parent: ClothingBackpackDuffelCaptain
+  id: ClothingBackpackDuffelCaptainBlack
+  name: black captain's duffel bag
+  description: A black duffel bag with a wide opening and reinforced bottom. The practical choice when a regular backpack isn't enough.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Back/Duffels/black_cap_duffel.rsi

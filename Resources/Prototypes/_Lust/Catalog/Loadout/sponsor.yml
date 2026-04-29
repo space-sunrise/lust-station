@@ -1,0 +1,32 @@
+- type: sponsorLoadout
+  id: LustSponsorTier1
+  equipment: LustSponsorTier1
+
+- type: startingGear
+  id: LustSponsorTier1
+  storage:
+    back:
+    - LustStationUplink
+    - Suntick40
+
+- type: sponsorLoadout
+  id: LustSponsorTier2
+  equipment: LustSponsorTier2
+
+- type: startingGear
+  id: LustSponsorTier2
+  storage:
+    back:
+    - LustStationUplink
+    - Suntick80
+
+- type: sponsorLoadout
+  id: LustSponsorTier3
+  equipment: LustSponsorTier3
+
+- type: startingGear
+  id: LustSponsorTier3
+  storage:
+    back:
+    - LustStationUplink
+    - Suntick100

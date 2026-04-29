@@ -1,0 +1,12 @@
+ent-AirSensorFreezerBase = { ent-AirSensor }
+    .suffix = Freezer Atmosphere
+    .desc = { ent-AirSensor.desc }
+ent-AirSensorFreezer = { ent-AirSensorFreezerBase }
+    .desc = { ent-AirSensorFreezerBase.desc }
+ent-GasVentPumpFreezer = { ent-GasVentPump }
+    .desc = { ent-GasVentPump.desc }
+ent-GasVentScrubberFreezer = { ent-GasVentScrubber }
+    .desc = { ent-GasVentScrubber.desc }
+ent-AirAlarmFreezer = { ent-AirAlarm }
+    .suffix = Freezer Atmosphere, auto mode disabled
+    .desc = { ent-AirAlarm.desc }

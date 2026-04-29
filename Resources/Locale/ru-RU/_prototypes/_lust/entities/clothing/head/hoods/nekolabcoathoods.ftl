@@ -1,0 +1,10 @@
+ent-ClothingHeadHatHoodCoatNekoBase = { ent-ClothingHeadBase }
+    .desc = { ent-ClothingHeadBase.desc }
+ent-ClothingHeadHatHoodCoatNeko = капюшон неко
+    .desc = Ты выглядишь довольно мило. Няя~
+ent-ClothingHeadHatHoodCoatNekoBlue = синий капюшон неко
+    .desc = Ты выглядишь довольно мило. Няя~
+ent-ClothingHeadHatHoodCoatNekoGreen = зелёный капюшон неко
+    .desc = Ты выглядишь довольно мило. Няя~
+ent-ClothingHeadHatHoodCoatNekoPurple = фиолетовый капюшон неко
+    .desc = Ты выглядишь довольно мило. Няя~

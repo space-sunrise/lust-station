@@ -1,0 +1,34 @@
+- files: ["delta.yml"]
+  editors: Gpxgji, SliZen, George69, Kendrick, ReWAFFlution
+
+- files: ["bagel.yml"]
+  editors: Gpxgji, SliZen, Stirka
+
+- files: ["box.yml"]
+  editors: Gpxgji, SliZen, George69
+
+- files: ["barratry.yml"]
+  editors: Focstor, Furo, non_stop_smetana
+
+- files: ["plasma.yml"]
+  editors: KaiserMaus, Hatiko, CallMeOwO, ktenanta, Odleer
+
+- files: ["planet_prison.yml"]
+  editors: KAVALDi
+
+- files: ["cluster.yml"]
+  editors: Odleer
+
+- files: ["fland.yml"]
+  editors: Odleer
+
+- files: ["marathon.yml"]
+  editors: Odleer
+
+- files: ["cluster.yml"]
+  editors: Odleer
+
+- files: ["meta.yml"]
+  editors: J C Denton, freychik
+
+

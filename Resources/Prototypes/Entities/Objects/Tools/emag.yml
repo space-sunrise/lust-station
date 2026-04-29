@@ -1,0 +1,24 @@
+- type: entity
+  parent: [BaseItem, BaseSyndicateContraband]
+  id: EmagUnlimited
+  suffix: Unlimited
+  name: cryptographic sequencer
+  description: The all-in-one hacking solution. Friend of any syndicate. The iconic EMAG.
+  components:
+  - type: Emag
+  - type: Sprite
+    sprite: _Sunrise/Objects/Tools/emag.rsi # Sunrise-Edit
+    state: icon
+  - type: Item
+    sprite: _Sunrise/Objects/Tools/emag.rsi # Sunrise-Edit
+    storedRotation: -90
+
+- type: entity
+  parent: EmagUnlimited
+  id: Emag
+  suffix: Limited
+  components:
+  - type: LimitedCharges
+  - type: AutoRecharge
+  - type: StaticPrice
+    price: 2500

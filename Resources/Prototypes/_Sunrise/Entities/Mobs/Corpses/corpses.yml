@@ -1,0 +1,143 @@
+# region start (ANTAGS)
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSyndicateCorpse
+  suffix: Dead, Syndicate
+  components:
+  - type: Loadout
+    prototypes:
+    - SyndicateCorpseGear
+    - SyndicateCorpseGearAlt
+    - SyndicateCorpseGearAlt2
+    - SyndicateCorpseGearSec1
+    - SyndicateCorpseGearSec2
+    - SyndicateCorpseGearSec3
+    - SyndicateCorpseGearSec4
+    - SyndicateCorpseGearLead
+    - SyndicateCorpseGearEngi
+    - SyndicateCorpseGearEngiAlt
+    - SyndicateCorpseGearMedicAlt
+    - SyndicateCorpseGearMedic
+    - SyndicateCorpseGearMedicAlt2
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomNukieCorpse
+  suffix: Dead, Nukie
+  components:
+  - type: Loadout
+    prototypes:
+    - NukieCorpseGear
+
+# USSP
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomSovietUSSPCorpse
+  suffix: Dead, Soviet
+  components:
+  - type: Loadout
+    prototypes:
+    - SovietCorpseGearMarine
+    - SovietCorpseGearMarineB
+    - SovietCorpseGearMarineC
+    - SovietCorpseGearMarineD
+    - SovietCorpseGearMarineF
+    - SovietCorpseGearOfficer
+    - SovietCorpseGearOfficerB
+    - SovietCorpseGearEVAOfficer
+    - SovietCorpseGearEVALight
+    - SovietCorpseGearEVALightB
+    - SovietCorpseGearEVA
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    # Additional non-EVA weighting to reduce total EVA chance to 5%.
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearMarine
+    - SovietCorpseGearOfficer
+    # Non-EVA entries are intentionally duplicated to reduce EVA overall chance.
+    - SovietCorpseGearMarine
+    - SovietCorpseGearMarineB
+    - SovietCorpseGearMarineC
+    - SovietCorpseGearMarineD
+    - SovietCorpseGearMarineF
+    - SovietCorpseGearOfficer
+    - SovietCorpseGearOfficerB
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    # Double duplicated for lovering chance.
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+    - SovietCorpseGearA
+    - SovietCorpseGearB
+    - SovietCorpseGearC
+    - SovietCorpseGearD
+    - SovietCorpseGearF
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomMercenaryCorpse
+  suffix: Dead, Mercenary
+  components:
+  - type: Loadout
+    prototypes:
+    - MercenaryCorpseGear
+
+- type: entity
+  parent: SalvageHumanCorpse
+  id: MobRandomPirateCorpse
+  suffix: Dead, Pirate
+  components:
+  - type: Loadout
+    prototypes:
+    - PirateCorpseGear
+
+# region End (ANTAGS)

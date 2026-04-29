@@ -1,0 +1,37 @@
+- type: entity
+  parent: CrateHydroponics
+  id: CrateHydroponicsSeedsMinimal
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ChiliSeeds
+        - id: EggplantSeeds
+        - id: TomatoSeeds
+        - id: WheatSeeds
+        - id: CarrotSeeds
+        - id: CabbageSeeds
+        - id: GarlicSeeds
+        - id: ChanterelleSeeds
+        - id: PotatoSeeds
+        - id: LemonSeeds
+        - id: LimeSeeds
+        - id: OnionSeeds
+        - id: OnionRedSeeds
+        - id: RiceSeeds
+        - id: WatermelonSeeds
+        - id: CherrySeeds
+
+- type: entity
+  parent: CrateHydroponics
+  id: CrateHydroponicsToolsMinimal
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: HydroponicsToolSpade
+        - id: HydroponicsToolMiniHoe
+        - id: HydroponicsToolClippers
+        - id: PestSpray

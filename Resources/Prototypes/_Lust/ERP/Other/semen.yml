@@ -1,0 +1,23 @@
+- type: reagent
+  id: Semen
+  name: reagent-name-semen
+  group: Foods
+  desc: reagent-description-semen
+  physicalDesc: reagent-physical-desc-sticky
+  flavor: salty
+  color: white
+  recognizable: true
+
+- type: entity
+  id: PuddleSemen
+  name: puddle
+  parent: PuddleTemporary
+  suffix: semen
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      puddle:
+        maxVol: 1000
+        reagents:
+        - ReagentId: Semen
+          Quantity: 2

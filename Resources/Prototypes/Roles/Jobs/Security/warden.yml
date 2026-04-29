@@ -1,0 +1,61 @@
+- type: job
+  id: Warden
+  name: job-name-warden
+  description: job-description-warden
+  playTimeTracker: JobWarden
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 5h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 10h
+  weight: 5
+  startingGear: WardenGear
+  icon: "JobIconWarden"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  displayWeight: 70  # Sunrise
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-jailer
+  # Sunrise-End
+  access:
+  - Security
+  - Brig
+  - Armory
+  # - Maintenance # Sunrise-Edit
+  - External
+  - Detective
+  - Cryogenics
+  - GenpopEnter
+  - GenpopLeave
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: WardenGear
+  equipment:
+    # eyes: ClothingEyesGlassesSecurity # Lust-Edit
+    id: WardenPDA
+    ears: ClothingHeadsetSecurity
+    # pocket1: WeaponPistolMk58 # Sunrise-Edit
+  storage:
+    back:
+    - Flash
+    # - MagazinePistol # Sunrise-Edit
+
+- type: chameleonOutfit
+  id: WardenChameleonOutfit
+  job: Warden
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatWarden
+    mask: ClothingMaskGasSecurity
+    outerClothing: ClothingOuterCoatWarden
+    jumpsuit: ClothingUniformJumpsuitWarden
+    neck: Dinkystar
+    belt: ClothingBeltSecurity
+    gloves: ClothingHandsGlovesCombat
+    shoes: ClothingShoesBootsJack

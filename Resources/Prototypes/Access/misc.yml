@@ -1,0 +1,51 @@
+- type: accessGroup
+  id: AllAccess
+  tags:
+  - EmergencyShuttleRepealAll
+  - Captain
+  - HeadOfPersonnel
+  - ChiefEngineer
+  - ChiefMedicalOfficer
+  - HeadOfSecurity
+  - ResearchDirector
+  - Command
+  - Cryogenics
+  - Security
+  - Detective
+  - Armory
+  - Brig
+  - Lawyer
+  - Engineering
+  - Medical
+  - Quartermaster
+  - Salvage
+  - Cargo
+  - Research
+  - Service
+  - Maintenance
+  - External
+  - Janitor
+  - Theatre
+  - Bar
+  - Chemistry
+  - Paramedic # Sunrise-edit
+  - Kitchen
+  - Chapel
+  - Hydroponics
+  - Atmospherics
+  - GenpopEnter
+  - GenpopLeave
+  - Magistrat  # Sunrise-edit
+  - BlueShield  # Sunrise-edit
+  - BlueShieldEnsign  # Sunrise-edit
+  - Ntrep  # Sunrise-edit
+  - Barber  # Sunrise-edit
+  - Mail  # Sunrise-edit
+  - Mining  # Sunrise-edit
+  - CargoPurchaseAccess  # Sunrise-edit
+  - ResearchConsoleAccess  # Sunrise-edit
+
+- type: accessGroup
+  id: General
+  tags:
+  - Maintenance

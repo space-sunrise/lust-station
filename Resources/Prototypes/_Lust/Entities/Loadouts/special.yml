@@ -1,0 +1,18 @@
+﻿# Neck
+- type: loadout
+  id: QilluCloak
+  sponsorOnly: true
+  equipment:
+    neck: ClothingNeckQilluCloak
+
+# Other stuff
+
+- type: loadout
+  id: Boombox
+  startingGear: Boombox
+  sponsorOnly: true
+
+- type: startingGear
+  id: Boombox
+  equipment:
+    back: Boombox

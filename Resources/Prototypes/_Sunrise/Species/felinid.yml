@@ -1,0 +1,63 @@
+- type: species
+  id: Felinid
+  name: species-name-felinid
+  roundStart: true
+  prototype: MobFelinid
+  bodyTypes:
+  - HumanNormal
+  - HumanSlimFemale
+  - HumanSlimMale
+  - HumanGigaFemale
+  - HumanGigaMale
+  - HumanFatFemale
+  - HumanFatMale
+  - HumanDistrofikFemale
+  - HumanDistrofikMale
+  markingLimits: MobFelinidMarkingLimits
+  dollPrototype: MobFelinidDummy
+  skinColoration: HumanToned
+  youngAge: 18
+  oldAge: 30
+  maxAge: 60
+  defaultHeight: 0.80
+  defaultWidth: 0.80
+  maxHeight: 1
+  maxWidth: 1
+  minHeight: 0.8
+  minWidth: 0.8
+  minHeightCm: 130
+  maxHeightCm: 190
+  buttScan:
+    sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
+    state: human
+  sexes: [Male, Female, Futanari] # Lust-Edit
+
+- type: markingPoints
+  id: MobFelinidMarkingLimits
+  points:
+    Special: # the cat ear joke
+      points: 1
+      required: false
+    Hair:
+      points: 1
+      required: false
+    FacialHair:
+      points: 1
+      required: false
+    Tail:
+      points: 1
+      required: true
+      defaultMarkings: [ FelinidTailBasic ]
+    HeadTop:
+      points: 1
+      required: true
+      defaultMarkings: [ FelinidEarsBasic ]
+    Chest:
+      points: 1
+      required: false
+    Legs:
+      points: 2
+      required: false
+    Arms:
+      points: 2
+      required: false

@@ -1,0 +1,164 @@
+- type: entity
+  parent: ClothingOuterHardsuitSyndie
+  id: ClothingOuterHardsuitSyndieBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieMedic
+  id: ClothingOuterHardsuitSyndieMedicBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieElite
+  id: ClothingOuterHardsuitSyndieEliteBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterHardsuitSyndieCommander
+  id: ClothingOuterHardsuitSyndieCommanderBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterHardsuitJuggernaut
+  id: ClothingOuterHardsuitJuggernautBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterArmorRaid
+  id: ClothingOuterArmorRaidBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterMaidArmorRaid
+  id: ClothingOuterMaidArmorRaidBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterHardsuitInfiltration
+  id: ClothingOuterHardsuitInfiltrationBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingShoesChameleonNoSlips
+  id: ClothingShoesChameleonNoSlipsBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingEyesGlassesThermalSyndie
+  id: ClothingEyesGlassesThermalSyndieBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterVestWebElite
+  id: ClothingOuterVestWebEliteBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingOuterVestWeb
+  id: ClothingOuterVestWebBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingHandsGlovesNorthStar
+  id: ClothingHandsGlovesNorthStarBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: ClothingShoesBootsMagSyndie
+  id: ClothingShoesBootsMagSyndieBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker
+
+- type: entity
+  parent: CornivoreGloves
+  id: CornivoreGlovesBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - Syndicate
+    - Pirate
+  - type: FactionClothingBlocker

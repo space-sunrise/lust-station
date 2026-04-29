@@ -1,0 +1,17 @@
+ent-OrganVoxLungs = { ent-OrganHumanLungs }
+    .suffix = вокс
+    .desc = { ent-OrganHumanLungs.desc }
+ent-OrganVoxStomach = желудок
+    .desc = Желудок с запахом аммиака.
+ent-OrganVoxLiver = печень
+    .desc = Пахнет горючим.
+ent-OrganVoxHeart = сердце
+    .desc = Странное сердце вокса.
+ent-OrganVoxKidneys = почка
+    .desc = Пахнет горючим.
+ent-OrganVoxEyes = глаза
+    .desc = Пара глаз вокса.
+ent-OrganVoxTongueA = язык
+    .desc = Мясистая мышца, в основном используемая для воплей.
+ent-OrganVoxTongueB = язык
+    .desc = Мясистая мышца, в основном используемая для воплей.

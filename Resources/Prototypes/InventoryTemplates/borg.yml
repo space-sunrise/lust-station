@@ -1,0 +1,80 @@
+- type: inventoryTemplate
+  id: borg
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, -0.09375
+  # Sunrise-Start
+  - name: armor
+    slotTexture: outerclothing
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
+
+- type: inventoryTemplate
+  id: borgShort
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, -0.1875
+  # Sunrise-Edit
+  - name: armor
+    slotTexture: outerclothing
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
+
+- type: inventoryTemplate
+  id: borgTall
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0.015625, -0.07 #Lust Edit
+  # Sunrise-Edit
+  - name: armor
+    slotTexture: outerclothing
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
+
+# taller than tall
+- type: inventoryTemplate
+  id: borgDutch
+  slots:
+  - name: head
+    slotTexture: head
+    slotFlags: HEAD
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,0
+    displayName: Head
+    offset: 0, 0.09375
+  # Sunrise-Edit
+  - name: armor
+    slotTexture: outerclothing
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End

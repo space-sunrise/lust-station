@@ -1,0 +1,50 @@
+- type: entity
+  name: appraisal tool
+  parent: RadioJammer
+  id: RadioJammerSyndicate
+  description: A beancounter's best friend, with a quantum connection to the galactic market and the ability to appraise even the toughest items. It will also tell you if a crate contains a completed bounty.
+  components:
+  - type: RadioJammer
+    frequenciesExcluded:
+    - 1213 # syndi radio
+  - type: Item
+    sprite: Objects/Tools/appraisal-tool.rsi
+    size: Small
+  - type: PriceGun
+  - type: UseDelay
+    delay: 3
+  - type: Tag
+    tags:
+    - AppraisalTool
+    - Sidearm
+  - type: Clothing
+    sprite: Objects/Tools/appraisal-tool.rsi
+    quickEquip: false
+    slots:
+    - Belt
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: RadioJammerBox
+  name: radio jammer
+  description: This device will disrupt any nearby outgoing radio communication as well as suit sensors when activated.
+  components:
+  - type: Item
+    size: Small
+  - type: Sprite
+    sprite: _Sunrise/Objects/Storage/boxicons.rsi
+    state: jammer
+  - type: SpawnItemsOnUse
+    items:
+    - id: RadioJammerSyndicate
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  name: the saboteur's communications jammer
+  parent: XenoborgRadioJammer
+  id: RadioJammerBorg
+  components:
+  - type: RadioJammer
+    frequenciesExcluded:
+    - 1213 # syndi radio

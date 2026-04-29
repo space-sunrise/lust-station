@@ -1,0 +1,12 @@
+ent-BaseBulletStarlight = Базовая пуля
+    .desc = Если вы это видите, вы, вероятно, мертвы!
+ent-BulletAdvTaser = разряд тазера
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BaseBulletRubber = { ent-BaseBulletStarlight }
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BulletEnergyCrossbow = { ent-BaseBullet }
+    .desc = { ent-BaseBullet.desc }
+ent-BulletMiniEnergyCrossbow = { ent-BulletEnergyCrossbow }
+    .desc = { ent-BulletEnergyCrossbow.desc }
+ent-BulletGrenadeCleanadeSyndicate = злой снаряд-клинада
+    .desc = Синдикатовский снаряд-клинада с агрессивной очищающей пеной.

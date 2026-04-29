@@ -1,0 +1,8 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: DemonHorns
+  name: demon horns
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Head/demon_horns.rsi
+    scale: 0.65, 0.65

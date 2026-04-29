@@ -1,0 +1,140 @@
+# Оружие
+
+- type: entity
+  name: The Chainsaw Energy Sword
+  suffix: Arrows
+  parent: BaseItem
+  id: ChainswordArrows
+  description: Technology and ultra-violence in one bottle!
+  components:
+  - type: EnergySword
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/_Lust/Weapons/start.ogg
+    soundDeactivate:
+      path: /Audio/_Lust/Weapons/start.ogg
+  - type: ItemToggleActiveSound
+    activeSound:
+      path: /Audio/_Lust/Weapons/idle.ogg
+  - type: ItemToggleSize
+    activatedSize: Huge
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/_Lust/Weapons/hit.ogg
+      params:
+        variation: 0.250
+    activatedSoundOnHitNoDamage:
+      path: /Audio/_Lust/Weapons/hit.ogg
+      params:
+        variation: 0.250
+        volume: -10
+    activatedSoundOnSwing:
+      path: /Audio/_Lust/Weapons/miss.ogg
+      params:
+        variation: 0.125
+    activatedDamage:
+        types:
+            Slash: 20
+            Blunt: 15
+            Structural: 25
+  - type: Sprite
+    sprite: _Lust/Objects/Weapons/Melee/chainsword.rsi
+    layers:
+      - state: chainsword
+      - state: chainsword_blade
+        color: "#FFFFFF"
+        visible: false
+        shader: unshaded
+        map: [ "blade" ]
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    attackRate: 1.2
+    damage:
+      types:
+        Blunt: 10
+        Slash: 5
+  - type: Item
+    size: Small
+    sprite: _Lust/Objects/Weapons/Melee/chainsword.rsi
+  - type: UseDelay
+    delay: 1.0
+  - type: ToggleableLightVisuals
+    spriteLayer: blade
+    inhandVisuals:
+      left:
+      - state: inhand-left-blade
+        shader: unshaded
+      right:
+      - state: inhand-right-blade
+        shader: unshaded
+
+- type: entity
+  name: Carnage
+  parent: [BaseItem, BaseSyndicateContraband]
+  suffix: Arrows
+  id: WeaponShotgunCarnage
+  description: The specialized "Carnage" shotgun uses .60 caliber shotgun shells.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Weapons/Guns/Shotguns/carnage.rsi
+    layers:
+      - state: icon
+        map: [ "enum.GunVisualLayers.Base" ]
+  - type: Item
+    size: Large
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: AmmoCounter
+  #- type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+  - type: Gun
+    fireRate: 2
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      collection: xm1014 # Sunrise-Edit
+    soundEmpty:
+      path: /Audio/Weapons/Guns/Empty/empty.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: MagazineShotgunCarnage
+        startingItem: MagazineShotgunCarnage
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineShotgunCarnage
+        whitelistFailPopup: gun-magazine-whitelist-fail
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineAmmoProvider
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 4500
+
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretArrows
+  name: ballistic turret
+  description: A ballistic machine gun auto-turret.
+  suffix: Arrows
+  components:
+  - type: NpcFactionMember
+    factions:
+    - Arrows
+  - type: Gun
+    fireRate: 12
+    soundGunshot: /Audio/Weapons/Guns/Gunshots/minigun.ogg
+

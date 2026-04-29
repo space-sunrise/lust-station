@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseAction
+  id: FleshSpiderWebAction
+  name: Web Weaving
+  description: Creates webs around you.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Action
+      icon: _Sunrise/FleshCult/Interface/Actions/flesh_web.png
+      useDelay: 10
+    - type: InstantAction
+      event: !type:SpiderWebActionEvent

@@ -1,0 +1,43 @@
+- type: entity
+  id: Vaccinator
+  parent: BaseMachinePowered
+  name: vaccinator
+  description: A machine that creates vaccines.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: Structures/Machines/vaccinator.rsi
+    layers:
+    - state: icon
+      map: ["enum.DiseaseMachineVisualLayers.IsRunning"]
+    - state: unlit
+      shader: unshaded
+      map: ["enum.DiseaseMachineVisualLayers.IsOn"]
+  - type: Appearance
+  - type: DiseaseMachineVisuals
+    idleState: icon
+    runningState: running
+  - type: Vaccinator
+    mixDuration: 10
+    mixingSound:
+      path: /Audio/Machines/spinning.ogg
+      params:
+        volume: -4
+  - type: ReactionMixer
+    reactionTypes:
+    - Vaccinator
+  - type: ItemSlots
+    slots:
+      mixer:
+        whitelist:
+          tags:
+            - CentrifugeCompatible
+  - type: Machine
+    board: VaccinatorMachineCircuitboard
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+      mixer: !type:ContainerSlot
+  - type: RequireProjectileTarget

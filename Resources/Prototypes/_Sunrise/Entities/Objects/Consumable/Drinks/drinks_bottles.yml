@@ -1,0 +1,38 @@
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottleGlassBaseFull]
+  id: DrinkCampariBottleFull
+  name: campari bottle
+  description: Tincture based on aromatic herbs and citrus fruits. Non-GMO!
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Campari
+          Quantity: 100
+  - type: Sprite
+    sprite: _Sunrise/Objects/Consumable/Drinks/campari.rsi
+  - type: SolutionContainerVisuals
+    maxFillLevels: 10
+    fillBaseName: fill-
+  - type: Sealable
+
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottleGlassBaseFull]
+  id: DrinkVodkizineBottleFull
+  name: Vodkizine bottle
+  description: The best cure for and cause of a hangover.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: Vodkizine
+          Quantity: 100
+  - type: Label
+    currentLabel: reagent-name-vodkizine
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/vodkabottle.rsi
+  - type: Sealable
+  - type: StaticPrice
+    price: 300

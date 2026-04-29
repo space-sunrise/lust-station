@@ -1,0 +1,15 @@
+- type: entity
+  id: OrganSwineStomach
+  parent: OrganAnimalStomach
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        stomach:
+          maxVol: 200
+        food:
+          maxVol: 5
+          reagents:
+          - ReagentId: UncookedAnimalProteins
+            Quantity: 5
+    - type: Stomach

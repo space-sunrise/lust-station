@@ -1,0 +1,34 @@
+﻿- type: stealTargetGroup
+  id: WeaponEnergyGunMultiphase
+  name: steal-target-groups-multiphase # x-01 multiphase energy gun
+  sprite:
+    sprite: _Starlight/Objects/Weapons/Guns/Battery/multiphase_gun.rsi
+    state: base
+
+- type: stealTargetGroup
+  id: PlutoniumCore
+  name: steal-target-groups-plutonium # plutonium core
+  sprite:
+    sprite: _Sunrise/Objects/Misc/plutonium_core.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: AdvancedDefibrillator
+  name: steal-target-groups-advanced-defibrillator # advanced defibrillator
+  sprite:
+    sprite: _Sunrise/Entities/Objects/Specific/Medical/advanced_defib.rsi
+    state: defib
+
+- type: stealTargetGroup
+  id: HandheldFax
+  name: objective-condition-steal-handheld-fax #handheld fax
+  sprite:
+    sprite: _Sunrise/Objects/Devices/handled_fax.rsi
+    state: icon
+
+- type: stealTargetGroup
+  id: JetpackChiefEngineerFilled
+  name: steal-target-groups-jetpack-ce
+  sprite:
+    sprite: _Sunrise/Objects/Tanks/Jetpacks/ce_void.rsi
+    state: icon

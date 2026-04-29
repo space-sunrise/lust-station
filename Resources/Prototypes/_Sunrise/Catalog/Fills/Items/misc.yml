@@ -1,0 +1,64 @@
+- type: entity
+  id: ClothingShoesBootsJackSecFilled
+  parent: ClothingShoesBootsJackSec
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife
+
+- type: entity
+  id: ClothingBeltBlueShieldWebbingFilled
+  parent: ClothingBeltBlueShieldWebbing
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MedkitCombatFilled
+        - id: Handcuffs
+        - id: Handcuffs
+        - id: Stunbaton
+        - id: GrenadeFlashBang
+        - id: HandheldHealthAnalyzer
+
+- type: entity
+  id: ClothingShoesBootsBlueShieldFilled
+  parent: ClothingShoesBootsBlueShield
+  suffix: Filled
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - CombatKnife
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.35
+
+- type: entity
+  id: ClothingBeltSecurityFilledERT
+  parent: ClothingBeltMilitaryWebbingERT
+  suffix: Filled, ERT
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: Telebaton
+        - id: Whistle
+        - id: Handcuffs
+        - id: Handcuffs
+        - id: HoloprojectorSecurity
+
+- type: entity
+  id: ClothingShoesBootsUSSPFilled
+  parent: ClothingShoesBootsCombat
+  suffix: Filled, Finka
+  components:
+  - type: ContainerFill
+    containers:
+      item:
+      - Finka
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.35

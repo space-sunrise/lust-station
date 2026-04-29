@@ -1,0 +1,315 @@
+# Ripley
+
+- type: entity
+  id: RipleyCentralElectronics
+  parent: BaseElectronics
+  name: ripley central control module
+  description: The electrical control center for the Ripley mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - RipleyCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: RipleyPeripheralsElectronics
+  parent: BaseElectronics
+  name: ripley peripherals control module
+  description: The electrical peripherals control for the Ripley mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - RipleyPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+# H.O.N.K.
+
+- type: entity
+  id: HonkerCentralElectronics
+  parent: BaseElectronics
+  name: H.O.N.K. central control module
+  description: The electrical control center for the H.O.N.K. mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - HonkerCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: HonkerPeripheralsElectronics
+  parent: BaseElectronics
+  name: H.O.N.K. peripherals control module
+  description: The electrical peripherals control for the H.O.N.K. mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - HonkerPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: HonkerTargetingElectronics
+  parent: BaseElectronics
+  name: H.O.N.K. weapon control and targeting module
+  description: The electrical targeting control for the H.O.N.K. mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mcontroller
+    - type: Tag
+      tags:
+      - HonkerTargetingControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+# HAMTR
+
+- type: entity
+  id: HamtrCentralElectronics
+  parent: BaseElectronics
+  name: HAMTR central control module
+  description: The electrical control center for the HAMTR mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - HamtrCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: HamtrPeripheralsElectronics
+  parent: BaseElectronics
+  name: HAMTR peripherals control module
+  description: The electrical peripherals control for the HAMTR mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - HamtrPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+# Clarke
+
+- type: entity
+  id: ClarkeCentralElectronics
+  parent: BaseElectronics
+  name: clarke central control module
+  description: The electrical control center for the Clarke mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - ClarkeCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: ClarkePeripheralsElectronics
+  parent: BaseElectronics
+  name: clarke peripherals control module
+  description: The electrical peripherals control for the Clarke mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - ClarkePeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+# Gygax
+
+- type: entity
+  id: GygaxCentralElectronics
+  parent: BaseElectronics
+  name: gygax central control module
+  description: The electrical control center for the Gygax mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - GygaxCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: GygaxPeripheralsElectronics
+  parent: BaseElectronics
+  name: gygax peripherals control module
+  description: The electrical peripherals control for the Gygax mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - GygaxPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: GygaxTargetingElectronics
+  parent: BaseElectronics
+  name: gygax weapon control and targeting module
+  description: The electrical targeting control for the Gygax mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mcontroller
+    - type: Tag
+      tags:
+      - GygaxTargetingControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+# Durand
+
+- type: entity
+  id: DurandCentralElectronics
+  parent: BaseElectronics
+  name: durand central control module
+  description: The electrical control center for the Durand mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - DurandCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: DurandPeripheralsElectronics
+  parent: BaseElectronics
+  name: durand peripherals control module
+  description: The electrical peripherals control for the Durand mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - DurandPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: DurandTargetingElectronics
+  parent: BaseElectronics
+  name: durand weapon control and targeting module
+  description: The electrical targeting control for the Durand mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mcontroller
+    - type: Tag
+      tags:
+      - DurandTargetingControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+      
+# Phazon
+
+- type: entity
+  id: PhazonCentralElectronics
+  parent: BaseElectronics
+  name: phazon central control module
+  description: The electrical control center for the Phazon mech.
+  components:
+    - type: Item
+      storedRotation: 0
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mainboard
+    - type: Tag
+      tags:
+      - PhazonCentralControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: PhazonPeripheralsElectronics
+  parent: BaseElectronics
+  name: phazon peripherals control module
+  description: The electrical peripherals control for the Phazon mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: id_mod
+    - type: Tag
+      tags:
+      - PhazonPeripheralsControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics
+
+- type: entity
+  id: PhazonTargetingElectronics
+  parent: BaseElectronics
+  name: phazon weapon control and targeting module
+  description: The electrical targeting control for the Phazon mech.
+  components:
+    - type: Sprite
+      sprite: Objects/Misc/module.rsi
+      state: mcontroller
+    - type: Tag
+      tags:
+      - PhazonTargetingControlModule
+    - type: GuideHelp
+      guides:
+      - Robotics

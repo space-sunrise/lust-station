@@ -1,0 +1,60 @@
+# jumpsuit
+- type: loadout
+  id: IAAuniformFormalSuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitIAAFormal
+
+- type: loadout
+  id: IAAuniformFormalSkirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtIAAFormalDress
+
+
+- type: loadout
+  id: IAAuniformElegantSuit
+  equipment:
+    jumpsuit: ClothingUniformElegantJumpsuitIAA
+
+
+- type: loadout
+  id: IAAuniformElegantSkirt
+  equipment:
+    jumpsuit: ClothingUniformElegantJumpskirtIAA
+
+# backpacks
+- type: loadout
+  id: IAASatchel
+  equipment:
+    back: ClothingBackpackSatchelIAABlack
+
+- type: loadout
+  id: IAAWhiteSatchel
+  equipment:
+    back: ClothingBackpackSatchelIAAWhite
+
+# coats
+- type: loadout
+  id: IAACoat
+  equipment:
+    outerClothing: ClothingOuterCoatIAABlackCoat
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: MasterIAA
+
+# neck
+
+- type: loadout
+  id: IAACloak
+  sponsorOnly: true
+  equipment:
+    neck: ClothingNeckCloakFormalIAACloak
+
+
+- type: loadoutEffectGroup
+  id: MasterIAA
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobIAA
+      time: 90000 #25 hrs

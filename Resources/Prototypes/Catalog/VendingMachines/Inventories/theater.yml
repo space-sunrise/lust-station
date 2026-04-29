@@ -1,0 +1,96 @@
+- type: vendingMachineInventory
+  id: AutoDrobeInventory
+  startingInventory:
+    ClothingHeadHatJester: 1
+    ClothingUniformJumpsuitJester: 1
+    ClothingHeadHatJesterAlt: 1
+    ClothingUniformJumpsuitJesterAlt: 1
+    ClothingShoesJester: 2
+    ClothingOuterWinterClown: 1
+    ClothingOuterWinterMime: 1
+    ClothingOuterWinterMusician: 1
+    ClothingMaskJoy: 2
+    ClothingHeadHatCardborg: 2
+    ClothingOuterCardborg: 2
+    ClothingHeadHatSombrero: 2
+    ClothingOuterPonchoClassic: 2
+    ClothingHeadHatPwig: 2
+    ClothingOuterRobesJudge: 2
+    ClothingOuterPoncho: 2
+    # Sunrise - Start
+    ClothingOuterCoatMansport: 2
+    ClothingOuterCoatJilldress: 2
+    ClothingOuterKigurumiPanda: 4
+    ClothingFairyWings: 2
+    ClothingLosyashWings: 2
+    ClothingDemonWings : 2
+    ClothingArchangelWings: 2
+    ClothingTechWings : 2
+    ClothingVoidWings : 2
+    ClothingNormalWings : 2
+    ClothingUniformPencilSkirt : 4
+    ClothingUniformMajimaTishka : 3
+    ClothingUniformMetatonTishka : 3
+    ClothingShoesBootsMettaton : 3
+    ClothingShoesBootsMajima : 3
+    ClothingUniformJumpskirtQipao: 2
+    ClothingMaskZombie: 2
+    # Sunrise - End
+    ClothingHeadHatSantahat: 2
+    ClothingOuterSanta: 2
+    ClothingHeadHatSkub: 2
+    ClothingOuterSkub: 2
+    ClothingHeadHatBeretFrench: 2
+    ClothingOuterSuitChicken: 2
+    ClothingHeadHatChickenhead: 2
+    ClothingOuterSuitMonkey: 2
+    ClothingHeadHatPumpkin: 2
+    ClothingHeadHatShrineMaidenWig: 2
+    ClothingOuterSuitShrineMaiden: 2
+    Gohei: 2
+    ClothingOuterSuitWitchRobes: 2
+    ClothingHeadHatWitch1: 2
+    ClothingHeadHatRedRacoon: 2
+    ClothingOuterRedRacoon: 2
+    ClothingHeadPaperSack: 2
+    ClothingHeadPaperSackSmile: 2
+    ClothingEyesBlindfold: 1
+    ClothingHeadRastaHat: 2
+    ClothingUniformJumpsuitDameDane: 2
+    ClothingShoesDameDane: 2
+    ClothingOuterDameDane: 2
+    ClothingOuterClownPriest: 1
+    ClothingMaskSadMime: 1
+    ClothingMaskScaredMime: 1
+    ClothingUniformJumpsuitKimono: 1
+    ClothingHeadHatCasa: 1
+    FoodPoppy: 1
+    ClothingHeadHatGladiator: 1
+    ClothingUniformJumpsuitGladiator: 1
+    ClothingHeadHatCowboyBrown: 1
+    ClothingHeadHatCowboyBlack: 1
+    ClothingHeadHatCowboyWhite: 1
+    ClothingHeadHatCowboyGrey: 1
+    ClothingShoesBootsCowboyBrown: 1
+    ClothingShoesBootsCowboyBlack: 1
+    ClothingShoesBootsCowboyWhite: 1
+# Lust-Start
+    ClothingBeerCostume: 2
+    ClothingPivozavr: 2
+    ClothingStripperSlimSuit: 2
+    ClothingStripperStarPastiesSuit: 2
+# Lust-End
+  contrabandInventory:
+    ClothingHeadHatRichard: 1
+    ToyFigurineBoxer: 1
+    ToyFigurineMusician: 1
+    ClothingShoesBling: 1
+    ClothingShoesBootsCowboyFancy: 1
+    ClothingOuterDogi: 1
+    ClothingOuterSuitCarp: 1
+    ClothingHeadHelmetDogi: 1
+    ClothingMaskDogi: 1
+    UmbrellaEntity: 1
+    ClothingMaskBlushingClown: 1
+    ClothingMaskBlushingMime: 1
+    ClothingHeadHatCowboyBountyHunter: 1

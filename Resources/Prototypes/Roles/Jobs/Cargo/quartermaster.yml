@@ -1,0 +1,68 @@
+- type: job
+  id: Quartermaster
+  name: job-name-qm
+  description: job-description-qm
+  playTimeTracker: JobQuartermaster
+  requirements:
+    - !type:RoleTimeRequirement
+      role: JobCargoTechnician
+      time: 5h
+    - !type:RoleTimeRequirement
+      role: JobSalvageSpecialist
+      time: 2.5h
+    - !type:DepartmentTimeRequirement
+      department: Cargo
+      time: 10h
+  weight: 10
+  startingGear: QuartermasterGear
+  icon: "JobIconQuarterMaster"
+  supervisors: job-supervisors-captain
+  canBeAntag: true # Sunrise-Edit
+  radioBold: true # Sunrise-Edit
+  displayWeight: 40  # Sunrise-Edit
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-intendant
+  - job-alt-title-director-of-logistics
+  # Sunrise-End
+  access:
+  - Cargo
+  - Salvage
+  - CargoPurchaseAccess  # Sunrise-Edit
+  - Quartermaster
+  - Maintenance
+  - External
+  - Command
+  - Brig
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleImplantBlueShield ] # Sunrise-Edit
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  speciesBlacklist:
+  - Vox # Sunrise-Edit
+
+- type: startingGear
+  id: QuartermasterGear
+  equipment:
+    id: QuartermasterPDA
+    ears: ClothingHeadsetQM
+    belt: BoxFolderClipboardThreePapers
+    pocket1: AppraisalTool
+  storage:
+    back:
+    - Flash
+
+- type: chameleonOutfit
+  id: QuartermasterChameleonOutfit
+  job: Quartermaster
+  hasMindShield: false #Sunrise-Edit
+  equipment:
+    head: ClothingHeadHatQMsoft
+    eyes: ClothingEyesGlassesSunglasses
+    mask: ClothingMaskBreath
+    outerClothing: ClothingOuterWinterQM
+    neck: ClothingNeckCloakQm
+    gloves: ClothingHandsKnuckleDustersQM

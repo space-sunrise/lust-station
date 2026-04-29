@@ -1,0 +1,51 @@
+
+- type: job
+  id: SecurityOfficer
+  name: job-name-security
+  description: job-description-security
+  playTimeTracker: JobSecurityOfficer
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 2.5h
+  startingGear: SecurityOfficerGear
+  icon: "JobIconSecurityOfficer"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  displayWeight: 10
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-law-enforcer
+  - job-alt-title-security-specialist
+  # Sunrise-End
+  access:
+  - Security
+  - Brig
+  # - Maintenance # Sunrise-Edit
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SecurityOfficerGear
+  equipment:
+    # eyes: ClothingEyesGlassesSecurity # Sunrise Edit
+    ears: ClothingHeadsetSecurity
+    # head: ClothingHeadHelmetBasic # Sunrise Edit
+    gloves: ClothingHandsGlovesColorBlack
+  storage:
+    back:
+    - Flash
+    # - MagazinePistol # Sunrise-Edit
+
+- type: chameleonOutfit
+  id: SecurityOfficerChameleonOutfit
+  job: SecurityOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretSecurity
+    mask: ClothingMaskGasSecurity
+    neck: Dinkystar
+    gloves: ClothingHandsGlovesColorBlack

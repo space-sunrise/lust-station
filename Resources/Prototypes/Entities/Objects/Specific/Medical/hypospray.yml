@@ -1,0 +1,681 @@
+- type: entity
+  abstract: true
+  parent: BaseItem
+  id: BaseHypospray
+  components:
+  - type: Injector
+    solutionName: hypospray
+    ignoreClosed: false
+    activeModeProtoId: HyposprayDynamicMode
+    allowedModes:
+    - HyposprayDynamicMode
+    - HyposprayInjectMode
+  - type: Appearance
+
+- type: entity
+  parent: [BaseHypospray, BaseGrandTheftContraband]
+  id: Hypospray
+  name: hypospray
+  description: A sterile injector for rapid administration of drugs to patients.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    layers:
+    - state: hypo
+      map: ["enum.SolutionContainerLayers.Base"]
+    - state: hypo_fill1
+      map: ["enum.SolutionContainerLayers.Fill"]
+      visible: false
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 30
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+    exactVolume: true
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice
+    price: 750
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: Hypospray
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: hypo_fill
+    solutionName: hypospray
+
+- type: entity
+  parent: [BaseHypospray, BaseSyndicateContraband]
+  id: SyndiHypo
+  name: gorlex hypospray
+  description: A sterile injector for rapid administration of drugs. Reverse-engineered from Nanotrasen designs, Cybersun produces these in limited quantities for Gorlex Marauders' corpsmen.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Objects/Specific/Medical/syndihypo.rsi #Sunrise-edit
+    layers:
+      - state: hypo
+        map: ["enum.SolutionContainerLayers.Base"]
+      - state: hypo_fill1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        visible: false
+  - type: Item
+    sprite: _Sunrise/Objects/Specific/Medical/syndihypo.rsi #Sunrise-edit
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 20
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: hypo_fill
+    solutionName: hypospray
+
+- type: entity
+  parent: BaseHypospray
+  id: BorgHypo
+  name: borghypo
+  description: A sterile injector for rapid administration of drugs to patients. This integrated model is specialized for use by medical borgs.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/hypospray.rsi
+    layers:
+    - state: borghypo
+      map: [ "enum.SolutionContainerLayers.Base" ]
+    - state: borghypo_fill1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Item
+    sprite: Objects/Specific/Medical/hypospray.rsi
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 10
+  - type: RefillableSolution
+    solution: hypospray
+  - type: ExaminableSolution
+    solution: hypospray
+  - type: SolutionContainerVisuals
+    maxFillLevels: 2
+    fillBaseName: borghypo_fill
+    solutionName: hypospray
+  - type: UseDelay
+    delay: 0.5
+
+- type: entity
+  parent: SyndiHypo
+  id: AdminHypo
+  name: experimental hypospray
+  suffix: Admeme
+  description: The ultimate application of bluespace technology and rapid chemical administration.
+  components:
+    - type: SolutionContainerManager
+      solutions:
+        hypospray:
+          maxVol: 3000
+    - type: UseDelay
+      delay: 0.0
+
+- type: entity
+  parent: BaseHypospray
+  id: ChemicalMedipen
+  name: chemical medipen
+  description: A single-dose, non-refillable medipen.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: firstaid
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: Item
+    sprite: Objects/Specific/Medical/medipen.rsi
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#439822"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#439822"
+      - state: base-colorB-inhand-right
+    size: Tiny
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+  - type: ExaminableSolution
+    solution: pen
+    exactVolume: true
+  - type: Injector
+    solutionName: pen
+    currentTransferAmount: null
+    activeModeProtoId: HyposprayInjectMode
+    allowedModes:
+    - HyposprayInjectMode
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: firstaid_empty
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 50
+  - type: SpaceGarbage
+  - type: StaticPrice
+    price: 75 # These are limited supply items.
+  - type: TrashOnSolutionEmpty
+    solution: pen
+
+- type: entity
+  parent: ChemicalMedipen
+  id: EmergencyMedipen
+  name: emergency medipen
+  description: A single-dose, non-refillable medipen containing epinephrine and tranexamic acid, used to temporarily stabilize patients in critical condition and buy time for them to recieve proper medical treatment. Beware of overdose.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Epinephrine
+          Quantity: 12
+        - ReagentId: TranexamicAcid
+          Quantity: 3
+
+- type: entity
+  parent: ChemicalMedipen
+  id: AntiPoisonMedipen
+  name: poison auto-injector
+  description: A single-dose, non-refillable medipen containing ultravasculine and epinephrine, used to quickly and easily treat toxin poisoning.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#573d9e"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#573d9e"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: penacid
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: penacid_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Ultravasculine
+          Quantity: 10
+        - ReagentId: Epinephrine
+          Quantity: 5
+
+- type: entity
+  parent: ChemicalMedipen
+  id: BruteAutoInjector
+  name: brute auto-injector
+  description: A single-dose, non-refillable medipen containing bicaridine and tranexamic acid, used to quickly and easily treat simple physical injuries. Commonly used as a combat medicine.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#c73333"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#c73333"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: bicpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: bicpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Bicaridine
+          Quantity: 15
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+
+- type: entity
+  parent: ChemicalMedipen
+  id: BurnAutoInjector
+  name: burn auto-injector
+  description: A single-dose, non-refillable medipen containing dermaline and leporazine, used to quickly and easily treat non-chemical burns. Commonly used as a combat medicine.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#427485"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#427485"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: dermpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: dermpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15 #Sunrise-Edit
+        reagents:
+        - ReagentId: Dermaline
+          Quantity: 10
+        - ReagentId: Leporazine
+          Quantity: 5 #Sunrise-Edit
+
+- type: entity
+  parent: ChemicalMedipen
+  id: RadAutoInjector
+  name: rad auto-injector
+  description: A single-dose, non-refillable medipen containing arithrazine and bicaridine, used to quickly and easily treat radiation poisoning.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#e3832f"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#e3832f"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: arithpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: arithpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 20
+        reagents:
+        - ReagentId: Arithrazine
+          Quantity: 15
+        - ReagentId: Bicaridine
+          Quantity: 5
+
+- type: entity
+  parent: ChemicalMedipen
+  id: PunctAutoInjector
+  name: puncturase auto-injector
+  description: A single-dose, non-refillable medipen containing puncturase and tranexamic acid, used to quickly and easily treat puncture wounds. Commonly used as a combat medicine.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#c7be5d"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#c7be5d"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: punctpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: punctpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Puncturase
+          Quantity: 10
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+
+- type: entity
+  parent: ChemicalMedipen
+  id: PyraAutoInjector
+  name: pyrazine auto-injector
+  description: A single-dose, non-refillable medipen containing pyrazine and dermaline, used to quickly and easily treat thermal burns. Commonly used as a combat medicine.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#c7a45d"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#c7a45d"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: pyrapen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: pyrapen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15 #Sunrise-Edit
+        reagents:
+        - ReagentId: Pyrazine
+          Quantity: 5 #Sunrise-Edit
+        - ReagentId: Dermaline
+          Quantity: 10
+
+- type: entity
+  parent: ChemicalMedipen
+  id: AirlossAutoInjector
+  name: airloss auto-injector
+  description: A single-dose, non-refillable medipen containing saline and dexalin plus, used to quickly and easily treat blood loss and asphyxiation.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#5d81c7"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#5d81c7"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: dexpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: dexpen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30 #Sunrise-Edit
+        reagents:
+        - ReagentId: Saline
+          Quantity: 15 #Sunrise-Edit
+        - ReagentId: DexalinPlus
+          Quantity: 15 #Sunrise-Edit
+
+- type: entity
+  parent: ChemicalMedipen
+  id: SpaceMedipen
+  name: space medipen
+  description: A single-dose, non-refillable medipen containing barozine and leporazine, used to protect exposed flesh from the deadly effects of space.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#a84597"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#a84597"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: hypovolemic
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: hypovolemic_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+          - ReagentId: Leporazine
+            Quantity: 10
+          - ReagentId: BarozinePlus
+            Quantity: 20
+
+- type: entity
+  parent: [ChemicalMedipen, BaseSyndicateContraband]
+  id: Stimpack
+  name: hyperzine injector
+  description: A chemical injector containing a large shot of pure hyperzine. For when it's time to throw down. Effects last for about 60 seconds.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#9a040e"
+      - state: base-colorB-inhand-left
+        color: "#c62933"
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#9a040e"
+      - state: base-colorB-inhand-right
+        color: "#c62933"
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: stimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 30
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: stimpen_empty
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: [ChemicalMedipen, BaseSyndicateContraband]
+  id: StimpackMini
+  name: hyperzine microinjector
+  description: A chemical microinjector containing a small shot of pure hyperzine. Effects last for about 30 seconds.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#9a040e"
+      - state: base-colorB-inhand-left
+        color: "#c62933"
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#9a040e"
+      - state: base-colorB-inhand-right
+        color: "#c62933"
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: microstimpen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 15
+        reagents:
+        - ReagentId: Stimulants
+          Quantity: 15
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: microstimpen_empty
+  - type: StaticPrice
+    price: 583 # 3500 for 6 as a freaky fraction
+
+- type: entity
+  parent: [ChemicalMedipen, BaseSyndicateContraband]
+  id: CombatMedipen
+  name: combat medipen
+  description: A single-dose, non-refillable medipen containing a chemical cocktail that treats most forms of damage.
+  components:
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-needle-inhand-left
+      - state: base-colorA-inhand-left
+        color: "#5bcaca"
+      - state: base-colorB-inhand-left
+      right:
+      - state: base-needle-inhand-right
+      - state: base-colorA-inhand-right
+        color: "#5bcaca"
+      - state: base-colorB-inhand-right
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: morphen
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: morphen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 30
+        reagents:
+        - ReagentId: Omnizine
+          Quantity: 25
+        - ReagentId: TranexamicAcid
+          Quantity: 5
+  - type: StaticPrice
+    price: 1500
+
+- type: entity
+  parent: Pen # It is just like normal pen, isn't it?
+  id: Hypopen
+  suffix: Hypopen
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      hypospray:
+        maxVol: 10
+  - type: RefillableSolution
+    solution: hypospray
+    refillTime: 0.75
+    maxRefill: 5
+  - type: ExaminableSolution
+    solution: hypospray
+    heldOnly: true # Allow examination only when held in hand.
+    exactVolume: true
+  - type: Injector
+    solutionName: hypospray
+    activeModeProtoId: HypopenDynamicMode
+    allowedModes:
+    - HyposprayInjectMode
+    - HypopenDynamicMode
+  - type: UseDelay
+    delay: 0.5
+  - type: StaticPrice # A new shitcurity meta
+    price: 75
+  - type: EmitSoundOnUse
+    handle: false # don't want the sound to stop the self-inject from triggering
+
+- type: entity
+  parent: [ BaseItem, BaseSyndicateContraband ]
+  id: HypopenBox
+  name: hypopen box
+  description: A small box containing a hypopen. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Objects/Storage/penbox.rsi
+    state: hypopen
+  - type: SpawnItemsOnUse
+    items:
+    - id: Hypopen
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+
+- type: entity
+  parent: ChemicalMedipen
+  id: WehMedipen
+  name: weh auto-injector
+  description: A non-refillable medipen containing multiple doses of weh.
+  components:
+  - type: Sprite
+    sprite: Objects/Specific/Medical/medipen.rsi
+    layers:
+    - state: medipen
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 1
+    changeColor: false
+    emptySpriteName: medipen_empty
+  - type: SolutionContainerManager
+    solutions:
+      pen:
+        maxVol: 60
+        reagents:
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 60

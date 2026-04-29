@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Made for sunrise",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "predalien_chest",
+      "directions": 4
+    },
+    {
+      "name": "pretor_chest",
+      "directions": 4
+    },
+    {
+      "name": "queen_chest",
+      "directions": 4
+    },
+    {
+      "name": "spitter_chest",
+      "directions": 4
+    },
+    {
+      "name": "runner_chest",
+      "directions": 4
+    },
+    {
+      "name": "neo_body",
+      "directions": 4
+    },
+    {
+      "name": "spitter_body",
+      "directions": 4
+    },
+    {
+      "name": "cougar_body",
+      "directions": 4
+    }
+  ]
+}

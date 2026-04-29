@@ -1,0 +1,21 @@
+﻿- type: entity
+  id: CrateVendingMachineRestockUnderwearFilled
+  parent: CratePlastic
+  name: Underwear restock crate
+  description: Contains a restock box for a Monkin' Donuts dispenser.
+  components:
+  - type: StorageFill
+    contents:
+    - id: VendingMachineRestockUnderwear
+      amount: 2
+
+- type: entity
+  id: CrateVendingMachineRestockKinkMateFilled
+  parent: CratePlastic
+  name: Kink mate restock crate
+  description: Contains a restock box for a Monkin' Donuts dispenser.
+  components:
+  - type: StorageFill
+    contents:
+    - id: VendingMachineRestockKinkMate
+      amount: 2

@@ -1,0 +1,426 @@
+# region base GunSafe
+- type: entity
+  id: GunSafeSunrise
+  parent: GunSafe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/lethal.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: EntityStorageVisuals
+    stateBaseClosed: base
+    stateDoorOpen: open
+    stateDoorClosed: door
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+
+- type: entity
+  id: GunSafeBaseSecureSunrise
+  parent: GunSafeSunrise
+  suffix: Armory, Locked
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+
+- type: entity
+  id: GunSafeHandgunSunrise
+  parent: GunSafeSunrise
+  name: handgun safe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/small_lethal.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+
+- type: entity
+  id: GunSafeHandgunBaseSecureSunrise
+  parent: GunSafeHandgunSunrise
+  suffix: Armory, Locked
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+
+- type: entity
+  id: GunSafeNonlethalHandgunSunrise
+  parent: GunSafeSunrise
+  name: non-lethal handgun safe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/small_nonlethal.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.2"
+        density: 150
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: GunSafeNonlethalHandgunBaseSecureSunrise
+  parent: GunSafeNonlethalHandgunSunrise
+  suffix: Security, Locked
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: GunSafeNonlethalSunrise
+  parent: GunSafeSunrise
+  name: non-lethal safe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/nonlethal.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+
+- type: entity
+  id: GunSafeNonlethalBaseSecureSunrise
+  parent: GunSafeNonlethalSunrise
+  suffix: Security, Locked
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: GunSafeSyndicateSunrise
+  parent: GunSafeSunrise
+  name: syndicate gun safe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/syndicate.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+
+- type: entity
+  id: GunSafeSyndicateBaseSecureSunrise
+  parent: GunSafeSyndicateSunrise
+  suffix: Syndicate, Locked
+  components:
+  - type: AccessReader
+    access: [["SyndicateAgent"]]
+
+- type: entity
+  id: GunSafeSuperweapon
+  parent: GunSafeSunrise
+  name: superweapon gun safe
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/Gunsafes/super.rsi
+    noRot: true
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.3,0.3,0.2"
+        density: 800
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+
+- type: entity
+  id: GunSafeSuperweaponBaseSecure
+  parent: GunSafeSuperweapon
+  suffix: Armory, Locked
+  components:
+  - type: AccessReader
+    access: [["Armory"]]
+
+- type: entity
+  id: GunSafeSuperweaponSecureGamma
+  description: Heavy reinforced safe delivered from NanoTrasen Smart Arms Division for field testing. Autounlocked at Gamma code.
+  parent: GunSafeSuperweapon
+  suffix: Gamma, Locked
+  components:
+  - type: AccessReader
+    access: [["CentralCommand"]]
+    alertAccesses:
+      gamma: GammaAlertAccesses
+  - type: Tag
+    tags:
+    - EmagImmune
+    - AccessBreakerImmune
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 99999
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Anchorable
+    flags:
+    - Anchorable
+# region End
+
+- type: entity
+  id: LockerBlueShield
+  parent: LockerBaseSecure
+  name: blue shield officer's locker
+  components:
+    - type: Appearance
+    - type: Sprite
+      sprite: _Sunrise/Structures/Storage/closet.rsi
+      noRot: true
+      layers:
+      - state: generic
+        map: ["enum.StorageVisualLayers.Base"]
+      - state: generic_door
+        map: ["enum.StorageVisualLayers.Door"]
+      - state: locked
+        map: ["enum.LockVisualLayers.Lock"]
+        shader: unshaded
+      - state: welded
+        visible: false
+        map: ["enum.WeldableLayers.BaseWelded"]
+    - type: EntityStorageVisuals
+      stateBaseClosed: bssecure
+      stateDoorOpen: bssecure_open
+      stateDoorClosed: bssecure_door
+    - type: AccessReader
+      access: [["BlueShield"]]
+
+- type: entity
+  id: LockerBlueShieldEnsign
+  parent: LockerBlueShield
+  name: blue shield ensign locker
+  components:
+  - type: AccessReader
+    access: [["BlueShieldEnsign"]]
+
+- type: entity
+  id: LockerPilot
+  parent: LockerBaseSecure
+  name: security pilot's locker
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/closet.rsi
+    noRot: true
+    layers:
+    - state: generic
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: generic_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: EntityStorageVisuals
+    stateBaseClosed: pilot
+    stateDoorOpen: pilot_open
+    stateDoorClosed: pilot_door
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: ClosetPatologoanatom
+  name: patologoanatom's locker
+  parent: LockerBaseSecure
+  suffix: Empty
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/closet.rsi
+    noRot: true
+    layers:
+    - state: generic
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: generic_door
+      map: ["enum.StorageVisualLayers.Door"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+      shader: unshaded
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Appearance
+  - type: EntityStorageVisuals
+    stateBaseClosed: patologoanatom
+    stateDoorOpen: patologoanatom_open
+    stateDoorClosed: patologoanatom_door
+  - type: AccessReader
+    access: [["Medical"]]
+    alertAccesses:
+      red: RedAlertAccesses
+      blue: BlueAlertAccessesHOS
+      gamma: GammaAlertAccesses
+
+- type: entity
+  id: ClosetPatologoanatomFilled
+  parent: ClosetPatologoanatom
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingUniformJumpsuitMedicalDoctor
+        - id: HandheldHealthAnalyzer
+        - id: BoxForensicPad
+        - id: ClothingHeadsetMedical
+        - id: HeadSkeleton
+        - id: ClothingHeadHatPatologonatHat
+        - id: Scalpel
+        - id: ClothingHandsGlovesNitrile
+        - id: ClothingShoesColorBlack
+        - id: RubberStampPath
+        - id: ClothingOuterHospitalGown
+          amount: 2
+
+- type: entity
+  id: LockerMiningSpecialist
+  parent: LockerBaseSecure
+  suffix: Empty
+  name: mining specialist's equipment
+  description: Nevermind the pickaxe.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: _Sunrise/Structures/Storage/closet.rsi
+  - type: EntityStorageVisuals
+    stateBaseClosed: mining
+    stateDoorOpen: mining_open
+    stateDoorClosed: mining_door
+  - type: AccessReader
+    access: [["Mining"]]
+    alertAccesses:
+      red: RedAlertAccesses
+      blue: BlueAlertAccessesHOS
+      gamma: GammaAlertAccesses
+
+- type: entity
+  id: LockerMiningSpecialistFilled
+  parent: LockerMiningSpecialist
+  suffix: Filled, Hardsuit
+  name: mining specialist's equipment
+  description: Nevermind the pickaxe.
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: ClothingOuterHardsuitSalvage
+        - id: ToolboxMechanicalFilledAllTools
+        - id: ClothingMaskGasExplorer
+        - id: AirTankFilled
+        - id: RadioHandheld
+        - id: OreBag
+        - id: Nanopaste
+
+# Representative
+- type: entity
+  id: LockerRepresentative
+  name: representative locker
+  parent: LockerBaseSecure
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Ntrep"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: hop
+    stateDoorOpen: hop_open
+    stateDoorClosed: representative_door
+
+- type: entity
+  id: LockerRepresentativeEmpty
+  name: representative locker
+  parent: LockerBaseSecure
+  suffix: Empty
+  components:
+  - type: Appearance
+  - type: AccessReader
+    access: [["Ntrep"]]
+  - type: EntityStorageVisuals
+    stateBaseClosed: hop
+    stateDoorOpen: hop_open
+    stateDoorClosed: representative_door
+
+- type: entity
+  id: LockerRepresentativeFilled
+  parent: LockerRepresentative
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: HandheldFax
+

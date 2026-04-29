@@ -1,0 +1,82 @@
+- type: entity
+  id: BaseStructure
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Pierceable
+    level: Metal
+  - type: Transform
+    anchored: true
+  - type: Clickable
+  - type: GravityAffected
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Pullable
+  - type: Tag
+    tags:
+      - Structure
+  - type: StaticPrice
+    price: 0
+  # Sunrise-Edit
+  - type: DamageOverlay
+    damagePopupType: SmallFloating
+    isStructure: true
+  - type: TTS
+    voice: Portal2FactCore  # Sunrise-TTS
+
+- type: entity
+  # This means that it's not anchored on spawn.
+  id: BaseStructureDynamic
+  parent: BaseStructure
+  abstract: true
+  components:
+# These might/might not be a good idea
+#  - type: MovedByPressure
+#  - type: DamageOnHighSpeedImpact
+#  - type: TileFrictionModifier
+#    modifier: 0.5
+  - type: Transform
+    anchored: false
+  - type: Clickable
+  - type: Physics
+    bodyType: Dynamic
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+  - type: Anchorable
+  # Sunrise-Start
+  - type: SunriseThrownItemDamage
+    damageTypes:
+      types:
+        Blunt: 10
+  # Sunrise-End
+
+# For use with yaml composition, so that all wheeled structures can easily be changed.
+- type: entity
+  id: StructureWheeled
+  abstract: true
+  components:
+    - type: TileFrictionModifier
+      modifier: 0.4

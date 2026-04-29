@@ -1,0 +1,63 @@
+- type: job
+  id: ResearchDirector
+  name: job-name-rd
+  description: job-description-rd
+  playTimeTracker: JobResearchDirector
+  requirements:
+  - !type:RoleTimeRequirement
+    role: JobScientist
+    time: 5h
+  - !type:DepartmentTimeRequirement
+    department: Science
+    time: 10h
+  weight: 10
+  startingGear: ResearchDirectorGear
+  icon: "JobIconResearchDirector"
+  supervisors: job-supervisors-captain
+  canBeAntag: true # Sunrise-Edit
+  radioBold: true # Sunrise-Edit
+  displayWeight: 50 # Sunrise-Edit
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-science-lead
+  # Sunrise-End
+  access:
+  - Research
+  - Command
+  - Maintenance
+  - ResearchDirector
+  - Brig
+  - Cryogenics
+  - ResearchConsoleAccess # Sunrise-Edit
+  special:
+  - !type:AddImplantSpecial
+    implants: [ DeathRattleImplantBlueShield ] # Sunrise-Edit
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+  speciesBlacklist:
+  - Vox # Sunrise-Edit
+
+- type: startingGear
+  id: ResearchDirectorGear
+  equipment:
+    id: RnDPDA
+    pocket1: HandheldRoboAnalyzer # Sunrise-Edit
+    pocket2: Nanopaste # Sunrise-Edit
+    ears: ClothingHeadsetRD
+  storage:
+    back:
+    - Flash
+    - Telebaton # Sunrise-Edit
+
+- type: chameleonOutfit
+  id: ResearchDirectorChameleonOutfit
+  job: ResearchDirector
+  hasMindShield: false #Sunrise-Edit
+  equipment:
+    head: ClothingHeadHatBeretRND
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckCloakRd
+    outerClothing: ClothingOuterCoatRD
+    gloves: ClothingHandsGlovesColorPurple

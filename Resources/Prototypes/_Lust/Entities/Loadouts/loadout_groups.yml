@@ -1,0 +1,7 @@
+﻿- type: loadoutGroup
+  id: SpecialLoadout
+  name: loadout-group-special-items
+  minLimit: 0
+  loadouts:
+  - QilluCloak
+  - Boombox

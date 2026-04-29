@@ -1,0 +1,31 @@
+- type: vendingMachineInventory
+  id: WinterDrobeInventory
+  startingInventory:
+    ClothingNeckScarfStripedRed: 3
+    ClothingNeckScarfStripedGreen: 3
+    ClothingNeckScarfStripedBlue: 3
+    ClothingNeckScarfStripedBlack: 3
+    ClothingNeckScarfStripedBrown: 3
+    ClothingNeckScarfStripedLightBlue: 3
+    ClothingNeckScarfStripedOrange: 3
+    ClothingNeckScarfStripedPurple: 3
+    ClothingOuterCoatTrench: 6
+    ClothingOuterWinterCoat: 6
+    ClothingShoesBootsWinter: 6
+    ClothingOuterFlannelRed: 2
+    ClothingOuterFlannelBlue: 2
+    ClothingOuterFlannelGreen: 2
+    ClothingOuterCoatBomber: 3
+    ClothingHeadHatCanadaBeanie: 4
+    ClothingHeadHatSantahat: 2
+    ClothingHeadHatXmasCrown: 2
+    #sunrise-start
+    ClothingNeckScarfStripedCyan: 3
+    ClothingNeckScarfStripedYellow: 3
+    ClothingOuterChristmasSweeter: 3
+    ClothingHandsGlovesChristmas: 3
+    ClothingHandsGlovesChristmasLong: 3
+    #sunrise-end
+  emaggedInventory:
+    ClothingNeckScarfStripedSyndieGreen: 3
+    ClothingNeckScarfStripedSyndieRed: 3

@@ -1,0 +1,66 @@
+﻿- type: job
+  id: Captain
+  name: job-name-captain
+  description: job-description-captain
+  playTimeTracker: JobCaptain
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Engineering
+      time: 4h
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 4h
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 4h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 4h
+    - !type:DepartmentTimeRequirement
+      department: Command
+      time: 4h
+  weight: 20
+  startingGear: CaptainGear
+  icon: "JobIconCaptain"
+  joinNotifyCrew: true
+  supervisors: job-supervisors-centcom
+  canBeAntag: false
+  displayWeight: 100 # Sunrise-Edit
+  radioBold: true # Sunrise-Edit
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant, DeathRattleImplantBlueShield ]
+  - !type:AddComponentSpecial
+    components:
+      # Sunrise added start
+      - type: ArtifactFunnyTarget
+      # Sunrise added end
+      - type: CommandStaff
+  speciesBlacklist:
+  - Vox # Sunrise-Edit
+
+- type: startingGear
+  id: CaptainGear
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+    eyes: ClothingEyesGlassesCommand
+    # gloves: ClothingHandsGlovesCaptain Sunrise - Edit
+    id: CaptainPDA
+    ears: ClothingHeadsetAltCommand
+  storage:
+    back:
+    - Flash
+    - Telebaton # Sunrise-Edit
+    # - StationCharter
+
+- type: chameleonOutfit
+  id: CaptainChameleonOutfit
+  job: Captain
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatCapcap
+    eyes: ClothingEyesGlassesCommand
+    mask: ClothingMaskGasCaptain
+    neck: ClothingNeckCloakCap

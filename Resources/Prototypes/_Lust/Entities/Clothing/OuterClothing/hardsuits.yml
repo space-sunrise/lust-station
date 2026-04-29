@@ -1,0 +1,43 @@
+- type: entity
+  parent: [BaseCentcommContraband, ClothingOuterHardsuitBase]
+  id: ClothingOuterHardsuitCentcomQillu
+  name: Central Command hardsuit
+  description: A high-grade Central Command hardsuit manufactured under Qillu contract, forged from the Axivex superalloy.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/centcom_hardsuit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/OuterClothing/Hardsuits/centcom_hardsuit_qillu.rsi
+  - type: Item
+    size: Huge
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.0008
+    coolingCoefficient: 0.0008
+  - type: ExplosionResistance
+    damageCoefficient: 0.60
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.60
+        Slash: 0.45
+        Piercing: 0.40
+        Heat: 0.35
+        Radiation: 0.25
+        Caustic: 0.55
+  - type: ClothingSpeedModifier
+    walkModifier: 0.88
+    sprintModifier: 0.88
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitCentcomQillu
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - Hardsuit
+    - FullBodyOuter

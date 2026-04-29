@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Based on Sprites that were originally taken from Paradise build of SS13 (ParadiseSS13/Paradise on GitHub) at commit 548161c4ec3bdff455ba7a972b079780d74641bf. Author is vinogradgarden (vinogradgarden on GitHub), redesigned for Qillu, Lust Station by gardsnake.",
+  "metaAtlas": false,
+  "size": {
+    "x": 512,
+    "y": 87
+  },
+  "states": [
+    {
+      "name": "qillu_form_header"
+    },
+    {
+      "name": "qillu_form_header_centcom"
+    },
+    {
+      "name": "qillu_form_header_cmd"
+    },
+    {
+      "name": "qillu_form_header_eng"
+    },
+    {
+      "name": "qillu_form_header_just"
+    },
+    {
+      "name": "qillu_form_header_mag"
+    },
+    {
+      "name": "qillu_form_header_med"
+    },
+    {
+      "name": "qillu_form_header_rnd"
+    },
+    {
+      "name": "qillu_form_header_sec_investig"
+    },
+    {
+      "name": "qillu_form_header_sec"
+    },
+    {
+      "name": "qillu_form_header_serv"
+    },
+    {
+      "name": "qillu_form_header_sup"
+    },
+    {
+      "name": "syndicate_form_header"
+    },
+    {
+      "name": "qillu_form_header_court"
+    },
+    {
+      "name": "qillu_form_header_just_oversight"
+    },
+    {
+      "name": "qillu_form_header_specops"
+    }
+  ]
+}

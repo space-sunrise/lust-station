@@ -1,0 +1,192 @@
+- type: lobbyArt
+  id: BarLife
+  background: /NetTextures/Lobby/Arts/bar-life.webp
+
+- type: lobbyArt
+  id: DeadInSpace
+  background: /NetTextures/Lobby/Arts/dead-in-space.webp
+
+- type: lobbyArt
+  id: Engineer
+  background: /NetTextures/Lobby/Arts/engineer.webp
+
+- type: lobbyArt
+  id: BeerSlime
+  background: /NetTextures/Lobby/Arts/beerslime.webp
+
+- type: lobbyArt
+  id: Deadsquad
+  background: /NetTextures/Lobby/Arts/deadsquad.webp
+
+- type: lobbyArt
+  id: EngineersChill
+  background: /NetTextures/Lobby/Arts/engineers-chill.webp
+
+- type: lobbyArt
+  id: IntoSpace
+  background: /NetTextures/Lobby/Arts/into-space.webp
+
+- type: lobbyArt
+  id: Jailbreak
+  background: /NetTextures/Lobby/Arts/jailbreak.webp
+
+- type: lobbyArt
+  id: Kosmologistika
+  background: /NetTextures/Lobby/Arts/kosmologistika.webp
+
+- type: lobbyArt
+  id: LizardBar
+  background: /NetTextures/Lobby/Arts/lizard-bar.webp
+
+- type: lobbyArt
+  id: Lofi
+  background: /NetTextures/Lobby/Arts/lofi.webp
+
+- type: lobbyArt
+  id: MaintenanceClown
+  background: /NetTextures/Lobby/Arts/maintenance-clown.webp
+
+- type: lobbyArt
+  id: NukiesHere
+  background: /NetTextures/Lobby/Arts/nukies-here.webp
+
+- type: lobbyArt
+  id: RegularShift
+  background: /NetTextures/Lobby/Arts/regular-shift.webp
+
+- type: lobbyArt
+  id: Singulord
+  background: /NetTextures/Lobby/Arts/singulord.webp
+
+- type: lobbyArt
+  id: StarBow14
+  background: /NetTextures/Lobby/Arts/starbow14.webp
+
+- type: lobbyArt
+  id: SpaceMudaki
+  background: /NetTextures/Lobby/Arts/space-mudaki.webp
+
+- type: lobbyArt
+  id: Traitor
+  background: /NetTextures/Lobby/Arts/traitor.webp
+
+- type: lobbyArt
+  id: TeslaLoose
+  background: /NetTextures/Lobby/Arts/tesla-loose.webp
+
+- type: lobbyArt
+  id: TeslaLoose2
+  background: /NetTextures/Lobby/Arts/teslaloose.webp
+
+- type: lobbyArt
+  id: NukieDudes
+  background: /NetTextures/Lobby/Arts/nukie-dudes.webp
+
+- type: lobbyArt
+  id: MenAtWork
+  background: /NetTextures/Lobby/Arts/men-at-work.webp
+
+- type: lobbyArt
+  id: FleshAnom
+  background: /NetTextures/Lobby/Arts/fleshanom.webp
+
+- type: lobbyArt
+  id: Revenant
+  background: /NetTextures/Lobby/Arts/revenant.webp
+
+- type: lobbyArt
+  id: RedAlertMed
+  background: /NetTextures/Lobby/Arts/red-alert-med.webp
+
+- type: lobbyArt
+  id: DeathNettle
+  background: /NetTextures/Lobby/Arts/deathnettle.webp
+
+- type: lobbyArt
+  id: Xeno
+  background: /NetTextures/Lobby/Arts/xeno.webp
+
+- type: lobbyArt
+  id: ClownSpider
+  background: /NetTextures/Lobby/Arts/clownspider.webp
+
+- type: lobbyArt
+  id: XenoAttack
+  background: /NetTextures/Lobby/Arts/xenosattack.webp
+
+- type: lobbyArt
+  id: SingulordCage
+  background: /NetTextures/Lobby/Arts/singulord-cage.webp
+
+- type: lobbyArt
+  id: GrayTide
+  background: /NetTextures/Lobby/Arts/gray-tide.webp
+
+- type: lobbyArt
+  id: GutsGuts
+  background: /NetTextures/Lobby/Arts/guts-guts.webp
+
+- type: lobbyArt
+  id: SecSave
+  background: /NetTextures/Lobby/Arts/sec-save.webp
+
+- type: lobbyArt
+  id: SpaceNuke
+  background: /NetTextures/Lobby/Arts/space-nuke.webp
+
+- type: lobbyArt
+  id: ArnoldIntelligence
+  background: /NetTextures/Lobby/Arts/arnold-intelligence.webp
+
+- type: lobbyArt
+  id: MimesInTechs
+  background: /NetTextures/Lobby/Arts/mimes-in-techs.webp
+
+- type: lobbyArt
+  id: EngineersVsZombies
+  background: /NetTextures/Lobby/Arts/engineers-vs-zombies.webp
+
+- type: lobbyArt
+  id: Reunion
+  background: /NetTextures/Lobby/Arts/reunion.webp
+
+- type: lobbyArt
+  id: Prostchitalsanogde
+  background: /NetTextures/Lobby/Arts/prostchitalsanogde.webp
+
+- type: lobbyArt
+  id: NukieWar
+  background: /NetTextures/Lobby/Arts/nukie-war.webp
+
+# region New Year
+- type: lobbyArt
+  id: NewYearNuke
+  background: /NetTextures/Lobby/Arts/new-year-nuke.webp
+
+# - type: lobbyArt
+#   id: NewYearPenguins
+#   background: /NetTextures/Lobby/Arts/new-year-penguins.webp
+
+# - type: lobbyArt
+#   id: NewYearBar
+#   background: /NetTextures/Lobby/Arts/new-year-bar.webp
+
+# - type: lobbyArt
+#   id: NewYearSec
+#   background: /NetTextures/Lobby/Arts/new-year-sec.webp
+
+# - type: lobbyArt
+#   id: NewYearComfort
+#   background: /NetTextures/Lobby/Arts/new-year-comfort.webp
+
+# - type: lobbyArt
+#   id: NewYearParty
+#   background: /NetTextures/Lobby/Arts/new-year-party.webp
+
+# - type: lobbyArt
+#   id: NewYearPine
+#   background: /NetTextures/Lobby/Arts/new-year-pine.webp
+
+# - type: lobbyArt
+#   id: NewYearExplosion
+#   background: /NetTextures/Lobby/Arts/new-year-explosion.webp

@@ -1,0 +1,59 @@
+- type: job
+  id: SecurityCadet
+  name: job-name-cadet
+  description: job-description-cadet
+  playTimeTracker: JobSecurityCadet
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 10h
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 50h # Sunrise-edit
+      inverted: true # stop playing intern if you're good at security!
+  startingGear: SecurityCadetGear
+  icon: "JobIconSecurityCadet"
+  supervisors: job-supervisors-security
+  canBeAntag: false
+  displayWeight: 0 # Sunrise-Edit
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-security-trainee
+  - job-alt-title-security-rookie
+  - job-alt-title-security-recruit
+  # Sunrise-End
+  access:
+  - Security
+  - Brig
+  # - Maintenance # sunrise-edit
+  - External
+  - Cryogenics
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant ]
+
+- type: startingGear
+  id: SecurityCadetGear
+  equipment:
+    shoes: ClothingShoesBootsJackFilled
+    outerClothing: ClothingOuterArmorBasic
+    id: SecurityCadetPDA
+    ears: ClothingHeadsetSecurity
+    belt: ClothingBeltSecurityFilled
+    # pocket1: WeaponPistolMk58 # sunrise-edit
+    pocket2: BookSecurity
+  storage:
+    back:
+    - Flash
+    #- MagazinePistol  # sunrise-edit
+
+- type: chameleonOutfit
+  id: SecurityCadetChameleonOutfit
+  job: SecurityCadet
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHelmetBasic
+    eyes: ClothingEyesHudSecurity
+    mask: ClothingMaskGasSecurity
+    neck: ClothingNeckScarfStripedRed
+    belt: ClothingBeltSecurity
+    gloves: ClothingHandsGlovesColorBlack

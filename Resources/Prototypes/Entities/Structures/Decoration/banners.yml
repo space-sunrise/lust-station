@@ -1,0 +1,239 @@
+- type: entity
+  id: BannerBase
+  parent: BaseStructureDynamic
+  name: base banner
+  description: It's the concept of a banner, you shouldn't be seeing this.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner
+    noRot: true
+  - type: Transform
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.2
+        density: 190
+        mask:
+        - MachineMask
+        layer:
+        - Opaque
+        - MidImpassable
+        - HighImpassable
+        - BulletImpassable
+  - type: InteractionOutline
+  - type: Damageable
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  id: BannerNanotrasen
+  parent: BannerBase
+  name: nanotrasen banner
+  description: A banner displaying the Nanotrasen logo. It looks rather cheap.
+  components:
+  - type: Sprite
+    sprite: Structures/Decoration/banner.rsi
+    state: banner
+
+- type: entity
+  id: BannerCargo
+  parent: BannerBase
+  name: cargo banner
+  description: A banner displaying the colors of the cargo department. Not. Cargonia.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_cargo
+
+- type: entity
+  id: BannerEngineering
+  parent: BannerBase
+  name: engineering banner
+  description: A banner displaying the colors of the engineering department. Scrungularty.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_engineering
+
+- type: entity
+  id: BannerMedical
+  parent: BannerBase
+  name: medical banner
+  description: A banner displaying the colors of the medical department. How sterile.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_medical
+
+- type: entity
+  id: BannerRevolution
+  parent: BannerBase
+  name: revolution banner
+  description: A banner displaying revolution. Viva!
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_revolution
+
+- type: entity
+  id: BannerSyndicate
+  parent: BannerBase
+  name: syndicate banner
+  description: A banner from which, according to the syndicate, you should feel hatred for NT.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_syndicate
+
+- type: entity
+  id: BannerScience
+  parent: BannerBase
+  name: science banner
+  description: A banner displaying the colors of the science department. Where science has no bounds, and regulations are rarely followed.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_science
+
+- type: entity
+  id: BannerSecurity
+  parent: BannerBase
+  name: security banner
+  description: A banner displaying the colors of the security department. You're surprised it's not vandalised.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner_security
+
+- type: entity
+  id: BannerBlue
+  parent: BannerBase
+  name: blue banner
+  description: A banner displaying the color blue. Dabudidabudai.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner-blue
+
+- type: entity
+  id: BannerRed
+  parent: BannerBase
+  name: red banner
+  description: A banner displaying the color red. The edgy one.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner-red
+
+- type: entity
+  id: BannerYellow
+  parent: BannerBase
+  name: yellow banner
+  description: A banner displaying the color yellow. Reminds you of ducks and lemon stands.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner-yellow
+
+- type: entity
+  id: BannerGreen
+  parent: BannerBase
+  name: green banner
+  description: A banner displaying the color green. Grass, leaves, guacamole.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi # Sunrise - edit
+    state: banner-green
+
+# Sunrise-start
+- type: entity
+  parent: BaseSign
+  id: BaseWallBanner
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: WallMountedItems
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+
+- type: entity
+  id: BannerUSSP
+  parent: BannerBase
+  name: USSP banner
+  description: A banner displaying USSP. Prepare to Combat COMRAD!.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+    state: banner_ussp
+
+- type: entity
+  parent: BaseWallBanner
+  id: BannerWallHammer
+  name: revolutionary wall banner
+  description: Gone are the days of oppression and the unfair treatment of contractors! URAA!
+  components:
+  - type: Sprite
+    state: banner0
+
+- type: entity
+  parent: BaseWallBanner
+  id: BannerWallSoviet
+  name: USSP wall banner
+  description: Banner of the United Soviet Socialist Planets. Hang it up. Obey it. Try not to salute by reflex.
+  components:
+  - type: Sprite
+    state: banner1
+
+- type: entity
+  id: BannerSovietRegular
+  parent: BannerBase
+  name: USSP banner
+  description: Banner of the United Soviet Socialist Planets. Features the glorious hammer and wrench. Symbols of industry, progress, fraternity and fixing what you broke.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+    state: banner2
+
+- type: entity
+  id: BannerSovietHammer
+  parent: BannerBase
+  name: revolutionary banner
+  description: Gone are the days of oppression and the unfair treatment of contractors! URAA!
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+    state: banner3
+
+- type: entity
+  id: BannerSNKVD
+  parent: BannerBase
+  name: soviet SNKVD banner
+  description: One wrong move and you're dead comrade. For good.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+    state: banner4
+
+- type: entity
+  id: BannerSGKB
+  parent: BannerBase
+  name: soviet SKB banner
+  description: Implementing workers rights. Yeah, we do that in your stations. You're welcome.
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Structures/Decoration/banner.rsi
+    state: banner5
+# Sunrise-end

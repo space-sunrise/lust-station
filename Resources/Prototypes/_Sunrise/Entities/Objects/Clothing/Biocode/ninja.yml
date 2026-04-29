@@ -1,0 +1,13 @@
+# Ninja equipment with SpiderClan biocode
+# Special ninja shoes - non-removable and no effects for non-ninja
+- type: entity
+  parent: ClothingShoesSpaceNinja
+  id: ClothingShoesSpaceNinjaBiocode
+  suffix: BIOCODE
+  components:
+  - type: Biocode
+    factions:
+    - SpiderClan
+  - type: FactionClothingBlocker
+  - type: Unremoveable
+    deleteOnDrop: false

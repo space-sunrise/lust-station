@@ -1,0 +1,68 @@
+- type: salvageFaction
+  id: Xenos
+  desc: salvage-faction-xenos
+  entries:
+    - proto: MobXeno
+    - proto: MobXenoDrone
+      cost: 4 # Sunrise-Edit
+    - proto: MobXenoPraetorian
+      cost: 10 # Sunrise-Edit
+      prob: 0.1
+    - proto: MobXenoQueen
+      cost: 15 # Sunrise-Edit
+      prob: 0.02
+    - proto: MobXenoRavager
+      cost: 10 # Sunrise-Edit
+    - proto: MobXenoRouny
+      cost: 6 # Sunrise-Edit
+      prob: 0.02
+    - proto: MobXenoSpitter
+      cost: 2 # Sunrise-Edit
+    - proto: MobXenoRunner # Sunrise-Edit
+      cost: 2 # Sunrise-Edit
+    - proto: WeaponTurretXeno
+      prob: 0.1
+  # Sunrise-Start
+  difficulties:
+    - Challenging
+    - Moderate
+  # Sunrise-End
+  configs:
+    DefenseStructure: XenoWardingTower
+    Megafauna: MobXenoQueen
+
+- type: salvageFaction
+  id: Carps
+  desc: salvage-faction-carps
+  entries:
+    - proto: MobCarpDungeon
+    # These do too much damage for salvage, need nerfs
+    # Sunrise-Start
+    - proto: MobCarpHolo
+      cost: 5 # Sunrise-Edit
+      prob: 0.1
+    - proto: MobCarpMagic
+      cost: 5 # Sunrise-Edit
+      prob: 0.1
+    - proto: MobSharkDragon
+      cost: 5
+      prob: 0.1
+    - proto: MobCarpRainbowDragon
+      cost: 5
+      prob: 0.1
+    # Sunrise-End
+    - proto: MobCarpRainbow # carp version of rouny...
+      cost: 3
+      prob: 0.05
+    - proto: MobDragonDungeon
+      cost: 10
+      prob: 0.02
+  # Sunrise-Start
+  difficulties:
+    - Challenging
+    - Moderate
+    - Easy
+  # Sunrise-End
+  configs:
+    DefenseStructure: CarpStatue
+    Megafauna: MobDragonDungeon

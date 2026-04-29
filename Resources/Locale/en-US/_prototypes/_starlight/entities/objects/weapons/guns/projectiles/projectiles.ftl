@@ -1,0 +1,12 @@
+ent-BaseBulletStarlight = BaseBullet
+    .desc = If you can see this you're probably dead!
+ent-BulletAdvTaser = taser bolt
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BaseBulletRubber = { ent-BaseBulletStarlight }
+    .desc = { ent-BaseBulletStarlight.desc }
+ent-BulletEnergyCrossbow = { ent-BaseBullet }
+    .desc = { ent-BaseBullet.desc }
+ent-BulletMiniEnergyCrossbow = { ent-BulletEnergyCrossbow }
+    .desc = { ent-BulletEnergyCrossbow.desc }
+ent-BulletGrenadeCleanadeSyndicate = evil cleanade grenade round
+    .desc = A syndicate-grade cleanade round filled with aggressive cleaning foam.

@@ -1,0 +1,107 @@
+- type: entity
+  name: AR2
+  parent: [BaseItem, BaseGunWieldable, BaseSecurityContraband]
+  id: WeaponRifleAR2
+  suffix: HL2
+  description: A pulse rifle originating from old Earth. Uses battery-based cartridges.
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Guns/Rifles/ar2/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Lust/CP/Guns/Rifles/ar2/tiny.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Item
+    sprite: _Lust/CP/Guns/Rifles/ar2/tiny.rsi
+    size: Huge
+    shape:
+    - 0,0,3,1
+  - type: GunRequiresWield
+  - type: MagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineAR2
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineAR2
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: AmmoCounter
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+  - type: Gun
+    fireRate: 6
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: MP7
+  parent: [BaseWeaponSubMachineGun, BaseSecurityContraband]
+  id: WeaponSubMachineGunMP7HL2
+  suffix: HL2
+  description: A compact submachine gun originating from old Earth.
+  components:
+  - type: Sprite
+    sprite: _Lust/CP/Guns/SMGs/mp7_hl2/big.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Lust/CP/Guns/SMGs/mp7_hl2/tiny.rsi
+  - type: Item
+    sprite: _Lust/CP/Guns/SMGs/mp7_hl2/tiny.rsi
+    size: Large
+    shape:
+    - 0,0,2,1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineMP7
+        insertSound: /Audio/_Sunrise/Weapons/Guns/Rifles/mp7/mp7_reload.ogg
+        ejectSound: /Audio/_Sunrise/Weapons/Guns/Rifles/mp7/mp7_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineMP7
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistolFMJ
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgePistol
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+    unwieldOnUse: false

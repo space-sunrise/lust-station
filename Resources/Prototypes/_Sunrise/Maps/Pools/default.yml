@@ -1,0 +1,26 @@
+- type: gameMapPool
+  id: SunriseMapPool
+  maps:
+  - SunriseDelta
+  - SunriseBox
+  - SunriseBagel
+# НЕ ДОБАВЛЯТЬ НОВЫЕ КАРТЫ В ПУЛЛ БЕЗ РЕВЬЮ ОТ SPLIKZERYS!!!
+#  - SunrisePlasma
+#  - SunriseBarratry
+#  - SunriseFland
+  - SunriseMarathon
+  - SunrisePacked
+#  - SunriseOasis
+#  - SunriseReach
+#  - SunriseRelic
+  # SUNRISE-TODO: Старые-новые карты
+  #- Glacier
+  #- Shoukou
+  #- Hammurabi
+  #- Lighthouse
+  #- Angle
+  #- Pebble
+  #- Ovni
+  #- Kettle
+  #- Tortuga
+  #- Arena

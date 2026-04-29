@@ -1,0 +1,242 @@
+# Структуры
+
+# Бронированная дверь командир
+
+- type: entity
+  parent: HighSecDoor
+  name: high security door
+  description: Keeps the bad guys out and the good guys in. Only the commander can open it.
+  id: HighSecMTOLLocked
+  suffix: Arrows, MTOL
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMTOL ]
+
+# Бронированная дверь
+
+- type: entity
+  parent: HighSecDoor
+  name: high security door
+  description: Keeps the bad out and keeps the good in.
+  id: HighSecMTOLocked
+  suffix: Arrows
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMTO ]
+
+# Стена
+
+- type: entity
+  parent: BaseWall
+  id: WallShuttleArm
+  name: reinforced shuttle wall
+  description: Keeps the bad out and keeps the good in.
+  suffix: Arrows
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    sprite: Structures/Walls/shuttle.rsi
+    color: "#505050"
+  - type: Icon
+    sprite: Structures/Walls/shuttle.rsi
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Reflect
+    reflectProb: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+  - type: IconSmooth
+    key: walls
+    base: state
+
+# Стена угол
+
+- type: entity
+  parent: WallShuttleDiagonal
+  id: WallShuttleDiagonalArm
+  name: reinforced shuttle wall
+  description: Keeps the bad out and keeps the good in.
+  suffix: Arrows, Diagonal
+  components:
+  - type: Tag
+    tags:
+      - Wall
+  - type: Sprite
+    color: "#505050"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Reflect
+    reflectProb: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          Girder:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+
+# Стекло
+
+- type: entity
+  id: ShuttleWindowArm
+  name: reinforced shuttle window
+  parent: ShuttleWindow
+  description: Keeps the bad out and keeps the good in.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    color: "#505050"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+
+# Ставни
+
+- type: entity
+  id: ShuttersArmOpen
+  parent: ShuttersNormalOpen
+  name: reinforced shutter
+  description: Keeps the bad out and keeps the good in.
+  suffix: Arrows
+  components:
+  - type: Sprite
+    color: "#505050"
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+
+# Платы шлюзов
+
+- type: entity
+  parent: DoorElectronics
+  categories: [ HideSpawnMenu ]
+  id: DoorElectronicsMTO
+  suffix: MTO, Locked
+  components:
+  - type: AccessReader
+    access: [["MTO"]]
+
+- type: entity
+  parent: DoorElectronics
+  categories: [ HideSpawnMenu ]
+  id: DoorElectronicsMTOL
+  suffix: MTO, Locked
+  components:
+  - type: AccessReader
+    access: [["MTOL"]]
+
+# Стыковочный шлюз
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockShuttleArm
+  suffix: Arrows
+  name: reinforced airlock shuttle
+  #description: Удерживает плохих снаружи, а хороших внутри.
+  components:
+  - type: Sprite
+    color: "#505050"
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMTO ]
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+  - type: Reflect
+    reflectProb: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/metal_break1.ogg
+
+# Шлюз
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockMTOLocked
+  suffix: Arrows
+  #name: glass airlock
+  #description: Он открывается, он закрывается, и он может вас раздавить.
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMTO ]
+
+# Раздвижное окно
+
+- type: entity
+  parent: WindoorSecureSecurityLocked
+  id: WindoorMTOLocked
+  suffix: Arrows
+  #name: армированное раздвижное окно
+  #description: Это и прочное окно, и раздвижная дверь. Вот это да!
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsMTO ]
+
+# Двигатель
+
+- type: entity
+  id: ThrusterM
+  name: military-grade engine
+  description: A powerful engine used on combat shuttles.
+  suffix: Arrows
+  parent: Thruster
+  components:
+  - type: Sprite
+    color: "#808080"
+  - type: Thruster
+    baseThrust: 350
+    thrust: 350
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallicStrong
+

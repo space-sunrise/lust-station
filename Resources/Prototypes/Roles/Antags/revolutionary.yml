@@ -1,0 +1,33 @@
+- type: antag
+  id: HeadRev
+  name: roles-antag-rev-head-name
+  antagonist: true
+  setPreference: true
+  playTimeTracker: AntagHeadRevolutionary # Sunrise-Edit
+  objective: roles-antag-rev-head-objective
+  guides: [ Revolutionaries ]
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 1h
+  # Sunrise-Edit
+  previewIcon:
+    sprite: /Textures/_Sunrise/Interface/Misc/antag_preview.rsi
+    state: head_rev
+
+- type: antag
+  id: Rev
+  name: roles-antag-rev-name
+  antagonist: true
+  setPreference: true # Sunrise-Edit
+  playTimeTracker: AntagRevolutionary # Sunrise-Edit
+  objective: roles-antag-rev-objective
+  guides: [ Revolutionaries ]
+
+- type: startingGear
+  id: HeadRevGear
+  storage:
+    back:
+    - Flash
+    - ClothingEyesGlassesHiddenSecurityChameleon # Sunrise-Edit
+    - BlueprintImplanterExtractor  # Sunrise-add
+    - PinpointerSmugglerRevolutionaryStash  # Sunrise-add

@@ -1,0 +1,12 @@
+ent-WildSlimeCube = слаймовый кубик
+    .desc = Просто добавь воды!
+ent-PigCube = свиной кубик
+    .desc = Просто добавь воды!
+ent-ChikenCube = куриный кубик
+    .desc = Просто добавь воды!
+ent-InferiorVulpkaninCube = кубик низшего вульпканина
+    .desc = Просто добавь воды!
+ent-FelinidCube = фелинидовый кубик
+    .desc = Просто добавь воды!
+ent-PirateMonkeyCube = пропитанный ромом обезьяний кубик
+    .desc = Просто добавь воды!

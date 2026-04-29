@@ -1,0 +1,110 @@
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitLoona
+  name: moon top with black shorts
+  description: These clothes seem to have been worn before you without being removed, torn and worn in places, the urge to howl at the top of your lungs comes over you.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/loona.rsi
+  - type: Clothing
+    sprite: _Lust/ERP/Stuff/loona.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitEroform
+  name: Erotic business form
+  description: A red office shirt, unbuttoned at the chest, and a black jacket, which are complemented by skinny shorts. It will suit you for a long and passionate work with documents.
+  components:
+  - type: Sprite
+    sprite: _Lust/ERP/Stuff/eroform.rsi
+  - type: Clothing
+    sprite: _Lust/ERP/Stuff/eroform.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuccubus
+  name: succubus uniform
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/succubus_uniform.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - ClothMade
+    - NudeFull
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomFormalQillu
+  name: Central Command formal suit
+  description: A suit for special occasions.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_formal.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_formal.rsi
+
+# IAA
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitIAAFormal
+  name: formal IAA suit
+  description: paperwork is important, but so is looking good while doing it.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_formal_suit.rsi
+
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformElegantJumpsuitIAA
+  name: elegant IAA suit
+  description: A sharp suit for an IAA agent who turns paperwork into power.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/iaa_elegant_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitQilluDirector
+  name: ent-ClothingUniformJumpsuitQilluDirector
+  description: ent-ClothingUniformJumpsuitQilluDirector-desc
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomSuitQillu
+  name: Central Command suit
+  description: A Central Command dress uniform produced under Qillu contract. Crisp, formal, and unmistakably official.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_suit_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCentcomUniformQillu
+  name: Central Command uniform
+  description: A Central Command uniform produced under Qillu contract. Formal, durable, and unmistakably official.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi

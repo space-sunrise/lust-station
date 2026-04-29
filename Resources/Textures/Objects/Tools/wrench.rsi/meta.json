@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from skyrat-tg at https://github.com/Skyrat-SS13/Skyrat-tg/commit/31156a1fcd48d67a717e7b63c11513172b28eeb1, storage by SonicHDC (github)",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "abductor",
+      "delays": [
+        [
+          0.2,
+          0.2
+        ]
+      ]
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "equipped-BELT",
+      "directions": 4
+    },
+    {
+      "name": "abductor-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "abductor-inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "abductor-equipped-BELT",
+      "directions": 4
+    },
+    {
+      "name": "storage"
+    }
+  ]
+}

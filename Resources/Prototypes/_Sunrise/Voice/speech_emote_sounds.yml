@@ -1,0 +1,305 @@
+- type: emoteSounds
+  id: MaleFelinid
+  parent: MaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Mew:
+      collection: FelinidMews
+    Meow:
+      collection: FelinidMeows
+    Hisses:
+      collection: FelinidHisses
+    Purr:
+      collection: FelinidPurrs
+    Growl:
+      collection: FelinidGrowls
+    SevereCough:
+      collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
+
+- type: emoteSounds
+  id: FemaleFelinid
+  parent: FemaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Mew:
+      collection: FelinidMews
+    Meow:
+      collection: FelinidMeows
+    Hisses:
+      collection: FelinidHisses
+    Purr:
+      collection: FelinidPurrs
+    Growl:
+      collection: FelinidGrowls
+    SevereCough:
+      collection: FemaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End
+
+- type: emoteSounds
+  id: MaleTajaran
+  parent: MaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    Sigh:
+      collection: MaleSigh
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Mew:
+      collection: FelinidMews
+    Meow:
+      collection: FelinidMeows
+    Hisses:
+      path: /Audio/_Sunrise/Voice/Tajaran/tajaran_hisses.ogg
+    Purr:
+      collection: FelinidPurrs
+    Growl:
+      path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
+    SevereCough:
+      collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
+
+- type: emoteSounds
+  id: FemaleTajaran
+  parent: FemaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Laugh:
+      collection: FemaleLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      collection: FemaleCry
+    Whistle:
+      collection: Whistles
+    Mew:
+      collection: FelinidMews
+    Meow:
+      collection: FelinidMeows
+    Hisses:
+      path: /Audio/_Sunrise/Voice/Tajaran/tajaran_hisses.ogg
+    Purr:
+      collection: FelinidPurrs
+    Growl:
+      path: /Audio/_Sunrise/Voice/Tajaran/tajaran_growl.ogg
+    SevereCough:
+      collection: FemaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End
+
+
+- type: emoteSounds
+  id: UnisexSwine
+  parent: MaleHuman
+  sounds:
+    Scream:
+      collection: SwineScreams
+    Laugh:
+      collection: MaleLaugh
+    Sneeze:
+      collection: MaleSneezes
+    Cough:
+      collection: MaleCoughs
+    MonkeyScreeches:
+      collection: MonkeyScreeches
+    RobotBeep:
+      collection: RobotBeeps
+    Yawn:
+      collection: MaleYawn
+    Snore:
+      collection: Snores
+    Sigh:
+      collection: MaleSigh
+    Honk:
+      collection: BikeHorn
+    Crying:
+      collection: MaleCry
+    Whistle:
+      collection: Whistles
+    Oink:
+      collection: SwineOinks
+    SevereCough:
+      collection: MaleSevereCough
+    # Lust-Start
+    Moan:
+      collection: MaleMoan
+    # Lust-End
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: XenoHumanoid
+  sounds:
+    Scream:
+      collection: HumanoidXenoSqeals
+    Laugh:
+      collection: HumanoidXenoScreams
+    Cough:
+      collection: HumanoidXenoScreams
+    SevereCough:
+      collection: HumanoidXenoScreams
+    Hisses:
+      collection: HumanoidXenoHisses
+    Roars:
+      collection: HumanoidXenoRoars
+    Growl:
+      collection: HumanoidXenoGrowls
+    Rumbles:
+      collection: HumanoidXenoRumbles
+    Crying:
+      collection: HumanoidXenoCry
+    DefaultDeathgasp:
+      collection: HumanoidXenoDeathgasp
+  params:
+    variation: 0.125
+
+- type: emoteSounds
+  id: Predator
+  parent: MaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: PredatorScreams
+    Sigh:
+      collection: PredatorSigh
+    Laugh:
+      collection: PredatorLaugh
+    # Lust-Start
+    Moan:
+      collection: PredatorScreams
+    # Lust-End
+    Flip:
+      path: /Audio/Effects/thudswoosh.ogg
+    Dance:
+      path: /Audio/Effects/thudswoosh.ogg
+    Lay:
+      collection: BodyFall
+    FallOnNeck:
+      collection: BodyFall
+
+- type: emoteSounds
+  id: Reaper
+  sound:
+    path: /Audio/_Sunrise/Voice/Reaper/reaper_scream.ogg
+    params:
+      volume: -2
+
+- type: emoteSounds
+  id: ClownGoblin
+  parent: MaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: ClownGoblinScream
+
+- type: emoteSounds
+  id: UnisexResomi
+  parent: FemaleHuman
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      path: /Audio/_Sunrise/Voice/Resomi/resomi_scream.ogg
+    Laugh:
+      collection: ResomiLaugh
+    Honk:
+      collection: BikeHorn
+    Whistle:
+      path: /Audio/_Sunrise/Voice/Resomi/resomi_whistle.ogg
+    Chirp:
+      collection: ResomiChirp
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Gasp:
+      collection: FemaleGasp
+    DefaultDeathgasp:
+      collection: DeathGasp
+    Sigh:
+      collection: FemaleSigh
+    Crying:
+      path: /Audio/_Sunrise/Voice/Resomi/resomi_cry.ogg
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FemaleYawn
+    Trill:
+      collection: ResomiTrills
+    Scree:
+      collection: ResomiScrees
+    Call:
+      collection: ResomiCalls
+    Squawk:
+      collection: ResomiSquawk
+    SevereCough:
+      collection: FemaleSevereCough
+    Growl:
+      collection: FelinidGrowls
+    Hisses:
+      collection: FelinidHisses
+    # Lust-Start
+    Moan:
+      collection: FemaleMoan
+    # Lust-End

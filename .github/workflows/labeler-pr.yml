@@ -1,0 +1,14 @@
+﻿name: "Labels: PR"
+
+on:
+- pull_request_target
+
+jobs:
+  labeler:
+    if: github.actor != 'Sunrise-Bot'
+    permissions:
+      contents: read
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/labeler@v5

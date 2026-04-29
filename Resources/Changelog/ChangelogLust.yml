@@ -1,0 +1,1554 @@
+﻿Entries:
+- author: VigersRay
+  changes:
+  - message: Init
+    type: Add
+  id: 1
+  time: '2024-03-05T22:16:24.059464+00:00'
+- author: 3arek
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u0432 ERP \u043F\
+      \u0430\u043D\u0435\u043B\u044C."
+    type: Add
+  id: 151
+  time: '2024-07-27T06:21:36.033456+00:00'
+- author: Ligyb
+  changes:
+  - message: "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0430 \u0415\u0420\u041F\
+      -\u043F\u0430\u043D\u0435\u043B\u044C."
+    type: Add
+  id: 152
+  time: '2024-08-28T18:16:05.142964+00:00'
+- author: SplikZerys
+  changes:
+  - message: "\u0424\u0440\u0443\u043A\u0442\u044B, \u043E\u0432\u043E\u0449\u0438\
+      , \u0434\u0438\u043B\u0434\u043E \u0438 \u0433\u0440\u0430\u043D\u0430\u0442\
+      \u044B \u043C\u043E\u0436\u043D\u043E \u0437\u0430\u0441\u043E\u0432\u044B\u0432\
+      \u0430\u0442\u044C \u0432 \u043E\u0434\u043D\u043E \u043C\u0435\u0441\u0442\u043E\
+      ."
+    type: Add
+  - message: "\u0424\u0438\u043A\u0441 \u0432\u0435\u0440\u0451\u0432\u043A\u0438\
+      \ \u0448\u0438\u0431\u0430\u0440\u0438."
+    type: Fix
+  id: 152
+  time: '2024-08-28T18:22:24.781030+00:00'
+- author: "\u0410\u043D\u043E\u043D\u0438\u043C69"
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0441\u043F\u0440\
+      \u0430\u0439\u0442\u044B \u0434\u043B\u044F \u0434\u0435\u0439\u0441\u0442\u0432\
+      \u0438\u0439 \u0415\u0420\u041F-\u043F\u0430\u043D\u0435\u043B\u0438."
+    type: Add
+  id: 153
+  time: '2024-08-28T18:16:35.843076+00:00'
+- author: VigersRay
+  changes:
+  - message: "\u041E\u043F\u0442\u0438\u043C\u0438\u0437\u0430\u0446\u0438\u044F \u043F\
+      \u0430\u043D\u0435\u043B\u0438 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\
+      \u0439\u0441\u0442\u0432\u0438\u0439 (\u0424\u0438\u043A\u0441 \u0432\u044B\u043B\
+      \u0435\u0442\u043E\u0432)."
+    type: Fix
+  - message: "\u041F\u043E\u0432\u044B\u0448\u0435\u043D \u043F\u0440\u0438\u043E\u0440\
+      \u0438\u0442\u0435\u0442 \u043E\u0442\u043E\u0431\u0440\u0430\u0436\u0435\u043D\
+      \u0438\u044F \u043F\u0430\u043D\u0435\u043B\u0438 \u0432\u0437\u0430\u0438\u043C\
+      \u043E\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u0432 \u043A\u043E\u043D\
+      \u0442\u0435\u043A\u0441\u0442\u043D\u043E\u043C \u043C\u0435\u043D\u044E."
+    type: Tweak
+  id: 153
+  time: '2024-08-29T12:50:29.711763+00:00'
+- author: Ligyb
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0441\u043B\u043E\u0442\
+      \ \u0430\u043D\u0430\u043B\u0430."
+    type: Add
+  id: 154
+  time: '2024-08-28T18:18:15.287616+00:00'
+- author: SplikZerys
+  changes:
+  - message: "\u0423\u0434\u0430\u043B\u0438\u043B \u0430\u0432\u0442\u043E\u0437\u0430\
+      \u043C\u0435\u043D\u0443 \u043C\u043D\u043E\u0433\u0438\u0445 \u0441\u043B\u043E\
+      \u0432."
+    type: Remove
+  id: 154
+  time: '2024-09-02T11:53:54.376996+00:00'
+- author: 3arek & SplikZerys
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u0432 \u0415\u0420\
+      \u041F-\u043F\u0430\u043D\u0435\u043B\u044C."
+    type: Add
+  id: 155
+  time: '2024-08-28T18:19:11.326318+00:00'
+- author: Ligyb
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0441\u0438\u0441\
+      \u0442\u0435\u043C\u0430 \u043D\u0435\u0432\u0438\u043D\u043D\u043E\u0441\u0442\
+      \u0438."
+    type: Add
+  id: 156
+  time: '2024-08-28T18:20:56.054427+00:00'
+- author: VigersRay
+  changes:
+  - message: "\u0410\u043F\u0441\u0442\u0440\u0438\u043C."
+    type: Add
+  id: 157
+  time: '2024-11-15T14:30:20.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/70
+- author: Nrd
+  changes:
+  - message: "\u0438\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u043B\u043E\
+      \u0433\u043E\u0442\u0438\u043F\u044B \u043D\u043E\u0432\u044B\u0445 \u0446\u0435\
+      \u043B\u0435\u0439"
+    type: Fix
+  id: 158
+  time: '2024-11-20T16:50:41.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/75
+- author: pacable
+  changes:
+  - message: "\u0423\u0432\u0435\u043B\u0438\u0447\u0435\u043D\u0430 \u0437\u0430\u0434\
+      \u0435\u0440\u0436\u043A\u0430 \u043D\u0430 \u0438\u0441\u043F\u043E\u043B\u044C\
+      \u0437\u043E\u0432\u0430\u043D\u0438\u0435 \u043F\u043B\u044E\u0448\u043A\u0438\
+      \ \u0410\u043D\u043D\u044B \u041B\u0438\u0441\u0438\u0447\u0430\u043D\u0441\u043A\
+      \u043E\u0439 \u0434\u043E 10 \u0441\u0435\u043A\u0443\u043D\u0434."
+    type: Tweak
+  id: 159
+  time: '2024-11-20T16:50:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/73
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u044B\u0435 \u0428\u0438\u0440\u043E \u0438 \u0418\u0432."
+    type: Add
+  id: 160
+  time: '2024-11-21T17:15:18.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/76
+- author: pacable
+  changes:
+  - message: "\u041A\u043E\u0440\u043E\u043B\u044C \u043A\u0440\u044B\u0441 \u0431\
+      \u044B\u043B \u0438\u0437\u043C\u0435\u043D\u0435\u043D \u043D\u0430 \u043A\u043E\
+      \u0440\u043E\u043B\u0435\u0432\u0443 \u043A\u0440\u044B\u0441."
+    type: Tweak
+  id: 161
+  time: '2024-11-21T17:17:01.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/77
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0422\u0430\u0439\u043B\u0435\u0440 \u041C\u0443\u0440\
+      \u043B\u044B\u043A\u0438\u043D."
+    type: Add
+  id: 162
+  time: '2024-11-21T17:16:25.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/84
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u044B\u0435 \u041C\u0438\u0440\u0430 \u041C\u0430\u0439\u043D\
+      \u0434 \u0438 \u041D\u0438\u043A\u043E \u041C\u0438\u043D\u043A."
+    type: Add
+  id: 163
+  time: '2024-11-26T16:34:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/90
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043A\u043E\u043C\u043F\
+      \u043B\u0435\u043A\u0442 \u043E\u0434\u0435\u0436\u0434\u044B \u0437\u0430\u0439\
+      \u0447\u0438\u043A\u0430."
+    type: Add
+  id: 164
+  time: '2024-11-26T16:34:40.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/91
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u0440\u0438\
+      \u0441\u043E\u0441\u043A\u0430 \u0432\u0441\u0435\u043C \u0432\u0438\u0434\u0430\
+      \u043C \u0434\u0438\u043B\u0434\u043E."
+    type: Add
+  id: 165
+  time: '2024-11-26T16:34:15.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/89
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u041D\u0435\u0438'\u0440\u0438\u044F \u0420\u0438\
+      \u0438'\u0410\u0439."
+    type: Add
+  id: 166
+  time: '2024-11-26T22:38:52.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/92
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D TTS \u043A\u043E\u0440\
+      \u043E\u043B\u0435\u0432\u0435 \u043A\u0440\u044B\u0441."
+    type: Add
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u0441\u043A\
+      \u043B\u043E\u043D\u0435\u043D\u0438\u0435 \u043A\u043E\u0440\u043E\u043B\u0435\
+      \u0432\u044B \u043A\u0440\u044B\u0441."
+    type: Fix
+  id: 167
+  time: '2024-11-27T22:29:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/93
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0433\u043E\u0440\
+      \u043D\u0438\u0447\u043D\u0430\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u043E\
+      \u0432\u0430\u043D\u0438\u044F."
+    type: Add
+  id: 168
+  time: '2024-12-02T04:44:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/96
+- author: kanopus7
+  changes:
+  - message: "\u0414\u043E\u043D\u0430\u0442\u043D\u044B\u0435 \u0440\u0430\u0441\u044B\
+      \ \u0441\u0442\u0430\u043B\u0438 \u043E\u0431\u0449\u0435\u0434\u043E\u0441\u0442\
+      \u0443\u043F\u043D\u044B\u043C\u0438."
+    type: Tweak
+  id: 169
+  time: '2024-12-02T04:49:13.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/98
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B 4 \u043D\u043E\
+      \u0432\u044B\u0435 \u043F\u043B\u044E\u0448\u0435\u0432\u044B\u0435 \u0438\u0433\
+      \u0440\u0443\u0448\u043A\u0438."
+    type: Add
+  id: 170
+  time: '2024-12-02T04:49:04.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/97
+- author: JunterFox
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043A\u043E\u043C\u043F\
+      \u043B\u0435\u043A\u0442 \u0444\u043E\u0440\u043C\u044B \u0421\u043F\u0435\u0446\
+      \u0438\u0430\u043B\u0438\u0441\u0442\u0430."
+    type: Add
+  id: 171
+  time: '2024-12-04T05:28:27.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/101
+- author: pacable
+  changes:
+  - message: "\u041F\u043B\u044E\u0448\u0435\u0432\u043E\u0439 \u0410\u043D\u043D\u0435\
+      \ \u041B\u0438\u0441\u0435\u0447\u0430\u043D\u0441\u043A\u043E\u0439 \u0434\u043E\
+      \u0431\u0430\u0432\u043B\u0435\u043D \u0444\u0443\u043D\u043A\u0446\u0438\u043E\
+      \u043D\u0430\u043B \u043A\u0430\u0440\u043C\u0430\u043D\u043D\u043E\u0439 \u043A\
+      \u0438\u0441\u043A\u0438."
+    type: Add
+  id: 172
+  time: '2024-12-04T05:28:44.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/104
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u044B\u0435: \u041B\u043E\u043B\u0430, \u041C\u0430\u0439\
+      \ \u0438 \u041C\u044D\u0434\u0438."
+    type: Add
+  id: 173
+  time: '2024-12-04T05:28:08.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/103
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u044B\u0435: \u0410\u043B\u0438\u0441\u0430 \u0421\u0438\u043C\
+      \u043E\u043D\u043E\u0432\u0430, RX1984."
+    type: Add
+  id: 174
+  time: '2024-12-07T05:30:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/108
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043D\u0430\u0431\u043E\
+      \u0440 \u043F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F \u041A\u0438\
+      \u043D\u043A\u043E\u041C\u0430\u0442."
+    type: Add
+  id: 175
+  time: '2024-12-07T05:30:35.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/109
+- author: kanopus7
+  changes:
+  - message: "\u0411\u043E\u0440\u0433\u0430\u043C \u0432\u043E\u0437\u0432\u0440\u0430\
+      \u0449\u0435\u043D\u044B \u0441\u043F\u0440\u0430\u0439\u0442\u044B."
+    type: Fix
+  - message: "\u0411\u043E\u0435\u0432\u043E\u0439 \u043A\u0438\u0431\u043E\u0440\u0433\
+      \ \u0421\u0411, \u043C\u0438\u0440\u043E\u0442\u0432\u043E\u0440\u0435\u0446\
+      , \u043A\u043B\u043E\u0443\u043D \u0431\u043E\u0440\u0433 \u0438 \u043E\u0445\
+      \u0440\u0430\u043D\u043D\u044B\u0439 \u0431\u043E\u0440\u0433 \u043F\u043E\u043B\
+      \u0443\u0447\u0438\u043B\u0438 \u043D\u043E\u0432\u044B\u0435 \u0441\u043F\u0440\
+      \u0430\u0439\u0442\u044B."
+    type: Tweak
+  id: 176
+  time: '2024-12-07T06:58:24.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/107
+- author: Euphoriya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0430\u043A\u0441\u0435\
+      \u0441\u0441\u0443\u0430\u0440 - \u0434\u0435\u043C\u043E\u043D\u0438\u0447\u0435\
+      \u0441\u043A\u0438\u0435 \u0440\u043E\u0436\u043A\u0438. \u0414\u043E\u0441\u0442\
+      \u0443\u043F\u0435\u043D \u0432 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0435\
+      \ \u0441\u043F\u043E\u043D\u0441\u043E\u0440\u043E\u0432."
+    type: Add
+  id: 177
+  time: '2024-12-10T00:04:00.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/111
+- author: kanopus7
+  changes:
+  - message: "\u041F\u043E\u0447\u0438\u043D\u0438\u043B \u0431\u043E\u043B\u044C\u0448\
+      \u0438\u043D\u0441\u0442\u0432\u043E \u0431\u0430\u0433\u043E\u0432 \u0441\u0432\
+      \u044F\u0437\u0430\u043D\u043D\u044B\u0445 \u0441 \u0431\u043E\u0440\u0433\u0430\
+      \u043C\u0438."
+    type: Fix
+  id: 178
+  time: '2024-12-10T00:07:14.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/115
+- author: JunterFox
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043C\u0430\u043D\
+      \u0442\u0438\u044F \u0428\u0430\u0445\u0442\u0451\u0440\u0430"
+    type: Add
+  id: 179
+  time: '2024-12-11T23:39:25.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/118
+- author: Nrd & Boy Boyevich
+  changes:
+  - message: "\u0438\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u0438\u043A\
+      \u043E\u043D\u043A\u0430 \u0441\u0442\u043E\u043D\u0430"
+    type: Fix
+  id: 180
+  time: '2024-12-11T23:39:37.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/117
+- author: kanopus7
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043C\u043D\u043E\
+      \u0433\u043E \u043D\u043E\u0432\u044B\u0445 \u0415\u0420\u041F \u0434\u0435\u0439\
+      \u0441\u0442\u0432\u0438\u0439 \u0432 \u043F\u0430\u043D\u0435\u043B\u044C \u0430\
+      \ \u0442\u0430\u043A-\u0436\u0435 \u043C\u043D\u043E\u0433\u0438\u043C \u0434\
+      \u0435\u0439\u0441\u0442\u0432\u0438\u044F\u043C \u0431\u044B\u043B\u0438 \u0434\
+      \u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0437\u0432\u0443\u043A\u0438\
+      ."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043B\u0443\u043D\
+      \u043D\u0430\u044F \u043E\u0434\u0435\u0436\u0434\u0430 \u0432 \u043A\u0438\u043D\
+      \u043A\u043E\u043C\u0430\u0442."
+    type: Add
+  id: 181
+  time: '2024-12-15T14:36:39.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/120
+- author: kanopus7
+  changes:
+  - message: "\u041F\u043E\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u043D\u0430\u043F\
+      \u043E\u043B\u043D\u0435\u043D\u0438\u0435 \u043A\u0438\u043D\u043A\u043E\u043C\
+      \u0430\u0442\u0430."
+    type: Add
+  id: 182
+  time: '2024-12-21T23:33:35.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/125
+- author: Alexpan
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u041A\u0443\u0440\u043E'\u043C\u0438 \u041E\u043B\
+      \u0438\u043D\u043A \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0410\u043B\u0438\u0441\u0430 \u0421\u0430\u0439\
+      \u0433\u0430\u043A \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0418\u0433\u043E\u0440\u044C \u0412\u043E\u043B\u043A\
+      \u043E\u0432 \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 I-102 \"\u0414\u0440\u0430\u0433\u043E\u043D\u0430\u0432\
+      \u0442\" \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0411\u043B\u043E\u0431\u0430 \u0411\u043B\u0430\
+      \u0431\u043E \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0411\u043E\u0440\u043C\u0430\u043D \u0421\u0435\u043A\
+      \u0438\u0440\u043E\u0431\u043E\u0439 \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u041C\u0430\u0439\u043A \u0428\u043C\u0438\u0434\u0442\
+      \ \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0420\u0430\u0442\u043C\u0438\u0440 \u0421\u0430\u043F\
+      \u0444\u0438\u0440\u043E\u0432 \u0432 LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u041A\u043E\u0441\u043C\u0438\u0447\u0435\u0441\
+      \u043A\u0430\u044F \u041F\u044B\u043B\u044C \u0417\u0432\u0435\u0437\u0434 \u0432\
+      \ LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0421\u0430\u0439 \u0425\u0430\u043A\u0441 \u0432\
+      \ LustShop."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u041A\u043B\u0430\u0440\u0430 \u0418\u0441\u0430\
+      \u0435\u0432\u0430 \u0432 LustShop."
+    type: Add
+  id: 183
+  time: '2024-12-30T05:24:51.223542+00:00'
+- author: VigersRay
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u043E\u0442\
+      \u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0415\u0420\u041F \u0441\
+      \u0442\u0430\u0442\u0443\u0441\u0430."
+    type: Fix
+  id: 184
+  time: '2025-01-04T04:24:25.469555+00:00'
+- author: Euphoriya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u041F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440\
+      \ \u041B\u0438\u043C\u0435\u043D\u0441\u043A\u0438"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u041F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0420\u044D\u043D\u0434\u0438"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u041F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0428\u043E\u043D \u0420\u043E\u0437"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u041F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0425\u0438\u043C\u0430 \u0410\u0439\u0441\u0435\
+      \u0442\u043E\u0432\u0430"
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u041F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u042D\u0439\u0444\u0430 \u0424\u043E\u043D \u042D\
+      \u0432\u0435\u0440\u0435\u043A"
+    type: Add
+  - message: "\u041D\u043E\u0432\u044B\u0435 \u043F\u043B\u044E\u0448\u043A\u0438\
+      \ \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0441 LustShop"
+    type: Tweak
+  id: 185
+  time: '2025-01-07T02:39:12.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/141
+- author: kanopus7 & Melatonin
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043D\u043E\u0432\
+      \u0430\u044F \u043F\u0440\u0438\u0447\u0435\u0441\u043A\u0430 \u0438 \u043D\u0435\
+      \u043C\u043D\u043E\u0433\u043E \u043A\u0430\u0441\u0442\u043E\u043C\u0438\u0437\
+      \u0430\u0446\u0438\u0438 \u0434\u043B\u044F \u0432\u0443\u043B\u044C\u043F."
+    type: Add
+  id: 186
+  time: '2025-01-07T02:39:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/140
+- author: VigersRay
+  changes:
+  - message: "\u0410\u0440\u0430\u0445\u043D\u0438\u0434\u044B, \u0442\u0440\u043E\
+      \u0442\u0442\u0438\u043D\u044B, \u0445\u0438\u0449\u043D\u0438\u043A\u0438 \u0438\
+      \ \u043A\u0441\u0435\u043D\u043E\u043C\u043E\u0440\u0444\u044B \u0442\u0435\u043F\
+      \u0435\u0440\u044C \u0443\u043C\u0435\u044E\u0442 \u0432 \u0435\u0440\u043F."
+    type: Tweak
+  id: 187
+  time: '2025-01-11T06:26:15.190145+00:00'
+- author: VigersRay
+  changes:
+  - message: "\u0413\u043E\u0440\u043D\u0438\u0447\u043D\u0430\u044F \u043A\u043E\u043C\
+      \u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u044F \u0431\u043E\u043B\u044C\
+      \u0448\u0435 \u043D\u0435 \u0438\u043C\u0435\u0435\u0442 \u043E\u0433\u0440\u0430\
+      \u043D\u0438\u0447\u0435\u043D\u0438\u044F \u043F\u043E \u043F\u043E\u043B\u0443\
+      ."
+    type: Tweak
+  id: 188
+  time: '2025-01-18T00:46:02.531597+00:00'
+- author: Disssr
+  changes:
+  - message: "\u0412 \u043A\u0438\u043D\u043A\u043E\u043C\u0430\u0442 \u0434\u043E\
+      \u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\u044B\u0435 \u043F\
+      \u0440\u0435\u0434\u043C\u0435\u0442\u044B"
+    type: Add
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u044B \u043D\u0430\u0437\u0432\
+      \u0430\u043D\u0438\u044F \u043A\u0430\u0440\u043C\u0430\u043D\u043D\u044B\u0445\
+      \ \u043A\u0438\u0441\u043E\u043A"
+    type: Tweak
+  - message: "\u0422\u0435\u043F\u0435\u0440\u044C \u043C\u043E\u0436\u043D\u043E\
+      \ \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C \u0432\
+      \u0441\u0435 \u043A\u0430\u0440\u043C\u0430\u043D\u043D\u044B\u0435 \u043A\u0438\
+      \u0441\u043A\u0438"
+    type: Fix
+  id: 189
+  time: '2025-01-20T03:55:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/150
+- author: Euphoriya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043A\u0430\u0441\
+      \u0442\u043E\u043C\u043D\u044B\u0435 ERP \u0434\u0435\u0439\u0441\u0442\u0432\
+      \u0438\u044F \u0432 \u043F\u0430\u043D\u0435\u043B\u044C \u0434\u043B\u044F\
+      \ \u043F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043B\u0435\
+      \u0439 \u0440\u0430\u0437\u043D\u044B\u0445 \u0440\u0430\u0441"
+    type: Add
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u044B \u0437\u0432\u0443\u043A\
+      \u0438 \u0436\u0435\u043D\u0441\u043A\u0438\u0445 \u0441\u0442\u043E\u043D\u043E\
+      \u0432"
+    type: Tweak
+  id: 190
+  time: '2025-01-20T03:55:34.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/148
+- author: kanopus7
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0431\u0430\u0433\
+      \ \u0441 \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0435\u043C \u043D\u0435\
+      \u0441\u043A\u043E\u043B\u044C\u043A\u0438\u0445 \u043F\u0430\u043D\u0435\u043B\
+      \u0435\u0439 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\u0441\u0442\
+      \u0432\u0438\u044F \u0441\u0440\u0430\u0437\u0443 \u0438 \u0432\u043E\u0437\u043C\
+      \u043E\u0436\u043D\u043E\u0441\u0442\u044C\u044E \u0434\u0435\u0440\u0436\u0430\
+      \u0442\u044C \u0438\u0445 \u043E\u0442\u043A\u0440\u044B\u0442\u044B\u043C\u0438\
+      \ \u0432 \u0433\u043E\u0441\u0442\u0430\u0445 \u0438\u043B\u0438 \u043B\u043E\
+      \u0431\u0431\u0438."
+    type: Fix
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u0441\u0438\
+      \u0441\u0442\u0435\u043C\u0430 \u0432\u0430\u0439\u0442\u043B\u0438\u0441\u0442\
+      \u0430 \u0438 \u0431\u043B\u044D\u043A\u043B\u0438\u0441\u0442\u0430 \u043F\u0430\
+      \u043D\u0435\u043B\u0438 \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\u0439\
+      \u0441\u0442\u0432\u0438\u044F."
+    type: Fix
+  id: 191
+  time: '2025-01-17T13:16:59.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/145
+- author: Shiranuy
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043D\u043E\u0432\
+      \u043E\u0435 \u0432\u0435\u0449\u0435\u0441\u0442\u0432\u043E \u0441\u0442\u043E\
+      \u043D\u0438\u0443\u043C \u0438 \u0432\u043E\u0437\u043C\u043E\u0436\u043D\u043E\
+      \u0441\u0442\u044C \u0435\u0433\u043E \u0432\u0430\u0440\u043A\u0438."
+    type: Add
+  id: 192
+  time: '2025-02-04T02:45:10.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/161
+- author: kanopus7
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B 2 \u043D\u043E\
+      \u0432\u044B\u0435 \u0430\u043D\u0430\u043B\u044C\u043D\u044B\u0435 \u043F\u0440\
+      \u043E\u0431\u043A\u0438 \u0432 \u043A\u0438\u043D\u043A\u043E\u043C\u0430\u0442\
+      : \u043E\u0434\u043D\u0430 \u0441 \u043A\u043E\u0448\u0430\u0447\u044C\u0438\
+      \u043C \u0445\u0432\u043E\u0441\u0442\u0438\u043A\u043E\u043C, \u0432\u0442\u043E\
+      \u0440\u0430\u044F \u0441 \u043B\u0438\u0441\u0438\u043C."
+    type: Add
+  id: 193
+  time: '2025-02-14T00:31:46.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/171
+- author: kanopus7
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043D\u043E\u0432\u044B\
+      \u0439 \u043F\u043E\u043B: \u0444\u0443\u0442\u0430\u043D\u0430\u0440\u0438."
+    type: Add
+  id: 194
+  time: '2025-02-14T00:31:37.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/170
+- author: AlexL1ne
+  changes:
+  - message: "\u0423 \u0441\u0435\u043A\u0441-\u0438\u0433\u0440\u0443\u0448\u0435\
+      \u043A \u0443\u0434\u0430\u043B\u0435\u043D\u0430 \u043F\u0440\u0438\u0441\u043E\
+      \u0441\u043A\u0430."
+    type: Tweak
+  id: 195
+  time: '2025-02-10T03:08:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/163
+- author: Ne0shka
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u0442\u0435\
+      \u043A\u0441\u0442\u0443\u0440\u0430 \u041A\u041F\u041A \u0433\u043E\u0440\u043D\
+      \u0438\u0447\u043D\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\
+      \u0430\u043D\u0438\u044F."
+    type: Fix
+  id: 196
+  time: '2025-02-14T00:31:07.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/169
+- author: Ne0shka
+  changes:
+  - message: "\u0421\u0435\u0440\u0432\u0438\u0441\u043D\u044B\u0439 \u0431\u043E\u0440\
+      \u0433 \u0442\u0435\u043F\u0435\u0440\u044C \u0438\u043C\u0435\u0435\u0442 \u0432\
+      \u043E\u0437\u043C\u043E\u0436\u043D\u043E\u0441\u0442\u044C \u043F\u0440\u043E\
+      \u0441\u043C\u0430\u0442\u0440\u0438\u0432\u0430\u0442\u044C \u0437\u0430\u043A\
+      \u043E\u043D\u044B \u0438 \u0441\u0430\u0434\u0438\u0442\u044C\u0441\u044F."
+    type: Fix
+  id: 197
+  time: '2025-02-14T00:30:59.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/168
+- author: JunterFox
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u041F\u043B\u044E\
+      \u0448\u0435\u0432\u044B\u0435 \u041C\u0430\u043A\u0441\u0438\u043C \u0414\u0435\
+      \u0434\u043E\u0432 \u0438 \u0418\u0432\u0430\u043D \u0411\u044B\u043A\u043E\u0432"
+    type: Add
+  - message: "\u0423\u0434\u0430\u043B\u0435\u043D\u0430 21 \u043F\u043B\u044E\u0448\
+      \u043A\u0430 \u043D\u0435\u0430\u043A\u0442\u0438\u0432\u043D\u044B\u0445/\u0437\
+      \u0430\u0431\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\
+      \u0445 \u0437\u0430 \u0433\u0440\u0443\u0431\u044B\u0435 \u043D\u0430\u0440\u0443\
+      \u0448\u0435\u043D\u0438\u044F \u0431\u044B\u0432\u0448\u0438\u0445 \u0447\u043B\
+      \u0435\u043D\u043E\u0432 \u0441\u043E\u043E\u0431\u0449\u0435\u0441\u0442\u0432\
+      \u0430 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0445 \u0432\
+      \ \u0445\u043E\u0434\u0435 \u043A\u043E\u043D\u0432\u0435\u0435\u0440\u043D\u043E\
+      \u0439 \u0440\u0430\u0431\u043E\u0442\u044B."
+    type: Remove
+  id: 198
+  time: '2025-02-14T01:30:06.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/174
+- author: kanopus7
+  changes:
+  - message: "\u0424\u0443\u0442\u0430\u043D\u0430\u0440\u0438 \u0442\u0435\u043F\u0435\
+      \u0440\u044C \u043E\u0431\u043B\u0430\u0434\u0430\u044E\u0442 \u0432\u0430\u0433\
+      \u0438\u043D\u043E\u0439."
+    type: Tweak
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u0431\u043E\
+      \u043B\u044C\u0448\u0438\u043D\u0441\u0442\u0432\u043E \u043E\u0448\u0438\u0431\
+      \u043E\u043A \u0441\u0432\u044F\u0437\u0430\u043D\u043D\u044B\u0445 \u0441 \u0444\
+      \u0443\u0442\u0430\u043D\u0430\u0440\u0438."
+    type: Fix
+  id: 199
+  time: '2025-02-15T04:05:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/176
+- author: kanopus7
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u0437\u0432\
+      \u0443\u043A\u0438 \u0432 \u044D\u043C\u043E\u0443\u0442\u0430\u0445 \u0443\
+      \ \u0432\u0441\u0435\u0445 \u0440\u0430\u0441 \u0434\u043B\u044F \u0444\u0443\
+      \u0442\u0430\u043D\u0430\u0440\u0438. \u0422\u0435\u043F\u0435\u0440\u044C \u0442\
+      \u0430\u043C \u0432\u0441\u0435 \u0442\u043E\u0447\u043D\u043E \u0436\u0435\u043D\
+      \u0441\u043A\u043E\u0435."
+    type: Fix
+  id: 200
+  time: '2025-02-15T21:22:47.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/178
+- author: LEWDXD
+  changes:
+  - message: "\u041D\u043E\u0432\u044B\u0439 \u0434\u0438\u0437\u0430\u0439\u043D\
+      \ \u041A\u041F\u041A \u0433\u043E\u0440\u043D\u0438\u0447\u043D\u043E\u0439\
+      \ \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u044F"
+    type: Tweak
+  id: 201
+  time: '2025-03-29T11:49:06.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/184
+- author: SqerDust
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0444\u0443\u0442\u0431\u043E\
+      \u043B\u043A\u0443 \"\u041F\u0438\u0432\u043E\u0437\u0430\u0432\u0440\" \u0438\
+      \ \u043F\u0438\u0432\u043D\u043E\u0439 \u043A\u043E\u0441\u0442\u044E\u043C\
+      . \u041D\u0430\u0439\u0442\u0438 \u0438\u0445 \u043C\u043E\u0436\u043D\u043E\
+      \ \u0432 \u0422\u0435\u0430\u0442\u0440\u043E\u041C\u0430\u0442\u0435."
+    type: Add
+  id: 202
+  time: '2025-03-29T11:53:04.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/198
+- author: kanopus7
+  changes:
+  - message: "\u041F\u0430\u043D\u0435\u043B\u044C \u0432\u0437\u0430\u0438\u043C\u043E\
+      \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044F \u043E\u043A\u043E\u043D\u0447\
+      \u0430\u0442\u0435\u043B\u044C\u043D\u043E \u043F\u043E\u0444\u0438\u043A\u0448\
+      \u0435\u043D\u0430 (\u0438\u043B\u0438 \u043D\u0435\u0442?)."
+    type: Fix
+  id: 203
+  time: '2025-03-29T11:48:55.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/172
+- author: Gardsnake
+  changes:
+  - message: "\u041B\u043E\u0433\u043E\u0442\u0438\u043F NT \u043D\u0430 \u043F\u043E\
+      \u0441\u044B\u043B\u043A\u0430\u0445 \u0437\u0430\u043C\u0435\u043D\u0451\u043D\
+      \ \u043D\u0430 \u043B\u043E\u0433\u043E\u0442\u0438\u043F Qillu."
+    type: Tweak
+  - message: "\u041B\u043E\u0433\u043E\u0442\u0438\u043F NT \u043D\u0430 \u043F\u0438\
+      \u0441\u044C\u043C\u0430\u0445 \u0437\u0430\u043C\u0435\u043D\u0451\u043D \u043D\
+      \u0430 \u043B\u043E\u0433\u043E\u0442\u0438\u043F Qillu."
+    type: Tweak
+  id: 204
+  time: '2025-04-06T00:24:48.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/203
+- author: SqerDust
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0451\u043D \u043B\u043E\u0433\u043E\u0442\
+      \u0438\u043F \"Nanotrasen\" \u043D\u0430 \"Qillu\"."
+    type: Tweak
+  id: 205
+  time: '2025-04-06T00:24:36.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/202
+- author: Gardsnake
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u0438\u043A\u043E\u043D\
+      \u043A\u0430 \u043A\u043B\u044E\u0447\u0430 \u0448\u0438\u0444\u0440\u043E\u0432\
+      \u0430\u043D\u0438\u044F \u0426\u0435\u043D\u0442\u041A\u043E\u043C\u0430."
+    type: Tweak
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u0438\u043A\u043E\u043D\
+      \u043A\u0430 \u0434\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u0438 \u0426\u0435\
+      \u043D\u0442\u041A\u043E\u043C\u0430."
+    type: Tweak
+  id: 206
+  time: '2025-04-03T01:25:25.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/200
+- author: VigersRay
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0430\
+      \u0432\u043D \u043A\u043E\u0441\u043C\u043E\u043F\u043E\u0440\u0442\u0430. (\u041A\
+      \u0430\u043A \u0438\u0442\u043E\u0433 \u0441\u043F\u0430\u0432\u043D \u0438\
+      \ \u0440\u0430\u0431\u043E\u0442\u0430 \u044D\u0432\u0430\u043A\u0430)"
+    type: Fix
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0430\
+      \u0432\u043D \u0431\u043E\u043A\u0441\u0430 \u0438 \u043D\u0435\u043A\u043E\u0442\
+      \u043E\u0440\u044B\u0445 \u0434\u0440\u0443\u0433\u0438\u0445 \u0441\u0442\u0430\
+      \u043D\u0446\u0438\u0439."
+    type: Fix
+  id: 207
+  time: '2025-04-11T17:35:23.468231+00:00'
+- author: VigersRay
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u0435\
+      \u0440\u0435\u043F\u0443\u0442\u0430\u043D\u044B\u0435 \u0448\u0430\u043D\u0441\
+      \u044B \u0440\u0435\u0436\u0438\u043C\u043E\u0432 \u043D\u0430 \u0441\u043F\u0435\
+      \u043A\u0442\u0440\u0443\u043C\u0435 \u0438 \u0432\u0435\u043D\u0435\u0440\u0435\
+      ."
+    type: Fix
+  id: 208
+  time: '2025-04-20T00:21:42.470337+00:00'
+- author: darneya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043A\u0430\u0442\
+      \u0435\u0433\u043E\u0440\u0438\u044F \"\u042D\u0440\u043E\u0442\u0438\u0447\u0435\
+      \u0441\u043A\u043E\u0435\" \u0432 Lust Shop"
+    type: Add
+  id: 209
+  time: '2025-05-05T13:59:47.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/230
+- author: Vacuum898
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0431\u0434\u0441\
+      \u043C \u0441\u0442\u043E\u0439\u043A\u0430 + \u0443\u043F\u0430\u043A\u043E\
+      \u0432\u0430\u043D\u043D\u044B\u0439 \u0432\u0430\u0440\u0438\u0430\u043D\u0442\
+      \ \u0434\u043B\u044F \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0438\
+      \ \u043C\u0443\u043B\u044C\u0442\u0438\u0442\u0443\u043B\u043E\u043C."
+    type: Add
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0451\u043D \u043A\u0430\u0442\u0430\u043B\
+      \u043E\u0433 \u043A\u0438\u043D\u043A\u043E\u043C\u0430\u0442\u0430, \u043A\u0443\
+      \u0434\u0430 \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u043E \u0438\
+      \ \u0431\u044B\u043B\u0430 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430\
+      \ \u0443\u043F\u0430\u043A\u043E\u0432\u0430\u043D\u043D\u0430\u044F \u0441\u0442\
+      \u043E\u0439\u043A\u0430."
+    type: Tweak
+  id: 210
+  time: '2025-05-05T13:59:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/229
+- author: ASLEEP
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0410\u043B\u043A\u043E\u0433\
+      \u043E\u043B\u0438\u0447\u043A\u0443"
+    type: Add
+  id: 211
+  time: '2025-04-27T20:56:40.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/227
+- author: ProfCopperGear
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u044D\u0440\u043E\
+      \u0442\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0434\u0435\u043B\u043E\u0432\
+      \u0430\u044F \u0444\u043E\u0440\u043C\u0430 \u0432 \u043A\u0438\u043D\u043A\u043E\
+      \u043C\u0430\u0442."
+    type: Add
+  id: 212
+  time: '2025-04-27T20:56:08.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/221
+- author: darneya
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0431\u0430\u0433\
+      \ \u0441 \u0415\u0420\u041F \u0432\u0437\u0430\u0438\u043C\u043E\u0434\u0435\
+      \u0439\u0441\u0442\u0432\u0438\u044F\u043C\u0438, \u0437\u0430\u0434\u0435\u0439\
+      \u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0435 \u0440\u043E\u0433\u0430."
+    type: Fix
+  id: 213
+  time: '2025-05-31T20:06:11.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/245
+- author: Dezzzix, Lugzag
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E 4 \u0432\u0438\
+      \u0434\u0430 \u043B\u0430\u043F\u043E\u043A-\u043F\u0435\u0440\u0447\u0430\u0442\
+      \u043E\u043A."
+    type: Add
+  - message: "\u0421\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0435 \u043F\
+      \u0435\u0440\u0447\u0430\u0442\u043A\u0438 \u0433\u043E\u0440\u043D\u0438\u0447\
+      \u043D\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\
+      \u0438\u044F \u0437\u0430\u043C\u0435\u043D\u0435\u043D\u044B \u043D\u0430 \u043B\
+      \u0430\u043F\u043A\u0438-\u043F\u0435\u0440\u0447\u0430\u0442\u043A\u0438."
+    type: Tweak
+  id: 214
+  time: '2025-05-31T19:56:19.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/249
+- author: ASLEEP
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0438\u0433\u0440\
+      \u0443\u0448\u0435\u0447\u043D\u044B\u0435 \u043D\u0430\u0440\u0443\u0447\u043D\
+      \u0438\u043A\u0438"
+    type: Add
+  id: 215
+  time: '2025-05-31T20:07:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/244
+- author: Noychik
+  changes:
+  - message: "\u0417\u0430\u043C\u0435\u043D\u0435\u043D\u0430 \u0442\u0435\u043A\u0441\
+      \u0442\u0443\u0440\u0430 \u043F\u043B\u044E\u0448\u043A\u0438 \u041C\u0430\u043A\
+      \u0441\u0438\u043C\u0430 \u0414\u0435\u0434\u043E\u0432\u0430"
+    type: Tweak
+  id: 216
+  time: '2025-06-01T17:31:09.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/260
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0421\u0432\u044F\u0449\u0435\u043D-\u041B\u044E\u043D\u0430\
+      ."
+    type: Add
+  id: 217
+  time: '2025-06-01T17:29:48.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/258
+- author: ProfCopperGear, pacable
+  changes:
+  - message: "\u0412 \u043A\u0438\u043D\u043A\u043E\u043C\u0430\u0442 \u0434\u043E\
+      \u0431\u0430\u0432\u043B\u0435\u043D\u043E \u043E\u0434\u0435\u044F\u043D\u0438\
+      \u0435 \u0441\u0443\u043A\u043A\u0443\u0431\u0430."
+    type: Add
+  id: 218
+  time: '2025-06-01T17:29:07.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/256
+- author: Hart_ty
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D \u0441\u043F\u0440\u0430\u0439\
+      \u0442 \u043A\u0430\u0441\u0442\u0435\u0442\u0430 \u041A\u0432\u0430\u0440\u0442\
+      \u0438\u0440\u043C\u0435\u0439\u0441\u0442\u0435\u0440\u0430. \u0422\u0435\u043F\
+      \u0435\u0440\u044C \u043D\u0430 \u043D\u0451\u043C \u044D\u043C\u0431\u043B\u0435\
+      \u043C\u0430 Qillu."
+    type: Tweak
+  id: 219
+  time: '2025-06-02T15:08:30.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/261
+- author: pacable
+  changes:
+  - message: "\u041B\u0443\u0436\u0438 \u0441\u0435\u043C\u0435\u043D\u0438 \u0442\
+      \u0435\u043F\u0435\u0440\u044C \u043E\u0431\u044A\u0435\u0434\u0438\u043D\u044F\
+      \u044E\u0442\u0441\u044F, \u0430 \u043D\u0435 \u043D\u0430\u043A\u043B\u0430\
+      \u0434\u044B\u0432\u0430\u044E\u0442\u0441\u044F."
+    type: Fix
+  id: 220
+  time: '2025-06-02T16:43:39.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/265
+- author: pacable, seraphimttt
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043E\u0448\u0435\
+      \u0439\u043D\u0438\u043A\u0438 \u0441 \u043A\u043E\u043B\u043E\u043A\u043E\u043B\
+      \u044C\u0447\u0438\u043A\u043E\u043C."
+    type: Add
+  id: 221
+  time: '2025-06-04T14:29:33.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/264
+- author: Kendrick
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0438\u043D\u0434\
+      \u0438\u0432\u0438\u0434\u0443\u0430\u043B\u044C\u043D\u0430\u044F \u0434\u043B\
+      \u044F Lust Station \u043A\u0430\u0441\u0442\u043E\u043C\u0438\u0437\u0430\u0446\
+      \u0438\u044F \u0434\u043B\u044F \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\
+      \u0445 \u0440\u043E\u043B\u0435\u0439: \u0410\u0412\u0414, \u041F\u041A, \u0412\
+      \u0441\u0435 \u0433\u043B\u0430\u0432\u044B (\u041A\u0440\u043E\u043C\u0435\
+      \ \u0413\u041F), \u041A\u0430\u043F\u0438\u0442\u0430\u043D, \u0441\u043C\u043E\
+      \u0442\u0440\u0438\u0442\u0435\u043B\u044C, \u0430\u0434\u044A\u044E\u0442\u0430\
+      \u043D\u0442."
+    type: Add
+  id: 222
+  time: '2025-06-04T14:31:59.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/263
+- author: Gardsnake
+  changes:
+  - message: "\u042D\u0445\u043E \u0412\u0438\u0441\u043A\u0438 \u0432\u044B\u0432\
+      \u0435\u0441\u043A\u0430 \u0432 \u0431\u0430\u0440\u0435 \u0442\u0435\u043F\u0435\
+      \u0440\u044C \u0438\u043C\u0435\u0435\u0442 \u043B\u043E\u0433\u043E\u0442\u0438\
+      \u043F Qillu!"
+    type: Add
+  id: 223
+  time: '2025-06-07T21:09:31.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/268
+- author: seraphimttt, pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0447\u043E\u043A\
+      \u0435\u0440 \u0441 \u043A\u0440\u0435\u0441\u0442\u0438\u043A\u043E\u043C \u0438\
+      \ \u0447\u043E\u043A\u0435\u0440 \u0441\u043E \u0437\u0432\u0435\u0437\u0434\
+      \u043E\u0439."
+    type: Add
+  id: 224
+  time: '2025-06-07T21:19:07.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/271
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F \u0438\u0433\u0440\u0443\u0448\u043A\u0430 \u0410\
+      \u0440\u0435\u043B\u0438\u0442\u0442 \u0412\u0435\u0440\u043C\u043E\u043B\u044C\
+      \u043D\u0434."
+    type: Add
+  id: 225
+  time: '2025-06-10T15:39:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/274
+- author: pacable
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0439 \u0424\u0440\u0430\u043D\u0446 \u042D\u0432\u0430\u043D\
+      \u0441."
+    type: Add
+  id: 226
+  time: '2025-06-10T15:20:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/273
+- author: darneya, Vitalitaalalita
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0427\u0412\u041A\
+      \ \"Arrows\"."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0448\u0430\u0442\u0442\
+      \u043B \u0427\u0412\u041A \"Arrows\"."
+    type: Add
+  id: 227
+  time: '2025-07-05T13:06:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/291
+- author: Kendrick
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0440\u043E\u0433\u0430 \u0430\u0440\u043A\u0430\u043D\u0430\u043C\
+      ."
+    type: Add
+  id: 228
+  time: '2025-07-06T13:31:39.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/286
+- author: Kendrick
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0441\u0435\u043A\u0441\
+      \ \u043D\u0430 \u043F\u043B\u044F\u0436\u0435"
+    type: Add
+  id: 229
+  time: '2025-07-11T15:48:29.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/301
+- author: ReWAFFlution
+  changes:
+  - message: "\u0423\u0434\u0430\u043B\u0435\u043D\u043E 3 \u0445\u0432\u043E\u0441\
+      \u0442\u0430 \u0434\u043B\u044F \u043B\u044E\u0434\u0435\u0439 \u0432 \u043C\
+      \u0435\u043D\u044E \u043A\u0430\u0441\u0442\u043E\u043C\u0438\u0437\u0430\u0446\
+      \u0438\u0438."
+    type: Remove
+  id: 230
+  time: '2025-07-13T08:37:01.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/306
+- author: daniil7383
+  changes:
+  - message: "\u0426\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u043E\u0435 \u043A\
+      \u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u0435 \u043D\u0430\
+      \u043A\u043E\u043D\u0435\u0446 \u043D\u0430\u0447\u0430\u043B\u043E \u043F\u043E\
+      \u0441\u0442\u0430\u0432\u043B\u044F\u0442\u044C \u043D\u043E\u0440\u043C\u0430\
+      \u043B\u044C\u043D\u0443\u044E \u043F\u0435\u0447\u0430\u0442\u044C \u043F\u0440\
+      \u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043B\u044E Qillu."
+    type: Tweak
+  id: 231
+  time: '2025-07-19T10:13:41.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/295
+- author: Kendrick
+  changes:
+  - message: "\u041D\u0430 \u043F\u0430\u0440\u0430\u0434\u043D\u043E\u0439 \u0444\
+      \u043E\u0440\u043C\u0435 \u043A\u0430\u043F\u0438\u0442\u0430\u043D\u0430, \u0413\
+      \u0421\u0411 \u0438 \u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044F\
+      \ \u043F\u043E\u044F\u0432\u0438\u043B\u0441\u044F \u0441\u043B\u043E\u0442\
+      \ \u043F\u043E\u0434 \u043E\u0440\u0443\u0436\u0438\u0435 \u0438 \u0431\u0430\
+      \u043B\u043B\u043E\u043D."
+    type: Fix
+  id: 232
+  time: '2025-07-18T14:42:39.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/307
+- author: VigersRay
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0430\
+      \u0432\u043D \u0426\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u043E\u0433\
+      \u043E \u041A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u044F\
+      ."
+    type: Fix
+  id: 233
+  time: '2025-07-19T10:27:09.120872+00:00'
+- author: kanopus7
+  changes:
+  - message: "\u0410\u0431\u0434\u0443\u043A\u0442\u043E\u0440\u044B \u043F\u043E\u043B\
+      \u0443\u0447\u0438\u043B\u0438 \u0415\u0420\u041F \u043F\u0430\u043D\u0435\u043B\
+      \u044C."
+    type: Add
+  id: 234
+  time: '2025-07-22T15:50:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/316
+- author: ReWAFFlution
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B 6 \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u044B\u0445 \u0438\u0433\u0440\u0443\u0448\u0435\u043A."
+    type: Add
+  id: 235
+  time: '2025-07-22T15:49:52.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/317
+- author: Ne0shka
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0414\u0440\u0430\u0441\u0443\u0441\u0430 \u041B\u0435\u0432\
+      \u0435\u0440\u0438\u0430\u043D\u0430."
+    type: Add
+  id: 236
+  time: '2025-07-25T08:59:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/320
+- author: kanopus7
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0441\u043E\u043E\
+      \u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0435 \u0432\
+      \u043E\u043A\u0430\u043B\u044C\u043D\u044B\u0435 \u044D\u0444\u0444\u0435\u043A\
+      \u0442\u044B \u0434\u043B\u044F \u043F\u043E\u043B\u0430 \"\u0424\u0443\u0442\
+      \u0430\u043D\u0430\u0440\u0438\"."
+    type: Fix
+  id: 237
+  time: '2025-08-07T07:35:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/326
+- author: Kinar_7
+  changes:
+  - message: "\u041A\u0432\u0438\u043B\u043B\u0443 \u0443\u0441\u0438\u043B\u0438\u043B\
+      \u043E \u043F\u043E\u0434\u0430\u0447\u0443 \u044D\u043D\u0435\u0440\u0433\u0438\
+      \u0438 \u0421\u0442\u0430\u043D\u043C\u0435\u0447\u0430. \u0422\u0435\u043F\u0435\
+      \u0440\u044C \u043E\u043D \u043C\u043E\u0436\u0435\u0442 \u043F\u043E\u043B\u043E\
+      \u0436\u0438\u0442\u044C \u0447\u0435\u043B\u043E\u0432\u0435\u043A\u0430 \u0441\
+      \ 3 \u0443\u0434\u0430\u0440\u043E\u0432."
+    type: Tweak
+  id: 238
+  time: '2025-08-07T07:34:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/325
+- author: Gpxgji
+  changes:
+  - message: "\u0411\u043E\u043B\u044C\u0448\u0430\u044F \u0447\u0430\u0441\u0442\u044C\
+      \ \u0430\u043A\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u043E\u0432 \u0438\
+      \ \u043E\u0434\u0435\u0436\u0434\u044B \u043F\u0435\u0440\u0435\u0432\u0435\u0434\
+      \u0435\u043D\u044B \u043D\u0430 \u0420\u0443\u0441\u0441\u043A\u0438\u0439 \u044F\
+      \u0437\u044B\u043A. \u041A\u0430\u0436\u0434\u044B\u0439 \u043F\u0440\u0435\u0434\
+      \u043C\u0435\u0442 \u0438\u043C\u0435\u0435\u0442 \u0443\u043D\u0438\u043A\u0430\
+      \u043B\u044C\u043D\u043E\u0435 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435\
+      \ \u0438 \u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435."
+    type: Tweak
+  id: 239
+  time: '2025-08-07T07:33:49.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/324
+- author: InoweD, land1001
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0443\u043A\u0430\
+      \u0437\u043A\u0430 \u0431\u0438\u0431\u043B\u0438\u043E\u0442\u0435\u043A\u0430\
+      \u0440\u044F."
+    type: Add
+  id: 240
+  time: '2025-08-07T07:45:51.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/334
+- author: Gpxgji
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0440\
+      \u0430\u0439\u0442 \u043F\u043B\u0430\u0449\u0430 \u041E\u0421\u041E."
+    type: Fix
+  - message: "\u0412 \u043B\u043E\u0430\u0434\u0430\u0443\u0442\u0435 \u0410\u0412\
+      \u0414 \u043D\u0430\u0445\u043E\u0434\u0438\u0442\u0441\u044F \u0435\u0433\u043E\
+      \ \u0441\u043F\u0435\u0446\u0438\u0430\u043B\u0438\u0437\u0438\u0440\u043E\u0432\
+      \u0430\u043D\u043D\u0430\u044F \u0441\u0443\u043C\u043A\u0430."
+    type: Fix
+  id: 241
+  time: '2025-08-07T07:50:43.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/330
+- author: Kendrick
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043F\u043B\u0430\
+      \u0449 \u0438 \u043C\u0430\u043D\u0442\u0438\u044F \u0448\u0430\u0445\u0442\u0451\
+      \u0440\u043E\u0432 \u0432 \u043B\u043E\u0430\u0434\u0430\u0443\u0442 \u0443\u0442\
+      \u0438\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u043E\u0432."
+    type: Add
+  id: 242
+  time: '2025-08-14T15:51:57.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/328
+- author: Hero_010
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043B\u043E\u0434\
+      \u0430\u0443\u0442\u044B \u0434\u043B\u044F \u0433\u043E\u0440\u043D\u0438\u0447\
+      \u043D\u043E\u0439."
+    type: Add
+  id: 243
+  time: '2025-08-14T15:38:43.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/344
+- author: Noychik & kamenshik975
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u044D\u043B\u0435\u0433\
+      \u0430\u043D\u0442\u043D\u044B\u0439 \u0442\u0440\u0435\u043D\u0447 \u0413\u0421\
+      \u0411"
+    type: Add
+  id: 244
+  time: '2025-08-14T16:08:29.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/340
+- author: daniil7383
+  changes:
+  - message: "\u0437\u0430\u043C\u0435\u043D\u0435\u043D\u044B \u0443\u043F\u043E\u043C\
+      \u0438\u043D\u0430\u043D\u0438\u044F \u0432 \u043E\u043F\u0438\u0441\u0430\u043D\
+      \u0438\u044F\u0445 \u0438\u043B\u0438 \u0432 \u0438\u043C\u0435\u043D\u0430\u0445\
+      \ NT \u043D\u0430 Qillu \u0434\u043B\u044F \u0441\u043E\u043E\u0442\u0432\u0435\
+      \u0442\u0441\u0442\u0432\u0438\u044F \u0441\u0435\u0440\u0432\u0435\u0440\u0443\
+      ."
+    type: Tweak
+  id: 245
+  time: '2025-08-14T19:43:49.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/296
+- author: daniil7383, gardsnake
+  changes:
+  - message: "\u041A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u0442\u0435\u043B\u044C\
+      \u043D\u044B\u0439 \u0430\u043F\u043F\u0430\u0440\u0430\u0442 \u043F\u0435\u0447\
+      \u0430\u0442\u0430\u0435\u0442 \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\
+      \u044B \u0441 \u043B\u043E\u0433\u043E\u0442\u0438\u043F\u043E\u043C Q."
+    type: Add
+  id: 246
+  time: '2025-08-25T10:35:24.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/364
+- author: Gpxgji
+  changes:
+  - message: "\u0422\u0435\u043F\u0435\u0440\u044C \u043F\u043B\u044E\u0448\u043A\u0438\
+      \ \u043B\u0430\u0441\u0442\u0430 \u0442\u0430\u043A\u0436\u0435 \u0432 \u0441\
+      \u0432\u043E\u0435\u0439 \u043A\u043E\u0440\u043E\u0431\u043A\u0435."
+    type: Tweak
+  id: 247
+  time: '2025-08-28T12:59:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/370
+- author: daniil7383
+  changes:
+  - message: "\u0448\u0430\u0431\u043B\u043E\u043D\u044B Qillu \u0434\u043B\u044F\
+      \ \u043F\u0440\u0438\u043D\u0442\u0435\u0440\u0430"
+    type: Add
+  id: 248
+  time: '2025-08-15T15:17:48.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/351
+- author: daniil7383
+  changes:
+  - message: "\u0414\u043E\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043B\u043E\u043A\
+      \u0430\u043B\u0438\u0437\u0430\u0446\u0438\u0438 \u041D\u0422 \u043D\u0430 Qillu"
+    type: Fix
+  id: 249
+  time: '2025-08-28T13:02:20.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/367
+- author: Orvex07, seraphimttt
+  changes:
+  - message: "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0430 \u0442\u0435\u043A\u0441\
+      \u0442\u0443\u0440\u0430 \u0431\u0430\u043D\u043D\u0435\u0440\u0430 Qillu"
+    type: Tweak
+  id: 250
+  time: '2025-11-14T18:41:58.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/411
+- author: darneya
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043A\u0430\u0442\
+      \u0435\u0433\u043E\u0440\u0438\u044F \"\u041E\u0447\u043A\u0438\" \u0434\u043B\
+      \u044F \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u043E\u0432 \u043E\
+      \u0442\u0434\u0435\u043B\u0430 \u0421\u043B\u0443\u0436\u0431\u044B \u0411\u0435\
+      \u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438."
+    type: Add
+  - message: "\u0414\u043B\u044F \u0441\u043F\u043E\u043D\u0441\u043E\u0440\u043E\u0432\
+      \ \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \"\u0432\u0438\u0437\u043E\
+      \u0440 \u0421\u0411\", \u043F\u0440\u044F\u043C\u043E\u0439 \u0430\u043D\u0430\
+      \u043B\u043E\u0433 \u043E\u0431\u044B\u0447\u043D\u044B\u0445 \u043E\u0447\u043A\
+      \u043E\u0432 \u043E\u0445\u0440\u0430\u043D\u044B, \u043D\u043E \u0441 \u0438\
+      \u043D\u044B\u043C \u0441\u043F\u0440\u0430\u0439\u0442\u043E\u043C."
+    type: Add
+  id: 251
+  time: '2025-11-16T11:54:55.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/384
+- author: darneya, Vitalitaalalita
+  changes:
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0438\u0435 \u0427\
+      \u0412\u041A \"Arrows\"."
+    type: Add
+  id: 252
+  time: '2025-11-16T20:38:22.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/407
+- author: Noychik
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0410\u0448\u0438\u0442\u043E \u041B\u0435\u0432\u0440\u0438\
+      \u043D\u0430"
+    type: Add
+  id: 253
+  time: '2025-11-20T11:45:57.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/410
+- author: Noychik
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u041A\u0438\u0440\u044B \u041A\u0438\u043B\u043B\u0438\u0433\
+      \u0440\u044E"
+    type: Add
+  id: 254
+  time: '2025-11-23T20:18:20.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/401
+- author: Kinar_7
+  changes:
+  - message: "\u0423\u0431\u0440\u0430\u043B \u043F\u043B\u044E\u0448\u043A\u0443\
+      \ \u041C\u0430\u043B\u0435\u0440\u043E\u043D\u0430"
+    type: Remove
+  id: 255
+  time: '2025-12-01T18:33:36.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/414
+- author: Kinar_7
+  changes:
+  - message: "\u0422\u0435\u043F\u0435\u0440\u044C \u0441 \u043F\u043E\u043C\u043E\
+      \u0449\u044C\u044E \u044D\u043B\u0435\u0433\u0430\u0442\u043D\u043E\u0433\u043E\
+      \ \u0442\u0440\u0435\u043D\u0447\u0430 \u0413\u0421\u0411 \u0432\u044B \u043C\
+      \u043E\u0436\u0435\u0442\u0435 \u043D\u043E\u0441\u0438\u0442\u044C \u043E\u0440\
+      \u0443\u0436\u0438\u0435 \u043D\u0430 \u0441\u043F\u0438\u043D\u0435"
+    type: Fix
+  id: 256
+  time: '2025-12-01T18:38:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/413
+- author: Hero_010
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u043D\u0430\
+      \u0437\u0432\u0430\u043D\u0438\u0435 \u044D\u043C\u043E\u0446\u0438\u0438 \u0421\
+      \u0442\u043E\u043D\u0430\u0442\u044C."
+    type: Fix
+  id: 257
+  time: '2025-12-01T18:37:23.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/402
+- author: Orvex07
+  changes:
+  - message: "\u041B\u043E\u043A\u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0434\
+      \u043E\u043A\u0443\u043C\u0435\u043D\u0442\u043E\u0432 \u0441 NT \u043D\u0430\
+      \ Qillu"
+    type: Fix
+  id: 258
+  time: '2025-12-05T18:44:41.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/422
+- author: kinar_7
+  changes:
+  - message: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u0441\u043F\u0440\
+      \u0430\u0439\u0442\u044B \u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E \u0443\
+      \u0431\u0440\u0430\u043D\u044B"
+    type: Remove
+  id: 259
+  time: '2025-12-13T16:39:54.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/424
+- author: JunterFox
+  changes:
+  - message: "\u041F\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u0438\u0442\u0435\u043B\
+      \u044C Qillu \u043F\u0435\u0440\u0435\u0432\u0435\u0434\u0451\u043D \u043F\u043E\
+      \u0434 Whitelist."
+    type: Tweak
+  id: 260
+  time: '2025-12-26T11:30:49.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/427
+- author: KaiserMaus
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u0432\u0435\
+      \u0441\u0435\u043B\u044C\u0435 VigersRay."
+    type: Fix
+  id: 261
+  time: '2025-12-26T12:25:31.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/436
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043E\u0434\u0435\
+      \u0436\u0434\u0430 \u0410\u0412\u0414"
+    type: Add
+  id: 262
+  time: '2025-12-26T12:25:08.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/437
+- author: kanopus7
+  changes:
+  - message: "\u041D\u0435\u043A\u043E\u0442\u043E\u0440\u044B\u0435 \u043F\u043B\u044E\
+      \u0448\u0438 \u0431\u044B\u043B\u0438 \u0443\u0434\u0430\u043B\u0435\u043D\u044B\
+      ."
+    type: Remove
+  - message: "\u0423\u0434\u0430\u043B\u0435\u043D \u043B\u0430\u043A\u0438 \u0431\
+      \u043E\u043A\u0441 \u0441\u0430\u043D\u0440\u0430\u0439\u0437 \u043F\u043B\u044E\
+      \u0448\u0435\u043A \u0441 LUST \u0430\u043F\u043B\u0438\u043D\u043A\u0430."
+    type: Remove
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u043A\u0430 \u0421\u0438\u043B\u044C\u0442\u043E\u043D\u0430 \u0413\u0440\
+      \u0435\u0439\u0441\u0430."
+    type: Add
+  - message: "\u041F\u043B\u044E\u0448\u043A\u0438 \u043A\u043E\u0442\u043E\u0440\u044B\
+      \u0435 \u0434\u043E\u043B\u0436\u043D\u044B \u0431\u044B\u043B\u0438 \u0433\u043E\
+      \u0432\u043E\u0440\u0438\u0442\u044C - \u0442\u0435\u043F\u0435\u0440\u044C\
+      \ \u0433\u043E\u0432\u043E\u0440\u044F\u0442."
+    type: Fix
+  id: 263
+  time: '2025-12-26T16:01:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/421
+- author: iDesmond
+  changes:
+  - message: "\u041F\u043B\u044E\u0448\u043A\u0430 \u0421\u043E\u0444\u044C\u044F\
+      \ \u041A\u043E\u043C\u0438\u0441\u0441\u0430\u0440\u043E\u0432\u0430 \u043F\u043E\
+      \u043B\u0443\u0447\u0438\u043B\u0430 inhand \u0441\u043F\u0440\u0430\u0439\u0442\
+      \u044B"
+    type: Add
+  id: 264
+  time: '2025-12-29T09:27:55.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/439
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0448\u0430\u0431\u043B\u043E\u043D\u044B \u0434\u043E\u043A\u0443\
+      \u043C\u0435\u043D\u0442\u043E\u0432 \u0432 \u043A\u043E\u043F\u0438\u0440\u043E\
+      \u0432\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u0439 \u0430\u043F\u043F\u0430\
+      \u0440\u0430\u0442"
+    type: Add
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0437\u0430\u0433\
+      \u043E\u043B\u043E\u0432\u043E\u043A \u0432 \u0446\u0435\u043B\u0438 \u0441\u0442\
+      \u0430\u043D\u0446\u0438\u0438"
+    type: Fix
+  id: 265
+  time: '2026-01-04T11:13:02.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/445
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0432\u0435\u0449\
+      \u0438 Qillu \u0446\u0435\u043D\u0442\u0440\u0430\u043B\u044C\u043D\u043E\u043C\
+      \u0443 \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0432\u0430\u043D\u0438\u044E\
+      ."
+    type: Add
+  id: 266
+  time: '2026-01-04T20:28:44.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/446
+- author: kanopus7
+  changes:
+  - message: "\u0412 \u0430\u043F\u043B\u0438\u043D\u043A \u043B\u0430\u0441\u0442\
+      \u0430 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0440\u0430\u0437\u0434\
+      \u0435\u043B \u0441 \u043A\u0440\u0430\u0441\u043A\u043E\u0439."
+    type: Add
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D \u0430\u0444\u0440\
+      \u043E\u0434\u0435\u0437\u0438\u0430\u043A."
+    type: Add
+  - message: "\u041F\u043E\u0444\u0438\u043A\u0448\u0435\u043D \u0433\u043E\u043B\u043E\
+      \u0441 \u0432\u043E\u043A\u0441\u043E\u0432."
+    type: Fix
+  id: 267
+  time: '2026-01-08T15:15:54.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/454
+- author: Fooksy2304, bulbo44kkey
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0423\u043B\u0430\u0432\u0435\
+      \ \u0441\u043F\u0440\u0430\u0439\u0442\u044B \u0432 \u0440\u0443\u043A\u0430\
+      \u0445, \u0441\u0438\u0434\u0435\u043D\u0438\u044F \u043D\u0430 \u0448\u0435\
+      \u0435"
+    type: Add
+  id: 268
+  time: '2026-01-08T18:24:32.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/455
+- author: Orvex07
+  changes:
+  - message: "\u0428\u043E\u043A\u043E\u0432\u044B\u0439 \u043E\u0448\u0435\u0439\u043D\
+      \u0438\u043A \u0441\u043D\u043E\u0432\u0430 \u0440\u0430\u0431\u043E\u0442\u0430\
+      \u0435\u0442."
+    type: Fix
+  id: 269
+  time: '2026-01-09T22:14:45.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/458
+- author: iDesmond & bulbo44kkey
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\
+      \u0448\u0435\u0432\u0430\u044F L.I.L.I.T.H"
+    type: Add
+  id: 270
+  time: '2026-01-20T19:59:34.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/461
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u0438\u043B \u0441\u0438\u043B\u043E\u0432\
+      \u0443\u044E \u0434\u0432\u0435\u0440\u044C \u0434\u043B\u044F \u0438\u0432\u0435\
+      \u043D\u0442\u043E\u0432 HL2"
+    type: Add
+  id: 271
+  time: '2026-01-20T19:59:47.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/460
+- author: Fooksy2304
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u0414\u0438\u0435\u0433\
+      \u043E \u0424\u043E\u043D \u044D\u044D\u044D \u0437\u0430\u0431\u044B\u043B\
+      , \u043A \u0441\u043E\u0436\u0430\u043B\u0435\u043D\u0438\u044E \u043D\u0435\
+      \ \u0432\u0443\u043B\u044C\u043F\u0430"
+    type: Add
+  id: 272
+  time: '2026-01-27T20:20:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/465
+- author: Orvex07
+  changes:
+  - message: "\u041F\u0430\u0440\u0430\u0434\u043E\u043A\u0441\u0430\u043B\u044C\u043D\
+      \u044B\u0439 \u043A\u043B\u043E\u043D \u043F\u043E\u043B\u0443\u0447\u0438\u043B\
+      \ \u0441\u0442\u0430\u0442\u0443\u0441 \u0415\u0420\u041F"
+    type: Add
+  id: 273
+  time: '2026-01-31T20:59:17.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/467
+- author: Orvex07
+  changes:
+  - message: 'Dev: Orvex, Spriter: Seraphimttt'
+    type: Add
+  id: 274
+  time: '2026-02-02T20:06:49.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/469
+- author: APA64IK, proximitymines
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B \u043D\u043E\u0432\
+      \u044B\u0435 \u0446\u0432\u0435\u0442\u0430 \u0432\u0435\u0440\u0451\u0432\u043A\
+      \u0438 \u0434\u043B\u044F \u0448\u0438\u0431\u0430\u0440\u0438."
+    type: Add
+  id: 275
+  time: '2026-02-14T16:48:03.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/471
+- author: BDSM_
+  changes:
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D \u0441\u043F\u043E\
+      \u043D\u0441\u043E\u0440\u0441\u043A\u0438\u0439 \u043F\u043B\u0430\u0449 \u043A\
+      \u0430\u043F\u0438\u0442\u0430\u043D\u0430 \u0432 \u043B\u043E\u0434\u0430\u0443\
+      \u0442"
+    type: Fix
+  id: 276
+  time: '2026-02-16T22:03:12.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/479
+- author: BDSM_
+  changes:
+  - message: "\u0412 \u043A\u0438\u043D\u043A\u043E\u043C\u0430\u0442 \u0434\u043E\
+      \u0431\u0430\u0432\u043B\u0435\u043D\u044B \u0441\u0442\u0440\u0435\u043B\u044B\
+      \ \u043A\u0443\u043F\u0438\u0434\u043E\u043D\u0430"
+    type: Add
+  - message: "\u0412 Lust shop \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u044B\
+      \ \u0441\u0442\u0440\u0435\u043B\u044B \u043A\u0443\u043F\u0438\u0434\u043E\u043D\
+      \u0430 \u0437\u0430 25 \u0441\u0430\u043D\u0442\u0438\u043A\u043E\u0432"
+    type: Add
+  id: 277
+  time: '2026-02-16T22:07:48.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/474
+- author: Fooksy2304
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u0442\u0430\
+      \ \u0441\u0430\u043C\u0430\u044F \u043B\u0435\u0433\u0435\u043D\u0434\u0430\u0440\
+      \u043D\u0430\u044F \u0434\u0443\u0431\u0438\u043D\u043A\u0430 \u0438\u0437 \
+      \ \u0441\u0430\u043D-\u0430\u043D\u0434\u0440\u0435\u0441\u0430."
+    type: Add
+  id: 278
+  time: '2026-02-23T20:41:43.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/482
+- author: seemah
+  changes:
+  - message: "\u0423\u0434\u0430\u043B\u0435\u043D\u0430 \u043F\u043B\u044E\u0448\u043A\
+      \u0430 \u0410\u0441\u0438 \u0424\u0430\u0440\u0442\u0443\u043D\u044B."
+    type: Remove
+  id: 279
+  time: '2026-02-24T07:03:11.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/476
+- author: Soragy
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0430 \u043F\u0440\
+      \u043E\u0431\u043B\u0435\u043C\u0430 \u043E\u0442\u0441\u0443\u0442\u0441\u0442\
+      \u0432\u0438\u044F \u043E\u0437\u0432\u0443\u0447\u043A\u0438 \u0441\u0442\u043E\
+      \u043D\u043E\u0432 \u0443 \u0432\u0441\u0435\u0445 \u0438\u0433\u0440\u043E\u0432\
+      \u044B\u0445 \u0440\u0430\u0441."
+    type: Fix
+  id: 280
+  time: '2026-03-11T21:01:15.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/486
+- author: Orvex07, seraphimttt
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0441\u043F\u0440\
+      \u0430\u0439\u0442 \u043C\u0430\u043D\u0442\u0438\u0438 \u0410\u0412\u0414"
+    type: Fix
+  id: 281
+  time: '2026-03-18T19:48:32.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/503
+- author: Soragy
+  changes:
+  - message: "\u041F\u0440\u0438\u0432\u0435\u0434\u0435\u043D\u044B \u043C\u0430\u0440\
+      \u043A\u0435\u0440\u044B \u043A\u043E\u043C\u043C\u0435\u043D\u0442\u0430\u0440\
+      \u0438\u0435\u0432 Lust \u043A \u0435\u0434\u0438\u043D\u043E\u043C\u0443 \u0444\
+      \u043E\u0440\u043C\u0430\u0442\u0443."
+    type: Fix
+  id: 282
+  time: '2026-03-21T21:40:32.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/502
+- author: matavsn
+  changes:
+  - message: "\u041E\u0442\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u0448\
+      \u0430\u043F\u043E\u043A \u043D\u0430 \u0431\u043E\u0440\u0433\u0430\u0445."
+    type: Fix
+  id: 283
+  time: '2026-03-29T18:44:10.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/509
+- author: Orvex07
+  changes:
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D\u0430 \u0432\u043A\
+      \u043B\u0430\u0434\u043A\u0430 \u0421\u043F\u043E\u043D\u0441\u043E\u0440 \u0432\
+      \ \u043B\u043E\u0434\u0430\u0443\u0442\u0430\u0445."
+    type: Add
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043B\u043E\u0434\u0430\
+      \u0443\u0442 Qillu \u0444\u043E\u0440\u043C\u0430\u0442\u0430 \u0434\u043B\u044F\
+      \ \u043E\u043F\u0435\u0440\u0430\u0442\u043E\u0440\u0430 \u0426\u041A."
+    type: Add
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0451\u043D \u0432\u0438\u0437\
+      \u043E\u0440 \u0421\u0411 \u0432 \u043B\u043E\u0434\u0430\u0443\u0442."
+    type: Fix
+  - message: "\u0421\u043F\u043E\u043D\u0441\u043E\u0440\u0441\u043A\u0438\u0435 \u043F\
+      \u0440\u0435\u0434\u043C\u0435\u0442\u044B \u0434\u043E\u0431\u0430\u0432\u043B\
+      \u0435\u043D\u044B \u0432 \u043B\u043E\u0434\u0430\u0443\u0442\u044B \u0432\u0441\
+      \u0435\u043C \u0440\u043E\u043B\u044F\u043C, \u0443 \u043A\u043E\u0442\u043E\
+      \u0440\u044B\u0445 \u0438\u0445 \u0440\u0430\u043D\u044C\u0448\u0435 \u043D\u0435\
+      \ \u0431\u044B\u043B\u043E."
+    type: Fix
+  - message: "\u0410\u0412\u0414 \u0438 \u043F\u0440\u0435\u0434\u0441\u0442\u0430\
+      \u0432\u0438\u0442\u0435\u043B\u044C Qillu \u043F\u043E\u043B\u0443\u0447\u0438\
+      \u043B\u0438 \u0440\u0443\u0447\u043A\u0443 \u0426\u041A Qillu \u043F\u043E\
+      \ \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E."
+    type: Fix
+  id: 284
+  time: '2026-03-31T15:58:52.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/510
+- author: seemah
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u043E \u043E\u0442\
+      \u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435 \u043F\u043B\u044E\u0448\
+      \u0435\u0432\u043E\u0439 Blizzard \u043D\u0430 \u0433\u043E\u043B\u043E\u0432\
+      \u0435."
+    type: Fix
+  id: 285
+  time: '2026-04-01T13:53:50.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/511
+- author: Orvex07
+  changes:
+  - message: "\u041E\u0431\u043D\u043E\u0432\u043B\u0435\u043D\u044B \u043D\u0430\u0437\
+      \u0432\u0430\u043D\u0438\u044F \u0448\u0430\u0442\u0442\u043B\u043E\u0432 Qillu."
+    type: Tweak
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u044B \u044D\u043C\
+      \u043E-\u0437\u0432\u0443\u043A\u0438 \u0443 ... \u0442\u0440\u0435\u0442\u044C\
+      \u0435\u0433\u043E \u043F\u043E\u043B\u0430."
+    type: Fix
+  id: 286
+  time: '2026-04-01T13:53:10.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/513
+- author: Noychik
+  changes:
+  - message: "\u0416\u0438\u0432\u0430\u044F \u043C\u0430\u043D\u0442\u0438\u044F\
+      \ \u0441\u043D\u043E\u0432\u0430 \u0432 \u043B\u043E\u0434\u0430\u0443\u0442\
+      \u0435 \u0443\u0442\u0438\u043B\u0438\u0437\u0430\u0442\u043E\u0440\u043E\u0432\
+      ."
+    type: Fix
+  id: 287
+  time: '2026-04-14T18:47:16.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/519
+- author: Orvex07
+  changes:
+  - message: "\u0414\u043E\u0436\u0434\u0430\u043B\u0438\u0441\u044C... \u0421\u043C\
+      \u043E\u0442\u0440\u0438\u0442\u0435\u043B\u044E \u043D\u0430\u043A\u043E\u043D\
+      \u0435\u0446-\u0442\u043E \u0432\u044B\u0434\u0430\u043B\u0438 \u0442\u0430\u0431\
+      \u0435\u043B\u044C\u043D\u043E\u0435 \u043E\u0440\u0443\u0436\u0438\u0435"
+    type: Fix
+  id: 288
+  time: '2026-04-13T04:29:50.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/518
+- author: Fooksy2304
+  changes:
+  - message: "\u0441\u0435\u043A\u0440\u0435\u0442 \u0432\u0435\u043D\u0435\u0440\u044B\
+      \ \u0441\u0442\u0430\u043B \u043A\u0443\u0434\u0430 \u0431\u043E\u043B\u0435\
+      \u0435 \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u043D\u044B\u043C."
+    type: Fix
+  id: 289
+  time: '2026-04-19T15:01:33.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/522
+- author: Orvex07
+  changes:
+  - message: "\u041F\u0440\u0430\u0432\u0438\u043B\u0430 \u043D\u0430 \u0441\u0435\
+      \u0440\u0432\u0435\u0440\u0430\u0445 \u0431\u044B\u043B\u0438 \u0430\u043A\u0442\
+      \u0443\u0430\u043B\u0438\u0437\u0438\u0440\u043E\u0432\u0430\u043D\u044B."
+    type: Tweak
+  id: 290
+  time: '2026-04-20T20:24:27.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/524

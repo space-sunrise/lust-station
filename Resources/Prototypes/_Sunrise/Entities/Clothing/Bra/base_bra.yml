@@ -1,0 +1,45 @@
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingBraBase
+  components:
+  - type: Clothing
+    slots: [bra]
+  - type: Item
+    size: Tiny
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Sprite
+    state: icon
+
+- type: entity
+  abstract: true
+  parent: ClothingBraBase
+  id: ClothingBraBaseButcherable
+  components:
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 1
+
+- type: entity
+  abstract: true
+  parent: ClothingBraBase
+  id: ClothingBraStorageBase
+  components:
+  - type: Storage
+    grid:
+    - 0,0,0,0
+    maxItemSize: Tiny
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface

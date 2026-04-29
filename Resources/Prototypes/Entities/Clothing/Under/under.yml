@@ -1,0 +1,42 @@
+# These are technically shoes for now, as we don't actually have underwear. But
+# I would cry if we didn't have them. -swept
+
+- type: entity
+  parent: ClothingSocksBaseButcherable # Sunrise-end
+  id: ClothingUnderSocksBee
+  name: bee socks
+  description: Make them loins buzz!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/bee.rsi
+    state: icon # Sunrise-Add
+  - type: Clothing
+    sprite: Clothing/Under/Socks/bee.rsi
+  # Sunrise-Start
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: icon
+      right:
+      - state: icon
+  # Sunrise-End
+
+- type: entity
+  parent: ClothingSocksBaseButcherable # Sunrise-end
+  id: ClothingUnderSocksCoder
+  name: coder socks
+  description: It's time to code sisters!!11!
+  components:
+  - type: Sprite
+    sprite: Clothing/Under/Socks/coder.rsi
+    state: icon # Sunrise-Add
+  - type: Clothing
+    sprite: Clothing/Under/Socks/coder.rsi
+  # Sunrise-Start
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: icon
+      right:
+      - state: icon
+  # Sunrise-End

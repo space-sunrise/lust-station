@@ -1,0 +1,670 @@
+﻿- type: entity
+  id: PlushieAnameGermanikum
+  parent: BasePlushie
+  name: Plush Aname Germanikum
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    layers:
+    - state: plushie-aname
+    - state: plushie-aname-unshaded
+      shader: unshaded
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelayTriggerCondition
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: SpeakOnTrigger
+    pack: LoviAptechku
+  - type: TTS
+    voice: Triss
+
+- type: localizedDataset
+  id: LoviAptechku
+  values:
+    prefix: lovi-aptechku-
+    count: 1
+
+- type: entity
+  id: PlushieAnnaLisechanskaya
+  parent: BasePlushie
+  name: Plush Anna Lisechanskaya
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie-anna
+  - type: EmoteOnUse
+    values:
+    - Moan
+  - type: Vocal
+  - type: Emoting
+  - type: EmitSoundOnUse
+    sound:
+      collection: FemaleMoan
+  - type: UseDelay
+    delay: 10
+
+- type: localizedDataset
+  id: KharshaPhrases
+  values:
+    prefix: kharsha-
+    count: 2
+
+- type: entity
+  id: PlushieKharsha
+  parent: BasePlushie
+  name: Plush Kharsha
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: kharsha
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelayTriggerCondition
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: SpeakOnTrigger
+    pack: KharshaPhrases
+  - type: TTS
+    voice: SironaRyan
+  - type: UseDelay
+    delay: 3
+
+- type: localizedDataset
+  id: PinkersPhrases
+  values:
+    prefix: pinkers-
+    count: 1
+
+- type: entity
+  id: PlushiePinkers
+  parent: BasePlushie
+  name: Plush Pinkers
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushie_pinkers
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelayTriggerCondition
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: SpeakOnTrigger
+    pack: PinkersPhrases
+  - type: TTS
+    voice: Mana
+  - type: UseDelay
+    delay: 3
+
+- type: entity
+  id: PlushieAliceSimonova
+  parent: BasePlushie
+  name: Plush Alice Simonova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alisa_simonova_de_mori
+
+- type: entity
+  id: PlushieSaiHaks
+  parent: BasePlushie
+  name: Plush Sai Haks
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sai_haks2
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieAlexandrLimenski
+  parent: BasePlushie
+  name: Alexandr Limenski
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: alexandr_limenski
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/huem_po_lbu.ogg
+      params:
+        volume: -2
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  id: PlushieMaksimDedov
+  parent: BasePlushie
+  name: Maksim Dedov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: ded_plushie
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/half-life_crowbar.ogg
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 1
+
+- type: localizedDataset
+  id: bykovPhrases
+  values:
+    prefix: bykov-
+    count: 2
+
+- type: entity
+  id: PlushieIvanBykov
+  parent: BasePlushie
+  name: Ivan Bykov
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: bykov
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelayTriggerCondition
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: SpeakOnTrigger
+    pack: bykovPhrases
+  - type: TTS
+    voice: TF2Soldier
+  - type: UseDelay
+    delay: 5
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieFranzEvans
+  name: Plushie Franz Evans
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: franz-evans
+  - type: EmitSoundOnUse
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnActivate
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnLand
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: EmitSoundOnCollide
+    sound:
+      collection: MaleSevereCough
+      params:
+        variation: 0.125
+  - type: TriggerOnActivate
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieArelitt
+  name: Plushie Arelitt Varmolnd
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: arelitt-varmolnd
+    scale: 1.15, 1.15
+  - type: Item
+    size: Large
+  - type: EmitSoundOnLand
+    sound:
+      collection: FemaleSigh
+      params:
+        variation: 0.125
+  - type: UseDelay
+    delay: 1
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieRustemBrich
+  name: Plushie Rustem Brich
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: rustem_brich
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/vremya_dengi.ogg
+  - type: UseDelay
+    delay: 4
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieBlizzard
+  name: Plushie Blizzard
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: blizzard
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Weapons/Xeno/alien_spitacid.ogg
+  - type: Item
+    heldPrefix: blizz
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: blizz
+    slots:
+    - HEAD
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieShinyaKucenko
+  name: Plushie Shinya Kucenko
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: shinya-kucenko
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/Gasp/male_deathgasp_1.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Lust/Interactions/skratch/skratch_1.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/Interactions/skratch/skratch_1.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: shinya
+    slots:
+    - NECK
+  - type: Item
+    heldPrefix: shinya
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieUlavaBritz
+  name: Plushie Ulava-Britz
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: ulava-britz
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnTrigger
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Toys/weh.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: ulava
+    slots:
+    - NECK
+  - type: Item
+    heldPrefix: ulava
+
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieSophieKomissarova
+  name: Plushie Sophie Komissarova
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: sophiekomissarova
+  - type: UseDelay
+    delay: 4
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Items/Defib/defib_charge.ogg
+  - type: Item
+    heldPrefix: sophiekomissarova
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieDrasusLeverian
+  name: Plushie Drasus Leverian
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    state: icon
+  - type: UseDelay
+    delay: 6
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Machines/scanning.ogg
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/Machines/scanning.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Stamp/automatic_stamp.ogg
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    slots:
+    - NECK
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+
+- type: entity
+  parent:
+  - BasePlushie
+  id: PlushieRaneliToll
+  name: Plushie Raneli Toll
+  description: |
+    Pocket doctor and little sorcerer. I'll be very happy if this toy ends up in the clawed paws of a tasty xenomorph...
+    Viva la Pivo!
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    layers:
+    - state: plushie-raneli-toll
+    - state: plushie-raneli-toll-eyes
+      visible: true
+      shader: unshaded
+      map: [ "light" ]
+  - type: Item
+    heldPrefix: plushie-raneli-toll
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: plushie-raneli-toll
+    slots:
+    - HEAD
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
+  - type: MeleeWeapon
+    soundHit:
+      collection: FelinidMews
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      collection: FelinidMews
+  - type: EmitSoundOnLand
+    sound:
+      collection: FelinidMews
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieAshito
+  name: Plushie Ashito
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    layers:
+    - state: icon
+    - state: icon-light
+      shader: unshaded
+      map: [ "light" ]
+  - type: UseDelay
+    delay: 4
+  - type: MeleeWeapon
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Sunrise/Interactions/clap1.ogg
+      params:
+        volume: -2
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+    slots:
+    - HEAD
+  - type: Item
+    sprite: _Lust/Objects/Fun/Plushies/ashiro_levrin.rsi
+
+- type: entity
+  parent: BasePlushie
+  id: PlushieKira
+  name: Kira Killigrue
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    layers:
+    - state: icon
+    - state: icon2
+      visible: false
+      map: [ "default" ]
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/advanced_toys/plushie_kira.rsi
+    equippedPrefix: kira
+    slots:
+    - HEAD
+  - type: Item
+    heldPrefix: kira
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_hide.ogg
+    soundDeactivate:
+      path: /Audio/_Sunrise/Items/Equip/sabre_equip.ogg
+      params:
+        volume: -2
+  - type: UseDelay
+    delay: 1.0
+  - type: Appearance
+  - type: ToggleableVisuals
+    spriteLayer: default
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/sabre_drop.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      collection: VulpkaninBarks
+  - type: EmitSoundOnUse
+    sound:
+      path: /Audio/_Lust/empty_audio.ogg
+
+
+- type: entity
+  parent: [BasePlushie, BaseFoldable]
+  id: PlushieSilton
+  name: Plushie Silton Grace
+  description: A menacing-looking toy that pierces you with a sharp and stern gaze. You suddenly felt compelled to comply with your department's KZ and SRP.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/silton.rsi
+    layers:
+    - state: silton-noshot-glasses
+      map: [ "unfoldedLayer" ]
+    - state: silton-noshot
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/silton.rsi
+    slots:
+    - NECK
+  - type: Item
+    size: Small
+  - type: UseDelay
+    delay: 3.0
+  - type: Appearance
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Lust/upal.ogg
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: glasses-on-verb
+    foldVerbText: glasses-off-verb
+  - type: FoldableClothing
+  - type: SpeakOnTrigger
+    pack: siltonPhrases
+  - type: TriggerOnUse
+  - type: UseDelayOnTrigger
+  - type: UseDelayTriggerCondition
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: TTS
+    voice: Johnny
+
+- type: localizedDataset
+  id: siltonPhrases
+  values:
+    prefix: silton-
+    count: 4
+
+- type: entity
+  parent: PlushieSilton
+  id: PlushieSiltonGun
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/silton.rsi
+    layers:
+    - state: silton-noshot-glasses
+      map: [ "unfoldedLayer" ]
+    - state: silton-noshot
+      map: ["foldedLayer"]
+      visible: false
+    - state: silton-shot
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Effects/thudswoosh.ogg
+  - type: PointLight
+    enabled: false
+    radius: 1.3
+    energy: 2
+    color: red
+    netsync: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+  - type: ItemTogglePointLight
+  - type: MeleeWeapon
+    wideAnimationRotation: -135
+    damage:
+      types:
+        Blunt: 0
+  - type: ItemToggleMeleeWeapon
+    activatedSoundOnHit:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+      params:
+        volume: -9
+        maxDistance: 3
+
+- type: entity
+  parent: [ EmitVulpGrowl, BasePlushie ]
+  id: PlushieDiegoVulpa
+  name: plushie diego
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushiediegovulpa
+  - type: Item
+    heldPrefix: diego-vulpa
+    inhandVisuals:
+      left:
+      - state: diego-vulpa-inhand-left
+      right:
+      - state: diego-vulpa-inhand-right
+
+- type: entity
+  parent: [BasePlushie, BaseFoldable]
+  id: PlushieLilith
+  name: Plushie L.I.L.I.T.H
+  description: A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/lilith.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon2
+      map: ["foldedLayer"]
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-LEFT
+      right:
+      - state: inhand-RIGHT
+    heldPrefix: icon
+    size: Large
+  - type: UseDelay
+    delay: 2.0
+  - type: Appearance
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Machines/buzz-two.ogg
+      params:
+        volume: 2
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+  - type: SpeakOnTrigger
+    pack: lilithPhrases
+    keysIn:
+    - lilith
+  - type: TriggerOnUse
+    keyOut: lilith
+  - type: UseDelayOnTrigger
+    keysIn:
+    - lilith
+  - type: UseDelayTriggerCondition
+    keys:
+    - lilith
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+      params:
+        volume: 9
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/Cargo/ping.ogg
+      params:
+        volume: 2
+  - type: EmitSoundOnUse
+    sound: null
+    handle: false
+  - type: EmitSoundOnTrigger
+    sound: null
+  - type: TTS
+    voice: MitaKind
+  - type: BorgVoice
+    selectedVoiceId: MitaKind
+    voiceEffect: robot
+
+- type: localizedDataset
+  id: lilithPhrases
+  values:
+    prefix: lilith-
+    count: 2

@@ -1,0 +1,47 @@
+﻿- type: job
+  id: ResearchAssistant
+  name: job-name-research-assistant
+  description: job-description-research-assistant
+  playTimeTracker: JobResearchAssistant
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Science
+      time: 15h #  Sunrise-edit
+      inverted: true # stop playing intern if you're good at science!
+  startingGear: ResearchAssistantGear
+  icon: "JobIconResearchAssistant"
+  supervisors: job-supervisors-science
+  canBeAntag: false
+  displayWeight: 0 # Sunrise-Edit
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-lab-technician
+  # Sunrise-End
+  access:
+  - Research
+  - Maintenance
+  # Sunrise-Start
+  extendedAccess:
+  - ResearchConsoleAccess
+  # Sunrise-End
+- type: startingGear
+  id: ResearchAssistantGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ResearchAssistantPDA
+    ears: ClothingHeadsetScience
+    pocket2: BookScientistsGuidebook
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ResearchAssistantChameleonOutfit
+  job: ResearchAssistant
+  equipment:
+    head: ClothingHeadHatCardborg
+    eyes: ClothingEyesGlasses
+    mask: ClothingMaskGas
+    neck: ClothingNeckScarfStripedPurple
+    outerClothing: ClothingOuterCoatLab
+    gloves: ClothingHandsGlovesLatex

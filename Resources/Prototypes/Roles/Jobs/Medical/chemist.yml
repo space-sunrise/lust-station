@@ -1,0 +1,43 @@
+- type: job
+  id: Chemist
+  name: job-name-chemist
+  description: job-description-chemist
+  playTimeTracker: JobChemist
+  requirements:
+    - !type:DepartmentTimeRequirement
+      department: Medical
+      time: 5h
+  startingGear: ChemistGear
+  icon: "JobIconChemist"
+  supervisors: job-supervisors-cmo
+  displayWeight: 30  # Sunrise
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-pharmacist
+  # Sunrise-End
+  access:
+  - Medical
+  - Chemistry
+  - Maintenance
+
+- type: startingGear
+  id: ChemistGear
+  equipment:
+    id: ChemistryPDA
+    ears: ClothingHeadsetMedical
+    belt: ChemBag
+    pocket1: HandLabeler
+    eyes: ClothingEyesGlassesChemical
+  #storage:
+    #back:
+    #- Stuff
+
+- type: chameleonOutfit
+  id: ChemistChameleonOutfit
+  job: Chemist
+  equipment:
+    head: ClothingHeadHatBeretMedic
+    mask: ClothingMaskSterile
+    neck: ClothingNeckStethoscope
+    outerClothing: ClothingOuterCoatLabChem
+    gloves: ClothingHandsGlovesLatex

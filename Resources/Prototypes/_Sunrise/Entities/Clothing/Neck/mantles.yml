@@ -1,0 +1,111 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleERTLeader
+  name: ERT leader's mantle
+  description: Extraordinary decorative drape over the shoulders.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/ertmantle.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/ertmantle.rsi
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckMantleAdjutant
+  name: adjutant mantle
+  description: Lightweight, velvet, uninhibited movement, on one shoulder, as if it speaks to your precarious position of command..
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/adjmantle.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/adjmantle.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingHoSMantleCoat
+  name: HoS's mantle
+  description: Kys.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/hos_mantle.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/hos_mantle.rsi
+
+- type: entity
+  parent: [ClothingNeckBase, BaseCommandContraband]
+  id: ClothingBSMantle
+  name: blueshield mantle
+  description: Mantle for command bodyguards.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/blueshieldm.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/blueshieldm.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCap
+  id: ClothingNeckMantleCaptainWhite
+  name: white captain's mantle
+  description: A crisp white mantle for a captain who really wants everyone to notice.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_white.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_white.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCap
+  id: ClothingNeckMantleCaptainBlack
+  name: black captain's mantle
+  description: A black mantle for a captain who prefers to command in stealth… loudly.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_black.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_black.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCap
+  id: ClothingNeckMantleCaptainWhiteShoulder
+  name: white captain's shoulder mantle
+  description: A one-shoulder white mantle half cape, half declaration of authority.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_white_shoulder.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_white_shoulder.rsi
+
+- type: entity
+  parent: ClothingNeckCloakCap
+  id: ClothingNeckMantleCaptainBlackShoulder
+  name: black captain's shoulder mantle
+  description: A one-shoulder black mantle for maximum drama and minimum paperwork.
+  components:
+    - type: Sprite
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_black_shoulder.rsi
+    - type: Clothing
+      sprite: _Sunrise/Clothing/Neck/Mantles/captain_mantle_black_shoulder.rsi
+
+- type: entity
+  parent: ClothingCloakBase
+  id: ClothingNeckMantleGoliathAlive
+  name: alive mantle
+  description: What is it? This... thing looks both mesmerizing and terrifying. It gives off a faint warmth, and… It’s clearly staring at me. WITH A LUST FOR THE FLESH
+  components:
+  - type: Sprite
+    sprite: _Sunrise/Clothing/Neck/Mantles/goliathalivemantle.rsi
+    layers:
+    - state: icon
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Neck/Mantles/goliathalivemantle.rsi
+    quickEquip: true
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadMantleGoliathAliveHelmet
+    action: GoliathHoodToggleAction
+    requiredSlot:
+    - neck
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+  - type: Appearance

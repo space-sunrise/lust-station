@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 52 19">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        isolation: isolate;
+      }
+    </style>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.7.1, SVG Export Plug-In . SVG Version: 1.2.0 Build 142)  -->
+  <g>
+    <g id="svg1">
+      <sodipodi:namedview id="namedview1" bordercolor="#eeeeee" borderopacity="1" inkscape:current-layer="layer1" inkscape:cx="27.577164" inkscape:cy="11.269514" inkscape:deskcolor="#505050" inkscape:document-units="mm" inkscape:pagecheckerboard="0" inkscape:pageopacity="0" inkscape:showpageshadow="0" inkscape:window-height="1009" inkscape:window-maximized="1" inkscape:window-width="1920" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:zoom="11.313709" pagecolor="#505050"/>
+      <g id="layer1" inkscape:groupmode="layer" inkscape:label="Ebene 1">
+        <image id="image1" class="cls-2" width="993" height="406" transform="translate(-2.2 -2.3) scale(0)" xlink:href="button_small-1.png"/>
+        <path id="path1" class="cls-1" d="M46.6.1c3,0,5.4,2.4,5.4,5.4v1.4s0,6.6,0,6.6c0,3-2.4,5.4-5.4,5.4H5.5C2.5,19,0,16.5.1,13.5v-1.4s0-6.5,0-6.5C.1,2.5,2.6.1,5.5.1h41.1Z" inkscape:export-filename="button_small.svg.96dpi.png" inkscape:export-xdpi="96" inkscape:export-ydpi="96" sodipodi:nodetypes="ccccccc"/>
+      </g>
+    </g>
+  </g>
+</svg>

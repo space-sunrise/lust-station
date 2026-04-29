@@ -1,0 +1,18 @@
+# Фракция NPC
+
+- type: npcFaction
+  id: Arrows
+  hostile:
+  - BloodCult
+  - NanoTrasen
+  - Syndicate
+  - Thief
+  - Zombie
+  - Revolutionary
+  - Vampire
+  - Xeno
+  - Flesh
+  - FleshHuman
+  - Carps
+  - AllHostile
+

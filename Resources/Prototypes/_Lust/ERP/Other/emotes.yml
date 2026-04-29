@@ -1,0 +1,33 @@
+- type: emote
+  id: Moan
+  name: chat-emote-name-moan
+  category: Vocal
+  icon: _Lust/Interface/Emotes/moan.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: ["стонет"]
+  chatTriggers:
+    - стонет
+    - стонет.
+
+
+- type: soundCollection
+  id: MaleMoan
+  files:
+    - /Audio/_Lust/Interactions/maleston1.ogg
+    - /Audio/_Lust/Interactions/maleston2.ogg
+
+- type: soundCollection
+  id: FemaleMoan
+  files:
+    - /Audio/_Lust/Interactions/femston1.ogg
+    - /Audio/_Lust/Interactions/femston2.ogg
+    - /Audio/_Lust/Interactions/femston3.ogg
+    - /Audio/_Lust/Interactions/femston4.ogg
+    - /Audio/_Lust/Interactions/femston5.ogg
+    - /Audio/_Lust/Interactions/femston6.ogg
+    - /Audio/_Lust/Interactions/femston7.ogg

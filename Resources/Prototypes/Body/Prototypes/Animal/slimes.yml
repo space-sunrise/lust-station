@@ -1,0 +1,18 @@
+﻿- type: body
+  id: Slimes
+  name: "slimes"
+  root: torso
+  slots:
+    torso:
+      part: TorsoSlime
+      connections:
+      - legs
+      organs:
+        core: SentientWildSlimeCore # Sunrise Edit
+        lungs: OrganSlimesLungs
+    legs:
+      part: LegsAnimal
+      connections:
+      - feet
+    feet:
+      part: FeetAnimal

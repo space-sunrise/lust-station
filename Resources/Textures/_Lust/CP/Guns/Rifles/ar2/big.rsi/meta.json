@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Made by discord @sokol9bl for Lust Station",
+  "size": {
+    "x": 64,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "bolt-open"
+    },
+    {
+      "name": "base"
+    },
+    {
+      "name": "mag-0"
+    }
+  ]
+}

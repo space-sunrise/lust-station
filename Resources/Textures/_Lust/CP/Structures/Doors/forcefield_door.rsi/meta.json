@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "Made for Lust Station",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "closed",
+      "directions": 4
+    },
+    {
+      "name": "open",
+      "directions": 4
+    },
+    {
+      "name": "opening",
+      "directions": 4
+    },
+    {
+      "name": "closing",
+      "directions": 4
+    },
+    {
+      "name": "deny",
+      "directions": 4
+    }
+  ]
+}

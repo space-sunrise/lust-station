@@ -1,0 +1,41 @@
+{
+    "version": 1,
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "license": "CC-BY-SA-3.0",
+    "copyright": "Taken from Skyrat-tg at commit https://github.com/Skyrat-SS13/Skyrat-tg/commit/bb8d8f968abdddc1dcf86ceda8d47001d531e321",
+    "states": [
+        {
+            "name": "engineer_tipped_icon"
+        },
+        {
+            "name": "janitor_tipped_icon"
+        },
+        {
+            "name": "medical_tipped_icon"
+        },
+        {
+            "name": "miner_tipped_icon"
+        },
+        {
+            "name": "service_tipped_icon"
+        },
+        {
+            "name": "sec_mk2_tipped_icon"
+        },
+        {
+            "name": "sec_tipped_icon"
+        },
+        {
+            "name": "clown_tipped_icon"
+        },
+        {
+            "name": "peace_tipped_icon"
+        },
+        {
+            "name": "robot_tipped_icon"
+        }
+    ]
+}

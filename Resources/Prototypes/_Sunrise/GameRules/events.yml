@@ -1,0 +1,249 @@
+﻿- type: entity
+  parent: BaseGameRule
+  id: RevolutionarySmugglerStashSpawn
+  components:
+  - type: StationEvent
+    earliestStart: 0
+    duration: 1
+    minimumPlayers: 1
+    weight: 0
+  - type: RandomSpawnRule
+    prototype: RevolutionarySmugglerStash
+
+- type: entity
+  parent: BaseGameRule
+  id: DiseaseSpawn
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    minimumPlayers: 40
+    weight: 5
+    maxOccurrences: 1
+    earliestStart: 30
+    reoccurrenceDelay: 20
+    duration: null
+  - type: LateJoinSpawnRule
+    prototype: MobDisease
+
+- type: entity
+  parent: BaseGameRule
+  id: TerminatorSpawn
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    weight: 5
+    earliestStart: 30
+    minimumPlayers: 20
+    duration: null
+  - type: LateJoinSpawnRule
+    prototype: SpawnPointGhostTerminator
+
+- type: entity
+  id: VentbullMigration
+  parent: BaseGameRule
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    weight: 5
+    duration: null
+  - type: VentCrittersRule
+    entries:
+    - id: MobPibbleVent
+      prob: 0.03
+
+- type: entity
+  parent: BaseGameRule
+  id: AbductorsSpawn
+  components:
+  - type: StationEvent
+    earliestStart: 15
+    weight: 7.5
+    minimumPlayers: 10
+    duration: 1
+  - type: RuleGrids
+  - type: LoadMapRule
+    gridPath: /Maps/_Sunrise/Shuttles/Antag/abductor_shuttle.yml
+  - type: AntagObjectives
+    objectives:
+    - AbductObjective
+  - type: AntagSpawner # Sunrise-todo: починить AntagLoadProfileRule для бубукторов
+    prototype: MobAbductor
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: AbductorScientistSpawner
+      min: 1
+      max: 1
+      pickPlayer: false
+      startingGear: AbductorScientistGear
+      briefing:
+        text: abductor-role-greeting
+        color: Green
+        sound: /Audio/_Sunrise/Abductor/abductor.ogg
+      components:
+      - type: Abductor
+      - type: Muted
+      - type: AbductorScientist
+      - type: ActionGrant
+        actions:
+        - ActionReturnToShip
+      - type: Tag
+        tags:
+          - Abductor
+          - AbductorScientist
+          - CanPilot
+          - DoorBumpOpener
+          - FootstepSound
+      - type: NpcFactionMember
+        factions:
+        - SimpleHostile
+      mindRoles:
+      - MindRoleLoneAbductor
+    - spawnerPrototype: AbductorAgentSpawner
+      min: 1
+      max: 1
+      pickPlayer: false
+      startingGear: AbductorAgentGear
+      briefing:
+        text: abductor-role-greeting
+        color: Green
+        sound: /Audio/_Sunrise/Abductor/abductor.ogg
+      components:
+      - type: Abductor
+      - type: Muted
+      - type: AbductorAgent
+      - type: Tag
+        tags:
+          - Abductor
+          - CanPilot
+      - type: NpcFactionMember
+        factions:
+        - SimpleHostile
+      mindRoles:
+      - MindRoleLoneAbductor
+  - type: DynamicRuleCost
+    cost: 100
+
+- type: entity
+  id: AbductorVictim
+  parent: BaseGameRule
+  components:
+  - type: AntagObjectives
+    objectives:
+    - AbductorEscapeShuttleObjective
+  - type: AntagRandomObjectives
+    sets:
+    - groups: AbductorObjectiveGroups
+      maxPicks: 1
+    maxDifficulty: 10
+  - type: GameRule
+    minPlayers: 1
+  - type: AbductorVictimRule
+  - type: AntagSelection
+    definitions:
+    - blacklist:
+        components:
+        - AntagImmune
+        - MindShield
+      briefing:
+        text: abductor-victim-role-greeting
+        color: Plum
+        sound: /Audio/_Sunrise/Abductor/abductor.ogg
+      mindRoles:
+      - AbductorVictimRole
+  - type: DynamicRuleCost
+    cost: 70
+
+- type: entity
+  parent: BaseGameRule
+  id: EpsilonDeathSquadLawset
+  components:
+  - type: StationEvent
+    weight: 0 # Only triggered by code/admin
+    duration: 1
+  - type: EpsilonDeathSquadLawset
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictSyndicateReaperCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 1
+    earliestStart: 25
+    reoccurrenceDelay: 20
+    minimumPlayers: 15
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerBorgSyndicateReaperDerelictGhostRoleSunrise
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictSyndicateReaperCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictSyndicateSaboteurCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 1
+    earliestStart: 25
+    reoccurrenceDelay: 20
+    minimumPlayers: 15
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerBorgSyndicateSaboteurDerelictGhostRoleSunrise
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictSyndicateSaboteurCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entity
+  parent: BaseGameRule
+  id: DerelictSyndicateMedicalCyborgSpawn
+  components:
+  - type: StationEvent
+    weight: 1
+    earliestStart: 25
+    reoccurrenceDelay: 20
+    minimumPlayers: 15
+    duration: null
+  - type: SpaceSpawnRule
+    spawnDistance: 0
+  - type: AntagSpawner
+    prototype: PlayerBorgSyndicateMedicalDerelictGhostRoleSunrise
+  - type: AntagSelection
+    definitions:
+    - spawnerPrototype: SpawnPointGhostDerelictSyndicateMedicalCyborg
+      min: 1
+      max: 1
+      pickPlayer: false
+
+- type: entityTable
+  id: BasicCalmEventsTableGreenShit
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: AnomalySpawn
+    - id: BluespaceArtifact
+    - id: BluespaceLocker
+    - id: BreakerFlip
+    - id: BureaucraticError
+    - id: ClericalError
+    - id: CockroachMigration
+    - id: GasLeak
+    - id: GreytideVirus
+    - id: IonStorm # its calm like 90% of the time smh
+    - id: KudzuGrowth
+    - id: MassHallucinations
+    - id: MimicVendorRule
+    - id: MouseMigration
+    - id: PowerGridCheck
+    - id: RandomSentience
+    - id: SolarFlare
+    - id: VentClog

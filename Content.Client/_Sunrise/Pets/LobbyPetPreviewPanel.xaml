@@ -1,0 +1,8 @@
+<Control xmlns="https://spacestation14.io"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+        <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+            <Control Name="ViewBox" HorizontalExpand="True" VerticalExpand="True" MinHeight="100"/>
+        </BoxContainer>
+    </BoxContainer>
+</Control>

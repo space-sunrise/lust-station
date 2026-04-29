@@ -1,0 +1,28 @@
+name: RSI Validator
+
+on:
+  push:
+    branches: [ master, staging, stable ]
+  merge_group:
+  pull_request:
+    types: [ opened, reopened, synchronize ]
+    paths:
+      - '**.rsi/**'
+
+jobs:
+  validate_rsis:
+    name: Validate RSIs
+    if: github.actor != 'Sunrise-Bot'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install Python dependencies
+        run: |
+          pip3 install --ignore-installed --user pillow jsonschema
+      - name: Validate RSIs
+        run: |
+          python3 Tools/Schemas/validate_rsis.py Resources/Prototypes/

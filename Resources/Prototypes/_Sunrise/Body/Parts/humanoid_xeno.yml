@@ -1,0 +1,144 @@
+# © SUNRISE, An EULA/CLA with a hosting restriction, full text: https://github.com/space-sunrise/space-station-14/blob/master/CLA.txt
+- type: entity
+  id: PartHumanoidXeno
+  parent: [ BaseItem, BasePart ]
+  name: "xenomorph body part"
+  abstract: true
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Fat
+        Quantity: 3
+      - ReagentId: Blood
+        Quantity: 10
+
+- type: entity
+  id: TorsoHumanoidXeno
+  name: "xenomorph torso"
+  parent: [ PartHumanoidXeno, BaseTorso ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "torso_m"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "torso_m"
+
+- type: entity
+  id: HeadHumanoidXeno
+  name: "xenomorph head"
+  parent: [ PartHumanoidXeno, BaseHead ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "head_m"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "head_m"
+
+- type: entity
+  id: LeftArmHumanoidXeno
+  name: "left xenomorph arm"
+  parent: [ PartHumanoidXeno, BaseLeftArm ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_arm"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_arm"
+
+- type: entity
+  id: RightArmHumanoidXeno
+  name: "right xenomorph arm"
+  parent: [ PartHumanoidXeno, BaseRightArm ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_arm"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_arm"
+
+- type: entity
+  id: LeftHandHumanoidXeno
+  name: "left xenomorph hand"
+  parent: [ PartHumanoidXeno, BaseLeftHand ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_hand"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_hand"
+
+- type: entity
+  id: RightHandHumanoidXeno
+  name: "right xenomorph hand"
+  parent: [ PartHumanoidXeno, BaseRightHand ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_hand"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_hand"
+
+- type: entity
+  id: LeftLegHumanoidXeno
+  name: "left xenomorph leg"
+  parent: [ PartHumanoidXeno, BaseLeftLeg ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_leg"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_leg"
+
+- type: entity
+  id: RightLegHumanoidXeno
+  name: "right xenomorph leg"
+  parent: [ PartHumanoidXeno, BaseRightLeg ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_leg"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_leg"
+
+- type: entity
+  id: LeftFootHumanoidXeno
+  name: "left xenomorph foot"
+  parent: [ PartHumanoidXeno, BaseLeftFoot ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_foot"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "l_foot"
+
+- type: entity
+  id: RightFootHumanoidXeno
+  name: "right xenomorph foot"
+  parent: [ PartHumanoidXeno, BaseRightFoot ]
+  components:
+  - type: Sprite
+    netsync: false
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_foot"
+  - type: Icon
+    sprite: _Sunrise/Mobs/Species/HumanoidXeno/parts.rsi
+    state: "r_foot"

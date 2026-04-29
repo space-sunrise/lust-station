@@ -1,0 +1,79 @@
+- type: entity
+  abstract: true
+  id: BaseStationNanotrasen
+  components:
+    - type: NpcFactionMember
+      factions:
+        - NanoTrasen
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: StandardNanotrasenStation
+  parent:
+    - BaseStation
+    - BaseStationNews
+    - BaseStationCargo
+    - BaseStationJobsSpawning
+    - BaseStationRecords
+    - BaseStationArrivals
+    - BaseStationGateway
+    - BaseStationShuttles
+    - BaseStationCentComm
+    - BaseStationEvacuation
+    - BaseStationAlertLevels
+    - BaseStationMagnet
+    - BaseStationExpeditions
+    - BaseStationSalvageJobs
+    - BaseStationSiliconLawCrewsimov
+    - BaseStationAllEventsEligible
+    - BaseStationNanotrasen
+    - BaseStationDeliveries
+  # Sunrise-Start
+    - BaseStationSpam
+    - BaseStationTransitHub
+    - BaseStationDontSelling
+    - BaseStationPlanetPrison
+    - BaseStationGoal
+    - BaseStationAntagsTargets
+    - BaseStationCryoTeleport
+    - BaseStationMeteorSwarmTarget
+    - BaseStationRandomXenoArtifact
+    - BaseStationCriminalRecords
+    - BaseStationCorporateLaw
+  # Sunrise-End
+  components:
+    - type: Transform
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: NanotrasenCentralCommand
+  parent:
+    - BaseStation
+    - BaseStationAlertLevels
+    - BaseStationNanotrasen
+    - BaseStationRecords
+    - BaseStationJobsSpawning
+    # Sunrise-Start
+    - BaseCentCommShuttles
+    - BaseStationImmortal
+    - BaseStationDontSelling
+    - BaseStationCryoTeleport
+    - BaseStationCorporateLaw # Sunrise-Edit
+    # Sunrise-End
+  components:
+    - type: Transform
+    - type: ProtectedGrid
+    - type: UnbuildableGrid
+    - type: StationOnlyDirectSpawn # Sunrise added
+
+- type: entity
+  id: StandardStationArena
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  - BaseStationNanotrasen
+  - BaseStationCorporateLaw # Sunrise-Edit
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Transform

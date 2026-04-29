@@ -1,0 +1,249 @@
+- type: entity
+  parent: WeaponRevolverPythonAP
+  id: WeaponRevolverPythonAPBiocode
+  suffix: BIOCODE, AP
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponShotgunBulldog
+  id: WeaponShotgunBulldogBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponLightMachineGunL6
+  id: WeaponLightMachineGunL6Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponLightMachineGunL6Max
+  id: WeaponLightMachineGunL6MaxBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSubMachineGunC20r
+  id: WeaponSubMachineGunC20rBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponRifleEstoc
+  id: WeaponRifleEstocBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponLauncherChinaLake
+  id: WeaponLauncherChinaLakeBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponLauncherM79
+  id: WeaponLauncherM79Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSniperHristov
+  id: WeaponSniperHristovBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponPistolDeagle
+  id: WeaponPistolDeagleBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponRifleM90GrenadeLauncher
+  id: WeaponRifleM90GrenadeLauncherBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponRifleBauer127
+  id: WeaponRifleBauer127Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSniperDragunov
+  id: WeaponSniperDragunovBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponRifleType88AMR
+  id: WeaponRifleType88AMRBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSIAR52
+  id: WeaponSIAR52Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponDL6902
+  id: WeaponDL6902Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponAJ100
+  id: WeaponAJ100Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSyndieLaserPistol
+  id: WeaponSyndieLaserPistolBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponLaserMinigun
+  id: WeaponLaserMinigunBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSyndieLaserGun
+  id: WeaponSyndieLaserGunBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponGrenadeLauncherGL70
+  id: WeaponGrenadeLauncherGL70Biocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponShotgunMinotaur
+  id: WeaponShotgunMinotaurBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponEnergyCrossbow
+  id: WeaponEnergyCrossbowBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponSubMachineGunC40r
+  id: WeaponSubMachineGunC40rBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate
+
+- type: entity
+  parent: WeaponPistolDeagleGolden
+  id: WeaponPistolDeagleGoldenBiocode
+  suffix: BIOCODE
+  components:
+  - type: FactionWeaponBlocker
+    factions:
+    - Syndicate
+    - Pirate

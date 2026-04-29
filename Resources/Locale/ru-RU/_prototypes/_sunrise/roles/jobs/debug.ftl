@@ -1,0 +1,12 @@
+ent-MobHumanBasicArmor = Урист МакТестБаза
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanBulletproof = Урист МакТестБроня
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanSWAT = Урист МакТестОМОН
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanAgentGear = Урист МакТестАгент
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanNukieGear = Урист МакТестЯО
+    .desc = { ent-BaseMobHuman.desc }
+ent-MobHumanjuggGear = Урист МакТестДжага
+    .desc = { ent-BaseMobHuman.desc }

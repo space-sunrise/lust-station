@@ -1,0 +1,49 @@
+- type: cargoProduct
+  id: SecuritySWAT
+  icon:
+    sprite: _Sunrise/Clothing/OuterClothing/Armor/swat_armor.rsi
+    state: icon
+  product: CrateSecuritySWAT
+  cost: 11984
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityHeatAbsorb
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/heatabsorbent.rsi
+    state: icon
+  product: CrateSecurityArmorHeatAbsorb
+  cost: 950
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityArmorStab
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/stabvest.rsi
+    state: icon
+  product: CrateSecurityArmorStab
+  cost: 950
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityArmorPlate
+  icon:
+    sprite: _Starlight/Clothing/OuterClothing/Armor/platecarrier.rsi
+    state: icon
+  product: CrateSecurityArmorPlate
+  cost: 950
+  category: cargoproduct-category-name-security
+  group: market
+
+- type: cargoProduct
+  id: SecurityExorcismCrate
+  icon:
+    sprite: _Sunrise/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+    state: holy
+  product: CrateSecurityHoly
+  cost: 2777
+  category: cargoproduct-category-name-security
+  group: market

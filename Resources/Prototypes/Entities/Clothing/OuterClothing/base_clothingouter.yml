@@ -1,0 +1,278 @@
+# Sunrise edit start
+- type: entity
+  abstract: true
+  id: BaseClothingOuterSounds
+  components:
+  - type: EmitSoundOnPickup
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cloth_pickup.ogg
+  - type: EmitSoundOnDrop
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cloth_drop.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_Sunrise/Items/Handling/cloth_drop.ogg
+# Sunrise edit end
+
+- type: entity
+  abstract: true
+  parent: Clothing
+  id: ClothingOuterBase
+  components:
+  - type: Clothing
+    slots:
+    - outerClothing
+  - type: Sprite
+    state: icon
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
+  id: ClothingOuterBaseLarge
+  components:
+  - type: Item
+    size: Huge
+  - type: Clothing
+    slots:
+    - outerClothing
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: StaminaResistance   # Sunrise-Add
+    damageCoefficient: 0.85 # Sunrise-Add
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, BaseClothingOuterSounds] # Sunrise
+  id: ClothingOuterStorageBase
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
+  - type: Storage
+    grid:
+    - 0,0,2,1
+    maxItemSize: Small
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+  - type: UserInterface
+    interfaces:
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: StaticPrice
+    price: 70
+  # Sunrise-Start
+  - type: Tag
+    tags:
+    - Vest
+    - WhitelistChameleon
+    - NudeBottom # INTERACTIONS
+  - type: ContainerInteractionAnimationVisuals
+  # Sunrise-End
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterStorageBase, BaseFoldable]
+  id: ClothingOuterStorageFoldableBase
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-zip-verb
+    foldVerbText: fold-unzip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: open
+    foldedHeldPrefix: open
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-open
+      map: ["foldedLayer"]
+      visible: false
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterStorageFoldableBase
+  id: ClothingOuterStorageFoldableBaseOpened
+  suffix: opened
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: open
+  - type: Item
+    heldPrefix: open
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+      visible: false
+    - state: icon-open
+      map: ["foldedLayer"]
+      visible: true
+  # SUNRISE EDIT
+  - type: Tag
+    tags:
+    - Vest
+    - WhitelistChameleon
+    - NudeFull # INTERACTIONS
+  # SUNRISE EDIT
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterStorageBase
+  id: ClothingOuterStorageToggleableBase
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterDefault
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, GeigerCounterClothing, AllowSuitStorageClothing]
+  id: ClothingOuterHardsuitBase
+  name: base hardsuit
+  components:
+# SlotBlocker blocked until UI change
+#  - type: SlotBlock
+#    slots: [innerclothing, feet]
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01
+    coolingCoefficient: 0.01
+  - type: ClothingSpeedModifier
+    walkModifier: 0.6
+    sprintModifier: 0.6
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Ginormous
+  - type: Pierceable
+    level: Metal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.95
+        Heat: 0.90
+        Radiation: 0.25
+  - type: ToggleableClothing
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      beakerSlot: !type:ContainerSlot # Sunrise-Start
+  - type: Inject
+    openCloseDelay: 1.5
+    autoClose: true
+    autoCloseDelay: 6
+  - type: ItemSlots
+    slots:
+      beakerSlot:
+        whitelist:
+          tags:
+          - FitsHardsuit # Sunrise-End
+  - type: GroupExamine
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+    - FullBodyOuter # Sunrise-Edit
+    - WhitelistChameleonSuit #Sunrise-edit
+  # Sunrise-start
+  - type: StaminaResistance
+    damageCoefficient: 0.8
+  - type: BedHealModifierClothing
+    multiplier: 0.25
+  - type: ArmorSparkEffect #starlight
+  # Sunrise-end
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # the average lightbulb only does around four damage!
+    slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
+
+- type: entity
+  abstract: true
+  parent: [ClothingOuterBase, AllowSuitStorageClothing]
+  id: ClothingOuterEVASuitBase
+  name: base EVA Suit
+  components:
+# SlotBlocker blocked until UI change
+#  - type: SlotBlock
+#    slots: [innerclothing, feet]
+  - type: PressureProtection
+    highPressureMultiplier: 0.6
+    lowPressureMultiplier: 1000
+  - type: TemperatureProtection
+    heatingCoefficient: 0.01 # Not complete protection from fire
+    coolingCoefficient: 0.01
+  - type: ClothingSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: Item
+    size: Huge
+  - type: ProtectedFromStepTriggers
+    slots: WITHOUT_POCKET
+  - type: DamageOnInteractProtection
+    damageProtection:
+      flatReductions:
+        Heat: 10 # the average lightbulb only does around four damage!
+    slots: OUTERCLOTHING
+  - type: HideLayerClothing
+    slots:
+    - Tail
+  # Sunrise-start
+  - type: BedHealModifierClothing
+    multiplier: 0.25
+  - type: Tag
+    tags:
+    - FullBodyOuter
+    - WhitelistChameleon
+    - Hardsuit
+  - type: StaminaResistance
+    damageCoefficient: 0.9
+  # Sunrise-End
+
+- type: entity
+  parent: ClothingOuterBase
+  id: ClothingOuterBaseToggleable
+  name: hoodie with hood
+  abstract: True
+  components:
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHatHoodWinterDefault
+    slot: head
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
+
+- type: entity
+  abstract: true
+  parent: ClothingOuterBase
+  id: ClothingOuterBaseMedium
+  components:
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,2,3

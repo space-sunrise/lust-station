@@ -1,0 +1,30 @@
+- type: reagent
+  id: NitroKill
+  name: reagent-name-nitrokill
+  group: Botanical
+  desc: reagent-desc-nitrokill
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: bitter
+  color: "#cbff0e"
+  plantMetabolism:
+  - !type:PlantAdjustHealth
+    amount: -2
+  - !type:PlantAffectGrowth
+    probability: 0.7
+    amount: 1
+
+- type: reagent
+  id: PulverizedLantern
+  name: reagent-name-pulverizedlantern
+  group: Botanical
+  desc: reagent-desc-pulverizedlantern
+  physicalDesc: reagent-physical-desc-pulverizedlantern
+  flavor: medicine
+  color: "#FFCA86"
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1

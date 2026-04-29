@@ -1,0 +1,21 @@
+name: RGA schema validator
+on:
+  push:
+    branches: [ master, staging, stable ]
+  merge_group:
+  pull_request:
+    types: [ opened, reopened, synchronize ]
+
+jobs:
+  yaml-schema-validation:
+    name: YAML RGA schema validator
+    if: github.actor != 'Sunrise-Bot'
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4.2.2
+    - uses: PaulRitter/yaml-schema-validator@v1
+      with:
+        schema: Tools/Schemas/rga.yml
+        path_pattern: .*attributions.ya?ml$
+        validators_path: Tools/Schemas/rga_validators.py
+        validators_requirements: Tools/Schemas/rga_requirements.txt

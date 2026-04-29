@@ -1,0 +1,737 @@
+using System.Collections.Concurrent;
+using System.Text.Json;
+using System.Threading;
+using System.Threading.Tasks;
+using Content.Server.Administration.Systems;
+using Content.Server.Database;
+using Content.Server.GameTicking;
+using Content.Shared.Administration.Logs;
+using Content.Shared.CCVar;
+using Content.Shared.Chat;
+using Content.Shared.Database;
+using Content.Shared.Mind;
+using Content.Shared.Players.PlayTimeTracking;
+using Prometheus;
+using Robust.Server.GameObjects;
+using Robust.Shared;
+using Robust.Shared.Configuration;
+using Robust.Shared.Map;
+using Robust.Shared.Network;
+using Robust.Shared.Player;
+using Robust.Shared.Prototypes;
+using Robust.Shared.Reflection;
+using System.Linq;
+using Robust.Shared.Timing;
+using Robust.Shared.Utility;
+
+namespace Content.Server.Administration.Logs;
+
+public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogManager
+{
+    [Dependency] private readonly IConfigurationManager _configuration = default!;
+    [Dependency] private readonly ILogManager _logManager = default!;
+    [Dependency] private readonly IServerDbManager _db = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IDynamicTypeFactory _typeFactory = default!;
+    [Dependency] private readonly IReflectionManager _reflection = default!;
+    [Dependency] private readonly IDependencyCollection _dependencies = default!;
+    [Dependency] private readonly ISharedPlayerManager _player = default!;
+    [Dependency] private readonly ISharedPlaytimeManager _playtime = default!;
+    [Dependency] private readonly ISharedChatManager _chat = default!;
+    [Dependency] private readonly IPrototypeManager _proto = default!;
+
+    public const string SawmillId = "admin.logs";
+
+    private static readonly Histogram DatabaseUpdateTime = Metrics.CreateHistogram(
+        "admin_logs_database_time",
+        "Time used to send logs to the database in ms",
+        new HistogramConfiguration
+        {
+            Buckets = Histogram.LinearBuckets(0, 0.5, 20)
+        });
+
+    private static readonly Gauge Queue = Metrics.CreateGauge(
+        "admin_logs_queue",
+        "How many logs are in the queue.");
+
+    private static readonly Gauge PreRoundQueue = Metrics.CreateGauge(
+        "admin_logs_pre_round_queue",
+        "How many logs are in the pre-round queue.");
+
+    private static readonly Gauge QueueCapReached = Metrics.CreateGauge(
+        "admin_logs_queue_cap_reached",
+        "Number of times the log queue cap has been reached in a round.");
+
+    private static readonly Gauge PreRoundQueueCapReached = Metrics.CreateGauge(
+        "admin_logs_pre_round_queue_cap_reached",
+        "Number of times the pre-round log queue cap has been reached in a round.");
+
+    private static readonly Gauge LogsSent = Metrics.CreateGauge(
+        "admin_logs_sent",
+        "Amount of logs sent to the database in a round.");
+
+    // Init only
+    private ISawmill _sawmill = default!;
+
+    // CVars
+    private bool _metricsEnabled;
+
+    private TimeSpan _queueSendDelay;
+    private int _queueMax;
+    private int _preRoundQueueMax;
+    private int _dropThreshold;
+    private int _highImpactLogPlaytime;
+
+    // Per update
+    private TimeSpan _nextUpdateTime;
+    private readonly ConcurrentQueue<AdminLog> _logQueue = new();
+    private readonly ConcurrentQueue<AdminLog> _preRoundLogQueue = new();
+
+    // Per round
+    private int _currentRoundId;
+    private int _currentLogId;
+    private int NextLogId => Interlocked.Increment(ref _currentLogId);
+    private GameRunLevel _runLevel = GameRunLevel.PreRoundLobby;
+
+    // 1 when saving, 0 otherwise
+    private int _savingLogs;
+    private int _logsDropped;
+
+    public void Initialize()
+    {
+        _sawmill = _logManager.GetSawmill(SawmillId);
+
+        InitializeJson();
+
+        _configuration.OnValueChanged(CVars.MetricsEnabled,
+            value => _metricsEnabled = value, true);
+        _configuration.OnValueChanged(CCVars.AdminLogsEnabled,
+            value => Enabled = value, true);
+        _configuration.OnValueChanged(CCVars.AdminLogsQueueSendDelay,
+            value => _queueSendDelay = TimeSpan.FromSeconds(value), true);
+        _configuration.OnValueChanged(CCVars.AdminLogsQueueMax,
+            value => _queueMax = value, true);
+        _configuration.OnValueChanged(CCVars.AdminLogsPreRoundQueueMax,
+            value => _preRoundQueueMax = value, true);
+        // Sunrise edit start - keep Loki configuration in fork partial
+        InitializeLokiConfiguration();
+        // Sunrise edit end
+        _configuration.OnValueChanged(CCVars.AdminLogsDropThreshold,
+            value => _dropThreshold = value, true);
+        _configuration.OnValueChanged(CCVars.AdminLogsHighLogPlaytime,
+            value => _highImpactLogPlaytime = value, true);
+
+        if (_metricsEnabled)
+        {
+            PreRoundQueueCapReached.Set(0);
+            QueueCapReached.Set(0);
+            LogsSent.Set(0);
+        }
+    }
+
+    public override string ConvertName(string name)
+    {
+        // JsonNamingPolicy is not whitelisted by the sandbox.
+        return NamingPolicy.ConvertName(name);
+    }
+
+    public async Task Shutdown()
+    {
+        try
+        {
+            if (!_logQueue.IsEmpty)
+            {
+                await SaveLogs();
+            }
+        }
+        finally
+        {
+            // Sunrise edit start - release fork Loki resources during admin log shutdown
+            ShutdownLoki();
+            // Sunrise edit end
+        }
+    }
+
+    public async void Update()
+    {
+        if (_runLevel == GameRunLevel.PreRoundLobby)
+        {
+            await PreRoundUpdate();
+            return;
+        }
+
+        var count = _logQueue.Count;
+        Queue.Set(count);
+
+        var preRoundCount = _preRoundLogQueue.Count;
+        PreRoundQueue.Set(preRoundCount);
+
+        if (count + preRoundCount == 0)
+        {
+            return;
+        }
+
+        if (_timing.RealTime >= _nextUpdateTime)
+        {
+            await TrySaveLogs();
+            return;
+        }
+
+        if (count >= _queueMax)
+        {
+            if (_metricsEnabled)
+            {
+                QueueCapReached.Inc();
+            }
+
+            await TrySaveLogs();
+        }
+    }
+
+    private async Task PreRoundUpdate()
+    {
+        var preRoundCount = _preRoundLogQueue.Count;
+        PreRoundQueue.Set(preRoundCount);
+
+        if (preRoundCount < _preRoundQueueMax)
+        {
+            return;
+        }
+
+        if (_metricsEnabled)
+        {
+            PreRoundQueueCapReached.Inc();
+        }
+
+        await TrySaveLogs();
+    }
+
+    private async Task TrySaveLogs()
+    {
+        if (Interlocked.Exchange(ref _savingLogs, 1) == 1)
+            return;
+
+        try
+        {
+            await SaveLogs();
+        }
+        finally
+        {
+            Interlocked.Exchange(ref _savingLogs, 0);
+        }
+    }
+
+    private async Task SaveLogs()
+    {
+        _nextUpdateTime = _timing.RealTime.Add(_queueSendDelay);
+
+        // TODO ADMIN LOGS array pool
+        var copy = new List<AdminLog>(_logQueue.Count + _preRoundLogQueue.Count);
+        copy.AddRange(_logQueue);
+
+        if (_logQueue.Count >= _queueMax)
+        {
+            _sawmill.Warning($"In-round cap of {_queueMax} reached for admin logs.");
+        }
+
+        var dropped = Interlocked.Exchange(ref _logsDropped, 0);
+        if (dropped > 0)
+        {
+            _sawmill.Error($"Dropped {dropped} logs. Current max threshold: {_dropThreshold}");
+        }
+
+        if (_runLevel == GameRunLevel.PreRoundLobby && !_preRoundLogQueue.IsEmpty)
+        {
+            _sawmill.Error($"Dropping {_preRoundLogQueue.Count} pre-round logs. Current cap: {_preRoundQueueMax}");
+        }
+        else
+        {
+            foreach (var log in _preRoundLogQueue)
+            {
+                log.RoundId = _currentRoundId;
+                CacheLog(log);
+            }
+
+            copy.AddRange(_preRoundLogQueue);
+        }
+
+        _logQueue.Clear();
+        Queue.Set(0);
+
+        _preRoundLogQueue.Clear();
+        PreRoundQueue.Set(0);
+
+        // Sunrise edit start - choose Loki or database admin log persistence
+        Task task;
+        if (_lokiEnabled)
+        {
+            task = SaveLogsToLoki(copy);
+            _sawmill.Debug($"Saving {copy.Count} admin logs to Loki.");
+        }
+        else
+        {
+            task = _db.AddAdminLogs(copy);
+            _sawmill.Debug($"Saving {copy.Count} admin logs.");
+        }
+        // Sunrise edit end
+
+        if (_metricsEnabled)
+        {
+            LogsSent.Inc(copy.Count);
+
+            using (DatabaseUpdateTime.NewTimer())
+            {
+                await task;
+                return;
+            }
+        }
+
+        await task;
+    }
+
+    public void RoundStarting(int id)
+    {
+        _currentRoundId = id;
+        CacheNewRound();
+    }
+
+    public void RunLevelChanged(GameRunLevel level)
+    {
+        _runLevel = level;
+
+        if (level == GameRunLevel.PreRoundLobby)
+        {
+            Interlocked.Exchange(ref _currentLogId, 0);
+
+            if (!_preRoundLogQueue.IsEmpty)
+            {
+                // This technically means that you could get pre-round logs from
+                // a previous round passed onto the next one
+                // If this happens please file a complaint with your nearest lottery
+                foreach (var log in _preRoundLogQueue)
+                {
+                    log.Id = NextLogId;
+                }
+            }
+
+            if (_metricsEnabled)
+            {
+                PreRoundQueueCapReached.Set(0);
+                QueueCapReached.Set(0);
+                LogsSent.Set(0);
+            }
+        }
+    }
+
+    public override void Add(LogType type, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
+    {
+        Add(type, LogImpact.Medium, ref handler);
+    }
+
+    public override void Add(LogType type, LogImpact impact, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
+    {
+        var message = handler.ToStringAndClear();
+        if (!Enabled)
+            return;
+
+        var preRound = _runLevel == GameRunLevel.PreRoundLobby;
+        var count = preRound ? _preRoundLogQueue.Count : _logQueue.Count;
+        if (count >= _dropThreshold)
+        {
+            Interlocked.Increment(ref _logsDropped);
+            return;
+        }
+
+        var json = JsonSerializer.SerializeToDocument(handler.Values, _jsonOptions);
+        var id = NextLogId;
+        var players = GetPlayers(handler.Values, id);
+
+        // PostgreSQL does not support storing null chars in text values.
+        if (message.Contains('\0'))
+        {
+            _sawmill.Error($"Null character detected in admin log message '{message}'! LogType: {type}, LogImpact: {impact}");
+            message = message.Replace("\0", "");
+        }
+
+        var log = new AdminLog
+        {
+            Id = id,
+            RoundId = _currentRoundId,
+            Type = type,
+            Impact = impact,
+            Date = DateTime.UtcNow,
+            Message = message,
+            Json = json,
+            Players = players,
+        };
+
+        DoAdminAlerts(players, message, impact, handler);
+
+        if (preRound)
+        {
+            _preRoundLogQueue.Enqueue(log);
+        }
+        else
+        {
+            _logQueue.Enqueue(log);
+            CacheLog(log);
+        }
+    }
+
+    private List<AdminLogPlayer> GetPlayers(Dictionary<string, object?> values, int logId)
+    {
+        List<AdminLogPlayer> players = new();
+        foreach (var value in values.Values)
+        {
+            switch (value)
+            {
+                case SerializablePlayer player:
+                    AddPlayer(players, player.UserId, logId);
+                    continue;
+
+                case EntityStringRepresentation rep:
+                    if (rep.Session is {} session)
+                        AddPlayer(players, session.UserId.UserId, logId);
+                    continue;
+
+                case IAdminLogsPlayerValue playerValue:
+                    foreach (var player in playerValue.Players)
+                    {
+                        AddPlayer(players, player, logId);
+                    }
+
+                    break;
+            }
+        }
+
+        return players;
+    }
+
+    /// <summary>
+    /// Get a list of coordinates from the <see cref="LogStringHandler"/>s values. Will transform all coordinate types
+    /// to map coordinates!
+    /// </summary>
+    /// <returns>A list of map coordinates that were found in the value input, can return an empty list.</returns>
+    private List<MapCoordinates> GetCoordinates(Dictionary<string, object?> values)
+    {
+        List<MapCoordinates> coordList = new();
+        EntityManager.TrySystem(out TransformSystem? transform);
+
+        foreach (var value in values.Values)
+        {
+            switch (value)
+            {
+                case EntityCoordinates entCords:
+                    if (transform != null)
+                        coordList.Add(transform.ToMapCoordinates(entCords));
+                    continue;
+
+                case MapCoordinates mapCord:
+                    coordList.Add(mapCord);
+                    continue;
+            }
+        }
+
+        return coordList;
+    }
+
+    private void AddPlayer(List<AdminLogPlayer> players, Guid user, int logId)
+    {
+        // The majority of logs have a single player, or maybe two. Instead of allocating a List<AdminLogPlayer> and
+        // HashSet<Guid>, we just iterate over the list to check for duplicates.
+        foreach (var player in players)
+        {
+            if (player.PlayerUserId == user)
+                return;
+        }
+
+        players.Add(new AdminLogPlayer
+        {
+            LogId = logId,
+            PlayerUserId = user
+        });
+    }
+
+    private void DoAdminAlerts(List<AdminLogPlayer> players, string message, LogImpact impact, LogStringHandler handler)
+    {
+        var adminLog = false;
+        var logMessage = message;
+        var playerNetEnts = new List<(NetEntity, string)>();
+
+        foreach (var player in players)
+        {
+            var id = player.PlayerUserId;
+
+            if (EntityManager.TrySystem(out AdminSystem? adminSys))
+            {
+                var cachedInfo = adminSys.GetCachedPlayerInfo(new NetUserId(id));
+                if (cachedInfo != null && cachedInfo.Antag)
+                {
+                    var proto = cachedInfo.RoleProto == null ? null : _proto.Index(cachedInfo.RoleProto.Value);
+                    var subtype = Loc.GetString(cachedInfo.Subtype ?? proto?.Name ?? RoleTypePrototype.FallbackName);
+                    logMessage = Loc.GetString(
+                        "admin-alert-antag-label",
+                        ("message", logMessage),
+                        ("name", cachedInfo.CharacterName),
+                        ("subtype", subtype));
+                }
+                if (cachedInfo != null && cachedInfo.NetEntity != null)
+                    playerNetEnts.Add((cachedInfo.NetEntity.Value, cachedInfo.CharacterName));
+            }
+
+            if (adminLog)
+                continue;
+
+            if (impact == LogImpact.Extreme) // Always chat-notify Extreme logs
+                adminLog = true;
+
+            if (impact == LogImpact.High) // Only chat-notify High logs if the player is below a threshold playtime
+            {
+                if (_highImpactLogPlaytime >= 0 && _player.TryGetSessionById(new NetUserId(id), out var session))
+                {
+                    var playtimes = _playtime.GetPlayTimes(session);
+                    if (playtimes.TryGetValue(PlayTimeTrackingShared.TrackerOverall, out var overallTime) &&
+                        overallTime <= TimeSpan.FromHours(_highImpactLogPlaytime))
+                    {
+                        adminLog = true;
+                    }
+                }
+            }
+        }
+
+        if (adminLog)
+        {
+            _chat.SendAdminAlert(logMessage);
+
+            if (CreateTpLinks(playerNetEnts, out var tpLinks))
+                _chat.SendAdminAlertNoFormatOrEscape(tpLinks);
+
+            var coords = GetCoordinates(handler.Values);
+
+            if (CreateCordLinks(coords, out var cordLinks))
+                _chat.SendAdminAlertNoFormatOrEscape(cordLinks);
+        }
+    }
+
+    /// <summary>
+    /// Creates a list of tpto command links of the given players
+    /// </summary>
+    private bool CreateTpLinks(List<(NetEntity NetEnt, string CharacterName)> players, out string outString)
+    {
+        outString = string.Empty;
+
+        if (players.Count == 0)
+            return false;
+
+        outString = Loc.GetString("admin-alert-tp-to-players-header");
+
+        for (var i = 0; i < players.Count; i++)
+        {
+            var player = players[i];
+            outString += $"[cmdlink=\"{EscapeText(player.CharacterName)}\" command=\"tpto {player.NetEnt}\"/]";
+
+            if (i < players.Count - 1)
+                outString += ", ";
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Creates a list of toto command links for the given map coordinates.
+    /// </summary>
+    private bool CreateCordLinks(List<MapCoordinates> cords, out string outString)
+    {
+        outString = string.Empty;
+
+        if (cords.Count == 0)
+            return false;
+
+        outString = Loc.GetString("admin-alert-tp-to-coords-header");
+
+        for (var i = 0; i < cords.Count; i++)
+        {
+            var cord = cords[i];
+            outString += $"[cmdlink=\"{cord.ToString()}\" command=\"tp {cord.X} {cord.Y} {cord.MapId}\"/]";
+
+            if (i < cords.Count - 1)
+                outString += ", ";
+        }
+
+        return true;
+    }
+
+    /// <summary>
+    /// Escape the given text to not allow breakouts of the cmdlink tags.
+    /// </summary>
+    private string EscapeText(string text)
+    {
+        return FormattedMessage.EscapeText(text).Replace("\"", "\\\"").Replace("'", "\\'");
+    }
+
+    public async Task<List<SharedAdminLog>> All(LogFilter? filter = null, Func<List<SharedAdminLog>>? listProvider = null)
+    {
+        if (TrySearchCache(filter, out var results))
+        {
+            return results;
+        }
+
+        var initialSize = Math.Min(filter?.Limit ?? 0, 1000);
+        List<SharedAdminLog> list;
+        if (listProvider != null)
+        {
+            list = listProvider();
+            list.EnsureCapacity(initialSize);
+        }
+        else
+        {
+            list = new List<SharedAdminLog>(initialSize);
+        }
+
+        // Sunrise edit start - read admin logs from Loki when enabled
+        if (_lokiEnabled)
+        {
+            await GetAdminLogsFromLoki(filter, list);
+            return list;
+        }
+        // Sunrise edit end
+
+        await foreach (var log in _db.GetAdminLogs(filter).WithCancellation(filter?.CancellationToken ?? default))
+        {
+            list.Add(log);
+        }
+
+        return list;
+    }
+
+    // Sunrise edit start - route log message reads through Loki-aware query paths
+    public async IAsyncEnumerable<string> AllMessages(LogFilter? filter = null)
+    {
+        if (_lokiEnabled)
+        {
+            var list = new List<SharedAdminLog>();
+            await GetAdminLogsFromLoki(filter, list);
+            foreach (var l in list) yield return l.Message;
+        }
+        else
+        {
+            await foreach (var message in _db.GetAdminLogMessages(filter)) yield return message;
+        }
+    }
+
+    public async IAsyncEnumerable<JsonDocument> AllJson(LogFilter? filter = null)
+    {
+        if (_lokiEnabled)
+        {
+            yield break;
+        }
+        else
+        {
+            await foreach (var json in _db.GetAdminLogsJson(filter)) yield return json;
+        }
+    }
+    // Sunrise edit end
+
+    public Task<Round> Round(int roundId)
+    {
+        return _db.GetRound(roundId);
+    }
+
+    public Task<List<SharedAdminLog>> CurrentRoundLogs(LogFilter? filter = null)
+    {
+        filter ??= new LogFilter();
+        filter.Round = _currentRoundId;
+        return All(filter);
+    }
+
+    public IAsyncEnumerable<string> CurrentRoundMessages(LogFilter? filter = null)
+    {
+        filter ??= new LogFilter();
+        filter.Round = _currentRoundId;
+        return AllMessages(filter);
+    }
+
+    public IAsyncEnumerable<JsonDocument> CurrentRoundJson(LogFilter? filter = null)
+    {
+        filter ??= new LogFilter();
+        filter.Round = _currentRoundId;
+        return AllJson(filter);
+    }
+
+    public Task<Round> CurrentRound()
+    {
+        return Round(_currentRoundId);
+    }
+
+    // Sunrise edit start - prefer Loki count and report zero if Loki is unavailable
+    public async Task<int> CountLogs(int round)
+    {
+        if (_lokiEnabled)
+        {
+            try
+            {
+                return await CountLogsFromLoki(round);
+            }
+            catch (Exception ex)
+            {
+                _sawmill.Warning($"Failed to fetch Loki log count for round {round}: {ex}");
+                return 0;
+            }
+        }
+
+        return await _db.CountAdminLogs(round);
+    }
+
+    private async Task<int> CountLogsFromLoki(int round)
+    {
+        if (string.IsNullOrEmpty(_lokiUrl))
+            return 0;
+
+        var filter = new LogFilter { Round = round };
+        var ascending = true;
+        var timeRange = await ResolveLokiTimeRange(filter);
+        var batchLimit = 5000;
+        LokiCursor? cursor = null;
+        var count = 0;
+        var requiresMore = true;
+
+        while (requiresMore)
+        {
+            var query = BuildLokiQuery(filter, ascending, cursor);
+            var url = BuildLokiQueryUrl(query, batchLimit, timeRange, ascending);
+            var response = await _httpClient.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+            {
+                var body = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Loki count query failed: {response.StatusCode} {body}");
+            }
+
+            var content = await response.Content.ReadAsStringAsync();
+            var lokiResponse = JsonSerializer.Deserialize<LokiQueryResponse>(content);
+            var rawValueCount = CountLokiValues(lokiResponse);
+            var rawValues = FlattenLokiValues(lokiResponse, ascending, batchLimit);
+            if (rawValues.Count == 0)
+                return count;
+
+            var nextCursor = cursor;
+            foreach (var parsed in rawValues)
+            {
+                if (cursor != null && !IsCursorBefore(parsed, cursor.Value))
+                    continue;
+
+                count++;
+                nextCursor = ToLokiCursor(parsed);
+            }
+
+            if (nextCursor == null || nextCursor == cursor)
+                return count;
+
+            cursor = nextCursor;
+            timeRange = MoveTimeRangeCursorForward(timeRange, cursor.Value, ascending);
+            requiresMore = rawValueCount >= batchLimit;
+        }
+
+        return count;
+    }
+    // Sunrise edit end
+}

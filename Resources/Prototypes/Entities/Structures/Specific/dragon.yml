@@ -1,0 +1,82 @@
+- type: entity
+  id: CarpRift
+  name: carp rift
+  description: A rift akin to the ones space carp use to travel long distances.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: DragonRift
+    # Sunrise-start
+    spawnPrototypes:
+    - MobCarpDragon
+    - MobCarpHoloDragon
+    - MobCarpRainbowDragon
+    - MobSharkDragon
+    # Sunrise-end
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+    canCollide: true #Sunrise-edit
+  - type: Fixtures
+#Sunrise-start
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.48,0.25,0.48"
+        density: 75
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+#Sunrise-end
+  - type: Sprite
+    layers:
+    - sprite: Structures/Specific/carp_rift.rsi
+      state: icon
+      color: "#569fff"
+      shader: unshaded
+  - type: InteractionOutline
+  - type: Clickable
+  - type: PointLight
+    enabled: true
+    color: "#366db5"
+    radius: 10.0
+    energy: 5.0
+    netsync: false
+  - type: NavMapBeacon
+    color: "#ff0000"
+    text: carp rift
+    # only show after making the announcement at 50%
+    enabled: false
+  - type: Damageable
+    damageContainer: Rift #Sunrise-edit
+    damageModifierSet: Rift #Sunrise-edit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: EmitSoundOnSpawn
+    sound:
+      path: /Audio/Weapons/Guns/Gunshots/rocket_launcher.ogg
+#Sunrise-start
+  - type: DamageOverlay
+  - type: AoEHeal
+    threshold: 0.9
+    damage:
+      groups:
+        # это не много. Так как мы лечим по группам урона, то это -2.6 урона по каждому типу в 2 секунды. Тобишь 160
+        # проникающих ранений (урон с которым можно еще надеяться спрятаться) вылечится за 2 минуты на половину, что вполне себе нормально
+        Brute: -8
+        Burn: -5
+        Airloss: -5
+        Toxin: -5 # Sunrise-Edit
+    whitelist:
+      tags:
+      - CarpRiftHealTarget
+#Sunrise-end

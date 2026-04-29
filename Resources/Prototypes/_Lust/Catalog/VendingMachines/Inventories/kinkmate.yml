@@ -1,0 +1,78 @@
+- type: vendingMachineInventory
+  id: KinkMateInventory
+  startingInventory:
+    # Dildos
+    ERPNormalDildo: 8
+    ERPDildoAvian: 8
+    ERPDildoDragon: 8
+    ERPDildoEquine: 8
+    ERPDildoKnot: 8
+    ERPDildoTentacle: 8
+    ERPDildoDouble : 3
+    # Fleshlights
+    ERPGreenFleshlight: 8
+    ERPRedFleshlight: 8
+    ERPTealFleshlight: 8
+    ERPYellowFleshlight: 8
+    ERPNormalFleshlight: 8
+    # Other stuff
+    ERPShibariRopeRed: 2
+    ERPShibariRopeWhite: 2
+    # Uniforms
+    ClothingUniformSkirtSunriseMaid: 4
+    ClothingUniformEroticRedUnderwear: 4
+    ClothingUniformJumpskirtJapaneseSchool: 3
+    ClothingUniformJumpskirtSchool: 2
+    ClothingShoesSchoolBlack: 2
+    ClothingShoesSchoolWhite: 2
+    ClothingUniformJumpsuitLoona: 3
+    ClothingUniformJumpsuitEroform: 3
+    ClothingUniformSuccubus: 2
+    # ERP toys
+    PlugBox: 3
+    ERPCatTailPlug: 3
+    ERPFoxTailPlug: 3
+    ERPVibroStick: 3
+    ERPVibroEgg: 3
+    ERPStrapOn: 3
+    ERPWhip: 3
+    ERPBeads: 3
+    RemoteSignaller: 5
+    ERPSexRackFlatpack: 3
+    ClothingMaskMuzzle: 3
+    ClothingEyesBlindfold: 3
+    ToyHandcuffs: 4
+    ArrowRouletteErot: 2
+    ArrowRouletteEros: 2
+    # Glowsticks
+    GlowstickBase: 3
+    GlowstickRed: 3
+    GlowstickPurple: 3
+    GlowstickYellow: 3
+    GlowstickBlue: 3
+    # Bunny uniform
+    BunnyUniform: 2
+    BunnyShoes: 2
+    BunnyButterfly: 2
+    BunnyEars: 2
+    BunnyManjets: 2
+    # Collars
+    ClothingNeckShockCollar: 2
+    ClothingNeckCollar1: 3
+    ClothingNeckCollar2: 3
+    ClothingNeckCollar3: 3
+    ClothingNeckCollar4: 3
+    ClothingNeckSpikeCollar: 3
+    ClothingNeckRibbon: 3
+    ClothingNeckBellCollarPlain: 3
+    ClothingNeckBellCollarPink: 3
+    ClothingNeckBellCollarYellow: 3
+    ClothingNeckCollarCross: 3
+    ClothingNeckCollarStar: 3
+    # Cat paws
+    ClothingHandsCatPawsWhite: 3
+    ClothingHandsCatPawsBrown: 3
+    ClothingHandsCatPawsBlack: 3
+    ClothingHandsCatPawsBlackWhite: 3
+  contrabandInventory:
+    ClothingHeadHatDeerHorns: 2

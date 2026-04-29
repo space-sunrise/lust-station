@@ -1,0 +1,78 @@
+- type: entity
+  parent: BaseItem
+  id: Suntick
+  categories: [ HideSpawnMenu ]
+  suffix: 20 LC
+  name: Lust Coin
+  description: Incredibly attractive and beautiful coins that open the door to the world of a cute little shop.
+  components:
+  - type: Sprite
+    sprite: _Lust/lust_coin.rsi # Lust-Edit
+    state: telecrystal
+  - type: Item
+    sprite: _Lust/lust_coin.rsi # Lust-Edit
+    size: Tiny
+  - type: Stack
+    count: 20
+    stackType: Suntick
+  - type: StaticPrice
+    price: 0
+  - type: StackPrice
+    price: -10
+  - type: Currency
+    price:
+      Suntick: 1
+
+- type: entity
+  parent: Suntick
+  id: Suntick1
+  suffix: 1 LC
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Stack
+    count: 1
+
+- type: entity
+  parent: Suntick
+  id: Suntick5
+  suffix: 5 LC
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Stack
+    count: 5
+
+- type: entity
+  parent: Suntick
+  id: Suntick10
+  categories: [ HideSpawnMenu ]
+  suffix: 10 LC
+  components:
+  - type: Stack
+    count: 10
+
+- type: entity
+  parent: Suntick
+  id: Suntick40
+  categories: [ HideSpawnMenu ]
+  suffix: 40 LC
+  components:
+  - type: Stack
+    count: 40
+
+- type: entity
+  parent: Suntick
+  id: Suntick80
+  categories: [ HideSpawnMenu ]
+  suffix: 80 LC
+  components:
+  - type: Stack
+    count: 80
+
+- type: entity
+  parent: Suntick
+  id: Suntick100
+  categories: [ HideSpawnMenu ]
+  suffix: 100 LC
+  components:
+  - type: Stack
+    count: 100

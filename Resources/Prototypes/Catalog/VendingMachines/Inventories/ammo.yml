@@ -1,0 +1,18 @@
+- type: vendingMachineInventory
+  id: AmmoVendInventory
+  startingInventory:
+    # Sunrise-Start
+    MagazineBoxCaselessRifle: 5
+    MagazineBoxCaselessRiflePractice: 3
+    MagazineBoxLightRifleBig: 5
+    MagazineBoxLightRiflePractice: 3
+    MagazineBoxMagnumSP: 5
+    MagazineBoxMagnumPractice: 3
+    MagazineBoxPistolSP: 5
+    MagazineBoxPistolPractice: 3
+    MagazineBoxRifleSP: 5
+    MagazineBoxRiflePractice: 3
+    # Sunrise-End
+
+    BoxLethalshot: 6
+    BoxShotgunPractice: 3
