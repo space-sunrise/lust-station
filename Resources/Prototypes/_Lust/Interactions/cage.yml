@@ -286,9 +286,6 @@
   - "%user внимательно разглядывает свою клетку в поисках слабого места"
   - "%user осматривает замок на своей клетке с тоскливым видом"
   - "%user трогает замок клетки и осознаёт, что без ключа никуда"
-  interactionSounds:
-  - FemaleSigh
-  - MaleSigh
   loveUser: 0
   cooldown: 10
 
@@ -372,9 +369,6 @@
   - "%user сжимает зубы — прутья клетки неумолимо сдерживают возбуждение"
   - "%user прерывисто вздыхает, ощущая как плоть упирается в металл"
   - "%user краснеет, борясь с ощущением тесноты клетки"
-  interactionSounds:
-  - FemaleSigh
-  - MaleSigh
   loveUser: 3
   cooldown: 5
 
@@ -423,7 +417,7 @@
   - !type:BodyAreaTagCondition
     checkInitiator: true
     checkTarget: false
-    categories: [ "клетка" ]
+    categories: [ "вагина" ]
     requireExposed: false
   - !type:BodyAreaTagCondition
     checkInitiator: true
@@ -454,7 +448,7 @@
   - !type:BodyAreaTagCondition
     checkInitiator: true
     checkTarget: false
-    categories: [ "клетка" ]
+    categories: [ "вагина" ]
     requireExposed: false
   - !type:BodyAreaTagCondition
     checkInitiator: true
@@ -516,7 +510,7 @@
   - !type:BodyAreaTagCondition
     checkTarget: true
     checkInitiator: false
-    categories: [ "клетка" ]
+    categories: [ "вагина" ]
     requireExposed: false
   - !type:BodyAreaTagCondition
     checkTarget: true
@@ -576,7 +570,7 @@
   - !type:BodyAreaTagCondition
     checkTarget: true
     checkInitiator: false
-    categories: [ "клетка" ]
+    categories: [ "вагина" ]
     requireExposed: false
   - !type:BodyAreaTagCondition
     checkTarget: true
@@ -638,7 +632,7 @@
   - !type:BodyAreaTagCondition
     checkTarget: true
     checkInitiator: false
-    categories: [ "клетка" ]
+    categories: [ "вагина" ]
     requireExposed: false
   - !type:BodyAreaTagCondition
     checkTarget: true

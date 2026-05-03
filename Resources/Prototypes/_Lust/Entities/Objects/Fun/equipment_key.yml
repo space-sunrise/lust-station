@@ -6,7 +6,6 @@
   components:
   - type: Item
     size: Small
-
   - type: Sprite
     sprite: _Lust/Clothing/Locked/key.rsi
     state: icon
