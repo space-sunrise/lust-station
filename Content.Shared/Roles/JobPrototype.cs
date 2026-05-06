@@ -178,6 +178,13 @@ namespace Content.Shared.Roles
 
         [DataField]
         public SpriteSpecifier PreviewIcon = new SpriteSpecifier.Rsi(new ResPath("/Textures/_Sunrise/Interface/Misc/job_preview.rsi"), "test");
+
+        /// <summary>
+        /// Список альтернативных названий должности (LocId ключи).
+        /// Игрок может выбрать одно из них при присоединении.
+        /// </summary>
+        [DataField]
+        public List<LocId> AlternativeTitles { get; private set; } = new();
         // Sunrise-End
 
         // Lust-Start

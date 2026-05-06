@@ -30,7 +30,6 @@
   - type: SiliconLawProvider
     laws: PeaceLawset
   - type: Pacified
-  - type: FlashImmunity
   - type: FabricateCookie
     cookieList:
     - FoodBakedCookieOatmeal
@@ -68,6 +67,15 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - SiliconEmotes
+    - EmagImmune
+    - Unimplantable
+    - NoPaint
 
   # Sounds
   footstepCollection:
@@ -118,8 +126,6 @@
     - SoapNT
     - SoapDeluxe
     - SoapHomemade
-  - type: PieThrower
-    pieProtoId: FoodPieBananaCream
   - type: TTS
     voice: NecoArcTwo
 
@@ -196,7 +202,6 @@
   - type: ShowCriminalRecordIcons
   - type: ShowMindShieldIcons
   - type: BorgCuffed
-  - type: FlashImmunity
   - type: SiliconLawProvider
     laws: SecurityLawset
   - type: Access
@@ -224,3 +229,12 @@
     - Atmospherics
   - type: AccessReader
     access: [ [ "Command" ], [ "Security" ] ]
+  - type: Tag
+    tags:
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - SiliconEmotes
+    - EmagImmune
+    - Unimplantable
+    - NoPaint
