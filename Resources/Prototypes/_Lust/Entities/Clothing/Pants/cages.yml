@@ -126,7 +126,7 @@
   - type: TriggerOnSignal
   - type: DeviceLinkSink
     ports:
-    - Pressed
+    - Trigger
   - type: SexEquipRestriction
     allowedSexes:
     - Male
