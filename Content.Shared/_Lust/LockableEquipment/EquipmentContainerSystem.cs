@@ -254,8 +254,11 @@ public sealed class EquipmentContainerSystem : EntitySystem
         if (!_container.TryGetContainer(target, comp.ContainerId, out var container) || !CanRemove(container, user.Value))
             return false;
 
-        var installedDevice = FindDevice(container)!.Value;
-        if (!TryComp(installedDevice, out LockableEquipmentComponent? installedComp))
+        var installedDevice = FindDevice(container);
+        if (installedDevice is not { } deviceUid)
+            return false;
+
+        if (!TryComp(deviceUid, out LockableEquipmentComponent? installedComp))
             return false;
 
         var doAfter = new DoAfterArgs(
