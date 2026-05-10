@@ -22,3 +22,21 @@
     layers:
     - state: crypt_red
     - state: cap_label
+
+# MedTak
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyMedTak
+  name: MedTak encryption key
+  description: An encryption key used by MedTak operators.
+  components:
+    - type: EncryptionKey
+      channels:
+        - MedTak
+      defaultChannel: MedTak
+    - type: Sprite
+      layers:
+        - sprite: _Lust/Objects/Devices/encryption_keys.rsi
+          state: crypt_medtak
+        - sprite: _Lust/Objects/Devices/encryption_keys.rsi
+          state: medtak_label

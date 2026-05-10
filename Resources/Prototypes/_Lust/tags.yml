@@ -1,6 +1,13 @@
 ﻿- type: Tag
   id: StunSword
 
+# MedTak
+- type: Tag
+  id: BorgModuleMedTak
+
+- type: Tag
+  id: RollerBed
+
 # HL2
 - type: Tag
   id: CartridgeAR2
