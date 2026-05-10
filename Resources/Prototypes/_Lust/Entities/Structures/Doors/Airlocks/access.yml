@@ -1,6 +1,6 @@
 # MedTak airlocks
 - type: entity
-  parent: AirlockBrigmed
+  parent: AirlockBrig
   id: AirlockMedTakLocked
   suffix: MedTak, Locked
   components:
@@ -11,7 +11,7 @@
       layoutId: AirlockMedTak
 
 - type: entity
-  parent: AirlockBrigmedGlass
+  parent: AirlockBrigGlass
   id: AirlockMedTakGlassLocked
   suffix: MedTak, Locked
   components:
