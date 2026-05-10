@@ -5,3 +5,12 @@
   frequency: 1984
   color: "#4169E1"
   longRange: true
+
+# MedTak
+- type: radioChannel
+  id: MedTak
+  name: chat-radio-medtak
+  keycode: 'k'
+  frequency: 1452
+  color: "#880606"
+  longRange: true

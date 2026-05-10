@@ -11,16 +11,37 @@
             "name": "Nanotrasen"
         },
         {
-		    "name": "Arrows"
+            "name": "Arrows"
         },
         {
-		    "name": "go"
+            "name": "go"
         },
         {
-		    "name": "ota"
+            "name": "ota"
         },
         {
-		    "name": "dvl"
+            "name": "dvl"
+        },
+        {
+            "name": "MedTakBorg"
+        },
+        {
+            "name": "MedTakDispatcher"
+        },
+        {
+            "name": "MedTakLeader"
+        },
+        {
+            "name": "MedTakMedic"
+        },
+        {
+            "name": "MedTakPilot"
+        },
+        {
+            "name": "MedTakSecurity"
+        },
+        {
+            "name": "MedTak_Mindshield"
         }
     ]
 }
