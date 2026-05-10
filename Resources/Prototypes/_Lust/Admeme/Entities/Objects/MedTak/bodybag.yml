@@ -1,6 +1,6 @@
 - type: entity
   id: BodyBagMedTak
-  parent: [ BodyBagLockable, BaseMedTakContraband ]
+  parent: [ BodyBag, BaseMedTakContraband ]
   name: secure body bag
   components:
   - type: Sprite
