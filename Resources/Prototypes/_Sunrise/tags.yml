@@ -143,6 +143,9 @@
   id: SunriseBlueprintXenoborg
 
 - type: Tag
+  id: SunriseWallhornElectronics
+
+- type: Tag
   id: TrayScanner
 
 # region Cores / power
