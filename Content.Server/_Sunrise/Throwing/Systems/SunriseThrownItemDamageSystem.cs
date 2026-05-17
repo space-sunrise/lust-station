@@ -159,7 +159,7 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
                         if (!IsFinite(normal) || normal.LengthSquared() < 0.01f)
                         {
                             _thrown.StopThrow(uid, args.Component);
-                            return;
+                            goto AfterBounceHandling;
                         }
 
                         // Reflection formula: R = V - 2(V.N)N
@@ -176,7 +176,7 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
                         if (!IsFinite(bounceDir) || bounceDir.LengthSquared() < 0.001f)
                         {
                             _thrown.StopThrow(uid, args.Component);
-                            return;
+                            goto AfterBounceHandling;
                         }
 
                         // Immediately move out of the target's collision bounds to prevent getting stuck
@@ -200,6 +200,7 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
             }
         }
 
+        AfterBounceHandling:
         if (forceKnockdown || weight >= component.KnockdownWeightThreshold)
         {
             _stun.TryKnockdown(args.Target, component.KnockdownDuration, drop: false, refresh: false);
