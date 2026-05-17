@@ -154,14 +154,6 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
                             ? diff.Normalized()
                             : -velocity.Normalized();
 
-                        // A same-tile hit can make both the collision normal and fallback velocity invalid.
-                        // Stop the throw here instead of passing NaN coordinates into ThrowingSystem.
-                        if (!IsFinite(normal) || normal.LengthSquared() < 0.01f)
-                        {
-                            _thrown.StopThrow(uid, args.Component);
-                            goto AfterBounceHandling;
-                        }
-
                         // Reflection formula: R = V - 2(V.N)N
                         // Only reflect if moving towards the target
                         var dot = Vector2.Dot(velocity, normal);
@@ -171,13 +163,6 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
                         var bounceDir = reflection.LengthSquared() > 0.001f
                             ? (reflection.Normalized() + normal * 0.4f).Normalized()
                             : normal;
-
-                        // The mixed reflection can still collapse to NaN if the physics contact is degenerate.
-                        if (!IsFinite(bounceDir) || bounceDir.LengthSquared() < 0.001f)
-                        {
-                            _thrown.StopThrow(uid, args.Component);
-                            goto AfterBounceHandling;
-                        }
 
                         // Immediately move out of the target's collision bounds to prevent getting stuck
                         _transform.SetWorldPosition(uid, currentPos + bounceDir * 0.25f);
@@ -200,7 +185,6 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
             }
         }
 
-        AfterBounceHandling:
         if (forceKnockdown || weight >= component.KnockdownWeightThreshold)
         {
             _stun.TryKnockdown(args.Target, component.KnockdownDuration, drop: false, refresh: false);
@@ -253,10 +237,5 @@ public sealed class SunriseThrownItemDamageSystem : EntitySystem
 
         // 3. Fallback: No damage distribution
         return new DamageSpecifier();
-    }
-
-    private static bool IsFinite(Vector2 vector)
-    {
-        return float.IsFinite(vector.X) && float.IsFinite(vector.Y);
     }
 }
