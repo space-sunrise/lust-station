@@ -94,6 +94,7 @@
       actions: [JuggernautCreateWall]
     - type: Hands
       showInHands: true
+    - type: DoAfter
     - type: Body
       prototype: ConstructJuggernaut
     - type: ContainerContainer
