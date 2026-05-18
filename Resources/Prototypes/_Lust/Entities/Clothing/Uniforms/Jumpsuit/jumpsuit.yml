@@ -77,8 +77,8 @@
 - type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitQilluDirector
-  name: ent-ClothingUniformJumpsuitQilluDirector
-  description: ent-ClothingUniformJumpsuitQilluDirector-desc
+  name: Qillu Corporation Director Suit
+  description: A formal suit reserved for the Director of Qillu Corporation. A symbol of supreme authority and highest rank.
   components:
   - type: Sprite
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/director_qillu.rsi
