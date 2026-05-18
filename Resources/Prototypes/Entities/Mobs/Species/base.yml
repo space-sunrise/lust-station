@@ -22,11 +22,16 @@
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
+    # Lust-Start
+    - map: ["lockable_under"]
+    - map: ["lockable_chest"]
+    # Lust-End
     # Sunrise-start
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
     - map: ["plug"]
+    - map: ["lockable_underpants"] # Lust-Edit
     - map: ["jumpsuit"]
     # Sunrise-end
     - map: ["enum.HumanoidVisualLayers.LHand"]
@@ -34,7 +39,11 @@
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
+    - map: ["lockable_normal"] # Lust-Edit
     - map: [ "outerClothing" ] #Sunrise-edit
+    # Lust-Start
+    - map: ["lockable_over"]
+    # Lust-End
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
@@ -273,6 +282,7 @@
   - type: Mood
   - type: CritHeartbeat
   # Sunrise-End
+  - type: EquipmentContainer # Lust-Edit
   - type: Barotrauma
     damage:
       types:
