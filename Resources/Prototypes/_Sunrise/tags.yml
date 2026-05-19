@@ -74,6 +74,9 @@
   id: CarpRiftHealTarget
 
 - type: Tag
+  id: RogueSiliconHealTarget
+
+- type: Tag
   id: Felinid
 
 - type: Tag
