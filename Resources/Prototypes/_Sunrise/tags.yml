@@ -344,6 +344,9 @@
   id: ModularReceiverAuto
 
 - type: Tag
+  id: ImprovisedModularReceiver
+
+- type: Tag
   id: RiotShield
 
 - type: Tag
