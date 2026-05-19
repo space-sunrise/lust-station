@@ -5989,3 +5989,14 @@
   id: 1849
   time: '2026-05-19T13:01:29.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4384
+- author: BDSM_
+  changes:
+  - message: "\u0412\u043E\u0437\u0432\u0440\u0430\u0449\u0435\u043D \u0430\u043A\u0446\
+      \u0435\u043D\u0442 \u0432\u0443\u043B\u044C\u043F\u0438\u043A\u0430\u043D\u043E\
+      \u043C, \u0442\u0435\u043F\u0435\u0440\u044C \u0441\u043D\u043E\u0432\u0430\
+      \ \u043C\u043E\u0433\u0443\u0442 \u043F\u0440\u043E\u0433\u043E\u0432\u0430\u0440\
+      \u0438\u0432\u0430\u0442\u044C \u0420\u0420\u0420"
+    type: Tweak
+  id: 1850
+  time: '2026-05-19T15:44:16.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4403
