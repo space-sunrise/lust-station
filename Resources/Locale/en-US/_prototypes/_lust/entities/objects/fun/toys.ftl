@@ -52,3 +52,5 @@ ent-PlushieDiegoVulpa = Plushie Diego
     .desc = A green-haired beastman of German descent, who loves agitational speeches, paperwork, and directives. He has devoted himself to serving the corporation and attempts to build his own "Eden" on the station — a place where progress, control, and order reign.
 ent-PlushieLilith = Plushie L.I.L.I.T.H
     .desc = A giant plush medborg, with a tag on its hip that reads "L.I.L.I.T.H - Deus Ex Machine." You smell the cloying scent of beer on it, and it makes you want to pet Nians and RAAAR.
+ent-PlushieMichaelFaLodbrok = Plushie Michael fa Lodbrok
+    .desc = A former Arkanian film star, now known in the sectors as a far-sighted personnel officer, he often represents the agency's interests both at press conferences and on his home planet of Aol. Central Command developed his perk as a way to boost the agency's image through his popularity, as well as the opportunity to warm lonely hearts... in a rather unusual way.
