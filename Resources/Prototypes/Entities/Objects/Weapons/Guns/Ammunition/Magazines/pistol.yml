@@ -45,7 +45,7 @@
     whitelist:
       tags:
         - CartridgePistol
-    capacity: 16
+    capacity: 15
   - type: Item
     size: Small
   - type: ContainerContainer
@@ -984,9 +984,11 @@
         color: "#F5514C"
 
 - type: entity
-  id: MagazinePistolSubMachineGunFMJ
-  name: SMG magazine (.35 auto FMJ)
-  parent: BaseMagazinePistolSubMachineGun
+  parent: BaseMagazinePistolHighCapacity
+  id: MagazinePistolHighCapacityEmpty
+  name: machine pistol magazine (.35 auto any)
+  suffix: empty
+  description: Custom 15-round double-stack magazine for the Viper pistol.
   components:
   - type: BallisticAmmoProvider
     capacity: 30
@@ -1014,9 +1016,10 @@
         color: "#080706"
 
 - type: entity
-  id: MagazinePistolSubMachineGunAP
-  name: SMG magazine (.35 auto AP)
-  parent: BaseMagazinePistolSubMachineGun
+  parent: BaseMagazinePistolHighCapacity
+  id: MagazinePistolHighCapacity
+  name: machine pistol magazine (.35 auto)
+  description: Custom 15-round double-stack magazine for the Viper pistol. Intended to hold general-purpose kinetic ammunition.
   components:
   - type: BallisticAmmoProvider
     capacity: 30
@@ -1046,10 +1049,10 @@
         color: "#540000"
 
 - type: entity
-  id: MagazinePistolSubMachineGunPractice
-  name: SMG magazine (.35 auto practice)
-  parent: BaseMagazinePistolSubMachineGun
-  description: 30-round double-stack magazine for submachine guns. Intended to hold non-harmful chalk ammunition.
+  parent: BaseMagazinePistolHighCapacity
+  id: MagazinePistolHighCapacityPractice
+  name: machine pistol magazine (.35 auto practice)
+  description: Custom 15-round double-stack magazine for the Viper pistol. Intended to hold harmless practice ammunition.
   components:
   - type: BallisticAmmoProvider
     proto: CartridgePistolPractice

@@ -11,7 +11,7 @@ public sealed partial class GunSystem
         SubscribeLocalEvent<SpentAmmoVisualsComponent, AppearanceChangeEvent>(OnSpentAmmoAppearance);
     }
 
-    private void OnSpentAmmoAppearance(EntityUid uid, SpentAmmoVisualsComponent component, ref AppearanceChangeEvent args)
+    private void OnSpentAmmoAppearance(Entity<SpentAmmoVisualsComponent> ent, ref AppearanceChangeEvent args)
     {
         var sprite = args.Sprite;
         if (sprite == null) return;
@@ -22,20 +22,14 @@ public sealed partial class GunSystem
         }
 
         var spent = (bool)varSpent;
-        string? state = null;
+        string state;
 
-        if (spent && component.State != null)
-            state = component.Suffix ? $"{component.State}-spent" : "spent";
+        if (spent)
+            state = ent.Comp.Suffix ? $"{ent.Comp.State}-spent" : "spent";
         else
-            state = component.State;
+            state = ent.Comp.State;
 
-        if (spent && component.revealSpent) /// Starlight
-        {
-            _sprite.LayerSetVisible((uid, sprite), AmmoVisualLayers.Spent, true);
-            return;
-        }
-
-        _sprite.LayerSetRsiState((uid, sprite), AmmoVisualLayers.Base, state);
-        _sprite.RemoveLayer((uid, sprite), AmmoVisualLayers.Tip, false);
+        _sprite.LayerSetRsiState((ent, sprite), AmmoVisualLayers.Base, state);
+        _sprite.RemoveLayer((ent, sprite), AmmoVisualLayers.Tip, false);
     }
 }
