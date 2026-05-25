@@ -2,7 +2,7 @@
   id: CatEars
   bodyPart: Special
   markingCategory: Special
-  speciesRestriction: [Human, Dwarf, Felinid] # sunrise-edit
+  speciesRestriction: [Human, Dwarf, Felinid, Demon] # sunrise-edit
   sponsorOnly: false
   coloring:
     default:
