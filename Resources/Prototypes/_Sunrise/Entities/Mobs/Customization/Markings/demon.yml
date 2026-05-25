@@ -346,7 +346,7 @@
   id: DemonTailArrow
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, human]
+  speciesRestriction: [Demon, Human]
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
     state: tail
