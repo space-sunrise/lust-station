@@ -3,6 +3,8 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.DoAfter;
 using Content.Shared.Mobs;
 using Content.Shared.Movement.Events;
+using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.Standing;
 using Content.Server.DoAfter;
 
 namespace Content.Server._Lust.Borgs;
@@ -24,6 +26,13 @@ public sealed class BorgRestSystem : EntitySystem
         SubscribeLocalEvent<BorgRestComponent, MobStateChangedEvent>(OnMobStateChanged);
         SubscribeLocalEvent<BorgRestComponent, UpdateCanMoveEvent>(OnUpdateCanMove);
         SubscribeLocalEvent<BorgRestComponent, BorgRestDoAfterEvent>(OnRestDoAfter);
+        // Lust edit - borgs are machines, they don't topple over when destroyed
+        SubscribeLocalEvent<BorgChassisComponent, DownAttemptEvent>(OnBorgDownAttempt);
+    }
+
+    private static void OnBorgDownAttempt(Entity<BorgChassisComponent> ent, ref DownAttemptEvent args)
+    {
+        args.Cancel();
     }
 
     private void OnRestAction(Entity<BorgRestComponent> ent, ref BorgRestActionEvent args)
