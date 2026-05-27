@@ -295,6 +295,7 @@
   id: BaseBorgChassis
   components:
   - type: IonStormTarget
+  - type: BorgRest # _Lust
 
 - type: entity
   abstract: true

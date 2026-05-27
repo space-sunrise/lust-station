@@ -38,10 +38,20 @@
   spriteHasMindState: robot_e
   spriteNoMindState: robot_e_r
   spriteToggleLightState: robot_l
+  # Lust-start
+  spriteRestingState: robot_rest
+  spriteWreckState: robot_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-generic-cyborg
   petFailureString: petting-failure-generic-cyborg
+  # Lust-start
+  addComponents:
+  - type: ActionGrant
+    actions:
+    - RestActionRobot
+  # Lust-end
 
 
 # Engineering borg
@@ -88,6 +98,11 @@
     instantActions:
     - HandheldStationMapUnpowered
     - EngiAlertsMonitor
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionEngineer
+  # Lust-end
   # Sunrise-End
 
   # Visual
@@ -96,6 +111,10 @@
   spriteHasMindState: engineer_e
   spriteNoMindState: engineer_e_r
   spriteToggleLightState: engineer_l
+  # Lust-start
+  spriteRestingState: engineer_rest
+  spriteWreckState: engineer_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-engineer-cyborg
@@ -140,6 +159,11 @@
   - type: InnateItem
     instantActions:
     - HandheldStationMapUnpowered
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionMiner
+  # Lust-end
   # Sunrise-End
 
   # Visual
@@ -149,6 +173,10 @@
   spriteHasMindState: miner_e
   spriteNoMindState: miner_e_r
   spriteToggleLightState: miner_l
+  # Lust-start
+  spriteRestingState: miner_rest
+  spriteWreckState: miner_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-salvage-cyborg
@@ -196,6 +224,10 @@
   spriteHasMindState: janitor_e
   spriteNoMindState: janitor_e_r
   spriteToggleLightState: janitor_l
+  # Lust-start
+  spriteRestingState: janitor_rest
+  spriteWreckState: janitor_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-janitor-cyborg
@@ -212,6 +244,11 @@
     solution: absorbed
   - type: RefillableSolution
     solution: absorbed
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionJanitor
+  # Lust-end
 
 
 # Medical borg
@@ -263,6 +300,11 @@
     - HandheldEmergencyCrewMonitorBorg
     entityTargetActions:
     - HandheldHealthAnalyzerUnpowered
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionMedical
+  # Lust-end
   # Sunrise-End
 
   # Visual
@@ -272,6 +314,10 @@
   spriteHasMindState: medical_e
   spriteNoMindState: medical_e_r
   spriteToggleLightState: medical_l
+  # Lust-start
+  spriteRestingState: medical_rest
+  spriteWreckState: medical_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-medical-cyborg
@@ -317,6 +363,11 @@
 
   addComponents:
   - type: SolutionScanner
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionService
+  # Lust-end
 
   # Visual
   inventoryTemplateId: borgTall
@@ -324,6 +375,10 @@
   spriteHasMindState: service_e
   spriteNoMindState: service_e_r
   spriteToggleLightState: service_l
+  # Lust-start
+  spriteRestingState: service_rest
+  spriteWreckState: service_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-service-cyborg

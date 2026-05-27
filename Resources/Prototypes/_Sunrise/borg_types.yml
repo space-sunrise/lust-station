@@ -76,6 +76,11 @@
     - EmagImmune
     - Unimplantable
     - NoPaint
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionPeace
+  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -89,6 +94,10 @@
   spriteHasMindState: peace_e
   spriteNoMindState: peace_e_r
   spriteToggleLightState: peace_l
+  # Lust-start
+  spriteRestingState: peace_rest
+  spriteWreckState: peace_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-peace-cyborg
@@ -128,6 +137,11 @@
     - SoapHomemade
   - type: TTS
     voice: NecoArcTwo
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionClown
+  # Lust-end
 
   # Sounds
   footstepCollection:
@@ -139,6 +153,10 @@
   spriteHasMindState: clown_e
   spriteNoMindState: clown_e_r
   spriteToggleLightState: clown_l
+  # Lust-start
+  spriteRestingState: clown_rest
+  spriteWreckState: clown_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-clown-cyborg
@@ -178,6 +196,10 @@
   spriteHasMindState: sec_e
   spriteNoMindState: sec_e_r
   spriteToggleLightState: sec_l
+  # Lust-start
+  spriteRestingState: sec_rest
+  spriteWreckState: sec_wreck
+  # Lust-end
 
   # Pet
   petSuccessString: petting-success-sec-cyborg
@@ -238,3 +260,9 @@
     - EmagImmune
     - Unimplantable
     - NoPaint
+
+  # Lust-start
+  - type: ActionGrant
+    actions:
+    - RestActionSec
+  # Lust-end

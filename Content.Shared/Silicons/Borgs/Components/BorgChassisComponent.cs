@@ -172,4 +172,9 @@ public enum BorgVisualLayers : byte
     /// Layer for the borg flashlight status.
     /// </summary>
     LightStatus,
+
+    // Lust edit start - rest/wreck visual layers
+    Resting,
+    Wrecked,
+    // Lust edit end
 }
