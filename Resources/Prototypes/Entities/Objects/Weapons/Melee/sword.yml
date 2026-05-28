@@ -20,7 +20,11 @@
       - Knife
   - type: Tool
     qualities:
-    - Slicing
+      - Cutting
+      - Slicing
+    speedModifier: 0.6
+    useSound:
+      path: /Audio/Items/wirecutter.ogg
 
 #Shortswords
 - type: entity

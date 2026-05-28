@@ -24,9 +24,11 @@
     size: Small
   - type: Tool
     qualities:
+      - Cutting
       - Slicing
+    speedModifier: 0.6
     useSound:
-      path: /Audio/Items/Culinary/chop.ogg
+      path: /Audio/Items/wirecutter.ogg
   # Sunrise-start
   - type: Scalpel
   - type: SurgeryTool
@@ -404,9 +406,8 @@
       - Knife
     - type: Tool
       qualities:
-      - Slicing
-      useSound:
-        path: /Audio/Items/Culinary/chop.ogg
+        - Cutting
+        - Slicing
   - type: Item
     size: Tiny
     sprite: Objects/Weapons/Melee/utility_knife.rsi
