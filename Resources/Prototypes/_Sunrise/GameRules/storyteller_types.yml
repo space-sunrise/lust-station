@@ -26,14 +26,14 @@
   budgetModifier: 1.0
   maxBudgetModifier: 1.0
   durationMultiplier: 1.0
-  relaxationMinMinutes: 20
-  relaxationMaxMinutes: 40
+  relaxationMinMinutes: 10
+  relaxationMaxMinutes: 20
   buildUpMinMinutes: 15
   buildUpMaxMinutes: 30
   peakMinMinutes: 12
   peakMaxMinutes: 24
-  recoveryMinMinutes: 10
-  recoveryMaxMinutes: 20
+  recoveryMinMinutes: 8
+  recoveryMaxMinutes: 16
   buildUpPreservationThreshold: 40
   strengthArmedCrewCoefficient: 10
   strengthSecurityCoefficient: 15
