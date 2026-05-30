@@ -1,8 +1,9 @@
+
 ﻿- type: marking
   id: DemonTail1
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, Human]
+  speciesRestriction: [Demon, Human] #sunrise edit
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
     state: tail
@@ -35,7 +36,7 @@
   id: DemonTailArrowAnimated
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, Human]
+  speciesRestriction: [Demon, Human] #sunrise edit
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/markings.rsi
     state: tail_arrow_animated
@@ -53,7 +54,7 @@
   id: DemonTailDefault
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, Human]
+  speciesRestriction: [Demon, Human] #sunrise edit
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
     state: tail
@@ -346,7 +347,7 @@
   id: DemonTailArrow
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, Human]
+  speciesRestriction: [Demon, Human] #sunrise edit
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
     state: tail
@@ -357,7 +358,7 @@
   id: DemonTailTrident
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Demon, Human]
+  speciesRestriction: [Demon, Human] #sunrise edit
   sprites:
   - sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
     state: tail
