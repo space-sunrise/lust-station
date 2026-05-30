@@ -52,6 +52,12 @@ public sealed partial class StorytellerTypePrototype : IPrototype
     [DataField]
     public float StrengthSecurityCoefficient = 15f;
 
+    [DataField]
+    public float StrengthCargoCoefficient = 0.0005f;
+
+    [DataField]
+    public float StrengthTechnologyCoefficient = 3.0f;
+
     // Threat Scaling Coefficients
     [DataField]
     public float HighBudgetThreshold = 40f;

@@ -37,7 +37,7 @@
   buildUpPreservationThreshold: 40
   strengthArmedCrewCoefficient: 10
   strengthSecurityCoefficient: 15
-  highBudgetThreshold: 40
+  highBudgetThreshold: 60
   majorThreatWeightMultiplier: 8
   minorThreatWeightMultiplier: 0.1
   stationStrengthScalingFactor: 50
