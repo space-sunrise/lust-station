@@ -62,7 +62,6 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly SharedJobSystem _jobSystem = default!;
     [Dependency] private readonly RoundEndSystem _roundEnd = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly EventManagerSystem _eventManager = default!;
     [Dependency] private readonly SharedCargoSystem _cargoSystem = default!;
     [Dependency] private readonly GhostRoleSystem _ghostRoleSystem = default!;
@@ -151,34 +150,47 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     private void TransitionPacingState(EntityUid uid, StorytellerRuleComponent comp)
     {
         var oldState = comp.PacingState;
-        // Sunrise-Edit: Adjust duration multiplier based on StorytellerTypePrototype
+        // Sunrise-Edit: Adjust duration and range based on StorytellerTypePrototype
         var durationMult = 1f;
+        var relMin = 20f;
+        var relMax = 40f;
+        var bldMin = 15f;
+        var bldMax = 30f;
+        var pkMin = 12f;
+        var pkMax = 24f;
+        var recMin = 10f;
+        var recMax = 20f;
+
         if (_protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out var typeProto))
         {
             durationMult = typeProto.DurationMultiplier;
+            relMin = typeProto.RelaxationMinMinutes;
+            relMax = typeProto.RelaxationMaxMinutes;
+            bldMin = typeProto.BuildUpMinMinutes;
+            bldMax = typeProto.BuildUpMaxMinutes;
+            pkMin = typeProto.PeakMinMinutes;
+            pkMax = typeProto.PeakMaxMinutes;
+            recMin = typeProto.RecoveryMinMinutes;
+            recMax = typeProto.RecoveryMaxMinutes;
         }
 
         switch (comp.PacingState)
         {
             case StorytellerPacingState.Relaxation:
                 comp.PacingState = StorytellerPacingState.BuildUp;
-                // Sunrise-Edit: Scaled up standard Relaxation duration to 20-40 minutes
-                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.Next(20, 40) * durationMult);
+                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.NextFloat(relMin, relMax) * durationMult);
                 break;
             case StorytellerPacingState.BuildUp:
                 comp.PacingState = StorytellerPacingState.Peak;
-                // Sunrise-Edit: Scaled up standard BuildUp duration to 15-30 minutes
-                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.Next(15, 30) * durationMult);
+                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.NextFloat(bldMin, bldMax) * durationMult);
                 break;
             case StorytellerPacingState.Peak:
                 comp.PacingState = StorytellerPacingState.Recovery;
-                // Sunrise-Edit: Scaled up standard Peak duration to 12-24 minutes
-                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.Next(12, 24) * durationMult);
+                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.NextFloat(pkMin, pkMax) * durationMult);
                 break;
             case StorytellerPacingState.Recovery:
                 comp.PacingState = StorytellerPacingState.Relaxation;
-                // Sunrise-Edit: Scaled up standard Recovery duration to 10-20 minutes
-                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.Next(10, 20) * durationMult);
+                comp.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.NextFloat(recMin, recMax) * durationMult);
                 break;
         }
 
@@ -190,8 +202,8 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         if (_roundEnd.IsRoundEndRequested())
             return;
 
-        var metrics = CalculateStationMetrics();
-        entity.Comp.CrewStress = CalculateCrewStress(metrics);
+        var metrics = CalculateStationMetrics(entity.Comp);
+        entity.Comp.CrewStress = CalculateCrewStress(ref metrics);
 
         // Update Prometheus gauges
         UpdatePrometheusGauges(entity.Comp, metrics);
@@ -243,14 +255,14 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             return;
 
         // Weighted random pick
-        var selected = PickEventFromEligible(eligibleEvents);
+        var selected = PickEventFromEligible(eligibleEvents, entity.Comp.ThreatBudget, metrics.StationStrength, entity.Comp.StorytellerType);
         if (selected == null)
             return;
 
         TriggerEvent(entity, selected.Value.Item1, selected.Value.Item2);
     }
 
-    public StationMetrics CalculateStationMetrics()
+    public StationMetrics CalculateStationMetrics(StorytellerRuleComponent? comp = null)
     {
         var totalPlayers = 0;
         var aliveCount = 0;
@@ -421,11 +433,18 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             PuddlesCount = puddlesCount,
             TrashCount = trashCount,
             AverageCrewDamage = averageCrewDamage,
-            TotalStationTiles = totalTiles
+            TotalStationTiles = totalTiles,
+            // Sunrise-Edit - Station Strength calculation loaded dynamically from storyteller prototype
+            StrengthArmedCrew = CountArmedCrewNotAntags() * (comp != null && _protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out var typeProto) ? typeProto.StrengthArmedCrewCoefficient : 10f),
+            StrengthSecurity = securityCount * (comp != null && _protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out typeProto) ? typeProto.StrengthSecurityCoefficient : 15f),
+            StrengthTechnology = researchTiers,
+            StationStrength = (CountArmedCrewNotAntags() * (comp != null && _protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out typeProto) ? typeProto.StrengthArmedCrewCoefficient : 10f)) +
+                              (securityCount * (comp != null && _protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out typeProto) ? typeProto.StrengthSecurityCoefficient : 15f)) +
+                              researchTiers
         };
     }
 
-    public float CalculateCrewStress(StationMetrics metrics)
+    public float CalculateCrewStress(ref StationMetrics metrics)
     {
         if (metrics.TotalPlayers == 0)
             return 0f;
@@ -455,10 +474,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             securityStress = Math.Clamp((deficit / targetSecurity) * 10f, 0f, 10f);
         }
 
-        // 4. Economy/RnD Distress (up to 10 points of stress) - Sunrise-Edit: Adjusted economyStress weight to 10
+        // 4. Economy Distress (up to 5 points of stress) - Sunrise edit - removed RnD points check, only count Cargo deficit
         float economyStress = 0f;
         if (metrics.CargoBalance < 1000) economyStress += 5f;
-        if (metrics.SciencePoints < 2000) economyStress += 5f;
 
         // 5. Living Crew Damage (up to 5 points of stress) - Sunrise-Edit: Added average crew damage check
         float damageStress = Math.Clamp(metrics.AverageCrewDamage * 0.1f, 0f, 5f);
@@ -472,6 +490,16 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         float trashDensity = metrics.TrashCount / totalStationTiles;
         // Standard density threshold: 1 puddle per 330 tiles (~0.003), 1 trash per 160 tiles (~0.006)
         float messStress = Math.Clamp((puddleDensity / 0.003f) * 2f + (trashDensity / 0.006f) * 2f, 0f, 4f);
+
+        // Sunrise edit start - Write stress components back to metrics
+        metrics.StressDead = deadStress;
+        metrics.StressContainment = containmentStress;
+        metrics.StressSecurity = securityStress;
+        metrics.StressEconomy = economyStress;
+        metrics.StressDamage = damageStress;
+        metrics.StressAnomaly = anomalyStress;
+        metrics.StressMess = messStress;
+        // Sunrise edit end
 
         float totalStress = deadStress + containmentStress + securityStress + economyStress + damageStress + anomalyStress + messStress;
         return Math.Clamp(totalStress, 0f, 100f);
@@ -505,8 +533,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             if (!_protoManager.TryIndex<StorytellerMetadataPrototype>(proto.ID, out var metadata))
                 continue;
 
-            // Player count limits
-            if (metrics.TotalPlayers < metadata.MinStress || comp.CrewStress < metadata.MinStress || comp.CrewStress > metadata.MaxStress)
+            if (comp.CrewStress < metadata.MinStress || comp.CrewStress > metadata.MaxStress)
                 continue;
 
             // Evac/roundend checks
@@ -546,6 +573,23 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
                 if (metadata.ThreatType == StorytellerThreatType.MajorAntag)
                     continue;
             }
+            // Sunrise edit start - Budget preservation mechanic loaded dynamically from storyteller prototype
+            var preservationThreshold = 40f;
+            if (_protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out var typeProto))
+            {
+                preservationThreshold = typeProto.BuildUpPreservationThreshold;
+            }
+
+            if (comp.PacingState == StorytellerPacingState.BuildUp && comp.ThreatBudget < preservationThreshold)
+            {
+                if (metadata.ThreatType != StorytellerThreatType.Helpful &&
+                    metadata.ThreatType != StorytellerThreatType.Neutral &&
+                    metadata.ThreatCost > 0f)
+                {
+                    continue;
+                }
+            }
+            // Sunrise edit end
 
             // Budget check
             if (metadata.ThreatType != StorytellerThreatType.Helpful && metadata.ThreatCost > comp.ThreatBudget)
@@ -561,8 +605,26 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         return result;
     }
 
-    private (EntityPrototype, StorytellerMetadataPrototype)? PickEventFromEligible(Dictionary<EntityPrototype, StorytellerMetadataPrototype> available)
+    private (EntityPrototype, StorytellerMetadataPrototype)? PickEventFromEligible(
+        Dictionary<EntityPrototype, StorytellerMetadataPrototype> available,
+        float currentBudget,
+        float stationStrength,
+        StorytellerType storytellerType)
     {
+        // Loaded dynamically from storyteller prototype
+        var highBudgetThreshold = 40f;
+        var majorMult = 8f;
+        var minorMult = 0.1f;
+        var scalingFactor = 50f;
+
+        if (_protoManager.TryIndex<StorytellerTypePrototype>(storytellerType.ToString(), out var typeProto))
+        {
+            highBudgetThreshold = typeProto.HighBudgetThreshold;
+            majorMult = typeProto.MajorThreatWeightMultiplier;
+            minorMult = typeProto.MinorThreatWeightMultiplier;
+            scalingFactor = typeProto.StationStrengthScalingFactor;
+        }
+
         var totalWeight = 0f;
         foreach (var (proto, metadata) in available)
         {
@@ -571,7 +633,28 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 baseWeight = stationEvent.Weight;
             }
-            totalWeight += baseWeight * metadata.WeightModifier;
+
+            var weight = baseWeight * metadata.WeightModifier;
+
+            // Sunrise edit start - Favor major/critical events when budget is high
+            if (currentBudget >= highBudgetThreshold)
+            {
+                if (metadata.ThreatType == StorytellerThreatType.MajorAntag ||
+                    metadata.ThreatType == StorytellerThreatType.MajorCalm)
+                {
+                    // Scale up major threats weight based on current budget and station strength
+                    var strengthMult = 1f + (stationStrength / scalingFactor);
+                    weight *= majorMult * strengthMult; // Strongly prioritize big threats scaled by station power
+                }
+                else if (metadata.ThreatType == StorytellerThreatType.Neutral ||
+                         metadata.ThreatType == StorytellerThreatType.MinorCalm)
+                {
+                    weight *= minorMult; // Heavily de-prioritize cheap clutter events
+                }
+            }
+            // Sunrise edit end
+
+            totalWeight += weight;
         }
 
         if (totalWeight <= 0f)
@@ -585,7 +668,27 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 baseWeight = stationEvent.Weight;
             }
-            roll -= baseWeight * metadata.WeightModifier;
+
+            var weight = baseWeight * metadata.WeightModifier;
+
+            // Sunrise edit start - Same weight adjustment during selection
+            if (currentBudget >= highBudgetThreshold)
+            {
+                if (metadata.ThreatType == StorytellerThreatType.MajorAntag ||
+                    metadata.ThreatType == StorytellerThreatType.MajorCalm)
+                {
+                    var strengthMult = 1f + (stationStrength / scalingFactor);
+                    weight *= majorMult * strengthMult;
+                }
+                else if (metadata.ThreatType == StorytellerThreatType.Neutral ||
+                         metadata.ThreatType == StorytellerThreatType.MinorCalm)
+                {
+                    weight *= minorMult;
+                }
+            }
+            // Sunrise edit end
+
+            roll -= weight;
             if (roll <= 0f)
             {
                 return (proto, metadata);
@@ -706,7 +809,8 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
     private int CountCrewWeapons()
     {
-        var count = 0;
+        // Sunrise edit start - Count unique armed crew members instead of raw weapon instances
+        var armedMobs = new HashSet<EntityUid>();
         var xformQuery = GetEntityQuery<TransformComponent>();
         var mobQuery = GetEntityQuery<MobStateComponent>();
 
@@ -718,7 +822,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    count++;
+                    armedMobs.Add(mob.Value);
                 }
             }
         }
@@ -734,11 +838,59 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    count++;
+                    armedMobs.Add(mob.Value);
                 }
             }
         }
-        return count;
+        return armedMobs.Count;
+        // Sunrise edit end
+    }
+
+    private int CountArmedCrewNotAntags()
+    {
+        // Sunrise edit start - Count unique armed peaceful crew members (excluding antagonists)
+        var armedMobs = new HashSet<EntityUid>();
+        var xformQuery = GetEntityQuery<TransformComponent>();
+        var mobQuery = GetEntityQuery<MobStateComponent>();
+
+        var gunQuery = EntityQueryEnumerator<GunComponent>();
+        while (gunQuery.MoveNext(out var uid, out _))
+        {
+            var mob = FindCarryingMob(uid, xformQuery, mobQuery);
+            if (mob != null && mobQuery.TryGetComponent(mob.Value, out var mobState))
+            {
+                if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
+                {
+                    // Filter out antagonists
+                    if (_mindSystem.TryGetMind(mob.Value, out var mindId, out _) && _roleSystem.MindIsAntagonist(mindId))
+                        continue;
+
+                    armedMobs.Add(mob.Value);
+                }
+            }
+        }
+
+        var meleeQuery = EntityQueryEnumerator<MeleeWeaponComponent>();
+        while (meleeQuery.MoveNext(out var uid, out var melee))
+        {
+            if (melee.Damage.GetTotal().Float() <= 10)
+                continue;
+
+            var mob = FindCarryingMob(uid, xformQuery, mobQuery);
+            if (mob != null && mobQuery.TryGetComponent(mob.Value, out var mobState))
+            {
+                if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
+                {
+                    // Filter out antagonists
+                    if (_mindSystem.TryGetMind(mob.Value, out var mindId, out _) && _roleSystem.MindIsAntagonist(mindId))
+                        continue;
+
+                    armedMobs.Add(mob.Value);
+                }
+            }
+        }
+        return armedMobs.Count;
+        // Sunrise edit end
     }
 
     private EntityUid? FindCarryingMob(EntityUid uid, EntityQuery<TransformComponent> xformQuery, EntityQuery<MobStateComponent> mobQuery)
@@ -871,16 +1023,44 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
     private int GetUnlockedResearchCount()
     {
-        var count = 0;
+        // Sunrise edit start - Calculate research strength based on unlocked technology tiers and discipline usefulness
+        var uniqueTechs = new HashSet<string>();
         var techQuery = EntityQueryEnumerator<TechnologyDatabaseComponent>();
         while (techQuery.MoveNext(out _, out var techDb))
         {
-            if (techDb.UnlockedTechnologies.Count > count)
+            foreach (var techId in techDb.UnlockedTechnologies)
             {
-                count = techDb.UnlockedTechnologies.Count;
+                uniqueTechs.Add(techId.Id);
             }
         }
-        return count;
+
+        var totalScore = 0f;
+        foreach (var techId in uniqueTechs)
+        {
+            if (!_protoManager.TryIndex<Content.Shared.Research.Prototypes.TechnologyPrototype>(techId, out var techProto))
+                continue;
+
+            // Tier weight: T3 is much more important than T1
+            var tierWeight = techProto.Tier switch
+            {
+                1 => 1f,
+                2 => 3f,
+                3 => 8f,
+                _ => 1f
+            };
+
+            // Discipline weight: loaded dynamically from the discipline prototype to avoid hardcoding IDs
+            var disciplineMult = 1.0f;
+            if (_protoManager.TryIndex<Content.Shared.Research.Prototypes.TechDisciplinePrototype>(techProto.Discipline, out var disciplineProto))
+            {
+                disciplineMult = disciplineProto.StorytellerUsefulness;
+            }
+
+            totalScore += tierWeight * disciplineMult;
+        }
+
+        return (int)MathF.Round(totalScore);
+        // Sunrise edit end
     }
 
     private Dictionary<string, int> GetCrewDistribution()
@@ -956,4 +1136,16 @@ public struct StationMetrics
     public int TrashCount;
     public float AverageCrewDamage;
     public int TotalStationTiles;
+    // Sunrise-Edit
+    public float StationStrength;
+    public float StressDead;
+    public float StressContainment;
+    public float StressSecurity;
+    public float StressEconomy;
+    public float StressDamage;
+    public float StressAnomaly;
+    public float StressMess;
+    public float StrengthArmedCrew;
+    public float StrengthSecurity;
+    public float StrengthTechnology;
 }

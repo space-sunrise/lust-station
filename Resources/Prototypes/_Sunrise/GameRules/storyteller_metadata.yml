@@ -351,14 +351,6 @@
   weightModifier: 2.0
 
 - type: storytellerMetadata
-  id: Exterminator
-  threatType: MajorAntag
-  threatCost: 85
-  minStress: 20
-  maxStress: 75
-  weightModifier: 1.0
-
-- type: storytellerMetadata
   id: TerminatorSpawn
   threatType: MinorAntag
   threatCost: 50
@@ -389,5 +381,3 @@
   minStress: 30
   maxStress: 70
   weightModifier: 1.0
-
-

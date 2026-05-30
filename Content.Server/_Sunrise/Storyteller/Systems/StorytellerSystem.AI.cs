@@ -79,6 +79,7 @@ public sealed partial class StorytellerSystem
             TeslaContained = metrics.TeslaContained,
             SupermatterIntegrity = metrics.SupermatterIntegrity,
             UnlockedResearchTiers = metrics.UnlockedResearchTiers,
+            StationStrength = metrics.StationStrength, // Sunrise-Edit
             CrewDistribution = metrics.CrewDistribution,
             PlayerJoinRate = metrics.PlayerJoinRate,
             PlayerLeaveRate = metrics.PlayerLeaveRate,
@@ -184,6 +185,7 @@ public sealed partial class StorytellerSystem
         public bool TeslaContained { get; set; }
         public float SupermatterIntegrity { get; set; }
         public int UnlockedResearchTiers { get; set; }
+        public float StationStrength { get; set; } // Sunrise-Edit
         public Dictionary<string, int> CrewDistribution { get; set; } = new();
         public float PlayerJoinRate { get; set; }
         public float PlayerLeaveRate { get; set; }
