@@ -12,10 +12,10 @@ public sealed class AssaultOpsSystem : EntitySystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<AssaultOperativeComponent, GetStatusIconsEvent>(GetAssaultOperativeIcon);
+        SubscribeLocalEvent<AssaultOperativeComponent, GetStatusIconsEvent>(GetVampireIcon);
     }
 
-    private void GetAssaultOperativeIcon(EntityUid uid, AssaultOperativeComponent component, ref GetStatusIconsEvent args)
+    private void GetVampireIcon(EntityUid uid, AssaultOperativeComponent component, ref GetStatusIconsEvent args)
     {
         var iconPrototype = _prototype.Index(component.StatusIcon);
         args.StatusIcons.Add(iconPrototype);

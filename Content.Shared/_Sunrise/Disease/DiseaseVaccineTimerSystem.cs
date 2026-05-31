@@ -45,7 +45,7 @@ public sealed class DiseaseVaccineTimerSystem : SharedSickSystem
                 if (!HasComp<SickComponent>(uid))
                 {
                     RemComp<DiseaseVaccineTimerComponent>(uid);
-                    continue;
+                    return;
                 }
 
                 RemComp<SickComponent>(uid);

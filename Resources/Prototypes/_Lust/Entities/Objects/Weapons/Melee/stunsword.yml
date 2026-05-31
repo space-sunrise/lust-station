@@ -65,7 +65,7 @@
           True: {state: stunsword_on}
           False: {state: stunsword_off}
   - type: StaticPrice
-    price: 35
+    price: 10
   - type: Riggable
   - type: SolutionContainerManager
     solutions:

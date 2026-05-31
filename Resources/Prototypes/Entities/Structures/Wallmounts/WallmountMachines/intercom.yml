@@ -13,8 +13,7 @@
   - type: Electrified
     enabled: false
     usesApcPower: true
-  # Sunrise-Edit
-  # - type: TelecomExempt
+  - type: TelecomExempt
   - type: EncryptionKeyHolder
     keySlots: 3
     keysExtractionMethod: Prying

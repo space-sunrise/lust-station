@@ -1419,37 +1419,20 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 5
-        Structural: 5
+        Blunt: 7
+        Structural: 6
   - type: TimedDespawn
     lifetime: 0.22 # roughly 5.5 tiles
-  - type: GatheringProjectile
-    chance: 0.5
-  - type: StaminaDamageOnCollide
-    damage: 5
-
-- type: entity
-  id: PelletKineticWeak
-  parent: BulletKineticWeak
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 10
-        Structural: 10
-  - type: GatheringProjectile
-    chance: 0.2
   - type: StaminaDamageOnCollide
     damage: 3
 
 - type: entity
   id: BulletKineticWeakSpread
   categories: [ HideSpawnMenu ]
-  parent: PelletKineticWeak
+  parent: BulletKineticWeak
   components:
   - type: ProjectileSpread
-    proto: PelletKineticWeak
-    count: 6
+    proto: BulletKineticWeak
+    count: 8
     spread: 20
 # end region PKA

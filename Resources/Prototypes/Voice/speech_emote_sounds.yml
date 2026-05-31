@@ -277,6 +277,9 @@
 
 - type: emoteSounds
   id: UnisexVox
+  # Sunrise-start
+  parent: MaleHuman
+  # Sunrise-end
   sounds:
     Scream:
       path: /Audio/Voice/Vox/shriek1.ogg
@@ -312,6 +315,9 @@
 
 - type: emoteSounds
   id: UnisexDiona
+  # Sunrise-start
+  parent: MaleHuman
+  # Sunrise-end
   sounds:
     Scream:
       path: /Audio/Voice/Diona/diona_scream.ogg
@@ -338,6 +344,9 @@
 
 - type: emoteSounds
   id: UnisexArachnid
+  # Sunrise-start
+  parent: MaleHuman
+  # Sunrise-end
   params:
     variation: 0.125
   sounds:
@@ -349,18 +358,6 @@
       path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
     Click:
       path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    # Sunrise-Start
-    Yawn:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-    Sigh:
-      path: /Audio/Voice/Arachnid/arachnid_chitter.ogg
-    Crying:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    Cough:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    SevereCough:
-      path: /Audio/Voice/Arachnid/arachnid_click.ogg
-    # Sunrise-End
     Weh:
       collection: Weh
     Hew:
@@ -480,6 +477,9 @@
 
 - type: emoteSounds
   id: UnisexMoth
+  # Sunrise-start
+  parent: MaleHuman
+  # Sunrise-end
   params:
     variation: 0.125
   sounds:
@@ -502,14 +502,6 @@
     Gasp:
       collection: MaleGasp
     # Sunrise-Start
-    Yawn:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-    Sigh:
-      path: /Audio/Voice/Moth/moth_chitter.ogg
-    Crying:
-      path: /Audio/Voice/Moth/moth_squeak.ogg
-    Cough:
-      path: /Audio/_Sunrise/Voice/Moth/moth_severe_cough.ogg
     SevereCough:
       path: /Audio/_Sunrise/Voice/Moth/moth_severe_cough.ogg
     # Sunrise-End

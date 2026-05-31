@@ -5,8 +5,6 @@
   - type: CarpQueenServant
   - type: CarpServantMemory
     biteReagentAmount: 1
-  - type: Puller
-    needsHands: false
   - type: MeleeWeapon
     damage:
       types:

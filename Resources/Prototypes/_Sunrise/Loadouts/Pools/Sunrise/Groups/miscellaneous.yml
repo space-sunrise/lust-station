@@ -79,8 +79,8 @@
   minLimit: 2
   hidden: true
   loadouts:
-  - SunriseEmergencyNitrogenSyndicate
-  - SunriseEmergencyOxygenSyndicate
+  - EmergencyNitrogenSyndicate
+  - EmergencyOxygenSyndicate
   - LoadoutSpeciesVoxNitrogen
   - EmergencyWithoutGasSyndicate
   - EmergencyDwarfSyndicate

@@ -66,18 +66,6 @@
         },
         {
             "name": "dragging-test"
-        },
-        {
-            "name": "footprint-tracked"
-        },
-        {
-            "name": "footprint-tracked-heavy"
-        },
-        {
-            "name": "footprint-suit-heavy"
-        },
-        {
-            "name": "footprint-mech-heavy"
         }
     ]
 }

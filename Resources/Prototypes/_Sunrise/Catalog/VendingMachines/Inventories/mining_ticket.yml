@@ -1,10 +1,31 @@
-﻿# equipment
+# equipment
+- type: listing
+  id: VendorMiningBinoculars
+  productEntity: Binoculars
+  cost:
+    SalvageTicket: 25
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: VendorMiningGrapplingGun
+  productEntity: WeaponGrapplingGun
+  cost:
+    SalvageTicket: 40
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
 
 - type: listing
   id: VendorMiningClothingMaskGasExplorer
   productEntity: ClothingMaskGasExplorer
   cost:
-    SalvageTicket: 50
+    SalvageTicket: 100
   categories:
   - MiningEquipment
 
@@ -70,17 +91,80 @@
   id: VendorMiningClothingEyesGlassesMeson
   productEntity: ClothingEyesGlassesMeson
   cost:
-    SalvageTicket: 400
+    SalvageTicket: 500
   categories:
   - MiningEquipment
 
 - type: listing
-  id: VendorMiningClothingEyesNVD
-  productEntity: ClothingEyesNVD
+  id: VendorMiningMiningDrill
+  productEntity: MiningDrill
   cost:
-    SalvageTicket: 800
+    SalvageTicket: 200
   categories:
   - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 3
+
+- type: listing
+  id: VendorMiningMiningDrillDiamond
+  productEntity: MiningDrillDiamond
+  cost:
+    SalvageTicket: 400
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 2
+
+- type: listing
+  id: VendorMiningMineralScanner
+  productEntity: MineralScanner
+  cost:
+    SalvageTicket: 350
+  categories:
+  - MiningEquipment
+
+- type: listing
+  id: VendorMiningMassScanner
+  productEntity: HandHeldMassScanner
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
+
+- type: listing
+  id: VendorMiningPKAUpgradeDamage
+  productEntity: PKAUpgradeDamage
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: VendorMiningPKAUpgradeRange
+  productEntity: PKAUpgradeRange
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
+
+- type: listing
+  id: VendorMiningPKAUpgradeFireRate
+  productEntity: PKAUpgradeFireRate
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 5
 
 - type: listing
   id: VendorMiningWeaponMechMeleeDrill
@@ -108,7 +192,19 @@
   id: VendorMiningWeaponMechIndustrialPlasmaCutter
   productEntity: WeaponMechIndustrialPlasmaCutter
   cost:
-    SalvageTicket: 699
+    SalvageTicket: 900
+  categories:
+  - MiningMech
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+
+- type: listing
+  id: VendorMiningWeaponMechMeleeDrillDiamond
+  productEntity: WeaponMechMelleDrillDiamond
+  cost:
+    SalvageTicket: 600
   categories:
   - MiningMech
   conditions:
@@ -116,15 +212,28 @@
     stock: 1
 
 - type: listing
-  id: VendorMiningWeaponMechMeleeDrillDiamond
-  productEntity: WeaponMechMelleDrillDiamond
+  id: VendorMiningWeaponPlasmaCutter
+  productEntity: WeaponPlasmaCutter
+  cost:
+    SalvageTicket: 666
+  categories:
+  - MiningEquipment
+
+- type: listing
+  id: VendorMiningEnergyPickaxe
+  productEntity: EnergyPickaxe
   cost:
     SalvageTicket: 650
   categories:
-  - MiningMech
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+  - MiningEquipment
+
+- type: listing
+  id: VendorMiningFloodlight
+  productEntity: Floodlight
+  cost:
+    SalvageTicket: 200
+  categories:
+  - MiningEquipment
 
 - type: listing
   id: VendorMiningOreBag
@@ -133,39 +242,6 @@
     SalvageTicket: 25
   categories:
   - MiningEquipment
-
-- type: listing
-  id: VendorMiningJetpackSalvage
-  productEntity: JetpackSalvage
-  cost:
-    SalvageTicket: 75
-  categories:
-  - MiningEquipment
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 5
-
-- type: listing
-  id: VendorMiningJetpackMini
-  productEntity: JetpackMini
-  cost:
-    SalvageTicket: 130
-  categories:
-  - MiningEquipment
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 5
-
-- type: listing
-  id: VendorMiningJetpackVoid
-  productEntity: JetpackVoid
-  cost:
-    SalvageTicket: 500
-  categories:
-  - MiningEquipment
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 5
 
 - type: listing
   id: VendorMiningShuttleGunKineticFlatpack
@@ -179,4 +255,34 @@
     stock: 4
 
 # consumables
+- type: listing
+  id: VendorMiningMedkitAdvancedFilled
+  productEntity: MedkitAdvancedFilled
+  cost:
+    SalvageTicket: 250
+  categories:
+  - MiningConsumeables
 
+- type: listing
+  id: VendorMiningMedkitFilled
+  productEntity: MedkitFilled
+  cost:
+    SalvageTicket: 150
+  categories:
+  - MiningConsumeables
+
+- type: listing
+  id: VendorMiningMedkitCombatFilled
+  productEntity: MedkitCombatFilled
+  cost:
+    SalvageTicket: 400
+  categories:
+  - MiningConsumeables
+
+- type: listing
+  id: VendorMiningBoxFlare
+  productEntity: BoxFlare
+  cost:
+    SalvageTicket: 15
+  categories:
+  - MiningConsumeables

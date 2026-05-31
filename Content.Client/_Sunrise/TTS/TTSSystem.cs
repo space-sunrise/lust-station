@@ -43,7 +43,6 @@ public sealed class TTSSystem : EntitySystem
     private bool _ttsClientEnable;
     private readonly Queue<QueuedTts> _ttsQueue = new();
     private (EntityUid Entity, AudioComponent Component)? _currentPlaying;
-    private readonly Dictionary<TTSPlaybackGroup, (EntityUid Entity, AudioComponent Component)> _groupedPlaying = new();
     private static readonly AudioResource EmptyAudioResource = new();
 
     public sealed class QueuedTts(byte[] data, TtsType ttsType)
@@ -68,7 +67,6 @@ public sealed class TTSSystem : EntitySystem
         _cfg.OnValueChanged(SunriseCCVars.TTSClientQueueEnabled, OnTTSQueueOptionChanged, true);
         _cfg.OnValueChanged(SunriseCCVars.TTSRadioGhostEnabled, OnTtsRadioGhostChanged, true);
         SubscribeNetworkEvent<PlayTTSEvent>(OnPlayTTS);
-        SubscribeNetworkEvent<StopTTSEvent>(OnStopTTS);
         SubscribeNetworkEvent<PlayMultiSpeakerTTSEvent>(OnPlayMultiSpeakerTTS);
     }
 
@@ -83,7 +81,6 @@ public sealed class TTSSystem : EntitySystem
 
         ContentRoot.Clear();
         _currentPlaying = null;
-        _groupedPlaying.Clear();
         _ttsQueue.Clear();
 
         _netManager.Connected += OnConnected;
@@ -155,9 +152,6 @@ public sealed class TTSSystem : EntitySystem
     {
         var volume = ev.IsRadio ? _radioVolume : _volume;
 
-        if (ev.PlaybackGroup != TTSPlaybackGroup.None)
-            StopTtsPlaybackGroup(ev.PlaybackGroup);
-
         if (volume == 0)
             return;
 
@@ -167,7 +161,7 @@ public sealed class TTSSystem : EntitySystem
             if (!_ghostRadioEnabled && localEntity.HasValue && HasComp<GhostComponent>(localEntity.Value))
                 return;
 
-            if (_isQueueEnabled && ev.PlaybackGroup == TTSPlaybackGroup.None)
+            if (_isQueueEnabled)
             {
                 var entry = new QueuedTts(ev.Data, TtsType.Radio);
 
@@ -181,34 +175,7 @@ public sealed class TTSSystem : EntitySystem
         var audioParams = AudioParams.Default.WithVolume(volume);
 
         var entity = GetEntity(ev.SourceUid);
-        var playing = PlayTTSBytes(ev.Data, entity, audioParams);
-        TrackTtsPlaybackGroup(ev.PlaybackGroup, playing);
-    }
-
-    private void OnStopTTS(StopTTSEvent ev)
-    {
-        StopTtsPlaybackGroup(ev.PlaybackGroup);
-    }
-
-    private void TrackTtsPlaybackGroup(
-        TTSPlaybackGroup playbackGroup,
-        (EntityUid Entity, AudioComponent Component)? playing)
-    {
-        if (playbackGroup == TTSPlaybackGroup.None || playing == null)
-            return;
-
-        _groupedPlaying[playbackGroup] = playing.Value;
-    }
-
-    private void StopTtsPlaybackGroup(TTSPlaybackGroup playbackGroup)
-    {
-        if (playbackGroup == TTSPlaybackGroup.None)
-            return;
-
-        if (!_groupedPlaying.Remove(playbackGroup, out var playing))
-            return;
-
-        _audio.Stop(playing.Entity, playing.Component);
+        PlayTTSBytes(ev.Data, entity, audioParams);
     }
 
     private (AudioResource Resource, ResPath FilePath)? AddTtsAudioResource(byte[] data)

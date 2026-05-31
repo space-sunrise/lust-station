@@ -65,17 +65,15 @@
   - HeadOfSecurity
   - ResearchDirector
   - Quartermaster
-# Sunrise-start
-#  - CBURN
-#  - ERTLeader
-#  - ERTChaplain
-#  - ERTJanitor
-#  - ERTMedical
-#  - ERTSecurity
-#  - ERTEngineer
-#  - DeathSquad
-#  - CentCommOfficial
-# Sunrise-end
+  - CBURN
+  - ERTLeader
+  - ERTChaplain
+  - ERTJanitor
+  - ERTMedical
+  - ERTSecurity
+  - ERTEngineer
+  - DeathSquad
+  - CentCommOfficial
   - NanoTrasenRepresentative  #Sunrise-Edit
   - Adjutant  #Sunrise-edit
   - ComMaid  # Lust-Edit

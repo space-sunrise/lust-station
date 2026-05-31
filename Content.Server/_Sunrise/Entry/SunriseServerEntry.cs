@@ -1,7 +1,3 @@
-using Content.Shared._Sunrise.Localization;
-using Robust.Shared.IoC;
-using Robust.Shared.Localization;
-
 #if SUNRISE_PRIVATE
 using Content.Server._SunrisePrivate.AntiNuke;
 using Content.Shared._Sunrise.NetTextures;
@@ -18,16 +14,6 @@ public sealed class SunriseServerEntry
 {
     public static void Init()
     {
-        var loc = IoCManager.Resolve<ILocalizationManager>();
-        foreach (var culture in loc.GetFoundCultures())
-        {
-            if (!loc.HasCulture(culture))
-                continue;
-
-            loc.AddFunction(culture, "KEYBIND", KeybindLocalization.FormatKeybind);
-        }
-
-        KeybindLocalization.ResolveKeybind = null;
 #if SUNRISE_PRIVATE
         IoCManager.Resolve<ISharedSponsorsManager>().Initialize();
         IoCManager.Resolve<IServerJoinQueueManager>().Initialize();

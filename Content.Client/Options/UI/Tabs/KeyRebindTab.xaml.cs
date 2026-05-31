@@ -170,7 +170,6 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.LookUp);
             AddButton(ContentKeyFunctions.OpenMentorHelp);
             AddButton(ContentKeyFunctions.OpenHelpChoice);
-            AddButton(ContentKeyFunctions.OpenMessenger);
             AddCheckBox("ui-options-function-hold-look-up", _cfg.GetCVar(SunriseCCVars.HoldLookUp), HandleHoldLookUp);
             // Sunrise-End
 

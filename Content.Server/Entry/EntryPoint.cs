@@ -44,7 +44,6 @@ using Robust.Shared.ContentPack;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
-using Content.Server._Sunrise.Auth;
 
 namespace Content.Server.Entry
 {
@@ -96,7 +95,6 @@ namespace Content.Server.Entry
         [Dependency] private readonly NetTexturesManager _netTexturesManager = default!; // Sunrise-Edit
         [Dependency] private readonly DiscordWebhook _discord = default!; // Sunrise-Edit
         [Dependency] private readonly MapperSyncManager _mapperSyncManager = default!; // Sunrise-Edit
-        [Dependency] private readonly AccountCreationManager _accountCreation = default!; // Sunrise-Edit
         private IIPBlockingSystem? _ipBlockingSystem;
         private ITrustedProxyService? _trustedProxyService;
         private ISharedSponsorsManager? _sponsorsManager; // Sunrise-Sponsors
@@ -156,7 +154,6 @@ namespace Content.Server.Entry
 
             // Sunrise-Start
             _ttsManager.Initialize();
-            _accountCreation.Initialize();
             _netTexturesManager.Initialize();
             IoCManager.Instance!.TryResolveType(out _trustedProxyService);
             _trustedProxyService?.Initialize();

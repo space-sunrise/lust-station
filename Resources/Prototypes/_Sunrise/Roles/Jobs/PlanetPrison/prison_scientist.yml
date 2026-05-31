@@ -26,7 +26,6 @@
     - Maintenance
     - Research
     - Medical
-    - ResearchConsoleAccess
   special:
     - !type:AddImplantSpecial
       implants: [ MindShieldImplant ]

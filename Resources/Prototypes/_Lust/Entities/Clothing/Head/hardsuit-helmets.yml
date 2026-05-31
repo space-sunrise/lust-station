@@ -14,7 +14,7 @@
       map: ["light"]
   - type: Clothing
     sprite: _Lust/Clothing/Head/Hardsuits/centcom_hardsuit_qillu.rsi
-    equippedPrefix: off
+    equippedPrefix: null
     clothingVisuals:
       head:
       - state: off-equipped-HELMET

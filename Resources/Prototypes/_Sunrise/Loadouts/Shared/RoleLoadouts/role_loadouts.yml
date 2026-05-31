@@ -468,20 +468,6 @@
   - Contributors
 
 - type: roleLoadout
-  id: SunriseRoleSurvivalSyndicate
-  groups:
-  - SunriseSurvivalSyndicate
-  - GroupSpeciesBreathTool
-  - GroupTankHarness
-
-- type: roleLoadout
-  id: SunriseRoleSurvivalNukie
-  groups:
-  - SunriseSurvivalSyndicate
-  - GroupSpeciesBreathTool
-  - GroupPocketTankDouble
-
-- type: roleLoadout
   id: JobMiningSpecialist
   groups:
   - SunriseSalvageHead

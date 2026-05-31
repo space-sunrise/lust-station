@@ -34,7 +34,6 @@
   id: ElectronicsStatic
   recipes:
   - IntercomElectronics
-  - SunriseWallhornElectronics # Sunrise-Edit
   - FirelockElectronics
   - DoorElectronics
   - AirAlarmElectronics

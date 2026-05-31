@@ -332,7 +332,7 @@ namespace Content.Server.Connection
                 softPlayerCount -= _adminManager.ActiveAdmins.Count();
             }
 
-            if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !isPrivileged && !isQueueEnabled))
+            if ((softPlayerCount >= _cfg.GetCVar(CCVars.SoftMaxPlayers) && !adminBypass && !isQueueEnabled) && !wasInGame)
             {
                 return (ConnectionDenyReason.Full, Loc.GetString("soft-player-cap-full"), null);
             }

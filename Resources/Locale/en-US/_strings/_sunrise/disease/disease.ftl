@@ -37,7 +37,3 @@ disease-death-reward = Received { $points } Disease Points from another disease'
 
 disease-upgrade-purchased = Upgrade purchased successfully!
 disease-upgrade-max-reached = Maximum upgrade level reached!
-
-disease-infect-success = Successful infection!
-
-disease-info-window-title = Disease Statistics

@@ -1,4 +1,3 @@
-using Content.Shared._Sunrise.CriminalRecords.Components; // Sunrise-Edit
 using Content.Shared.CriminalRecords.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Interaction;
@@ -25,7 +24,7 @@ public abstract class SharedCriminalRecordsHackerSystem : EntitySystem
         if (args.Handled || !_gloves.AbilityCheck(ent, args, out var target))
             return;
 
-        if (!HasComp<SunriseCriminalRecordsConsoleComponent>(target)) // Sunrise-Edit
+        if (!HasComp<CriminalRecordsConsoleComponent>(target))
             return;
 
         var doAfterArgs = new DoAfterArgs(EntityManager, ent, ent.Comp.Delay, new CriminalRecordsHackDoAfterEvent(), target: target, used: ent, eventTarget: ent)

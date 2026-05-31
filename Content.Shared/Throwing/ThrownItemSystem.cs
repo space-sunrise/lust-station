@@ -157,14 +157,6 @@ namespace Content.Shared.Throwing
                 if (_netMan.IsClient && !physics.Predict)
                     continue;
 
-                // Sunrise-Start - Clear deleted/invalid thrower references to prevent network state serialization exceptions
-                if (thrown.Thrower is { } thrower && (Deleted(thrower) || !Exists(thrower)))
-                {
-                    thrown.Thrower = null;
-                    Dirty(uid, thrown);
-                }
-                // Sunrise-End
-
                 if (thrown.LandTime <= _gameTiming.CurTime)
                 {
                     LandComponent(uid, thrown, physics, thrown.PlayLandSound);

@@ -185,24 +185,21 @@ public abstract partial class SharedCarryingSystem
     {
         OnCarryDropped(carrier, target);
 
-        if (Exists(target) && !Deleted(target))
-        {
-            RemComp<KnockedDownComponent>(target);
-            RemComp<ActiveCanBeCarriedComponent>(target);
-            _actionBlocker.UpdateCanMove(target);
-            if (!Terminating(target))
-                _transform.AttachToGridOrMap(target);
-            _standing.Stand(target);
-
-            var ev = new CarryDroppedEvent();
-            RaiseLocalEvent(target, ref ev);
-        }
-
-        RemComp<ActiveCarrierComponent>(carrier);
+        RemComp<KnockedDownComponent>(target);
+        RemComp<ActiveCarrierComponent>(carrier); // get rid of this first so we don't recusrively fire that event
         RemComp<CarryingSlowdownComponent>(carrier);
+        RemComp<ActiveCanBeCarriedComponent>(target);
 
+        _actionBlocker.UpdateCanMove(target);
         _virtualItem.DeleteInHandsMatching(carrier, target);
+
+        _transform.AttachToGridOrMap(target);
+
+        _standing.Stand(target);
         _movementSpeed.RefreshMovementSpeedModifiers(carrier);
+
+        var ev = new CarryDroppedEvent();
+        RaiseLocalEvent(target, ref ev);
     }
 
     #endregion

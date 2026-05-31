@@ -309,6 +309,3 @@ Resources/MapImages
 
 # Direnv stuff
 .direnv/
-
-# C-sharp cache files
-*.lscache

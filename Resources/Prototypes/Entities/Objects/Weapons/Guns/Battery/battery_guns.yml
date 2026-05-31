@@ -142,10 +142,6 @@
     slots:
     - Belt
     - suitStorage
-  - type: CanDualWield # Sunrise-Edit
-    dualWieldInaccuracyPenalty: 0.25
-    dualWieldFireRatePenalty: 0.25
-    dualWieldRecoilPenalty: 0.25
 
 - type: entity
   id: BaseWeaponPowerCellSmall
@@ -162,10 +158,6 @@
     quickEquip: false
     slots:
     - Belt
-  - type: CanDualWield # Sunrise-Edit
-    dualWieldInaccuracyPenalty: 0.25
-    dualWieldFireRatePenalty: 0.25
-    dualWieldRecoilPenalty: 0.25
 
 - type: entity
   name: svalinn laser pistol

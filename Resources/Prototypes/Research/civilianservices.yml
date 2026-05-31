@@ -190,6 +190,8 @@
   - PushHorn
   - BorgModuleAdvancedClowning
 
+# Tier 3
+
 - type: technology
   id: QuantumFiberWeaving
   name: research-technology-quantum-fiber-weaving
