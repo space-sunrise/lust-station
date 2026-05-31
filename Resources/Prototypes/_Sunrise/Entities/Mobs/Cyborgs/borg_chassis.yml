@@ -354,6 +354,10 @@
   - type: InnateItem
     entityTargetActions:
     - AccessBreaker
+  - type: FootprintEmitter
+    placementOffset: 0,0
+    leftBareFootState: [ footprint-tracked-heavy ]
+    rightBareFootState: [ footprint-tracked-heavy ]
   # Lust-Start
   - type: ActionGrant
     actions:
