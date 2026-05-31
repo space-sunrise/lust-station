@@ -2,17 +2,19 @@ using System.Linq;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
 using Content.Server.RoundEnd;
+using Content.Server.Station.Events;
 using Content.Server.Station.Systems;
 using Content.Server.StationEvents;
 using Content.Server.StationEvents.Components;
 using Content.Server._Sunrise.Storyteller.Components;
+using Content.Server.Administration.Managers;
+using Content.Shared._Sunrise.Footprints;
 using Content.Shared._Sunrise.Storyteller.Prototypes;
 using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared.Cargo;
 using Content.Shared.Cargo.Components;
-using Content.Shared.Cargo.Systems;
-using Content.Shared.GameTicking.Components;
 using Content.Shared.CCVar;
+using Content.Shared.GameTicking.Components;
 using Content.Shared.Ghost;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
@@ -20,17 +22,18 @@ using Content.Shared.Mobs.Components;
 using Content.Shared.Research.Components;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Jobs;
+using Content.Shared.Tag;
+using Content.Shared.Xenoarchaeology.Artifact.Components;
+using Content.Shared.Humanoid;
+using Content.Shared.Silicons.Borgs.Components;
 using Robust.Server.Player;
 using Robust.Shared.Player;
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
-using Content.Server.Atmos.Components;
 using Content.Server.Ghost.Roles;
 using Content.Server.Power.Components;
 using Content.Server.Tesla.Components;
-using Content.Shared.Atmos;
 using Content.Shared.Singularity.Components;
 using Content.Shared.Starlight.Energy.Supermatter;
 using Content.Shared.Weapons.Ranged.Components;
@@ -39,16 +42,13 @@ using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Anomaly.Components;
 using Content.Shared.Fluids.Components;
-using Content.Shared.FixedPoint;
 using Content.Shared.Damage.Components;
-using Content.Shared.Tag;
-using Content.Shared.Xenoarchaeology.Artifact.Components;
 
 
 namespace Content.Server._Sunrise.Storyteller.Systems;
 
 /// <summary>
-/// The core EntitySystem managing the Sunrise Storyteller (Game Director).
+/// The core EntitySystem managing the Storyteller (Game Director).
 /// Computes crew stress, manages pacing states, and triggers balanced events.
 /// </summary>
 public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleComponent>
@@ -68,6 +68,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     [Dependency] private readonly SharedRoleSystem _roleSystem = default!;
     [Dependency] private readonly SharedBatterySystem _batterySystem = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
+    [Dependency] private readonly IAdminManager _adminManager = default!;
 
     private readonly List<TimeSpan> _joinTimestamps = new();
     private readonly List<TimeSpan> _leaveTimestamps = new();
@@ -81,12 +82,57 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
         _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
         SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnPlayerJoinedLobby);
+        SubscribeLocalEvent<StationPostInitEvent>(OnStationPostInitForBaseline,
+            after: new[] { typeof(RoundstartStationVariationRuleSystem) });
     }
 
     public override void Shutdown()
     {
         base.Shutdown();
         _playerManager.PlayerStatusChanged -= OnPlayerStatusChanged;
+    }
+
+    // TODO: Не работает, нужен правильный способ игнорировать раундстарт мусор для определения стресса
+    private void OnStationPostInitForBaseline(ref StationPostInitEvent ev)
+    {
+        var storytellerQuery = EntityQueryEnumerator<StorytellerRuleComponent>();
+        if (!storytellerQuery.MoveNext(out _, out var storytellerComp))
+            return;
+
+        if (storytellerComp.TrashBaselineRecorded)
+            return;
+
+        var baseline = 0;
+        var tagQuery = EntityQueryEnumerator<TagComponent, TransformComponent>();
+        while (tagQuery.MoveNext(out _, out var tag, out var xform))
+        {
+            if (tag.Tags.Contains("Trash") && xform.GridUid != null && xform.ParentUid == xform.GridUid)
+            {
+                if (_stationSystem.GetOwningStation(xform.GridUid.Value) == null)
+                    continue;
+                baseline++;
+            }
+        }
+
+        storytellerComp.TrashBaseline = baseline;
+        storytellerComp.TrashBaselineRecorded = true;
+        Log.Debug($"[Storyteller] Trash baseline recorded: {baseline} entities");
+    }
+
+    public bool ForceTriggerEvent(string eventId)
+    {
+        var query = EntityQueryEnumerator<StorytellerRuleComponent>();
+        if (!query.MoveNext(out var uid, out var comp))
+            return false;
+
+        if (!_protoManager.TryIndex<EntityPrototype>(eventId, out var proto))
+            return false;
+
+        if (!_protoManager.TryIndex<StorytellerMetadataPrototype>(eventId, out var metadata))
+            return false;
+
+        TriggerEvent((uid, comp), proto, metadata);
+        return true;
     }
 
     protected override void Added(EntityUid uid, StorytellerRuleComponent component, GameRuleComponent gameRule, GameRuleAddedEvent args)
@@ -113,9 +159,6 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     protected override void ActiveTick(EntityUid uid, StorytellerRuleComponent component, GameRuleComponent gameRule, float frameTime)
     {
         base.ActiveTick(uid, component, gameRule, frameTime);
-
-        if (!_cfg.GetCVar(SunriseCCVars.StorytellerEnabled))
-            return;
 
 
         var budgetModifier = 1f;
@@ -250,10 +293,14 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         if (!_random.Prob(rollChance))
             return;
 
-        // Find candidate events
         var eligibleEvents = GetEligibleHeuristicEvents(entity.Comp, metrics);
         if (eligibleEvents.Count == 0)
+        {
+            var warningMsg = $"Storyteller evaluated, but eligibleEvents.Count is 0! Stress: {entity.Comp.CrewStress}, Budget: {entity.Comp.ThreatBudget}, PacingState: {entity.Comp.PacingState}, StorytellerType: {entity.Comp.StorytellerType}";
+            _sawmill.Warning(warningMsg);
+            Log.Warning($"[Storyteller] {warningMsg}");
             return;
+        }
 
         // Weighted random pick
         var selected = PickEventFromEligible(eligibleEvents, entity.Comp.ThreatBudget, metrics.StationStrength, entity.Comp.StorytellerType);
@@ -280,13 +327,47 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
             if (session.AttachedEntity is not { Valid: true } entity || Deleted(entity))
             {
-                ghostCount++;
                 continue;
             }
 
             if (HasComp<GhostComponent>(entity))
             {
-                ghostCount++;
+                if (_adminManager.IsAdmin(session))
+                    continue;
+
+                if (TryComp<GhostComponent>(entity, out var ghost) && ghost.CanReturnToBody)
+                {
+                    if (_mindSystem.TryGetMind(session, out _, out var mind) && mind.OwnedEntity != null)
+                    {
+                        if (TryComp<MobStateComponent>(mind.OwnedEntity.Value, out var bodyMob) &&
+                            (bodyMob.CurrentState == MobState.Alive || bodyMob.CurrentState == MobState.Critical))
+                        {
+                            ghostCount++;
+                        }
+                    }
+                }
+
+                if (_mindSystem.TryGetMind(session, out _, out var mindEntity))
+                {
+                    EntityUid? bodyUid = null;
+                    if (mindEntity.VisitingEntity != null)
+                    {
+                        bodyUid = mindEntity.OwnedEntity;
+                    }
+                    else if (mindEntity.OriginalOwnedEntity != null)
+                    {
+                        bodyUid = GetEntity(mindEntity.OriginalOwnedEntity.Value);
+                    }
+
+                    if (bodyUid != null && Exists(bodyUid.Value))
+                    {
+                        if (TryComp<MobStateComponent>(bodyUid.Value, out var bodyMob) && bodyMob.CurrentState == MobState.Dead)
+                        {
+                            deadCount++;
+                        }
+                    }
+                }
+
                 continue;
             }
 
@@ -329,9 +410,12 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         }
 
         var sciencePoints = 0;
-        var serverQuery = EntityQueryEnumerator<ResearchServerComponent>();
-        while (serverQuery.MoveNext(out _, out var serverComp))
+        var serverQuery = EntityQueryEnumerator<ResearchServerComponent, TransformComponent>();
+        while (serverQuery.MoveNext(out _, out var serverComp, out var serverXform))
         {
+            if (serverXform.GridUid == null || _stationSystem.GetOwningStation(serverXform.GridUid.Value) == null)
+                continue;
+
             sciencePoints += serverComp.Points;
         }
 
@@ -358,29 +442,75 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             anomaliesCount++;
         }
 
-        var activeArtifactsCount = 0;
+        // Sunrise-Edit: Artifact stress is proportional to the number of dangerous unlocked nodes:
+        // - Suppressed artifacts (inside blocking containers) are ignored entirely
+        // - Nodes whose research has been fully consumed (Degraded or ConsumedResearchValue >= ResearchValue) are ignored
+        // This means a freshly researched/safe artifact doesn't contribute stress.
+        var dangerousArtifactNodes = 0;
         var artifactQuery = EntityQueryEnumerator<XenoArtifactComponent, TransformComponent>();
-        while (artifactQuery.MoveNext(out _, out _, out var xform))
+        while (artifactQuery.MoveNext(out var artifactUid, out var artifact, out var xform))
         {
             if (xform.GridUid == null || _stationSystem.GetOwningStation(xform.GridUid.Value) == null)
                 continue;
 
-            activeArtifactsCount++;
+            // Artifacts in suppressing containers (stasis boxes etc.) are neutralized
+            if (artifact.Suppressed)
+                continue;
+
+            // Count each unlocked node that still has research value remaining (not exhausted)
+            foreach (var netNode in artifact.CachedActiveNodes)
+            {
+                var nodeUid = GetEntity(netNode);
+                if (!TryComp<XenoArtifactNodeComponent>(nodeUid, out var nodeComp))
+                    continue;
+
+                // Skip degraded nodes (no durability left = exhausted)
+                if (nodeComp.Degraded)
+                    continue;
+
+                // Skip nodes whose research points are fully extracted
+                if (nodeComp.ResearchValue > 0 && nodeComp.ConsumedResearchValue >= nodeComp.ResearchValue)
+                    continue;
+
+                dangerousArtifactNodes++;
+            }
         }
 
+        // Sunrise-Edit: Exclude puddles spawned by BasicPuddleMessVariationPass (they have StorytellerIgnoreMessComponent)
         var puddlesCount = 0;
         var puddleQuery = EntityQueryEnumerator<PuddleComponent, TransformComponent>();
-        while (puddleQuery.MoveNext(out _, out _, out var xform))
+        while (puddleQuery.MoveNext(out var uid, out _, out var xform))
         {
             if (xform.GridUid == null || _stationSystem.GetOwningStation(xform.GridUid.Value) == null)
+                continue;
+
+            if (HasComp<StorytellerIgnoreMessComponent>(uid))
                 continue;
 
             puddlesCount++;
         }
 
+        // Sunrise-Edit: Footprints count as light mess (1/10th the weight of a puddle)
+        var footprintsCount = 0;
+        var footprintQuery = EntityQueryEnumerator<FootprintComponent, TransformComponent>();
+        while (footprintQuery.MoveNext(out _, out _, out var xform))
+        {
+            if (xform.GridUid == null || _stationSystem.GetOwningStation(xform.GridUid.Value) == null)
+                continue;
+
+            footprintsCount++;
+        }
+
+        // Sunrise-Edit: Subtract round-start trash baseline so variation-pass mess doesn't inflate stress.
+        // The baseline is captured in OnStationPostInitForBaseline after all variation passes have run.
         var trashCount = 0;
+        var trashBaseline = 0;
+        var storytellerQuery = EntityQueryEnumerator<StorytellerRuleComponent>();
+        if (storytellerQuery.MoveNext(out _, out var storytellerComp))
+            trashBaseline = storytellerComp.TrashBaseline;
+
         var tagQuery = EntityQueryEnumerator<TagComponent, TransformComponent>();
-        while (tagQuery.MoveNext(out var uid, out var tag, out var xform))
+        while (tagQuery.MoveNext(out _, out var tag, out var xform))
         {
             if (tag.Tags.Contains("Trash") && xform.GridUid != null && xform.ParentUid == xform.GridUid)
             {
@@ -390,6 +520,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
                 trashCount++;
             }
         }
+
+        // Subtract baseline (clamped to 0 so we never get negative trash)
+        trashCount = Math.Max(0, trashCount - trashBaseline);
 
         var totalCrewDamage = 0f;
         var crewWithMindCount = 0;
@@ -443,8 +576,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
 
             AnomaliesCount = anomaliesCount,
-            ActiveArtifactsCount = activeArtifactsCount,
+            ActiveArtifactsCount = dangerousArtifactNodes,
             PuddlesCount = puddlesCount,
+            FootprintsCount = footprintsCount, // Sunrise-Edit
             TrashCount = trashCount,
             AverageCrewDamage = averageCrewDamage,
             TotalStationTiles = totalTiles,
@@ -465,9 +599,11 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         if (metrics.TotalPlayers == 0)
             return 0f;
 
-        // 1. Dead/Ghost ratio (up to 35 points of stress)
-        float deadGhostRatio = (float)(metrics.DeadCount + metrics.GhostCount) / metrics.TotalPlayers;
-        float deadStress = Math.Clamp(deadGhostRatio * 35f, 0f, 35f);
+        // 1. Dead crew ratio (up to 35 points of stress)
+        float deadStress = Math.Clamp(((float)metrics.DeadCount / MathF.Max(1f, metrics.TotalPlayers)) * 35f, 0f, 35f);
+
+        // 1.1. Ghost/Visiting ratio (up to 5 points of stress)
+        float ghostStress = Math.Clamp(((float)metrics.GhostCount / MathF.Max(1f, metrics.TotalPlayers)) * 5f, 0f, 5f);
 
 
         // 2. Singularity/Tesla/Supermatter escape/integrity state (up to 10 points of stress)
@@ -496,27 +632,35 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             securityStress = Math.Clamp((deficit / targetSecurity) * 10f, 0f, 10f);
         }
 
-        // 4. Economy Distress (up to 5 points of stress) - Sunrise edit - removed RnD points check, only count Cargo deficit
+        // 4. Economy Distress (up to 5 points of stress)
         float economyStress = 0f;
         if (metrics.CargoBalance < 1000) economyStress += 5f;
 
         // 5. Living Crew Damage (up to 5 points of stress)
         float damageStress = Math.Clamp(metrics.AverageCrewDamage * 0.1f, 0f, 5f);
 
-        // 6. Anomalies & Uncontained active artifacts (up to 6 points of stress)
-        float anomalyStress = Math.Clamp((metrics.AnomaliesCount * 2f) + (metrics.ActiveArtifactsCount * 1.5f), 0f, 6f);
+        // 6. Anomalies & active artifact nodes (up to 6 points of stress)
+        // Sunrise-Edit: artifact stress scales with dangerous node count (1 node = 0.3 pts), not artifact count
+        float anomalyStress = Math.Clamp((metrics.AnomaliesCount * 2f) + (metrics.ActiveArtifactsCount * 0.3f), 0f, 6f);
 
         // 7. Station Dirt & Mess (up to 4 points of stress)
         float totalStationTiles = MathF.Max(100f, metrics.TotalStationTiles);
-        float puddleDensity = metrics.PuddlesCount / totalStationTiles;
-        float trashDensity = metrics.TrashCount / totalStationTiles;
+        float adjustedPuddles = MathF.Max(0f, metrics.PuddlesCount - 150f);
+        float adjustedTrash = MathF.Max(0f, metrics.TrashCount - 450f);
+        // Sunrise-Edit: Footprints contribute 1/10th of a puddle each
+        float footprintEquivalent = metrics.FootprintsCount * 0.1f;
+        float adjustedFootprints = MathF.Max(0f, footprintEquivalent - 50f); // free threshold: 500 footprints
+        float puddleDensity = (adjustedPuddles + adjustedFootprints) / totalStationTiles;
+        float trashDensity = adjustedTrash / totalStationTiles;
         // Standard density threshold: 1 puddle per 330 tiles (~0.003), 1 trash per 160 tiles (~0.006)
         float messStress = Math.Clamp((puddleDensity / 0.003f) * 2f + (trashDensity / 0.006f) * 2f, 0f, 4f);
 
-        // 8. Power grid deficit (up to 10 points of stress) - Sunrise edit
-        float powerStress = Math.Clamp(metrics.PowerGridDeficitRatio * 10f, 0f, 10f);
+        // 8. Power grid deficit (up to 10 points of stress)
+        float adjustedPowerDeficit = MathF.Max(0f, metrics.PowerGridDeficitRatio - 0.10f) / 0.90f;
+        float powerStress = Math.Clamp(adjustedPowerDeficit * 10f, 0f, 10f);
 
-        // 9. Atmosphere breach / Spaced tiles (up to 10 points of stress) - Sunrise edit
+        // TODO: Обьединить опасные газы и неподходящую атмосферу в одино значение стресса
+        // 9. Atmosphere breach / Spaced tiles (up to 10 points of stress)
         float breachStress = Math.Clamp(metrics.AtmosphereBreachRatio * 50f, 0f, 10f);
 
         // 10. Dangerous gases / Toxic air (up to 10 points of stress)
@@ -524,6 +668,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
 
         metrics.StressDead = deadStress;
+        metrics.StressGhost = ghostStress;
         metrics.StressContainment = containmentStress;
         metrics.StressSecurity = securityStress;
         metrics.StressEconomy = economyStress;
@@ -535,7 +680,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         metrics.StressGas = gasStress;
 
 
-        float totalStress = deadStress + containmentStress + securityStress + economyStress + damageStress + anomalyStress + messStress + powerStress + breachStress + gasStress;
+        float totalStress = deadStress + ghostStress + containmentStress + securityStress + economyStress + damageStress + anomalyStress + messStress + powerStress + breachStress + gasStress;
         return Math.Clamp(totalStress, 0f, 100f);
     }
 
@@ -778,53 +923,88 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         dangerousGasesRatio = 0f;
         totalTiles = 0;
 
-        var spacedTiles = 0;
-        var dangerousTiles = 0;
+        var totalSensors = 0;
+        var breachedSensors = 0;
+        var dangerousSensors = 0;
 
-        var query = EntityQueryEnumerator<GridAtmosphereComponent, TransformComponent>();
-        while (query.MoveNext(out var gridUid, out var atmos, out var xform))
+        // This is highly accurate and ignores tiles under walls or unsimulated areas.
+        var monitorQuery = EntityQueryEnumerator<Content.Server.Atmos.Monitor.Components.AtmosMonitorComponent, TransformComponent>();
+        var atmosSystem = EntityManager.System<Content.Server.Atmos.EntitySystems.AtmosphereSystem>(); // Fetch atmosphere system to read real tile gas if sensor is unpowered
+        while (monitorQuery.MoveNext(out var uid, out var monitor, out var xform))
         {
-
-            if (_stationSystem.GetOwningStation(gridUid) == null)
+            if (monitor.MonitorsPipeNet)
                 continue;
 
-            foreach (var tile in atmos.Tiles.Values)
+            if (xform.GridUid == null || _stationSystem.GetOwningStation(xform.GridUid.Value) == null)
+                continue;
+
+            if (monitor.IgnoreStress)
+                continue;
+
+            totalSensors++;
+
+            // If the sensor is unpowered, monitor.TileGas will be null.
+            // We fetch the real physical atmosphere of the tile directly to prevent false breach stress during blackouts.
+            var air = monitor.TileGas ?? atmosSystem.GetContainingMixture(uid, true);
+
+            if (air == null)
             {
-                if (tile.NoGridTile)
-                    continue;
+                breachedSensors++;
+            }
+            else
+            {
+                // Dynamic threshold evaluation based on the sensor's own YAML/prototype configuration.
+                // This completely eliminates hardcoded gas, temperature, and pressure limits.
+                var state = Content.Shared.Atmos.Monitor.AtmosAlarmType.Normal;
 
-                totalTiles++;
-                if (tile.Space || tile.Air == null || tile.MapAtmosphere)
+                if (monitor.PressureThreshold != null && monitor.PressureThreshold.CheckThreshold(air.Pressure, out var pressureState))
                 {
-                    spacedTiles++;
+                    if (pressureState > state)
+                        state = pressureState;
                 }
-                else
-                {
-                    var air = tile.Air;
 
-                    if (air.GetMoles(Gas.Plasma) > 0.5f ||
-                        air.GetMoles(Gas.Tritium) > 0.5f ||
-                        air.GetMoles(Gas.Zauker) > 0.1f ||
-                        air.GetMoles(Gas.NitrousOxide) > 1.0f ||
-                        air.GetMoles(Gas.BZ) > 0.5f ||
-                        air.GetMoles(Gas.Nitrium) > 0.5f ||
-                        air.GetMoles(Gas.Frezon) > 0.5f ||
-                        air.GetMoles(Gas.Hydrogen) > 1.0f ||
-                        air.GetMoles(Gas.ChargedElectrovae) > 0.1f ||
-                        air.Temperature > 340f ||
-                        air.Temperature < 250f)
+                if (monitor.TemperatureThreshold != null && monitor.TemperatureThreshold.CheckThreshold(air.Temperature, out var tempState))
+                {
+                    if (tempState > state)
+                        state = tempState;
+                }
+
+                if (monitor.GasThresholds != null && air.TotalMoles > 1e-8f)
+                {
+                    foreach (var (gas, threshold) in monitor.GasThresholds)
                     {
-                        dangerousTiles++;
+                        var gasRatio = air.GetMoles(gas) / air.TotalMoles;
+                        if (threshold.CheckThreshold(gasRatio, out var gasState))
+                        {
+                            if (gasState > state)
+                                state = gasState;
+                        }
                     }
+                }
+
+                // If the sensor is powered, we also take its actual live alarm state into account
+                if (monitor.LastAlarmState > state)
+                {
+                    state = monitor.LastAlarmState;
+                }
+
+                // Map alert state to breach/danger metrics
+                if (state == Content.Shared.Atmos.Monitor.AtmosAlarmType.Danger)
+                {
+                    breachedSensors++;
+                }
+                else if (state == Content.Shared.Atmos.Monitor.AtmosAlarmType.Warning)
+                {
+                    dangerousSensors++;
                 }
             }
         }
 
-        if (totalTiles > 0)
+        if (totalSensors > 0)
         {
-            breachRatio = (float)spacedTiles / totalTiles;
-
-            dangerousGasesRatio = (float)dangerousTiles / totalTiles;
+            breachRatio = (float)breachedSensors / totalSensors;
+            dangerousGasesRatio = (float)dangerousSensors / totalSensors;
+            totalTiles = totalSensors;
         }
     }
 
@@ -849,9 +1029,35 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         powerDeficitRatio = totalApcs > 0 ? (float)deadApcs / totalApcs : 0f;
     }
 
+    private bool IsSecurity(EntityUid mob)
+    {
+        if (_mindSystem.TryGetMind(mob, out var mindId, out _))
+        {
+            if (_jobSystem.MindTryGetJob(mindId, out var job) && IsSecurityJob(job))
+                return true;
+        }
+        return false;
+    }
+
+    private bool IsValidCrewOrBorg(EntityUid mob, bool excludeAntags = false)
+    {
+        if (!HasComp<HumanoidAppearanceComponent>(mob) && !HasComp<BorgChassisComponent>(mob))
+            return false;
+
+        if (IsSecurity(mob))
+            return false;
+
+        if (excludeAntags && _mindSystem.TryGetMind(mob, out var mindId, out _))
+        {
+            if (_roleSystem.MindIsAntagonist(mindId))
+                return false;
+        }
+
+        return true;
+    }
+
     private int CountCrewWeapons()
     {
-
         var armedMobs = new HashSet<EntityUid>();
         var xformQuery = GetEntityQuery<TransformComponent>();
         var mobQuery = GetEntityQuery<MobStateComponent>();
@@ -864,7 +1070,10 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    armedMobs.Add(mob.Value);
+                    if (IsValidCrewOrBorg(mob.Value, excludeAntags: false))
+                    {
+                        armedMobs.Add(mob.Value);
+                    }
                 }
             }
         }
@@ -872,7 +1081,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         var meleeQuery = EntityQueryEnumerator<MeleeWeaponComponent>();
         while (meleeQuery.MoveNext(out var uid, out var melee))
         {
-            if (melee.Damage.GetTotal().Float() <= 10)
+            if (melee.Damage.GetTotal().Float() <= 15) // TODO: Магическое число должно быть обьявлено переменной
                 continue;
 
             var mob = FindCarryingMob(uid, xformQuery, mobQuery);
@@ -880,12 +1089,14 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    armedMobs.Add(mob.Value);
+                    if (IsValidCrewOrBorg(mob.Value, excludeAntags: false))
+                    {
+                        armedMobs.Add(mob.Value);
+                    }
                 }
             }
         }
         return armedMobs.Count;
-
     }
 
     private int CountArmedCrewNotAntags()
@@ -902,16 +1113,10 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    // Filter out antagonists and security personnel (as they are already counted under security strength)
-                    if (_mindSystem.TryGetMind(mob.Value, out var mindId, out _))
+                    if (IsValidCrewOrBorg(mob.Value, excludeAntags: true))
                     {
-                        if (_roleSystem.MindIsAntagonist(mindId))
-                            continue;
-                        if (_jobSystem.MindTryGetJob(mindId, out var job) && IsSecurityJob(job))
-                            continue;
+                        armedMobs.Add(mob.Value);
                     }
-
-                    armedMobs.Add(mob.Value);
                 }
             }
         }
@@ -927,16 +1132,10 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             {
                 if (mobState.CurrentState == MobState.Alive || mobState.CurrentState == MobState.Critical)
                 {
-                    // Filter out antagonists and security personnel (as they are already counted under security strength)
-                    if (_mindSystem.TryGetMind(mob.Value, out var mindId, out _))
+                    if (IsValidCrewOrBorg(mob.Value, excludeAntags: true))
                     {
-                        if (_roleSystem.MindIsAntagonist(mindId))
-                            continue;
-                        if (_jobSystem.MindTryGetJob(mindId, out var job) && IsSecurityJob(job))
-                            continue;
+                        armedMobs.Add(mob.Value);
                     }
-
-                    armedMobs.Add(mob.Value);
                 }
             }
         }
@@ -991,7 +1190,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
                     {
                         foreach (var dept in departments)
                         {
-                            if (dept.ID == "SpecialOperations" || dept.ID == "TSF" || dept.ID == "CentralCommand")
+                            if (dept.ID == "SpecialOperations" || dept.ID == "TSF" || dept.ID == "CentralCommand") // TODO: Убрать хардкод, расширить логику
                             {
                                 ertCount++;
                                 break;
@@ -1079,9 +1278,12 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     {
 
         var uniqueTechs = new HashSet<string>();
-        var techQuery = EntityQueryEnumerator<TechnologyDatabaseComponent>();
-        while (techQuery.MoveNext(out _, out var techDb))
+        var techQuery = EntityQueryEnumerator<TechnologyDatabaseComponent, TransformComponent>();
+        while (techQuery.MoveNext(out _, out var techDb, out var techXform))
         {
+            if (techXform.GridUid == null || _stationSystem.GetOwningStation(techXform.GridUid.Value) == null)
+                continue;
+
             foreach (var techId in techDb.UnlockedTechnologies)
             {
                 uniqueTechs.Add(techId.Id);
@@ -1183,6 +1385,7 @@ public struct StationMetrics
     public int AnomaliesCount;
     public int ActiveArtifactsCount;
     public int PuddlesCount;
+    public int FootprintsCount; // Sunrise-Edit: Footprints as light mess
     public int TrashCount;
     public float AverageCrewDamage;
     public int TotalStationTiles;
@@ -1201,4 +1404,5 @@ public struct StationMetrics
     public float StressPower;
     public float StressBreach;
     public float StressGas;
+    public float StressGhost;
 }
