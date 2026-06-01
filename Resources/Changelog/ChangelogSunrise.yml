@@ -6443,3 +6443,12 @@
   id: 1871
   time: '2026-05-31T22:03:34.0000000+00:00'
   url: https://github.com/space-sunrise/sunrise-station/pull/4434
+- author: BDSM_
+  changes:
+  - message: "\u0418\u0441\u043F\u0440\u0430\u0432\u043B\u0435\u043D \u0434\u043E\u0441\
+      \u0442\u0443\u043F \u0443 \u041A\u0432\u0430\u0440\u0442\u0438\u0440\u043C\u0435\
+      \u0439\u0441\u0442\u0435\u0440\u0430 \u043A \u0448\u0430\u0445\u0442\u0435"
+    type: Fix
+  id: 1872
+  time: '2026-06-01T08:13:54.0000000+00:00'
+  url: https://github.com/space-sunrise/sunrise-station/pull/4443
