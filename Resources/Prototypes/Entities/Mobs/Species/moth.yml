@@ -99,11 +99,14 @@
       - map: [ "enum.HumanoidVisualLayers.RHand" ]
       - map: [ "enum.HumanoidVisualLayers.LFoot" ]
       - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+      - map: [ "lockable_under" ] # Lust-Edit
+      - map: [ "lockable_chest" ] # Lust-Edit
       # Sunrise-start
       - map: ["bra"]
       - map: ["pants"]
       - map: ["socks"]
       - map: ["plug"]
+      - map: ["lockable_underpants"] # Lust-Edit
       - map: ["jumpsuit"]
       # Sunrise-end
       - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
@@ -114,7 +117,9 @@
       - map: [ "gloves" ]
       - map: [ "shoes" ]
       - map: [ "ears" ]
+      - map: [ "lockable_normal" ] # Lust-Edit
       - map: [ "outerClothing" ] #Sunrise-edit
+      - map: [ "lockable_over" ] # Lust-Edit
       - map: [ "eyes" ]
       - map: [ "belt" ]
       - map: [ "id" ]

@@ -94,19 +94,24 @@
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
       - map: ["enum.HumanoidVisualLayers.RFoot"]
+      - map: [ "lockable_under" ] # Lust-Edit
+      - map: [ "lockable_chest" ] # Lust-Edit
       # Sunrise-start
       - map: ["bra"]
       - map: ["pants"]
       - map: ["socks"]
       - map: ["plug"]
+      - map: ["lockable_underpants"] # Lust-Edit
       - map: ["jumpsuit"]
       # Sunrise-end
       - map: ["enum.HumanoidVisualLayers.LHand"]
       - map: ["enum.HumanoidVisualLayers.RHand"]
       - map: [ "gloves" ]
       - map: [ "shoes" ]
+      - map: [ "lockable_normal" ] # Lust-Edit
       - map: [ "belt" ]
       - map: [ "id" ]
+      - map: [ "lockable_over" ] # Lust-Edit
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
       - map: [ "back" ]
       - map: [ "neck" ]
