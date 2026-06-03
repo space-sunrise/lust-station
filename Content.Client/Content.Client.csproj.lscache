@@ -1,0 +1,2941 @@
+version=1
+
+# This file caches language service data to improve the performance of C# Dev Kit.
+# It is not intended for manual editing. It can safely be deleted and will be
+# regenerated automatically. For more information, see https://aka.ms/lscache
+#
+# To control where cache files are stored, use the following VS Code setting:
+#   "dotnet.projectsystem.cacheInProjectFolder": true
+
+[project]
+language=C#
+primary
+lastDtbSucceeded
+
+[properties]
+AssemblyName=Content.Client
+CommandLineArgsForDesignTimeEvaluation=-langversion:14 -define:DEBUG;TRACE;WINDOWS;DEVELOPMENT;CLIENT_SCRIPTING;TOOLS
+CompilerGeneratedFilesOutputPath=
+MaxSupportedLangVersion=14.0
+ProjectAssetsFile=<PATH>obj/project.assets.json
+RootNamespace=Content.Client
+RunAnalyzers=
+RunAnalyzersDuringLiveAnalysis=
+SolutionPath=<PATH>../SpaceStation14.slnx
+TargetFrameworkIdentifier=.NETCoreApp
+TargetPath=<PATH>../bin/Content.Client/Content.Client.dll
+TargetRefPath=<PATH>obj/Debug/ref/Content.Client.dll
+TemporaryDependencyNodeTargetIdentifier=net10.0
+
+[commandLineArguments]
+/noconfig
+/unsafe-
+/checked-
+/nowarn:1701,1702,1701,1702
+/fullpaths
+/nostdlib+
+/errorreport:prompt
+/warn:10
+/define:DEBUG;TRACE;WINDOWS;DEVELOPMENT;CLIENT_SCRIPTING;TOOLS;NET;NET10_0;NETCOREAPP;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER
+/highentropyva+
+/nullable:enable
+/features:"InterceptorsNamespaces=;Microsoft.Extensions.Validation.Generated"
+/debug+
+/debug:portable
+/filealign:512
+/optimize-
+/out:obj\Debug\Content.Client.dll
+/refout:obj\Debug\refint\Content.Client.dll
+/target:exe
+/warnaserror-
+/utf8output
+/deterministic+
+/langversion:14
+/warnaserror+:RA0032,nullable,SYSLIB0011
+
+[sourceFiles]
+Access/
+ AccessOverlay.cs
+ AccessOverriderSystem.cs
+ AccessSystem.cs
+ Commands/ShowAccessReadersCommand.cs
+ IdCardConsoleSystem.cs
+ IdCardSystem.cs
+ UI/
+  AccessLevelControl.xaml.cs
+  AccessOverriderBoundUserInterface.cs
+  AccessOverriderWindow.xaml.cs
+  AgentIDCardBoundUserInterface.cs
+  AgentIDCardWindow.xaml.cs
+  GroupedAccessLevelChecklist.xaml.cs
+  IdCardConsoleBoundUserInterface.cs
+  IdCardConsoleWindow.xaml.cs
+Actions/
+ ActionEvents.cs
+ ActionsSystem.cs
+ UI/ActionAlertTooltip.cs
+Administration/
+ AdminNameOverlay.cs
+ Managers/
+  ClientAdminManager.cs
+  IClientAdminManager.cs
+ OverlayOptions.cs
+ QuickDialogSystem.cs
+ Systems/
+  AdminSystem.cs
+  AdminSystem.Overlay.cs
+  AdminVerbSystem.cs
+  AdminWhoSystem.cs
+  BufferingSystem.cs
+  BwoinkSystem.cs
+  HeadstandSystem.cs
+  KillSignSystem.cs
+ UI/
+  AdminAnnounceWindow.xaml.cs
+  AdminCamera/
+   AdminCameraControl.xaml.cs
+   AdminCameraEui.cs
+   AdminCameraWindow.xaml.cs
+  AdminMenuWindow.xaml.cs
+  AdminMenuWindowEui.cs
+  AdminRemarks/
+   AdminMessageEui.cs
+   AdminMessagePopupMessage.xaml.cs
+   AdminMessagePopupWindow.xaml.cs
+   AdminRemarksWindow.xaml.cs
+   UserNotesEui.cs
+  AntagObjectives/
+   AntagObjectivesUIController.cs
+   AntagObjectivesWindow.xaml.cs
+  BanList/
+   BanListEui.cs
+   BanListIdsPopup.xaml.cs
+   BanListWindow.xaml.cs
+   Bans/
+    BanListControl.xaml.cs
+    BanListHeader.xaml.cs
+    BanListLine.xaml.cs
+   IBanListLine.cs
+   RoleBans/
+    RoleBanListControl.xaml.cs
+    RoleBanListHeader.xaml.cs
+    RoleBanListLine.xaml.cs
+  BanPanel/
+   BanPanel.xaml.cs
+   BanPanelEui.cs
+  Bwoink/
+   AdminWhoUIController.cs
+   AdminWhoWindow.xaml.cs
+   BwoinkControl.xaml.cs
+   BwoinkPanel.xaml.cs
+   BwoinkWindow.xaml.cs
+  CustomControls/
+   AdminLogImpactButton.cs
+   AdminLogLabel.cs
+   AdminLogPlayerButton.cs
+   AdminLogTypeButton.cs
+   CommandButton.cs
+   HSeparator.cs
+   PlayerListControl.xaml.cs
+   PlayerListEntry.xaml.cs
+   UICommandButton.cs
+   VSeparator.cs
+  Logs/
+   AdminLogsControl.xaml.cs
+   AdminLogsEui.cs
+   AdminLogsWindow.xaml.cs
+  ManageSolutions/
+   AddReagentWindow.xaml.cs
+   EditSolutionsEui.cs
+   EditSolutionsWindow.xaml.cs
+  Notes/
+   AdminNotesControl.xaml.cs
+   AdminNotesEui.cs
+   AdminNotesLine.xaml.cs
+   AdminNotesLinePopup.xaml.cs
+   AdminNotesWindow.xaml.cs
+   NoteEdit.xaml.cs
+  PermissionsEui.cs
+  PlayerPanel/
+   PlayerPanel.xaml.cs
+   PlayerPanelEui.cs
+  SetOutfit/
+   SetOutfitEui.cs
+   SetOutfitMenu.xaml.cs
+  SpawnExplosion/
+   ExplosionDebugOverlay.cs
+   SpawnExplosionEui.cs
+   SpawnExplosionWindow.xaml.cs
+  Tabs/AdminbusTab/
+   AdminbusTab.xaml.cs
+   LoadBlueprintsWindow.xaml.cs
+  Tabs/AdminTab/
+   AdminShuttleWindow.xaml.cs
+   AdminTab.xaml.cs
+  Tabs/AtmosTab/
+   AddAtmosWindow.xaml.cs
+   AddGasWindow.xaml.cs
+   AtmosTab.xaml.cs
+   FillGasWindow.xaml.cs
+   SetTemperatureWindow.xaml.cs
+  Tabs/ObjectsTab/
+   ObjectsTab.xaml.cs
+   ObjectsTabEntry.xaml.cs
+   ObjectsTabHeader.xaml.cs
+  Tabs/PanicBunkerTab/
+   PanicBunkerStatusWindow.xaml.cs
+   PanicBunkerTab.xaml.cs
+  Tabs/PlayerTab/
+   PlayerTab.xaml.cs
+   PlayerTabEntry.xaml.cs
+   PlayerTabHeader.xaml.cs
+   PlayerTabOptions.cs
+  Tabs/
+   RoundTab.xaml.cs
+   ServerTab.xaml.cs
+Advertise/Systems/SpeakOnUIClosedSystem.cs
+AlertLevel/AlertLevelDisplaySystem.cs
+Alerts/
+ ClientAlertsSystem.cs
+ GenericCounterAlertSystem.cs
+ UpdateAlertSpriteEvent.cs
+Ame/UI/
+ AmeControllerBoundUserInterface.cs
+ AmeWindow.xaml.cs
+Animals/Systems/ParrotMemorySystem.cs
+Animations/
+ EntityPickupAnimationComponent.cs
+ EntityPickupAnimationSystem.cs
+ TrackUserComponent.cs
+Anomaly/
+ AnomalyScannerScreenComponent.cs
+ AnomalyScannerSystem.cs
+ AnomalySystem.cs
+ Effects/
+  ClientInnerBodySystem.cs
+  GravityAnomalySystem.cs
+ Ui/
+  AnomalyGeneratorBoundUserInterface.cs
+  AnomalyGeneratorWindow.xaml.cs
+  AnomalyScannerBoundUserInterface.cs
+  AnomalyScannerMenu.xaml.cs
+Arcade/
+ BlockGameMenu.cs
+ SpaceVillainArcadeMenu.cs
+ UI/
+  BlockGameBoundUserInterface.cs
+  SpaceVillainArcadeBoundUserInterface.cs
+Armor/ArmorSystem.cs
+AssemblyInfo.cs
+Atmos/
+ AlignAtmosPipeLayers.cs
+ Components/
+  FireVisualsComponent.cs
+  MapAtmosphereComponent.cs
+  PipeColorVisualsComponent.cs
+ Consoles/
+  AtmosAlarmEntryContainer.xaml.cs
+  AtmosAlertsComputerBoundUserInterface.cs
+  AtmosAlertsComputerWindow.xaml.cs
+  AtmosMonitoringConsoleBoundUserInterface.cs
+  AtmosMonitoringConsoleNavMapControl.cs
+  AtmosMonitoringConsoleSystem.cs
+  AtmosMonitoringConsoleWindow.xaml.cs
+  AtmosMonitoringEntryContainer.xaml.cs
+ EntitySystems/
+  AtmosDebugOverlaySystem.cs
+  AtmosphereSystem.cs
+  AtmosPipeAppearanceSystem.cs
+  AtmosPipeLayersSystem.cs
+  DeltaPressureSystem.cs
+  FirestarterSystem.cs
+  FireVisualizerSystem.cs
+  GasCanisterAppearanceSystem.cs
+  GasMinerSystem.cs
+  GasPressurePumpSystem.cs
+  GasPressureRegulatorSystem.cs
+  GasTankSystem.cs
+  GasTileOverlaySystem.cs
+  PipeColorVisualizerSystem.cs
+ Monitor/
+  AtmosAlarmableVisualsComponent.cs
+  AtmosAlarmableVisualsSystem.cs
+  UI/
+   AirAlarmBoundUserInterface.cs
+   AirAlarmWindow.xaml.cs
+   Widgets/
+    PumpControl.xaml.cs
+    ScrubberControl.xaml.cs
+    SensorInfo.xaml.cs
+    ThresholdBoundControl.xaml.cs
+    ThresholdControl.xaml.cs
+ Overlays/
+  AtmosDebugOverlay.cs
+  GasTileOverlay.cs
+ Piping/Binary/Systems/
+  GasValveSystem.cs
+  GasVolumePumpSystem.cs
+ Piping/Unary/Systems/
+  GasCanisterSystem.cs
+  GasThermoMachineSystem.cs
+ Rotting/RottingSystem.cs
+ UI/
+  GasAnalyzerBoundUserInterface.cs
+  GasAnalyzerWindow.xaml.cs
+  GasCanisterBoundUserInterface.cs
+  GasCanisterWindow.xaml.cs
+  GasFilterBoundUserInterface.cs
+  GasFilterWindow.xaml.cs
+  GasMixerBoundUserInteface.cs
+  GasMixerWindow.xaml.cs
+  GasPressurePumpBoundUserInterface.cs
+  GasPressurePumpWindow.xaml.cs
+  GasPressureRegulatorBoundUserInterface.cs
+  GasPressureRegulatorWindow.xaml.cs
+  GasThermomachineBoundUserInterface.cs
+  GasThermomachineWindow.xaml.cs
+  GasVolumePumpBoundUserInterface.cs
+  GasVolumePumpWindow.xaml.cs
+  SpaceHeaterBoundUserInterface.cs
+  SpaceHeaterWindow.xaml.cs
+ Visualizers/
+  Components/PortableScrubberVisualsComponent.cs
+  PortableScrubberVisualsSystem.cs
+Audio/
+ AmbientOverlayCommand.cs
+ AmbientSoundOverlay.cs
+ AmbientSoundSystem.cs
+ AmbientSoundTreeComponent.cs
+ AmbientSoundTreeSystem.cs
+ AudioUIController.cs
+ ClientGlobalSoundSystem.cs
+ ContentAudioSystem.AmbientMusic.cs
+ ContentAudioSystem.cs
+ ContentAudioSystem.LobbyMusic.cs
+ Jukebox/
+  JukeboxBoundUserInterface.cs
+  JukeboxMenu.xaml.cs
+  JukeboxSystem.cs
+BarSign/
+ BarSignSystem.cs
+ Ui/
+  BarSignBoundUserInterface.cs
+  BarSignMenu.xaml.cs
+Beam/
+ BeamSystem.cs
+ Components/BeamComponent.cs
+Bed/
+ Components/StasisBedVisualsComponent.cs
+ Cryostorage/
+  CryostorageBoundUserInterface.cs
+  CryostorageEntryControl.xaml.cs
+  CryostorageMenu.xaml.cs
+  CryostorageSlotControl.xaml.cs
+  CryostorageSystem.cs
+Body/Systems/
+ BloodStreamSystem.cs
+ BodySystem.cs
+ InternalsSystem.cs
+ MetabolizerSystem.cs
+Botany/Components/
+ PlantHolderVisualsComponent.cs
+ PotencyVisualsComponent.cs
+ ProduceComponent.cs
+ SeedComponent.cs
+Botany/PlantAnalyzer/
+ PlantAnalyzerBoundUserInterface.cs
+ PlantAnalyzerWindow.xaml.cs
+Botany/
+ PlantHolderVisualizerSystem.cs
+ PotencyVisualsSystem.cs
+Bql/
+ ToolshedVisualizeEui.cs
+ ToolshedVisualizeWindow.xaml.cs
+Buckle/BuckleSystem.cs
+Camera/CameraRecoilSystem.cs
+CardboardBox/CardboardBoxSystem.cs
+Cargo/BUI/
+ CargoBountyConsoleBoundUserInterface.cs
+ CargoOrderConsoleBoundUserInterface.cs
+ CargoPalletConsoleBoundUserInterface.cs
+ CargoShuttleConsoleBoundUserInterface.cs
+ FundingAllocationConsoleBoundUserInterface.cs
+Cargo/Systems/
+ CargoSystem.cs
+ CargoSystem.Telepad.cs
+ ClientPriceGunSystem.cs
+Cargo/UI/
+ BountyEntry.xaml.cs
+ BountyHistoryEntry.xaml.cs
+ CargoBountyMenu.xaml.cs
+ CargoConsoleMenu.xaml.cs
+ CargoConsoleOrderMenu.xaml.cs
+ CargoOrderRow.xaml.cs
+ CargoPalletMenu.xaml.cs
+ CargoProductRow.xaml.cs
+ CargoShuttleMenu.xaml.cs
+ FundingAllocationMenu.xaml.cs
+CartridgeLoader/
+ CartridgeLoaderBoundUserInterface.cs
+ CartridgeLoaderSystem.cs
+ Cartridges/
+  CrewManifestUi.cs
+  CrewManifestUiFragment.xaml.cs
+  LogProbeUi.cs
+  LogProbeUiEntry.xaml.cs
+  LogProbeUiFragment.xaml.cs
+  NanoTaskCartridgeSystem.cs
+  NanoTaskItemControl.xaml.cs
+  NanoTaskItemPopup.xaml.cs
+  NanoTaskUi.cs
+  NanoTaskUiFragment.xaml.cs
+  NetProbeUi.cs
+  NetProbeUiFragment.xaml.cs
+  NewsReaderUi.cs
+  NewsReaderUiFragment.xaml.cs
+  NotekeeperUi.cs
+  NotekeeperUiFragment.xaml.cs
+  WantedListUi.cs
+  WantedListUiFragment.cs
+Changeling/
+ Systems/ChangelingIdentitySystem.cs
+ UI/ChangelingTransformBoundUserInterface.cs
+Changelog/
+ ChangelogButton.cs
+ ChangelogManager.cs
+ ChangelogTab.xaml.cs
+ ChangelogWindow.xaml.cs
+CharacterInfo/CharacterInfoSystem.cs
+Charges/ChargesSystem.cs
+Chasm/ChasmFallingVisualsSystem.cs
+Chat/
+ ChatSystem.cs
+ CollectiveMindChatUpdateSystem.cs
+ Managers/
+  ChatManager.cs
+  IChatManager.cs
+ TypingIndicator/
+  TypingIndicatorSystem.cs
+  TypingIndicatorVisualizerSystem.cs
+ UI/
+  EmotesMenu.xaml.cs
+  SpeechBubble.cs
+Chemistry/
+ Components/SolutionItemStatusComponent.cs
+ Containers/EntitySystems/SolutionContainerSystem.cs
+ EntitySystems/
+  ChemistryGuideDataSystem.cs
+  InjectorStatusControlSystem.cs
+  PillSystem.cs
+  SolutionContainerMixerSystem.cs
+  SolutionItemStatusSystem.cs
+ UI/
+  ButtonGrid.cs
+  ChemMasterBoundUserInterface.cs
+  ChemMasterWindow.xaml.cs
+  InjectorStatusControl.cs
+  ReagentCardControl.xaml.cs
+  ReagentDispenserBoundUserInterface.cs
+  ReagentDispenserWindow.xaml.cs
+  SolutionStatusControl.cs
+  TransferAmountBoundUserInterface.cs
+  TransferAmountWindow.xaml.cs
+ Visualizers/
+  FoamVisualizerSystem.cs
+  FoamVisualsComponent.cs
+  SmokeVisualizerSystem.cs
+  SmokeVisualsComponent.cs
+  SolutionContainerVisualsSystem.cs
+  VaporVisualizerSystem.cs
+  VaporVisualsComponent.cs
+Clickable/
+ ClickableComponent.cs
+ ClickableSystem.cs
+ ClickMapManager.cs
+Clock/ClockSystem.cs
+Cloning/
+ CloningSystem.cs
+ UI/
+  AcceptCloningEui.cs
+  AcceptCloningWindow.cs
+CloningConsole/UI/
+ CloningConsoleBoundUserInterface.cs
+ CloningConsoleWindow.xaml.cs
+Clothing/
+ ClientClothingSystem.cs
+ FlippableClothingVisualizerSystem.cs
+ FlippableClothingVisualsComponent.cs
+ Systems/
+  ChameleonClothingSystem.cs
+  CursedMaskSystem.cs
+  PilotedByClothingSystem.cs
+ UI/
+  ChameleonBoundUserInterface.cs
+  ChameleonMenu.xaml.cs
+CombatMode/
+ ColoredScreenBorderOverlay.cs
+ CombatModeIndicatorsOverlay.cs
+ CombatModeSystem.cs
+Commands/
+ ActionsCommands.cs
+ AtmosDebugCommands.cs
+ CreditsCommand.cs
+ DebugCommands.cs
+ DebugPathfindingCommand.cs
+ GroupingEntityMenuCommand.cs
+ HideMechanismsCommand.cs
+ MappingClientSideSetupCommand.cs
+ OpenAHelpCommand.cs
+ QuickInspectCommand.cs
+ SetMenuVisibilityCommand.cs
+ ShowHealthBarsCommand.cs
+ ShowMechanismsCommand.cs
+ ShowWallmountsCommand.cs
+ ToggleOutlineCommand.cs
+ ZoomCommand.cs
+Communications/
+ CommsHackerSystem.cs
+ UI/
+  CommunicationsConsoleBoundUserInterface.cs
+  CommunicationsConsoleMenu.xaml.cs
+Computer/ComputerBoundUserInterface.cs
+Configurable/
+ ConfigurationSystem.cs
+ UI/
+  ConfigurationBoundUserInterface.cs
+  ConfigurationMenu.cs
+Construction/
+ ConstructionGhostComponent.cs
+ ConstructionPlacementHijack.cs
+ ConstructionSystem.cs
+ FlatpackSystem.cs
+ UI/
+  ConstructionMenu.xaml.cs
+  ConstructionMenuPresenter.cs
+  FlatpackCreatorBoundUserInterface.cs
+  FlatpackCreatorMenu.xaml.cs
+ContextMenu/UI/
+ ContextMenuElement.xaml.cs
+ ContextMenuPopup.xaml.cs
+ ContextMenuUIController.cs
+ EntityMenuElement.cs
+ EntityMenuPresenterGrouping.cs
+ EntityMenuUIController.cs
+Cooldown/CooldownGraphic.cs
+Crayon/
+ CrayonSystem.cs
+ UI/
+  CrayonBoundUserInterface.cs
+  CrayonWindow.xaml.cs
+Credits/CreditsWindow.xaml.cs
+CrewManifest/
+ CrewManifestEui.cs
+ CrewManifestSystem.cs
+ CrewManifestUi.xaml.cs
+ UI/
+  CrewManifestListing.cs
+  CrewManifestSection.cs
+CriminalRecords/
+ CrimeHistoryWindow.xaml.cs
+ CriminalRecordsConsoleBoundUserInterface.cs
+ CriminalRecordsConsoleWindow.xaml.cs
+ Systems/
+  CriminalRecordsConsoleSystem.cs
+  CriminalRecordsHackerSystem.cs
+  CriminalRecordsSystem.cs
+Cuffs/CuffableSystem.cs
+Damage/
+ DamageVisualsComponent.cs
+ DamageVisualsSystem.cs
+ DestructibleSystem.cs
+ GodmodeSystem.cs
+ Systems/
+  DamageOtherOnHitSystem.cs
+  StaminaSystem.cs
+DamageState/
+ DamageStateVisualizerSystem.cs
+ DamageStateVisualsComponent.cs
+DebugMon/DebugMonitorManager.cs
+Decals/
+ DecalPlacementSystem.cs
+ DecalSystem.cs
+ Overlays/
+  DecalOverlay.cs
+  DecalPlacementOverlay.cs
+ ToggleDecalCommand.cs
+ UI/
+  DecalPlacerWindow.xaml.cs
+  PaletteColorPicker.xaml.cs
+Delivery/
+ DeliverySystem.cs
+ DeliveryVisualizerSystem.cs
+DeviceLinking/
+ DeviceLinkSystem.cs
+ Systems/RandomGateSystem.cs
+ UI/
+  RandomGateBoundUserInterface.cs
+  RandomGateSetupWindow.xaml.cs
+DeviceNetwork/
+ JammerSystem.cs
+ Systems/
+  DeviceNetworkJammerSystem.cs
+  DeviceNetworkSystem.cs
+Dice/DiceSystem.cs
+DisplacementMap/DisplacementMapSystem.cs
+Disposal/Mailing/
+ MailingUnitBoundUserInterface.cs
+ MailingUnitSystem.cs
+ MailingUnitWindow.xaml.cs
+Disposal/
+ PressureBar.cs
+ Tube/
+  DisposalRouterBoundUserInterface.cs
+  DisposalRouterWindow.xaml.cs
+  DisposalTaggerBoundUserInterface.cs
+  DisposalTaggerWindow.xaml.cs
+  DisposalTubeSystem.cs
+ Unit/
+  DisposalUnitBoundUserInterface.cs
+  DisposalUnitSystem.cs
+  DisposalUnitWindow.xaml.cs
+DoAfter/
+ DoAfterOverlay.cs
+ DoAfterSystem.cs
+Doors/
+ AirlockSystem.cs
+ DoorSystem.cs
+ Electronics/
+  DoorElectronicsBoundUserInterface.cs
+  DoorElectronicsConfigurationMenu.xaml.cs
+ FirelockSystem.cs
+ TurnstileSystem.cs
+Dragon/
+ DragonRiftComponent.cs
+ DragonSystem.cs
+Drowsiness/
+ DrowsinessOverlay.cs
+ DrowsinessSystem.cs
+Drugs/
+ DrugOverlaySystem.cs
+ RainbowOverlay.cs
+Drunk/
+ DrunkOverlay.cs
+ DrunkSystem.cs
+Effects/
+ ColorFlashEffectSystem.cs
+ EffectVisualizerSystem.cs
+ EffectVisualsComponent.cs
+Electrocution/
+ ElectrocutionHUDVisualizerSystem.cs
+ ElectrocutionSystem.cs
+Emp/EmpSystem.cs
+Ensnaring/EnsnareableSystem.cs
+Entry/EntryPoint.cs
+Eui/
+ BaseEui.cs
+ EuiManager.cs
+Examine/
+ ExamineButton.cs
+ ExamineSystem.cs
+Explosion/
+ ClusterGrenadeVisualizerSystem.cs
+ ClusterGrenadeVisualsComponent.cs
+ ExplosionOverlay.cs
+ ExplosionOverlaySystem.cs
+ ExplosionSystem.cs
+ ExplosionVisualsTexturesComponent.cs
+ ScatteringGrenadeSystem.cs
+Eye/Blinding/
+ BlindingSystem.cs
+ BlindOverlay.cs
+ BlurryVisionOverlay.cs
+ BlurryVisionSystem.cs
+Eye/
+ EyeLerpingSystem.cs
+ LerpingEyeComponent.cs
+Fax/AdminUI/
+ AdminFaxEui.cs
+ AdminFaxWindow.xaml.cs
+Fax/
+ System/FaxVisualsSystem.cs
+ UI/
+  FaxBoundUi.cs
+  FaxWindow.xaml.cs
+Flash/
+ FlashOverlay.cs
+ FlashSystem.cs
+FlavorText/FlavorText.xaml.cs
+Fluids/
+ AbsorbentSystem.cs
+ PuddleDebugOverlaySystem.cs
+ PuddleOverlay.cs
+ PuddleSystem.cs
+ SpraySystem.cs
+ UI/AbsorbentItemStatus.xaml.cs
+Forensics/
+ ForensicScannerBoundUserInterface.cs
+ ForensicScannerMenu.xaml.cs
+ Systems/ForensicsSystem.cs
+Fullscreen/FullscreenHook.cs
+Gameplay/
+ GameplayState.cs
+ GameplayStateBase.cs
+GameTicking/Managers/
+ ClientGameTicker.cs
+ TitleWindowManager.cs
+Gateway/UI/
+ GatewayBoundUserInterface.cs
+ GatewayWindow.xaml.cs
+Ghost/
+ Commands/ToggleGhostVisibilityCommand.cs
+ GhostRoleRadioBoundUserInterface.cs
+ GhostSystem.cs
+ GhostToggleSelfVisibility.cs
+ UI/
+  ReturnToBodyEui.cs
+  ReturnToBodyMenu.cs
+GhostKick/GhostKickManager.cs
+GlobalUsings.cs
+GPS/
+ Systems/HandheldGpsSystem.cs
+ UI/HandheldGpsStatusControl.cs
+Graphics/OverlayResourceCache.cs
+Gravity/
+ FloatingVisualizerSystem.cs
+ GravityGeneratorSystem.cs
+ GravitySystem.cs
+ GravitySystem.Shake.cs
+Guidebook/Components/
+ GuidebookControlsTestComponent.cs
+ GuideHelpComponent.cs
+Guidebook/Controls/
+ GuidebookError.xaml.cs
+ GuidebookRichPrototypeLink.cs
+ GuidebookWindow.xaml.cs
+ GuideEntityEmbed.xaml.cs
+ GuideLawsetEmbed.xaml.cs
+ GuideLawsetListEmbed.xaml.cs
+ GuideMicrowaveEmbed.xaml.cs
+ GuideMicrowaveGroupEmbed.cs
+ GuideReagentEmbed.xaml.cs
+ GuideReagentGroupEmbed.xaml.cs
+ GuideReagentReaction.xaml.cs
+ GuideTechDisciplineEmbed.xaml.cs
+ GuideTechnologyEmbed.xaml.cs
+ IPrototypeLinkControl.cs
+ ISearchableControl.cs
+Guidebook/
+ DocumentParsingManager.cs
+ DocumentParsingManager.static.cs
+ GuidebookDataSystem.cs
+ GuidebookSystem.cs
+ Richtext/
+  Box.cs
+  ColorBox.cs
+  Document.cs
+  KeyBindTag.cs
+  ProtodataTag.cs
+  Table.cs
+  TextLinkTag.cs
+Hands/
+ ShowHandItemOverlay.cs
+ Systems/HandsSystem.cs
+ UI/HandVirtualItemStatus.xaml.cs
+HealthAnalyzer/UI/
+ HealthAnalyzerBoundUserInterface.cs
+ HealthAnalyzerWindow.xaml.cs
+Holiday/
+ HolidayClothingSwapComponent.cs
+ HolidayRsiSwapComponent.cs
+ HolidaySystem.cs
+Holopad/
+ HolopadBoundUserInterface.cs
+ HolopadSystem.cs
+ HolopadWindow.xaml.cs
+HotPotato/HotPotatoSystem.cs
+Humanoid/
+ EyeColorPicker.cs
+ HumanoidAppearanceSystem.cs
+ HumanoidMarkingModifierBoundUserInterface.cs
+ HumanoidMarkingModifierWindow.xaml.cs
+ MarkingPicker.xaml.cs
+ SingleMarkingPicker.xaml.cs
+IconSmoothing/
+ ClientRandomIconSmoothSystem.cs
+ IconSmoothComponent.cs
+ IconSmoothSystem.cs
+ IconSmoothSystem.Edge.cs
+IgnitionSource/IgnitionSourceSystem.cs
+Implants/
+ ChameleonControllerSystem.cs
+ ImplanterSystem.cs
+ SubdermalImplantSystem.cs
+ UI/
+  ChameleonControllerBoundUserInterface.cs
+  ChameleonControllerMenu.xaml.cs
+  DeimplantBoundUserInterface.cs
+  DeimplantChoiceWindow.xaml.cs
+  ImplanterStatusControl.cs
+Info/
+ DevInfoBanner.cs
+ Info.xaml.cs
+ InfoControlsSection.xaml.cs
+ InfoSection.xaml.cs
+ LinkBanner.cs
+ PlaytimeStats/
+  PlaytimeStatsEntry.cs
+  PlaytimeStatsHeader.cs
+  PlaytimeStatsWindow.cs
+ RulesAndInfoWindow.cs
+ RulesControl.xaml.cs
+ RulesPopup.xaml.cs
+ ServerInfo.cs
+Input/ContentContexts.cs
+Instruments/
+ InstrumentComponent.cs
+ InstrumentSystem.cs
+ InstrumentSystem.MidiParsing.cs
+ MidiParser/
+  MidiInstrument.cs
+  MidiParser.cs
+  MidiStreamWrapper.cs
+ UI/
+  BandMenu.xaml.cs
+  ChannelsMenu.xaml.cs
+  InstrumentBoundUserInterface.cs
+  InstrumentMenu.xaml.cs
+Interactable/
+ Components/InteractionOutlineComponent.cs
+ InteractionSystem.cs
+Interaction/
+ DragDropHelper.cs
+ DragDropSystem.cs
+Inventory/
+ ClientInventorySystem.cs
+ InventorySlotsComponent.cs
+ StrippableBoundUserInterface.cs
+ VirtualItemSystem.cs
+IoC/
+ ClientContentIoC.cs
+ ClientModuleTestingCallbacks.cs
+ StaticIoC.cs
+ItemRecall/ItemRecallSystem.cs
+Items/
+ ItemStatusMessages.cs
+ Systems/ItemSystem.cs
+ UI/PollingItemStatusControl.cs
+Jittering/JitteringSystem.cs
+Kitchen/UI/
+ GrinderMenu.xaml.cs
+ LabelledContentBox.xaml.cs
+ MicrowaveBoundUserInterface.cs
+ MicrowaveMenu.xaml.cs
+ ReagentGrinderBoundUserInterface.cs
+Kitchen/Visualizers/MicrowaveVisuals.cs
+Kudzu/
+ KudzuVisualizerComponent.cs
+ KudzuVisualizerSystem.cs
+Labels/
+ EntitySystems/HandLabelerSystem.cs
+ UI/
+  HandLabelerBoundUserInterface.cs
+  HandLabelerWindow.xaml.cs
+LateJoin/LateJoinGui.cs
+Lathe/
+ LatheSystem.cs
+ UI/
+  LatheBoundUserInterface.cs
+  LatheMenu.xaml.cs
+  QueuedRecipeControl.xaml.cs
+  RecipeControl.xaml.cs
+  RecipeTooltip.xaml.cs
+Launcher/
+ ExtendedDisconnectInformationManager.cs
+ LauncherConnecting.cs
+ LauncherConnectingGui.xaml.cs
+Light/
+ AfterLightTargetOverlay.cs
+ AmbientOcclusionOverlay.cs
+ BeforeLightTargetOverlay.cs
+ Components/
+  EmergencyLightComponent.cs
+  ExpendableLightComponent.cs
+  HandheldLightComponent.cs
+  LightBehaviourComponent.cs
+  LightFadeComponent.cs
+ EntitySystems/
+  EmergencyLightSystem.cs
+  ExpendableLightSystem.cs
+  LightBehaviorSystem.cs
+  LightBulbSystem.cs
+  LightFadeSystem.cs
+  PlanetLightSystem.cs
+  PoweredLightSystem.cs
+  RoofSystem.cs
+  RotatingLightSystem.cs
+  SunShadowSystem.cs
+ HandheldLightSystem.cs
+ LightBlurOverlay.cs
+ LightCycleSystem.cs
+ RgbLightControllerSystem.cs
+ RoofOverlay.cs
+ SunShadowOverlay.cs
+ TileEmissionOverlay.cs
+ Visualizers/
+  PoweredLightVisualizerSystem.cs
+  PoweredLightVisualsComponent.cs
+Lightning/Components/LightningComponent.cs
+Lobby/
+ ClientPreferencesManager.cs
+ IClientPreferencesManager.cs
+ LobbyState.cs
+ LobbyUIController.cs
+ UI/
+  CharacterPickerButton.xaml.cs
+  CharacterSetupGui.xaml.cs
+  CharacterSetupGuiSavePanel.xaml.cs
+  HighlightedContainer.xaml.cs
+  HumanoidProfileEditor.xaml.cs
+  HumanoidProfileEditorSheetlet.cs
+  Loadouts/
+   LoadoutContainer.xaml.cs
+   LoadoutGroupContainer.xaml.cs
+   LoadoutWindow.xaml.cs
+   SubLoadoutContainer.xaml.cs
+   ToggleLoadoutButton.xaml.cs
+  LobbyCharacterPreviewPanel.xaml.cs
+  LobbyGui.xaml.cs
+  ObserveWarningWindow.xaml.cs
+  Roles/
+   RequirementsSelector.xaml.cs
+   TraitPreferenceSelector.xaml.cs
+Lock/Visualizers/
+ LockVisualizerSystem.cs
+ LockVisualsComponent.cs
+MachineLinking/UI/
+ SignalTimerBoundUserInterface.cs
+ SignalTimerWindow.xaml.cs
+Machines/
+ Components/MultipartMachineGhostComponent.cs
+ EntitySystems/MultipartMachineSystem.cs
+Magic/MagicSystem.cs
+MagicMirror/
+ MagicMirrorBoundUserInterface.cs
+ MagicMirrorSystem.cs
+ MagicMirrorWindow.xaml.cs
+MainMenu/
+ MainMenu.cs
+ UI/
+  MainMenuControl.xaml.cs
+  MainMenuSheetlet.cs
+Mapping/
+ MappingActionsButton.xaml.cs
+ MappingDoNotMeasure.xaml.cs
+ MappingManager.cs
+ MappingOverlay.cs
+ MappingPrototype.cs
+ MappingPrototypeList.xaml.cs
+ MappingScreen.xaml.cs
+ MappingSpawnButton.xaml.cs
+ MappingState.cs
+ MappingSystem.cs
+Maps/GridDraggingSystem.cs
+MapText/
+ MapTextComponent.cs
+ MapTextOverlay.cs
+ MapTextSystem.cs
+Markers/
+ MarkerComponent.cs
+ MarkerSystem.cs
+MassMedia/
+ NewsSystem.cs
+ Ui/
+  ArticleEditorPanel.xaml.cs
+  NewsArticleCard.xaml.cs
+  NewsWriterBoundUserInterface.cs
+  NewsWriterMenu.xaml.cs
+  PhotoSelectorWindow.xaml.cs
+Materials/
+ MaterialReclaimerSystem.cs
+ MaterialStorageSystem.cs
+ OreSiloSystem.cs
+ RecyclerVisualizerSystem.cs
+ RecyclerVisualsComponent.cs
+ UI/
+  MaterialDisplay.xaml.cs
+  MaterialStorageControl.xaml.cs
+  MaterialStorageUIController.cs
+  OreSiloBoundUserInterface.cs
+  OreSiloMenu.xaml.cs
+Mech/
+ MechAssemblyVisualizerSystem.cs
+ MechAssemblyVisualsComponent.cs
+ MechSystem.cs
+ Ui/Equipment/
+  MechGrabberUi.cs
+  MechGrabberUiFragment.xaml.cs
+  MechSoundboardUi.cs
+  MechSoundboardUiFragment.xaml.cs
+ Ui/
+  MechBoundUserInterface.cs
+  MechEquipmentControl.xaml.cs
+  MechMenu.xaml.cs
+Medical/CrewMonitoring/
+ CrewMonitoringBoundUserInterface.cs
+ CrewMonitoringNavMapControl.cs
+ CrewMonitoringWindow.xaml.cs
+Medical/
+ Cryogenics/CryoPodSystem.cs
+ DiseaseSystem.cs
+ SuitSensors/SuitSensorSystem.cs
+MedicalScanner/MedicalScannerComponent.cs
+Message/RichTextLabelExt.cs
+Mind/MindSystem.cs
+Mining/
+ MiningOverlay.cs
+ MiningOverlaySystem.cs
+Morgue/
+ CrematoriumSystem.cs
+ MorgueSystem.cs
+ Visualizers/
+  BodyBagVisualLayers.cs
+  CrematoriumVisualLayers.cs
+  MorgueVisualLayers.cs
+MouseRotator/MouseRotatorSystem.cs
+Movement/
+ Components/EyeCursorOffsetComponent.cs
+ Systems/
+  ClientSpriteMovementSystem.cs
+  ContentEyeSystem.cs
+  EyeCursorOffsetSystem.cs
+  FloorOcclusionSystem.cs
+  JetpackSystem.cs
+  MobCollisionSystem.cs
+NameIdentifier/NameIdentifierSystem.cs
+NetworkConfigurator/
+ NetworkConfiguratorActiveLinkOverlayComponent.cs
+ NetworkConfiguratorBoundUserInterface.cs
+ NetworkConfiguratorConfigurationMenu.xaml.cs
+ NetworkConfiguratorDeviceList.xaml.cs
+ NetworkConfiguratorLinkMenu.xaml.cs
+ NetworkConfiguratorLinkOverlay.cs
+ NetworkConfiguratorListMenu.xaml.cs
+ Systems/
+  DeviceListSystem.cs
+  NetworkConfiguratorSystem.cs
+Ninja/Systems/
+ ItemCreatorSystem.cs
+ NinjaGlovesSystem.cs
+ NinjaSuitSystem.cs
+ NinjaSystem.cs
+ SpiderChargeSystem.cs
+NodeContainer/
+ NodeContainerSystem.cs
+ NodeGroupSystem.cs
+ NodeVisCommand.cs
+ NodeVisualizationOverlay.cs
+NPC/HTN/
+ HTNComponent.cs
+ HTNOverlay.cs
+ HTNSystem.cs
+NPC/
+ NPCComponent.cs
+ NPCEui.cs
+ NPCSteeringComponent.cs
+ NPCSteeringSystem.cs
+ NPCWindow.xaml.cs
+ PathfindingSystem.cs
+ ShowHTNCommand.cs
+Nuke/
+ NukeBoundUserInterface.cs
+ NukeMenu.xaml.cs
+NukeOps/
+ WarDeclaratorBoundUserInterface.cs
+ WarDeclaratorWindow.xaml.cs
+Nutrition/EntitySystems/
+ ClientFoodSequenceSystem.cs
+ CreamPiedSystem.cs
+ InfantSystem.cs
+obj/Debug/
+ .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+ Content.Client.AssemblyInfo.cs
+Objectives/Systems/ObjectivesSystem.cs
+Options/
+ OptionsVisualizerComponent.cs
+ OptionsVisualizerSystem.cs
+ UI/
+  EscapeMenu.xaml.cs
+  OptionColorSlider.xaml.cs
+  OptionDropDown.xaml.cs
+  OptionSlider.xaml.cs
+  OptionsMenu.xaml.cs
+  OptionsTabControlRow.xaml.cs
+  Tabs/
+   AccessibilityTab.xaml.cs
+   AdminOptionsTab.xaml.cs
+   AudioTab.xaml.cs
+   ExtraTab.xaml.cs
+   GraphicsTab.xaml.cs
+   KeyRebindTab.xaml.cs
+   MiscTab.xaml.cs
+Orbit/OrbitVisualsSystem.cs
+Outline/
+ InteractionOutlineSystem.cs
+ TargetOutlineSystem.cs
+Overlays/
+ BlackAndWhiteOverlay.cs
+ BlackAndWhiteOverlaySystem.cs
+ EntityHealthBarOverlay.cs
+ EquipmentHudSystem.cs
+ NoirOverlay.cs
+ NoirOverlaySystem.cs
+ ShowCriminalRecordIconsSystem.cs
+ ShowHealthBarsSystem.cs
+ ShowHealthIconsSystem.cs
+ ShowHungerIconsSystem.cs
+ ShowJobIconsSystem.cs
+ ShowMindShieldIconsSystem.cs
+ ShowSyndicateIconsSystem.cs
+ ShowThirstIconsSystem.cs
+ StencilOverlay.cs
+ StencilOverlay.RestrictedRange.cs
+ StencilOverlay.Weather.cs
+ StencilOverlaySystem.cs
+Paper/
+ EnvelopeSystem.cs
+ UI/
+  PaperBoundUserInterface.cs
+  PaperSheetlet.cs
+  PaperVisualizerSystem.cs
+  PaperVisualsComponent.cs
+  PaperWindow.xaml.cs
+  StampCollection.xaml.cs
+  StampLabel.xaml.cs
+  StampWidget.xaml.cs
+Parallax/
+ BiomeDebugOverlay.cs
+ BiomeSystem.cs
+ Commands/ShowBiomeCommand.cs
+ Data/
+  GeneratedParallaxTextureSource.cs
+  ImageParallaxTextureSource.cs
+  IParallaxTextureSource.cs
+  ParallaxLayerConfig.cs
+  ParallaxPrototype.cs
+ Managers/
+  GeneratedParallaxCache.cs
+  IParallaxManager.cs
+  ParallaxManager.cs
+ ParallaxControl.cs
+ ParallaxGenerator.cs
+ ParallaxLayerPrepared.cs
+ ParallaxOverlay.cs
+ ParallaxSystem.cs
+ParticleAccelerator/
+ ParticleAcceleratorPartVisualizerComponent.cs
+ ParticleAcceleratorPartVisualizerSystem.cs
+ UI/
+  ParticleAcceleratorBoundUserInterface.cs
+  ParticleAcceleratorControlMenu.xaml.cs
+PDA/
+ PdaBorderColorComponent.cs
+ PdaBoundUserInterface.cs
+ PdaMenu.xaml.cs
+ PdaNavigationButton.xaml.cs
+ PdaProgramItem.xaml.cs
+ PdaSettingsButton.xaml.cs
+ PdaSheetlet.cs
+ PdaSystem.cs
+ PdaVisualizerSystem.cs
+ PdaVisualsComponent.cs
+ PdaWindow.xaml.cs
+ Ringer/
+  RingerBoundUserInterface.cs
+  RingerSystem.cs
+  RingtoneMenu.xaml.cs
+Physics/Controllers/
+ ConveyorController.cs
+ MoverController.cs
+Physics/
+ JointVisualsOverlay.cs
+ JointVisualsSystem.cs
+Pinpointer/
+ NavMapSystem.cs
+ NavMapSystem.Regions.cs
+ PinpointerSystem.cs
+ UI/
+  NavMapBeaconBoundUserInterface.cs
+  NavMapBeaconWindow.xaml.cs
+  NavMapControl.cs
+  StationMapBeaconControl.xaml.cs
+  StationMapBoundUserInterface.cs
+  StationMapWindow.xaml.cs
+Placement/Modes/WallmountLight.cs
+Players/
+ PlayerSystem.cs
+ PlayTimeTracking/JobRequirementsManager.cs
+ RateLimiting/PlayerRateLimitManager.cs
+Playtime/ClientsidePlaytimeTrackingManager.cs
+PneumaticCannon/PneumaticCannonSystem.cs
+Pointing/Components/
+ PointingArrowComponent.cs
+ RoguePointingArrowComponent.cs
+Pointing/
+ PointingSystem.cs
+ PointingSystem.Visualizer.cs
+Points/PointSystem.cs
+Polymorph/Systems/ChameleonProjectorSystem.cs
+Popups/
+ PopupOverlay.cs
+ PopupSystem.cs
+ PopupUIController.cs
+Power/
+ ActivatableUIRequiresPowerSystem.cs
+ APC/
+  ApcBoundUserInterface.cs
+  ApcVisualizerComponent.cs
+  ApcVisualizerSystem.cs
+  UI/ApcMenu.xaml.cs
+ Battery/
+  BatteryBoundUserInterface.cs
+  BatteryMenu.xaml.cs
+ Components/ApcPowerReceiverComponent.cs
+ EntitySystems/
+  BatterySystem.cs
+  PowerNetSystem.cs
+  PowerReceiverSystem.cs
+  StaticPowerSystem.cs
+ Generation/Teg/
+  TegCirculatorComponent.cs
+  TegSystem.cs
+ Generator/
+  GeneratorWindow.xaml.cs
+  PortableGeneratorBoundUserInterface.cs
+  PowerSwitchableSystem.cs
+ PowerCharge/
+  PowerChargeBoundUserInterface.cs
+  PowerChargeComponent.cs
+  PowerChargeWindow.xaml.cs
+ PowerMonitoringConsoleBoundUserInterface.cs
+ PowerMonitoringConsoleNavMapControl.cs
+ PowerMonitoringWindow.xaml.cs
+ PowerMonitoringWindow.xaml.Widgets.cs
+ SMES/
+  SmesComponent.cs
+  SmesSystem.cs
+ SolarControlWindow.xaml.cs
+ Visualizers/
+  CableVisualizerComponent.cs
+  CableVisualizerSystem.cs
+  PowerDeviceVisuals.cs
+PowerCell/
+ PowerCellVisualLayers.cs
+ PowerChargerVisualizerComponent.cs
+ PowerChargerVisualizerSystem.cs
+Program.cs
+Projectiles/ProjectileSystem.cs
+Radiation/Overlays/
+ RadiationDebugOverlay.cs
+ RadiationPulseOverlay.cs
+Radiation/Systems/
+ GeigerSystem.cs
+ RadiationSystem.cs
+Radiation/UI/GeigerItemControl.cs
+Radio/EntitySystems/
+ HeadsetSystem.cs
+ RadioDeviceSystem.cs
+Radio/Ui/
+ IntercomBoundUserInterface.cs
+ IntercomMenu.xaml.cs
+RatKing/RatKingSystem.cs
+RCD/
+ AlignRCDConstruction.cs
+ RCDConstructionGhostSystem.cs
+ RCDMenuBoundUserInterface.cs
+Remotes/
+ Systems/DoorRemoteSystem.cs
+ UI/
+  DoorRemoteBoundUserInterface.cs
+  DoorRemoteStatusControl.cs
+Replay/
+ ContentReplayPlaybackManager.cs
+ LoadReplayJob.cs
+ ReplayConGroup.cs
+ ReplayToggleScreenshotModeCommand.cs
+ Spectator/
+  ReplaySpectatorComponent.cs
+  ReplaySpectatorSystem.Blockers.cs
+  ReplaySpectatorSystem.cs
+  ReplaySpectatorSystem.Movement.cs
+  ReplaySpectatorSystem.Position.cs
+  ReplaySpectatorSystem.Spectate.cs
+ UI/Loading/
+  LoadingScreen.cs
+  LoadingScreenControl.xaml.cs
+  ReplayLoadingFailed.cs
+  ReplayLoadingFailedControl.xaml.cs
+ UI/
+  ReplayGhostState.cs
+  ReplaySpectateEntityState.cs
+Research/
+ ResearchStealerSystem.cs
+ ResearchSystem.cs
+ UI/
+  DiskConsoleBoundUserInterface.cs
+  DiskConsoleMenu.xaml.cs
+  MiniTechnologyCardControl.xaml.cs
+  ResearchClientBoundUserInterface.cs
+  ResearchClientServerSelectionMenu.xaml.cs
+  ResearchConsoleBoundUserInterface.cs
+  ResearchConsoleMenu.xaml.cs
+  TechnologyCardControl.xaml.cs
+Resources/ResourceCacheExtensions.cs
+Revenant/
+ CorporealSystem.cs
+ RevenantOverloadedLightsSystem.cs
+ RevenantSystem.cs
+Revolutionary/
+ RevolutionarySystem.cs
+ UI/
+  DeconvertedEui.cs
+  DeconvertedMenu.xaml.cs
+RichText/UserFormattableTags.cs
+Robotics/
+ Systems/RoboticsConsoleSystem.cs
+ UI/
+  RoboticsConsoleBoundUserInterface.cs
+  RoboticsConsoleWindow.xaml.cs
+Roles/
+ JobSystem.cs
+ RoleCodewordSystem.cs
+ RoleSystem.cs
+Rotation/RotationVisualizerSystem.cs
+RoundEnd/
+ RoundEndSummaryUIController.cs
+ RoundEndSummaryWindow.cs
+Salvage/
+ FultonSystem.cs
+ RestrictedRangeSystem.cs
+ SalvageExpeditionComponent.cs
+ SalvageSystem.cs
+ UI/
+  JobEntry.xaml.cs
+  OfferingWindow.xaml.cs
+  OfferingWindowOption.xaml.cs
+  SalvageExpeditionConsoleBoundUserInterface.cs
+  SalvageJobBoardBoundUserInterface.cs
+  SalvageJobBoardMenu.xaml.cs
+  SalvageMagnetBoundUserInterface.cs
+Sandbox/SandboxSystem.cs
+Screenshot/ScreenshotHook.cs
+Security/
+ GenpopSystem.cs
+ Ui/
+  GenpopLockerBoundUserInterface.cs
+  GenpopLockerMenu.xaml.cs
+SensorMonitoring/SensorMonitoringWindow.xaml.cs
+Sericulture/SericultureSystem.cs
+Shuttles/BUI/
+ EmergencyConsoleBoundUserInterface.cs
+ IFFConsoleBoundUserInterface.cs
+ RadarConsoleBoundUserInterface.cs
+ ShuttleConsoleBoundUserInterface.cs
+Shuttles/
+ Commands/ShowEmergencyShuttleCommand.cs
+ FtlArrivalOverlay.cs
+ ShuttleConsoleComponent.cs
+ Systems/
+  DockingSystem.cs
+  EmergencyShuttleSystem.cs
+  RadarConsoleSystem.cs
+  ShuttleConsoleSystem.cs
+  ShuttleSystem.Console.cs
+  ShuttleSystem.cs
+  ShuttleSystem.EmergencyConsole.cs
+ ThrusterComponent.cs
+ ThrusterSystem.cs
+ UI/
+  BaseShuttleControl.xaml.cs
+  DockingScreen.xaml.cs
+  DockObject.xaml.cs
+  EmergencyConsoleWindow.xaml.cs
+  IFFConsoleWindow.xaml.cs
+  MapScreen.xaml.cs
+  NavScreen.xaml.cs
+  RadarConsoleWindow.xaml.cs
+  ShuttleConsoleWindow.xaml.cs
+  ShuttleDockControl.xaml.cs
+  ShuttleMapControl.xaml.cs
+  ShuttleNavControl.xaml.cs
+Silicons/Borgs/
+ BorgBoundUserInterface.cs
+ BorgMenu.xaml.cs
+ BorgModuleControl.xaml.cs
+ BorgSelectTypeMenu.xaml.cs
+ BorgSelectTypeUserInterface.cs
+ BorgSwitchableTypeSystem.cs
+ BorgSystem.Battery.cs
+ BorgSystem.cs
+ BorgVoiceBoundUserInterface.cs
+ BorgVoiceWindow.cs
+Silicons/
+ Bots/HugBotSystem.cs
+ Laws/SiliconLawEditUi/
+  SiliconLawContainer.xaml.cs
+  SiliconLawEui.cs
+  SiliconLawUi.xaml.cs
+ Laws/
+  SiliconLawSystem.cs
+  Ui/
+   LawDisplay.xaml.cs
+   SiliconLawBoundUserInterface.cs
+   SiliconLawMenu.xaml.cs
+ StationAi/
+  StationAiBoundUserInterface.cs
+  StationAiCustomizationBoundUserInterface.cs
+  StationAiCustomizationMenu.xaml.cs
+  StationAiFixerConsoleBoundUserInterface.cs
+  StationAiFixerConsoleConfirmationDialog.xaml.cs
+  StationAiFixerConsoleSystem.cs
+  StationAiFixerConsoleWindow.xaml.cs
+  StationAiOverlay.cs
+  StationAiSystem.Airlock.cs
+  StationAiSystem.cs
+  StationAiSystem.Light.cs
+Singularity/
+ SingularityOverlay.cs
+ Systems/
+  EmitterSystem.cs
+  EventHorizonSystem.cs
+  SingularityGeneratorSystem.cs
+  SingularitySystem.cs
+ Visualizers/
+  RadiationCollectorComponent.cs
+  RadiationCollectorSystem.cs
+SmartFridge/
+ SmartFridgeBoundUserInterface.cs
+ SmartFridgeItem.xaml.cs
+ SmartFridgeMenu.xaml.cs
+ SmartFridgeUISystem.cs
+Smoking/
+ BurnStateVisualizerSystem.cs
+ BurnStateVisualsComponent.cs
+Sound/EmitSoundSystem.cs
+Speech/EntitySystems/
+ RatvarianLanguageSystem.cs
+ SlurredSystem.cs
+ StutteringSystem.cs
+SprayPainter/
+ SprayPainterSystem.cs
+ UI/
+  SprayPainterBoundUserInterface.cs
+  SprayPainterDecals.xaml.cs
+  SprayPainterGroup.xaml.cs
+  SprayPainterWindow.xaml.cs
+Sprite/
+ ContentSpriteSystem.cs
+ FadingSpriteComponent.cs
+ RandomSpriteSystem.cs
+ ScaleVisualsSystem.cs
+ SpriteFadeSystem.cs
+SSDIndicator/SSDIndicatorSystem.cs
+Stack/
+ StackStatusControl.cs
+ StackSystem.cs
+Station/
+ StationSpawningSystem.cs
+ StationSystem.cs
+StationRecords/
+ GeneralRecord.xaml.cs
+ GeneralStationRecordConsoleBoundUserInterface.cs
+ GeneralStationRecordConsoleWindow.xaml.cs
+ StationRecordsSystem.cs
+StatusIcon/
+ StatusIconOverlay.cs
+ StatusIconSystem.cs
+Stealth/StealthSystem.cs
+Sticky/Visualizers/StickyVisualizerSystem.cs
+Storage/
+ Components/StorageContainerVisualsComponent.cs
+ StorageBoundUserInterface.cs
+ Systems/
+  EntityStorageSystem.cs
+  ItemCounterSystem.cs
+  ItemMapperSystem.cs
+  StorageContainerVisualsSystem.cs
+  StorageSystem.cs
+ Visualizers/
+  EntityStorageVisualizerSystem.cs
+  EntityStorageVisualsComponent.cs
+  StorageFillVisualizerSystem.cs
+Store/Ui/
+ StoreBoundUserInterface.cs
+ StoreListingControl.xaml.cs
+ StoreMenu.xaml.cs
+ StoreWithdrawWindow.xaml.cs
+Strip/
+ StrippableSystem.cs
+ StrippingMenu.cs
+Stunnable/
+ StunbatonSystem.cs
+ StunSystem.cs
+Stylesheets/
+ BaseStylesheet.cs
+ BaseStylesheet.Fonts.cs
+ BaseStylesheet.Resources.cs
+ BaseStylesheet.Sheetlets.cs
+ BaseStylesheet.Textures.cs
+ Colorspace/ColorExtensions.cs
+ CommonSheetletAttribute.cs
+ CommonStylesheet.cs
+ Fonts/
+  FontKind.cs
+  NotoFontFamilyStack.cs
+ ISheetletConfig.cs
+ IStyleResources.cs
+ IStylesheetManager.cs
+ NTSheetlets/NanoHeadingSheetlet.cs
+ Palette/
+  ColorPalette.cs
+  Palettes.cs
+  StatusPalette.cs
+ PalettedStylesheet.cs
+ PalettedStylesheet.Palettes.cs
+ Sheetlet.cs
+ SheetletConfigs/
+  IButtonConfig.cs
+  ICheckboxConfig.cs
+  IIconConfig.cs
+  ILineEditConfig.cs
+  INanoHeadingConfig.cs
+  IPanelConfig.cs
+  IPlaceholderConfig.cs
+  IRadialMenuConfig.cs
+  ISliderConfig.cs
+  IStripebackConfig.cs
+  ITabContainerConfig.cs
+  ITooltipConfig.cs
+  IWindowConfig.cs
+ Sheetlets/
+  ButtonSheetlet.cs
+  CheckboxSheetlet.cs
+  ConfirmButtonSheetlet.cs
+  DividersSheetlet.cs
+  FancyTreeSheetlet.cs
+  HLineSheetlet.cs
+  Hud/
+   ActionSheetlet.cs
+   ChatGameScreenSheetlet.cs
+   ChatSheetlet.cs
+   ContextMenuSheetlet.cs
+   ExamineButtonSheetlet.cs
+   ItemStatusSheetlet.cs
+   TooltipSheetlet.cs
+  ItemListSheetlet.cs
+  LabelSheetlet.cs
+  LineEditSheetlet.cs
+  ListContainerSheetlet.cs
+  MenuButtonSheetlet.cs
+  MonotoneButtonSheetlet.cs
+  MonotoneCheckBoxSheetlet.cs
+  OptionButtonSheetlet.cs
+  PanelSheetlet.cs
+  PlaceholderSheetlet.cs
+  ProgressBarSheetlet.cs
+  RadialMenuSheetlet.cs
+  ScrollbarSheetlet.cs
+  SliderSheetlet.cs
+  StripebackSheetlet.cs
+  TabContainerSheetlet.cs
+  TextSheetlet.cs
+  WindowSheetlet.cs
+ StyleBase.cs
+ StyleClass.cs
+ StyleNano.cs
+ StyleProperties.cs
+ StylesheetHelpers.cs
+ StylesheetManager.cs
+ Stylesheets/
+  NanotrasenStylesheet.cs
+  NanotrasenStylesheet.Palettes.cs
+  SystemStylesheet.cs
+  SystemStylesheet.Palettes.cs
+ StyleSpace.cs
+SubFloor/
+ SubFloorHideSystem.cs
+ TrayRevealedComponent.cs
+ TrayScannerSystem.cs
+ TrayScanRevealSystem.cs
+SurveillanceCamera/
+ ActiveSurveillanceCameraMonitor.cs
+ SurveillanceCameraMonitorSystem.cs
+ SurveillanceCameraSystem.cs
+ SurveillanceCameraVisualsComponent.cs
+ SurveillanceCameraVisualsSystem.cs
+ UI/
+  SurveillanceCameraMonitorBoundUi.cs
+  SurveillanceCameraMonitorWindow.xaml.cs
+  SurveillanceCameraNavMapControl.cs
+  SurveillanceCameraSetupBoundUi.cs
+  SurveillanceCameraSetupWindow.xaml.cs
+Tabletop/
+ TabletopSystem.cs
+ UI/TabletopWindow.xaml.cs
+Telephone/TelephoneSystem.cs
+Teleportation/
+ PortalSystem.cs
+ TeleportLocationsSystem.cs
+ Ui/
+  TeleportLocationsBoundUserInterface.cs
+  TeleportMenu.xaml.cs
+Temperature/Systems/
+ EntityHeaterSystem.cs
+ TemperatureSystem.cs
+TextScreen/
+ TextScreenSystem.cs
+ TextScreenTimerComponent.cs
+ TextScreenVisualsComponent.cs
+Thief/
+ ThiefBackpackBoundUserInterface.cs
+ ThiefBackpackMenu.xaml.cs
+ ThiefBackpackSet.xaml.cs
+Throwing/ThrownItemVisualizerSystem.cs
+Tips/
+ TippyUI.xaml.cs
+ TippyUIController.cs
+ TipsSystem.cs
+Toggleable/
+ ToggleableVisualsComponent.cs
+ ToggleableVisualsSystem.cs
+Tools/
+ Components/MultipleToolComponent.cs
+ ToolSystem.cs
+ UI/WelderStatusControl.cs
+ Visualizers/WeldableVisualizerSystem.cs
+Traits/ParacusiaSystem.cs
+Trigger/
+ Components/TimerTriggerVisualizerComponent.cs
+ Systems/
+  LightBehaviorOnTriggerSystem.cs
+  ProximityTriggerAnimationSystem.cs
+  ReleaseGasOnTriggerSystem.cs
+  TimerTriggerVisualizerSystem.cs
+TurretController/
+ DeployableTurretControllerSystem.cs
+ TurretControllerWindow.xaml.cs
+ TurretControllerWindowBoundUserInterface.cs
+Turrets/DeployableTurretSystem.cs
+UserInterface/
+ BoundKeyHelpers.cs
+ BuiPredictionState.cs
+ BuiPreTickUpdateSystem.cs
+ ButtonHelpers.cs
+ ControlExtensions/ControlExtension.cs
+ Controls/
+  ClipControl.cs
+  ConfirmButton.cs
+  DatePicker.xaml.cs
+  DialogWindow.xaml.cs
+  DirectionIcon.cs
+  FancyTree/
+   FancyTree.xaml.cs
+   TreeItem.xaml.cs
+   TreeLine.cs
+  FancyWindow.xaml.cs
+  HighDivider.cs
+  HLine.cs
+  HSpacer.cs
+  ListContainer.cs
+  MainViewport.cs
+  MapGridControl.xaml.cs
+  MenuButton.cs
+  MonotoneButton.cs
+  MonotoneCheckBox.cs
+  NanoHeading.cs
+  OnOffButton.xaml.cs
+  Placeholder.cs
+  ProgressTextureRect.cs
+  RadialContainer.cs
+  RadialMenu.cs
+  SearchListContainer.cs
+  SimpleRadialMenu.xaml.cs
+  SlotButton.cs
+  SlotControl.cs
+  SplitBar.xaml.cs
+  StripeBack.cs
+  TableContainer.cs
+  VSpacer.cs
+ Fragments/
+  UIFragment.cs
+  UiFragmentComponent.cs
+ IEntityControl.cs
+ InputCoalescer.cs
+ RichText/
+  MonoTag.cs
+  ScrambleTag.cs
+ Screens/
+  DefaultGameScreen.xaml.cs
+  InGameScreen.cs
+  ScreenType.cs
+  SeparatedChatGameScreen.xaml.cs
+ StatsWindow.xaml.cs
+ StatValuesEui.cs
+ Systems/Actions/
+  ActionUIController.cs
+  Controls/
+   ActionButton.cs
+   ActionButtonContainer.cs
+   ActionPageButtons.xaml.cs
+  Widgets/ActionsBar.xaml.cs
+  Windows/ActionsWindow.xaml.cs
+ Systems/
+  Admin/AdminUIController.cs
+  Alerts/
+   AlertsUIController.cs
+   Controls/AlertControl.cs
+   Widgets/AlertsUI.xaml.cs
+  Atmos/GasTank/
+   GasTankBoundUserInterface.cs
+   GasTankWindow.cs
+  Bwoink/AHelpUIController.cs
+  Character/
+   CharacterUIController.cs
+   Controls/CharacterObjectiveControl.xaml.cs
+   Windows/CharacterWindow.xaml.cs
+  Chat/
+   ChatUIController.cs
+   ChatUIController.Highlighting.cs
+   ChatWindow.xaml.cs
+   ChatWindowCommand.cs
+   Controls/
+    ChannelFilterButton.cs
+    ChannelFilterCheckbox.cs
+    ChannelFilterPopup.xaml.cs
+    ChannelSelectorButton.cs
+    ChannelSelectorItemButton.cs
+    ChannelSelectorPopup.cs
+    ChatInputBox.xaml.cs
+    ChatPopupButton.cs
+   Widgets/
+    ChatBox.xaml.cs
+    ResizableChatBox.cs
+  CloseWindow/
+   CloseAllWindowsUIController.cs
+   CloseRecentWindowUIController.cs
+  Crafting/CraftingUIController.cs
+  DamageOverlays/
+   DamageOverlayUiController.cs
+   Overlays/DamageOverlay.cs
+  DecalPlacer/DecalPlacerUIController.cs
+  Emotes/EmotesUIController.cs
+  EscapeMenu/
+   ChangelogUIController.cs
+   EscapeContextUIController.cs
+   EscapeUIController.cs
+   OptionsUIController.cs
+  Gameplay/GameplayStateLoadController.cs
+  Ghost/Controls/
+   GhostTargetWindow.xaml.cs
+   Roles/
+    GhostRoleButtonsBox.xaml.cs
+    GhostRoleEntryButtons.xaml.cs
+    GhostRoleInfoBox.xaml.cs
+    GhostRoleRulesWindow.xaml.cs
+    GhostRolesEui.cs
+    GhostRolesWindow.xaml.cs
+    MakeGhostRoleEui.cs
+    MakeGhostRoleWindow.xaml.cs
+  Ghost/
+   GhostUIController.cs
+   Widgets/GhostGui.xaml.cs
+  Guidebook/GuidebookUIController.cs
+  Hands/Controls/
+   HandButton.cs
+   HandsContainer.cs
+  Hands/HandsUIController.cs
+  Hotbar/
+   HotbarUIController.cs
+   Widgets/HotbarGui.xaml.cs
+  Info/InfoUIController.cs
+  Inventory/Controls/
+   InventoryDisplay.cs
+   ItemSlotButtonContainer.cs
+   ItemSlotUIContainer.cs
+   ItemStatusPanel.xaml.cs
+  Inventory/
+   InventoryUIController.cs
+   Widgets/InventoryGui.xaml.cs
+   Windows/StrippingWindow.xaml.cs
+  MenuBar/
+   GameTopMenuBarUIController.cs
+   Widgets/GameTopMenuBar.xaml.cs
+  Objectives/Controls/
+   ObjectiveBriefingControl.xaml.cs
+   ObjectiveConditionsControl.xaml.cs
+  ProgressColorSystem.cs
+  Sandbox/
+   SandboxUIController.cs
+   Windows/SandboxWindow.xaml.cs
+  Storage/Controls/
+   ItemGridPiece.cs
+   StorageWindow.cs
+  Storage/StorageUIController.cs
+  Viewport/ViewportUIController.cs
+  Vote/VoteUIController.cs
+ XamlExtensions/TextureExtension.cs
+VendingMachines/UI/
+ VendingMachineItem.xaml.cs
+ VendingMachineMenu.xaml.cs
+VendingMachines/
+ VendingMachineBoundUserInterface.cs
+ VendingMachineSystem.cs
+Verbs/UI/
+ ConfirmationMenuElement.cs
+ VerbMenuElement.cs
+ VerbMenuUIController.cs
+Verbs/VerbSystem.cs
+Viewport/
+ IMainViewport.cs
+ ScalingViewport.cs
+ ViewportExt.cs
+ ViewportManager.cs
+VoiceMask/
+ VoiceMaskBoundUserInterface.cs
+ VoiceMaskNameChangeWindow.xaml.cs
+Voting/UI/
+ VoteCallMenu.xaml.cs
+ VoteCallMenuButton.cs
+ VotePopup.xaml.cs
+Voting/
+ VoteManager.cs
+ VotingSystem.cs
+Wall/
+ ReinforcedWallVisuals.cs
+ ShuttleWallVisuals.cs
+ WallmountDebugOverlay.cs
+Weapons/
+ Marker/DamageMarkerSystem.cs
+ Melee/
+  Components/WeaponArcVisualsComponent.cs
+  MeleeArcOverlay.cs
+  MeleeSpreadCommand.cs
+  MeleeWeaponSystem.cs
+  MeleeWeaponSystem.Effects.cs
+  UI/
+   MeleeSpeechBoundUserInterface.cs
+   MeleeSpeechWindow.xaml.cs
+ Misc/
+  GrapplingGunSystem.cs
+  TetherGunOverlay.cs
+  TetherGunSystem.cs
+ Ranged/
+  Commands/ShowSpreadCommand.cs
+  Components/
+   AmmoCounterComponent.cs
+   MagazineVisualsComponent.cs
+   SpentAmmoVisualsComponent.cs
+  GunSpreadOverlay.cs
+  ItemStatus/BulletRender.cs
+  Systems/
+   FlyBySoundSystem.cs
+   GunSystem.AmmoCounter.cs
+   GunSystem.Ballistic.cs
+   GunSystem.BasicEntity.cs
+   GunSystem.Battery.cs
+   GunSystem.ChamberMagazine.cs
+   GunSystem.cs
+   GunSystem.Magazine.cs
+   GunSystem.MagazineVisuals.cs
+   GunSystem.Revolver.cs
+   GunSystem.SpentAmmo.cs
+Weather/WeatherSystem.cs
+Wieldable/WieldableSystem.cs
+Wires/UI/
+ WiresBoundUserInterface.cs
+ WiresMenu.cs
+Wires/
+ Visualizers/WiresVisualizerSystem.cs
+ WiresSystem.cs
+ WiresVisualsComponent.cs
+Xenoarchaeology/
+ Artifact/XenoArtifactSystem.cs
+ Equipment/
+  ArtifactAnalyzerSystem.cs
+  ArtifactCrusherSystem.cs
+ Ui/
+  AnalysisConsoleBoundUserInterface.cs
+  AnalysisConsoleMenu.xaml.cs
+  NodeScannerBoundUserInterface.cs
+  NodeScannerDisplay.xaml.cs
+  XenoArtifactGraphControl.xaml.cs
+ XenoArtifacts/RandomArtifactSpriteSystem.cs
+Zombies/ZombieSystem.cs
+_RMC14/
+ Explosion/RMCExplosionShockWaveOverlay.cs
+ Xenonids/Screech/RMCXenoScreechShockWaveOverlay.cs
+ _Sunrise/Explosion/
+  ClientExplosionShockWaveSystem.cs
+  RMCExplosionSystem.cs
+_Starlight/
+ ChoiceControl.xaml.cs
+ Combat/Effects/EntitySystems/ArmorSparkEffectSystem.cs
+ ItemSwitch/ItemSystem.cs
+ Knockback/KnockbackSystem.cs
+ Medical/
+  Limbs/LimbSystem.cs
+  Surgery/
+   CustomLimbVisualizerSystem.cs
+   SurgeryBui.cs
+   SurgeryStepButton.xaml.cs
+   SurgerySystem.cs
+   SurgeryWindow.xaml.cs
+ Weapon/WeaponDismantleOnShootSystem.cs
+_Sunrise/
+ Abilities/Milira/WingFlightVisualizerSystem.cs
+ Administration/UI/CustomControls/SunriseAdminLogLabel.cs
+ Animations/ContainerInteraction/
+  ContainerInteractionAnimationVisualsComponent.cs
+  ContainerInteractionAnimationVisualsSystem.cs
+ Animations/EmoteAnimationSystem.cs
+ Anomaly/AnomalyAutoInjectorVisualizerSystem.cs
+ AntagObjectives/AntagObjectivesSystem.cs
+ Antags/Abductor/
+  AbductorCameraConsoleBui.cs
+  AbductorCameraConsoleWindow.xaml.cs
+  AbductorConsoleBui.cs
+  AbductorConsoleWindow.xaml.cs
+  AbductorSystem.cs
+ AssaultOps/
+  AssaultOps/AssaultOpsSystem.cs
+  Icarus/
+   IcarusTerminalBoundUserInterface.cs
+   IcarusTerminalWindow.xaml.cs
+ BloodCult/
+  CultPentagramSystem.cs
+  Items/VeilShifter/
+   VeilVisualizerSystem.cs
+   VeilVisualsComponent.cs
+  Items/VoidTorch/
+   VoidTorchVisualizerSystem.cs
+   VoidTorchVisualsComponent.cs
+  Narsie/
+   NarsieLayer.cs
+   NarsieVisualizer.cs
+  PentagramComponent.cs
+  Pylon/
+   PylonVisualizerSystem.cs
+   PylonVisualsComponent.cs
+  ShowCultHudSystem.cs
+  Structures/
+   CultCraftStructureVisualizerSystem.cs
+   CultCraftStructureVisualsComponent.cs
+  UI/Altar/
+   AltarBUI.cs
+   AltarListingControl.xaml.cs
+   AltarWindow.xaml.cs
+  UI/
+   BloodSpellSelector/BloodSpellSelectorBUI.cs
+   ConstructSelector/ConstructSelectorBui.cs
+   CountSelector/
+    CountSelectorBUI.cs
+    CountSelectorWindow.xaml.cs
+   CultistFactory/CultistFactoryBUI.cs
+   ListViewSelector/
+    ListViewSelectorBUI.cs
+    ListViewSelectorWindow.xaml.cs
+   NameSelector/
+    NameSelectorBUI.cs
+    NameSelectorWindow.xaml.cs
+   SpellSelector/SpellSelectorBUI.cs
+   StructureRadial/StructureCraftBoundUserInterface.cs
+   SummonCultistList/
+    SummonCultistListWindow.xaml.cs
+    SummonCultistListWindowBUI.cs
+   TeleportRunesList/
+    TeleportRunesListWindow.xaml.cs
+    TeleportRunesListWindowBUI.cs
+   TeleportSpell/TeleportSpellEui.cs
+   Torch/
+    TorchWindow.xaml.cs
+    TorchWindowBUI.cs
+ Boss/
+  BUI/HellSpawnArenaConsoleBoundUserInterface.cs
+  Systems/
+   HellSpawnArenaSystem.cs
+   HellSpawnInvincibilitySystem.cs
+  UI/HellSpawnArenaConsoleWindow.xaml.cs
+ CarpQueen/
+  CarpEggVisualizerSystem.cs
+  CarpServantVisualizerSystem.cs
+ CartridgeLoader/Cartridges/
+  AddUserDialog.xaml.cs
+  CreateGroupDialog.xaml.cs
+  MessagePanel.xaml.cs
+  MessengerUi.cs
+  MessengerUiFragment.xaml.cs
+  NavigatorUi.cs
+  NavigatorUiFragment.xaml.cs
+  PhotoCaptureOverlay.cs
+  PhotoCartridgeClientSystem.cs
+  PhotoOverlaySystem.cs
+  PhotoUi.cs
+  PhotoUiFragment.xaml.cs
+ Chat/LocTag.cs
+ ChatIcons/
+  PointIconsSystem.cs
+  RadioIconsSystem.cs
+ CloudEmotes/CloudEmoteSystem.cs
+ CodeConsole/
+  CodeConsoleBoundUserInterface.cs
+  CodeConsoleMenu.xaml.cs
+ CommandConsole/
+  CommandConsoleBoundUserInterface.cs
+  CommandConsoleWindow.xaml.cs
+ Contributors/
+  ContributorEntryControl.xaml.cs
+  ContributorsManager.cs
+  ContributorsTop.xaml.cs
+ CopyMachine/
+  CopyMachineBoundUserInterface.cs
+  CopyMachineMenu.xaml.cs
+  CopyMachineSystem.cs
+ DamageOverlay/DamageOverlaySystem.cs
+ Dice/
+  ChangeDiceUserInterface.cs
+  ChangeDiceWindow.cs
+ Disease/
+  DiseaseRoleSystem.cs
+  SickSystem.cs
+  VaccinatorSystem.cs
+ Drugs/RainbowSmoothOverlay.cs
+ Entry/SunriseClientEntry.cs
+ Eye/DarkenedVisionSystem.cs
+ FleshCult/
+  FleshCultistSystem.cs
+  FleshHeartVisualSystem.cs
+ Footprints/FootPrintsVisualizerSystem.cs
+ Ghost/
+  AcceptGhostEUI.cs
+  AcceptGhostWindow.cs
+ GhostTheme/
+  GhostThemeBoundUserInterface.cs
+  GhostThemeMenu.xaml.cs
+  GhostThemeSystem.cs
+ Heartbeat/HeartbeatSystem.Settings.cs
+ HelpChoice/
+  HelpChoiceUIController.cs
+  HelpChoiceWindow.xaml.cs
+ Helpers/SunriseHelpersSystem.cs
+ HyperLink/HyperLinkSystem.cs
+ InteractionsPanel/
+  CustomInteractionEditor.xaml.cs
+  InteractionsUIWindow.xaml.cs
+  InteractionsUIWindowBoundUserInterface.cs
+  Models/
+   CustomInteraction.cs
+   CustomInteractionService.cs
+ Interrogator/InterrogatorSystem.cs
+ IoC/SunriseClientContentIoC.cs
+ Jump/JumpSystem.cs
+ Kitchen/UI/
+  AssemblerBoundUserInterface.cs
+  AssemblerMenu.xaml.cs
+ Latejoin/
+  SRLateJoinGui.xaml.cs
+  SRLateJoinJobButton.xaml.cs
+  StationsListControl.cs
+ MarkingEffectsClient/
+  ColorMarkingEffectUiBuilder.cs
+  GradientMarkingEffectUiBuilder.cs
+  IMarkingEffectUiBuilder.cs
+  MarkingEffectShaders.cs
+  RoughGradientMarkingEffectUiBuilder.cs
+ Medical/CrewMonitoring/
+  SunriseCrewMonitoringBoundUserInterface.cs
+  SunriseCrewMonitoringWindow.xaml.cs
+ MentorHelp/
+  MentorHelpControl.xaml.cs
+  MentorHelpNewTicketDialog.xaml.cs
+  MentorHelpStatisticsDialog.xaml.cs
+  MentorHelpStatisticsUIController.cs
+  MentorHelpSystem.cs
+  MentorHelpUIController.cs
+  MentorHelpWindow.xaml.cs
+  StatisticsEntryControl.xaml.cs
+  TicketEntryControl.xaml.cs
+ Messenger/
+  EmojiSystem.cs
+  EmojiTag.cs
+ Misc/XenoArtifactThrowingAutoInjectorVisualizerSystem.cs
+ Mood/MoodVisualizerSystem.cs
+ Nesting/NestingSystem.cs
+ NetTexturesManager.cs
+ NewLife/
+  NewLifeEui.cs
+  NewLifeWindow.xaml.cs
+ Overlays/
+  BaseVisionOverlay.cs
+  DarkenedVisionOverlay.cs
+  DogVisionOverlay.cs
+  LoveVisionOverlay.cs
+  NightVisionOverlay.cs
+  OverlayZIndexes.cs
+  SaturationScaleOverlay.cs
+  Systems/
+   DogVisionSystem.cs
+   LoveVisionSystem.cs
+   NightVisionSystem.cs
+   SaturationScaleSystem.cs
+ Pacificator/
+  PacificatorBoundUserInterface.cs
+  PacificatorWindow.xaml.cs
+ Paint/PaintVisualizerSystem.cs
+ PDA/PdaAnimationVisualsSystem.cs
+ Pets/
+  LobbyPetPreviewPanel.xaml.cs
+  PetControlBoundUserInterface.cs
+  PetSelectionMenu.xaml.cs
+  PetSelectionSystem.cs
+  PettingSystem.cs
+ Pirate/PirateSystem.cs
+ PlayerCache/PlayerCacheManager.cs
+ Radials/
+  RadialSystem.cs
+  RadialUIController.cs
+ Razor/
+  RazorBoundUserInterface.cs
+  RazorSingleMarkingPicker.xaml.cs
+  RazorSystem.cs
+  RazorWindow.xaml.cs
+ Restrict/RestrictSystem.cs
+ Roadmap/
+  Roadmap.xaml.cs
+  RoadmapItem.xaml.cs
+  RoadmapUIController.cs
+ ScaleSprite/ScaleSpriteSystem.cs
+ ServersHub/
+  ServersHub.xaml.cs
+  ServersHubEntry.xaml.cs
+  ServersHubManager.cs
+  ServersHubUi.xaml.cs
+ Sheetlets/
+  SunriseButtonSheetlets.cs
+  SunriseStyleClass.cs
+ SolutionRegenerationSwitcher/ClientSolutionRegenerationSwitcherSystem.cs
+ SponsorTiers/
+  SponsorTierEntry.xaml.cs
+  SponsorTiers.xaml.cs
+  SponsorTiersUi.xaml.cs
+  SponsorTiersUIController.cs
+ StationRecords/SunriseGeneralRecord.xaml.cs
+ StatsBoard/
+  StatsEntries.xaml.cs
+  StatsEntry.xaml.cs
+ SunriseStanding/StandingStateSystem.cs
+ TapePlayer/
+  TapePlayerBoundUserInterface.cs
+  TapePlayerMenu.xaml.cs
+  TapePlayerSystem.cs
+ ThermalVision/
+  ThermalVisionOverlay.cs
+  ThermalVisionSystem.cs
+  ThroughWallsVisionOverlay.cs
+ Time/TimeSystem.cs
+ TTS/
+  HumanoidProfileEditor.TTS.cs
+  TTSSystem.cs
+ UserActions/Tabs/
+  BaseTabControl.cs
+  EmotesTabControl.cs
+  VerbsTabControl.cs
+ UserActions/
+  UserActionsPanel.cs
+  UserActionUIController.cs
+  UserActionUISystem.cs
+ UserInterface/Controls/
+  CustomColorSelectorSliders.cs
+  MarkingEffectSelectorSliders.cs
+  RichTextButton.cs
+  SunriseSpriteView.cs
+ UserInterface/CustomControls/
+  EmojiPickerWindow.cs
+  PhotoPreviewWindow.cs
+ UserInterface/Radial/
+  RadialButton.xaml.cs
+  RadialContainer.xaml.cs
+  RadialContainerCommandTest.cs
+ UserInterface/RichText/
+  BaseTextureTag.cs
+  CenterTag.cs
+  EntityTextureTag.cs
+  RadioIconTag.cs
+  TextureTag.cs
+ UserInterface/Systems/Ghost/Controls/
+  SunriseGhostTargetWindow.Generation.xaml.cs
+  SunriseGhostTargetWindow.Helpers.xaml.cs
+  SunriseGhostTargetWindow.Search.cs
+  SunriseGhostTargetWindow.xaml.cs
+ UserProfile/UserProfile.xaml.cs
+ Vampire/
+  VampireMutationBoundUserInterface.cs
+  VampireSystem.cs
+ VentCraw/
+  VentCrawableSystem.cs
+  VentCrawVisionSystem.cs
+ Weapons/Ranged/Systems/
+  BatteryWeaponFireModesVisuals.cs
+  BatteryWeaponFireModesVisualSystem.cs
+
+[metadataReferences]
+../
+ Content.Shared.Database/obj/Debug/net10.0/ref/Content.Shared.Database.dll
+ Content.Shared/obj/Debug/ref/Content.Shared.dll
+ RobustToolbox/
+  Avalonia.Base/obj/Debug/net10.0/ref/Avalonia.Base.dll
+  Lidgren.Network/obj/Debug/net10.0/ref/SpaceWizards.Lidgren.Network.dll
+  NetSerializer/NetSerializer/obj/Debug/net10.0/ref/Robust.NetSerializer.dll
+  Robust.Client/obj/Debug/ref/Robust.Client.dll
+  Robust.LoaderApi/Robust.LoaderApi/obj/Debug/net10.0/ref/Robust.LoaderApi.dll
+  Robust.Shared.Maths/obj/Debug/ref/Robust.Shared.Maths.dll
+  Robust.Shared.Scripting/obj/Debug/ref/Robust.Shared.Scripting.dll
+  Robust.Shared/obj/Debug/ref/Robust.Shared.dll
+  Robust.Xaml/bin/Debug/netstandard2.0/Robust.Xaml.dll
+  XamlX/src/
+   XamlX.IL.Cecil/bin/Debug/netstandard2.0/XamlX.IL.Cecil.dll
+   XamlX/bin/Debug/netstandard2.0/XamlX.dll
+ Sunrise/
+  Content.Sunrise.Interfaces.Client/obj/Debug/net10.0/ref/Content.Sunrise.Interfaces.Client.dll
+  Content.Sunrise.Interfaces.Shared/obj/Debug/net10.0/ref/Content.Sunrise.Interfaces.Shared.dll
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.3/ref/net10.0/
+ Microsoft.CSharp.dll
+ Microsoft.VisualBasic.Core.dll
+ Microsoft.VisualBasic.dll
+ Microsoft.Win32.Primitives.dll
+ Microsoft.Win32.Registry.dll
+ mscorlib.dll
+ netstandard.dll
+ System.AppContext.dll
+ System.Buffers.dll
+ System.Collections.Concurrent.dll
+ System.Collections.dll
+ System.Collections.Immutable.dll
+ System.Collections.NonGeneric.dll
+ System.Collections.Specialized.dll
+ System.ComponentModel.Annotations.dll
+ System.ComponentModel.DataAnnotations.dll
+ System.ComponentModel.dll
+ System.ComponentModel.EventBasedAsync.dll
+ System.ComponentModel.Primitives.dll
+ System.ComponentModel.TypeConverter.dll
+ System.Configuration.dll
+ System.Console.dll
+ System.Core.dll
+ System.Data.Common.dll
+ System.Data.DataSetExtensions.dll
+ System.Data.dll
+ System.Diagnostics.Contracts.dll
+ System.Diagnostics.Debug.dll
+ System.Diagnostics.DiagnosticSource.dll
+ System.Diagnostics.FileVersionInfo.dll
+ System.Diagnostics.Process.dll
+ System.Diagnostics.StackTrace.dll
+ System.Diagnostics.TextWriterTraceListener.dll
+ System.Diagnostics.Tools.dll
+ System.Diagnostics.TraceSource.dll
+ System.Diagnostics.Tracing.dll
+ System.dll
+ System.Drawing.dll
+ System.Drawing.Primitives.dll
+ System.Dynamic.Runtime.dll
+ System.Formats.Asn1.dll
+ System.Formats.Tar.dll
+ System.Globalization.Calendars.dll
+ System.Globalization.dll
+ System.Globalization.Extensions.dll
+ System.IO.Compression.Brotli.dll
+ System.IO.Compression.dll
+ System.IO.Compression.FileSystem.dll
+ System.IO.Compression.ZipFile.dll
+ System.IO.dll
+ System.IO.FileSystem.AccessControl.dll
+ System.IO.FileSystem.dll
+ System.IO.FileSystem.DriveInfo.dll
+ System.IO.FileSystem.Primitives.dll
+ System.IO.FileSystem.Watcher.dll
+ System.IO.IsolatedStorage.dll
+ System.IO.MemoryMappedFiles.dll
+ System.IO.Pipelines.dll
+ System.IO.Pipes.AccessControl.dll
+ System.IO.Pipes.dll
+ System.IO.UnmanagedMemoryStream.dll
+ System.Linq.AsyncEnumerable.dll
+ System.Linq.dll
+ System.Linq.Expressions.dll
+ System.Linq.Parallel.dll
+ System.Linq.Queryable.dll
+ System.Memory.dll
+ System.Net.dll
+ System.Net.Http.dll
+ System.Net.Http.Json.dll
+ System.Net.HttpListener.dll
+ System.Net.Mail.dll
+ System.Net.NameResolution.dll
+ System.Net.NetworkInformation.dll
+ System.Net.Ping.dll
+ System.Net.Primitives.dll
+ System.Net.Quic.dll
+ System.Net.Requests.dll
+ System.Net.Security.dll
+ System.Net.ServerSentEvents.dll
+ System.Net.ServicePoint.dll
+ System.Net.Sockets.dll
+ System.Net.WebClient.dll
+ System.Net.WebHeaderCollection.dll
+ System.Net.WebProxy.dll
+ System.Net.WebSockets.Client.dll
+ System.Net.WebSockets.dll
+ System.Numerics.dll
+ System.Numerics.Vectors.dll
+ System.ObjectModel.dll
+ System.Reflection.DispatchProxy.dll
+ System.Reflection.dll
+ System.Reflection.Emit.dll
+ System.Reflection.Emit.ILGeneration.dll
+ System.Reflection.Emit.Lightweight.dll
+ System.Reflection.Extensions.dll
+ System.Reflection.Metadata.dll
+ System.Reflection.Primitives.dll
+ System.Reflection.TypeExtensions.dll
+ System.Resources.Reader.dll
+ System.Resources.ResourceManager.dll
+ System.Resources.Writer.dll
+ System.Runtime.CompilerServices.Unsafe.dll
+ System.Runtime.CompilerServices.VisualC.dll
+ System.Runtime.dll
+ System.Runtime.Extensions.dll
+ System.Runtime.Handles.dll
+ System.Runtime.InteropServices.dll
+ System.Runtime.InteropServices.JavaScript.dll
+ System.Runtime.InteropServices.RuntimeInformation.dll
+ System.Runtime.Intrinsics.dll
+ System.Runtime.Loader.dll
+ System.Runtime.Numerics.dll
+ System.Runtime.Serialization.dll
+ System.Runtime.Serialization.Formatters.dll
+ System.Runtime.Serialization.Json.dll
+ System.Runtime.Serialization.Primitives.dll
+ System.Runtime.Serialization.Xml.dll
+ System.Security.AccessControl.dll
+ System.Security.Claims.dll
+ System.Security.Cryptography.Algorithms.dll
+ System.Security.Cryptography.Cng.dll
+ System.Security.Cryptography.Csp.dll
+ System.Security.Cryptography.dll
+ System.Security.Cryptography.Encoding.dll
+ System.Security.Cryptography.OpenSsl.dll
+ System.Security.Cryptography.Primitives.dll
+ System.Security.Cryptography.X509Certificates.dll
+ System.Security.dll
+ System.Security.Principal.dll
+ System.Security.Principal.Windows.dll
+ System.Security.SecureString.dll
+ System.ServiceModel.Web.dll
+ System.ServiceProcess.dll
+ System.Text.Encoding.CodePages.dll
+ System.Text.Encoding.dll
+ System.Text.Encoding.Extensions.dll
+ System.Text.Encodings.Web.dll
+ System.Text.Json.dll
+ System.Text.RegularExpressions.dll
+ System.Threading.AccessControl.dll
+ System.Threading.Channels.dll
+ System.Threading.dll
+ System.Threading.Overlapped.dll
+ System.Threading.Tasks.Dataflow.dll
+ System.Threading.Tasks.dll
+ System.Threading.Tasks.Extensions.dll
+ System.Threading.Tasks.Parallel.dll
+ System.Threading.Thread.dll
+ System.Threading.ThreadPool.dll
+ System.Threading.Timer.dll
+ System.Transactions.dll
+ System.Transactions.Local.dll
+ System.ValueTuple.dll
+ System.Web.dll
+ System.Web.HttpUtility.dll
+ System.Windows.dll
+ System.Xml.dll
+ System.Xml.Linq.dll
+ System.Xml.ReaderWriter.dll
+ System.Xml.Serialization.dll
+ System.Xml.XDocument.dll
+ System.Xml.XmlDocument.dll
+ System.Xml.XmlSerializer.dll
+ System.Xml.XPath.dll
+ System.Xml.XPath.XDocument.dll
+ WindowsBase.dll
+<NUGET>/
+ jetbrains.annotations/2025.2.4/lib/netstandard2.0/JetBrains.Annotations.dll
+ nett/0.15.0/lib/netstandard2.0/Nett.dll
+ pidgin/3.5.1/lib/net7.0/Pidgin.dll
+ robust.shared.authlib/0.1.2/lib/netstandard2.1/Robust.Shared.AuthLib.dll
+ sixlabors.imagesharp/3.1.12/lib/net6.0/SixLabors.ImageSharp.dll
+ yamldotnet/16.3.0/lib/net8.0/YamlDotNet.dll
+
+[analyzerReferences]
+../RobustToolbox/
+ Robust.Analyzers/bin/Debug/netstandard2.0/Robust.Analyzers.dll
+ Robust.Client.NameGenerator/bin/Debug/netstandard2.0/Robust.Client.NameGenerator.dll
+ Robust.Serialization.Generator/bin/Debug/netstandard2.0/Robust.Serialization.Generator.dll
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.3/analyzers/dotnet/cs/
+ Microsoft.Interop.LibraryImportGenerator.dll
+ Microsoft.Interop.SourceGeneration.dll
+ System.Text.Json.SourceGeneration.dll
+ System.Text.RegularExpressions.Generator.dll
+<DOTNET>/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/analyzers/
+ Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
+ Microsoft.CodeAnalysis.NetAnalyzers.dll
+<NUGET>/microsoft.codeanalysis.analyzers/3.11.0/analyzers/dotnet/cs/
+ Microsoft.CodeAnalysis.Analyzers.dll
+ Microsoft.CodeAnalysis.CSharp.Analyzers.dll
+<NUGET>/microsoft.net.illink.tasks/10.0.0/analyzers/dotnet/cs/
+ ILLink.CodeFixProvider.dll
+ ILLink.RoslynAnalyzer.dll
+
+[analyzerConfigFiles]
+../.editorconfig
+<DOTNET>/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
+obj/Debug/Content.Client.GeneratedMSBuildEditorConfig.editorconfig
+
+[additionalFiles]
+Access/UI/
+ AccessLevelControl.xaml
+ AccessOverriderWindow.xaml
+ AgentIDCardWindow.xaml
+ GroupedAccessLevelChecklist.xaml
+ IdCardConsoleWindow.xaml
+Administration/UI/
+ AdminAnnounceWindow.xaml
+ AdminCamera/
+  AdminCameraControl.xaml
+  AdminCameraWindow.xaml
+ AdminMenuWindow.xaml
+ AdminRemarks/
+  AdminMessagePopupMessage.xaml
+  AdminMessagePopupWindow.xaml
+  AdminRemarksWindow.xaml
+ AntagObjectives/AntagObjectivesWindow.xaml
+ BanList/
+  BanListIdsPopup.xaml
+  BanListWindow.xaml
+  Bans/
+   BanListControl.xaml
+   BanListHeader.xaml
+   BanListLine.xaml
+  RoleBans/
+   RoleBanListControl.xaml
+   RoleBanListHeader.xaml
+   RoleBanListLine.xaml
+ BanPanel/BanPanel.xaml
+ Bwoink/
+  AdminWhoWindow.xaml
+  BwoinkControl.xaml
+  BwoinkPanel.xaml
+  BwoinkWindow.xaml
+ CustomControls/
+  PlayerListControl.xaml
+  PlayerListEntry.xaml
+ Logs/
+  AdminLogsControl.xaml
+  AdminLogsWindow.xaml
+ ManageSolutions/
+  AddReagentWindow.xaml
+  EditSolutionsWindow.xaml
+ Notes/
+  AdminNotesControl.xaml
+  AdminNotesLine.xaml
+  AdminNotesLinePopup.xaml
+  AdminNotesWindow.xaml
+  NoteEdit.xaml
+ PlayerPanel/PlayerPanel.xaml
+ SetOutfit/SetOutfitMenu.xaml
+ SpawnExplosion/SpawnExplosionWindow.xaml
+ Tabs/AdminbusTab/
+  AdminbusTab.xaml
+  LoadBlueprintsWindow.xaml
+ Tabs/AdminTab/
+  AdminShuttleWindow.xaml
+  AdminTab.xaml
+ Tabs/AtmosTab/
+  AddAtmosWindow.xaml
+  AddGasWindow.xaml
+  AtmosTab.xaml
+  FillGasWindow.xaml
+  SetTemperatureWindow.xaml
+ Tabs/ObjectsTab/
+  ObjectsTab.xaml
+  ObjectsTabEntry.xaml
+  ObjectsTabHeader.xaml
+ Tabs/PanicBunkerTab/
+  PanicBunkerStatusWindow.xaml
+  PanicBunkerTab.xaml
+ Tabs/PlayerTab/
+  PlayerTab.xaml
+  PlayerTabEntry.xaml
+  PlayerTabHeader.xaml
+ Tabs/
+  RoundTab.xaml
+  ServerTab.xaml
+Ame/UI/AmeWindow.xaml
+Anomaly/Ui/
+ AnomalyGeneratorWindow.xaml
+ AnomalyScannerMenu.xaml
+Atmos/Consoles/
+ AtmosAlarmEntryContainer.xaml
+ AtmosAlertsComputerWindow.xaml
+ AtmosMonitoringConsoleWindow.xaml
+ AtmosMonitoringEntryContainer.xaml
+Atmos/Monitor/UI/
+ AirAlarmWindow.xaml
+ Widgets/
+  PumpControl.xaml
+  ScrubberControl.xaml
+  SensorInfo.xaml
+  ThresholdBoundControl.xaml
+  ThresholdControl.xaml
+Atmos/UI/
+ GasAnalyzerWindow.xaml
+ GasCanisterWindow.xaml
+ GasFilterWindow.xaml
+ GasMixerWindow.xaml
+ GasPressurePumpWindow.xaml
+ GasPressureRegulatorWindow.xaml
+ GasThermomachineWindow.xaml
+ GasVolumePumpWindow.xaml
+ SpaceHeaterWindow.xaml
+Audio/Jukebox/JukeboxMenu.xaml
+BarSign/Ui/BarSignMenu.xaml
+Bed/Cryostorage/
+ CryostorageEntryControl.xaml
+ CryostorageMenu.xaml
+ CryostorageSlotControl.xaml
+Botany/PlantAnalyzer/PlantAnalyzerWindow.xaml
+Bql/ToolshedVisualizeWindow.xaml
+Cargo/UI/
+ BountyEntry.xaml
+ BountyHistoryEntry.xaml
+ CargoBountyMenu.xaml
+ CargoConsoleMenu.xaml
+ CargoConsoleOrderMenu.xaml
+ CargoOrderRow.xaml
+ CargoPalletMenu.xaml
+ CargoProductRow.xaml
+ CargoShuttleMenu.xaml
+ FundingAllocationMenu.xaml
+CartridgeLoader/Cartridges/
+ CrewManifestUiFragment.xaml
+ LogProbeUiEntry.xaml
+ LogProbeUiFragment.xaml
+ NanoTaskItemControl.xaml
+ NanoTaskItemPopup.xaml
+ NanoTaskUiFragment.xaml
+ NetProbeUiFragment.xaml
+ NewsReaderUiFragment.xaml
+ NotekeeperUiFragment.xaml
+ WantedListUiFragment.xaml
+Changelog/
+ ChangelogTab.xaml
+ ChangelogWindow.xaml
+Chemistry/UI/
+ ChemMasterWindow.xaml
+ ReagentCardControl.xaml
+ ReagentDispenserWindow.xaml
+ TransferAmountWindow.xaml
+CloningConsole/UI/CloningConsoleWindow.xaml
+Clothing/UI/ChameleonMenu.xaml
+Communications/UI/CommunicationsConsoleMenu.xaml
+Construction/UI/
+ ConstructionMenu.xaml
+ FlatpackCreatorMenu.xaml
+ContextMenu/UI/
+ ContextMenuElement.xaml
+ ContextMenuPopup.xaml
+Crayon/UI/CrayonWindow.xaml
+Credits/CreditsWindow.xaml
+CrewManifest/CrewManifestUi.xaml
+CriminalRecords/
+ CrimeHistoryWindow.xaml
+ CriminalRecordsConsoleWindow.xaml
+Decals/UI/
+ DecalPlacerWindow.xaml
+ PaletteColorPicker.xaml
+DeviceLinking/UI/RandomGateSetupWindow.xaml
+Disposal/
+ Mailing/MailingUnitWindow.xaml
+ Tube/
+  DisposalRouterWindow.xaml
+  DisposalTaggerWindow.xaml
+ Unit/DisposalUnitWindow.xaml
+Doors/Electronics/DoorElectronicsConfigurationMenu.xaml
+Fax/
+ AdminUI/AdminFaxWindow.xaml
+ UI/FaxWindow.xaml
+FlavorText/FlavorText.xaml
+Fluids/UI/AbsorbentItemStatus.xaml
+Forensics/ForensicScannerMenu.xaml
+Gateway/UI/GatewayWindow.xaml
+Guidebook/Controls/
+ GuidebookError.xaml
+ GuidebookWindow.xaml
+ GuideEntityEmbed.xaml
+ GuideLawsetEmbed.xaml
+ GuideLawsetListEmbed.xaml
+ GuideMicrowaveEmbed.xaml
+ GuideReagentEmbed.xaml
+ GuideReagentGroupEmbed.xaml
+ GuideReagentReaction.xaml
+ GuideTechDisciplineEmbed.xaml
+ GuideTechnologyEmbed.xaml
+Hands/UI/HandVirtualItemStatus.xaml
+HealthAnalyzer/UI/HealthAnalyzerWindow.xaml
+Holopad/HolopadWindow.xaml
+Humanoid/
+ HumanoidMarkingModifierWindow.xaml
+ MarkingPicker.xaml
+ SingleMarkingPicker.xaml
+Implants/UI/
+ ChameleonControllerMenu.xaml
+ DeimplantChoiceWindow.xaml
+Info/
+ Info.xaml
+ InfoControlsSection.xaml
+ InfoSection.xaml
+ PlaytimeStats/
+  PlaytimeStatsEntry.xaml
+  PlaytimeStatsHeader.xaml
+  PlaytimeStatsWindow.xaml
+ RulesControl.xaml
+ RulesPopup.xaml
+Instruments/UI/
+ BandMenu.xaml
+ ChannelsMenu.xaml
+ InstrumentMenu.xaml
+Kitchen/UI/
+ GrinderMenu.xaml
+ LabelledContentBox.xaml
+ MicrowaveMenu.xaml
+Labels/UI/HandLabelerWindow.xaml
+Lathe/UI/
+ LatheMenu.xaml
+ QueuedRecipeControl.xaml
+ RecipeControl.xaml
+ RecipeTooltip.xaml
+Launcher/LauncherConnectingGui.xaml
+Lobby/UI/
+ CharacterPickerButton.xaml
+ CharacterSetupGui.xaml
+ CharacterSetupGuiSavePanel.xaml
+ HighlightedContainer.xaml
+ HumanoidProfileEditor.xaml
+ Loadouts/
+  LoadoutContainer.xaml
+  LoadoutGroupContainer.xaml
+  LoadoutWindow.xaml
+  SubLoadoutContainer.xaml
+  ToggleLoadoutButton.xaml
+ LobbyCharacterPreviewPanel.xaml
+ LobbyGui.xaml
+ ObserveWarningWindow.xaml
+ Roles/
+  RequirementsSelector.xaml
+  TraitPreferenceSelector.xaml
+MachineLinking/UI/SignalTimerWindow.xaml
+MagicMirror/MagicMirrorWindow.xaml
+MainMenu/UI/MainMenuControl.xaml
+Mapping/
+ MappingActionsButton.xaml
+ MappingDoNotMeasure.xaml
+ MappingPrototypeList.xaml
+ MappingScreen.xaml
+ MappingSpawnButton.xaml
+MassMedia/Ui/
+ ArticleEditorPanel.xaml
+ NewsArticleCard.xaml
+ NewsWriterMenu.xaml
+ PhotoSelectorWindow.xaml
+Materials/UI/
+ MaterialDisplay.xaml
+ MaterialStorageControl.xaml
+ OreSiloMenu.xaml
+Mech/Ui/Equipment/
+ MechGrabberUiFragment.xaml
+ MechSoundboardUiFragment.xaml
+Mech/Ui/
+ MechEquipmentControl.xaml
+ MechMenu.xaml
+Medical/CrewMonitoring/CrewMonitoringWindow.xaml
+NetworkConfigurator/
+ NetworkConfiguratorConfigurationMenu.xaml
+ NetworkConfiguratorDeviceList.xaml
+ NetworkConfiguratorLinkMenu.xaml
+ NetworkConfiguratorListMenu.xaml
+NPC/NPCWindow.xaml
+Nuke/NukeMenu.xaml
+NukeOps/WarDeclaratorWindow.xaml
+Options/UI/
+ EscapeMenu.xaml
+ OptionColorSlider.xaml
+ OptionDropDown.xaml
+ OptionSlider.xaml
+ OptionsMenu.xaml
+ OptionsTabControlRow.xaml
+ Tabs/
+  AccessibilityTab.xaml
+  AdminOptionsTab.xaml
+  AudioTab.xaml
+  ExtraTab.xaml
+  GraphicsTab.xaml
+  KeyRebindTab.xaml
+  MiscTab.xaml
+Paper/UI/
+ PaperWindow.xaml
+ StampCollection.xaml
+ StampLabel.xaml
+ StampWidget.xaml
+ParticleAccelerator/UI/ParticleAcceleratorControlMenu.xaml
+PDA/
+ PdaMenu.xaml
+ PdaNavigationButton.xaml
+ PdaProgramItem.xaml
+ PdaSettingsButton.xaml
+ PdaWindow.xaml
+ Ringer/RingtoneMenu.xaml
+Pinpointer/UI/
+ NavMapBeaconWindow.xaml
+ StationMapBeaconControl.xaml
+ StationMapWindow.xaml
+Power/
+ APC/UI/ApcMenu.xaml
+ Battery/BatteryMenu.xaml
+ Generator/GeneratorWindow.xaml
+ PowerCharge/PowerChargeWindow.xaml
+ PowerMonitoringWindow.xaml
+ SolarControlWindow.xaml
+Radio/Ui/IntercomMenu.xaml
+Replay/UI/Loading/
+ LoadingScreenControl.xaml
+ ReplayLoadingFailedControl.xaml
+Research/UI/
+ DiskConsoleMenu.xaml
+ MiniTechnologyCardControl.xaml
+ ResearchClientServerSelectionMenu.xaml
+ ResearchConsoleMenu.xaml
+ TechnologyCardControl.xaml
+Revolutionary/UI/DeconvertedMenu.xaml
+Robotics/UI/RoboticsConsoleWindow.xaml
+Salvage/UI/
+ JobEntry.xaml
+ OfferingWindow.xaml
+ OfferingWindowOption.xaml
+ SalvageJobBoardMenu.xaml
+Security/Ui/GenpopLockerMenu.xaml
+SensorMonitoring/SensorMonitoringWindow.xaml
+Shuttles/UI/
+ BaseShuttleControl.xaml
+ DockingScreen.xaml
+ DockObject.xaml
+ EmergencyConsoleWindow.xaml
+ IFFConsoleWindow.xaml
+ MapScreen.xaml
+ NavScreen.xaml
+ RadarConsoleWindow.xaml
+ ShuttleConsoleWindow.xaml
+ ShuttleDockControl.xaml
+ ShuttleMapControl.xaml
+ ShuttleNavControl.xaml
+Silicons/Borgs/
+ BorgMenu.xaml
+ BorgModuleControl.xaml
+ BorgSelectTypeMenu.xaml
+ BorgVoiceWindow.xaml
+Silicons/Laws/SiliconLawEditUi/
+ SiliconLawContainer.xaml
+ SiliconLawUi.xaml
+Silicons/Laws/Ui/
+ LawDisplay.xaml
+ SiliconLawMenu.xaml
+Silicons/StationAi/
+ StationAiCustomizationMenu.xaml
+ StationAiFixerConsoleConfirmationDialog.xaml
+ StationAiFixerConsoleWindow.xaml
+SmartFridge/
+ SmartFridgeItem.xaml
+ SmartFridgeMenu.xaml
+SprayPainter/UI/
+ SprayPainterDecals.xaml
+ SprayPainterGroup.xaml
+ SprayPainterWindow.xaml
+StationRecords/
+ GeneralRecord.xaml
+ GeneralStationRecordConsoleWindow.xaml
+Store/Ui/
+ StoreListingControl.xaml
+ StoreMenu.xaml
+ StoreWithdrawWindow.xaml
+SurveillanceCamera/UI/
+ SurveillanceCameraMonitorWindow.xaml
+ SurveillanceCameraSetupWindow.xaml
+Tabletop/UI/TabletopWindow.xaml
+Teleportation/Ui/TeleportMenu.xaml
+Thief/
+ ThiefBackpackMenu.xaml
+ ThiefBackpackSet.xaml
+Tips/TippyUI.xaml
+TurretController/TurretControllerWindow.xaml
+UserInterface/Controls/
+ DatePicker.xaml
+ DialogWindow.xaml
+ FancyTree/
+  FancyTree.xaml
+  TreeItem.xaml
+ FancyWindow.xaml
+ MapGridControl.xaml
+ OnOffButton.xaml
+ SimpleRadialMenu.xaml
+ SplitBar.xaml
+UserInterface/Screens/
+ DefaultGameScreen.xaml
+ SeparatedChatGameScreen.xaml
+UserInterface/
+ StatsWindow.xaml
+ Systems/Actions/
+  Controls/ActionPageButtons.xaml
+  Widgets/ActionsBar.xaml
+  Windows/ActionsWindow.xaml
+ Systems/
+  Alerts/Widgets/AlertsUI.xaml
+  Character/
+   Controls/CharacterObjectiveControl.xaml
+   Windows/CharacterWindow.xaml
+  Chat/
+   ChatWindow.xaml
+   Controls/ChannelFilterPopup.xaml
+   Widgets/ChatBox.xaml
+  Ghost/Controls/
+   GhostTargetWindow.xaml
+   Roles/
+    GhostRoleButtonsBox.xaml
+    GhostRoleEntryButtons.xaml
+    GhostRoleInfoBox.xaml
+    GhostRoleRulesWindow.xaml
+    GhostRolesWindow.xaml
+    MakeGhostRoleWindow.xaml
+  Ghost/Widgets/GhostGui.xaml
+  Hotbar/Widgets/HotbarGui.xaml
+  Inventory/
+   Controls/ItemStatusPanel.xaml
+   Widgets/InventoryGui.xaml
+   Windows/StrippingWindow.xaml
+  MenuBar/Widgets/GameTopMenuBar.xaml
+  Objectives/Controls/
+   ObjectiveBriefingControl.xaml
+   ObjectiveConditionsControl.xaml
+  Sandbox/Windows/SandboxWindow.xaml
+VendingMachines/UI/
+ VendingMachineItem.xaml
+ VendingMachineMenu.xaml
+VoiceMask/VoiceMaskNameChangeWindow.xaml
+Voting/UI/
+ VoteCallMenu.xaml
+ VotePopup.xaml
+Weapons/Melee/UI/MeleeSpeechWindow.xaml
+Xenoarchaeology/Ui/
+ AnalysisConsoleMenu.xaml
+ NodeScannerDisplay.xaml
+ XenoArtifactGraphControl.xaml
+_Starlight/
+ ChoiceControl.xaml
+ Medical/Surgery/
+  SurgeryStepButton.xaml
+  SurgeryWindow.xaml
+_Sunrise/Antags/Abductor/
+ AbductorCameraConsoleWindow.xaml
+ AbductorConsoleWindow.xaml
+_Sunrise/
+ AssaultOps/Icarus/IcarusTerminalWindow.xaml
+ BloodCult/UI/Altar/
+  AltarListingControl.xaml
+  AltarWindow.xaml
+ BloodCult/UI/
+  CountSelector/CountSelectorWindow.xaml
+  ListViewSelector/ListViewSelectorWindow.xaml
+  NameSelector/NameSelectorWindow.xaml
+  SummonCultistList/SummonCultistListWindow.xaml
+  TeleportRunesList/TeleportRunesListWindow.xaml
+  Torch/TorchWindow.xaml
+ Boss/UI/HellSpawnArenaConsoleWindow.xaml
+ CartridgeLoader/Cartridges/
+  AddUserDialog.xaml
+  CreateGroupDialog.xaml
+  MessagePanel.xaml
+  MessengerUiFragment.xaml
+  NavigatorUiFragment.xaml
+  PhotoUiFragment.xaml
+ CodeConsole/CodeConsoleMenu.xaml
+ CommandConsole/CommandConsoleWindow.xaml
+ Contributors/
+  ContributorEntryControl.xaml
+  ContributorsTop.xaml
+ CopyMachine/CopyMachineMenu.xaml
+ Dice/ChangeDiceWindow.xaml
+ GhostTheme/GhostThemeMenu.xaml
+ HelpChoice/HelpChoiceWindow.xaml
+ InteractionsPanel/
+  CustomInteractionEditor.xaml
+  InteractionsUIWindow.xaml
+ Kitchen/UI/AssemblerMenu.xaml
+ Latejoin/
+  SRLateJoinGui.xaml
+  SRLateJoinJobButton.xaml
+  StationsListControl.xaml
+ Medical/CrewMonitoring/SunriseCrewMonitoringWindow.xaml
+ MentorHelp/
+  MentorHelpControl.xaml
+  MentorHelpNewTicketDialog.xaml
+  MentorHelpStatisticsDialog.xaml
+  MentorHelpWindow.xaml
+  StatisticsEntryControl.xaml
+  TicketEntryControl.xaml
+ NewLife/NewLifeWindow.xaml
+ Pacificator/PacificatorWindow.xaml
+ Pets/
+  LobbyPetPreviewPanel.xaml
+  PetSelectionMenu.xaml
+ Razor/
+  RazorSingleMarkingPicker.xaml
+  RazorWindow.xaml
+ Roadmap/
+  Roadmap.xaml
+  RoadmapItem.xaml
+ ServersHub/
+  ServersHub.xaml
+  ServersHubEntry.xaml
+  ServersHubUi.xaml
+ SponsorTiers/
+  SponsorTierEntry.xaml
+  SponsorTiers.xaml
+  SponsorTiersUi.xaml
+ StationRecords/SunriseGeneralRecord.xaml
+ StatsBoard/
+  StatsEntries.xaml
+  StatsEntry.xaml
+ TapePlayer/TapePlayerMenu.xaml
+ UserActions/Tabs/
+  EmotesTabControl.xaml
+  VerbsTabControl.xaml
+ UserActions/UserActionsPanel.xaml
+ UserInterface/Radial/
+  RadialButton.xaml
+  RadialContainer.xaml
+ UserInterface/Systems/Ghost/Controls/SunriseGhostTargetWindow.xaml
+ UserProfile/UserProfile.xaml

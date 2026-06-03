@@ -668,3 +668,29 @@
   values:
     prefix: lilith-
     count: 2
+
+- type: entity
+  id: PlushieMichaelFaLodbrok
+  parent: [ BasePlushie, BaseFoldable ]
+  name: Plushie Michael fa Lodbrok
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Plushies/michael.rsi
+    layers:
+    - state: michael_fa_lodbrok
+      map: [ "unfoldedLayer" ]
+    - state: michael_fa_lodbrok2
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+  - type: Clothing
+    quickEquip: false
+    sprite: _Lust/Objects/Fun/Plushies/michael.rsi
+    slots:
+    - NECK
+  - type: UseDelay
+    delay: 1
+  - type: Appearance
+  - type: Interactions

@@ -1,0 +1,4653 @@
+version=1
+
+# This file caches language service data to improve the performance of C# Dev Kit.
+# It is not intended for manual editing. It can safely be deleted and will be
+# regenerated automatically. For more information, see https://aka.ms/lscache
+#
+# To control where cache files are stored, use the following VS Code setting:
+#   "dotnet.projectsystem.cacheInProjectFolder": true
+
+[project]
+language=C#
+primary
+lastDtbSucceeded
+
+[properties]
+AssemblyName=Content.Shared
+CommandLineArgsForDesignTimeEvaluation=-langversion:14 -define:DEBUG;TRACE;WINDOWS;DEVELOPMENT;CLIENT_SCRIPTING;TOOLS
+CompilerGeneratedFilesOutputPath=
+MaxSupportedLangVersion=14.0
+ProjectAssetsFile=<PATH>obj/project.assets.json
+RootNamespace=Content.Shared
+RunAnalyzers=
+RunAnalyzersDuringLiveAnalysis=
+SolutionPath=<PATH>../SpaceStation14.slnx
+TargetFrameworkIdentifier=.NETCoreApp
+TargetPath=<PATH>bin/Debug/Content.Shared.dll
+TargetRefPath=<PATH>obj/Debug/ref/Content.Shared.dll
+TemporaryDependencyNodeTargetIdentifier=net10.0
+
+[commandLineArguments]
+/noconfig
+/unsafe-
+/checked-
+/nowarn:1701,1702,1701,1702
+/fullpaths
+/nostdlib+
+/errorreport:prompt
+/warn:10
+/define:DEBUG;TRACE;WINDOWS;DEVELOPMENT;CLIENT_SCRIPTING;TOOLS;NET;NET10_0;NETCOREAPP;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NET9_0_OR_GREATER;NET10_0_OR_GREATER;NETCOREAPP1_0_OR_GREATER;NETCOREAPP1_1_OR_GREATER;NETCOREAPP2_0_OR_GREATER;NETCOREAPP2_1_OR_GREATER;NETCOREAPP2_2_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER
+/highentropyva+
+/nullable:enable
+/features:"InterceptorsNamespaces=;Microsoft.Extensions.Validation.Generated"
+/debug+
+/debug:portable
+/filealign:512
+/optimize-
+/out:obj\Debug\Content.Shared.dll
+/refout:obj\Debug\refint\Content.Shared.dll
+/target:library
+/warnaserror-
+/utf8output
+/deterministic+
+/langversion:14
+/warnaserror+:RA0032,nullable,SYSLIB0011
+
+[sourceFiles]
+Abilities/Goliath/
+ GoliathSummonTentacleAction.cs
+ GoliathTentacleSystem.cs
+Abilities/Mime/
+ MimePowers.cs
+ MimePowersComponent.cs
+ MimePowersSystem.cs
+AbstractAnalyzer/
+ AbstractAnalyzerComponent.cs
+ AbstractAnalyzerSystem.cs
+Access/
+ AccessGroupPrototype.cs
+ AccessLevelPrototype.cs
+ Components/
+  AccessComponent.cs
+  AccessOverriderComponent.cs
+  AccessReaderComponent.cs
+  AccessToggleComponent.cs
+  ActivatableUIRequiresAccessComponent.cs
+  ExpireIdCardComponent.cs
+  IdCardComponent.cs
+  IdCardConsoleComponent.cs
+  IdExaminableComponent.cs
+  ShowAccessReaderSettingsComponent.cs
+ SharedAccessWire.cs
+ SharedAgentIDCardSystem.cs
+ Systems/
+  AccessReaderSystem.cs
+  AccessToggleSystem.cs
+  ActivatableUIRequiresAccessSystem.cs
+  IdExaminableSystem.cs
+  SharedAccessOverriderSystem.cs
+  SharedAccessSystem.cs
+  SharedIdCardConsoleSystem.cs
+  SharedIdCardSystem.cs
+ActionBlocker/ActionBlockerSystem.cs
+Actions/
+ ActionContainerSystem.cs
+ ActionEvents.cs
+ ActionGrantComponent.cs
+ ActionGrantSystem.cs
+ ActionUpgradeSystem.cs
+ Components/
+  ActionComponent.cs
+  ActionContainerComponent.cs
+  ActionsComponent.cs
+  ActionUpgradeComponent.cs
+  ConfirmableActionComponent.cs
+  EntityTargetActionComponent.cs
+  InstantActionComponent.cs
+  TargetActionComponent.cs
+  WorldTargetActionComponent.cs
+ ConfirmableActionSystem.cs
+ EntityTargetActionComponent.cs
+ Events/
+  ActionAttemptEvent.cs
+  ActionComponentChangeEvent.cs
+  ActionDoAfterEvent.cs
+  ActionGetEventEvent.cs
+  ActionPerformedEvent.cs
+  ActionSetEventEvent.cs
+  ActionSetTargetEvent.cs
+  ActionUpgradeEvent.cs
+  ActionValidateEvent.cs
+  DisarmAttemptEvent.cs
+  EggLayInstantActionEvent.cs
+  FireStarterActionEvent.cs
+  InvisibleWallActionEvent.cs
+ ItemActionGrantComponent.cs
+ SharedActionsSystem.cs
+ SharedActionsSystem.DoAfter.cs
+Administration/
+ AdminAnnounceEuiState.cs
+ AdminCameraEuiState.cs
+ AdminCommandPermissions.cs
+ AdminData.cs
+ AdminFlags.cs
+ AdminFlagsHelper.cs
+ AdminFrozenComponent.cs
+ AdminFrozenSystem.cs
+ AdminWhoSystem.cs
+ AnyCommandAttribute.cs
+ BanList/
+  BanListEuiState.cs
+  SharedServerBan.cs
+  SharedServerRoleBan.cs
+  SharedServerUnban.cs
+ BanPanelEuiState.cs
+ Components/
+  AdminMinigunComponent.cs
+  BufferingComponent.cs
+  DisarmProneComponent.cs
+  HeadstandComponent.cs
+  KillSignComponent.cs
+  MarkerComponent.cs
+  StationInfiniteBatteryTargetComponent.cs
+ EditSolutionsEuiState.cs
+ Events/
+  FullPlayerListEvent.cs
+  PanicBunkerChangedEvent.cs
+  PlayerInfoChangedEvent.cs
+ Logs/
+  AdminLogsEuiState.cs
+  DateOrder.cs
+  IAdminLogsPlayerValue.cs
+  ISharedAdminLogManager.cs
+  LogStringHandler.cs
+  SharedAdminLog.cs
+  SharedAdminLogManager.cs
+ Managers/ISharedAdminManager.cs
+ MsgUpdateAdminStatus.cs
+ Notes/
+  AdminMessageEuiState.cs
+  AdminNotesEuiState.cs
+  SharedAdminNote.cs
+  UserNotesEuiState.cs
+ PermissionsEuiState.cs
+ PlayerInfo.cs
+ PlayerPanelEuiState.cs
+ QuickDialogOpenEvent.cs
+ SetOutfitEuiState.cs
+ SharedBwoinkSystem.cs
+ SpawnExplosionEuiMsg.cs
+ Systems/
+  AdminGunSystem.cs
+  RejuvenateSystem.cs
+  SharedBufferingSystem.cs
+Advertise/
+ Components/SpeakOnUIClosedComponent.cs
+ Systems/SharedSpeakOnUIClosedSystem.cs
+Alert/
+ AlertAutoRemoveComponent.cs
+ AlertCategoryPrototype.cs
+ AlertKey.cs
+ AlertOrderPrototype.cs
+ AlertPrototype.cs
+ AlertsComponent.cs
+ AlertsSystem.cs
+ AlertState.cs
+ AlertSyncEvent.cs
+ ClickAlertEvent.cs
+ Components/GenericCounterAlertComponent.cs
+AlertLevel/
+ AlertLevelDisplayComponent.cs
+ SharedAlertLevelDisplay.cs
+Ame/Components/
+ AmeFuelContainerComponent.cs
+ SharedAmeControllerComponent.cs
+ SharedAmeShieldComponent.cs
+Ame/EntitySystems/AmeFuelContainerSystem.cs
+Animals/
+ Components/ParrotMemoryComponent.cs
+ Systems/SharedParrotMemorySystem.cs
+ UdderComponent.cs
+ UdderSystem.cs
+ WoolyComponent.cs
+ WoolySystem.cs
+Anomaly/
+ AnomalyCoreVisuals.cs
+ AnomalySynchronizerSystem.cs
+ Components/
+  AnomalousParticleComponent.cs
+  AnomalyComponent.cs
+  AnomalyCoreComponent.cs
+  AnomalyPulsingComponent.cs
+  AnomalyScannerComponent.cs
+  AnomalySupercriticalComponent.cs
+  AnomalySynchronizerComponent.cs
+  CorePoweredThrowerComponent.cs
+  InnerBodyAnomalyComponent.cs
+  InnerBodyAnomalyInjectorComponent.cs
+ Effects/Components/
+  ElectricityAnomalyComponent.cs
+  EntitySpawnAnomalyComponent.cs
+  GravityAnomalyComponent.cs
+  PyroclasticAnomalyComponent.cs
+  TileSpawnAnomalyComponent.cs
+ Effects/
+  SharedEntityAnomalySystem.cs
+  SharedGravityAnomalySystem.cs
+  SharedInnerBodyAnomalySystem.cs
+  SharedTileAnomalySystem.cs
+ Prototypes/AnomalyBehaviorPrototype.cs
+ ScannerDoAfterEvent.cs
+ SharedAnomaly.cs
+ SharedAnomalyCoreSystem.cs
+ SharedAnomalyScannerSystem.cs
+ SharedAnomalySystem.cs
+Antag/
+ AntagAcceptability.cs
+ ShowAntagIconsComponent.cs
+APC/SharedApc.cs
+Arcade/
+ BlockGameBlock.cs
+ BlockGameMessages.cs
+ BlockGamePlayerAction.cs
+ BlockGameUiKey.cs
+ SharedSpaceVillainArcadeComponent.cs
+Armable/
+ ArmableComponent.cs
+ ArmableSystem.cs
+Armor/
+ AllowSuitStorageComponent.cs
+ ArmorComponent.cs
+ SharedArmorSystem.cs
+Atmos/
+ AtmosCommandUtils.cs
+ AtmosDirection.cs
+ Atmospherics.cs
+ Components/
+  AtmosPipeLayersComponent.cs
+  BreathToolComponent.cs
+  DeltaPressureComponent.cs
+  ExtinguishableSetCollisionWakeComponent.cs
+  ExtinguishOnInteractComponent.cs
+  FirestarterComponent.cs
+  FlammableComponent.cs
+  GasAnalyzerComponent.cs
+  GasMinerComponent.cs
+  GasPipeSensorComponent.cs
+  GasPressurePumpComponent.cs
+  GasTankComponent.cs
+  GasTileOverlayComponent.cs
+  MovedByPressureComponent.cs
+  PipeAppearanceComponent.cs
+  SharedGasTankComponent.cs
+  SharedMapAtmosphereComponent.cs
+ Consoles/Components/
+  AtmosAlertsComputerComponent.cs
+  AtmosAlertsDeviceComponent.cs
+  AtmosMonitoringConsoleComponent.cs
+  AtmosMonitoringConsoleDeviceComponent.cs
+ Consoles/
+  SharedAtmosAlertsComputerSystem.cs
+  SharedAtmosMonitoringConsoleSystem.cs
+ EntitySystems/
+  ExtinguishableSetCollisionWakeSystem.cs
+  SharedAtmosDebugOverlaySystem.cs
+  SharedAtmosphereSystem.BreathTool.cs
+  SharedAtmosphereSystem.cs
+  SharedAtmosPipeAppearanceSystem.cs
+  SharedAtmosPipeLayersSystem.cs
+  SharedDeltaPressureSystem.cs
+  SharedFirestarterSystem.cs
+  SharedGasMinerSystem.cs
+  SharedGasPressurePumpSystem.cs
+  SharedGasPressureRegulatorSystem.cs
+  SharedGasTankSystem.cs
+  SharedGasTileOverlaySystem.cs
+ FireEvents.cs
+ FireVisuals.cs
+ GasArraySerializer.cs
+ GasMixture.cs
+ GasMixtureStringRepresentation.cs
+ GasOverlayChunk.cs
+ GetFireProtectionEvent.cs
+ IGasMixtureHolder.cs
+ Monitor/
+  AtmosAlarmThreshold.cs
+  AtmosAlarmType.cs
+  AtmosMonitorAlarmWireActionKeys.cs
+  AtmosSensorData.cs
+  Components/SharedAirAlarmComponent.cs
+ PipeDirection.cs
+ Piping/Binary/Components/
+  GasPressureRegulatorComponent.cs
+  GasValveComponent.cs
+  GasVolumePumpComponent.cs
+  SharedGasCanisterComponent.cs
+  SharedGasPressurePumpComponent.cs
+  SharedGasPressureRegulatorComponent.cs
+  SharedGasVolumePumpComponent.cs
+ Piping/Binary/Systems/
+  SharedGasValveSystem.cs
+  SharedGasVolumePumpSystem.cs
+ Piping/
+  Binary/Visuals/GasVolumePumpVisuals.cs
+  Components/
+   AtmosDeviceDisabledEvent.cs
+   AtmosDeviceEnabledEvent.cs
+   AtmosDeviceTileChangedEvent.cs
+  EnabledAtmosDeviceVisuals.cs
+  PipeColorVisuals.cs
+  Trinary/Components/
+   SharedGasFilterComponent.cs
+   SharedGasMixerComponent.cs
+  Unary/Components/
+   GasCanisterComponent.cs
+   GasThermoMachineComponent.cs
+   SharedGasThermomachineComponent.cs
+   SharedVentPumpComponent.cs
+   SharedVentScrubberComponent.cs
+  Unary/Systems/
+   SharedGasCanisterSystem.cs
+   SharedGasThermoMachineSystem.cs
+  Unary/
+   VentScrewedDoAfterEvent.cs
+   Visuals/
+    ScrubberVisuals.cs
+    VentPumpVisuals.cs
+ Portable/Components/SharedSpaceHeaterComponent.cs
+ Prototypes/GasPrototype.cs
+ Reactions/GasReactionEnums.cs
+ Rotting/
+  AntiRotOnBuckleComponent.cs
+  AntiRottingContainerComponent.cs
+  PerishableComponent.cs
+  ProRottingContainerComponent.cs
+  RotIntoComponent.cs
+  RottingComponent.cs
+  SharedRottingSystem.cs
+ TileFireEvent.cs
+ Visuals/
+  PortableScrubberVisuals.cs
+  SpaceHeaterVisuals.cs
+Audio/
+ AmbientMusicPrototype.cs
+ AmbientSoundComponent.cs
+ AudioHelpers.cs
+ Events/LobbyPlaylistChangedEvent.cs
+ Jukebox/
+  JukeboxComponent.cs
+  JukeboxPrototype.cs
+  JukeboxUi.cs
+  SharedJukeboxSystem.cs
+ SharedAmbientSoundSystem.cs
+ SharedContentAudioSystem.cs
+ SharedGlobalSoundSystem.cs
+ SoundWhileAliveComponent.cs
+BarSign/
+ BarSignComponent.cs
+ BarSignPrototype.cs
+ BarSignSystem.cs
+Beam/
+ Components/SharedBeamComponent.cs
+ SharedBeamSystem.cs
+Bed/
+ BedSystem.cs
+ Components/
+  HealOnBuckleComponent.cs
+  HealOnBuckleHealing.cs
+  StasisBedBuckledComponent.cs
+  StasisBedComponent.cs
+ Cryostorage/
+  CanEnterCryostorageComponent.cs
+  CryostorageComponent.cs
+  CryostorageContainedComponent.cs
+  SharedCryostorageSystem.cs
+ Sleep/
+  CanSleepComponent.cs
+  ForcedSleepingStatusEffectComponent.cs
+  SleepEmitSoundComponent.cs
+  SleepingComponent.cs
+  SleepingSystem.cs
+  SnoringComponent.cs
+  TryingToSleepEvent.cs
+Beeper/
+ BeeperEvents.cs
+ Components/
+  BeeperComponent.cs
+  ProximityBeeperComponent.cs
+ Systems/
+  BeeperSystem.cs
+  ProximityBeeperSystem.cs
+Bible/SummonActionEvent.cs
+Blocking/
+ BlockingSystem.cs
+ BlockingSystem.User.cs
+ Components/
+  BlockingComponent.cs
+  BlockingUserComponent.cs
+Body/Components/
+ BloodstreamComponent.cs
+ BodyComponent.cs
+ BrainComponent.cs
+ InternalsComponent.cs
+ LungComponent.cs
+ StomachComponent.cs
+Body/Events/
+ BeingGibbedEvent.cs
+ BleedModifierEvent.cs
+ BodyInitEvent.cs
+ MechanismBodyEvents.cs
+ MetabolismExclusionEvent.cs
+ MetabolizerEvents.cs
+ ShiverAttemptEvent.cs
+ SweatAttemptEvent.cs
+Body/
+ Organ/OrganComponent.cs
+ Part/
+  BodyPartComponent.cs
+  BodyPartEvents.cs
+  BodyPartSymmetry.cs
+  BodyPartType.cs
+ Prototypes/
+  BodyPrototype.cs
+  BodyPrototypeSerializer.cs
+  MetabolismGroupPrototype.cs
+  MetabolizerTypePrototype.cs
+ Systems/
+  BrainSystem.cs
+  LungSystem.cs
+  SharedBloodstreamSystem.cs
+  SharedBodySystem.Body.cs
+  SharedBodySystem.cs
+  SharedBodySystem.Organs.cs
+  SharedBodySystem.Parts.cs
+  SharedInternalsSystem.cs
+  SharedMetabolizerSystem.cs
+  StomachSystem.cs
+Botany/Components/
+ PlantAnalyzerComponent.cs
+ SharedProduceComponent.cs
+ SharedSeedComponent.cs
+Botany/PlantAnalyzer/
+ PlantAnalyzerDoAfterEvent.cs
+ PlantAnalyzerLocalizationHelper.cs
+ PlantAnalyzerScannedUserMessage.cs
+ PlantAnalyzerUiKey.cs
+Botany/
+ PlantHolderVisuals.cs
+ ProduceVisuals.cs
+Bql/ToolshedVisualizeEuiState.cs
+Buckle/
+ BuckleDoafterEvent.cs
+ Components/
+  BuckleComponent.cs
+  StrapComponent.cs
+ SharedBuckleSystem.Buckle.cs
+ SharedBuckleSystem.cs
+ SharedBuckleSystem.Interaction.cs
+ SharedBuckleSystem.Strap.cs
+Burial/
+ BurialSystem.cs
+ Components/
+  GraveComponent.cs
+  ShovelComponent.cs
+ GraveDiggingDoAfterEvent.cs
+Cabinet/
+ ItemCabinetComponent.cs
+ ItemCabinetSystem.cs
+Camera/
+ CameraRecoilComponent.cs
+ GetEyeOffsetEvent.cs
+ GetEyePvsScaleEvent.cs
+ SharedCameraRecoilSystem.cs
+CardboardBox/
+ Components/CardboardBoxComponent.cs
+ SharedCardboardBoxSystem.cs
+Cargo/BUI/
+ CargoConsoleInterfaceState.cs
+ CargoPalletConsoleInterfaceState.cs
+ CargoShuttleConsoleBoundUserInterfaceState.cs
+Cargo/
+ CargoBountyData.cs
+ CargoBountyHistoryData.cs
+ CargoOrderData.cs
+ CargoPalletConsoleComponent.cs
+ Components/
+  CargoBountyConsoleComponent.cs
+  CargoOrderConsoleComponent.cs
+  CargoShuttleComponent.cs
+  CargoSlipComponent.cs
+  CashComponent.cs
+  FundingAllocationConsoleComponent.cs
+  OverrideSellComponent.cs
+  PriceGunComponent.cs
+  SharedCargoTelepadComponent.cs
+  StationBankAccountComponent.cs
+ Events/
+  CargoConsoleAddOrderMessage.cs
+  CargoConsoleApproveOrderMessage.cs
+  CargoConsoleRemoveOrderMessage.cs
+  CargoPalletAppraiseMessage.cs
+  CargoPalletSellMessage.cs
+ PriceCalculationEvent.cs
+ Prototypes/
+  CargoAccountPrototype.cs
+  CargoBountyGroupPrototype.cs
+  CargoBountyPrototype.cs
+  CargoMarketPrototype.cs
+  CargoProductPrototype.cs
+ SharedCargoSystem.cs
+ SharedPriceGunSystem.cs
+CartridgeLoader/
+ CartridgeComponent.cs
+ CartridgeLoaderComponent.cs
+ CartridgeLoaderUiMessage.cs
+ CartridgeLoaderUiState.cs
+ CartridgeLoaderVisuals.cs
+ Cartridges/
+  CrewManifestUiState.cs
+  LogProbePrintMessage.cs
+  LogProbeUiState.cs
+  NanoTaskCartridgeComponent.cs
+  NanoTaskPrintedComponent.cs
+  NanoTaskUiMessageEvent.cs
+  NanoTaskUiState.cs
+  NetProbeUiState.cs
+  NewsReaderUiMessageEvent.cs
+  NewsReaderUiState.cs
+  NotekeeperUiMessageEvent.cs
+  NotekeeperUiState.cs
+  SharedNanoTaskCartridgeSystem.cs
+  WantedListUiState.cs
+ CartridgeUiMessage.cs
+ SharedCartridgeLoaderSystem.cs
+CCVar/
+ CCVars.Accessibility.cs
+ CCVars.Admin.Ahelp.cs
+ CCVars.Admin.cs
+ CCVars.Admin.Logs.cs
+ CCVars.Admin.Rules.cs
+ CCVars.Atmos.cs
+ CCVars.Audio.cs
+ CCVars.Cargo.cs
+ CCVars.Chat.Admin.cs
+ CCVars.Chat.cs
+ CCVars.Chat.Looc.cs
+ CCVars.Chat.Ooc.cs
+ CCVars.Config.cs
+ CCVars.Console.cs
+ CCVars.Crewmanifest.cs
+ CCVars.cs
+ CCVars.Database.cs
+ CCVars.Debug.cs
+ CCVars.Discord.cs
+ CCVars.Events.cs
+ CCVars.Explosion.cs
+ CCVars.Game.cs
+ CCVars.Game.Infolinks.cs
+ CCVars.Ghost.cs
+ CCVars.Hud.cs
+ CCVars.Ic.cs
+ CCVars.Interactions.cs
+ CCVars.Interface.cs
+ CCVars.Lighting.cs
+ CCVars.Mapping.cs
+ CCVars.Midi.cs
+ CCVars.Misc.cs
+ CCVars.Movement.cs
+ CCVars.Net.cs
+ CCVars.NPC.cs
+ CCVars.Parallax.cs
+ CCVars.Physics.cs
+ CCVars.Playtest.cs
+ CCVars.Radiation.cs
+ CCVars.Replays.cs
+ CCVars.Salvage.cs
+ CCVars.Server.cs
+ CCVars.Shuttle.cs
+ CCVars.Sounds.cs
+ CCVars.Tips.cs
+ CCVars.Viewport.cs
+ CCVars.Vote.cs
+ CCVars.Whitelist.cs
+ CCVars.Worldgen.cs
+ CVarAccess/CVarControl.cs
+Changeling/
+ ChangelingComponent.cs
+ ChangelingDevourEvents.cs
+ ChangelingTransformEvents.cs
+ Components/
+  ChangelingClonerComponent.cs
+  ChangelingDevourComponent.cs
+  ChangelingIdentityComponent.cs
+  ChangelingStoredIdentityComponent.cs
+  ChangelingTransformComponent.cs
+ Systems/
+  ChangelingClonerSystem.cs
+  ChangelingDevourSystem.cs
+  ChangelingTransformSystem.cs
+  ChangelingTransformSystem.UI.cs
+  SharedChangelingIdentitySystem.cs
+ChangeNameInContainer/
+ ChangeNameInContainerComponent.cs
+ ChangeNameInContainerSystem.cs
+CharacterInfo/SharedCharacterInfoSystem.cs
+Charges/Components/
+ AutoRechargeComponent.cs
+ DeleteWithoutChargesComponent.cs
+ LimitedChargesComponent.cs
+Charges/Systems/SharedChargesSystem.cs
+Chasm/
+ ChasmComponent.cs
+ ChasmFallingComponent.cs
+ ChasmSystem.cs
+Chat/
+ ChatChannel.cs
+ ChatChannelExtensions.cs
+ ChatSelectChannel.cs
+ EmotesEvents.cs
+ InGameOocMessageAttemptEvent.cs
+ ISharedChatManager.cs
+ MsgChatMessage.cs
+ MsgDeleteChatMessagesBy.cs
+ Prototypes/
+  AutoEmotePrototype.cs
+  ChatNotificationPrototype.cs
+  EmotePrototype.cs
+  EmoteSoundsPrototype.cs
+ SharedChatEvents.cs
+ SharedChatSystem.cs
+ SharedChatSystem.Emote.cs
+ SharedSuicideSystem.cs
+ TypingIndicator/
+  SharedTypingIndicatorSystem.cs
+  TypingIndicatorClothingComponent.cs
+  TypingIndicatorComponent.cs
+  TypingIndicatorEvents.cs
+  TypingIndicatorPrototype.cs
+  TypingIndicatorState.cs
+  TypingIndicatorVisuals.cs
+ V2/Moderation/
+  ChatCensor.cs
+  RegexCensor.cs
+  SimpleCensor.cs
+ V2/
+  Repository/Types.cs
+  Types.cs
+Chemistry/Components/
+ CryostasisBeakerComponent.cs
+ DrainableSolutionComponent.cs
+ DumpableSolutionComponent.cs
+ FitsInDispenserComponent.cs
+ InjectorComponent.cs
+ MixableSolutionComponent.cs
+ MovespeedModifierMetabolismComponent.cs
+ PillComponent.cs
+ ReactiveContainerComponent.cs
+ ReagentTankComponent.cs
+ RefillableSolutionComponent.cs
+ RehydratableComponent.cs
+ ScoopableSolutionComponent.cs
+ SlotBasedConnectedContainerComponent.cs
+ SmokeAffectedComponent.cs
+ SmokeComponent.cs
+ Solution.cs
+ SolutionComponent.cs
+ SolutionContainerMixerComponent.cs
+ SolutionContainerVisualsComponent.cs
+ SolutionManager/
+  ContainedSolutionComponent.cs
+  DrawableSolutionComponent.cs
+  ExaminableSolutionComponent.cs
+  InjectableSolutionComponent.cs
+  SolutionContainerManagerComponent.cs
+ SolutionPurgeComponent.cs
+ SolutionRegenerationComponent.cs
+ SolutionScannerComponent.cs
+ SolutionSpikerComponent.cs
+ SolutionTransferComponent.cs
+Chemistry/EntitySystems/
+ CryostasisBeakerSystem.cs
+ InjectorSystem.cs
+ ReactiveContainerSystem.cs
+ RehydratableSystem.cs
+ ScoopableSolutionSystem.cs
+ SharedSolutionContainerMixerSystem.cs
+ SharedSolutionContainerSystem.Capabilities.cs
+ SharedSolutionContainerSystem.cs
+ SharedSolutionContainerSystem.Relays.cs
+ SolutionPurgeSystem.cs
+ SolutionRegenerationSystem.cs
+ SolutionSpikerSystem.cs
+ SolutionTransferSystem.cs
+Chemistry/
+ Events/InjectorEvents.cs
+ InjectOverTimeEvent.cs
+ MetabolismMovespeedModifierSystem.cs
+ Prototypes/InjectorModePrototype.cs
+ Reaction/
+  ChemicalReactionSystem.cs
+  ITileReaction.cs
+  MixingCategoryPrototype.cs
+  ReactionMixerComponent.cs
+  ReactionMixerSystem.cs
+  ReactionPrototype.cs
+  ReactiveComponent.cs
+  ReactiveGroupPrototype.cs
+ ReactiveSystem.cs
+ Reagent/
+  DNAData.cs
+  ReagentData.cs
+  ReagentId.cs
+  ReagentPrototype.cs
+  ReagentQuantity.cs
+ SharedChemistryGuideDataSystem.cs
+ SharedChemMaster.cs
+ SharedReagentDispenser.cs
+ SharedSolutionHeater.cs
+ SharedTransferAmount.cs
+ SolutionScannerSystem.cs
+ SolutionVisuals.cs
+Climbing/Components/
+ BonkableComponent.cs
+ ClimbableComponent.cs
+ ClimbingComponent.cs
+ GlassTableComponent.cs
+Climbing/Events/
+ AttemptClimbEvent.cs
+ BeforeClimbEvents.cs
+ ClimbedOnEvent.cs
+ EndClimbEvent.cs
+ StartClimbEvent.cs
+Climbing/Systems/ClimbSystem.cs
+Clock/
+ ClockComponent.cs
+ GlobalTimeManagerComponent.cs
+ SharedClockSystem.cs
+Cloning/
+ AcceptCloningEuiMessage.cs
+ CloningEvents.cs
+ CloningPodComponent.cs
+ CloningSettingsPrototype.cs
+ SharedCloningConsole.cs
+ SharedCloningSystem.cs
+Clothing/
+ ClothingEvents.cs
+ ClothingSpeedModifierComponent.cs
+ ClothingSpeedModifierSystem.cs
+ Components/
+  AntiGravityClothingComponent.cs
+  AttachedClothingComponent.cs
+  ChameleonClothingComponent.cs
+  ClothingComponent.cs
+  CursedMaskComponent.cs
+  FactionClothingComponent.cs
+  FireProtectionComponent.cs
+  FoldableClothingComponent.cs
+  HideLayerClothingComponent.cs
+  LoadoutComponent.cs
+  MaskComponent.cs
+  PilotedByClothingComponent.cs
+  PilotedClothingComponent.cs
+  SelfUnremovableClothingComponent.cs
+  SkatesComponent.cs
+  SpeedModifierContactCapClothingComponent.cs
+  ToggleableClothingComponent.cs
+  ToggleClothingComponent.cs
+  ToggleClothingPrefixComponent.cs
+ EntitySystems/
+  AntiGravityClothingSystem.cs
+  ClothingSystem.cs
+  FactionClothingSystem.cs
+  FireProtectionSystem.cs
+  FoldableClothingSystem.cs
+  HideLayerClothingSystem.cs
+  MaskSystem.cs
+  PilotedClothingSystem.cs
+  SelfUnremovableClothingSystem.cs
+  SharedChameleonClothingSystem.cs
+  SkatesSystem.cs
+  SpeedModifierContactCapClothingSystem.cs
+  ToggleableClothingSystem.cs
+  ToggleClothingPrefixSystem.cs
+  ToggleClothingSystem.cs
+ LoadoutSystem.cs
+ MagbootsComponent.cs
+ MagbootsSystem.cs
+ SharedCursedMaskSystem.cs
+Clumsy/
+ ClumsyComponent.cs
+ ClumsySystem.cs
+Cluwne/CluwneComponent.cs
+CombatMode/
+ CombatModeComponent.cs
+ DisarmedEvent.cs
+ DisarmMalusComponent.cs
+ Pacification/
+  PacificationSystem.cs
+  PacifiedComponent.cs
+  PacifismAllowedGunComponent.cs
+  PacifismDangerousAttackComponent.cs
+ SharedCombatModeSystem.cs
+Communications/
+ CommsHackerComponent.cs
+ SharedCommsHackerSystem.cs
+ SharedCommunicationsConsoleComponent.cs
+ComponentTable/
+ ComponentTableComponent.cs
+ SharedComponentTableSystem.cs
+Computer/SharedComputerComponent.cs
+Configurable/
+ ConfigurationComponent.cs
+ SharedConfigurationSystem.cs
+Connection/IPBlocking/IIPBlockingSystem.cs
+Construction/Components/
+ AnchorableComponent.cs
+ BlockAnchorOnComponent.cs
+ ComputerBoardComponent.cs
+ ElectronicsBoardComponent.cs
+ FlatpackComponent.cs
+ FlatpackCreatorComponent.cs
+ MachineBoardComponent.cs
+ PartAssemblyComponent.cs
+Construction/Conditions/
+ EmptyOrWindowValidInTile.cs
+ EntityWhitelistCondition.cs
+ IConstructionCondition.cs
+ NoUnstackableInTile.cs
+ NoWindowsInTile.cs
+ TileNotBlocked.cs
+ TileType.cs
+ WallmountCondition.cs
+Construction/
+ ConstructionGraphEdge.cs
+ ConstructionGraphNode.cs
+ ConstructionGuide.cs
+ EntitySystems/
+  AnchorableSystem.cs
+  BlockAnchorOnSystem.cs
+ Enums.cs
+ Events.cs
+ IGraphAction.cs
+ IGraphCondition.cs
+ IGraphNodeEntity.cs
+ IGraphTransform.cs
+ MachineDeconstructedEvent.cs
+ MachinePartSystem.cs
+ NodeEntities/
+  BoardNodeEntity.cs
+  NullNodeEntity.cs
+  StaticNodeEntity.cs
+ PartAssemblySystem.cs
+ Prototypes/
+  ConstructionGraphPrototype.cs
+  ConstructionPrototype.cs
+ Serialization/GraphNodeEntitySerializer.cs
+ SharedCanBuildWindowOnTopComponent.cs
+ SharedConstructionSystem.cs
+ SharedFlatpackSystem.cs
+ Steps/
+  ArbitraryInsertConstructionGraphStep.cs
+  ComponentConstructionGraphStep.cs
+  ConstructionGraphStep.cs
+  ConstructionGraphStepTypeSerializer.cs
+  EntityInsertConstructionGraphStep.cs
+  MaterialConstructionGraphStep.cs
+  MultipleTagsConstructionGraphStep.cs
+  PartAssemblyConstructionGraphStep.cs
+  TagConstructionGraphStep.cs
+  TemperatureConstructionGraphStep.cs
+  ToolConstructionGraphStep.cs
+ContainerHeld/
+ ContainerHeldComponent.cs
+ ContainerHeldSystem.cs
+Containers/
+ ContainerCompComponent.cs
+ ContainerCompSystem.cs
+ ContainerFillComponent.cs
+ ContainerFillSystem.cs
+ DragInsertContainerComponent.cs
+ DragInsertContainerSystem.cs
+ EntityTableContainerFillComponent.cs
+ ExitContainerOnMoveComponent.cs
+ ExitContainerOnMoveSystem.cs
+ ItemSlot/
+  ItemSlotEvents.cs
+  ItemSlotsComponent.cs
+  ItemSlotsLockComponent.cs
+  ItemSlotsSystem.cs
+  ItemSlotsSystem.Lock.cs
+ SharedThrowInsertContainerSystem.cs
+ SlotBasedConnectedContainerSystem.cs
+Contraband/
+ ContrabandComponent.cs
+ ContrabandSeverityPrototype.cs
+ ContrabandSystem.cs
+ ShowContrabandDetailsComponent.cs
+ ShowContrabandSystem.cs
+Conveyor/
+ ConveyedComponent.cs
+ ConveyorComponent.cs
+Coordinates/
+ EntityCoordinatesExtensions.cs
+ Helpers/SnapgridHelper.cs
+Crayon/
+ CrayonComponent.cs
+ SharedCrayonSystem.cs
+CrewManifest/SharedCrewManifestSystem.cs
+CriminalRecords/Components/
+ CriminalRecordsConsoleComponent.cs
+ CriminalRecordsHackerComponent.cs
+CriminalRecords/
+ CriminalRecord.cs
+ CriminalRecordsUi.cs
+ Systems/
+  SharedCriminalRecordsConsoleSystem.cs
+  SharedCriminalRecordsHackerSystem.cs
+  SharedCriminalRecordsSystem.cs
+Cuffs/Components/
+ CuffableComponent.cs
+ HandcuffComponent.cs
+Cuffs/SharedCuffableSystem.cs
+Damage/Components/
+ ActiveStaminaComponent.cs
+ ClothingSlowOnDamageModifierComponent.cs
+ DamageableComponent.cs
+ DamageContactsComponent.cs
+ DamagedByContactComponent.cs
+ DamageExaminableComponent.cs
+ DamageOnAttackedComponent.cs
+ DamageOnAttackedProtectionComponent.cs
+ DamageOnHighSpeedImpactComponent.cs
+ DamageOnHoldingComponent.cs
+ DamageOnInteractComponent.cs
+ DamageOnInteractProtectionComponent.cs
+ DamageOtherOnHitComponent.cs
+ DamagePopupComponent.cs
+ DamageProtectionBuffComponent.cs
+ GodmodeComponent.cs
+ IgnoreSlowOnDamageComponent.cs
+ PassiveDamageComponent.cs
+ RequireProjectileTargetComponent.cs
+ SlowOnDamageComponent.cs
+ StaminaComponent.cs
+ StaminaDamageOnCollideComponent.cs
+ StaminaDamageOnEmbedComponent.cs
+ StaminaDamageOnHitComponent.cs
+ StaminaModifierStatusEffectComponent.cs
+ StaminaResistanceComponent.cs
+Damage/
+ DamageModifierSet.cs
+ DamageSpecifier.cs
+ DamageSpecifierDictionarySerializer.cs
+ DamageVisualizerKeys.cs
+ Events/
+  BeforeForceSayEvent.cs
+  BeforeStaminaDamageEvent.cs
+  DamageExamineEvent.cs
+  RefreshStaminaCritThresholdEvent.cs
+  StaminaDamageOnHitAttemptEvent.cs
+  StaminaMeleeHitEvent.cs
+ ForceSay/
+  AllowNextCritSpeechComponent.cs
+  DamageForceSayComponent.cs
+  DamageForceSayEvent.cs
+ Prototypes/
+  DamageContainerPrototype.cs
+  DamageGroupPrototype.cs
+  DamageModifierSetPrototype.cs
+  DamageTypePrototype.cs
+ Systems/
+  DamageableSystem.API.cs
+  DamageableSystem.BenchmarkHelpers.cs
+  DamageableSystem.cs
+  DamageableSystem.Events.cs
+  DamageContactsSystem.cs
+  DamageExamineSystem.cs
+  DamageOnAttackedSystem.cs
+  DamageOnHighSpeedImpactSystem.cs
+  DamageOnHoldingSystem.cs
+  DamageOnInteractSystem.cs
+  DamagePopupSystem.cs
+  DamageProtectionBuffSystem.cs
+  PassiveDamageSystem.cs
+  RequireProjectileTargetSystem.cs
+  SharedDamageOtherOnHitSystem.cs
+  SharedGodmodeSystem.cs
+  SharedStaminaSystem.cs
+  SharedStaminaSystem.Modifier.cs
+  SharedStaminaSystem.Resistance.cs
+  SlowOnDamageSystem.cs
+Dataset/
+ DatasetPrototype.cs
+ LocalizedDatasetPrototype.cs
+Decals/
+ ColorPalettePrototype.cs
+ Decal.cs
+ DecalChunkUpdateEvent.cs
+ DecalGridChunkCollectionTypeSerializer.cs
+ DecalGridComponent.cs
+ DecalPrototype.cs
+ PlaceDecalActionEvent.cs
+ SharedDecalSystem.cs
+Defusable/SharedDefusableSystem.cs
+Delivery/
+ DeliveryBombComponent.cs
+ DeliveryComponent.cs
+ DeliveryFragileComponent.cs
+ DeliveryModifierSystem.cs
+ DeliveryPriorityComponent.cs
+ DeliveryRandomMultiplierComponent.cs
+ DeliverySpawnerComponent.cs
+ DeliveryVisuals.cs
+ PrimedDeliveryBombComponent.cs
+ SharedDeliverySystem.cs
+Destructible/
+ SharedDestructibleSystem.cs
+ ThresholdActs.cs
+ Thresholds/MinMax.cs
+ Triggers/
+  AndTrigger.cs
+  DamageGroupTrigger.cs
+  DamageTrigger.cs
+  DamageTypeTrigger.cs
+  IThresholdTrigger.cs
+  OrTrigger.cs
+DetailExaminable/
+ DetailExaminableComponent.cs
+ DetailExaminableystem.cs
+DeviceLinking/Components/
+ RandomGateComponent.cs
+ TwoWayLeverComponent.cs
+DeviceLinking/
+ DeviceLinkSinkComponent.cs
+ DeviceLinkSourceComponent.cs
+ DevicePortPrototype.cs
+ Events/
+  DeviceLinkOverloadedEvent.cs
+  LinkAttemptEvent.cs
+  NewLinkEvent.cs
+  PortDisconnectedEvent.cs
+  SignalReceivedEvent.cs
+ SharedDeviceLinkSystem.cs
+ SharedLogicGate.cs
+ SharedRandomGateEvents.cs
+ Systems/
+  SharedRandomGateSystem.cs
+  TwoWayLeverSystem.cs
+ TwoWayLeverSignal.cs
+DeviceNetwork/Components/
+ DeviceListComponent.cs
+ DeviceNetworkComponent.cs
+ DeviceNetworkJammerComponent.cs
+ NetworkConfiguratorComponent.cs
+DeviceNetwork/
+ DeviceFrequencyPrototype.cs
+ DeviceNet.cs
+ DeviceNetworkConstants.cs
+ Events/
+  BeforeBroadcastAttemptEvent.cs
+  BeforePacketSentEvent.cs
+  DeviceNetworkPacketEvent.cs
+ NetworkConfiguratorUIMessages.cs
+ NetworkConfiguratorUserInterfaceState.cs
+ NetworkPayload.cs
+ Systems/
+  SharedDeviceListSystem.cs
+  SharedDeviceNetworkJammerSystem.cs
+  SharedDeviceNetworkSystem.cs
+  SharedNetworkConfiguratorSystem.cs
+Devour/
+ Components/DevourerComponent.cs
+ DevourSystem.cs
+Dice/
+ DiceComponent.cs
+ SharedDiceSystem.cs
+Directions/SharedDirectionExtensions.cs
+DisplacementMap/DisplacementData.cs
+Disposal/Mailing/
+ MailingUnitComponent.cs
+ MailingUnitUiMessages.cs
+ SharedDisposalRouterComponent.cs
+ SharedDisposalTaggerComponent.cs
+ SharedMailingUnitSystem.cs
+Disposal/Tube/
+ DisposalEntryComponent.cs
+ SharedDisposalTubeComponent.cs
+Disposal/Unit/
+ BeforeDisposalFlushEvent.cs
+ DisposalUnitComponent.cs
+ SharedDisposalTubeSystem.cs
+ SharedDisposalUnitSystem.cs
+DoAfter/
+ ActiveDoAfterComponent.cs
+ DoAfter.cs
+ DoAfterArgs.cs
+ DoAfterArgsComponent.cs
+ DoAfterComponent.cs
+ DoAfterEvent.cs
+ SharedDoAfterSystem.cs
+ SharedDoAfterSystem.Update.cs
+Doors/
+ AirlockWireStatus.cs
+ Components/
+  AirlockComponent.cs
+  DoorBoltComponent.cs
+  DoorComponent.cs
+  FirelockComponent.cs
+  TurnstileComponent.cs
+ DoorEvents.cs
+ Electronics/DoorElectronicsComponent.cs
+ Systems/
+  SharedAirlockSystem.cs
+  SharedDoorSystem.Bolts.cs
+  SharedDoorSystem.cs
+  SharedFirelockSystem.cs
+  SharedTurnstileSystem.cs
+DragDrop/
+ DragDropRequestEvent.cs
+ DraggableEvents.cs
+ SharedDragDropSystem.cs
+Dragon/
+ DragonEvents.cs
+ DragonRiftComponentState.cs
+ SharedDragonRiftComponent.cs
+DrawDepth/DrawDepth.cs
+Drowsiness/
+ DrowsinessStatusEffectComponent.cs
+ DrowsinessSystem.cs
+Drugs/SeeingRainbowsComponent.cs
+Drunk/
+ DrunkStatusEffectComponent.cs
+ SharedDrunkSystem.cs
+Effects/
+ ColorFlashEffectComponent.cs
+ ColorFlashEffectEvent.cs
+ SharedColorFlashEffectSystem.cs
+Electrocution/Components/
+ ElectrifiedComponent.cs
+ ElectrocutionHUDVisualsComponent.cs
+ ShowElectrocutionHUDComponent.cs
+Electrocution/
+ ElectrocutedComponent.cs
+ ElectrocutionEvents.cs
+ InsulatedComponent.cs
+ InsulatedSystem.cs
+ SharedElectrocution.cs
+ SharedElectrocutionSystem.cs
+Emag/Components/
+ EmagComponent.cs
+ EmaggedComponent.cs
+Emag/Systems/EmagSystem.cs
+Emoting/
+ EmoteEvents.cs
+ EmoteSystem.cs
+ EmotingComponent.cs
+Emp/
+ EmpDisabledComponent.cs
+ SharedEmpSystem.cs
+EnergyDome/
+ EnergyDomeProtectedUserComponent.cs
+ SharedEnergyDomeComponent.cs
+Engineering/Components/
+ DisassembleOnAltVerbComponent.cs
+ InflatableSafeDisassemblyComponent.cs
+Engineering/Systems/
+ DisassembleOnAltVerbSystem.cs
+ InflatableSafeDisassemblySystem.cs
+Ensnaring/Components/
+ EnsnareableComponent.cs
+ EnsnaringComponent.cs
+Ensnaring/
+ EnsnareableVisuals.cs
+ SharedEnsnareableSystem.cs
+EntityConditions/Conditions/Body/
+ BreathingEntityCondition.cs
+ HungerEntityConditionSystem.cs
+ InternalsEntityConditionSystem.cs
+ MetabolizerTypeEntityCondition.cs
+ MobStateEntityConditionSystem.cs
+EntityConditions/Conditions/
+ DamageGroupEntityConditionSystem.cs
+ DamageTypeEntityConditionSystem.cs
+ JobEntityConditionSystem.cs
+ ReagentEntityConditionSystem.cs
+ Tags/
+  HasAllTagsEntityConditionSystem.cs
+  HasAnyTagEntityConditionSystem.cs
+  HasTagEntityConditionSystem.cs
+ TemperatureEntityConditionSystem.cs
+ TemplateEntityConditionSystem.cs
+ TotalDamageEntityConditionSystem.cs
+EntityConditions/SharedEntityConditionsSystem.cs
+EntityEffects/Effects/
+ AdjustAlertEntityEffectSystem.cs
+ AdjustTemperatureEntityEffectsSystem.cs
+ ArtifactEntityEffectsSystem.cs
+ Atmos/
+  CreateGasEntityEffect.cs
+  ExtinguishEntityEffectSystem.cs
+  FlammableEntityEffect.cs
+  IgniteEntityEffect.cs
+ Body/
+  CleanBloodstreamEntityEffectSystem.cs
+  EyeDamageEntityEffectSystem.cs
+  ModifyBleedEntityEffectSystem.cs
+  ModifyBloodLevelEntityEffectSystem.cs
+  ModifyLungGasEntityEffectSystem.cs
+  OxygenateEntityEffect.cs
+  ReduceRottingEntityEffectSystem.cs
+  SatiateEntityEffectSystem.cs
+  VomitEntityEffectSystem.cs
+ Botany/PlantAttributes/
+  BasePlantAdjustAttributeEntityEffect.cs
+  PlantAdjustHealth.cs
+  PlantAdjustMutationLevel.cs
+  PlantAdjustMutationMod.cs
+  PlantAdjustNutrition.cs
+  PlantAdjustPests.cs
+  PlantAdjustPotency.cs
+  PlantAdjustToxins.cs
+  PlantAdjustWater.cs
+  PlantAdjustWeeds.cs
+  PlantAffectGrowth.cs
+  PlantChangeStat.cs
+  PlantCryoxadone.cs
+  PlantDestroySeeds.cs
+  PlantDiethylamine.cs
+  PlantPhalanximine.cs
+  PlantRestoreSeeds.cs
+  RobustHarvest.cs
+ Botany/
+  PlantMutateChemicalsEntityEffect.cs
+  PlantMutateGasesEntityEffect.cs
+  PlantMutateHarvestEntityEffect.cs
+  PlantMutateSpeciesChangeEntityEffect.cs
+ Damage/
+  DistributedHealthChangeEntityEffectSystem.cs
+  EvenHealthChangeEntityEffectSystem.cs
+  HealthChangeEntityEffectSystem.cs
+ EmoteEntityEffectSystem.cs
+ EntitySpawning/
+  BaseSpawnEntityEntityEffect.cs
+  SpawnEntityEntityEffectSystem.cs
+  SpawnEntityInContainerEntityEffectSystem.cs
+  SpawnEntityInContainerOrDropEntityEffectSystem.cs
+  SpawnEntityInInventoryEntityEffectSystem.cs
+ ExplodeEntityEffect.cs
+ GlowEntityEffectSystem.cs
+ MakeSentientEntityEffect.cs
+ MetaData/DestructibleActEntityEffectSystem.cs
+ PolymorphEntityEffect.cs
+ ResetNarcolepsyEntityEffectSystem.cs
+ SlipifyEntityEffectSystem.cs
+ Solution/
+  AddReagentToSolutionEntityEffectSystem.cs
+  AdjustReagentEntityEffectSystem.cs
+  AdjustReagentsByGroupEntityEffectSystem.cs
+  AreaReactionEntityEffect.cs
+  SolutionTemperatureEntityEffectsSystem.cs
+ StatusEffects/
+  BaseStatusEffectEntityEffect.cs
+  DrunkEntityEffectSystem.cs
+  ElectrocuteEntityEffectSystem.cs
+  GenericStatusEffectEntityEffectSystem.cs
+  JitterEntityEffectSystem.cs
+  ModifyKnockdownEntityEffectSystem.cs
+  ModifyParalysisEntityEffectSystem.cs
+  ModifyStatusEffectEntityEffectSystem.cs
+  MovementSpeedModifierEntityEffectSystem.cs
+ TemplateEntityEffectSystem.cs
+ Transform/
+  EmpEntityEffectSystem.cs
+  ExplosionEntityEffect.cs
+  FlashEntityEffectSystem.cs
+  PopupMessageEntityEffectSystem.cs
+ WashCreamPieEntityEffectSystem.cs
+ ZombieEntityEffectsSystem.cs
+EntityEffects/
+ EntityEffect.cs
+ EntityEffectEvent.cs
+ SharedEntityEffectsSystem.cs
+EntityList/EntityListPrototype.cs
+EntityTable/Conditions/
+ EntityTableCondition.cs
+ HasBudgetCondition.cs
+ MaxRuleOccurenceCondition.cs
+ PlayerCountCondition.cs
+ ReoccurrenceDelayCondition.cs
+ RoundDurationCondition.cs
+EntityTable/EntitySelectors/
+ AllSelector.cs
+ EntityTableSelector.cs
+ EntityTableTypeSerializer.cs
+ EntSelector.cs
+ GroupSelector.cs
+ NestedSelector.cs
+ NoneSelector.cs
+EntityTable/
+ EntityTablePrototype.cs
+ EntityTableSystem.cs
+ ValueSelector/
+  BinomialNumberSelector.cs
+  ConstantNumberSelector.cs
+  NumberSelector.cs
+  NumberSelectorTypeSerializer.cs
+  RangeNumberSelector.cs
+Entry/EntryPoint.cs
+Eui/
+ EuiMessageBase.cs
+ EuiStateBase.cs
+ MsgEuiCtl.cs
+ MsgEuiMessage.cs
+ MsgEuiState.cs
+Examine/
+ ExaminerComponent.cs
+ ExamineSystemMessages.cs
+ ExamineSystemShared.cs
+ ExamineSystemShared.Group.cs
+ GroupExamineComponent.cs
+Exchanger/ExchangerDoAfterEvent.cs
+Execution/
+ DoAfterEvent.cs
+ ExecutionComponent.cs
+ SharedExecutionSystem.cs
+Explosion/Components/
+ ExplosionResistanceComponent.cs
+ ExplosionVisualsComponent.cs
+ ExplosiveComponent.cs
+ ScatteringGrenadeComponent.cs
+ SharedClusterGrenadeComponent.cs
+Explosion/EntitySystems/
+ SharedExplosionSystem.cs
+ SharedScatteringGrenadeSystem.cs
+Explosion/
+ ExplosionEvents.cs
+ ExplosionPrototype.cs
+Eye/Blinding/Components/
+ ActivatableUIRequiresVisionComponent.cs
+ BlindableComponent.cs
+ BlindfoldComponent.cs
+ BlurryVisionComponent.cs
+ EyeClosingComponent.cs
+ EyeProtectionComponent.cs
+ RequiresEyeProtectionComponent.cs
+ TemporaryBlindnessComponent.cs
+ VisionCorrectionComponent.cs
+Eye/Blinding/Systems/
+ ActivatableUIRequiresVisionSystem.cs
+ BlindableSystem.cs
+ BlindfoldSystem.cs
+ BlurryVisionSystem.cs
+ EyeClosingSystem.cs
+ EyeProtectionSystem.cs
+ TemporaryBlindnessSystem.cs
+Eye/VisibilityFlags.cs
+Fax/
+ AdminFaxEui.cs
+ Components/
+  FaxableObjectComponent.cs
+  FaxecuteComponent.cs
+  FaxMachineComponent.cs
+ DamageOnFaxecuteEvent.cs
+ FaxVisuals.cs
+ SharedFax.cs
+ Systems/FaxecuteSystem.cs
+FingerprintReader/
+ FingerprintReaderComponent.cs
+ FingerprintReaderSystem.cs
+FixedPoint/
+ FixedPoint2.cs
+ FixedPoint4.cs
+Flash/Components/
+ ActiveFlashComponent.cs
+ DamagedByFlashingComponent.cs
+ FlashComponent.cs
+ FlashedComponent.cs
+ FlashImmunityComponent.cs
+Flash/
+ DamagedByFlashingSystem.cs
+ FlashEvents.cs
+ FlashVisuals.cs
+ SharedFlashSystem.cs
+Fluids/
+ AbsorbentComponent.cs
+ Components/
+  DrainComponent.cs
+  EquipSprayComponent.cs
+  EvaporationComponent.cs
+  PuddleComponent.cs
+  SpillableComponent.cs
+  SpillWhenWornComponent.cs
+  SprayComponent.cs
+  SpraySafetyComponent.cs
+ EntitySystems/
+  SharedSpraySystem.cs
+  SolutionDumpingSystem.cs
+  SpillWhenWornSystem.cs
+ Events.cs
+ PuddleVisuals.cs
+ SharedAbsorbentSystem.cs
+ SharedDrainSystem.cs
+ SharedPuddleDebugOverlaySystem.cs
+ SharedPuddleSystem.cs
+ SharedPuddleSystem.Evaporation.cs
+ SharedPuddleSystem.Spillable.cs
+ SharedSprayComponent.cs
+ SpraySafetySystem.cs
+Foldable/
+ DeployFoldableComponent.cs
+ DeployFoldableSystem.cs
+ FoldableComponent.cs
+ FoldableSystem.cs
+Follower/Components/
+ FollowedComponent.cs
+ FollowerComponent.cs
+ OrbitVisualsComponent.cs
+Follower/FollowerSystem.cs
+Forensics/Components/
+ DnaComponent.cs
+ FingerprintComponent.cs
+ FingerprintMaskComponent.cs
+Forensics/
+ Events.cs
+ ForensicScannerEvent.cs
+ Systems/SharedForensicsSystem.cs
+Friction/
+ TileFrictionController.cs
+ TileFrictionModifier.cs
+Friends/
+ Components/PettableFriendComponent.cs
+ Systems/PettableFriendSystem.cs
+GameTicking/Components/
+ ActiveGameRuleComponent.cs
+ DelayedStartRuleComponent.cs
+ EndedGameRuleComponent.cs
+ GameRuleComponent.cs
+GameTicking/
+ PlayerBeforeSpawnEvent.cs
+ PlayerSpawnCompleteEvent.cs
+ Prototypes/LobbyBackgroundPrototype.cs
+ RoundRestartCleanupEvent.cs
+ Rules/
+  DynamicRuleComponent.cs
+  DynamicRuleCostComponent.cs
+ SharedGameTicker.cs
+GameWindow/RequestWindowAttentionEvent.cs
+Gateway/
+ GatewayUi.cs
+ SharedGatewayGeneratorSystem.cs
+Ghost/
+ GhostComponent.cs
+ GhostHearingComponent.cs
+ GhostOnMoveComponent.cs
+ GhostRoleRadioEvents.cs
+ ReturnToBodyEuiMessage.cs
+ Roles/
+  Components/GhostRoleMobSpawnerComponent.cs
+  GhostRolePrototype.cs
+  GhostRolesEuiMessages.cs
+  MakeGhostRoleEuiState.cs
+  Raffles/
+   GhostRoleRaffleSettings.cs
+   GhostRoleRaffleSettingsPrototype.cs
+  SharedGhostRoleSystem.cs
+ SharedGhostSystem.cs
+ SpectralComponent.cs
+GhostKick/MsgGhostKick.cs
+Gibbing/Components/
+ GibbableComponent.cs
+ GibOnRoundEndComponent.cs
+Gibbing/
+ Events/GibbingEvents.cs
+ Systems/GibbingSystem.cs
+GlobalUsings.cs
+Glue/
+ GlueComponent.cs
+ GluedComponent.cs
+ GlueSystem.cs
+GPS/
+ Components/HandheldGPSComponent.cs
+ Systems/HandheldGpsSystem.cs
+Gravity/
+ FloatingVisualsComponent.cs
+ GravityAffectedComponent.cs
+ GravityChangedEvent.cs
+ GravityComponent.cs
+ GravityGeneratorComponent.cs
+ GravityShakeComponent.cs
+ SharedFloatingVisualizerSystem.cs
+ SharedGravityGeneratorSystem.cs
+ SharedGravitySystem.cs
+ SharedGravitySystem.Shake.cs
+GridPreloader/
+ Prototypes/PreloadedGridPrototype.cs
+ Systems/SharedGridPreloaderSystem.cs
+Guardian/
+ GuardianCreatorDoAfterEvent.cs
+ GuardianToggleActionEvent.cs
+Guidebook/
+ Events.cs
+ GuidebookData.cs
+ GuidebookDataAttribute.cs
+ GuideEntry.cs
+Hands/Components/
+ ExtraHandsEquipmentComponent.cs
+ HandsComponent.cs
+Hands/EntitySystems/
+ ExtraHandsEquipmentSystem.cs
+ SharedHandsSystem.AI.cs
+ SharedHandsSystem.cs
+ SharedHandsSystem.Drop.cs
+ SharedHandsSystem.EventListeners.cs
+ SharedHandsSystem.Interactions.cs
+ SharedHandsSystem.Pickup.cs
+ SharedHandsSystem.Relay.cs
+ SharedHandsSystem.Whitelist.cs
+Hands/HandEvents.cs
+HealthExaminable/
+ HealthExaminableComponent.cs
+ HealthExaminableSystem.cs
+Holiday/HolidayVisuals.cs
+Holopad/
+ HolographicAvatarComponent.cs
+ HolopadComponent.cs
+ HolopadHologramComponent.cs
+ HolopadUserComponent.cs
+ SharedHolopadSystem.cs
+HotPotato/
+ ActiveHotPotatoComponent.cs
+ HotPotatoComponent.cs
+ SharedHotPotatoSystem.cs
+HUD/HudThemePrototype.cs
+Humanoid/
+ Erp.cs
+ HairStyles.cs
+ HumanoidAppearanceComponent.cs
+ HumanoidCharacterAppearance.cs
+ HumanoidProfileExport.cs
+ HumanoidVisualLayers.cs
+ HumanoidVisualLayersExtension.cs
+ ICharacterAppearance.cs
+ Markings/ColoringTypes/
+  CategoryColoring.cs
+  EyeColoring.cs
+  SimpleColoring.cs
+  SkinColoring.cs
+  TattooColoring.cs
+ Markings/
+  Marking.cs
+  MarkingCategories.cs
+  MarkingColoring.cs
+  MarkingManager.cs
+  MarkingPoints.cs
+  MarkingPrototype.cs
+  MarkingsComponent.cs
+  MarkingsSet.cs
+ NamingSystem.cs
+ Prototypes/
+  HumanoidProfilePrototype.cs
+  HumanoidSpritePrototypes.cs
+  RandomHumanoidSettingsPrototype.cs
+  SpeciesPrototype.cs
+ Sex.cs
+ SharedHumanoidAppearanceSystem.cs
+ SharedHumanoidMarkingModifierSystem.cs
+ SkinColor.cs
+ SkinColorationPrototype.cs
+ Virginity.cs
+IconSmoothing/
+ RandomIconSmoothComponent.cs
+ SharedRandomIconSmoothSystem.cs
+ SmoothEdgeComponent.cs
+IdentityManagement/Components/
+ IdentityBlockerComponent.cs
+ IdentityComponent.cs
+IdentityManagement/
+ Identity.cs
+ IdentitySystem.cs
+ TryGetIdentityShortInfoEvent.cs
+IgnitionSource/Components/
+ MatchboxComponent.cs
+ MatchstickComponent.cs
+IgnitionSource/EntitySystems/
+ MatchboxSystem.cs
+ MatchstickSystem.cs
+IgnitionSource/
+ IgnitionEvent.cs
+ IgnitionSourceComponent.cs
+ SharedIgnitionSourceSystem.cs
+Implants/
+ ChameleonControllerImplantComponent.cs
+ ChameleonOutfitPrototype.cs
+ Components/
+  ImplantedComponent.cs
+  ImplanterComponent.cs
+  RadioImplantComponent.cs
+  ReplacementImplantComponent.cs
+  StorageImplantComponent.cs
+  SubdermalImplantComponent.cs
+ ReplacementImplantSystem.cs
+ SharedChameleonControllerSystem.cs
+ SharedImplanterSystem.cs
+ SharedSubdermalImplantSystem.cs
+ SharedSubdermalImplantSystem.Relays.cs
+ StorageImplantSystem.cs
+Info/RulesMessages.cs
+Input/ContentKeyFunctions.cs
+Instruments/
+ SharedInstrumentComponent.cs
+ SharedInstrumentSystem.cs
+ UI/InstrumentBoundUserInterfaceMessages.cs
+Intellicard/Components/IntellicardComponent.cs
+Interaction/
+ ActivateInWorldEvent.cs
+ AfterInteract.cs
+ BeforeInteract.cs
+ Components/
+  BlockMovementComponent.cs
+  BypassInteractionChecksComponent.cs
+  ComplexInteractionComponent.cs
+  InteractionPopupComponent.cs
+  InteractionRelayComponent.cs
+  NoRotateOnInteractComponent.cs
+  UnremoveableComponent.cs
+ Events/
+  AttackAttemptEvent.cs
+  ChangeDirectionAttemptEvent.cs
+  ContactInteractionEvent.cs
+  DroppedEvent.cs
+  GettingAttackedAttemptEvent.cs
+  GettingUsedAttemptEvent.cs
+  InteractionAttemptEvent.cs
+  InteractionFailureEvent.cs
+  InteractionSuccessEvent.cs
+  SuicideEvent.cs
+  UseAttemptEvent.cs
+  UseInHandEvent.cs
+ InteractHand.cs
+ InteractionPopupSystem.cs
+ InteractUsing.cs
+ ITargetedInteractEventArgs.cs
+ RangedInteract.cs
+ RotateToFaceSystem.cs
+ SharedInteractionSystem.Blocking.cs
+ SharedInteractionSystem.cs
+ SharedInteractionSystem.Relay.cs
+ SmartEquipSystem.cs
+Internals/InternalsDoAfterEvent.cs
+Inventory/Events/
+ EquipAttemptEvents.cs
+ EquippedEvents.cs
+ InventoryEquipActEvent.cs
+ OpenSlotStorageNetworkMessage.cs
+ RefreshEquipmentHudEvent.cs
+ UnequipAttemptEvent.cs
+ UnequippedEvents.cs
+ UseSlotNetworkMessage.cs
+Inventory/
+ InventoryComponent.cs
+ InventorySystem.cs
+ InventorySystem.Equip.cs
+ InventorySystem.Helpers.cs
+ InventorySystem.Relay.cs
+ InventorySystem.Slots.cs
+ InventoryTemplatePrototype.cs
+ RelaySubscriptionHelpers.cs
+ SelfEquipOnlyComponent.cs
+ SelfEquipOnlySystem.cs
+ SlotBlockComponent.cs
+ SlotBlockSystem.cs
+ SlotFlags.cs
+ VirtualItem/
+  SharedVirtualItemSystem.cs
+  VirtualItemComponent.cs
+IoC/SharedContentIoC.cs
+Item/
+ HeldSpeedModifierComponent.cs
+ HeldSpeedModifierSystem.cs
+ ItemComponent.cs
+ ItemSizeChangedEvent.cs
+ ItemSizePrototype.cs
+ ItemToggle/Components/
+  ComponentTogglerComponent.cs
+  ItemToggleActiveSoundComponent.cs
+  ItemToggleComponent.cs
+  ItemToggleHotComponent.cs
+  ItemToggleMeleeWeaponComponent.cs
+  ItemTogglePrefixComponent.cs
+  ItemToggleSizeComponent.cs
+ ItemToggle/
+  ComponentTogglerSystem.cs
+  ItemTogglePrefixSystem.cs
+  ItemToggleSystem.cs
+ MultiHandedItemComponent.cs
+ MultiHandedItemSystem.cs
+ PickupAttemptEvent.cs
+ SharedItemSystem.cs
+ItemRecall/
+ ItemRecallComponent.cs
+ ItemRecallEvents.cs
+ RecallMarkerComponent.cs
+ SharedItemRecallSystem.cs
+Jaunt/
+ JauntComponent.cs
+ JauntSystem.cs
+Jittering/
+ JitteringComponent.cs
+ SharedJitteringSystem.cs
+Kitchen/
+ BeingMicrowavedEvent.cs
+ Components/
+  ExtractableComponent.cs
+  KitchenSpikeComponent.cs
+  KitchenSpikeHookedComponent.cs
+  KitchenSpikeVictimComponent.cs
+  RecipeProviderComponent.cs
+  SharedMicrowave.cs
+  SharpComponent.cs
+ GetSecretRecipesEvent.cs
+ MicrowaveMealRecipePrototype.cs
+ RecipeManager.cs
+ SharedKitchenSpikeSystem.cs
+ SharedReagentGrinder.cs
+ SharpDoAfterEvent.cs
+Labels/Components/
+ HandLabelerComponent.cs
+ LabelComponent.cs
+ PaperLabelComponent.cs
+ PaperLabelTypeComponent.cs
+Labels/EntitySystems/
+ LabelSystem.cs
+ SharedHandLabelerSystem.cs
+Labels/LabelEvents.cs
+LandMines/LandMineComponent.cs
+Lathe/
+ EmagLatheComponent.cs
+ LatheComponent.cs
+ LatheMessages.cs
+ LatheVisuals.cs
+ PrototypeIdLinkedListSerializer.cs
+ Prototypes/
+  LatheCategoryPrototype.cs
+  LatheRecipePackPrototype.cs
+ SharedLatheSystem.cs
+Light/Components/
+ HandheldLightComponent.cs
+ ImplicitRoofComponent.cs
+ IsRoofComponent.cs
+ ItemTogglePointLightComponent.cs
+ LightBulbComponent.cs
+ LightCycleComponent.cs
+ LightOnCollideColliderComponent.cs
+ LightOnCollideComponent.cs
+ LightReplacerComponent.cs
+ PoweredLightComponent.cs
+ RgbLightControllerComponent.cs
+ RoofComponent.cs
+ RotatingLightComponent.cs
+ SharedEmergencyLightComponent.cs
+ SharedExpendableLightComponent.cs
+ SharedLightBehaviourComponent.cs
+ SlimPoweredLightComponent.cs
+ SunShadowCastComponent.cs
+ SunShadowComponent.cs
+ SunShadowCycleComponent.cs
+ TileEmissionComponent.cs
+ UnpoweredFlashlightComponent.cs
+Light/EntitySystems/
+ ItemTogglePointLightSystem.cs
+ LightCollideSystem.cs
+ SharedLightBulbSystem.cs
+ SharedLightCycleSystem.cs
+ SharedLightReplacerSystem.cs
+ SharedPoweredLightSystem.cs
+ SharedRoofSystem.cs
+ SharedSunShadowSystem.cs
+ SlimPoweredLightSystem.cs
+ UnpoweredFlashlightSystem.cs
+Light/
+ LightToggleEvent.cs
+ PoweredLightDoAfterEvent.cs
+ SharedEmergencyLightSystem.cs
+ SharedHandheldLightSystem.cs
+ SharedPoweredLightVisuals.cs
+ SharedRgbLightControllerSystem.cs
+ SharedRotatingLightSystem.cs
+ SharedUnpoweredFlashlightVisuals.cs
+Lightning/
+ Components/SharedLightningComponent.cs
+ SharedLightningSystem.cs
+Localizations/
+ ContentLocalizationManager.cs
+ Units.cs
+ UserInputParser.cs
+Lock/
+ ItemToggleRequiresLockComponent.cs
+ LockComponent.cs
+ LockedAnchorableComponent.cs
+ LockedStorageComponent.cs
+ LockedWiresPanelComponent.cs
+ LockingWhitelistComponent.cs
+ LockingWhitelistSystem.cs
+ LockSystem.cs
+ UIRequiresLockComponent.cs
+Lube/
+ LubeComponent.cs
+ LubedComponent.cs
+MachineLinking/
+ SharedSignalTimerComponent.cs
+ UIKeys.cs
+Machines/Components/
+ MultipartMachineComponent.cs
+ MultipartMachinePartComponent.cs
+Machines/
+ EntitySystems/SharedMultipartMachineSystem.cs
+ Events/MultipartMachineEvents.cs
+Magic/Components/
+ AnimateableComponent.cs
+ AnimateComponent.cs
+ MagicComponent.cs
+ SpellbookComponent.cs
+ WizardClothesComponent.cs
+Magic/Events/
+ BeforeCastSpellEvent.cs
+ ChangeComponentSpellEvent.cs
+ ChargeSpellEvent.cs
+ InstantSpawnSpellEvent.cs
+ KnockSpellEvent.cs
+ MindSwapSpellEvent.cs
+ ProjectileSpellEvent.cs
+ RandomGlobalSpawnSpellEvent.cs
+ SmiteSpellEvent.cs
+ TeleportSpellEvent.cs
+ VoidApplauseSpellEvent.cs
+ WorldSpawnSpellEvent.cs
+Magic/
+ MagicInstantSpawnData.cs
+ SharedMagicSystem.cs
+ SpellbookDoAfterEvent.cs
+ SpellbookSystem.cs
+ Systems/AnimateSpellSystem.cs
+MagicMirror/
+ MagicMirrorComponent.cs
+ SharedMagicMirrorSystem.cs
+Mapping/
+ MappingMapDataMessage.cs
+ MappingSaveMapErrorMessage.cs
+ MappingSaveMapMessage.cs
+ StartPlacementActionEvent.cs
+Maps/
+ ContentTileDefinition.cs
+ GameMapCondition.cs
+ GameMapPrototype.cs
+ GameMapPrototype.MapSelection.cs
+ SharedGridDraggingSystem.cs
+ TileSystem.cs
+ TurfSystem.cs
+MapText/
+ SharedMapTextComponent.cs
+ SharedMapTextSystem.cs
+MassMedia/Components/
+ NewsWriterBuiMessages.cs
+ StationNewsComponent.cs
+MassMedia/Systems/SharedNewsSystem.cs
+Materials/
+ ActiveMaterialReclaimerComponent.cs
+ CollideMaterialReclaimerComponent.cs
+ InsertingMaterialStorageComponent.cs
+ MaterialComponent.cs
+ MaterialPrototype.cs
+ MaterialReclaimerComponent.cs
+ MaterialStorageComponent.cs
+ OreSilo/
+  OreSiloClientComponent.cs
+  OreSiloComponent.cs
+  SharedOreSiloSystem.cs
+ PhysicalCompositionComponent.cs
+ SharedMaterialReclaimerSystem.cs
+ SharedMaterialStorageSystem.cs
+Maths/PhysicalConstants.cs
+Mech/Components/
+ MechComponent.cs
+ MechPilotComponent.cs
+Mech/EntitySystems/
+ SharedMechSystem.cs
+ SharedMechSystem.Relay.cs
+Mech/Equipment/Components/
+ MechEquipmentComponent.cs
+ MechSoundboardComponent.cs
+Mech/
+ Equipment/Systems/MechSoundboardSystem.cs
+ MechUI.cs
+ SharedMech.cs
+Medical/
+ CrewMonitoring/CrewMonitoringShared.cs
+ Cryogenics/
+  ActiveCryoPodComponent.cs
+  CryoPodComponent.cs
+  CryoPodWireStatus.cs
+  InsideCryoPodComponent.cs
+  SharedCryoPodSystem.cs
+  SharedInsideCryoPodSystem.cs
+ DefibrillatorComponent.cs
+ DefibrillatorEvents.cs
+ Healing/
+  HealingComponent.cs
+  HealingSystem.cs
+ HealingDoAfterEvent.cs
+ ReclaimerDoAfterEvent.cs
+ SharedHealingSystem.cs
+ Stethoscope/
+  Components/StethoscopeComponent.cs
+  StethoscopeSystem.cs
+ StethoscopeDoAfterEvent.cs
+ SuitSensors/
+  SharedSuitSensor.cs
+  SharedSuitSensorSystem.cs
+  SuitSensorComponent.cs
+ VomitSystem.cs
+MedicalScanner/
+ HealthAnalyzerDoAfterEvent.cs
+ HealthAnalyzerScannedUserMessage.cs
+ HealthAnalyzerUiKey.cs
+ SharedMedicalScannerComponent.cs
+Mind/Components/
+ IsDeadICComponent.cs
+ MindContainerComponent.cs
+ TransferMindOnGibComponent.cs
+ VisitingMindComponent.cs
+Mind/Filters/
+ AliveHumansPool.cs
+ AntagonistMindFilter.cs
+ BodyMindFilter.cs
+ HasRoleMindFilter.cs
+ IMindPool.cs
+ JobMindFilter.cs
+ MindFilter.cs
+ ObjectiveMindFilter.cs
+Mind/
+ IsDeadICSystem.cs
+ MindComponent.cs
+ MindVisuals.cs
+ RoleTypePrototype.cs
+ SharedMindSystem.cs
+ SharedMindSystem.Relay.cs
+Mindshield/Components/
+ FakeMindshieldComponent.cs
+ FakeMindShieldImplantComponent.cs
+ MindShieldComponent.cs
+ MindShieldImplantComponent.cs
+Mindshield/FakeMindShield/FakeMindshieldSystem.cs
+Mining/Components/
+ MiningScannerComponent.cs
+ MiningScannerViewableComponent.cs
+ MiningScannerViewerComponent.cs
+ OreVeinComponent.cs
+Mining/
+ MiningScannerSystem.cs
+ OrePrototype.cs
+Mobs/Components/
+ MobStateActionsComponent.cs
+ MobStateComponent.cs
+ MobThresholdsComponent.cs
+Mobs/
+ CritMobActions.cs
+ Events/BeforeAlertSeverityCheckEvent.cs
+ MobState.cs
+ Systems/
+  MobStateActionsSystem.cs
+  MobStateSystem.cs
+  MobStateSystem.StateMachine.cs
+  MobStateSystem.Subscribers.cs
+  MobThresholdSystem.cs
+Module/SharedModuleTestingCallbacks.cs
+Mood/MoodVisualsComponent.cs
+Morgue/Components/
+ ActiveCrematoriumComponent.cs
+ CrematoriumComponent.cs
+ EntityStorageLayingDownOverrideComponent.cs
+ MorgueComponent.cs
+Morgue/
+ EntityStorageLayingDownOverrideSystem.cs
+ SharedCrematoriumSystem.cs
+ SharedMorgue.cs
+ SharedMorgueSystem.cs
+MouseRotator/
+ MouseRotatorComponent.cs
+ SharedMouseRotatorSystem.cs
+Mousetrap/
+ MousetrapComponent.cs
+ MousetrapSystem.cs
+Movement/Components/
+ ActiveInputMoverComponent.cs
+ ActiveJetpackComponent.cs
+ ActiveLeaperComponent.cs
+ AutoOrientComponent.cs
+ BorgJetpackComponent.cs
+ BoundaryComponent.cs
+ CanMoveInAirComponent.cs
+ ContentEyeComponent.cs
+ CursorOffsetRequiresWieldComponent.cs
+ EyeCursorOffsetComponent.cs
+ FloorOccluderComponent.cs
+ FloorOcclusionComponent.cs
+ FootstepModifierComponent.cs
+ FrictionContactsComponent.cs
+ FrictionStatusEffectComponent.cs
+ IgnoreKudzuComponent.cs
+ InputMoverComponent.cs
+ JetpackComponent.cs
+ JetpackUserComponent.cs
+ JumpAbilityComponent.cs
+ MobCollisionComponent.cs
+ MobMoverComponent.cs
+ MovementAlwaysTouchingComponent.cs
+ MovementBodyPartComponent.cs
+ MovementIgnoreGravityComponent.cs
+ MovementModifiedByContactComponent.cs
+ MovementModStatusEffectComponent.cs
+ MovementRelayTargetComponent.cs
+ MovementSoundComponent.cs
+ MovementSpeedModifierComponent.cs
+ NoRotateOnMoveComponent.cs
+ RelayInputMoverComponent.cs
+ SpeedModifiedOnWieldComponent.cs
+ SpeedModifierContactsComponent.cs
+ SpriteMovementComponent.cs
+ WormComponent.cs
+Movement/Events/
+ ContainerRelayMovementEntityEvent.cs
+ GetFootstepSoundEvent.cs
+ GetSpeedModifierContactCapEvent.cs
+ MoveInputEvent.cs
+ SpriteMoveEvent.cs
+ TileFrictionEvent.cs
+ ToggleJetpackEvent.cs
+ UpdateCanMoveEvent.cs
+ WeightlessMoveEvent.cs
+Movement/Pulling/Components/
+ ActivePullerComponent.cs
+ PullableComponent.cs
+ PullerComponent.cs
+Movement/Pulling/Events/
+ AttemptPullEvent.cs
+ AttemptStopPullingEvent.cs
+ BeingPulledAttemptEvent.cs
+ PullMessage.cs
+ PullStartedMessage.cs
+ PullStoppedMessage.cs
+ StartPullAttemptEvent.cs
+Movement/
+ Pulling/Systems/PullingSystem.cs
+ Systems/
+  AutoOrientSystem.cs
+  FrictionContactsSystem.cs
+  MovementIgnoreGravitySystem.cs
+  MovementModStatusSystem.cs
+  MovementSoundSystem.cs
+  MovementSpeedModifierSystem.cs
+  SharedBorgJetpackSystem.cs
+  SharedContentEyeSystem.cs
+  SharedFloorOcclusionSystem.cs
+  SharedJetpackSystem.cs
+  SharedJumpAbilitySystem.cs
+  SharedMobCollisionSystem.cs
+  SharedMoverController.cs
+  SharedMoverController.Input.cs
+  SharedMoverController.Relay.cs
+  SharedSpriteMovementSystem.cs
+  SpeedModifierContactsSystem.cs
+  WormSystem.cs
+NameIdentifier/
+ NameIdentifierComponent.cs
+ NameIdentifierGroupPrototype.cs
+ SharedNameIdentifierSystem.cs
+NameModifier/Components/
+ ModifyWearerNameComponent.cs
+ NameModifierComponent.cs
+NameModifier/EntitySystems/
+ ModifyWearerNameSystem.cs
+ NameModifierSystem.cs
+Ninja/Components/
+ BatteryDrainerComponent.cs
+ DashAbilityComponent.cs
+ EmagProviderComponent.cs
+ EnergyKatanaComponent.cs
+ ItemCreatorComponent.cs
+ NinjaGlovesComponent.cs
+ NinjaSuitComponent.cs
+ NinjaSuitDrawComponent.cs
+ SpaceNinjaComponent.cs
+ SpiderChargeComponent.cs
+ StunProviderComponent.cs
+Ninja/Systems/
+ DashAbilitySystem.cs
+ EmagProviderSystem.cs
+ EnergyKatanaSystem.cs
+ ItemCreatorSystem.cs
+ SharedBatteryDrainerSystem.cs
+ SharedNinjaGlovesSystem.cs
+ SharedNinjaSuitDrawSystem.cs
+ SharedNinjaSuitSystem.cs
+ SharedSpaceNinjaSystem.cs
+ SharedSpiderChargeSystem.cs
+ SharedStunProviderSystem.cs
+NodeContainer/
+ Node.cs
+ NodeContainerComponent.cs
+ NodeGroups/
+  INodeGroup.cs
+  NodeGroupID.cs
+ NodeVis.cs
+ SharedNodeContainerSystem.cs
+NPC/
+ ActiveNPCComponent.cs
+ Components/
+  FactionExceptionComponent.cs
+  FactionExceptionTrackerComponent.cs
+  NpcFactionMemberComponent.cs
+  NPCRecentlyInjectedComponent.cs
+ Events/
+  HTNMessage.cs
+  NPCSteeringDebugEvent.cs
+  PathBreadcrumbsMessage.cs
+  PathPolysRefreshMessage.cs
+  PathRouteMessage.cs
+  RequestNPCSteeringDebugEvent.cs
+  RequestPathfindingDebugMessage.cs
+ PathfindingBoundary.cs
+ PathfindingBreadcrumb.cs
+ PathfindingDebugMode.cs
+ PathPoly.cs
+ Prototypes/NpcFactionPrototype.cs
+ RequestHTNMessage.cs
+ SharedNPCComponent.cs
+ SharedNPCSteeringSystem.cs
+ SharedPathfindingSystem.cs
+ SharedPathfindingSystem.Line.cs
+ Systems/
+  NpcFactionSystem.cs
+  NpcFactionSystem.Exception.cs
+  SharedNPCImprintingOnSpawnBehaviourSystem.cs
+  SharedNPCSystem.cs
+Nuke/
+ NukeDiskComponent.cs
+ NukeUiMessages.cs
+ SharedNuke.cs
+NukeOps/
+ NukeOperativeComponent.cs
+ WarDeclaratorEvents.cs
+Nutrition/AnimalHusbandry/
+ InfantComponent.cs
+ ReproductiveComponent.cs
+ ReproductivePartnerComponent.cs
+Nutrition/Components/
+ ButcherableComponent.cs
+ CreamPieComponent.cs
+ CreamPiedComponent.cs
+ DrinkComponent.cs
+ EdibleComponent.cs
+ ExaminableHungerComponent.cs
+ FlavorProfileComponent.cs
+ FoodMetamorphableByAddingComponent.cs
+ FoodSequenceElementComponent.cs
+ FoodSequenceStartPointComponent.cs
+ HungerComponent.cs
+ IngestionBlockerComponent.cs
+ MessyDrinkerComponent.cs
+ OpenableComponent.cs
+ PressurizedSolutionComponent.cs
+ SealableComponent.cs
+ ShakeableComponent.cs
+ SharedFatExtractor.cs
+ SharedFoodComponent.cs
+ SmokableComponent.cs
+ ThirstComponent.cs
+ UtensilComponent.cs
+Nutrition/EntitySystems/
+ ExaminableHungerSystem.cs
+ FlavorProfileSystem.cs
+ FoodSequenceSystem.cs
+ HungerSystem.cs
+ IngestionSystem.API.cs
+ IngestionSystem.Blockers.cs
+ IngestionSystem.cs
+ IngestionSystem.Utensils.cs
+ MessyDrinkerSystem.cs
+ OpenableSystem.cs
+ PressurizedSolutionSystem.cs
+ SealableSystem.cs
+ ShakeableSystem.cs
+ SharedCreamPieSystem.cs
+ SharedFoodSequenceSystem.cs
+ ThirstSystem.cs
+ UtensilSystem.cs
+Nutrition/
+ Events.cs
+ Flavor.cs
+ FoodMetamorphRules/FoodMetamorphRule.cs
+ IngestionEvents.cs
+ Prototypes/
+  EdiblePrototype.cs
+  FoodSequenceElementPrototype.cs
+  MetamorphRecipePrototype.cs
+obj/Debug/
+ .NETCoreApp,Version=v10.0.AssemblyAttributes.cs
+ Content.Shared.AssemblyInfo.cs
+Objectives/Components/
+ ObjectiveComponent.cs
+ StealTargetComponent.cs
+Objectives/
+ ObjectiveInfo.cs
+ Prototypes/StealTargetGroupPrototype.cs
+ Systems/SharedObjectivesSystem.cs
+Overlays/
+ BlackAndWhiteOverlayComponent.cs
+ NoirOverlayComponent.cs
+ ShowCriminalRecordIconsComponent.cs
+ ShowHealthBarsComponent.cs
+ ShowHealthIconsComponent.cs
+ ShowHungerIconsComponent.cs
+ ShowJobIconsComponent.cs
+ ShowMindShieldIconsComponent.cs
+ ShowSyndicateIconsComponent.cs
+ ShowThirstIconsComponent.cs
+PAI/PAIComponent.cs
+Paper/
+ ActivateOnPaperOpenedComponent.cs
+ BlockWritingComponent.cs
+ BlockWritingSystem.cs
+ EnvelopeComponent.cs
+ EnvelopeSystem.cs
+ PaperComponent.cs
+ PaperSystem.cs
+ RandomPaperContentComponent.cs
+ StampComponent.cs
+Parallax/Biomes/
+ BiomeComponent.cs
+ BiomeTemplatePrototype.cs
+ Layers/
+  BiomeDecalLayer.cs
+  BiomeDummyLayer.cs
+  BiomeEntityLayer.cs
+  BiomeMetaLayer.cs
+  BiomeTileLayer.cs
+  IBiomeLayer.cs
+  IBiomeWorldLayer.cs
+ Markers/
+  BiomeMarkerLayerPrototype.cs
+  IBiomeMarkerLayer.cs
+ SharedBiomeSystem.cs
+Parallax/
+ ParallaxComponent.cs
+ SharedParallaxSystem.cs
+ParcelWrap/Components/
+ ParcelWrapComponent.cs
+ ParcelWrapOverrideComponent.cs
+ WrappedParcelComponent.cs
+ WrappedParcelVisuals.cs
+ParcelWrap/Systems/
+ ParcelWrapEvents.cs
+ ParcelWrappingSystem.cs
+ ParcelWrappingSystem.ParcelWrap.cs
+ ParcelWrappingSystem.WrappedParcel.cs
+ParticleAccelerator/
+ AcceleratorParts.cs
+ Components/
+  ParticleAcceleratorEmitterComponent.cs
+  ParticleAcceleratorEndCapComponent.cs
+  ParticleAcceleratorFuelChamberComponent.cs
+  ParticleAcceleratorPowerBoxComponent.cs
+Payload/Components/
+ ChemicalPayloadComponent.cs
+ PayloadCaseComponent.cs
+ PayloadTriggerComponent.cs
+Payload/EntitySystems/ChemicalPayloadSystem.cs
+PDA/
+ PdaComponent.cs
+ PdaMessagesUi.cs
+ PdaUpdateState.cs
+ PdaVisuals.cs
+ Ringer/
+  RingerComponent.cs
+  RingerMessagesUI.cs
+  RingerUplinkComponent.cs
+  RingerVisuals.cs
+ SharedPdaSystem.cs
+ SharedRingerSystem.cs
+Physics/
+ CollisionGroup.cs
+ Controllers/SharedConveyorController.cs
+ JointVisualsComponent.cs
+ PreventCollideComponent.cs
+ SharedPreventCollideSystem.cs
+Pinpointer/
+ ConfigurableNavMapBeaconComponent.cs
+ NavMapBeaconComponent.cs
+ NavMapComponent.cs
+ NavMapDoorComponent.cs
+ PinpointerComponent.cs
+ PinpointerVisuals.cs
+ SharedNavMapSystem.cs
+ SharedPinpointerSystem.cs
+ SharedStationMapSystem.cs
+ StationMapComponent.cs
+Placeable/
+ ItemPlacerComponent.cs
+ ItemPlacerSystem.cs
+ PlaceableSurfaceComponent.cs
+ PlaceableSurfaceSystem.cs
+Players/
+ ContentPlayerData.cs
+ JobWhitelist/MsgJobWhitelist.cs
+ MsgRoleBans.cs
+ PlayerDataExt.cs
+ PlayTimeTracking/
+  ISharedPlaytimeManager.cs
+  MsgPlayTime.cs
+  PlayTimeTrackerPrototype.cs
+  PlayTimeTrackingShared.cs
+ RateLimiting/
+  RateLimitRegistration.cs
+  SharedPlayerRateLimitManager.cs
+ SharedPlayerSystem.cs
+Plunger/Components/
+ PlungerComponent.cs
+ PlungerUseComponent.cs
+Plunger/
+ PlungerDoAfterEvent.cs
+ Systems/PlungerSystem.cs
+PneumaticCannon/
+ PneumaticCannonComponent.cs
+ SharedPneumaticCannonSystem.cs
+Pointing/Components/
+ SharedPointingArrowComponent.cs
+ SharedRoguePointingArrowComponent.cs
+Pointing/
+ PointingEvents.cs
+ SharedPointingSystem.cs
+Points/
+ PointManagerComponent.cs
+ SharedPointSystem.cs
+Polymorph/Components/
+ ChameleonDisguiseComponent.cs
+ ChameleonDisguisedComponent.cs
+ ChameleonProjectorComponent.cs
+Polymorph/
+ PolymorphActions.cs
+ PolymorphEvents.cs
+ PolymorphPrototype.cs
+ Systems/SharedChameleonProjectorSystem.cs
+Popups/SharedPopupSystem.cs
+Power/
+ ApcToolFinishedEvent.cs
+ ChargeEvents.cs
+ Components/
+  ActivatableUIRequiresPowerComponent.cs
+  ApcPowerReceiverBatteryComponent.cs
+  ApcPowerReceiverComponentState.cs
+  BatteryComponent.cs
+  BatterySelfRechargerComponent.cs
+  BatteryVisualsComponent.cs
+  ChargerComponent.cs
+  ExaminableBatteryComponent.cs
+  InsideChargerComponent.cs
+  ItemSlotRequiresPowerComponent.cs
+  PowerStateComponent.cs
+  SharedApcPowerReceiverComponent.cs
+  UIPowerStateComponent.cs
+ EntitySystems/
+  ChargerSystem.cs
+  ItemSlotRequiresPowerSystem.cs
+  PowerStateSystem.cs
+  SharedActivatableUIRequiresPowerSystem.cs
+  SharedBatterySystem.API.cs
+  SharedBatterySystem.cs
+  SharedPowerNetSystem.cs
+  SharedPowerReceiverSystem.cs
+  UIPowerStateSystem.cs
+ Generation/Teg/SharedTeg.cs
+ Generator/
+  ActiveGeneratorRevvingComponent.cs
+  ActiveGeneratorRevvingSystem.cs
+  FuelGeneratorComponent.cs
+  GeneratorExhaustGasComponent.cs
+  PowerSwitchableComponent.cs
+  SharedGeneratorSystem.cs
+  SharedPortableGeneratorComponent.cs
+  SharedPortableGeneratorSystem.cs
+  SharedPowerSwitchableSystem.cs
+ PowerChangedEvent.cs
+ PowerMonitoringCableNetworksComponent.cs
+ SharedBattery.cs
+ SharedPower.cs
+ SharedPowerCharge.cs
+ SharedPowerChargeComponent.cs
+ SharedPowerDevice.cs
+ SharedPowerMonitoringConsoleComponent.cs
+ SharedPowerMonitoringConsoleSystem.cs
+ TeslaCoilVisuals.cs
+PowerCell/Components/
+ PowerCellComponent.cs
+ PowerCellDrawComponent.cs
+ PowerCellSlotComponent.cs
+ ToggleCellDrawComponent.cs
+PowerCell/
+ PowerCellEvents.cs
+ PowerCellSystem.API.cs
+ PowerCellSystem.cs
+ PowerCellSystem.Draw.cs
+ PowerCellSystem.Relay.cs
+ ToggleCellDrawSystem.cs
+Prayer/PrayableComponent.cs
+Preferences/
+ GameSettings.cs
+ HumanoidCharacterProfile.cs
+ ICharacterProfile.cs
+ JobPriority.cs
+ Loadouts/Effects/
+  GroupLoadoutEffect.cs
+  JobRequirementLoadoutEffect.cs
+  LoadoutEffect.cs
+  LoadoutEffectGroupPrototype.cs
+  PointsCostLoadoutEffect.cs
+  SexLoadoutEffect.cs
+  SpeciesLoadoutEffect.cs
+ Loadouts/
+  Loadout.cs
+  LoadoutGroupPrototype.cs
+  LoadoutPrototype.cs
+  RoleLoadout.cs
+  RoleLoadoutPrototype.cs
+ MsgDeleteCharacter.cs
+ MsgPreferencesAndSettings.cs
+ MsgSelectCharacter.cs
+ MsgUpdateCharacter.cs
+ MsgUpdateConstructionFavorites.cs
+ PlayerPreferences.cs
+ PreferenceUnavailableMode.cs
+ SpawnPriorityPreference.cs
+Procedural/
+ Components/EntityRemapComponent.cs
+ Distance/
+  DunGenEuclideanSquaredDistance.cs
+  DunGenSquareBump.cs
+  IDunGenDistance.cs
+ Dungeon.cs
+ DungeonConfig.cs
+ DungeonGenerators/
+  ExteriorDunGen.cs
+  NoiseDistanceDunGen.cs
+  NoiseDunGen.cs
+  PrefabDunGen.cs
+  PrototypeDunGen.cs
+  ReplaceTileDunGen.cs
+ DungeonLayers/
+  EntityTableDunGen.cs
+  FillGridDunGen.cs
+  MobsDunGen.cs
+  OreDunGen.cs
+  OreDunGenPrototype.cs
+ DungeonPath.cs
+ DungeonPresetPrototype.cs
+ DungeonRoom.cs
+ DungeonRoomPackPrototype.cs
+ DungeonRoomPrototype.cs
+ IDunGenLayer.cs
+ Loot/
+  BiomeMarkerLoot.cs
+  BiomeTemplateLoot.cs
+  IDungeonLoot.cs
+  RandomSpawnsLoot.cs
+  SalvageLootPrototype.cs
+ PostGeneration/
+  AutoCablingDunGen.cs
+  BiomeDunGen.cs
+  BiomeMarkerLayerDunGen.cs
+  BoundaryWallDunGen.cs
+  CornerClutterDunGen.cs
+  CorridorClutterDunGen.cs
+  CorridorDecalSkirtingDunGen.cs
+  CorridorDunGen.cs
+  DungeonEntranceDunGen.cs
+  EntranceFlankDunGen.cs
+  ExternalWindowDunGen.cs
+  InternalWindowDunGen.cs
+  JunctionDunGen.cs
+  MiddleConnectionDunGen.cs
+  RoomEntranceDunGen.cs
+  SplineDungeonConnectorDunGen.cs
+  WallMountDunGen.cs
+  WormCorridorDunGen.cs
+ SalvageDifficultyPrototype.cs
+ SharedDungeonSystem.cs
+Projectiles/
+ EmbeddableProjectileComponent.cs
+ EmbeddedContainerComponent.cs
+ EmbedEvents.cs
+ ProjectileComponent.cs
+ ProjectileEmbedEvent.cs
+ ProjectileSpreadComponent.cs
+ SharedProjectileSystem.cs
+Prototypes/
+ EntityPrototypeHelpers.cs
+ NavMapBlipPrototype.cs
+ProximityDetection/
+ Components/ProximityDetectorComponent.cs
+ ProximityDetectionEvents.cs
+ Systems/ProximityDetectionSystem.cs
+Prying/Components/
+ PryingComponent.cs
+ PryUnpoweredComponent.cs
+Prying/Systems/PryingSystem.cs
+Puppet/
+ SharedVentriloquistPuppetSystem.cs
+ VentriloquistPuppetComponent.cs
+Radiation/Components/
+ GeigerComponent.cs
+ RadiationPulseComponent.cs
+ RadiationSourceComponent.cs
+Radiation/Events/
+ OnIrradiatedEvent.cs
+ OnRadiationOverlayUpdateEvent.cs
+Radiation/
+ RadiationRay.cs
+ Systems/
+  RadiationPulseSystem.cs
+  SharedGeigerSystem.cs
+Radio/Components/
+ ActiveRadioComponent.cs
+ ActiveRadioJammerComponent.cs
+ EncryptionKeyComponent.cs
+ EncryptionKeyHolderComponent.cs
+ HeadsetComponent.cs
+ IntercomComponent.cs
+ IntrinsicRadioReceiverComponent.cs
+ IntrinsicRadioTransmitterComponent.cs
+ RadioJammerComponent.cs
+ RadioMicrophoneComponent.cs
+ RadioSpeakerComponent.cs
+ TelecomExemptComponent.cs
+ TelecomServerComponent.cs
+ WearingHeadsetComponent.cs
+Radio/
+ EncryptionChannelsChangedEvent.cs
+ EntitySystems/
+  EncryptionKeySystem.cs
+  SharedHeadsetSystem.cs
+  SharedJammerSystem.cs
+  SharedRadioDeviceSystem.cs
+ GetDefaultRadioChannelEvent.cs
+ RadioChannelPrototype.cs
+ RadioVisuals.cs
+ SharedIntercom.cs
+Random/
+ Helpers/SharedRandomExtensions.cs
+ IBudgetEntry.cs
+ IWeightedRandom.cs
+ RandomFillSolution.cs
+ RandomHelperSystem.cs
+ RandomPlantMutation.cs
+ RandomPlantMutationListPrototype.cs
+ RandomSystem.cs
+ Rules/
+  AlwaysTrue.cs
+  GridInRange.cs
+  InSpace.cs
+  NearbyAccess.cs
+  NearbyComponents.cs
+  NearbyEntities.cs
+  NearbyTilesPercent.cs
+  OnMapGrid.cs
+  RulesSystem.cs
+ WeightedRandomEntityPrototype.cs
+ WeightedRandomFillSolutionPrototype.cs
+ WeightedRandomOrePrototype.cs
+ WeightedRandomPrototype.cs
+ WeightedRandomSpeciesPrototype.cs
+RatKing/Components/
+ RummageableComponent.cs
+ RummagerComponent.cs
+RatKing/
+ RatKingActions.cs
+ RatKingComponent.cs
+ RatKingServantComponent.cs
+ SharedRatKingSystem.cs
+ Systems/RummagerSystem.cs
+RCD/Components/
+ RCDAmmoComponent.cs
+ RCDComponent.cs
+ RCDDeconstructibleComponent.cs
+RCD/
+ RCDEvents.cs
+ RCDPrototype.cs
+ Systems/
+  RCDAmmoSystem.cs
+  RCDSystem.cs
+ReagentSpeed/
+ ReagentSpeedComponent.cs
+ ReagentSpeedSystem.cs
+Rejuvenate/RejuvenateEvent.cs
+Remotes/
+ Components/DoorRemoteComponent.cs
+ EntitySystems/SharedDoorRemoteSystem.cs
+Repairable/
+ RepairableComponent.cs
+ RepairableSystem.cs
+RepulseAttract/
+ Events/RepulseAttractActionEvent.cs
+ RepulseAttractComponent.cs
+ RepulseAttractSystem.cs
+Research/Components/
+ BlueprintComponent.cs
+ BlueprintReceiverComponent.cs
+ ResearchClientComponent.cs
+ ResearchServerComponent.cs
+ ResearchStealerComponent.cs
+ SharedResearchConsoleComponent.cs
+ TechnologyDatabaseComponent.cs
+Research/Prototypes/
+ LatheRecipePrototype.cs
+ TechDisciplinePrototype.cs
+ TechnologyPrototype.cs
+Research/
+ SharedDiskConsole.cs
+ Systems/
+  BlueprintSystem.cs
+  SharedResearchStealerSystem.cs
+  SharedResearchSystem.cs
+ TechnologyDisk/
+  Components/TechnologyDiskComponent.cs
+  Systems/TechnologyDiskSystem.cs
+Resist/
+ EscapeInventoryEvent.cs
+ ResistLockerDoAfterEvent.cs
+Respawn/
+ SharedSpecialRespawnSystem.cs
+ SpecialRespawnComponent.cs
+RetractableItemAction/
+ ActionRetractableItemComponent.cs
+ ItemActionEvents.cs
+ RetractableItemActionComponent.cs
+ RetractableItemActionSystem.cs
+Revenant/Components/
+ CorporealComponent.cs
+ RevenantComponent.cs
+ RevenantOverloadedLightsComponent.cs
+Revenant/EntitySystems/
+ SharedCorporealSystem.cs
+ SharedRevenantOverloadedLightsSystem.cs
+Revenant/SharedRevenant.cs
+Revolutionary/Components/
+ AlwaysRevolutionaryConvertibleComponent.cs
+ HeadRevolutionaryComponent.cs
+ RevolutionaryComponent.cs
+Revolutionary/SharedRevolutionarySystem.cs
+Robotics/
+ Components/RoboticsConsoleComponent.cs
+ RoboticsConsoleUi.cs
+ Systems/SharedRoboticsConsoleSystem.cs
+Roles/
+ AntagPrototype.cs
+ Components/
+  ChangelingRoleComponent.cs
+  DragonRoleComponent.cs
+  GhostRoleMarkerRoleComponent.cs
+  InitialInfectedRoleComponent.cs
+  JobRoleComponent.cs
+  MindRoleComponent.cs
+  NinjaRoleComponent.cs
+  NukeopsRoleComponent.cs
+  ObserverRoleComponent.cs
+  ParadoxCloneRoleComponent.cs
+  RevolutionaryRoleComponent.cs
+  RoleBriefingComponent.cs
+  SiliconBrainRoleComponent.cs
+  StartingMindRoleComponent.cs
+  SubvertedSiliconRoleComponent.cs
+  SurvivorRoleComponent.cs
+  ThiefRoleComponent.cs
+  TraitorRoleComponent.cs
+  WizardRoleComponent.cs
+  XenoborgRoleComponent.cs
+  ZombieRoleComponent.cs
+ DepartmentPrototype.cs
+ JobPrototype.cs
+ JobRequirement/
+  AgeRequirement.cs
+  DepartmentTimeRequirement.cs
+  OverallPlaytimeRequirement.cs
+  RoleTimeRequirement.cs
+  SpeciesRequirement.cs
+  TraitsRequirement.cs
+ JobRequirementOverridePrototype.cs
+ JobRequirements.cs
+ Jobs/SharedJobSystem.cs
+ JobSpecial.cs
+ MindGetAllRoleInfoEvent.cs
+ MindIsAntagonistEvent.cs
+ RoleAddedEvent.cs
+ RoleCodeword/
+  RoleCodewordComponent.cs
+  SharedRoleCodewordSystem.cs
+ RoleEvent.cs
+ RoleRemovedEvent.cs
+ SharedRoleSystem.cs
+ StartingGearEquippedEvent.cs
+ StartingGearPrototype.cs
+Rootable/
+ RootableComponent.cs
+ RootableSystem.cs
+Rotatable/
+ FlippableComponent.cs
+ RotatableComponent.cs
+ RotatableSystem.cs
+Rotation/
+ RotationVisualsComponent.cs
+ SharedRotationVisualsSystem.cs
+Rounding/ContentHelpers.cs
+Salvage/Expeditions/
+ ExpeditionStage.cs
+ Modifiers/
+  IBiomeSpecificMod.cs
+  ISalvageMod.cs
+  SalvageAirMod.cs
+  SalvageBiomeModPrototype.cs
+  SalvageDungeonModPrototype.cs
+  SalvageLightMod.cs
+  SalvageMod.cs
+  SalvageTemperatureMod.cs
+  SalvageWeatherMod.cs
+ SalvageExpeditions.cs
+ SalvageFactionPrototype.cs
+ SalvageMobEntry.cs
+ SharedSalvageExpeditionComponent.cs
+Salvage/Fulton/
+ FultonBeaconComponent.cs
+ FultonComponent.cs
+ FultonedComponent.cs
+ SharedFultonSystem.cs
+Salvage/
+ JobBoard/SalvageJobBoardConsoleComponent.cs
+ Magnet/
+  AsteroidOffering.cs
+  DebrisOffering.cs
+  ISalvageMagnetOffering.cs
+  MagnetClaimOfferEvent.cs
+  SalvageMagnetBoundUserInterfaceState.cs
+  SalvageMagnetUiKey.cs
+  SalvageOffering.cs
+ RestrictedRangeComponent.cs
+ SalvageMapPrototype.cs
+ SharedRestrictedRangeSystem.cs
+ SharedSalvageSystem.cs
+ SharedSalvageSystem.Magnet.cs
+Sandbox/SharedSandboxSystem.cs
+SecretLocks/
+ SharedVoiceTriggerLockSystem.cs
+ VoiceTriggerLockComponent.cs
+Security/Components/
+ CriminalRecordComponent.cs
+ DeployableBarrierComponent.cs
+ GenpopIdCardComponent.cs
+ GenpopLockerComponent.cs
+Security/
+ SecurityStatus.cs
+ Systems/
+  DeployableBarrierSystem.cs
+  SharedGenpopSystem.cs
+SelectableComponentAdder/
+ SelectableComponentAdderComponent.cs
+ SelectableComponentAdderSystem.cs
+SensorMonitoring/SharedSensorMonitoringConsoleComponent.cs
+Sericulture/
+ SericultureComponent.cs
+ SericultureSystem.cs
+SharedArrayExtension.cs
+Shuttles/BUIStates/
+ DockingInterfaceState.cs
+ DockingPortState.cs
+ EmergencyConsoleBoundUserInterfaceState.cs
+ IFFConsoleBoundUserInterfaceState.cs
+ NavBoundUserInterfaceState.cs
+ NavInterfaceState.cs
+ ShuttleBoundUserInterfaceState.cs
+ ShuttleMapInterfaceState.cs
+Shuttles/Components/
+ EmergencyShuttleConsoleComponent.cs
+ FTLComponent.cs
+ FTLDestinationComponent.cs
+ FTLMapComponent.cs
+ FTLSmashImmuneComponent.cs
+ FtlVisualizerComponent.cs
+ IFFComponent.cs
+ NoFTLComponent.cs
+ PilotComponent.cs
+ PreventFTLComponent.cs
+ PreventPilotComponent.cs
+ RadarConsoleComponent.cs
+ SharedDockingComponent.cs
+ SharedShuttleConsoleComponent.cs
+ SharedThrusterComponent.cs
+ ShuttleDestinationCoordinatesComponent.cs
+ ShuttleMapParallaxComponent.cs
+ SpaceGarbageComponent.cs
+Shuttles/Events/
+ DockRequestMessage.cs
+ EmergencyShuttleAuthorizeMessage.cs
+ EmergencyShuttlePositionMessage.cs
+ EmergencyShuttleRepealAllMessage.cs
+ EmergencyShuttleRepealMessage.cs
+ EmergencyShuttleRequestPositionMessage.cs
+ IFFShowIFFMessage.cs
+ IFFShowVesselMessage.cs
+ ShuttleConsoleFTLBeaconMessage.cs
+ ShuttleConsoleFTLPositionMessage.cs
+ UndockRequestMessage.cs
+Shuttles/Systems/
+ SharedDockingSystem.cs
+ SharedEmergencyShuttleSystem.cs
+ SharedRadarConsoleSystem.cs
+ SharedShuttleConsoleSystem.cs
+ SharedShuttleSystem.cs
+ SharedShuttleSystem.EmergencyConsole.cs
+ SharedShuttleSystem.IFF.cs
+Shuttles/UI/MapObjects/
+ GridMapObject.cs
+ IMapObject.cs
+ ShuttleBeaconObject.cs
+ ShuttleExclusionObject.cs
+Silicons/Borgs/
+ BorgTypePrototype.cs
+ BorgUI.cs
+ Components/
+  BorgBrainComponent.cs
+  BorgChassisComponent.cs
+  BorgCrewManifestViewerComponent.cs
+  BorgModuleComponent.cs
+  BorgModuleIconComponent.cs
+  BorgSwitchableTypeComponent.cs
+  BorgTransponderComponent.cs
+  ItemBorgModuleComponent.cs
+  MMIComponent.cs
+  SelectableBorgModuleComponent.cs
+ SharedBorgSwitchableTypeSystem.cs
+ SharedBorgSystem.API.cs
+ SharedBorgSystem.cs
+ SharedBorgSystem.MMI.cs
+ SharedBorgSystem.Module.cs
+ SharedBorgSystem.Relay.cs
+ SharedBorgSystem.Ui.cs
+Silicons/Bots/
+ EmaggableMedibotComponent.cs
+ HugBotComponent.cs
+ MedibotComponent.cs
+ MedibotSystem.cs
+ SharedHugBotSystem.cs
+Silicons/Laws/Components/
+ EmagSiliconLawComponent.cs
+ IonStormTargetComponent.cs
+ SiliconLawBoundComponent.cs
+ SiliconLawProviderComponent.cs
+ SiliconLawUpdaterComponent.cs
+ StartIonStormedComponent.cs
+Silicons/Laws/
+ SharedSiliconLawSystem.cs
+ SharedSiliconLawSystem.Updater.cs
+ SiliconLawEditEuiState.cs
+ SiliconLawPrototype.cs
+ SiliconLawsetPrototype.cs
+Silicons/StationAi/
+ SharedStationAiFixerConsoleSystem.cs
+ SharedStationAiSystem.Airlock.cs
+ SharedStationAiSystem.cs
+ SharedStationAiSystem.Customization.cs
+ SharedStationAiSystem.Held.cs
+ SharedStationAiSystem.Light.cs
+ StationAiCoreComponent.cs
+ StationAiCustomizationComponent.cs
+ StationAiCustomizationGroupPrototype.cs
+ StationAiCustomizationPrototype.cs
+ StationAiFixerConsoleComponent.cs
+ StationAiHeldComponent.cs
+ StationAiHolderComponent.cs
+ StationAiOverlayComponent.cs
+ StationAiVisionComponent.cs
+ StationAiVisionSystem.cs
+ StationAiWhitelistComponent.cs
+Singularity/Components/
+ ContainmentFieldComponent.cs
+ ContainmentFieldGeneratorComponent.cs
+ EventHorizonComponent.cs
+ SharedEmitterComponent.cs
+ SharedParticleAcceleratorComponent.cs
+ SharedRadiationCollectorComponent.cs
+ SingularityComponent.cs
+ SingularityDistortionComponent.cs
+ SingularityGeneratorComponent.cs
+Singularity/EntitySystems/
+ SharedEmitterSystem.cs
+ SharedEventHorizonSystem.cs
+ SharedGravityWellSystem.cs
+ SharedSingularityGeneratorSystem.cs
+ SharedSingularitySystem.cs
+Singularity/
+ Events/SingularityLevelChangedEvent.cs
+ SingularityVisualKeys.cs
+Slippery/
+ GetSlowedOverSlipperyModifierEvent.cs
+ NoSlipComponent.cs
+ SlidingComponent.cs
+ SlidingSystem.cs
+ SlipperyComponent.cs
+ SlipperySystem.cs
+ SlowedOverSlipperyComponent.cs
+SmartFridge/
+ SmartFridgeComponent.cs
+ SmartFridgeSystem.cs
+SMES/SharedSmesComponent.cs
+Smoking/
+ BurningComponent.cs
+ SmokableState.cs
+ SmokeVisuals.cs
+ SmokingVisuals.cs
+Solar/SharedSolarControlConsoleComponent.cs
+Sound/Components/
+ BaseEmitSoundComponent.cs
+ EmitSoundOnActivateComponent.cs
+ EmitSoundOnCollideComponent.cs
+ EmitSoundOnDropComponent.cs
+ EmitSoundOnInteractUsingComponent.cs
+ EmitSoundOnLandComponent.cs
+ EmitSoundOnPickupComponent.cs
+ EmitSoundOnSpawnComponent.cs
+ EmitSoundOnThrowComponent.cs
+ EmitSoundOnUIOpenComponent.cs
+ EmitSoundOnUseComponent.cs
+ SpamEmitSoundComponent.cs
+ SpamEmitSoundRequirePowerComponent.cs
+Sound/
+ SharedEmitSoundSystem.cs
+ SharedSpamEmitSoundRequirePowerSystem.cs
+Spawning/EntitySystemExtensions.cs
+Species/Components/
+ GibActionComponent.cs
+ NymphComponent.cs
+ ReformComponent.cs
+Species/Systems/
+ GibActionSystem.cs
+ ReformSystem.cs
+Speech/
+ AccentEvent.cs
+ Components/
+  ActiveListenerComponent.cs
+  DamagedSiliconAccentComponent.cs
+  EmoteBlockerComponent.cs
+  MeleeSpeechComponent.cs
+  RatvarianLanguageComponent.cs
+  SpeakOnActionComponent.cs
+  VocalComponent.cs
+ EntitySystems/
+  EmoteBlockerSystem.cs
+  SharedListenWireAction.cs
+  SharedMeleeSpeechSystem.cs
+  SharedRatvarianLanguageSystem.cs
+  SharedSlurredSystem.cs
+  SharedSpeakOnActionSystem.cs
+  SharedSpeechWireAction.cs
+  SharedStutteringSystem.cs
+ ListenEvent.cs
+ Muting/MutedComponent.cs
+ ScreamActionEvent.cs
+ SpeakAttemptEvent.cs
+ SpeechComponent.cs
+ SpeechSoundsPrototype.cs
+ SpeechSystem.cs
+ SpeechVerbPrototype.cs
+Spider/
+ IgnoreSpiderWebComponent.cs
+ SharedSpiderSystem.cs
+ SpiderComponent.cs
+ SpiderWebObjectComponent.cs
+Spillable/SpillDoAfterEvent.cs
+SprayPainter/Components/
+ PaintableComponent.cs
+ PaintedComponent.cs
+ SprayPainterAmmo.cs
+ SprayPainterComponent.cs
+SprayPainter/Prototypes/
+ PaintableGroupCategoryPrototype.cs
+ PaintableGroupPrototype.cs
+SprayPainter/
+ SharedSprayPainterSystem.cs
+ SprayPainterAmmoSystem.cs
+ SprayPainterEvents.cs
+Spreader/
+ EdgeSpreaderPrototype.cs
+ KudzuVisuals.cs
+Sprite/
+ RandomSpriteComponent.cs
+ ScaleVisualsComponent.cs
+ SharedRandomSpriteSystem.cs
+ SharedScaleVisualsSystem.cs
+ SpriteFadeComponent.cs
+SSDIndicator/
+ SSDIndicatorComponent.cs
+ SSDIndicatorSystem.cs
+Stacks/
+ SharedStackSystem.API.cs
+ SharedStackSystem.cs
+ StackComponent.cs
+ StackPrototype.cs
+ StackSplitEvent.cs
+ StackThresholdComponent.cs
+ StackVisuals.cs
+Standing/
+ StandingStateComponent.cs
+ StandingStateSystem.cs
+Station/Components/
+ StationDataComponent.cs
+ StationMemberComponent.cs
+ StationTrackerComponent.cs
+Station/
+ SharedStationSpawningSystem.cs
+ SharedStationSystem.cs
+ SharedStationSystem.Tracker.cs
+ StationConfig.cs
+ StationsUpdatedEvent.cs
+StationRecords/
+ GeneralRecordsUi.cs
+ GeneralStationRecord.cs
+ SharedStationRecordsSystem.cs
+ StationRecordKey.cs
+ StationRecordKeyStorageComponent.cs
+ StationRecordKeyStorageSystem.cs
+ StationRecordsComponent.cs
+ StationRecordSet.cs
+ StationRecordsFilter.cs
+StatusEffect/
+ StatusEffectPrototype.cs
+ StatusEffectsComponent.cs
+ StatusEffectsSystem.cs
+StatusEffectNew/Components/
+ RejuvenateRemovedStatusEffectComponent.cs
+ StatusEffectAlertComponent.cs
+ StatusEffectComponent.cs
+ StatusEffectContainerComponent.cs
+StatusEffectNew/
+ StatusEffectAlertSystem.cs
+ StatusEffectsSystem.cs
+ StatusEffectSystem.API.cs
+ StatusEffectSystem.Relay.cs
+StatusIcon/
+ Components/StatusIconComponent.cs
+ SharedStatusIconSystem.cs
+ StatusIconPrototype.cs
+Stealth/Components/
+ StealthComponent.cs
+ StealthOnMoveComponent.cs
+Stealth/SharedStealthSystem.cs
+StepTrigger/Components/
+ PreventableStepTriggerComponent.cs
+ ProtectedFromStepTriggersComponent.cs
+ StepTriggerComponent.cs
+StepTrigger/Systems/
+ StepTriggerImmuneSystem.cs
+ StepTriggerSystem.cs
+Sticky/Components/
+ StickyComponent.cs
+ StickyVisualizerComponent.cs
+Sticky/
+ EntityStuckEvent.cs
+ StickyDoAfterEvent.cs
+ Systems/StickySystem.cs
+Storage/Components/
+ AnchoredStorageFilterComponent.cs
+ BinComponent.cs
+ DumpableComponent.cs
+ EntityStorageComponent.cs
+ InsideEntityStorageComponent.cs
+ ItemCounterComponent.cs
+ ItemMapperComponent.cs
+ MagnetPickupComponent.cs
+ PickRandomComponent.cs
+ SecretStashComponent.cs
+ SharedBagOpenVisuals.cs
+ SharedMapLayerData.cs
+ StorageFillComponent.cs
+ StorageFillVisualizerComponent.cs
+ StoreAfterFailedInteractComponent.cs
+ StoreOnCollideComponent.cs
+Storage/
+ EntitySpawnEntry.cs
+ EntitySystems/
+  AnchoredStorageFilterSystem.cs
+  BinSystem.cs
+  BluespaceLockerDoAfterEvent.cs
+  DumpableSystem.cs
+  MagnetPickupSystem.cs
+  PickRandomSystem.cs
+  SecretStashSystem.cs
+  SharedEntityStorageSystem.cs
+  SharedItemCounterSystem.cs
+  SharedItemMapperSystem.cs
+  SharedStorageSystem.cs
+  StoreAfterFailedInteractSystem.cs
+  StoreOnCollideSystem.cs
+ Events.cs
+ Events/StorageInsertFailedEvent.cs
+ ItemStorageLocation.cs
+ StorageComponent.cs
+ StorageHelpers.cs
+Store/
+ Components/StoreComponent.cs
+ CurrencyPrototype.cs
+ Events/
+  IntrinsicStoreActionEvent.cs
+  StorePurchasedListingEvent.cs
+ ListingCondition.cs
+ ListingLocalisationHelpers.cs
+ ListingPrototype.cs
+ StoreCategoryPrototype.cs
+ StorePresetPrototype.cs
+ StoreUi.cs
+StoreDiscount/Components/StoreDiscountComponent.cs
+StoryGen/
+ EntitySystems/StoryGeneratorSystem.cs
+ Prototypes/StoryTemplatePrototype.cs
+Strip/Components/
+ StrippableComponent.cs
+ StrippingComponent.cs
+ ThievingComponent.cs
+Strip/
+ SharedStrippableSystem.cs
+ ThievingSystem.cs
+Stunnable/
+ CrawlerComponent.cs
+ KnockdownStatusEffectComponent.cs
+ KnockedDownComponent.cs
+ SharedStunbatonSystem.cs
+ SharedStunSystem.cs
+ SharedStunSystem.Knockdown.cs
+ SharedStunSystem.Visualizer.cs
+ StunbatonComponent.cs
+ StunnableEvents.cs
+ StunnedComponent.cs
+ StunnedStatusEffectComponent.cs
+ StunOnContactComponent.cs
+ StunVisualsComponent.cs
+SubFloor/
+ SharedSubFloorHideSystem.cs
+ SharedTrayScannerSystem.cs
+ SubFloorHideComponent.cs
+ TrayScannerComponent.cs
+ TrayScannerUserComponent.cs
+ TrayScanRevealComponent.cs
+SurveillanceCamera/
+ Components/SurveillanceCameraComponent.cs
+ SharedSurveillanceCameraMonitorSystem.cs
+ SharedSurveillanceCameraSystem.cs
+Survivor/Components/SurvivorComponent.cs
+Swab/SwabEvents.cs
+Tabletop/
+ Components/TabletopDraggableComponent.cs
+ Events/
+  TabletopDraggingPlayerChangedEvent.cs
+  TabletopMoveEvent.cs
+  TabletopPlayEvent.cs
+  TabletopStopPlayingEvent.cs
+ SharedTabletopSystem.cs
+ TabletopItemVisuals.cs
+Tag/
+ TagComponent.cs
+ TagPrototype.cs
+ TagSystem.cs
+Telephone/
+ SharedTelephoneSystem.cs
+ TelephoneComponent.cs
+Teleportation/Components/
+ HandTeleporterComponent.cs
+ LinkedEntityComponent.cs
+ PortalComponent.cs
+ PortalTimeoutComponent.cs
+ SwapTeleporterComponent.cs
+ TeleportLocationsComponent.cs
+Teleportation/Systems/
+ LinkedEntitySystem.cs
+ SharedPortalSystem.cs
+ SharedTeleportLocationsSystem.cs
+ SwapTeleporterSystem.cs
+Teleportation/TeleportLocationsUi.cs
+Temperature/Components/
+ AlwaysHotComponent.cs
+ EntityHeaterComponent.cs
+ TemperatureComponent.cs
+ TemperatureDamageComponent.cs
+ TemperatureSpeedComponent.cs
+Temperature/
+ IsHotEvent.cs
+ SharedEntityHeater.cs
+ Systems/
+  AlwaysHotSystem.cs
+  SharedEntityHeaterSystem.cs
+  SharedTemperatureSystem.cs
+ TemperatureEvents.cs
+ TemperatureHelpers.cs
+Tests/TestMarkerComponent.cs
+TextScreen/TextScreenVisuals.cs
+Thief/
+ Components/ThiefBackpackUI.cs
+ Prototypes/ThiefBackpackSetPrototype.cs
+Throwing/
+ BeforeThrowEvent.cs
+ CatchableComponent.cs
+ CatchableSystem.cs
+ CatchAttemptEvent.cs
+ LandAtCursorComponent.cs
+ LandEvent.cs
+ ThrowAttemptEvent.cs
+ ThrowEvents.cs
+ ThrowingAngleComponent.cs
+ ThrowingSystem.cs
+ ThrownItemComponent.cs
+ ThrownItemSystem.cs
+Tiles/
+ FloorTileAttemptEvent.cs
+ FloorTileComponent.cs
+ FloorTileSystem.cs
+ ProtectedGridComponent.cs
+ ProtectedGridSystem.cs
+ ReplaceFloorOnSpawnComponent.cs
+ ReplaceFloorOnSpawnSystem.cs
+ RequiresTileComponent.cs
+Timing/
+ StartEndTime.cs
+ UseDelayComponent.cs
+ UseDelaySystem.cs
+Tips/
+ SharedTipsSystem.cs
+ TippyEvent.cs
+Toggleable/ToggleActionEvent.cs
+Toilet/
+ Components/ToiletComponent.cs
+ Systems/ToiletSystem.cs
+Tools/Components/
+ LayerChangeOnWeldComponent.cs
+ MultipleToolComponent.cs
+ SimpleToolUsageComponent.cs
+ ToolComponent.cs
+ ToolOpenableComponent.cs
+ ToolRefinableComponent.cs
+ ToolTileCompatibleComponent.cs
+ WeldableComponent.cs
+ WelderComponent.cs
+Tools/Systems/
+ SharedToolSystem.cs
+ SharedToolSystem.MultipleTool.cs
+ SharedToolSystem.Tile.cs
+ SharedToolSystem.Welder.cs
+ SimpleToolUsageSystem.cs
+ ToolOpenableSystem.cs
+ ToolRefinableSystem.cs
+ WeldableAttemptEvent.cs
+ WeldableChangedEvent.cs
+ WeldableSystem.cs
+ WeldFinishedEvent.cs
+Tools/ToolQualityPrototype.cs
+Toolshed/TypeParsers/FixedPoint2TypeParser.cs
+Traits/Assorted/
+ AccentlessComponent.cs
+ AccentlessSystem.cs
+ HemophiliaStatusEffectComponent.cs
+ HemophiliaSystem.cs
+ ImpairedMobilityComponent.cs
+ ImpairedMobilitySystem.cs
+ LegsParalyzedComponent.cs
+ LegsParalyzedSystem.cs
+ LightweightDrunkComponent.cs
+ MobilityAidComponent.cs
+ MobilityAidSystem.cs
+ NarcolepsyComponent.cs
+ NarcolepsySystem.cs
+ PainNumbnessStatusEffectComponent.cs
+ PainNumbnessSystem.cs
+ ParacusiaComponent.cs
+ PermanentBlindnessComponent.cs
+ PermanentBlindnessSystem.cs
+ SharedParacusiaSystem.cs
+ UnrevivableComponent.cs
+Traits/
+ TraitCategoryPrototype.cs
+ TraitPrototype.cs
+Trigger/Components/
+ ActiveTimerTriggerComponent.cs
+ ActiveTwoStageTriggerComponent.cs
+ Conditions/
+  BaseTriggerConditionComponent.cs
+  MindRoleTriggerConditionComponent.cs
+  RandomChanceTriggerConditionComponent.cs
+  ToggleTriggerConditionComponent.cs
+  UseDelayTriggerConditionComponent.cs
+  WhitelistTriggerConditionComponent.cs
+ Effects/
+  AddComponentsOnTriggerComponent.cs
+  AddGameRuleOnTriggerComponent.cs
+  AddSolutionOnTriggerComponent.cs
+  AddTagsOnTriggerComponent.cs
+  AdminLogOnTriggerComponent.cs
+  AlertLevelChangeOnTriggerComponent.cs
+  AnchorOnTriggerComponent.cs
+  BaseXOnTriggerComponent.cs
+  CleanContainersOnTriggerComponent.cs
+  DamageOnTriggerComponent.cs
+  DeleteOnTriggerComponent.cs
+  DnaScrambleOnTriggerComponent.cs
+  EmitSoundOnTriggerComponent.cs
+  EmpOnTriggerComponent.cs
+  EmptyContainersOnTriggerComponent.cs
+  EntityEffectOnTriggerComponent.cs
+  ExplodeOnTriggerComponent.cs
+  ExplosionOnTriggerComponent.cs
+  ExtinguishOnTriggerComponent.cs
+  FireStackOnTriggerComponent.cs
+  FlashOnTriggerComponent.cs
+  GhostKickOnTriggerComponent.cs
+  GibOnTriggerComponent.cs
+  IgniteOnTriggerComponent.cs
+  ItemToggleOnTriggerComponent.cs
+  JitterOnTriggerComponent.cs
+  KnockdownOnTriggerComponent.cs
+  LaunchOnTriggerComponent.cs
+  LightBehaviorOnTriggerComponent.cs
+  LockOnTriggerComponent.cs
+  PolymorphOnTriggerComponent.cs
+  PopupOnTriggerComponent.cs
+  RandomTriggerOnTriggerComponent.cs
+  RattleOnTriggerComponent.cs
+  RejuventateOnTriggerComponent.cs
+  ReleaseGasOnTriggerComponent.cs
+  RemoveComponentsOnTriggerComponent.cs
+  RemoveTagsOnTriggerComponent.cs
+  RepulseAttractOnTriggerComponent.cs
+  ScramOnTriggerComponent.cs
+  ShockOnTriggerComponent.cs
+  SignalOnTriggerComponent.cs
+  SmokeOnTriggerComponent.cs
+  SpawnEntityTableOnTriggerComponent.cs
+  SpawnOnTriggerComponent.cs
+  SpeakOnTriggerComponent.cs
+  StaminaDamageOnTriggerComponent.cs
+  StunOnTriggerComponent.cs
+  SwapLocationOnTriggerComponent.cs
+  TippyOnTriggerComponent.cs
+  ToggleComponentsOnTriggerComponent.cs
+  UncuffOnTriggerComponent.cs
+  UseDelayOnTriggerComponent.cs
+  WeatherOnTriggerComponent.cs
+ RandomTimerTriggerComponent.cs
+ StartTimerOnShootComponent.cs
+ TimerTriggerComponent.cs
+ Triggers/
+  ActiveTriggerOnTimedCollideComponent.cs
+  BaseTriggerOnXComponent.cs
+  RepeatingTriggerComponent.cs
+  TriggerOnActivateComponent.cs
+  TriggerOnActivateImplantComponent.cs
+  TriggerOnBuckledComponent.cs
+  TriggerOnCollideComponent.cs
+  TriggerOnDidEquipComponent.cs
+  TriggerOnDidEquipHandComponent.cs
+  TriggerOnDidUnequipComponent.cs
+  TriggerOnDidUnequipHandComponent.cs
+  TriggerOnDroppedComponent.cs
+  TriggerOnEmbedComponent.cs
+  TriggerOnEmptyGunshotComponent.cs
+  TriggerOnExaminedComponent.cs
+  TriggerOnGotEquippedComponent.cs
+  TriggerOnGotEquippedHandComponent.cs
+  TriggerOnGotInsertedIntoContainerComponent.cs
+  TriggerOnGotRemovedFromContainerComponent.cs
+  TriggerOnGotUnequippedComponent.cs
+  TriggerOnGotUnequippedHandComponent.cs
+  TriggerOnHitscanFiredComponent.cs
+  TriggerOnHitscanHitComponent.cs
+  TriggerOnIngestedComponent.cs
+  TriggerOnInsertedIntoContainerComponent.cs
+  TriggerOnInteractHandComponent.cs
+  TriggerOnInteractUsingComponent.cs
+  TriggerOnLandComponent.cs
+  TriggerOnMeleeHitComponent.cs
+  TriggerOnMeleeMissComponent.cs
+  TriggerOnMeleeSwingComponent.cs
+  TriggerOnMobstateChangeComponent.cs
+  TriggerOnPlayerSpawnCompleteComponent.cs
+  TriggerOnProximityComponent.cs
+  TriggerOnRemovedFromContainerComponent.cs
+  TriggerOnRoundEndComponent.cs
+  TriggerOnSignalComponent.cs
+  TriggerOnSimpleToolUsage.cs
+  TriggerOnSlipComponent.cs
+  TriggerOnSpawnComponent.cs
+  TriggerOnStepTriggerComponent.cs
+  TriggerOnStrappedComponent.cs
+  TriggerOnStuckComponent.cs
+  TriggerOnThrowComponent.cs
+  TriggerOnThrowDoHitComponent.cs
+  TriggerOnThrownComponent.cs
+  TriggerOnTimedCollideComponent.cs
+  TriggerOnUiCloseComponent.cs
+  TriggerOnUiOpenComponent.cs
+  TriggerOnUnbuckledComponent.cs
+  TriggerOnUnembedComponent.cs
+  TriggerOnUnstrappedComponent.cs
+  TriggerOnUseComponent.cs
+  TriggerOnUserInteractHandComponent.cs
+  TriggerOnUserInteractUsingComponent.cs
+  TriggerOnVerb.cs
+  TriggerOnVoiceComponent.cs
+ TwoStageTriggerComponent.cs
+Trigger/
+ SharedTriggerSystems.cs
+ Systems/
+  AdminLogOnTriggerSystem.cs
+  ComponentsOnTriggerSystem.cs
+  DamageOnTriggerSystem.cs
+  DnaScrambleOnTriggerSystem.cs
+  EmitSoundOnTriggerSystem.cs
+  EmpOnTriggerSystem.cs
+  EmptyContainersOnTriggerSystem.cs
+  EntityEffectOnTriggerSystem.cs
+  ExplodeOnTriggerSystem.cs
+  FlashOnTriggerSystem.cs
+  GibOnTriggerSystem.cs
+  JitterOnTriggerSystem.cs
+  KnockdownOnTriggerSystem.cs
+  LaunchOnTriggerSystem.cs
+  LockOnTriggerSystem.cs
+  PopupOnTriggerSystem.cs
+  RandomTriggerOnTriggerSystem.cs
+  RejuvenateOnTriggerSystem.cs
+  RepulseAttractOnTriggerSystem.cs
+  ScramOnTriggerSystem.cs
+  SharedReleaseGasOnTriggerSystem.cs
+  ShockOnTriggerSystem.cs
+  SolutionTriggerSystem.cs
+  StaminaDamageOnTriggerSystem.cs
+  StunOnTriggerSystem.cs
+  SwapLocationOnTriggerSystem.cs
+  TagOnTriggerSystem.cs
+  TippyOnTriggerSystem.cs
+  TriggerOnActivateImplantSystem.cs
+  TriggerOnContainerInteractionSystem.cs
+  TriggerOnEmbedSystem.cs
+  TriggerOnEmptyGunshotSystem.cs
+  TriggerOnEquipmentSystem.cs
+  TriggerOnHandSystem.cs
+  TriggerOnHitscanSystem.cs
+  TriggerOnIngestedSystem.cs
+  TriggerOnLandSystem.cs
+  TriggerOnMeleeSystem.cs
+  TriggerOnMobstateChangeSystem.cs
+  TriggerOnRoundEndSystem.cs
+  TriggerOnSlipSystem.cs
+  TriggerOnStrappedOrBuckledSystem.cs
+  TriggerOnStuckSystem.cs
+  TriggerOnThrowDoHitSystem.cs
+  TriggerOnToolUseSystem.cs
+  TriggerOnVerbSystem.cs
+  TriggerSystem.Collide.cs
+  TriggerSystem.Condition.cs
+  TriggerSystem.cs
+  TriggerSystem.Interaction.cs
+  TriggerSystem.Proximity.cs
+  TriggerSystem.Signal.cs
+  TriggerSystem.Spawn.cs
+  TriggerSystem.Timer.cs
+  TriggerSystem.Voice.cs
+  TwoStageTriggerSystem.cs
+  UncuffOnTriggerSystem.cs
+  WeatherTriggerSystem.cs
+ TriggerEvent.cs
+ TriggerVisuals.cs
+ VoiceTriggeredEvent.cs
+TurretController/
+ DeployableTurretControllerComponent.cs
+ SharedDeployableTurretControllerSystem.cs
+Turrets/
+ DeployableTurretComponent.cs
+ SharedDeployableTurretSystem.cs
+ StationAiTurretComponent.cs
+ TurretTargetSettingsComponent.cs
+ TurretTargetSettingsSystem.cs
+Udder/MilkingDoAfterEvent.cs
+UserInterface/
+ ActivatableUIComponent.cs
+ ActivatableUIEvents.cs
+ ActivatableUIRequiresAnchorComponent.cs
+ ActivatableUIRequiresAnchorSystem.cs
+ ActivatableUIRequiresPowerCellComponent.cs
+ ActivatableUISystem.cs
+ ActivatableUISystem.Power.cs
+ IntrinsicUIComponent.cs
+ IntrinsicUISystem.cs
+ OpenUiActionEvent.cs
+ StatValuesEuiMessage.cs
+ ToggleIntrinsicUIEvent.cs
+Vampire/
+ SharedVampireSystem.cs
+ VampireAlertComponent.cs
+ VampireComponent.cs
+ VampireEvents.cs
+ VampireIconComponent.cs
+Vapor/SharedVaporComponent.cs
+VendingMachines/
+ SharedVendingMachineSystem.cs
+ SharedVendingMachineSystem.Restock.cs
+ VendingMachineComponent.cs
+ VendingMachineInterfaceState.cs
+ VendingMachineInventoryPrototype.cs
+ VendingMachineRestockComponent.cs
+Verbs/
+ SharedVerbSystem.cs
+ Verb.cs
+ VerbCategory.cs
+ VerbEvents.cs
+VoiceMask/
+ SharedVoiceMaskSystem.cs
+ VoiceMaskSetNameEvent.cs
+Voting/
+ MsgVoteCanCall.cs
+ MsgVoteData.cs
+ MsgVoteMenu.cs
+ StandardVoteType.cs
+ VotingEvents.cs
+Wagging/WaggingComponent.cs
+Wall/
+ ReinforcedWallVisuals.cs
+ ShuttleWallVisuals.cs
+ WallMountComponent.cs
+Warps/
+ WarpPointComponent.cs
+ WarpPointSystem.cs
+Weapons/Hitscan/Components/
+ HitscanAmmoComponent.cs
+ HitscanBasicDamageComponent.cs
+ HitscanBasicEffectsComponent.cs
+ HitscanBasicRaycastComponent.cs
+ HitscanBasicVisualsComponent.cs
+ HitscanReflectComponent.cs
+ HitscanStaminaDamageComponent.cs
+Weapons/Hitscan/
+ Events/HitscanEvents.cs
+ Systems/
+  HitscanBasicDamageSystem.cs
+  HitscanBasicEffectsSystem.cs
+  HitscanBasicRaycastSystem.cs
+  HitscanReflectSystem.cs
+  HitscanStunSystem.cs
+Weapons/Marker/
+ DamageMarkerComponent.cs
+ DamageMarkerOnCollideComponent.cs
+ LeechOnMarkerComponent.cs
+ SharedDamageMarkerSystem.cs
+Weapons/Melee/
+ Balloon/BalloonPopperComponent.cs
+ Components/
+  AltFireMeleeComponent.cs
+  BonusMeleeAttackRateComponent.cs
+  BonusMeleeDamageComponent.cs
+  InfectOnMeleeComponent.cs
+  MeleeRequiresWieldComponent.cs
+  MeleeSoundComponent.cs
+  MeleeThrowOnHitComponent.cs
+  UseDelayOnMeleeHitComponent.cs
+ EnergySword/
+  EnergySwordComponent.cs
+  EnergySwordSystem.cs
+  SMCuttableComponent.cs
+ Events/
+  AttackEvent.cs
+  AttemptMeleeEvent.cs
+  DisarmAttackEvent.cs
+  HeavyAttackEvent.cs
+  LightAttackEvent.cs
+  MeleeAttackEvent.cs
+  MeleeHitEvent.cs
+  MeleeLungeEvent.cs
+  StopAttackEvent.cs
+ MeleeSoundSystem.cs
+ MeleeThrowOnHitSystem.cs
+ MeleeWeaponComponent.cs
+ SharedMeleeWeaponSystem.cs
+ UseDelayOnMeleeHitSystem.cs
+Weapons/Misc/
+ BaseForceGunComponent.cs
+ ForceGunComponent.cs
+ GrapplingProjectileComponent.cs
+ SharedGrapplingGunSystem.cs
+ SharedTetherGunSystem.cs
+ SharedTetherGunSystem.Force.cs
+ TetheredComponent.cs
+ TetherGunComponent.cs
+Weapons/Ranged/Components/
+ ActionGunComponent.cs
+ AmmoComponent.cs
+ AmmoProviderComponent.cs
+ AutoShootGunComponent.cs
+ BallisticAmmoProviderComponent.cs
+ BallisticAmmoSelfRefillerComponent.cs
+ BasicEntityAmmoProviderComponent.cs
+ BatteryAmmoProviderComponent.cs
+ BatteryWeaponFireModesComponent.cs
+ ChamberMagazineAmmoProviderComponent.cs
+ ClothingSlotAmmoProviderComponent.cs
+ ContainerAmmoProviderComponent.cs
+ FireModeCondition.cs
+ FlyBySoundComponent.cs
+ GrapplingGunComponent.cs
+ GunComponent.cs
+ GunRequiresWieldComponent.cs
+ GunSpreadModifierComponent.cs
+ GunWieldBonusComponent.cs
+ MagazineAmmoProviderComponent.cs
+ RechargeBasicEntityAmmoComponent.cs
+ RechargeCycleAmmoComponent.cs
+ ReflectiveComponent.cs
+ RevolverAmmoProviderComponent.cs
+ SharedAmmoCounterComponent.cs
+ SolutionAmmoProviderComponent.cs
+ SpeedLoaderComponent.cs
+ TargetedProjectileComponent.cs
+ UseDelayOnShootComponent.cs
+Weapons/Ranged/Events/
+ AmmoShotEvent.cs
+ BeforeGunShootEvent.cs
+ GetAmmoCountEvent.cs
+ GunCycledEvent.cs
+ GunGetAmmoSpreadEvent.cs
+ GunMuzzleFlashAttemptEvent.cs
+ GunRefreshModifiersEvent.cs
+ HitScanReflectAttempt.cs
+ MuzzleFlashEvent.cs
+ OnEmptyGunShotEvent.cs
+ ProjectileShotEvent.cs
+ RequestShootEvent.cs
+ RequestStopShootEvent.cs
+ ShotAttemptedEvent.cs
+ TakeAmmoEvent.cs
+Weapons/Ranged/
+ HitscanPrototype.cs
+ IShootable.cs
+ Systems/
+  ActionGunSystem.cs
+  BatteryWeaponFireModesSystem.cs
+  GunSpreadModifierSystem.cs
+  RechargeBasicEntityAmmoSystem.cs
+  RechargeCycleAmmoSystem.cs
+  SharedFlyBySoundSystem.cs
+  SharedGunSystem.AutoFire.cs
+  SharedGunSystem.Ballistic.cs
+  SharedGunSystem.BasicEntity.cs
+  SharedGunSystem.Battery.cs
+  SharedGunSystem.Cartridges.cs
+  SharedGunSystem.ChamberMagazine.cs
+  SharedGunSystem.Clothing.cs
+  SharedGunSystem.Container.cs
+  SharedGunSystem.cs
+  SharedGunSystem.Interactions.cs
+  SharedGunSystem.Magazine.cs
+  SharedGunSystem.Revolver.cs
+  SharedGunSystem.Solution.cs
+  UseDelayOnShootSystem.cs
+ Upgrades/Components/
+  GunUpgradeComponent.cs
+  GunUpgradeDamageComponent.cs
+  GunUpgradeFireRateComponent.cs
+  GunUpgradeSpeedComponent.cs
+  UpgradeableGunComponent.cs
+ Upgrades/GunUpgradeSystem.cs
+Weapons/Reflect/
+ ReflectComponent.cs
+ ReflectSystem.cs
+Weather/
+ BlockWeatherComponent.cs
+ SharedWeatherSystem.cs
+ WeatherComponent.cs
+ WeatherPrototype.cs
+Whistle/
+ WhistleComponent.cs
+ WhistleSystem.cs
+Whitelist/
+ EntityWhitelist.cs
+ EntityWhitelistSystem.cs
+Wieldable/Components/
+ IncreaseDamageOnWieldComponent.cs
+ WieldableComponent.cs
+ WieldingBlockerComponent.cs
+Wieldable/
+ Events.cs
+ SharedWieldableSystem.cs
+Wires/
+ ActivatableUIRequiresPanelComponent.cs
+ Events.cs
+ SharedWiresComponent.cs
+ SharedWiresSystem.cs
+ SharedWireVisComponent.cs
+ WiresPanelComponent.cs
+ WiresPanelSecurityComponent.cs
+Xenoarchaeology/Artifact/Components/
+ XenoArtifactComponent.cs
+ XenoArtifactNodeComponent.cs
+ XenoArtifactUnlockingComponent.cs
+Xenoarchaeology/Artifact/
+ Prototypes/XenoArchTriggerPrototype.cs
+ SharedXenoArtifactSystem.cs
+ SharedXenoArtifactSystem.Graph.cs
+ SharedXenoArtifactSystem.Node.cs
+ SharedXenoArtifactSystem.Unlock.cs
+ SharedXenoArtifactSystem.XAE.cs
+ SharedXenoArtifactSystem.XAT.cs
+ XAE/
+  BaseXAESystem.cs
+  Components/
+   XAEApplyComponentsComponent.cs
+   XAEDamageInAreaComponent.cs
+   XAEKnockComponent.cs
+   XAERandomTeleportInvokerComponent.cs
+   XAERemoveCollisionComponent.cs
+   XAEShuffleComponent.cs
+  XAEApplyComponentsSystem.cs
+  XAEDamageInAreaSystem.cs
+  XAEKnockSystem.cs
+  XAERandomTeleportInvokerSystem.cs
+  XAERemoveCollisionSystem.cs
+  XAEShuffleSystem.cs
+ XAT/
+  BaseQueryUpdateXATSystem.cs
+  BaseXATSystem.cs
+  Components/
+   XATCompNearbyComponent.cs
+   XATDamageThresholdReachedComponent.cs
+   XATDeathComponent.cs
+   XATExaminableTextComponent.cs
+   XATExamineComponent.cs
+   XATInteractionComponent.cs
+   XATItemLandComponent.cs
+   XATReactiveComponent.cs
+   XATTimerComponent.cs
+   XATToolUseComponent.cs
+  XATCompNearbySystem.cs
+  XATDamageThresholdReachedSystem.cs
+  XATDeathSystem.cs
+  XATExaminableTextSystem.cs
+  XATExamineSystem.cs
+  XATInteractionSystem.cs
+  XATItemLandSystem.cs
+  XATReactiveSystem.cs
+  XATTimerSystem.cs
+  XATToolUseSystem.cs
+Xenoarchaeology/Equipment/Components/
+ AnalysisConsoleComponent.cs
+ ArtifactAnalyzerComponent.cs
+ ArtifactCrusherComponent.cs
+ NodeScannerComponent.cs
+ SuppressArtifactContainerComponent.cs
+Xenoarchaeology/Equipment/
+ NodeScannerSystem.cs
+ SharedArtifactAnalyzerSystem.cs
+ SharedArtifactCrusherSystem.cs
+ SuppressArtifactContainerSystem.cs
+Xenoarchaeology/XenoArtifacts/
+ RandomArtifactSpriteComponent.cs
+ SharedArtifact.cs
+Xenoborgs/Components/
+ MothershipCoreComponent.cs
+ XenoborgComponent.cs
+Zombies/
+ IncurableZombieComponent.cs
+ InitialInfectedComponent.cs
+ PendingZombieComponent.cs
+ SharedZombieSystem.cs
+ ZombieComponent.cs
+ ZombieEvents.cs
+ ZombieImmuneComponent.cs
+ ZombificationResistanceComponent.cs
+ ZombifyOnDeathComponent.cs
+_Lust/ErpStatus/
+ ErpStatusComponent.cs
+ ErpStatusSystem.cs
+_Lust/Toys/
+ Components/VibratingToyComponent.cs
+ Systems/SharedToySystem.cs
+_RMC14/Explosion/
+ CMExplosionEffectComponent.cs
+ RMCExplosionShockWaveComponent.cs
+ SharedRMCExplosionSystem.cs
+_RMC14/Xenonids/Screech/
+ RMCXenoScreechShockWaveComponent.cs
+ XenoScreechComponent.cs
+_Starlight/
+ Abstract/AccUpdateEntitySystem.cs
+ Action/
+  StarlightActionsSystem.cs
+  Stasis/
+   SharedStasisFrozenSystem.cs
+   SharedStasisSystem.cs
+   StasisAnimationEvent.cs
+   StasisComponent.cs
+   StasisFrozenComponent.cs
+ Combat/Effects/Components/
+  ArmorSparkEffectComponent.cs
+  CyborgSparkEffectComponent.cs
+ Combat/
+  Effects/EntitySystems/ArmorSparkEffectSystem.cs
+  OnHit/
+   CuffsOnHitComponent.cs
+   InjectOnHitComponent.cs
+   SharedOnHitSystem.cs
+  Ranged/Pierce/
+   PierceableComponent.cs
+   RicochetedComponent.cs
+ Effects/DisplacementEffect.cs
+ Energy/Supermatter/SupermatterComponent.cs
+ Implants/
+  Components/USSPUplinkOwnerComponent.cs
+  MagillitisSerumImplantEvent.cs
+ ItemSwitch/
+  Components/ItemSwitchComponent.cs
+  SharedItemSwitchSystem.cs
+ Knockback/
+  KnockbackByUserTagComponent.cs
+  SharedKnockbackSystem.cs
+ Medical/Body/
+  BodyParts.cs
+  VisualLayers.cs
+ Medical/
+  Damage/DamageBeforeApplyEvent.cs
+  Items/Components/
+   PatchComponent.cs
+   PatchUserComponent.cs
+  Items/
+   EntitySystems/PatchSystem.cs
+   PatchDoAfterEvent.cs
+  Limbs/
+   BaseLayerIdComponent.cs
+   IImplantable.cs
+   LimbWithItemsComponent.cs
+   SharedLimbSystem.cs
+   ToggleLimbEvent.cs
+   WithAttachedBodyParts.cs
+  Surgery/Components/
+   CustomLimbVisualizerComponent.cs
+   SurgeryComponent.cs
+   SurgeryProgressComponent.cs
+   SurgeryStepComponent.cs
+   SurgeryTargetComponent.cs
+   _Conditions.cs
+   _Organs.cs
+   _Parts.cs
+   _Steps.cs
+   _Tools.cs
+  Surgery/Events/
+   SurgeryCanPerformStepEvent.cs
+   SurgeryDoAfterEvent.cs
+   SurgeryOrganImplantationCompleted.cs
+   SurgeryStepEvent.cs
+   SurgeryValidEvent.cs
+  Surgery/
+   ISurgeryToolComponent.cs
+   SharedSurgerySystem.BaseSteps.cs
+   SharedSurgerySystem.Conditions.cs
+   SharedSurgerySystem.cs
+   StepInvalidReason.cs
+   SurgeryUI.cs
+ OnCollide/SpawnOnCollideComponent.cs
+ StarlightEntitySystem.cs
+ StarlightEntitySystem.Singleton.cs
+ Utility/
+  EmpProperties.cs
+  ExtendedSpriteSpecifier.cs
+ Weapon/Components/
+  HitScanCartridgeAmmoComponent.cs
+  WeaponDismantleOnShootComponent.cs
+ Weapon/Hitscan/Components/
+  HitscanCrawlerTargetEffectsComponent.cs
+  HitscanEmpEffectComponent.cs
+  HitscanIgniteEffectComponent.cs
+  HitscanPierceComponent.cs
+  HitscanRicochetComponent.cs
+ Weapon/Hitscan/Events/
+  HitScanPierceAttemptEvent.cs
+  HitScanRicochetAttemptEvent.cs
+  HitscanTrace.cs
+ Weapon/Hitscan/Systems/
+  HitscanCrawlerTargetEffectsSystem.cs
+  HitscanEmpEffectSystem.cs
+  HitscanPierceSystem.cs
+  HitscanRicochetSystem.cs
+ Weapon/SharedWeaponDismantleOnShootSystem.cs
+_Sunrise/Abilities/
+ BorgCuffedComponent.cs
+ BorgMagbootsComponent.cs
+ BorgMagBootSystem.cs
+ DogVisionComponent.cs
+ FabricateCandyComponent.cs
+ FabricateCookieComponent.cs
+ FabricateSoapComponent.cs
+ Felinid/
+  FelinidLickingComponent.cs
+  FelinidLickingSystem.cs
+ Jump/JumpActionEvent.cs
+ LoveVisionComponent.cs
+ Milira/
+  SharedWingFlightSystem.cs
+  SharedWingFlightSystem.WingToggle.cs
+  WingFlightComponent.cs
+  WingToggleComponent.cs
+ PieThrowerComponent.cs
+ Resomi/
+  ResomiActiveAbilityComponent.cs
+  SharedResomiAbilitySystem.cs
+_Sunrise/AddWantedStatus/
+ AddWantedEvent.cs
+ AddWantedStatusComponent.cs
+_Sunrise/
+ AlwaysPoweredMap/AlwaysPoweredMapComponent.cs
+ Animations/EmoteAnimationComponent.cs
+ AnnouncementSpeaker/
+  Components/AnnouncementSpeakerComponent.cs
+  Events/
+   AnnouncementSpeakerEvents.cs
+   PlayMultiSpeakerTTSEvent.cs
+ Anomaly/Components/
+  AnomalyAutoInjectorComponent.cs
+  PendingAnomalyInfectionComponent.cs
+ AntagObjectives/SharedAntagObjectivesSystem.cs
+ Antags/Abductor/Components/
+  AbductorEnums.cs
+  AbductorReturnDoAfterEvent.cs
+  AbductorsComponents.Agent.cs
+  AbductorsComponents.General.cs
+  AbductorsComponents.Scientist.cs
+ Antags/Abductor/
+  EntitySystems/SharedAbductorSystem.cs
+  Prototypes/AbductorListingPrototype.cs
+  UI/AbductorCameraConsoleUI.cs
+ AssaultOps/
+  AssaultOperativeComponent.cs
+  AssaultOpsShuttleComponent.cs
+  Icarus/
+   IcarusKeyComponent.cs
+   IcarusTerminalComponent.cs
+   SharedIcarus.cs
+ Bed/CanSleepOnBuckleComponent.cs
+ Biocode/
+  AttemptThrowBiocodeEvent.cs
+  BiocodeComponent.cs
+  BiocodeSystem.cs
+  Components/BiocodeDeactivationComponent.cs
+  Systems/BiocodeDeactivationSystem.cs
+ BlockedTool/BlockedToolComponent.cs
+ BloodCult/
+  Actions/CultActions.cs
+  BloodCultPrototype.cs
+  Components/
+   BloodCultistComponent.cs
+   BloodCultTargetComponent.cs
+   BloodSpearOwnerComponent.cs
+   ConstructShellComponent.cs
+   CultBuffComponent.cs
+   CultEmpowerComponent.cs
+   CultMemberComponent.cs
+  ConstructsEvents.cs
+  DeconvertCultist.cs
+  Items/
+   BloodCultWeaponComponent.cs
+   CultBloodOrbComponent.cs
+   CultBloodSpearComponent.cs
+   CultBloodSpellComponent.cs
+   CultMirrorShieldComponent.cs
+   CultSpellProviderComponent.cs
+   RuneDrawerProviderComponent.cs
+   SharedSoulShard.cs
+   SharpenerVisuals.cs
+   TorchWindowSerializables.cs
+   VoidTeleportComponent.cs
+  Pentagram/SharedPentagramComponent.cs
+  Pylon/SharedPylonComponent.cs
+  Runes/
+   CultDrawEvent.cs
+   CultEraseEvent.cs
+   CultRuneInvokeEvent.cs
+   SummonNarsieDoAfterEvent.cs
+  SharedNarsie.cs
+  Structures/
+   CultStructurePrototype.cs
+   CultStructureSerializables.cs
+   RunicDoorComponent.cs
+  Systems/
+   CultistWordGeneratorManager.cs
+   CultMemberSystem.cs
+  UI/
+   AltarBUIState.cs
+   ConstructUi.cs
+   CultistFactoryBUIState.cs
+   ListViewSelectorBUIState.cs
+   NameSelector.cs
+   TeleportSpellEuiState.cs
+ Body/Organ/BodyOrganEvents.cs
+ BodyType.cs
+ Boss/Components/
+  ApplyAngularVelocityComponent.cs
+  DamageOnCollideComponent.cs
+  HellSpawnArenaTransferTargetComponent.cs
+  HellSpawnConsoleComponent.cs
+  HellSpawnInvincibilityComponent.cs
+  HellSpawnTentacleComponent.cs
+  SpiralMovementComponent.cs
+ Boss/Events/
+  HellSpawnFireballActionEvent.cs
+  HellSpawnInvincibilityActionEvent.cs
+  HellSpawnRushActionEvent.cs
+  HellSpawnSpiralActionEvent.cs
+  HellSpawnTentacleActionEvent.cs
+ Boss/Systems/
+  ApplyAngularVelocitySystem.cs
+  SharedDamageOnCollideSystem.cs
+  SharedHellSpawnArenaSystem.cs
+  SharedHellSpawnInvincibilitySystem.cs
+  SharedHellSpawnTentacleSystem.cs
+  SpiralMovementSystem.cs
+ Cabinet/
+  SealingCabinetComponent.cs
+  SealingCabinetSystem.cs
+ CarpQueen/
+  CarpEggComponent.cs
+  CarpEggVisuals.cs
+  CarpQueenAccessSystem.cs
+  CarpQueenActionEvents.cs
+  CarpQueenComponent.cs
+  CarpQueenServantComponent.cs
+  CarpServantMemoryComponent.cs
+  SharedCarpQueenSystem.cs
+ Carrying/
+  BeingCarriedComponent.cs
+  CanCarryEvent.cs
+  CarriableComponent.cs
+  CarryDoAfterEvent.cs
+  CarryDroppedEvent.cs
+  CarryingComponent.cs
+  CarryingDoAfterEvent.cs
+  CarryingSlowdownComponent.cs
+  CarryingSlowdownSystem.cs
+  SharedCarryingSystem.cs
+ CartridgeLoader/Cartridges/
+  MessengerUiMessageEvent.cs
+  MessengerUiState.cs
+  NavigatorUiState.cs
+  PdaPhotoCaptureMessage.cs
+  PhotoCartridgeComponent.cs
+  PhotoUiMessageEvent.cs
+  PhotoUiState.cs
+ Clothing/Components/
+  EmitSoundOnWearerMoveComponent.cs
+  WeldingMaskComponent.cs
+ Clothing/EntitySystems/
+  EmitSoundOnWearerMoveSystem.cs
+  WeldingMaskSystem.cs
+ CloudEmote/
+  CloudEmoteActiveComponent.cs
+  CloudEmotePhaseComponent.cs
+  SharedCloudEmoteSystem.cs
+ CodeConsole/
+  CodeConsoleComponent.cs
+  CodeConsoleMessages.cs
+ CollectiveMind/
+  CollectiveMindComponent.cs
+  CollectiveMindPrototype.cs
+ CommandConsole/
+  CommandConsoleComponent.cs
+  CommandConsoleExecuteBoundUserInterfaceMessage.cs
+  CommandConsoleUiKey.cs
+ Contributors/
+  ContributorEntry.cs
+  FullContributorsListMessage.cs
+ CopyMachine/
+  CopyMachineBoundUserInterfaceState.cs
+  CopyMachineComponent.cs
+  CopyMachineJobType.cs
+  CopyMachineUiMessages.cs
+  DocTemplate.cs
+  PoolDocTemplate.cs
+  SharedCopyMachineSystem.cs
+ DamageOverlay/DamageOverlayOptionEvent.cs
+ Dice/
+  SharedChangeDice.cs
+  SharedChangeDiceSystem.cs
+ Disease/
+  CureDiseaseInfection.cs
+  DiseaseImmuneClothingComponent.cs
+  DiseaseImmuneComponent.cs
+  DiseaseRoleComponent.cs
+  DiseaseTempImmuneComponent.cs
+  DiseaseVaccineTimerComponent.cs
+  DiseaseVaccineTimerSystem.cs
+  InfectEvent.cs
+  SharedDiseaseRoleSystem.cs
+  SharedSickSystem.cs
+  SharedVaccinatorSystem.cs
+  SickComponent.cs
+  SpeedModifierOnComponent.cs
+  SpeedModifierOnSystem.cs
+  VaccinatorComponent.cs
+ Drugs/SeeingRainbowsWeakStatusEffectComponent.cs
+ Economy/DontSellComponent.cs
+ Emp/
+  EmpImmuneComponent.cs
+  EmpImmuneSystem.cs
+ Events/ReflectedEvent.cs
+ Execution/DoafterEvent.cs
+ Explosion/SharedSunriseExplosionSystem.cs
+ Eye/
+  DarkenedVisionComponent.cs
+  SharedDarkenedVisionSystem.cs
+  VisionDarkenerComponent.cs
+  VisionDarkenerSystem.cs
+ FactionClothingBlockerSystem/
+  FactionClothingBlockerComponent.cs
+  FactionClothingBlockerSystem.cs
+ FactionWeaponBlockerSystem/
+  FactionWeaponBlockerComponent.cs
+  FactionWeaponBlockerSystem.cs
+ Flash/Components/FlashModifierComponent.cs
+ FleshCult/
+  CauseFleshCultInfection.cs
+  FleshCultistComponent.cs
+  FleshHeartComponent.cs
+  FleshHeartVisuals.cs
+  FleshHuggerComponent.cs
+  FleshMobComponent.cs
+  IgnoreFleshSpiderWebComponent.cs
+  PendingFleshCultistComponent.cs
+  SharedFleshCultist.cs
+  SharedFleshHeartComponent.cs
+  SharedFleshHuggerSystem.cs
+  SharedFleshMobSystem.cs
+ Flip/
+  FlipComponent.cs
+  FlipOnAttackComponent.cs
+  SharedFlipSystem.cs
+ Flyswatter/FlyswatterComponent.cs
+ Footprints/FootprintsSerializables.cs
+ Fun/SpinnableComponent.cs
+ Ghost/
+  AcceptGhostEuiMessage.cs
+  GhostPanelAntagonistMarkerComponent.cs
+  SharedGhostSystem.GhostPanelSpecific.cs
+ GhostTheme/
+  GhostThemeComponent.cs
+  GhostThemePrototype.cs
+ HairDye/HairDyeDoAfterEvent.cs
+ HardsuitInjection/Ampula/
+  AmpulaComponent.cs
+  AmpulaSystem.cs
+ HardsuitInjection/Events/Local/
+  EjectionEvent.cs
+  InjectionEvent.cs
+  ToggleECEvent.cs
+ HardsuitInjection/Events/Network/
+  ToggleSlotDoAfterEvent.cs
+  UpdateEvent.cs
+ HardsuitInjection/
+  InjectComponent.cs
+  InjectNeedComponent.cs
+  InjectSystem.ActionEvents.cs
+  InjectSystem.BaseEvents.cs
+  InjectSystem.cs
+  InjectSystem.DoAfterEvents.cs
+  InjectSystem.Helpers.cs
+ Heartbeat/HeartbeatOptionsChangedEvent.cs
+ Helpers/
+  ChatIconsHelpersSystem.cs
+  CoordinatesHelpers.cs
+  DictionaryExtentions.cs
+  SharedSunriseHelpersSystem.cs
+  StringExtensions.cs
+ HyperLink/SharedHyperLinkSystem.cs
+ InnateItem/
+  InnateItemComponent.cs
+  InnateItemSystem.cs
+ InteractionsPanel/Data/
+  Components/InteractionsComponent.cs
+  Conditions/
+   BodyAreaTagCondition.cs
+   ClothingCondition.cs
+   GenitalCondition.cs
+   Genitals.cs
+   HasMarkingCondition.cs
+   HasTargetCondition.cs
+   HasVisualLayerCondition.cs
+   IInteractCondition.cs
+   ItemCondition.cs
+   Logical.cs
+   SelfOnlyCondition.cs
+   SexCondition.cs
+   SpeciesCondition.cs
+  Prototypes/
+   InteractionCategoryPrototype.cs
+   InteractionEntityEffectPrototype.cs
+   InteractionIconPrototype.cs
+   InteractionPrototype.cs
+   InteractionSoundPrototype.cs
+  UI/BUI.cs
+ Interrogator/
+  ActiveInterrogatorComponent.cs
+  InterrogatorComponent.cs
+  SharedInterrogatorSystem.cs
+ Inventory/
+  Components/ClothingWhitelistComponent.cs
+  Systems/ClothingWhitelistSystem.cs
+ Item/
+  ItemRepickupCooldownComponent.cs
+  ItemRepickupCooldownSystem.cs
+ Jump/
+  BunnyHopComponent.cs
+  CanJumpComponent.cs
+  ClientOptionDisableJumpSoundEvent.cs
+  JumpStatusEffectComponent.cs
+  SharedJumpSystem.CCvar.cs
+  SharedJumpSystem.cs
+ Kitchen/Components/SharedMicrowave.Assembler.cs
+ Lobby/
+  LobbyAnimationPrototype.cs
+  LobbyArtPrototype.cs
+  LobbyBackgroundPreset.cs
+  LobbyParallaxPrototype.cs
+ MarkingEffects/
+  ColorMarkingEffect.cs
+  GradientMarkingEffect.cs
+  MarkingEffect.cs
+  MarkingEffectTypes.cs
+  RoughGradientMarkingEffect.cs
+ Mech/
+  MechOnEMPPulseComponent.cs
+  MechPaintComponent.cs
+  MechVulnerableToEMPComponent.cs
+ Medical/
+  BorgHyposprayComponent.cs
+  CrewMonitoring/
+   CrewMonitoringCorpseAlertComponent.cs
+   CrewMonitoringFilterComponent.cs
+  PsychologistSystem/
+   PsychologistAbilities.cs
+   PsychologistComponents.cs
+   PsychologistEvents.cs
+ MentorHelp/SharedMentorHelpSystem.cs
+ Messenger/
+  EmojiPrototype.cs
+  EmojiSystem.cs
+  MessengerAutoGroupPrototype.cs
+  MessengerGroup.cs
+  MessengerGroupInvite.cs
+  MessengerGroupType.cs
+  MessengerMessage.cs
+  MessengerSpamPrototype.cs
+  MessengerUser.cs
+ Misc/
+  ArtifactFunnyTargetComponent.cs
+  XenoArtifactThrowingAutoInjectorComponent.cs
+ Modsuit/
+  ModsuitComponent.cs
+  SharedModsuitSystem.cs
+ Mood/
+  MoodCategoryPrototype.cs
+  MoodEffectPrototype.cs
+  MoodEvents.cs
+  MoodThreshold.cs
+  MoodVisuals.cs
+  SaturationScaleComponent.cs
+  SharedMoodComponent.cs
+ Nesting/
+  NestingContainerComponent.cs
+  NestingMobComponent.cs
+  SharedNestingSystem.cs
+ NetTextures/RequestNetworkResourceMessage.cs
+ NewLife/
+  NewLifeEuiMessages.cs
+  SharedNewLifeSystem.cs
+ NightVision/Components/
+  NightVisionComponent.cs
+  ToggleableNightVisionComponent.cs
+ NightVision/Events/ToggleNightVisionEvent.cs
+ Pacificator/SharedPacificatorSystem.cs
+ Paint/
+  PaintComponent.cs
+  PaintDoAfterEvent.cs
+  PaintedComponent.cs
+  PaintRemoverComponent.cs
+  PaintRemoverDoAfterEvent.cs
+  PaintRemoverSystem.cs
+  SharedPaintSystem.cs
+ PDA/PdaAnimationVisualsComponent.cs
+ PersonalBiocode/
+  PersonalBiocodeComponent.cs
+  SharedPersonalBiocodeSystem.cs
+  StoreDNAActionEvent.cs
+ Pets/
+  PetMessages.cs
+  PetOnInteractComponent.cs
+  PetSelectionPrototype.cs
+  PetSelectionShared.cs
+  PettableOnInteractComponent.cs
+  PettingEvents.cs
+  Prototypes/PetControlPrototype.cs
+  SharedPettingSystem.cs
+ Pirate/PirateIconComponent.cs
+ PlayerCache/
+  MsgPlayerCacheRequest.cs
+  MsgPlayerCacheSync.cs
+  PlayerCacheData.cs
+ Radials/
+  Radial.cs
+  RadialEvents.cs
+  Systems/SharedRadialSystem.cs
+ Random/
+  RandomPredictedSystem.cs
+  RandomPredictedSystem.EntityBased.cs
+  RandomPredictedSystem.TickBased.cs
+ Razor/
+  RazorComponent.cs
+  SharedRazorSystem.cs
+ Reagents/
+  CognizinFixComponent.cs
+  Convert/
+   ByClickReagentConvertComponent.cs
+   ByClickReagentConvertSystem.cs
+ Research/Artifact/ArtifactEvents.cs
+ Restrict/
+  RestrictByUserTagComponent.cs
+  SharedRestrictSystem.cs
+ Roadmap/RoadmapVersionsPrototype.cs
+ Roles/DiscordRoleRequirement.cs
+ ScaleSprite/ScaleSpriteComponent.cs
+ ServersHub/
+  FullServerHubListMessage.cs
+  ServerHubEntry.cs
+ Shuttles/
+  CentCommShuttleComponent.cs
+  ErtShuttleComponent.cs
+  IgnoreFtlCheckComponent.cs
+  NukeOpsShuttleComponent.cs
+  PrisonShuttleComponent.cs
+  SecurityShuttleComponent.cs
+ Smile/
+  SmileEvents.cs
+  SmileSlimeComponent.cs
+ SolutionRegenerationSwitcher/
+  SharedSolutionRegenerationSwitcherSystem.cs
+  SolutionRegenerationSwitcherComponent.cs
+ StationRecords/SunriseStationRecordEvents.cs
+ StatsBoard/StatsBoardEntry.cs
+ Stunnable/
+  SharedTelescopicbatonSystem.cs
+  TelescopicbatonComponent.cs
+ SunriseCCVars/
+  SunriseCCVars.Contributors.cs
+  SunriseCCVars.cs
+  SunriseCCVars.Discord.cs
+  SunriseCCVars.Lobby.cs
+ SunriseStanding/
+  CanFallComponent.cs
+  FallAttemptEvent.cs
+  FallStatusEffectComponent.cs
+  StandingStateSystem.cs
+ Switchable/
+  SwitchableLightVisuals.cs
+  SwitchableVisuals.cs
+ SyndicateTeleporter/SyndicateTeleporterComponent.cs
+ TapePlayer/
+  ClientOptionTapePlayerEvent.cs
+  MusicTapeComponent.cs
+  SharedTapePlayerSystem.cs
+  TapePlayerComponent.cs
+  TapePlayerUi.cs
+ ThermalVision/
+  ThermalVisionComponent.cs
+  ToggleableThermalVisionComponent.cs
+ Trigger/
+  Effects/UnsnareOnTriggerComponent.cs
+  TriggerOnBeingGibbed/
+   TriggerOnBeingGibbedComponent.cs
+   TriggerOnBeingGibbedSystem.cs
+  UnsnareOnTriggerSystem.cs
+ TTS/
+  BorgVoiceChangeEvent.cs
+  BorgVoiceComponent.cs
+  ClientOptionTTSEvent.cs
+  PlayTTSEvent.cs
+  RequestPreviewTTSEvent.cs
+  SharedVoiceMaskSystem.cs
+  TTSComponent.cs
+  TTSVoicePrototype.cs
+ UnbuildableGrid/UnbuildableGridComponent.cs
+ VendingMachines/PlayerCountDependentStockComponent.cs
+ VentCraw/Components/
+  BeingVentCrawComponent.cs
+  VentCrawBendComponent.cs
+  VentCrawClothingComponent.cs
+  VentCrawEntryComponent.cs
+  VentCrawHolderComponent.cs
+  VentCrawJunctionComponent.cs
+  VentCrawTransitComponent.cs
+  VentCrawTubeComponent.cs
+ VentCraw/
+  SharedVentCrawableSystem.cs
+  SharedVentTubeSystem.cs
+  VentCrawlerComponent.cs
+ Vote/
+  RequestVoteMusicDisableOptionMessage.cs
+  VoteMusicDisableOptionMessage.cs
+ Weapons/Melee/Components/PowerDrainOnMeleeHitComponent.cs
+ Xenoarchaeology/Artifact/SharedXenoArtifactSystem.cs
+
+[metadataReferences]
+../
+ Content.Shared.Database/obj/Debug/net10.0/ref/Content.Shared.Database.dll
+ RobustToolbox/
+  Lidgren.Network/obj/Debug/net10.0/ref/SpaceWizards.Lidgren.Network.dll
+  NetSerializer/NetSerializer/obj/Debug/net10.0/ref/Robust.NetSerializer.dll
+  Robust.Shared.Maths/obj/Debug/ref/Robust.Shared.Maths.dll
+  Robust.Shared/obj/Debug/ref/Robust.Shared.dll
+ Sunrise/Content.Sunrise.Interfaces.Shared/obj/Debug/net10.0/ref/Content.Sunrise.Interfaces.Shared.dll
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.3/ref/net10.0/
+ Microsoft.CSharp.dll
+ Microsoft.VisualBasic.Core.dll
+ Microsoft.VisualBasic.dll
+ Microsoft.Win32.Primitives.dll
+ Microsoft.Win32.Registry.dll
+ mscorlib.dll
+ netstandard.dll
+ System.AppContext.dll
+ System.Buffers.dll
+ System.Collections.Concurrent.dll
+ System.Collections.dll
+ System.Collections.Immutable.dll
+ System.Collections.NonGeneric.dll
+ System.Collections.Specialized.dll
+ System.ComponentModel.Annotations.dll
+ System.ComponentModel.DataAnnotations.dll
+ System.ComponentModel.dll
+ System.ComponentModel.EventBasedAsync.dll
+ System.ComponentModel.Primitives.dll
+ System.ComponentModel.TypeConverter.dll
+ System.Configuration.dll
+ System.Console.dll
+ System.Core.dll
+ System.Data.Common.dll
+ System.Data.DataSetExtensions.dll
+ System.Data.dll
+ System.Diagnostics.Contracts.dll
+ System.Diagnostics.Debug.dll
+ System.Diagnostics.DiagnosticSource.dll
+ System.Diagnostics.FileVersionInfo.dll
+ System.Diagnostics.Process.dll
+ System.Diagnostics.StackTrace.dll
+ System.Diagnostics.TextWriterTraceListener.dll
+ System.Diagnostics.Tools.dll
+ System.Diagnostics.TraceSource.dll
+ System.Diagnostics.Tracing.dll
+ System.dll
+ System.Drawing.dll
+ System.Drawing.Primitives.dll
+ System.Dynamic.Runtime.dll
+ System.Formats.Asn1.dll
+ System.Formats.Tar.dll
+ System.Globalization.Calendars.dll
+ System.Globalization.dll
+ System.Globalization.Extensions.dll
+ System.IO.Compression.Brotli.dll
+ System.IO.Compression.dll
+ System.IO.Compression.FileSystem.dll
+ System.IO.Compression.ZipFile.dll
+ System.IO.dll
+ System.IO.FileSystem.AccessControl.dll
+ System.IO.FileSystem.dll
+ System.IO.FileSystem.DriveInfo.dll
+ System.IO.FileSystem.Primitives.dll
+ System.IO.FileSystem.Watcher.dll
+ System.IO.IsolatedStorage.dll
+ System.IO.MemoryMappedFiles.dll
+ System.IO.Pipelines.dll
+ System.IO.Pipes.AccessControl.dll
+ System.IO.Pipes.dll
+ System.IO.UnmanagedMemoryStream.dll
+ System.Linq.AsyncEnumerable.dll
+ System.Linq.dll
+ System.Linq.Expressions.dll
+ System.Linq.Parallel.dll
+ System.Linq.Queryable.dll
+ System.Memory.dll
+ System.Net.dll
+ System.Net.Http.dll
+ System.Net.Http.Json.dll
+ System.Net.HttpListener.dll
+ System.Net.Mail.dll
+ System.Net.NameResolution.dll
+ System.Net.NetworkInformation.dll
+ System.Net.Ping.dll
+ System.Net.Primitives.dll
+ System.Net.Quic.dll
+ System.Net.Requests.dll
+ System.Net.Security.dll
+ System.Net.ServerSentEvents.dll
+ System.Net.ServicePoint.dll
+ System.Net.Sockets.dll
+ System.Net.WebClient.dll
+ System.Net.WebHeaderCollection.dll
+ System.Net.WebProxy.dll
+ System.Net.WebSockets.Client.dll
+ System.Net.WebSockets.dll
+ System.Numerics.dll
+ System.Numerics.Vectors.dll
+ System.ObjectModel.dll
+ System.Reflection.DispatchProxy.dll
+ System.Reflection.dll
+ System.Reflection.Emit.dll
+ System.Reflection.Emit.ILGeneration.dll
+ System.Reflection.Emit.Lightweight.dll
+ System.Reflection.Extensions.dll
+ System.Reflection.Metadata.dll
+ System.Reflection.Primitives.dll
+ System.Reflection.TypeExtensions.dll
+ System.Resources.Reader.dll
+ System.Resources.ResourceManager.dll
+ System.Resources.Writer.dll
+ System.Runtime.CompilerServices.Unsafe.dll
+ System.Runtime.CompilerServices.VisualC.dll
+ System.Runtime.dll
+ System.Runtime.Extensions.dll
+ System.Runtime.Handles.dll
+ System.Runtime.InteropServices.dll
+ System.Runtime.InteropServices.JavaScript.dll
+ System.Runtime.InteropServices.RuntimeInformation.dll
+ System.Runtime.Intrinsics.dll
+ System.Runtime.Loader.dll
+ System.Runtime.Numerics.dll
+ System.Runtime.Serialization.dll
+ System.Runtime.Serialization.Formatters.dll
+ System.Runtime.Serialization.Json.dll
+ System.Runtime.Serialization.Primitives.dll
+ System.Runtime.Serialization.Xml.dll
+ System.Security.AccessControl.dll
+ System.Security.Claims.dll
+ System.Security.Cryptography.Algorithms.dll
+ System.Security.Cryptography.Cng.dll
+ System.Security.Cryptography.Csp.dll
+ System.Security.Cryptography.dll
+ System.Security.Cryptography.Encoding.dll
+ System.Security.Cryptography.OpenSsl.dll
+ System.Security.Cryptography.Primitives.dll
+ System.Security.Cryptography.X509Certificates.dll
+ System.Security.dll
+ System.Security.Principal.dll
+ System.Security.Principal.Windows.dll
+ System.Security.SecureString.dll
+ System.ServiceModel.Web.dll
+ System.ServiceProcess.dll
+ System.Text.Encoding.CodePages.dll
+ System.Text.Encoding.dll
+ System.Text.Encoding.Extensions.dll
+ System.Text.Encodings.Web.dll
+ System.Text.Json.dll
+ System.Text.RegularExpressions.dll
+ System.Threading.AccessControl.dll
+ System.Threading.Channels.dll
+ System.Threading.dll
+ System.Threading.Overlapped.dll
+ System.Threading.Tasks.Dataflow.dll
+ System.Threading.Tasks.dll
+ System.Threading.Tasks.Extensions.dll
+ System.Threading.Tasks.Parallel.dll
+ System.Threading.Thread.dll
+ System.Threading.ThreadPool.dll
+ System.Threading.Timer.dll
+ System.Transactions.dll
+ System.Transactions.Local.dll
+ System.ValueTuple.dll
+ System.Web.dll
+ System.Web.HttpUtility.dll
+ System.Windows.dll
+ System.Xml.dll
+ System.Xml.Linq.dll
+ System.Xml.ReaderWriter.dll
+ System.Xml.Serialization.dll
+ System.Xml.XDocument.dll
+ System.Xml.XmlDocument.dll
+ System.Xml.XmlSerializer.dll
+ System.Xml.XPath.dll
+ System.Xml.XPath.XDocument.dll
+ WindowsBase.dll
+<NUGET>/
+ jetbrains.annotations/2025.2.4/lib/netstandard2.0/JetBrains.Annotations.dll
+ robust.shared.authlib/0.1.2/lib/netstandard2.1/Robust.Shared.AuthLib.dll
+ yamldotnet/16.3.0/lib/net8.0/YamlDotNet.dll
+
+[analyzerReferences]
+../RobustToolbox/
+ Robust.Analyzers/bin/Debug/netstandard2.0/Robust.Analyzers.dll
+ Robust.Serialization.Generator/bin/Debug/netstandard2.0/Robust.Serialization.Generator.dll
+ Robust.Shared.CompNetworkGenerator/bin/Debug/netstandard2.0/Robust.Shared.CompNetworkGenerator.dll
+<DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.3/analyzers/dotnet/cs/
+ Microsoft.Interop.LibraryImportGenerator.dll
+ Microsoft.Interop.SourceGeneration.dll
+ System.Text.Json.SourceGeneration.dll
+ System.Text.RegularExpressions.Generator.dll
+<DOTNET>/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/analyzers/
+ Microsoft.CodeAnalysis.CSharp.NetAnalyzers.dll
+ Microsoft.CodeAnalysis.NetAnalyzers.dll
+
+[analyzerConfigFiles]
+../.editorconfig
+<DOTNET>/sdk/10.0.103/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_10_default.globalconfig
+obj/Debug/Content.Shared.GeneratedMSBuildEditorConfig.editorconfig
