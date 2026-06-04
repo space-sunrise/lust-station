@@ -2,8 +2,7 @@
   id: GoodCleanFunInventory
   startingInventory:
 #Sunrise-start
-    PokerCardClassicBoxFilled: 2
-    PokerCardBoxFilled: 2
+    LustCardBox: 4
     ArrowRouletteErot: 3
     ArrowRouletteEros: 3
 #Sunrise-end

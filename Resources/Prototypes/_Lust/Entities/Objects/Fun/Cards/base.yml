@@ -1,0 +1,117 @@
+# Base prototypes for the playing-card system.
+# Card faces and box reuse the existing Lust sprites; the deck has its own sprite.
+
+# Abstract base for any "stack of cards" entity (deck or hand).
+- type: entity
+  parent: BaseItem
+  id: LustCardStackBase
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+  - type: CardStack
+  - type: ContainerContainer
+    containers:
+      cardstack-container: !type:Container
+        ents: []
+
+# A single playable card. Spawned face-down; the face is set by child prototypes via Sprite layers.
+- type: entity
+  parent: BaseItem
+  id: LustCardBase
+  name: card
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EmitSoundOnLand
+    sound:
+      collection: cardShove
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/Cards/poker_cards.rsi
+    scale: 0.5,0.5
+    layers:
+    - state: background
+    - state: cover
+    - state: logo
+  - type: Rotatable
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,1 # 1 wide, 2 tall (2x1 slot footprint)
+  - type: UseDelay
+    delay: 0.5
+  - type: Card
+    backSprite:
+    - sprite: _Sunrise/Objects/Fun/Cards/poker_cards.rsi
+      state: background
+    - sprite: _Sunrise/Objects/Fun/Cards/poker_cards.rsi
+      state: cover
+    - sprite: _Sunrise/Objects/Fun/Cards/poker_cards.rsi
+      state: logo
+    flipped: true
+
+# Runtime container for a fanned hand of cards (spawned by the system when combining cards).
+- type: entity
+  parent: LustCardStackBase
+  id: LustCardHandBase
+  name: hand of cards
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: CardHand
+    scale: 0.5
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/Cards/poker_cards.rsi
+    layers:
+    - state: background
+    - state: cover
+    - state: logo
+  - type: UserInterface
+    interfaces:
+      enum.CardUiKey.Key:
+        type: CardHandMenuBoundUserInterface
+
+# Runtime container for a deck/stack of cards.
+- type: entity
+  parent: LustCardStackBase
+  id: LustCardDeckBase
+  name: deck of cards
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: CardDeck
+    scale: 0.5
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/Cards/cards.rsi
+    state: deck_pink_full
+  - type: Item
+    size: Normal
+
+# Box that holds a deck — uses the existing Lust cardbox sprite.
+- type: entity
+  parent: [ BoxCardboard, BaseBagOpenClose ]
+  id: LustCardBoxBase
+  name: deck box
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Item
+    size: Small
+    sprite: _Sunrise/Objects/Fun/Cards/cardbox.rsi
+  - type: Sprite
+    sprite: _Sunrise/Objects/Fun/Cards/cardbox.rsi
+    scale: 0.5,0.5
+    state: closed
+    layers:
+    - state: closed
+      map: ["closeLayer"]
+    - state: open
+      map: ["openLayer"]
+      visible: false
+  - type: Storage
+    maxItemSize: Normal
+    grid:
+    - 0,0,4,4
+    whitelist:
+      components:
+      - CardDeck
+  - type: StorageFill
+    contents:
+    - id: LustCardDeck
+  - type: Appearance

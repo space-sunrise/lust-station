@@ -1032,4 +1032,21 @@ toyhandcuff: ToyHandcuffs
 VendingMachineCentDrobe: VendingMachineCentDrobeQillu
 PenCentcom: PenCentcomQillu
 BoxFolderCentCom: BoxFolderCentComQillu
+
+# Old Sunrise poker cards replaced by the _Lust card system
+PokerCardBox: LustCardBox
+PokerCardBoxFilled: LustCardBox
+PokerCardClassicBox: LustCardBox
+PokerCardClassicBoxFilled: LustCardBox
+PokerCardTenClub: LustCardTenClubs
+PokerCardQueenClub: LustCardQueenClubs
+PokerCardKingClub: LustCardKingClubs
+PokerCardJackClub: LustCardJackClubs
+PokerCardRedJoker: LustCardJokerRed
+PokerCardClassicSevenSpade: LustCardSevenSpades
+PokerCardClassicSevenDiamond: LustCardSevenDiamonds
+PokerCardClassicJackHeart: LustCardJackHearts
+PokerCardClassicFourSpade: LustCardFourSpades
+PokerCardClassicFiveHeart: LustCardFiveHearts
+PokerCardClassicAceClub: LustCardAceClubs
 # Lust-End
