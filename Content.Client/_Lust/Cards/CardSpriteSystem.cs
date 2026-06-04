@@ -69,16 +69,12 @@ public sealed class CardSpriteSystem : EntitySystem
         {
             var (cardIndex, layer, cardRsi) = obj;
             sprite.LayerSetVisible(j, true);
-            // Lust-Edit: copy the source card's RSI as well, not just the state name.
+            // Lust-Edit: set the source card's state and RSI together so cards from a different RSI
+            // than the stack entity render (and no stale-state refresh against the wrong RSI).
             if (cardRsi != null && layer.RsiState.Name != null)
-            {
-                sprite.LayerSetRSI(j, cardRsi);
-                sprite.LayerSetState(j, layer.RsiState.Name);
-            }
+                sprite.LayerSetState(j, layer.RsiState.Name, cardRsi);
             else
-            {
                 sprite.LayerSetTexture(j, layer.Texture);
-            }
             layerFunc.Invoke((uid, sprite), cardIndex, j);
             j++;
         }
