@@ -1,5 +1,3 @@
-ent-PlushieAnameGermanikum = Plush Aname Germanikum
-    .desc = A responsible chief physician and just a cute and fluffy spider who can hug with her appendages.
 ent-PlushieAnnaLisechanskaya = Plush Anna Lisechanskaya
     .desc = Her legs are spread suspiciously wide.
 ent-PlushieKharsha = Plush Kharsha

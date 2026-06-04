@@ -13,8 +13,6 @@
     items:
       - id: ERPNormalDildo
         orGroup: Plushie
-      - id: PlushieAnameGermanikum
-        orGroup: Plushie
       - id: PlushieAnnaLisechanskaya
         orGroup: Plushie
       - id: PlushieLu
