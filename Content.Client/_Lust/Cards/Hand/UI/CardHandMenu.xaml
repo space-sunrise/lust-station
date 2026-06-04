@@ -1,0 +1,7 @@
+<DefaultWindow xmlns="https://spacestation14.io"
+               Title="{Loc 'card-hand-menu-title'}"
+               MinSize="280 140">
+    <ScrollContainer HScrollEnabled="False" VScrollEnabled="True" VerticalExpand="True" HorizontalExpand="True">
+        <GridContainer Name="CardGrid" Columns="6" />
+    </ScrollContainer>
+</DefaultWindow>

@@ -1,0 +1,25 @@
+- type: soundCollection
+  id: cardFan
+  files:
+  - /Audio/_Lust/Cards/cardFan1.ogg
+  - /Audio/_Lust/Cards/cardFan2.ogg
+
+- type: soundCollection
+  id: cardShove
+  files:
+  - /Audio/_Lust/Cards/cardShove1.ogg
+  - /Audio/_Lust/Cards/cardShove2.ogg
+  - /Audio/_Lust/Cards/cardShove3.ogg
+  - /Audio/_Lust/Cards/cardShove4.ogg
+
+- type: soundCollection
+  id: cardSlide
+  files:
+  - /Audio/_Lust/Cards/cardSlide1.ogg
+  - /Audio/_Lust/Cards/cardSlide2.ogg
+  - /Audio/_Lust/Cards/cardSlide3.ogg
+  - /Audio/_Lust/Cards/cardSlide4.ogg
+  - /Audio/_Lust/Cards/cardSlide5.ogg
+  - /Audio/_Lust/Cards/cardSlide6.ogg
+  - /Audio/_Lust/Cards/cardSlide7.ogg
+  - /Audio/_Lust/Cards/cardSlide8.ogg
