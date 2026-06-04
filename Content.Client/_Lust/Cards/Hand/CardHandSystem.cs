@@ -28,7 +28,8 @@ public sealed class CardHandSystem : EntitySystem
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
-        foreach (var (ent, value) in _notInit)
+        // Iterate a snapshot so we can safely add/remove entries inside the loop.
+        foreach (var (ent, value) in _notInit.ToArray())
         {
             if (value >= 5)
             {
@@ -62,9 +63,10 @@ public sealed class CardHandSystem : EntitySystem
             || !TryComp(uid, out CardStackComponent? cardStack))
             return;
 
-        // Prevents error appearing at spawnMenu
-        if (cardStack.Cards.Count <= 0 || !TryGetCardLayer(cardStack.Cards.Last(), out var cardlayer) ||
-            cardlayer == null)
+        // Prevents error appearing at spawnMenu. Empty stacks fall through to the
+        // placeholder branch below instead of returning here.
+        if (cardStack.Cards.Count > 0 &&
+            (!TryGetCardLayer(cardStack.Cards[^1], out var cardlayer) || cardlayer == null))
         {
             _notInit[(uid, comp)] = 0;
             return;

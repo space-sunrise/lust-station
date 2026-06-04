@@ -101,7 +101,7 @@ public sealed class CardSystem : EntitySystem
             return;
         component.Flipped = !component.Flipped;
         Dirty(uid, component);
-        RaiseNetworkEvent(new CardFlipUpdatedEvent(GetNetEntity(uid)));
+        RaiseNetworkEvent(new CardFlipUpdatedEvent(GetNetEntity(uid), component.Flipped));
     }
 
     private void JoinCards(EntityUid user, EntityUid first, CardComponent firstComp, EntityUid second, CardStackComponent secondStack)

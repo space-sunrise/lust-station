@@ -208,6 +208,7 @@ public sealed class CardHandSystem : EntitySystem
     private void FlipCards(EntityUid hand, CardHandComponent comp)
     {
         comp.Flipped = !comp.Flipped;
+        Dirty(hand, comp);
         _cardStack.FlipAllCards(hand, null, comp.Flipped);
     }
 

@@ -31,8 +31,9 @@ public sealed class CardDeckSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        // Lazy way to make sure the sprite starts correctly
-        foreach (var kv in _notInitialized)
+        // Lazy way to make sure the sprite starts correctly.
+        // Iterate a snapshot so we can safely add/remove entries inside the loop.
+        foreach (var kv in _notInitialized.ToArray())
         {
             var ent = kv.Key;
 

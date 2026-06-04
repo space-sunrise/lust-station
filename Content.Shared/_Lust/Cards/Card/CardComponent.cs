@@ -36,7 +36,13 @@ public sealed partial class CardComponent : Component
 }
 
 [Serializable, NetSerializable]
-public sealed class CardFlipUpdatedEvent(NetEntity card) : EntityEventArgs
+public sealed class CardFlipUpdatedEvent(NetEntity card, bool flipped) : EntityEventArgs
 {
     public NetEntity Card = card;
+
+    /// <summary>
+    /// The new flipped state, carried in the event so the client renders correctly
+    /// even if it arrives before the networked component state.
+    /// </summary>
+    public bool Flipped = flipped;
 }

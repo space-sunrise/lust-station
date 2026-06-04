@@ -24,7 +24,7 @@ namespace Content.Shared._Lust.Cards.Stack;
 public sealed class CardStackSystem : EntitySystem
 {
     public const string ContainerId = "cardstack-container";
-    public const int MaxCardsInStack = 212; // four 53-card decks.
+    public const int MaxCardsInStack = 216; // four 54-card decks.
 
     [Dependency] private readonly SharedContainerSystem _container = default!;
     [Dependency] private readonly EntityManager _entityManager = default!;
@@ -133,7 +133,7 @@ public sealed class CardStackSystem : EntitySystem
             cardComponent.Flipped = isFlipped ?? !cardComponent.Flipped;
 
             Dirty(card, cardComponent);
-            RaiseNetworkEvent(new CardFlipUpdatedEvent(GetNetEntity(card)));
+            RaiseNetworkEvent(new CardFlipUpdatedEvent(GetNetEntity(card), cardComponent.Flipped));
         }
 
         RaiseNetworkEvent(new CardStackFlippedEvent(GetNetEntity(uid)));
@@ -421,15 +421,22 @@ public sealed class CardStackSystem : EntitySystem
 
         if (!component.Cards.TryGetValue(component.Cards.Count - 1, out var card))
             return;
-        if (!component.Cards.TryGetValue(component.Cards.Count - 2, out var under))
-            return;
+
+        // The "under" card only exists when there is more than one card in the stack.
+        EntityUid? under = null;
+        if (component.Cards.Count > 1)
+        {
+            if (!component.Cards.TryGetValue(component.Cards.Count - 2, out var underCard))
+                return;
+            under = underCard;
+        }
 
         if (!TryRemoveCard(uid, card, component))
             return;
 
         _hands.TryPickupAnyHand(user, card);
-        if (!Exists(uid) && pickup)
-            _hands.TryPickupAnyHand(user, under);
+        if (!Exists(uid) && pickup && under != null)
+            _hands.TryPickupAnyHand(user, under.Value);
 
         if (TryComp<CardDeckComponent>(uid, out var deck))
             _audio.PlayPredicted(deck.PickUpSound, Transform(card).Coordinates, user);

@@ -2,7 +2,7 @@
   id: GoodCleanFunInventory
   startingInventory:
 #Sunrise-start
-    LustCardBox: 4
+    LustCardBox: 4 # Lust-Edit: replaced the old poker card boxes with the Lust card box.
     ArrowRouletteErot: 3
     ArrowRouletteEros: 3
 #Sunrise-end

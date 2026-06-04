@@ -12,15 +12,27 @@ namespace Content.Shared._Lust.Cards.Stack;
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class CardStackComponent : Component
 {
+    /// <summary>
+    /// Card prototypes spawned into the stack when it is created.
+    /// </summary>
     [DataField]
     public List<EntProtoId> InitialContent = [];
 
+    /// <summary>
+    /// Sound played when the stack is shuffled.
+    /// </summary>
     [DataField]
     public SoundSpecifier ShuffleSound = new SoundCollectionSpecifier("cardFan");
 
+    /// <summary>
+    /// Sound played when the stack is picked up.
+    /// </summary>
     [DataField]
     public SoundSpecifier PickUpSound = new SoundCollectionSpecifier("cardSlide");
 
+    /// <summary>
+    /// Sound played when the stack is placed down.
+    /// </summary>
     [DataField]
     public SoundSpecifier PlaceDownSound = new SoundCollectionSpecifier("cardShove");
 

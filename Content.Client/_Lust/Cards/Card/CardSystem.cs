@@ -43,6 +43,9 @@ public sealed class CardSystem : EntitySystem
     {
         if (!TryComp(GetEntity(args.Card), out CardComponent? comp))
             return;
+        // Use the state carried by the event so the sprite is correct even if it
+        // arrives before the networked component state.
+        comp.Flipped = args.Flipped;
         UpdateSprite(GetEntity(args.Card), comp);
     }
 
