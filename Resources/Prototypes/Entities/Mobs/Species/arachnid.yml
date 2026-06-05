@@ -109,9 +109,9 @@
       - map: [ "gloves" ]
       - map: [ "shoes" ]
       - map: [ "lockable_normal" ] # Lust-Edit
+      - map: [ "lockable_over" ] # Lust-Edit
       - map: [ "belt" ]
       - map: [ "id" ]
-      - map: [ "lockable_over" ] # Lust-Edit
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
       - map: [ "back" ]
       - map: [ "neck" ]
