@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server.GameTicking;
 using Content.Server.GameTicking.Rules;
+using Content.Shared.GameTicking;
 using Content.Server.RoundEnd;
 using Content.Server.Station.Systems;
 using Content.Server.StationEvents;
@@ -110,6 +111,8 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     private float _maxResearchStorytellerScore;
     private int _totalTechnologyCount;
 
+    private TimeSpan _lastStarvationWarningTime = TimeSpan.Zero;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -119,6 +122,14 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
         _playerManager.PlayerStatusChanged += OnPlayerStatusChanged;
         SubscribeLocalEvent<PlayerJoinedLobbyEvent>(OnPlayerJoinedLobby);
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestartCleanup);
+    }
+
+    private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
+    {
+        _joinTimestamps.Clear();
+        _leaveTimestamps.Clear();
+        _lastStarvationWarningTime = TimeSpan.Zero;
     }
 
     public override void Shutdown()
@@ -175,7 +186,6 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     {
         base.ActiveTick(uid, component, gameRule, frameTime);
 
-
         var budgetModifier = 1f;
         var maxBudgetModifier = 1f;
         if (_protoManager.TryIndex<StorytellerTypePrototype>(component.StorytellerType.ToString(), out var typeProto))
@@ -201,6 +211,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         if (Timing.CurTime >= component.NextCheckTime)
         {
             var interval = _cfg.GetCVar(SunriseCCVars.StorytellerCheckInterval);
+            _sawmill.Info($"ActiveTick: Timing.CurTime ({Timing.CurTime.TotalSeconds:F1}s) >= NextCheckTime ({component.NextCheckTime.TotalSeconds:F1}s). Triggering EvaluateStoryteller.");
             component.NextCheckTime = Timing.CurTime + TimeSpan.FromSeconds(interval);
             EvaluateStoryteller((uid, component));
         }
@@ -253,13 +264,21 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
                 break;
         }
 
+        _sawmill.Info($"TransitionPacingState: Pacing state changed from {oldState} to {comp.PacingState}. Next transition scheduled at {comp.StateTransitionTime.TotalSeconds:F1}s.");
         LogStorytellerState(comp, oldState);
     }
 
     private void EvaluateStoryteller(Entity<StorytellerRuleComponent> entity)
     {
-        if (_roundEnd.IsRoundEndRequested())
+        _sawmill.Info("EvaluateStoryteller: Entered method.");
+
+        var roundEndRequested = _roundEnd.IsRoundEndRequested();
+        _sawmill.Info($"EvaluateStoryteller: RoundEndRequested status is {roundEndRequested}.");
+        if (roundEndRequested)
+        {
+            _sawmill.Info("EvaluateStoryteller: Exiting early because RoundEndRequested is true.");
             return;
+        }
 
         var metrics = CalculateStationMetrics(entity.Comp);
         entity.Comp.CrewStress = CalculateCrewStress(ref metrics);
@@ -273,11 +292,13 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         // AI storyteller branch
         if (_cfg.GetCVar(SunriseCCVars.StorytellerAiEnabled) && !string.IsNullOrWhiteSpace(_cfg.GetCVar(SunriseCCVars.StorytellerAiUrl)))
         {
+            _sawmill.Info("EvaluateStoryteller: AI Storyteller is enabled, requesting recommendation.");
             RequestAiEventRecommendation(entity, metrics);
             return;
         }
 
         // Default heuristic branch
+        _sawmill.Info("EvaluateStoryteller: Running default heuristic storyteller.");
         ExecuteHeuristicStoryteller(entity, metrics);
     }
 
@@ -313,13 +334,26 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         {
             var warningMsg = $"Storyteller evaluated, but eligibleEvents.Count is 0! Stress: {entity.Comp.CrewStress}, Budget: {entity.Comp.ThreatBudget}, PacingState: {entity.Comp.PacingState}, StorytellerType: {entity.Comp.StorytellerType}";
             _sawmill.Warning(warningMsg);
+
+            if (entity.Comp.ThreatBudget > 80f && Timing.CurTime - _lastStarvationWarningTime > TimeSpan.FromMinutes(5))
+            {
+                _lastStarvationWarningTime = Timing.CurTime;
+                LogStarvationDiagnostics(entity.Comp, metrics);
+            }
             return;
         }
 
         // Weighted random pick
         var selected = PickEventFromEligible(eligibleEvents, entity.Comp.ThreatBudget, metrics.StationStrength, entity.Comp.StorytellerType);
         if (selected == null)
+        {
+            if (entity.Comp.ThreatBudget > 80f && Timing.CurTime - _lastStarvationWarningTime > TimeSpan.FromMinutes(5))
+            {
+                _lastStarvationWarningTime = Timing.CurTime;
+                LogStarvationDiagnostics(entity.Comp, metrics, eligibleEvents);
+            }
             return;
+        }
 
         TriggerEvent(entity, selected.Value.Item1, selected.Value.Item2);
     }
@@ -1562,6 +1596,180 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
             }
         }
         return dist;
+    }
+
+    private void LogStarvationDiagnostics(StorytellerRuleComponent comp, StationMetrics metrics, Dictionary<EntityPrototype, StorytellerMetadataPrototype>? eligibleEvents = null)
+    {
+        var currentDuration = GameTicker.RoundDuration();
+        _sawmill.Warning($"Storyteller Starvation Diagnostics: Budget={comp.ThreatBudget}, Pacing={comp.PacingState}, Players={metrics.TotalPlayers}, RoundDuration={currentDuration.TotalMinutes:F1}m");
+
+        if (eligibleEvents != null && eligibleEvents.Count > 0)
+        {
+            _sawmill.Warning($"Found {eligibleEvents.Count} eligible events, calculating weights:");
+
+            var highBudgetThreshold = 40f;
+            var majorMult = 8f;
+            var minorMult = 0.1f;
+            var scalingFactor = 50f;
+
+            if (_protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out var typeProto))
+            {
+                highBudgetThreshold = typeProto.HighBudgetThreshold;
+                majorMult = typeProto.MajorThreatWeightMultiplier;
+                minorMult = typeProto.MinorThreatWeightMultiplier;
+                scalingFactor = typeProto.StationStrengthScalingFactor;
+            }
+
+            foreach (var (proto, metadata) in eligibleEvents)
+            {
+                var baseWeight = 10f;
+                if (proto.TryGetComponent<StationEventComponent>(out var stationEvent, EntityManager.ComponentFactory))
+                {
+                    baseWeight = stationEvent.Weight;
+                }
+
+                var weight = baseWeight * metadata.WeightModifier;
+
+                if (comp.ThreatBudget >= highBudgetThreshold)
+                {
+                    if (metadata.ThreatType == StorytellerThreatType.MajorAntag ||
+                        metadata.ThreatType == StorytellerThreatType.MajorCalm)
+                    {
+                        var strengthMult = 1f + (metrics.StationStrength / scalingFactor);
+                        weight *= majorMult * strengthMult;
+                    }
+                    else if (metadata.ThreatType == StorytellerThreatType.Neutral ||
+                             metadata.ThreatType == StorytellerThreatType.MinorCalm)
+                    {
+                        weight *= minorMult;
+                    }
+                }
+
+                _sawmill.Warning($"  Event: {proto.ID}, Type: {metadata.ThreatType}, BaseWeight: {baseWeight}, FinalWeight: {weight}, Cost: {metadata.ThreatCost}");
+            }
+        }
+
+        var skippedCount = 0;
+        var totalCount = 0;
+        var reasons = new Dictionary<string, int>();
+
+        foreach (var proto in _protoManager.EnumeratePrototypes<EntityPrototype>())
+        {
+            if (proto.Abstract)
+                continue;
+
+            if (!_protoManager.TryIndex<StorytellerMetadataPrototype>(proto.ID, out var metadata))
+                continue;
+
+            totalCount++;
+
+            if (metadata.ThreatType is StorytellerThreatType.MajorAntag or StorytellerThreatType.MajorCalm)
+            {
+                if (metrics.StationStrength < metadata.MinStationStrength)
+                {
+                    IncrementReason("StationStrength < MinStationStrength");
+                    continue;
+                }
+            }
+            else if (comp.CrewStress > metadata.MaxStress)
+            {
+                IncrementReason("CrewStress > MaxStress");
+                continue;
+            }
+
+            if (proto.TryGetComponent<StationEventComponent>(out var stationEvent, EntityManager.ComponentFactory))
+            {
+                if (metrics.TotalPlayers < stationEvent.MinimumPlayers)
+                {
+                    IncrementReason($"TotalPlayers < MinimumPlayers ({stationEvent.MinimumPlayers})");
+                    continue;
+                }
+
+                if (currentDuration.TotalMinutes < stationEvent.EarliestStart)
+                {
+                    IncrementReason($"RoundDuration < EarliestStart ({stationEvent.EarliestStart}m)");
+                    continue;
+                }
+
+                var lastTime = _eventManager.TimeSinceLastEvent(proto);
+                if (lastTime != TimeSpan.Zero && currentDuration.TotalMinutes < stationEvent.ReoccurrenceDelay + lastTime.TotalMinutes)
+                {
+                    IncrementReason($"Within ReoccurrenceDelay ({stationEvent.ReoccurrenceDelay}m)");
+                    continue;
+                }
+
+                if (_roundEnd.IsRoundEndRequested() && !stationEvent.OccursDuringRoundEnd)
+                {
+                    IncrementReason("RoundEndRequested && !OccursDuringRoundEnd");
+                    continue;
+                }
+            }
+
+            if (comp.PacingState == StorytellerPacingState.Recovery)
+            {
+                if (metadata.ThreatType != StorytellerThreatType.Helpful && metadata.ThreatType != StorytellerThreatType.Neutral)
+                {
+                    IncrementReason("RecoveryPacing: Only Helpful/Neutral allowed");
+                    continue;
+                }
+            }
+            else if (comp.PacingState == StorytellerPacingState.Relaxation)
+            {
+                if (metadata.ThreatType == StorytellerThreatType.MajorCalm || metadata.ThreatType == StorytellerThreatType.MajorAntag)
+                {
+                    IncrementReason("RelaxationPacing: Major threats forbidden");
+                    continue;
+                }
+            }
+            else if (comp.PacingState == StorytellerPacingState.Peak)
+            {
+                if (metadata.ThreatType == StorytellerThreatType.MajorAntag)
+                {
+                    IncrementReason("PeakPacing: Major Antags forbidden");
+                    continue;
+                }
+            }
+
+            var preservationThreshold = 40f;
+            if (_protoManager.TryIndex<StorytellerTypePrototype>(comp.StorytellerType.ToString(), out var typeProto))
+            {
+                preservationThreshold = typeProto.BuildUpPreservationThreshold;
+            }
+
+            if (comp.PacingState == StorytellerPacingState.BuildUp && comp.ThreatBudget < preservationThreshold)
+            {
+                if (metadata.ThreatType != StorytellerThreatType.Helpful &&
+                    metadata.ThreatType != StorytellerThreatType.Neutral &&
+                    metadata.ThreatCost > 0f)
+                {
+                    IncrementReason("BuildUpPreservation: Budget preserved");
+                    continue;
+                }
+            }
+
+            if (metadata.ThreatType != StorytellerThreatType.Helpful && metadata.ThreatCost > comp.ThreatBudget)
+            {
+                IncrementReason($"ThreatCost ({metadata.ThreatCost}) > ThreatBudget");
+                continue;
+            }
+
+            if (GameTicker.IsGameRuleActive(proto.ID))
+            {
+                IncrementReason("GameRuleActive");
+                continue;
+            }
+        }
+
+        foreach (var (reason, count) in reasons)
+        {
+            _sawmill.Warning($"  Skipped {count} events due to: {reason}");
+        }
+
+        void IncrementReason(string reason)
+        {
+            reasons[reason] = reasons.GetValueOrDefault(reason) + 1;
+            skippedCount++;
+        }
     }
 }
 
