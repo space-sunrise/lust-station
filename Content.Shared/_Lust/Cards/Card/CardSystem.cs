@@ -118,8 +118,11 @@ public sealed class CardSystem : EntitySystem
         else if (HasComp<CardHandComponent>(second))
         {
             cardStack = SpawnInSameParent(_cardHand.CardHandBaseName, first);
-            if(TryComp<CardHandComponent>(cardStack, out var stackHand))
+            if (TryComp<CardHandComponent>(cardStack, out var stackHand))
+            {
                 stackHand.Flipped = firstComp.Flipped;
+                Dirty(cardStack, stackHand);
+            }
             flip = firstComp.Flipped;
         }
         else

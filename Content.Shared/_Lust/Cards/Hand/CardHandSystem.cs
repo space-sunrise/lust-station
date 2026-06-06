@@ -176,7 +176,10 @@ public sealed class CardHandSystem : EntitySystem
             return;
         var cardHand = SpawnInSameParent(CardHandBaseName, card);
         if (TryComp<CardHandComponent>(cardHand, out var handComp))
+        {
             handComp.Flipped = targetComp.Flipped;
+            Dirty(cardHand, handComp);
+        }
         if (!TryComp(cardHand, out CardStackComponent? stack))
             return;
         if (!_cardStack.TryInsertCard(cardHand, card, stack) || !_cardStack.TryInsertCard(cardHand, target, stack))
@@ -194,7 +197,10 @@ public sealed class CardHandSystem : EntitySystem
             return;
         var cardHand = SpawnInSameParent(CardHandBaseName, card);
         if (TryComp<CardHandComponent>(cardHand, out var handComp))
+        {
             handComp.Flipped = comp.Flipped;
+            Dirty(cardHand, handComp);
+        }
         if (!TryComp(cardHand, out CardStackComponent? stack))
             return;
         if (!_cardStack.TryInsertCard(cardHand, card, stack))
@@ -224,12 +230,18 @@ public sealed class CardHandSystem : EntitySystem
         {
             var entity = SpawnInContainerOrDrop(prototype, container.Owner, container.ID);
             if (!Exists(entity))
+            {
                 Log.Error($"Failed to spawn {prototype} in container {container.ID}");
+                return EntityUid.Invalid;
+            }
             return entity;
         }
         var worldEntity = Spawn(prototype, Transform(uid).Coordinates);
         if (!Exists(worldEntity))
+        {
             Log.Error($"Failed to spawn {prototype} at coordinates {Transform(uid).Coordinates}");
+            return EntityUid.Invalid;
+        }
         return worldEntity;
     }
 }
