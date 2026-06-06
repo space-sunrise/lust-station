@@ -304,8 +304,7 @@
         Radiation: 10
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    layers:
-    - state: xray
+    state: xray
     rotation: 90
     noRot: false
   - type: HitscanBasicVisuals
