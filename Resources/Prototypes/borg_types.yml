@@ -234,8 +234,7 @@
     - BorgModuleMedical
 
   defaultModules:
-  - BorgModuleStandart
-  - SunriseBorgModuleChemical # Sunrise-Edit
+  - BorgModuleChemical
   - BorgModuleTopicals
   - BorgModuleRescue
 
@@ -263,7 +262,7 @@
     - HandheldStationMapUnpowered
     - HandheldEmergencyCrewMonitorBorg
     entityTargetActions:
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzer
   # Sunrise-End
 
   # Visual

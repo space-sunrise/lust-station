@@ -202,7 +202,7 @@
     - type: InnateItem
       entityTargetActions:
       - AccessBreaker
-      - HandheldHealthAnalyzerUnpowered
+      - HandheldHealthAnalyzer
     # Sunrise-End
 
 - type: entity
