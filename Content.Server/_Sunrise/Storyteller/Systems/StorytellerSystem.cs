@@ -163,6 +163,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         base.Added(uid, component, gameRule, args);
 
         component.NextCheckTime = Timing.CurTime + TimeSpan.FromSeconds(10);
+        component.LastAnyEventTime = Timing.CurTime;
+        component.LastHelpfulEventTime = Timing.CurTime;
+        component.LastNeutralEventTime = Timing.CurTime;
 
         component.StateTransitionTime = Timing.CurTime + TimeSpan.FromMinutes(_random.Next(15, 30));
         component.PacingState = StorytellerPacingState.Relaxation;
@@ -192,6 +195,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         LogStorytellerState(component, null);
 
         component.RuleStartTime = Timing.CurTime;
+        component.LastAnyEventTime = Timing.CurTime;
+        component.LastHelpfulEventTime = Timing.CurTime;
+        component.LastNeutralEventTime = Timing.CurTime;
         component.AlertLevelHistory.Clear();
         var query = EntityQueryEnumerator<AlertLevelComponent>();
         while (query.MoveNext(out var stationUid, out var alertComp))
