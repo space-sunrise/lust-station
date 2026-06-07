@@ -9,13 +9,11 @@ using Content.Shared.GameTicking;
 using Content.Shared.GameWindow;
 using Content.Shared.Players;
 using Content.Shared.Preferences;
-using Content.Sunrise.Interfaces.Server;
 using JetBrains.Annotations;
 using Robust.Server.Player;
 using Robust.Shared.Audio;
 using Robust.Shared.Enums;
 using Robust.Shared.Player;
-using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
 namespace Content.Server.GameTicking
@@ -160,8 +158,6 @@ namespace Content.Server.GameTicking
                     // Sunrise edit start - закрываем только userDb load, который стартовал Sunrise pipeline.
                     StopUserDbLoad(session);
                     // Sunrise edit end
-
-                    _adminLogger.Add(LogType.Connection, LogImpact.Low, $"User {args.Session:Player} attached to {(args.Session.AttachedEntity != null ? ToPrettyString(args.Session.AttachedEntity) : "nothing"):entity} disconnected from the game.");
                     break;
                 }
             }
