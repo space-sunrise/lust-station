@@ -5,7 +5,6 @@ using Content.Server.AlertLevel;
 using Content.Server._Sunrise.Storyteller.Components;
 using Content.Shared._Sunrise.Storyteller.Prototypes;
 using Content.Shared._Sunrise.SunriseCCVars;
-using Robust.Shared.Log;
 
 namespace Content.Server._Sunrise.Storyteller.Systems;
 
