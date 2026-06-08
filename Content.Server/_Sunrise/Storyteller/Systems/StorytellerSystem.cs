@@ -336,7 +336,14 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
     private void ExecuteHeuristicStoryteller(Entity<StorytellerRuleComponent> entity, StationMetrics metrics)
     {
         if (!_cfg.GetCVar(CCVars.EventsEnabled))
+        {
+            if (Timing.CurTime - entity.Comp.LastDisabledWarningTime > TimeSpan.FromMinutes(5))
+            {
+                _sawmill.Warning($"Storyteller evaluated, but {CCVars.EventsEnabled.Name} is false! Events are disabled.");
+                entity.Comp.LastDisabledWarningTime = Timing.CurTime;
+            }
             return;
+        }
 
         if (Timing.CurTime - entity.Comp.LastAnyEventTime < TimeSpan.FromMinutes(entity.Comp.GlobalEventCooldownMinutes))
             return;

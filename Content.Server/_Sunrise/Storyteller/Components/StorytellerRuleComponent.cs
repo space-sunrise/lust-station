@@ -77,6 +77,12 @@ public sealed partial class StorytellerRuleComponent : Component
     public TimeSpan LastNeutralEventTime;
 
     /// <summary>
+    /// Last timestamp when a warning about events being disabled was logged.
+    /// </summary>
+    [AutoPausedField, ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan LastDisabledWarningTime;
+
+    /// <summary>
     /// Global cooldown between any storyteller events (in minutes).
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
