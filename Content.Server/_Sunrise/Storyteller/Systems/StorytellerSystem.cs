@@ -205,8 +205,8 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
         component.LastHelpfulEventTime = Timing.CurTime;
         component.LastNeutralEventTime = Timing.CurTime;
         component.AlertLevelHistory.Clear();
-        var query = EntityQueryEnumerator<AlertLevelComponent>();
-        while (query.MoveNext(out var stationUid, out var alertComp))
+        var query = EntityQueryEnumerator<AlertLevelComponent, MainStationComponent>();
+        while (query.MoveNext(out var stationUid, out var alertComp, out _))
         {
             RecordAlertLevelChange(component, stationUid, alertComp.CurrentLevel);
         }
@@ -1933,6 +1933,9 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
     private void OnAlertLevelChanged(AlertLevelChangedEvent ev)
     {
+        if (!HasComp<MainStationComponent>(ev.Station))
+            return;
+
         var query = EntityQueryEnumerator<StorytellerRuleComponent>();
         while (query.MoveNext(out _, out var comp))
         {
@@ -1999,7 +2002,7 @@ public sealed partial class StorytellerSystem : GameRuleSystem<StorytellerRuleCo
 
         foreach (var (station, history) in comp.AlertLevelHistory)
         {
-            if (!Exists(station) || !HasComp<StationDataComponent>(station))
+            if (!Exists(station) || !HasComp<MainStationComponent>(station))
                 continue;
 
             double greenDuration = 0;

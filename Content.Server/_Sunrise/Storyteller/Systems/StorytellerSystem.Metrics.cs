@@ -295,16 +295,12 @@ public sealed partial class StorytellerSystem
         StressAntagonistGauge.Set(metrics.StressAntagonist);
         TotalPlayersGauge.Set(metrics.TotalPlayers);
 
-        var alertQuery = EntityQueryEnumerator<AlertLevelComponent>();
+        var alertQuery = EntityQueryEnumerator<AlertLevelComponent, MainStationComponent>();
         AlertLevelComponent? mainAlertComp = null;
-        while (alertQuery.MoveNext(out _, out var alertComp))
+        while (alertQuery.MoveNext(out _, out var alertComp, out _))
         {
-            if (alertComp.AlertLevelPrototype == "stationAlerts")
-            {
-                mainAlertComp = alertComp;
-                break;
-            }
-            mainAlertComp ??= alertComp;
+            mainAlertComp = alertComp;
+            break;
         }
 
         if (mainAlertComp != null)
@@ -344,16 +340,12 @@ public sealed partial class StorytellerSystem
         var maxBudget = comp.MaxThreatBudget * maxBudgetModifier;
 
         var alertLevel = "green";
-        var alertQuery = EntityQueryEnumerator<AlertLevelComponent>();
+        var alertQuery = EntityQueryEnumerator<AlertLevelComponent, MainStationComponent>();
         AlertLevelComponent? mainAlertComp = null;
-        while (alertQuery.MoveNext(out _, out var alertComp))
+        while (alertQuery.MoveNext(out _, out var alertComp, out _))
         {
-            if (alertComp.AlertLevelPrototype == "stationAlerts")
-            {
-                mainAlertComp = alertComp;
-                break;
-            }
-            mainAlertComp ??= alertComp;
+            mainAlertComp = alertComp;
+            break;
         }
         if (mainAlertComp != null)
         {
