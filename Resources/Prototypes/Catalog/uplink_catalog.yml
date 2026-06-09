@@ -1905,7 +1905,6 @@
       tags:
       - NukeOpsUplink
       - LoneOpsUplink # Sunrise-Edit
-      - AssaultOpsUplink # Sunrise-Edit
 
 - type: listing
   id: UplinkHardsuitSyndieElite
