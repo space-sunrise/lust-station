@@ -1,4 +1,19 @@
 - type: entity
+  id: ScanGateMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: scan gate machine board
+  description: A machine printed circuit board for a scan gate
+  components:
+    - type: Sprite
+      state: service
+    - type: MachineBoard
+      prototype: ScanGate
+      stackRequirements:
+        Steel: 5
+        Glass: 2
+        Cable: 10
+
+- type: entity
   parent: BaseMachineCircuitboard
   id: AssortedForgeParts
   name: assorted forge parts
