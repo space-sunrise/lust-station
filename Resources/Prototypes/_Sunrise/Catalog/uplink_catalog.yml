@@ -2202,7 +2202,6 @@
   - !type:StoreWhitelistCondition
     whitelist:
       tags:
-      - NukeOpsUplink
       - LoneOpsUplink
   - !type:BuyerWhitelistCondition
     blacklist:
