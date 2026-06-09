@@ -2,8 +2,7 @@
 - type: weightedRandom
   id: NinjaThreats
   weights:
-    # Sunrise Edit
-    Dragon: 0.1
+    Dragon: 0.1 # Sunrise Edit
     Revenant: 1
     # Sunrise-start
     Pirate: 0.75
