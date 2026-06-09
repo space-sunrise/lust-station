@@ -113,6 +113,16 @@
   - BrigmedicDuffel
 
 - type: loadoutGroup
+  id: BrigmedicOuterClothing
+  name: loadout-group-brigmedic-outer-clothing
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - BrigmedicCoatLab
+  - BrigmedicArmoredRobe
+  - BrigmedicBulletproof
+
+- type: loadoutGroup
   id: BrigmedicJumpsuit
   name: loadout-group-brigmedic-jumpsuit
   loadouts:

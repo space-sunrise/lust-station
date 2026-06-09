@@ -18,6 +18,18 @@
   name: security medic armor vest
   description: A security medic's armor vest, with little pockets for little things.
   components:
+    - type: Storage
+      grid:
+      - 0,0,2,1
+      maxItemSize: Small
+    - type: ContainerContainer
+      containers:
+       storagebase: !type:Container
+        ents: []
+    - type: UserInterface
+      interfaces:
+        enum.StorageUiKey.Key:
+          type: StorageBoundUserInterface
     - type: Sprite
       sprite: _Sunrise/Clothing/OuterClothing/Vests/armor_sec_med.rsi
     - type: Clothing
