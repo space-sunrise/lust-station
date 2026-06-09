@@ -66,12 +66,6 @@
     - MagazinePistol40HP
     - MagazinePistol40FMJ
     - MagazinePistol40Empty
-    # Pistol High Capacity
-    - MagazinePistolHighCapacitySP
-    - MagazinePistolHighCapacityHP
-    - MagazinePistolHighCapacityFMJ
-    - MagazinePistolHighCapacityRubber
-    - MagazinePistolHighCapacityEmpty
     # SMG
     - MagazinePistolSubMachineGunSP
     - MagazinePistolSubMachineGunHP
@@ -244,7 +238,7 @@
     #
     - EnergyDomeDirectionalTurtle
     - WeaponTemperatureGun
-    - ModularReceiverAuto
+    #- ModularReceiverAuto
     - LecterUpgrade
     - DrozdUpgrade
   #####################BOX#######################
@@ -295,10 +289,6 @@
     - MagazinePistolUranium
     - MagazinePistolAP
     - MagazinePistol40AP
-  # Pistol High Capacity
-    - MagazinePistolHighCapacityIncendiary
-    - MagazinePistolHighCapacityUranium
-    - MagazinePistolHighCapacityAP
   # SMG
     - MagazinePistolSubMachineGunIncendiary
     - MagazinePistolSubMachineGunUranium
@@ -485,9 +475,12 @@
   - MagazineLightRifleBeltBoxFMJ
 
 - type: latheRecipePack
-  id: SyndicateAmmoSunrise
+  id: SyndicateAmmoDynamicSunrise
   recipes:
     - MagazineRifleBoxIncendiary
     - MagazineRifleBoxUranium
     - MagazineShotgunIncendiary
     - MagazineShotgunBeanbag
+    - MagazinePistolHighCapacityIncendiary
+    - MagazinePistolHighCapacityUranium
+    - MagazinePistolHighCapacityAP

@@ -41,15 +41,15 @@
     Plastic: 50
     Steel: 250
 
-- type: latheRecipe
-  id: ModularReceiverAuto
-  result: ModularReceiverAuto
-  categories:
-  - Weapons
-  completetime: 10
-  materials:
-    Steel: 500
-    Plastic: 50
+# - type: latheRecipe # Not use right now
+#   id: ModularReceiverAuto
+#   result: ModularReceiverAuto
+#   categories:
+#   - Weapons
+#   completetime: 10
+#   materials:
+#     Steel: 500
+#     Plastic: 50
 
 - type: latheRecipe
   id: DrozdUpgrade

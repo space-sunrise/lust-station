@@ -194,9 +194,9 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: WeaponPistolG22
+        - id: WeaponPistolEnforcer
           amount: 4
-        - id: MagazineGlock22
+        - id: MagazinePistol
           amount: 8
 
 - type: entity
