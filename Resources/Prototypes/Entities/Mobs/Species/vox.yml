@@ -57,7 +57,8 @@
           FoodMeatChickenFriedVox:
             min: 3
             max: 5
-      - !type:BurnBodyBehavior { }
+      - !type:BurnBodyBehavior
+        popupMessage: bodyburn-vox-text-others
       - !type:PlaySoundBehavior
         sound:
           collection: MeatLaserImpact
@@ -121,15 +122,20 @@
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "lockable_under" ] # Lust-Edit
+    - map: [ "lockable_chest" ] # Lust-Edit
     - map: [ "enum.HumanoidVisualLayers.LHand" ]
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     # Sunrise-start
+    - map: [ "lockable_underpants" ] # Lust-Edit
     - map: ["jumpsuit"]
     # Sunrise-end
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
+    - map: [ "lockable_normal" ] # Lust-Edit
     - map: [ "outerClothing" ] #Sunrise-edit
+    - map: [ "lockable_over" ] # Lust-Edit
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
