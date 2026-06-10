@@ -92,7 +92,7 @@ public sealed partial class SunriseCCVars : CVars
      */
 
     public static readonly CVarDef<bool> SponsorEnabled =
-        CVarDef.Create("sponsor.enabled", false, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("sponsor.enabled", true, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<string> SponsorApiUrl =
         CVarDef.Create("sponsor.api_url", "", CVar.SERVERONLY);
@@ -143,7 +143,7 @@ public sealed partial class SunriseCCVars : CVars
      */
 
     public static readonly CVarDef<bool> ServersHubEnable =
-        CVarDef.Create("servers_hub.enable", false, CVar.SERVER | CVar.REPLICATED);
+        CVarDef.Create("servers_hub.enable", true, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
     /// Список серверов отображаемых в хабе. Разделяются через запятую.
