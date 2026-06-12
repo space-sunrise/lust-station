@@ -181,7 +181,7 @@
       collection: MaleSevereCough
     # Lust-Start
     Moan:
-      collection: MaleMoan
+      collection: SwineOinks
     # Lust-End
   params:
     variation: 0.125
@@ -209,6 +209,10 @@
       collection: HumanoidXenoCry
     DefaultDeathgasp:
       collection: HumanoidXenoDeathgasp
+    # Lust-Start
+    Moan:
+      collection: HumanoidXenoScreams
+    # Lust-End
   params:
     variation: 0.125
 
@@ -301,5 +305,5 @@
       collection: FelinidHisses
     # Lust-Start
     Moan:
-      collection: FemaleMoan
+      path: /Audio/_Sunrise/Voice/Resomi/resomi_scream.ogg
     # Lust-End
