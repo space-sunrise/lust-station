@@ -1,0 +1,18 @@
+# NTRep Satchels
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelNtrepWhite
+  name: white Qillu representative satchel
+  description: A neat white satchel issued to Qillu representatives.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchels/ntrep_white_satchel.rsi
+
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelNtrepBlack
+  name: black Qillu representative satchel
+  description: A neat black satchel issued to Qillu representatives.
+  components:
+    - type: Sprite
+      sprite: _Lust/Clothing/Back/Satchels/ntrep_black_satchel.rsi

@@ -1,3 +1,6 @@
+loadout-group-qillurepresentative-neck = { loadout-group-neck }
+loadout-group-qillurepresentative-jumpsuit = { loadout-group-jumpsuit }
+loadout-group-qillurepresentative-back = { loadout-group-back }
 loadout-group-security-neck = { loadout-group-neck }
 loadout-group-security-officer-neck = { loadout-group-neck }
 loadout-group-engineer-neck = { loadout-group-neck }
