@@ -1,9 +1,13 @@
-﻿using Content.Shared.Alert;
+﻿using Content.Client.Toggleable;
+using Content.Shared.Alert;
 using Content.Shared.Mobs;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.PowerCell;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
+// Lust edit start - borg rest visuals
+using Content.Shared._Lust.Borgs;
+// Lust edit end
 using Robust.Client.GameObjects;
 using Robust.Client.Player;
 using Robust.Shared.Containers;
@@ -29,8 +33,13 @@ public sealed partial class BorgSystem : SharedBorgSystem
 
         InitializeBattery();
 
-        SubscribeLocalEvent<BorgChassisComponent, AppearanceChangeEvent>(OnBorgAppearanceChanged);
-        SubscribeLocalEvent<MMIComponent, AppearanceChangeEvent>(OnMMIAppearanceChanged);
+        // Lust edit - must run after ToggleableVisualsSystem to override LightStatus when resting
+        // Both subscriptions to AppearanceChangeEvent must use the same ordering constraints (engine requirement)
+        SubscribeLocalEvent<BorgChassisComponent, AppearanceChangeEvent>(OnBorgAppearanceChanged, after: [typeof(ToggleableVisualsSystem)]);
+        SubscribeLocalEvent<MMIComponent, AppearanceChangeEvent>(OnMMIAppearanceChanged, after: [typeof(ToggleableVisualsSystem)]);
+        // Lust edit start - borg rest visuals
+        SubscribeLocalEvent<BorgRestComponent, AfterAutoHandleStateEvent>(OnBorgRestStateChanged);
+        // Lust edit end
     }
 
     public override void UpdateUI(Entity<BorgChassisComponent?> chassis)
@@ -74,21 +83,60 @@ public sealed partial class BorgSystem : SharedBorgSystem
         if (!Resolve(ent, ref ent.Comp1, ref ent.Comp2, ref ent.Comp3))
             return;
 
+        // Lust edit start - borg rest/wrecked visual states
+        var isResting = TryComp<BorgRestComponent>(ent, out var borgRest) && borgRest.IsResting;
+
         if (_appearance.TryGetData<MobState>(ent.Owner, MobStateVisuals.State, out var state, ent.Comp2))
         {
             if (state != MobState.Alive)
             {
                 _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Light, false);
+                SetRestLayerSafe(ent, BorgVisualLayers.Body, false);
+                SetRestLayerSafe(ent, BorgVisualLayers.LightStatus, false);
+                SetRestLayerSafe(ent, BorgVisualLayers.Resting, false);
+                SetRestLayerSafe(ent, BorgVisualLayers.Wrecked, true);
                 return;
             }
         }
 
+        SetRestLayerSafe(ent, BorgVisualLayers.Wrecked, false);
+        SetRestLayerSafe(ent, BorgVisualLayers.Body, !isResting);
+        SetRestLayerSafe(ent, BorgVisualLayers.Resting, isResting);
+        // Hide flashlight sprite when resting (ToggleableVisualsSystem already ran before us)
+        if (isResting)
+            SetRestLayerSafe(ent, BorgVisualLayers.LightStatus, false);
+        // Lust edit end
+
         if (!_appearance.TryGetData<bool>(ent.Owner, BorgVisuals.HasPlayer, out var hasPlayer, ent.Comp2))
             hasPlayer = false;
+
+        // Lust edit start - hide mind-state light when resting
+        if (isResting)
+        {
+            _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Light, false);
+            return;
+        }
+        // Lust edit end
 
         _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Light, ent.Comp1.BrainEntity != null || hasPlayer);
         _sprite.LayerSetRsiState((ent.Owner, ent.Comp3), BorgVisualLayers.Light, hasPlayer ? ent.Comp1.HasMindState : ent.Comp1.NoMindState);
     }
+
+    // Lust edit start - handler and helper for borg rest visuals
+    private void OnBorgRestStateChanged(Entity<BorgRestComponent> ent, ref AfterAutoHandleStateEvent args)
+    {
+        if (TryComp<AppearanceComponent>(ent, out var appearance))
+            _appearance.QueueUpdate(ent, appearance);
+    }
+
+    private void SetRestLayerSafe(Entity<BorgChassisComponent?, AppearanceComponent?, SpriteComponent?> ent, Enum layer, bool visible)
+    {
+        if (ent.Comp3 is not { } sprite || !_sprite.LayerExists((ent.Owner, sprite), layer))
+            return;
+
+        _sprite.LayerSetVisible((ent.Owner, sprite), layer, visible);
+    }
+    // Lust edit end
 
     private void OnMMIAppearanceChanged(EntityUid uid, MMIComponent component, ref AppearanceChangeEvent args)
     {

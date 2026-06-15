@@ -1,0 +1,101 @@
+- type: entity
+  id: BaseRestAction
+  parent: BaseMentalAction
+  name: Rest
+  description: Lay down or get up.
+  abstract: true
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+  - type: InstantAction
+    event: !type:BorgRestActionEvent {}
+
+- type: entity
+  id: RestActionRobot
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: robot_tipped_icon
+
+- type: entity
+  id: RestActionEngineer
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: engineer_tipped_icon
+
+- type: entity
+  id: RestActionMiner
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: miner_tipped_icon
+
+- type: entity
+  id: RestActionJanitor
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: janitor_tipped_icon
+
+- type: entity
+  id: RestActionMedical
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: medical_tipped_icon
+
+- type: entity
+  id: RestActionService
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: service_tipped_icon
+
+- type: entity
+  id: RestActionPeace
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: peace_tipped_icon
+
+- type: entity
+  id: RestActionClown
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: clown_tipped_icon
+
+- type: entity
+  id: RestActionSec
+  parent: BaseRestAction
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis_icons.rsi
+      state: sec_tipped_icon

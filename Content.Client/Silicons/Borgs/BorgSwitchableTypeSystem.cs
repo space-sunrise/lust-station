@@ -42,6 +42,12 @@ public sealed class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeSystem
         {
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
+            // Lust edit start - update rest/wreck sprite states for borg type
+            if (_sprite.LayerExists((entity, sprite), BorgVisualLayers.Resting))
+                _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Resting, prototype.SpriteRestingState);
+            if (_sprite.LayerExists((entity, sprite), BorgVisualLayers.Wrecked))
+                _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Wrecked, prototype.SpriteWreckState);
+            // Lust edit end
         }
 
         if (TryComp(entity, out BorgChassisComponent? chassis))

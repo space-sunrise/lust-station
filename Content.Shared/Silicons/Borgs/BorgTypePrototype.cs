@@ -126,6 +126,20 @@ public sealed partial class BorgTypePrototype : IPrototype
     [DataField]
     public string SpriteToggleLightState { get; set; } = "robot_l";
 
+    // Lust edit start - rest/wreck sprite states per borg type
+    /// <summary>
+    /// Sprite state used when the borg is resting.
+    /// </summary>
+    [DataField]
+    public string SpriteRestingState { get; set; } = "robot_rest";
+
+    /// <summary>
+    /// Sprite state used when the borg is wrecked/dead.
+    /// </summary>
+    [DataField]
+    public string SpriteWreckState { get; set; } = "robot_wreck";
+    // Lust edit end
+
     //
     // Minor information
     //
