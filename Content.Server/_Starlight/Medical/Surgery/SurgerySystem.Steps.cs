@@ -86,7 +86,10 @@ public sealed partial class SurgerySystem : SharedSurgerySystem
         }
 
         if (!TryComp<OrganComponent>(organId, out var organComp))
+        {
+            args.IsCancelled = true;
             return;
+        }
 
         var part = args.Part;
         var body = args.Body;
