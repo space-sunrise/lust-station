@@ -141,10 +141,25 @@
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: ded_plushie
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/_Lust/half-life_crowbar.ogg
   - type: EmitSoundOnUse
     sound:
-      path: /Audio/_Lust/half-life_crowbar.ogg
-  - type: TriggerOnActivate
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: EmitSoundOnActivate
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Items/Toys/rawr.ogg
+  - type: Catchable
+    catchChance: 0.8
+    catchSuccessSound:
+      path: /Audio/Items/Toys/rawr.ogg
   - type: UseDelay
     delay: 1
 
