@@ -25,18 +25,6 @@
   name: store-category-special
   priority: 4
 
-# Sunrise-Start
-- type: storeCategory
-  id: Romantic
-  name: store-category-romantic
-  priority: 5
-# Sunrise-End
-
-- type: storeCategory
-  id: Erotic
-  name: store-category-erotic
-  priority: 6
-
 - type: storeCategory
   id: HOSHeadOfDepartment
   name: store-category-hos
