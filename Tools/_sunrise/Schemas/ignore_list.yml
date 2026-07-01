@@ -60,11 +60,14 @@ ignore_list:
   - 'EVA'
   - 'MK58'
   - 'WT550'
+  - 'SKM-24'
+  - 'SKM-28'
   - 'N1984'
   - 'DEUS VULT'
   - 'AMS-42'
   - 'SAM-300'
   - 'AJ-100'
+  - 'SIAR-52'
   - 'Deus vult! Ave maria!'
   - TR-263'
   - 'G-Man'
@@ -116,6 +119,7 @@ ignore_list:
   - 'L6 SAW'
   - 'L6C ROW'
   - 'China Lake'
+  - 'China-Lake'
   - 'Plant-B-Gone'
   - 'Bon appétit!'
   - 'Bon ap-petite!'
@@ -134,6 +138,7 @@ ignore_list:
   - 'RL-5'
   - 'Zauer'
   - 'Trenchgun L-4034'
+  - 'AS-12 "Hasta la vista"'
   - 'SPAS-12'
   - 'TBD'
   - '°C ( K)'
@@ -143,12 +148,21 @@ ignore_list:
   - 'AMLG-90'
   - 'TR-263'
   - 'LAW-12'    # Для ent-WeaponShotgunSPAS12
-  - 'AKM'       # Для ent-WeaponRifleAKM
   - 'MG-342'    # Для ent-WeaponMachineGunMG42
   - 'S-13'
   - 'v3.0.9'
   - 'v0.2.1'
   - 'F₃BZ'
+  - 'Pl₂'
+  - 'H₂'
+  - 'HN₂'
+  - 'PN₂'
+  - 'Z₂'
+  - 'Ha₂'
+  - 'He₂'
+  - 'AN₂'
+  - 'E'
+  - 'E₂'
   - 'Holo Girl'
   - 'BZ'
   - 'NH₃'
@@ -177,11 +191,18 @@ ignore_list:
   - 'MHelp'
   - 'Net-ERR*?*%'
   - 'Holo Girl'
-  # Sunrise-Lust start
+  - 'RobustChat'
+  - 'www.wetskrell.nt'
+  - '25-j*%...o1q'
+  - '1u'
+  - '5u'
+  - '10u'
+  - '20u'
+  # Lust-Start
   - 'Qillu'
   - 'QL'
   - 'ERP'
-  # Sunrise-Lust end
+  # Lust-End
 
 ignore_files:
   - 'italian.ftl'
@@ -215,7 +236,7 @@ ignore_files:
   - xeno_last.ftl
   - xeno_first.ftl
   - narsie.ftl
-  # Sunrise-Lust start
+  # Lust-Start
   - 'friendly_interactions.yml'
   - 'anal_interactions.yml'
   - 'ears_interactions.yml'
@@ -232,4 +253,4 @@ ignore_files:
   - 'thighs_interactions.yml'
   - 'toyInteractions.yml'
   - 'butt_interactions.yml'
-  # Sunrise-Lust end
+  # Lust-End

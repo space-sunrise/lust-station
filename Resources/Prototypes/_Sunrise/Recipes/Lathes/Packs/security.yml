@@ -38,6 +38,7 @@
     - BoxLethalshot
     - BoxShotgunSlug
     - BoxShellTranquilizer
+    - BoxShotgunFlare
     #####################MAGAZINE#######################
     # LMG
     - MagazineLightRifleBeltBoxSP
@@ -65,12 +66,6 @@
     - MagazinePistol40HP
     - MagazinePistol40FMJ
     - MagazinePistol40Empty
-    # Pistol High Capacity
-    - MagazinePistolHighCapacitySP
-    - MagazinePistolHighCapacityHP
-    - MagazinePistolHighCapacityFMJ
-    - MagazinePistolHighCapacityRubber
-    - MagazinePistolHighCapacityEmpty
     # SMG
     - MagazinePistolSubMachineGunSP
     - MagazinePistolSubMachineGunHP
@@ -93,6 +88,7 @@
     - MagazineRifleHeavyEmpty
     # Shotgun Speedloader
     - SpeedLoaderShellShotgun
+    - SpeedLoaderShotgunBirdshot
     - SpeedLoaderShotgunEmpty
     - SpeedLoaderShotgunSlug
     - SpeedLoaderShotgunBeanbag
@@ -186,9 +182,14 @@
     - MagazineRifleHeavyEmpty
     # Shotgun Speedloader
     - SpeedLoaderShellShotgun
+    - SpeedLoaderShotgunBirdshot
     - SpeedLoaderShotgunEmpty
     - SpeedLoaderShotgunSlug
     - SpeedLoaderShotgunBeanbag
+    # Pirate cannon
+    - CannonBallMini
+    - CannonBallGrapeshotMini
+    - MagazineCannonBallMini
     # Medical
     - Gauze
     - Brutepack
@@ -199,11 +200,14 @@
 - type: latheRecipePack
   id: SecurityDynamicSunrise
   recipes:
+    - ComputerGunneryCircuitboard
     - WeaponEnergyGun
     - WeaponMiniEnergyGun
-    - WeaponEnergyGunPistol
-    - WeaponGunLaserCarbineAutomatic
+    - WeaponIonCarbine
+    - WeaponDecloner
+    - ScanGateMachineCircuitboard
     - MagazineBatteryLr30
+    - WeaponSunriseLaserPistol
     - FlareGunSecurityUpgrade
 # Sunrise-TODO: Нужен ребаланс с учетом типов боеприпасов
 #    - BaseMagazinePistolCaselessRifleExtended
@@ -219,22 +223,24 @@
     - ShellBlastArtillery
     - ShellEMPArtillery
     - ShellFlashArtillery
+    - ShellFragArtillery
     - MagazineBauer127
+#    - MagazineBauer127Penetrator
     - RifleHeavyMagazineArtillery
     - MagazineBoxBelt127Artillery
-    - MagazineBauer127Blast
+#    - MagazineBauer127Blast
     - MagazineBauer127Frag
     - MagazineBauer127Emp
     - MagazineBoxBelt127Empty
-    - MagazineBoxBelt127
+#    - MagazineBoxBelt127
     - MagazineBoxBelt127Artillery
-    - MagazineBoxBelt127Blast
+#    - MagazineBoxBelt127Blast
     - MagazineBoxBelt127Frag
     - MagazineBoxBelt127Emp
     #
     - EnergyDomeDirectionalTurtle
     - WeaponTemperatureGun
-    - ModularReceiverAuto
+    #- ModularReceiverAuto
     - LecterUpgrade
     - DrozdUpgrade
   #####################BOX#######################
@@ -264,6 +270,7 @@
     - BoxShotgunIncendiary
     - BoxShotgunUranium
     - BoxShellTranquilizer
+    - BoxShotgunFlechette
   #####################MAGAZINE#######################
   # LMG
     - MagazineLightRifleBeltBoxIncendiary
@@ -284,10 +291,6 @@
     - MagazinePistolUranium
     - MagazinePistolAP
     - MagazinePistol40AP
-  # Pistol High Capacity
-    - MagazinePistolHighCapacityIncendiary
-    - MagazinePistolHighCapacityUranium
-    - MagazinePistolHighCapacityAP
   # SMG
     - MagazinePistolSubMachineGunIncendiary
     - MagazinePistolSubMachineGunUranium
@@ -306,9 +309,17 @@
     - MagazineRifleHeavyIncendiary
     - MagazineRifleHeavyAP
     - MagazineRifleHeavyUranium
+    - RifleHeavyMagazineEmpty
+    - RifleHeavyMagazineFMJ
+    - RifleHeavyMagazineHP
+    - RifleHeavyMagazineSP
+    - RifleHeavyMagazineAP
+    - RifleHeavyMagazineIncendiary
+    - RifleHeavyMagazineUranium
   # Shotgun
     - SpeedLoaderShotgunIncendiary
     - SpeedLoaderShotgunUranium
+    - SpeedLoaderShotgunFlechette
   # Grenade
     - MagazineGrenadeEmpty
 ####################################################
@@ -327,6 +338,11 @@
     - VestSecUpgradeReflective
     - VestSecUpgradeWeb
     - VestSecUpgradeBulletHeavy
+    - ClothingOuterArmorMiliraLight
+    - ClothingOuterArmorMiliraHeavy
+    - ClothingOuterHardsuitMilira
+    - ClothingHeadHelmetEVAMilira
+    - ClothingEyesHudMilira
 
 - type: latheRecipePack
   id: SecurityDynamicSunriseMech
@@ -335,7 +351,6 @@
     - WeaponMechCombatSolarisLaser
     - WeaponMechCombatFiredartLaser
     - WeaponMechCombatUltraRifle
-    - WeaponMechCombatMG
     - WeaponMechCombatIon
     - WeaponMechCombatXray
     - WeaponMechCombatShotgun
@@ -366,26 +381,27 @@
     - MagazineRifleFMJ
     # Shotgun Speedloader
     - SpeedLoaderShellShotgun
+    - SpeedLoaderShotgunBirdshot
     - SpeedLoaderShotgunSlug
     # Shuttle stuff
     - MagazineGrenadeEmpty
     - ShellFragArtillery
     - ShellEMPArtillery
-    # .60/14mm cannon
+    # .60/15mm cannon
     - MagazineBauer127
     - MagazineBauer127Penetrator
     - MagazineBauer127Blast
     - MagazineBauer127Frag
     - MagazineBauer127Emp
-    # .60/14mm auto-cannon
+    # .60/15mm auto-cannon
     - MagazineBoxBelt127Empty
     - MagazineBoxBelt127
     - MagazineBoxBelt127Artillery
     # .308 Cannon
+    - RifleHeavyMagazineEmpty
     - RifleHeavyMagazineFMJ
     - RifleHeavyMagazineHP
     - RifleHeavyMagazineSP
-    - RifleHeavyMagazineArtillery
     # Structure
     - PowerCageRechargerCircuitboard
     - ShuttleGunDusterCircuitboard
@@ -407,14 +423,18 @@
   - MagazineBoxBelt127Frag
   - MagazineBoxBelt127Blast
   - MagazineBoxBelt127Emp
+  - RifleHeavyMagazineArtillery
   - ShuttleGunQuadlingCircuitboard
   - ShuttleGunTeslaHyperionCircuitboard
+  - ShuttleGunBullfrogCircuitboard
   # Shotgun Magazine
   - MagazineShotgun
   - MagazineShotgunEmpty
   - MagazineShotgunSlug
   # # # AP
   - RifleHeavyMagazineAP
+  - RifleHeavyMagazineIncendiary
+  - RifleHeavyMagazineUranium
   - MagazineBoxLightRifleAP
   - MagazineBoxMagnumAP
   - MagazineBoxPistolAP
@@ -457,9 +477,12 @@
   - MagazineLightRifleBeltBoxFMJ
 
 - type: latheRecipePack
-  id: SyndicateAmmoSunrise
+  id: SyndicateAmmoDynamicSunrise
   recipes:
     - MagazineRifleBoxIncendiary
     - MagazineRifleBoxUranium
     - MagazineShotgunIncendiary
     - MagazineShotgunBeanbag
+    - MagazinePistolHighCapacityIncendiary
+    - MagazinePistolHighCapacityUranium
+    - MagazinePistolHighCapacityAP

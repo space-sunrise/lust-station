@@ -1,2 +1,3 @@
-ent-ClothingHeadHelmetHardsuitCentcomQillu = Шлем скафандра Центрального Командования (Qillu)
-    .desc = Шлем скафандра Центрального Командования, изготовленный по контракту Qillu. Оснащён встроенным фонарём.
+ent-ClothingHeadHelmetHardsuitCentcomQillu = шлем скафандра Центкома
+    .suffix = Qillu
+    .desc = Шлем скафандра Центкома, изготовленный по контракту Qillu. Оснащён встроенным фонарём.

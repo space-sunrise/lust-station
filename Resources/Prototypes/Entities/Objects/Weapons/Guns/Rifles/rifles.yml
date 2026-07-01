@@ -19,10 +19,10 @@
   - type: AmmoCounter
   - type: GunWieldBonus # Sunrise-start
     minAngle: -20
-    maxAngle: -45
+    maxAngle: -30
   - type: Gun
-    minAngle: 23
-    maxAngle: 90
+    minAngle: 21
+    maxAngle: 60
     angleIncrease: 1.25
     angleDecay: 20  # Sunrise-end
     fireRate: 5
@@ -78,8 +78,8 @@
         knockback: 0.1
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 1
+    pvsIncrease: 0.1
   # Sunrise end
 
 - type: entity
@@ -181,14 +181,14 @@
   description: "Popular gas-operated combat rifle used heavily by Nanotrasen and SolGov. Operating in semi or fully automatic, its accuracy, stopping power, and reliability make it excel in all manner of environments.\nFeeds from .20 rifle magazines."
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Rifles/lecter_new.rsi # Sunrise-Edit
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Rifles/lecter_new.rsi # Sunrise-Edit
   - type: Gun
     soundGunshot:
       collection: galil # Sunrise-Edit
@@ -318,39 +318,3 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-
-- type: entity
-  name: Foam Force Astro Ace
-  parent: [BaseWeaponShotgun, BaseGunWieldable]
-  id: WeaponRifleFoam
-  description: A premium foam rifle of the highest quality. Its plastic feels rugged, and its mechanisms sturdy.
-  components:
-  - type: Sprite
-    sprite: Objects/Fun/Foam/foam_rifle.rsi
-  - type: Clothing
-    sprite: Objects/Fun/Foam/foam_rifle.rsi
-  - type: Item
-    sprite: Objects/Fun/Foam/foam_rifle_inhand_64x.rsi
-    size: Normal
-    shape:
-    - 0,0,3,0
-  - type: BallisticAmmoProvider
-    whitelist:
-      tags:
-      - BulletFoam
-    capacity: 10
-    proto: BulletFoam
-  - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
-  - type: Gun
-    fireRate: 2
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
-    soundGunshot:
-      path: /Audio/Effects/thunk.ogg
-    soundEmpty:
-      path: /Audio/Weapons/Guns/Empty/empty.ogg
-    clumsyProof: true
-  - type: PacifismAllowedGun
-  - type: StaticPrice
-    price: 100

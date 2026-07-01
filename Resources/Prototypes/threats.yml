@@ -2,16 +2,21 @@
 - type: weightedRandom
   id: NinjaThreats
   weights:
-    Dragon: 1
+    Dragon: 0.1 # Sunrise Edit
     Revenant: 1
     # Sunrise-start
-    Pirate: 1
-    PirateSmall: 0.25
-    LoneOperative: 1
-    Instigator: 0.6
-    Infiltrator: 0.35
-    Nukeops: 0.05
+    Pirate: 0.75
+    PirateSmall: 0.2
+    LoneOperative: 0.25
+    Instigator: 0.2
+    Infiltrator: 0.5
+    InfiltratorDropShip: 0.6
     Abductors: 0.5
+    Clown: 0.5
+    NinjaBackup: 0.75
+    Rod: 0.75
+    Wizard: 0.1
+    Nukeops: 0.1
     # Sunrise-end
 
 - type: ninjaHackingThreat
@@ -38,7 +43,12 @@
 - type: ninjaHackingThreat
   id: Infiltrator
   announcement: terror-nukeops-infiltrator
-  rule: NukeopsInfiltrator
+  rule: NukeopsInfiltratorDropShipSoviet
+
+- type: ninjaHackingThreat
+  id: InfiltratorDropShip
+  announcement: terror-nukeops-infiltrator-dropship
+  rule: NukeopsInfiltratorDropShip
 
 - type: ninjaHackingThreat
   id: Nukeops
@@ -59,4 +69,24 @@
   id: Abductors
   announcement: terror-abductor
   rule: AbductorsSpawn
+
+- type: ninjaHackingThreat
+  id: Clown
+  announcement: terror-clown
+  rule: UnknownShuttleHonki
+
+- type: ninjaHackingThreat
+  id: NinjaBackup
+  announcement: terror-ninja
+  rule: NinjaSpawn
+
+- type: ninjaHackingThreat
+  id: Rod
+  announcement: terror-rod
+  rule: ImmovableRodSpawn
+
+- type: ninjaHackingThreat
+  id: Wizard
+  announcement: terror-wizard
+  rule: WizardSpawn
 # Sunrise-end

@@ -11,11 +11,27 @@
 # Blueprints
 - type: latheRecipe
   parent: BaseAmmoRecipe
-  id: MagazineAsh12
-  result: MagazineAsh12
+  id: MagazineAsh12Slug
+  result: MagazineAsh12Slug
   materials:
-    Steel: 200
+    Steel: 250
     Plastic: 100
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineAsh12Flare
+  result: MagazineAsh12Flare
+  materials:
+    Steel: 150
+    Plastic: 70
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineAsh12Beanbag
+  result: MagazineAsh12Beanbag
+  materials:
+    Steel: 150
+    Plastic: 140
 
 # .40 Pistol (.45 ACP)
 - type: latheRecipe
@@ -420,12 +436,41 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
+  id: MagazinePistolSubMachineGunCaselessExtended
+  result: MagazinePistolSubMachineGunCaselessExtended
+  materials:
+    Steel: 500
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
   id: MagazinePistolSubMachineGunAP
   result: MagazinePistolSubMachineGunAP
   materials:
     Steel: 225
     Plasteel: 115
     Uranium: 40
+
+# .40 SMG
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazinePistol40SubMachineGunSP
+  result: MagazinePistol40SubMachineGunSP
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazinePistol40SubMachineGunHP
+  result: MagazinePistol40SubMachineGunHP
+  materials:
+    Steel: 300
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazinePistol40SubMachineGunFMJ
+  result: MagazinePistol40SubMachineGunFMJ
+  materials:
+    Steel: 375
 
 # .35 Auto WT550
 - type: latheRecipe
@@ -758,21 +803,21 @@
   id: RifleHeavyMagazineSP
   result: RifleHeavyMagazineSP
   materials:
-    Steel: 1412
+    Steel: 2100
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: RifleHeavyMagazineHP
   result: RifleHeavyMagazineHP
   materials:
-    Steel: 1412
+    Steel: 2100
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: RifleHeavyMagazineFMJ
   result: RifleHeavyMagazineFMJ
   materials:
-    Steel: 1412
+    Steel: 2600
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -780,8 +825,8 @@
   result: RifleHeavyMagazineUranium
   materials:
     Steel: 100
-    Plastic: 1080
-    Uranium: 1080
+    Plastic: 875
+    Uranium: 875
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -789,15 +834,17 @@
   result: RifleHeavyMagazineIncendiary
   materials:
     Steel: 100
-    Plastic: 1350
+    Plastic: 875
+    Plasma: 875
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: RifleHeavyMagazineAP
   result: RifleHeavyMagazineAP
   materials:
-    Steel: 1312
-    Uranium: 1312
+    Steel: 1600
+    Plasteel: 750
+    Uranium: 250
 
 ## 15мм/.60
 - type: latheRecipe
@@ -805,15 +852,15 @@
   id: MagazineBauer127Penetrator
   result: MagazineBauer127Penetrator
   materials:
-    Steel: 300
-    Uranium: 200
+    Steel: 250
+    Uranium: 100
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineBauer127
   result: MagazineBauer127
   materials:
-    Steel: 275
+    Steel: 250
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -822,7 +869,7 @@
   completetime: 3
   materials:
     Steel: 250
-    Plastic: 200
+    Plastic: 115
     Glass: 35
 
 - type: latheRecipe
@@ -831,9 +878,9 @@
   result: MagazineBauer127Blast
   completetime: 3
   materials:
-    Steel: 500
-    Plastic: 500
-    Gold: 200
+    Steel: 300
+    Plastic: 300
+    Gold: 100
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -841,9 +888,9 @@
   result: MagazineBauer127Frag
   completetime: 3
   materials:
-    Steel: 800
+    Steel: 500
     Plastic: 300
-    Gold: 100
+    Gold: 50
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -857,16 +904,16 @@
   id: MagazineBoxBelt127
   result: MagazineBoxBelt127
   materials:
-    Steel: 800
-    Plasteel: 100
-    Uranium: 100
+    Steel: 1000
+    Plasteel: 125
+    Uranium: 125
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
   id: MagazineBoxBelt127Artillery
   result: MagazineBoxBelt127Artillery
   materials:
-    Steel: 900
+    Steel: 1125
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -874,9 +921,9 @@
   result: MagazineBoxBelt127Emp
   completetime: 3
   materials:
-    Steel: 800
-    Plastic: 900
-    Glass: 150
+    Steel: 1000
+    Plastic: 1125
+    Glass: 190
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -884,9 +931,9 @@
   result: MagazineBoxBelt127Blast
   completetime: 3
   materials:
-    Steel: 2000
-    Plastic: 3000
-    Gold: 1500
+    Steel: 2500
+    Plastic: 3750
+    Gold: 1875
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -894,9 +941,9 @@
   result: MagazineBoxBelt127Frag
   completetime: 3
   materials:
-    Steel: 2500
-    Plastic: 1500
-    Gold: 450
+    Steel: 3125
+    Plastic: 1875
+    Gold: 560
 
 # .308 belt box
 - type: latheRecipe
@@ -963,6 +1010,25 @@
     Plasteel: 425
     Uranium: 140
 
+#Box .50 Shotgun
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: BoxShotgunBreaching
+  result: BoxShotgunBreaching
+  materials:
+    Steel: 250
+    Plastic: 100
+    Plasma: 50
+
+- type: latheRecipe
+  parent: BaseAmmoBoxRecipe
+  id: BoxShotgunFlechette
+  result: BoxShotgunFlechette
+  materials:
+    Steel: 80
+    Plasteel: 300
+    Plastic: 50
+
 #Speedloaders .50 Shotgun
 - type: latheRecipe
   parent: BaseEmptyAmmoRecipe
@@ -980,6 +1046,13 @@
 
 - type: latheRecipe
   parent: BaseAmmoRecipe
+  id: SpeedLoaderShotgunBirdshot
+  result: SpeedLoaderShotgunBirdshot
+  materials:
+    Steel: 100
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
   id: SpeedLoaderShotgunBeanbag
   result: SpeedLoaderShotgunBeanbag
   materials:
@@ -992,6 +1065,15 @@
   result: SpeedLoaderShotgunSlug
   materials:
     Steel: 225
+    Plastic: 25
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: SpeedLoaderShotgunFlechette
+  result: SpeedLoaderShotgunFlechette
+  materials:
+    Steel: 60
+    Plasteel: 200
     Plastic: 25
 
 - type: latheRecipe
@@ -1060,8 +1142,8 @@
     Steel: 835
 
 - type: latheRecipe
-  id: MagazineDragunov
-  result: MagazineDragunov
+  id: MagazineDragunovSP
+  result: MagazineDragunovSP
   categories:
   - Ammo
   completetime: 5
@@ -1069,22 +1151,22 @@
     Steel: 800
 
 - type: latheRecipe
-  id: MagazineGlock22
-  result: MagazineGlock22
+  id: MagazineDragunovHP
+  result: MagazineDragunovHP
   categories:
   - Ammo
   completetime: 5
   materials:
-    Steel: 250
+    Steel: 800
 
-# - type: latheRecipe
-#   id: MagazineVP78
-#   result: MagazineVP78
-#   categories:
-#   - Ammo
-#   completetime: 5
-#   materials:
-#     Steel: 250
+- type: latheRecipe
+  id: MagazineDragunovFMJ
+  result: MagazineDragunovFMJ
+  categories:
+  - Ammo
+  completetime: 5
+  materials:
+    Steel: 850
 
 - type: latheRecipe
   id: MagazineHIBrowning
@@ -1102,7 +1184,7 @@
   - Ammo
   completetime: 5
   materials:
-    Steel: 193
+    Steel: 220
 
 #
 #- type: latheRecipe  # Отдельной технологией
@@ -1204,3 +1286,56 @@
     Steel: 500
     Plastic: 150
     Gold: 50
+
+### Grenades
+- type: latheRecipe
+  id: GrenadeEMP
+  result: GrenadeEMP
+  completetime: 3
+  materials:
+    Steel: 150
+    Plastic: 100
+    Glass: 20
+
+- type: latheRecipe
+  id: GrenadeBlast
+  result: GrenadeBlast
+  completetime: 3
+  materials:
+    Steel: 450
+    Plastic: 300
+    Gold: 150
+
+- type: latheRecipe
+  id: GrenadeFrag
+  result: GrenadeFrag
+  completetime: 3
+  materials:
+    Steel: 500
+    Plastic: 150
+    Gold: 50
+
+# Pirate cannon (PirateTechFab)
+# NOTE: PirateTechFab has materialUseMultiplier: 0.6, and lathe recipes apply discount by default.
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CannonBallMini
+  result: CannonBallMini
+  materials:
+    Steel: 10
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: CannonBallGrapeshotMini
+  result: CannonBallGrapeshotMini
+  materials:
+    Steel: 20
+    Cloth: 10
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: MagazineCannonBallMini
+  result: MagazineCannonBallMini
+  materials:
+    Steel: 500
+    Cloth: 200

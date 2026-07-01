@@ -19,14 +19,13 @@ using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Network;
+using Robust.Shared.Physics;
+using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Physics.Systems;
-using Robust.Shared.Timing;
-using Robust.Shared.Audio.Systems;
-using Robust.Shared.Network;
-using Robust.Shared.Map.Components;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Shared.Doors.Systems;
 
@@ -50,6 +49,8 @@ public abstract partial class SharedDoorSystem : EntitySystem
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiver = default!;
 
+    private EntityQuery<FixturesComponent> _fixturesQuery; // Sunrise-edit - фикс двойных шлюзов
+
     public static readonly ProtoId<TagPrototype> DoorBumpTag = "DoorBumpOpener";
 
     /// <summary>
@@ -57,7 +58,14 @@ public abstract partial class SharedDoorSystem : EntitySystem
     /// </summary>
     private readonly HashSet<Entity<DoorComponent>> _activeDoors = new();
 
-    private readonly HashSet<Entity<PhysicsComponent>> _doorIntersecting = new();
+    // Sunrise edit start - для двойных шлюзов пришлось поменять на просто EntityUid
+    // Так как метода с Entity<T> нет
+    private readonly HashSet<EntityUid> _doorIntersecting = new();
+    // Sunrise edit end
+
+    // Sunrise added start - фикс двойных шлюзов
+    private EntityQuery<PhysicsComponent> _physicsQuery;
+    // Sunrise added end
 
     public override void Initialize()
     {
@@ -80,6 +88,11 @@ public abstract partial class SharedDoorSystem : EntitySystem
         SubscribeLocalEvent<DoorComponent, WeldableChangedEvent>(OnWeldChanged);
         SubscribeLocalEvent<DoorComponent, GetPryTimeModifierEvent>(OnPryTimeModifier);
         SubscribeLocalEvent<DoorComponent, GotEmaggedEvent>(OnEmagged);
+
+        // Sunrise added start - фикс двойных шлюзов
+        _physicsQuery = GetEntityQuery<PhysicsComponent>();
+        _fixturesQuery = GetEntityQuery<FixturesComponent>();
+        // Sunrise added end
     }
 
     protected virtual void OnComponentInit(Entity<DoorComponent> ent, ref ComponentInit args)
@@ -589,44 +602,74 @@ public abstract partial class SharedDoorSystem : EntitySystem
         var tileRef = _mapSystem.GetTileRef(xform.GridUid.Value, mapGridComp, xform.Coordinates);
 
         _doorIntersecting.Clear();
+
+        // Sunrise edit start - фикс двойных шлюзов
+        // Для корректного подсчета координат необходимо использовать LocalPhysicsTransform
+        var transform = PhysicsSystem.GetLocalPhysicsTransform(uid);
+
+        if (!_fixturesQuery.TryGetComponent(uid, out var fixtures))
+        {
+            yield break;
+        }
+
+        // Шлюзы могут иметь дополнительные сенсорные fixtures (например, для стыковки),
+        // поэтому берем первую твердую (Hard) fixture для определения границ проверки столкновений.
+        IPhysShape? hardShape = null;
+        foreach (var fixture in fixtures.Fixtures.Values)
+        {
+            if (fixture.Hard)
+            {
+                hardShape = fixture.Shape;
+                break;
+            }
+        }
+
+        if (hardShape == null)
+            yield break;
+
+        var bounds = hardShape.ComputeAABB(transform, 0).Enlarged(-0.05f);
+
         _entityLookup.GetLocalEntitiesIntersecting(xform.GridUid.Value,
-            tileRef.GridIndices,
-            _doorIntersecting,
-            gridComp: mapGridComp,
-            flags: (LookupFlags.All & ~LookupFlags.Sensors));
+              bounds,
+              _doorIntersecting,
+              flags: (LookupFlags.All & ~LookupFlags.Sensors));
 
         // TODO SLOTH fix electro's code.
         // ReSharper disable once InconsistentNaming
-
+        // Просто методя с Entity<T> нет, поэтому пришлось тут все менять
         foreach (var otherPhysics in _doorIntersecting)
         {
-            if (otherPhysics.Comp == physics)
+            if (!_physicsQuery.TryComp(otherPhysics, out var physicsComp))
                 continue;
 
-            if (!otherPhysics.Comp.CanCollide)
+            if (physicsComp == physics)
+                continue;
+
+            if (!physicsComp.CanCollide)
                 continue;
 
             //TODO: Make only shutters ignore these objects upon colliding instead of all airlocks
             // Excludes Glasslayer for windows, GlassAirlockLayer for windoors, TableLayer for tables
-            if (otherPhysics.Comp.CollisionLayer == (int)CollisionGroup.GlassLayer ||
-                otherPhysics.Comp.CollisionLayer == (int)CollisionGroup.GlassAirlockLayer ||
-                otherPhysics.Comp.CollisionLayer == (int)CollisionGroup.TableLayer)
+            if (physicsComp.CollisionLayer == (int)CollisionGroup.GlassLayer ||
+                physicsComp.CollisionLayer == (int)CollisionGroup.GlassAirlockLayer ||
+                physicsComp.CollisionLayer == (int)CollisionGroup.TableLayer)
                 continue;
 
             // Ignore low-passable entities.
-            if ((otherPhysics.Comp.CollisionMask & (int)CollisionGroup.LowImpassable) == 0)
+            if ((physicsComp.CollisionMask & (int)CollisionGroup.LowImpassable) == 0)
                 continue;
 
             //For when doors need to close over conveyor belts
-            if (otherPhysics.Comp.CollisionLayer == (int)CollisionGroup.ConveyorMask)
+            if (physicsComp.CollisionLayer == (int)CollisionGroup.ConveyorMask)
                 continue;
 
-            if ((physics.CollisionMask & otherPhysics.Comp.CollisionLayer) == 0 &&
-                (otherPhysics.Comp.CollisionMask & physics.CollisionLayer) == 0)
+            if ((physics.CollisionMask & physicsComp.CollisionLayer) == 0 &&
+                (physicsComp.CollisionMask & physics.CollisionLayer) == 0)
                 continue;
 
-            yield return otherPhysics.Owner;
+            yield return otherPhysics;
         }
+        // Sunrise edit end
     }
 
     private void PreventCollision(EntityUid uid, DoorComponent component, ref PreventCollideEvent args)

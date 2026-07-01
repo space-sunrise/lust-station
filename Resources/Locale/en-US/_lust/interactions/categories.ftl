@@ -14,3 +14,5 @@ lust-interaction-category-Wings = Wings
 lust-interaction-category-Dildos = Dildos
 lust-interaction-category-Fleshlights = Fleshlights
 lust-interaction-category-Legs = Legs
+lust-interaction-category-Cage = Cage
+lust-interaction-category-Belt = Belt

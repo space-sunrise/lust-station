@@ -1,3 +1,6 @@
+ent-SunriseAdvancedSalvageMagnetMachineCircuitboard = advanced salvage magnet machine board
+    .desc = A machine printed circuit board for an advanced salvage magnet.
+
 ent-CopyMachineMachineCircuitboard = copy machine board
     .desc = A machine printed circuit board for an document printer
 ent-PacificatorCircuitboard = pacifism generator machine board
@@ -10,8 +13,12 @@ ent-MedicalAssemblerMachineCircuitboard = Medical assembler machine board
     .desc = { ent-BaseMachineCircuitboard.desc }
 ent-AutolathePrisonMetusMachineCircuitboard = prison autolathe machine board
     .desc = Worn, with broken mounts and fine cracks, still warm in places from occasional power pulses.
-ent-SewingPrinterMetusMachineCircuitboard = prison sewing printer machine board
+ent-SewingPrinterPrisonMachineCircuitboard = prison sewing printer machine board
     .desc = Scarred with solder marks, corroded contacts, and burn traces, dim LEDs flicker occasionally.
 
 ent-PirateTechFabCircuitboard = pirate techfab machine board
     .desc = { ent-BaseMachineCircuitboard.desc }
+ent-TelecomServerT2Circuitboard = advanced telecommunication server machine board
+    .desc = { ent-TelecomServerCircuitboard.desc }
+ent-TelecomServerT3Circuitboard = experimental telecommunication server machine board
+    .desc = { ent-TelecomServerCircuitboard.desc }

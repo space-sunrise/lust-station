@@ -1,0 +1,26 @@
+- type: entity
+  parent: VendingMachineCentDrobe
+  id: VendingMachineCentDrobeQillu
+  name: CentDrobe
+  description: A Central Command wardrobe vending machine stocked with Qillu-contract gear in a purple-and-gold style.
+  suffix: Qillu
+  components:
+  - type: VendingMachine
+    pack: CentDrobeQilluInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: Sprite
+    sprite: _Lust/Structures/Machines/VendingMachines/centdrobe_qillu.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: PointLight
+    radius: 1.5
+    energy: 3.0
+    color: "#B44CFF"

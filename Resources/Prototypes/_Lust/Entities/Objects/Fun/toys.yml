@@ -1,31 +1,4 @@
 ﻿- type: entity
-  id: PlushieAnameGermanikum
-  parent: BasePlushie
-  name: Plush Aname Germanikum
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    layers:
-    - state: plushie-aname
-    - state: plushie-aname-unshaded
-      shader: unshaded
-  - type: TriggerOnUse
-  - type: UseDelayOnTrigger
-  - type: UseDelayTriggerCondition
-  - type: EmitSoundOnTrigger
-    sound: null
-  - type: SpeakOnTrigger
-    pack: LoviAptechku
-  - type: TTS
-    voice: Triss
-
-- type: localizedDataset
-  id: LoviAptechku
-  values:
-    prefix: lovi-aptechku-
-    count: 1
-
-- type: entity
   id: PlushieAnnaLisechanskaya
   parent: BasePlushie
   name: Plush Anna Lisechanskaya
@@ -242,20 +215,6 @@
 
 - type: entity
   parent: BasePlushie
-  id: PlushieAsyaFartuna
-  name: Plushie Asya Fartuna
-  components:
-  - type: UseDelay
-    delay: 4
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: asya_fartuna
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Sunrise/Voice/Felinid/cat_purr1.ogg
-
-- type: entity
-  parent: BasePlushie
   id: PlushieRustemBrich
   name: Plushie Rustem Brich
   components:
@@ -357,90 +316,15 @@
   - type: EmitSoundOnUse
     sound:
       path: /Audio/Items/Toys/weh.ogg
-
-- type: entity
-  parent: BasePlushie
-  id: PlushieSophieKomissarova
-  name: Plushie Sophie Komissarova
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    state: sophiekomissarova
-  - type: UseDelay
-    delay: 4
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Items/Defib/defib_charge.ogg
-  - type: Item
-    heldPrefix: sophiekomissarova
-
-- type: entity
-  parent: BasePlushie
-  id: PlushieDrasusLeverian
-  name: Plushie Drasus Leverian
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
-    state: icon
-  - type: UseDelay
-    delay: 6
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/Machines/scanning.ogg
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/Machines/scanning.ogg
-  - type: EmitSoundOnLand
-    sound:
-      path: /Audio/Items/Stamp/automatic_stamp.ogg
   - type: Clothing
     quickEquip: false
-    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    sprite: _Lust/Objects/Fun/toys.rsi
+    equippedPrefix: ulava
     slots:
     - NECK
   - type: Item
-    sprite: _Lust/Objects/Fun/Plushies/drasus_leverian.rsi
+    heldPrefix: ulava
 
-- type: entity
-  parent:
-  - BasePlushie
-  id: PlushieRaneliToll
-  name: Plushie Raneli Toll
-  description: |
-    Pocket doctor and little sorcerer. I'll be very happy if this toy ends up in the clawed paws of a tasty xenomorph...
-    Viva la Pivo!
-  components:
-  - type: Sprite
-    sprite: _Lust/Objects/Fun/toys.rsi
-    layers:
-    - state: plushie-raneli-toll
-    - state: plushie-raneli-toll-eyes
-      visible: true
-      shader: unshaded
-      map: [ "light" ]
-  - type: Item
-    heldPrefix: plushie-raneli-toll
-  - type: Clothing
-    quickEquip: false
-    sprite: _Lust/Objects/Fun/toys.rsi
-    equippedPrefix: plushie-raneli-toll
-    slots:
-    - HEAD
-  - type: EmitSoundOnUse
-    sound:
-      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
-  - type: MeleeWeapon
-    soundHit:
-      collection: FelinidMews
-  - type: EmitSoundOnActivate
-    sound:
-      path: /Audio/_Sunrise/Interactions/stroke/stroke_1.ogg
-  - type: EmitSoundOnCollide
-    sound:
-      collection: FelinidMews
-  - type: EmitSoundOnLand
-    sound:
-      collection: FelinidMews
 
 - type: entity
   parent: BasePlushie
@@ -601,3 +485,18 @@
         volume: -9
         maxDistance: 3
 
+- type: entity
+  parent: [ EmitVulpGrowl, BasePlushie ]
+  id: PlushieDiegoVulpa
+  name: plushie diego
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Fun/toys.rsi
+    state: plushiediegovulpa
+  - type: Item
+    heldPrefix: diego-vulpa
+    inhandVisuals:
+      left:
+      - state: diego-vulpa-inhand-left
+      right:
+      - state: diego-vulpa-inhand-right

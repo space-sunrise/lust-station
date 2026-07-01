@@ -133,6 +133,7 @@
   suffix: Coal
   components:
   - type: Sprite
+    sprite: _Sunrise/Mobs/Elemental/orecrab.rsi # Sunrise-Add
     state: coal_crab
   - type: MeleeWeapon
     damage:
@@ -169,7 +170,7 @@
     attackMemoryLength: 10
   - type: NpcFactionMember
     factions:
-      - SimpleNeutral
+      - UraniumCrab # Sunrise-Edit
   - type: RadiationSource
     intensity: 2
     slope: 0.3
@@ -201,6 +202,7 @@
   suffix: Bananium
   components:
   - type: Sprite
+    sprite: _Sunrise/Mobs/Elemental/orecrab.rsi # Sunrise-Add
     state: bananium_crab
   - type: FactionException
   - type: NPCRetaliation
@@ -286,6 +288,7 @@
   suffix: Gold
   components:
   - type: Sprite
+    sprite: _Sunrise/Mobs/Elemental/orecrab.rsi # Sunrise-Add
     state: gold_crab
   - type: MeleeWeapon
     damage:
@@ -388,31 +391,31 @@
     solution: bloodstream
 
 - type: entity
-  name: Reagent Slime Spawner
-  id: ReagentSlimeSpawner
   parent: MarkerBase
+  id: ReagentSlimeSpawner
+  name: Reagent Slime Spawner
   components:
-    - type: Sprite
-      layers:
-        - state: red
-        - sprite: Mobs/Aliens/elemental.rsi
-          state: alive
-    - type: RandomSpawner
-      prototypes:
-        - ReagentSlime
-        - ReagentSlimeBeer
-        - ReagentSlimePax
-        - ReagentSlimeNocturine
-        - ReagentSlimeTHC
-        - ReagentSlimeBicaridine
-        - ReagentSlimeToxin
-        - ReagentSlimeNapalm
-        - ReagentSlimeOmnizine
-        - ReagentSlimeMuteToxin
-        - ReagentSlimeNorepinephricAcid
-        - ReagentSlimeEphedrine
-        - ReagentSlimeRobustHarvest
-      chance: 1
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Aliens/elemental.rsi
+        state: alive
+  - type: EntityTableSpawner
+    table: !type:GroupSelector
+      children:
+      - id: ReagentSlime
+      - id: ReagentSlimeBeer
+      - id: ReagentSlimePax
+      - id: ReagentSlimeNocturine
+      - id: ReagentSlimeTHC
+      - id: ReagentSlimeBicaridine
+      - id: ReagentSlimeToxin
+      - id: ReagentSlimeNapalm
+      - id: ReagentSlimeOmnizine
+      - id: ReagentSlimeMuteToxin
+      - id: ReagentSlimeNorepinephricAcid
+      - id: ReagentSlimeEphedrine
+      - id: ReagentSlimeRobustHarvest
 
 - type: entity
   id: ReagentSlimeBeer

@@ -62,7 +62,7 @@
       path: /Audio/Effects/bite.ogg
     damage:
       types:
-        Piercing: 15 # Sunrise-Edit
+        Piercing: 5
   # Visual & Audio
   - type: DamageVisuals
     damageOverlayGroups:
@@ -94,17 +94,22 @@
       - map: [ "enum.HumanoidVisualLayers.LLeg" ]
       - map: ["enum.HumanoidVisualLayers.LFoot"]
       - map: ["enum.HumanoidVisualLayers.RFoot"]
+      - map: [ "lockable_under" ] # Lust-Edit
+      - map: [ "lockable_chest" ] # Lust-Edit
       # Sunrise-start
       - map: ["bra"]
       - map: ["pants"]
       - map: ["socks"]
       - map: ["plug"]
+      - map: ["lockable_underpants"] # Lust-Edit
       - map: ["jumpsuit"]
       # Sunrise-end
       - map: ["enum.HumanoidVisualLayers.LHand"]
       - map: ["enum.HumanoidVisualLayers.RHand"]
       - map: [ "gloves" ]
       - map: [ "shoes" ]
+      - map: [ "lockable_normal" ] # Lust-Edit
+      - map: [ "lockable_over" ] # Lust-Edit
       - map: [ "belt" ]
       - map: [ "id" ]
       - map: [ "enum.HumanoidVisualLayers.Tail" ] # Mentioned in moth code: This needs renaming lol.
@@ -147,19 +152,8 @@
       - "footprint-left-bare-spider"
     rightBareFootState:
       - "footprint-right-bare-spider"
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.40
-        density: 250
-        restitution: 0.0
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: Carriable
+  - type: ToggleableNightVision
+    effect: EffectNightVisioSpecies
   # Sunrise-end
 
 - type: entity

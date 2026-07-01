@@ -10,6 +10,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 7200 # 2 hrs
+  weight: 8
   alwaysUseSpawner: true
   canBeAntag: false
   startingGear: PrisonInspectorGear
@@ -17,6 +18,8 @@
   overrideConsoleVisibility: false
   supervisors: job-supervisors-head-of-prison
   displayWeight: 90
+  alternativeTitles:
+  - job-alt-title-colony-overseer
   access:
   - Security
   - Brig
@@ -63,7 +66,7 @@
   job: PrisonInspector
   equipment:
     jumpsuit: ClothingUniformJumpsuitArmouredBlack
-    head: Sunrise-ClothingHeadHatDetGadget
+    head: SunriseClothingHeadHatDetGadget
     ears: ClothingHeadsetCommand
     gloves: ClothingHandsGlovesForensic
     outerClothing: ClothingOuterArmorBasic

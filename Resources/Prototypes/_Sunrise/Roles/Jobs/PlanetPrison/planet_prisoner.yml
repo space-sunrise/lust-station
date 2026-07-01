@@ -7,12 +7,15 @@
   - !type:OverallPlaytimeRequirement
     time: 36000 # 10 hrs
   startingGear: PlanetPrisonerGear
+  weight: 9
   alwaysUseSpawner: true
   canBeAntag: false
   icon: "JobIconPrisoner"
   overrideConsoleVisibility: false
   supervisors: job-supervisors-security
   displayWeight: 10
+  alternativeTitles:
+  - job-alt-title-convict
   special:
     - !type:AddImplantSpecial
       implants: [ TrackingImplant ]
@@ -24,7 +27,6 @@
   id: PlanetPrisonerGear
   equipment:
     shoes: ClothingShoesBootsPrisonerGrey
-    id: PlanetPrisonerPDA
     ears: ClothingHeadsetGrey
 
 - type: chameleonOutfit

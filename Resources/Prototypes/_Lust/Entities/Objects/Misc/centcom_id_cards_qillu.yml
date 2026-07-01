@@ -1,0 +1,87 @@
+- type: entity
+  parent: IDCardStandard
+  id: CentcomOperatorIDCardQillu
+  name: command operator ID card
+  description: A purple-and-gold Central Command operator identification card. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+    layers:
+    - state: blue
+      color: "#6A2CA0"
+    - state: department-side
+      color: "#4B1D7A"
+    - state: department-side-extra-gold
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.19, 0
+      state: Nanotrasen
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentCommOperator
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomInspectorIDCardQillu
+  name: command inspector ID card
+  description: A purple-and-gold Central Command inspector identification card. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+    layers:
+    - state: blue
+      color: "#6A2CA0"
+    - state: department-side
+      color: "#4B1D7A"
+    - state: department-side-extra-gold
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.19, 0
+      state: Nanotrasen
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+  - type: Item
+    heldPrefix: blue
+  - type: Access
+    groups:
+    - AllAccess
+    tags:
+    - CentralCommand
+  - type: IdCard
+    jobTitle: job-title-centcom-inspector
+    jobIcon: JobIconNanotrasen
+
+
+- type: entity
+  parent: IDCardStandard
+  id: CentcomIDCardQillu
+  name: centcom representative ID card
+  suffix: Qillu
+  description: A purple-and-gold Central Command representative identification card. Produced under Qillu contract.
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+    layers:
+    - state: blue
+      color: "#6A2CA0"
+    - state: department-side
+      color: "#4B1D7A"
+    - state: department-side-extra-gold
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.19, 0
+      state: Nanotrasen
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _Lust/Objects/Misc/centcom_id_cards_qillu.rsi
+  - type: Item
+    heldPrefix: blue
+  - type: PresetIdCard
+    job: CentralCommandOfficial

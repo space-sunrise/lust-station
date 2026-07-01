@@ -32,10 +32,40 @@
   id: PirateChatterNPC
   values:
     prefix: advertisement-piratehumanoid-
-    count: 48
+    count: 60
+
+- type: localizedDataset
+  id: PirateChatterNPCVeteran
+  values:
+    prefix: advertisement-piratehumanoid-veteran-
+    count: 24
+
+- type: localizedDataset
+  id: SovietChatterNPC
+  values:
+    prefix: advertisement-soviethumanoid-
+    count: 68
+
+- type: localizedDataset
+  id: SovietChatterNPCVeteran
+  values:
+    prefix: advertisement-soviethumanoid-veteran-
+    count: 24
+
+- type: localizedDataset
+  id: PirateUplinkChatter
+  values:
+    prefix: advertisement-pirate-uplink-
+    count: 40
 
 - type: localizedDataset
   id: NarSieAds
   values:
     prefix: advertisement-narsie-
+    count: 8
+
+- type: localizedDataset
+  id: EVAdispenserAds
+  values:
+    prefix: advertisement-evadisp-
     count: 8

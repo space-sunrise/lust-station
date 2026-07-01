@@ -3,6 +3,9 @@ using Content.Server.Atmos.EntitySystems;
 using Content.Server.Chat.Managers;
 using Content.Server.Lightning;
 using Content.Server.Radio.EntitySystems;
+using Content.Server.Station.Systems;
+using Content.Server._Sunrise.Messenger;
+using Content.Shared._Sunrise.Storyteller; // Sunrise-Edit
 using Content.Shared.Abilities.Goliath;
 using Content.Shared.Atmos;
 using Content.Shared.Damage;
@@ -35,6 +38,8 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly MessengerServerSystem _messenger = default!;
+    [Dependency] private readonly StationSystem _station = default!;
 
     private readonly Dictionary<EntityUid, Entity<SupermatterComponent>> _supermatters = [];
     private DamageGroupPrototype? _brute;
@@ -109,6 +114,9 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
     {
         if (supermatter.Comp.Durability > 0.01) return;
 
+        // Sunrise-Edit
+        RaiseLocalEvent(new SunriseSupermatterDelaminatedEvent(supermatter.Owner));
+
         _cascade.StartCascade(Transform(supermatter.Owner).Coordinates);
         QueueDel(supermatter.Owner);
     }
@@ -125,10 +133,24 @@ public sealed class SupermatterSystem : AccUpdateEntitySystem
         supermatter.Comp.LastSendedDurability = supermatter.Comp.Durability;
 
         if (currentDurability > lastDurability)
-            _radioSystem.SendRadioMessage(supermatter.Owner, $"The crystal is regenerating. Durability: {currentDurability}%", _engi, supermatter.Owner);
+        {
+            // _radioSystem.SendRadioMessage(supermatter.Owner, $"The crystal is regenerating. Durability: {currentDurability}%", _engi, supermatter.Owner);
+            if (_messenger.GetServerEntity(_station.GetOwningStation(supermatter.Owner)) is var (server, _) &&
+                _messenger.GetGroupIdByRadioChannel(_engi.ID) is { } groupId)
+            {
+                _messenger.SendSystemMessageToGroup(server, groupId, $"The crystal is regenerating. Durability: {currentDurability}%");
+            }
+        }
         else switch (currentDurability)
             {
-                case > 75: _radioSystem.SendRadioMessage(supermatter.Owner, $"Attention! The crystal is destabilizing. Durability: {currentDurability}%", _engi, supermatter.Owner); break;
+                case > 75:
+                    // _radioSystem.SendRadioMessage(supermatter.Owner, $"Attention! The crystal is destabilizing. Durability: {currentDurability}%", _engi, supermatter.Owner);
+                    if (_messenger.GetServerEntity(_station.GetOwningStation(supermatter.Owner)) is var (server, _) &&
+                        _messenger.GetGroupIdByRadioChannel(_engi.ID) is { } groupId)
+                    {
+                        _messenger.SendSystemMessageToGroup(server, groupId, $"Attention! The crystal is destabilizing. Durability: {currentDurability}%");
+                    }
+                    break;
                 case > 50: _chat.DispatchServerAnnouncement($"Attention! The crystal is destabilizing. Durability: {currentDurability}%", Color.Yellow); break;
                 case > 25: _chat.DispatchServerAnnouncement($"Critical state of the crystal! Durability: {currentDurability}%", Color.OrangeRed); break;
                 default: _chat.DispatchServerAnnouncement($"Crystal destruction is inevitable. Current durability: {currentDurability}%", Color.Red); break;

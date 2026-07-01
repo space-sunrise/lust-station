@@ -1,7 +1,7 @@
 - type: polymorph
   id: SunriseEffectChair
   configuration:
-    entity: ChairFolding
+    entity: ChairFoldingArtifact
     forced: true
     transferName: false
     transferHumanoidAppearance: false
@@ -53,7 +53,7 @@
 - type: polymorph
   id: SunriseEffectTable
   configuration:
-    entity: Table
+    entity: TableArtifact
     forced: true
     transferName: false
     transferHumanoidAppearance: false

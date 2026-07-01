@@ -22,12 +22,12 @@
     rules:
     - id: Thief
       prob: 0.5
-#    - id: Vampire
-#      prob: 0.3
     - id: SubWizard
       prob: 0.05
     - id: Xenoborgs
       prob: 0.05
+    - id: SiliconLiberation # Sunrise-Edit
+      prob: 0.25
 
 - type: entity
   parent: BaseGameRule
@@ -37,10 +37,10 @@
     rules:
     - id: Thief
       prob: 0.5
-#    - id: Vampire
-#      prob: 0.3
     - id: Xenoborgs
       prob: 0.05
+    - id: SiliconLiberation # Sunrise-Edit
+      prob: 0.25
 
 - type: entity
   parent: BaseGameRule
@@ -52,6 +52,8 @@
       prob: 0.5
     - id: SubWizard
       prob: 0.05
+    - id: SiliconLiberation # Sunrise-Edit
+      prob: 0.25
 
 - type: entity
   parent: BaseGameRule
@@ -61,6 +63,8 @@
     rules:
     - id: Thief
       prob: 0.5
+    - id: SiliconLiberation # Sunrise-Edit
+      prob: 0.25
 
 - type: entity
   parent: BaseGameRule
@@ -132,15 +136,14 @@
   - type: AntagLoadProfileRule
     speciesOverride: Human
     speciesOverrideBlacklist:
-    - Vox
-    - Felinid
-    - Diona
-    - HumanoidXeno
-    - Predator
     #Species that do not work with nukies should be included in this list.
     #Once the issues are fixed the species should be removed from this list to be enabled.
     #Balance concerns are not a valid reason to disable a species, except for high-impact Nukie-specific exploits.
-    #- Vox
+    # - Vox
+    # - Felinid
+    # - Diona
+    # - HumanoidXeno
+    # - Predator
 
 - type: entity
   parent: BaseNukeopsRule
@@ -149,7 +152,7 @@
   - type: GameRule
     minPlayers: 50
   - type: LoadMapRule
-    mapPath: /Maps/_Sunrise/Nonstations/nukieplanet.yml
+    mapPath: /Maps/_Sunrise/Nonstations/nukieplanet.yml # Sunrise-Edit
   - type: AntagSelection
     selectionTime: PrePlayerSpawn
     definitions:
@@ -224,6 +227,33 @@
         - Syndicate
       mindRoles:
       - MindRoleNukeops
+    # Sunrise start
+    # Extra operative above 80 players (keeps 80 players unchanged).
+    - prefRoles: [ Nukeops ]
+      fallbackRoles: [ NukeopsCommander, NukeopsMedic ]
+      spawnerPrototype: SpawnPointNukeopsOperative
+      min: 0
+      max: 1
+      playerRatio: 85
+      startingGear: SyndicateOperativeGearFull
+      roleLoadout:
+      - RoleSurvivalNukie
+      components:
+      - type: GhostPanelAntagonistMarker
+        name: ghost-panel-antagonist-nukeops-name
+        description: ghost-panel-antagonist-nukeops-description
+        priority: 10
+      - type: NukeOperative
+      - type: RandomMetadata
+        nameSegments:
+        - NamesSyndicateNormal
+        nameFormat: name-format-nukie-operator
+      - type: NpcFactionMember
+        factions:
+        - Syndicate
+      mindRoles:
+      - MindRoleNukeops
+    # Sunrise end
   - type: DynamicRuleCost
     cost: 200
 
@@ -238,7 +268,7 @@
   - type: AntagRandomObjectives
     sets:
     - groups: TraitorObjectiveGroups
-    maxDifficulty: 5
+    maxDifficulty: 6 # Sunrise-Edit
   - type: AntagSelection
     agentName: traitor-round-end-agent-name
   - type: DynamicRuleCost
@@ -250,14 +280,11 @@
   components:
   - type: GameRule
     minPlayers: 5
-    delay:
-      min: 600 # Sunrise-Edit
-      max: 900 # Sunrise-Edit
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
     definitions:
     - prefRoles: [ Traitor ]
-      max: 8
+      max: 10 # Sunrise-Edit
       playerRatio: 10
       pickCommandStaff: true # Sunrise-Edit
       maxCommandStaff: 1 # Sunrise-Edit
@@ -331,12 +358,7 @@
   parent: BaseGameRule
   components:
   - type: GameRule
-    minPlayers: 15
-    # Sunrise-Start
-    delay:
-      min: 900
-      max: 1200
-    # Sunrise-End
+    minPlayers: 45 # Sunrise-Edit
   - type: RevolutionaryRule
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
@@ -345,6 +367,11 @@
       fallbackRoles: [ Rev ]
       max: 3
       playerRatio: 15
+      # Sunrise - start
+      blacklist:
+        components:
+        - MindShield
+      # Sunrise - end
       briefing:
         text: head-rev-role-greeting
         color: CornflowerBlue
@@ -358,8 +385,13 @@
     # Sunrise-Start
     - prefRoles: [ Rev ]
       fallbackRoles: [ HeadRev ]
-      max: 30
-      playerRatio: 3
+      max: 40
+      playerRatio: 2
+      ignorePrefCheck: False
+      blacklist:
+        components:
+        - CommandStaff
+        - MindShield # Sunrise-Edit
       briefing:
         text: rev-role-greeting
         color: CornflowerBlue
@@ -368,6 +400,11 @@
       - type: Revolutionary
       mindRoles:
       - MindRoleRevolutionary
+  - type: SubGamemodes
+    rules:
+    - id: RevolutionarySmugglerStashSpawn
+      amount: 9
+      maxAmount: 18
     # Sunrise-End
   - type: DynamicRuleCost
     cost: 200
@@ -449,9 +486,10 @@
   components:
   - type: GameRule
     minPlayers: 20
-    delay:
-      min: 600
-      max: 900
+    # Sunrise-Edit
+    #delay:
+    #  min: 600
+    #  max: 900
   - type: ZombieRule
   - type: AntagSelection
     selectionTime: IntraPlayerSpawn
@@ -545,12 +583,6 @@
   parent: BaseGameRule
   components:
   - type: BasicStationEventScheduler
-    # Sunrise-Start
-    minimumTimeUntilFirstEvent: 600 # 10 mins
-    minMaxEventTiming:
-      min: 600 # 10 mins
-      max: 900 # 15 mins
-    # Sunrise-End
     scheduledGameRules: !type:NestedSelector
       tableId: BasicGameRulesTable
 

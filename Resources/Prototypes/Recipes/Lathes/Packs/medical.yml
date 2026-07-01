@@ -50,6 +50,7 @@
   - WhiteCane
   - OffsetCane
   - OffsetCaneWood
+  - JetInjector
 
 - type: latheRecipePack
   id: RollerBedsStatic
@@ -76,7 +77,7 @@
   - MedkitBrute
   - MedkitAdvanced
   - MedkitRadiation
-  - MedkitCombat
+  #- MedkitCombat # Sunrise-Edit
 
 - type: latheRecipePack
   id: MedicalBoardsStatic
@@ -99,9 +100,12 @@
   - SyringeCryostasis
   - BluespaceBeaker
   - SyringeBluespace
+  - VialBluespace # Sunrise-Add
   - LauncherSyringe
   - MiniSyringe
+  - AdvancedJetInjector
   - BluespacePillPatchCanister # Sunrise-Add
+  - JugBluespace # Sunrise-Add
 
 - type: latheRecipePack
   id: MedicalBoards

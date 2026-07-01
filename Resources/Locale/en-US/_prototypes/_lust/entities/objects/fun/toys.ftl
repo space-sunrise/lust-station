@@ -1,5 +1,3 @@
-ent-PlushieAnameGermanikum = Plush Aname Germanikum
-    .desc = A responsible chief physician and just a cute and fluffy spider who can hug with her appendages.
 ent-PlushieAnnaLisechanskaya = Plush Anna Lisechanskaya
     .desc = Her legs are spread suspiciously wide.
 ent-PlushieKharsha = Plush Kharsha
@@ -22,8 +20,6 @@ ent-PlushieArelitt = Plushie Arelitt Varmolnd
     .desc = Large toy of a large arcana. The fabric contains 0.02% Omnisin. Very soft
 ent-PlushieNiko = Plushie Niko Mink
     .desc = A soft plush toy of a vulpa in a leading doctor's uniform, made of synthetic materials using a cinnamon-scented fragrance. On the tag you can see the inscription in small font "Made in SaiBuka"
-ent-PlushieAsyaFartuna = Plushie Asya Fartuna
-    .desc = It looks like an ordinary toy that smells like an ordinary toy, it has a tag on it and the tag says "Hello, workers!"
 ent-PlushieBlizzard = Plushie Blizzard
     .desc = A dumb drone, but a good builder
 ent-PlushieRustemBrich = Plushie Rustem Brich
@@ -32,14 +28,6 @@ ent-PlushieShinyaKucenko = Plushie Shinya Kucenko
     .desc = The bun smells like fermented beer. Now you want to drink beer. It's 0.05% stable mutagen. Viva la pivo!
 ent-PlushieUlavaBritz = Plushie Ulava-Britz
     .desc = Turquoise unati. She holds a golden WEH in her hands. She smells of ash and cognac. She likes to snort. She loves her job as a recycler.
-ent-PlushieSophieKomissarova = Plushie Sophie Komissarova
-    .desc = Looks after your health better than you do yourself. Choking in the darkness of the techs, you will be glad to see her nearby. The smell of fresh beer hovers around her.
-ent-PlushieDrasusLeverian = Plushie Drasus Leverian
-    .desc = The chief bureaucratic dushnila
-ent-PlushieRaneliToll = Plushie Raneli Toll
-    .desc = Pocket doctor and little sorcerer.
-            This toy will be very happy if this toy ends up in the clawed paws of a tasty xenomorph...
-            Viva la Pivo!
 ent-PlushieAshito = Plushie Ashito Levrin
     .desc = An adorable and slightly unhinged Ashito cradling a pocket-sized doctor in his hands. Smells faintly of beer... and it looks like the plushie is grabbing someone's butt.
 ent-PlushieKira = Kira Killigrew
@@ -48,3 +36,5 @@ ent-PlushieSilton = Plushie Silton Grace
     .desc = A menacing-looking toy that pierces you with a sharp and stern gaze. You suddenly felt compelled to comply with your department's KZ and SRP.
 ent-PlushieSiltonGun = { ent-PlushieSilton }
     .desc = { ent-PlushieSilton.desc }
+ent-PlushieDiegoVulpa = Plushie Diego
+    .desc = A green-haired beastman of German descent, who loves agitational speeches, paperwork, and directives. He has devoted himself to serving the corporation and attempts to build his own "Eden" on the station — a place where progress, control, and order reign.

@@ -11,11 +11,20 @@
   startingGear: SalvageSpecialistGear
   supervisors: job-supervisors-qm
   displayWeight: 10  # Sunrise
+  # Sunrise-Start
+  alternativeTitles:
+  - job-alt-title-forwarder
+  # Sunrise-End
   access:
   - Cargo
   - Salvage
   - Maintenance
   - External
+  # Sunrise-start
+  extendedAccess:
+  - CargoPurchaseAccess
+  - Mining
+  # Sunrise-end
 
 - type: startingGear
   id: SalvageSpecialistGear

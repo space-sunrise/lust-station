@@ -4,10 +4,6 @@ ent-MobGorillaRampaging = буйная горилла
 ent-MachineArtifactCrusherXenoborg = дробилка тел
     .desc = Лучше не засовывать туда голову...
 
-ent-ChemistryBottleAloxadone = { ent-BaseChemistryBottleFilled }
-    .desc = { ent-BaseChemistryBottleFilled.desc }
-    .suffix = алоксадон
-
 ent-WeaponSubMachineGunBriefcase = коричневый портфель
     .desc = Полезен для переноски вещей в руках.
     .suffix = Оружие
@@ -18,8 +14,8 @@ ent-FoodBreadCottonNutriBatard = хлопковый нутри-батард
 ent-CrazyLube = сумасшедшая смазка
     .desc = Бутылка суперскользкой сумасшедшей смазки от Honk! Co.
 
-ent-ClothingBackpackMessengerPirateDecoyKitFilled = набор отвлекающих манёвров
-    .desc = Содержит визуальные отвлекашки. Запах и звук — скоро.
+ent-ClothingBackpackMessengerPirateDecoyKitFilled = набор обманок
+    .desc = Содержит визуальные отвлекашки и набор ПТСР утилизатора.
 
 ent-CurtainsSkyBlue = { ent-BaseCurtains }
     .suffix = Красивые небесно-голубые
@@ -49,10 +45,8 @@ ent-MiningBorgChassisDerelict = заброшенный киборг-утилиз
 
 ent-SyndicateAssaultBorgChassisDerelictSunrise = заброшенный штурмовой киборг Синдиката
     .desc = Смертоносная машина с доступом к разнообразным модулям. Этот скорее ржаво-оранжевый, чем кроваво-красный.
-
-ent-PlayerSyndicateAssaultBorgDerelict = { ent-SyndicateAssaultBorgChassisDerelictSunrise }
+ent-SyndicateAssaultBorgChassisDerelict = { ent-SyndicateAssaultBorgChassisDerelictSunrise }
     .desc = { ent-SyndicateAssaultBorgChassisDerelictSunrise.desc }
-    .suffix = Батарея, Модуль
 
 ent-SyndicateMedicalBorgChassisDerelictSunrise = заброшенный медицинский киборг Синдиката
     .desc = Медицинская поддержка для полевых операций. Его медицинские протоколы, похоже, деградировали.
@@ -62,6 +56,8 @@ ent-SyndicateReaperBorgChassisDerelictSunrise = заброшенный кибо�
 
 ent-SyndicateSaboteurBorgChassisDerelictSunrise = заброшенный киборг-саботёр Синдиката
     .desc = Специализированная инфильтрационная единица для саботажа и шпионажа. Этот прошёл через войны.
+ent-SyndicateSaboteurBorgChassisDerelict = { ent-SyndicateSaboteurBorgChassisDerelictSunrise }
+    .desc = { ent-SyndicateSaboteurBorgChassisDerelictSunrise.desc }
 
 ent-XenoborgModuleDoorControl = модуль ксеноборга: управление дверями
     .desc = Модуль, позволяющий ксеноборгам управлять шлюзами.
@@ -86,6 +82,12 @@ ent-CableDet = взрывной шнур
 ent-CableDetStack = взрывной шнур
     .desc = Взрывной шнур, чтобы убрать всё, что стоит на пути.
     .suffix = Полный
+ent-CableDetStack10 = { ent-CableDetStack }
+    .desc = { ent-CableDetStack.desc }
+    .suffix = 10
+ent-CableDetStack1 = { ent-CableDetStack }
+    .desc = { ent-CableDetStack.desc }
+    .suffix = 1
 
 ent-ParcelWrapAdmeme = блюспейс-обёртка
     .desc = Бумага для упаковки предметов при транспортировке. Эта, кажется, способна прятать внутри подозрительно много пространства.
@@ -98,3 +100,6 @@ ent-CartridgeHeavyRifleRFMJMech = { ent-CartridgeHeavyRifleRFMJ }
 ent-CartridgeXrayBeam = патрон (рентген-луч)
     .desc = { ent-BaseCartridge.desc }
 
+
+ent-EmptyDetonator = детонатор
+    .desc = Детонирующий капсюль. Требуются триггер и провод.

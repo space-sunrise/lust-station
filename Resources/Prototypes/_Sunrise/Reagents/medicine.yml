@@ -80,3 +80,63 @@
           damage:
             types:
              Cellular: -5
+             Mangleness: -1.25
+
+- type: reagent
+  id: Nutricryokomp
+  name: reagent-name-nutricryokomp
+  group: Medicine
+  desc: reagent-desc-nutricryokomp
+  physicalDesc: reagent-physical-desc-nutricryokomp
+  flavor: medicine
+  color: "#cfc434ff"
+  worksOnTheDead: true
+  metabolisms:
+    Medicine:
+      effects:
+        - !type:ModifyBloodLevel
+          amount: 1
+          conditions:
+          - !type:TemperatureCondition
+            max: 213.0
+        - !type:SatiateThirst
+          factor: 4
+          conditions:
+          - !type:TemperatureCondition
+            max: 213.0
+        - !type:SatiateHunger
+          factor: 1
+          conditions:
+          - !type:TemperatureCondition
+            max: 213.0
+
+- type: reagent
+  id: Vodkizine
+  name: reagent-name-vodkizine
+  parent: BaseAlcohol
+  desc: reagent-desc-vodkizine
+  physicalDesc: reagent-physical-desc-strong-smelling
+  flavor: vodka
+  color: "#fcf7f955"
+  recognizable: true
+  metamorphicSprite:
+    sprite: Objects/Consumable/Drinks/ginvodkaglass.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Drink:
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:AdjustReagent
+        reagent: Ethanol
+        amount: 0.2
+    Medicine:
+      effects:
+      - !type:HealthChange
+        damage:
+          groups:
+            Burn: -4
+            Brute: -4

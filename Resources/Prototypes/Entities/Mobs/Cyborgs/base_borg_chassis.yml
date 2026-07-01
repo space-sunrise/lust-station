@@ -87,7 +87,7 @@
   - type: EmagSiliconLaw
     stunTime: 5
   - type: SiliconLawProvider
-    laws: NTDefault # Sunrise-Edit
+    laws: Crewsimov
   - type: Inventory
     templateId: borg
   - type: Hands
@@ -107,18 +107,24 @@
     - Common
     - Science
   - type: ZombieImmune
-  # Sunrise-Start
+
   - type: Repairable
-    doAfterDelay: 2
-    damage:
-      types:
-        Blunt: -15
-        Slash: -15
-        Piercing: -15
-        Caustic: -15
-        Structural: -15
-        Mangleness: 2 #SUNRISE-EDIT
+    #damageValue: -10 # 10 seconds to repair from crit # Sunrise-Edit
+    doAfterDelay: 1
+    fuelCost: 0.5
     allowSelfRepair: false
+  # Sunrise-Start
+    damage:
+      groups:
+        Brute: -10
+      types:
+        Heat: -5
+        Shock: -5
+        Caustic: -5
+        Structural: -10
+        Mangleness: 1
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadout ]
   # Sunrise-End
   - type: BorgChassis
   - type: BorgVoice # Sunrise-TTS: Allow cyborgs to change their voice
@@ -151,6 +157,11 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+        # Sunrise-Start
+        whitelist:
+          tags:
+          - PowerCell
+        # Sunrise-End
   - type: Body
   - type: StatusEffects
     allowed:
@@ -255,6 +266,7 @@
     - CanPilot
     - SiliconEmotes
     - Unimplantable
+    - NoPaint # Sunrise-Add
   - type: Emoting
   - type: GuideHelp
     guides:
@@ -265,6 +277,11 @@
     damageProtection:
       flatReductions:
         Heat: 10 # capable of touching light bulbs and stoves without feeling pain!
+  - type: BypassLock
+  - type: BypassLockRequiresMobState
+    requiredMobState:
+    - Critical
+    - Dead
   # Sunrise-start
   - type: TTS
     voice: Portal2FactCore
@@ -331,6 +348,7 @@
     networkSet: true
     nameSet: True
     id: Xenoborg
+    useEntityNameAsCameraId: true
   - type: Explosive
     explosionType: Minibomb
     deleteAfterExplosion: false # let damage threshold gib the borg
@@ -389,6 +407,8 @@
     - HandheldStationMapUnpowered
   - type: BorgCrewManifestViewer
   - type: StationRecordKeyStorage
+  - type: SiliconLawProvider
+    laws: CrewsimovAiAssigned
   # Sunrise-End
 
 - type: entity
@@ -425,11 +445,15 @@
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
-  # Sunrise-start
   - type: PointLight
+    # Sunrise-Start
     color: "#f51e0f"
     radius: 6
     energy: 3
+    # Sunrise-End
+  - type: BypassLock
+    bypassDelay: 15 # We don't want people to easily be able to remove syndieborg brains.
+   # Sunrise-Start
   - type: ShowJobIcons
   - type: FlashImmunity
   - type: TypingIndicator
@@ -439,9 +463,18 @@
     - DoorBumpOpener
     - CanPilot
     - FootstepSound
-    - EmagImmune
+    - NoPaint # Sunrise-Add
   - type: BlockLawChange
-  # Sunrise-end
+  - type: Loadout
+    prototypes: [ BorgArmorSiliconLoadoutMk2 ]
+  - type: ToggleableNightVision
+    effect: EffectNightVisionSyndie
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  # Sunrise-End
 
 - type: entity
   id: BaseBorgChassisDerelict
@@ -499,6 +532,19 @@
       Unsexed: UnisexSiliconSyndicate
   - type: PointLight
     color: "#dd200b"
+  - type: BypassLock
+    bypassDelay: 15 # We don't want people to easily be able to remove syndieborg brains.
+  # Sunrise-start
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Critical
+      300: Dead
+  - type: TTS
+    voice: Sentrybot
+  - type: ToggleableNightVision
+    effect: EffectNightVisionSyndie
+  # Sunrise-end
 
 - type: entity
   parent: BaseBorgChassisNotIonStormable
@@ -513,6 +559,12 @@
     - NamesXenoborg
   - type: NameIdentifier
     group: Xenoborg
+  # Sunrise-Start
+  - type: GhostPanelAntagonistMarker
+    name: ghost-panel-antagonist-xenoborg-name
+    description: ghost-panel-antagonist-xenoborg-description
+    priority: 25
+  # Sunrise-End
   - type: Sprite
     sprite: Mobs/Silicon/chassis.rsi
   - type: MobThresholds
@@ -533,10 +585,6 @@
     - Mothership
     - Xenoborg
     - Binary
-  # Sunrise-start
-  # - type: Repairable
-  #   doAfterDelay: 13 # 25% more HP, so 30% more time to heal
-  # Sunrise-end
   - type: BorgChassis
     maxModules: 0
     hasMindState: robot_e
@@ -592,7 +640,7 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          PinpointerMothership: # drop a pinpointer to the mothership upon being destructed
+          PinpointerMothershipPiece: # drop a piece of core pinpointer upon being destructed (4 pieces to make a core pinpointer)
             min: 1
             max: 1
       - !type:EmptyContainersBehaviour
@@ -620,3 +668,5 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: Xenoborg
+  - type: BypassLock
+    bypassDelay: 15 # We don't want people to easily be able to remove xenoborg brains.

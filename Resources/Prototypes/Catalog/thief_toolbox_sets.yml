@@ -6,10 +6,9 @@
     sprite: Objects/Devices/chameleon_projector.rsi
     state: icon
   content:
-  - ClothingBackpackChameleonFill
+  - ClothingBackpackChameleonFillAgent
   - ChameleonProjector
   - FakeMindShieldImplanter
-  - AgentIDCard
 
 - type: thiefBackpackSet
   id: ToolsSet
@@ -23,7 +22,7 @@
   - ClothingEyesGlassesMeson
   - ClothingHandsGlovesColorYellow
   - JawsOfLife
-  - ClothingEyesGlassesThermal # Sunrise-Edit
+  - ClothingEyesGlassesThermalChameleon # Sunrise-Edit
   - FreedomImplant # Sunrise-Edit
   - RemoteSignaller
   - Multitool

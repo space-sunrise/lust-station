@@ -8,6 +8,26 @@
     strippingWindowPos: 0,0
     displayName: Head
     offset: 0.015625, -0.09375
+    # Sunrise-Start
+    blacklist:
+      tags:
+      - SecurityHelmet
+      - HelmetEVA
+      - FullCovered
+      - Helmet
+      - WeldingMask
+      - NightVisionDevice
+      - NVDHandcrafted
+    # Sunrise-End
+  # Sunrise-Start
+  - name: armor
+    slotTexture: suit # Sunrise-Edit
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
 
 - type: inventoryTemplate
   id: borgShort
@@ -19,6 +39,24 @@
     strippingWindowPos: 0,0
     displayName: Head
     offset: 0.015625, -0.1875
+  # Sunrise-Start
+    blacklist:
+      tags:
+      - SecurityHelmet
+      - HelmetEVA
+      - FullCovered
+      - Helmet
+      - WeldingMask
+      - NightVisionDevice
+      - NVDHandcrafted
+  - name: armor
+    slotTexture: suit # Sunrise-Edit
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
 
 - type: inventoryTemplate
   id: borgTall
@@ -29,7 +67,25 @@
     uiWindowPos: 1,0
     strippingWindowPos: 0,0
     displayName: Head
-    offset: 0.015625, 0
+    offset: 0.015625, -0.07 #Lust Edit
+  # Sunrise-Start
+    blacklist:
+      tags:
+      - SecurityHelmet
+      - HelmetEVA
+      - FullCovered
+      - Helmet
+      - WeldingMask
+      - NightVisionDevice
+      - NVDHandcrafted
+  - name: armor
+    slotTexture: suit # Sunrise-Edit
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End
 
 # taller than tall
 - type: inventoryTemplate
@@ -42,3 +98,21 @@
     strippingWindowPos: 0,0
     displayName: Head
     offset: 0, 0.09375
+  # Sunrise-Start
+    blacklist:
+      tags:
+      - SecurityHelmet
+      - HelmetEVA
+      - FullCovered
+      - Helmet
+      - WeldingMask
+      - NightVisionDevice
+      - NVDHandcrafted
+  - name: armor
+    slotTexture: suit # Sunrise-Edit
+    slotFlags: OUTERCLOTHING
+    uiWindowPos: 1,0
+    strippingWindowPos: 0,1
+    displayName: Armor
+    offset: 5,5
+  # Sunrise-End

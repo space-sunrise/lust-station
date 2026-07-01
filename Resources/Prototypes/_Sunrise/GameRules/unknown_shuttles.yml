@@ -93,6 +93,8 @@
     minimumPlayers: 75
   - type: LoadMapRule
     gridPath: "/Maps/_Sunrise/Shuttles/Antag/rust_brass.yml"
+  - type: DynamicRuleCost
+    cost: 125
 
 - type: entity
   id: PirateMedium
@@ -117,15 +119,17 @@
     # endAudio: /Audio/Ambience/Antag/pirate_start.ogg
   - type: LoadMapRule
     gridPath: "/Maps/_Sunrise/Shuttles/Antag/falcon.yml"
+  - type: DynamicRuleCost
+    cost: 75
 
 - type: entity
-  id: NukeopsInfiltrator
+  id: NukeopsInfiltratorDropShipSoviet
   parent: BaseUnknownShuttleRule
   components:
   - type: StationEvent
     startAnnouncement: null
   - type: LoadMapRule
-    gridPath: "/Maps/_Sunrise/Shuttles/Antag/infiltrator_raid.yml"
+    gridPath: "/Maps/_Sunrise/Shuttles/Antag/infiltrator_dropship_soviet.yml"
 
 - type: entity
   id: NukeopsInstigator
@@ -135,3 +139,12 @@
     startAnnouncement: null
   - type: LoadMapRule
     gridPath: "/Maps/_Sunrise/Shuttles/Antag/instigator.yml"
+
+- type: entity
+  id: NukeopsInfiltratorDropShip
+  parent: BaseUnknownShuttleRule
+  components:
+  - type: StationEvent
+    startAnnouncement: null
+  - type: LoadMapRule
+    gridPath: "/Maps/_Sunrise/Shuttles/Antag/infiltrator_dropship.yml"

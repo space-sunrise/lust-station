@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelIAAWhite
-  name: IAA white satchel
-  description: hello i am satchel of iaa agent, please do not open me i have secret documents inside
+  name: white business satchel
+  description: A neat satchel for everyday work and small personal items.
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Back/Satchels/iaa_white_satchel.rsi
@@ -10,8 +10,8 @@
 - type: entity
   parent: ClothingBackpackSatchel
   id: ClothingBackpackSatchelIAABlack
-  name: IAA black satchel
-  description: sir are you sure you want to open this satchel? it looks important.
+  name: black business satchel
+  description: A neat satchel for everyday work and small personal items.
   components:
     - type: Sprite
       sprite: _Lust/Clothing/Back/Satchels/iaa_black_satchel.rsi

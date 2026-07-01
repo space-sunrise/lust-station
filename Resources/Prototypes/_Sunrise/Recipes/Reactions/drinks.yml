@@ -62,6 +62,8 @@
 
 - type: reaction
   id: BadTouch
+  requiredMixerCategories:
+  - Shake
   reactants:
     Vodka:
       amount: 1

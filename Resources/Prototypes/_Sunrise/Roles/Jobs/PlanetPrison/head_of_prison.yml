@@ -10,7 +10,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 18000 # 5 hrs
-  weight: 10
+  weight: 9
   startingGear: HeadOfPrisonGear
   icon: "JobIconHeadOfPrison"
   overrideConsoleVisibility: false
@@ -19,6 +19,8 @@
   canBeAntag: false
   alwaysUseSpawner: true
   radioBold: true
+  alternativeTitles:
+  - job-alt-title-colony-warden
   displayWeight: 100
   accessGroups:
     - AllAccess
@@ -30,7 +32,6 @@
   id: HeadOfPrisonGear
   equipment:
     id: HeadOfPrisonPDA
-    jumpsuit: ClothingUniformJumpsuitHoSOld
     head: ClothingHeadHatBeretHoS
     gloves: ClothingHandsGlovesCombat
     ears: ClothingHeadsetAltCommand

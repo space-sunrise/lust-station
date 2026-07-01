@@ -1,5 +1,6 @@
-﻿using Content.Server.Bed.Cryostorage;
+using Content.Server.Bed.Cryostorage;
 using Content.Server.Body.Components;
+using Content.Server.Polymorph.Components;
 using Content.Server.Station.Components;
 using Content.Server.Station.Systems;
 using Content.Shared._Sunrise.SunriseCCVars;
@@ -51,6 +52,7 @@ public sealed class CryoTeleportationSystem : EntitySystem
         SubscribeLocalEvent<PlayerSpawnCompleteEvent>(OnCompleteSpawn);
         SubscribeLocalEvent<CryoTeleportTargetComponent, PlayerDetachedEvent>(OnPlayerDetached);
         SubscribeLocalEvent<CryoTeleportTargetComponent, PlayerAttachedEvent>(OnPlayerAttached);
+        SubscribeLocalEvent<CryoTeleportTargetComponent, MobStateChangedEvent>(OnMobStateChanged);
         _playerMan.PlayerStatusChanged += OnSessionStatus;
     }
 
@@ -85,6 +87,9 @@ public sealed class CryoTeleportationSystem : EntitySystem
                 || _timing.CurTime - comp.ExitTime < _transferDelay
                 || HasComp<CryostorageContainedComponent>(uid)
                 || HasComp<ZombieComponent>(uid))
+                continue;
+
+            if (HasComp<PolymorphedEntityComponent>(uid))
                 continue;
 
             // Check if the entity has a brain - if no brain, don't teleport to cryo
@@ -160,6 +165,17 @@ public sealed class CryoTeleportationSystem : EntitySystem
             comp.ExitTime = null;
         if (_mind.TryGetMind(uid, out var mindId, out var mind))
             comp.UserId = mind.UserId;
+    }
+
+    private void OnMobStateChanged(EntityUid uid, CryoTeleportTargetComponent component, MobStateChangedEvent args)
+    {
+        if (args.NewMobState != MobState.Alive)
+            return;
+
+        if (_playerMan.TryGetSessionByEntity(uid, out _))
+            component.ExitTime = null;
+        else
+            component.ExitTime = _timing.CurTime;
     }
 
     private void OnSessionStatus(object? sender, SessionStatusEventArgs args)

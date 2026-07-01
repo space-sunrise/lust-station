@@ -147,13 +147,14 @@
     size: Tiny
     sprite: _Starlight/Objects/Specific/Chemistry/patch_pack.rsi
   - type: Sprite
+    scale: 0.9,0.9
     sprite: _Starlight/Objects/Specific/Chemistry/patch_pack.rsi
     state: icon
   - type: Tag
     tags:
       - PatchPack
   - type: Storage
-    maxItemSize: Small
+    maxItemSize: Tiny
     grid:
     - 0,0,4,1
     quickInsert: true
@@ -171,10 +172,12 @@
   components:
   - type: Label
     currentLabel: brute patch
-  - type: StorageFill
-    contents:
-    - id: PatchBrute
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PatchBrute
+          amount: 5
 
 - type: entity
   name: patch pack
@@ -184,10 +187,29 @@
   components:
   - type: Label
     currentLabel: Heat patch
-  - type: StorageFill
-    contents:
-    - id: PatchBurn
-      amount: 5
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PatchBurn
+          amount: 5
+
+- type: entity
+  name: patch pack
+  parent: PatchPack
+  id: PatchPackBruteHeat
+  suffix: Brute-Heat
+  components:
+  - type: Label
+    currentLabel: brute/heat patch
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PatchBrute
+          amount: 5
+        - id: PatchBurn
+          amount: 5
 
 - type: entity
   name: bluespace drug storage

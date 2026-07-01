@@ -25,12 +25,11 @@
   - type: StationLimitedNetwork
   - type: StaticPrice
     price: 500
-#    Sunrise-Edit
-#  - type: Tag
-#    tags:
-#    - HighRiskItem
-#  - type: StealTarget
-#    stealGroup: HandheldCrewMonitor
+  - type: Tag
+    tags:
+    - HighRiskItem
+  - type: StealTarget
+    stealGroup: HandheldCrewMonitor
 
 - type: entity
   id: HandheldCrewMonitorEmpty
@@ -41,3 +40,8 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
+        # Sunrise-Start
+        whitelist:
+          tags:
+          - PowerCell
+        # Sunrise-End

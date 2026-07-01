@@ -311,24 +311,6 @@ public sealed partial class CCVars
         CVarDef.Create("game.ipintel_alert_admin_warn_rating", 0f, CVar.SERVERONLY);
 
     /// <summary>
-    /// Включить систему блокировки IP-адресов для защиты от перегрузки памяти.
-    /// </summary>
-    public static readonly CVarDef<bool> GameIPBlockingEnabled =
-        CVarDef.Create("game.ipblocking_enabled", true, CVar.SERVERONLY);
-
-    /// <summary>
-    /// Время блокировки IP-адреса в секундах при обнаружении подозрительного запроса.
-    /// </summary>
-    public static readonly CVarDef<int> GameIPBlockingDuration =
-        CVarDef.Create("game.ipblocking_duration", 900, CVar.SERVERONLY); // 15 минут по умолчанию
-
-    /// <summary>
-    /// Максимальная допустимая длина ответа в байтах. Запросы с большей длиной будут блокироваться.
-    /// </summary>
-    public static readonly CVarDef<int> GameIPBlockingMaxResponseLength =
-        CVarDef.Create("game.ipblocking_max_response_length", 10485760, CVar.SERVERONLY); // 10MB по умолчанию
-
-    /// <summary>
     ///     Make people bonk when trying to climb certain objects like tables.
     /// </summary>
     public static readonly CVarDef<bool> GameTableBonk =
@@ -427,4 +409,13 @@ public sealed partial class CCVars
     /// </summary>
     public static readonly CVarDef<bool> GameHostnameInTitlebar =
         CVarDef.Create("game.hostname_in_titlebar", true, CVar.SERVER | CVar.REPLICATED);
+
+    /// <summary>
+    /// The maximum amount of tiles you can stack on top of each other. 0 is unlimited.
+    /// </summary>
+    /// <remarks>
+    /// Having it too high can result in "doomstacking" tiles - this messes with efficiency of explosions, deconstruction of tiles, and might result in memory problems.
+    /// </remarks>
+    public static readonly CVarDef<int> TileStackLimit =
+        CVarDef.Create("game.tile_stack_limit", 5, CVar.SERVER | CVar.REPLICATED);
 }

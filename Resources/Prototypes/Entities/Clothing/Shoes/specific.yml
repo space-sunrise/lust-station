@@ -125,7 +125,7 @@
     maxContactWalkSlowdown: 0.75
 
 - type: entity
-  parent: [ClothingShoesBaseButcherable, BaseHighlyIllegalContraband]
+  parent: [ClothingShoesBase, BaseHighlyIllegalContraband] # Sunrise Edit
   id: ClothingShoesSpaceNinja
   name: space ninja shoes
   description: A pair of nano-enhanced boots with built-in magnetic suction cups.
@@ -206,12 +206,6 @@
     - type: ChameleonClothing
       slot: [FEET]
       default: ClothingShoesColorBlack
-  # Sunrise-Start
-    - type: Biocode
-      factions:
-      - Syndicate
-      - Thief
-  # Sunrise-End
 
 - type: entity
   parent: ClothingShoesChameleon

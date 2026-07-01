@@ -1,0 +1,141 @@
+<Document>
+  # Пираты
+
+  Пиратские силы на экспедициях делятся на три фракции:
+  [bold]Мусорщики (T1)[/bold], [bold]Пираты (T2)[/bold], [bold]Наемники (T3)[/bold].
+  Фракции широкий набор вариантов сил и снаряжения и иногда встречаются не одиночные бойцы, а целые группы.
+
+  # Мусорщики
+  Низкоуровневые налетчики и мародеры. Используют самодельное и промышленное снаряжение.
+
+  [bold][color=#a4885c]Общие характеристики:[/color][/bold]
+  - [bold][color=#a4885c]Здоровье:[/color][/bold] 100; у обезьян 80
+  - [bold][color=#a4885c]Скорость:[/color][/bold] 3.8 м/с (ближний бой), 3.0 м/с (дальний бой)
+  - [bold][color=#a4885c]Сопротивления:[/color][/bold] [color=red]Blunt[/color] 40% [color=red]Slash[/color] 35% [color=yellow]Piercing[/color] 30% [color=orange]Heat[/color] 50% [color=orange]Caustic[/color] 50%
+  - [bold][color=#a4885c]Особенности:[/color][/bold] ночное зрение, пассивная регенерация, EVA-экипировка
+
+  ## Ближний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT1Knife" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1Pickaxe" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1MonkeyKnuckleDusters" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1ECutlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1EPickaxe" Caption=""/>
+  </Box>
+
+  ## Дальний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT1Pistol" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1Mosin" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1Flintlock" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1PKA" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1ScrapSMG" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1SMG" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1ScrapRifle" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1Rifle" Caption=""/>
+  </Box>
+
+  ## Редкие варианты
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT1MonkeyFireBomb" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1MonkeyEDagger" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1Hunter" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1HunterSmash" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1BombardierFire" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1BombardierGlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1BombardierPipe" Caption=""/>
+  </Box>
+
+  # Пираты
+  Средний уровень угрозы. Носит классическое пиратское снаряжение и тяжелую броню.
+
+  [bold][color=#a4885c]Общие характеристики:[/color][/bold]
+  - [bold][color=#a4885c]Здоровье:[/color][/bold] 100
+  - [bold][color=#a4885c]Скорость:[/color][/bold] 3.8 м/с (ближний бой), 3.0 м/с (дальний бой)
+  - [bold][color=#a4885c]Сопротивления:[/color][/bold] [color=red]Blunt[/color] 50% [color=red]Slash[/color] 40% [color=yellow]Piercing[/color] 60% [color=orange]Heat[/color] 40% [color=orange]Caustic[/color] 50% Bloodloss 30% Mangleness 30%
+  - [bold][color=#a4885c]Особенности:[/color][/bold] ночное зрение, пассивная регенерация, улучшенное бронирование
+
+  ## Ближний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT2Cutlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2ECutlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Sledgehammer" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2GauntletDrill" Caption=""/>
+  </Box>
+
+  ## Дальний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT2Shotgun" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2ShotgunMiniBall" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2ShotgunGlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Musket" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2MachineCannon" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2DoubleFlintlock" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2DoubleRevolver" Caption=""/>
+  </Box>
+
+  ## Редкие варианты
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT2RevolverCutlass" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Grapeshot" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Cannoball" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Mech" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Juggernaut" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2JuggernautMG" Caption=""/>
+  </Box>
+
+  # Наемники
+  Много специализированных ролей, контроль и высокая огневая мощь.
+
+  [bold][color=#a4885c]Общие характеристики:[/color][/bold]
+  - [bold][color=#a4885c]Здоровье:[/color][/bold] 100
+  - [bold][color=#a4885c]Скорость:[/color][/bold] 3.8 м/с (ближний бой), 3.0 м/с (дальний бой)
+  - [bold][color=#a4885c]Сопротивления:[/color][/bold] [color=red]Blunt[/color] 60% [color=red]Slash[/color] 50% [color=yellow]Piercing[/color] 70% [color=orange]Heat[/color] 50% [color=orange]Caustic[/color] 50% Bloodloss 50% Mangleness 50%
+  - [bold][color=#a4885c]Особенности:[/color][/bold] лучшее снаряжение, щиты и продвинутые боевые роли
+
+  ## Ближний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT3Bola" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Stun" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Shield1984" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3ShieldSMG" Caption=""/>
+  </Box>
+
+  ## Дальний бой
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT3DMR" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Rifle" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Rifle2" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Revolver" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3LaserSMG" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3LaserCannon" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3SMG" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Medic" Caption=""/>
+  </Box>
+
+  ## Редкие варианты
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT3L6" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3RPD" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Tachanka" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Grenadier" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Infiltrator" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Sniper" Caption=""/>
+  </Box>
+
+  # Киборги и боссы
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT1BorgAssault" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2BorgAssault" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3BorgAssault" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1BorgMining" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT1BorgDerelict" Caption=""/>
+  </Box>
+  <Box>
+  <GuideEntityEmbed Entity="MobPirateT1Boss" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT2Boss" Caption=""/>
+  <GuideEntityEmbed Entity="MobPirateT3Boss" Caption=""/>
+  </Box>
+
+  - [bold][color=#a4885c]Практика:[/color][/bold] сначала срезай медиков/контроль, потом тяжёлые цели. В затяжном бою пиратские отряды усиливаются за счёт роли и синергии.
+</Document>

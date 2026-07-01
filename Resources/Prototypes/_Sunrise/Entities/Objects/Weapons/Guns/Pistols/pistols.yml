@@ -40,16 +40,16 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
   - type: MeleeWeapon
-    angle: 60
-    range: 0.9
+    wideAnimationRotation: 0
+    range: 0.95
     damage:
       types:
         Blunt: 8
     bluntStaminaDamageFactor: 2.0
-    attackRate: 1
-    autoAttack: false
+    soundHit:
+      collection: MetalThud
   - type: AltFireMelee
-    attackType: Light
+    attackType: Heavy
 
 - type: entity
   name: combat pistol VP-70
@@ -97,74 +97,22 @@
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
 
-
 - type: entity
-  name: Glock-22
-  parent: BaseWeaponPistolSunrise
-  id: WeaponPistolG22
-  suffix: Sunrise, Security
+  name: Glock-22 Prison
+  description: Manufactured by special order for prison complex security. Semi-automatic firearm chambered in .35 Auto.
+  parent: BaseWeaponPistol
+  id: WeaponPistolG22Prison
+  suffix: Sunrise
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/big.rsi
+    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22_metus.rsi
   - type: Item
-    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/tiny.rsi
-  - type: Tag
-    tags:
-    - WeaponPistolG22
-    - Sidearm
-  - type: Construction
-    graph: Glock22AutoCraft
-    node: start
+    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22_metus.rsi
   - type: Gun
     fireRate: 4
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    soundGunshot:
-      collection: glock22
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MagazineGlock22
-        insertSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_reload.ogg
-        ejectSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_unload.ogg
-        priority: 2
-        whitelist:
-          tags:
-          - MagazinePistol
-          - MagazinePistolHighCapacity
-          - MagazineGlock22
-      gun_chamber:
-        name: Chamber
-        startingItem: CartridgePistolSP
-        priority: 1
-        whitelist:
-          tags:
-          - CartridgePistol
-  - type: MagazineVisuals
-    magState: mag
-    steps: 1
-    zeroVisible: true
-  - type: ContainerContainer
-    containers:
-      gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot
-  - type: ChamberMagazineAmmoProvider
-    soundRack:
-      path: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_cocked.ogg
-
-- type: entity
-  name: Glock-22 Metus
-  description: Made to order for the security of the Metus planetary prison. Semi-automatic design. Uses .35 Auto caliber ammunition.
-  parent: WeaponPistolG22
-  id: WeaponPistolG22Metus
-  suffix: Sunrise
-  components:
-  - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22_metus/big.rsi
-  - type: Gun
-    fireRate: 3.4
     soundGunshot:
       path: /Audio/_Sunrise/Weapons/Guns/Pistols/vp70_shot.ogg
     soundEmpty:
@@ -172,46 +120,17 @@
   - type: ItemSlots
     slots:
       gun_magazine:
-        startingItem: MagazinePistolHighCapacityRubber
-
-- type: entity
-  name: Glock-22 Auto
-  parent: WeaponPistolG22
-  id: WeaponPistolG22Auto
-  description: Designed by Nanotrasen’s Small Arms Division, the Glock-22 Auto is a premium full-automatic sidearm built for superior performance and reliability. Featuring a simple yet robust recoil-operated mechanism, it serves as a high-end replacement for the standard Glock 22. Favored by station security and emergency response teams, it delivers greater firepower and durability in high-risk scenarios. Uses .35 pistol magazines.
-  suffix: Sunrise, Security
-  components:
-  - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/big.rsi
-  - type: Item
-    sprite: _Sunrise/Objects/Weapons/Guns/Pistols/glock22/tiny.rsi
-  - type: Gun
-    minAngle: 6.2 #Max Effect Range 6
-    maxAngle: 18.6
-    angleIncrease: 1.25
-    angleDecay: 0.5
-    fireRate: 5
-    selectedMode: FullAuto
-    availableModes:
-    - FullAuto
-    soundGunshot:
-      collection: glock22
-  - type: ItemSlots
-    slots:
-      gun_magazine:
         name: Magazine
-        startingItem: null
+        startingItem: MagazineGlock22Metus
         insertSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_reload.ogg
         ejectSound: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_unload.ogg
         priority: 2
         whitelist:
           tags:
-          - MagazinePistol
-          - MagazinePistolHighCapacity
-          - MagazineGlock22
+          - MagazinePistolHighCapacityRubber
       gun_chamber:
         name: Chamber
-        startingItem: null
+        startingItem: CartridgePistolRubber
         priority: 1
         whitelist:
           tags:
@@ -224,9 +143,6 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-  - type: ChamberMagazineAmmoProvider
-    soundRack:
-      path: /Audio/_Sunrise/Weapons/Guns/Pistols/glock22/glock22_cocked.ogg
 
 - type: entity
   name: HI Browning-88 M4
@@ -234,6 +150,7 @@
   id: WeaponPistolHIB88M4
   components:
   - type: Sprite
+    scale: 0.8, 0.8
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/hi_browning/big.rsi
   - type: Item
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/hi_browning/tiny.rsi
@@ -325,6 +242,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: StealTarget
+    stealGroup: OfficerHandgun
 
 - type: entity
   name: Mateba
@@ -341,6 +260,8 @@
     fireRate: 3
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mateba.ogg
+  - type: StealTarget
+    stealGroup: OfficerHandgun
 
 # Sidearm HOS and Nukies.
 - type: entity
@@ -353,11 +274,11 @@
   - type: Item
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/deagle/tiny.rsi
   - type: Gun
-    minAngle: 3.5
-    maxAngle: 15
+    minAngle: 3
+    maxAngle: 35
     angleIncrease: 5
     angleDecay: 10
-    fireRate: 5
+    fireRate: 3.5 # 122 dps - 105 for mateba
     availableModes:
     - SemiAuto
     soundGunshot:
@@ -393,6 +314,8 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+  - type: StealTarget
+    stealGroup: OfficerHandgun
 
 - type: entity
   name: Desert Eagle Metus
@@ -454,17 +377,8 @@
   - type: EyeCursorOffset
     maxOffset: 2.5
     pvsIncrease: 0.25
-  # - type: MeleeWeapon
-  #   angle: 60
-  #   range: 0.9
-  #   damage:
-  #     types:
-  #       Blunt: 10
-  #   bluntStaminaDamageFactor: 2.0
-  #   attackRate: 1
-  #   autoAttack: false
-  # - type: AltFireMelee
-  #   attackType: Light
+  - type: StealTarget
+    stealGroup: OfficerHandgun
 
 - type: entity
   parent: WeaponRevolverSpearhead
@@ -479,7 +393,7 @@
   parent: BaseWeaponPistolSunrise
   id: WeaponPistolM1984
   name: D1984
-  description: A compact sidearm developed under Nanotrasen’s internal order directive “N1984.” A personal weapon of control, discipline, and precise response. Issued to distinguished detectives for reliability during field investigations. Fires .35 Auto.
+  description: A compact sidearm developed under Nanotrasen’s internal order directive “N1984.” A personal weapon of control, discipline, and precise response. Issued to distinguished detectives for reliability during field investigations. Fires .40 Auto.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Pistols/m1984.rsi
@@ -493,7 +407,7 @@
     maxAngle: -10
   - type: Gun
     selectedMode: SemiAuto
-    minAngle: 4.7
+    minAngle: 5
     maxAngle: 25
     angleIncrease: 2
     angleDecay: 14
@@ -512,6 +426,35 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.99
     sprintModifier: 0.99
+  - type: StealTarget
+    stealGroup: OfficerHandgun
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistol40FMJ
+        insertSound: /Audio/_Sunrise/Weapons/Guns/Pistols/vp70_reload.ogg
+        ejectSound: /Audio/_Sunrise/Weapons/Guns/Pistols/vp70_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazinePistolDP
+          - MagazineVP78
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgePistol40FMJ # .45 ACP
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgePistol
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
 
 - type: entity
   name: Golden Desert Eagle
@@ -530,7 +473,7 @@
   components:
   - type: Sprite
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/tec9tactical/big.rsi
-    scale: 0.63, 0.63
+    scale: 0.65, 0.65
   - type: Item
     sprite: _Sunrise/Objects/Weapons/Guns/Pistols/tec9tactical/tiny.rsi
   - type: ChamberMagazineAmmoProvider
@@ -545,7 +488,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGunCaseless
+        startingItem: BaseMagazinePistolCaselessRifleExtended
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 1
@@ -568,3 +511,43 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
+
+- type: entity
+  name: stechkin APS
+  parent: [WeaponPistolMk58, BaseSovietContraband]
+  id: SunriseWeaponPistolAPS
+  description: A high quality firearm issued to SNKVD elites and high ranking officials. It's half pistol, half closing argument. Uses .40 ammo.
+  components:
+    - type: Sprite
+      sprite: _Starlight/Objects/Weapons/Guns/Pistols/aps.rsi
+    - type: Clothing
+      sprite: _Starlight/Objects/Weapons/Guns/Pistols/aps.rsi
+    - type: Gun
+      selectedMode: SemiAuto
+      shotsPerBurst: 3
+      availableModes:
+        - Burst
+        - SemiAuto
+      soundGunshot:
+        path: /Audio/_Starlight/Weapons/Guns/Gunshots/1suppres.ogg
+    - type: Contraband
+      severity: Soviet
+    - type: ItemSlots
+      slots:
+        gun_magazine:
+          name: Magazine
+          startingItem: MagazinePistol40AP
+          insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+          ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+          priority: 2
+          whitelist:
+            tags:
+              - MagazinePistolDP
+          whitelistFailPopup: gun-magazine-whitelist-fail
+        gun_chamber:
+          name: Chamber
+          startingItem: CartridgePistol40AP
+          priority: 1
+          whitelist:
+            tags:
+              - CartridgePistolDP

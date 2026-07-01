@@ -5,7 +5,7 @@
   description: Linked together with some spare cuffs and metal.
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Throwable/bola/bolasecurity.rsi
+    sprite: _Sunrise/Objects/Weapons/Throwable/bola/bola_security.rsi
     state: icon
   - type: Ensnaring
     walkSpeed: 0.6
@@ -15,6 +15,7 @@
   - type: Tag
     tags:
     - BolaSecurity
+    - SecBeltEquip
 
 - type: entity
   name: syndicate bola
@@ -23,7 +24,7 @@
   description: Linked together with some spare cuffs and metal.
   components:
   - type: Sprite
-    sprite: _Sunrise/Objects/Weapons/Throwable/bola/bolasyndicate.rsi
+    sprite: _Sunrise/Objects/Weapons/Throwable/bola/bola_syndicate.rsi
     state: icon
   - type: Ensnaring
     freeTime: 2.5
@@ -31,3 +32,14 @@
     walkSpeed: 0.60
     sprintSpeed: 0.60
     staminaDamage: 30
+  - type: Tag
+    tags:
+    - BolaSecurity
+    - SecBeltEquip
+
+- type: entity
+  parent: BolaSyndicate
+  id: BolaSyndicateDespawn
+  components:
+  - type: TimedDespawn
+    lifetime: 60

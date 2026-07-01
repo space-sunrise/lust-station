@@ -184,6 +184,9 @@
       - DiscreteHealthAnalyzer
       - SurgeryTool
       - Dropper
+      - Patch # Sunrise-Add
+      - PatchPack # Sunrise-Add
+      - AutoMender # Sunrise-Add
       components:
       - Injector
       - Pill

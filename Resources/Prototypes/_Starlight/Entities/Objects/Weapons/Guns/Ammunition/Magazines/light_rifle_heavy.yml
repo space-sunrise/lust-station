@@ -28,6 +28,9 @@
     steps: 5
     zeroVisible: false
   - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
 
 - type: entity
   id: RifleHeavyMagazineSP
@@ -261,7 +264,7 @@
     mayTransfer: false
     fillDelay: 1
     proto: CartridgeRifleHeavyArtillery
-    capacity: 500
+    capacity: 300
 
 - type: entity
   id: RifleHeavyMagazineArtilleryLargeExtra
@@ -294,4 +297,4 @@
     mayTransfer: false
     fillDelay: 1
     proto: CartridgeRifleHeavyArtillery
-    capacity: 1500
+    capacity: 900

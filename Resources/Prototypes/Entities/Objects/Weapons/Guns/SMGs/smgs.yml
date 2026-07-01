@@ -36,6 +36,10 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/smg.ogg
     defaultDirection: 1, 0
+  - type: CanDualWield # Sunrise-Edit
+    dualWieldInaccuracyPenalty: 2
+    dualWieldFireRatePenalty: 0.25
+    dualWieldRecoilPenalty: 0.25
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/smg_cock.ogg
@@ -74,10 +78,6 @@
   - type: EmitSoundOnLand
     sound:
       collection: RiflesDrop
-  - type: CursorOffsetRequiresWield
-  - type: EyeCursorOffset
-    maxOffset: 2
-    pvsIncrease: 0.2
   # Sunrise end
 
 - type: entity
@@ -178,7 +178,7 @@
       tags:
       - CartridgePistol
     capacity: 30
-    proto: CartridgePistolSP
+    proto: CartridgePistolFMJ
     cycleable: false # No synthesizing ammo for your syndicate masters.
   - type: BallisticAmmoSelfRefiller
     autoRefillRate: 4s
@@ -192,14 +192,14 @@
   description: A modern SMG manufactured by Nanotrasen’s Small Arms Division. It features an exceptional rate of fire in burst mode, useful for holding defensive angles or engaging hostiles at longer ranges. Feeds from .35 SMG magazines.
   components:
     - type: Sprite
-      sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+      sprite: _Sunrise/Objects/Weapons/Guns/SMGs/drozd_new.rsi # Sunrise-Edit
       layers:
         - state: base
           map: ["enum.GunVisualLayers.Base"]
         - state: mag-0
           map: ["enum.GunVisualLayers.Mag"]
     - type: Clothing
-      sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+      sprite: _Sunrise/Objects/Weapons/Guns/SMGs/drozd_new.rsi # Sunrise-Edit
     - type: Wieldable
       unwieldOnUse: false
     - type: GunWieldBonus
@@ -295,7 +295,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        startingItem: MagazinePistolSubMachineGunTopMounted
+        startingItem: MagazinePistolSubMachineGunTopMountedSP # Sunrise-edit
         insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
         priority: 2
@@ -354,3 +354,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 5000
+  - type: MeleeWeapon
+    damage:
+      types:
+        Blunt: 8

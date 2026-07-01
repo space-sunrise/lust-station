@@ -20,12 +20,6 @@
             "name": "plushie_pinkers"
         },
         {
-            "name": "plushie-aname"
-        },
-        {
-            "name": "plushie-aname-unshaded"
-        },
-        {
             "name": "plushie-anna"
         },
         {
@@ -63,7 +57,7 @@
             "directions": 4
         },
         {
-            "name": "blizz-equipped-HEAD",
+            "name": "blizz-equipped-HELMET",
             "directions": 4
         },
         {
@@ -79,9 +73,6 @@
             "directions": 4
         },
         {
-            "name": "asya_fartuna"
-        },
-        {
             "name": "blizzard"
         },
         {
@@ -94,33 +85,27 @@
             "name": "ulava-britz"
         },
         {
-            "name": "sophiekomissarova"
-        },
-        {
-            "name": "sophiekomissarova-inhand-left",
+            "name": "ulava-inhand-right",
             "directions": 4
         },
         {
-            "name": "sophiekomissarova-inhand-right",
+            "name": "ulava-inhand-left",
             "directions": 4
         },
         {
-          "name": "plushie-raneli-toll"
+            "name": "ulava-equipped-NECK",
+            "directions": 4
         },
         {
-          "name": "plushie-raneli-toll-equipped-HELMET",
-          "directions": 4
-        },
-        {
-          "name": "plushie-raneli-toll-inhand-left",
-          "directions": 4
-        },
-        {
-          "name": "plushie-raneli-toll-inhand-right",
-          "directions": 4
-        },
-        {
-          "name": "plushie-raneli-toll-eyes"
+          "name": "plushiediegovulpa"
+    },
+    {
+        "name": "diego-vulpa-inhand-left",
+        "directions": 4
+    },
+    {
+        "name": "diego-vulpa-inhand-right",
+        "directions": 4
         }
     ]
 }

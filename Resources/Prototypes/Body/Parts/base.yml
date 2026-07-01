@@ -10,7 +10,6 @@
   - type: Damageable
     damageContainer: Biological
   - type: BodyPart
-  - type: Gibbable
   - type: ContainerContainer
     containers:
       bodypart: !type:Container
@@ -21,7 +20,6 @@
     tags:
       - Trash
   # Sunrise-start
-  - type: SurgeryTarget
   - type: UserInterface
     interfaces:
       enum.SurgeryUIKey.Key:

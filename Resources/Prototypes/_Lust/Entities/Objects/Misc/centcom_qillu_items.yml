@@ -1,0 +1,29 @@
+- type: entity
+  parent: [BoxFolderCentComEmpty, BoxFolderFill]
+  id: BoxFolderCentComQillu
+  name: CentComm folder
+  description: A folder used by Central Command bureaucracy. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/folder_qillu.rsi
+    layers:
+    - state: folder-centcom
+    - state: folder-base
+  - type: Item
+    sprite: _Lust/Objects/Misc/folder_qillu.rsi
+    size: Small
+
+- type: entity
+  parent: PenCentcom
+  id: PenCentcomQillu
+  name: CentComm pen
+  description: A pen issued to Central Command personnel. Produced under Qillu contract.
+  suffix: Qillu
+  components:
+  - type: Sprite
+    sprite: _Lust/Objects/Misc/centcom_pen_qillu.rsi
+    state: pen_centcom_qillu
+  - type: Item
+    sprite: _Lust/Objects/Misc/centcom_pen_qillu.rsi
+    heldPrefix: pen_centcom_qillu

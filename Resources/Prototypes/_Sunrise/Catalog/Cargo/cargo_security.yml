@@ -1,40 +1,30 @@
 - type: cargoProduct
-  id: SecurityWebbing
+  id: SecurityHeatAbsorb
   icon:
-    sprite: Clothing/Belt/securitywebbing.rsi
+    sprite: _Starlight/Clothing/OuterClothing/Armor/heatabsorbent.rsi
     state: icon
-  product: CrateSecurityWebbing
-  cost: 1500
+  product: CrateSecurityArmorHeatAbsorb
+  cost: 950
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
-  id: SecurityGlovesCombat
+  id: SecurityArmorStab
   icon:
-    sprite: Clothing/Hands/Gloves/combat.rsi
+    sprite: _Starlight/Clothing/OuterClothing/Armor/stabvest.rsi
     state: icon
-  product: CrateSecurityGlovesCombat
-  cost: 12000
+  product: CrateSecurityArmorStab
+  cost: 950
   category: cargoproduct-category-name-security
   group: market
 
 - type: cargoProduct
-  id: SecuritySWAT
+  id: SecurityArmorPlate
   icon:
-    sprite: _Sunrise/Clothing/OuterClothing/Armor/swat_armor.rsi
+    sprite: _Starlight/Clothing/OuterClothing/Armor/platecarrier.rsi
     state: icon
-  product: CrateSecuritySWAT
-  cost: 11984
-  category: cargoproduct-category-name-security
-  group: market
-
-- type: cargoProduct
-  id: SecurityReflective
-  icon:
-    sprite: Clothing/OuterClothing/Armor/armor_reflec.rsi
-    state: icon
-  product: CrateSecurityArmorReflective
-  cost: 880
+  product: CrateSecurityArmorPlate
+  cost: 950
   category: cargoproduct-category-name-security
   group: market
 

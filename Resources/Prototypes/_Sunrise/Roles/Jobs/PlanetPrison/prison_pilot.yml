@@ -7,6 +7,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 18000 #5 hrs
+  weight: 3
   startingGear: PrisonPilotGear
   icon: "JobIconPrisonPilot"
   setPreference: false
@@ -44,7 +45,6 @@
     id: PrisonPilotPDA
     ears: ClothingHeadsetSecurity
     belt: ClothingBeltPrisonGuardianFilled
-    pocket1: WeaponPistolG22
 
 - type: chameleonOutfit
   id: PrisonPilotChameleonOutfit

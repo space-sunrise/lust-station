@@ -12,7 +12,11 @@
   - type: Clothing
     sprite: Clothing/Belt/sheath.rsi
   - type: Item
-    size: Ginormous
+# Sunrise-Start
+    size: Normal
+    shape:
+    - 0,0,0,6
+# Sunrise-End
   - type: ItemSlots
     slots:
       item:
@@ -79,7 +83,7 @@
     whitelist:
       tags:
         - ShellShotgun
-    capacity: 14
+    capacity: 24 # Sunrise-Edit
 
 - type: entity
   parent: [ ClothingBeltStorageBase, BaseMagicalContraband ]

@@ -137,7 +137,7 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: MagazineDragunov
+        - id: MagazineDragunovSP
           amount: 2
         - id: MagazineDragunovExtended
           amount: 2
@@ -167,7 +167,7 @@
     - state: smg_base
 
 - type: entity
-  parent: BaseSyndicateAmmoKit
+  parent: BaseSyndicateAmmoKitSmall
   id: SMGIncendiaryAmmoKit
   name: C20r Incendiary ammo kit
   components:
@@ -176,7 +176,7 @@
       storagebase: !type:AllSelector
         children:
         - id: MagazinePistolSubMachineGunIncendiary
-          amount: 8
+          amount: 6
   - type: Sprite
     layers:
     - state: box_of_doom_big
@@ -199,6 +199,44 @@
     layers:
     - state: box_of_doom_big
     - state: shotgun_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKitSmall
+  id: ShotGunKitSmall
+  name: ammo drum kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineShotgun
+          amount: 2
+        - id: MagazineShotgunSlug
+          amount: 2
+        - id: MagazineShotgunIncendiary
+        - id: MagazineShotgunFlechette
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: shotgun_base
+
+- type: entity
+  parent: BaseSyndicateAmmoKit
+  id: ShotGunKitLarge
+  name: XL ammo kit
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: MagazineShotgunXL
+        - id: MagazineShotgunFlechetteXL
+        - id: MagazineShotgunSlugXL
+        - id: MagazineShotgunIncendiaryXL
+  - type: Sprite
+    layers:
+    - state: box_of_doom_big
+    - state: shotgun_xl_big
 
 - type: entity
   parent: BaseSyndicateAmmoKit
@@ -230,13 +268,13 @@
   components:
   - type: Storage
     grid:
-    - 0,0,3,1
+    - 0,0,2,1
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
         children:
         - id: MagazineRifleBoxSP
-          amount: 3
+          amount: 2
         - id: MagazineRifleBoxFMJ
   - type: Sprite
     layers:
@@ -253,7 +291,7 @@
       storagebase: !type:AllSelector
         children:
         - id: MagazineRifleBoxIncendiary
-          amount: 4
+          amount: 3
   - type: Sprite
     layers:
     - state: box_of_doom_big
@@ -269,7 +307,7 @@
       storagebase: !type:AllSelector
         children:
         - id: MagazineRifleBoxUranium
-          amount: 4
+          amount: 3
   - type: Sprite
     layers:
     - state: box_of_doom_big
@@ -391,3 +429,33 @@
     layers:
     - state: box_of_doom_big
     - state: implant
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: SyndicateRapierToxinBox
+  name: syndicate rapier kit
+  description: Contains a wrapped syndicate rapier and a random toxin bottle. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: BeltSheathSyndieFilledBox
+    - id: ChemistryBottleToxin
+      orGroup: RapierToxin
+    - id: ChemistryBottleMuteToxin
+      orGroup: RapierToxin
+    - id: ChemistryBottleUnstableMutagen
+      orGroup: RapierToxin
+    - id: ChemistryBottlePolytrinicAcid
+      orGroup: RapierToxin
+    - id: ChemistryBottleLead
+      orGroup: RapierToxin
+
+- type: entity
+  parent: CyberEyeThermalBox
+  id: ChameleonSilentShoesBox
+  name: chameleon silent shoes kit
+  description: Contains a pair of stealth chameleon shoes. Packaging disintegrates when opened, leaving no evidence behind.
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: ClothingShoesChameleonSilent

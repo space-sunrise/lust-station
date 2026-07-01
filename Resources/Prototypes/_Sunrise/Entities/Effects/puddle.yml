@@ -9,10 +9,9 @@
     noRot: false
   - type: Sprite
     drawdepth: FloorObjects
-    color: "#FFFFFF80"
   - type: SolutionContainerManager
     solutions:
-      step: { maxVol: 1 }
+      step: { maxVol: 2.5 }
   - type: Footprint
     printType: Foot
   - type: Puddle
@@ -20,6 +19,20 @@
     canSlow: false
     canSlip: false
   - type: Appearance
+  - type: DnaSubstanceTrace
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      footstepFixture:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.2,-0.2,0.2,0.2"
+        mask:
+        - ItemMask
+        layer:
+        - SlipLayer
+        hard: false
 
 - type: entity
   name: drag mark

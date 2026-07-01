@@ -221,6 +221,28 @@
     stock: 1
 
 - type: listing
+  id: UplinkLustEroticArrowRouletteErot
+  productEntity: ArrowRouletteErot
+  cost:
+    Suntick: 25
+  categories:
+  - Erotic
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
+  id: UplinkLustEroticArrowRouletteEros
+  productEntity: ArrowRouletteEros
+  cost:
+    Suntick: 25
+  categories:
+  - Erotic
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+
+- type: listing
   id: UplinkLustEroticClothingHeadHatDeerHorns
   productEntity: ClothingHeadHatDeerHorns
   cost:
@@ -243,3 +265,14 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 3
+
+- type: listing
+  id: UplinkLustEroticERPDildoDouble
+  productEntity: ERPDildoDouble
+  cost:
+    Suntick: 4
+  categories:
+  - Erotic
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
