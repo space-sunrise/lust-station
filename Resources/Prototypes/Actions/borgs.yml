@@ -26,3 +26,18 @@
     useDelay: 0.5
   - type: InstantAction
     event: !type:BorgToggleSelectTypeEvent
+
+- type: entity
+  parent: BaseToggleAction
+  id: ActionBorgToggleRest
+  name: Sit down
+  description: Sit down or stand up.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _Lust/Mobs/Silicon/chassis.rsi
+      state: robot_rest
+    useDelay: 0.5
+  - type: InstantAction
+    event: !type:BorgToggleRestActionEvent

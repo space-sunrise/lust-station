@@ -1,6 +1,6 @@
+using Content.Shared._Lust.Borgs.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Silicons.Borgs.Components;
-using Content.Shared.Standing;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
 
@@ -19,9 +19,7 @@ public sealed partial class BorgSystem
 
         var alive = !_appearance.TryGetData<MobState>(ent.Owner, MobStateVisuals.State, out var mobState, ent.Comp2)
                     || mobState == MobState.Alive;
-        var resting = alive
-                      && TryComp<StandingStateComponent>(ent, out var standing)
-                      && !standing.Standing;
+        var resting = alive && HasComp<BorgRestingComponent>(ent);
 
         if (TrySetDerivedLayerState(ent, BorgVisualLayers.Resting, bodyState, "rest"))
             _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Resting, resting);
