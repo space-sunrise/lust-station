@@ -109,11 +109,13 @@
 - type: entity
   id: PlushieMaksimDedov
   parent: BasePlushie
-  name: Maksim Dedov
+  name: Maksa plushie
   components:
   - type: Sprite
     sprite: _Lust/Objects/Fun/toys.rsi
     state: ded_plushie
+  - type: Item
+    sprite: _Lust/Objects/Fun/maksa_plushie.rsi
   - type: MeleeWeapon
     soundHit:
       path: /Audio/_Lust/half-life_crowbar.ogg
