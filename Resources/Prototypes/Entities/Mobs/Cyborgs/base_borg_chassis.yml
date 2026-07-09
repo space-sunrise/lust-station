@@ -259,6 +259,11 @@
   - type: Puller
     needsHands: false
   - type: StandingState
+  # Lust edit start - борги используют общий механизм сидения/вставания
+  - type: Crawler
+    standTime: 1
+    speedModifier: 0
+  # Lust edit end
   - type: Tag
     tags:
     - DoorBumpOpener
