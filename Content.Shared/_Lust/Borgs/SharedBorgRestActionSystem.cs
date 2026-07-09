@@ -1,7 +1,10 @@
 using Content.Shared._Lust.Borgs.Components;
 using Content.Shared.Actions;
+using Content.Shared.Mobs.Systems;
 using Content.Shared.Rotation;
+using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Stunnable;
+using Robust.Shared.Player;
 
 namespace Content.Shared._Lust.Borgs;
 
@@ -9,6 +12,7 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
 {
     [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
     [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
 
     public override void Initialize()
@@ -39,37 +43,20 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
         if (args.Handled)
             return;
 
-        args.Handled = true;
-
-        if (HasComp<BorgRestingComponent>(ent))
-        {
-            RemComp<BorgRestingComponent>(ent);
-            RemComp<KnockedDownComponent>(ent);
-        }
-        else
-        {
-            EnsureComp<BorgRestingComponent>(ent);
-
-            if (_stun.TryKnockdown(ent.Owner, null, refresh: true, autoStand: false, drop: false, force: true))
-                SetRestingVisualRotation(ent);
-            else
-                RemComp<BorgRestingComponent>(ent);
-        }
-
-        UpdateActionState(ent);
+        if (TryToggleRest(ent))
+            args.Handled = true;
     }
 
     private void OnRestingStartup(Entity<BorgRestingComponent> ent, ref ComponentStartup args)
     {
         if (TryComp<BorgRestActionComponent>(ent, out var borgRest))
-        {
-            SetRestingVisualRotation(ent.Owner);
             UpdateActionState((ent.Owner, borgRest));
-        }
     }
 
     private void OnRestingRemove(Entity<BorgRestingComponent> ent, ref ComponentRemove args)
     {
+        ClearRestingVisual(ent.Owner);
+
         if (TryComp<BorgRestActionComponent>(ent, out var borgRest))
             UpdateActionState((ent.Owner, borgRest), resting: false);
     }
@@ -89,8 +76,64 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
         _actions.SetToggled(ent.Comp.ToggleActionEntity, resting);
     }
 
+    public bool TryToggleRest(Entity<BorgRestActionComponent> ent)
+    {
+        if (!CanToggleRest(ent))
+            return false;
+
+        if (HasComp<BorgRestingComponent>(ent))
+            DoStandUp(ent);
+        else
+            DoRest(ent);
+
+        return true;
+    }
+
+    public bool CanToggleRest(Entity<BorgRestActionComponent> ent)
+    {
+        if (HasComp<BorgRestingComponent>(ent))
+            return true;
+
+        if (!TryComp<BorgChassisComponent>(ent, out var borg) || borg.BrainEntity == null)
+            return false;
+
+        if (!HasComp<ActorComponent>(ent))
+            return false;
+
+        return _mobState.IsAlive(ent);
+    }
+
+    private void DoRest(Entity<BorgRestActionComponent> ent)
+    {
+        if (!_stun.TryKnockdown(ent.Owner, null, refresh: true, autoStand: false, drop: false, force: true))
+        {
+            ClearRestingVisual(ent);
+            return;
+        }
+
+        EnsureComp<BorgRestingComponent>(ent);
+        SetRestingVisual(ent, true);
+    }
+
+    private void DoStandUp(Entity<BorgRestActionComponent> ent)
+    {
+        RemComp<BorgRestingComponent>(ent);
+        RemComp<KnockedDownComponent>(ent);
+    }
+
     private void SetRestingVisualRotation(EntityUid uid)
     {
         _appearance.SetData(uid, RotationVisuals.RotationState, RotationState.Vertical);
+    }
+
+    private void SetRestingVisual(EntityUid uid, bool resting)
+    {
+        _appearance.SetData(uid, BorgRestVisuals.Resting, resting);
+        SetRestingVisualRotation(uid);
+    }
+
+    private void ClearRestingVisual(EntityUid uid)
+    {
+        SetRestingVisual(uid, false);
     }
 }

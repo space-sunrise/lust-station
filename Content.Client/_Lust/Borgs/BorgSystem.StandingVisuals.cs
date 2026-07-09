@@ -19,13 +19,19 @@ public sealed partial class BorgSystem
 
         var alive = !_appearance.TryGetData<MobState>(ent.Owner, MobStateVisuals.State, out var mobState, ent.Comp2)
                     || mobState == MobState.Alive;
-        var resting = alive && HasComp<BorgRestingComponent>(ent);
+        var resting = alive
+                      && _appearance.TryGetData<bool>(ent.Owner, BorgRestVisuals.Resting, out var restingVisual, ent.Comp2)
+                      && restingVisual;
 
         if (TrySetDerivedLayerState(ent, BorgVisualLayers.Resting, bodyState, "rest"))
             _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Resting, resting);
+        else
+            HideLayer(ent, BorgVisualLayers.Resting);
 
         if (TrySetDerivedLayerState(ent, BorgVisualLayers.Wrecked, bodyState, "wreck"))
             _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Wrecked, !alive);
+        else
+            HideLayer(ent, BorgVisualLayers.Wrecked);
 
         _sprite.LayerSetVisible((ent.Owner, ent.Comp3), BorgVisualLayers.Body, alive && !resting);
 
@@ -56,6 +62,14 @@ public sealed partial class BorgSystem
 
         state = stateId.Name;
         return true;
+    }
+
+    private void HideLayer(
+        Entity<BorgChassisComponent?, AppearanceComponent?, SpriteComponent?> ent,
+        BorgVisualLayers layer)
+    {
+        if (_sprite.LayerExists((ent.Owner, ent.Comp3), layer))
+            _sprite.LayerSetVisible((ent.Owner, ent.Comp3), layer, false);
     }
 
     private bool TrySetDerivedLayerState(

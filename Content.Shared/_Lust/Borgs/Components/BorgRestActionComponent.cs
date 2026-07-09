@@ -2,6 +2,7 @@ using Content.Shared._Lust.Borgs;
 using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Serialization;
 
 namespace Content.Shared._Lust.Borgs.Components;
 
@@ -21,7 +22,7 @@ public sealed partial class BorgRestActionComponent : Component
     /// <summary>
     /// Action entity currently granted to the borg.
     /// </summary>
-    [DataField, AutoNetworkedField]
+    [AutoNetworkedField]
     public EntityUid? ToggleActionEntity;
 }
 
@@ -30,3 +31,9 @@ public sealed partial class BorgRestActionComponent : Component
 public sealed partial class BorgRestingComponent : Component;
 
 public sealed partial class BorgToggleRestActionEvent : InstantActionEvent;
+
+[Serializable, NetSerializable]
+public enum BorgRestVisuals : byte
+{
+    Resting,
+}
