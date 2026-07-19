@@ -68,7 +68,7 @@
 - type: entity
   name: inferior vulpkanin
   id: BaseSimpleEventMobVulpkaninERP
-  parent: MobBaseAncestor
+  parent: BaseSimpleEventMobVulpkanin
   abstract: true
   components:
   - type: Interactions
