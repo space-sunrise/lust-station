@@ -51,11 +51,6 @@
       state: inferior_vulpkanin
       sprite: _Sunrise/Mobs/Animals/inferior_vulpkanin.rsi
     - map: [ "jumpsuit" ]
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
     - map: [ "id" ]
