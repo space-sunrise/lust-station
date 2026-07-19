@@ -16,6 +16,5 @@ ent-ERPEventVulpkaninDressed = { ent-ERPEventVulpkaninNaked }
 
 ent-ERPEventDemonEvelNaked = smiling demon
     .desc = It looks friendly. Why don't you give it a hug?
-Если она замерла - беги. Если двинулась – уже поздно
 ent-ERPEventDemonEvel = { ent-ERPEventDemonEvelNaked }
     .desc = { ent-ERPEventDemonEvelNaked.desc }
