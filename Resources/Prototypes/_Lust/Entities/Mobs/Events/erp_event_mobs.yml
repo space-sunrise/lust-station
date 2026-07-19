@@ -1,0 +1,253 @@
+- type: entity
+  name: inferior vulpkanin
+  id: BaseSimpleEventMobVulpkanin
+  parent: MobBaseAncestor
+  abstract: true
+  components:
+  - type: VulpaAccent
+  - type: Speech
+    speechSounds: Vulpkanin
+    speechVerb: Vulpkanin
+    allowedEmotes: ['Growl', 'Bark', 'Howl', 'Whines']
+  - type: Vocal
+    sounds:
+      Male: MaleVulpkanin
+      Female: FemaleVulpkanin
+      Unsexed: MaleVulpkanin
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
+  - type: TypingIndicator
+    proto: lizard
+  - type: InteractionPopup
+    successChance: 0.9
+    interactSuccessString: petting-success-monkey
+    interactFailureString: petting-failure-monkey
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+    interactFailureSound:
+      path: /Audio/Items/wirecutter.ogg
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+        Piercing: 4
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: inferior_vulpkanin
+      sprite: _Sunrise/Mobs/Animals/inferior_vulpkanin.rsi
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "id" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: AlwaysRevolutionaryConvertible
+  - type: Body
+    prototype: InferiorVulpkanin
+  - type: TTS
+
+- type: entity
+  name: inferior vulpkanin
+  id: BaseSimpleEventMobVulpkaninERP
+  parent: MobBaseAncestor
+  abstract: true
+  components:
+  - type: Interactions
+
+- type: entity
+  save: false
+  parent: BaseSimpleEventMobVulpkaninERP
+  id: BaseSimpleEventMobMoth
+  abstract: true
+  components:
+  - type: Speech
+    speechVerb: Moth
+    allowedEmotes: ['Chitter', 'Squeak']
+  - type: TypingIndicator
+    proto: moth
+  - type: MothAccent
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
+      Futanari: UnisexMoth
+
+#Moth
+- type: entity
+  name: moth of death
+  id: ERPEventMothNakedFolded
+  parent: BaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_1_1
+      sprite: _Lust/Mobs/Events/moth.rsi
+
+- type: entity
+  name: moth of death
+  id: ERPEventMothNakedUnfolded
+  parent: BaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_1_2
+      sprite: _Lust/Mobs/Events/moth.rsi
+
+- type: entity
+  name: moth of death
+  id: ERPEventMothFolded
+  parent: BaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_2_1
+      sprite: _Lust/Mobs/Events/moth.rsi
+
+- type: entity
+  name: moth of death
+  id: ERPEventMothUnfolded
+  parent: BaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_2_2
+      sprite: _Lust/Mobs/Events/moth.rsi
+
+#Vulpkanin
+- type: entity
+  name: Object № 7114
+  id: ERPEventVulpkaninNaked
+  parent: BaseSimpleEventMobVulpkaninERP
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_1
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+
+- type: entity
+  name: Object № 7114
+  id: ERPEventVulpkaninHalfNaked
+  parent: ERPEventVulpkaninNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_3
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+
+- type: entity
+  name: Object № 7114
+  id: ERPEventVulpkaninDressed
+  parent: ERPEventVulpkaninNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_2
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+
+#Smiling demon
+- type: entity
+  name: smiling demon
+  id: ERPEventDemonEvelNaked
+  parent: BaseSimpleEventMobVulpkaninERP
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_1
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+
+- type: entity
+  name: smiling demon
+  id: ERPEventDemonEvel
+  parent: ERPEventDemonEvelNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_2
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+
+#Ulubastic
+- type: entity
+  name: ""
+  id: ERPEventUlubastik
+  parent: BaseSimpleEventMobVulpkanin
+  description: ""
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: ulubastik
+      sprite: _Lust/Mobs/Events/ulubastik.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: ulubastik
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/ulubastik.rsi
