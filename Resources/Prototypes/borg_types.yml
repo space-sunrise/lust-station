@@ -21,6 +21,7 @@
   - BorgModuleInflatable
   - BorgModuleArtifact
   - BorgModuleAnomaly
+  - BorgModuleRobotics # Sunrise-Edit
 
   radioChannels:
   - Science
@@ -233,7 +234,6 @@
     - BorgModuleMedical
 
   defaultModules:
-  - BorgModuleStandart
   - BorgModuleChemical
   - BorgModuleTopicals
   - BorgModuleRescue
@@ -262,7 +262,7 @@
     - HandheldStationMapUnpowered
     - HandheldEmergencyCrewMonitorBorg
     entityTargetActions:
-    - HandheldHealthAnalyzerUnpowered
+    - HandheldHealthAnalyzer
   # Sunrise-End
 
   # Visual
