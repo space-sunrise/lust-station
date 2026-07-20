@@ -13,7 +13,7 @@
     sounds:
       Male: MaleVulpkanin
       Female: FemaleVulpkanin
-      Unsexed: MaleVulpkanin
+      Unsexed: FemaleVulpkanin
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: TypingIndicator
@@ -50,6 +50,12 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: inferior_vulpkanin
       sprite: _Sunrise/Mobs/Animals/inferior_vulpkanin.rsi
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
     - map: [ "jumpsuit" ]
     - map: [ "ears" ]
     - map: [ "outerClothing" ]
@@ -105,6 +111,11 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: moth_1_1
       sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: moth of death
@@ -118,6 +129,11 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: moth_1_2
       sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: moth of death
@@ -131,6 +147,11 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: moth_2_1
       sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: moth of death
@@ -144,6 +165,11 @@
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: moth_2_2
       sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 #Vulpkanin
 - type: entity
@@ -162,6 +188,11 @@
       state: light
       shader: unshaded
       sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: Object № 7114
@@ -178,6 +209,11 @@
       state: light
       shader: unshaded
       sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: Object № 7114
@@ -194,6 +230,11 @@
       state: light
       shader: unshaded
       sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 #Smiling demon
 - type: entity
@@ -212,6 +253,11 @@
       state: light
       shader: unshaded
       sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 - type: entity
   name: smiling demon
@@ -228,6 +274,11 @@
       state: light
       shader: unshaded
       sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
 
 #Ulubastic
 - type: entity
@@ -246,3 +297,8 @@
       state: ulubastik
       shader: unshaded
       sprite: _Lust/Mobs/Events/ulubastik.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
