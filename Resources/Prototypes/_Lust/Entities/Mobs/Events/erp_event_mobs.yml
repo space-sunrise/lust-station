@@ -119,24 +119,6 @@
 
 - type: entity
   name: moth of death
-  id: ERPEventMothNakedUnfolded
-  parent: BaseSimpleEventMobMoth
-  description: It looks friendly. Why don't you give it a hug?
-  components:
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: moth_1_2
-      sprite: _Lust/Mobs/Events/moth.rsi
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-
-- type: entity
-  name: moth of death
   id: ERPEventMothFolded
   parent: BaseSimpleEventMobMoth
   description: It looks friendly. Why don't you give it a hug?
@@ -146,24 +128,6 @@
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: moth_2_1
-      sprite: _Lust/Mobs/Events/moth.rsi
-    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
-      color: "#ffffff"
-      sprite: Objects/Misc/handcuffs.rsi
-      state: body-overlay-2
-      visible: false
-
-- type: entity
-  name: moth of death
-  id: ERPEventMothUnfolded
-  parent: BaseSimpleEventMobMoth
-  description: It looks friendly. Why don't you give it a hug?
-  components:
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - map: ["enum.DamageStateVisualLayers.Base"]
-      state: moth_2_2
       sprite: _Lust/Mobs/Events/moth.rsi
     - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
       color: "#ffffff"

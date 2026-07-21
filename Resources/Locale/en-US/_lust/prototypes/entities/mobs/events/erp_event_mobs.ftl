@@ -1,10 +1,6 @@
 ent-ERPEventMothNakedFolded = Moth of death
     .desc = It looks friendly. Why don't you give it a hug?
-ent-ERPEventMothNakedUnfolded = { ent-ERPEventMothNakedFolded }
-    .desc = { ent-ERPEventMothNakedFolded.desc }
 ent-ERPEventMothFolded = { ent-ERPEventMothNakedFolded }
-    .desc = { ent-ERPEventMothNakedFolded.desc }
-ent-ERPEventMothUnfolded = { ent-ERPEventMothNakedFolded }
     .desc = { ent-ERPEventMothNakedFolded.desc }
 
 ent-ERPEventVulpkaninNaked = Object № 7114

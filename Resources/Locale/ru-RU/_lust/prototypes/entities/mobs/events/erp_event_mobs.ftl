@@ -5,11 +5,7 @@ ent-ERPEventMothNakedFolded = Смертомоль
     Не издает звуков, но ты слышишь шорох крыльев в голове.
     Тянется к свету. И к теплу. И к твоему дыханию.
     Если она села на стену – не дыши. Она ждет.
-ent-ERPEventMothNakedUnfolded = { ent-ERPEventMothNakedFolded }
-    .desc = { ent-ERPEventMothNakedFolded.desc }
 ent-ERPEventMothFolded = { ent-ERPEventMothNakedFolded }
-    .desc = { ent-ERPEventMothNakedFolded.desc }
-ent-ERPEventMothUnfolded = { ent-ERPEventMothNakedFolded }
     .desc = { ent-ERPEventMothNakedFolded.desc }
 
 ent-ERPEventVulpkaninNaked = Особь номер 7114
