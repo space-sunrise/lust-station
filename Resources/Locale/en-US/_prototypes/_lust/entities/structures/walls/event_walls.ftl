@@ -1,0 +1,1 @@
+ent-ERPEventRivetedWall = yellow wallpaper

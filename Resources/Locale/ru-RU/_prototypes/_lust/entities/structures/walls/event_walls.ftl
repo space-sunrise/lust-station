@@ -1,0 +1,1 @@
+ent-ERPEventRivetedWall = жёлтые обои
