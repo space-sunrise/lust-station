@@ -2,7 +2,7 @@
   parent: BaseWall
   id: ERPEventRivetedWall
   name: yellow wallpaper
-  description: ""
+  description: Walls with yellow wallpaper.
   components:
   - type: Sprite
     sprite: _Lust/Structures/Walls/riveted.rsi
