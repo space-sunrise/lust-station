@@ -652,28 +652,6 @@
     stock: 1
 
 - type: listing
-  id: UplinkLustRomanticGoldRing
-  productEntity: GoldRing
-  cost:
-    Suntick: 7
-  categories:
-  - Romantic
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 2
-
-- type: listing
-  id: UplinkLustRomanticSilverRing
-  productEntity: SilverRing
-  cost:
-    Suntick: 6
-  categories:
-  - Romantic
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 2
-
-- type: listing
   id: UplinkLustRomanticClothingShoesHighheelBoots
   productEntity: ClothingShoesHighheelBoots
   cost:
@@ -683,5 +661,3 @@
   conditions:
   - !type:ListingLimitedStockCondition
     stock: 1
-
-
