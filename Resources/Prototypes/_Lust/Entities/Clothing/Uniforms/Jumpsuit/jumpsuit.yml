@@ -108,3 +108,25 @@
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
   - type: Clothing
     sprite: _Lust/Clothing/Uniforms/Jumpsuit/centcom_uniform_qillu.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LustClothingUniformJumpsuitStripperSlim
+  name: slim stripper suit
+  description: Stripper suit. Leaves nothing to the imagination.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/stripper_slimsuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/stripper_slimsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LustClothingUniformJumpsuitStripperStarPasties
+  name: star pasties suit
+  description: Stripper suit. Nanofibers ensure these won't fall off.
+  components:
+  - type: Sprite
+    sprite: _Lust/Clothing/Uniforms/stripper_starpastiessuit.rsi
+  - type: Clothing
+    sprite: _Lust/Clothing/Uniforms/stripper_starpastiessuit.rsi
