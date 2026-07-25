@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseWall
-  id: ERPEventRivetedWall
+  id: LustERPEventRivetedWall
   name: yellow wallpaper
   description: Walls with yellow wallpaper.
   components:
