@@ -1,9 +1,9 @@
-ent-LustERPEventMothNakedFolded = Moth of death
+ent-LustERPEventMothNakedFolded = moth of death
     .desc = It looks friendly. Why don't you give it a hug?
 ent-LustERPEventMothFolded = { ent-LustERPEventMothNakedFolded }
     .desc = { ent-LustERPEventMothNakedFolded.desc }
 
-ent-LustERPEventVulpkaninNaked = Object № 7114
+ent-LustERPEventVulpkaninNaked = object № 7114
     .desc = It looks friendly. Why don't you give it a hug?
 ent-LustERPEventVulpkaninHalfNaked = { ent-LustERPEventVulpkaninNaked }
     .desc = { ent-LustERPEventVulpkaninNaked.desc }
