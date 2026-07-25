@@ -1,5 +1,5 @@
 - type: decal
-  id: ERPEventAbyss
+  id: LustERPEventAbyss
   tags: ["planet", "markings"]
   sprite:
     sprite: _Lust/Decals/abyss.rsi

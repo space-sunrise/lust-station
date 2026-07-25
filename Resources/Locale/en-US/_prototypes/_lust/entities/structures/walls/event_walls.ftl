@@ -1,2 +1,2 @@
 ent-ERPEventRivetedWall = yellow wallpaper
-    .desc = The walls are covered yellow wallpaper, often with damp stains and peeling adges.
+    .desc = The walls are covered with yellow wallpaper, often with damp stains and peeling edges.
