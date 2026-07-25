@@ -1591,3 +1591,31 @@
   id: 294
   time: '2026-06-05T18:50:53.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/546
+- author: Kinar_7
+  changes:
+  - message: "\u041A\u043E\u0440\u043E\u043B\u044E \u043A\u0440\u044B\u0441 \u0432\
+      \u0435\u0440\u043D\u0443\u043B\u0438 \u0441\u0442\u0430\u043D\u0434\u0430\u0440\
+      \u0442\u043D\u044B\u0439 \u043C\u0443\u0436\u0441\u043A\u043E\u0439 \u0441\u043F\
+      \u0440\u0430\u0439\u0442"
+    type: Tweak
+  id: 295
+  time: '2026-06-23T17:37:36.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/553
+- author: ThereDrD
+  changes:
+  - message: "\u0410\u043F\u0441\u0442\u0440\u0438\u043C \u0441 \u0441\u0430\u043D\
+      \u0440\u0430\u0439\u0437\u0430"
+    type: Add
+  id: 296
+  time: '2026-07-20T14:15:07.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/559
+- author: fuckrules
+  changes:
+  - message: "\u0412 \u043B\u043E\u0434\u0430\u0443\u0442 \u0431\u0440\u0438\u0433\
+      \u043C\u0435\u0434\u0438\u043A\u0430 \u0431\u044B\u043B \u0434\u043E\u0431\u0430\
+      \u0432\u043B\u0435\u043D \u043D\u043E\u0432\u044B\u0439 \u043F\u0440\u0435\u0434\
+      \u043C\u0435\u0442"
+    type: Add
+  id: 297
+  time: '2026-07-25T08:40:31.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/551

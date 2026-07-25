@@ -112,6 +112,7 @@
   groups:
   - SecurityNeck
   - BrigmedicJumpsuit
+  - BrigmedicOuterClothing
   - BrigmedicBackpack
   - BrigmedicInjectors
   - SurvivalSecurity
