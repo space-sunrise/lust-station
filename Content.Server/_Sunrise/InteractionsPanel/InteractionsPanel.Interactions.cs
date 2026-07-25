@@ -496,7 +496,8 @@ public partial class InteractionsPanel
         if (IsOnCooldown(uid, "orgasm"))
             return;
 
-        comp.LoveAmount = 0;
+        if (ShouldDecayLove((uid, comp)))
+            comp.LoveAmount = 0;
 
         _chatSystem.TrySendInGameICMessage(uid, "кончает", InGameICChatType.Emote, false);
         _chatSystem.TryEmoteWithChat(uid, "Moan");
