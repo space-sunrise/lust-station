@@ -43,7 +43,7 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
         if (args.Handled)
             return;
 
-        if (TryToggleRest(ent))
+        if (TryToggleRest(ent.AsNullable()))
             args.Handled = true;
     }
 
@@ -76,21 +76,36 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
         _actions.SetToggled(ent.Comp.ToggleActionEntity, resting);
     }
 
-    public bool TryToggleRest(Entity<BorgRestActionComponent> ent)
+    /// <summary>
+    /// Пытается переключить состояние отдыха борга.
+    /// </summary>
+    public bool TryToggleRest(Entity<BorgRestActionComponent?> ent)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
         if (!CanToggleRest(ent))
             return false;
 
-        if (HasComp<BorgRestingComponent>(ent))
-            DoStandUp(ent);
-        else
-            DoRest(ent);
+        Entity<BorgRestActionComponent> borgRest = (ent.Owner, ent.Comp);
 
-        return true;
+        if (HasComp<BorgRestingComponent>(ent))
+        {
+            DoStandUp(borgRest);
+            return true;
+        }
+
+        return DoRest(borgRest);
     }
 
-    public bool CanToggleRest(Entity<BorgRestActionComponent> ent)
+    /// <summary>
+    /// Проверяет, может ли борг переключить состояние отдыха.
+    /// </summary>
+    public bool CanToggleRest(Entity<BorgRestActionComponent?> ent, bool quiet = false)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
         if (HasComp<BorgRestingComponent>(ent))
             return true;
 
@@ -103,16 +118,17 @@ public sealed class SharedBorgRestActionSystem : EntitySystem
         return _mobState.IsAlive(ent);
     }
 
-    private void DoRest(Entity<BorgRestActionComponent> ent)
+    private bool DoRest(Entity<BorgRestActionComponent> ent)
     {
         if (!_stun.TryKnockdown(ent.Owner, null, refresh: true, autoStand: false, drop: false, force: true))
         {
             ClearRestingVisual(ent);
-            return;
+            return false;
         }
 
         EnsureComp<BorgRestingComponent>(ent);
         SetRestingVisual(ent, true);
+        return true;
     }
 
     private void DoStandUp(Entity<BorgRestActionComponent> ent)
