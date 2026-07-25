@@ -11,31 +11,46 @@ public partial class InteractionsPanel
         Entity<InteractionsComponent> ent,
         ref SetInteractionPanelEnabledMessage args)
     {
-        TrySetInteractionPanelEnabled(ent, args.Enabled);
+        TrySetInteractionPanelEnabled(ent.AsNullable(), args.Enabled);
     }
 
     private void OnSetLoveDecayEnabled(
         Entity<InteractionsComponent> ent,
         ref SetLoveDecayEnabledMessage args)
     {
-        TrySetLoveDecayEnabled(ent, args.Enabled);
+        TrySetLoveDecayEnabled(ent.AsNullable(), args.Enabled);
     }
 
-    private bool TrySetInteractionPanelEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    /// <summary>
+    /// Tries to change whether the owner's interaction panel is available.
+    /// </summary>
+    public bool TrySetInteractionPanelEnabled(Entity<InteractionsComponent?> ent, bool enabled)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
         if (!CanSetInteractionPanelEnabled(ent, enabled))
             return false;
 
-        SetInteractionPanelEnabled(ent, enabled);
+        DoSetInteractionPanelEnabled((ent.Owner, ent.Comp), enabled);
         return true;
     }
 
-    private bool CanSetInteractionPanelEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    /// <summary>
+    /// Checks whether the owner's interaction-panel availability can be changed.
+    /// </summary>
+    public bool CanSetInteractionPanelEnabled(
+        Entity<InteractionsComponent?> ent,
+        bool enabled,
+        bool quiet = false)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
         return ent.Comp.Erp != enabled;
     }
 
-    private void SetInteractionPanelEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    private void DoSetInteractionPanelEnabled(Entity<InteractionsComponent> ent, bool enabled)
     {
         ent.Comp.Erp = enabled;
         Dirty(ent);
@@ -53,40 +68,51 @@ public partial class InteractionsPanel
         UpdateOwnerUIState(ent);
     }
 
-    private bool TrySetLoveDecayEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    /// <summary>
+    /// Tries to change the owner's automatic interaction-progress decay preference.
+    /// </summary>
+    public bool TrySetLoveDecayEnabled(Entity<InteractionsComponent?> ent, bool enabled)
     {
+        if (!Resolve(ent, ref ent.Comp))
+            return false;
+
         if (!CanSetLoveDecayEnabled(ent, enabled))
             return false;
 
-        SetLoveDecayEnabled(ent, enabled);
+        DoSetLoveDecayEnabled((ent.Owner, ent.Comp), enabled);
         return true;
     }
 
-    private bool CanSetLoveDecayEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    /// <summary>
+    /// Checks whether the owner's automatic interaction-progress decay preference can be changed.
+    /// </summary>
+    public bool CanSetLoveDecayEnabled(
+        Entity<InteractionsComponent?> ent,
+        bool enabled,
+        bool quiet = false)
     {
-        if (ent.Comp.LoveDecayEnabled != enabled)
-            return true;
-
-        if (ent.Comp.CurrentTarget is not { } target || target == ent.Owner)
+        if (!Resolve(ent, ref ent.Comp))
             return false;
 
-        return TryComp<InteractionsComponent>(target, out var targetInteractions) &&
-               targetInteractions.LoveDecayEnabled != enabled;
+        return ent.Comp.LoveDecayEnabled != enabled;
     }
 
-    private void SetLoveDecayEnabled(Entity<InteractionsComponent> ent, bool enabled)
+    private void DoSetLoveDecayEnabled(Entity<InteractionsComponent> ent, bool enabled)
     {
         SetLoveDecayEnabledValue(ent, enabled);
         UpdateOwnerUIState(ent);
+    }
+
+    private bool ShouldDecayLove(Entity<InteractionsComponent> ent)
+    {
+        if (ent.Comp.LoveDecayEnabled)
+            return true;
 
         if (ent.Comp.CurrentTarget is not { } target || target == ent.Owner)
-            return;
+            return true;
 
-        if (!TryComp<InteractionsComponent>(target, out var targetInteractions))
-            return;
-
-        SetLoveDecayEnabledValue((target, targetInteractions), enabled);
-        UpdateOwnerUIState((target, targetInteractions));
+        return !TryComp<InteractionsComponent>(target, out var targetInteractions) ||
+               targetInteractions.LoveDecayEnabled;
     }
 
     private void SetLoveDecayEnabledValue(Entity<InteractionsComponent> ent, bool enabled)

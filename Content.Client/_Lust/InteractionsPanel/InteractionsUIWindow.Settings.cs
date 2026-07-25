@@ -1,7 +1,6 @@
 using System.Numerics;
 using Content.Client.Stylesheets;
 using Content.Shared._Sunrise.InteractionsPanel.Data.UI;
-using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.CustomControls;
@@ -12,6 +11,7 @@ namespace Content.Client._Sunrise.InteractionsPanel;
 
 public sealed partial class InteractionsUIWindow
 {
+    // Эта часть хранит состояние настроек и диалог подтверждения отключения панели.
     private bool _panelEnabled = true;
     private bool _updatingPanelSetting;
     private bool _loveDecayEnabled = true;
@@ -63,10 +63,7 @@ public sealed partial class InteractionsUIWindow
         {
             VerticalExpand = true,
             HorizontalExpand = true,
-            PanelOverride = new StyleBoxFlat
-            {
-                BackgroundColor = BackgroundMedium
-            }
+            StyleClasses = { StyleClass.PanelDark }
         };
 
         var dialogBox = new BoxContainer
@@ -81,7 +78,7 @@ public sealed partial class InteractionsUIWindow
             Text = Loc.GetString("interaction-panel-disable-confirmation-text"),
             HorizontalExpand = true,
             HorizontalAlignment = HAlignment.Center,
-            FontColorOverride = PrimaryColor
+            StyleClasses = { StyleClass.Highlight }
         };
 
         var buttonsBox = new BoxContainer

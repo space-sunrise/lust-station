@@ -463,7 +463,7 @@ public partial class InteractionsPanel
         }
 
         // Lust edit start - возможность отключить автоматическое снижение прогресса.
-        if (comp.LoveDecayEnabled)
+        if (ShouldDecayLove((uid, comp)))
         {
             comp.LoveAmount -= LoveDecayRate * frameTime;
             if (comp.LoveAmount < 0)

@@ -7,7 +7,7 @@ namespace Content.Shared._Sunrise.InteractionsPanel.Data.Components;
 public sealed partial class InteractionsComponent
 {
     /// <summary>
-    /// Определяет, уменьшается ли прогресс взаимодействий со временем.
+    /// Whether this character allows interaction progress to decay over time.
     /// </summary>
     [ViewVariables, AutoNetworkedField]
     public bool LoveDecayEnabled = true;
