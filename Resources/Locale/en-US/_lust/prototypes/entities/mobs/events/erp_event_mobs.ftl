@@ -1,16 +1,19 @@
-ent-ERPEventMothNakedFolded = Moth of death
+ent-LustERPEventMothNakedFolded = Moth of death
     .desc = It looks friendly. Why don't you give it a hug?
-ent-ERPEventMothFolded = { ent-ERPEventMothNakedFolded }
-    .desc = { ent-ERPEventMothNakedFolded.desc }
+ent-LustERPEventMothFolded = { ent-LustERPEventMothNakedFolded }
+    .desc = { ent-LustERPEventMothNakedFolded.desc }
 
-ent-ERPEventVulpkaninNaked = Object № 7114
+ent-LustERPEventVulpkaninNaked = Object № 7114
     .desc = It looks friendly. Why don't you give it a hug?
-ent-ERPEventVulpkaninHalfNaked = { ent-ERPEventVulpkaninNaked }
-    .desc = { ent-ERPEventVulpkaninNaked.desc }
-ent-ERPEventVulpkaninDressed = { ent-ERPEventVulpkaninNaked }
-    .desc = { ent-ERPEventVulpkaninNaked.desc }
+ent-LustERPEventVulpkaninHalfNaked = { ent-LustERPEventVulpkaninNaked }
+    .desc = { ent-LustERPEventVulpkaninNaked.desc }
+ent-LustERPEventVulpkaninDressed = { ent-LustERPEventVulpkaninNaked }
+    .desc = { ent-LustERPEventVulpkaninNaked.desc }
 
-ent-ERPEventDemonEvelNaked = smiling demon
+ent-LustERPEventDemonEvelNaked = smiling demon
     .desc = It looks friendly. Why don't you give it a hug?
-ent-ERPEventDemonEvel = { ent-ERPEventDemonEvelNaked }
-    .desc = { ent-ERPEventDemonEvelNaked.desc }
+ent-LustERPEventDemonEvel = { ent-LustERPEventDemonEvelNaked }
+    .desc = { ent-LustERPEventDemonEvelNaked.desc }
+
+ent-LustERPEventUlubastik = smiling
+    .desc = Smiling creature.

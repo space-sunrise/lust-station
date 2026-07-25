@@ -1,6 +1,6 @@
 - type: entity
   name: inferior vulpkanin
-  id: BaseSimpleEventMobVulpkanin
+  id: LustBaseSimpleEventMobVulpkanin
   parent: MobBaseAncestor
   abstract: true
   components:
@@ -73,16 +73,16 @@
 
 - type: entity
   name: inferior vulpkanin
-  id: BaseSimpleEventMobVulpkaninERP
-  parent: BaseSimpleEventMobVulpkanin
+  id: LustBaseSimpleEventMobVulpkaninERP
+  parent: LustBaseSimpleEventMobVulpkanin
   abstract: true
   components:
   - type: Interactions
 
 - type: entity
   save: false
-  parent: BaseSimpleEventMobVulpkaninERP
-  id: BaseSimpleEventMobMoth
+  parent: LustBaseSimpleEventMobVulpkaninERP
+  id: LustBaseSimpleEventMobMoth
   abstract: true
   components:
   - type: Speech
@@ -101,8 +101,8 @@
 #Moth
 - type: entity
   name: moth of death
-  id: ERPEventMothNakedFolded
-  parent: BaseSimpleEventMobMoth
+  id: LustERPEventMothNakedFolded
+  parent: LustBaseSimpleEventMobMoth
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -119,8 +119,8 @@
 
 - type: entity
   name: moth of death
-  id: ERPEventMothFolded
-  parent: BaseSimpleEventMobMoth
+  id: LustERPEventMothFolded
+  parent: LustBaseSimpleEventMobMoth
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -137,9 +137,9 @@
 
 #Vulpkanin
 - type: entity
-  name: Object № 7114
-  id: ERPEventVulpkaninNaked
-  parent: BaseSimpleEventMobVulpkaninERP
+  name: object № 7114
+  id: LustERPEventVulpkaninNaked
+  parent: LustBaseSimpleEventMobVulpkaninERP
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -159,9 +159,9 @@
       visible: false
 
 - type: entity
-  name: Object № 7114
-  id: ERPEventVulpkaninHalfNaked
-  parent: ERPEventVulpkaninNaked
+  name: object № 7114
+  id: LustERPEventVulpkaninHalfNaked
+  parent: LustERPEventVulpkaninNaked
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -180,9 +180,9 @@
       visible: false
 
 - type: entity
-  name: Object № 7114
-  id: ERPEventVulpkaninDressed
-  parent: ERPEventVulpkaninNaked
+  name: object № 7114
+  id: LustERPEventVulpkaninDressed
+  parent: LustERPEventVulpkaninNaked
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -203,8 +203,8 @@
 #Smiling demon
 - type: entity
   name: smiling demon
-  id: ERPEventDemonEvelNaked
-  parent: BaseSimpleEventMobVulpkaninERP
+  id: LustERPEventDemonEvelNaked
+  parent: LustBaseSimpleEventMobVulpkaninERP
   description: It looks friendly. Why don't you give it a hug?
   components:
   - type: Sprite
@@ -225,8 +225,8 @@
 
 - type: entity
   name: smiling demon
-  id: ERPEventDemonEvel
-  parent: ERPEventDemonEvelNaked
+  id: LustERPEventDemonEvel
+  parent: LustERPEventDemonEvelNaked
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -246,10 +246,10 @@
 
 #Ulubastic
 - type: entity
-  name: ""
-  id: ERPEventUlubastik
-  parent: BaseSimpleEventMobVulpkanin
-  description: ""
+  name: smiling
+  id: LustERPEventUlubastik
+  parent: LustBaseSimpleEventMobVulpkanin
+  description: Smiling creature
   components:
   - type: Sprite
     drawdepth: Mobs
