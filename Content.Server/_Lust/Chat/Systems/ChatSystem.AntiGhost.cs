@@ -1,8 +1,10 @@
 using Content.Server.Administration.Logs;
+using Content.Shared.CCVar;
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.Ghost;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Players;
 using Content.Shared.Players.RateLimiting;
 using Robust.Shared.Console;
 using Robust.Shared.Network;
@@ -16,27 +18,61 @@ public sealed partial class ChatSystem
 {
     private static readonly Color AntiGhostColor = Color.FromHex("#F4C1C1");
 
-    public void TrySendAntiGhostMessage(
+    /// <summary>
+    /// Проверяет, может ли игрок отправить сообщение в антигост-чат.
+    /// </summary>
+    /// <param name="quiet">Не выводить игроку причину отказа.</param>
+    public bool CanSendAntiGhostMessage(
+        EntityUid source,
+        string message,
+        IConsoleShell shell,
+        ICommonSession player,
+        bool quiet = false)
+    {
+        if (HasComp<GhostComponent>(source) ||
+            player.AttachedEntity != source)
+        {
+            return false;
+        }
+
+        if (!quiet)
+            return CanSendInGame(message, shell, player);
+
+        return player.ContentData()?.Mind != null &&
+               player.AttachedEntity is { Valid: true } &&
+               message.Length <= _configurationManager.GetCVar(CCVars.ChatMaxMessageLength);
+    }
+
+    /// <summary>
+    /// Пытается отправить сообщение в антигост-чат.
+    /// </summary>
+    /// <returns>Возвращает <see langword="true"/>, если сообщение было отправлено.</returns>
+    public bool TrySendAntiGhostMessage(
         EntityUid source,
         string message,
         IConsoleShell shell,
         ICommonSession player)
     {
-        if (HasComp<GhostComponent>(source) ||
-            !CanSendInGame(message, shell, player) ||
-            _chatManager.HandleRateLimit(player) != RateLimitStatus.Allowed ||
-            player.AttachedEntity != source)
-        {
-            return;
-        }
+        if (!CanSendAntiGhostMessage(source, message, shell, player))
+            return false;
+
+        // HandleRateLimit изменяет состояние лимитера, поэтому эта проверка не входит в Can-метод.
+        if (_chatManager.HandleRateLimit(player) != RateLimitStatus.Allowed)
+            return false;
 
         if (!TryProcessSunriseChatMessage(source, ref message, oocChatType: InGameOOCChatType.Looc))
-            return;
+            return false;
 
         message = SanitizeInGameOOCMessage(message);
         if (string.IsNullOrEmpty(message))
-            return;
+            return false;
 
+        SendAntiGhostMessage(source, message, player);
+        return true;
+    }
+
+    private void SendAntiGhostMessage(EntityUid source, string message, ICommonSession player)
+    {
         var name = FormattedMessage.EscapeText(Identity.Name(source, EntityManager));
         var localizedMessage = Loc.GetString("chat-manager-entity-antighost-wrap-message",
             ("entityName", name),
