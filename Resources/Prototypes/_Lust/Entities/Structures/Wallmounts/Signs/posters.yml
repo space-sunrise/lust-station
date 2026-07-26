@@ -13,7 +13,7 @@
   parent: PosterBase
   id: PosterLegitQilluTGC
   name: Qillu tactical game cards
-  description: An advertisement for Qillu's TCG cards: BUY MORE CARDS.
+  description: "An advertisement for Qillu's TCG cards: BUY MORE CARDS."
   components:
     - type: Sprite
       sprite: _Lust/Structures/Wallmounts/posters.rsi
@@ -22,7 +22,7 @@
 - type: entity
   parent: PosterBase
   id: PosterLegitQilluVacation
-  name: Qillu corporate perks: vacation
+  name: "Qillu corporate perks: vacation"
   description: This informational poster provides information on some of the prizes available via the Qillu Corporate Perks program, including a two-week vacation for two on the resort world Idyllus.
   components:
     - type: Sprite
