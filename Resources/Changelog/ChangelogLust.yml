@@ -1627,3 +1627,12 @@
   id: 298
   time: '2026-07-26T05:00:53.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/561
+- author: Fooksy2304
+  changes:
+  - message: "\u041A\u0441\u0435\u043D\u043E\u043C\u043E\u0440\u0444\u044B \u043F\u043E\
+      \u043B\u0443\u0447\u0438\u043B\u0438 \u043F\u043E\u043B \"\u0444\u0443\u0442\
+      \u0430\""
+    type: Fix
+  id: 299
+  time: '2026-07-26T05:35:04.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/563
