@@ -1089,6 +1089,20 @@ SignNanotrasen3: SignQillu2
 SignNanotrasen4: SignQillu3
 SignNanotrasen5: null
 toyhandcuff: ToyHandcuffs
+BedsheetCaptain: BedsheetCaptainQillu
+BedsheetCentcom: BedsheetCentcomQillu
+BedsheetNT: BedsheetNTQillu
+DoubleBedsheetCaptain: DoubleBedsheetCaptainQillu
+DoubleBedsheetCentcom: DoubleBedsheetCentcomQillu
+DoubleBedsheetNT: DoubleBedsheetQillu
+TowelColorNT: TowelColorQillu
+ClothingNeckNanoTrasenPin: ClothingNeckQilluPin
+BannerNanotrasen: BannerQillu
+AltarNanotrasen: AltarQillu
+CentcomPDA: CentcomPDAQillu
+CentcomOperatorPDA: CentcomOperatorPDAQillu
+CentcomIDCard: CentcomIDCardQillu
+CentcomOperatorIDCard: CentcomOperatorIDCardQillu
 VendingMachineCentDrobe: VendingMachineCentDrobeQillu
 PenCentcom: PenCentcomQillu
 BoxFolderCentCom: BoxFolderCentComQillu
@@ -1099,5 +1113,7 @@ PlushieDrasusLeverian: PlushieOne
 PlushieRaneliToll: PlushieOne
 PlushieLilith: PlushieOne
 PlushieAnameGermanikum: PlushieLizardJobChiefmedicalofficer
+ClothingUniformJumpsuitCentcomFormal: ClothingUniformJumpsuitCentcomFormalQillu
+ClothingUniformJumpskirtCentcomFormalDress: ClothingUniformJumpskirtCentcomFormalDressQillu
 
 # Lust-End
