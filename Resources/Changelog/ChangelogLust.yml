@@ -1654,3 +1654,20 @@
   id: 300
   time: '2026-07-26T06:15:34.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/555
+- author: Fooksy2304
+  changes:
+  - message: "\u043F\u043B\u044E\u0448\u0435\u0432\u0430\u044F \u041C\u0430\u043A\u0441\
+      \u0430 \u0441\u0442\u0430\u043B\u0430 \u043C\u0443\u0436\u0438\u043A\u043E\u043C"
+    type: Add
+  id: 301
+  time: '2026-07-27T02:07:50.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/554
+- author: Orvex07, Gardsnake
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D \u043B\u043E\u0433\u043E\
+      \u0442\u0438\u043F Qillu \u043D\u0430 \u0431\u043E\u043B\u044C\u0448\u0438\u043D\
+      \u0441\u0442\u0432\u043E \u0432\u0435\u0449\u0435\u0439"
+    type: Add
+  id: 302
+  time: '2026-07-27T02:10:27.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/525
