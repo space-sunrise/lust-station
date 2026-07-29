@@ -61,13 +61,6 @@
                                                    ToolTip="{Loc 'humanoid-profile-editor-guidebook-button-tooltip'}"/>
                                     <OptionButton Name="SpeciesButton" HorizontalAlignment="Right" />
                                 </BoxContainer>
-                                <!-- Body Type -->
-                                <BoxContainer HorizontalExpand="True">
-                                    <Label Text="Тип тела"/>
-                                    <Control HorizontalExpand="True"/>
-                                    <OptionButton Name="CBodyTypesButton" HorizontalAlignment="Right" />
-                                </BoxContainer>
-                                <!-- Body Type -->
                                 <!-- Age -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label Text="{Loc 'humanoid-profile-editor-age-label'}" />
@@ -131,6 +124,22 @@
                             </BoxContainer>
                             <!-- SUNRISE - Species Size -->
                             <BoxContainer Margin="10" HorizontalExpand="True" Orientation="Vertical">
+                                <!-- Lust added start - параметры тела в блоке настройки роста -->
+                                <BoxContainer Name="BodyCustomizationContainer" Orientation="Vertical" HorizontalExpand="True">
+                                    <BoxContainer HorizontalExpand="True">
+                                        <Label MinWidth="180" Name="BodyTypeDescribeLabel" Margin="5 0 10 0" />
+                                        <Slider Name="BodyTypeSlider" MinValue="0" Value="0" MaxValue="2" Rounded="True" RoundingDecimals="0" HorizontalExpand="True" Margin="10 0 5 0" />
+                                    </BoxContainer>
+                                    <BoxContainer HorizontalExpand="True">
+                                        <Label MinWidth="180" Name="BreastSizeDescribeLabel" Margin="5 0 10 0" />
+                                        <Slider Name="BreastSizeSlider" MinValue="0" Value="0" MaxValue="7" Rounded="True" RoundingDecimals="0" HorizontalExpand="True" Margin="10 0 5 0" />
+                                    </BoxContainer>
+                                    <BoxContainer HorizontalExpand="True">
+                                        <Label MinWidth="180" Name="ButtSizeDescribeLabel" Margin="5 0 10 0" />
+                                        <Slider Name="ButtSizeSlider" MinValue="0" Value="1" MaxValue="2" Rounded="True" RoundingDecimals="0" HorizontalExpand="True" Margin="10 0 5 0" />
+                                    </BoxContainer>
+                                </BoxContainer>
+                                <!-- Lust added end -->
                                 <BoxContainer HorizontalExpand="True">
                                     <Label SetWidth="150" Name="HeightDescribeLabel" Margin="5 0 10 0" />
                                     <Slider Name="HeightSlider" MinValue="0.5" Value="1" MaxValue="1.5" HorizontalExpand="True" Margin="10 0 5 0" />

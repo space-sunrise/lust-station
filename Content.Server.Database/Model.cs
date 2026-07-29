@@ -424,6 +424,11 @@ namespace Content.Server.Database
 
         public string BodyType { get; set; } = null!;
 
+        // Lust added start - независимые параметры тела
+        public int BreastSize { get; set; }
+        public int ButtSize { get; set; } = 1;
+        // Lust added end
+
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;
         public string Voice { get; set; } = null!; // Sunrise-TTS

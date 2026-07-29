@@ -108,6 +108,14 @@ public sealed partial class HumanoidAppearanceComponent : Component
     [DataField, AutoNetworkedField]
     public ProtoId<BodyTypePrototype> BodyType { get; set; } = SharedHumanoidAppearanceSystem.DefaultBodyType;
 
+    // Lust added start - выбранные независимые параметры тела
+    [DataField, AutoNetworkedField]
+    public BreastSize BreastSize { get; set; } = BreastSize.AA;
+
+    [DataField, AutoNetworkedField]
+    public ButtSize ButtSize { get; set; } = ButtSize.Standard;
+    // Lust added end
+
     /// <summary>
     ///     The displacement maps that will be applied to specific layers of the humanoid.
     /// </summary>

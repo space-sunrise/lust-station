@@ -1029,6 +1029,14 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("body_type");
 
+                    b.Property<int>("BreastSize")
+                        .HasColumnType("integer")
+                        .HasColumnName("breast_size");
+
+                    b.Property<int>("ButtSize")
+                        .HasColumnType("integer")
+                        .HasColumnName("butt_size");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("text")
