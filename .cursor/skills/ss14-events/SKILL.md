@@ -1,11 +1,11 @@
 ---
 name: ss14-events
-description: Руководство по использованию событий в Space Station 14 — строгая таксономия, подписки, приоритизация ссылочных (by-ref) событий и паттерны сетевого взаимодействия.
+description: A guide to using events in Space Station 14 - strict taxonomy, subscriptions, by-ref event prioritization, and networking patterns.
 ---
 
 # Cursor Bridge
 
-Canonical bridge skill file:
-../../../.claude/skills/ss14-events/SKILL.md.
+Canonical source skill file:
+../../../.agents/skills/ss14-events/SKILL.md.
 
-Use that file as the entrypoint and follow its source mapping.
+Use that file as the entrypoint and load resources from the same source skill directory.

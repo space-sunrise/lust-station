@@ -2,7 +2,7 @@ ent-ClothingBackpackMessengerPassenger = сумка-мессенджер пас�
     .desc = Модная сумка-мессенджер в приятных оттенках.
 ent-ClothingBackpackMessengerPilot = сумка-мессенджер пилота
     .desc = Прочная сумка-мессенджер для деталей шаттла.
-ent-ClothingBackpackMessengerMercenary = сумка-мессенджер наемника
+ent-ClothingBackpackMessengerMercenary = сумка-мессенджер наёмника
     .desc = Прочная сумка-мессенджер для военных преступлений.
 ent-ClothingBackpackMessengerPrivateSecurity = сумка-мессенджер частной охраны
     .desc = Прочная сумка-мессенджер для совершения военных преступлений на зарплате.
@@ -15,5 +15,5 @@ ent-ClothingBackpackMessengerArcadia = сумка-мессенджер Арка�
 ent-ClothingBackpackMessengerPirate = пиратская сумка-мессенджер
     .desc = Прочная сумка-мессенджер для военных преступлений. Яррр.
 
-ent-ClothingBackpackMessengerPirateBundleSKM24Scrap = набор SKM-24 (хлам)
-    .desc = Содержит самую дешёвую штурмовую винтовку.
+ent-ClothingBackpackMessengerMercenaryBundleARG = набор ARG
+    .desc = Содержит стандартную штурмовую винтовку.

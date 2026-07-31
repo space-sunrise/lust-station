@@ -3,6 +3,8 @@
   id: BaseMobTajaran
   abstract: true
   components:
+  - type: MessyDrinker
+    spillChance: 0.2
   - type: Interactions
   - type: HumanoidAppearance
     species: Tajaran
@@ -10,7 +12,6 @@
     - Snout
     - HeadTop
     - HeadSide
-    - Tail
   - type: Body
     prototype: Tajaran
     requiredLegs: 2
@@ -58,6 +59,7 @@
       Male: MaleTajaran
       Female: FemaleTajaran
       Unsexed: MaleTajaran
+      Futanari: FemaleTajaran # Lust-Edit
   - type: Temperature
     currentTemperature: 310.15
     specificHeat: 46
@@ -154,9 +156,8 @@
             sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
             state: hardsuit
   - type: FootprintEmitter
-  - type: Carriable
-  - type: ToggleableNightVision
-    effect: EffectNightVisioSpecies
+    leftBareFootState: [ footprint-left-bare-cat ]
+    rightBareFootState: [ footprint-right-bare-cat ]
 
 - type: entity
   save: false

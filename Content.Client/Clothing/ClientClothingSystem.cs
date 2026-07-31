@@ -332,7 +332,7 @@ public sealed class ClientClothingSystem : ClothingSystem
                     }
 
                     break;
-                // Lust-start
+                // Lust-Start
                 case Sex.Futanari:
 
                     displacementData = inventory.FemaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
@@ -345,7 +345,7 @@ public sealed class ClientClothingSystem : ClothingSystem
                     }
 
                     break;
-                // Lust-end
+                // Lust-End
             }
         }
 

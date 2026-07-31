@@ -1,13 +1,13 @@
 ---
 name: ss14-eventbus
-description: Архитектурный гайд по EventBus в Space Station 14 — строгая таксономия событий, хранение подписок, логика диспетчеризации и внутренние механизмы оптимизации.
+description: Architectural guide to EventBus in Space Station 14 - strict event taxonomy, subscription storage, dispatch logic and internal optimization mechanisms.
 metadata:
-  source_skill: "../../../.agent/skills/ss14-eventbus/SKILL.md"
+  source_skill: "../../../.agents/skills/ss14-eventbus/SKILL.md"
 ---
 
 # GitHub Copilot Bridge
 
 Canonical source skill file:
-../../../.agent/skills/ss14-eventbus/SKILL.md.
+../../../.agents/skills/ss14-eventbus/SKILL.md.
 
 Use that file as the entrypoint and load resources from the same source skill directory.
