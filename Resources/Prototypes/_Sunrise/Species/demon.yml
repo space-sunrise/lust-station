@@ -14,7 +14,7 @@
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human # SUNRISE-TODO: Спрайт жопы аркан
-  sexes: [Male, Female, Futanari] # Lust-edit
+  sexes: [Male, Female, Futanari] # Lust-Edit
 
 - type: bodyType
   id: DemonNormal
@@ -44,7 +44,7 @@
   name: body-slim
   sexRestrictions:
   - Male
-  - Futanari # Lust-edit
+  - Futanari # Lust-Edit
   sprites:
     Head: MobDemonSlimHead
     Hair: MobHumanoidAnyMarking

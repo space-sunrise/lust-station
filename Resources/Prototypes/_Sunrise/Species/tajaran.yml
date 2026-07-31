@@ -21,7 +21,7 @@
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human # SUNRISE-TODO: Спрайт жопы таяров
-  sexes: [Male, Female, Futanari] # Lust-edit
+  sexes: [Male, Female, Futanari] # Lust-Edit
 
 - type: bodyType
   id: TajaranNormal

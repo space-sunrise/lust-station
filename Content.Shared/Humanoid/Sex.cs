@@ -11,7 +11,7 @@ namespace Content.Shared.Humanoid
         Male,
         Female,
         Unsexed,
-        Futanari, // Lust-edit
+        Futanari, // Lust-Edit
     }
 
     /// <summary>

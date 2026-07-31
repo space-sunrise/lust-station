@@ -1,13 +1,13 @@
 ---
 name: ss14-virtual-controller-api
-description: Дает практический каталог API вокруг VirtualController в Space Station 14: выбор хуков и order, physics mutators, relay/movement/climb сценарии, prediction-ограничения и безопасные паттерны применения.
+description: Gives a practical catalog of APIs around the VirtualController in Space Station 14: selection of hooks and order, physics mutators, relay/movement/climb scripts, prediction constraints and safe application patterns.
 metadata:
-  source_skill: "../../../.agent/skills/ss14-virtual-controller-api/SKILL.md"
+  source_skill: "../../../.agents/skills/ss14-virtual-controller-api/SKILL.md"
 ---
 
 # GitHub Copilot Bridge
 
 Canonical source skill file:
-../../../.agent/skills/ss14-virtual-controller-api/SKILL.md.
+../../../.agents/skills/ss14-virtual-controller-api/SKILL.md.
 
 Use that file as the entrypoint and load resources from the same source skill directory.
