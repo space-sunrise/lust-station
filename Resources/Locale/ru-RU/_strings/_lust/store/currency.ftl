@@ -1,1 +1,1 @@
-store-currency-display-lust-coin = Ласт Коин
+store-currency-display-lust-coin = Ластик

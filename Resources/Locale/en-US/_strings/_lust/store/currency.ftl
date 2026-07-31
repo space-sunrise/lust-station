@@ -1,1 +1,1 @@
-store-currency-display-lust-coin = Lust Coin
+store-currency-display-lust-coin = Lastic
