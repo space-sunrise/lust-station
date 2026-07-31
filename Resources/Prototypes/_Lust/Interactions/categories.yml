@@ -45,6 +45,11 @@
 - type: interactionCategory
   id: Thighs
   name: lust-interaction-category-Thighs
+
+- type: interactionCategory
+  id: Wings
+  name: lust-interaction-category-Wings
+
 - type: interactionCategory
   id: Dildos
   name: lust-interaction-category-Dildos
@@ -56,3 +61,11 @@
 - type: interactionCategory
   id: Legs
   name: lust-interaction-category-Legs
+
+- type: interactionCategory
+  id: Cage
+  name: lust-interaction-category-Cage
+
+- type: interactionCategory
+  id: Belt
+  name: lust-interaction-category-Belt

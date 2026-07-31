@@ -1,5 +1,11 @@
 ent-ClothingBackpackDuffelSyndicateFilledBauer127 = Набор "Элитный Снайпер"
     .desc = "Ты у меня на прицеле: Содержит Bauer SR-127 с тремя магазинами, коробкой 15×115 антиматериальных, набором спецбоеприпасов, а также уникальные термальные очки"
+ent-ClothingBackpackDuffelSyndicateX4tBundle = набор X-4 Синдиката
+    .desc = Содержит большое количество зарядов X-4.
+ent-ClothingBackpackDuffelSyndicateAmmoIncendiaryFilled = набор боеприпасов зажигательные
+    .desc = Перезаряжаю! Содержит коробку зажигательных магазинов для C-20r, коробку барабанов зажигательных для Бульдога и коробку зажигательных патронов для L6 SAW. а так же аптечка против ожогов.
+ent-ClothingBackpackDuffelSyndicateAmmoUraniumFilled = набор боеприпасов урановые
+    .desc = Перезаряжаю! Содержит коробку урановых магазинов для C-20r, коробку барабанов урановые для Бульдога и коробку урановых патронов для L6 SAW. а так же аптечка против радиации.
 ent-ClothingBackpackDuffelWeaponSubMachineGunMP5Filled = Набор MP5
     .desc = Mp5 c 2мя магазинами.
 ent-ClothingBackpackDuffelWeaponSubMachineGunMP7Filled = Набор MP7
@@ -67,3 +73,5 @@ ent-ClothingBackpackDuffelWeaponRifleAsh12 = Набор АШ-12
 
 ent-ClothingBackpackDuffelMilitaryBundlePirateEva = пиратский EVA набор
     .desc = Содержит старый пиратский EVA костюм.
+ent-ClothingBackpackDuffelMilitaryBundleScaf = набор Scaf
+    .desc = Содержит старый боевой EVA костюм.
