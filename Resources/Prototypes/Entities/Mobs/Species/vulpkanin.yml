@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   abstract: true
   save: false
   parent: [BaseMobSpeciesOrganic]
@@ -6,8 +6,6 @@
   name: Urist McBark
   components:
   - type: Interactions
-  - type: ToggleableNightVision
-    effect: EffectNightVisioSpecies
   - type: Hunger
   - type: Thirst
   - type: MessyDrinker
@@ -33,6 +31,7 @@
       Male: MaleVulpkanin
       Female: FemaleVulpkanin
       Unsexed: MaleVulpkanin
+      Futanari: FemaleVulpkanin # Lust-Edit
   - type: Damageable
     damageModifierSet: Vulpkanin
   - type: MeleeWeapon
@@ -55,6 +54,7 @@
       types:
         Heat: 2.5 # Per second, scales with temperature & other constants
   # Sunrise-Start
+  - type: VulpaAccent
   - type: FlashModifier
     modifier: 1.4
   # Sunrise-End
@@ -87,16 +87,21 @@
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: ["enum.HumanoidVisualLayers.LFoot"]
     - map: ["enum.HumanoidVisualLayers.RFoot"]
+    - map: ["lockable_under"] # Lust-Edit
+    - map: ["lockable_chest"] # Lust-Edit
     - map: ["bra"]
     - map: ["pants"]
     - map: ["socks"]
+    - map: ["lockable_underpants"] # Lust-Edit
     - map: ["jumpsuit"]
     - map: ["enum.HumanoidVisualLayers.LHand"]
     - map: ["enum.HumanoidVisualLayers.RHand"]
     - map: [ "gloves" ]
     - map: [ "shoes" ]
     - map: [ "ears" ]
+    - map: [ "lockable_normal" ] # Lust-Edit
     - map: [ "outerClothing" ]
+    - map: [ "lockable_over" ] # Lust-Edit
     - map: [ "eyes" ]
     - map: [ "belt" ]
     - map: [ "id" ]
@@ -143,8 +148,9 @@
             sprite: Mobs/Species/Vulpkanin/displacement.rsi
             state: hair
   # Sunrise-start
-  - type: Carriable
   - type: FootprintEmitter
+    leftBareFootState: [ footprint-left-bare-cat ]
+    rightBareFootState: [ footprint-right-bare-cat ]
   # Sunrise-end
   - type: Inventory
 # SUNRISE EDIT

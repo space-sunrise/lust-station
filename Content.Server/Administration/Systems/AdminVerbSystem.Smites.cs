@@ -36,6 +36,7 @@ using Content.Shared.Damage.Prototypes;
 using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Shared.Electrocution;
+using Content.Shared.Gibbing;
 using Content.Shared.Gravity;
 using Content.Shared.FixedPoint;
 using Content.Shared.Interaction.Components;
@@ -103,6 +104,7 @@ public sealed partial class AdminVerbSystem
     [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
     [Dependency] private readonly SuperBonkSystem _superBonkSystem = default!;
     [Dependency] private readonly SlipperySystem _slipperySystem = default!;
+    [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly DamageableSystem _damageable = default!;
     [Dependency] private readonly IAdminLogManager _adminLogManager = default!;
 
@@ -143,7 +145,7 @@ public sealed partial class AdminVerbSystem
                         4, 1, 2, args.Target, maxTileBreak: 0), // it gibs, damage doesn't need to be high.
                     CancellationToken.None);
 
-                _bodySystem.GibBody(args.Target);
+                _gibbing.Gib(args.Target);
             },
             Impact = LogImpact.Extreme,
             Message = string.Join(": ", explodeName, Loc.GetString("admin-smite-explode-description")) // we do this so the description tells admins the Text to run it via console.
@@ -633,12 +635,12 @@ public sealed partial class AdminVerbSystem
             };
             args.Verbs.Add(nyanify);
 
-            var killSignName = Loc.GetString("admin-smite-fuck-sign-name").ToLowerInvariant(); // Lust-edit
+            var killSignName = Loc.GetString("admin-smite-fuck-sign-name").ToLowerInvariant(); // Lust-Edit
             Verb killSign = new()
             {
                 Text = killSignName,
                 Category = VerbCategory.Smite,
-                Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fuck_sign.rsi"), "icon"), // Lust-edit
+                Icon = new SpriteSpecifier.Rsi(new("_Lust/Objects/Misc/fuck_sign.rsi"), "icon"), // Lust-Edit
                 Act = () =>
                 {
                     EnsureComp<KillSignComponent>(args.Target, out var comp);
@@ -646,7 +648,7 @@ public sealed partial class AdminVerbSystem
                     Dirty(args.Target, comp);
                 },
                 Impact = LogImpact.Extreme,
-                Message = string.Join(": ", killSignName, Loc.GetString("admin-smite-fuck-sign-description")) // Lust-edit
+                Message = string.Join(": ", killSignName, Loc.GetString("admin-smite-fuck-sign-description")) // Lust-Edit
             };
             args.Verbs.Add(killSign);
 

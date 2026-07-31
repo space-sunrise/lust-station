@@ -1,13 +1,13 @@
 ---
 name: ss14-transform-system-api
-description: Полный справочник API SharedTransformSystem в Space Station 14: разбор всех публичных семейств методов, выбор перегрузок, ограничения и практические паттерны применения на сервере и клиенте. Используй, когда нужно точно выбрать метод TransformSystem и избежать ошибок пространства координат.
+description: A complete reference book for the SharedTransformSystem API in Space Station 14: analysis of all public families of methods, selection of overloads, restrictions and practical application patterns on the server and client. Use when you need to accurately select the TransformSystem method and avoid coordinate space errors.
 metadata:
-  source_skill: "../../../.agent/skills/ss14-transform-system-api/SKILL.md"
+  source_skill: "../../../.agents/skills/ss14-transform-system-api/SKILL.md"
 ---
 
 # GitHub Copilot Bridge
 
 Canonical source skill file:
-../../../.agent/skills/ss14-transform-system-api/SKILL.md.
+../../../.agents/skills/ss14-transform-system-api/SKILL.md.
 
 Use that file as the entrypoint and load resources from the same source skill directory.
