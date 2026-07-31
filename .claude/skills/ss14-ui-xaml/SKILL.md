@@ -1,11 +1,11 @@
 ---
 name: ss14-ui-xaml
-description: Практический гайд по XAML-интерфейсам SS14: структура окон, GenerateTypedNameReferences, загрузка через RobustXamlLoader, layout-контейнеры, локализация и стиль-классы. Используй при создании, рефакторинге и визуальной полировке UI-окон.
+description: A practical guide to SS14 XAML interfaces: window structure, GenerateTypedNameReferences, loading via RobustXamlLoader, layout containers, localization and style classes. Use it when creating, refactoring and visually polishing UI windows.
 ---
 
 # Claude Bridge
 
-Canonical bridge skill file:
+Canonical source skill file:
 ../../../.agents/skills/ss14-ui-xaml/SKILL.md.
 
-Use that file as the entrypoint and follow its source mapping.
+Use that file as the entrypoint and load resources from the same source skill directory.

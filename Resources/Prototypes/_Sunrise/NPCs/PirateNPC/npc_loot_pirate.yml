@@ -1,10 +1,26 @@
-﻿#region BASE
+#region BASE
 
 - type: entity
   id: NpcLootBase
   description: Loot boxes? Here?
   categories: [ HideSpawnMenu ]
   suffix: NPC Loot
+
+- type: entity
+  abstract: true
+  id: BaseSunriseNpcLootEquipSound
+  components:
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  abstract: true
+  id: BaseSunriseNpcLootClosetOpenSound
+  components:
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Effects/closetopen.ogg
 
 ## BACK - for gear and cash
 - type: entity
@@ -99,6 +115,8 @@
   - type: Sprite
     sprite: Clothing/Back/Duffels/leather.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Duffels/leather.rsi
 
 - type: entity
   parent: MercenaryDuffelGiftBox
@@ -110,6 +128,8 @@
   - type: Sprite
     sprite: Clothing/Back/Duffels/syndicate.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Duffels/syndicate.rsi
 
 - type: entity
   parent: MercenaryDuffelGiftBox
@@ -121,6 +141,8 @@
   - type: Sprite
     sprite: Clothing/Back/Duffels/salvage.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Duffels/salvage.rsi
 
 ## BELT - for ammo and mags
 - type: entity
@@ -150,6 +172,8 @@
   - type: Sprite
     sprite: Clothing/Belt/militarywebbing.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Belt/militarywebbing.rsi
 
 - type: entity
   parent: MercenaryWebbingBox
@@ -161,6 +185,8 @@
   - type: Sprite
     sprite: Clothing/Belt/assault.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Belt/assault.rsi
 
 - type: entity
   parent: [NpcLootBase, ClothingBeltSyndieWebbing]
@@ -172,6 +198,8 @@
   - type: Sprite
     sprite: _Sunrise/Clothing/Belt/syndie_rps.rsi
     state: icon
+  - type: Clothing
+    sprite: _Sunrise/Clothing/Belt/syndie_rps.rsi
 
 - type: entity
   parent: MercenaryWebbingBox
@@ -183,6 +211,8 @@
   - type: Sprite
     sprite: Clothing/Belt/salvagewebbing.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
   parent: MercenaryWebbingBox
@@ -194,6 +224,8 @@
   - type: Sprite
     sprite: Clothing/Belt/bandolier.rsi
     state: icon
+  - type: Clothing
+    sprite: Clothing/Belt/bandolier.rsi
 
 - type: entity
   parent: MercenaryWebbingBox
@@ -205,6 +237,8 @@
     sprite: Clothing/Belt/waistbag_leather.rsi
     layers:
     - state: icon
+  - type: Clothing
+    sprite: Clothing/Belt/waistbag_leather.rsi
   - type: Item
     size: Huge
 
@@ -254,6 +288,72 @@
     - AmpulaDexa
     - AmpulaHyro
     chance: 0.25
+    offset: 0.2
+    deleteSpawnerAfterSpawn: true
+
+# Grenade pools (new grenade-action NPCs)
+- type: entity
+  id: PirateGrenadeSpawnerT1FB
+  name: pirate grenade spawner t1 firebomb
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - ImprovisedGrenadeFirebomb
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: true
+
+- type: entity
+  id: PirateGrenadeSpawnerT1Veteran
+  name: pirate grenade spawner t1 veteran
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - ImprovisedGrenadeFirebomb
+    - ImprovisedGrenadeGlass
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: true
+
+- type: entity
+  id: PirateGrenadeSpawnerT2Veteran
+  name: pirate grenade spawner t2 veteran
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - CannonBallFuze
+    - ImprovisedGrenadeFirebomb
+    - ImprovisedGrenadeGlass
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: true
+
+- type: entity
+  id: PirateGrenadeSpawnerT3
+  name: pirate grenade spawner t3 grenadier set
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - GrenadeStinger
+    - GrenadeIncendiary
+    - GrenadeShrapnel
+    chance: 1
+    offset: 0.2
+    deleteSpawnerAfterSpawn: true
+
+- type: entity
+  id: PirateGrenadeSpawnerSmoke
+  name: pirate grenade spawner smoke
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - SmokeGrenade
+    chance: 1
     offset: 0.2
     deleteSpawnerAfterSpawn: true
 
@@ -561,7 +661,7 @@
       orGroup: KnuckleDuster
 
 - type: entity
-  parent: PiratePouchGiftBox
+  parent: [PiratePouchGiftBox, BaseSunriseNpcLootEquipSound]
   id: PiratePouchTier1FlareGun
   categories: [ HideSpawnMenu ]
   components:
@@ -611,11 +711,9 @@
       prob: 0.15
       amount: 3
       orGroup: ShotgunAmmoPool
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PiratePouchGiftBox
+  parent: [PiratePouchGiftBox, BaseSunriseNpcLootEquipSound]
   id: PiratePouchTier1FireBomb
   categories: [ HideSpawnMenu ]
   components:
@@ -648,12 +746,10 @@
       prob: 0.05
       amount: 3
       orGroup: ShotgunAmmoPool
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 - type: entity
-  parent: WaistbagBox
+  parent: [WaistbagBox, BaseSunriseNpcLootEquipSound]
   id: WaistbagBoxTier1Grenade
   categories: [ HideSpawnMenu ]
   components:
@@ -707,12 +803,10 @@
     - id: ImprovisedGrenadeGlass
       prob: 0.15
       orGroup: GrenadePool
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 # MERCENARY NPC LOOT
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier1Flintlock
   categories: [ HideSpawnMenu ]
   components:
@@ -745,11 +839,9 @@
     - id: PirateCashSpawner03
     - id: LootSpawnerMedicalMinor
       prob: 0.7
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier1Pistol
   categories: [ HideSpawnMenu ]
   components:
@@ -784,12 +876,10 @@
     - id: PirateCashSpawner03
     - id: LootSpawnerMedicalMinor
       prob: 0.7
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 - type: entity
-  parent: DuffelSyndicateMedicalGiftBox
+  parent: [DuffelSyndicateMedicalGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier1Medic
   categories: [ HideSpawnMenu ]
   components:
@@ -831,11 +921,9 @@
       prob: 0.8
     - id: NukeOpsMedkitBruteSpawner
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: DuffelSyndicateMedicalGiftBox
+  parent: [DuffelSyndicateMedicalGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier2Medic
   categories: [ HideSpawnMenu ]
   components:
@@ -872,11 +960,9 @@
       prob: 0.8
     - id: NukeOpsMedkitSpawner
       prob: 0.55
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: DuffelSyndicateMedicalGiftBox
+  parent: [DuffelSyndicateMedicalGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier3Medic
   categories: [ HideSpawnMenu ]
   components:
@@ -914,11 +1000,9 @@
       prob: 0.5
     - id: Doubloon5
       prob: 0.1
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryWebbingBox
+  parent: [SovietLightWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltWebbingMercenaryTier1Pistol
   categories: [ HideSpawnMenu ]
   components:
@@ -933,11 +1017,9 @@
       prob: 0.4
     - id: LootSpawnerMedicalMinor
       prob: 0.5
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryWebbingBox
+  parent: [MercenaryWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltUtilityPirateT1
   name: utility belt bundle
   categories: [ HideSpawnMenu ]
@@ -961,6 +1043,10 @@
       prob: 0.5
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT1FB
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT1FB
+      prob: 0.15
     - id: Doubloon1
       prob: 0.05
     - id: PirateCashSpawner01
@@ -973,11 +1059,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SalvageWebbingBox
+  parent: [SalvageWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSalvageWebbingTier1Flintlock
   categories: [ HideSpawnMenu ]
   components:
@@ -1009,11 +1093,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SalvageWebbingBox
+  parent: [SalvageWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingSalvageWebbingTier1Mosin
   categories: [ HideSpawnMenu ]
   components:
@@ -1047,11 +1129,9 @@
     - id: PirateCashSpawner03
     - id: LootSpawnerMedicalMinor
       prob: 0.7
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: ScrapperDuffelGiftBox
+  parent: [ScrapperDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperMeleeT1
   categories: [ HideSpawnMenu ]
   components:
@@ -1075,11 +1155,9 @@
       prob: 0.4
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.2
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: ScrapperDuffelGiftBox
+  parent: [ScrapperDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperRangedT1
   categories: [ HideSpawnMenu ]
   components:
@@ -1104,9 +1182,6 @@
       prob: 0.15
     - id: PKAUpgradeFireRate
       prob: 0.15
-    - id: ClothingNeckCloakPirateCap
-      prob: 0.75
-      orGroup: SalvHardPool
     - id: ClothingHeadHelmetPirate
       prob: 0.15
       orGroup: SalvHardPool
@@ -1117,13 +1192,22 @@
       prob: 0.15
       orGroup: SalvHardPool
     - id: ClothingOuterEVASuitPirate
-      prob: 0.05
+      prob: 0.2
+      orGroup: SalvHardPool
+    - id: ClothingOuterArmorBasic
+      prob: 0.2
       orGroup: SalvHardPool
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.01
       orGroup: SalvHardPool
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.25
+      orGroup: SalvHardPool
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.01
+      orGroup: SalvHardPool
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: SalvHardPool
     # Items
     - id: LootSpawnerMaterialsSurplus
@@ -1133,11 +1217,9 @@
       prob: 0.4
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.2
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BeltAssaultBox
+  parent: [BeltAssaultBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAssaultT1LCG
   categories: [ HideSpawnMenu ]
   components:
@@ -1147,13 +1229,11 @@
     - id: PirateCashSpawner01
     - id: PirateCashSpawner03
     # Weapons
-    - id: WeaponLightMachineGunRPD
-      prob: 0.15
-    # Items
-    - id: WeaponMachineGunLCGEmpty
-      orGroup: AmmoMGPool
     - id: WeaponMachineGunLCG
-      orGroup: AmmoMGPool
+      orGroup: MGPool
+    - id: WeaponMachineGunLCGEmpty
+      orGroup: MGPool
+    # Items
     - id: MagazineChainGun
       orGroup: AmmoMGPool
     - id: MagazineChainGun100
@@ -1171,6 +1251,8 @@
       prob: 0.4
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
     # Bonus Loot T1
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -1184,12 +1266,10 @@
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.25
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 #region TIER 2
 - type: entity
-  parent: ScrapperDuffelGiftBox
+  parent: [ScrapperDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperT1PlasmaCutter
   categories: [ HideSpawnMenu ]
   components:
@@ -1255,11 +1335,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT2Shotgun
   categories: [ HideSpawnMenu ]
   components:
@@ -1313,11 +1391,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAmmoT2Shotgun
   categories: [ HideSpawnMenu ]
   components:
@@ -1366,11 +1442,9 @@
       prob: 0.15
       amount: 3
       orGroup: BlunderBussPool
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT2MG
   categories: [ HideSpawnMenu ]
   components:
@@ -1392,6 +1466,8 @@
       amount: 3
       prob: 0.5
     # Items
+    - id: ClothingOuterHardsuitMurmillo
+      prob: 0.15
     - id: PirateMedSpawner03
     # Bonus Loot T2
     - id: PirateAmpulaSpawnerT2
@@ -1416,11 +1492,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAmmoT2MG
   categories: [ HideSpawnMenu ]
   components:
@@ -1449,11 +1523,9 @@
       orGroup: CannonPool
     - id: MagazineCannonBallMini
       prob: 0.3
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAmmoT2Musket
   categories: [ HideSpawnMenu ]
   components:
@@ -1515,11 +1587,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltWebbingMercenaryTier2Revolver
   categories: [ HideSpawnMenu ]
   components:
@@ -1548,6 +1618,8 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
     # Bonus Loot T2
     - id: PirateAmpulaSpawnerT2
     - id: Doubloon1
@@ -1571,11 +1643,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltWebbingMercenaryTier2Flintlock
   categories: [ HideSpawnMenu ]
   components:
@@ -1625,11 +1695,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltWebbingMercenaryTier2RevolverAlt
   categories: [ HideSpawnMenu ]
   components:
@@ -1679,11 +1747,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: ScrapperDuffelGiftBox
+  parent: [ScrapperDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperT1Hunter
   categories: [ HideSpawnMenu ]
   components:
@@ -1740,11 +1806,9 @@
       prob: 0.5
     - id: LootSpawnerMaterialsSurplus
       prob: 0.3
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperT1Smasher
   categories: [ HideSpawnMenu ]
   components:
@@ -1802,11 +1866,9 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperRangedT2
   categories: [ HideSpawnMenu ]
   components:
@@ -1838,9 +1900,6 @@
     - id: MagazinePistolSubMachineGunImprovisedFilled
       prob: 0.4
     # Armor
-    - id: ClothingNeckCloakPirateCap
-      prob: 0.25
-      orGroup: SalvHardPool2
     - id: ClothingHeadHelmetPirate
       prob: 0.5
       orGroup: SalvHardPool2
@@ -1853,11 +1912,20 @@
     - id: ClothingOuterEVASuitPirate
       prob: 0.2
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     # Items
     - id: PirateMedSpawner03
@@ -1880,8 +1948,6 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 #region TIER 3
 - type: entity
@@ -1909,10 +1975,15 @@
     - id: PirateCashSpawner01
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootClosetOpenSound]
   id: ClothingBackOreCrateTier1Mech
   categories: [ HideSpawnMenu ]
   components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - feet
+    sprite: /Textures/Structures/Storage/orebox.rsi
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -1999,14 +2070,17 @@
       prob: 0.7
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.5
-    sound:
-      path: /Audio/Effects/closetopen.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootClosetOpenSound]
   id: ClothingBackOreCrateTier1Cyborg
   categories: [ HideSpawnMenu ]
   components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - feet
+    sprite: /Textures/Structures/Storage/orebox.rsi
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -2083,14 +2157,17 @@
     - id: PirateCashSpawner03
     - id: LootSpawnerMedicalMinor
       prob: 0.7
-    sound:
-      path: /Audio/Effects/closetopen.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootClosetOpenSound]
   id: ClothingBackOreCrateTier2Cyborg
   categories: [ HideSpawnMenu ]
   components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - feet
+    sprite: /Textures/Structures/Storage/orebox.rsi
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -2180,14 +2257,17 @@
       prob: 0.5
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Effects/closetopen.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootClosetOpenSound]
   id: ClothingBackOreCrateTier3Mech
   categories: [ HideSpawnMenu ]
   components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - feet
+    sprite: /Textures/Structures/Storage/orebox.rsi
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -2263,6 +2343,10 @@
       prob: 0.1
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerSmoke
+      prob: 0.05
+    - id: PirateGrenadeSpawnerSmoke
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -2278,11 +2362,10 @@
       prob: 0.7
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.5
-    sound:
-      path: /Audio/Effects/closetopen.ogg
+    - id: SovietMedicalSupplyRandomSpawner
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier3Grenade
   categories: [ HideSpawnMenu ]
   components:
@@ -2295,11 +2378,17 @@
     - id: CombatKnife
       prob: 0.15
     - id: WeaponLauncherM79
-      prob: 0.6
-    - id:  PouchExplosive
-      prob: 0.9
-    - id:  PouchExplosiveFilled
+      prob: 0.5
+      orGroup: Grenadier
+    - id: WeaponLauncherM79Biocode
       prob: 0.25
+      orGroup: Grenadier
+    - id: BriefcaseWeaponM79Filled
+      prob: 0.25
+      orGroup: Grenadier
+    - id: ClothingBackpackDuffelSyndicateFilledGrenadeLauncherM79
+      prob: 0.1
+      orGroup: Grenadier
     # Items
     - id: GrenadeBlastTimer
       amount: 2
@@ -2334,11 +2423,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackDuffelMercenaryTier3Sniper
   categories: [ HideSpawnMenu ]
   components:
@@ -2352,10 +2439,10 @@
       prob: 0.05
       orGroup: dragunovPool
     - id: WeaponSniperDragunov
-      prob: 0.3
+      prob: 0.5
       orGroup: dragunovPool
     - id:  WeaponSniperDragunovBiocode
-      prob: 0.6
+      prob: 0.5
       orGroup: dragunovPool
     # Items
     - id: MagazineDragunovSP
@@ -2394,11 +2481,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingAmmoBeltGrapeShot
   categories: [ HideSpawnMenu ]
   components:
@@ -2426,14 +2511,13 @@
       prob: 0.25
     - id: MaterialGunpowder
       prob: 0.9
-    - id: MaterialGunpowder
-      amount: 5
+    - id: MaterialGunpowder5
       prob: 0.5
-    - id: MaterialGunpowder
-      amount: 10
+    - id: MaterialGunpowder5
+      amount: 2
       prob: 0.25
-    - id: MaterialGunpowder
-      amount: 30
+    - id: MaterialGunpowder5
+      amount: 6
       prob: 0.1
     - id: PipeBombCable
       amount: 2
@@ -2461,11 +2545,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackpackMessengerMeleeT2
   categories: [ HideSpawnMenu ]
   components:
@@ -2492,6 +2574,10 @@
       orGroup: PirateHardPool
     # Bonus Loot T2
     - id: PirateAmpulaSpawnerT2
+    - id: PirateGrenadeSpawnerT2Veteran
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT2Veteran
+      prob: 0.15
     - id: Doubloon1
       prob: 0.05
     - id: Doubloon5
@@ -2513,12 +2599,10 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltShieldBucklerMeleeT2
   categories: [ HideSpawnMenu ]
   components:
@@ -2528,6 +2612,11 @@
     - state: base
   - type: Item
     sprite: _Starlight/Objects/Weapons/Melee/forged_buckler_shield.rsi
+    inhandVisuals:
+      left:
+      - state: base
+      right:
+      - state: base
   - type: SpawnItemsOnUse
     items:
     # Cash
@@ -2571,11 +2660,9 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT1ECutlass
   categories: [ HideSpawnMenu ]
   components:
@@ -2607,13 +2694,26 @@
     - id: ClothingOuterEVASuitPirate
       prob: 0.2
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.05
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     # Bonus Loot
+    - id: PirateGrenadeSpawnerT1Veteran
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT1Veteran
+      prob: 0.15
     - id: Doubloon1
       prob: 0.05
     - id: PirateCashSpawner01
@@ -2624,11 +2724,9 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.1
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT1EPickaxe
   categories: [ HideSpawnMenu ]
   components:
@@ -2656,11 +2754,20 @@
     - id: ClothingOuterEVASuitPirate
       prob: 0.2
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     # ORE
     - id: SteelOre
@@ -2690,17 +2797,19 @@
       prob: 0.2
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT1Veteran
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT1Veteran
+      prob: 0.15
     - id: Doubloon1
       prob: 0.05
     - id: PirateCashSpawner01
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT3SKM24
   categories: [ HideSpawnMenu ]
   components:
@@ -2735,8 +2844,14 @@
     # Armor
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -2754,11 +2869,9 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MilitaryWebbingBox
+  parent: [MilitaryWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltMilitaryWebbingT3Rifle
   categories: [ HideSpawnMenu ]
   components:
@@ -2780,6 +2893,10 @@
       prob: 0.05
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -2797,13 +2914,11 @@
     - id: PirateMedSpawner01
     - id: ClothingBeltMilitaryWebbing
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT1SKM24
   categories: [ HideSpawnMenu ]
   components:
@@ -2846,11 +2961,20 @@
     - id: ClothingOuterEVASuitPirate
       prob: 0.2
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     # Bonus Loot T1
     - id: Doubloon1
@@ -2882,11 +3006,9 @@
       prob: 0.01
     - id: ClothingBackpackMessengerPirate
       prob: 0.05
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryWebbingBox
+  parent: [MercenaryWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltMercenaryWebbingRangedT3
   categories: [ HideSpawnMenu ]
   components:
@@ -2931,6 +3053,9 @@
     - id: ClothingOuterHardsuitScaf
       prob: 0.05
       orGroup: ScafPool
+    - id: ClothingOuterHardsuitScafDamaged
+      prob: 0.4
+      orGroup: ScafPool
     - id: ClothingBeltMercWebbing
       prob: 0.25
       orGroup: ScafPool
@@ -2939,6 +3064,10 @@
       orGroup: ScafPool
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -2954,11 +3083,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackPirateMessengerT1SMG
   categories: [ HideSpawnMenu ]
   components:
@@ -2998,11 +3125,20 @@
     - id: ClothingOuterEVASuitPirate
       prob: 0.2
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.05
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
@@ -3018,11 +3154,9 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.15
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltBandolierT1Rifle
   categories: [ HideSpawnMenu ]
   components:
@@ -3062,11 +3196,20 @@
     - id: ClothingOuterEVASuitPirateArmored
       prob: 0.25
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterEVASuitPirateArmoredAlt
       prob: 0.25
       orGroup: SalvHardPool2
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: SalvHardPool2
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+      orGroup: SalvHardPool2
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
       orGroup: SalvHardPool2
     # Bonus Loot T1
     - id: Doubloon1
@@ -3081,11 +3224,9 @@
     - id: PirateMedSpawner01
     - id: ClothingBackpackMessengerPirate
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MilitaryWebbingBox
+  parent: [MilitaryWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltMilitaryWebbingTier3Pistol
   categories: [ HideSpawnMenu ]
   components:
@@ -3119,8 +3260,14 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.05
+    - id: PirateGrenadeSpawnerT3
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -3138,11 +3285,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MilitaryWebbingBox
+  parent: [MilitaryWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltMilitaryWebbingTier3Scorpion
   categories: [ HideSpawnMenu ]
   components:
@@ -3169,6 +3314,8 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3188,11 +3335,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SyndieWebbingBox
+  parent: [SyndieWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSyndieWebbingTier3Bola
   categories: [ HideSpawnMenu ]
   components:
@@ -3214,6 +3359,8 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     - id: BolaSyndicateDespawn
       prob: 0.9
     - id: BolaSyndicateDespawn
@@ -3246,11 +3393,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SyndieWebbingBox
+  parent: [SyndieWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSyndieWebbingTier3Stun
   categories: [ HideSpawnMenu ]
   components:
@@ -3262,12 +3407,15 @@
     - id: EnergyCutlass
       prob: 0.8
     - id: BrokenEnergyShield
-      prob: 0.9
+      prob: 0.5
       orGroup: EnergyShieldPool
     - id: EnergyShieldBiocode
       prob: 0.5
       orGroup: EnergyShieldPool
     - id: EnergyShield
+      prob: 0.75
+      orGroup: EnergyShieldPool
+    - id: SunriseEnergyShield
       prob: 0.2
       orGroup: EnergyShieldPool
     - id: GrenadeStinger
@@ -3286,6 +3434,8 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3310,11 +3460,9 @@
     - id: LootSpawnerMedicalMinor
       prob: 0.7
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BeltAssaultBox
+  parent: [BeltAssaultBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAssaultT3MG
   categories: [ HideSpawnMenu ]
   components:
@@ -3325,16 +3473,16 @@
     - id: PirateCashSpawner03
     # Weapons
     - id: WeaponLightMachineGunL6
-      prob: 0.05
+      prob: 0.5
       orGroup: WeaponMGPool
     - id: WeaponLightMachineGunL6Biocode
-      prob: 0.20
+      prob: 0.5
       orGroup: WeaponMGPool
     - id: MagazineRifleBoxSP
-      prob: 0.75
+      prob: 0.15
       orGroup: WeaponMGPool
     - id: MagazineRifleBoxFMJ
-      prob: 0.5
+      prob: 0.15
       orGroup: WeaponMGPool
     # Items
     - id: MagazineBoxRifleBig
@@ -3360,6 +3508,8 @@
       prob: 0.05
     - id: ClothingOuterHardsuitScaf
       prob: 0.05
+    - id: ClothingOuterHardsuitScafDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3377,11 +3527,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: BeltAssaultBox
+  parent: [BeltAssaultBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltAssaultT3RPD
   categories: [ HideSpawnMenu ]
   components:
@@ -3419,6 +3567,8 @@
       prob: 0.4
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3436,11 +3586,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SyndieWebbingBox
+  parent: [SyndieWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSyndieWebbingTier3Cannon
   categories: [ HideSpawnMenu ]
   components:
@@ -3451,17 +3599,20 @@
     - id: PirateCashSpawner03
     # Weapons
     - id: WeaponSyndieLaserGun
-      prob: 0.15
+      prob: 0.3
       orGroup: LaserGunPool
     - id: WeaponSyndieLaserGunBiocode
-      prob: 0.75
+      prob: 0.3
       orGroup: LaserGunPool
     - id: WeaponLaserCannon
+      prob: 0.3
       orGroup: LaserGunPool
     # Items
     - id: PirateMedSpawner03
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3493,11 +3644,9 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SyndieWebbingBox
+  parent: [SyndieWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSyndieWebbingTier3SMG
   categories: [ HideSpawnMenu ]
   components:
@@ -3508,14 +3657,17 @@
     - id: PirateCashSpawner03
     # Weapons
     - id: WeaponSubMachineGunC40r
-      prob: 0.15
+      prob: 0.4
       orGroup: SMG40Pool
     - id: WeaponSubMachineGunC40rBiocode
+      prob: 0.5
       orGroup: SMG40Pool
     # Items
     - id: PirateMedSpawner03
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3547,12 +3699,10 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 - type: entity
-  parent: BandolierBox
+  parent: [BandolierBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltBandolierT4LMG
   categories: [ HideSpawnMenu ]
   components:
@@ -3585,6 +3735,8 @@
       prob: 0.25
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3616,11 +3768,9 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SyndieWebbingBox
+  parent: [SyndieWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSyndieWebbingTier3SMGLaser
   categories: [ HideSpawnMenu ]
   components:
@@ -3647,6 +3797,8 @@
     - id: PirateMedSpawner03
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.05
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
     # Bonus Loot T3
     - id: PirateAmpulaSpawnerT3
     - id: Doubloon5
@@ -3678,12 +3830,10 @@
       prob: 0.3
     - id: LootSpawnerMaterialsHighValue
       prob: 0.25
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 #region TIER 4
 - type: entity
-  parent: SalvageWebbingBox
+  parent: [SalvageWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSalvageWebbingTier4Captain
   categories: [ HideSpawnMenu ]
   components:
@@ -3725,11 +3875,9 @@
     - id: PirateCashSpawner03
     - id: PirateCashSpawner08
     - id: PirateMedSpawner04
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: SalvageWebbingBox
+  parent: [SalvageWebbingBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBeltSalvageWebbingTier4Ranged
   categories: [ HideSpawnMenu ]
   components:
@@ -3762,9 +3910,11 @@
       prob: 0.5
     - id: Tourniquet
       prob: 0.25
-    - id: ClothingOuterHardsuitPrivateer
-      prob: 0.05
     # Bonus Loot T4
+    - id: PirateGrenadeSpawnerSmoke
+      prob: 0.05
+    - id: PirateGrenadeSpawnerSmoke
+      prob: 0.15
     - id: Doubloon5
       prob: 0.1
     - id: Doubloon5
@@ -3779,12 +3929,10 @@
     - id: PirateCashSpawner03
     - id: PirateCashSpawner08
     - id: PirateMedSpawner04
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 
 - type: entity
-  parent: SyndiBaglGiftBox
+  parent: [SyndiBaglGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackSyndiBagTier4Ranged
   categories: [ HideSpawnMenu ]
   components:
@@ -3811,8 +3959,14 @@
     - id: ClothingOuterHardsuitPrivateerArmored
       prob: 0.05
       orGroup: EvaHelmPool
+    - id: ClothingOuterHardsuitPrivateerArmoredDamaged
+      prob: 0.4
+      orGroup: EvaHelmPool
     - id: ClothingOuterHardsuitPrivateer
       prob: 0.2
+      orGroup: EvaHelmPool
+    - id: ClothingOuterHardsuitPrivateerDamaged
+      prob: 0.4
       orGroup: EvaHelmPool
     - id: ClothingHeadHelmetPirateAlt
       orGroup: EvaHelmPool
@@ -3820,7 +3974,13 @@
       orGroup: EvaHelmPool
     - id: ClothingOuterEVASuitPirateArmoredAlt
       orGroup: EvaPiratePool
+    - id: ClothingOuterEVASuitPirateArmoredAltDamaged
+      prob: 0.4
+      orGroup: EvaPiratePool
     - id: ClothingOuterEVASuitPirateArmored
+      orGroup: EvaPiratePool
+    - id: ClothingOuterEVASuitPirateArmoredDamaged
+      prob: 0.4
       orGroup: EvaPiratePool
     # Cyber
     - id: CyberEyeNightVisionBox
@@ -3859,14 +4019,17 @@
     - id: PirateCashSpawner03
     - id: PirateCashSpawner08
     - id: PirateMedSpawner04
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
 
 - type: entity
-  parent: MercenaryDuffelGiftBox
+  parent: [MercenaryDuffelGiftBox, BaseSunriseNpcLootClosetOpenSound]
   id: ClothingBackOreCrateBoss
   categories: [ HideSpawnMenu ]
   components:
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - feet
+    sprite: /Textures/Structures/Storage/orebox.rsi
   - type: Sprite
     noRot: true
     sprite: /Textures/Structures/Storage/orebox.rsi
@@ -3901,6 +4064,8 @@
       prob: 0.5
     - id: ClothingUniformJumpsuitGladiator
       prob: 0.5
+    - id: ClothingOuterHardsuitMurmillo
+      prob: 0.15
     - id: WeaponCrusherBroadAxe
       prob: 0.7
     # Bonus Loot T3
@@ -3925,11 +4090,9 @@
     - id: PirateTechFabCircuitboard
       prob: 0.001
     - id: PirateMedSpawner01
-    sound:
-      path: /Audio/Effects/closetopen.ogg
 
 - type: entity
-  parent: PirateMessengerGiftBox
+  parent: [PirateMessengerGiftBox, BaseSunriseNpcLootEquipSound]
   id: ClothingBackScrapperBoss
   categories: [ HideSpawnMenu ]
   components:
@@ -3971,6 +4134,5 @@
       prob: 0.6
     - id: LootSpawnerMaterialsHighValueConstruction
       prob: 0.4
-    sound:
-      path: /Audio/Items/jumpsuit_equip.ogg
+
 

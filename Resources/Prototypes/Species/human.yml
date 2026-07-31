@@ -20,7 +20,7 @@
   buttScan:
     sprite: /Textures/_Sunrise/CopyMachine/butts_scans.rsi
     state: human
-  sexes: [Male, Female, Futanari] # Lust-edit
+  sexes: [Male, Female, Futanari] # Lust-Edit
 
 # The lack of a layer means that
 # this person cannot have round-start anything

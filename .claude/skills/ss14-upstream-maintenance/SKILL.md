@@ -1,11 +1,11 @@
 ---
 name: ss14-upstream-maintenance
-description: Руководство по работе с кодовой базой fire-station для минимизации конфликтов слияния с апстримом Space Station 14. Использовать при модификации ванильного кода или прототипов.
+description: Guide to working with Space Station 14 forks with project-folder pattern (`_Sunrise`, `_Scp`, `_Fish`, `_Lust`) to minimize merge conflicts with the upstream. Use when modifying vanilla code or prototypes.
 ---
 
 # Claude Bridge
 
-Canonical bridge skill file:
+Canonical source skill file:
 ../../../.agents/skills/ss14-upstream-maintenance/SKILL.md.
 
-Use that file as the entrypoint and follow its source mapping.
+Use that file as the entrypoint and load resources from the same source skill directory.

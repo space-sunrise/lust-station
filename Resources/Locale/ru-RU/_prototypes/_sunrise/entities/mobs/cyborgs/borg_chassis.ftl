@@ -14,3 +14,12 @@ ent-BorgChassisSyndicateSpider = киборг диверсант Синдика�
     .desc = Маленький робот Синдиката, разработанный для Диверсионного Отряда, оснащён всем необходимым для крупного саботажа.
 ent-BorgChassisSecurityCombat = { ent-PlayerBorgSecurityCombatBattery }
     .desc = { ent-PlayerBorgSecurityCombatBattery.desc }
+
+ent-PlayerBorgChassisSyndicateSpiderBattery = { ent-BorgChassisSyndicateSpider }
+    .desc = { ent-BorgChassisSyndicateSpider.desc }
+    .suffix = батарея, инструменты
+ent-BorgChassisPirate = пиратский абордажный киборг
+    .desc = Крепкая машина, созданная для абордажей и прочей пиратской работы.
+ent-BorgChassisPirateBattery = { ent-BorgChassisPirate }
+    .desc = { ent-BorgChassisPirate.desc }
+    .suffix = батарея, модуль, пират
