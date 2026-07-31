@@ -18,6 +18,8 @@
   overrideConsoleVisibility: false
   supervisors: job-supervisors-head-of-prison
   displayWeight: 90
+  alternativeTitles:
+  - job-alt-title-colony-overseer
   access:
   - Security
   - Brig
@@ -57,7 +59,7 @@
       - BoxEvidenceMarkers
       - DrinkDetFlask
       - RubberStampPrisonInspector
-      - PenCentcom
+      - PenCentcomQillu # Lust-Edit
 
 - type: chameleonOutfit
   id: PrisonInspectorChameleonOutfit

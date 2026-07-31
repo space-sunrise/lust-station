@@ -46,7 +46,7 @@
       Male: MaleReptilian
       Female: FemaleReptilian
       Unsexed: MaleReptilian
-      Futanari: FemaleReptilian # Lust-edit
+      Futanari: FemaleReptilian # Lust-Edit
   - type: BodyEmotes
     soundsId: ReptilianBodyEmotes
   - type: Damageable
@@ -96,6 +96,13 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      # Sunrise - Start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            state: socks
+      # Sunrise - End
     displacements:
       head:
         sizeMaps:
@@ -165,7 +172,6 @@
     - "footprint-left-bare-lizard"
     rightBareFootState:
     - "footprint-right-bare-lizard"
-  - type: Carriable
 #Sunrise-end
 
 
@@ -199,6 +205,13 @@
           32:
             sprite: Mobs/Species/Reptilian/displacement.rsi
             state: mask
+      # Sunrise - Start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Sunrise/Mobs/Species/Reptilian/displacement.rsi
+            state: socks
+      # Sunrise - End
     displacements:
       head:
         sizeMaps:

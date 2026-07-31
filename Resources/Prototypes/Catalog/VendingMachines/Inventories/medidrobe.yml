@@ -23,12 +23,12 @@
     ClothingHeadHatSurgcapBlue: 4
     ClothingHeadHatSurgcapPurple: 4
     ClothingShoesBootsWinterMed: 2
-    #Lust-start
+    # Lust-Start
     ClothingOuterCoatMedNeko: 2
     ClothingOuterCoatMedNekoBlue: 2
     ClothingOuterCoatMedNekoGreen: 2
     ClothingOuterCoatMedNekoPurple: 2
-    #Lust-end
+    # Lust-End
   contrabandInventory:
     ClothingUniformJumpskirtOfLife: 1
     ToyFigurineMedicalDoctor: 1

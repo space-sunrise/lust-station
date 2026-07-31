@@ -17,12 +17,6 @@
         Piercing: 18
         Heat: 3
         Structural: 14
-  - type: HitscanPierce
-    chance: 0.45
-    deviation: 0.05
-    pierceLevel: HardenedMetal
-  - type: HitscanRicochet
-    chance: 0.55
   - type: HitscanBasicVisuals
     bullet:
       sprite:
