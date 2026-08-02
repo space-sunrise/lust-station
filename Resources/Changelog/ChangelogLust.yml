@@ -1679,3 +1679,12 @@
   id: 303
   time: '2026-08-02T10:16:33.0000000+00:00'
   url: https://github.com/space-sunrise/lust-station/pull/562
+- author: Soragy
+  changes:
+  - message: "\u0414\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0430 \u043B\u043E\u043A\
+      \u0430\u043B\u0438\u0437\u0430\u0446\u0438\u044F \u0432\u0430\u043B\u044E\u0442\
+      \u044B Lust Shop."
+    type: Add
+  id: 304
+  time: '2026-08-02T12:35:57.0000000+00:00'
+  url: https://github.com/space-sunrise/lust-station/pull/500
