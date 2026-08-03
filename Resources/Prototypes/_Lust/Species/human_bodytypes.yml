@@ -1,0 +1,442 @@
+# Женские bodytype-прототипы также используются полом Futanari.
+- type: bodyType
+  id: HumanLustHourglassFemale
+  name: body-shape-hourglass
+  supportsBodyCustomization: true
+  sexRestrictions: [Male]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_hourglass_f }
+  buttSprites:
+    Athletic: MobHumanLustHourglassFemaleTorsoAthletic
+    Standard: MobHumanLustHourglassFemaleTorsoStandard
+    Large: MobHumanLustHourglassFemaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustHourglassFemaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustHourglassFemaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustHourglassFemaleLArm
+    RArm: MobHumanLustHourglassFemaleRArm
+    LHand: MobHumanLustHourglassFemaleLHand
+    RHand: MobHumanLustHourglassFemaleRHand
+    LLeg: MobHumanLustHourglassFemaleLLeg
+    RLeg: MobHumanLustHourglassFemaleRLeg
+    LFoot: MobHumanLustHourglassFemaleLFoot
+    RFoot: MobHumanLustHourglassFemaleRFoot
+
+- type: bodyType
+  id: HumanLustHourglassMale
+  name: body-shape-hourglass
+  supportsBodyCustomization: true
+  sexRestrictions: [Female, Futanari]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_hourglass_m }
+  buttSprites:
+    Athletic: MobHumanLustHourglassMaleTorsoAthletic
+    Standard: MobHumanLustHourglassMaleTorsoStandard
+    Large: MobHumanLustHourglassMaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustHourglassMaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustHourglassMaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustHourglassMaleLArm
+    RArm: MobHumanLustHourglassMaleRArm
+    LHand: MobHumanLustHourglassMaleLHand
+    RHand: MobHumanLustHourglassMaleRHand
+    LLeg: MobHumanLustHourglassMaleLLeg
+    RLeg: MobHumanLustHourglassMaleRLeg
+    LFoot: MobHumanLustHourglassMaleLFoot
+    RFoot: MobHumanLustHourglassMaleRFoot
+
+- type: bodyType
+  id: HumanLustPearFemale
+  name: body-shape-pear
+  supportsBodyCustomization: true
+  sexRestrictions: [Male]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_pear_f }
+  buttSprites:
+    Athletic: MobHumanLustPearFemaleTorsoAthletic
+    Standard: MobHumanLustPearFemaleTorsoStandard
+    Large: MobHumanLustPearFemaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustPearFemaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustPearFemaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustPearFemaleLArm
+    RArm: MobHumanLustPearFemaleRArm
+    LHand: MobHumanLustPearFemaleLHand
+    RHand: MobHumanLustPearFemaleRHand
+    LLeg: MobHumanLustPearFemaleLLeg
+    RLeg: MobHumanLustPearFemaleRLeg
+    LFoot: MobHumanLustPearFemaleLFoot
+    RFoot: MobHumanLustPearFemaleRFoot
+
+- type: bodyType
+  id: HumanLustPearMale
+  name: body-shape-pear
+  supportsBodyCustomization: true
+  sexRestrictions: [Female, Futanari]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_pear_m }
+  buttSprites:
+    Athletic: MobHumanLustPearMaleTorsoAthletic
+    Standard: MobHumanLustPearMaleTorsoStandard
+    Large: MobHumanLustPearMaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustPearMaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustPearMaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustPearMaleLArm
+    RArm: MobHumanLustPearMaleRArm
+    LHand: MobHumanLustPearMaleLHand
+    RHand: MobHumanLustPearMaleRHand
+    LLeg: MobHumanLustPearMaleLLeg
+    RLeg: MobHumanLustPearMaleRLeg
+    LFoot: MobHumanLustPearMaleLFoot
+    RFoot: MobHumanLustPearMaleRFoot
+
+- type: bodyType
+  id: HumanLustAppleFemale
+  name: body-shape-apple
+  supportsBodyCustomization: true
+  sexRestrictions: [Male]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_apple_f }
+  buttSprites:
+    Athletic: MobHumanLustAppleFemaleTorsoAthletic
+    Standard: MobHumanLustAppleFemaleTorsoStandard
+    Large: MobHumanLustAppleFemaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustAppleFemaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustAppleFemaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustAppleFemaleLArm
+    RArm: MobHumanLustAppleFemaleRArm
+    LHand: MobHumanLustAppleFemaleLHand
+    RHand: MobHumanLustAppleFemaleRHand
+    LLeg: MobHumanLustAppleFemaleLLeg
+    RLeg: MobHumanLustAppleFemaleRLeg
+    LFoot: MobHumanLustAppleFemaleLFoot
+    RFoot: MobHumanLustAppleFemaleRFoot
+
+- type: bodyType
+  id: HumanLustAppleMale
+  name: body-shape-apple
+  supportsBodyCustomization: true
+  sexRestrictions: [Female, Futanari]
+  shapeDisplacement:
+    sizeMaps:
+      32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: shape_apple_m }
+  buttSprites:
+    Athletic: MobHumanLustAppleMaleTorsoAthletic
+    Standard: MobHumanLustAppleMaleTorsoStandard
+    Large: MobHumanLustAppleMaleTorsoLarge
+  sprites:
+    Special: MobHumanoidAnyMarking
+    Head: MobHumanLustAppleMaleHead
+    Hair: MobHumanoidAnyMarking
+    FacialHair: MobHumanoidAnyMarking
+    Snout: MobHumanoidAnyMarking
+    Chest: MobHumanLustAppleMaleTorsoStandard
+    Breast: MobHumanLustBreastAA
+    Eyes: MobHumanoidEyes
+    HeadTop: MobHumanoidAnyMarking
+    Tail: MobHumanoidAnyMarking
+    LArm: MobHumanLustAppleMaleLArm
+    RArm: MobHumanLustAppleMaleRArm
+    LHand: MobHumanLustAppleMaleLHand
+    RHand: MobHumanLustAppleMaleRHand
+    LLeg: MobHumanLustAppleMaleLLeg
+    RLeg: MobHumanLustAppleMaleRLeg
+    LFoot: MobHumanLustAppleMaleLFoot
+    RFoot: MobHumanLustAppleMaleRFoot
+
+# Слои женских частей тела.
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: head_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: l_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: r_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: torso_f_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: torso_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassFemaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass.rsi, state: torso_f_big }
+
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: head_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: l_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: r_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: torso_f_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: torso_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearFemaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear.rsi, state: torso_f_big }
+
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: head_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: l_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: r_leg_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: torso_f_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: torso_f }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleFemaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple.rsi, state: torso_f_big }
+
+# Слои мужских частей тела.
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: head_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: l_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: r_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: torso_m_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: torso_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustHourglassMaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/hourglass_m.rsi, state: torso_m_big }
+
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: head_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: l_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: r_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: torso_m_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: torso_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustPearMaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/pear_m.rsi, state: torso_m_big }
+
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleHead
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: head_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleLArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: l_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleRArm
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: r_arm }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleLHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: l_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleRHand
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: r_hand }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleLLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: l_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleRLeg
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: r_leg }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleLFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: l_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleRFoot
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: r_foot }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleTorsoAthletic
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: torso_m_fit }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleTorsoStandard
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: torso_m }
+- type: humanoidBaseSprite
+  id: MobHumanLustAppleMaleTorsoLarge
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/apple_m.rsi, state: torso_m_big }
+
+# Независимый skin-colored слой груди.
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastAA
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_0 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastA
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_1 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastB
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_2 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastC
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_3 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastD
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_4 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastDD
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_5 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastE
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_6 }
+- type: humanoidBaseSprite
+  id: MobHumanLustBreastF
+  baseSprite: { sprite: _Lust/Mobs/Species/Human/BodyTypes/breast.rsi, state: size_7 }

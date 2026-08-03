@@ -332,7 +332,10 @@ namespace Content.Server.Database
                 antags.ToHashSet(),
                 traits.ToHashSet(),
                 loadouts
-            ).WithJobAlternativeTitles(jobAltTitles); // Sunrise
+            )
+                .WithJobAlternativeTitles(jobAltTitles) // Sunrise
+                .WithBreastSize((BreastSize) profile.BreastSize) // Lust added
+                .WithButtSize((ButtSize) profile.ButtSize); // Lust added
         }
 
         private static Profile ConvertProfiles(HumanoidCharacterProfile humanoid, int slot, Profile? profile = null)
@@ -353,6 +356,8 @@ namespace Content.Server.Database
             profile.Species = humanoid.Species;
             profile.Voice = humanoid.Voice; // Sunrise-TTS
             profile.BodyType = humanoid.BodyType;
+            profile.BreastSize = (int) humanoid.BreastSize; // Lust added
+            profile.ButtSize = (int) humanoid.ButtSize; // Lust added
             profile.Age = humanoid.Age;
             profile.Width = appearance.Width; //Sunrise
             profile.Height = appearance.Height; //Sunrise

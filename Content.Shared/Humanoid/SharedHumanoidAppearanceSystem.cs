@@ -51,7 +51,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     public static readonly ProtoId<SpeciesPrototype> DefaultSpecies = "Human";
 
     [ValidatePrototypeId<BodyTypePrototype>]
-    public const string DefaultBodyType = "HumanNormal";
+    public const string DefaultBodyType = "HumanLustHourglassMale"; // Lust edit
 
     // Sunrise-TTS-Start
     public const string DefaultVoice = "Voljin";
@@ -83,10 +83,20 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             return;
 
         var speciesPrototype = _proto.Index<SpeciesPrototype>(humanoid.Species);
-        if (speciesPrototype.BodyTypes.Contains(bodyType))
+        if (speciesPrototype.BodyTypes.Contains(bodyType)
+            && _proto.TryIndex<BodyTypePrototype>(bodyType, out var bodyTypePrototype)
+            && !bodyTypePrototype.SexRestrictions.Contains(humanoid.Sex.ToString()))
+        {
             humanoid.BodyType = bodyType;
+        }
         else
-            humanoid.BodyType = speciesPrototype.BodyTypes.First();
+        {
+            // Lust edit - при смене пола Futanari получает женский набор, Male — мужской
+            humanoid.BodyType = speciesPrototype.BodyTypes
+                .FirstOrDefault(id => _proto.TryIndex<BodyTypePrototype>(id, out var prototype)
+                    && !prototype.SexRestrictions.Contains(humanoid.Sex.ToString()))
+                ?? speciesPrototype.BodyTypes.First();
+        }
 
         if (sync)
             Dirty(uid, humanoid);
@@ -499,6 +509,10 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         EnsureDefaultMarkings(uid, humanoid);
         SetTTSVoice(uid, profile.Voice, humanoid); // Sunrise-TTS
         SetBodyType(uid, profile.BodyType, false, humanoid);
+        // Lust added start - применяем независимые параметры тела из профиля
+        humanoid.BreastSize = profile.BreastSize;
+        humanoid.ButtSize = profile.ButtSize;
+        // Lust added end
 
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))

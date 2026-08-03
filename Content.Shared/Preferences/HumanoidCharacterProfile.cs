@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Text.RegularExpressions;
+using Content.Shared._Sunrise;
 using Content.Shared._Sunrise.SunriseCCVars;
 using Content.Shared.CCVar;
 using Content.Shared._Sunrise.TTS;
@@ -110,6 +111,14 @@ namespace Content.Shared.Preferences
 
         [DataField]
         public string BodyType { get; set; } = SharedHumanoidAppearanceSystem.DefaultBodyType;
+
+        // Lust added start - независимые параметры тела
+        [DataField]
+        public BreastSize BreastSize { get; set; } = BreastSize.AA;
+
+        [DataField]
+        public ButtSize ButtSize { get; set; } = ButtSize.Standard;
+        // Lust added end
 
         /// <summary>
         /// <see cref="Appearance"/>
@@ -228,6 +237,10 @@ namespace Content.Shared.Preferences
             // Sunrise-Start
             _jobAlternativeTitles = new Dictionary<ProtoId<JobPrototype>, LocId>(other._jobAlternativeTitles);
             // Sunrise-End
+            // Lust added start - копируем независимые параметры тела
+            BreastSize = other.BreastSize;
+            ButtSize = other.ButtSize;
+            // Lust added end
         }
 
         /// <summary>
@@ -285,7 +298,11 @@ namespace Content.Shared.Preferences
             {
                 sex = random.Pick(speciesPrototype.Sexes);
                 age = random.Next(speciesPrototype.MinAge, speciesPrototype.OldAge); // people don't look and keep making 119 year old characters with zero rp, cap it at middle aged
-                bodyType = speciesPrototype.BodyTypes.First();
+                // Lust edit - сразу выбираем bodytype, разрешённый для случайного пола
+                bodyType = speciesPrototype.BodyTypes
+                    .FirstOrDefault(id => prototypeManager.TryIndex<BodyTypePrototype>(id, out var prototype)
+                        && !prototype.SexRestrictions.Contains(sex.ToString()))
+                    ?? speciesPrototype.BodyTypes.First();
             }
 
             // Sunrise-TTS-Start
@@ -385,6 +402,18 @@ namespace Content.Shared.Preferences
         {
             return new HumanoidCharacterProfile(this) { BodyType = bodyType };
         }
+
+        // Lust added start - изменение независимых параметров тела в редакторе
+        public HumanoidCharacterProfile WithBreastSize(BreastSize breastSize)
+        {
+            return new HumanoidCharacterProfile(this) { BreastSize = breastSize };
+        }
+
+        public HumanoidCharacterProfile WithButtSize(ButtSize buttSize)
+        {
+            return new HumanoidCharacterProfile(this) { ButtSize = buttSize };
+        }
+        // Lust added end
 
         public HumanoidCharacterProfile WithCharacterAppearance(HumanoidCharacterAppearance appearance)
         {
@@ -583,6 +612,8 @@ namespace Content.Shared.Preferences
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
             if (BodyType != other.BodyType) return false;
+            if (BreastSize != other.BreastSize) return false; // Lust added
+            if (ButtSize != other.ButtSize) return false; // Lust added
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
@@ -637,7 +668,35 @@ namespace Content.Shared.Preferences
                 _ => Gender.Epicene // Invalid enum values.
             };
 
-            var bodyType = speciesPrototype.BodyTypes.Contains(BodyType) ? BodyType : speciesPrototype.BodyTypes.First();
+            // Lust edit start - bodytype должен соответствовать выбранному полу
+            var allowedBodyTypes = speciesPrototype.BodyTypes
+                .Where(id => prototypeManager.TryIndex<BodyTypePrototype>(id, out var prototype)
+                    && !prototype.SexRestrictions.Contains(sex.ToString()))
+                .ToList();
+            var bodyType = allowedBodyTypes.Contains(BodyType)
+                ? BodyType
+                : allowedBodyTypes.FirstOrDefault() ?? speciesPrototype.BodyTypes.First();
+            // Lust edit end
+
+            var breastSize = BreastSize switch
+            {
+                BreastSize.AA => BreastSize.AA,
+                BreastSize.A => BreastSize.A,
+                BreastSize.B => BreastSize.B,
+                BreastSize.C => BreastSize.C,
+                BreastSize.D => BreastSize.D,
+                BreastSize.DD => BreastSize.DD,
+                BreastSize.E => BreastSize.E,
+                BreastSize.F => BreastSize.F,
+                _ => BreastSize.AA,
+            };
+            var buttSize = ButtSize switch
+            {
+                ButtSize.Athletic => ButtSize.Athletic,
+                ButtSize.Standard => ButtSize.Standard,
+                ButtSize.Large => ButtSize.Large,
+                _ => ButtSize.Standard,
+            };
 
             string name;
             var maxNameLength = configManager.GetCVar(CCVars.MaxNameLength);
@@ -748,6 +807,8 @@ namespace Content.Shared.Preferences
             Sex = sex;
             Gender = gender;
             BodyType = bodyType;
+            BreastSize = breastSize; // Lust added
+            ButtSize = buttSize; // Lust added
             Appearance = appearance;
             SpawnPriority = spawnPriority;
 
@@ -916,6 +977,8 @@ namespace Content.Shared.Preferences
             hashCode.Add(Species);
             hashCode.Add(Age);
             hashCode.Add(BodyType);
+            hashCode.Add((int)BreastSize); // Lust added
+            hashCode.Add((int)ButtSize); // Lust added
             hashCode.Add((int)Sex);
             hashCode.Add((int)Erp);
             hashCode.Add((int)Virginity);

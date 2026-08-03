@@ -1,4 +1,5 @@
 ﻿using Content.Shared.Humanoid;
+using Content.Shared.DisplacementMap;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._Sunrise;
@@ -17,4 +18,15 @@ public sealed partial class BodyTypePrototype : IPrototype
 
     [DataField]
     public List<string> SexRestrictions = new();
+
+    // Lust added start - независимая кастомизация фигуры человека
+    [DataField]
+    public bool SupportsBodyCustomization;
+
+    [DataField]
+    public Dictionary<ButtSize, string> ButtSprites = new();
+
+    [DataField]
+    public DisplacementData? ShapeDisplacement;
+    // Lust added end
 }

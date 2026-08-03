@@ -35,7 +35,9 @@ namespace Content.Shared.Humanoid
         Other,
         // Sunrise - Start
         Rings,
-        Dreadlocks
+        Dreadlocks,
         // Sunrise - End
+
+        Breast // Lust added - отдельный skin-colored слой груди
     }
 }
