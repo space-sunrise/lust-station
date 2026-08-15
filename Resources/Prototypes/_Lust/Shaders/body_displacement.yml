@@ -1,0 +1,10 @@
+- type: shader
+  id: BodyDisplacedDraw
+  kind: source
+  path: "/Textures/_Lust/Shaders/body_displacement.swsl"
+  params:
+    displacementSize: 127
+    useBaseDisplacement: false
+    useShapeDisplacement: true
+    useBreastDisplacement: true
+    useButtDisplacement: true

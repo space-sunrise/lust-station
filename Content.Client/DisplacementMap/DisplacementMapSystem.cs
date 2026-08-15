@@ -2,14 +2,19 @@ using System.Diagnostics.CodeAnalysis;
 using Content.Shared.DisplacementMap;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
+using Robust.Shared.GameObjects;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization.Manager;
 
 namespace Content.Client.DisplacementMap;
 
 public sealed class DisplacementMapSystem : EntitySystem
 {
+    private static readonly ProtoId<ShaderPrototype> BodyDisplacedDrawShader = "BodyDisplacedDraw";
+
     [Dependency] private readonly ISerializationManager _serialization = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private readonly IPrototypeManager _prototype = default!; // Lust added
 
     private static string? BuildDisplacementLayerKey(object key)
     {
@@ -115,4 +120,79 @@ public sealed class DisplacementMapSystem : EntitySystem
 
         _sprite.RemoveLayer(sprite.AsNullable(), displacementLayerKey, false);
     }
+
+    // Lust added start - композиция независимых карт тела без сотен готовых комбинаций
+    public bool TryAddBodyCustomizationDisplacements(
+        DisplacementData? baseData,
+        DisplacementData? shapeData,
+        DisplacementData? breastData,
+        DisplacementData? buttData,
+        Entity<SpriteComponent> sprite,
+        int index,
+        object key,
+        out List<string> displacementKeys)
+    {
+        displacementKeys = new List<string>();
+        var targetKey = key.ToString();
+        if (targetKey is null)
+            return false;
+
+        var data = new (string Prefix, DisplacementData? Data)[]
+        {
+            ("base", baseData),
+            ("shape", shapeData),
+            ("breast", breastData),
+            ("butt", buttData),
+        };
+
+        foreach (var (prefix, _) in data)
+            _sprite.RemoveLayer(sprite.AsNullable(), BuildBodyDisplacementLayerKey(key, prefix), false);
+
+        var actualRsi = _sprite.LayerGetEffectiveRsi(sprite.AsNullable(), index);
+        var layerSize = actualRsi?.Size.X ?? EyeManager.PixelsPerMeter;
+        if (actualRsi is not null && actualRsi.Size.X != actualRsi.Size.Y)
+        {
+            Log.Warning($"BODY DISPLACEMENT: {targetKey} has a resolution that is not 1:1, things can look crooked");
+        }
+
+        var shader = _prototype.Index(BodyDisplacedDrawShader).InstanceUnique();
+        shader.SetParameter("displacementSize", 127f);
+        foreach (var (prefix, mapData) in data)
+            shader.SetParameter($"use{char.ToUpperInvariant(prefix[0])}{prefix[1..]}Displacement", mapData is not null);
+        sprite.Comp.LayerSetShader(index, shader);
+
+        var insertionIndex = index;
+        foreach (var (prefix, mapData) in data)
+        {
+            if (mapData is null)
+                continue;
+
+            if (!mapData.SizeMaps.TryGetValue(layerSize, out var map)
+                && !mapData.SizeMaps.TryGetValue(EyeManager.PixelsPerMeter, out map))
+            {
+                Log.Error($"BODY DISPLACEMENT: {prefix} map for {targetKey} has no 32x32 fallback");
+                continue;
+            }
+
+            var displacementLayer = _serialization.CreateCopy(map, notNullableOverride: true);
+            displacementLayer.CopyToShaderParameters = new PrototypeCopyToShaderParameters
+            {
+                LayerKey = targetKey,
+                ParameterTexture = $"{prefix}DisplacementMap",
+                ParameterUV = $"{prefix}DisplacementUV",
+            };
+
+            var displacementKey = BuildBodyDisplacementLayerKey(key, prefix);
+            _sprite.AddLayer(sprite.AsNullable(), displacementLayer, insertionIndex);
+            _sprite.LayerMapSet(sprite.AsNullable(), displacementKey, insertionIndex);
+            displacementKeys.Add(displacementKey);
+            insertionIndex++;
+        }
+
+        return displacementKeys.Count > 0;
+    }
+
+    private static string BuildBodyDisplacementLayerKey(object key, string prefix)
+        => $"{key}-body-{prefix}-displacement";
+    // Lust added end
 }

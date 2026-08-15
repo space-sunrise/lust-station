@@ -274,12 +274,41 @@ namespace Content.Client.Lobby.UI
 
             #region BodyType
 
-
-            CBodyTypesButton.OnItemSelected += args =>
+            // Lust added start - дискретные ползунки параметров тела
+            BodyTypeSlider.OnValueChanged += _ =>
             {
-                CBodyTypesButton.SelectId(args.Id);
-                SetBodyType(_bodyTypes[args.Id].ID);
+                UpdateBodyCustomizationText();
             };
+
+            BodyTypeSlider.OnReleased += args =>
+            {
+                if (_bodyTypes.Count == 0)
+                    return;
+
+                var index = GetSliderIndex(args.Value, _bodyTypes.Count);
+                SetBodyType(_bodyTypes[index].ID);
+            };
+
+            BreastSizeSlider.OnValueChanged += _ =>
+            {
+                UpdateBodyCustomizationText();
+            };
+
+            BreastSizeSlider.OnReleased += args =>
+            {
+                SetBreastSize((BreastSize) GetSliderIndex(args.Value, Enum.GetValues<BreastSize>().Length));
+            };
+
+            ButtSizeSlider.OnValueChanged += _ =>
+            {
+                UpdateBodyCustomizationText();
+            };
+
+            ButtSizeSlider.OnReleased += args =>
+            {
+                SetButtSize((ButtSize) GetSliderIndex(args.Value, Enum.GetValues<ButtSize>().Length));
+            };
+            // Lust added end
 
             #endregion
 
@@ -2161,29 +2190,103 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
 
+        // Lust added start - изменение независимых параметров тела
+        private void SetBreastSize(BreastSize breastSize)
+        {
+            Profile = Profile?.WithBreastSize(breastSize);
+            ReloadPreview();
+            IsDirty = true;
+        }
+
+        private void SetButtSize(ButtSize buttSize)
+        {
+            Profile = Profile?.WithButtSize(buttSize);
+            ReloadPreview();
+            IsDirty = true;
+        }
+
+        private void UpdateBodyCustomizationControls(SpeciesPrototype species)
+        {
+            if (Profile is null)
+                return;
+
+            BodyCustomizationContainer.Visible = species.SupportsBodyCustomization;
+            if (!species.SupportsBodyCustomization || _bodyTypes.Count == 0)
+                return;
+
+            BodyTypeSlider.MinValue = 0;
+            BodyTypeSlider.MaxValue = _bodyTypes.Count - 1;
+            BodyTypeSlider.SetValueWithoutEvent(_bodyTypes.FindIndex(bodyType => bodyType.ID == Profile.BodyType));
+
+            BreastSizeSlider.MinValue = 0;
+            BreastSizeSlider.MaxValue = Enum.GetValues<BreastSize>().Length - 1;
+            BreastSizeSlider.SetValueWithoutEvent((int) Profile.BreastSize);
+
+            ButtSizeSlider.MinValue = 0;
+            ButtSizeSlider.MaxValue = Enum.GetValues<ButtSize>().Length - 1;
+            ButtSizeSlider.SetValueWithoutEvent((int) Profile.ButtSize);
+
+            UpdateBodyCustomizationText();
+        }
+
+        private void UpdateBodyCustomizationText()
+        {
+            if (Profile is null ||
+                !_prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species) ||
+                !species.SupportsBodyCustomization ||
+                _bodyTypes.Count == 0)
+            {
+                return;
+            }
+
+            var bodyTypeIndex = GetSliderIndex(BodyTypeSlider.Value, _bodyTypes.Count);
+            var bodyTypeName = Loc.GetString(_bodyTypes[bodyTypeIndex].Name);
+            BodyTypeDescribeLabel.Text = Loc.GetString(
+                "humanoid-profile-editor-body-shape-label",
+                ("value", bodyTypeName));
+
+            var breastSize = (BreastSize) GetSliderIndex(
+                BreastSizeSlider.Value,
+                Enum.GetValues<BreastSize>().Length);
+            var breastSizeName = Loc.GetString(
+                $"humanoid-profile-editor-breast-size-{breastSize.ToString().ToLowerInvariant()}");
+            BreastSizeDescribeLabel.Text = Loc.GetString(
+                "humanoid-profile-editor-breast-size-label",
+                ("value", breastSizeName));
+
+            var buttSize = (ButtSize) GetSliderIndex(
+                ButtSizeSlider.Value,
+                Enum.GetValues<ButtSize>().Length);
+            var buttSizeName = Loc.GetString(
+                $"humanoid-profile-editor-butt-size-{buttSize.ToString().ToLowerInvariant()}");
+            ButtSizeDescribeLabel.Text = Loc.GetString(
+                "humanoid-profile-editor-butt-size-label",
+                ("value", buttSizeName));
+        }
+
+        private static int GetSliderIndex(float value, int count)
+        {
+            return Math.Clamp((int) MathF.Round(value), 0, count - 1);
+        }
+        // Lust added end
+
         private void UpdateBodyTypes()
         {
             if (Profile is null)
                 return;
 
-            CBodyTypesButton.Clear();
             var species = _prototypeManager.Index(Profile.Species);
             var sex = Profile.Sex;
             _bodyTypes = species.BodyTypes.Select(protoId => _prototypeManager.Index<BodyTypePrototype>(protoId))
                 .Where(proto => !proto.SexRestrictions.Contains(sex.ToString()))
                 .ToList();
 
-            for (var i = 0; i < _bodyTypes.Count; i++)
-            {
-                CBodyTypesButton.AddItem(Loc.GetString(_bodyTypes[i].Name), i);
-            }
-
             if (!_bodyTypes.Select(proto => proto.ID).Contains(Profile.BodyType))
             {
                 SetBodyType(_bodyTypes.First().ID);
             }
 
-            CBodyTypesButton.Select(_bodyTypes.FindIndex(x => x.ID == Profile.BodyType));
+            UpdateBodyCustomizationControls(species); // Lust added
         }
     }
 }

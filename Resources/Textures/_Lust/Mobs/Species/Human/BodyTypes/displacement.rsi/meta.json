@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Askasl.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "load": {
+    "srgb": false
+  },
+  "states": [
+    { "name": "shape_hourglass_f", "directions": 4 },
+    { "name": "shape_hourglass_m", "directions": 4 },
+    { "name": "shape_pear_f", "directions": 4 },
+    { "name": "shape_pear_m", "directions": 4 },
+    { "name": "shape_apple_f", "directions": 4 },
+    { "name": "shape_apple_m", "directions": 4 },
+    { "name": "breast_aa", "directions": 4 },
+    { "name": "breast_a", "directions": 4 },
+    { "name": "breast_b", "directions": 4 },
+    { "name": "breast_c", "directions": 4 },
+    { "name": "breast_d", "directions": 4 },
+    { "name": "breast_dd", "directions": 4 },
+    { "name": "breast_e", "directions": 4 },
+    { "name": "breast_f", "directions": 4 },
+    { "name": "butt_athletic", "directions": 4 },
+    { "name": "butt_standard", "directions": 4 },
+    { "name": "butt_large", "directions": 4 }
+  ]
+}

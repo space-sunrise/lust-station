@@ -6,7 +6,9 @@ using Content.Shared._Sunrise;
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
+using Content.Shared.DisplacementMap;
 using Content.Shared.Humanoid;
+using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Inventory;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Item;
@@ -25,6 +27,7 @@ namespace Content.Client.Clothing;
 public sealed class ClientClothingSystem : ClothingSystem
 {
     public const string Jumpsuit = "jumpsuit";
+    private static readonly ProtoId<TagPrototype> HardsuitTag = "Hardsuit";
 
     /// <summary>
     /// This is a shitty hotfix written by me (Paul) to save me from renaming all files.
@@ -296,9 +299,32 @@ public sealed class ClientClothingSystem : ClothingSystem
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map
 
         string? bodyTypeName = null;
+        // Lust added start - независимые карты формы, груди и ягодиц
+        DisplacementData? shapeDisplacement = null;
+        DisplacementData? breastDisplacement = null;
+        DisplacementData? buttDisplacement = null;
+        var bodyCustomizationSlots = BodyCustomizationDisplacementSlots.None;
+        // Lust added end
         if (TryComp(equipee, out HumanoidAppearanceComponent? humanoid))
         {
-            bodyTypeName = _prototype.Index(humanoid.BodyType).Name;
+            var bodyType = _prototype.Index(humanoid.BodyType);
+            bodyTypeName = bodyType.Name;
+
+            // Lust added start - Futanari уже использует женский bodytype, поэтому карта формы берётся из него
+            if (bodyType.SupportsBodyCustomization
+                && _prototype.TryIndex<SpeciesPrototype>(humanoid.Species, out var species)
+                && species.SupportsBodyCustomization)
+            {
+                shapeDisplacement = bodyType.ShapeDisplacement;
+                species.BreastDisplacements.TryGetValue(humanoid.BreastSize, out breastDisplacement);
+                species.ButtDisplacements.TryGetValue(humanoid.ButtSize, out buttDisplacement);
+                bodyCustomizationSlots = GetBodyCustomizationDisplacementSlots(slot);
+
+                // Жёсткие скафандры используют собственные карты и не должны растягиваться по контурам тела.
+                if (_tagSystem.HasTag(equipment, HardsuitTag))
+                    bodyCustomizationSlots = BodyCustomizationDisplacementSlots.None;
+            }
+            // Lust added end
 
             var hardsuitKey = $"hardsuit-{bodyTypeName}";
 
@@ -310,7 +336,7 @@ public sealed class ClientClothingSystem : ClothingSystem
                         displacementData = inventory.MaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
                             ?? inventory.MaleDisplacements.GetValueOrDefault(slot);
 
-                        if (_tagSystem.HasTag(equipment, "Hardsuit"))
+                        if (_tagSystem.HasTag(equipment, HardsuitTag))
                         {
                             displacementData = inventory.MaleDisplacements.GetValueOrDefault(hardsuitKey)
                                                ?? inventory.Displacements.GetValueOrDefault(slot);
@@ -324,7 +350,7 @@ public sealed class ClientClothingSystem : ClothingSystem
                         displacementData = inventory.FemaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
                             ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
 
-                        if (_tagSystem.HasTag(equipment, "Hardsuit"))
+                        if (_tagSystem.HasTag(equipment, HardsuitTag))
                         {
                             displacementData = inventory.FemaleDisplacements.GetValueOrDefault(hardsuitKey)
                                                ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
@@ -338,7 +364,7 @@ public sealed class ClientClothingSystem : ClothingSystem
                     displacementData = inventory.FemaleDisplacements.GetValueOrDefault($"{slot}-{bodyTypeName}")
                             ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
 
-                    if (_tagSystem.HasTag(equipment, "Hardsuit"))
+                    if (_tagSystem.HasTag(equipment, HardsuitTag))
                     {
                         displacementData = inventory.FemaleDisplacements.GetValueOrDefault(hardsuitKey)
                                             ?? inventory.FemaleDisplacements.GetValueOrDefault(slot);
@@ -348,6 +374,15 @@ public sealed class ClientClothingSystem : ClothingSystem
                 // Lust-End
             }
         }
+
+        // Lust added start - карты применяются только к подходящим облегающим слоям
+        if ((bodyCustomizationSlots & BodyCustomizationDisplacementSlots.Shape) == 0)
+            shapeDisplacement = null;
+        if ((bodyCustomizationSlots & BodyCustomizationDisplacementSlots.Breast) == 0)
+            breastDisplacement = null;
+        if ((bodyCustomizationSlots & BodyCustomizationDisplacementSlots.Butt) == 0)
+            buttDisplacement = null;
+        // Lust added end
 
         // add the new layers
         foreach (var (key, layerData) in ev.Layers)
@@ -388,21 +423,74 @@ public sealed class ClientClothingSystem : ClothingSystem
             _sprite.LayerSetData((equipee, sprite), index, layerData);
             _sprite.LayerSetOffset(layer, layer.Offset + slotDef.Offset);
 
-            if (displacementData is not null)
+            if (displacementData is not null
+                || shapeDisplacement is not null
+                || breastDisplacement is not null
+                || buttDisplacement is not null)
             {
                 //Checking that the state is not tied to the current race. In this case we don't need to use the displacement maps.
                 if (layerData.State is not null && (inventory.SpeciesId is not null && layerData.State.EndsWith(inventory.SpeciesId)
                     || bodyTypeName is not null && layerData.State.EndsWith(bodyTypeName)))
                     continue;
 
-                if (_displacement.TryAddDisplacement(displacementData, (equipee, sprite), index, key, out var displacementKey))
+                // Lust edit start - объединяем до четырёх карт в одном шейдере
+                if ((shapeDisplacement is not null
+                        || breastDisplacement is not null
+                        || buttDisplacement is not null)
+                    && _displacement.TryAddBodyCustomizationDisplacements(
+                        null,
+                        shapeDisplacement,
+                        breastDisplacement,
+                        buttDisplacement,
+                        (equipee, sprite),
+                        index,
+                        key,
+                        out var bodyDisplacementKeys))
+                {
+                    foreach (var bodyDisplacementKey in bodyDisplacementKeys)
+                        revealedLayers.Add(bodyDisplacementKey);
+                    index += bodyDisplacementKeys.Count;
+                }
+                else if (displacementData is not null
+                    && _displacement.TryAddDisplacement(displacementData, (equipee, sprite), index, key, out var displacementKey))
                 {
                     revealedLayers.Add(displacementKey);
                     index++;
                 }
+                // Lust edit end
             }
         }
 
         RaiseLocalEvent(equipment, new EquipmentVisualsUpdatedEvent(equipee, slot, revealedLayers), true);
     }
+
+    // Lust added start - области, которые допускают деформацию по контурам тела
+    private static BodyCustomizationDisplacementSlots GetBodyCustomizationDisplacementSlots(string slot)
+    {
+        return slot switch
+        {
+            Jumpsuit =>
+                BodyCustomizationDisplacementSlots.Shape |
+                BodyCustomizationDisplacementSlots.Breast |
+                BodyCustomizationDisplacementSlots.Butt,
+            "bra" =>
+                BodyCustomizationDisplacementSlots.Shape |
+                BodyCustomizationDisplacementSlots.Breast,
+            "pants" or "socks" =>
+                BodyCustomizationDisplacementSlots.Shape |
+                BodyCustomizationDisplacementSlots.Butt,
+            "plug" => BodyCustomizationDisplacementSlots.Butt,
+            _ => BodyCustomizationDisplacementSlots.None,
+        };
+    }
+
+    [Flags]
+    private enum BodyCustomizationDisplacementSlots : byte
+    {
+        None = 0,
+        Shape = 1 << 0,
+        Breast = 1 << 1,
+        Butt = 1 << 2,
+    }
+    // Lust added end
 }

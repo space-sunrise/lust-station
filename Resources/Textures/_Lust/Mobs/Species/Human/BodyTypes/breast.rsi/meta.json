@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Askasl.",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    { "name": "size_0", "directions": 4 },
+    { "name": "size_1", "directions": 4 },
+    { "name": "size_2", "directions": 4 },
+    { "name": "size_3", "directions": 4 },
+    { "name": "size_4", "directions": 4 },
+    { "name": "size_5", "directions": 4 },
+    { "name": "size_6", "directions": 4 },
+    { "name": "size_7", "directions": 4 }
+  ]
+}

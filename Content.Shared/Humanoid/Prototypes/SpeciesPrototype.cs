@@ -1,4 +1,5 @@
 using Content.Shared.Dataset;
+using Content.Shared.DisplacementMap;
 using Content.Shared.Humanoid.Markings;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
@@ -58,6 +59,20 @@ public sealed partial class SpeciesPrototype : IPrototype
 
     [DataField(required: true)]
     public List<string> BodyTypes { get; private set; } = default!;
+
+    // Lust added start - независимая кастомизация груди и ягодиц
+    [DataField]
+    public bool SupportsBodyCustomization { get; private set; }
+
+    [DataField]
+    public Dictionary<BreastSize, string> BreastSprites { get; private set; } = new();
+
+    [DataField]
+    public Dictionary<BreastSize, DisplacementData> BreastDisplacements { get; private set; } = new();
+
+    [DataField]
+    public Dictionary<ButtSize, DisplacementData> ButtDisplacements { get; private set; } = new();
+    // Lust added end
 
     /// <summary>
     ///     Default skin tone for this species. This applies for non-human skin tones.

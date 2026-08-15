@@ -4,15 +4,59 @@
   roundStart: true
   prototype: MobHuman
   bodyTypes:
-  - HumanNormal
-  - HumanSlimFemale
-  - HumanSlimMale
-  - HumanGigaFemale
-  - HumanGigaMale
-  - HumanFatFemale
-  - HumanFatMale
-  - HumanDistrofikFemale
-  - HumanDistrofikMale
+  # Lust edit start - три формы тела, женские ассеты также используются Futanari
+  - HumanLustHourglassFemale
+  - HumanLustHourglassMale
+  - HumanLustPearFemale
+  - HumanLustPearMale
+  - HumanLustAppleFemale
+  - HumanLustAppleMale
+  supportsBodyCustomization: true
+  breastSprites:
+    AA: MobHumanLustBreastAA
+    A: MobHumanLustBreastA
+    B: MobHumanLustBreastB
+    C: MobHumanLustBreastC
+    D: MobHumanLustBreastD
+    DD: MobHumanLustBreastDD
+    E: MobHumanLustBreastE
+    F: MobHumanLustBreastF
+  breastDisplacements:
+    AA:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_aa }
+    A:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_a }
+    B:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_b }
+    C:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_c }
+    D:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_d }
+    DD:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_dd }
+    E:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_e }
+    F:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: breast_f }
+  buttDisplacements:
+    Athletic:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: butt_athletic }
+    Standard:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: butt_standard }
+    Large:
+      sizeMaps:
+        32: { sprite: _Lust/Mobs/Species/Human/BodyTypes/displacement.rsi, state: butt_large }
+  # Lust edit end
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobHumanDummy
   skinColoration: HumanToned

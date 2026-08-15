@@ -1,0 +1,148 @@
+uniform sampler2D baseDisplacementMap;
+uniform sampler2D shapeDisplacementMap;
+uniform sampler2D breastDisplacementMap;
+uniform sampler2D buttDisplacementMap;
+
+uniform highp float displacementSize;
+uniform highp vec4 baseDisplacementUV;
+uniform highp vec4 shapeDisplacementUV;
+uniform highp vec4 breastDisplacementUV;
+uniform highp vec4 buttDisplacementUV;
+
+uniform bool useBaseDisplacement;
+uniform bool useShapeDisplacement;
+uniform bool useBreastDisplacement;
+uniform bool useButtDisplacement;
+
+varying highp vec2 baseDisplacementUVOut;
+varying highp vec2 shapeDisplacementUVOut;
+varying highp vec2 breastDisplacementUVOut;
+varying highp vec2 buttDisplacementUVOut;
+
+void vertex() {
+    if (useBaseDisplacement)
+        baseDisplacementUVOut = mix(baseDisplacementUV.xy, baseDisplacementUV.zw, tCoord2);
+    if (useShapeDisplacement)
+        shapeDisplacementUVOut = mix(shapeDisplacementUV.xy, shapeDisplacementUV.zw, tCoord2);
+    if (useBreastDisplacement)
+        breastDisplacementUVOut = mix(breastDisplacementUV.xy, breastDisplacementUV.zw, tCoord2);
+    if (useButtDisplacement)
+        buttDisplacementUVOut = mix(buttDisplacementUV.xy, buttDisplacementUV.zw, tCoord2);
+}
+
+highp vec2 decodeDisplacement(highp vec4 sampleValue) {
+    return (sampleValue.xy - vec2(128.0 / 255.0)) / (1.0 - 128.0 / 255.0);
+}
+
+highp vec2 offsetMapUV(
+    highp vec2 currentUV,
+    highp vec4 mapUV,
+    highp vec2 pixelOffset) {
+    return currentUV + pixelOffset * (mapUV.zw - mapUV.xy) / 32.0;
+}
+
+highp vec4 resolveDisplacement(highp vec2 pixelOffset) {
+    highp vec2 displacement = vec2(0.0);
+    highp float alpha = 1.0;
+    highp float active = 0.0;
+
+    if (useBaseDisplacement) {
+        highp vec4 sampleValue = texture2D(
+            baseDisplacementMap,
+            offsetMapUV(baseDisplacementUVOut, baseDisplacementUV, pixelOffset));
+        highp vec2 baseDisplacement = decodeDisplacement(sampleValue);
+        displacement += baseDisplacement;
+        if (abs(baseDisplacement.x) + abs(baseDisplacement.y) > 0.0001)
+            active = 1.0;
+        alpha *= sampleValue.a;
+    }
+    if (useShapeDisplacement) {
+        highp vec4 sampleValue = texture2D(
+            shapeDisplacementMap,
+            offsetMapUV(shapeDisplacementUVOut, shapeDisplacementUV, pixelOffset));
+        highp vec2 shapeDisplacement = decodeDisplacement(sampleValue);
+        if (sampleValue.b > 0.5 || abs(shapeDisplacement.x) + abs(shapeDisplacement.y) > 0.0001) {
+            displacement = shapeDisplacement;
+            active = 1.0;
+        }
+        alpha *= sampleValue.a;
+    }
+    if (useBreastDisplacement) {
+        highp vec4 sampleValue = texture2D(
+            breastDisplacementMap,
+            offsetMapUV(breastDisplacementUVOut, breastDisplacementUV, pixelOffset));
+        highp vec2 breastDisplacement = decodeDisplacement(sampleValue);
+        if (sampleValue.b > 0.5 || abs(breastDisplacement.x) + abs(breastDisplacement.y) > 0.0001) {
+            displacement = breastDisplacement;
+            active = 1.0;
+        }
+        alpha *= sampleValue.a;
+    }
+    if (useButtDisplacement) {
+        highp vec4 sampleValue = texture2D(
+            buttDisplacementMap,
+            offsetMapUV(buttDisplacementUVOut, buttDisplacementUV, pixelOffset));
+        highp vec2 buttDisplacement = decodeDisplacement(sampleValue);
+        if (sampleValue.b > 0.5 || abs(buttDisplacement.x) + abs(buttDisplacement.y) > 0.0001) {
+            displacement = buttDisplacement;
+            active = 1.0;
+        }
+        alpha *= sampleValue.a;
+    }
+
+    return vec4(displacement, alpha, active);
+}
+
+highp vec4 sampleDisplacedColor(highp vec2 pixelOffset) {
+    highp vec4 resolved = resolveDisplacement(pixelOffset);
+    highp vec2 targetUV = UV + pixelOffset * TEXTURE_PIXEL_SIZE;
+    highp vec2 sourceUV =
+        targetUV + resolved.xy * TEXTURE_PIXEL_SIZE * displacementSize * vec2(1.0, -1.0);
+    highp vec4 color = zTexture(sourceUV);
+    color.a *= resolved.z;
+    return color;
+}
+
+void fragment() {
+    highp vec4 resolved = resolveDisplacement(vec2(0.0));
+    highp vec2 sourceUV =
+        UV + resolved.xy * TEXTURE_PIXEL_SIZE * displacementSize * vec2(1.0, -1.0);
+    highp vec4 displacedColor = zTexture(sourceUV);
+    displacedColor.a *= resolved.z;
+
+    if (resolved.w > 0.5 && displacedColor.a <= 0.001) {
+        highp vec4 leftColor = sampleDisplacedColor(vec2(-1.0, 0.0));
+        highp vec4 rightColor = sampleDisplacedColor(vec2(1.0, 0.0));
+        highp vec4 topColor = sampleDisplacedColor(vec2(0.0, -1.0));
+        highp vec4 bottomColor = sampleDisplacedColor(vec2(0.0, 1.0));
+        highp float neighbourCount = 0.0;
+        highp vec4 neighbourColor = vec4(0.0);
+        if (leftColor.a > 0.001) {
+            neighbourCount += 1.0;
+            neighbourColor += leftColor;
+        }
+        if (rightColor.a > 0.001) {
+            neighbourCount += 1.0;
+            neighbourColor += rightColor;
+        }
+        if (topColor.a > 0.001) {
+            neighbourCount += 1.0;
+            neighbourColor += topColor;
+        }
+        if (bottomColor.a > 0.001) {
+            neighbourCount += 1.0;
+            neighbourColor += bottomColor;
+        }
+
+        if (neighbourCount >= 2.0) {
+            highp vec4 originalColor = zTexture(UV);
+            originalColor.a *= resolved.z;
+            if (originalColor.a > 0.001)
+                displacedColor = originalColor;
+            else
+                displacedColor = neighbourColor / neighbourCount;
+        }
+    }
+
+    COLOR = displacedColor;
+}

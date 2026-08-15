@@ -972,6 +972,14 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("body_type");
 
+                    b.Property<int>("BreastSize")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("breast_size");
+
+                    b.Property<int>("ButtSize")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("butt_size");
+
                     b.Property<string>("CharacterName")
                         .IsRequired()
                         .HasColumnType("TEXT")

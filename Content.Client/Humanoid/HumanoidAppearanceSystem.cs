@@ -79,11 +79,30 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
         // add default species layers
         var bodyTypeProto = _prototypeManager.Index(component.BodyType); // Sunrise-Edit
-        foreach (var (key, id) in bodyTypeProto.Sprites)
+        var speciesProto = _prototypeManager.Index(component.Species); // Lust added
+        foreach (var (key, defaultId) in bodyTypeProto.Sprites)
         {
             oldLayers.Remove(key);
             if (!component.CustomBaseLayers.ContainsKey(key))
-                SetLayerData(entity, key, id, sexMorph: true);
+            {
+                // Lust edit start - грудь и ягодицы выбираются независимо от формы тела
+                var id = defaultId;
+                if (bodyTypeProto.SupportsBodyCustomization
+                    && key == HumanoidVisualLayers.Chest
+                    && bodyTypeProto.ButtSprites.TryGetValue(component.ButtSize, out var buttSprite))
+                {
+                    id = buttSprite;
+                }
+                else if (bodyTypeProto.SupportsBodyCustomization
+                    && key == HumanoidVisualLayers.Breast
+                    && speciesProto.BreastSprites.TryGetValue(component.BreastSize, out var breastSprite))
+                {
+                    id = breastSprite;
+                }
+
+                SetLayerData(entity, key, id, sexMorph: !bodyTypeProto.SupportsBodyCustomization);
+                // Lust edit end
+            }
         }
 
         // add custom layers
@@ -247,6 +266,8 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Gender = profile.Gender;
         humanoid.Age = profile.Age;
         humanoid.BodyType = profile.BodyType;
+        humanoid.BreastSize = profile.BreastSize; // Lust added
+        humanoid.ButtSize = profile.ButtSize; // Lust added
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
