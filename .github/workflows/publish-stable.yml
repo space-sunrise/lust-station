@@ -45,8 +45,10 @@ jobs:
     - name: Move Sunrise Private files
       run: python3 Tools/_sunrise/move_private.py --clone-dir "SunrisePrivate" --target-dirs "Resources"
 
+    # Lust edit start - обработка названий в локализации
     - name: Process localization
       run: python3 Tools/_lust/replace_nt.py --path Resources/Locale
+    # Lust edit end
 
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v4.1.0
@@ -71,7 +73,7 @@ jobs:
       run: dotnet run --project Content.Packaging client --no-wipe-release
 
     - name: Publish version
-      run: Tools/publish_multi_request.py --fork-id lust_station_stable
+      run: Tools/publish_multi_request.py --fork-id lust_station_stable # Lust edit
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
@@ -86,14 +88,14 @@ jobs:
 
     - name: Publish discord changelog
       continue-on-error: true
-      run: Tools/_sunrise/actions_changelogs_since_last_run.py
+      run: Tools/_sunrise/changelog/actions_changelogs_since_last_run.py
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK_LUST }}
         CHANGELOG_FILE: 'Resources/Changelog/ChangelogLust.yml'
 
     - name: Publish discord changelog (Sunrise)
-      run: Tools/_sunrise/actions_changelogs_since_last_run.py
+      run: Tools/_sunrise/changelog/actions_changelogs_since_last_run.py
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK_SUNRISE }}
