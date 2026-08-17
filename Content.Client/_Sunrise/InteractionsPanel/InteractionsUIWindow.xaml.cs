@@ -301,7 +301,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         }
 
 
-        if (_entityManager.TryGetComponent<HumanoidAppearanceComponent>(_entityManager.GetEntity(userEntity), out var userHumanoid))
+        if (_entityManager.TryGetComponent<HumanoidProfileComponent>(_entityManager.GetEntity(userEntity), out var userHumanoid))
         {
             var userGenitals = GenitalsHelper.GetGenitals(userHumanoid.Sex)
                 .OrderBy(slot => GenitalDisplayOrder.GetValueOrDefault(slot, 99))
@@ -316,7 +316,7 @@ public sealed partial class InteractionsUIWindow : DefaultWindow
         }
 
         if (!selfTargeting &&
-            _entityManager.TryGetComponent<HumanoidAppearanceComponent>(_entityManager.GetEntity(targetEntity), out var targetHumanoid))
+            _entityManager.TryGetComponent<HumanoidProfileComponent>(_entityManager.GetEntity(targetEntity), out var targetHumanoid))
         {
             var targetGenitals = GenitalsHelper.GetGenitals(targetHumanoid.Sex)
                 .OrderBy(slot => GenitalDisplayOrder.GetValueOrDefault(slot, 99))

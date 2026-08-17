@@ -68,6 +68,10 @@
       Chest:
         sprite: _Sunrise/Mobs/Species/Demon/parts.rsi
         state: torso_f
+    Futanari: # Lust edit - сохраняем отдельный визуал торса
+      Chest:
+        sprite: _Lust/Mobs/Species/Demon/parts.rsi
+        state: torso_fut
 - type: bodyType
   id: DemonSlim
   name: body-slim

@@ -51,6 +51,10 @@
       Head:
         sprite: _Sunrise/Mobs/Species/Human/Basic/parts.rsi
         state: head_f
+    Futanari: # Lust edit - сохраняем отдельный визуал торса
+      Chest:
+        sprite: _Lust/Mobs/Species/Human/parts.rsi
+        state: torso_fut
 - type: bodyType
   id: MothNormal
   name: body-normal

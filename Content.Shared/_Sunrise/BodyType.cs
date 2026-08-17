@@ -1,5 +1,4 @@
 ﻿using Content.Shared.Humanoid;
-using Robust.Shared.Enums;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Prototypes;
 
@@ -43,13 +42,15 @@ public sealed partial class BodyTypePrototype : IPrototype
     /// </summary>
     public bool TryGetLayer(HumanoidVisualLayers layer, Sex sex, out PrototypeLayerData data)
     {
-        sex = NormalizeLustSex(sex); // Lust edit - телосложения Futanari используют женские слои
-
         if (SexLayers.TryGetValue(sex, out var sexLayers) &&
             sexLayers.TryGetValue(layer, out data!))
         {
             return true;
         }
+
+        // Lust edit - для видов без отдельного Futanari-слоя используем женский визуал
+        if (TryGetLustFallbackLayer(layer, sex, out data))
+            return true;
 
         return Layers.TryGetValue(layer, out data!);
     }

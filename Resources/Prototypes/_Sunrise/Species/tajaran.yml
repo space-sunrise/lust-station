@@ -75,6 +75,10 @@
       Chest:
         sprite: _Sunrise/Mobs/Species/Tajaran/parts.rsi
         state: torso_f
+    Futanari: # Lust edit - сохраняем отдельный визуал торса
+      Chest:
+        sprite: _Lust/Mobs/Species/Tajaran/parts.rsi
+        state: torso_fut
 - type: bodyType
   id: TajaranCurved
   name: body-curved-tajaran
@@ -128,6 +132,10 @@
       Chest:
         sprite: _Sunrise/Mobs/Species/Tajaran/parts.rsi
         state: torso_f
+    Futanari: # Lust edit - сохраняем отдельный визуал торса
+      Chest:
+        sprite: _Lust/Mobs/Species/Tajaran/parts.rsi
+        state: torso_fut
 - type: bodyType
   id: TajaranSlim
   name: body-slim-tajaran
