@@ -126,7 +126,7 @@ def main():
     default_filename = (
         str(validate_changelog_path(configured_filename))
         if configured_filename
-        else None
+        else 'Resources/Changelog/ChangelogLust.yml'
     )
 
     parser = argparse.ArgumentParser(description='Update the changelog manually.')
