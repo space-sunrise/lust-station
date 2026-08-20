@@ -2,6 +2,7 @@
   id: UnderwearMateInventory
   startingInventory:
     # Мужские трусы
+    ClothingPantsManWolf: 5
     ClothingPantsManBoxers: 5
     ClothingPantsManBriefs: 4
     ClothingPantsManCommie: 4
