@@ -1,0 +1,268 @@
+- type: entity
+  name: inferior vulpkanin
+  id: LustBaseSimpleEventMobVulpkanin
+  parent: MobBaseAncestor
+  abstract: true
+  components:
+  - type: VulpaAccent
+  - type: Speech
+    speechSounds: Vulpkanin
+    speechVerb: Vulpkanin
+    allowedEmotes: ['Growl', 'Bark', 'Howl', 'Whines']
+  - type: Vocal
+    sounds:
+      Male: MaleVulpkanin
+      Female: FemaleVulpkanin
+      Unsexed: FemaleVulpkanin
+  - type: BodyEmotes
+    soundsId: ReptilianBodyEmotes
+  - type: TypingIndicator
+    proto: lizard
+  - type: InteractionPopup
+    successChance: 0.9
+    interactSuccessString: petting-success-monkey
+    interactFailureString: petting-failure-monkey
+    interactSuccessSpawn: EffectHearts
+    interactSuccessSound:
+      path: /Audio/Animals/lizard_happy.ogg
+    interactFailureSound:
+      path: /Audio/Items/wirecutter.ogg
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical
+      200: Dead
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 5
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    angle: 30
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 5
+        Piercing: 4
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: inferior_vulpkanin
+      sprite: _Sunrise/Mobs/Animals/inferior_vulpkanin.rsi
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "jumpsuit" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "id" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+  - type: AlwaysRevolutionaryConvertible
+  - type: Body
+    prototype: InferiorVulpkanin
+  - type: TTS
+
+- type: entity
+  name: inferior vulpkanin
+  id: LustBaseSimpleEventMobVulpkaninERP
+  parent: LustBaseSimpleEventMobVulpkanin
+  abstract: true
+  components:
+  - type: Interactions
+
+- type: entity
+  save: false
+  parent: LustBaseSimpleEventMobVulpkaninERP
+  id: LustBaseSimpleEventMobMoth
+  abstract: true
+  components:
+  - type: Speech
+    speechVerb: Moth
+    allowedEmotes: ['Chitter', 'Squeak']
+  - type: TypingIndicator
+    proto: moth
+  - type: MothAccent
+  - type: Vocal
+    sounds:
+      Male: UnisexMoth
+      Female: UnisexMoth
+      Unsexed: UnisexMoth
+      Futanari: UnisexMoth
+
+#Moth
+- type: entity
+  name: moth of death
+  id: LustERPEventMothNakedFolded
+  parent: LustBaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_1_1
+      sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+- type: entity
+  name: moth of death
+  id: LustERPEventMothFolded
+  parent: LustBaseSimpleEventMobMoth
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: moth_2_1
+      sprite: _Lust/Mobs/Events/moth.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+#Vulpkanin
+- type: entity
+  name: object № 7114
+  id: LustERPEventVulpkaninNaked
+  parent: LustBaseSimpleEventMobVulpkaninERP
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_1
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+- type: entity
+  name: object № 7114
+  id: LustERPEventVulpkaninHalfNaked
+  parent: LustERPEventVulpkaninNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_3
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+- type: entity
+  name: object № 7114
+  id: LustERPEventVulpkaninDressed
+  parent: LustERPEventVulpkaninNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_2
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_one.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+#Smiling demon
+- type: entity
+  name: smiling demon
+  id: LustERPEventDemonEvelNaked
+  parent: LustBaseSimpleEventMobVulpkaninERP
+  description: It looks friendly. Why don't you give it a hug?
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_1
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+- type: entity
+  name: smiling demon
+  id: LustERPEventDemonEvel
+  parent: LustERPEventDemonEvelNaked
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: vulpkanin_2
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: light
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/vulpkanin_two.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+
+#Ulubastic
+- type: entity
+  name: smiling
+  id: LustERPEventUlubastik
+  parent: LustBaseSimpleEventMobVulpkanin
+  description: Smiling creature
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      state: ulubastik
+      sprite: _Lust/Mobs/Events/ulubastik.rsi
+    - map: [ "enum.DamageStateVisualLayers.BaseUnshaded" ]
+      state: ulubastik
+      shader: unshaded
+      sprite: _Lust/Mobs/Events/ulubastik.rsi
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
